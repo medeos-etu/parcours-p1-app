@@ -3298,8 +3298,6 @@ function renderCurArena(){
   const iCur=ARENES.findIndex(x=>x.k===arCourante());
   if(arView===0 && iCur>0) arView=iCur;
   const a=ARENES[arView]||ARENES[0];
-  const gi=gradeIdx(S.ar.T), suiv=GRADES[gi+1];
-  const pct=suiv?Math.max(0,Math.min(100,Math.round((S.ar.T-GRADES[gi][0])/(suiv[0]-GRADES[gi][0])*100))):100;
   const ouverte=arOuverte(a), dispo=arDispo(a);
   let voile='';
   if(!dispo) voile='<div class="slock"><span class="l1">🔜</span><b>Bientôt</b><span>Les questions arrivent — cette arène ouvre très vite</span></div>';
@@ -3308,9 +3306,7 @@ function renderCurArena(){
     '<div class="sscene '+a.sky+'"><div class="decor"></div>'+parts+
     '</div>'+
     '<div class="stagefoot"><div class="sn">'+(a.sous||a.k)+'</div><div class="snom"><img class="semb" src="img/icones/'+EMBLEMES[a.k]+'.png" alt="" onerror="this.replaceWith(\''+a.em+'\')">'+a.nom+'</div>'+
-    '<div class="sbar"><i style="width:'+pct+'%"></i></div>'+
-    '<div class="smeta"><span><img class="ticn" src="img/icones/trophee-medeos.png" alt=""> '+fmtT(arT(a.k))+' dans cette arène</span>'+
-    '<span>Total '+fmtT(S.ar.T)+' · '+(suiv? fmtT(suiv[0]-S.ar.T)+' avant '+suiv[1] : GRADES[gi][1])+'</span></div></div>';
+    '<div class="smeta"><span><img class="ticn" src="img/icones/trophee-medeos.png" alt=""> '+fmtT(arT(a.k))+' dans cette arène</span></div></div>';
 
 
   /* le bouton d'action reflète l'arène regardée */
