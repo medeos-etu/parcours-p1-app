@@ -1830,7 +1830,6 @@
         <p class="skin-t">Ta bannière</p>
         <div class="skinbans" id="skin-bans"></div>
         <p class="skin-note">Gagne des trophées pour débloquer de nouvelles photos et bannières 🏆</p>
-        <button class="btn ghost small" style="margin-top:10px;width:100%" onclick="closeSheet('sheet-skin');go('profil')">Voir mon profil complet</button>
       </div>
     </div>
   </div>
@@ -3204,14 +3203,12 @@ function renderIdBar(){
   const pav='<div class="pav2"><span class="pem">'+av.em+'</span><img src="'+av.img+'"'+(av.fit==='zoom'?' class="zoom"':'')+' alt="" onerror="this.remove()"></div>';
   if(accOk()){
     const c=S.ar.compte;
-    b.innerHTML='<div class="pcard" style="cursor:pointer;'+banFond(ban)+'" onclick="openSheet(\'sheet-skin\')">'+pav+
-      '<div style="min-width:0"><div class="pn">'+c.id+'</div><div class="pg">'+GRADES[gi][2]+' '+GRADES[gi][1]+'</div></div>'+
-      '<span class="pedit">✎</span></div>'+
+    b.innerHTML='<div class="pcard" style="cursor:pointer;'+banFond(ban)+'" onclick="go(\'profil\')">'+pav+
+      '<div style="min-width:0"><div class="pn">'+c.id+'</div><div class="pg">'+GRADES[gi][2]+' '+GRADES[gi][1]+'</div></div></div>'+
       '<span class="goldplate"><img class="ticn g" src="img/icones/trophee-medeos.png" alt=""> '+fmtT(S.ar.T)+'</span>';
   } else {
-    b.innerHTML='<div class="pcard" style="cursor:pointer;'+banFond(ban)+'" onclick="openSheet(\'sheet-skin\')">'+pav+
-      '<div style="min-width:0"><div class="pn">Invité</div><div class="pg">Progression non gardée</div></div>'+
-      '<span class="pedit">✎</span></div>'+
+    b.innerHTML='<div class="pcard" style="cursor:pointer;'+banFond(ban)+'" onclick="go(\'profil\')">'+pav+
+      '<div style="min-width:0"><div class="pn">Invité</div><div class="pg">Progression non gardée</div></div></div>'+
       '<span class="goldplate"><img class="ticn g" src="img/icones/trophee-medeos.png" alt=""> '+fmtT(S.ar.T)+'</span>'+
       '<button class="connectbtn" onclick="focusAcc()">Se connecter</button>';
   }
