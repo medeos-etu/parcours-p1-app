@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sage-femme : le métier en vrai — Fiche Medeos</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 15px; line-height: 1.6; color: #2c3e50; background: #f6f8fb; padding: 22px; max-width: 760px; margin: 0 auto; }
+    .page-container { position: relative; }
+    .page-container::before { display: none; }
+    .page-container > * { position: relative; z-index: 1; }
+    .prod-brand { margin: 0 0 14px; }
+    .prod-brand img { height: 27px; width: auto; display: block; margin: 0 auto; }
+    .hook-header { background: #FAF6F0; border-radius: 14px; padding: 26px 30px 22px; box-shadow: 0 4px 18px rgba(76,42,133,0.08); border: 1px solid #efe7d8; }
+    .hook-header .brand-tag { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #6B46C1; font-weight: 600; opacity: 0.85; margin-bottom: 12px; }
+    .hook-header .course-title { font-size: 28px; line-height: 1.1; font-weight: 800; color: #4C2A85; letter-spacing: -0.7px; margin: 0 0 12px; }
+    .hook-header .punch { font-size: 18px; line-height: 1.3; font-weight: 800; color: #1A1A2E; letter-spacing: -0.3px; margin: 0; }
+    .hook-header .punch span.accent { color: #6B46C1; }
+    .hook-header .punch + .punch { margin-top: 5px; }
+    .intro { font-size: 15.5px; line-height: 1.7; color: #2c3e50; margin: 20px 2px; }
+    .intro strong { font-weight: 700; color: #4C2A85; }
+    em.hl { background: linear-gradient(180deg, transparent 60%, #FCD34D 60%); font-style: normal; padding: 0 2px; }
+    .schema-box { background: #fff; border: 2px solid #6B46C1; padding: 12px; text-align: center; border-radius: 12px; box-shadow: 0 4px 15px rgba(107, 70, 193, 0.15); position: relative; overflow: hidden; }
+    .schema-box::before { content: 'medeos-sante.fr'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: 'Inter', Arial, sans-serif; font-size: 14px; font-weight: 700; color: rgba(120,120,120,0.13); letter-spacing: 2px; text-transform: uppercase; pointer-events: none; user-select: none; z-index: 5; white-space: nowrap; max-width: 92%; overflow: hidden; }
+    .schema-box img { max-width: 100%; max-height: 300px; height: auto; border-radius: 8px; display: block; margin: 0 auto; cursor: zoom-in; }
+    .schema-box .schema-num { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 0.6px; text-transform: uppercase; color: #6B46C1; margin-bottom: 6px; }
+    .schema-box .caption { font-size: 12px; color: #6b6275; margin-top: 9px; font-weight: 500; }
+    .schema-box .caption strong { color: #6B46C1; }
+    .schema-box .file-target { display: none; margin-top: 10px; padding: 8px 12px; background: #e8f5e9; border: 1px solid #a5d6a7; border-radius: 6px; font-family: 'SFMono-Regular', Consolas, monospace; font-size: 11.5px; color: #1b5e20; text-align: left; line-height: 1.5; }
+    .schema-box .file-target strong { color: #2e7d32; }
+    .schema-box .generation-prompt { background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border: 2px dashed #ff9800; border-radius: 8px; padding: 13px; margin-top: 12px; text-align: left; font-size: 11.5px; color: #e65100; line-height: 1.55; white-space: pre-wrap; }
+    .schema-box .generation-prompt strong { color: #bf360c; display: block; margin-bottom: 8px; font-size: 12.5px; background: #ffcc80; padding: 7px 11px; border-radius: 4px; }
+    .schema-box .copy-prompt-btn { display: none; margin-top: 8px; padding: 6px 12px; background: #ff9800; color: #fff; border: none; border-radius: 4px; font-size: 12px; cursor: pointer; font-weight: 600; }
+    .schema-box .copy-prompt-btn:hover { background: #f57c00; }
+    .schema-box .generation-prompt { display: none; }
+    .schema-box.img-missing .generation-prompt { display: block; }
+    .schema-box.img-missing .copy-prompt-btn { display: inline-block; }
+    .schema-box.img-missing .file-target { display: block !important; }
+    .schema-2up { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; align-items: stretch; }
+    .schema-2up .schema-box { margin: 0; display: flex; flex-direction: column; }
+    .schema-2up .schema-box img { height: 230px; width: 100%; max-height: none; object-fit: contain; }
+    .schema-2up .schema-box .caption { margin-top: auto; }
+    @media (max-width: 720px) { .schema-2up { grid-template-columns: 1fr; } .schema-2up .schema-box img { height: auto; max-height: 300px; } }
+    .steps { background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%); border-left: 5px solid #6B46C1; border-radius: 0 12px 12px 0; padding: 18px 22px; margin: 20px 0; box-shadow: 0 2px 10px rgba(107,70,193,0.08); }
+    .steps .steps-title { font-size: 15px; font-weight: 800; color: #4C2A85; margin-bottom: 13px; }
+    .steps ol { list-style: none; margin: 0; padding: 0; }
+    .step { display: grid; grid-template-columns: 28px 1fr; gap: 12px; align-items: start; margin-bottom: 12px; }
+    .step:last-child { margin-bottom: 0; }
+    .step .n { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 999px; background: #6B46C1; color: #fff; font-size: 13px; font-weight: 800; }
+    .step .txt { font-size: 14.5px; line-height: 1.5; color: #2c3e50; padding-top: 2px; }
+    .step .txt b { color: #4C2A85; font-weight: 700; }
+    .step .txt .gl { color: #6b6275; font-weight: 400; }
+    .step .txt .lead { font-weight: 800; color: #1A1A2E; }
+    .pass-tip { background: #fdf6ec; border-left: 6px solid #B8895A; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; box-shadow: 0 3px 12px rgba(184,137,90,0.14); font-size: 14.5px; line-height: 1.55; }
+    .pass-tip::before { content: "Parlons vrai"; display: block; font-weight: 700; font-size: 12px; color: #9a6a37; margin-bottom: 7px; letter-spacing: 0.8px; text-transform: uppercase; }
+    .pass-tip strong { color: #9a6a37; }
+    .recap { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
+    .recap .box { border-radius: 12px; padding: 15px 18px; font-size: 14px; line-height: 1.5; }
+    .recap .retenir { background: #F1ECFA; border: 1px solid #dccff2; }
+    .recap .piege { background: #FFFBEB; border: 1px solid #F6E4A8; }
+    .recap .box .lbl { display: block; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 7px; }
+    .recap .retenir .lbl { color: #6B46C1; }
+    .recap .piege .lbl { color: #9a6d00; }
+    .recap b { font-weight: 700; color: #1A1A2E; }
+    .qcm-cta { display: flex; align-items: center; gap: 16px; text-decoration: none; color: inherit; background: #fff; border: 1px solid #d6c6f0; border-radius: 14px; padding: 18px 22px; margin: 24px 0 6px; box-shadow: 0 9px 26px -16px rgba(107,70,193,.4); transition: transform .18s ease, box-shadow .18s ease; }
+    .qcm-cta:hover { transform: translateY(-2px); box-shadow: 0 16px 38px -16px rgba(107,70,193,.5); }
+    .qcm-cta:focus-visible { outline: 3px solid #6B46C1; outline-offset: 2px; }
+    .qcm-cta .qcm-body { flex: 1; }
+    .qcm-cta .qcm-k { font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #6B46C1; }
+    .qcm-cta .qcm-t { font-size: 18px; font-weight: 800; color: #1A1A2E; margin-top: 3px; letter-spacing: -0.3px; }
+    .qcm-cta .qcm-arrow { flex: none; width: 42px; height: 42px; border-radius: 11px; background: #6B46C1; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700; }
+    .chapter-footer { text-align: center; margin-top: 22px; padding-top: 16px; border-top: 1px solid #e6dfd1; color: #7a8088; font-size: 12px; }
+    .chapter-footer strong { color: #6b6275; }
+    .bio-hint { display: none; }
+    .section-title { font-size: 19px; font-weight: 800; color: #4C2A85; letter-spacing: -0.3px; margin: 28px 2px 6px; }
+    .fine-note { font-size: 12.5px; color: #6b6275; margin: 10px 2px 0; line-height: 1.5; }
+    /* Placements variés des illustrations */
+    .illu-float-right { float: right; width: min(48%, 320px); margin: 4px 0 10px 18px; }
+    .illu-float-right img { width: 100%; max-height: none; }
+    .section-title { clear: both; }
+    .duo { display: grid; grid-template-columns: 250px 1fr; gap: 16px; align-items: center; margin: 20px 0; }
+    .duo .illu { margin: 0; }
+    .duo .illu img { width: 100%; max-height: none; }
+    .duo .pass-tip { margin: 0; }
+    .spot-corner { float: right; width: 74px; margin: 0 0 4px 12px; }
+    .spot-corner img { width: 100%; max-height: none; }
+    .recap .box { overflow: hidden; }
+    /* Mode brouillon (image manquante) : tout repasse en pleine largeur */
+    .illu:has(.img-missing) { float: none !important; width: auto !important; }
+    .duo:has(.img-missing) { grid-template-columns: 1fr; }
+    @media (max-width: 600px) {
+        .illu-float-right { float: none; width: 72%; margin: 12px auto; }
+        .duo { grid-template-columns: 1fr; }
+        .spot-corner { width: 58px; margin-left: 8px; }
+    }
+    /* Illustrations légères : pas de cadre, pas de fond, pas de zoom */
+    .illu { margin: 18px auto 8px; }
+    .schema-box.illu { border: none; box-shadow: none; background: transparent; padding: 0; overflow: visible; }
+    .schema-box.illu::before { content: none; }
+    .schema-box.illu img { cursor: default; max-height: none; }
+    .illu-mid img { max-height: 250px; }
+    .illu-wide img { max-height: 220px; width: 100%; object-fit: contain; }
+    .illu-slim img { max-height: 150px; width: 100%; object-fit: contain; }
+    .illu-spot img { max-height: 96px; }
+    .schema-box.illu .caption { margin-top: 5px; font-size: 12px; }
+    .schema-box.illu.img-missing { background: #fff; border: 2px dashed #ffb74d; border-radius: 12px; padding: 12px; }
+    /* Livrets dépliables (grilles de rémunération) */
+    .livret { border: 1px solid #e3d9f2; background: #fff; border-radius: 12px; margin: 12px 0; overflow: hidden; }
+    .livret summary { cursor: pointer; list-style: none; display: flex; align-items: center; gap: 10px; padding: 13px 16px; font-weight: 700; font-size: 14px; color: #4C2A85; background: #F7F4FC; }
+    .livret summary::-webkit-details-marker { display: none; }
+    .livret summary .chev { margin-left: auto; color: #6B46C1; font-weight: 800; transition: transform .18s ease; }
+    .livret[open] summary .chev { transform: rotate(90deg); }
+    .livret .livret-body { padding: 12px 16px 14px; overflow-x: auto; }
+    .livret table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .livret th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: .6px; color: #6B46C1; padding: 6px 8px; border-bottom: 2px solid #ede7f8; white-space: nowrap; }
+    .livret td { padding: 6px 8px; border-bottom: 1px solid #f1edf8; color: #2c3e50; line-height: 1.45; }
+    .livret tr:last-child td { border-bottom: none; }
+    .livret td b { color: #4C2A85; }
+    .livret .src { font-size: 11.5px; color: #8a8494; margin-top: 9px; line-height: 1.5; }
+    @media print { .section-title { font-size: 22px; } .fine-note { font-size: 14px; } }
+    /* ===== IMPRESSION / PDF — format REEL 9:16 (1080×1920), agrandi pour remplir ===== */
+    @media print {
+        @page { size: 1080px 1920px; margin: 42px; }
+        body { background: #fff; padding: 0; max-width: 996px; font-size: 17px; }
+        .page-container::before { display: none; }
+        .prod-brand { margin: 0 0 12px; }
+        .prod-brand img { height: 38px; }
+        .hook-header { padding: 22px 30px; box-shadow: none; }
+        .hook-header .brand-tag { font-size: 12px; margin-bottom: 10px; }
+        .hook-header .course-title { font-size: 34px; margin-bottom: 10px; }
+        .hook-header .punch { font-size: 21px; }
+        .intro { font-size: 17px; line-height: 1.55; margin: 18px 2px; }
+        .schema-2up { margin: 18px 0; gap: 20px; }
+        .schema-box { padding: 12px; box-shadow: none; }
+        .schema-2up .schema-box img { height: 300px; }
+        .schema-box .schema-num { font-size: 12.5px; margin-bottom: 5px; }
+        .schema-box .caption { font-size: 14px; margin-top: 8px; }
+        .steps { padding: 20px 26px; margin: 18px 0; box-shadow: none; }
+        .steps .steps-title { font-size: 19px; margin-bottom: 13px; }
+        .step { margin-bottom: 11px; gap: 13px; }
+        .step .n { width: 30px; height: 30px; font-size: 14px; }
+        .step .txt { font-size: 16.5px; line-height: 1.5; padding-top: 2px; }
+        .pass-tip { padding: 16px 22px; margin: 18px 0; font-size: 16.5px; box-shadow: none; }
+        .recap { gap: 16px; margin: 18px 0; }
+        .recap .box { padding: 15px 20px; font-size: 15.5px; }
+        .recap .box .lbl { font-size: 12.5px; }
+        .qcm-cta { padding: 17px 24px; margin: 18px 0 6px; box-shadow: none; }
+        .qcm-cta .qcm-k { font-size: 12.5px; }
+        .qcm-cta .qcm-t { font-size: 20px; }
+        .qcm-cta .qcm-arrow { width: 44px; height: 44px; font-size: 20px; }
+        .bio-hint { display: block; text-align: center; margin: 12px 0 0; font-size: 17px; font-weight: 800; color: #6B46C1; }
+        .bio-hint strong { color: #4C2A85; }
+        .chapter-footer { margin-top: 14px; padding-top: 12px; font-size: 14px; }
+        .schema-2up, .schema-box, .steps, .recap, .pass-tip, .qcm-cta { page-break-inside: avoid; }
+    }
+    @media (max-width: 600px) {
+        body { padding: 14px; }
+        .hook-header { padding: 22px 18px 18px; }
+        .hook-header .course-title { font-size: 24px; }
+        .hook-header .punch { font-size: 16px; }
+        .recap { grid-template-columns: 1fr; }
+        .intro, .pass-tip, .step .txt, .recap .box { text-align: left; }
+        .schema-box::before { color: rgba(107,70,193,0.20); font-size: 11px; letter-spacing: 1px; max-width: 90%; }
+    }
+
+    /* === mobile-polish + zoom-bar ordi only === */
+    /* La barre de zoom (− / 100 % / +) est réservée à l'ordinateur : sur mobile,
+       le pinch-to-zoom natif suffit. On la masque sous la largeur tactile. */
+    @media (max-width: 768px) {
+        #medeos-zoom-bar { display: none !important; }
+    }
+    /* Agencement mobile soigné : le titre ne déborde jamais, le hook respire. */
+    @media (max-width: 600px) {
+        body { padding: 14px 13px 18px; }
+        .hook-header { padding: 20px 17px 16px; }
+        .hook-header .course-title {
+            font-size: clamp(20px, 6.4vw, 25px);
+            line-height: 1.12;
+            letter-spacing: -0.4px;
+            overflow-wrap: anywhere;
+            hyphens: auto;
+        }
+        .hook-header .punch { font-size: clamp(14.5px, 4.4vw, 17px); line-height: 1.3; }
+        .hook-header .brand-tag { font-size: 10.5px; letter-spacing: 1.2px; }
+        .intro { font-size: 15px; }
+        .schema-2up { gap: 14px; }
+        .steps { padding: 18px 16px; }
+        .steps .steps-title { font-size: 15px; }
+        .step .txt { font-size: 14.5px; }
+        .qcm-cta { padding: 15px 16px; gap: 12px; }
+        .qcm-cta .qcm-t { font-size: 16px; }
+        .qcm-cta .qcm-arrow { width: 38px; height: 38px; font-size: 18px; }
+        /* boutons de la lightbox plus gros au doigt */
+        #medeos-lightbox button[aria-label="Fermer"] { width: 46px; height: 46px; font-size: 26px; }
+    }
+</style>
+</head>
+<body>
+<div class="page-container">
+
+    <div class="prod-brand"><img src="../images/logo-medeos-violet-texte.png" alt="Medeos"></div>
+
+    <header class="hook-header">
+        <div class="brand-tag">Ressource gratuite · Découverte métier</div>
+        <h1 class="course-title">Sage-femme : le métier en vrai</h1>
+        <p class="punch"><span class="accent">Plus d'1 bébé sur 2</span> en France vient au monde entre les mains d'une sage-femme — pas d'un médecin.</p>
+        <p class="punch">Consulter, prescrire, échographier, accoucher : une des trois professions médicales de France — et un titre de docteur au bout de 6 ans.</p>
+    </header>
+
+    <div class="illu illu-float-right">
+        <figure class="schema-box illu illu-mid">
+            <img src="../images/metiers/fiche_metier_sage_femme_univers.png"
+                 alt="Une sage-femme stylisée portant un nouveau-né, reliée à six pastilles rondes : salle de naissance, cabinet, à domicile, maison de naissance, PMI, gynécologie."
+                 onerror="schemaMissing(this)">
+            <div class="file-target">📁 <strong>fiche_metier_sage_femme_univers.png</strong><br>à placer dans : <strong>/public/images/metiers/</strong><br><span style="color:#555;font-weight:400;">Illustration paysage 4:3 SANS fond (PNG transparent) : une sage-femme au centre, un nouveau-né dans les bras, entourée de six pastilles pictogrammes (salle de naissance, cabinet, à domicile, maison de naissance, PMI, gynécologie).</span></div>
+            <figcaption class="caption">Un même diplôme, <strong>six univers d'exercice</strong> — de la salle de naissance au cabinet.</figcaption>
+            <div class="generation-prompt"><strong>Prompt ChatGPT-image :</strong>
+Charming minimal flat 2-D vector illustration, light and airy, FLAT SOLID pastel colours only, thin clean outlines, isolated on a fully TRANSPARENT background (PNG with alpha) — no background shape, no frame, no card, no drop shadow, absolutely NO dark background, NO glow, NO neon, NO blur, NO soft halos around elements: crisp flat shapes on pure transparency, as in a clean SVG icon set. Landscape 4:3 composition. One friendly flat midwife silhouette in the centre, seen from the front, smooth blank face, violet #6B46C1 medical tunic, gently holding a tiny swaddled newborn in a warm terracotta blanket, about 40% of image height. Around her, six small round pastel discs in a regular fan (three above, three below), each linked to the midwife by a fine light-grey line, each holding one simple flat pictogram, one short French sans-serif label just below each disc: « Salle de naissance » (deep blue #1F4E8C disc, small cradle), « Cabinet » (warm terracotta disc, small desk with lamp), « À domicile » (honey amber disc, small house with a tiny heart), « Maison de naissance » (warm terracotta disc, cosy rounded house with a small leaf), « PMI » (deep blue disc, teddy bear), « Gynécologie » (honey amber disc, simple flower). One tiny yellow #FCD34D four-point spark near the midwife's head, the only yellow accent. Airy, generous empty space. AVOID: any English text, gibberish or misspelled words, 3-D, photorealism, shadows, any background colour, frames, borders, watermark, realistic faces, red cross emblem, stork, religious imagery, blood, text inside the discs.
+            </div>
+            <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+        </figure>
+    </div>
+
+    <p class="intro">Mettre un enfant au monde, être la toute première personne sur Terre à le tenir : peu de métiers offrent des moments aussi forts, aussi souvent. Mais l'image qu'on s'en fait est trop étroite : la sage-femme est une <strong>profession médicale</strong> à part entière — l'une des trois de France, avec le médecin et le chirurgien-dentiste — qui <em class="hl">consulte, prescrit, suit les grossesses de A à Z</em> et pratique en autonomie complète les accouchements normaux, du premier examen au premier cri. C'est aussi un métier de <strong>sang-froid</strong> : la naissance est une discipline d'urgence, où l'on décide vite et en équipe. Sur cette fiche, on te montre le quotidien réel — gardes, tarifs, grilles, chemin d'études — pour que tu puisses te projeter <strong>les yeux ouverts</strong>.</p>
+
+    <h2 class="section-title">Ta journée si tu deviens sage-femme</h2>
+    <div class="steps">
+        <div class="steps-title">Une journée type</div>
+        <ol>
+            <li class="step">
+                <span class="n">1</span>
+                <span class="txt"><span class="lead">7h45 — Transmissions.</span> L'équipe de nuit te raconte chaque patiente : qui est en travail, qui a accouché à 3 h du matin, qui a besoin d'un œil attentif. En salle de naissance, <b>tout commence par l'écoute</b>.</span>
+            </li>
+            <li class="step">
+                <span class="n">2</span>
+                <span class="txt"><span class="lead">8h30 — Tour des salles.</span> Tu examines une patiente en travail, tu poses le <b>monitoring</b> <span class="gl">(l'appareil qui enregistre le cœur du bébé et les contractions)</span>, tu rassures le couple. C'est toi qui pilotes.</span>
+            </li>
+            <li class="step">
+                <span class="n">3</span>
+                <span class="txt"><span class="lead">10h15 — La péridurale.</span> Une patiente n'en peut plus : tu évalues, tu appelles l'<b>anesthésiste</b> <span class="gl">(8 femmes sur 10 accouchent sous péridurale)</span> et tu restes près d'elle pendant la pose.</span>
+            </li>
+            <li class="step">
+                <span class="n">4</span>
+                <span class="txt"><span class="lead">11h40 — Une naissance.</span> C'est toi qui accouches la patiente, du dernier effort au <b>premier cri</b>. Premiers soins au nouveau-né, première mise au sein : ces minutes-là ne ressemblent à aucun autre métier.</span>
+            </li>
+            <li class="step">
+                <span class="n">5</span>
+                <span class="txt"><span class="lead">13h30 — Dossiers, repas express.</span> Tout se trace : examens, heures, décisions. Tu manges vite — <b>deux patientes sont en travail</b> en même temps.</span>
+            </li>
+            <li class="step">
+                <span class="n">6</span>
+                <span class="txt"><span class="lead">16h — Ça s'accélère.</span> Une maman saigne plus que la normale après son accouchement : tu déclenches le protocole, l'obstétricien arrive, chacun connaît son rôle. <b>Garder son calme</b>, c'est le cœur du métier — et ça s'apprend.</span>
+            </li>
+            <li class="step">
+                <span class="n">7</span>
+                <span class="txt"><span class="lead">19h45 — Transmissions du soir.</span> Tu passes le relais à l'équipe de nuit, patiente par patiente. Douze heures dans les jambes, des vies plein la tête — et demain, <b>repos</b>.</span>
+            </li>
+        </ol>
+    </div>
+
+    <div class="illu">
+        <figure class="schema-box illu illu-slim">
+            <img src="../images/metiers/fiche_metier_sage_femme_journee.png"
+                 alt="Frise fine du matin au soir : sept moments d&#x27;une garde de 12 heures en salle de naissance, du soleil levant au croissant de lune, avec leurs horaires."
+                 onerror="schemaMissing(this)">
+            <div class="file-target">📁 <strong>fiche_metier_sage_femme_journee.png</strong><br>à placer dans : <strong>/public/images/metiers/</strong><br><span style="color:#555;font-weight:400;">Bandeau très large et fin SANS fond (PNG transparent) : ligne du temps soleil → lune, sept petits pictogrammes horodatés d&#x27;une garde de 12 h, aucun mot en dehors des heures.</span></div>
+            <figcaption class="caption">Une garde de 12 heures : de 7h45 à 19h45, <strong>la salle de naissance ne s'arrête jamais</strong>.</figcaption>
+            <div class="generation-prompt"><strong>Prompt ChatGPT-image :</strong>
+Charming minimal flat 2-D vector illustration, light and airy, FLAT SOLID pastel colours only, thin clean outlines, isolated on a fully TRANSPARENT background (PNG with alpha) — no background shape, no frame, no card, no drop shadow, absolutely NO dark background, NO glow, NO neon, NO blur, NO soft halos around elements: crisp flat shapes on pure transparency, as in a clean SVG icon set. Very wide, slim banner. A single thin light-grey horizontal line across the middle, a small flat honey-amber rising sun at the far left end, a small deep-blue #1F4E8C crescent moon at the far right end. On the line, seven small violet #6B46C1 dots; above or below each dot (alternating), one tiny flat pictogram with its time only, in small violet French numerals: « 7h45 » two overlapping speech bubbles, « 8h30 » clipboard with a tiny heartbeat trace, « 10h15 » small hanging drip bag with one droplet, « 11h40 » tiny swaddled newborn with a soft yellow #FCD34D four-point spark beside it (the only yellow accent), « 13h30 » folder with a coffee cup, « 16h » small ringing bell, « 19h45 » two speech bubbles with a tiny crescent. All pictograms the same small size, soft terracotta / deep blue / honey amber colours, lots of empty space. AVOID: any English text, gibberish, any word or label other than the seven times, 3-D, photorealism, shadows, any background colour, frames, borders, watermark, clock faces, syringes, blood, realistic faces, red cross emblem.
+            </div>
+            <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+        </figure>
+    </div>
+
+    <h2 class="section-title">Où tu peux exercer</h2>
+    <div class="steps">
+        <div class="steps-title">Trois façons de vivre le même métier</div>
+        <ol>
+            <li class="step">
+                <span class="n">1</span>
+                <span class="txt"><span class="lead">Salariée à l'hôpital — le cœur du métier.</span> Plus d'une sage-femme sur deux (54 %) travaille en maternité : salle de naissance, suites de couches, grossesses à risque — avec l'obstétricien, l'anesthésiste et le pédiatre à portée de voix. <b>Salaire fixe</b>, plateau technique, intensité. En échange : des <b>postes de 12 h</b>, nuits, week-ends et jours fériés compris — un temps plein tourne à <b>35 h en moyenne</b>, soit environ 11 à 12 gardes de 12 h par mois.</span>
+            </li>
+            <li class="step">
+                <span class="n">2</span>
+                <span class="txt"><span class="lead">Libérale — ton cabinet, tes patientes.</span> En cabinet ou en maison de santé : suivi de grossesse, préparation à la naissance, visites à domicile après l'accouchement, rééducation, gynécologie de prévention. Une patientèle qui te suit, une vraie <b>liberté d'agenda</b> — mais pas d'accouchements (sauf en maison de naissance), pas de congés payés, et un rythme que tu fixes toi-même : tes consultations, tes jours travaillés, tes visites à domicile. Environ une sage-femme sur trois exerce en libéral, seule ou en cabinet de groupe.</span>
+            </li>
+            <li class="step">
+                <span class="n">3</span>
+                <span class="txt"><span class="lead">PMI, clinique, mixte — les autres visages.</span> En PMI <span class="gl">(Protection maternelle et infantile, le service public qui suit gratuitement mamans et jeunes enfants)</span>, tu fais de la prévention en horaires de bureau, ≈ 35-39 h par semaine. En clinique privée, tu retrouves la salle de naissance sous contrat de droit privé. Et beaucoup panachent : cabinet en semaine, gardes à l'hôpital le week-end. Environ 10 % de la profession.</span>
+            </li>
+        </ol>
+    </div>
+
+    <h2 class="section-title">Combien tu gagnes — et comment</h2>
+    <div class="steps">
+        <div class="steps-title">Les circuits de l'argent</div>
+        <ol>
+            <li class="step">
+                <span class="n">1</span>
+                <span class="txt"><span class="lead">À l'hôpital : une grille + des primes + les nuits.</span> Fonctionnaire hospitalière, payée sur une <b>grille nationale</b> à 2 grades de 10 échelons, gravie à l'ancienneté. En début de carrière : <b>≈ 2 300 € net par mois</b> primes fixes incluses <span class="gl">(complément Ségur 241 € brut, soit ≈ 192 € net + prime d'exercice médical 265 € brut, ≈ 240 € net)</span>, pour ≈ 35 h par semaine en postes de 12 h. Les nuits <span class="gl">(majorées à 25 % du taux horaire depuis le 1ᵉʳ janvier 2024)</span>, dimanches et fériés ajoutent souvent <b>200 à 400 € par mois</b>. Au sommet : ≈ 3 800 € net — la grille complète est dans le livret.</span>
+            </li>
+            <li class="step">
+                <span class="n">2</span>
+                <span class="txt"><span class="lead">En libéral : payée à l'acte, aux tarifs de l'Assurance Maladie.</span> Chaque acte a son tarif fixé par la convention : <b>26,50 €</b> la consultation <span class="gl">(le généraliste est à 30 € — la profession réclame l'alignement)</span>, 24 € la séance de rééducation périnéale, ≈ 63 € la visite à domicile après l'accouchement, déplacement compris. Mais <b>honoraires ≠ revenu</b> : 40 à 50 % partent en charges. Selon le rythme, compte <b>≈ 2 500 à 4 500 € net avant impôt</b> — pour des semaines de 35 à 50 h. La simulation détaillée est dans le livret.</span>
+            </li>
+            <li class="step">
+                <span class="n">3</span>
+                <span class="txt"><span class="lead">Et pendant les études ?</span> À partir de la <b>4ᵉ année</b>, tu deviens <b>agent public de l'hôpital</b> : ≈ 273 € brut par mois en 4ᵉ année, ≈ 336 € en 5ᵉ <span class="gl">(un statut d'étudiant hospitalier, comme les externes de médecine — symbolique, mais avec congés payés et protection sociale)</span>, pour des semaines déjà bien remplies entre cours et stages. Et les études coûtent peu : l'université publique, ≈ 180 € d'inscription par an. Le détail année par année est dans le livret.</span>
+            </li>
+        </ol>
+    </div>
+
+    <details class="livret">
+        <summary>📖 L'argent pendant les études, année par année<span class="chev">›</span></summary>
+        <div class="livret-body">
+            <p class="src" style="margin:0 0 9px;">Pas d'école privée à payer : la maïeutique est une filière universitaire publique. Et à partir de la <b>4ᵉ année</b>, c'est l'hôpital qui te paie :</p>
+            <table>
+                <thead><tr><th>Année</th><th>Ce que tu touches</th><th>Le détail</th></tr></thead>
+                <tbody>
+                    <tr><td><b>P1 (PASS ou LAS)</b></td><td>0 €</td><td>tu paies l'inscription universitaire ≈ 175-180 € + la CVEC ≈ 105 € (contribution vie étudiante)</td></tr>
+                    <tr><td><b>2ᵉ et 3ᵉ années</b></td><td>0 €</td><td>droits universitaires classiques ; premiers stages (non rémunérés) ; bourses possibles — Crous ou Région selon le statut de l'école</td></tr>
+                    <tr><td><b>4ᵉ année</b></td><td><b>3 277,64 € brut / an</b> ≈ 273 € / mois</td><td>statut d'étudiant hospitalier, agent public : congés payés, arrêts maladie, congé maternité</td></tr>
+                    <tr><td><b>5ᵉ année</b></td><td><b>4 034,20 € brut / an</b> ≈ 336 € / mois</td><td>même statut + long stage pré-professionnel en fin d'année</td></tr>
+                    <tr><td><b>6ᵉ année (dès 2028-2029)</b></td><td>à fixer</td><td>la rémunération du tout nouveau 3ᵉ cycle n'était pas encore publiée à l'été 2026 — les premières promotions y arriveront en 2028-2029</td></tr>
+                </tbody>
+            </table>
+            <p class="src">Montants fixés par l'arrêté du 7 octobre 2016 modifié — dernière revalorisation par l'<b>arrêté du 6 juillet 2023</b>, en vigueur en 2026. Selon les villes, l'école est encore « hospitalière » (bourses versées par la Région, pas par le Crous) ; la loi du 25 janvier 2023 prévoit l'intégration de toutes les écoles à l'université d'ici septembre 2027.<br>⏱️ En face : des semaines déjà denses — cours + stages à l'hôpital, gardes de stage comprises, dès la 2ᵉ année.</p>
+        </div>
+    </details>
+
+    <details class="livret">
+        <summary>📖 La grille hospitalière complète — 2 grades, 20 échelons<span class="chev">›</span></summary>
+        <div class="livret-body">
+            <p class="src" style="margin:0 0 9px;">La sage-femme hospitalière est fonctionnaire : son salaire suit une grille nationale à 2 grades de 10 échelons. Voici la grille en vigueur (relevée en janvier 2026), et le net estimé une fois ajoutées les deux primes fixes du métier :</p>
+            <table>
+                <thead><tr><th>Échelon</th><th>Durée</th><th>Brut mensuel (grille seule)</th><th>≈ net / mois, primes incluses</th></tr></thead>
+                <tbody>
+                    <tr><td><b>1ᵉʳ grade — éch. 1</b></td><td>1 an 6 mois</td><td>2 289,09 €</td><td><b>≈ 2 300 €</b></td></tr>
+                    <tr><td>Échelon 2</td><td>2 ans</td><td>2 422,01 €</td><td><b>≈ 2 400 €</b></td></tr>
+                    <tr><td>Échelon 3</td><td>2 ans</td><td>2 535,23 €</td><td><b>≈ 2 500 €</b></td></tr>
+                    <tr><td>Échelon 4</td><td>2 ans</td><td>2 628,77 €</td><td><b>≈ 2 580 €</b></td></tr>
+                    <tr><td>Échelon 5</td><td>3 ans</td><td>2 737,07 €</td><td><b>≈ 2 670 €</b></td></tr>
+                    <tr><td>Échelon 6</td><td>3 ans</td><td>2 860,14 €</td><td><b>≈ 2 770 €</b></td></tr>
+                    <tr><td>Échelon 7</td><td>3 ans</td><td>3 002,90 €</td><td><b>≈ 2 880 €</b></td></tr>
+                    <tr><td>Échelon 8</td><td>4 ans</td><td>3 185,04 €</td><td><b>≈ 3 030 €</b></td></tr>
+                    <tr><td>Échelon 9</td><td>4 ans</td><td>3 352,42 €</td><td><b>≈ 3 170 €</b></td></tr>
+                    <tr><td>Échelon 10</td><td>dernier</td><td>3 559,17 €</td><td><b>≈ 3 340 €</b></td></tr>
+                    <tr><td><b>2ᵉ grade (second grade) — par avancement</b></td><td></td><td></td><td></td></tr>
+                    <tr><td>Échelon 1</td><td>1 an 6 mois</td><td>2 796,14 €</td><td><b>≈ 2 720 €</b></td></tr>
+                    <tr><td>Échelon 5</td><td>3 ans</td><td>3 411,49 €</td><td><b>≈ 3 220 €</b></td></tr>
+                    <tr><td>Échelon 10</td><td>dernier</td><td>4 110,52 €</td><td><b>≈ 3 790 €</b></td></tr>
+                </tbody>
+            </table>
+            <p class="src">Grille indiciaire des sages-femmes des hôpitaux (fonction publique hospitalière), valeur du point 4,92278 €, relevée en janvier 2026. <b>≈ net / mois</b> : estimation prudente avant impôt — traitement brut moins les cotisations, plus les deux primes fixes versées en net : <b>complément Ségur 241 € brut (≈ 192 € net)</b> et <b>prime d'exercice médical 240 €</b> (décret n° 2022-260 du 25 février 2022). S'ajoutent encore, selon les postes : l'indemnité spécifique (figée sur l'indice détenu au 30 septembre 2021), les <b>nuits</b> (majorées à 25 % du taux horaire depuis le 1ᵉʳ janvier 2024), les dimanches et fériés (60 € l'indemnité forfaitaire) : souvent <b>+ 200 à 400 € par mois</b>.<br>⏱️ <b>Le temps de travail en face</b> : temps plein = 35 h en moyenne, en postes de <b>12 h</b> incluant nuits, week-ends et fériés (≈ 11-12 gardes par mois). Compte ≈ 25 ans pour atteindre le 10ᵉ échelon du 1ᵉʳ grade.</p>
+        </div>
+    </details>
+
+    <details class="livret">
+        <summary>📖 Le libéral n'a pas de grille : la simulation<span class="chev">›</span></summary>
+        <div class="livret-body">
+            <p class="src" style="margin:0 0 9px;">Hypothèses : cabinet conventionné (tarifs Assurance Maladie, sans dépassement), <b>4,5 jours par semaine</b>, <b>45 semaines par an</b> (les congés ne sont pas payés), panier moyen ≈ 28 € par acte (consultation 26,50 €, rééducation périnéale 24 €, visite à domicile 62,80 € déplacement compris, séances collectives 19,20 € par personne), charges ≈ <b>45 %</b> (fourchette réelle : 40 à 50 %).</p>
+            <table>
+                <thead><tr><th>Rythme</th><th>Honoraires / mois</th><th>≈ net avant impôt</th></tr></thead>
+                <tbody>
+                    <tr><td><b>12 actes / jour</b> (semaine ≈ 35 h)</td><td>≈ 5 650 €</td><td><b>≈ 3 100 €</b></td></tr>
+                    <tr><td><b>16 actes / jour</b> (semaine ≈ 42 h)</td><td>≈ 7 550 €</td><td><b>≈ 4 150 €</b></td></tr>
+                    <tr><td><b>20 actes / jour</b> (semaine ≈ 50 h)</td><td>≈ 9 450 €</td><td><b>≈ 5 200 €</b></td></tr>
+                </tbody>
+            </table>
+            <p class="src">Tarifs réels affichés par un cabinet parisien au <b>23 février 2026</b>, conformes à la convention nationale (en vigueur depuis le 1ᵉʳ janvier 2025 : lettre-clé SF portée à 3,20 €, consultation 23 € + majoration sage-femme 3,50 € ; la visite à domicile après l'accouchement inclut la majoration de déplacement de 10 € créée par l'avenant 7). Garde les pieds sur terre : un agenda n'est jamais rempli à 100 %, les trajets et l'administratif ne sont pas payés, et beaucoup choisissent un rythme partiel — les revenus réellement observés se situent plus souvent entre <b>2 500 et 4 500 € net / mois</b>. La dernière grande mesure nationale (DREES) donnait ≈ 32 000 € net par an en 2014, avant les revalorisations de l'avenant 7 signé en 2023 (+ 61 millions d'euros d'honoraires sur deux ans pour la profession).<br>⏱️ Les heures indiquées incluent soins, trajets à domicile et paperasse — et la disponibilité téléphonique s'ajoute.</p>
+        </div>
+    </details>
+
+    <div class="duo">
+    <div class="illu">
+        <figure class="schema-box illu illu-mid">
+            <img src="../images/metiers/fiche_metier_sage_femme_remuneration.png"
+                 alt="Deux petites scènes : à gauche la libérale (sage-femme et patiente, pièce de 26,50 €, barre charges/net) ; à droite la salariée (hôpital, escalier de grille, pastille nuits)."
+                 onerror="schemaMissing(this)">
+            <div class="file-target">📁 <strong>fiche_metier_sage_femme_remuneration.png</strong><br>à placer dans : <strong>/public/images/metiers/</strong><br><span style="color:#555;font-weight:400;">Petite illustration SANS fond (PNG transparent) : scène libérale (patiente → 26,50 € → barre charges/net) à gauche, scène salariée (escalier de grille + pastille nuits) à droite.</span></div>
+            <figcaption class="caption">À l'acte en libéral, <strong>sur une grille</strong> à l'hôpital — nuits et dimanches payés en plus.</figcaption>
+            <div class="generation-prompt"><strong>Prompt ChatGPT-image :</strong>
+Charming minimal flat 2-D vector illustration, light and airy, FLAT SOLID pastel colours only, thin clean outlines, isolated on a fully TRANSPARENT background (PNG with alpha) — no background shape, no frame, no card, no drop shadow, absolutely NO dark background, NO glow, NO neon, NO blur, NO soft halos around elements: crisp flat shapes on pure transparency, as in a clean SVG icon set. Two small scenes side by side, separated by generous empty space. LEFT scene, French label « Libérale » in violet #6B46C1 above it: a flat midwife silhouette in a violet tunic at a small desk facing one seated patient silhouette, below them one violet coin marked only « 26,50 € » in white, and under the coin one short horizontal rounded bar split roughly in half — warm terracotta half labelled « Charges », violet half labelled « Net » with a thin yellow #FCD34D ring around it (the only yellow accent). RIGHT scene, French label « Salariée » in deep blue #1F4E8C above it: a small flat hospital building with a tiny heart above the door, beside an ascending staircase of five deep-blue steps with a thin grey rising arrow, one label « Grille » under the staircase, plus one small honey-amber disc with a crescent-moon pictogram labelled « + Nuits ». Exactly seven short French labels in the whole image, small clean sans-serif. AVOID: any English text, gibberish or misspelled words, any number other than 26,50 €, 3-D, photorealism, shadows, any background colour, frames, borders, watermark, banknote piles, piggy banks, dollar signs, percentages, pie charts, realistic faces, red cross emblem.
+            </div>
+            <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+        </figure>
+    </div>
+    <div class="pass-tip">
+        Ces montants sont des <strong>moyennes, pas des promesses</strong> : entre une libérale qui démarre sa patientèle et une hospitalière expérimentée qui enchaîne les nuits, les fiches de paie ne se ressemblent pas. On ne choisit pas sage-femme pour s'enrichir : on la choisit pour l'<strong>autonomie médicale</strong> rare à ce niveau d'études, l'intensité humaine — et une vraie <strong>sécurité d'emploi</strong> : les maternités recrutent, le libéral se développe, et les revalorisations de 2022-2024 (primes, grilles, nuits, tarifs) sont allées dans le bon sens, même si la profession continue de se battre pour mieux.
+    </div>
+    </div>
+
+    <h2 class="section-title">Le chemin depuis la Terminale</h2>
+    <div class="illu">
+        <figure class="schema-box illu illu-wide">
+            <img src="../images/metiers/fiche_metier_sage_femme_parcours.png"
+                 alt="Chemin montant de la Terminale au métier de sage-femme : P1 (1 an), 2ᵉ-3ᵉ année (2 ans), 4ᵉ-5ᵉ année (2 ans), thèse (1 an) — arc « 6 ans »."
+                 onerror="schemaMissing(this)">
+            <div class="file-target">📁 <strong>fiche_metier_sage_femme_parcours.png</strong><br>à placer dans : <strong>/public/images/metiers/</strong><br><span style="color:#555;font-weight:400;">Bandeau SANS fond (PNG transparent) : chemin montant à cinq jalons avec durées, losange thèse, silhouette finale de sage-femme, arc « 6 ans » au-dessus.</span></div>
+            <figcaption class="caption">Compte <strong>6 ans après le bac</strong> — rémunérée par l'hôpital dès la 4ᵉ année.</figcaption>
+            <div class="generation-prompt"><strong>Prompt ChatGPT-image :</strong>
+Charming minimal flat 2-D vector illustration, light and airy, FLAT SOLID pastel colours only, thin clean outlines, isolated on a fully TRANSPARENT background (PNG with alpha) — no background shape, no frame, no card, no drop shadow, absolutely NO dark background, NO glow, NO neon, NO blur, NO soft halos around elements: crisp flat shapes on pure transparency, as in a clean SVG icon set. Wide banner. A thin light-grey path rises gently from bottom-left to upper-right with soft curves. Along it, five milestones and a final figure, spacing roughly proportional to duration: warm terracotta dot with a schoolbag pictogram, label « Terminale » ; violet #6B46C1 dot with an open book, label « P1 », tiny grey « 1 an » ; deep blue #1F4E8C dot with a stethoscope, label « 2e-3e année », tiny grey « 2 ans » ; honey amber dot with a small hospital, label « 4e-5e année », tiny grey « 2 ans » ; one yellow #FCD34D diamond with a tiny graduation cap, label « Thèse », tiny grey « 1 an » (the only yellow accent). At the end of the path, upper right, one small flat midwife silhouette in a violet tunic, blank face, holding a tiny swaddled newborn, label « Sage-femme ». Above the whole path, one thin light-grey arc from the first dot to the final figure with the single violet label « 6 ans ». Small clean French sans-serif labels, lots of empty space. AVOID: any English text, gibberish or misspelled words, 3-D, photorealism, shadows, any background colour, frames, borders, watermark, extra numbers, more than six milestones, hourglasses, calendars, sad or stressed characters, red cross emblem, stork.
+            </div>
+            <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+        </figure>
+    </div>
+
+    <div class="steps">
+        <div class="steps-title">6 étapes — 6 ans après le bac</div>
+        <ol>
+            <li class="step">
+                <span class="n">1</span>
+                <span class="txt"><span class="lead">Terminale — Parcoursup.</span> Tu formules tes vœux vers les études de santé (PASS ou LAS). Un dossier régulier et des <b>spécialités scientifiques</b> (SVT, physique-chimie) sont tes meilleurs alliés.</span>
+            </li>
+            <li class="step">
+                <span class="n">2</span>
+                <span class="txt"><span class="lead">La P1 (voies PASS ou LAS) — 1 an.</span> L'année d'entrée, commune avec les futurs médecins, dentistes et pharmaciens : un <b>classement</b> décide de ta place — environ <b>1 000 places de maïeutique</b> par an dans toute la France. Ce n'est pas réservé aux génies : ceux qui décrochent leur place sont très souvent ceux qui arrivent avec une vraie <b>méthode de travail</b> dès les premières semaines.</span>
+            </li>
+            <li class="step">
+                <span class="n">3</span>
+                <span class="txt"><span class="lead">2ᵉ et 3ᵉ années — 2 ans.</span> Bienvenue à l'école de maïeutique : des promotions à taille humaine — souvent <b>25 à 40 étudiants</b> selon les villes — où tout le monde se connaît. Sciences du corps, obstétrique, gynécologie… et déjà des <b>stages</b> — la salle de naissance, tu y entres très tôt. Fin du 1ᵉʳ cycle : le DFGSMa <span class="gl">(le diplôme de niveau licence de la filière)</span>.</span>
+            </li>
+            <li class="step">
+                <span class="n">4</span>
+                <span class="txt"><span class="lead">4ᵉ et 5ᵉ années — 2 ans.</span> Le 2ᵉ cycle : tu deviens <b>agent public rémunéré</b>, les stages s'intensifient et tu pratiques déjà des <b>accouchements</b>, toujours encadrée. La 5ᵉ année se conclut par un long stage pré-professionnel.</span>
+            </li>
+            <li class="step">
+                <span class="n">5</span>
+                <span class="txt"><span class="lead">La 6ᵉ année — 1 an, la nouveauté.</span> Le 3ᵉ cycle créé en 2024 : approfondissements, construction du projet professionnel et <b>thèse d'exercice</b>. Tu sors <b>docteur(e) en maïeutique</b>.</span>
+            </li>
+            <li class="step">
+                <span class="n">6</span>
+                <span class="txt"><span class="lead">Ton premier poste.</span> Le plus souvent en <b>salle de naissance</b> d'une maternité — l'emploi est quasi assuré, les maternités recrutent. Le libéral, la PMI, la clinique ou l'exercice mixte viennent souvent après quelques années d'hôpital.</span>
+            </li>
+        </ol>
+    </div>
+
+    <p class="fine-note">Deux chantiers bougent autour de ce métier. Les études viennent de passer de 5 à 6 ans : le décret du 3 juillet 2024 crée un 3ᵉ cycle d'un an conclu par une thèse — si tu entres en P1 à la rentrée 2026 ou après, tu es concerné(e) et tu sortiras <strong>docteur(e) en maïeutique</strong> (les toutes premières 6ᵉ années ouvriront en 2028-2029). Côté admission, une « licence santé » unique a été annoncée en avril 2026 pour remplacer le PASS et la LAS, visée pour la rentrée 2027 — le calendrier peut encore bouger. Quel que soit son nom, la première année restera <strong>classante</strong> — la méthode de travail restera le nerf de la guerre.</p>
+
+    <div class="recap">
+        <div class="box retenir">
+    <div class="illu spot-corner">
+        <figure class="schema-box illu illu-spot">
+            <img src="../images/metiers/fiche_metier_sage_femme_spot.png"
+                 alt="Deux mains violettes stylisées berçant un nouveau-né emmailloté dans une couverture terracotta, un petit cœur au-dessus."
+                 onerror="schemaMissing(this)">
+            <div class="file-target">📁 <strong>fiche_metier_sage_femme_spot.png</strong><br>à placer dans : <strong>/public/images/metiers/</strong><br><span style="color:#555;font-weight:400;">Mini-illustration SANS fond (PNG transparent) : deux mains berçant un nouveau-né emmailloté, un petit cœur. Aucun texte.</span></div>
+            <div class="generation-prompt"><strong>Prompt ChatGPT-image :</strong>
+Charming minimal flat 2-D vector illustration, light and airy, FLAT SOLID pastel colours only, thin clean outlines, isolated on a fully TRANSPARENT background (PNG with alpha) — no background shape, no frame, no card, no drop shadow, absolutely NO dark background, NO glow, NO neon, NO blur, NO soft halos around elements: crisp flat shapes on pure transparency, as in a clean SVG icon set. A single tiny spot motif: two soft violet #6B46C1 flat hands gently cradling a tiny sleeping swaddled newborn wrapped in a warm terracotta blanket, one small deep blue #1F4E8C heart floating just above, and one tiny yellow #FCD34D four-point spark beside it (the only yellow accent). No text at all. AVOID: any text or letters, gibberish, 3-D, photorealism, shadows, any background colour, frames, borders, watermark, realistic faces, red cross emblem, stork, religious imagery.
+            </div>
+            <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+        </figure>
+    </div>
+            <span class="lbl">Fait pour toi si…</span>
+            Tu aimes l'idée que la <b>biologie</b> serve des moments de vie bien réels, pas seulement des schémas dans un livre. Tu sais <b>garder ton calme</b> quand tout s'accélère — ou tu as envie de l'apprendre pour de bon. Tu aimes autant le <b>geste technique</b> (monitoring, échographie, accouchement) que la <b>relation</b> qui se tisse avec une famille sur neuf mois. Tu veux des <b>responsabilités tôt</b>, en vraie autonomie, sans dix ans d'études. Et accompagner des gens dans les plus grands jours de leur vie — parfois dans les plus durs — te donne envie plutôt que peur.
+        </div>
+        <div class="box piege">
+            <span class="lbl">Ce qu'on te dit moins</span>
+            Un pan du métier qu'on n'imagine pas : la <b>santé mentale</b>. Dans l'année qui suit une naissance, le <b>suicide est la première cause de décès maternel</b> — c'est pour ça qu'un entretien est désormais prévu après l'accouchement, et que savoir écouter compte autant que le geste technique.
+            Des <b>nuits, des week-ends et des jours fériés</b> toute l'année à l'hôpital — les bébés ne regardent pas le calendrier. Une <b>responsabilité</b> réelle dès le premier poste : l'obstétrique est l'une des disciplines les plus à risques de la médecine, au même titre que l'anesthésie et la chirurgie, et tout ne finit pas toujours bien — la charge émotionnelle fait partie du métier. Côté paie, les revalorisations de 2022-2024 sont réelles, mais la profession juge encore les salaires hospitaliers modestes au regard des responsabilités. Autant y aller en le sachant, et pour les bonnes raisons : un emploi quasi assuré, une autonomie médicale rare — et le <b>premier cri</b> comme quotidien.
+        </div>
+    </div>
+
+    <a class="qcm-cta" style="display:none" href="/ressources/qcm-decouverte/decouverte-metier-sage-femme" target="_top">
+        <span class="qcm-body">
+            <span class="qcm-k">Teste tes idées reçues en 3 questions</span>
+            <span class="qcm-t">QCM — Le métier de sage-femme</span>
+        </span>
+        <span class="qcm-arrow" aria-hidden="true">→</span>
+    </a>
+    <div class="bio-hint">📲 Pour faire le QCM gratuit → <strong>lien en bio</strong></div>
+
+    <footer class="chapter-footer">
+        <p>Une fiche <strong>Medeos</strong> · pour anticiper la P1, sereinement · medeos-sante.fr</p>
+    </footer>
+
+</div>
+
+<div id="medeos-lightbox" role="dialog" aria-label="Schéma agrandi" aria-modal="true" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(26,26,46,0.92);overflow:auto;-webkit-overflow-scrolling:touch;touch-action:pinch-zoom;cursor:zoom-out;">
+    <button type="button" aria-label="Fermer" onclick="closeLightbox()" style="position:fixed;top:14px;right:16px;z-index:10003;width:42px;height:42px;border-radius:50%;border:none;background:rgba(255,255,255,0.14);color:#fff;font-size:24px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);">&times;</button>
+    <div id="medeos-zoom-bar" style="position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:10003;display:flex;gap:8px;align-items:center;background:rgba(255,255,255,0.14);backdrop-filter:blur(4px);padding:7px 10px;border-radius:999px;">
+        <button type="button" aria-label="Dézoomer" onclick="lbZoom(-1,event)" style="width:38px;height:38px;border-radius:50%;border:none;background:rgba(255,255,255,0.9);color:#1A1A2E;font-size:22px;font-weight:700;line-height:1;cursor:pointer;">&minus;</button>
+        <button type="button" aria-label="Réinitialiser le zoom" onclick="lbReset(event)" style="height:38px;padding:0 14px;border-radius:999px;border:none;background:rgba(255,255,255,0.9);color:#1A1A2E;font-size:13px;font-weight:700;cursor:pointer;">100&nbsp;%</button>
+        <button type="button" aria-label="Zoomer" onclick="lbZoom(1,event)" style="width:38px;height:38px;border-radius:50%;border:none;background:rgba(255,255,255,0.9);color:#1A1A2E;font-size:22px;font-weight:700;line-height:1;cursor:pointer;">+</button>
+    </div>
+    <div id="medeos-lightbox-stage" onclick="lbStageClick(event)" style="min-height:100%;display:flex;align-items:center;justify-content:center;padding:64px 16px;">
+        <div style="position:relative;display:inline-flex;">
+            <img id="medeos-lightbox-img" src="" alt="Schéma agrandi" ondblclick="lbToggleZoom(event)" style="display:block;border-radius:10px;box-shadow:0 10px 40px rgba(0,0,0,0.5);transform-origin:center center;transition:transform .18s ease;max-width:none;cursor:zoom-in;">
+            <div aria-hidden="true" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;">
+                <span style="font-family:'Inter',Arial,sans-serif;font-size:clamp(11px,4vw,30px);font-weight:700;letter-spacing:clamp(1px,1vw,6px);text-transform:uppercase;color:rgba(120,120,120,0.16);white-space:nowrap;">medeos-sante.fr</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var lbScale = 1, lbBaseW = 0;
+    function openLightbox(src) {
+        var lb = document.getElementById('medeos-lightbox');
+        var img = document.getElementById('medeos-lightbox-img');
+        lbScale = 1;
+        img.onload = function () {
+            // Taille de base : on s'aligne sur la largeur dispo (max 96vw) ou la taille native si plus petite.
+            var availW = Math.min(window.innerWidth * 0.96, this.naturalWidth);
+            var availH = window.innerHeight * 0.84;
+            var ratio = Math.min(availW / this.naturalWidth, availH / this.naturalHeight, 1);
+            lbBaseW = Math.max(120, Math.round(this.naturalWidth * ratio));
+            this.style.width = lbBaseW + 'px';
+            this.style.height = 'auto';
+            lbApply();
+        };
+        img.src = src;
+        lb.style.display = 'block';
+        lb.scrollTop = 0; lb.scrollLeft = 0;
+        document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+        document.getElementById('medeos-lightbox').style.display = 'none';
+        document.body.style.overflow = '';
+    }
+    function lbApply() {
+        var img = document.getElementById('medeos-lightbox-img');
+        img.style.transform = 'scale(' + lbScale + ')';
+        img.style.cursor = lbScale > 1 ? 'zoom-out' : 'zoom-in';
+        var lbl = document.querySelector('#medeos-zoom-bar button[onclick^="lbReset"]');
+        if (lbl) lbl.innerHTML = Math.round(lbScale * 100) + '&nbsp;%';
+    }
+    function lbZoom(dir, e) {
+        if (e) { e.stopPropagation(); e.preventDefault(); }
+        lbScale = Math.min(4, Math.max(1, +(lbScale + dir * 0.5).toFixed(2)));
+        lbApply();
+    }
+    function lbReset(e) { if (e) { e.stopPropagation(); e.preventDefault(); } lbScale = 1; lbApply(); }
+    function lbToggleZoom(e) { if (e) { e.stopPropagation(); e.preventDefault(); } lbScale = lbScale > 1 ? 1 : 2; lbApply(); }
+    function lbStageClick(e) { if (e.target.id === 'medeos-lightbox-stage') closeLightbox(); } // clic dans le vide = fermer
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeLightbox();
+        else if (document.getElementById('medeos-lightbox').style.display === 'block') {
+            if (e.key === '+' || e.key === '=') lbZoom(1);
+            else if (e.key === '-') lbZoom(-1);
+            else if (e.key === '0') lbReset();
+        }
+    });
+    document.getElementById('medeos-lightbox').addEventListener('wheel', function (e) {
+        if (this.style.display !== 'block') return;
+        if (e.ctrlKey || Math.abs(e.deltaY) > 0) { /* molette = zoom */ }
+        e.preventDefault();
+        lbScale = Math.min(4, Math.max(1, +(lbScale - Math.sign(e.deltaY) * 0.25).toFixed(2)));
+        lbApply();
+    }, { passive: false });
+    function schemaMissing(img) { img.style.display = 'none'; var b = img.closest('.schema-box'); if (b) b.classList.add('img-missing'); }
+</script>
+</body>
+</html>

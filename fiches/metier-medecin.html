@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Médecin : le métier en vrai — Fiche Medeos</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 15px; line-height: 1.6; color: #2c3e50; background: #f6f8fb; padding: 22px; max-width: 760px; margin: 0 auto; }
+    .page-container { position: relative; }
+    .page-container::before { display: none; }
+    .page-container > * { position: relative; z-index: 1; }
+    .prod-brand { margin: 0 0 14px; }
+    .prod-brand img { height: 27px; width: auto; display: block; margin: 0 auto; }
+    .hook-header { background: #FAF6F0; border-radius: 14px; padding: 26px 30px 22px; box-shadow: 0 4px 18px rgba(76,42,133,0.08); border: 1px solid #efe7d8; }
+    .hook-header .brand-tag { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #6B46C1; font-weight: 600; opacity: 0.85; margin-bottom: 12px; }
+    .hook-header .course-title { font-size: 28px; line-height: 1.1; font-weight: 800; color: #4C2A85; letter-spacing: -0.7px; margin: 0 0 12px; }
+    .hook-header .punch { font-size: 18px; line-height: 1.3; font-weight: 800; color: #1A1A2E; letter-spacing: -0.3px; margin: 0; }
+    .hook-header .punch span.accent { color: #6B46C1; }
+    .hook-header .punch + .punch { margin-top: 5px; }
+    .intro { font-size: 15.5px; line-height: 1.7; color: #2c3e50; margin: 20px 2px; }
+    .intro strong { font-weight: 700; color: #4C2A85; }
+    em.hl { background: linear-gradient(180deg, transparent 60%, #FCD34D 60%); font-style: normal; padding: 0 2px; }
+    .schema-box { background: #fff; border: 2px solid #6B46C1; padding: 12px; text-align: center; border-radius: 12px; box-shadow: 0 4px 15px rgba(107, 70, 193, 0.15); position: relative; overflow: hidden; }
+    .schema-box::before { content: 'medeos-sante.fr'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: 'Inter', Arial, sans-serif; font-size: 14px; font-weight: 700; color: rgba(120,120,120,0.13); letter-spacing: 2px; text-transform: uppercase; pointer-events: none; user-select: none; z-index: 5; white-space: nowrap; max-width: 92%; overflow: hidden; }
+    .schema-box img { max-width: 100%; max-height: 300px; height: auto; border-radius: 8px; display: block; margin: 0 auto; cursor: zoom-in; }
+    .schema-box .schema-num { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 0.6px; text-transform: uppercase; color: #6B46C1; margin-bottom: 6px; }
+    .schema-box .caption { font-size: 12px; color: #6b6275; margin-top: 9px; font-weight: 500; }
+    .schema-box .caption strong { color: #6B46C1; }
+    .schema-box .file-target { display: none; margin-top: 10px; padding: 8px 12px; background: #e8f5e9; border: 1px solid #a5d6a7; border-radius: 6px; font-family: 'SFMono-Regular', Consolas, monospace; font-size: 11.5px; color: #1b5e20; text-align: left; line-height: 1.5; }
+    .schema-box .file-target strong { color: #2e7d32; }
+    .schema-box .generation-prompt { background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border: 2px dashed #ff9800; border-radius: 8px; padding: 13px; margin-top: 12px; text-align: left; font-size: 11.5px; color: #e65100; line-height: 1.55; white-space: pre-wrap; }
+    .schema-box .generation-prompt strong { color: #bf360c; display: block; margin-bottom: 8px; font-size: 12.5px; background: #ffcc80; padding: 7px 11px; border-radius: 4px; }
+    .schema-box .copy-prompt-btn { display: none; margin-top: 8px; padding: 6px 12px; background: #ff9800; color: #fff; border: none; border-radius: 4px; font-size: 12px; cursor: pointer; font-weight: 600; }
+    .schema-box .copy-prompt-btn:hover { background: #f57c00; }
+    .schema-box .generation-prompt { display: none; }
+    .schema-box.img-missing .generation-prompt { display: block; }
+    .schema-box.img-missing .copy-prompt-btn { display: inline-block; }
+    .schema-box.img-missing .file-target { display: block !important; }
+    .schema-2up { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; align-items: stretch; }
+    .schema-2up .schema-box { margin: 0; display: flex; flex-direction: column; }
+    .schema-2up .schema-box img { height: 230px; width: 100%; max-height: none; object-fit: contain; }
+    .schema-2up .schema-box .caption { margin-top: auto; }
+    @media (max-width: 720px) { .schema-2up { grid-template-columns: 1fr; } .schema-2up .schema-box img { height: auto; max-height: 300px; } }
+    .steps { background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%); border-left: 5px solid #6B46C1; border-radius: 0 12px 12px 0; padding: 18px 22px; margin: 20px 0; box-shadow: 0 2px 10px rgba(107,70,193,0.08); }
+    .steps .steps-title { font-size: 15px; font-weight: 800; color: #4C2A85; margin-bottom: 13px; }
+    .steps ol { list-style: none; margin: 0; padding: 0; }
+    .step { display: grid; grid-template-columns: 28px 1fr; gap: 12px; align-items: start; margin-bottom: 12px; }
+    .step:last-child { margin-bottom: 0; }
+    .step .n { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 999px; background: #6B46C1; color: #fff; font-size: 13px; font-weight: 800; }
+    .step .txt { font-size: 14.5px; line-height: 1.5; color: #2c3e50; padding-top: 2px; }
+    .step .txt b { color: #4C2A85; font-weight: 700; }
+    .step .txt .gl { color: #6b6275; font-weight: 400; }
+    .step .txt .lead { font-weight: 800; color: #1A1A2E; }
+    .pass-tip { background: #fdf6ec; border-left: 6px solid #B8895A; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; box-shadow: 0 3px 12px rgba(184,137,90,0.14); font-size: 14.5px; line-height: 1.55; }
+    .pass-tip::before { content: "Parlons vrai"; display: block; font-weight: 700; font-size: 12px; color: #9a6a37; margin-bottom: 7px; letter-spacing: 0.8px; text-transform: uppercase; }
+    .pass-tip strong { color: #9a6a37; }
+    .recap { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
+    .recap .box { border-radius: 12px; padding: 15px 18px; font-size: 14px; line-height: 1.5; }
+    .recap .retenir { background: #F1ECFA; border: 1px solid #dccff2; }
+    .recap .piege { background: #FFFBEB; border: 1px solid #F6E4A8; }
+    .recap .box .lbl { display: block; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 7px; }
+    .recap .retenir .lbl { color: #6B46C1; }
+    .recap .piege .lbl { color: #9a6d00; }
+    .recap b { font-weight: 700; color: #1A1A2E; }
+    .qcm-cta { display: flex; align-items: center; gap: 16px; text-decoration: none; color: inherit; background: #fff; border: 1px solid #d6c6f0; border-radius: 14px; padding: 18px 22px; margin: 24px 0 6px; box-shadow: 0 9px 26px -16px rgba(107,70,193,.4); transition: transform .18s ease, box-shadow .18s ease; }
+    .qcm-cta:hover { transform: translateY(-2px); box-shadow: 0 16px 38px -16px rgba(107,70,193,.5); }
+    .qcm-cta:focus-visible { outline: 3px solid #6B46C1; outline-offset: 2px; }
+    .qcm-cta .qcm-body { flex: 1; }
+    .qcm-cta .qcm-k { font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #6B46C1; }
+    .qcm-cta .qcm-t { font-size: 18px; font-weight: 800; color: #1A1A2E; margin-top: 3px; letter-spacing: -0.3px; }
+    .qcm-cta .qcm-arrow { flex: none; width: 42px; height: 42px; border-radius: 11px; background: #6B46C1; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700; }
+    .chapter-footer { text-align: center; margin-top: 22px; padding-top: 16px; border-top: 1px solid #e6dfd1; color: #7a8088; font-size: 12px; }
+    .chapter-footer strong { color: #6b6275; }
+    .bio-hint { display: none; }
+    .section-title { font-size: 19px; font-weight: 800; color: #4C2A85; letter-spacing: -0.3px; margin: 28px 2px 6px; }
+    .fine-note { font-size: 12.5px; color: #6b6275; margin: 10px 2px 0; line-height: 1.5; }
+    /* Placements variés des illustrations */
+    .illu-float-right { float: right; width: min(48%, 320px); margin: 4px 0 10px 18px; }
+    .illu-float-right img { width: 100%; max-height: none; }
+    .section-title { clear: both; }
+    .duo { display: grid; grid-template-columns: 250px 1fr; gap: 16px; align-items: center; margin: 20px 0; }
+    .duo .illu { margin: 0; }
+    .duo .illu img { width: 100%; max-height: none; }
+    .duo .pass-tip { margin: 0; }
+    .spot-corner { float: right; width: 74px; margin: 0 0 4px 12px; }
+    .spot-corner img { width: 100%; max-height: none; }
+    .recap .box { overflow: hidden; }
+    /* Mode brouillon (image manquante) : tout repasse en pleine largeur */
+    .illu:has(.img-missing) { float: none !important; width: auto !important; }
+    .duo:has(.img-missing) { grid-template-columns: 1fr; }
+    @media (max-width: 600px) {
+        .illu-float-right { float: none; width: 72%; margin: 12px auto; }
+        .duo { grid-template-columns: 1fr; }
+        .spot-corner { width: 58px; margin-left: 8px; }
+    }
+    /* Illustrations légères : pas de cadre, pas de fond, pas de zoom */
+    .illu { margin: 18px auto 8px; }
+    .schema-box.illu { border: none; box-shadow: none; background: transparent; padding: 0; overflow: visible; }
+    .schema-box.illu::before { content: none; }
+    .schema-box.illu img { cursor: default; max-height: none; }
+    .illu-mid img { max-height: 250px; }
+    .illu-wide img { max-height: 220px; width: 100%; object-fit: contain; }
+    .illu-slim img { max-height: 150px; width: 100%; object-fit: contain; }
+    .illu-spot img { max-height: 96px; }
+    .schema-box.illu .caption { margin-top: 5px; font-size: 12px; }
+    .schema-box.illu.img-missing { background: #fff; border: 2px dashed #ffb74d; border-radius: 12px; padding: 12px; }
+    /* Livrets dépliables (grilles de rémunération) */
+    .livret { border: 1px solid #e3d9f2; background: #fff; border-radius: 12px; margin: 12px 0; overflow: hidden; }
+    .livret summary { cursor: pointer; list-style: none; display: flex; align-items: center; gap: 10px; padding: 13px 16px; font-weight: 700; font-size: 14px; color: #4C2A85; background: #F7F4FC; }
+    .livret summary::-webkit-details-marker { display: none; }
+    .livret summary .chev { margin-left: auto; color: #6B46C1; font-weight: 800; transition: transform .18s ease; }
+    .livret[open] summary .chev { transform: rotate(90deg); }
+    .livret .livret-body { padding: 12px 16px 14px; overflow-x: auto; }
+    .livret table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .livret th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: .6px; color: #6B46C1; padding: 6px 8px; border-bottom: 2px solid #ede7f8; white-space: nowrap; }
+    .livret td { padding: 6px 8px; border-bottom: 1px solid #f1edf8; color: #2c3e50; line-height: 1.45; }
+    .livret tr:last-child td { border-bottom: none; }
+    .livret td b { color: #4C2A85; }
+    .livret .src { font-size: 11.5px; color: #8a8494; margin-top: 9px; line-height: 1.5; }
+    @media print { .section-title { font-size: 22px; } .fine-note { font-size: 14px; } }
+    /* ===== IMPRESSION / PDF — format REEL 9:16 (1080×1920), agrandi pour remplir ===== */
+    @media print {
+        @page { size: 1080px 1920px; margin: 42px; }
+        body { background: #fff; padding: 0; max-width: 996px; font-size: 17px; }
+        .page-container::before { display: none; }
+        .prod-brand { margin: 0 0 12px; }
+        .prod-brand img { height: 38px; }
+        .hook-header { padding: 22px 30px; box-shadow: none; }
+        .hook-header .brand-tag { font-size: 12px; margin-bottom: 10px; }
+        .hook-header .course-title { font-size: 34px; margin-bottom: 10px; }
+        .hook-header .punch { font-size: 21px; }
+        .intro { font-size: 17px; line-height: 1.55; margin: 18px 2px; }
+        .schema-2up { margin: 18px 0; gap: 20px; }
+        .schema-box { padding: 12px; box-shadow: none; }
+        .schema-2up .schema-box img { height: 300px; }
+        .schema-box .schema-num { font-size: 12.5px; margin-bottom: 5px; }
+        .schema-box .caption { font-size: 14px; margin-top: 8px; }
+        .steps { padding: 20px 26px; margin: 18px 0; box-shadow: none; }
+        .steps .steps-title { font-size: 19px; margin-bottom: 13px; }
+        .step { margin-bottom: 11px; gap: 13px; }
+        .step .n { width: 30px; height: 30px; font-size: 14px; }
+        .step .txt { font-size: 16.5px; line-height: 1.5; padding-top: 2px; }
+        .pass-tip { padding: 16px 22px; margin: 18px 0; font-size: 16.5px; box-shadow: none; }
+        .recap { gap: 16px; margin: 18px 0; }
+        .recap .box { padding: 15px 20px; font-size: 15.5px; }
+        .recap .box .lbl { font-size: 12.5px; }
+        .qcm-cta { padding: 17px 24px; margin: 18px 0 6px; box-shadow: none; }
+        .qcm-cta .qcm-k { font-size: 12.5px; }
+        .qcm-cta .qcm-t { font-size: 20px; }
+        .qcm-cta .qcm-arrow { width: 44px; height: 44px; font-size: 20px; }
+        .bio-hint { display: block; text-align: center; margin: 12px 0 0; font-size: 17px; font-weight: 800; color: #6B46C1; }
+        .bio-hint strong { color: #4C2A85; }
+        .chapter-footer { margin-top: 14px; padding-top: 12px; font-size: 14px; }
+        .schema-2up, .schema-box, .steps, .recap, .pass-tip, .qcm-cta { page-break-inside: avoid; }
+    }
+    @media (max-width: 600px) {
+        body { padding: 14px; }
+        .hook-header { padding: 22px 18px 18px; }
+        .hook-header .course-title { font-size: 24px; }
+        .hook-header .punch { font-size: 16px; }
+        .recap { grid-template-columns: 1fr; }
+        .intro, .pass-tip, .step .txt, .recap .box { text-align: left; }
+        .schema-box::before { color: rgba(107,70,193,0.20); font-size: 11px; letter-spacing: 1px; max-width: 90%; }
+    }
+
+    /* === mobile-polish + zoom-bar ordi only === */
+    /* La barre de zoom (− / 100 % / +) est réservée à l'ordinateur : sur mobile,
+       le pinch-to-zoom natif suffit. On la masque sous la largeur tactile. */
+    @media (max-width: 768px) {
+        #medeos-zoom-bar { display: none !important; }
+    }
+    /* Agencement mobile soigné : le titre ne déborde jamais, le hook respire. */
+    @media (max-width: 600px) {
+        body { padding: 14px 13px 18px; }
+        .hook-header { padding: 20px 17px 16px; }
+        .hook-header .course-title {
+            font-size: clamp(20px, 6.4vw, 25px);
+            line-height: 1.12;
+            letter-spacing: -0.4px;
+            overflow-wrap: anywhere;
+            hyphens: auto;
+        }
+        .hook-header .punch { font-size: clamp(14.5px, 4.4vw, 17px); line-height: 1.3; }
+        .hook-header .brand-tag { font-size: 10.5px; letter-spacing: 1.2px; }
+        .intro { font-size: 15px; }
+        .schema-2up { gap: 14px; }
+        .steps { padding: 18px 16px; }
+        .steps .steps-title { font-size: 15px; }
+        .step .txt { font-size: 14.5px; }
+        .qcm-cta { padding: 15px 16px; gap: 12px; }
+        .qcm-cta .qcm-t { font-size: 16px; }
+        .qcm-cta .qcm-arrow { width: 38px; height: 38px; font-size: 18px; }
+        /* boutons de la lightbox plus gros au doigt */
+        #medeos-lightbox button[aria-label="Fermer"] { width: 46px; height: 46px; font-size: 26px; }
+    }
+</style>
+</head>
+<body>
+<div class="page-container">
+
+    <div class="prod-brand"><img src="../images/logo-medeos-violet-texte.png" alt="Medeos"></div>
+
+    <header class="hook-header">
+        <div class="brand-tag">Ressource gratuite · Découverte métier</div>
+        <h1 class="course-title">Médecin : le métier en vrai</h1>
+        <p class="punch"><span class="accent">Sur 1 000 personnes</span> qui ont mal quelque part, 250 poussent la porte d'un cabinet… et une seule finit au CHU, l'hôpital universitaire. Le médecin veille sur tout ce chemin.</p>
+        <p class="punch">Un seul diplôme, <span class="accent">mille façons de l'exercer</span> — et un salaire dès l'internat.</p>
+    </header>
+
+    <div class="illu illu-float-right">
+        <figure class="schema-box illu illu-mid">
+            <img src="../images/metiers/fiche_metier_medecin_univers.png"
+                 alt="Un médecin stylisé au centre, relié à six pastilles rondes : cabinet, hôpital, urgences, pédiatrie, humanitaire, recherche."
+                 onerror="schemaMissing(this)">
+            <div class="file-target">📁 <strong>fiche_metier_medecin_univers.png</strong><br>à placer dans : <strong>/public/images/metiers/</strong><br><span style="color:#555;font-weight:400;">Petite illustration SANS fond (PNG transparent) : un médecin au centre entouré de six pastilles pictogrammes (cabinet, hôpital, urgences, pédiatrie, humanitaire, recherche).</span></div>
+            <figcaption class="caption">Un seul diplôme, <strong>des dizaines de façons de l'exercer</strong>.</figcaption>
+            <div class="generation-prompt"><strong>Prompt ChatGPT-image :</strong>
+Charming minimal flat 2-D vector illustration, soft flat colours, thin clean outlines, isolated on a fully TRANSPARENT background (PNG with alpha) — no background shape, no frame, no card, no drop shadow. One friendly flat doctor silhouette in the centre, seen from the front, smooth blank face, violet #6B46C1 coat, thin stethoscope line around the neck, about 40% of image height. Around it, six small round pastel discs in a regular fan (three above, three below), each linked to the doctor by a fine light-grey line, each holding one simple flat pictogram, one short French sans-serif label just below each disc: « Cabinet » (warm terracotta disc, small desk), « Hôpital » (deep blue #1F4E8C disc, building with a small cross), « Urgences » (honey amber disc, small ambulance), « Pédiatrie » (honey amber disc, teddy bear), « Humanitaire » (warm terracotta disc, globe with a heart), « Recherche » (deep blue disc, microscope). One tiny yellow #FCD34D four-point spark near the doctor's head, the only yellow accent. Airy, generous empty space. AVOID: any English text, gibberish or misspelled words, 3-D, photorealism, shadows, any background rectangle or colour, borders, frames, watermark, realistic faces, red cross emblem, text inside the discs.
+            </div>
+            <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+        </figure>
+    </div>
+
+    <p class="intro">Sauver des vies, porter la blouse, être la personne qu'on appelle quand rien ne va plus : le métier de médecin fait rêver depuis toujours. On le résume souvent à guérir, alors qu'il se joue sur <strong>trois terrains</strong> : <strong>prévenir</strong> avant que la maladie arrive, <strong>guérir</strong> quand c'est possible, et <strong>accompagner</strong> quand la guérison n'est plus l'objectif — ce dernier terrain n'étant pas réservé à la fin de vie. La réalité est <em class="hl">à la fois plus simple et plus riche</em> que dans les séries : <strong>écouter, mener l'enquête, décider, accompagner</strong> — avec de vraies personnes en face, chaque jour. Et c'est un métier qui se vit de mille façons : au cabinet, à l'hôpital, en maison de santé, en mission humanitaire ou en laboratoire. Sur cette fiche, on te montre à quoi ressemble vraiment le quotidien, pour que tu puisses te projeter <strong>les yeux ouverts</strong>.</p>
+
+    
+
+    <h2 class="section-title">Ta journée si tu deviens généraliste</h2>
+    <div class="steps">
+        <div class="steps-title">Une journée type, au cabinet</div>
+        <ol>
+            <li class="step">
+                <span class="n">1</span>
+                <span class="txt"><span class="lead">7h45 — Ouverture.</span> Tu ouvres le cabinet, tu allumes l'ordinateur et tu jettes un œil aux <b>résultats d'analyses</b> arrivés dans la nuit. Le premier patient sonne déjà.</span>
+            </li>
+            <li class="step">
+                <span class="n">2</span>
+                <span class="txt"><span class="lead">8h — Consultations.</span> Un nourrisson à vacciner, une entorse de cheville, une grand-mère qui vient surtout pour parler. À chaque fois, la même démarche : <b>écouter, formuler des hypothèses, examiner, décider</b>.</span>
+            </li>
+            <li class="step">
+                <span class="n">3</span>
+                <span class="txt"><span class="lead">12h30 — Pause… et administratif.</span> Courriers aux spécialistes, ordonnances à renouveler, dossiers à mettre à jour : c'est la <b>face cachée</b> du métier.</span>
+            </li>
+            <li class="step">
+                <span class="n">4</span>
+                <span class="txt"><span class="lead">14h — Visite à domicile.</span> Chez un patient âgé qui ne peut plus se déplacer. Là, tu vois la personne <b>dans sa vraie vie</b> — et c'est souvent là qu'on comprend le mieux.</span>
+            </li>
+            <li class="step">
+                <span class="n">5</span>
+                <span class="txt"><span class="lead">15h — Retour au cabinet.</span> La règle d'or du généraliste : <b>penser d'abord au banal</b>, sans jamais rater le cas rare qui doit filer à l'hôpital.</span>
+            </li>
+            <li class="step">
+                <span class="n">6</span>
+                <span class="txt"><span class="lead">19h — Derniers dossiers.</span> Dernier patient parti, tu termines les dossiers du jour et tu rappelles le laboratoire pour un résultat que tu veux <b>vérifier</b>.</span>
+            </li>
+            <li class="step">
+                <span class="n">7</span>
+                <span class="txt"><span class="lead">20h30 — Un œil sur la science.</span> Un peu de lecture médicale ou une formation à distance : la médecine évolue en permanence, et <b>se former toute sa vie</b> fait partie du métier.</span>
+            </li>
+        </ol>
+    </div>
+
+    <div class="illu">
+        <figure class="schema-box illu illu-slim">
+            <img src="../images/metiers/fiche_metier_medecin_journee.png"
+                 alt="Frise fine du matin au soir : sept moments de la journée d&#x27;un généraliste, du soleil levant au croissant de lune, avec leurs horaires."
+                 onerror="schemaMissing(this)">
+            <div class="file-target">📁 <strong>fiche_metier_medecin_journee.png</strong><br>à placer dans : <strong>/public/images/metiers/</strong><br><span style="color:#555;font-weight:400;">Bandeau fin SANS fond (PNG transparent) : ligne du temps soleil → lune, sept petits pictogrammes horodatés.</span></div>
+            <figcaption class="caption">De 7h45 à 20h30 : <strong>les consultations ne sont que la partie visible</strong>.</figcaption>
+            <div class="generation-prompt"><strong>Prompt ChatGPT-image :</strong>
+Charming minimal flat 2-D vector illustration, soft flat colours, thin clean outlines, isolated on a fully TRANSPARENT background (PNG with alpha) — no background shape, no frame, no card, no drop shadow. Very wide, slim banner. A single thin light-grey horizontal line across the middle, a small flat honey-amber rising sun at the far left end, a small deep-blue #1F4E8C crescent moon at the far right end. On the line, seven small violet #6B46C1 dots; above or below each dot (alternating), one tiny flat pictogram with its time only, in small violet French numerals: « 7h45 » computer and coffee cup, « 8h » stethoscope, « 12h30 » small stack of papers with a soft yellow #FCD34D underline (the only yellow accent), « 14h » small house with a doctor's bag, « 15h » stethoscope, « 19h » folder and telephone handset, « 20h30 » open book. All pictograms the same small size, soft terracotta / deep blue / honey amber colours, lots of empty space. AVOID: any English text, gibberish, any word or label other than the seven times, 3-D, photorealism, shadows, any background colour, frames, borders, watermark, clock faces, realistic faces.
+            </div>
+            <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+        </figure>
+    </div>
+
+    <h2 class="section-title">Où tu peux exercer</h2>
+    <div class="steps">
+        <div class="steps-title">Trois façons de vivre le même métier</div>
+        <ol>
+            <li class="step">
+                <span class="n">1</span>
+                <span class="txt"><span class="lead">Libéral — ton propre patron.</span> Seul en cabinet ou en <b>maison de santé</b> avec d'autres soignants ; ta patientèle te suit pendant des années. Grande <b>liberté</b> d'organisation : <b>tu fixes tes horaires</b>, tes jours de consultation, et le rythme que tu veux tenir. Tu peux même exercer comme <b>remplaçant</b> — tu remplaces des médecins pendant leurs congés, d'un cabinet à l'autre, d'une région à l'autre : de quoi <b>travailler partout en France</b>, voir plusieurs façons d'exercer et voyager, avant de choisir où t'installer. En échange : <b>pas de congés payés ni de RTT</b>, et une charge de travail qui dépend entièrement du rythme que tu te fixes.</span>
+            </li>
+            <li class="step">
+                <span class="n">2</span>
+                <span class="txt"><span class="lead">Salarié — l'équipe et la stabilité.</span> À l'hôpital ou en centre de santé : <b>salaire fixe</b>, congés payés, temps de travail plafonné par la loi à <b>48 heures par semaine</b>. En échange, tu suis les horaires de la structure.</span>
+            </li>
+            <li class="step">
+                <span class="n">3</span>
+                <span class="txt"><span class="lead">Mixte — les deux à la fois.</span> Tu es installé en libéral <b>et</b> tu fais des vacations <span class="gl">(des demi-journées payées à l'hôpital)</span> ou des gardes : l'autonomie du cabinet et la vie d'équipe dans la même semaine. <span class="gl">Il faut aimer jongler.</span></span>
+            </li>
+        </ol>
+    </div>
+
+    <h2 class="section-title">Combien tu gagnes — et comment</h2>
+    <div class="steps">
+        <div class="steps-title">Trois circuits, un même diplôme</div>
+        <ol>
+            <li class="step">
+                <span class="n">1</span>
+                <span class="txt"><span class="lead">En libéral : payé à l'acte.</span> Pas de salaire : chaque consultation rapporte <b>30 €</b> <span class="gl">(tarif fixé par l'Assurance Maladie, secteur 1)</span>. Mais <b>honoraires ≠ revenu</b> : environ la moitié part en charges — sur 30 € encaissés, il reste 15 à 17 € avant impôt. Un généraliste installé gagne en moyenne <b>≈ 8 000 € net par mois</b> — les sources vont de ≈ 7 400 à 8 200 € selon qu'on interroge l'étude publique ou la caisse de retraite des médecins. Un jeune installé démarre souvent vers 5 000 à 6 500 €. Ton revenu suit directement le <b>nombre de consultations</b> que tu choisis d'assurer.</span>
+            </li>
+            <li class="step">
+                <span class="n">2</span>
+                <span class="txt"><span class="lead">À l'hôpital : une grille + des gardes.</span> Le praticien hospitalier est payé sur une <b>grille nationale à 13 échelons</b> qu'on gravit à l'ancienneté : de <b>≈ 3 900 € net par mois</b> au 1ᵉʳ échelon à <b>≈ 7 900 €</b> au 13ᵉ — la grille exacte est dans le livret ci-dessous. Temps plein = <b>10 demi-journées par semaine</b>, dans la limite légale de 48 h ; les <b>gardes et astreintes</b> s'ajoutent au salaire.</span>
+            </li>
+            <li class="step">
+                <span class="n">3</span>
+                <span class="txt"><span class="lead">L'internat est déjà salarié — modestement.</span> Les <b>4 à 6 dernières années d'études</b> — l'internat, qui commence en 7ᵉ année après le bac — sont <b>payées par l'hôpital</b>. En 1ʳᵉ année d'internat, le salaire de base est de <b>≈ 1 300 € net par mois</b> ; avec l'indemnité versée les deux premières années, on arrive à <b>≈ 1 600 €</b>, et les gardes s'ajoutent <span class="gl">(≈ 190 € net la nuit — avec 3-4 gardes par mois, on dépasse les 2 000 €)</span>. En face, de vraies semaines : <b>48 h maximum légal, ≈ 59 h en réalité</b> <span class="gl">(de ≈ 50 h en médecine générale à ≈ 75 h en chirurgie, selon les enquêtes des syndicats d'internes)</span>. C'est peu payé au regard des heures — mais tu n'attends pas le diplôme pour commencer à gagner ta vie, et le détail année par année est dans le livret ci-dessous.</span>
+            </li>
+        </ol>
+    </div>
+
+    
+
+    <details class="livret">
+        <summary>📖 La grille de l'interne, année par année<span class="chev">›</span></summary>
+        <div class="livret-body">
+            <p class="src" style="margin:0 0 9px;">Le salaire de <b>base</b> est fixé par arrêté : <b>19 406,35 € brut par an en 1ʳᵉ année</b> (arrêté du 8 juillet 2022), soit <b>≈ 1 300 € net par mois</b> avant toute indemnité — c'est le chiffre « bas » qu'on entend souvent. Les montants du tableau ajoutent les indemnités fixes (mais pas les gardes) :</p>
+            <table>
+                <thead><tr><th>Année d'internat</th><th>≈ net / mois (hors gardes)</th><th>Ce qui est compté</th></tr></thead>
+                <tbody>
+                    <tr><td><b>1ʳᵉ année</b></td><td><b>≈ 1 600 €</b></td><td>≈ 1 300 € de base + indemnité de sujétion (435,18 € brut/mois, versée les 4 premiers semestres seulement)</td></tr>
+                    <tr><td><b>2ᵉ année</b></td><td><b>≈ 1 750 €</b></td><td>base + indemnité de sujétion</td></tr>
+                    <tr><td><b>3ᵉ année</b></td><td><b>≈ 1 900 €</b></td><td>base seule : la sujétion s'arrête, la base augmente</td></tr>
+                    <tr><td><b>4ᵉ année</b></td><td><b>≈ 2 000 – 2 050 €</b></td><td>prime de responsabilité incluse (179,50 € brut/mois) — hors médecine générale, où la 4ᵉ année est déjà l'année de docteur junior</td></tr>
+                    <tr><td><b>5ᵉ année</b></td><td><b>≈ 2 100 – 2 150 €</b></td><td>prime de responsabilité incluse (356,16 € brut/mois)</td></tr>
+                    <tr><td><b>Docteur junior (dernière année)</b></td><td><b>≈ 2 200 – 2 300 €</b></td><td>l'année en autonomie supervisée qui clôt l'internat — la 4ᵉ année en médecine générale, la 5ᵉ ou 6ᵉ ailleurs</td></tr>
+                </tbody>
+            </table>
+            <p class="src">Gardes en plus : <b>234,80 € brut</b> la nuit de semaine (≈ 190 € net), <b>256,86 €</b> la nuit du samedi au dimanche, le dimanche ou un jour férié — montants en vigueur depuis le 1ᵉʳ janvier 2024 (arrêté du 22 décembre 2023, revalorisation pérenne de 50 %). Avec 3 à 4 gardes par mois : ≈ <b>+ 550 à 750 € net</b>.<br>⏱️ <b>Le temps de travail en face</b> : 48 h par semaine maximum légal, gardes comprises — mais les enquêtes des syndicats d'internes mesurent <b>≈ 59 h en moyenne</b> (≈ 50 h en médecine générale, jusqu'à ≈ 75 h en chirurgie), et 8 internes sur 10 dépassent le plafond.</p>
+        </div>
+    </details>
+
+    <details class="livret">
+        <summary>📖 La grille du praticien hospitalier — les 13 échelons<span class="chev">›</span></summary>
+        <div class="livret-body">
+            <table>
+                <thead><tr><th>Échelon</th><th>Durée</th><th>Brut annuel</th><th>≈ net / mois</th></tr></thead>
+                <tbody>
+                    <tr><td><b>Échelon 1</b></td><td>2 ans</td><td>55 607,79 €</td><td><b>≈ 3 900 €</b></td></tr>
+                    <tr><td><b>Échelon 2</b></td><td>2 ans</td><td>58 082,41 €</td><td><b>≈ 4 050 €</b></td></tr>
+                    <tr><td><b>Échelon 3</b></td><td>2 ans</td><td>62 148,07 €</td><td><b>≈ 4 350 €</b></td></tr>
+                    <tr><td><b>Échelon 4</b></td><td>2 ans</td><td>66 567,09 €</td><td><b>≈ 4 650 €</b></td></tr>
+                    <tr><td><b>Échelon 5</b></td><td>2 ans</td><td>68 688,21 €</td><td><b>≈ 4 800 €</b></td></tr>
+                    <tr><td><b>Échelon 6</b></td><td>2 ans</td><td>71 162,83 €</td><td><b>≈ 5 000 €</b></td></tr>
+                    <tr><td><b>Échelon 7</b></td><td>2 ans</td><td>76 465,74 €</td><td><b>≈ 5 350 €</b></td></tr>
+                    <tr><td><b>Échelon 8</b></td><td>2 ans</td><td>79 647,54 €</td><td><b>≈ 5 600 €</b></td></tr>
+                    <tr><td><b>Échelon 9</b></td><td>4 ans</td><td>90 549,14 €</td><td><b>≈ 6 350 €</b></td></tr>
+                    <tr><td><b>Échelon 10</b></td><td>4 ans</td><td>94 557,64 €</td><td><b>≈ 6 600 €</b></td></tr>
+                    <tr><td><b>Échelon 11</b></td><td>4 ans</td><td>99 810,26 €</td><td><b>≈ 7 000 €</b></td></tr>
+                    <tr><td><b>Échelon 12</b></td><td>4 ans</td><td>105 062,89 €</td><td><b>≈ 7 350 €</b></td></tr>
+                    <tr><td><b>Échelon 13</b></td><td>dernier</td><td>112 416,56 €</td><td><b>≈ 7 900 €</b></td></tr>
+                </tbody>
+            </table>
+            <p class="src">Grille nationale des émoluments au 1ᵉʳ juillet 2023 (source MACSF). Le net mensuel est une estimation avant impôt. Il faut environ <b>32 ans</b> pour atteindre le 13ᵉ échelon. S'ajoutent les gardes et astreintes (une astreinte : environ 70 à 280 € la nuit) et diverses primes d'engagement.</p>
+        </div>
+    </details>
+
+    <details class="livret">
+        <summary>📖 Le libéral n'a pas de grille : la simulation<span class="chev">›</span></summary>
+        <div class="livret-body">
+            <p class="src" style="margin:0 0 9px;">Hypothèses de la simulation : <b>4,5 jours de consultations par semaine</b> <span style="font-weight:400;">(le rythme classique du généraliste : une demi-journée libérée dans la semaine, en plus du week-end)</span> et <b>46 semaines travaillées par an</b> <span style="font-weight:400;">(≈ 6 semaines de congés — non payés en libéral)</span>.</p>
+            <table>
+                <thead><tr><th>Rythme (sur 4,5 j / semaine)</th><th>Honoraires / mois</th><th>≈ net avant impôt</th></tr></thead>
+                <tbody>
+                    <tr><td><b>20 patients / jour</b></td><td>≈ 10 350 €</td><td><b>≈ 5 200 €</b></td></tr>
+                    <tr><td><b>25 patients / jour</b></td><td>≈ 12 900 €</td><td><b>≈ 6 500 €</b></td></tr>
+                    <tr><td><b>30 patients / jour</b></td><td>≈ 15 500 €</td><td><b>≈ 7 800 €</b></td></tr>
+                </tbody>
+            </table>
+            <p class="src">Base : consultation à 30 € (secteur 1), ≈ 50 % de charges. S'ajoutent les <b>forfaits</b> versés par l'Assurance Maladie (suivi de ta patientèle de médecin traitant, objectifs de santé publique), soit ≈ 10 à 15 % de plus : c'est ainsi que la moyenne nationale ressort à <b>≈ 8 000 € net</b>.</p>
+        </div>
+    </details>
+
+    <div class="duo">
+<div class="illu">
+        <figure class="schema-box illu illu-mid">
+            <img src="../images/metiers/fiche_metier_medecin_remuneration.png"
+                 alt="Deux petites scènes : à gauche le libéral (médecin et patient, pièce de 30 €, barre charges/net) ; à droite le salarié (hôpital, escalier de grille, pastille gardes)."
+                 onerror="schemaMissing(this)">
+            <div class="file-target">📁 <strong>fiche_metier_medecin_remuneration.png</strong><br>à placer dans : <strong>/public/images/metiers/</strong><br><span style="color:#555;font-weight:400;">Petite illustration SANS fond (PNG transparent) : scène libéral (patient → 30 € → barre charges/net) à gauche, scène salarié (escalier de grille + gardes) à droite.</span></div>
+            <figcaption class="caption">À l'acte en libéral, <strong>sur une grille</strong> à l'hôpital — gardes payées en plus.</figcaption>
+            <div class="generation-prompt"><strong>Prompt ChatGPT-image :</strong>
+Charming minimal flat 2-D vector illustration, light and airy, FLAT SOLID pastel colours only, thin clean outlines, isolated on a fully TRANSPARENT background (PNG with alpha) — no background shape, no frame, no card, no drop shadow, absolutely NO dark background, NO glow, NO neon, NO blur, NO soft halos around elements: crisp flat shapes on pure transparency, as in a clean SVG icon set. Two small scenes side by side, separated by generous empty space. LEFT scene, French label « Libéral » in violet #6B46C1 above it: a flat doctor silhouette at a small desk facing one patient silhouette, below them one violet coin marked only « 30 € » in white, and under the coin one short horizontal rounded bar split exactly in half — warm terracotta half labelled « Charges », violet half labelled « Net » with a thin yellow #FCD34D ring around it (the only yellow accent). RIGHT scene, French label « Salarié » in deep blue #1F4E8C above it: a small flat hospital building beside an ascending staircase of five deep-blue steps with a thin grey rising arrow, one label « Grille » under the staircase, plus one small honey-amber disc with a crescent-moon pictogram labelled « + Gardes ». Exactly seven short French labels in the whole image, small clean sans-serif. AVOID: any English text, gibberish or misspelled words, any number other than 30 €, 3-D, photorealism, shadows, any background colour, frames, borders, watermark, banknote piles, dollar signs, percentages, pie charts, realistic faces.
+            </div>
+            <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+        </figure>
+    </div>
+<div class="pass-tip">
+        Ces montants sont des <strong>moyennes, pas des promesses</strong> : entre deux médecins libéraux, le revenu varie beaucoup selon la spécialité, l'activité et la région <strong>(de ≈ 7 700 € net par mois pour un psychiatre libéral à plus de 20 000 € pour un radiothérapeute ou un médecin nucléaire)</strong>. On ne devient pas médecin pour être riche à 25 ans : les études sont longues, et l'internat est payé <strong>modestement au regard des heures</strong> (≈ 1 600 à 2 200 € net pour des semaines très chargées). Le revenu devient réellement confortable <strong>après l'internat</strong> — et là, dans tous les modes d'exercice, avec une vraie <strong>sécurité d'emploi</strong>.
+    </div>
+    </div>
+
+    
+
+    <h2 class="section-title">Le chemin depuis la Terminale</h2>
+    <div class="illu">
+        <figure class="schema-box illu illu-wide">
+            <img src="../images/metiers/fiche_metier_medecin_parcours.png"
+                 alt="Chemin montant de la Terminale au médecin : P1 (1 an), 2e-3e année (2 ans), externat (3 ans), internat (4-6 ans), thèse — arc « 10 à 12 ans »."
+                 onerror="schemaMissing(this)">
+            <div class="file-target">📁 <strong>fiche_metier_medecin_parcours.png</strong><br>à placer dans : <strong>/public/images/metiers/</strong><br><span style="color:#555;font-weight:400;">Bandeau SANS fond (PNG transparent) : chemin montant à six jalons avec durées, losange thèse, arc « 10 à 12 ans ».</span></div>
+            <figcaption class="caption">Compte <strong>10 à 12 ans selon la spécialité</strong> — salarié de l'hôpital dès l'internat.</figcaption>
+            <div class="generation-prompt"><strong>Prompt ChatGPT-image :</strong>
+Charming minimal flat 2-D vector illustration, soft flat colours, thin clean outlines, isolated on a fully TRANSPARENT background (PNG with alpha) — no background shape, no frame, no card, no drop shadow. Wide banner. A thin light-grey path rises gently from bottom-left to upper-right with soft curves. Along it, six milestones and a final figure, spacing roughly proportional to duration (the « Internat » segment clearly the longest): warm terracotta dot with a schoolbag pictogram, label « Terminale » ; violet #6B46C1 dot with an open book, label « P1 », tiny grey « 1 an » ; deep blue #1F4E8C dot with a stethoscope, label « 2e-3e année », tiny grey « 2 ans » ; honey amber dot with a small hospital, label « Externat », tiny grey « 3 ans » ; a larger violet dot with a doctor badge, label « Internat », tiny grey « 4-6 ans » ; one yellow #FCD34D diamond with a tiny graduation cap, label « Thèse » (the only yellow accent). At the end of the path, upper right, one small flat doctor silhouette in a violet coat, blank face, label « Médecin ». Above the whole path, one thin light-grey arc from the first dot to the final figure with the single violet label « 10 à 12 ans ». Small clean French sans-serif labels, lots of empty space. AVOID: any English text, gibberish or misspelled words, 3-D, photorealism, shadows, any background colour, frames, borders, watermark, extra numbers, more than seven milestones, hourglasses, calendars, sad or stressed characters, red cross emblem.
+            </div>
+            <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+        </figure>
+    </div>
+
+    <div class="steps">
+        <div class="steps-title">6 étapes — 10 à 12 ans selon la spécialité</div>
+        <ol>
+            <li class="step">
+                <span class="n">1</span>
+                <span class="txt"><span class="lead">Terminale — Parcoursup.</span> Tu formules tes vœux pour rejoindre les études de santé. Un dossier régulier et des <b>spécialités scientifiques</b> sont tes meilleurs alliés.</span>
+            </li>
+            <li class="step">
+                <span class="n">2</span>
+                <span class="txt"><span class="lead">La P1 (voies PASS ou LAS) — 1 an.</span> L'année d'entrée : les bases scientifiques du corps humain, et un <b>classement</b> qui décide de ton admission en 2ᵉ année. Ce n'est pas réservé aux génies : ceux qui la réussissent sont très souvent ceux qui arrivent avec une vraie <b>méthode de travail</b> dès les premières semaines.</span>
+            </li>
+            <li class="step">
+                <span class="n">3</span>
+                <span class="txt"><span class="lead">2ᵉ et 3ᵉ années — 2 ans.</span> La sélection est derrière toi. Tu approfondis les sciences médicales, tu découvres la <b>sémiologie</b> <span class="gl">(l'art de reconnaître les signes des maladies)</span> et tu fais tes premiers stages.</span>
+            </li>
+            <li class="step">
+                <span class="n">4</span>
+                <span class="txt"><span class="lead">L'externat — 3 ans.</span> La moitié de ton temps se passe à l'<b>hôpital</b>, au contact des patients. En 6ᵉ année, les épreuves nationales <span class="gl">(EDN puis ECOS)</span> classent les étudiants : ce classement te permet de <b>choisir ta spécialité et ta ville</b>.</span>
+            </li>
+            <li class="step">
+                <span class="n">5</span>
+                <span class="txt"><span class="lead">L'internat — 4 à 6 ans.</span> Tu es un médecin en formation, <b>salarié de l'hôpital</b> : tes propres patients, tes prescriptions, tes gardes — toujours encadré. Médecine générale : 4 ans ; spécialités chirurgicales : jusqu'à 6 ans.</span>
+            </li>
+            <li class="step">
+                <span class="n">6</span>
+                <span class="txt"><span class="lead">La thèse — et ton premier jour.</span> Tu soutiens ta thèse : te voilà <b>docteur en médecine</b>. Reste à choisir ta façon d'exercer : cabinet, hôpital, remplacements, seul ou en équipe.</span>
+            </li>
+        </ol>
+    </div>
+
+    <p class="fine-note">À suivre : une « licence santé » unique a été annoncée en avril 2026 pour remplacer le PASS et la LAS, visée pour la rentrée 2027 — le calendrier peut encore bouger, et le PASS et la LAS restent en place pour la rentrée 2026. Quel que soit son nom, la première année restera <strong>classante</strong>.</p>
+
+    
+
+    <div class="recap">
+        <div class="box retenir">
+<div class="illu spot-corner">
+        <figure class="schema-box illu illu-spot">
+            <img src="../images/metiers/fiche_metier_medecin_spot_enquete.png"
+                 alt="Petite loupe violette dont la lentille contient un cœur terracotta traversé d&#x27;un tracé de battement cardiaque."
+                 onerror="schemaMissing(this)">
+            <div class="file-target">📁 <strong>fiche_metier_medecin_spot_enquete.png</strong><br>à placer dans : <strong>/public/images/metiers/</strong><br><span style="color:#555;font-weight:400;">Mini-illustration SANS fond (PNG transparent) : une loupe violette, un cœur avec tracé cardiaque dans la lentille. Aucun texte.</span></div>
+            <div class="generation-prompt"><strong>Prompt ChatGPT-image :</strong>
+Tiny charming flat 2-D vector spot illustration, isolated on a fully TRANSPARENT background (PNG with alpha) — no background shape, no frame, no card. A single motif: a violet #6B46C1 magnifying glass, and inside its lens a small warm terracotta heart crossed by a tiny white ECG heartbeat line. Thin clean outlines, soft flat colours, one tiny yellow #FCD34D four-point spark beside the handle (the only accent). No text at all. AVOID: any text or letters, 3-D, photorealism, shadows, any background colour, frames, borders, watermark.
+            </div>
+            <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+        </figure>
+    </div>
+            <span class="lbl">Fait pour toi si…</span>
+            Tu aimes <b>mener l'enquête</b> — comprendre le corps, une maladie, un symptôme mystérieux. Tu sais <b>vraiment écouter</b>, tu gardes ton <b>calme</b> quand ça s'agite, et tu veux que les sciences <b>servent l'humain</b>, tous les jours, en vrai. La curiosité fait le reste : la médecine s'apprend toute la vie.
+        </div>
+        <div class="box piege">
+            <span class="lbl">Ce qu'on te dit moins</span>
+            Une vraie part d'<b>administratif</b>, des semaines <b>pleines</b> — et des études longues : la P1 n'est que la <b>première marche</b> d'un chemin de 10 ans et plus. Autant y aller pour les bonnes raisons : ceux qui exercent ce métier le décrivent comme <b>passionnant</b>.
+        </div>
+    </div>
+
+    <a class="qcm-cta" style="display:none" href="/ressources/qcm-decouverte/decouverte-metier-medecin" target="_top">
+        <span class="qcm-body">
+            <span class="qcm-k">Teste tes idées reçues en 3 questions</span>
+            <span class="qcm-t">QCM — Le métier de médecin</span>
+        </span>
+        <span class="qcm-arrow" aria-hidden="true">→</span>
+    </a>
+    <div class="bio-hint">📲 Pour faire le QCM gratuit → <strong>lien en bio</strong></div>
+
+    <footer class="chapter-footer">
+        <p>Une fiche <strong>Medeos</strong> · pour anticiper la P1, sereinement · medeos-sante.fr</p>
+    </footer>
+
+</div>
+
+<div id="medeos-lightbox" role="dialog" aria-label="Schéma agrandi" aria-modal="true" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(26,26,46,0.92);overflow:auto;-webkit-overflow-scrolling:touch;touch-action:pinch-zoom;cursor:zoom-out;">
+    <button type="button" aria-label="Fermer" onclick="closeLightbox()" style="position:fixed;top:14px;right:16px;z-index:10003;width:42px;height:42px;border-radius:50%;border:none;background:rgba(255,255,255,0.14);color:#fff;font-size:24px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);">&times;</button>
+    <div id="medeos-zoom-bar" style="position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:10003;display:flex;gap:8px;align-items:center;background:rgba(255,255,255,0.14);backdrop-filter:blur(4px);padding:7px 10px;border-radius:999px;">
+        <button type="button" aria-label="Dézoomer" onclick="lbZoom(-1,event)" style="width:38px;height:38px;border-radius:50%;border:none;background:rgba(255,255,255,0.9);color:#1A1A2E;font-size:22px;font-weight:700;line-height:1;cursor:pointer;">&minus;</button>
+        <button type="button" aria-label="Réinitialiser le zoom" onclick="lbReset(event)" style="height:38px;padding:0 14px;border-radius:999px;border:none;background:rgba(255,255,255,0.9);color:#1A1A2E;font-size:13px;font-weight:700;cursor:pointer;">100&nbsp;%</button>
+        <button type="button" aria-label="Zoomer" onclick="lbZoom(1,event)" style="width:38px;height:38px;border-radius:50%;border:none;background:rgba(255,255,255,0.9);color:#1A1A2E;font-size:22px;font-weight:700;line-height:1;cursor:pointer;">+</button>
+    </div>
+    <div id="medeos-lightbox-stage" onclick="lbStageClick(event)" style="min-height:100%;display:flex;align-items:center;justify-content:center;padding:64px 16px;">
+        <div style="position:relative;display:inline-flex;">
+            <img id="medeos-lightbox-img" src="" alt="Schéma agrandi" ondblclick="lbToggleZoom(event)" style="display:block;border-radius:10px;box-shadow:0 10px 40px rgba(0,0,0,0.5);transform-origin:center center;transition:transform .18s ease;max-width:none;cursor:zoom-in;">
+            <div aria-hidden="true" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;">
+                <span style="font-family:'Inter',Arial,sans-serif;font-size:clamp(11px,4vw,30px);font-weight:700;letter-spacing:clamp(1px,1vw,6px);text-transform:uppercase;color:rgba(120,120,120,0.16);white-space:nowrap;">medeos-sante.fr</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var lbScale = 1, lbBaseW = 0;
+    function openLightbox(src) {
+        var lb = document.getElementById('medeos-lightbox');
+        var img = document.getElementById('medeos-lightbox-img');
+        lbScale = 1;
+        img.onload = function () {
+            // Taille de base : on s'aligne sur la largeur dispo (max 96vw) ou la taille native si plus petite.
+            var availW = Math.min(window.innerWidth * 0.96, this.naturalWidth);
+            var availH = window.innerHeight * 0.84;
+            var ratio = Math.min(availW / this.naturalWidth, availH / this.naturalHeight, 1);
+            lbBaseW = Math.max(120, Math.round(this.naturalWidth * ratio));
+            this.style.width = lbBaseW + 'px';
+            this.style.height = 'auto';
+            lbApply();
+        };
+        img.src = src;
+        lb.style.display = 'block';
+        lb.scrollTop = 0; lb.scrollLeft = 0;
+        document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+        document.getElementById('medeos-lightbox').style.display = 'none';
+        document.body.style.overflow = '';
+    }
+    function lbApply() {
+        var img = document.getElementById('medeos-lightbox-img');
+        img.style.transform = 'scale(' + lbScale + ')';
+        img.style.cursor = lbScale > 1 ? 'zoom-out' : 'zoom-in';
+        var lbl = document.querySelector('#medeos-zoom-bar button[onclick^="lbReset"]');
+        if (lbl) lbl.innerHTML = Math.round(lbScale * 100) + '&nbsp;%';
+    }
+    function lbZoom(dir, e) {
+        if (e) { e.stopPropagation(); e.preventDefault(); }
+        lbScale = Math.min(4, Math.max(1, +(lbScale + dir * 0.5).toFixed(2)));
+        lbApply();
+    }
+    function lbReset(e) { if (e) { e.stopPropagation(); e.preventDefault(); } lbScale = 1; lbApply(); }
+    function lbToggleZoom(e) { if (e) { e.stopPropagation(); e.preventDefault(); } lbScale = lbScale > 1 ? 1 : 2; lbApply(); }
+    function lbStageClick(e) { if (e.target.id === 'medeos-lightbox-stage') closeLightbox(); } // clic dans le vide = fermer
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeLightbox();
+        else if (document.getElementById('medeos-lightbox').style.display === 'block') {
+            if (e.key === '+' || e.key === '=') lbZoom(1);
+            else if (e.key === '-') lbZoom(-1);
+            else if (e.key === '0') lbReset();
+        }
+    });
+    document.getElementById('medeos-lightbox').addEventListener('wheel', function (e) {
+        if (this.style.display !== 'block') return;
+        if (e.ctrlKey || Math.abs(e.deltaY) > 0) { /* molette = zoom */ }
+        e.preventDefault();
+        lbScale = Math.min(4, Math.max(1, +(lbScale - Math.sign(e.deltaY) * 0.25).toFixed(2)));
+        lbApply();
+    }, { passive: false });
+    function schemaMissing(img) { img.style.display = 'none'; var b = img.closest('.schema-box'); if (b) b.classList.add('img-missing'); }
+</script>
+</body>
+</html>

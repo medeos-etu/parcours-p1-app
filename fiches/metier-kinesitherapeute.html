@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kinésithérapeute : le métier en vrai — Fiche Medeos</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 15px; line-height: 1.6; color: #2c3e50; background: #f6f8fb; padding: 22px; max-width: 760px; margin: 0 auto; }
+    .page-container { position: relative; }
+    .page-container::before { display: none; }
+    .page-container > * { position: relative; z-index: 1; }
+    .prod-brand { margin: 0 0 14px; }
+    .prod-brand img { height: 27px; width: auto; display: block; margin: 0 auto; }
+    .hook-header { background: #FAF6F0; border-radius: 14px; padding: 26px 30px 22px; box-shadow: 0 4px 18px rgba(76,42,133,0.08); border: 1px solid #efe7d8; }
+    .hook-header .brand-tag { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #6B46C1; font-weight: 600; opacity: 0.85; margin-bottom: 12px; }
+    .hook-header .course-title { font-size: 28px; line-height: 1.1; font-weight: 800; color: #4C2A85; letter-spacing: -0.7px; margin: 0 0 12px; }
+    .hook-header .punch { font-size: 18px; line-height: 1.3; font-weight: 800; color: #1A1A2E; letter-spacing: -0.3px; margin: 0; }
+    .hook-header .punch span.accent { color: #6B46C1; }
+    .hook-header .punch + .punch { margin-top: 5px; }
+    .intro { font-size: 15.5px; line-height: 1.7; color: #2c3e50; margin: 20px 2px; }
+    .intro strong { font-weight: 700; color: #4C2A85; }
+    em.hl { background: linear-gradient(180deg, transparent 60%, #FCD34D 60%); font-style: normal; padding: 0 2px; }
+    .schema-box { background: #fff; border: 2px solid #6B46C1; padding: 12px; text-align: center; border-radius: 12px; box-shadow: 0 4px 15px rgba(107, 70, 193, 0.15); position: relative; overflow: hidden; }
+    .schema-box::before { content: 'medeos-sante.fr'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: 'Inter', Arial, sans-serif; font-size: 14px; font-weight: 700; color: rgba(120,120,120,0.13); letter-spacing: 2px; text-transform: uppercase; pointer-events: none; user-select: none; z-index: 5; white-space: nowrap; max-width: 92%; overflow: hidden; }
+    .schema-box img { max-width: 100%; max-height: 300px; height: auto; border-radius: 8px; display: block; margin: 0 auto; cursor: zoom-in; }
+    .schema-box .schema-num { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 0.6px; text-transform: uppercase; color: #6B46C1; margin-bottom: 6px; }
+    .schema-box .caption { font-size: 12px; color: #6b6275; margin-top: 9px; font-weight: 500; }
+    .schema-box .caption strong { color: #6B46C1; }
+    .schema-box .file-target { display: none; margin-top: 10px; padding: 8px 12px; background: #e8f5e9; border: 1px solid #a5d6a7; border-radius: 6px; font-family: 'SFMono-Regular', Consolas, monospace; font-size: 11.5px; color: #1b5e20; text-align: left; line-height: 1.5; }
+    .schema-box .file-target strong { color: #2e7d32; }
+    .schema-box .generation-prompt { background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border: 2px dashed #ff9800; border-radius: 8px; padding: 13px; margin-top: 12px; text-align: left; font-size: 11.5px; color: #e65100; line-height: 1.55; white-space: pre-wrap; }
+    .schema-box .generation-prompt strong { color: #bf360c; display: block; margin-bottom: 8px; font-size: 12.5px; background: #ffcc80; padding: 7px 11px; border-radius: 4px; }
+    .schema-box .copy-prompt-btn { display: none; margin-top: 8px; padding: 6px 12px; background: #ff9800; color: #fff; border: none; border-radius: 4px; font-size: 12px; cursor: pointer; font-weight: 600; }
+    .schema-box .copy-prompt-btn:hover { background: #f57c00; }
+    .schema-box .generation-prompt { display: none; }
+    .schema-box.img-missing .generation-prompt { display: block; }
+    .schema-box.img-missing .copy-prompt-btn { display: inline-block; }
+    .schema-box.img-missing .file-target { display: block !important; }
+    .schema-2up { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; align-items: stretch; }
+    .schema-2up .schema-box { margin: 0; display: flex; flex-direction: column; }
+    .schema-2up .schema-box img { height: 230px; width: 100%; max-height: none; object-fit: contain; }
+    .schema-2up .schema-box .caption { margin-top: auto; }
+    @media (max-width: 720px) { .schema-2up { grid-template-columns: 1fr; } .schema-2up .schema-box img { height: auto; max-height: 300px; } }
+    .steps { background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%); border-left: 5px solid #6B46C1; border-radius: 0 12px 12px 0; padding: 18px 22px; margin: 20px 0; box-shadow: 0 2px 10px rgba(107,70,193,0.08); }
+    .steps .steps-title { font-size: 15px; font-weight: 800; color: #4C2A85; margin-bottom: 13px; }
+    .steps ol { list-style: none; margin: 0; padding: 0; }
+    .step { display: grid; grid-template-columns: 28px 1fr; gap: 12px; align-items: start; margin-bottom: 12px; }
+    .step:last-child { margin-bottom: 0; }
+    .step .n { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 999px; background: #6B46C1; color: #fff; font-size: 13px; font-weight: 800; }
+    .step .txt { font-size: 14.5px; line-height: 1.5; color: #2c3e50; padding-top: 2px; }
+    .step .txt b { color: #4C2A85; font-weight: 700; }
+    .step .txt .gl { color: #6b6275; font-weight: 400; }
+    .step .txt .lead { font-weight: 800; color: #1A1A2E; }
+    .pass-tip { background: #fdf6ec; border-left: 6px solid #B8895A; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; box-shadow: 0 3px 12px rgba(184,137,90,0.14); font-size: 14.5px; line-height: 1.55; }
+    .pass-tip::before { content: "Parlons vrai"; display: block; font-weight: 700; font-size: 12px; color: #9a6a37; margin-bottom: 7px; letter-spacing: 0.8px; text-transform: uppercase; }
+    .pass-tip strong { color: #9a6a37; }
+    .recap { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
+    .recap .box { border-radius: 12px; padding: 15px 18px; font-size: 14px; line-height: 1.5; }
+    .recap .retenir { background: #F1ECFA; border: 1px solid #dccff2; }
+    .recap .piege { background: #FFFBEB; border: 1px solid #F6E4A8; }
+    .recap .box .lbl { display: block; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 7px; }
+    .recap .retenir .lbl { color: #6B46C1; }
+    .recap .piege .lbl { color: #9a6d00; }
+    .recap b { font-weight: 700; color: #1A1A2E; }
+    .qcm-cta { display: flex; align-items: center; gap: 16px; text-decoration: none; color: inherit; background: #fff; border: 1px solid #d6c6f0; border-radius: 14px; padding: 18px 22px; margin: 24px 0 6px; box-shadow: 0 9px 26px -16px rgba(107,70,193,.4); transition: transform .18s ease, box-shadow .18s ease; }
+    .qcm-cta:hover { transform: translateY(-2px); box-shadow: 0 16px 38px -16px rgba(107,70,193,.5); }
+    .qcm-cta:focus-visible { outline: 3px solid #6B46C1; outline-offset: 2px; }
+    .qcm-cta .qcm-body { flex: 1; }
+    .qcm-cta .qcm-k { font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #6B46C1; }
+    .qcm-cta .qcm-t { font-size: 18px; font-weight: 800; color: #1A1A2E; margin-top: 3px; letter-spacing: -0.3px; }
+    .qcm-cta .qcm-arrow { flex: none; width: 42px; height: 42px; border-radius: 11px; background: #6B46C1; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700; }
+    .chapter-footer { text-align: center; margin-top: 22px; padding-top: 16px; border-top: 1px solid #e6dfd1; color: #7a8088; font-size: 12px; }
+    .chapter-footer strong { color: #6b6275; }
+    .bio-hint { display: none; }
+    .section-title { font-size: 19px; font-weight: 800; color: #4C2A85; letter-spacing: -0.3px; margin: 28px 2px 6px; }
+    .fine-note { font-size: 12.5px; color: #6b6275; margin: 10px 2px 0; line-height: 1.5; }
+    /* Placements variés des illustrations */
+    .illu-float-right { float: right; width: min(48%, 320px); margin: 4px 0 10px 18px; }
+    .illu-float-right img { width: 100%; max-height: none; }
+    .section-title { clear: both; }
+    .duo { display: grid; grid-template-columns: 250px 1fr; gap: 16px; align-items: center; margin: 20px 0; }
+    .duo .illu { margin: 0; }
+    .duo .illu img { width: 100%; max-height: none; }
+    .duo .pass-tip { margin: 0; }
+    .spot-corner { float: right; width: 74px; margin: 0 0 4px 12px; }
+    .spot-corner img { width: 100%; max-height: none; }
+    .recap .box { overflow: hidden; }
+    /* Mode brouillon (image manquante) : tout repasse en pleine largeur */
+    .illu:has(.img-missing) { float: none !important; width: auto !important; }
+    .duo:has(.img-missing) { grid-template-columns: 1fr; }
+    @media (max-width: 600px) {
+        .illu-float-right { float: none; width: 72%; margin: 12px auto; }
+        .duo { grid-template-columns: 1fr; }
+        .spot-corner { width: 58px; margin-left: 8px; }
+    }
+    /* Illustrations légères : pas de cadre, pas de fond, pas de zoom */
+    .illu { margin: 18px auto 8px; }
+    .schema-box.illu { border: none; box-shadow: none; background: transparent; padding: 0; overflow: visible; }
+    .schema-box.illu::before { content: none; }
+    .schema-box.illu img { cursor: default; max-height: none; }
+    .illu-mid img { max-height: 250px; }
+    .illu-wide img { max-height: 220px; width: 100%; object-fit: contain; }
+    .illu-slim img { max-height: 150px; width: 100%; object-fit: contain; }
+    .illu-spot img { max-height: 96px; }
+    .schema-box.illu .caption { margin-top: 5px; font-size: 12px; }
+    .schema-box.illu.img-missing { background: #fff; border: 2px dashed #ffb74d; border-radius: 12px; padding: 12px; }
+    /* Livrets dépliables (grilles de rémunération) */
+    .livret { border: 1px solid #e3d9f2; background: #fff; border-radius: 12px; margin: 12px 0; overflow: hidden; }
+    .livret summary { cursor: pointer; list-style: none; display: flex; align-items: center; gap: 10px; padding: 13px 16px; font-weight: 700; font-size: 14px; color: #4C2A85; background: #F7F4FC; }
+    .livret summary::-webkit-details-marker { display: none; }
+    .livret summary .chev { margin-left: auto; color: #6B46C1; font-weight: 800; transition: transform .18s ease; }
+    .livret[open] summary .chev { transform: rotate(90deg); }
+    .livret .livret-body { padding: 12px 16px 14px; overflow-x: auto; }
+    .livret table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .livret th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: .6px; color: #6B46C1; padding: 6px 8px; border-bottom: 2px solid #ede7f8; white-space: nowrap; }
+    .livret td { padding: 6px 8px; border-bottom: 1px solid #f1edf8; color: #2c3e50; line-height: 1.45; }
+    .livret tr:last-child td { border-bottom: none; }
+    .livret td b { color: #4C2A85; }
+    .livret .src { font-size: 11.5px; color: #8a8494; margin-top: 9px; line-height: 1.5; }
+    @media print { .section-title { font-size: 22px; } .fine-note { font-size: 14px; } }
+    /* ===== IMPRESSION / PDF — format REEL 9:16 (1080×1920), agrandi pour remplir ===== */
+    @media print {
+        @page { size: 1080px 1920px; margin: 42px; }
+        body { background: #fff; padding: 0; max-width: 996px; font-size: 17px; }
+        .page-container::before { display: none; }
+        .prod-brand { margin: 0 0 12px; }
+        .prod-brand img { height: 38px; }
+        .hook-header { padding: 22px 30px; box-shadow: none; }
+        .hook-header .brand-tag { font-size: 12px; margin-bottom: 10px; }
+        .hook-header .course-title { font-size: 34px; margin-bottom: 10px; }
+        .hook-header .punch { font-size: 21px; }
+        .intro { font-size: 17px; line-height: 1.55; margin: 18px 2px; }
+        .schema-2up { margin: 18px 0; gap: 20px; }
+        .schema-box { padding: 12px; box-shadow: none; }
+        .schema-2up .schema-box img { height: 300px; }
+        .schema-box .schema-num { font-size: 12.5px; margin-bottom: 5px; }
+        .schema-box .caption { font-size: 14px; margin-top: 8px; }
+        .steps { padding: 20px 26px; margin: 18px 0; box-shadow: none; }
+        .steps .steps-title { font-size: 19px; margin-bottom: 13px; }
+        .step { margin-bottom: 11px; gap: 13px; }
+        .step .n { width: 30px; height: 30px; font-size: 14px; }
+        .step .txt { font-size: 16.5px; line-height: 1.5; padding-top: 2px; }
+        .pass-tip { padding: 16px 22px; margin: 18px 0; font-size: 16.5px; box-shadow: none; }
+        .recap { gap: 16px; margin: 18px 0; }
+        .recap .box { padding: 15px 20px; font-size: 15.5px; }
+        .recap .box .lbl { font-size: 12.5px; }
+        .qcm-cta { padding: 17px 24px; margin: 18px 0 6px; box-shadow: none; }
+        .qcm-cta .qcm-k { font-size: 12.5px; }
+        .qcm-cta .qcm-t { font-size: 20px; }
+        .qcm-cta .qcm-arrow { width: 44px; height: 44px; font-size: 20px; }
+        .bio-hint { display: block; text-align: center; margin: 12px 0 0; font-size: 17px; font-weight: 800; color: #6B46C1; }
+        .bio-hint strong { color: #4C2A85; }
+        .chapter-footer { margin-top: 14px; padding-top: 12px; font-size: 14px; }
+        .schema-2up, .schema-box, .steps, .recap, .pass-tip, .qcm-cta { page-break-inside: avoid; }
+    }
+    @media (max-width: 600px) {
+        body { padding: 14px; }
+        .hook-header { padding: 22px 18px 18px; }
+        .hook-header .course-title { font-size: 24px; }
+        .hook-header .punch { font-size: 16px; }
+        .recap { grid-template-columns: 1fr; }
+        .intro, .pass-tip, .step .txt, .recap .box { text-align: left; }
+        .schema-box::before { color: rgba(107,70,193,0.20); font-size: 11px; letter-spacing: 1px; max-width: 90%; }
+    }
+
+    /* === mobile-polish + zoom-bar ordi only === */
+    /* La barre de zoom (− / 100 % / +) est réservée à l'ordinateur : sur mobile,
+       le pinch-to-zoom natif suffit. On la masque sous la largeur tactile. */
+    @media (max-width: 768px) {
+        #medeos-zoom-bar { display: none !important; }
+    }
+    /* Agencement mobile soigné : le titre ne déborde jamais, le hook respire. */
+    @media (max-width: 600px) {
+        body { padding: 14px 13px 18px; }
+        .hook-header { padding: 20px 17px 16px; }
+        .hook-header .course-title {
+            font-size: clamp(20px, 6.4vw, 25px);
+            line-height: 1.12;
+            letter-spacing: -0.4px;
+            overflow-wrap: anywhere;
+            hyphens: auto;
+        }
+        .hook-header .punch { font-size: clamp(14.5px, 4.4vw, 17px); line-height: 1.3; }
+        .hook-header .brand-tag { font-size: 10.5px; letter-spacing: 1.2px; }
+        .intro { font-size: 15px; }
+        .schema-2up { gap: 14px; }
+        .steps { padding: 18px 16px; }
+        .steps .steps-title { font-size: 15px; }
+        .step .txt { font-size: 14.5px; }
+        .qcm-cta { padding: 15px 16px; gap: 12px; }
+        .qcm-cta .qcm-t { font-size: 16px; }
+        .qcm-cta .qcm-arrow { width: 38px; height: 38px; font-size: 18px; }
+        /* boutons de la lightbox plus gros au doigt */
+        #medeos-lightbox button[aria-label="Fermer"] { width: 46px; height: 46px; font-size: 26px; }
+    }
+</style>
+</head>
+<body>
+<div class="page-container">
+
+    <div class="prod-brand"><img src="../images/logo-medeos-violet-texte.png" alt="Medeos"></div>
+
+    <header class="hook-header">
+        <div class="brand-tag">Ressource gratuite · Découverte métier</div>
+        <h1 class="course-title">Kinésithérapeute : le métier en vrai</h1>
+        <p class="punch"><span class="accent">109 000 kinés</span> en France — et plus de 8 sur 10 sont leur propre patron, du cabinet de quartier au bord des terrains.</p>
+        <p class="punch">5 ans après le bac, un diplôme de grade master — et un métier qui soigne avec les mains, sans médicament ni bistouri.</p>
+    </header>
+
+    <div class="illu illu-float-right">
+        <figure class="schema-box illu illu-mid">
+            <img src="../images/metiers/fiche_metier_kinesitherapeute_univers.png"
+                 alt="Un kinésithérapeute stylisé au centre, mains ouvertes, relié à six pastilles rondes : cabinet, domicile, hôpital, sport, EHPAD, entreprise."
+                 onerror="schemaMissing(this)">
+            <div class="file-target">📁 <strong>fiche_metier_kinesitherapeute_univers.png</strong><br>à placer dans : <strong>/public/images/metiers/</strong><br><span style="color:#555;font-weight:400;">Petite illustration SANS fond (PNG transparent) : un kinésithérapeute au centre, mains ouvertes, entouré de six pastilles pictogrammes (cabinet, domicile, hôpital, sport, EHPAD, entreprise), format paysage 4:3.</span></div>
+            <figcaption class="caption">Un seul diplôme, <strong>six univers d'exercice</strong> — et plus de 8 kinés sur 10 à leur compte.</figcaption>
+            <div class="generation-prompt"><strong>Prompt ChatGPT-image :</strong>
+Charming minimal flat 2-D vector illustration, light and airy, FLAT SOLID pastel colours only, thin clean outlines, isolated on a fully TRANSPARENT background (PNG with alpha) — no background shape, no frame, no card, no drop shadow, absolutely NO dark background, NO glow, NO neon, NO blur, NO soft halos around elements: crisp flat shapes on pure transparency, as in a clean SVG icon set. Landscape 4:3 composition. One friendly flat physiotherapist silhouette in the centre, seen from the front, smooth blank face, violet #6B46C1 tunic, both hands open and slightly raised (the hands are the tool of this profession), about 40% of image height. Around it, six small round pastel discs in a regular fan (three above, three below), each linked to the physiotherapist by a fine light-grey line, each holding one simple flat pictogram, one short French sans-serif label just below each disc: « Cabinet » (warm terracotta disc, low flat treatment table), « Domicile » (honey amber disc, small house), « Hôpital » (deep blue #1F4E8C disc, building with a small white cross), « Sport » (warm terracotta disc, round ball with one tiny motion line), « EHPAD » (deep blue disc, elderly silhouette with a walking cane), « Entreprise » (honey amber disc, office chair and desk). One tiny yellow #FCD34D four-point spark near the physiotherapist's hands, the only yellow accent. Airy, generous empty space. AVOID: any English text, gibberish or misspelled words, 3-D, photorealism, shadows, any background rectangle or colour, frames, borders, watermark, realistic faces, red cross emblem, stethoscope, white doctor coat, text inside the discs, massage-parlour candles or stones.
+            </div>
+            <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+        </figure>
+    </div>
+
+    <p class="intro">Remettre un sportif sur pied, réapprendre à marcher après un accident, aider un nouveau-né ou une grand-mère à mieux respirer : le kinésithérapeute est <strong>le spécialiste du mouvement</strong> — celui qui soigne <em class="hl">avec ses mains</em>, sans médicament ni bistouri. C'est un métier de <strong>relation longue</strong> : on accompagne ses patients séance après séance, parfois pendant des mois, et on voit les progrès à l'œil nu. C'est aussi l'un des rares métiers de santé où plus de 8 professionnels sur 10 sont <strong>leur propre patron</strong>. Sur cette fiche, on te montre le quotidien réel — les séances, les circuits de l'argent, le chemin depuis la Terminale — pour que tu puisses te projeter <strong>les yeux ouverts</strong>.</p>
+
+    <h2 class="section-title">Ta journée si tu deviens kinésithérapeute</h2>
+    <div class="steps">
+        <div class="steps-title">Une journée type</div>
+        <ol>
+            <li class="step">
+                <span class="n">1</span>
+                <span class="txt"><span class="lead">7h45 — Ouverture.</span> Tu ouvres le cabinet, tu allumes le <b>plateau technique</b> <span class="gl">(la salle d'appareils : vélos, poulies, tables de soins)</span> et tu regardes l'agenda : <b>25 rendez-vous</b> aujourd'hui. Le premier patient sonne à 8h.</span>
+            </li>
+            <li class="step">
+                <span class="n">2</span>
+                <span class="txt"><span class="lead">8h — Les séances s'enchaînent.</span> Une épaule opérée, une lombalgie <span class="gl">(un mal du bas du dos)</span>, un genou en rééducation après une entorse. Une séance dure <b>environ 30 minutes</b> : les mains, les exercices, les encouragements.</span>
+            </li>
+            <li class="step">
+                <span class="n">3</span>
+                <span class="txt"><span class="lead">11h — Un nouveau patient.</span> Place au <b>bilan</b> : tu interroges, tu mesures, tu testes — pour poser ton <b>diagnostic kinésithérapique</b> <span class="gl">(non pas le nom d'une maladie, mais d'où vient le problème de mouvement et comment le corriger)</span>.</span>
+            </li>
+            <li class="step">
+                <span class="n">4</span>
+                <span class="txt"><span class="lead">13h — Tournée à domicile.</span> Chez une patiente âgée qui réapprend à marcher après une chute. À domicile, tu vois la personne <b>dans sa vraie vie</b> — l'escalier, le tapis qui glisse — et c'est souvent là que tout se joue.</span>
+            </li>
+            <li class="step">
+                <span class="n">5</span>
+                <span class="txt"><span class="lead">14h30 — Les patients au long cours.</span> Un monsieur hémiplégique <span class="gl">(paralysé d'un côté après un AVC, un accident vasculaire cérébral)</span>, une adolescente suivie pour une scoliose : des progrès qui se gagnent sur des <b>semaines, parfois des mois</b>. La patience est un outil de travail.</span>
+            </li>
+            <li class="step">
+                <span class="n">6</span>
+                <span class="txt"><span class="lead">18h — Le créneau des actifs.</span> Ceux qui sortent du travail et les sportifs du club d'à côté remplissent la fin de journée : le cabinet <b>ne désemplit pas</b>.</span>
+            </li>
+            <li class="step">
+                <span class="n">7</span>
+                <span class="txt"><span class="lead">19h30 — Fermeture… et gestion.</span> Télétransmission des séances à l'Assurance Maladie, factures, un œil sur la comptabilité : en libéral, tu es aussi <b>chef d'entreprise</b>.</span>
+            </li>
+        </ol>
+    </div>
+
+    <div class="illu">
+        <figure class="schema-box illu illu-slim">
+            <img src="../images/metiers/fiche_metier_kinesitherapeute_journee.png"
+                 alt="Frise fine du matin au soir : sept moments de la journée d&#x27;un kiné libéral, du soleil levant au croissant de lune, avec leurs horaires."
+                 onerror="schemaMissing(this)">
+            <div class="file-target">📁 <strong>fiche_metier_kinesitherapeute_journee.png</strong><br>à placer dans : <strong>/public/images/metiers/</strong><br><span style="color:#555;font-weight:400;">Bandeau très large et fin SANS fond (PNG transparent) : ligne du temps soleil → lune, sept petits pictogrammes horodatés de la journée d&#x27;un kiné libéral — aucun autre mot que les heures.</span></div>
+            <figcaption class="caption">De 7h45 à 19h30 : <strong>les mains toute la journée</strong> — et la gestion en prime.</figcaption>
+            <div class="generation-prompt"><strong>Prompt ChatGPT-image :</strong>
+Charming minimal flat 2-D vector illustration, light and airy, FLAT SOLID pastel colours only, thin clean outlines, isolated on a fully TRANSPARENT background (PNG with alpha) — no background shape, no frame, no card, no drop shadow, absolutely NO dark background, NO glow, NO neon, NO blur, NO soft halos around elements: crisp flat shapes on pure transparency, as in a clean SVG icon set. Very wide, slim banner. A single thin light-grey horizontal line across the middle, a small flat honey-amber rising sun at the far left end, a small deep-blue #1F4E8C crescent moon at the far right end. On the line, seven small violet #6B46C1 dots; above or below each dot (alternating), one tiny flat pictogram with its time only, in small violet French numerals: « 7h45 » a key turning in a door, « 8h » two open hands above a low flat treatment table, « 11h » a clipboard with a short checklist, « 13h » a tiny car beside a small house with one thin yellow #FCD34D underline below the time (the only yellow accent), « 14h30 » a small standing figure stretching an exercise band, « 18h » a round ball beside a small training cone, « 19h30 » a computer screen with a paper sheet. All pictograms the same small size, soft terracotta / deep blue / honey amber flat colours, lots of empty space. AVOID: any English text, gibberish, any word or label other than the seven times, 3-D, photorealism, shadows, any background colour, frames, borders, watermark, clock faces, realistic faces, red cross emblem, hourglasses.
+            </div>
+            <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+        </figure>
+    </div>
+
+    <h2 class="section-title">Où tu peux exercer</h2>
+    <div class="steps">
+        <div class="steps-title">Trois façons de vivre le même métier</div>
+        <ol>
+            <li class="step">
+                <span class="n">1</span>
+                <span class="txt"><span class="lead">Libéral — ton propre patron.</span> Seul en cabinet ou en <b>cabinet de groupe</b> (la formule qui se développe : matériel partagé, continuité des soins), avec des visites à domicile — c'est le mode d'exercice de plus de 8 kinés sur 10. Grande liberté d'organisation et patientèle fidèle, en échange : <b>pas de congés payés</b>, et un rythme que tu choisis toi-même, une amplitude 8h-20h, et pas de congés payés.</span>
+            </li>
+            <li class="step">
+                <span class="n">2</span>
+                <span class="txt"><span class="lead">Salarié — l'équipe et les cas qu'on ne voit qu'à l'hôpital.</span> À l'hôpital public, en clinique ou en centre de rééducation : réanimation, neurologie lourde, grands brûlés — avec une équipe pluridisciplinaire autour de toi. Salaire fixe, congés payés, <b>35 heures par semaine</b> dans le public. En échange, une rémunération plus faible qu'en libéral.</span>
+            </li>
+            <li class="step">
+                <span class="n">3</span>
+                <span class="txt"><span class="lead">Mixte — le cabinet et autre chose.</span> Beaucoup de kinés panachent : cabinet + vacations <span class="gl">(des demi-journées salariées en établissement)</span>, ou cabinet + terrain de sport. Attention à l'image toute faite : le kiné d'équipe professionnelle est <b>très rare</b> — en club amateur, c'est souvent du bénévolat. Compte des semaines aussi pleines qu'en libéral (45 h et plus), à composer toi-même.</span>
+            </li>
+        </ol>
+    </div>
+
+    <h2 class="section-title">Combien tu gagnes — et comment</h2>
+    <div class="steps">
+        <div class="steps-title">Les circuits de l'argent</div>
+        <ol>
+            <li class="step">
+                <span class="n">1</span>
+                <span class="txt"><span class="lead">En libéral : payé à l'acte, à la séance.</span> Pas de salaire : chaque séance conventionnée rapporte <b>≈ 17,90 €</b> <span class="gl">(tarif fixé par l'Assurance Maladie depuis le 1ᵉʳ janvier 2026 — de 17,83 à 17,97 € selon la situation clinique traitée)</span> pour une séance d'environ <b>30 minutes</b>. Et c'est là que se joue tout le métier : <b>tu es payé au patient, pas à l'heure</b>. Sur un plateau technique, rien ne t'empêche de suivre <b>2, 3 ou 4 patients dans la même heure</b> — pendant que l'un fait ses exercices sous ta surveillance, tu prends le suivant. Ton revenu du mois dépend donc du <b>nombre de patients que tu as vus</b>, et c'est à toi de trouver ton équilibre entre <b>la quantité et la qualité des soins</b> : c'est le vrai arbitrage du kiné libéral, et personne ne le fera à ta place. Mais <b>honoraires ≠ revenu</b> : environ la moitié part en charges (cotisations, local, matériel, assurances). Un titulaire installé gagne en moyenne <b>≈ 3 400 € net par mois avant impôt</b> — mais <b>la moitié des kinés gagne moins de 2 600 €</b> <span class="gl">(UNASA, revenus 2023 : moyenne 3 400 €, médiane 2 600 €)</span>. L'écart n'a rien d'anodin : c'est exactement le nombre de patients pris qui sépare les deux, une minorité à gros volume tirant la moyenne vers le haut. En <b>remplacement</b>, tu factures <b>exactement les mêmes séances aux mêmes tarifs</b> qu'un titulaire : tu reverses simplement une <b>rétrocession</b> au kiné que tu remplaces <span class="gl">(un pourcentage convenu entre vous)</span>, et en échange tu n'as ni loyer, ni matériel, ni personnel à payer. De quoi <b>travailler partout en France</b>, choisir tes périodes et voyager entre deux remplacements.</span>
+            </li>
+            <li class="step">
+                <span class="n">2</span>
+                <span class="txt"><span class="lead">En salarié : une grille nationale.</span> À l'hôpital public, tu gravis une <b>grille à échelons</b> : <b>≈ 1 900 € net</b> au début <span class="gl">(complément Ségur inclus)</span> pour <b>35 heures par semaine</b>, jusqu'à ≈ <b>3 260 € net</b> au sommet de la grille — le détail exact est dans le livret ci-dessous. En clinique ou en centre de rééducation privé, l'embauche se négocie autour de <b>2 000 à 2 300 € brut</b> selon la convention de l'établissement.</span>
+            </li>
+            <li class="step">
+                <span class="n">3</span>
+                <span class="txt"><span class="lead">Et pendant les études ?</span> Contrairement à l'interne en médecine, l'étudiant kiné n'a <b>pas de salaire</b> : les stages versent une <b>indemnité de 36 à 60 € par semaine</b> selon l'année. La vraie question, c'est le <b>coût de l'école</b> : 170 à 243 € l'année en IFMK public depuis 2023… mais jusqu'à ≈ 10 000 € l'année dans certains IFMK privés — la vérité complète est dans le livret ci-dessous.</span>
+            </li>
+        </ol>
+    </div>
+
+    <details class="livret">
+        <summary>📖 L'argent pendant les études : la vérité des frais (et des petites indemnités)<span class="chev">›</span></summary>
+        <div class="livret-body">
+            <p class="src" style="margin:0 0 9px;">En kiné, la question n'est pas « combien tu gagnes pendant tes études » mais « combien elles te coûtent » : tout dépend de l'école — pour <b>le même diplôme d'État</b> à la sortie.</p>
+            <table>
+                <thead><tr><th>Poste</th><th>Montant</th><th>Précision</th></tr></thead>
+                <tbody>
+                    <tr><td><b>P1 à l'université</b> (PASS ou LAS)</td><td>178 € l'année</td><td>droits d'inscription universitaires 2025-2026, + CVEC 105 € (la contribution de vie étudiante)</td></tr>
+                    <tr><td><b>IFMK public — années 1 et 2</b></td><td><b>170 € / an</b></td><td>tarif unique imposé aux 25 IFMK publics depuis la rentrée 2023 (arrêté du 27 mars 2023)</td></tr>
+                    <tr><td><b>IFMK public — années 3 et 4</b></td><td><b>243 € / an</b></td><td>même arrêté — aucun frais supplémentaire ne peut être exigé</td></tr>
+                    <tr><td><b>IFMK privé à but non lucratif</b></td><td>≈ 5 400 € / an</td><td>moyenne constatée (enquête L'Étudiant / FNEK)</td></tr>
+                    <tr><td><b>IFMK privé à but lucratif</b></td><td>≈ 9 000 à 10 100 € / an</td><td>ex. : 10 100 € à l'École d'Assas pour 2026-2027</td></tr>
+                    <tr><td>Indemnité de stage — 1ʳᵉ année d'IFMK</td><td>36 € / semaine de stage</td><td>arrêté du 16 décembre 2020</td></tr>
+                    <tr><td>Indemnité de stage — 2ᵉ année</td><td>46 € / semaine</td><td>versée au prorata des jours de stage réalisés</td></tr>
+                    <tr><td>Indemnité de stage — 3ᵉ et 4ᵉ années</td><td>60 € / semaine</td><td>idem</td></tr>
+                    <tr><td>Gratification (stage de plus de 2 mois dans la même structure)</td><td>4,50 € / heure depuis janvier 2026</td><td>rare : peu de stages d'IFMK dépassent ce seuil</td></tr>
+                </tbody>
+            </table>
+            <p class="src">Avant l'arrêté du 27 mars 2023, les IFMK publics facturaient de 376,50 € à <b>5 600 € par an</b> selon l'établissement — l'alignement sur les tarifs universitaires a tout changé pour les 25 instituts publics. Les IFMK privés restent libres de leurs tarifs.<br>💡 Attention : tu ne choisis pas toujours entre public et privé — l'affectation dépend de ton <b>classement en P1</b> et des instituts reliés à ta fac (dans certaines villes, l'école reliée est privée). Des <b>bourses régionales</b> existent, sous conditions de ressources : les formations de kiné dépendent des Régions — renseigne-toi tôt.</p>
+        </div>
+    </details>
+
+    <details class="livret">
+        <summary>📖 La grille du kiné à l'hôpital public — échelon par échelon<span class="chev">›</span></summary>
+        <div class="livret-body">
+            <p class="src" style="margin:0 0 9px;">Grille de la fonction publique hospitalière (catégorie A), classe normale. Le « ≈ net » inclut le <b>complément Ségur</b> (+241 € brut, ≈ +183 € net par mois) et reste une estimation avant impôt, hors primes.</p>
+            <table>
+                <thead><tr><th>Échelon</th><th>Durée</th><th>Brut mensuel (traitement)</th><th>≈ net / mois (Ségur inclus)</th></tr></thead>
+                <tbody>
+                    <tr><td><b>Échelon 1</b></td><td>18 mois</td><td>2 102 €</td><td><b>≈ 1 900 €</b></td></tr>
+                    <tr><td><b>Échelon 2</b></td><td>2 ans</td><td>2 215 €</td><td><b>≈ 1 990 €</b></td></tr>
+                    <tr><td><b>Échelon 3</b></td><td>2 ans</td><td>2 353 €</td><td><b>≈ 2 100 €</b></td></tr>
+                    <tr><td><b>Échelon 4</b></td><td>2 ans</td><td>2 491 €</td><td><b>≈ 2 210 €</b></td></tr>
+                    <tr><td><b>Échelon 5</b></td><td>2 ans</td><td>2 629 €</td><td><b>≈ 2 320 €</b></td></tr>
+                    <tr><td><b>Échelon 6</b></td><td>2 ans 6 mois</td><td>2 772 €</td><td><b>≈ 2 440 €</b></td></tr>
+                    <tr><td><b>Échelon 7</b></td><td>3 ans</td><td>2 919 €</td><td><b>≈ 2 560 €</b></td></tr>
+                    <tr><td><b>Échelon 8</b></td><td>3 ans</td><td>3 072 €</td><td><b>≈ 2 680 €</b></td></tr>
+                    <tr><td><b>Échelon 9</b></td><td>4 ans</td><td>3 229 €</td><td><b>≈ 2 810 €</b></td></tr>
+                    <tr><td><b>Échelon 10</b></td><td>4 ans</td><td>3 397 €</td><td><b>≈ 2 950 €</b></td></tr>
+                    <tr><td><b>Échelon 11</b></td><td>dernier de la classe normale</td><td>3 579 €</td><td><b>≈ 3 090 €</b></td></tr>
+                    <tr><td><b>Classe supérieure — sommet</b></td><td>2ᵉ grade, à l'ancienneté</td><td>3 786 €</td><td><b>≈ 3 260 €</b></td></tr>
+                </tbody>
+            </table>
+            <p class="src">Grille indiciaire FPH, valeur du point 4,92278 € (en vigueur depuis juillet 2023, inchangée — grilles consultées en 2026). Il faut ≈ <b>26 ans</b> pour atteindre le 11ᵉ échelon ; s'ajoutent la prime de service et d'éventuelles indemnités.<br>⏱️ <b>Le temps de travail en face</b> : 35 heures par semaine, congés payés, RTT selon les établissements. En clinique ou centre de rééducation privé (conventions collectives dites CCN 51 ou CCN 66), l'embauche se négocie : ≈ <b>2 000 à 2 300 € brut</b> au départ, primes possibles.</p>
+        </div>
+    </details>
+
+    <details class="livret">
+        <summary>📖 Le libéral n'a pas de grille : la simulation<span class="chev">›</span></summary>
+        <div class="livret-body">
+            <p class="src" style="margin:0 0 9px;">⚠️ Lis bien la première colonne : ce sont des <b>patients pris dans la journée</b>, pas des heures de travail. Une séance dure ≈ 30 minutes, mais sur plateau technique un kiné en suit couramment 2 à 4 par heure — c'est ce choix, quantité contre qualité, qui fait varier le revenu du simple au double.<br><br>Hypothèses affichées : séance conventionnée à <b>17,90 €</b> (tarif moyen au 1ᵉʳ janvier 2026), <b>4,5 jours de travail par semaine</b>, <b>46 semaines par an</b> (≈ 6 semaines de congés — non payés en libéral) et <b>≈ 50 % de charges</b> (cotisations URSSAF et CARPIMKO, local, matériel, assurances — l'UNASA mesure ≈ 52 % en réalité).</p>
+            <table>
+                <thead><tr><th>Patients / jour (sur 4,5 j / semaine)</th><th>Honoraires / mois</th><th>≈ net avant impôt</th></tr></thead>
+                <tbody>
+                    <tr><td><b>20 patients / jour</b></td><td>≈ 6 200 €</td><td><b>≈ 3 100 €</b></td></tr>
+                    <tr><td><b>25 patients / jour</b></td><td>≈ 7 700 €</td><td><b>≈ 3 850 €</b></td></tr>
+                    <tr><td><b>30 patients / jour</b></td><td>≈ 9 300 €</td><td><b>≈ 4 650 €</b></td></tr>
+                </tbody>
+            </table>
+            <p class="src">La réalité mesurée colle à la simulation : recettes moyennes ≈ <b>85 300 € / an</b> et bénéfice moyen ≈ <b>40 700 € / an</b>, soit ≈ 3 400 € / mois avant impôt — la <b>médiane</b> est plus basse, ≈ 31 400 € / an soit ≈ 2 600 € / mois (UNASA, revenus 2023). S'ajoutent les <b>indemnités de déplacement</b> pour les visites à domicile et des actes cotés plus haut (neurologie, par exemple).<br>⏱️ <b>À savoir</b> : en libéral, tu fixes toi-même ton nombre de séances par jour et tes jours de consultation — le volume ci-dessus n'est qu'une hypothèse de calcul. Un <b>remplaçant</b> facture les mêmes séances aux mêmes tarifs et reverse une <b>rétrocession</b> au titulaire. La moyenne déclarée des remplaçants (≈ 2 400-2 500 € net/mois) est plus basse surtout parce qu'ils travaillent <b>moins de semaines dans l'année</b> — pas parce que l'acte rapporte moins.<br>La séance d'hier à aujourd'hui : <b>16,13 €</b> jusqu'en février 2024, 16,58 € de février 2024 à fin 2025, <b>≈ 17,90 €</b> depuis janvier 2026 (avenant 7 — la nomenclature détaille désormais l'acte selon la zone traitée : de 17,83 à 17,97 €).</p>
+        </div>
+    </details>
+
+    <div class="duo">
+    <div class="illu">
+        <figure class="schema-box illu illu-mid">
+            <img src="../images/metiers/fiche_metier_kinesitherapeute_remuneration.png"
+                 alt="Deux petites scènes : à gauche le libéral (kiné penché sur une table de soins, pièce de 17,90 €, barre charges/net) ; à droite le salarié (hôpital et escalier de grille)."
+                 onerror="schemaMissing(this)">
+            <div class="file-target">📁 <strong>fiche_metier_kinesitherapeute_remuneration.png</strong><br>à placer dans : <strong>/public/images/metiers/</strong><br><span style="color:#555;font-weight:400;">Petite illustration SANS fond (PNG transparent) : scène libéral (table de soins → pièce 17,90 € → barre Charges/Net) à gauche, scène salarié (hôpital + escalier de grille) à droite.</span></div>
+            <figcaption class="caption">À l'acte en libéral — <strong>≈ 17,90 € la séance</strong> —, sur une grille à l'hôpital.</figcaption>
+            <div class="generation-prompt"><strong>Prompt ChatGPT-image :</strong>
+Charming minimal flat 2-D vector illustration, light and airy, FLAT SOLID pastel colours only, thin clean outlines, isolated on a fully TRANSPARENT background (PNG with alpha) — no background shape, no frame, no card, no drop shadow, absolutely NO dark background, NO glow, NO neon, NO blur, NO soft halos around elements: crisp flat shapes on pure transparency, as in a clean SVG icon set. Two small scenes side by side, separated by generous empty space. LEFT scene, French label « Libéral » in violet #6B46C1 above it: a flat physiotherapist silhouette standing beside a low flat treatment table, hands over a lying patient silhouette, below them one violet coin marked only « 17,90 € » in white, and under the coin one short horizontal rounded bar split exactly in half — warm terracotta half labelled « Charges », violet half labelled « Net » with a thin yellow #FCD34D ring around it (the only yellow accent). RIGHT scene, French label « Salarié » in deep blue #1F4E8C above it: a small flat hospital building with a tiny white cross, beside an ascending staircase of five deep-blue steps with a thin grey rising arrow, one label « Grille » under the staircase. Exactly six short French labels in the whole image, small clean sans-serif. AVOID: any English text, gibberish or misspelled words, any number other than 17,90 €, 3-D, photorealism, shadows, any background colour, frames, borders, watermark, banknote piles, dollar signs, euro-sign icons, percentages, pie charts, realistic faces, red cross emblem.
+            </div>
+            <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+        </figure>
+    </div>
+    <div class="pass-tip">
+        Ces montants sont des <strong>moyennes, pas des promesses</strong> : entre une <strong>médiane</strong> des titulaires autour de 2 600 € et le quart le mieux installé au-delà de <strong>5 500 € net par mois</strong>, tout dépend du rythme que tu choisis, du lieu et des années d'installation. On ne devient pas kiné pour rouler sur l'or : le tarif de la séance est fixé par l'Assurance Maladie, et le revenu se construit <strong>au volume et à la régularité</strong>. Ce que le métier offre vraiment : un <strong>quasi-plein-emploi</strong> partout en France, des patients dès les premiers remplacements, une liberté d'organisation rare — et des résultats qui se voient à l'œil nu, séance après séance.
+    </div>
+    </div>
+
+    <h2 class="section-title">Le chemin depuis la Terminale</h2>
+    <div class="illu">
+        <figure class="schema-box illu illu-wide">
+            <img src="../images/metiers/fiche_metier_kinesitherapeute_parcours.png"
+                 alt="Chemin montant de la Terminale au kiné : P1 (1 an), IFMK cycle 1 (2 ans), IFMK cycle 2 (2 ans), losange Diplôme d&#x27;État — arc « 5 ans »."
+                 onerror="schemaMissing(this)">
+            <div class="file-target">📁 <strong>fiche_metier_kinesitherapeute_parcours.png</strong><br>à placer dans : <strong>/public/images/metiers/</strong><br><span style="color:#555;font-weight:400;">Bandeau SANS fond (PNG transparent) : chemin montant Terminale → P1 → IFMK cycle 1 → IFMK cycle 2 → losange Diplôme d&#x27;État → silhouette kiné, arc « 5 ans » au-dessus.</span></div>
+            <figcaption class="caption">Compte <strong>5 ans après le bac</strong> — une seule année de sélection : la P1.</figcaption>
+            <div class="generation-prompt"><strong>Prompt ChatGPT-image :</strong>
+Charming minimal flat 2-D vector illustration, light and airy, FLAT SOLID pastel colours only, thin clean outlines, isolated on a fully TRANSPARENT background (PNG with alpha) — no background shape, no frame, no card, no drop shadow, absolutely NO dark background, NO glow, NO neon, NO blur, NO soft halos around elements: crisp flat shapes on pure transparency, as in a clean SVG icon set. Wide banner. A thin light-grey path rises gently from bottom-left to upper-right with soft curves. Along it, five milestones and a final figure, spacing roughly proportional to duration (the two IFMK segments together clearly the longest): warm terracotta dot with a schoolbag pictogram, label « Terminale » ; violet #6B46C1 dot with an open book, label « P1 », tiny grey « 1 an » ; deep blue #1F4E8C dot with two open hands above a small flat treatment table, label « IFMK cycle 1 », tiny grey « 2 ans » ; honey amber dot with a small standing figure stretching an exercise band, label « IFMK cycle 2 », tiny grey « 2 ans » ; one yellow #FCD34D diamond with a tiny graduation cap, label « Diplôme d'État » (the only yellow accent). At the end of the path, upper right, one small flat physiotherapist silhouette in a violet tunic, blank face, open hands, label « Kiné ». Above the whole path, one thin light-grey arc from the first dot to the final figure with the single violet label « 5 ans ». Small clean French sans-serif labels, lots of empty space. AVOID: any English text, gibberish or misspelled words, 3-D, photorealism, shadows, any background colour, frames, borders, watermark, extra numbers, more than six milestones, hourglasses, calendars, sad or stressed characters, stethoscope, white doctor coat, red cross emblem.
+            </div>
+            <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+        </figure>
+    </div>
+
+    <div class="steps">
+        <div class="steps-title">6 étapes — 5 ans après le bac</div>
+        <ol>
+            <li class="step">
+                <span class="n">1</span>
+                <span class="txt"><span class="lead">Terminale — Parcoursup.</span> Tu formules tes vœux vers la première année de santé <span class="gl">(PASS ou LAS — dans certaines facs, une L1 STAPS ou de biologie mène aussi en école de kiné)</span>. Un dossier régulier et des <b>spécialités scientifiques</b> sont tes meilleurs alliés.</span>
+            </li>
+            <li class="step">
+                <span class="n">2</span>
+                <span class="txt"><span class="lead">La P1 (voies PASS ou LAS) — 1 an.</span> L'année d'entrée : les sciences du corps humain et un <b>classement</b> qui décide de ton admission en école de kiné — chaque fac dispose d'un nombre de places précis. Ce n'est pas réservé aux génies : ceux qui décrochent kiné sont très souvent ceux qui arrivent avec une vraie <b>méthode de travail</b> dès les premières semaines.</span>
+            </li>
+            <li class="step">
+                <span class="n">3</span>
+                <span class="txt"><span class="lead">L'IFMK, cycle 1 — 2 ans.</span> L'école de kiné <span class="gl">(Institut de Formation en Masso-Kinésithérapie)</span> : anatomie, biomécanique <span class="gl">(la mécanique du corps en mouvement)</span>, premières techniques sur table — et déjà des <b>stages</b>.</span>
+            </li>
+            <li class="step">
+                <span class="n">4</span>
+                <span class="txt"><span class="lead">L'IFMK, cycle 2 — 2 ans.</span> Neurologie, respiratoire, sport, pédiatrie : tu tournes dans tous les champs du métier, avec des <b>stages longs</b> et un <b>mémoire de fin d'études</b>. Certains mènent en parallèle un master recherche.</span>
+            </li>
+            <li class="step">
+                <span class="n">5</span>
+                <span class="txt"><span class="lead">Le Diplôme d'État — grade master.</span> Te voilà kinésithérapeute, à bac +5. L'installation n'est plus libre partout, et une règle du jeu te concernera : <b>à partir de 2028</b>, les nouveaux diplômés devront exercer <b>2 ans</b> en zone sous-dotée <span class="gl">(là où l'on manque de kinés)</span> ou en établissement de santé avant de pouvoir t'installer dans les zones déjà très pourvues.</span>
+            </li>
+            <li class="step">
+                <span class="n">6</span>
+                <span class="txt"><span class="lead">Ton premier poste.</span> Beaucoup commencent par des <b>remplacements</b>, puis une collaboration <span class="gl">(tu exerces dans le cabinet d'un titulaire en lui reversant un pourcentage)</span>, avant l'installation — d'autres choisissent l'hôpital et ses prises en charge qu'on ne voit nulle part ailleurs.</span>
+            </li>
+        </ol>
+    </div>
+
+    <p class="fine-note">À suivre : le PASS et la LAS doivent laisser place à une « licence santé » unique à la rentrée 2027 — le kiné en fait partie, et les voies actuelles restent en place pour 2026. Deux autres chantiers avancent : l'<b>accès direct</b> sans ordonnance, déjà réel en structure de soins coordonnés, et la <b>régulation de l'installation</b>, qui imposera 2 ans en zone sous-dotée aux diplômés à partir de 2028. Quel que soit le nom de la porte d'entrée, la première année restera classante.</p>
+
+    <div class="recap">
+        <div class="box retenir">
+    <div class="illu spot-corner">
+        <figure class="schema-box illu illu-spot">
+            <img src="../images/metiers/fiche_metier_kinesitherapeute_spot.png"
+                 alt="Petite main ouverte violette au-dessus de laquelle marche une silhouette terracotta, ligne de mouvement bleue et étincelle jaune."
+                 onerror="schemaMissing(this)">
+            <div class="file-target">📁 <strong>fiche_metier_kinesitherapeute_spot.png</strong><br>à placer dans : <strong>/public/images/metiers/</strong><br><span style="color:#555;font-weight:400;">Mini-illustration SANS fond (PNG transparent) : une main ouverte violette, une petite silhouette terracotta qui marche au-dessus, une étincelle jaune. Aucun texte.</span></div>
+            <div class="generation-prompt"><strong>Prompt ChatGPT-image :</strong>
+Charming minimal flat 2-D vector illustration, light and airy, FLAT SOLID pastel colours only, thin clean outlines, isolated on a fully TRANSPARENT background (PNG with alpha) — no background shape, no frame, no card, no drop shadow, absolutely NO dark background, NO glow, NO neon, NO blur, NO soft halos around elements: crisp flat shapes on pure transparency, as in a clean SVG icon set. A single tiny spot motif: a violet #6B46C1 open hand seen in profile, palm up, and just above the palm a small warm terracotta stylised human figure caught mid-stride, walking confidently, with one thin deep-blue #1F4E8C curved motion line under its feet. One tiny yellow #FCD34D four-point spark beside the walking figure, the only yellow accent. No text at all. AVOID: any text or letters, gibberish, 3-D, photorealism, shadows, any background colour, frames, borders, watermark, realistic faces, realistic anatomy, skeletons, red cross emblem.
+            </div>
+            <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+        </figure>
+    </div>
+            <span class="lbl">Fait pour toi si…</span>
+            Tu aimes le <b>corps en mouvement</b> — le sport, la mécanique des muscles et des articulations. Tu préfères <b>faire</b> avec tes mains plutôt que rester derrière un bureau, et tu as le <b>contact facile</b> : toucher, guider, encourager font partie du soin. Tu es <b>patient</b> — les progrès se gagnent séance après séance, parfois sur des mois — et l'idée d'être un jour <b>ton propre patron</b> te plaît. Pas besoin d'être un athlète : une bonne condition physique suffit, même aux petits gabarits.
+        </div>
+        <div class="box piege">
+            <span class="lbl">Ce qu'on te dit moins</span>
+            C'est un métier <b>physique</b> : debout toute la journée, des patients parfois lourds à mobiliser, les mains et le dos très sollicités. En libéral, les semaines sont <b>pleines</b> (amplitude 8h-20h, pas de congés payés) et le tarif de la séance, fixé par l'Assurance Maladie, impose de <b>tenir un vrai rythme</b> pour bien gagner sa vie — sans oublier la part de gestion. En face : un quasi-plein-emploi partout en France, une liberté rare… et le jour où ton patient <b>remarche grâce à toi</b>, tu sais exactement pourquoi tu as choisi ce métier.
+        </div>
+    </div>
+
+    <a class="qcm-cta" style="display:none" href="/ressources/qcm-decouverte/decouverte-metier-kinesitherapeute" target="_top">
+        <span class="qcm-body">
+            <span class="qcm-k">Teste tes idées reçues en 3 questions</span>
+            <span class="qcm-t">QCM — Le métier de kinésithérapeute</span>
+        </span>
+        <span class="qcm-arrow" aria-hidden="true">→</span>
+    </a>
+    <div class="bio-hint">📲 Pour faire le QCM gratuit → <strong>lien en bio</strong></div>
+
+    <footer class="chapter-footer">
+        <p>Une fiche <strong>Medeos</strong> · pour anticiper la P1, sereinement · medeos-sante.fr</p>
+    </footer>
+
+</div>
+
+<div id="medeos-lightbox" role="dialog" aria-label="Schéma agrandi" aria-modal="true" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(26,26,46,0.92);overflow:auto;-webkit-overflow-scrolling:touch;touch-action:pinch-zoom;cursor:zoom-out;">
+    <button type="button" aria-label="Fermer" onclick="closeLightbox()" style="position:fixed;top:14px;right:16px;z-index:10003;width:42px;height:42px;border-radius:50%;border:none;background:rgba(255,255,255,0.14);color:#fff;font-size:24px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);">&times;</button>
+    <div id="medeos-zoom-bar" style="position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:10003;display:flex;gap:8px;align-items:center;background:rgba(255,255,255,0.14);backdrop-filter:blur(4px);padding:7px 10px;border-radius:999px;">
+        <button type="button" aria-label="Dézoomer" onclick="lbZoom(-1,event)" style="width:38px;height:38px;border-radius:50%;border:none;background:rgba(255,255,255,0.9);color:#1A1A2E;font-size:22px;font-weight:700;line-height:1;cursor:pointer;">&minus;</button>
+        <button type="button" aria-label="Réinitialiser le zoom" onclick="lbReset(event)" style="height:38px;padding:0 14px;border-radius:999px;border:none;background:rgba(255,255,255,0.9);color:#1A1A2E;font-size:13px;font-weight:700;cursor:pointer;">100&nbsp;%</button>
+        <button type="button" aria-label="Zoomer" onclick="lbZoom(1,event)" style="width:38px;height:38px;border-radius:50%;border:none;background:rgba(255,255,255,0.9);color:#1A1A2E;font-size:22px;font-weight:700;line-height:1;cursor:pointer;">+</button>
+    </div>
+    <div id="medeos-lightbox-stage" onclick="lbStageClick(event)" style="min-height:100%;display:flex;align-items:center;justify-content:center;padding:64px 16px;">
+        <div style="position:relative;display:inline-flex;">
+            <img id="medeos-lightbox-img" src="" alt="Schéma agrandi" ondblclick="lbToggleZoom(event)" style="display:block;border-radius:10px;box-shadow:0 10px 40px rgba(0,0,0,0.5);transform-origin:center center;transition:transform .18s ease;max-width:none;cursor:zoom-in;">
+            <div aria-hidden="true" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;">
+                <span style="font-family:'Inter',Arial,sans-serif;font-size:clamp(11px,4vw,30px);font-weight:700;letter-spacing:clamp(1px,1vw,6px);text-transform:uppercase;color:rgba(120,120,120,0.16);white-space:nowrap;">medeos-sante.fr</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var lbScale = 1, lbBaseW = 0;
+    function openLightbox(src) {
+        var lb = document.getElementById('medeos-lightbox');
+        var img = document.getElementById('medeos-lightbox-img');
+        lbScale = 1;
+        img.onload = function () {
+            // Taille de base : on s'aligne sur la largeur dispo (max 96vw) ou la taille native si plus petite.
+            var availW = Math.min(window.innerWidth * 0.96, this.naturalWidth);
+            var availH = window.innerHeight * 0.84;
+            var ratio = Math.min(availW / this.naturalWidth, availH / this.naturalHeight, 1);
+            lbBaseW = Math.max(120, Math.round(this.naturalWidth * ratio));
+            this.style.width = lbBaseW + 'px';
+            this.style.height = 'auto';
+            lbApply();
+        };
+        img.src = src;
+        lb.style.display = 'block';
+        lb.scrollTop = 0; lb.scrollLeft = 0;
+        document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+        document.getElementById('medeos-lightbox').style.display = 'none';
+        document.body.style.overflow = '';
+    }
+    function lbApply() {
+        var img = document.getElementById('medeos-lightbox-img');
+        img.style.transform = 'scale(' + lbScale + ')';
+        img.style.cursor = lbScale > 1 ? 'zoom-out' : 'zoom-in';
+        var lbl = document.querySelector('#medeos-zoom-bar button[onclick^="lbReset"]');
+        if (lbl) lbl.innerHTML = Math.round(lbScale * 100) + '&nbsp;%';
+    }
+    function lbZoom(dir, e) {
+        if (e) { e.stopPropagation(); e.preventDefault(); }
+        lbScale = Math.min(4, Math.max(1, +(lbScale + dir * 0.5).toFixed(2)));
+        lbApply();
+    }
+    function lbReset(e) { if (e) { e.stopPropagation(); e.preventDefault(); } lbScale = 1; lbApply(); }
+    function lbToggleZoom(e) { if (e) { e.stopPropagation(); e.preventDefault(); } lbScale = lbScale > 1 ? 1 : 2; lbApply(); }
+    function lbStageClick(e) { if (e.target.id === 'medeos-lightbox-stage') closeLightbox(); } // clic dans le vide = fermer
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeLightbox();
+        else if (document.getElementById('medeos-lightbox').style.display === 'block') {
+            if (e.key === '+' || e.key === '=') lbZoom(1);
+            else if (e.key === '-') lbZoom(-1);
+            else if (e.key === '0') lbReset();
+        }
+    });
+    document.getElementById('medeos-lightbox').addEventListener('wheel', function (e) {
+        if (this.style.display !== 'block') return;
+        if (e.ctrlKey || Math.abs(e.deltaY) > 0) { /* molette = zoom */ }
+        e.preventDefault();
+        lbScale = Math.min(4, Math.max(1, +(lbScale - Math.sign(e.deltaY) * 0.25).toFixed(2)));
+        lbApply();
+    }, { passive: false });
+    function schemaMissing(img) { img.style.display = 'none'; var b = img.closest('.schema-box'); if (b) b.classList.add('img-missing'); }
+</script>
+</body>
+</html>

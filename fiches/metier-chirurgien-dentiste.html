@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chirurgien-dentiste : le métier en vrai — Fiche Medeos</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 15px; line-height: 1.6; color: #2c3e50; background: #f6f8fb; padding: 22px; max-width: 760px; margin: 0 auto; }
+    .page-container { position: relative; }
+    .page-container::before { display: none; }
+    .page-container > * { position: relative; z-index: 1; }
+    .prod-brand { margin: 0 0 14px; }
+    .prod-brand img { height: 27px; width: auto; display: block; margin: 0 auto; }
+    .hook-header { background: #FAF6F0; border-radius: 14px; padding: 26px 30px 22px; box-shadow: 0 4px 18px rgba(76,42,133,0.08); border: 1px solid #efe7d8; }
+    .hook-header .brand-tag { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #6B46C1; font-weight: 600; opacity: 0.85; margin-bottom: 12px; }
+    .hook-header .course-title { font-size: 28px; line-height: 1.1; font-weight: 800; color: #4C2A85; letter-spacing: -0.7px; margin: 0 0 12px; }
+    .hook-header .punch { font-size: 18px; line-height: 1.3; font-weight: 800; color: #1A1A2E; letter-spacing: -0.3px; margin: 0; }
+    .hook-header .punch span.accent { color: #6B46C1; }
+    .hook-header .punch + .punch { margin-top: 5px; }
+    .intro { font-size: 15.5px; line-height: 1.7; color: #2c3e50; margin: 20px 2px; }
+    .intro strong { font-weight: 700; color: #4C2A85; }
+    em.hl { background: linear-gradient(180deg, transparent 60%, #FCD34D 60%); font-style: normal; padding: 0 2px; }
+    .schema-box { background: #fff; border: 2px solid #6B46C1; padding: 12px; text-align: center; border-radius: 12px; box-shadow: 0 4px 15px rgba(107, 70, 193, 0.15); position: relative; overflow: hidden; }
+    .schema-box::before { content: 'medeos-sante.fr'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: 'Inter', Arial, sans-serif; font-size: 14px; font-weight: 700; color: rgba(120,120,120,0.13); letter-spacing: 2px; text-transform: uppercase; pointer-events: none; user-select: none; z-index: 5; white-space: nowrap; max-width: 92%; overflow: hidden; }
+    .schema-box img { max-width: 100%; max-height: 300px; height: auto; border-radius: 8px; display: block; margin: 0 auto; cursor: zoom-in; }
+    .schema-box .schema-num { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 0.6px; text-transform: uppercase; color: #6B46C1; margin-bottom: 6px; }
+    .schema-box .caption { font-size: 12px; color: #6b6275; margin-top: 9px; font-weight: 500; }
+    .schema-box .caption strong { color: #6B46C1; }
+    .schema-box .file-target { display: none; margin-top: 10px; padding: 8px 12px; background: #e8f5e9; border: 1px solid #a5d6a7; border-radius: 6px; font-family: 'SFMono-Regular', Consolas, monospace; font-size: 11.5px; color: #1b5e20; text-align: left; line-height: 1.5; }
+    .schema-box .file-target strong { color: #2e7d32; }
+    .schema-box .generation-prompt { background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border: 2px dashed #ff9800; border-radius: 8px; padding: 13px; margin-top: 12px; text-align: left; font-size: 11.5px; color: #e65100; line-height: 1.55; white-space: pre-wrap; }
+    .schema-box .generation-prompt strong { color: #bf360c; display: block; margin-bottom: 8px; font-size: 12.5px; background: #ffcc80; padding: 7px 11px; border-radius: 4px; }
+    .schema-box .copy-prompt-btn { display: none; margin-top: 8px; padding: 6px 12px; background: #ff9800; color: #fff; border: none; border-radius: 4px; font-size: 12px; cursor: pointer; font-weight: 600; }
+    .schema-box .copy-prompt-btn:hover { background: #f57c00; }
+    .schema-box .generation-prompt { display: none; }
+    .schema-box.img-missing .generation-prompt { display: block; }
+    .schema-box.img-missing .copy-prompt-btn { display: inline-block; }
+    .schema-box.img-missing .file-target { display: block !important; }
+    .schema-2up { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; align-items: stretch; }
+    .schema-2up .schema-box { margin: 0; display: flex; flex-direction: column; }
+    .schema-2up .schema-box img { height: 230px; width: 100%; max-height: none; object-fit: contain; }
+    .schema-2up .schema-box .caption { margin-top: auto; }
+    @media (max-width: 720px) { .schema-2up { grid-template-columns: 1fr; } .schema-2up .schema-box img { height: auto; max-height: 300px; } }
+    .steps { background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%); border-left: 5px solid #6B46C1; border-radius: 0 12px 12px 0; padding: 18px 22px; margin: 20px 0; box-shadow: 0 2px 10px rgba(107,70,193,0.08); }
+    .steps .steps-title { font-size: 15px; font-weight: 800; color: #4C2A85; margin-bottom: 13px; }
+    .steps ol { list-style: none; margin: 0; padding: 0; }
+    .step { display: grid; grid-template-columns: 28px 1fr; gap: 12px; align-items: start; margin-bottom: 12px; }
+    .step:last-child { margin-bottom: 0; }
+    .step .n { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 999px; background: #6B46C1; color: #fff; font-size: 13px; font-weight: 800; }
+    .step .txt { font-size: 14.5px; line-height: 1.5; color: #2c3e50; padding-top: 2px; }
+    .step .txt b { color: #4C2A85; font-weight: 700; }
+    .step .txt .gl { color: #6b6275; font-weight: 400; }
+    .step .txt .lead { font-weight: 800; color: #1A1A2E; }
+    .pass-tip { background: #fdf6ec; border-left: 6px solid #B8895A; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; box-shadow: 0 3px 12px rgba(184,137,90,0.14); font-size: 14.5px; line-height: 1.55; }
+    .pass-tip::before { content: "Parlons vrai"; display: block; font-weight: 700; font-size: 12px; color: #9a6a37; margin-bottom: 7px; letter-spacing: 0.8px; text-transform: uppercase; }
+    .pass-tip strong { color: #9a6a37; }
+    .recap { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
+    .recap .box { border-radius: 12px; padding: 15px 18px; font-size: 14px; line-height: 1.5; }
+    .recap .retenir { background: #F1ECFA; border: 1px solid #dccff2; }
+    .recap .piege { background: #FFFBEB; border: 1px solid #F6E4A8; }
+    .recap .box .lbl { display: block; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 7px; }
+    .recap .retenir .lbl { color: #6B46C1; }
+    .recap .piege .lbl { color: #9a6d00; }
+    .recap b { font-weight: 700; color: #1A1A2E; }
+    .qcm-cta { display: flex; align-items: center; gap: 16px; text-decoration: none; color: inherit; background: #fff; border: 1px solid #d6c6f0; border-radius: 14px; padding: 18px 22px; margin: 24px 0 6px; box-shadow: 0 9px 26px -16px rgba(107,70,193,.4); transition: transform .18s ease, box-shadow .18s ease; }
+    .qcm-cta:hover { transform: translateY(-2px); box-shadow: 0 16px 38px -16px rgba(107,70,193,.5); }
+    .qcm-cta:focus-visible { outline: 3px solid #6B46C1; outline-offset: 2px; }
+    .qcm-cta .qcm-body { flex: 1; }
+    .qcm-cta .qcm-k { font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #6B46C1; }
+    .qcm-cta .qcm-t { font-size: 18px; font-weight: 800; color: #1A1A2E; margin-top: 3px; letter-spacing: -0.3px; }
+    .qcm-cta .qcm-arrow { flex: none; width: 42px; height: 42px; border-radius: 11px; background: #6B46C1; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700; }
+    .chapter-footer { text-align: center; margin-top: 22px; padding-top: 16px; border-top: 1px solid #e6dfd1; color: #7a8088; font-size: 12px; }
+    .chapter-footer strong { color: #6b6275; }
+    .bio-hint { display: none; }
+    .section-title { font-size: 19px; font-weight: 800; color: #4C2A85; letter-spacing: -0.3px; margin: 28px 2px 6px; }
+    .fine-note { font-size: 12.5px; color: #6b6275; margin: 10px 2px 0; line-height: 1.5; }
+    /* Placements variés des illustrations */
+    .illu-float-right { float: right; width: min(48%, 320px); margin: 4px 0 10px 18px; }
+    .illu-float-right img { width: 100%; max-height: none; }
+    .section-title { clear: both; }
+    .duo { display: grid; grid-template-columns: 250px 1fr; gap: 16px; align-items: center; margin: 20px 0; }
+    .duo .illu { margin: 0; }
+    .duo .illu img { width: 100%; max-height: none; }
+    .duo .pass-tip { margin: 0; }
+    .spot-corner { float: right; width: 74px; margin: 0 0 4px 12px; }
+    .spot-corner img { width: 100%; max-height: none; }
+    .recap .box { overflow: hidden; }
+    /* Mode brouillon (image manquante) : tout repasse en pleine largeur */
+    .illu:has(.img-missing) { float: none !important; width: auto !important; }
+    .duo:has(.img-missing) { grid-template-columns: 1fr; }
+    @media (max-width: 600px) {
+        .illu-float-right { float: none; width: 72%; margin: 12px auto; }
+        .duo { grid-template-columns: 1fr; }
+        .spot-corner { width: 58px; margin-left: 8px; }
+    }
+    /* Illustrations légères : pas de cadre, pas de fond, pas de zoom */
+    .illu { margin: 18px auto 8px; }
+    .schema-box.illu { border: none; box-shadow: none; background: transparent; padding: 0; overflow: visible; }
+    .schema-box.illu::before { content: none; }
+    .schema-box.illu img { cursor: default; max-height: none; }
+    .illu-mid img { max-height: 250px; }
+    .illu-wide img { max-height: 220px; width: 100%; object-fit: contain; }
+    .illu-slim img { max-height: 150px; width: 100%; object-fit: contain; }
+    .illu-spot img { max-height: 96px; }
+    .schema-box.illu .caption { margin-top: 5px; font-size: 12px; }
+    .schema-box.illu.img-missing { background: #fff; border: 2px dashed #ffb74d; border-radius: 12px; padding: 12px; }
+    /* Livrets dépliables (grilles de rémunération) */
+    .livret { border: 1px solid #e3d9f2; background: #fff; border-radius: 12px; margin: 12px 0; overflow: hidden; }
+    .livret summary { cursor: pointer; list-style: none; display: flex; align-items: center; gap: 10px; padding: 13px 16px; font-weight: 700; font-size: 14px; color: #4C2A85; background: #F7F4FC; }
+    .livret summary::-webkit-details-marker { display: none; }
+    .livret summary .chev { margin-left: auto; color: #6B46C1; font-weight: 800; transition: transform .18s ease; }
+    .livret[open] summary .chev { transform: rotate(90deg); }
+    .livret .livret-body { padding: 12px 16px 14px; overflow-x: auto; }
+    .livret table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .livret th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: .6px; color: #6B46C1; padding: 6px 8px; border-bottom: 2px solid #ede7f8; white-space: nowrap; }
+    .livret td { padding: 6px 8px; border-bottom: 1px solid #f1edf8; color: #2c3e50; line-height: 1.45; }
+    .livret tr:last-child td { border-bottom: none; }
+    .livret td b { color: #4C2A85; }
+    .livret .src { font-size: 11.5px; color: #8a8494; margin-top: 9px; line-height: 1.5; }
+    @media print { .section-title { font-size: 22px; } .fine-note { font-size: 14px; } }
+    /* ===== IMPRESSION / PDF — format REEL 9:16 (1080×1920), agrandi pour remplir ===== */
+    @media print {
+        @page { size: 1080px 1920px; margin: 42px; }
+        body { background: #fff; padding: 0; max-width: 996px; font-size: 17px; }
+        .page-container::before { display: none; }
+        .prod-brand { margin: 0 0 12px; }
+        .prod-brand img { height: 38px; }
+        .hook-header { padding: 22px 30px; box-shadow: none; }
+        .hook-header .brand-tag { font-size: 12px; margin-bottom: 10px; }
+        .hook-header .course-title { font-size: 34px; margin-bottom: 10px; }
+        .hook-header .punch { font-size: 21px; }
+        .intro { font-size: 17px; line-height: 1.55; margin: 18px 2px; }
+        .schema-2up { margin: 18px 0; gap: 20px; }
+        .schema-box { padding: 12px; box-shadow: none; }
+        .schema-2up .schema-box img { height: 300px; }
+        .schema-box .schema-num { font-size: 12.5px; margin-bottom: 5px; }
+        .schema-box .caption { font-size: 14px; margin-top: 8px; }
+        .steps { padding: 20px 26px; margin: 18px 0; box-shadow: none; }
+        .steps .steps-title { font-size: 19px; margin-bottom: 13px; }
+        .step { margin-bottom: 11px; gap: 13px; }
+        .step .n { width: 30px; height: 30px; font-size: 14px; }
+        .step .txt { font-size: 16.5px; line-height: 1.5; padding-top: 2px; }
+        .pass-tip { padding: 16px 22px; margin: 18px 0; font-size: 16.5px; box-shadow: none; }
+        .recap { gap: 16px; margin: 18px 0; }
+        .recap .box { padding: 15px 20px; font-size: 15.5px; }
+        .recap .box .lbl { font-size: 12.5px; }
+        .qcm-cta { padding: 17px 24px; margin: 18px 0 6px; box-shadow: none; }
+        .qcm-cta .qcm-k { font-size: 12.5px; }
+        .qcm-cta .qcm-t { font-size: 20px; }
+        .qcm-cta .qcm-arrow { width: 44px; height: 44px; font-size: 20px; }
+        .bio-hint { display: block; text-align: center; margin: 12px 0 0; font-size: 17px; font-weight: 800; color: #6B46C1; }
+        .bio-hint strong { color: #4C2A85; }
+        .chapter-footer { margin-top: 14px; padding-top: 12px; font-size: 14px; }
+        .schema-2up, .schema-box, .steps, .recap, .pass-tip, .qcm-cta { page-break-inside: avoid; }
+    }
+    @media (max-width: 600px) {
+        body { padding: 14px; }
+        .hook-header { padding: 22px 18px 18px; }
+        .hook-header .course-title { font-size: 24px; }
+        .hook-header .punch { font-size: 16px; }
+        .recap { grid-template-columns: 1fr; }
+        .intro, .pass-tip, .step .txt, .recap .box { text-align: left; }
+        .schema-box::before { color: rgba(107,70,193,0.20); font-size: 11px; letter-spacing: 1px; max-width: 90%; }
+    }
+
+    /* === mobile-polish + zoom-bar ordi only === */
+    /* La barre de zoom (− / 100 % / +) est réservée à l'ordinateur : sur mobile,
+       le pinch-to-zoom natif suffit. On la masque sous la largeur tactile. */
+    @media (max-width: 768px) {
+        #medeos-zoom-bar { display: none !important; }
+    }
+    /* Agencement mobile soigné : le titre ne déborde jamais, le hook respire. */
+    @media (max-width: 600px) {
+        body { padding: 14px 13px 18px; }
+        .hook-header { padding: 20px 17px 16px; }
+        .hook-header .course-title {
+            font-size: clamp(20px, 6.4vw, 25px);
+            line-height: 1.12;
+            letter-spacing: -0.4px;
+            overflow-wrap: anywhere;
+            hyphens: auto;
+        }
+        .hook-header .punch { font-size: clamp(14.5px, 4.4vw, 17px); line-height: 1.3; }
+        .hook-header .brand-tag { font-size: 10.5px; letter-spacing: 1.2px; }
+        .intro { font-size: 15px; }
+        .schema-2up { gap: 14px; }
+        .steps { padding: 18px 16px; }
+        .steps .steps-title { font-size: 15px; }
+        .step .txt { font-size: 14.5px; }
+        .qcm-cta { padding: 15px 16px; gap: 12px; }
+        .qcm-cta .qcm-t { font-size: 16px; }
+        .qcm-cta .qcm-arrow { width: 38px; height: 38px; font-size: 18px; }
+        /* boutons de la lightbox plus gros au doigt */
+        #medeos-lightbox button[aria-label="Fermer"] { width: 46px; height: 46px; font-size: 26px; }
+    }
+</style>
+</head>
+<body>
+<div class="page-container">
+
+    <div class="prod-brand"><img src="../images/logo-medeos-violet-texte.png" alt="Medeos"></div>
+
+    <header class="hook-header">
+        <div class="brand-tag">Ressource gratuite · Découverte métier</div>
+        <h1 class="course-title">Chirurgien-dentiste : le métier en vrai</h1>
+        <p class="punch">Le seul « chirurgien » accessible en <span class="accent">6 ans après le bac</span> — et 8 dentistes sur 10 exercent en libéral, le plus souvent en cabinet de groupe.</p>
+        <p class="punch">Des gestes au dixième de millimètre, des patients de 3 à 103 ans — et près de deux tiers des dentistes ne travaillent jamais le samedi.</p>
+    </header>
+
+    <div class="illu illu-float-right">
+        <figure class="schema-box illu illu-mid">
+            <img src="../images/metiers/fiche_metier_chirurgien_dentiste_univers.png"
+                 alt="Un chirurgien-dentiste stylisé au centre, relié à six pastilles rondes : cabinet, centre de santé, hôpital, orthodontie, enfants, recherche."
+                 onerror="schemaMissing(this)">
+            <div class="file-target">📁 <strong>fiche_metier_chirurgien_dentiste_univers.png</strong><br>à placer dans : <strong>/public/images/metiers/</strong><br><span style="color:#555;font-weight:400;">Petite illustration SANS fond (PNG transparent) : un chirurgien-dentiste au centre entouré de six pastilles pictogrammes (cabinet, centre de santé, hôpital, orthodontie, enfants, recherche).</span></div>
+            <figcaption class="caption">Un seul diplôme, <strong>des dizaines de façons de soigner les sourires</strong>.</figcaption>
+            <div class="generation-prompt"><strong>Prompt ChatGPT-image :</strong>
+Charming minimal flat 2-D vector illustration, light and airy, FLAT SOLID pastel colours only, thin clean outlines, isolated on a fully TRANSPARENT background (PNG with alpha) — no background shape, no frame, no card, no drop shadow, absolutely NO dark background, NO glow, NO neon, NO blur, NO soft halos around elements: crisp flat shapes on pure transparency, as in a clean SVG icon set. Landscape 4:3 composition. One friendly flat dentist silhouette in the centre, seen from the front, smooth blank face, violet #6B46C1 medical tunic, holding a tiny angled dental mirror in one hand, about 40% of image height. Around the dentist, six small round pastel discs arranged in a regular fan (three above, three below), each linked to the dentist by a fine light-grey line, each disc holding one simple flat pictogram, one short French sans-serif label just below each disc: « Cabinet » (warm terracotta disc, simple reclined dental chair), « Centre de santé » (deep blue #1F4E8C disc, small building with a tooth sign), « Hôpital » (deep blue disc, larger flat building), « Orthodontie » (honey amber disc, tooth with a thin straight wire across it), « Enfants » (warm terracotta disc, teddy bear), « Recherche » (honey amber disc, microscope). One tiny yellow #FCD34D four-point spark near the dentist's head, the only yellow accent. Airy, generous empty space. AVOID: any English text, gibberish or misspelled words, 3-D, photorealism, shadows, any background rectangle or colour, frames, borders, watermark, realistic faces, red cross emblem, scary drills or syringes, blood, decayed or sad teeth, wide-open realistic mouths, text inside the discs.
+            </div>
+            <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+        </figure>
+    </div>
+
+    <p class="intro">Repérer un cancer de la bouche avant qu'il ne se voie, faire disparaître une rage de dents, redonner un sourire, poser un implant au dixième de millimètre : le chirurgien-dentiste est <em class="hl">le chirurgien du quotidien</em> — l'un des rares soignants à réaliser des actes chirurgicaux presque chaque jour, dès la sortie d'études. Son territoire, c'est la <strong>sphère oro-faciale</strong> (les dents, mais aussi les gencives, les mâchoires et la langue) : un concentré de <strong>précision manuelle, de science et de relation humaine</strong>, avec une dimension esthétique qui change la vie des patients. Et c'est un métier qui se vit surtout en cabinet, près de chez toi : 8 praticiens sur 10 exercent en libéral. Sur cette fiche, on te montre le quotidien, l'argent — sans tabou — et le chemin, pour que tu puisses te projeter <strong>les yeux ouverts</strong>.</p>
+
+    <h2 class="section-title">Ta journée si tu deviens chirurgien-dentiste</h2>
+    <div class="steps">
+        <div class="steps-title">Une journée type</div>
+        <ol>
+            <li class="step">
+                <span class="n">1</span>
+                <span class="txt"><span class="lead">8h15 — Ouverture.</span> Tu arrives avant le premier patient : avec ton <b>assistante dentaire</b>, vous préparez la salle de soins, sortez les instruments <span class="gl">(stérilisés la veille)</span> et passez en revue l'agenda du jour. Le fauteuil est prêt.</span>
+            </li>
+            <li class="step">
+                <span class="n">2</span>
+                <span class="txt"><span class="lead">8h30 — Soins du matin.</span> Un détartrage, deux <b>caries</b> à soigner, un contrôle. À chaque fois le même défi : des gestes <b>au dixième de millimètre</b>, dans une bouche, sur un patient éveillé qu'il faut mettre en confiance.</span>
+            </li>
+            <li class="step">
+                <span class="n">3</span>
+                <span class="txt"><span class="lead">11h — L'urgence du jour.</span> Une <b>rage de dents</b> <span class="gl">(une pulpite : le nerf de la dent qui s'enflamme)</span> glissée entre deux rendez-vous. Tu soulages d'abord la douleur — c'est souvent le moment où le patient te remercie avec le plus d'émotion.</span>
+            </li>
+            <li class="step">
+                <span class="n">4</span>
+                <span class="txt"><span class="lead">13h — Pause… et prothésiste.</span> Tu déjeunes, puis tu appelles le <b>prothésiste dentaire</b> <span class="gl">(l'artisan qui fabrique couronnes et appareils)</span> pour valider une teinte de céramique, et tu prépares deux devis.</span>
+            </li>
+            <li class="step">
+                <span class="n">5</span>
+                <span class="txt"><span class="lead">14h30 — La partie « chirurgien ».</span> Pose d'une <b>couronne</b>, extraction d'une dent de sagesse ou <b>implant</b> planifié sur une imagerie en trois dimensions : l'après-midi, place aux actes techniques longs.</span>
+            </li>
+            <li class="step">
+                <span class="n">6</span>
+                <span class="txt"><span class="lead">17h — Le petit patient.</span> Un enfant qui a peur. Ton arme secrète : la <b>pédagogie</b> — tout expliquer, tout montrer, dédramatiser. S'il repart en souriant, il n'aura plus jamais peur du dentiste.</span>
+            </li>
+            <li class="step">
+                <span class="n">7</span>
+                <span class="txt"><span class="lead">18h30 — Chef d'entreprise.</span> Dernier patient parti : <b>stérilisation</b>, dossiers, commandes de matériel, comptabilité. En libéral, tu diriges une petite <b>entreprise</b> — c'est la face cachée du métier.</span>
+            </li>
+        </ol>
+    </div>
+
+    <div class="illu">
+        <figure class="schema-box illu illu-slim">
+            <img src="../images/metiers/fiche_metier_chirurgien_dentiste_journee.png"
+                 alt="Frise fine du matin au soir : sept moments de la journée d&#x27;un dentiste au cabinet, du soleil levant au croissant de lune, avec leurs horaires."
+                 onerror="schemaMissing(this)">
+            <div class="file-target">📁 <strong>fiche_metier_chirurgien_dentiste_journee.png</strong><br>à placer dans : <strong>/public/images/metiers/</strong><br><span style="color:#555;font-weight:400;">Bandeau fin SANS fond (PNG transparent) : ligne du temps soleil → lune, sept petits pictogrammes horodatés de la journée au cabinet.</span></div>
+            <figcaption class="caption">De 8h15 à 18h30 : <strong>le fauteuil n'est que la partie visible</strong>.</figcaption>
+            <div class="generation-prompt"><strong>Prompt ChatGPT-image :</strong>
+Charming minimal flat 2-D vector illustration, light and airy, FLAT SOLID pastel colours only, thin clean outlines, isolated on a fully TRANSPARENT background (PNG with alpha) — no background shape, no frame, no card, no drop shadow, absolutely NO dark background, NO glow, NO neon, NO blur, NO soft halos around elements: crisp flat shapes on pure transparency, as in a clean SVG icon set. Very wide, slim banner. A single thin light-grey horizontal line across the middle, a small flat honey-amber rising sun at the far left end, a small deep blue #1F4E8C crescent moon at the far right end. On the line, seven small violet #6B46C1 dots; above or below each dot (alternating), one tiny flat pictogram with its time only, written in small violet French numerals: « 8h15 » reclined dental chair, « 8h30 » smiling flat tooth with a tiny sparkle, « 11h » tooth with a small yellow #FCD34D lightning bolt (the only yellow accent), « 13h » telephone handset beside a tiny crown shape, « 14h30 » single tooth-crown pictogram, « 17h » teddy bear, « 18h30 » closed folder. All pictograms the same small size, flat warm terracotta / deep blue / honey amber colours, lots of empty space. AVOID: any English text, gibberish, any word or label other than the seven times, 3-D, photorealism, shadows, any background colour, frames, borders, watermark, clock faces, realistic faces, scary drills or syringes, blood.
+            </div>
+            <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+        </figure>
+    </div>
+
+    <h2 class="section-title">Où tu peux exercer</h2>
+    <div class="steps">
+        <div class="steps-title">Trois façons de vivre le même métier</div>
+        <ol>
+            <li class="step">
+                <span class="n">1</span>
+                <span class="txt"><span class="lead">Libéral — ton propre patron.</span> C'est la voie de ≈ <b>8 dentistes sur 10</b> : cabinet individuel ou de groupe, ta patientèle, ton équipe, tes horaires. En face, tu gères une vraie petite entreprise <span class="gl">(assistante dentaire, matériel, comptabilité)</span>. Tu fixes tes journées, tes jours de consultation et ton rythme — certains bouclent leur semaine en 4 jours, d'autres en 6, et près de deux tiers des dentistes ne travaillent jamais le samedi <span class="gl">(enquête URPS Nouvelle-Aquitaine, 2023)</span>.</span>
+            </li>
+            <li class="step">
+                <span class="n">2</span>
+                <span class="txt"><span class="lead">Salarié — centre de santé, zéro gestion.</span> Dans les centres de santé dentaires <span class="gl">(mutualistes, associatifs ou municipaux)</span> : un <b>salaire</b> — souvent indexé sur ton activité —, des congés payés et <b>35 à 39 h par semaine</b>, sans aucun souci de gestion. En échange : moins de liberté sur les horaires, le rythme et le choix du matériel.</span>
+            </li>
+            <li class="step">
+                <span class="n">3</span>
+                <span class="txt"><span class="lead">Hôpital et université — les cas complexes.</span> Une minorité choisie : soigner les patients que le cabinet ne peut pas prendre <span class="gl">(handicap, maladies lourdes, chirurgie)</span>, enseigner aux étudiants, faire de la recherche. Temps plein = <b>10 demi-journées par semaine</b>, plafonné à 48 h par la loi <span class="gl">(DREES, données 2022)</span>.</span>
+            </li>
+        </ol>
+    </div>
+
+    <h2 class="section-title">Combien tu gagnes — et comment</h2>
+    <div class="steps">
+        <div class="steps-title">Les circuits de l'argent</div>
+        <ol>
+            <li class="step">
+                <span class="n">1</span>
+                <span class="txt"><span class="lead">En libéral : payé à l'acte — et deux familles de tarifs.</span> C'est LE mécanisme à comprendre. Les <b>soins conservateurs</b> sont à tarifs <b>fixés par l'Assurance Maladie</b>, au centime près <span class="gl">(consultation 23 €, détartrage 28,92 €, soin d'une carie de 26,97 € (une face) à 60,95 € (trois faces ou plus), dévitalisation d'une molaire 104 €)</span>. Les <b>prothèses, implants et l'orthodontie</b>, eux, sont à <b>honoraires libres</b> sur devis <span class="gl">(couronne ≈ 350 à 800 €, implant ≈ 1 800 à 2 500 €)</span> : c'est là que se fait le chiffre. Mais <b>honoraires ≠ revenu</b> : 50 à 60 % partent en charges. Au bout : <b>≈ 10 200 € net par mois en moyenne</b> avant impôt <span class="gl">(CARCDSF 2023)</span>, selon le rythme que tu te fixes.</span>
+            </li>
+            <li class="step">
+                <span class="n">2</span>
+                <span class="txt"><span class="lead">En salarié : un salaire — sans grille unique.</span> En <b>centre de santé</b>, la paie est le plus souvent indexée sur l'activité <span class="gl">(le taux se négocie de gré à gré)</span> : ≈ <b>4 500 à 5 500 € brut par mois</b> — soit ≈ 3 300 € net — en début de carrière, pour 35 à 39 h. À l'<b>hôpital public</b>, tu es payé sur la grille nationale des praticiens hospitaliers : de ≈ 3 900 € à ≈ 7 900 € net selon l'ancienneté — la grille exacte est dans le livret ci-dessous.</span>
+            </li>
+            <li class="step">
+                <span class="n">3</span>
+                <span class="txt"><span class="lead">Et pendant les études ?</span> Dès la <b>4ᵉ année</b>, tu soignes de vrais patients à l'hôpital et tu touches une rémunération d'étudiant hospitalier — modeste : <span class="gl">≈ 273 € brut par mois en 4ᵉ année, ≈ 410 € en 6ᵉ</span>. Et si tu choisis l'<b>internat</b> (facultatif !), tu deviens salarié de l'hôpital : ≈ <b>1 600 € net par mois</b> en 1ʳᵉ année, gardes en plus. Le détail année par année est dans le livret ci-dessous.</span>
+            </li>
+        </ol>
+    </div>
+
+    <details class="livret">
+        <summary>📖 L'argent pendant les études : la vérité année par année<span class="chev">›</span></summary>
+        <div class="livret-body">
+            <p class="src" style="margin:0 0 9px;">En odontologie <span class="gl">(le nom universitaire des études dentaires)</span>, pas de salaire avant la 4ᵉ année — mais à partir de là, chaque année à l'hôpital est un peu payée, et l'internat, si tu le choisis, est un vrai salaire :</p>
+            <table>
+                <thead><tr><th>Année</th><th>Ce que tu touches</th><th>En face</th></tr></thead>
+                <tbody>
+                    <tr><td><b>P1 → 3ᵉ année</b></td><td>0 €</td><td>études classiques, pas encore de statut hospitalier</td></tr>
+                    <tr><td><b>4ᵉ année (DFASO1)</b></td><td><b>273,14 € brut / mois</b> (3 277,64 €/an)</td><td>premiers vrais patients à l'hôpital, sous supervision — mi-temps clinique</td></tr>
+                    <tr><td><b>5ᵉ année (DFASO2)</b></td><td><b>336,17 € brut / mois</b> (4 034,02 €/an)</td><td>clinique intense + stage d'initiation à la vie professionnelle</td></tr>
+                    <tr><td><b>6ᵉ année (cycle court)</b></td><td><b>409,70 € brut / mois</b> (4 916,46 €/an)</td><td>stage actif en cabinet de ville + thèse d'exercice</td></tr>
+                    <tr><td><b>Internat 1ʳᵉ-2ᵉ année</b> (facultatif)</td><td><b>≈ 1 600 – 1 750 € net / mois</b></td><td>salarié de l'hôpital : base ≈ 1 300 € net + indemnité de sujétion ; gardes en plus</td></tr>
+                    <tr><td><b>Internat 3ᵉ-4ᵉ année</b></td><td><b>≈ 1 850 – 2 100 € net / mois</b></td><td>la base grimpe à ≈ 28 400 € brut par an — semaines denses (48 h maximum légal), gardes en plus</td></tr>
+                </tbody>
+            </table>
+            <p class="src">Rémunérations des étudiants hospitaliers en odontologie : arrêté du 29 juin 2023, montants en vigueur depuis le 1ᵉʳ juillet 2023. Les internes en odontologie sont payés sur la même grille que les internes en médecine <b>(base 1ʳᵉ année : 19 406,35 € brut par an, arrêté du 8 juillet 2022 — montants toujours en vigueur en 2026)</b> ; une garde de nuit en semaine ajoute 234,80 € brut, soit ≈ 190 € net, depuis la revalorisation pérennisée au 1ᵉʳ janvier 2024.<br>⏱️ <b>Le temps en face</b> : en 4ᵉ-5ᵉ année, la clinique occupe environ la moitié de la semaine en plus des cours — ce sont les deux années réputées les plus intenses du cursus.</p>
+        </div>
+    </details>
+
+    <details class="livret">
+        <summary>📖 La grille du dentiste hospitalier — les 13 échelons<span class="chev">›</span></summary>
+        <div class="livret-body">
+            <p class="src" style="margin:0 0 9px;">En centre de santé, il n'existe <b>pas de grille nationale</b> : la paie se négocie de gré à gré <span class="gl">(≈ 4 500 à 5 500 € brut, soit ≈ 3 300 € net, en début de carrière pour 35-39 h)</span>. À l'hôpital public, en revanche, le praticien hospitalier est payé sur la même grille nationale que les médecins :</p>
+            <table>
+                <thead><tr><th>Échelon</th><th>Durée</th><th>Brut annuel</th><th>≈ net / mois</th></tr></thead>
+                <tbody>
+                    <tr><td><b>Échelon 1</b></td><td>2 ans</td><td>55 607,79 €</td><td><b>≈ 3 900 €</b></td></tr>
+                    <tr><td><b>Échelon 2</b></td><td>2 ans</td><td>58 082,41 €</td><td><b>≈ 4 050 €</b></td></tr>
+                    <tr><td><b>Échelon 3</b></td><td>2 ans</td><td>62 148,07 €</td><td><b>≈ 4 350 €</b></td></tr>
+                    <tr><td><b>Échelon 4</b></td><td>2 ans</td><td>66 567,09 €</td><td><b>≈ 4 650 €</b></td></tr>
+                    <tr><td><b>Échelon 5</b></td><td>2 ans</td><td>68 688,21 €</td><td><b>≈ 4 800 €</b></td></tr>
+                    <tr><td><b>Échelon 6</b></td><td>2 ans</td><td>71 162,83 €</td><td><b>≈ 5 000 €</b></td></tr>
+                    <tr><td><b>Échelon 7</b></td><td>2 ans</td><td>76 465,74 €</td><td><b>≈ 5 350 €</b></td></tr>
+                    <tr><td><b>Échelon 8</b></td><td>2 ans</td><td>79 647,54 €</td><td><b>≈ 5 600 €</b></td></tr>
+                    <tr><td><b>Échelon 9</b></td><td>4 ans</td><td>90 549,14 €</td><td><b>≈ 6 350 €</b></td></tr>
+                    <tr><td><b>Échelon 10</b></td><td>4 ans</td><td>94 557,64 €</td><td><b>≈ 6 600 €</b></td></tr>
+                    <tr><td><b>Échelon 11</b></td><td>4 ans</td><td>99 810,26 €</td><td><b>≈ 7 000 €</b></td></tr>
+                    <tr><td><b>Échelon 12</b></td><td>4 ans</td><td>105 062,89 €</td><td><b>≈ 7 350 €</b></td></tr>
+                    <tr><td><b>Échelon 13</b></td><td>dernier</td><td>112 416,56 €</td><td><b>≈ 7 900 €</b></td></tr>
+                </tbody>
+            </table>
+            <p class="src">Grille nationale des émoluments des praticiens hospitaliers en vigueur depuis le 1ᵉʳ juillet 2023, inchangée à ce jour (sources SNPHARE et MACSF, vérifiée 2026) ; net mensuel estimé avant impôt. Il faut ≈ 32 ans pour atteindre le 13ᵉ échelon ; gardes et astreintes s'ajoutent. Repère DREES (données 2022) : le salaire net moyen des personnels médicaux hospitaliers — médecins et dentistes confondus, hors internes — ressort à <b>≈ 6 082 € par mois</b>. Salaires en centre de santé : sources spécialisées 2025-2026 (28-32 % du chiffre d'affaires généré).<br>⏱️ <b>Le temps en face</b> : temps plein hospitalier = 10 demi-journées par semaine, plafonné à 48 h par la loi.</p>
+        </div>
+    </details>
+
+    <details class="livret">
+        <summary>📖 Le libéral n'a pas de grille : la simulation<span class="chev">›</span></summary>
+        <div class="livret-body">
+            <p class="src" style="margin:0 0 9px;">Hypothèses affichées : <b>4 jours au fauteuil par semaine</b> <span class="gl">(le rythme le plus courant — le reste part en gestion)</span>, <b>45 semaines travaillées par an</b> <span class="gl">(congés non payés en libéral)</span>, et <b>57 % de charges</b> — la fourchette réelle va de 50 à 60 % (assistante dentaire, prothésiste, fauteuil, radiologie, loyer, cotisations).</p>
+            <table>
+                <thead><tr><th>Rythme (sur 4 j / semaine)</th><th>Honoraires / mois</th><th>≈ net avant impôt</th></tr></thead>
+                <tbody>
+                    <tr><td><b>Jeune installé</b> — ≈ 1 000 € d'actes / jour</td><td>≈ 15 000 €</td><td><b>≈ 6 450 €</b></td></tr>
+                    <tr><td><b>Cabinet installé</b> — ≈ 1 300 € / jour</td><td>≈ 19 500 €</td><td><b>≈ 8 400 €</b> (proche de la médiane réelle)</td></tr>
+                    <tr><td><b>Grosse activité</b> — ≈ 1 800 € / jour</td><td>≈ 27 000 €</td><td><b>≈ 11 600 €</b></td></tr>
+                </tbody>
+            </table>
+            <p class="src">Une journée à ≈ 1 300 € d'honoraires, c'est par exemple une quinzaine de patients mêlant soins à tarif fixé (23 à 104 € l'acte) et un ou deux actes prothétiques (couronne ≈ 500 €) : ce sont les <b>prothèses et implants qui font le chiffre</b>, pas les soins courants. Réalité mesurée : revenu moyen <b>122 279 € net par an</b> (≈ 10 200 €/mois) et médiane 97 672 € (≈ 8 100 €/mois) avant impôt — CARCDSF 2023, les données les plus récentes publiées. Chiffre d'affaires moyen d'un cabinet : 250 000 à 300 000 € par an.<br>⏱️ <b>À savoir</b> : à la durée passée au fauteuil s'ajoute toujours du temps de gestion — mais en libéral, chacun fixe son propre rythme — enquête régionale URPS/ORS Nouvelle-Aquitaine 2022, publiée en mars 2023.</p>
+        </div>
+    </details>
+
+    <div class="duo">
+    <div class="illu">
+        <figure class="schema-box illu illu-mid">
+            <img src="../images/metiers/fiche_metier_chirurgien_dentiste_remuneration.png"
+                 alt="Deux petites scènes : à gauche le libéral (dentiste, patient sur fauteuil, pièce de 23 €, jeton couronne, barre charges/net) ; à droite le salarié (bâtiment, escalier de grille, pastille pourcentage d&#x27;activité)."
+                 onerror="schemaMissing(this)">
+            <div class="file-target">📁 <strong>fiche_metier_chirurgien_dentiste_remuneration.png</strong><br>à placer dans : <strong>/public/images/metiers/</strong><br><span style="color:#555;font-weight:400;">Petite illustration SANS fond (PNG transparent) : scène libéral (fauteuil, pièce 23 €, jeton couronne, barre charges/net) à gauche, scène salarié (bâtiment, escalier de grille, pastille % activité) à droite.</span></div>
+            <figcaption class="caption">Payé à l'acte en libéral — tarifs fixés ou devis libres —, <strong>salaire ou grille</strong> en centre de santé et à l'hôpital.</figcaption>
+            <div class="generation-prompt"><strong>Prompt ChatGPT-image :</strong>
+Charming minimal flat 2-D vector illustration, light and airy, FLAT SOLID pastel colours only, thin clean outlines, isolated on a fully TRANSPARENT background (PNG with alpha) — no background shape, no frame, no card, no drop shadow, absolutely NO dark background, NO glow, NO neon, NO blur, NO soft halos around elements: crisp flat shapes on pure transparency, as in a clean SVG icon set. Two small scenes side by side, separated by generous empty space. LEFT scene, French label « Libéral » in violet #6B46C1 above it: a flat dentist silhouette standing beside a reclined patient silhouette on a simple flat dental chair; below them, one violet coin marked only « 23 € » in white, next to one slightly larger honey-amber disc holding a small white tooth-crown pictogram with no text inside; under the coins, one short horizontal rounded bar split slightly past the middle — warm terracotta portion labelled « Charges », violet portion labelled « Net » with a thin yellow #FCD34D ring around it (the only yellow accent). RIGHT scene, French label « Salarié » in deep blue #1F4E8C above it: a small flat deep-blue building with a tiny tooth sign, beside an ascending staircase of five deep-blue steps with a thin grey rising arrow, one label « Grille » under the staircase, plus one small warm terracotta disc holding a percent sign, labelled « % activité ». Exactly seven short French labels in the whole image, small clean sans-serif. AVOID: any English text, gibberish or misspelled words, any number other than 23 €, 3-D, photorealism, shadows, any background colour, frames, borders, watermark, banknote piles, dollar signs, pie charts, realistic faces, scary dental tools, blood.
+            </div>
+            <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+        </figure>
+    </div>
+    <div class="pass-tip">
+        Ces montants sont des <strong>moyennes, pas des promesses</strong>. Un cabinet dégage ≈ 10 200 € net par mois en moyenne, mais la <strong>médiane est à ≈ 8 100 €</strong> : une minorité de très gros cabinets tire la moyenne vers le haut. D'un département à l'autre, d'une activité à l'autre, les revenus varient <strong>du simple au double</strong> — le lieu où tu t'installes et le type de soins que tu pratiques comptent autant que le diplôme. Le revenu confortable se construit : un cabinet s'équipe, une patientèle se fidélise, un geste se perfectionne. Ce que le métier offre vraiment, c'est un revenu solide <strong>dès la sortie d'études</strong> — six ans après le bac, sans internat obligatoire —, une demande de soins partout en France, et un <strong>équilibre de vie rare</strong> parmi les soignants : pas de gardes de nuit, et une semaine bouclée en 4 à 4,5 jours pour près de la moitié des praticiens.
+    </div>
+    </div>
+
+    <h2 class="section-title">Le chemin depuis la Terminale</h2>
+    <div class="illu">
+        <figure class="schema-box illu illu-wide">
+            <img src="../images/metiers/fiche_metier_chirurgien_dentiste_parcours.png"
+                 alt="Chemin montant de la Terminale au dentiste : P1 (1 an), 2e-3e année (2 ans), 4e-5e année cliniques (2 ans), 6e année (1 an), losange thèse — arc « 6 ans »."
+                 onerror="schemaMissing(this)">
+            <div class="file-target">📁 <strong>fiche_metier_chirurgien_dentiste_parcours.png</strong><br>à placer dans : <strong>/public/images/metiers/</strong><br><span style="color:#555;font-weight:400;">Bandeau SANS fond (PNG transparent) : chemin montant à six jalons avec durées, losange thèse, arc « 6 ans ».</span></div>
+            <figcaption class="caption">Compte <strong>6 ans après le bac</strong> — et 3 à 4 de plus seulement si tu choisis une spécialité.</figcaption>
+            <div class="generation-prompt"><strong>Prompt ChatGPT-image :</strong>
+Charming minimal flat 2-D vector illustration, light and airy, FLAT SOLID pastel colours only, thin clean outlines, isolated on a fully TRANSPARENT background (PNG with alpha) — no background shape, no frame, no card, no drop shadow, absolutely NO dark background, NO glow, NO neon, NO blur, NO soft halos around elements: crisp flat shapes on pure transparency, as in a clean SVG icon set. Wide banner. A thin light-grey path rises gently from bottom-left to upper-right with soft curves. Along it, six milestones and a final figure, spacing roughly proportional to duration: warm terracotta dot with a schoolbag pictogram, label « Terminale » ; violet #6B46C1 dot with an open book, label « P1 », tiny grey « 1 an » ; deep blue #1F4E8C dot with a small tooth beside a book, label « 2ᵉ-3ᵉ année », tiny grey « 2 ans » ; honey amber dot with a small reclined dental chair, label « 4ᵉ-5ᵉ année », tiny grey « 2 ans » ; violet dot with a small door and tooth sign, label « 6ᵉ année », tiny grey « 1 an » ; one yellow #FCD34D diamond with a tiny graduation cap, label « Thèse » (the only yellow accent). At the end of the path, upper right, one small flat dentist silhouette in a violet tunic, blank face, label « Dentiste ». Above the whole path, one thin light-grey arc from the first dot to the final figure with the single violet label « 6 ans ». Small clean French sans-serif labels, lots of empty space. AVOID: any English text, gibberish or misspelled words, 3-D, photorealism, shadows, any background colour, frames, borders, watermark, extra numbers, more than six milestones plus the final figure, hourglasses, calendars, sad or stressed characters, red cross emblem, scary dental tools.
+            </div>
+            <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+        </figure>
+    </div>
+
+    <div class="steps">
+        <div class="steps-title">6 étapes — 6 ans après le bac</div>
+        <ol>
+            <li class="step">
+                <span class="n">1</span>
+                <span class="txt"><span class="lead">Terminale — Parcoursup.</span> Tu formules tes vœux vers les études de santé. Un dossier régulier et des <b>spécialités scientifiques</b> sont tes meilleurs alliés — et une bonne <b>habileté manuelle</b> se cultive dès maintenant.</span>
+            </li>
+            <li class="step">
+                <span class="n">2</span>
+                <span class="txt"><span class="lead">La P1 (voies PASS ou LAS) — 1 an.</span> L'année d'entrée, commune avec les futurs médecins et pharmaciens : un <b>classement</b> décide de ta filière, et les places en odontologie sont parmi les plus disputées. Ce n'est pas réservé aux génies : ceux qui décrochent leur place sont très souvent ceux qui arrivent avec une vraie <b>méthode de travail</b> dès les premières semaines.</span>
+            </li>
+            <li class="step">
+                <span class="n">3</span>
+                <span class="txt"><span class="lead">2ᵉ et 3ᵉ années — 2 ans.</span> Le premier cycle <span class="gl">(conclu par le diplôme DFGSO)</span> : sciences du vivant, anatomie de la <b>sphère oro-faciale</b> <span class="gl">(dents, gencives, mâchoires, langue)</span> — et déjà des <b>travaux pratiques de dextérité</b> sur dents artificielles, la marque de fabrique de ces études.</span>
+            </li>
+            <li class="step">
+                <span class="n">4</span>
+                <span class="txt"><span class="lead">4ᵉ et 5ᵉ années — 2 ans.</span> Le grand saut : tu soignes de <b>vrais patients</b> à l'hôpital, sous supervision, dès la 4ᵉ année. Deux années cliniques intenses, conclues par le <b>CSCT</b> <span class="gl">(le certificat qui valide ton aptitude à exercer)</span>.</span>
+            </li>
+            <li class="step">
+                <span class="n">5</span>
+                <span class="txt"><span class="lead">6ᵉ année — 1 an, et te voilà Docteur.</span> Le cycle court, choisi par la grande majorité : un <b>stage actif</b> en cabinet de ville pour apprendre le métier en conditions réelles, la <b>thèse d'exercice</b> — et le diplôme d'État de <b>Docteur en chirurgie dentaire</b>. Tu peux exercer partout en France.</span>
+            </li>
+            <li class="step">
+                <span class="n">6</span>
+                <span class="txt"><span class="lead">L'internat — facultatif, 3 à 4 ans.</span> Uniquement si tu vises une <b>spécialité</b> : orthodontie <span class="gl">(3 ans)</span>, médecine bucco-dentaire <span class="gl">(3 ans)</span> ou chirurgie orale <span class="gl">(4 ans)</span>. Un concours national — <b>140 postes</b> offerts pour l'année 2026-2027 — et un salaire d'interne pendant tout ce temps.</span>
+            </li>
+        </ol>
+    </div>
+
+    <p class="fine-note">À suivre : une « licence santé » unique a été annoncée le 17 avril 2026 pour remplacer le PASS et la LAS, visée pour la rentrée 2027 — le calendrier peut encore bouger, et le PASS et la LAS restent intégralement en place pour la rentrée 2026. Côté dentaire, une réflexion est aussi engagée sur l'évolution du 3ᵉ cycle (généraliser l'internat ou créer de nouvelles spécialités — il n'en existe que 3 en France, contre une dizaine au Canada). Quel que soit son nom, la première année restera <strong>classante</strong> — et la méthode de travail restera le nerf de la guerre.</p>
+
+    <div class="recap">
+        <div class="box retenir">
+    <div class="illu spot-corner">
+        <figure class="schema-box illu illu-spot">
+            <img src="../images/metiers/fiche_metier_chirurgien_dentiste_spot.png"
+                 alt="Une dent souriante stylisée avec un petit miroir de dentiste violet appuyé contre elle."
+                 onerror="schemaMissing(this)">
+            <div class="file-target">📁 <strong>fiche_metier_chirurgien_dentiste_spot.png</strong><br>à placer dans : <strong>/public/images/metiers/</strong><br><span style="color:#555;font-weight:400;">Mini-illustration SANS fond (PNG transparent) : une dent souriante et un petit miroir de dentiste violet. Aucun texte.</span></div>
+            <div class="generation-prompt"><strong>Prompt ChatGPT-image :</strong>
+Charming minimal flat 2-D vector illustration, light and airy, FLAT SOLID pastel colours only, thin clean outlines, isolated on a fully TRANSPARENT background (PNG with alpha) — no background shape, no frame, no card, no drop shadow, absolutely NO dark background, NO glow, NO neon, NO blur, NO soft halos around elements: crisp flat shapes on pure transparency, as in a clean SVG icon set. Tiny spot illustration, a single motif: one friendly smiling flat white tooth with thin clean outlines and two tiny dot eyes, and leaning against its side a small violet #6B46C1 angled dental mirror with a thin handle; one tiny yellow #FCD34D four-point spark at the upper corner of the tooth, the only yellow accent. No text at all. AVOID: any text or letters, 3-D, photorealism, shadows, any background colour, frames, borders, watermark, decayed or sad tooth, drills, syringes, blood, realistic faces.
+            </div>
+            <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+        </figure>
+    </div>
+            <span class="lbl">Fait pour toi si…</span>
+            Tu aimes <b>créer avec tes mains</b> — dessin, maquettes, musique, couture : la dextérité est le cœur du métier, et elle se travaille. Tu aimes <b>rassurer</b> : beaucoup de patients arrivent avec la peur au ventre, et c'est toi qui la fais tomber. Tu veux du <b>concret</b> : ici, le résultat se voit dans l'heure — la douleur disparaît, le sourire revient. L'<b>esthétique</b> te parle autant que la science du vivant, et l'idée de <b>monter ton propre cabinet</b>, de choisir ton équipe et tes horaires, te motive plus qu'elle ne t'effraie.
+        </div>
+        <div class="box piege">
+            <span class="lbl">Ce qu'on te dit moins</span>
+            Le corps encaisse : des heures penché sur le fauteuil, la <b>nuque et le dos</b> mis à l'épreuve, le bruit des instruments toute la journée. Il faut aussi aimer gérer : en libéral, tu es <b>chef d'entreprise</b> (personnel, matériel, comptabilité), et la peur du dentiste te met parfois face à des patients très tendus. Enfin, les places en odontologie sont <b>rares en P1</b>. Mais en face : un métier demandé <b>partout en France</b>, un revenu solide dès 24-25 ans — et un équilibre de vie que peu de soignants connaissent.
+        </div>
+    </div>
+
+    <a class="qcm-cta" style="display:none" href="/ressources/qcm-decouverte/decouverte-metier-chirurgien-dentiste" target="_top">
+        <span class="qcm-body">
+            <span class="qcm-k">Teste tes idées reçues en 3 questions</span>
+            <span class="qcm-t">QCM — Le métier de chirurgien-dentiste</span>
+        </span>
+        <span class="qcm-arrow" aria-hidden="true">→</span>
+    </a>
+    <div class="bio-hint">📲 Pour faire le QCM gratuit → <strong>lien en bio</strong></div>
+
+    <footer class="chapter-footer">
+        <p>Une fiche <strong>Medeos</strong> · pour anticiper la P1, sereinement · medeos-sante.fr</p>
+    </footer>
+
+</div>
+
+<div id="medeos-lightbox" role="dialog" aria-label="Schéma agrandi" aria-modal="true" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(26,26,46,0.92);overflow:auto;-webkit-overflow-scrolling:touch;touch-action:pinch-zoom;cursor:zoom-out;">
+    <button type="button" aria-label="Fermer" onclick="closeLightbox()" style="position:fixed;top:14px;right:16px;z-index:10003;width:42px;height:42px;border-radius:50%;border:none;background:rgba(255,255,255,0.14);color:#fff;font-size:24px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);">&times;</button>
+    <div id="medeos-zoom-bar" style="position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:10003;display:flex;gap:8px;align-items:center;background:rgba(255,255,255,0.14);backdrop-filter:blur(4px);padding:7px 10px;border-radius:999px;">
+        <button type="button" aria-label="Dézoomer" onclick="lbZoom(-1,event)" style="width:38px;height:38px;border-radius:50%;border:none;background:rgba(255,255,255,0.9);color:#1A1A2E;font-size:22px;font-weight:700;line-height:1;cursor:pointer;">&minus;</button>
+        <button type="button" aria-label="Réinitialiser le zoom" onclick="lbReset(event)" style="height:38px;padding:0 14px;border-radius:999px;border:none;background:rgba(255,255,255,0.9);color:#1A1A2E;font-size:13px;font-weight:700;cursor:pointer;">100&nbsp;%</button>
+        <button type="button" aria-label="Zoomer" onclick="lbZoom(1,event)" style="width:38px;height:38px;border-radius:50%;border:none;background:rgba(255,255,255,0.9);color:#1A1A2E;font-size:22px;font-weight:700;line-height:1;cursor:pointer;">+</button>
+    </div>
+    <div id="medeos-lightbox-stage" onclick="lbStageClick(event)" style="min-height:100%;display:flex;align-items:center;justify-content:center;padding:64px 16px;">
+        <div style="position:relative;display:inline-flex;">
+            <img id="medeos-lightbox-img" src="" alt="Schéma agrandi" ondblclick="lbToggleZoom(event)" style="display:block;border-radius:10px;box-shadow:0 10px 40px rgba(0,0,0,0.5);transform-origin:center center;transition:transform .18s ease;max-width:none;cursor:zoom-in;">
+            <div aria-hidden="true" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;">
+                <span style="font-family:'Inter',Arial,sans-serif;font-size:clamp(11px,4vw,30px);font-weight:700;letter-spacing:clamp(1px,1vw,6px);text-transform:uppercase;color:rgba(120,120,120,0.16);white-space:nowrap;">medeos-sante.fr</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var lbScale = 1, lbBaseW = 0;
+    function openLightbox(src) {
+        var lb = document.getElementById('medeos-lightbox');
+        var img = document.getElementById('medeos-lightbox-img');
+        lbScale = 1;
+        img.onload = function () {
+            // Taille de base : on s'aligne sur la largeur dispo (max 96vw) ou la taille native si plus petite.
+            var availW = Math.min(window.innerWidth * 0.96, this.naturalWidth);
+            var availH = window.innerHeight * 0.84;
+            var ratio = Math.min(availW / this.naturalWidth, availH / this.naturalHeight, 1);
+            lbBaseW = Math.max(120, Math.round(this.naturalWidth * ratio));
+            this.style.width = lbBaseW + 'px';
+            this.style.height = 'auto';
+            lbApply();
+        };
+        img.src = src;
+        lb.style.display = 'block';
+        lb.scrollTop = 0; lb.scrollLeft = 0;
+        document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+        document.getElementById('medeos-lightbox').style.display = 'none';
+        document.body.style.overflow = '';
+    }
+    function lbApply() {
+        var img = document.getElementById('medeos-lightbox-img');
+        img.style.transform = 'scale(' + lbScale + ')';
+        img.style.cursor = lbScale > 1 ? 'zoom-out' : 'zoom-in';
+        var lbl = document.querySelector('#medeos-zoom-bar button[onclick^="lbReset"]');
+        if (lbl) lbl.innerHTML = Math.round(lbScale * 100) + '&nbsp;%';
+    }
+    function lbZoom(dir, e) {
+        if (e) { e.stopPropagation(); e.preventDefault(); }
+        lbScale = Math.min(4, Math.max(1, +(lbScale + dir * 0.5).toFixed(2)));
+        lbApply();
+    }
+    function lbReset(e) { if (e) { e.stopPropagation(); e.preventDefault(); } lbScale = 1; lbApply(); }
+    function lbToggleZoom(e) { if (e) { e.stopPropagation(); e.preventDefault(); } lbScale = lbScale > 1 ? 1 : 2; lbApply(); }
+    function lbStageClick(e) { if (e.target.id === 'medeos-lightbox-stage') closeLightbox(); } // clic dans le vide = fermer
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeLightbox();
+        else if (document.getElementById('medeos-lightbox').style.display === 'block') {
+            if (e.key === '+' || e.key === '=') lbZoom(1);
+            else if (e.key === '-') lbZoom(-1);
+            else if (e.key === '0') lbReset();
+        }
+    });
+    document.getElementById('medeos-lightbox').addEventListener('wheel', function (e) {
+        if (this.style.display !== 'block') return;
+        if (e.ctrlKey || Math.abs(e.deltaY) > 0) { /* molette = zoom */ }
+        e.preventDefault();
+        lbScale = Math.min(4, Math.max(1, +(lbScale - Math.sign(e.deltaY) * 0.25).toFixed(2)));
+        lbApply();
+    }, { passive: false });
+    function schemaMissing(img) { img.style.display = 'none'; var b = img.closest('.schema-box'); if (b) b.classList.add('img-missing'); }
+</script>
+</body>
+</html>

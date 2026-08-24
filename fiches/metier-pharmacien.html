@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pharmacien : le métier en vrai — Fiche Medeos</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 15px; line-height: 1.6; color: #2c3e50; background: #f6f8fb; padding: 22px; max-width: 760px; margin: 0 auto; }
+    .page-container { position: relative; }
+    .page-container::before { display: none; }
+    .page-container > * { position: relative; z-index: 1; }
+    .prod-brand { margin: 0 0 14px; }
+    .prod-brand img { height: 27px; width: auto; display: block; margin: 0 auto; }
+    .hook-header { background: #FAF6F0; border-radius: 14px; padding: 26px 30px 22px; box-shadow: 0 4px 18px rgba(76,42,133,0.08); border: 1px solid #efe7d8; }
+    .hook-header .brand-tag { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #6B46C1; font-weight: 600; opacity: 0.85; margin-bottom: 12px; }
+    .hook-header .course-title { font-size: 28px; line-height: 1.1; font-weight: 800; color: #4C2A85; letter-spacing: -0.7px; margin: 0 0 12px; }
+    .hook-header .punch { font-size: 18px; line-height: 1.3; font-weight: 800; color: #1A1A2E; letter-spacing: -0.3px; margin: 0; }
+    .hook-header .punch span.accent { color: #6B46C1; }
+    .hook-header .punch + .punch { margin-top: 5px; }
+    .intro { font-size: 15.5px; line-height: 1.7; color: #2c3e50; margin: 20px 2px; }
+    .intro strong { font-weight: 700; color: #4C2A85; }
+    em.hl { background: linear-gradient(180deg, transparent 60%, #FCD34D 60%); font-style: normal; padding: 0 2px; }
+    .schema-box { background: #fff; border: 2px solid #6B46C1; padding: 12px; text-align: center; border-radius: 12px; box-shadow: 0 4px 15px rgba(107, 70, 193, 0.15); position: relative; overflow: hidden; }
+    .schema-box::before { content: 'medeos-sante.fr'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: 'Inter', Arial, sans-serif; font-size: 14px; font-weight: 700; color: rgba(120,120,120,0.13); letter-spacing: 2px; text-transform: uppercase; pointer-events: none; user-select: none; z-index: 5; white-space: nowrap; max-width: 92%; overflow: hidden; }
+    .schema-box img { max-width: 100%; max-height: 300px; height: auto; border-radius: 8px; display: block; margin: 0 auto; cursor: zoom-in; }
+    .schema-box .schema-num { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 0.6px; text-transform: uppercase; color: #6B46C1; margin-bottom: 6px; }
+    .schema-box .caption { font-size: 12px; color: #6b6275; margin-top: 9px; font-weight: 500; }
+    .schema-box .caption strong { color: #6B46C1; }
+    .schema-box .file-target { display: none; margin-top: 10px; padding: 8px 12px; background: #e8f5e9; border: 1px solid #a5d6a7; border-radius: 6px; font-family: 'SFMono-Regular', Consolas, monospace; font-size: 11.5px; color: #1b5e20; text-align: left; line-height: 1.5; }
+    .schema-box .file-target strong { color: #2e7d32; }
+    .schema-box .generation-prompt { background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border: 2px dashed #ff9800; border-radius: 8px; padding: 13px; margin-top: 12px; text-align: left; font-size: 11.5px; color: #e65100; line-height: 1.55; white-space: pre-wrap; }
+    .schema-box .generation-prompt strong { color: #bf360c; display: block; margin-bottom: 8px; font-size: 12.5px; background: #ffcc80; padding: 7px 11px; border-radius: 4px; }
+    .schema-box .copy-prompt-btn { display: none; margin-top: 8px; padding: 6px 12px; background: #ff9800; color: #fff; border: none; border-radius: 4px; font-size: 12px; cursor: pointer; font-weight: 600; }
+    .schema-box .copy-prompt-btn:hover { background: #f57c00; }
+    .schema-box .generation-prompt { display: none; }
+    .schema-box.img-missing .generation-prompt { display: block; }
+    .schema-box.img-missing .copy-prompt-btn { display: inline-block; }
+    .schema-box.img-missing .file-target { display: block !important; }
+    .schema-2up { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; align-items: stretch; }
+    .schema-2up .schema-box { margin: 0; display: flex; flex-direction: column; }
+    .schema-2up .schema-box img { height: 230px; width: 100%; max-height: none; object-fit: contain; }
+    .schema-2up .schema-box .caption { margin-top: auto; }
+    @media (max-width: 720px) { .schema-2up { grid-template-columns: 1fr; } .schema-2up .schema-box img { height: auto; max-height: 300px; } }
+    .steps { background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%); border-left: 5px solid #6B46C1; border-radius: 0 12px 12px 0; padding: 18px 22px; margin: 20px 0; box-shadow: 0 2px 10px rgba(107,70,193,0.08); }
+    .steps .steps-title { font-size: 15px; font-weight: 800; color: #4C2A85; margin-bottom: 13px; }
+    .steps ol { list-style: none; margin: 0; padding: 0; }
+    .step { display: grid; grid-template-columns: 28px 1fr; gap: 12px; align-items: start; margin-bottom: 12px; }
+    .step:last-child { margin-bottom: 0; }
+    .step .n { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 999px; background: #6B46C1; color: #fff; font-size: 13px; font-weight: 800; }
+    .step .txt { font-size: 14.5px; line-height: 1.5; color: #2c3e50; padding-top: 2px; }
+    .step .txt b { color: #4C2A85; font-weight: 700; }
+    .step .txt .gl { color: #6b6275; font-weight: 400; }
+    .step .txt .lead { font-weight: 800; color: #1A1A2E; }
+    .pass-tip { background: #fdf6ec; border-left: 6px solid #B8895A; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; box-shadow: 0 3px 12px rgba(184,137,90,0.14); font-size: 14.5px; line-height: 1.55; }
+    .pass-tip::before { content: "Parlons vrai"; display: block; font-weight: 700; font-size: 12px; color: #9a6a37; margin-bottom: 7px; letter-spacing: 0.8px; text-transform: uppercase; }
+    .pass-tip strong { color: #9a6a37; }
+    .recap { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
+    .recap .box { border-radius: 12px; padding: 15px 18px; font-size: 14px; line-height: 1.5; }
+    .recap .retenir { background: #F1ECFA; border: 1px solid #dccff2; }
+    .recap .piege { background: #FFFBEB; border: 1px solid #F6E4A8; }
+    .recap .box .lbl { display: block; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 7px; }
+    .recap .retenir .lbl { color: #6B46C1; }
+    .recap .piege .lbl { color: #9a6d00; }
+    .recap b { font-weight: 700; color: #1A1A2E; }
+    .qcm-cta { display: flex; align-items: center; gap: 16px; text-decoration: none; color: inherit; background: #fff; border: 1px solid #d6c6f0; border-radius: 14px; padding: 18px 22px; margin: 24px 0 6px; box-shadow: 0 9px 26px -16px rgba(107,70,193,.4); transition: transform .18s ease, box-shadow .18s ease; }
+    .qcm-cta:hover { transform: translateY(-2px); box-shadow: 0 16px 38px -16px rgba(107,70,193,.5); }
+    .qcm-cta:focus-visible { outline: 3px solid #6B46C1; outline-offset: 2px; }
+    .qcm-cta .qcm-body { flex: 1; }
+    .qcm-cta .qcm-k { font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #6B46C1; }
+    .qcm-cta .qcm-t { font-size: 18px; font-weight: 800; color: #1A1A2E; margin-top: 3px; letter-spacing: -0.3px; }
+    .qcm-cta .qcm-arrow { flex: none; width: 42px; height: 42px; border-radius: 11px; background: #6B46C1; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700; }
+    .chapter-footer { text-align: center; margin-top: 22px; padding-top: 16px; border-top: 1px solid #e6dfd1; color: #7a8088; font-size: 12px; }
+    .chapter-footer strong { color: #6b6275; }
+    .bio-hint { display: none; }
+    .section-title { font-size: 19px; font-weight: 800; color: #4C2A85; letter-spacing: -0.3px; margin: 28px 2px 6px; }
+    .fine-note { font-size: 12.5px; color: #6b6275; margin: 10px 2px 0; line-height: 1.5; }
+    /* Placements variés des illustrations */
+    .illu-float-right { float: right; width: min(48%, 320px); margin: 4px 0 10px 18px; }
+    .illu-float-right img { width: 100%; max-height: none; }
+    .section-title { clear: both; }
+    .duo { display: grid; grid-template-columns: 250px 1fr; gap: 16px; align-items: center; margin: 20px 0; }
+    .duo .illu { margin: 0; }
+    .duo .illu img { width: 100%; max-height: none; }
+    .duo .pass-tip { margin: 0; }
+    .spot-corner { float: right; width: 74px; margin: 0 0 4px 12px; }
+    .spot-corner img { width: 100%; max-height: none; }
+    .recap .box { overflow: hidden; }
+    /* Mode brouillon (image manquante) : tout repasse en pleine largeur */
+    .illu:has(.img-missing) { float: none !important; width: auto !important; }
+    .duo:has(.img-missing) { grid-template-columns: 1fr; }
+    @media (max-width: 600px) {
+        .illu-float-right { float: none; width: 72%; margin: 12px auto; }
+        .duo { grid-template-columns: 1fr; }
+        .spot-corner { width: 58px; margin-left: 8px; }
+    }
+    /* Illustrations légères : pas de cadre, pas de fond, pas de zoom */
+    .illu { margin: 18px auto 8px; }
+    .schema-box.illu { border: none; box-shadow: none; background: transparent; padding: 0; overflow: visible; }
+    .schema-box.illu::before { content: none; }
+    .schema-box.illu img { cursor: default; max-height: none; }
+    .illu-mid img { max-height: 250px; }
+    .illu-wide img { max-height: 220px; width: 100%; object-fit: contain; }
+    .illu-slim img { max-height: 150px; width: 100%; object-fit: contain; }
+    .illu-spot img { max-height: 96px; }
+    .schema-box.illu .caption { margin-top: 5px; font-size: 12px; }
+    .schema-box.illu.img-missing { background: #fff; border: 2px dashed #ffb74d; border-radius: 12px; padding: 12px; }
+    /* Livrets dépliables (grilles de rémunération) */
+    .livret { border: 1px solid #e3d9f2; background: #fff; border-radius: 12px; margin: 12px 0; overflow: hidden; }
+    .livret summary { cursor: pointer; list-style: none; display: flex; align-items: center; gap: 10px; padding: 13px 16px; font-weight: 700; font-size: 14px; color: #4C2A85; background: #F7F4FC; }
+    .livret summary::-webkit-details-marker { display: none; }
+    .livret summary .chev { margin-left: auto; color: #6B46C1; font-weight: 800; transition: transform .18s ease; }
+    .livret[open] summary .chev { transform: rotate(90deg); }
+    .livret .livret-body { padding: 12px 16px 14px; overflow-x: auto; }
+    .livret table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .livret th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: .6px; color: #6B46C1; padding: 6px 8px; border-bottom: 2px solid #ede7f8; white-space: nowrap; }
+    .livret td { padding: 6px 8px; border-bottom: 1px solid #f1edf8; color: #2c3e50; line-height: 1.45; }
+    .livret tr:last-child td { border-bottom: none; }
+    .livret td b { color: #4C2A85; }
+    .livret .src { font-size: 11.5px; color: #8a8494; margin-top: 9px; line-height: 1.5; }
+    @media print { .section-title { font-size: 22px; } .fine-note { font-size: 14px; } }
+    /* ===== IMPRESSION / PDF — format REEL 9:16 (1080×1920), agrandi pour remplir ===== */
+    @media print {
+        @page { size: 1080px 1920px; margin: 42px; }
+        body { background: #fff; padding: 0; max-width: 996px; font-size: 17px; }
+        .page-container::before { display: none; }
+        .prod-brand { margin: 0 0 12px; }
+        .prod-brand img { height: 38px; }
+        .hook-header { padding: 22px 30px; box-shadow: none; }
+        .hook-header .brand-tag { font-size: 12px; margin-bottom: 10px; }
+        .hook-header .course-title { font-size: 34px; margin-bottom: 10px; }
+        .hook-header .punch { font-size: 21px; }
+        .intro { font-size: 17px; line-height: 1.55; margin: 18px 2px; }
+        .schema-2up { margin: 18px 0; gap: 20px; }
+        .schema-box { padding: 12px; box-shadow: none; }
+        .schema-2up .schema-box img { height: 300px; }
+        .schema-box .schema-num { font-size: 12.5px; margin-bottom: 5px; }
+        .schema-box .caption { font-size: 14px; margin-top: 8px; }
+        .steps { padding: 20px 26px; margin: 18px 0; box-shadow: none; }
+        .steps .steps-title { font-size: 19px; margin-bottom: 13px; }
+        .step { margin-bottom: 11px; gap: 13px; }
+        .step .n { width: 30px; height: 30px; font-size: 14px; }
+        .step .txt { font-size: 16.5px; line-height: 1.5; padding-top: 2px; }
+        .pass-tip { padding: 16px 22px; margin: 18px 0; font-size: 16.5px; box-shadow: none; }
+        .recap { gap: 16px; margin: 18px 0; }
+        .recap .box { padding: 15px 20px; font-size: 15.5px; }
+        .recap .box .lbl { font-size: 12.5px; }
+        .qcm-cta { padding: 17px 24px; margin: 18px 0 6px; box-shadow: none; }
+        .qcm-cta .qcm-k { font-size: 12.5px; }
+        .qcm-cta .qcm-t { font-size: 20px; }
+        .qcm-cta .qcm-arrow { width: 44px; height: 44px; font-size: 20px; }
+        .bio-hint { display: block; text-align: center; margin: 12px 0 0; font-size: 17px; font-weight: 800; color: #6B46C1; }
+        .bio-hint strong { color: #4C2A85; }
+        .chapter-footer { margin-top: 14px; padding-top: 12px; font-size: 14px; }
+        .schema-2up, .schema-box, .steps, .recap, .pass-tip, .qcm-cta { page-break-inside: avoid; }
+    }
+    @media (max-width: 600px) {
+        body { padding: 14px; }
+        .hook-header { padding: 22px 18px 18px; }
+        .hook-header .course-title { font-size: 24px; }
+        .hook-header .punch { font-size: 16px; }
+        .recap { grid-template-columns: 1fr; }
+        .intro, .pass-tip, .step .txt, .recap .box { text-align: left; }
+        .schema-box::before { color: rgba(107,70,193,0.20); font-size: 11px; letter-spacing: 1px; max-width: 90%; }
+    }
+
+    /* === mobile-polish + zoom-bar ordi only === */
+    /* La barre de zoom (− / 100 % / +) est réservée à l'ordinateur : sur mobile,
+       le pinch-to-zoom natif suffit. On la masque sous la largeur tactile. */
+    @media (max-width: 768px) {
+        #medeos-zoom-bar { display: none !important; }
+    }
+    /* Agencement mobile soigné : le titre ne déborde jamais, le hook respire. */
+    @media (max-width: 600px) {
+        body { padding: 14px 13px 18px; }
+        .hook-header { padding: 20px 17px 16px; }
+        .hook-header .course-title {
+            font-size: clamp(20px, 6.4vw, 25px);
+            line-height: 1.12;
+            letter-spacing: -0.4px;
+            overflow-wrap: anywhere;
+            hyphens: auto;
+        }
+        .hook-header .punch { font-size: clamp(14.5px, 4.4vw, 17px); line-height: 1.3; }
+        .hook-header .brand-tag { font-size: 10.5px; letter-spacing: 1.2px; }
+        .intro { font-size: 15px; }
+        .schema-2up { gap: 14px; }
+        .steps { padding: 18px 16px; }
+        .steps .steps-title { font-size: 15px; }
+        .step .txt { font-size: 14.5px; }
+        .qcm-cta { padding: 15px 16px; gap: 12px; }
+        .qcm-cta .qcm-t { font-size: 16px; }
+        .qcm-cta .qcm-arrow { width: 38px; height: 38px; font-size: 18px; }
+        /* boutons de la lightbox plus gros au doigt */
+        #medeos-lightbox button[aria-label="Fermer"] { width: 46px; height: 46px; font-size: 26px; }
+    }
+</style>
+</head>
+<body>
+<div class="page-container">
+
+    <div class="prod-brand"><img src="../images/logo-medeos-violet-texte.png" alt="Medeos"></div>
+
+    <header class="hook-header">
+        <div class="brand-tag">Ressource gratuite · Découverte métier</div>
+        <h1 class="course-title">Pharmacien : le métier en vrai</h1>
+        <p class="punch"><span class="accent">4 millions de personnes</span> entrent chaque jour dans une pharmacie en France. Le pharmacien est le soignant le plus accessible du pays : sans rendez-vous, à côté de chez toi.</p>
+        <p class="punch">Un seul diplôme, plus de 100 métiers — et un quasi plein emploi : ces dernières années, des places sont même restées vides en 2ᵉ année de pharmacie.</p>
+    </header>
+
+    <div class="illu illu-float-right">
+        <figure class="schema-box illu illu-mid">
+            <img src="../images/metiers/fiche_metier_pharmacien_univers.png"
+                 alt="Un pharmacien stylisé au centre, relié à six pastilles rondes : officine, hôpital, biologie, industrie, recherche, armées."
+                 onerror="schemaMissing(this)">
+            <div class="file-target">📁 <strong>fiche_metier_pharmacien_univers.png</strong><br>à placer dans : <strong>/public/images/metiers/</strong><br><span style="color:#555;font-weight:400;">Petite illustration SANS fond (PNG transparent) : un pharmacien au centre entouré de six pastilles pictogrammes (officine, hôpital, biologie, industrie, recherche, armées).</span></div>
+            <figcaption class="caption">Un seul diplôme, <strong>plus de 100 métiers</strong> — de l'officine à l'industrie.</figcaption>
+            <div class="generation-prompt"><strong>Prompt ChatGPT-image :</strong>
+Charming minimal flat 2-D vector illustration, light and airy, FLAT SOLID pastel colours only, thin clean outlines, isolated on a fully TRANSPARENT background (PNG with alpha) — no background shape, no frame, no card, no drop shadow, absolutely NO dark background, NO glow, NO neon, NO blur, NO soft halos around elements: crisp flat shapes on pure transparency, as in a clean SVG icon set. Landscape 4:3 composition. One friendly flat pharmacist silhouette in the centre, seen from the front, smooth blank face, violet #6B46C1 pharmacy coat, holding a small mortar and pestle, about 40% of image height. Around it, six small round pastel discs in a regular fan (three above, three below), each linked to the pharmacist by a fine light-grey line, each holding one simple flat pictogram, one short French sans-serif label just below each disc: « Officine » (warm terracotta disc, small shop counter with a tiny violet cross sign), « Hôpital » (deep blue #1F4E8C disc, building with a small cross), « Biologie » (honey amber disc, microscope), « Industrie » (deep blue disc, small factory with one blister pack), « Recherche » (warm terracotta disc, Erlenmeyer flask), « Armées » (honey amber disc, simple flat shield). One tiny yellow #FCD34D four-point spark near the pharmacist's head, the only yellow accent. Airy, generous empty space. AVOID: any English text, gibberish or misspelled words, 3-D, photorealism, shadows, any background rectangle or colour, borders, frames, watermark, realistic faces, red cross emblem, snake-and-cup emblem, text inside the discs, more than six discs.
+            </div>
+            <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+        </figure>
+    </div>
+
+    <p class="intro">Le pharmacien, c'est le soignant qu'on voit sans rendez-vous — et celui qui connaît tes médicaments mieux que personne. C'est <strong>l'expert du médicament</strong> : le dernier verrou entre une ordonnance et toi, celui qui vérifie, dose, explique — et peut décrocher son téléphone pour corriger une prescription. Et ce métier est <em class="hl">bien plus vaste que le comptoir</em> : il se vit aussi à l'hôpital, au laboratoire d'analyses, dans l'industrie qui invente et fabrique les traitements — <strong>plus de 100 métiers derrière un seul diplôme</strong>. Sur cette fiche, on te montre à quoi ressemble vraiment le quotidien, pour que tu puisses te projeter <strong>les yeux ouverts</strong>.</p>
+
+    <h2 class="section-title">Ta journée si tu deviens pharmacien</h2>
+    <div class="steps">
+        <div class="steps-title">Une journée type</div>
+        <ol>
+            <li class="step">
+                <span class="n">1</span>
+                <span class="txt"><span class="lead">8h30 — Ouverture.</span> Le rideau se lève, la commande du <b>grossiste-répartiteur</b> <span class="gl">(le fournisseur qui livre l'officine plusieurs fois par jour)</span> attend déjà. On range, on allume les ordinateurs, les premiers habitués entrent.</span>
+            </li>
+            <li class="step">
+                <span class="n">2</span>
+                <span class="txt"><span class="lead">9h — Les ordonnances.</span> Chaque ordonnance est <b>analysée</b> avant d'être délivrée : interactions entre médicaments, doses, âge, poids du patient. C'est le <b>cœur du métier</b> — et personne ne prend rendez-vous : on accueille les gens comme ils arrivent.</span>
+            </li>
+            <li class="step">
+                <span class="n">3</span>
+                <span class="txt"><span class="lead">11h — Vaccins et tests.</span> Une vaccination contre la grippe, un <b>test rapide de l'angine</b> <span class="gl">(le TROD, fait en quelques minutes à l'officine)</span> pour un ado fiévreux : si le test le justifie, l'antibiotique part avec lui.</span>
+            </li>
+            <li class="step">
+                <span class="n">4</span>
+                <span class="txt"><span class="lead">13h — Les coulisses.</span> Commandes à passer, stocks à ranger, <b>tiers payant</b> <span class="gl">(la partie remboursée directement par l'Assurance Maladie)</span> à pointer : la face cachée de l'officine, celle qu'on ne voit jamais du comptoir.</span>
+            </li>
+            <li class="step">
+                <span class="n">5</span>
+                <span class="txt"><span class="lead">15h30 — Le coup de fil.</span> Une ordonnance pose problème : deux médicaments <b>incompatibles</b>. On appelle le médecin, on propose une alternative — c'est exactement pour ça que le pharmacien est le <b>dernier verrou</b> avant le patient.</span>
+            </li>
+            <li class="step">
+                <span class="n">6</span>
+                <span class="txt"><span class="lead">18h — Le conseil.</span> Un mal de gorge, une toux qui traîne, une inquiétude : écouter, conseiller, et surtout <b>orienter vers le médecin</b> quand il le faut — repérer ce qui ne peut pas attendre.</span>
+            </li>
+            <li class="step">
+                <span class="n">7</span>
+                <span class="txt"><span class="lead">19h30 — Fermeture.</span> Caisse, rideau — et certains soirs, la <b>garde de nuit</b> : l'officine de garde du secteur reste joignable jusqu'au matin pour les ordonnances urgentes. <span class="gl">C'est un tour de rôle entre pharmacies, payé en plus.</span></span>
+            </li>
+        </ol>
+    </div>
+
+    <div class="illu">
+        <figure class="schema-box illu illu-slim">
+            <img src="../images/metiers/fiche_metier_pharmacien_journee.png"
+                 alt="Frise fine du matin au soir : sept moments de la journée d&#x27;un pharmacien d&#x27;officine, du soleil levant au croissant de lune, avec leurs horaires."
+                 onerror="schemaMissing(this)">
+            <div class="file-target">📁 <strong>fiche_metier_pharmacien_journee.png</strong><br>à placer dans : <strong>/public/images/metiers/</strong><br><span style="color:#555;font-weight:400;">Bandeau fin SANS fond (PNG transparent) : ligne du temps soleil → lune, sept petits pictogrammes horodatés de la journée d&#x27;officine.</span></div>
+            <figcaption class="caption">De 8h30 à 19h30 : <strong>le comptoir n'est que la partie visible</strong>.</figcaption>
+            <div class="generation-prompt"><strong>Prompt ChatGPT-image :</strong>
+Charming minimal flat 2-D vector illustration, light and airy, FLAT SOLID pastel colours only, thin clean outlines, isolated on a fully TRANSPARENT background (PNG with alpha) — no background shape, no frame, no card, no drop shadow, absolutely NO dark background, NO glow, NO neon, NO blur, NO soft halos around elements: crisp flat shapes on pure transparency, as in a clean SVG icon set. Very wide, slim banner. A single thin light-grey horizontal line across the middle, a small flat honey-amber rising sun at the far left end, a small deep-blue #1F4E8C crescent moon at the far right end. On the line, seven small violet #6B46C1 dots; above or below each dot (alternating), one tiny flat pictogram with its time only, in small violet French numerals: « 8h30 » shop awning with a half-raised roller shutter, « 9h » prescription sheet, « 11h » small syringe, « 13h » stack of delivery boxes, « 15h30 » telephone handset, « 18h » speech bubble, « 19h30 » door key with a tiny yellow #FCD34D glint (the only yellow accent). All pictograms the same small size, soft terracotta / deep blue / honey amber colours, lots of empty space. AVOID: any English text, gibberish, any word or label other than the seven times, 3-D, photorealism, shadows, any background colour, frames, borders, watermark, clock faces, realistic faces, red or green cross emblems.
+            </div>
+            <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+        </figure>
+    </div>
+
+    <h2 class="section-title">Où tu peux exercer</h2>
+    <div class="steps">
+        <div class="steps-title">Trois façons de vivre le même métier</div>
+        <ol>
+            <li class="step">
+                <span class="n">1</span>
+                <span class="txt"><span class="lead">L'officine — le soignant d'à côté.</span> Près de 7 pharmaciens sur 10 y travaillent : <b>adjoint salarié</b> (35 h par semaine, le samedi souvent travaillé) ou <b>titulaire</b>, propriétaire et chef d'entreprise <span class="gl">(à ce titre, c'est lui qui fixe ses horaires et ceux de son officine, dans les limites des tours de garde)</span> (souvent 45 à 55 h). Le comptoir, les ordonnances, les vaccins, une équipe à faire tourner : la proximité au quotidien — avec des <b>gardes de nuit</b> à tour de rôle.</span>
+            </li>
+            <li class="step">
+                <span class="n">2</span>
+                <span class="txt"><span class="lead">L'hôpital et la biologie — la voie de l'internat.</span> Le <b>pharmacien hospitalier</b> est le gardien du circuit du médicament (des chimiothérapies préparées en zone stérile à la stérilisation des instruments de bloc) ; le <b>biologiste médical</b> valide les analyses de sang et conseille les médecins. On y accède par le <b>concours de l'internat</b> en 5ᵉ année — 4 ans payés par l'hôpital. En face : 10 demi-journées par semaine, 48 h maximum légal, astreintes en plus.</span>
+            </li>
+            <li class="step">
+                <span class="n">3</span>
+                <span class="txt"><span class="lead">L'industrie — l'expert du médicament à grande échelle.</span> Recherche, essais cliniques, production, qualité, affaires réglementaires : tout un éventail de métiers, dans un secteur où sur <b>10 000 molécules</b> étudiées, une seule devient un médicament. Des semaines de cadre (≈ 35 à 40 h), des déplacements — et les <b>salaires les plus élevés</b> en début de carrière : ≈ 49 300 € brut par an en région, ≈ 57 500 € en Île-de-France.</span>
+            </li>
+        </ol>
+    </div>
+
+    <h2 class="section-title">Combien tu gagnes — et comment</h2>
+    <div class="steps">
+        <div class="steps-title">Les circuits de l'argent</div>
+        <ol>
+            <li class="step">
+                <span class="n">1</span>
+                <span class="txt"><span class="lead">À l'officine : la boîte, l'honoraire — et la grille.</span> L'officine se paie sur chaque boîte délivrée : un <b>honoraire de dispensation de 1,02 €</b> par boîte plus une marge encadrée par l'État, une <b>prime annuelle sur objectifs de santé publique</b> <span class="gl">(génériques délivrés, entretiens, vaccinations)</span>, et des actes payés à l'unité <span class="gl">(vaccination : 7,50 €, ou 9,60 € si le pharmacien prescrit et vaccine ; nuit de garde : 200 € d'astreinte + 10 à 20 € par ordonnance selon l'heure)</span>. L'<b>adjoint salarié</b> est payé sur une grille nationale : <b>≈ 2 900 € net dès l'embauche</b> pour 35 h par semaine — et le marché réel paie souvent au-dessus de la grille, faute de candidats. Le <b>titulaire</b> se paie en dernier : <b>≈ 5 000 € net par mois en moyenne</b>, pour des semaines de 45 à 55 h — le détail est dans les livrets.</span>
+            </li>
+            <li class="step">
+                <span class="n">2</span>
+                <span class="txt"><span class="lead">À l'hôpital et au laboratoire : une grille + des gardes.</span> Le pharmacien hospitalier et le biologiste des hôpitaux sont payés sur la <b>même grille que les médecins hospitaliers</b> : de <b>≈ 3 900 € net par mois</b> au 1ᵉʳ échelon à <b>≈ 7 900 €</b> au 13ᵉ, pour 10 demi-journées par semaine <span class="gl">(48 h maximum légal)</span>, astreintes payées en plus. En <b>laboratoire privé</b>, le biologiste gagne davantage : ≈ 5 000 à 6 000 € net par mois, et nettement plus en devenant associé du laboratoire.</span>
+            </li>
+            <li class="step">
+                <span class="n">3</span>
+                <span class="txt"><span class="lead">Et pendant les études ?</span> La fac coûte <b>≈ 280 à 360 € par an</b> <span class="gl">(droits d'inscription 178 € puis 254 € en 2ᵉ cycle, + contribution vie étudiante 105 € — montants 2025-2026)</span> — et l'argent arrive avant le diplôme : le stage de 6ᵉ année est payé <b>≈ 600 à 680 € net par mois</b>, porté à <b>≈ 1 037 €</b> dès la rentrée 2026. Ceux qui choisissent l'internat deviennent <b>salariés de l'hôpital</b> pendant 4 ans : de ≈ 1 600 € à ≈ 1 950 € net par mois, gardes en plus — pour de vraies semaines <span class="gl">(48 h maximum légal, souvent dépassées)</span>.</span>
+            </li>
+        </ol>
+    </div>
+
+    <details class="livret">
+        <summary>📖 L'argent pendant les études, année par année<span class="chev">›</span></summary>
+        <div class="livret-body">
+            <p class="src" style="margin:0 0 9px;">La vérité du métier : en filière courte (officine, industrie), tu restes étudiant 6 ans, avec un stage payé à la fin ; en filière internat, tu deviens <b>salarié de l'hôpital dès la 6ᵉ année d'études</b> — payé exactement comme un interne de médecine (statut unique de l'interne).</p>
+            <table>
+                <thead><tr><th>Moment des études</th><th>≈ Montant</th><th>Ce qui est compté</th></tr></thead>
+                <tbody>
+                    <tr><td><b>De la P1 à la 3ᵉ année</b> : la fac</td><td>tu paies ≈ 283 € / an</td><td>droits d'inscription 178 € + CVEC 105 € (montants 2025-2026) — les boursiers en sont exonérés</td></tr>
+                    <tr><td><b>De la 4ᵉ à la 6ᵉ année</b></td><td>tu paies ≈ 359 € / an</td><td>droits du 2ᵉ cycle 254 € + CVEC 105 € — boursiers exonérés là aussi</td></tr>
+                    <tr><td>Stages courts (2ᵉ-4ᵉ année)</td><td>≈ 0 €</td><td>stage d'initiation en officine et stages d'application : souvent moins de 2 mois, donc pas de gratification obligatoire</td></tr>
+                    <tr><td>5ᵉ année hospitalo-universitaire</td><td>quelques centaines d'€ / mois</td><td>mi-temps à l'hôpital avec le statut d'étudiant hospitalier — indemnité modeste, variable selon les facultés</td></tr>
+                    <tr><td><b>6ᵉ année : le stage long</b> (officine ou industrie)</td><td><b>≈ 600 – 680 € net / mois</b></td><td>gratification minimale de stage (4,50 € par heure de présence en 2026), à temps plein</td></tr>
+                    <tr><td>Le même stage, dès la rentrée 2026</td><td><b>≈ 1 037 € net / mois</b></td><td>réforme du 3ᵉ cycle : indemnité revalorisée, financée par l'Assurance maladie et avancée par l'officine, congés payés et droits sociaux (maladie, maternité, retraite)</td></tr>
+                    <tr><td><b>Internat 1ʳᵉ année</b></td><td><b>≈ 1 600 € net / mois</b></td><td>base ≈ 1 300 € (19 406,35 € brut par an, arrêté du 8 juillet 2022 modifié) + indemnité de sujétion 435,18 € brut/mois, versée les 4 premiers semestres</td></tr>
+                    <tr><td>Internat 2ᵉ année</td><td>≈ 1 750 €</td><td>base + indemnité de sujétion</td></tr>
+                    <tr><td>Internat 3ᵉ année</td><td>≈ 1 850 €</td><td>base seule : la sujétion s'arrête, mais la base grimpe avec l'ancienneté (≈ 2 367 € brut/mois)</td></tr>
+                    <tr><td>Internat 4ᵉ année (docteur junior)</td><td><b>≈ 1 900 – 1 950 €</b></td><td>dernière année en autonomie supervisée ; gardes payées en plus (234,80 € brut la nuit, soit ≈ 180 € net)</td></tr>
+                </tbody>
+            </table>
+            <p class="src">⏱️ <b>Le temps en face pour l'interne</b> : 48 h par semaine maximum légal, gardes comprises — souvent dépassées en stage hospitalier. L'internat de pharmacie (biologie médicale ou pharmacie hospitalière) partage la grille des internes de médecine : mêmes émoluments, mêmes indemnités.<br>Sources : arrêté du 8 juillet 2022 modifié (émoluments et indemnités des internes, via ISNI) ; Le Moniteur des pharmacies (janvier 2026) pour le stage de 6ᵉ année ; service-public.fr (droits universitaires 2025-2026).</p>
+        </div>
+    </details>
+
+    <details class="livret">
+        <summary>📖 La grille du pharmacien adjoint — les coefficients 2026<span class="chev">›</span></summary>
+        <div class="livret-body">
+            <p class="src" style="margin:0 0 9px;">La grille nationale de la convention collective de la pharmacie d'officine : brut mensuel = (coefficient ÷ 100) × valeur du point (<b>5,278 € en 2026</b>) × 151,67 h. Depuis le <b>1ᵉʳ novembre 2025</b>, les coefficients 400 et 430 ont disparu : on embauche un adjoint au <b>470 minimum</b> — et la montée se fait ensuite à l'ancienneté, automatiquement.</p>
+            <table>
+                <thead><tr><th>Coefficient</th><th>Le moment</th><th>Brut mensuel (35 h)</th><th>≈ net / mois</th></tr></thead>
+                <tbody>
+                    <tr><td><b>470</b></td><td>à l'embauche</td><td>≈ 3 762 €</td><td><b>≈ 2 900 €</b></td></tr>
+                    <tr><td><b>500</b></td><td>automatique après 1 an</td><td>≈ 4 003 €</td><td><b>≈ 3 100 €</b></td></tr>
+                    <tr><td><b>520</b></td><td>après 5 ans</td><td>≈ 4 163 €</td><td><b>≈ 3 200 €</b></td></tr>
+                    <tr><td><b>530</b></td><td>après 10 ans</td><td>≈ 4 243 €</td><td><b>≈ 3 270 €</b></td></tr>
+                    <tr><td><b>540</b></td><td>après 15 ans</td><td>≈ 4 323 €</td><td><b>≈ 3 330 €</b></td></tr>
+                    <tr><td><b>550</b></td><td>après 20 ans</td><td>≈ 4 403 €</td><td><b>≈ 3 390 €</b></td></tr>
+                    <tr><td><b>600 à 800</b></td><td>responsabilités élargies, gérance (négocié)</td><td>≈ 4 803 à 6 404 €</td><td><b>≈ 3 700 à 4 930 €</b></td></tr>
+                </tbody>
+            </table>
+            <p class="src">Valeur du point 2026 : 5,278 € (accord du 19 janvier 2026, étendu par arrêté au printemps 2026) — soit ≈ 45 150 € brut par an à l'embauche ; selon l'arrondi retenu, les sources varient de quelques centimes autour de ces montants. Net estimé avant impôt (brut − 23 % environ, statut cadre). S'ajoute une <b>prime d'ancienneté</b> : +3 % après 3 ans, jusqu'à +15 % après 15 ans.<br>⏱️ <b>Le temps en face</b> : temps plein = 35 h par semaine, le samedi souvent travaillé, plafond conventionnel 46 h sur une semaine (44 h en moyenne sur 12 semaines). Et le marché réel paie souvent <b>au-dessus de la grille</b>, faute de candidats : des annonces dépassent 4 000 € brut pour des débutants.<br>À l'hôpital, le pharmacien est payé sur la <b>grille des praticiens hospitaliers</b> — la même que les médecins : de ≈ 3 900 € net (échelon 1) à ≈ 7 900 € net (échelon 13, en fin de carrière, ≈ 30 ans), astreintes en plus (grille au 1ᵉʳ juillet 2023 : 55 607,79 € → 112 416,56 € brut par an, source MACSF).</p>
+        </div>
+    </details>
+
+    <details class="livret">
+        <summary>📖 Le titulaire n'a pas de grille : la simulation<span class="chev">›</span></summary>
+        <div class="livret-body">
+            <p class="src" style="margin:0 0 9px;">Le titulaire est un <b>chef d'entreprise</b> : pas de salaire fixe. Les hypothèses, toutes affichées : sur 100 € de chiffre d'affaires, environ deux tiers repartent en achat des médicaments ; il reste ≈ un tiers de marge <b>(l'honoraire de 1,02 € par boîte + la marge encadrée par l'État + les actes : vaccination 7,50 – 9,60 €, tests, gardes)</b> pour payer l'équipe, le loyer, l'emprunt — et en dernier, le titulaire. Revenus nets avant impôt, tirés des bilans 2024 des cabinets comptables spécialisés.</p>
+            <table>
+                <thead><tr><th>Taille de l'officine (chiffre d'affaires annuel)</th><th>≈ revenu net / mois du titulaire</th><th>Repère</th></tr></thead>
+                <tbody>
+                    <tr><td><b>Petite officine</b> (moins de 1 M€)</td><td><b>≈ 2 300 €</b></td><td>≈ 28 100 € net par an — parfois moins bien payé que son propre adjoint</td></tr>
+                    <tr><td><b>Officine moyenne</b> (≈ 1,5 M€)</td><td><b>≈ 4 500 – 5 500 €</b></td><td>le cas type en zone rurale ou périurbaine</td></tr>
+                    <tr><td><b>Grande officine</b> (≈ 2,5 M€)</td><td><b>≈ 6 500 – 7 500 €</b></td><td>centre-ville, zone commerçante (estimation : à 3 M€ de CA, le revenu dépasse la moyenne de ≈ 80 %)</td></tr>
+                    <tr><td><b>Moyenne nationale</b></td><td><b>≈ 5 000 €</b></td><td>60 500 € net par an (étude Extencia 2025, sur 1 853 officines) ; 62 200 € (Centre de Gestion Pharmaceutique)</td></tr>
+                </tbody>
+            </table>
+            <p class="src">⏱️ <b>Le temps en face</b> : des semaines souvent de <b>45 à 55 h</b>, samedi compris, plus les gardes (fourchette d'usage dans la profession — il n'existe pas de statistique nationale récente, on te le dit honnêtement). Une officine <b>s'achète</b> — souvent plus d'un million d'euros — avec un emprunt remboursé sur 10 à 12 ans : les premières années, une partie du revenu y passe.<br>Garde : <b>200 € d'astreinte</b> par nuit, + 10 € par ordonnance délivrée en soirée (20h-minuit et 6h-8h), 20 € en pleine nuit (minuit-6h), 6 € le dimanche et les jours fériés (convention pharmaceutique, montants en vigueur depuis janvier 2025).</p>
+        </div>
+    </details>
+
+    <div class="duo">
+    <div class="illu">
+        <figure class="schema-box illu illu-mid">
+            <img src="../images/metiers/fiche_metier_pharmacien_remuneration.png"
+                 alt="Deux petites scènes : à gauche l&#x27;officine (pharmacien, patient, pièce de 1,02 €, barre charges/net) ; à droite le salarié (hôpital, escalier de grille, pastille gardes)."
+                 onerror="schemaMissing(this)">
+            <div class="file-target">📁 <strong>fiche_metier_pharmacien_remuneration.png</strong><br>à placer dans : <strong>/public/images/metiers/</strong><br><span style="color:#555;font-weight:400;">Petite illustration SANS fond (PNG transparent) : scène officine (boîte délivrée → 1,02 € → barre charges/net) à gauche, scène salarié (escalier de grille + gardes) à droite.</span></div>
+            <figcaption class="caption">À l'officine, chaque boîte paie <strong>un honoraire</strong> ; à l'hôpital, <strong>une grille</strong> — gardes en plus.</figcaption>
+            <div class="generation-prompt"><strong>Prompt ChatGPT-image :</strong>
+Charming minimal flat 2-D vector illustration, light and airy, FLAT SOLID pastel colours only, thin clean outlines, isolated on a fully TRANSPARENT background (PNG with alpha) — no background shape, no frame, no card, no drop shadow, absolutely NO dark background, NO glow, NO neon, NO blur, NO soft halos around elements: crisp flat shapes on pure transparency, as in a clean SVG icon set. Two small scenes side by side, separated by generous empty space. LEFT scene, French label « Officine » in violet #6B46C1 above it: one flat pharmacist silhouette behind a small counter handing a tiny medicine box to one patient silhouette, below them one violet coin marked only « 1,02 € » in white, and under the coin one short horizontal rounded bar split exactly in half — warm terracotta half labelled « Charges », violet half labelled « Net » with a thin yellow #FCD34D ring around it (the only yellow accent). RIGHT scene, French label « Salarié » in deep blue #1F4E8C above it: a small flat hospital building beside an ascending staircase of five deep-blue steps with a thin grey rising arrow, one label « Grille » under the staircase, plus one small honey-amber disc with a crescent-moon pictogram labelled « + Gardes ». Exactly seven short French labels in the whole image, small clean sans-serif. AVOID: any English text, gibberish or misspelled words, any number other than 1,02 €, 3-D, photorealism, shadows, any background colour, frames, borders, watermark, banknote piles, dollar signs, percentages, pie charts, realistic faces, red or green cross emblems.
+            </div>
+            <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+        </figure>
+    </div>
+    <div class="pass-tip">
+        Ces montants sont des <strong>moyennes, pas des promesses</strong> : entre le titulaire d'une petite officine rurale (parfois ≈ 2 300 € net par mois) et celui d'une grande officine urbaine (plus de 7 500 €), l'écart va <strong>du simple au triple</strong> — et l'hôpital paie moins que le privé, en échange d'une autre mission. Ce que la pharmacie offre vraiment est devenu rare : un <strong>quasi plein emploi</strong> (des places restent même vacantes en fac), des revenus réguliers dès la sortie, et une utilité concrète — être le soignant que tout un quartier connaît. On n'y devient pas riche à 25 ans ; on y construit <strong>une vie stable, tôt</strong>, et de mille façons différentes.
+    </div>
+    </div>
+
+    <h2 class="section-title">Le chemin depuis la Terminale</h2>
+    <div class="illu">
+        <figure class="schema-box illu illu-wide">
+            <img src="../images/metiers/fiche_metier_pharmacien_parcours.png"
+                 alt="Chemin montant de la Terminale au pharmacien : P1 (1 an), tronc commun 2ᵉ-4ᵉ année (3 ans), 5ᵉ année (1 an), 6ᵉ année avec thèse, embranchement internat (4 ans) — arc « 6 à 9 ans »."
+                 onerror="schemaMissing(this)">
+            <div class="file-target">📁 <strong>fiche_metier_pharmacien_parcours.png</strong><br>à placer dans : <strong>/public/images/metiers/</strong><br><span style="color:#555;font-weight:400;">Bandeau SANS fond (PNG transparent) : chemin montant à six jalons avec durées, losange thèse en 6ᵉ année, embranchement internat, arc « 6 à 9 ans ».</span></div>
+            <figcaption class="caption">Compte <strong>6 ans</strong> pour l'officine ou l'industrie, <strong>9 ans</strong> par l'internat — payé dès la 6ᵉ année.</figcaption>
+            <div class="generation-prompt"><strong>Prompt ChatGPT-image :</strong>
+Charming minimal flat 2-D vector illustration, light and airy, FLAT SOLID pastel colours only, thin clean outlines, isolated on a fully TRANSPARENT background (PNG with alpha) — no background shape, no frame, no card, no drop shadow, absolutely NO dark background, NO glow, NO neon, NO blur, NO soft halos around elements: crisp flat shapes on pure transparency, as in a clean SVG icon set. Wide banner. A thin light-grey path rises gently from bottom-left to upper-right with soft curves. Along it, milestones with spacing roughly proportional to duration: warm terracotta dot with a schoolbag pictogram, label « Terminale » ; violet #6B46C1 dot with an open book, label « P1 », tiny grey « 1 an » ; deep blue #1F4E8C dot with a mortar and pestle, label « 2e-4e année », tiny grey « 3 ans » ; honey amber dot with a small hospital, label « 5e année », tiny grey « 1 an » ; one yellow #FCD34D diamond with a tiny graduation cap, label « 6e année : thèse » (the only yellow accent). From the « 5e année » milestone, one short dotted light-grey branch rises higher to a violet dot with a flat hospital badge, label « Internat », tiny grey « 4 ans ». At the end of the main path, upper right, one small flat pharmacist silhouette in a violet coat, blank face, label « Pharmacien ». Above the whole path, one thin light-grey arc from the first dot to the final figure with the single violet label « 6 à 9 ans ». Small clean French sans-serif labels, lots of empty space. AVOID: any English text, gibberish or misspelled words, 3-D, photorealism, shadows, any background colour, frames, borders, watermark, extra numbers, hourglasses, calendars, sad or stressed characters, red or green cross emblems.
+            </div>
+            <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+        </figure>
+    </div>
+
+    <div class="steps">
+        <div class="steps-title">6 étapes — 6 à 9 ans après le bac</div>
+        <ol>
+            <li class="step">
+                <span class="n">1</span>
+                <span class="txt"><span class="lead">Terminale — Parcoursup.</span> Tu formules tes vœux pour rejoindre les études de santé. Un dossier régulier et des <b>spécialités scientifiques</b> — la chimie et la biologie serviront particulièrement en pharmacie — sont tes meilleurs alliés.</span>
+            </li>
+            <li class="step">
+                <span class="n">2</span>
+                <span class="txt"><span class="lead">La P1 (voies PASS ou LAS) — 1 an.</span> L'année d'entrée, commune avec médecine : les bases scientifiques, et un <b>classement</b> qui décide de ton admission en 2ᵉ année. Ce n'est pas réservé aux génies : ceux qui la réussissent sont très souvent ceux qui arrivent avec une vraie <b>méthode de travail</b> dès les premières semaines. Et la pharmacie fait partie des filières où des places restent parfois non pourvues : la porte est plus large qu'on ne le croit.</span>
+            </li>
+            <li class="step">
+                <span class="n">3</span>
+                <span class="txt"><span class="lead">2ᵉ à 4ᵉ année — le tronc commun, 3 ans.</span> La sélection est derrière toi : quand on travaille et qu'on valide, le passage en année supérieure est la règle. Sciences du médicament, <b>travaux pratiques</b> dans presque toutes les matières, stages dès la 2ᵉ année — et le <b>choix de ta filière</b> (officine, industrie, internat) à partir de la 4ᵉ année.</span>
+            </li>
+            <li class="step">
+                <span class="n">4</span>
+                <span class="txt"><span class="lead">5ᵉ année — l'année hospitalo-universitaire, 1 an.</span> Mi-temps à l'<b>hôpital</b>, mi-temps en cours : tu découvres le terrain avec le statut d'étudiant hospitalier. C'est aussi l'année du <b>concours de l'internat</b>, pour ceux qui visent la biologie médicale ou la pharmacie hospitalière.</span>
+            </li>
+            <li class="step">
+                <span class="n">5</span>
+                <span class="txt"><span class="lead">6ᵉ année — filière courte : le stage et la thèse.</span> Une année de terrain : un long <b>stage à temps plein</b> en officine ou en industrie — indemnisé, et revalorisé à ≈ 1 037 € net par mois par la réforme de 2026 — puis ta <b>thèse d'exercice</b> : te voilà docteur en pharmacie en 6 ans, prêt à exercer, ou à ajouter un Master (qualité, affaires réglementaires, recherche clinique…) pour l'industrie.</span>
+            </li>
+            <li class="step">
+                <span class="n">6</span>
+                <span class="txt"><span class="lead">Ou l'internat — 4 ans, salarié de l'hôpital.</span> Pour la <b>biologie médicale</b> ou la <b>pharmacie hospitalière</b> : 4 années de stages semestriels payés par l'hôpital, la thèse en chemin, un mémoire de spécialité — et le titre à la clé, en <b>9 ans</b> au total après le bac.</span>
+            </li>
+        </ol>
+    </div>
+
+    <p class="fine-note">À suivre : une « licence santé » unique a été annoncée en avril 2026 pour remplacer le PASS et la LAS, visée pour la rentrée 2027 — le calendrier peut encore bouger, et le PASS et la LAS restent en place pour la rentrée 2026. Côté pharmacie, la réforme du 3ᵉ cycle s'applique dès la rentrée 2026 : le stage de 6ᵉ année passe à ≈ 1 037 € net par mois, avec congés payés et droits sociaux. Quel que soit le nom de l'année d'entrée, la première année restera classante — la méthode de travail restera le nerf de la guerre.</p>
+
+    <div class="recap">
+        <div class="box retenir">
+    <div class="illu spot-corner">
+        <figure class="schema-box illu illu-spot">
+            <img src="../images/metiers/fiche_metier_pharmacien_spot.png"
+                 alt="Petit mortier et pilon violets, accompagnés d&#x27;une gélule terracotta et d&#x27;une molécule bleue stylisées."
+                 onerror="schemaMissing(this)">
+            <div class="file-target">📁 <strong>fiche_metier_pharmacien_spot.png</strong><br>à placer dans : <strong>/public/images/metiers/</strong><br><span style="color:#555;font-weight:400;">Mini-illustration SANS fond (PNG transparent) : un mortier et son pilon violets, une gélule et une petite molécule à côté. Aucun texte.</span></div>
+            <div class="generation-prompt"><strong>Prompt ChatGPT-image :</strong>
+Charming minimal flat 2-D vector illustration, light and airy, FLAT SOLID pastel colours only, thin clean outlines, isolated on a fully TRANSPARENT background (PNG with alpha) — no background shape, no frame, no card, no drop shadow, absolutely NO dark background, NO glow, NO neon, NO blur, NO soft halos around elements: crisp flat shapes on pure transparency, as in a clean SVG icon set. A single tiny spot motif: a violet #6B46C1 mortar and pestle, with one small warm terracotta pill capsule resting beside its base and one small deep blue #1F4E8C hexagonal molecule outline floating near the rim, one tiny yellow #FCD34D four-point spark above the pestle (the only yellow accent). No text at all. AVOID: any text or letters, gibberish, 3-D, photorealism, shadows, any background colour, frames, borders, watermark, realistic faces, red or green cross emblems, snake-and-cup emblem.
+            </div>
+            <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+        </figure>
+    </div>
+            <span class="lbl">Fait pour toi si…</span>
+            Tu aimes la <b>chimie et la biologie</b> — comprendre ce qu'une molécule fait au corps humain, c'est le cœur de ce métier. Tu es d'une <b>rigueur tranquille</b> : vérifier, doser, ne rien laisser passer, parce qu'une erreur de médicament ne pardonne pas. Tu aimes le <b>contact simple et quotidien</b> — expliquer un traitement, rassurer un parent, connaître tes habitués par leur prénom. Tu apprécies l'idée d'un métier <b>stable</b>, où l'on t'attend à la sortie des études. Et si diriger une équipe te tente un jour, l'officine peut faire de toi un <b>chef d'entreprise de la santé</b>.
+        </div>
+        <div class="box piege">
+            <span class="lbl">Ce qu'on te dit moins</span>
+            Des journées entières <b>debout au comptoir</b>, le samedi souvent travaillé, des gardes de nuit à tour de rôle — et une vraie part de <b>gestion</b> : cartons, stocks, tiers payant. À l'hôpital, les salaires sont plus modestes que dans le privé ; et dans certains territoires, des officines ferment faute de repreneur <span class="gl">(245 fermetures en 2025)</span>. Reste l'essentiel : un métier où le <b>chômage n'existe quasiment pas</b>, où l'on gagne correctement sa vie dès la sortie — et où l'on se sent <b>utile à chaque ordonnance</b>. Ceux qui l'exercent parlent d'abord de la relation avec leurs patients.
+        </div>
+    </div>
+
+    <a class="qcm-cta" style="display:none" href="/ressources/qcm-decouverte/decouverte-metier-pharmacien" target="_top">
+        <span class="qcm-body">
+            <span class="qcm-k">Teste tes idées reçues en 3 questions</span>
+            <span class="qcm-t">QCM — Le métier de pharmacien</span>
+        </span>
+        <span class="qcm-arrow" aria-hidden="true">→</span>
+    </a>
+    <div class="bio-hint">📲 Pour faire le QCM gratuit → <strong>lien en bio</strong></div>
+
+    <footer class="chapter-footer">
+        <p>Une fiche <strong>Medeos</strong> · pour anticiper la P1, sereinement · medeos-sante.fr</p>
+    </footer>
+
+</div>
+
+<div id="medeos-lightbox" role="dialog" aria-label="Schéma agrandi" aria-modal="true" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(26,26,46,0.92);overflow:auto;-webkit-overflow-scrolling:touch;touch-action:pinch-zoom;cursor:zoom-out;">
+    <button type="button" aria-label="Fermer" onclick="closeLightbox()" style="position:fixed;top:14px;right:16px;z-index:10003;width:42px;height:42px;border-radius:50%;border:none;background:rgba(255,255,255,0.14);color:#fff;font-size:24px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);">&times;</button>
+    <div id="medeos-zoom-bar" style="position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:10003;display:flex;gap:8px;align-items:center;background:rgba(255,255,255,0.14);backdrop-filter:blur(4px);padding:7px 10px;border-radius:999px;">
+        <button type="button" aria-label="Dézoomer" onclick="lbZoom(-1,event)" style="width:38px;height:38px;border-radius:50%;border:none;background:rgba(255,255,255,0.9);color:#1A1A2E;font-size:22px;font-weight:700;line-height:1;cursor:pointer;">&minus;</button>
+        <button type="button" aria-label="Réinitialiser le zoom" onclick="lbReset(event)" style="height:38px;padding:0 14px;border-radius:999px;border:none;background:rgba(255,255,255,0.9);color:#1A1A2E;font-size:13px;font-weight:700;cursor:pointer;">100&nbsp;%</button>
+        <button type="button" aria-label="Zoomer" onclick="lbZoom(1,event)" style="width:38px;height:38px;border-radius:50%;border:none;background:rgba(255,255,255,0.9);color:#1A1A2E;font-size:22px;font-weight:700;line-height:1;cursor:pointer;">+</button>
+    </div>
+    <div id="medeos-lightbox-stage" onclick="lbStageClick(event)" style="min-height:100%;display:flex;align-items:center;justify-content:center;padding:64px 16px;">
+        <div style="position:relative;display:inline-flex;">
+            <img id="medeos-lightbox-img" src="" alt="Schéma agrandi" ondblclick="lbToggleZoom(event)" style="display:block;border-radius:10px;box-shadow:0 10px 40px rgba(0,0,0,0.5);transform-origin:center center;transition:transform .18s ease;max-width:none;cursor:zoom-in;">
+            <div aria-hidden="true" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;">
+                <span style="font-family:'Inter',Arial,sans-serif;font-size:clamp(11px,4vw,30px);font-weight:700;letter-spacing:clamp(1px,1vw,6px);text-transform:uppercase;color:rgba(120,120,120,0.16);white-space:nowrap;">medeos-sante.fr</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var lbScale = 1, lbBaseW = 0;
+    function openLightbox(src) {
+        var lb = document.getElementById('medeos-lightbox');
+        var img = document.getElementById('medeos-lightbox-img');
+        lbScale = 1;
+        img.onload = function () {
+            // Taille de base : on s'aligne sur la largeur dispo (max 96vw) ou la taille native si plus petite.
+            var availW = Math.min(window.innerWidth * 0.96, this.naturalWidth);
+            var availH = window.innerHeight * 0.84;
+            var ratio = Math.min(availW / this.naturalWidth, availH / this.naturalHeight, 1);
+            lbBaseW = Math.max(120, Math.round(this.naturalWidth * ratio));
+            this.style.width = lbBaseW + 'px';
+            this.style.height = 'auto';
+            lbApply();
+        };
+        img.src = src;
+        lb.style.display = 'block';
+        lb.scrollTop = 0; lb.scrollLeft = 0;
+        document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+        document.getElementById('medeos-lightbox').style.display = 'none';
+        document.body.style.overflow = '';
+    }
+    function lbApply() {
+        var img = document.getElementById('medeos-lightbox-img');
+        img.style.transform = 'scale(' + lbScale + ')';
+        img.style.cursor = lbScale > 1 ? 'zoom-out' : 'zoom-in';
+        var lbl = document.querySelector('#medeos-zoom-bar button[onclick^="lbReset"]');
+        if (lbl) lbl.innerHTML = Math.round(lbScale * 100) + '&nbsp;%';
+    }
+    function lbZoom(dir, e) {
+        if (e) { e.stopPropagation(); e.preventDefault(); }
+        lbScale = Math.min(4, Math.max(1, +(lbScale + dir * 0.5).toFixed(2)));
+        lbApply();
+    }
+    function lbReset(e) { if (e) { e.stopPropagation(); e.preventDefault(); } lbScale = 1; lbApply(); }
+    function lbToggleZoom(e) { if (e) { e.stopPropagation(); e.preventDefault(); } lbScale = lbScale > 1 ? 1 : 2; lbApply(); }
+    function lbStageClick(e) { if (e.target.id === 'medeos-lightbox-stage') closeLightbox(); } // clic dans le vide = fermer
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeLightbox();
+        else if (document.getElementById('medeos-lightbox').style.display === 'block') {
+            if (e.key === '+' || e.key === '=') lbZoom(1);
+            else if (e.key === '-') lbZoom(-1);
+            else if (e.key === '0') lbReset();
+        }
+    });
+    document.getElementById('medeos-lightbox').addEventListener('wheel', function (e) {
+        if (this.style.display !== 'block') return;
+        if (e.ctrlKey || Math.abs(e.deltaY) > 0) { /* molette = zoom */ }
+        e.preventDefault();
+        lbScale = Math.min(4, Math.max(1, +(lbScale - Math.sign(e.deltaY) * 0.25).toFixed(2)));
+        lbApply();
+    }, { passive: false });
+    function schemaMissing(img) { img.style.display = 'none'; var b = img.closest('.schema-box'); if (b) b.classList.add('img-missing'); }
+</script>
+</body>
+</html>
