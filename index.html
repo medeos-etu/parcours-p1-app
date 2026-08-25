@@ -3729,11 +3729,15 @@ function renderDiag(){
     return;
   }
   /* (le radar vit dans « Ton avancée » — ici : priorité et réussite) */
-  /* — la matière à prioriser — */
+  /* — la matière à prioriser : SEULEMENT si on a des données pour la désigner — */
   const jouees=MATS.filter(m=>st[m].joue);
-  const prio=(jouees.length?jouees:MATS).slice().sort((a,b)=>st[a].score-st[b].score)[0];
-  x+='<div class="dprio" style="border-color:'+COUL[prio]+'"><b style="color:'+COUL[prio]+'">Matière à prioriser : '+prio+'</b>'+
-     '<span>'+(st[prio].reussite!==null? Math.round(st[prio].reussite*100)+' % de réussite · ':'')+st[prio].sol+' notion'+(st[prio].sol>1?'s':'')+' solide'+(st[prio].sol>1?'s':'')+' sur '+st[prio].tot+'</span></div>';
+  if(jouees.length){
+    const prio=jouees.slice().sort((a,b)=>st[a].score-st[b].score)[0];
+    x+='<div class="dprio" style="border-color:'+COUL[prio]+'"><b style="color:'+COUL[prio]+'">Matière à prioriser : '+prio+'</b>'+
+       '<span>'+(st[prio].reussite!==null? Math.round(st[prio].reussite*100)+' % de réussite · ':'')+st[prio].sol+' notion'+(st[prio].sol>1?'s':'')+' solide'+(st[prio].sol>1?'s':'')+' sur '+st[prio].tot+'</span></div>';
+  } else {
+    x+='<p style="font-size:11.5px;color:var(--muted);line-height:1.5;margin:4px 0 8px">Pas encore assez de données pour désigner une priorité — tes premières questions rempliront ce tableau.</p>';
+  }
   /* — les 4 lignes de stats — */
   MATS.forEach(m=>{ const s=st[m];
     const pc=s.reussite!==null?Math.round(s.reussite*100):null;
@@ -3768,7 +3772,7 @@ function renderMaitrise(){
   e.innerHTML='<h3>📚 Ta maîtrise</h3>'+
     '<p style="font-size:12.5px;font-weight:800">'+m.sol+' notion'+(m.sol>1?'s':'')+' solide'+(m.sol>1?'s':'')+' sur '+m.tot+'</p>'+
     '<div class="mait-bar"><i style="width:'+Math.max(pct,m.sol?3:0)+'%"></i></div>'+
-    '<p style="font-size:10.5px;color:var(--muted);margin-top:7px">Une notion devient solide quand tu la réussis plusieurs fois — c\'est ta vraie progression, au-delà des trophées.</p>';
+    '<p style="font-size:10.5px;color:var(--muted);margin-top:7px">Une notion devient solide après au moins 2 questions réussies dessus, avec plus de réussites que d\'erreurs. Tout compte : Arène, QCM du Jour, QCM de séance.</p>';
 }
 function renderProfilHead(){
   const h=document.getElementById('profil-hdr'); if(!h||!S.ar) return;
@@ -4840,6 +4844,13 @@ function libreValide(){
     b.appendChild(ex);
   });
   if(juste) LB.ok++;
+  /* la maîtrise se mesure sur TOUTES les questions jouées, pas seulement l'Arène */
+  if(!S.ar) initAr();
+  { const st=S.ar.notions[q.n]||{ok:0,ko:0,mat:q.mat};
+    juste?st.ok++:st.ko++; S.ar.notions[q.n]=st;
+    if(!juste && q.id) S.ar.errs[q.id]=Date.now();
+    else if(q.id) delete S.ar.errs[q.id];
+    saveS(); }
   if(!juste && q.f){
     const fb=document.createElement('button'); fb.className='btn ghost'; fb.style.marginTop='10px';
     fb.textContent='📄 Revoir la fiche de cette notion';
