@@ -2288,7 +2288,7 @@
     <div id="ec-count" style="display:none;text-align:center;padding:40px 0">
       <p style="font-family:Fredoka,Inter,sans-serif;font-size:16px;font-weight:600">Prépare-toi…</p>
       <div class="cdnum" id="ec-count-n">3</div>
-      <p style="font-size:11.5px;color:var(--muted)">Bonne réponse +3 🏆 · erreur −2 🏆 — comme en ascension.</p>
+      <p style="font-size:11.5px;color:var(--muted)">Bonne réponse +2 🏆 · erreur −2 🏆 — au barème de l'Arène, chaque matière vers son arène.</p>
     </div>
     <div id="ec-jeu">
       <div class="card" id="ec-card" style="text-align:center">
@@ -2308,8 +2308,8 @@
         <img src="img/moment-ascension-reussie.png" alt="" style="height:96px;margin:0 auto 8px;display:block" onerror="this.remove()">
         <p style="font-family:Fredoka,Inter,sans-serif;font-size:18px;font-weight:600">Temps écoulé !</p>
         <p id="ec-fin-s" style="font-size:12.5px;margin-top:6px;font-weight:800"></p>
+          <div id="ec-diag" style="text-align:left"></div>
         <p id="ec-fin-r" style="font-size:11.5px;color:var(--muted);margin-top:6px;line-height:1.5"></p>
-        <div id="ec-diag" style="text-align:left"></div>
         <button class="btn" style="margin-top:12px" onclick="startEclair()">Rejouer</button>
         <button class="btn ghost" style="margin-top:8px" onclick="quitterEclair()">Retour à l'Arène</button>
       </div>
@@ -2356,6 +2356,7 @@
       <p style="font-size:10.5px;color:var(--muted);margin-top:8px">Les points mesurent ton travail : ils comptent pour les grades de l'Arène et les étapes franchies.</p>
     </div>
     <div class="card" id="p-maitrise"></div>
+    <div class="card" id="p-diag"></div>
     <div class="card">
       <h3>Réglages</h3>
       <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
@@ -2453,6 +2454,7 @@ function go(id){
   if(id==='profil'){ if(typeof renderSimCard==='function'){ renderSimCard(); renderAvancee(); } if(typeof renderProfilHead==='function') renderProfilHead();
     if(typeof renderCodeZone==='function') renderCodeZone();
     if(typeof renderMaitrise==='function') renderMaitrise();
+    if(typeof renderDiag==='function') renderDiag();
     { const v=document.getElementById('sw-son'); if(v) v.classList.toggle('on',S.son!==false); } }
   if(id==='agenda' && typeof renderAgenda==='function'){ renderAgenda(); }
   if((id==='home'||id==='arene') && typeof renderMissions==='function'){ renderMissions(); if(typeof renderQj==='function') renderQj(); if(typeof renderEcl==='function') renderEcl(); }
@@ -3602,6 +3604,21 @@ function notionsEtat(){
   Object.keys(ns).forEach(n=>{ const s=ns[n]; if(s.ok>=2 && s.ok>s.ko) sol++; });
   return {tot:Object.keys(all).length, sol:sol};
 }
+function renderDiag(){
+  const e=document.getElementById('p-diag'); if(!e) return;
+  const src=S.eclDiag||{};
+  const notes=Object.keys(src).sort((x,y)=>src[y].c-src[x].c);
+  if(!notes.length){
+    e.innerHTML='<h3>🩺 Ton diagnostic</h3><p style="font-size:12px;color:var(--muted);line-height:1.5">Joue à l\'Éclair et à l\'Arène : tes erreurs dessineront ici ce qu\'il faut réviser en priorité.</p>';
+    return;
+  }
+  let x='<h3>🩺 Ton diagnostic</h3><p style="font-size:11px;color:var(--muted);margin-bottom:2px">Tes points faibles, toutes parties confondues — 2 fiches par jour, pas plus.</p>';
+  notes.slice(0,2).forEach(n=>{ x+='<div class="agj-row"><span class="agj-nom">'+n+'</span>'+
+    (src[n].f?'<button class="blien" onclick="openFiche(\''+src[n].f+'\')">📄 réviser</button>':'')+'</div>'; });
+  const suite=notes.slice(2,6);
+  if(suite.length) x+='<p style="font-size:10.5px;color:var(--muted);margin-top:7px">Ensuite : '+suite.join(' · ')+'</p>';
+  e.innerHTML=x;
+}
 function renderMaitrise(){
   const e=document.getElementById('p-maitrise'); if(!e) return;
   const m=notionsEtat(), pct=m.tot?Math.round(m.sol/m.tot*100):0;
@@ -3672,7 +3689,7 @@ function renderSideAcc(){
   if(accOk()){
     const top3=coh.slice(0,3).map((p,i)=>'<div class="lbmini"><span class="p">'+(i+1)+'</span><span class="n">'+p.n+'</span><span class="t">'+fmtT(p.v)+' 🏆</span></div>').join('');
     b.innerHTML='<h3>📊 Le classement</h3>'+top3+
-      '<p style="font-size:12px;font-weight:800;color:var(--violet);margin-top:8px">'+(S.ar.runsDone?'Ta place : '+(mieux+1)+'ᵉ · 🏆 '+fmtT(S.ar.T):'Ta place apparaît après ta première ascension.')+'</p>'+
+      '<p style="font-size:12px;font-weight:800;color:var(--violet);margin-top:8px">'+((S.ar.runsDone||S.ar.T>0)?'Ta place : '+(mieux+1)+'ᵉ · 🏆 '+fmtT(S.ar.T):'Ta place apparaît dès tes premiers trophées — ascension, Éclair ou QCM du Jour.')+'</p>'+
       '<button class="lbbtn" onclick="openSheet(\'sheet-rank\')"><img class="ic" src="img/icones/icone-classement.png" alt="" onerror="this.remove()">Voir tout le classement<span class="chev">›</span></button>';
   } else {
     b.innerHTML='<h3>🎮 Tu joues en invité</h3>'+
@@ -3891,21 +3908,38 @@ function ecTire(){
   if(n<8) k=0;
   else if(n<16) k=Math.random()<0.5?0:1;
   else { const r=Math.random(); k=r<0.2?0:(r<0.6?1:2); }
+  /* flux ÉQUILIBRÉ : vrai ou faux tiré à pile ou face — répondre au hasard ne rapporte rien */
+  const want=Math.random()<0.5;
+  for(let t=0;t<3;t++){
+    const P=EC.pools[(k+t)%3];
+    for(let i=P.length-1;i>=0;i--){ if(P[i].v===want){ const it=P[i]; P.splice(i,1); return it; } }
+  }
   for(let t=0;t<3;t++){ const P=EC.pools[(k+t)%3]; if(P.length) return P.pop(); }
   return null;
 }
-/* les trophées de l'Éclair suivent les règles de l'Arène : planchers de grade et paliers dorés protégés */
-function eclCredit(d){
+/* les trophées de l'Éclair : chaque matière crédite SON arène, avec les règles de l'Arène
+   (cadre −20/+60 par partie, planchers de grade et paliers dorés protégés) */
+function eclCredit(parMat){
   if(!S.ar) initAr();
+  let brut=0; Object.keys(parMat).forEach(m=>{ brut+=parMat[m]; });
+  const vise=Math.max(-20,Math.min(60,brut));
+  const fac=brut!==0?vise/brut:0;
+  const dm={}; let somme=0;
+  Object.keys(parMat).forEach(m=>{ dm[m]=Math.round(parMat[m]*fac); somme+=dm[m]; });
   const avant=S.ar.T;
   const plancher=Math.max(GRADES[gradeIdx(avant)][0], S.ar.gold||0);
-  let T=avant+d; if(T<plancher) T=plancher;
-  d=T-avant;
-  S.ar.T=T; S.ar.Tmax=Math.max(S.ar.Tmax||0,T);
-  S.ar.gold=Math.max(S.ar.gold||0, Math.floor(T/GOLD)*GOLD, GRADES[gradeIdx(T)][0]);
-  arAdd(arCourante(),d);
-  S.ar.wdt=(S.ar.wdt||0)+d; S.ar.wdm=S.ar.wdm||{}; S.ar.wdm[arCourante()]=(S.ar.wdm[arCourante()]||0)+d;
-  return d;
+  if(avant+somme<plancher){
+    const need=plancher-avant-somme;
+    const mats=Object.keys(dm).sort((x,y)=>dm[x]-dm[y]);
+    if(mats.length){ dm[mats[0]]+=need; somme+=need; }
+  }
+  S.ar.T=avant+somme;
+  S.ar.Tmax=Math.max(S.ar.Tmax||0,S.ar.T);
+  S.ar.gold=Math.max(S.ar.gold||0, Math.floor(S.ar.T/GOLD)*GOLD, GRADES[gradeIdx(S.ar.T)][0]);
+  S.ar.wdm=S.ar.wdm||{};
+  Object.keys(dm).forEach(m=>{ arAdd(m,dm[m]); S.ar.wdm[m]=(S.ar.wdm[m]||0)+dm[m]; });
+  S.ar.wdt=(S.ar.wdt||0)+somme;
+  return somme;
 }
 function startEclair(){
   if(ecFaitAuj() && !S.stage){ renderEcl(); go('arene'); return; }   /* une partie par jour — sauf année complète */
@@ -3945,6 +3979,7 @@ function ecLance(){
 }
 function ecShow(){
   const it=EC.cur; if(!it){ ecFin(); return; }
+  EC.verrou=Date.now()+850;   /* anti-mitraille : on lit avant de juger */
   document.getElementById('ec-item').textContent=it.t;
   document.getElementById('ec-mat').textContent=it.mat;
   { const nn=document.getElementById('ec-notion'); if(nn) nn.textContent=it.n; }
@@ -3953,11 +3988,13 @@ function ecShow(){
 }
 function ecRep(v){
   if(!EC||EC.fini||!EC.cur) return;
+  if(EC.verrou && Date.now()<EC.verrou) return;   /* trop tôt : lis l'affirmation */
   const it=EC.cur, ok=(v===it.v);
+  EC.parMat=EC.parMat||{};
   if(ok){ EC.score++; EC.combo++; EC.maxCombo=Math.max(EC.maxCombo,EC.combo); son('ok');
-    if(EC.premier) EC.gain+=3; }
+    if(EC.premier) EC.parMat[it.mat]=(EC.parMat[it.mat]||0)+2; }
   else { EC.ko++; EC.combo=0; son('ko');
-    if(EC.premier && S.ar && S.ar.n>=CAL_N) EC.gain-=2;              /* calibration : on ne perd rien */
+    if(EC.premier && S.ar && S.ar.n>=CAL_N) EC.parMat[it.mat]=(EC.parMat[it.mat]||0)-2;   /* calibration : on ne perd rien */
     EC.err[it.n]=EC.err[it.n]||{c:0,f:it.f}; EC.err[it.n].c++;
     if(S.ar && it.qid) S.ar.errs[it.qid]=Date.now(); }               /* nourrit la révision espacée de l'Arène */
   const c=document.getElementById('ec-card');
@@ -3971,7 +4008,7 @@ function ecFin(){
   S.ecl=S.ecl||{}; const d=arDay();
   let applique=0;
   if(EC.premier){
-    applique=eclCredit(Math.max(-20,Math.min(60,EC.gain)));
+    applique=eclCredit(EC.parMat||{});
     S.ecl.day=d; S.ecl.gain=applique;
   }
   S.ecl.best=Math.max(S.ecl.best||0,EC.score);
@@ -3987,21 +4024,16 @@ function ecFin(){
     : 'Partie pour le record — les trophées, c\'était la partie comptée du jour.';
   const dg=document.getElementById('ec-diag');
   if(dg){
-    const errs=Object.keys(EC.err).sort((x,y)=>EC.err[y].c-EC.err[x].c).slice(0,3);
-    const cum=Object.keys(S.eclDiag).sort((x,y)=>S.eclDiag[y].c-S.eclDiag[x].c).slice(0,3);
-    let z='';
-    if(errs.length){
-      z+='<p style="font-size:11px;font-weight:900;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin:12px 0 4px">Cette partie a repéré</p>'+
-        errs.map(n=>'<div class="agj-row"><span class="agj-nom">'+n+'</span>'+
-          (EC.err[n].f?'<button class="blien" onclick="openFiche(\''+EC.err[n].f+'\')">📄 la fiche</button>':'')+'</div>').join('');
-    } else z+='<p style="font-size:11px;color:#2E7D53;font-weight:800;margin-top:12px">Aucun point faible repéré sur cette partie 👏</p>';
-    const cum2=cum.filter(n=>!errs.includes(n));
-    if(cum2.length){
-      z+='<p style="font-size:11px;font-weight:900;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin:12px 0 4px">Ton bilan, toutes parties confondues</p>'+
-        cum2.map(n=>'<div class="agj-row"><span class="agj-nom">'+n+'</span>'+
-          (S.eclDiag[n].f?'<button class="blien" onclick="openFiche(\''+S.eclDiag[n].f+'\')">📄 la fiche</button>':'')+'</div>').join('');
-    }
-    dg.innerHTML=z;
+    const cum=Object.keys(S.eclDiag).sort((x,y)=>S.eclDiag[y].c-S.eclDiag[x].c);
+    if(cum.length){
+      let z='<p style="font-size:11px;font-weight:900;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin:10px 0 4px">🩺 À réviser en priorité</p>';
+      cum.slice(0,2).forEach(n=>{ z+='<div class="agj-row"><span class="agj-nom">'+n+'</span>'+
+        (S.eclDiag[n].f?'<button class="blien" onclick="openFiche(\''+S.eclDiag[n].f+'\')">📄 réviser</button>':'')+'</div>'; });
+      const suite=cum.slice(2,5);
+      if(suite.length) z+='<p style="font-size:10.5px;color:var(--muted);margin-top:6px">Ensuite : '+suite.join(' · ')+'</p>';
+      z+='<p style="font-size:10px;color:var(--muted);margin-top:4px">2 fiches par jour, pas plus — la régularité bat le gavage.</p>';
+      dg.innerHTML=z;
+    } else dg.innerHTML='<p style="font-size:11px;color:#2E7D53;font-weight:800;margin-top:10px">Aucun point faible repéré 👏</p>';
   }
   /* rejouer : réservé à l'année complète (une partie par jour sinon) */
   const rj=document.querySelector('#ec-fin .btn:not(.ghost)');
@@ -4014,7 +4046,7 @@ function renderEcl(){
   const fait=ecFaitAuj();
   e.innerHTML = !fait
     ? '<div class="qj-row" onclick="startEclair()"><span class="qj-ic">⚡</span><div class="qj-bd"><b>L\'Éclair</b>'+
-      '<span>60 s de vrai/faux — ça démarre doux, ça monte · +3 par bonne, −2 par erreur, comme en ascension</span></div><span class="qj-go">Jouer</span></div>'
+      '<span>60 s de vrai/faux — ça démarre doux, ça monte · +2 par bonne, −2 par erreur, chaque matière vers son arène</span></div><span class="qj-go">Jouer</span></div>'
     : (S.stage
       ? '<div class="qj-row" onclick="startEclair()"><span class="qj-ic">⚡</span><div class="qj-bd"><b>L\'Éclair — record '+(S.ecl.best||0)+'</b>'+
         '<span>Partie du jour comptée ('+((S.ecl.gain||0)>=0?'+':'−')+Math.abs(S.ecl.gain||0)+' 🏆) · rejoue pour le record</span></div><span class="qj-go">Rejouer</span></div>'
@@ -5937,10 +5969,10 @@ function renderLB(){
     note.textContent='Crée ton compte pour prendre ta place. Les élèves de l\'année complète s\'entraînent en illimité — ça se voit au classement.';
     return;
   }
-  if(!S.ar.runsDone){
+  if(!S.ar.runsDone && !(S.ar.T>0)){
     podium(coh.slice(0,3));
     coh.slice(3,5).forEach((p,i)=>row(i+4,p.n,p.v,false,p.m));
-    note.textContent='Ta ligne apparaît après ta première ascension. Badge Medeos = élève de l\'année complète, entraînement illimité.';
+    note.textContent='Ta ligne apparaît dès tes premiers trophées — ascension, Éclair ou QCM du Jour. Badge Medeos = élève de l\'année complète, entraînement illimité.';
     return;
   }
   const maSem=monScore(lbTab);
