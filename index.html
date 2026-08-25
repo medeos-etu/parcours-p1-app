@@ -774,6 +774,31 @@
     background:linear-gradient(90deg,transparent,rgba(252,211,77,.16),transparent);animation:lbshine 3.4s ease-in-out infinite}
   @keyframes lbshine{0%,55%{left:-60%}100%{left:130%}}
 
+  /* — le QCM du Jour : la porte de 90 secondes — */
+  .qjcard{padding:10px 12px}
+  .qj-row{display:flex;align-items:center;gap:10px;cursor:pointer}
+  .qj-row.ok{cursor:default}
+  .qj-ic{font-size:22px;flex-shrink:0}
+  .qj-bd{flex:1;min-width:0}
+  .qj-bd b{font-size:13px;font-weight:800;display:block}
+  .qj-bd span{font-size:11px;color:var(--muted);line-height:1.4;display:block;margin-top:1px}
+  .qj-go{flex-shrink:0;font-family:Fredoka,Inter,sans-serif;font-weight:600;font-size:13px;color:#4A3208;
+    background:linear-gradient(180deg,#FCD34D,#E29C5C);border-radius:11px;padding:8px 16px;
+    box-shadow:0 2px 0 #B87A33, inset 0 1px 0 rgba(255,255,255,.5)}
+  .qj-row:active .qj-go{transform:translateY(1px);box-shadow:0 1px 0 #B87A33}
+
+  /* — les jauges de ta journée — */
+  .mj-jauge{padding:6px 0}
+  .mj-jh{display:flex;align-items:center;gap:7px}
+  .mj-ji{font-size:14px;flex-shrink:0}
+  .mj-jt{flex:1;min-width:0;font-size:12px;font-weight:800}
+  .mj-jt i{font-style:normal;font-weight:700;color:var(--muted);font-size:11px}
+  .mj-jv{font-size:11px;font-weight:900;color:var(--violet);flex-shrink:0;font-variant-numeric:tabular-nums}
+  .mj-jauge.ok .mj-jv{color:#2E7D53}
+  .mj-bar{height:7px;border-radius:99px;background:rgba(107,70,193,.1);overflow:hidden;margin-top:5px}
+  .mj-bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#8B5CF6,#6B46C1);transition:width .4s ease}
+  .mj-jauge.ok .mj-bar i{background:linear-gradient(90deg,#2E7D53,#4CAF7D)}
+
   /* — les missions du jour — */
   .mj-row{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid var(--line)}
   .mj-row:last-child{border-bottom:none}
@@ -1690,13 +1715,14 @@
       <div class="flampop" id="flamme-pop" hidden onclick="event.stopPropagation()">
         <b id="fp-titre">Ta série</b>
         <p id="fp-next" style="color:#B87A33;font-weight:800"></p>
-        <p>Un jour travaillé — une séance ou une ascension — fait grandir ta série de 1.</p>
+        <p>Un jour travaillé — une séance, une ascension ou le QCM du Jour — fait grandir ta série de 1.</p>
         <p id="fp-gel">Un oubli est pardonné grâce à <b style="display:inline">un jour de bonus — un seul</b>. Deux jours sans venir, et elle repart de zéro.</p>
       </div>
     </header>
 
     <div class="seance" id="seance"></div>
 
+    <div class="card qjcard" id="qj-home"></div>
     <div class="card" id="mj-home"></div>
 
 
@@ -1878,6 +1904,7 @@
       </div>
 
       <div class="sidecol">
+        <div class="card qjcard" id="qj-arene"></div>
         <div class="card" id="mj-arene"></div>
         <div class="card" id="ar-sideacc" style="display:none"></div>
         <div class="card" id="ar-stagecard" style="display:none;border:1px solid var(--tung)">
@@ -2241,6 +2268,13 @@
       <p style="font-size:10.5px;color:var(--muted);margin-top:8px">Les points mesurent ton travail : ils comptent pour les grades de l'Arène et les étapes franchies.</p>
     </div>
     <div class="card" id="p-maitrise"></div>
+    <div class="card">
+      <h3>Réglages</h3>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+        <span style="font-size:12px;color:#3A3730">Les sons de l'app</span>
+        <button class="iosw" id="sw-son" role="switch" onclick="S.son=(S.son===false);saveS();this.classList.toggle('on',S.son!==false)" aria-label="Sons"><span class="knob"></span></button>
+      </div>
+    </div>
     <div class="card" id="p-code">
       <h3>⚔️ Accès illimité</h3>
       <div id="code-zone"></div>
@@ -2330,9 +2364,10 @@ function go(id){
   document.body.classList.toggle('in-arene', id==='arene');
   if(id==='profil'){ if(typeof renderSimCard==='function'){ renderSimCard(); renderAvancee(); } if(typeof renderProfilHead==='function') renderProfilHead();
     if(typeof renderCodeZone==='function') renderCodeZone();
-    if(typeof renderMaitrise==='function') renderMaitrise(); }
+    if(typeof renderMaitrise==='function') renderMaitrise();
+    { const v=document.getElementById('sw-son'); if(v) v.classList.toggle('on',S.son!==false); } }
   if(id==='agenda' && typeof renderAgenda==='function'){ renderAgenda(); }
-  if((id==='home'||id==='arene') && typeof renderMissions==='function'){ renderMissions(); }
+  if((id==='home'||id==='arene') && typeof renderMissions==='function'){ renderMissions(); if(typeof renderQj==='function') renderQj(); }
   if(id==='home' && typeof renderParcours==='function'){ renderParcours(); }
   if(id==='arene' && typeof renderArene==='function'){ renderArene(); }
   window.scrollTo({top:0});
@@ -3747,43 +3782,58 @@ function tutoEnd(){
    un facile, un moyen, un corsé. Les corsés demandent de jouer BIEN, pas juste de jouer.
    Le coffre grossit avec les jours de coffres enchaînés : +40 → +60 (3 j) → +80 (7 j).
    Règle d'or inchangée : aucun trophée sans acte d'apprentissage. ═══ */
+/* ═══ LA COUCHE SONORE — notes douces synthétisées (aucun fichier), coupable dans les réglages.
+   Bonne réponse = pling montant · erreur = note basse discrète, jamais punitive. ═══ */
+let AC=null;
+function son(nom){
+  if(S.son===false) return;
+  try{
+    AC=AC||new (window.AudioContext||window.webkitAudioContext)();
+    if(AC.state==='suspended') AC.resume();
+    const seqs={ ok:[[880,0,.09,.10],[1320,.09,.14,.09]],
+                 ko:[[280,0,.20,.05]],
+                 pop:[[660,0,.07,.09],[990,.07,.10,.08]],
+                 coffre:[[523,0,.09,.09],[784,.09,.09,.09],[1046,.18,.22,.10]],
+                 fanfare:[[659,0,.11,.10],[880,.11,.11,.10],[1174,.22,.24,.11]],
+                 tick:[[700,0,.05,.05]],
+                 go:[[880,0,.09,.09],[1174,.09,.18,.10]] };
+    (seqs[nom]||[]).forEach(n=>{
+      const o=AC.createOscillator(), g=AC.createGain();
+      o.type='triangle'; o.frequency.value=n[0];
+      const t=AC.currentTime+n[1];
+      g.gain.setValueAtTime(0.0001,t);
+      g.gain.exponentialRampToValueAtTime(n[3],t+0.012);
+      g.gain.exponentialRampToValueAtTime(0.0001,t+n[2]);
+      o.connect(g); g.connect(AC.destination);
+      o.start(t); o.stop(t+n[2]+0.03);
+    });
+  }catch(e){}
+}
+
 const MJ_MATS=['Anatomie','Biologie','Chimie','Physique'];
-const MJ_POOL={
-  facile:[
-    {id:'se',   t:'Fais ta séance du jour',            r:5,  ok:M=>!!M.se},
-    {id:'asc',  t:'Termine une ascension',             r:5,  ok:M=>M.asc>=1},
-    {id:'sf2',  t:'Réussis 2 sans-faute',              r:5,  ok:M=>M.sf>=2, p:M=>Math.min(2,M.sf)+'/2'}
-  ],
-  moyen:[
-    {id:'tro30',  t:'Gagne 30 🏆 en ascension',        r:15, ok:M=>M.tro>=30, p:M=>Math.min(30,M.tro)+'/30'},
-    {id:'chain2', t:'Enchaîne 2 sans-faute d\'affilée', r:15, ok:M=>M.chain>=2},
-    {id:'run6',   t:'Fais 6 sans-faute ou plus dans une ascension', r:15, ok:M=>M.best>=6},
-    {id:'matsf',  t:'Réussis un sans-faute en __MAT__', r:15, ok:M=>!!M.matok}
-  ],
-  corse:[
-    {id:'run8',   t:'Fais 8/10 ou mieux dans une ascension', r:25, ok:M=>M.best>=8},
-    {id:'chain3', t:'Enchaîne 3 sans-faute d\'affilée', r:25, ok:M=>M.chain>=3},
-    {id:'star4',  t:'Sans-faute sur une question 4★ ou plus', r:25, ok:M=>!!M.star4},
-    {id:'tro60',  t:'Gagne 60 🏆 en ascension',        r:25, ok:M=>M.tro>=60, p:M=>Math.min(60,M.tro)+'/60'}
-  ]
-};
+const MJ3=[
+  {k:'app',  ic:'📖', t:'Apprends', sub:'2 fiches lues',                 goal:2,  r:10},
+  {k:'rev',  ic:'🔁', t:'Révise',   sub:'2 révisions',                   goal:2,  r:10},
+  {k:'joue', ic:'⚔️', t:'Joue',     sub:'20 🏆 gagnés en ascension',     goal:20, r:10}
+];
+const MJ_BONUS=[
+  {id:'chain2', t:'Enchaîne 2 sans-faute d\'affilée',              ok:M=>M.chain>=2},
+  {id:'run6',   t:'Fais 6 sans-faute ou plus dans une ascension',  ok:M=>M.best>=6},
+  {id:'star4',  t:'Sans-faute sur une question 4★ ou plus',        ok:M=>!!M.star4},
+  {id:'matsf',  t:'Réussis un sans-faute en __MAT__',              ok:M=>!!M.matok},
+  {id:'run8',   t:'Fais 8/10 ou mieux dans une ascension',         ok:M=>M.best>=8}
+];
+const MJ_BONUS_R=25;
 function mjSeed(d){ let x=7; for(let i=0;i<d.length;i++) x=(x*31+d.charCodeAt(i))%9973; return x; }
 function mjState(){
   const d=arDay();
-  /* !S.mj.def : état de l'ancienne version des missions — on régénère proprement */
-  if(!S.mj || S.mj.day!==d || !S.mj.def){
+  if(!S.mj || S.mj.day!==d || !S.mj.jauges){
     const s=mjSeed(d);
-    S.mj={day:d, se:0, asc:0, sf:0, chain:0, tro:0, best:0, star4:0, matok:0, done:{}, coffre:0,
-          mat:MJ_MATS[s%4],
-          def:[MJ_POOL.facile[s%MJ_POOL.facile.length].id,
-               MJ_POOL.moyen[(s*7+3)%MJ_POOL.moyen.length].id,
-               MJ_POOL.corse[(s*13+5)%MJ_POOL.corse.length].id]};
+    S.mj={day:d, jauges:1, app:0, fiches:{}, rev:0, joue:0,
+          chain:0, best:0, star4:0, matok:0, done:{}, coffre:0,
+          mat:MJ_MATS[s%4], bonus:MJ_BONUS[(s*7+3)%MJ_BONUS.length].id};
   }
   return S.mj;
-}
-function mjDefs(){
-  const M=mjState(), all=[].concat(MJ_POOL.facile,MJ_POOL.moyen,MJ_POOL.corse);
-  return M.def.map(id=>all.find(d=>d.id===id)).filter(Boolean);
 }
 function mjCoffreVal(){ const n=(S.mjChest&&S.mjChest.n)||0; return n>=7?80:(n>=3?60:40); }
 function mjCredit(x){
@@ -3795,46 +3845,63 @@ function mjCredit(x){
   S.ar.wdt=(S.ar.wdt||0)+x;
   S.ar.wdm=S.ar.wdm||{}; S.ar.wdm[arCourante()]=(S.ar.wdm[arCourante()]||0)+x;
 }
-/* les compteurs du jour se nourrissent du jeu réel */
+/* les jauges se remplissent avec le vrai travail, où qu'il ait lieu dans l'app */
 function mjTrack(kind,data){
   const M=mjState(); data=data||{};
-  if(kind==='se') M.se=1;
-  if(kind==='sf'){ M.sf++; M.chain=Math.max(M.chain,data.chain||0);
+  if(kind==='fiche' && data.slug && !M.fiches[data.slug]){ M.fiches[data.slug]=1; M.app++; }
+  if(kind==='rev') M.rev++;
+  if(kind==='sf'){ M.chain=Math.max(M.chain,data.chain||0);
     if(data.star>=4) M.star4=1;
     if(data.mat===M.mat) M.matok=1; }
-  if(kind==='run'){ M.asc++; M.best=Math.max(M.best,data.ok||0); if((data.dT||0)>0) M.tro+=data.dT; }
-  /* on encaisse les défis accomplis */
-  mjDefs().forEach(d=>{
-    if(M.done[d.id] || !d.ok(M)) return;
-    M.done[d.id]=Date.now();
-    mjCredit(d.r);
+  if(kind==='run'){ M.best=Math.max(M.best,data.ok||0); if((data.dT||0)>0) M.joue+=data.dT; }
+  /* jauges pleines → récompense */
+  MJ3.forEach(j=>{
+    if(M.done[j.k] || (M[j.k]||0)<j.goal) return;
+    M.done[j.k]=Date.now(); mjCredit(j.r); son('pop');
   });
-  if(mjDefs().every(d=>M.done[d.id]) && !M.coffre){
+  /* le défi bonus du jour (facultatif) */
+  const B=MJ_BONUS.find(x=>x.id===M.bonus);
+  if(B && !M.done.bonus && B.ok(M)){ M.done.bonus=Date.now(); mjCredit(MJ_BONUS_R); son('pop'); }
+  /* le coffre : les TROIS jauges pleines (le bonus n'est pas requis) */
+  if(MJ3.every(j=>M.done[j.k]) && !M.coffre){
     const C=S.mjChest||{n:0,last:null};
     C.n = (C.last===_jourMoins(1)) ? C.n+1 : 1;
     C.last=M.day; S.mjChest=C;
     M.coffre=mjCoffreVal();
-    mjCredit(M.coffre);
+    mjCredit(M.coffre); son('coffre');
   }
   saveS(); renderMissions();
   if(typeof renderIdBar==='function') renderIdBar();
 }
+function renderQj(){
+  const fait=qjFaitAuj();
+  const x = fait
+    ? '<div class="qj-row ok"><span class="qj-ic">☀️</span><div class="qj-bd"><b>QCM du Jour — fait ✓</b>'+
+      '<span>+'+((S.qj&&S.qj.gain)||0)+' 🏆 · ta flamme est à l\'abri. À demain !</span></div></div>'
+    : '<div class="qj-row" onclick="startQcmJour()"><span class="qj-ic">☀️</span><div class="qj-bd"><b>Le QCM du Jour</b>'+
+      '<span>Une question, 90 secondes — récompense mystère, et ta flamme tient 🔥</span></div><span class="qj-go">Jouer</span></div>';
+  ['qj-home','qj-arene'].forEach(id=>{ const e=document.getElementById(id); if(e) e.innerHTML=x; });
+}
 function renderMissions(){
-  const M=mjState(), defs=mjDefs();
-  const tiers=['facile','moyen','corsé'];
-  let x='<h3>🎯 Défis du jour</h3>';
-  defs.forEach((d,i)=>{
-    const ok=!!M.done[d.id];
-    const txt=d.t.replace('__MAT__',M.mat);
-    const prog=(!ok && d.p)?' <i class="mj-p">'+d.p(M)+'</i>':'';
-    x+='<div class="mj-row'+(ok?' ok':'')+'"><span class="mj-c">'+(ok?'✓':'○')+'</span>'+
-       '<span class="mj-t">'+txt+prog+'<i class="mj-tier t'+i+'">'+tiers[i]+'</i></span>'+
-       '<span class="mj-r">+'+d.r+' 🏆</span></div>';
+  const M=mjState();
+  let x='<h3>🎯 Ta journée</h3>';
+  MJ3.forEach(j=>{
+    const v=Math.min(j.goal,M[j.k]||0), ok=!!M.done[j.k];
+    const pct=Math.round(v/j.goal*100);
+    x+='<div class="mj-jauge'+(ok?' ok':'')+'"><div class="mj-jh"><span class="mj-ji">'+j.ic+'</span>'+
+       '<span class="mj-jt">'+j.t+' <i>· '+j.sub+'</i></span>'+
+       '<span class="mj-jv">'+(ok?'✓ +'+j.r:v+'/'+j.goal)+'</span></div>'+
+       '<div class="mj-bar"><i style="width:'+pct+'%"></i></div></div>';
   });
+  const B=MJ_BONUS.find(xx=>xx.id===M.bonus);
+  if(B){ const bok=!!M.done.bonus;
+    x+='<div class="mj-row'+(bok?' ok':'')+'" style="margin-top:5px"><span class="mj-c">'+(bok?'✓':'★')+'</span>'+
+       '<span class="mj-t">'+B.t.replace('__MAT__',M.mat)+'<i class="mj-tier t2">bonus</i></span>'+
+       '<span class="mj-r">+'+MJ_BONUS_R+' 🏆</span></div>'; }
   const cv=M.coffre||mjCoffreVal(), chain=(S.mjChest&&S.mjChest.n)||0;
   x+= M.coffre
-    ? '<div class="mj-row coffre ok"><span class="mj-c">🎁</span><span class="mj-t">Coffre ouvert'+(chain>=2?' — '+chain+' jours d\'affilée':'')+'. Demain : trois nouveaux défis.</span><span class="mj-r">+'+M.coffre+' 🏆</span></div>'
-    : '<div class="mj-row coffre"><span class="mj-c">🎁</span><span class="mj-t">Les 3 relevés → le coffre s\'ouvre'+(cv>40?' (coffres enchaînés : il a grossi)':(chain>=1?' — enchaîne les jours, il grossira':''))+'</span><span class="mj-r">+'+cv+' 🏆</span></div>';
+    ? '<div class="mj-row coffre ok"><span class="mj-c">🎁</span><span class="mj-t">Coffre ouvert'+(chain>=2?' — '+chain+' jours d\'affilée':'')+'. À demain.</span><span class="mj-r">+'+M.coffre+' 🏆</span></div>'
+    : '<div class="mj-row coffre"><span class="mj-c">🎁</span><span class="mj-t">Les 3 jauges pleines → le coffre s\'ouvre'+(cv>40?' (il a grossi avec tes jours enchaînés)':'')+'</span><span class="mj-r">+'+cv+' 🏆</span></div>';
   ['mj-arene','mj-home'].forEach(id=>{ const e=document.getElementById(id); if(e) e.innerHTML=x; });
 }
 
@@ -3867,7 +3934,7 @@ function agjDus(jour){
   });
   return out;
 }
-function agjFait(k){ agjState().faits[k]=Date.now(); saveS(); renderAgenda(); }
+function agjFait(k){ agjState().faits[k]=Date.now(); if(typeof mjTrack==='function') mjTrack('rev'); son('pop'); saveS(); renderAgenda(); }
 function agjAjouter(){
   const n=document.getElementById('agj-nom'), m=document.getElementById('agj-mat'), msg=document.getElementById('agj-msg');
   const nom=(n.value||'').trim();
@@ -4261,7 +4328,9 @@ function startLibre(mat){
   document.getElementById('libre-note').textContent='Sans chrono, sans trophées. Juste toi et la question.';
   libreShow(); go('libre');
 }
+function qjFaitAuj(){ return !!(S.qj && S.qj.day===arDay() && S.qj.fait); }
 function startQcmJour(){
+  if(qjFaitAuj()){ go('home'); return; }
   LB={qs:qcmDuJour(),i:0,ok:0,mat:null,jour:true,sel:new Set(),done:false};
   document.getElementById('libre-titre').textContent='Le QCM du jour';
   document.getElementById('libre-note').textContent='Une question, la même pour tout le monde aujourd\'hui.';
@@ -4341,10 +4410,21 @@ function libreFin(){
   }
   document.getElementById('libre-card').style.display='none';
   const f=document.getElementById('libre-fin'); f.style.display='block';
+  let gQJ=0;
+  if(LB.jour && !qjFaitAuj()){
+    gQJ = LB.ok ? [10,15,25][mjSeed(arDay())%3] : 5;   /* récompense mystère du jour */
+    S.qj={day:arDay(), fait:1, gain:gQJ};
+    mjCredit(gQJ);
+    majStreak();                                        /* le QCM du Jour suffit à garder ta flamme */
+    son(LB.ok?'coffre':'pop');
+    saveS();
+    if(typeof renderQj==='function') renderQj();
+    if(typeof renderIdBar==='function') renderIdBar();
+  }
   document.getElementById('libre-fin-t').textContent = LB.jour
-    ? (LB.ok? 'Bien joué. À demain pour la suivante.' : 'Celle-là était piégeuse. À demain pour ta revanche.')
+    ? (LB.ok? 'Bien joué — +'+gQJ+' 🏆. À demain pour la suivante.' : 'Piégeuse. +'+gQJ+' 🏆 quand même — à demain pour ta revanche.')
     : LB.ok+' sur '+LB.qs.length+(LB.ok>=4?' — solide.':(LB.ok>=2?' — ça se construit.':' — ces notions t\'attendent dans le fil guidé.'));
-  document.getElementById('libre-fin-s').textContent = LB.jour ? '' : 'Chaque question corrigée compte, même ratée.';
+  document.getElementById('libre-fin-s').textContent = LB.jour ? 'Ta flamme est à l\'abri pour aujourd\'hui 🔥' : 'Chaque question corrigée compte, même ratée.';
   const enc=document.getElementById('libre-encore');
   enc.style.display=LB.jour?'none':'block';
   enc.onclick=()=>startLibre(LB.mat);
@@ -4430,6 +4510,7 @@ function consommerAlt(){
 function openFiche(slug,titre){
   if(!slug) return;
   marquerVue(slug);
+  if(typeof mjTrack==='function') mjTrack('fiche',{slug:slug});   /* jauge Apprends */
   const L=document.getElementById('lecteur');
   const fr=document.getElementById('fiche-frame');
   fr.onload=()=>{ try{
@@ -4552,7 +4633,7 @@ function seanceCredit(){
   else S.sjour=arDay();                       /* seule une séance du FIL consomme le jour */
   delete S.sr;                                 /* la séance finie n'est plus « en cours » */
   S.points=(S.points||0)+20; S.qcm=(S.qcm||0)+2;
-  majStreak(); if(typeof mjTrack==='function') mjTrack('se');
+  majStreak();
   SR.credited=true;
   saveS();
 }
@@ -5126,9 +5207,11 @@ function preRun(){
   let n=3; if(e) e.textContent=n;
   openSheet('sheet-launch');
   clearInterval(cdTimer);
+  son('tick');
   cdTimer=setInterval(()=>{
     n--;
-    if(n<=0){ annulerLancement(); doStartRun(); return; }
+    if(n<=0){ son('go'); annulerLancement(); doStartRun(); return; }
+    son('tick');
     if(e){ e.textContent=n; e.style.animation='none'; void e.offsetWidth; e.style.animation=''; }
   },1000);
 }
@@ -5235,6 +5318,7 @@ function aCheck(timeout){
     b.insertAdjacentHTML('beforeend','<span class="iex">'+q.it[idx][3]+'</span>');
   });
   const juste = !timeout && missing.length===0 && wrong.length===0;
+  if(!vite) son(juste?'ok':'ko');
   const gainPlein = run.boost ? Math.round(P.Gmax*BOOST_MULT) : P.Gmax;
 
   /* le ± par case : les pertes sont réelles case par case ; le +gU ne s'affiche que sur le sans-faute
@@ -5266,6 +5350,7 @@ function aCheck(timeout){
     if(!juste) run.errs.push(q);
     if(juste) run.ok++;
     if(juste && typeof mjTrack==='function') mjTrack('sf',{chain:run.serie, star:(P.D<865?1:(P.D<955?2:(P.D<1045?3:(P.D<1135?4:5)))), mat:q.mat});
+    if(cur.slot==='révision' && typeof mjTrack==='function') mjTrack('rev');   /* jauge Révise */
     /* l'encaissement par palier */
     let gTot=0;
     if(nOk===5) gTot=gainPlein;
@@ -5348,7 +5433,7 @@ function closeRun(anticipee){
   S.ar.Tmax=Math.max(S.ar.Tmax||0,T);   /* meilleur total atteint : débloque photos et bannières */
   if(run.ok>=RUN_LEN) S.ar.parfait=Date.now();   /* exploit : une ascension 10/10 */
   if(run.lignes.length) majStreak();             /* une ascension jouée nourrit la série 🔥 */
-  if(run.lignes.length>=RUN_LEN && typeof mjTrack==='function') mjTrack('run',{ok:run.ok, dT:T-avant});
+  if(run.lignes.length && typeof mjTrack==='function') mjTrack('run',{ok:run.ok, dT:T-avant});
   const gi=gradeIdx(T);
   S.ar.gold=Math.max(S.ar.gold, Math.floor(T/GOLD)*GOLD, GRADES[gi][0]);
   arAdd(arCourante(), T-avant);          /* les trophées vont à l'arène jouée : total = somme des 4 */
@@ -5397,7 +5482,8 @@ function closeRun(anticipee){
                   : run.ok>=8 ? 'img/moment-ascension-reussie.png'
                   : run.ok<4  ? 'img/moment-ascension-difficile.png'
                   : 'img/app-noeud-valide.png'; }
-  if(monte && !anticipee) confettis();   /* la pluie dorée du grade franchi */
+  if(monte && !anticipee){ confettis(); son('fanfare'); }
+  else if(!anticipee && T-avant>0) son('pop');
   document.getElementById('arend-title').textContent = anticipee ? 'Ascension arrêtée' : (monte?'Grade franchi':'Ascension terminée');
   document.getElementById('arend-lead').textContent =
     anticipee ? 'On s\'arrête ici — ce que tu as joué est compté, rien n\'est perdu.'
