@@ -3855,7 +3855,8 @@ function renderIdBar(){
 }
 function focusAcc(){ const e=document.getElementById('acc-id');
   if(e){ e.scrollIntoView({behavior:'smooth',block:'center'}); setTimeout(()=>e.focus(),300); } }
-function renderCurArena(){
+/* ⚠️ VERSION MORTE — remplacée par la renderCurArena() définie plus bas (hoisting) ; conservée par prudence, jamais appelée. */
+function renderCurArena_morte(){
   const b=document.getElementById('ar-cur'); if(!b) return;
   if(!S.ar) initAr();
   const a=ARENES.find(x=>x.k===arCourante())||ARENES[0];
@@ -5164,16 +5165,18 @@ function areneOuvrable(){
 function startEntrainement(){
   const deb=(typeof fichesDebloquees==='function')?fichesDebloquees():{};
   const pool=ABANK.filter(q=>deb[q.f]);
-  if(pool.length<3){
-    LB={qs:[],i:0,ok:0,mat:null,jour:false,sel:new Set(),done:false};
-    go('home');
-    return;
-  }
+  if(!pool.length){ go('home'); return; }              /* rien de travaillé : direction la séance */
   const arr=pool.slice();
   for(let i=arr.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]]; }
-  LB={qs:arr.slice(0,5),i:0,ok:0,mat:null,jour:false,sel:new Set(),done:false};
+  /* PRIORITÉ AUX DÉJÀ-VUES : l'entraînement est de la révision, il préserve la fraîcheur
+     des questions que l'Arène te réserve — et il ne marque jamais rien comme « servi ». */
+  if(S.ar && S.ar.seen) arr.sort((a,b)=>(S.ar.seen[b.id]?1:0)-(S.ar.seen[a.id]?1:0));
+  const n=Math.min(5,arr.length);
+  LB={qs:arr.slice(0,n),i:0,ok:0,mat:null,jour:false,sel:new Set(),done:false};
   document.getElementById('libre-titre').textContent='Entraînement · sur tes fiches';
-  document.getElementById('libre-note').textContent='Sans chrono, sans trophées — uniquement ce que tu as déjà vu dans ton Parcours.';
+  document.getElementById('libre-note').textContent = n<5
+    ? n+' question'+(n>1?'s':'')+' sur ce que tu as déjà travaillé — tes prochaines séances en apporteront d\'autres.'
+    : 'Sans chrono ni trophées — de la révision : tu peux recroiser des questions déjà vues, c\'est fait pour.';
   libreShow(); go('libre');
 }
 function startLibre(mat){
@@ -6472,24 +6475,30 @@ function renderArene(){
   pips('ar-pips',S.ar.runs);
   document.getElementById('ar-runs').textContent=S.ar.runs+' sur '+RUN_PER_DAY+' restantes';
   const st=document.getElementById('ar-start');
-  st.disabled=(!S.stage && S.ar.runs<=0);
+  st.disabled=(!S.stage && S.ar.runs<=0 && (typeof areneArmee!=='function' || areneArmee(arCourante())));
   /* ne jamais écraser la structure deux-lignes du bouton or : on écrit dans ses spans */
   { const stt=document.getElementById('ar-start-t'), sts=document.getElementById('ar-start-s');
     /* quota épuisé : renderCurArena a déjà écrit « REVIENS DEMAIN » — ne pas le remplacer
        par « Commencer une ascension » sur un bouton désactivé */
-    if(stt&&sts && (S.stage || S.ar.runs>0)){
+    const armee=(typeof areneArmee!=='function') || areneArmee(arCourante());
+    if(stt&&sts && armee && (S.stage || S.ar.runs>0)){
       if(S.ar.runsDone){ stt.textContent='Commencer une ascension'; }
       else { stt.textContent='Commencer ma première ascension'; sts.textContent='pendant la calibration, impossible de perdre'; }
     } }
+  /* le libellé contextuel du bouton d'or est reposé en dernier (arène verrouillée, quota…) */
+  if(typeof renderCurArena==='function') setTimeout(renderCurArena,0);
   /* le contrat, avant de lancer */
   const ct=document.getElementById('ar-contrat');
-  if(S.ar.runs>0){
+  if(typeof areneArmee==='function' && !areneArmee(arCourante())){
+    ct.innerHTML='<span>Cette arène s\'ouvre dès que tu auras terminé une séance de cette matière dans ton Parcours.</span>'+
+      '<span>En attendant : <b>entraîne-toi sans enjeu</b> sur les fiches que tu as déjà travaillées.</span>';
+  } else if(S.ar.runs>0){
     ct.innerHTML='<span>6 questions à ton niveau · 2 d\'échauffement · 1 difficile · 1 révision</span>'+
       '<span>Jusqu\'à <b>+'+(RUN_LEN*32+capSerie())+' 🏆</b> sur cette ascension</span>'+
       '<span><b>−60 au pire</b>, quoi qu\'il arrive</span>'+
       '<span><b>6 bonnes réponses sur 10 : tu ne perds rien.</b></span>';
   } else {
-    ct.innerHTML='<span>Tes trois ascensions du jour sont faites. Elles reviennent demain matin — <b>rien ne baisse entre-temps.</b></span>';
+    ct.innerHTML='<span>Tes ascensions du jour sont faites. Elles reviennent demain matin — <b>rien ne baisse entre-temps.</b></span>';
   }
   document.getElementById('ar-recharge').style.display=S.ar.runs<=0?'block':'none';
   const lc=document.getElementById('ar-lastcard');
