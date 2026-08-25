@@ -1752,7 +1752,6 @@
     <div class="seance" id="seance"></div>
 
     <div class="card qjcard" id="qj-home"></div>
-    <div class="card qjcard" id="mj-home"></div>
 
 
 
@@ -1937,7 +1936,6 @@
         <div class="card qjcard">
           <div class="qj-row" onclick="startEclair()"><span class="qj-ic">⚡</span><div class="qj-bd"><b>L'Éclair</b><span>60 secondes de vrai/faux — ça démarre doux, ça monte · trophées à la première partie du jour</span></div><span class="qj-go">Jouer</span></div>
         </div>
-        <div class="card qjcard" id="mj-arene"></div>
         <div class="card" id="ar-sideacc" style="display:none"></div>
         <div class="card" id="ar-stagecard" style="display:none;border:1px solid var(--tung)">
           <p style="font-size:12.5px;font-weight:800">Tes 3 ascensions du jour sont faites. 👏</p>
@@ -2048,7 +2046,8 @@
           <input class="field" id="axo-nom-inp" placeholder="Son nom (ex : Axo, Plume, Doc…)" maxlength="14" style="flex:1;margin:0">
           <button class="btn small" onclick="axoRenommer()">C'est son nom</button>
         </div>
-        <p style="font-size:10.5px;color:var(--muted);margin-top:8px">Ton compagnon suit ta préparation — il grandira avec toi.</p>
+        <div id="axo-jour" style="text-align:left;margin-top:14px"></div>
+        <p style="font-size:10.5px;color:var(--muted);margin-top:10px">Ton compagnon suit ta préparation — il grandira avec toi.</p>
       </div>
     </div>
   </div>
@@ -3959,6 +3958,7 @@ function axoEtat(){
   return {t:axoNom()+' t\'attend pour commencer la journée — ta séance est prête.', img:'axo-mains'};
 }
 function ouvrirAxo(){
+  renderJourSheet();
   const e=axoEtat();
   const im=document.getElementById('axo-img'); if(im) im.src='img/'+e.img+'.png';
   const nt=document.getElementById('axo-nom-t'); if(nt) nt.textContent=axoNom();
@@ -4092,7 +4092,9 @@ function renderMissions(){
   ['mj-arene','mj-home'].forEach(id=>{ const e=document.getElementById(id); if(e) e.innerHTML=x; });
 }
 function renderJourSheet(){
-  const b=document.getElementById('jour-corps'); if(!b) return;
+  const cibles=['jour-corps','axo-jour'].map(id=>document.getElementById(id)).filter(Boolean);
+  if(!cibles.length) return;
+  const b={set innerHTML(v){ cibles.forEach(e=>e.innerHTML=v); }};
   const M=mjState();
   let x='';
   MJ3.forEach(j=>{
