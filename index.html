@@ -742,6 +742,26 @@
   .skban .sklock i{font-size:11px}
   .skin-note{font-size:11px;color:var(--muted);margin-top:12px;text-align:center;line-height:1.5}
 
+  /* — compte à rebours de lancement d'ascension — */
+  .cdnum{font-family:Fredoka,Inter,sans-serif;font-size:64px;font-weight:700;color:var(--violet);
+    line-height:1.1;margin:2px 0;animation:cdpop .5s ease-out}
+  @keyframes cdpop{from{transform:scale(1.55);opacity:.25}to{transform:scale(1);opacity:1}}
+
+  /* — visite guidée : voile percé d'un projecteur + carte de la mascotte — */
+  #tuto{position:fixed;inset:0;z-index:300;cursor:pointer}
+  .tuto-hole{position:fixed;left:50vw;top:40vh;width:0;height:0;border-radius:18px;
+    box-shadow:0 0 0 200vmax rgba(12,9,24,.82);pointer-events:none;
+    transition:left .35s ease,top .35s ease,width .35s ease,height .35s ease}
+  .tuto-box{position:fixed;left:14px;right:14px;max-width:430px;margin:0 auto;background:#FFFDF9;border-radius:18px;
+    padding:14px 15px 12px;box-shadow:0 18px 44px rgba(10,8,20,.5);text-align:center;cursor:default}
+  .tuto-axo{height:84px;display:block;margin:-54px auto 4px;filter:drop-shadow(0 10px 18px rgba(0,0,0,.35))}
+  .tuto-bulle{font-size:13.5px;line-height:1.6;color:#1A1A2E;font-weight:600}
+  .tuto-pips{display:flex;gap:5px;justify-content:center;margin:10px 0 2px}
+  .tuto-pips i{width:7px;height:7px;border-radius:50%;background:rgba(107,70,193,.18)}
+  .tuto-pips i.on{background:var(--violet)}
+  .tuto-next{width:100%;margin-top:8px}
+  .tuto-skip{background:none;border:none;font-size:11.5px;color:var(--muted);margin-top:8px;cursor:pointer;font-family:inherit;display:block;margin-left:auto;margin-right:auto}
+
   /* — LE CŒUR : l'arène, parcourable aux flèches — */
   .stage{position:relative;display:flex;align-items:stretch;gap:6px;margin:2px 0}
   .arrowbtn{flex:0 0 34px;height:64px;border:none;cursor:pointer;border-radius:12px;
@@ -1796,6 +1816,19 @@
     </div>
   </div>
 
+  <!-- ═══ FENÊTRE : lancement d'ascension — 3, 2, 1, annulable ═══ -->
+  <div class="modal" id="sheet-launch" onclick="if(event.target===this)annulerLancement()">
+    <div class="sheet">
+      <div class="sheet-b" style="text-align:center">
+        <img src="img/mascotte-arene-prete-au-combat.png" alt="" style="height:92px;display:block;margin:4px auto 8px" onerror="this.remove()">
+        <h4 style="font-family:Fredoka,Inter,sans-serif;font-size:17px;font-weight:600">L'ascension démarre dans…</h4>
+        <div class="cdnum" id="cd-num">3</div>
+        <p style="font-size:12px;color:var(--muted);line-height:1.6;margin:2px 0 12px">10 questions de ton niveau · le pot de trophées s'affiche sous chaque énoncé · prends ton temps, la vitesse ne rapporte rien.</p>
+        <button class="btn ghost" style="width:100%" onclick="annulerLancement()">Annuler — je reviens plus tard</button>
+      </div>
+    </div>
+  </div>
+
   <!-- ═══ FENÊTRE : quitter l'ascension en cours ═══ -->
   <div class="modal" id="sheet-quit" onclick="if(event.target===this)closeSheet('sheet-quit')">
     <div class="sheet" style="max-width:400px">
@@ -2080,6 +2113,18 @@
   <button class="soon" data-t="social" onclick="go('social')"><span class="disc"><img class="nvi" src="img/icones/nav-social.png" alt=""></span><span class="lab">Social</span><span class="badge-soon2">BIENTÔT</span></button>
 </nav>
 
+<!-- ═══ VISITE GUIDÉE : voile sombre + projecteur + mascotte — une fois par monde ═══ -->
+<div id="tuto" hidden onclick="tutoNext()">
+  <div class="tuto-hole" id="tuto-hole"></div>
+  <div class="tuto-box" id="tuto-box">
+    <img class="tuto-axo" id="tuto-axo" src="img/axo-mains.png" alt="" onerror="this.style.display='none'">
+    <div class="tuto-bulle" id="tuto-bulle"></div>
+    <div class="tuto-pips" id="tuto-pips"></div>
+    <button class="btn tuto-next" id="tuto-nextbtn" onclick="event.stopPropagation();tutoNext()">Suivant</button>
+    <button class="tuto-skip" id="tuto-skipbtn" onclick="event.stopPropagation();tutoEnd()">Passer la visite</button>
+  </div>
+</div>
+
 <script>
 /* ================= Navigation & état ================= */
 const TABS=['home','arene','biblio','social','etapes','profil'];
@@ -2131,6 +2176,11 @@ function go(id){
   if(id==='home' && typeof renderParcours==='function'){ renderParcours(); }
   if(id==='arene' && typeof renderArene==='function'){ renderArene(); }
   window.scrollTo({top:0});
+  /* visite guidée : chaque monde se présente à la première arrivée (Parcours/Arène : une fois connecté) */
+  if(typeof startTuto==='function'){
+    const kT=(id==='biblio')?'biblio':((id==='home'||id==='arene')&&accOk()?id:null);
+    if(kT && !tutoFait(kT)) setTimeout(()=>{ const sc=document.getElementById(id); if(sc&&sc.classList.contains('on')) startTuto(kT); },450);
+  }
 }
 function selOnly(btn){ btn.parentElement.querySelectorAll('.opt').forEach(o=>o.classList.remove('sel')); btn.classList.add('sel'); }
 /* Filières : multi-sélection — « Je ne sais pas encore » est exclusif */
@@ -2944,6 +2994,12 @@ function seDeconnecter(){
 }
 function accApresEntree(){
   setTimeout(()=>closeSheet('sheet-compte'),650);
+  /* l'identifiant du compte tient lieu de prénom : plus jamais de deuxième question */
+  if(accOk() && !localStorage.getItem('m4_prenom')){
+    localStorage.setItem('m4_prenom', S.ar.compte.id);
+    localStorage.setItem('m4_onboarded','1');
+    if(typeof applyPrenom==='function') applyPrenom();
+  }
   saveS(); renderCompte(); renderLB(); renderIdBar(); renderCurArena(); renderSideAcc();
   const b=document.getElementById('ar-acc');
   if(b){ b.animate([{transform:'scale(1)'},{transform:'scale(1.015)'},{transform:'scale(1)'}],{duration:320,easing:'ease-out'}); }
@@ -3377,12 +3433,93 @@ function renderPick(){
 }
 
 
+/* ═══ VISITE GUIDÉE — le voile sombre, la mascotte qui parle, une fois par monde.
+   Étape 1 : l'arrivée présente la Bibliothèque · étape 2 : le compte ouvre le Parcours ·
+   étape 3 : l'Arène se découvre. Jamais revu une fois fait (S.tuto). ═══ */
+const TUTOS={
+  biblio:[
+    {img:'axo-mains',    t:"Bienvenue dans l'Univers Medeos ! Ici, c'est la <b>Bibliothèque</b> : fiches, panoramas et métiers de la santé — tout est en accès libre."},
+    {sel:'#rescards-free', t:"Chaque carte s'ouvre librement. Lis, referme, reviens — rien n'est chronométré, rien n'est noté."},
+    {sel:'#mainnav',     t:"En bas, les trois mondes : la <b>Bibliothèque</b>, ton <b>Parcours</b> de révision et l'<b>Arène</b>."},
+    {img:'axo-encourage', t:"Le Parcours et l'Arène s'ouvrent avec un compte gratuit — ta progression y est gardée pour de bon.",
+     btn:"Découvrir le Parcours →", act:function(){ go('home'); }, skip:"Explorer la Bibliothèque d'abord"}
+  ],
+  home:[
+    {img:'axo-canon',   t:"Voici ton <b>Parcours</b> : deux fiches par jour, un rythme tenable, une méthode qui fait tenir les notions."},
+    {sel:'#seance',     t:"Ta <b>séance du jour</b> t'attend ici : lecture, rappel de mémoire, comparaison, puis QCM."},
+    {img:'axo-fiche',   t:"Chaque jour travaillé allonge ta série 🔥. Un oubli est pardonné — un seul."},
+    {img:'axo-encourage', t:"Tout ce que tu lis ici arme l'Arène. Bonne première séance !", btn:"C'est parti !"}
+  ],
+  arene:[
+    {img:'mascotte-arene-prete-au-combat', t:"Bienvenue dans l'<b>Arène</b> ! Ici, tes réponses te font gagner des trophées 🏆 et grimper les grades."},
+    {sel:'#ar-cur',    t:"Quatre arènes, une par matière. Les flèches te font passer de l'une à l'autre."},
+    {sel:'#ar-start',  t:"Le bouton d'or lance une <b>ascension</b> : 10 questions de ton niveau, un pot de trophées sur chacune."},
+    {sel:'#ar-limite', t:"Tu as <b>3 ascensions par jour</b> — elles se rechargent chaque matin à 6 h."},
+    {img:'mascotte-arene-grade-franchi', t:"Premier objectif : <b>400 🏆</b>, le grade Primant. La Route des trophées t'attend. Bonne ascension !", btn:"Entrer dans l'Arène"}
+  ]
+};
+let TU=null;
+function tutoFait(k){ return !!(S.tuto && S.tuto[k]); }
+function startTuto(k){
+  if(TU || tutoFait(k) || !TUTOS[k]) return;
+  TU={k:k,i:0};
+  document.getElementById('tuto').hidden=false;
+  tutoShow();
+  window.addEventListener('resize',tutoReplace);
+}
+function tutoReplace(){ if(TU) tutoShow(); }
+function tutoShow(){
+  if(!TU) return;
+  const st=TUTOS[TU.k][TU.i];
+  const hole=document.getElementById('tuto-hole'), box=document.getElementById('tuto-box');
+  document.getElementById('tuto-bulle').innerHTML=st.t;
+  const ax=document.getElementById('tuto-axo'); ax.style.display=''; ax.src='img/'+(st.img||'axo-mains')+'.png';
+  document.getElementById('tuto-nextbtn').textContent=st.btn||'Suivant';
+  document.getElementById('tuto-skipbtn').textContent=st.skip||'Passer la visite';
+  const n=TUTOS[TU.k].length;
+  document.getElementById('tuto-pips').innerHTML=Array.from({length:n},(x,i)=>'<i class="'+(i===TU.i?'on':'')+'"></i>').join('');
+  /* le projecteur se pose sur l'élément présenté ; sans cible, plein voile */
+  let r=null;
+  if(st.sel){ const el=document.querySelector(st.sel);
+    if(el){ try{ el.scrollIntoView({block:'center'}); }catch(e){} r=el.getBoundingClientRect(); } }
+  if(r && r.width>0){
+    const p=8;
+    hole.style.left=(r.left-p)+'px'; hole.style.top=(r.top-p)+'px';
+    hole.style.width=(r.width+2*p)+'px'; hole.style.height=(r.height+2*p)+'px';
+  } else {
+    hole.style.left='50vw'; hole.style.top='40vh'; hole.style.width='0px'; hole.style.height='0px';
+  }
+  /* la carte se place à l'opposé du projecteur */
+  box.style.top=''; box.style.bottom='';
+  if(r && (r.top+r.height/2)>window.innerHeight/2) box.style.top='64px';
+  else box.style.bottom='calc(96px + env(safe-area-inset-bottom))';
+}
+function tutoNext(){
+  if(!TU) return;
+  const st=TUTOS[TU.k][TU.i];
+  if(TU.i>=TUTOS[TU.k].length-1){ const act=st.act; tutoEnd(); if(act) act(); return; }
+  TU.i++; tutoShow();
+}
+function tutoEnd(){
+  if(!TU) return;
+  S.tuto=S.tuto||{}; S.tuto[TU.k]=Date.now(); saveS();
+  TU=null;
+  document.getElementById('tuto').hidden=true;
+  window.removeEventListener('resize',tutoReplace);
+}
+
 /* ═══ PORTIER D'ONBOARDING — aucune question tant qu'on se balade.
    Le prénom n'est demandé qu'au moment où on COMMENCE (1re ascension ou 1re étape). */
 let pendingAction=null;
 function onbFait(){ return localStorage.getItem('m4_onboarded')==='1'; }
 function ensureOnb(next){
   if(onbFait()){ next(); return; }
+  /* un compte existe déjà : son identifiant fait office de prénom — on ne repose JAMAIS la question */
+  if(typeof accOk==='function' && accOk()){
+    if(!localStorage.getItem('m4_prenom')) localStorage.setItem('m4_prenom', S.ar.compte.id);
+    localStorage.setItem('m4_onboarded','1');
+    applyPrenom(); next(); return;
+  }
   pendingAction=next;
   go('onb2');
 }
@@ -4496,7 +4633,23 @@ function pickQuestions(){
 
 /* ---- la boucle ---- */
 let run=null, aTimer=null;
-function startRun(){ ensureOnb(doStartRun); }
+function startRun(){ ensureOnb(preRun); }
+/* ---- compte à rebours de lancement : 3·2·1, annulable tant que rien n'est décompté ---- */
+let cdTimer=null;
+function preRun(){
+  initAr();
+  if(S.ar.runs<=0 && !S.stage){ renderArene(); go('arene'); return; }
+  const e=document.getElementById('cd-num');
+  let n=3; if(e) e.textContent=n;
+  openSheet('sheet-launch');
+  clearInterval(cdTimer);
+  cdTimer=setInterval(()=>{
+    n--;
+    if(n<=0){ annulerLancement(); doStartRun(); return; }
+    if(e){ e.textContent=n; e.style.animation='none'; void e.offsetWidth; e.style.animation=''; }
+  },1000);
+}
+function annulerLancement(){ clearInterval(cdTimer); cdTimer=null; closeSheet('sheet-launch'); }
 function doStartRun(){
   initAr();
   if(S.stage){ S.ar.runs=Math.max(S.ar.runs,1); }
@@ -4931,8 +5084,10 @@ initAr();
 renderState();
 /* lien profond depuis le site : #biblio, #home, #arene, #social — sinon l'Arène */
 const HASH0=(location.hash||'').slice(1);
-go(['biblio','home','arene','social'].includes(HASH0) ? HASH0 : 'arene');
+/* premier passage (ni compte ni visite faite) : on arrive par la Bibliothèque — étape 1 du parcours d'accueil */
+const NOUVEAU=!(typeof accOk==='function'&&accOk()) && !(S.tuto&&S.tuto.biblio);
+go(['biblio','home','arene','social'].includes(HASH0) ? HASH0 : (NOUVEAU?'biblio':'arene'));
 /* pas de fenêtre de compte imposée à qui vient lire la Bibliothèque librement */
-if(!accOk() && !S.acD && HASH0!=='biblio'){ setTimeout(()=>{ if(!accOk() && !S.acD) focusAcc(); }, 1400); }
+if(!accOk() && !S.acD && HASH0!=='biblio' && !NOUVEAU){ setTimeout(()=>{ if(!accOk() && !S.acD && !TU) focusAcc(); }, 1400); }
 calcSim();
 </script>
