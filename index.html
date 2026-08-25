@@ -775,6 +775,11 @@
     background:linear-gradient(90deg,transparent,rgba(252,211,77,.16),transparent);animation:lbshine 3.4s ease-in-out infinite}
   @keyframes lbshine{0%,55%{left:-60%}100%{left:130%}}
 
+  /* — la pluie de trophées vers le widget général (haut droite) — */
+  .tfly{position:fixed;inset:0;pointer-events:none;z-index:400}
+  .tfly i{position:absolute;font-size:17px;font-style:normal;opacity:0;animation:tflyup 1.15s ease-in forwards}
+  @keyframes tflyup{0%{opacity:0;transform:translate(0,0) scale(.8)}15%{opacity:1}100%{opacity:0;transform:translate(40vw,-62vh) scale(.5)}}
+
   /* — L'Éclair : vrai/faux minute — */
   .ec-time{margin-left:auto;font-variant-numeric:tabular-nums;font-weight:900;font-size:13px}
   .ec-barbox{height:6px;border-radius:99px;background:rgba(107,70,193,.12);overflow:hidden;margin:4px 0 12px}
@@ -4303,6 +4308,9 @@ function tutoEnd(){
    La première partie du jour rapporte (1 🏆 par bonne réponse, plafonné à 15) ;
    ensuite on joue pour le record. ═══ */
 let EC=null, ecTimer=null, ecCd=null;
+function eclairOuvrable(){
+  return Object.keys((typeof fichesArmees==='function')?fichesArmees():{}).length>=4;
+}
 function ecFaitAuj(){ return !!(S.ecl && S.ecl.day===arDay()); }
 /* un item n'entre dans l'Éclair que s'il se suffit à lui-même : les référents orphelins
    (« Son rôle… », « Elle traverse… », « Cette paire… ») dépendent de l'énoncé d'origine */
@@ -4310,7 +4318,9 @@ const EC_ORPHELIN=/^\s*(Il |Elle |Ils |Elles |Son |Sa |Ses |Ce |Cet |Cette |Leur
 function ecPool(){
   /* trois paniers par difficulté de la question d'origine : on démarre DOUX, ça monte */
   const A=[],B=[],C=[];
-  ABANK.forEach(q=>{ const cible=q.D<=950?A:(q.D<=1045?B:C);
+  const arm=(typeof fichesArmees==='function')?fichesArmees():{};
+  ABANK.forEach(q=>{ if(!arm[q.f]) return;              /* uniquement le déjà-vu du Parcours */
+    const cible=q.D<=950?A:(q.D<=1045?B:C);
     q.it.forEach(it=>{ if(EC_ORPHELIN.test(it[1])) return;
       cible.push({t:it[1], v:!!it[2], mat:q.mat, n:q.n, f:q.f, qid:q.id}); }); });
   [A,B,C].forEach(arr=>{ for(let i=arr.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]]; } });
@@ -4333,40 +4343,24 @@ function ecTire(){
 }
 /* les trophées de l'Éclair : chaque matière crédite SON arène, avec les règles de l'Arène
    (cadre −20/+60 par partie, planchers de grade et paliers dorés protégés) */
+/* les trophées de l'Éclair s'ajoutent au TOTAL GÉNÉRAL (pas à une arène particulière) :
+   le général = les 4 arènes + l'Éclair. Cadre −20/+60, planchers de grade protégés. */
 function eclCredit(parMat){
   if(!S.ar) initAr();
   let brut=0; Object.keys(parMat).forEach(m=>{ brut+=parMat[m]; });
-  const vise=Math.max(-20,Math.min(60,brut));
-  const fac=brut!==0?vise/brut:0;
-  const dm={}; let somme=0;
-  S.ar.mats=S.ar.mats||{};
-  Object.keys(parMat).forEach(m=>{ dm[m]=Math.round(parMat[m]*fac);
-    if(dm[m]<0) dm[m]=Math.max(dm[m], -(S.ar.mats[m]||0));   /* une arène ne descend pas sous 0 : T suit */
-    somme+=dm[m]; });
-  /* l'arrondi par matière ne doit jamais faire déborder le cadre −20/+60 annoncé :
-     le résidu d'arrondi se réabsorbe sur la matière au plus gros écart */
-  if(somme!==vise && Object.keys(dm).length){
-    const res=vise-somme;
-    const mM=Object.keys(dm).sort((x,y)=>Math.abs(dm[y])-Math.abs(dm[x]))[0];
-    dm[mM]+=res; somme+=res;
-  }
+  let d=Math.max(-20,Math.min(60,brut));
   const avant=S.ar.T;
   const plancher=Math.max(GRADES[gradeIdx(avant)][0], S.ar.gold||0);
-  if(avant+somme<plancher){
-    const need=plancher-avant-somme;
-    const mats=Object.keys(dm).sort((x,y)=>dm[x]-dm[y]);
-    if(mats.length){ dm[mats[0]]+=need; somme+=need; }
-  }
-  S.ar.T=avant+somme;
+  if(avant+d<plancher) d=plancher-avant;
+  S.ar.T=avant+d;
   S.ar.Tmax=Math.max(S.ar.Tmax||0,S.ar.T);
   S.ar.gold=Math.max(S.ar.gold||0, Math.floor(S.ar.T/GOLD)*GOLD, GRADES[gradeIdx(S.ar.T)][0]);
-  S.ar.wdm=S.ar.wdm||{};
-  Object.keys(dm).forEach(m=>{ arAdd(m,dm[m]); S.ar.wdm[m]=(S.ar.wdm[m]||0)+dm[m]; });
-  S.ar.wdt=(S.ar.wdt||0)+somme;
+  S.ar.wdt=(S.ar.wdt||0)+d;
   histoSnap();
-  return somme;
+  return d;
 }
 function startEclair(){
+  if(!eclairOuvrable()){ renderEcl(); go('arene'); return; }
   if(ecFaitAuj() && !S.stage){ renderEcl(); go('arene'); return; }   /* une partie par jour — sauf année complète */
   EC={pools:ecPool(),count:0,cur:null,score:0,ko:0,gain:0,combo:0,maxCombo:0,left:60,fini:false,err:{},
       premier:!ecFaitAuj()};
@@ -4443,6 +4437,7 @@ function ecFin(){
   S.eclDiag=S.eclDiag||{};
   Object.keys(EC.err).forEach(n=>{ S.eclDiag[n]=S.eclDiag[n]||{c:0,f:EC.err[n].f}; S.eclDiag[n].c+=EC.err[n].c; });
   saveS(); son(EC.score>=15?'fanfare':'coffre');
+  if(applique>0) trophFly(Math.min(14,Math.max(4,Math.round(applique/4))));
   document.getElementById('ec-jeu').style.display='none';
   document.getElementById('ec-fin').style.display='block';
   document.getElementById('ec-fin-s').textContent=EC.score+' bonne'+(EC.score>1?'s':'')+' réponse'+(EC.score>1?'s':'')+' · '+EC.ko+' erreur'+(EC.ko>1?'s':'')+' · combo ×'+EC.maxCombo+' · record '+(S.ecl.best||0);
@@ -4476,6 +4471,12 @@ function renderEcl(){
   const cibles=['ec-entree','ec-home'].map(id=>document.getElementById(id)).filter(Boolean);
   if(!cibles.length) return;
   const e={set innerHTML(v){ cibles.forEach(el=>el.innerHTML=v); }};
+  if(!eclairOuvrable()){
+    const n=Object.keys((typeof fichesArmees==='function')?fichesArmees():{}).length;
+    e.innerHTML='<div class="qj-row ok"><span class="qj-ic">⚡</span><div class="qj-bd"><b>L\'Éclair — verrouillé</b>'+
+      '<span>Il s\'ouvre avec ton Parcours ('+n+'/4 fiches travaillées) — 60 s de vrai/faux sur tout ce que tu as vu.</span></div></div>';
+    return;
+  }
   const fait=ecFaitAuj();
   e.innerHTML = !fait
     ? '<div class="qj-row" onclick="startEclair()"><span class="qj-ic">⚡</span><div class="qj-bd"><b>L\'Éclair</b>'+
@@ -4485,6 +4486,13 @@ function renderEcl(){
         '<span>Partie du jour comptée ('+((S.ecl.gain||0)>=0?'+':'−')+Math.abs(S.ecl.gain||0)+' 🏆) · rejoue pour le record</span></div><span class="qj-go">Rejouer</span></div>'
       : '<div class="qj-row ok"><span class="qj-ic">⚡</span><div class="qj-bd"><b>L\'Éclair — fait ✓</b>'+
         '<span>'+((S.ecl.gain||0)>=0?'+':'−')+Math.abs(S.ecl.gain||0)+' 🏆 aujourd\'hui · record '+(S.ecl.best||0)+' · à demain !</span></div></div>');
+}
+function trophFly(n){
+  const box=document.createElement('div'); box.className='tfly'; box.setAttribute('aria-hidden','true');
+  let s='';
+  for(let i=0;i<n;i++){ s+='<i style="left:'+(28+((i*37)%42))+'%;top:'+(38+((i*13)%22))+'%;animation-delay:'+(i*0.07).toFixed(2)+'s">🏆</i>'; }
+  box.innerHTML=s; document.body.appendChild(box);
+  setTimeout(()=>box.remove(),1800);
 }
 function quitterEclair(){ EC=null; clearInterval(ecTimer); clearInterval(ecCd); go('arene'); }
 
