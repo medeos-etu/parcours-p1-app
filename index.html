@@ -4827,10 +4827,17 @@ function qcmDuJour(){
 }
 /* ═══ L'ARÈNE SE MÉRITE — elle s'ouvre après 2 séances de Parcours.
    Avant : le mode ENTRAÎNEMENT, sans enjeu, uniquement sur les fiches déjà vues. ═══ */
+/* les fiches ARMÉES = séances TERMINÉES uniquement : le « bam » d'ouverture arrive
+   à la fin de la première étape, jamais avant */
+function fichesArmees(){
+  const set={};
+  if(typeof SEANCES!=='undefined')
+    SEANCES.forEach(s=>{ if(S.sdone&&S.sdone[s.id]) (s.fiches||[]).forEach(f=>set[f]=1); });
+  return set;
+}
 function areneArmee(mat){
-  /* une arène ne vit que de SES fiches vues dans le Parcours (2 questions débloquées minimum) */
-  const deb=(typeof fichesDebloquees==='function')?fichesDebloquees():{};
-  return ABANK.filter(q=>q.mat===mat && deb[q.f]).length>=2;
+  const arm=fichesArmees();
+  return ABANK.filter(q=>q.mat===mat && arm[q.f]).length>=2;
 }
 function areneOuvrable(){
   if(S.stage) return true;
@@ -5704,8 +5711,8 @@ function pickQuestions(){
   /* L'ARÈNE NE SERT QUE LE PARCOURS : uniquement les questions des fiches déjà vues.
      L'ascension grandit avec le fil (2 questions au début, 10 au complet),
      et les fiches du JOUR y entrent en priorité. */
-  const deb=(typeof fichesDebloquees==='function')?fichesDebloquees():{};
-  const BANK=ABANK.filter(q=>q.mat===_ar && deb[q.f]);
+  const arm=(typeof fichesArmees==='function')?fichesArmees():{};
+  const BANK=ABANK.filter(q=>q.mat===_ar && arm[q.f]);
   const LEN=Math.min(RUN_LEN,BANK.length);
   if(LEN<2) return [];
   let dispo=BANK.filter(q=>!S.ar.seen[q.id] || (now-S.ar.seen[q.id])>REVU_J*864e5);
