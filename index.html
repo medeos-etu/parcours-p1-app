@@ -742,6 +742,12 @@
   .skban .sklock i{font-size:11px}
   .skin-note{font-size:11px;color:var(--muted);margin-top:12px;text-align:center;line-height:1.5}
 
+  /* — barème par case : le ± de chaque item et la case « fausse bien laissée » — */
+  .idelta{font-weight:900;font-size:11px;font-variant-numeric:tabular-nums}
+  .idelta.up{color:#2E7D53}
+  .idelta.dn{color:#C05B4D}
+  .item.okn .verdict{color:#2E7D53;opacity:.75}
+
   /* — compte à rebours de lancement d'ascension — */
   .cdnum{font-family:Fredoka,Inter,sans-serif;font-size:64px;font-weight:700;color:var(--violet);
     line-height:1.1;margin:2px 0;animation:cdpop .5s ease-out}
@@ -2864,13 +2870,17 @@ const ABANK=[
   it:[["A", "Une membrane perméable laisse passer l'eau et tous les solutés, sans rien bloquer.", 1, "Exact : la membrane perméable ne fait aucun tri, tout passe. C'est un cas plutôt théorique, peu utile en pratique."],["B", "Une membrane dialysante laisse passer l'eau et les petits ions, mais bloque les grosses molécules comme les protéines.", 1, "Exact : c'est le principe des capillaires et de l'hémodialyse. Les petites molécules et les petits ions traversent, les grosses protéines restent bloquées."],["C", "Une membrane semi-perméable (hémiperméable) laisse passer l'eau uniquement et bloque tous les solutés, y compris les petits ions.", 1, "Exact : c'est la différence clé avec la dialysante. La semi-perméable ne laisse passer que le solvant, aucun soluté, même les plus petits."],["D", "Une membrane imperméable laisse passer les petits ions mais bloque l'eau.", 0, "Faux : une membrane imperméable ne laisse rien passer du tout, ni l'eau ni les solutés. C'est l'opposé de la perméable."],["E", "Le critère qui décide de ce qu'une membrane laisse passer est la taille de ses pores par rapport à la taille des particules.", 1, "Exact : plus les pores sont grands, plus de particules passent (comme un videur plus ou moins strict). C'est ce critère de taille qui définit les 4 types."]]}
 ];
 
-/* ================= L'ASCENSION (Arène) — moteur v2 (14/08/2026) =================
+/* ================= L'ASCENSION (Arène) — moteur v3.1 (25/08/2026) =================
    Deux compteurs : R = niveau estimé (Elo interne, départ 1000, jamais montré comme un rang)
                     T = trophées (route de carrière, plancher définitif, ne se réinitialise jamais)
-   Pot fixe : E = 1/(1+10^((D−R)/400)) · G = clamp(round(40×(1−E)),8,32) · L = 40 − G
-   Modulateurs : perte ×0 les 20 premières questions · perte ×0,70 / ×0,85 / ×1 selon la bande
-                 bonus de série +2 (plafond +16/+8) · aucun bonus de vitesse, jamais
-   Clôture : ΔT = Σ + série ; garantie 6/10 ; plancher −60 ; planchers de grade et paliers dorés.
+   Pot : E = 1/(1+10^((D−R)/400)) · G = clamp(round(40×(1−E)),8,32) · L = 40 − G
+   BARÈME PAR CASE (v3.1) : gU=G/5 et lU=L/5 par item. Pertes strictement par case mal jugée.
+   Gains par PALIER (anti-hasard : cocher tout à l'aveugle doit perdre) : 5/5 = 5·gU (pot entier),
+   4/5 = moitié du pot, ≤3/5 = rien. Elo en score fractionnel : Sc = nOk/5.
+   Modulateurs : calibration (20 premières) = perte 0 ET seul le sans-faute encaisse ·
+   perte ×0,70/0,85/1 selon la bande de grade · bonus de série +2 (plafond +16/+8) ·
+   anti-lecture <3 s = rien compté ni mesuré · aucun bonus de vitesse, jamais.
+   Clôture : ΔT = Σ + série ; garantie 6 sans-faute/10 ; plancher −60 ; planchers de grade et paliers dorés.
    Rien n'est exposé en notice : le pot s'annonce sous l'énoncé, le décompte se montre après. */
 
 const GRADES=[[0,'Aspirant','🩺'],[400,'Primant','📗'],[1000,'Carabin','⭐'],[1900,'Externe','🏥'],
@@ -3453,7 +3463,7 @@ const TUTOS={
   arene:[
     {img:'mascotte-arene-prete-au-combat', t:"Bienvenue dans l'<b>Arène</b> ! Ici, tes réponses te font gagner des trophées 🏆 et grimper les grades."},
     {sel:'#ar-cur',    t:"Quatre arènes, une par matière. Les flèches te font passer de l'une à l'autre."},
-    {sel:'#ar-start',  t:"Le bouton d'or lance une <b>ascension</b> : 10 questions de ton niveau, un pot de trophées sur chacune."},
+    {sel:'#ar-start',  t:"Le bouton d'or lance une <b>ascension</b> : 10 questions de ton niveau. Chaque case se joue — bien jugée elle rapporte des trophées, mal jugée elle en coûte."},
     {sel:'#ar-limite', t:"Tu as <b>3 ascensions par jour</b> — elles se rechargent chaque matin à 6 h."},
     {img:'mascotte-arene-grade-franchi', t:"Premier objectif : <b>400 🏆</b>, le grade Primant. La Route des trophées t'attend. Bonne ascension !", btn:"Entrer dans l'Arène"}
   ]
@@ -4594,7 +4604,12 @@ function potOf(q){
   let L = brut;
   const cal = S.ar.n<CAL_N;
   if(cal) L=0; else L=Math.round(brut*bande());
-  return {P:P,G:G,L:L,Lbrut:brut,p:p,m:m,D:D,cal:cal,jeune:m<CAL_M};
+  /* v3 — le pot se joue CASE PAR CASE : chacun des 5 items porte sa part du pot.
+     gU = gain par case bien jugée · lU = perte par case mal jugée (0 en calibration). */
+  const gU=Math.max(1,Math.round(G/5));
+  const lU=cal?0:Math.max(1,Math.round((brut/5)*bande()));
+  return {P:P,G:G,L:L,Lbrut:brut,p:p,m:m,D:D,cal:cal,jeune:m<CAL_M,
+          gU:gU,lU:lU,Gmax:gU*5,Lmax:lU*5};
 }
 
 /* ---- sélection : mix 6/2/1/1, publié et invariable ---- */
@@ -4683,13 +4698,15 @@ function showAQ(){
   document.getElementById('a-meta').innerHTML='<span class="pmat">'+q.mat+'</span><span>'+q.n+'</span>'+
     (cur.slot==='défi'||cur.slot==='révision'?'<span class="pslot">'+cur.slot+'</span>':'');
   document.getElementById('a-enonce').textContent=q.q;
-  /* ⭐ le badge de pot, sous l'énoncé, AVANT la réponse */
-  document.getElementById('a-pot-g').textContent='+'+P.G;
-  document.getElementById('a-pot-l').textContent=P.L?('−'+P.L):'−0';
-  let raison = P.jeune
+  /* ⭐ le badge de pot, sous l'énoncé, AVANT la réponse — les extrêmes réellement encaissables */
+  const gAff = run.boost ? Math.round(P.Gmax*BOOST_MULT) : P.Gmax;
+  document.getElementById('a-pot-g').textContent='+'+gAff;
+  document.getElementById('a-pot-l').textContent=P.Lmax?('−'+P.Lmax):'−0';
+  let raison = 'Sans-faute : +'+gAff+' 🏆 · 4 cases sur 5 : la moitié du pot'+(P.lU?(' · chaque case fausse : −'+P.lU+' 🏆'):'')+'. ';
+  raison += P.jeune
     ? 'Difficulté estimée '+stars(P.D)+' — question en calibration, enjeu réduit de moitié.'
     : 'Difficulté '+stars(P.D)+' — le pot est calculé pour ton niveau.';
-  if(P.cal) raison+=' Calibration '+Math.min(CAL_N,S.ar.n+1)+'/'+CAL_N+' — tu ne peux rien perdre.';
+  if(P.cal) raison+=' Calibration '+Math.min(CAL_N,S.ar.n+1)+'/'+CAL_N+' — tu ne peux rien perdre, et seul le sans-faute encaisse.';
   else if(bande()<1) raison+=' Perte allégée à ton grade.';
   if(run.boost) raison+=' Retour en douceur : gains ×1,5.';
   document.getElementById('a-pot-r').textContent=raison;
@@ -4737,42 +4754,67 @@ function aCheck(timeout){
   run.answered=true; stopChrono();
   const cur=run.qs[run.i], q=cur.q, P=run.pot, missing=[], wrong=[];
   const vite = !timeout && (Date.now()-run.t0)<ANTI_READ && cur.slot!=='révision';
+  /* v3.1 — pertes PAR CASE, gains par palier : sans-faute = pot entier · 4/5 = moitié du pot · ≤3/5 = rien.
+     Pourquoi le palier : avec un gain linéaire par case, cocher tout à l'aveugle rapportait (3-4 items
+     vrais par question). Calibration : seul le sans-faute encaisse, et rien ne se perd.
+     Temps écoulé : aucune case créditée, perte maximale. Anti-lecture (<3 s) : RIEN n'est compté ni mesuré. */
+  let nOk=0;
   document.querySelectorAll('#a-items .item').forEach((b,idx)=>{
     const bon=!!q.it[idx][2], pris=run.sel.has(idx)&&!timeout;
+    const bienJuge = !timeout && (bon===pris);
+    if(bienJuge) nOk++;
     b.classList.remove('sel');
     if(bon&&pris){ b.classList.add('ok'); b.querySelector('.verdict').textContent='✓'; }
     if(bon&&!pris){ b.classList.add('miss'); b.querySelector('.verdict').textContent='✓ à cocher'; missing.push(q.it[idx][0]); }
     if(!bon&&pris){ b.classList.add('ko'); b.querySelector('.verdict').textContent='✗'; wrong.push(q.it[idx][0]); }
+    if(!bon&&!pris&&!timeout){ b.classList.add('okn'); b.querySelector('.verdict').textContent='✓ bien laissée'; }
     b.insertAdjacentHTML('beforeend','<span class="iex">'+q.it[idx][3]+'</span>');
   });
   const juste = !timeout && missing.length===0 && wrong.length===0;
-  if(juste) run.ok++;
+  const gainPlein = run.boost ? Math.round(P.Gmax*BOOST_MULT) : P.Gmax;
 
-  /* R : le niveau estimé bouge à chaque question (c'est une mesure, pas une récompense) */
-  const Sc=juste?1:0;
-  S.ar.R=Math.round(S.ar.R+kR()*(Sc-P.p));
-  S.ar.n++; S.qcm++;
-  /* D : la question apprend sa vraie difficulté */
-  if(P.m<400){ const nD=Math.round(P.D+kD(P.m)*(P.p-Sc)); S.ar.qd[q.id]=[nD,P.m+1]; }
-  else S.ar.qd[q.id]=[P.D,P.m];
+  /* le ± par case : les pertes sont réelles case par case ; le +gU ne s'affiche que sur le sans-faute
+     (sinon la somme des cases mentirait sur ce qui est encaissé) */
+  if(!vite) document.querySelectorAll('#a-items .item').forEach((b,idx)=>{
+    const bon=!!q.it[idx][2], pris=run.sel.has(idx)&&!timeout;
+    const bienJuge = !timeout && (bon===pris);
+    const v=b.querySelector('.verdict');
+    if(!bienJuge && P.lU) v.insertAdjacentHTML('beforeend',' <span class="idelta dn">−'+P.lU+'</span>');
+    else if(bienJuge && juste) v.insertAdjacentHTML('beforeend',' <span class="idelta up">+'+Math.round(gainPlein/5)+'</span>');
+  });
 
-  /* trophées : accumulés, appliqués seulement à la clôture */
-  let d = juste ? P.G : -P.L;
-  let note='';
-  if(vite){ d=0; note='Trop rapide pour être lu — non compté, et tu n\'as rien perdu.'; }
-  else if(juste && run.boost) d=Math.round(d*BOOST_MULT);
-  else if(!juste && P.cal) note='Calibration '+Math.min(CAL_N,S.ar.n)+'/'+CAL_N+' — tu ne perds rien.';
+  let d=0, note='';
+  if(vite){
+    note='Trop rapide pour être lu — non compté : ni gain, ni perte, ni mesure.';
+  } else {
+    /* R : le niveau estimé bouge à chaque question — en score FRACTIONNEL (4 cases sur 5 ≠ 0) */
+    const Sc = timeout ? 0 : nOk/5;
+    S.ar.R=Math.round(S.ar.R+kR()*(Sc-P.p));
+    S.ar.n++; S.qcm++;
+    /* D : la question apprend sa vraie difficulté */
+    if(P.m<400){ const nD=Math.round(P.D+kD(P.m)*(P.p-Sc)); S.ar.qd[q.id]=[nD,P.m+1]; }
+    else S.ar.qd[q.id]=[P.D,P.m];
+    /* anti-répétition, révision espacée, diagnostic */
+    S.ar.seen[q.id]=Date.now();
+    if(juste) delete S.ar.errs[q.id]; else S.ar.errs[q.id]=Date.now();
+    const st=S.ar.notions[q.n]||{ok:0,ko:0,mat:q.mat};
+    juste?st.ok++:st.ko++; S.ar.notions[q.n]=st;
+    if(!juste) run.errs.push(q);
+    if(juste) run.ok++;
+    /* l'encaissement par palier */
+    let gTot=0;
+    if(nOk===5) gTot=gainPlein;
+    else if(nOk===4 && !P.cal) gTot=Math.round(gainPlein/2);
+    const lTot=(timeout?5:(5-nOk))*P.lU;
+    d=gTot-lTot;
+    if(!juste && P.cal) note='Calibration '+Math.min(CAL_N,S.ar.n)+'/'+CAL_N+' — tu ne perds rien, et seul le sans-faute encaisse ici.';
+    else if(nOk===4) note='4 cases sur 5 — tu sauves la moitié du pot, moins ta case fausse.';
+    else if(!juste && !timeout) note=nOk+' case'+(nOk>1?'s':'')+' sur 5 — il en faut 4 pour encaisser.';
+    if(juste){ run.serie++; if(run.serie>=2 && run.bonus<capSerie()) run.bonus=Math.min(capSerie(),run.bonus+STREAK_STEP); }
+    else run.serie=0;
+  }
   run.som+=d;
-  if(juste && !vite){ run.serie++; if(run.serie>=2 && run.bonus<capSerie()) run.bonus=Math.min(capSerie(),run.bonus+STREAK_STEP); }
-  else run.serie=0;
-  run.lignes.push({n:run.i+1,mat:q.mat,notion:q.n,ok:juste,d:d});
-
-  /* anti-répétition, révision espacée, diagnostic */
-  S.ar.seen[q.id]=Date.now();
-  if(juste) delete S.ar.errs[q.id]; else S.ar.errs[q.id]=Date.now();
-  const st=S.ar.notions[q.n]||{ok:0,ko:0,mat:q.mat};
-  juste?st.ok++:st.ko++; S.ar.notions[q.n]=st;
-  if(!juste) run.errs.push(q);
+  run.lignes.push({n:run.i+1,mat:q.mat,notion:q.n,ok:juste&&!vite,k:nOk,v:vite?1:0,d:d});
   saveS(); renderState();
 
   /* la correction occupe la place principale, le delta est secondaire */
@@ -4833,12 +4875,14 @@ function closeRun(anticipee){
   const ligne=(txt,val,cls,tot)=>{ const d=document.createElement('div');
     d.className='bline'+(tot?' tot':'');
     d.innerHTML='<span class="bl">'+txt+'</span><span class="bv '+(cls||'')+'">'+val+'</span>'; bl.appendChild(d); };
-  const gagne=run.lignes.filter(l=>l.d>0).reduce((a,l)=>a+l.d,0);
-  const perdu=run.lignes.filter(l=>l.d<0).reduce((a,l)=>a-l.d,0);
-  const nuls=run.lignes.filter(l=>l.d===0).length;
-  ligne(run.ok+' bonne'+(run.ok>1?'s':'')+' réponse'+(run.ok>1?'s':''),'+'+fmtT(gagne),'up2');
-  ligne((run.lignes.length-run.ok-nuls)+' erreur'+((run.lignes.length-run.ok-nuls)>1?'s':''), perdu?('−'+fmtT(perdu)):'−0','slate');
-  if(nuls) ligne(nuls+' question'+(nuls>1?'s':'')+' non comptée'+(nuls>1?'s':''),'0','slate');
+  /* v3.1 : sans-faute / avec erreurs / non comptées — les sommes collent exactement au total */
+  const dOk=run.lignes.filter(l=>l.ok).reduce((a,l)=>a+l.d,0);
+  const errL=run.lignes.filter(l=>!l.ok && !l.v);
+  const dErr=errL.reduce((a,l)=>a+l.d,0);
+  const nuls=run.lignes.filter(l=>l.v).length;
+  ligne(run.ok+' sans-faute','+'+fmtT(dOk),'up2');
+  if(errL.length) ligne(errL.length+' avec erreur'+(errL.length>1?'s':''),(dErr>=0?'+':'−')+fmtT(Math.abs(dErr)),dErr>=0?'up2':'slate');
+  if(nuls) ligne(nuls+' non comptée'+(nuls>1?'s':'')+' (répondues trop vite)','0','slate');
   if(run.bonus) ligne('Bonus de série','+'+run.bonus,'up2');
   if(garantie) ligne('<b>'+run.ok+'/10 → garantie appliquée</b> : tu ne perds rien','0','up2');
   if(plafond) ligne('Perte plafonnée','−60','slate');
