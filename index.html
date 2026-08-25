@@ -3770,7 +3770,8 @@ const MJ_POOL={
 function mjSeed(d){ let x=7; for(let i=0;i<d.length;i++) x=(x*31+d.charCodeAt(i))%9973; return x; }
 function mjState(){
   const d=arDay();
-  if(!S.mj || S.mj.day!==d){
+  /* !S.mj.def : état de l'ancienne version des missions — on régénère proprement */
+  if(!S.mj || S.mj.day!==d || !S.mj.def){
     const s=mjSeed(d);
     S.mj={day:d, se:0, asc:0, sf:0, chain:0, tro:0, best:0, star4:0, matok:0, done:{}, coffre:0,
           mat:MJ_MATS[s%4],
