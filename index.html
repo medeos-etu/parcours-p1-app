@@ -2167,13 +2167,6 @@
       <div id="code-zone"></div>
     </div>
     <div class="card">
-      <h3>Réglages</h3>
-      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
-        <span style="font-size:12px;color:#3A3730">Petite vibration à la bonne réponse (mobile)</span>
-        <button class="iosw" id="sw-vib" role="switch" onclick="S.vib=(S.vib===false);saveS();this.classList.toggle('on',S.vib!==false)" aria-label="Vibration"><span class="knob"></span></button>
-      </div>
-    </div>
-    <div class="card">
       <h3>Une question sur une notion ?</h3>
       <p style="font-size:12px;color:#3A3730;line-height:1.5">Écris-nous sur Instagram : <b>@medeos.sante</b> — on répond en DM. Si tu veux, laisse ton @ pour qu'on te reconnaisse quand tu nous écris.</p>
       <input class="field" placeholder="@tonpseudo (facultatif)" style="margin-top:8px" />
@@ -2257,8 +2250,7 @@ function go(id){
   setBg(id);
   document.body.classList.toggle('in-arene', id==='arene');
   if(id==='profil'){ if(typeof renderSimCard==='function'){ renderSimCard(); renderAvancee(); } if(typeof renderProfilHead==='function') renderProfilHead();
-    if(typeof renderCodeZone==='function') renderCodeZone();
-    { const v=document.getElementById('sw-vib'); if(v) v.classList.toggle('on',S.vib!==false); } }
+    if(typeof renderCodeZone==='function') renderCodeZone(); }
   if(id==='home' && typeof renderParcours==='function'){ renderParcours(); }
   if(id==='arene' && typeof renderArene==='function'){ renderArene(); }
   window.scrollTo({top:0});
@@ -4984,7 +4976,6 @@ function aCheck(timeout){
     juste?st.ok++:st.ko++; S.ar.notions[q.n]=st;
     if(!juste) run.errs.push(q);
     if(juste) run.ok++;
-    if(juste && S.vib!==false && navigator.vibrate){ try{ navigator.vibrate(18); }catch(e){} }
     /* l'encaissement par palier */
     let gTot=0;
     if(nOk===5) gTot=gainPlein;
