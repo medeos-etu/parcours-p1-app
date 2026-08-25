@@ -3774,7 +3774,7 @@ function renderDiag(){
   const dispo=notes.find(n=>{ const f=(S.eclDiag&&S.eclDiag[n]&&S.eclDiag[n].f)||nf[n]; return f&&diagOuvrable(f); });
   if(dispo){
     const f=(S.eclDiag&&S.eclDiag[dispo]&&S.eclDiag[dispo].f)||nf[dispo];
-    x+='<div class="dvic"><span>💪 <b>Ta prochaine victoire :</b> '+dispo+'</span>'+
+    x+='<div class="dvic"><span>🔁 <b>Ta revanche à prendre :</b> '+dispo+'</span>'+
        '<button class="blien" onclick="openFiche(\''+f+'\')">📄 revoir la fiche</button></div>';
   } else if(notes.length){
     x+='<p style="font-size:11px;color:var(--muted);line-height:1.5;margin-top:10px">Ton Parcours te fera retravailler tes points fragiles au bon moment — rien à gérer toi-même.</p>';
