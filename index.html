@@ -774,6 +774,23 @@
     background:linear-gradient(90deg,transparent,rgba(252,211,77,.16),transparent);animation:lbshine 3.4s ease-in-out infinite}
   @keyframes lbshine{0%,55%{left:-60%}100%{left:130%}}
 
+  /* — les missions du jour — */
+  .mj-row{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid var(--line)}
+  .mj-row:last-child{border-bottom:none}
+  .mj-c{width:22px;height:22px;border-radius:8px;display:flex;align-items:center;justify-content:center;
+    font-size:12px;font-weight:900;color:var(--muted);background:rgba(107,70,193,.07);flex-shrink:0}
+  .mj-row.ok .mj-c{color:#2E7D53;background:rgba(46,125,83,.12)}
+  .mj-t{flex:1;min-width:0;font-size:12px;font-weight:700;line-height:1.35}
+  .mj-row.ok .mj-t{color:var(--muted)}
+  .mj-r{font-size:11px;font-weight:900;color:#B87A33;flex-shrink:0;font-variant-numeric:tabular-nums}
+  .mj-row.coffre{background:linear-gradient(90deg,rgba(252,211,77,.10),transparent);border-radius:10px;padding:8px 7px;margin-top:3px;border-bottom:none}
+  .mj-row.coffre.ok{background:linear-gradient(90deg,rgba(252,211,77,.22),rgba(226,156,92,.08))}
+  .mj-row.coffre .mj-c{background:none;font-size:15px}
+
+  /* — la maîtrise : notions solides — */
+  .mait-bar{height:10px;border-radius:99px;background:rgba(107,70,193,.1);overflow:hidden;margin-top:8px}
+  .mait-bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#8B5CF6,#6B46C1);transition:width .5s ease}
+
   /* — l'Agenda des J — */
   .agj-row{display:flex;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid var(--line)}
   .agj-row:last-child{border-bottom:none}
@@ -1666,12 +1683,15 @@
       <span class="pflame" id="pt-flame" hidden style="cursor:pointer" onclick="toggleFlamme(event)">🔥 1 j</span>
       <div class="flampop" id="flamme-pop" hidden onclick="event.stopPropagation()">
         <b id="fp-titre">Ta série</b>
+        <p id="fp-next" style="color:#B87A33;font-weight:800"></p>
         <p>Un jour travaillé — une séance ou une ascension — fait grandir ta série de 1.</p>
-        <p>Un oubli est pardonné grâce à <b style="display:inline">un jour de bonus — un seul</b>. Deux jours sans venir, et elle repart de zéro.</p>
+        <p id="fp-gel">Un oubli est pardonné grâce à <b style="display:inline">un jour de bonus — un seul</b>. Deux jours sans venir, et elle repart de zéro.</p>
       </div>
     </header>
 
     <div class="seance" id="seance"></div>
+
+    <div class="card" id="mj-home"></div>
 
 
 
@@ -1852,6 +1872,7 @@
       </div>
 
       <div class="sidecol">
+        <div class="card" id="mj-arene"></div>
         <div class="card" id="ar-sideacc" style="display:none"></div>
         <div class="card" id="ar-stagecard" style="display:none;border:1px solid var(--tung)">
           <p style="font-size:12.5px;font-weight:800">Tes 3 ascensions du jour sont faites. 👏</p>
@@ -2213,6 +2234,7 @@
       </div>
       <p style="font-size:10.5px;color:var(--muted);margin-top:8px">Les points mesurent ton travail : ils comptent pour les grades de l'Arène et les étapes franchies.</p>
     </div>
+    <div class="card" id="p-maitrise"></div>
     <div class="card" id="p-code">
       <h3>⚔️ Accès illimité</h3>
       <div id="code-zone"></div>
@@ -2301,8 +2323,10 @@ function go(id){
   setBg(id);
   document.body.classList.toggle('in-arene', id==='arene');
   if(id==='profil'){ if(typeof renderSimCard==='function'){ renderSimCard(); renderAvancee(); } if(typeof renderProfilHead==='function') renderProfilHead();
-    if(typeof renderCodeZone==='function') renderCodeZone(); }
+    if(typeof renderCodeZone==='function') renderCodeZone();
+    if(typeof renderMaitrise==='function') renderMaitrise(); }
   if(id==='agenda' && typeof renderAgenda==='function'){ renderAgenda(); }
+  if((id==='home'||id==='arene') && typeof renderMissions==='function'){ renderMissions(); }
   if(id==='home' && typeof renderParcours==='function'){ renderParcours(); }
   if(id==='arene' && typeof renderArene==='function'){ renderArene(); }
   window.scrollTo({top:0});
@@ -3060,7 +3084,9 @@ const AVATARS=[
   {id:'marathonien', nom:'Le Marathonien',  em:'🏃', img:'img/profil/av-marathonien.png',
    expl:'30 ascensions',     cond:function(){ return ((S.ar&&S.ar.runsDone)||0)>=30; }},
   {id:'curieux',     nom:'Le Curieux',      em:'🤓', img:'img/profil/av-curieux.png',
-   expl:'20 fiches lues',    cond:function(){ return Object.keys(S.vues||{}).length>=20; }}
+   expl:'20 fiches lues',    cond:function(){ return Object.keys(S.vues||{}).length>=20; }},
+  {id:'inarretable', nom:'L\'Inarrêtable',  em:'🚀', img:'img/profil/av-inarretable.png',
+   expl:'Série de 60 jours', cond:function(){ return (S.streakMax||S.streak||0)>=60; }}
 ];
 const BANNIERES=[
   {id:'violet',  nom:'Violet Medeos',   seuil:0,     css:'linear-gradient(120deg,#3A2A66,#6B46C1)'},
@@ -3073,7 +3099,11 @@ const BANNIERES=[
   {id:'or',      nom:'Rivière d\'or',   seuil:4600,  img:'img/profil/ban-or.jpg',      css:'linear-gradient(120deg,#8A5A22,#E29C5C)'},
   {id:'amphi',   nom:'L\'Amphithéâtre', seuil:6400,  img:'img/profil/ban-amphi.jpg',   css:'linear-gradient(120deg,#2B2340,#6B46C1)'},
   {id:'sommet',  nom:'Le Sommet',       seuil:8600,  img:'img/profil/ban-sommet.jpg',  css:'linear-gradient(120deg,#12304A,#3A7ABF)'},
-  {id:'legende', nom:'La Légende',      seuil:10000, img:'img/profil/ban-legende.jpg', css:'linear-gradient(120deg,#4C2A85,#E29C5C)'}
+  {id:'legende', nom:'La Légende',      seuil:10000, img:'img/profil/ban-legende.jpg', css:'linear-gradient(120deg,#4C2A85,#E29C5C)'},
+  /* — la ROUTE DE LA FLAMME : réservées à l'assiduité, introuvables autrement — */
+  {id:'braise',     nom:'Braise',          em:'🔥', expl:'Série de 3 jours',   cond:function(){ return (S.streakMax||S.streak||0)>=3; },   css:'linear-gradient(120deg,#3B1010,#C2410C)'},
+  {id:'brasier',    nom:'Brasier',         em:'🔥', expl:'Série de 30 jours',  cond:function(){ return (S.streakMax||S.streak||0)>=30; },  img:'img/profil/ban-brasier.jpg',  css:'linear-gradient(120deg,#7C2D12,#F59E0B)'},
+  {id:'feulegende', nom:'Légende de feu',  em:'🔥', expl:'Série de 100 jours', cond:function(){ return (S.streakMax||S.streak||0)>=100; }, img:'img/profil/ban-feu-legende.jpg', css:'linear-gradient(120deg,#450A0A,#FCD34D)'}
 ];
 function skinTmax(){ return S.ar? Math.max(S.ar.Tmax||0, S.ar.T||0) : 0; }
 function skinOk(it){ return it.cond ? !!it.cond() : skinTmax()>=it.seuil; }
@@ -3436,6 +3466,21 @@ function renderIdBar(){
   }
 }
 /* ═══ PERSONNALISATION : la fenêtre photo + bannière ═══ */
+/* une notion est SOLIDE quand on l'a réussie au moins 2 fois et plus souvent qu'on ne l'a ratée */
+function notionsEtat(){
+  const ns=(S.ar&&S.ar.notions)||{}; let sol=0;
+  const all={}; if(typeof ABANK!=='undefined') ABANK.forEach(q=>{ all[q.n]=1; });
+  Object.keys(ns).forEach(n=>{ const s=ns[n]; if(s.ok>=2 && s.ok>s.ko) sol++; });
+  return {tot:Object.keys(all).length, sol:sol};
+}
+function renderMaitrise(){
+  const e=document.getElementById('p-maitrise'); if(!e) return;
+  const m=notionsEtat(), pct=m.tot?Math.round(m.sol/m.tot*100):0;
+  e.innerHTML='<h3>📚 Ta maîtrise</h3>'+
+    '<p style="font-size:12.5px;font-weight:800">'+m.sol+' notion'+(m.sol>1?'s':'')+' solide'+(m.sol>1?'s':'')+' sur '+m.tot+'</p>'+
+    '<div class="mait-bar"><i style="width:'+Math.max(pct,m.sol?3:0)+'%"></i></div>'+
+    '<p style="font-size:10.5px;color:var(--muted);margin-top:7px">Une notion devient solide quand tu la réussis plusieurs fois — c\'est ta vraie progression, au-delà des trophées.</p>';
+}
 function renderProfilHead(){
   const h=document.getElementById('profil-hdr'); if(!h||!S.ar) return;
   const av=avatarOf(), ban=banniereOf();
@@ -3467,7 +3512,7 @@ function renderSkin(){
     const st="background-image:"+(bn.img?"url('"+bn.img+"'),":"")+bn.css+";background-size:cover;background-position:center";
     return '<button class="skban'+(on?' on':'')+(ok?'':' lock')+'" style="'+st+'" onclick="choisirSkin(\'ban\',\''+bn.id+'\')">'+
       '<span class="skbn">'+bn.nom+'</span>'+
-      (ok?'':'<span class="sklock">🔒<i>'+fmtT(bn.seuil)+' 🏆</i></span>')+
+      (ok?'':'<span class="sklock">🔒<i>'+(bn.expl||fmtT(bn.seuil)+' 🏆')+'</i></span>')+
       '</button>';
   }).join('');
 }
@@ -3574,12 +3619,19 @@ function openSheet(id){
 }
 function closeSheet(id){ const m=document.getElementById(id); if(m) m.classList.remove('on'); }
 /* la bulle de la flamme : petit popover, se referme au clic ailleurs */
+const FLAMME_ROUTE=[[3,'la bannière « Braise »'],[7,'la photo « La Flamme »'],[14,'un gel de série'],[30,'la bannière « Brasier »'],[60,'la photo « L\'Inarrêtable »'],[100,'la bannière « Légende de feu »']];
 function toggleFlamme(ev){
   if(ev) ev.stopPropagation();
   const p=document.getElementById('flamme-pop'); if(!p) return;
   if(p.hidden){
     const n=S.streak||0;
     document.getElementById('fp-titre').textContent=n+' jour'+(n>1?'s':'')+' d\'affilée';
+    /* le prochain cadeau de la Route de la Flamme — la raison de revenir demain */
+    const nx=FLAMME_ROUTE.find(x=>x[0]>n);
+    const fn=document.getElementById('fp-next');
+    if(fn) fn.textContent = nx ? '🎁 Dans '+(nx[0]-n)+' jour'+((nx[0]-n)>1?'s':'')+' : '+nx[1] : '🎁 Tu as débloqué toute la Route de la Flamme.';
+    const fg=document.getElementById('fp-gel');
+    if(fg && (S.gels||0)>0) fg.innerHTML='🧊 Tu as <b style="display:inline">'+S.gels+' gel'+(S.gels>1?'s':'')+' de série</b> : il te protège jusqu\'à deux jours d\'absence.';
     p.hidden=false;
     setTimeout(()=>document.addEventListener('click',fermerFlamme,{once:true}),0);
   } else p.hidden=true;
@@ -3683,6 +3735,54 @@ function tutoEnd(){
   document.getElementById('tuto').hidden=true;
   window.removeEventListener('resize',tutoReplace);
   if(flTemp && typeof renderPtop==='function') renderPtop();   /* la flamme reprend son état réel */
+}
+
+/* ═══ LES MISSIONS DU JOUR — trois actes d'APPRENTISSAGE, récompense en escalier.
+   Règle d'or : aucun trophée sans avoir appris quelque chose. Le coffre vaut plus
+   que les trois missions réunies : on finit ce qu'on a commencé. ═══ */
+const MJ_DEF=[
+  {k:'se',  t:'Fais ta séance du jour',    r:5},
+  {k:'asc', t:'Termine une ascension',     r:10},
+  {k:'sf',  t:'Réussis un sans-faute',     r:20}
+];
+const MJ_COFFRE=40;
+function mjState(){
+  const d=arDay();
+  if(!S.mj || S.mj.day!==d) S.mj={day:d};
+  return S.mj;
+}
+function mjCredit(x){
+  if(!S.ar) initAr();
+  S.ar.T=(S.ar.T||0)+x;
+  S.ar.Tmax=Math.max(S.ar.Tmax||0,S.ar.T);
+  S.ar.gold=Math.max(S.ar.gold||0, Math.floor(S.ar.T/GOLD)*GOLD, GRADES[gradeIdx(S.ar.T)][0]);
+  arAdd(arCourante(),x);
+  S.ar.wdt=(S.ar.wdt||0)+x;
+  S.ar.wdm=S.ar.wdm||{}; S.ar.wdm[arCourante()]=(S.ar.wdm[arCourante()]||0)+x;
+}
+function mjEvent(k){
+  const M=mjState();
+  if(M[k]) return;
+  const def=MJ_DEF.find(d=>d.k===k); if(!def) return;
+  M[k]=Date.now();
+  mjCredit(def.r);
+  if(MJ_DEF.every(d=>M[d.k]) && !M.coffre){ M.coffre=Date.now(); mjCredit(MJ_COFFRE); }
+  saveS(); renderMissions();
+  if(typeof renderIdBar==='function') renderIdBar();
+}
+function renderMissions(){
+  const M=mjState();
+  const faits=MJ_DEF.filter(d=>M[d.k]).length;
+  let x='<h3>🎯 Missions du jour</h3>';
+  MJ_DEF.forEach(d=>{
+    const ok=!!M[d.k];
+    x+='<div class="mj-row'+(ok?' ok':'')+'"><span class="mj-c">'+(ok?'✓':'○')+'</span>'+
+       '<span class="mj-t">'+d.t+'</span><span class="mj-r">+'+d.r+' 🏆</span></div>';
+  });
+  x+= M.coffre
+    ? '<div class="mj-row coffre ok"><span class="mj-c">🎁</span><span class="mj-t">Coffre ouvert — bien joué. À demain pour la suite.</span><span class="mj-r">+'+MJ_COFFRE+' 🏆</span></div>'
+    : '<div class="mj-row coffre"><span class="mj-c">🎁</span><span class="mj-t">Les 3 faites → le coffre s\'ouvre</span><span class="mj-r">+'+MJ_COFFRE+' 🏆</span></div>';
+  ['mj-arene','mj-home'].forEach(id=>{ const e=document.getElementById(id); if(e) e.innerHTML=x; });
 }
 
 /* ═══ L'AGENDA DES J — révisions espacées J+1 · +3 · +7 · +14 · +30.
@@ -4399,7 +4499,7 @@ function seanceCredit(){
   else S.sjour=arDay();                       /* seule une séance du FIL consomme le jour */
   delete S.sr;                                 /* la séance finie n'est plus « en cours » */
   S.points=(S.points||0)+20; S.qcm=(S.qcm||0)+2;
-  majStreak();
+  majStreak(); if(typeof mjEvent==='function') mjEvent('se');
   SR.credited=true;
   saveS();
 }
@@ -4411,9 +4511,11 @@ function majStreak(){
   const auj=arDay();
   if(S.stDay===auj){ return; }                                  /* déjà compté aujourd'hui */
   if(S.stDay===_jourMoins(1) || S.stDay===_jourMoins(2)) S.streak=(S.streak||0)+1;  /* consécutif, ou un oubli pardonné */
+  else if(S.stDay===_jourMoins(3) && (S.gels||0)>0){ S.gels--; S.streak=(S.streak||0)+1; }  /* le gel sauve 2 jours d'absence */
   else S.streak=1;
   S.stDay=auj;
   S.streakMax=Math.max(S.streakMax||0,S.streak);
+  if(S.streakMax>=14 && !S.gel14){ S.gel14=1; S.gels=(S.gels||0)+1; }   /* palier 14 j : un gel de série offert */
   saveS();
   if(typeof renderPtop==='function') renderPtop();
 }
@@ -5110,6 +5212,7 @@ function aCheck(timeout){
     juste?st.ok++:st.ko++; S.ar.notions[q.n]=st;
     if(!juste) run.errs.push(q);
     if(juste) run.ok++;
+    if(juste && typeof mjEvent==='function') mjEvent('sf');
     /* l'encaissement par palier */
     let gTot=0;
     if(nOk===5) gTot=gainPlein;
@@ -5192,6 +5295,7 @@ function closeRun(anticipee){
   S.ar.Tmax=Math.max(S.ar.Tmax||0,T);   /* meilleur total atteint : débloque photos et bannières */
   if(run.ok>=RUN_LEN) S.ar.parfait=Date.now();   /* exploit : une ascension 10/10 */
   if(run.lignes.length) majStreak();             /* une ascension jouée nourrit la série 🔥 */
+  if(run.lignes.length>=RUN_LEN && typeof mjEvent==='function') mjEvent('asc');
   const gi=gradeIdx(T);
   S.ar.gold=Math.max(S.ar.gold, Math.floor(T/GOLD)*GOLD, GRADES[gi][0]);
   arAdd(arCourante(), T-avant);          /* les trophées vont à l'arène jouée : total = somme des 4 */
@@ -5216,6 +5320,8 @@ function closeRun(anticipee){
   ligne(run.ok+' sans-faute','+'+fmtT(dOk),'up2');
   if(errL.length) ligne(errL.length+' avec erreur'+(errL.length>1?'s':''),(dErr>=0?'+':'−')+fmtT(Math.abs(dErr)),dErr>=0?'up2':'slate');
   if(nuls) ligne(nuls+' non comptée'+(nuls>1?'s':'')+' (répondues trop vite)','0','slate');
+  { const nr=new Set(run.lignes.filter(l=>l.ok).map(l=>l.notion)).size;
+    if(nr) ligne('Notions renforcées aujourd\'hui','📚 '+nr,'up2'); }
   if(run.bonus) ligne('Bonus de série','+'+run.bonus,'up2');
   if(garantie) ligne('<b>'+run.ok+'/10 → garantie appliquée</b> : tu ne perds rien','0','up2');
   if(plafond) ligne('Perte plafonnée','−60','slate');
