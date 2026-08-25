@@ -904,6 +904,13 @@
   .agj-day b{font-size:9.5px;text-transform:uppercase;letter-spacing:.03em}
   .agj-day span{font-size:13px;font-weight:900;color:var(--violet)}
 
+  /* — le résumé chiffré du panneau — */
+  .lbresume{text-align:center;padding:10px 0 4px}
+  .lbr-tot{display:block;font-family:Fredoka,Inter,sans-serif;font-size:30px;font-weight:700;color:var(--violet);line-height:1.1}
+  .lbr-sem{display:block;font-size:12px;font-weight:800;color:#3A3730;margin-top:3px}
+  .lbr-sem em{font-style:normal;color:#2E7D53;font-weight:900}
+  .lbr-sem i{font-style:normal;color:var(--muted);font-weight:700}
+
   /* — les jours travaillés de la semaine — */
   .jsembox{margin-top:12px;border-top:1px solid var(--line);padding-top:10px}
   .jsemrow{display:flex;gap:6px}
@@ -6537,12 +6544,14 @@ function renderLB(){
     const lg=document.createElement('p'); lg.className='pg-note'; lg.textContent='Là où tu as le plus avancé — tes trophées ne redescendent jamais d\'eux-mêmes.';
     box.appendChild(lg);
   }
-  const ligne=(txt,val,cls)=>{ const d=document.createElement('div'); d.className='lbrow'+(cls||'');
-    d.innerHTML='<span class="nm3">'+txt+'</span><span class="tr">'+val+'</span>'; box.appendChild(d); };
-  ligne('<b>Tes trophées</b>','<b>'+fmtT(S.ar.T||0)+' 🏆</b>',' me2');
-  ligne('Cette semaine','+'+fmtT(sem)+' 🏆');
-  ligne('La semaine dernière','+'+fmtT(prev)+' 🏆');
-  ligne('Ta meilleure semaine','+'+fmtT(rec)+' 🏆');
+  /* un seul bloc : le total, et le rythme de la semaine en dessous */
+  const res=document.createElement('div'); res.className='lbresume';
+  const cmp = prev>0
+    ? (sem>=prev ? '<em>+'+fmtT(sem-prev)+' vs semaine dernière</em>' : '<i>'+fmtT(prev-sem)+' de moins que la semaine dernière</i>')
+    : (rec>0 && sem<rec ? '<i>record : +'+fmtT(rec)+'</i>' : '');
+  res.innerHTML='<span class="lbr-tot">'+fmtT(S.ar.T||0)+' 🏆</span>'+
+    '<span class="lbr-sem">+'+fmtT(sem)+' cette semaine '+cmp+'</span>';
+  box.appendChild(res);
   /* — les jours travaillés de la semaine : la régularité, mesurée honnêtement — */
   const auj=new Date(Date.now()-6*3600*1000);
   const lun=new Date(auj); lun.setDate(auj.getDate()-((auj.getDay()+6)%7));
