@@ -1715,7 +1715,7 @@
       <div class="flampop" id="flamme-pop" hidden onclick="event.stopPropagation()">
         <b id="fp-titre">Ta série</b>
         <p id="fp-next" style="color:#B87A33;font-weight:800"></p>
-        <p>Un jour travaillé — une séance, une ascension ou le QCM du Jour — fait grandir ta série de 1.</p>
+        <p>Un jour travaillé — une séance ou une ascension — fait grandir ta série de 1.</p>
         <p id="fp-gel">Un oubli est pardonné grâce à <b style="display:inline">un jour de bonus — un seul</b>. Deux jours sans venir, et elle repart de zéro.</p>
       </div>
     </header>
@@ -3877,9 +3877,9 @@ function renderQj(){
   const fait=qjFaitAuj();
   const x = fait
     ? '<div class="qj-row ok"><span class="qj-ic">☀️</span><div class="qj-bd"><b>QCM du Jour — fait ✓</b>'+
-      '<span>+'+((S.qj&&S.qj.gain)||0)+' 🏆 · ta flamme est à l\'abri. À demain !</span></div></div>'
+      '<span>+'+((S.qj&&S.qj.gain)||0)+' 🏆 · à demain pour la suivante.</span></div></div>'
     : '<div class="qj-row" onclick="startQcmJour()"><span class="qj-ic">☀️</span><div class="qj-bd"><b>Le QCM du Jour</b>'+
-      '<span>Une question, 90 secondes — récompense mystère, et ta flamme tient 🔥</span></div><span class="qj-go">Jouer</span></div>';
+      '<span>Une question, 90 secondes — la même pour tout le monde, récompense mystère 🎁</span></div><span class="qj-go">Jouer</span></div>';
   ['qj-home','qj-arene'].forEach(id=>{ const e=document.getElementById(id); if(e) e.innerHTML=x; });
 }
 function renderMissions(){
@@ -4415,7 +4415,6 @@ function libreFin(){
     gQJ = LB.ok ? [10,15,25][mjSeed(arDay())%3] : 5;   /* récompense mystère du jour */
     S.qj={day:arDay(), fait:1, gain:gQJ};
     mjCredit(gQJ);
-    majStreak();                                        /* le QCM du Jour suffit à garder ta flamme */
     son(LB.ok?'coffre':'pop');
     saveS();
     if(typeof renderQj==='function') renderQj();
@@ -4424,7 +4423,7 @@ function libreFin(){
   document.getElementById('libre-fin-t').textContent = LB.jour
     ? (LB.ok? 'Bien joué — +'+gQJ+' 🏆. À demain pour la suivante.' : 'Piégeuse. +'+gQJ+' 🏆 quand même — à demain pour ta revanche.')
     : LB.ok+' sur '+LB.qs.length+(LB.ok>=4?' — solide.':(LB.ok>=2?' — ça se construit.':' — ces notions t\'attendent dans le fil guidé.'));
-  document.getElementById('libre-fin-s').textContent = LB.jour ? 'Ta flamme est à l\'abri pour aujourd\'hui 🔥' : 'Chaque question corrigée compte, même ratée.';
+  document.getElementById('libre-fin-s').textContent = LB.jour ? 'La même question pour tout le monde — demain, une nouvelle.' : 'Chaque question corrigée compte, même ratée.';
   const enc=document.getElementById('libre-encore');
   enc.style.display=LB.jour?'none':'block';
   enc.onclick=()=>startLibre(LB.mat);
