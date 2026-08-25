@@ -3736,8 +3736,10 @@ function lbJoueurs(){
   LB_PLAYERS=[];
   for(let i=0;i<LB_SIZE;i++){
     const force=5400*Math.exp(-i*0.13)+((i*53)%47);
-    /* chaque joueur a ses matières fortes et faibles (poids semés, somme = 1) */
-    const g=[3+(i*7)%5, 3+(i*11)%5, 3+(i*13)%5, 3+(i*17)%5];
+    /* chaque joueur a ses matières fortes et faibles — multiplicateurs à RESTES DISTINCTS
+       modulo 5 + décalages, sinon deux matières sortent identiques (bug : 7 ≡ 17 [mod 5],
+       Anatomie et Physique avaient exactement les mêmes trophées) */
+    const g=[3+(i*7+1)%5, 3+(i*11+2)%5, 3+(i*13)%5, 3+(i*19+3)%5];
     const somme=g[0]+g[1]+g[2]+g[3];
     const vals={};
     let total=0;
