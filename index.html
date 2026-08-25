@@ -2066,6 +2066,20 @@
     </div>
   </div>
 
+  <!-- ═══ FENÊTRE : un déblocage, et surtout POURQUOI ═══ -->
+  <div class="modal" id="sheet-deblo" onclick="if(event.target===this)closeSheet('sheet-deblo')">
+    <div class="sheet" style="max-width:370px">
+      <div class="sheet-b" style="text-align:center;padding:22px 20px 18px">
+        <div id="deblo-vis" style="display:flex;justify-content:center;margin-bottom:10px"></div>
+        <p id="deblo-t" style="font-family:Fredoka,Inter,sans-serif;font-size:17px;font-weight:600"></p>
+        <p id="deblo-nom" style="font-size:14px;font-weight:900;color:var(--violet);margin-top:4px"></p>
+        <p id="deblo-p" style="font-size:12.5px;color:var(--muted);line-height:1.55;margin-top:6px"></p>
+        <button class="btn" style="margin-top:14px" id="deblo-go">L'utiliser maintenant</button>
+        <button class="btn ghost" style="margin-top:8px" onclick="closeSheet('sheet-deblo')">Plus tard</button>
+      </div>
+    </div>
+  </div>
+
   <!-- ═══ FENÊTRE : le détail de ta journée ═══ -->
   <div class="modal" id="sheet-jour" onclick="if(event.target===this)closeSheet('sheet-jour')">
     <div class="sheet">
@@ -2101,7 +2115,7 @@
         <div class="skingrid" id="skin-avs"></div>
         <p class="skin-t">Ta bannière</p>
         <div class="skinbans" id="skin-bans"></div>
-        <p class="skin-note">Gagne des trophées pour débloquer de nouvelles photos et bannières 🏆</p>
+        <p class="skin-note">Touche une photo ou une bannière : elle te dira comment elle se gagne 🏆</p>
       </div>
     </div>
   </div>
@@ -2477,6 +2491,7 @@ function go(id){
   if(id==='agenda' && typeof renderAgenda==='function'){ renderAgenda(); }
   if((id==='home'||id==='arene') && typeof renderMissions==='function'){ renderMissions(); if(typeof renderQj==='function') renderQj(); if(typeof renderEcl==='function') renderEcl(); }
   if((id==='home'||id==='profil') && typeof renderProgression==='function') renderProgression();
+  if(['home','arene','profil'].includes(id) && typeof verifSkins==='function') setTimeout(verifSkins,700);
   if(id==='home' && typeof renderParcours==='function'){ renderParcours(); }
   if(id==='arene' && typeof renderArene==='function'){ renderArene(); }
   window.scrollTo({top:0});
@@ -3429,9 +3444,10 @@ const ABANK=[
    Deux compteurs : R = niveau estimé (Elo interne, départ 1000, jamais montré comme un rang)
                     T = trophées (route de carrière, plancher définitif, ne se réinitialise jamais)
    Pot : E = 1/(1+10^((D−R)/400)) · G = clamp(round(40×(1−E)),8,32) · L = 40 − G
-   BARÈME PAR CASE (v3.1) : gU=G/5 et lU=L/5 par item. Pertes strictement par case mal jugée.
-   Gains par PALIER (anti-hasard : cocher tout à l'aveugle doit perdre) : 5/5 = 5·gU (pot entier),
-   4/5 = moitié du pot, ≤3/5 = rien. Elo en score fractionnel : Sc = nOk/5.
+   BARÈME PAR CASE (v4) : chaque item bien jugé rapporte +gU (=G/5), chaque item mal jugé coûte
+   −lU (=max(1,5·gU ; L/5·bande)) — le ratio 1,5 rend le hasard perdant (simulation longue durée).
+   Cocher les 5 cases n'est jamais une réponse (aucune question n'a 5 items vrais) : non compté.
+   Elo en score fractionnel : Sc = nOk/5.
    Modulateurs : calibration (20 premières) = perte 0 ET seul le sans-faute encaisse ·
    perte ×0,70/0,85/1 selon la bande de grade · bonus de série +2 (plafond +16/+8) ·
    anti-lecture <3 s = rien compté ni mesuré · aucun bonus de vitesse, jamais.
@@ -4056,7 +4072,7 @@ function renderSkin(){
     '<div style="min-width:0"><div class="pn">'+nom+'</div><div class="pg">'+GRADES[gi][2]+' '+GRADES[gi][1]+' · 🏆 '+fmtT(S.ar.T)+'</div></div></div>';
   document.getElementById('skin-avs').innerHTML=AVATARS.map(a=>{
     const ok=skinOk(a), on=avatarOf().id===a.id;
-    return '<button class="sktile'+(on?' on':'')+(ok?'':' lock')+'" onclick="choisirSkin(\'av\',\''+a.id+'\')" aria-label="'+a.nom+'">'+
+    return '<button class="sktile'+(on?' on':'')+(ok?'':' lock')+'" onclick="choisirSkin(\'av\',\''+a.id+'\')" title="'+a.nom+' — '+skinCond(a)+'" aria-label="'+a.nom+' : '+skinCond(a)+'">'+
       '<span class="skem">'+a.em+'</span>'+
       '<img src="'+a.img+'"'+(a.fit==='zoom'?' class="zoom"':'')+' alt="" onerror="this.remove()">'+
       (ok?'':'<span class="sklock">🔒<i>'+(a.expl||fmtT(a.seuil)+' 🏆')+'</i></span>')+
@@ -4065,11 +4081,48 @@ function renderSkin(){
   document.getElementById('skin-bans').innerHTML=BANNIERES.map(bn=>{
     const ok=skinOk(bn), on=banniereOf().id===bn.id;
     const st="background-image:"+(bn.img?"url('"+bn.img+"'),":"")+bn.css+";background-size:cover;background-position:center";
-    return '<button class="skban'+(on?' on':'')+(ok?'':' lock')+'" style="'+st+'" onclick="choisirSkin(\'ban\',\''+bn.id+'\')">'+
+    return '<button class="skban'+(on?' on':'')+(ok?'':' lock')+'" style="'+st+'" onclick="choisirSkin(\'ban\',\''+bn.id+'\')" title="'+bn.nom+' — '+skinCond(bn)+'" aria-label="'+bn.nom+' : '+skinCond(bn)+'">'+
       '<span class="skbn">'+bn.nom+'</span>'+
       (ok?'':'<span class="sklock">🔒<i>'+(bn.expl||fmtT(bn.seuil)+' 🏆')+'</i></span>')+
       '</button>';
   }).join('');
+}
+/* ═══ UN DÉBLOCAGE SE COMPREND : on dit toujours CE QUI a été gagné et POURQUOI ═══ */
+function skinCond(it){
+  if(it.expl) return it.expl;
+  if(it.seuil) return fmtT(it.seuil)+' 🏆 atteints';
+  return 'offerte au départ';
+}
+function ouvrirDeblocage(x,autres){
+  const o=x.o, av=(x.t==='av');
+  const vis=document.getElementById('deblo-vis');
+  if(vis) vis.innerHTML = av
+    ? '<span class="sktile on" style="width:92px;height:92px"><span class="skem">'+o.em+'</span><img src="'+o.img+'"'+(o.fit==='zoom'?' class="zoom"':'')+' alt="" onerror="this.remove()"></span>'
+    : '<span class="skban on" style="width:100%;height:58px;'+("background-image:"+(o.img?"url('"+o.img+"'),":"")+o.css+";background-size:cover;background-position:center")+'"><span class="skbn">'+o.nom+'</span></span>';
+  const t=document.getElementById('deblo-t'); if(t) t.textContent = av?'🎉 Nouvelle photo de profil !':'🎉 Nouvelle bannière !';
+  const nm=document.getElementById('deblo-nom'); if(nm) nm.textContent='« '+o.nom+' »';
+  const pp=document.getElementById('deblo-p');
+  if(pp) pp.textContent='Tu l\'as gagnée : '+skinCond(o)+'.'+(autres>0?' (+'+autres+' autre'+(autres>1?'s':'')+' t\'attend'+(autres>1?'ent':'')+' dans ton profil)':'');
+  const b=document.getElementById('deblo-go');
+  if(b) b.onclick=()=>{ closeSheet('sheet-deblo'); choisirSkin(x.t,o.id); if(typeof go==='function') go('profil'); };
+  openSheet('sheet-deblo');
+  if(typeof son==='function') son('fanfare');
+}
+function verifSkins(){
+  if(!S.ar) return;
+  const premier=!S.skinsVus;                    /* amorçage silencieux pour les comptes existants */
+  S.skinsVus=S.skinsVus||[];
+  const tous=[].concat(AVATARS.map(a=>({t:'av',o:a})),BANNIERES.map(b=>({t:'ban',o:b})));
+  const nouveaux=[];
+  tous.forEach(x=>{ const k=x.t+':'+x.o.id;
+    if(skinOk(x.o) && S.skinsVus.indexOf(k)<0){
+      S.skinsVus.push(k);
+      if(x.o.expl || x.o.seuil) nouveaux.push(x);   /* les offerts du départ ne s'annoncent pas */
+    }
+  });
+  saveS();
+  if(premier || !nouveaux.length) return;
+  ouvrirDeblocage(nouveaux[0], nouveaux.length-1);
 }
 function choisirSkin(type,id){
   const it=(type==='av'?AVATARS:BANNIERES).find(x=>x.id===id); if(!it) return;
@@ -4081,7 +4134,7 @@ function choisirSkin(type,id){
       note.animate([{transform:'translateX(0)'},{transform:'translateX(-4px)'},{transform:'translateX(4px)'},{transform:'translateX(0)'}],{duration:240}); }
     return;
   }
-  if(note) note.textContent='Gagne des trophées pour débloquer de nouvelles photos et bannières 🏆';
+  if(note) note.textContent='« '+it.nom+' » — obtenue : '+skinCond(it)+'.';
   S.ar.skin=S.ar.skin||{}; S.ar.skin[type]=id; saveS();
   if(accOk()){ const reg=accRegistre(), k=S.ar.compte.id.toLowerCase();   /* le skin suit le compte */
     if(reg[k]){ reg[k].skin=S.ar.skin; localStorage.setItem('m4_comptes',JSON.stringify(reg)); } }
@@ -4308,8 +4361,9 @@ function tutoEnd(){
    La première partie du jour rapporte (1 🏆 par bonne réponse, plafonné à 15) ;
    ensuite on joue pour le record. ═══ */
 let EC=null, ecTimer=null, ecCd=null;
+const ECLAIR_SEUIL_FICHES=6;   /* ≈ 3 jours de Parcours : de quoi mélanger les matières */
 function eclairOuvrable(){
-  return Object.keys((typeof fichesArmees==='function')?fichesArmees():{}).length>=4;
+  return Object.keys((typeof fichesArmees==='function')?fichesArmees():{}).length>=ECLAIR_SEUIL_FICHES;
 }
 function ecFaitAuj(){ return !!(S.ecl && S.ecl.day===arDay()); }
 /* un item n'entre dans l'Éclair que s'il se suffit à lui-même : les référents orphelins
@@ -4474,7 +4528,7 @@ function renderEcl(){
   if(!eclairOuvrable()){
     const n=Object.keys((typeof fichesArmees==='function')?fichesArmees():{}).length;
     e.innerHTML='<div class="qj-row ok"><span class="qj-ic">⚡</span><div class="qj-bd"><b>L\'Éclair — verrouillé</b>'+
-      '<span>Il s\'ouvre avec ton Parcours ('+n+'/4 fiches travaillées) — 60 s de vrai/faux sur tout ce que tu as vu.</span></div></div>';
+      '<span>Il s\'ouvre après 3 jours de Parcours ('+n+'/'+ECLAIR_SEUIL_FICHES+' fiches) — 60 s de vrai/faux sur tout ce que tu as vu, toutes matières mêlées.</span></div></div>';
     return;
   }
   const fait=ecFaitAuj();
@@ -5963,7 +6017,9 @@ function potOf(q){
   /* v3 — le pot se joue CASE PAR CASE : chacun des 5 items porte sa part du pot.
      gU = gain par case bien jugée · lU = perte par case mal jugée (0 en calibration). */
   const gU=Math.max(1,Math.round(G/5));
-  const lU=cal?0:Math.max(1,Math.round((brut/5)*bande()));
+  /* la case fausse coûte au moins 1,5× ce que la case juste rapporte : répondre au hasard
+     doit rester PERDANT (vérifié par simulation longue durée) */
+  const lU=cal?0:Math.max(Math.round(Math.max(1,Math.round(G/5))*1.5), Math.round((brut/5)*bande()), 1);
   return {P:P,G:G,L:L,Lbrut:brut,p:p,m:m,D:D,cal:cal,jeune:m<CAL_M,
           gU:gU,lU:lU,Gmax:gU*5,Lmax:lU*5};
 }
@@ -6071,7 +6127,8 @@ function showAQ(){
   const gAff = run.boost ? Math.round(P.Gmax*BOOST_MULT) : P.Gmax;
   document.getElementById('a-pot-g').textContent='+'+gAff;
   document.getElementById('a-pot-l').textContent=P.Lmax?('−'+P.Lmax):'−0';
-  let raison = 'Sans-faute : +'+gAff+' 🏆 · 4 cases sur 5 : la moitié du pot'+(P.lU?(' · chaque case fausse : −'+P.lU+' 🏆'):'')+'. ';
+  const gUAff = run.boost ? Math.round(P.gU*BOOST_MULT) : P.gU;
+  let raison = 'Chaque case bien jugée : +'+gUAff+' 🏆'+(P.lU?(' · chaque case fausse : −'+P.lU+' 🏆'):' · rien à perdre')+'. ';
   raison += P.jeune
     ? 'Difficulté estimée '+stars(P.D)+' — question en calibration, enjeu réduit de moitié.'
     : 'Difficulté '+stars(P.D)+' — le pot est calculé pour ton niveau.';
@@ -6141,21 +6198,24 @@ function aCheck(timeout){
   });
   const juste = !timeout && missing.length===0 && wrong.length===0;
   if(!vite) son(juste?'ok':'ko');
-  const gainPlein = run.boost ? Math.round(P.Gmax*BOOST_MULT) : P.Gmax;
+  const gUP = run.boost ? Math.round(P.gU*BOOST_MULT) : P.gU;
+  /* garde anti-loterie : cocher les 5 cases n'est jamais une réponse (aucune question n'a 5 items vrais) */
+  const toutCoche = !timeout && run.sel.size===5;
 
-  /* le ± par case : les pertes sont réelles case par case ; le +gU ne s'affiche que sur le sans-faute
-     (sinon la somme des cases mentirait sur ce qui est encaissé) */
-  if(!vite) document.querySelectorAll('#a-items .item').forEach((b,idx)=>{
+  /* LE ± PAR CASE, sans condition : chaque case dit ce qu'elle rapporte ou ce qu'elle coûte */
+  if(!vite && !toutCoche) document.querySelectorAll('#a-items .item').forEach((b,idx)=>{
     const bon=!!q.it[idx][2], pris=run.sel.has(idx)&&!timeout;
     const bienJuge = !timeout && (bon===pris);
     const v=b.querySelector('.verdict');
-    if(!bienJuge && P.lU) v.insertAdjacentHTML('beforeend',' <span class="idelta dn">−'+P.lU+'</span>');
-    else if(bienJuge && juste) v.insertAdjacentHTML('beforeend',' <span class="idelta up">+'+Math.round(gainPlein/5)+'</span>');
+    if(bienJuge) v.insertAdjacentHTML('beforeend',' <span class="idelta up">+'+gUP+'</span>');
+    else if(P.lU) v.insertAdjacentHTML('beforeend',' <span class="idelta dn">−'+P.lU+'</span>');
   });
 
   let d=0, note='';
   if(vite){
     note='Trop rapide pour être lu — non compté : ni gain, ni perte, ni mesure.';
+  } else if(toutCoche){
+    note='Tout cocher n\'est pas une réponse — non compté : ni gain, ni perte.';
   } else {
     /* R : le niveau estimé bouge à chaque question — en score FRACTIONNEL (4 cases sur 5 ≠ 0) */
     const Sc = timeout ? 0 : nOk/5;
@@ -6173,20 +6233,17 @@ function aCheck(timeout){
     if(juste) run.ok++;
     if(juste && typeof mjTrack==='function') mjTrack('sf',{chain:run.serie, star:(P.D<865?1:(P.D<955?2:(P.D<1045?3:(P.D<1135?4:5)))), mat:q.mat});
     if(cur.slot==='révision' && typeof mjTrack==='function') mjTrack('rev');   /* jauge Révise */
-    /* l'encaissement par palier */
-    let gTot=0;
-    if(nOk===5) gTot=gainPlein;
-    else if(nOk===4 && !P.cal) gTot=Math.round(gainPlein/2);
+    /* l'encaissement CASE PAR CASE : chaque case bien jugée rapporte, chaque case fausse coûte */
+    const gTot=timeout?0:nOk*gUP;
     const lTot=(timeout?5:(5-nOk))*P.lU;
     d=gTot-lTot;
-    if(!juste && P.cal) note='Calibration '+Math.min(CAL_N,S.ar.n)+'/'+CAL_N+' — tu ne perds rien, et seul le sans-faute encaisse ici.';
-    else if(nOk===4) note='4 cases sur 5 — tu sauves la moitié du pot, moins ta case fausse.';
-    else if(!juste && !timeout) note=nOk+' case'+(nOk>1?'s':'')+' sur 5 — il en faut 4 pour encaisser.';
+    if(P.cal) note='Calibration '+Math.min(CAL_N,S.ar.n)+'/'+CAL_N+' — chaque case juste rapporte, aucune ne coûte.';
+    else if(!juste && !timeout) note=nOk+' case'+(nOk>1?'s':'')+' bien jugée'+(nOk>1?'s':'')+' : +'+(nOk*gUP)+' 🏆 · '+(5-nOk)+' fausse'+((5-nOk)>1?'s':'')+' : −'+((5-nOk)*P.lU)+' 🏆.';
     if(juste){ run.serie++; if(run.serie>=2 && run.bonus<capSerie()) run.bonus=Math.min(capSerie(),run.bonus+STREAK_STEP); }
     else run.serie=0;
   }
   run.som+=d;
-  run.lignes.push({n:run.i+1,mat:q.mat,notion:q.n,ok:juste&&!vite,k:nOk,v:vite?1:0,d:d});
+  run.lignes.push({n:run.i+1,mat:q.mat,notion:q.n,ok:juste&&!vite&&!toutCoche,k:nOk,v:(vite||toutCoche)?1:0,d:d});
   saveS(); renderState();
 
   /* la correction occupe la place principale, le delta est secondaire */
