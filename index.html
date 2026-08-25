@@ -3605,16 +3605,23 @@ function notionsEtat(){
   return {tot:Object.keys(all).length, sol:sol};
 }
 function renderDiag(){
+  /* LE diagnostic de l'élève : Éclair + ascensions d'Arène fusionnés, priorisés.
+     Il dit quoi apprendre — 2 fiches recommandées par jour, pas plus. */
   const e=document.getElementById('p-diag'); if(!e) return;
-  const src=S.eclDiag||{};
-  const notes=Object.keys(src).sort((x,y)=>src[y].c-src[x].c);
+  const nf={}; if(typeof ABANK!=='undefined') ABANK.forEach(q=>{ if(!nf[q.n]) nf[q.n]=q.f; });
+  const sc={};
+  Object.keys(S.eclDiag||{}).forEach(n=>{ sc[n]=(sc[n]||0)+(S.eclDiag[n].c||0); });
+  const ns=(S.ar&&S.ar.notions)||{};
+  Object.keys(ns).forEach(n=>{ const d=ns[n].ko-(ns[n].ok||0); if(d>0) sc[n]=(sc[n]||0)+d*2; });   /* l'Arène pèse double : question complète ratée */
+  const notes=Object.keys(sc).sort((x,y)=>sc[y]-sc[x]);
   if(!notes.length){
-    e.innerHTML='<h3>🩺 Ton diagnostic</h3><p style="font-size:12px;color:var(--muted);line-height:1.5">Joue à l\'Éclair et à l\'Arène : tes erreurs dessineront ici ce qu\'il faut réviser en priorité.</p>';
+    e.innerHTML='<h3>🩺 Ton diagnostic</h3><p style="font-size:12px;color:var(--muted);line-height:1.5">Joue à l\'Éclair et à l\'Arène : tes erreurs dessineront ici ce qu\'il faut apprendre en priorité.</p>';
     return;
   }
-  let x='<h3>🩺 Ton diagnostic</h3><p style="font-size:11px;color:var(--muted);margin-bottom:2px">Tes points faibles, toutes parties confondues — 2 fiches par jour, pas plus.</p>';
-  notes.slice(0,2).forEach(n=>{ x+='<div class="agj-row"><span class="agj-nom">'+n+'</span>'+
-    (src[n].f?'<button class="blien" onclick="openFiche(\''+src[n].f+'\')">📄 réviser</button>':'')+'</div>'; });
+  let x='<h3>🩺 Ton diagnostic</h3><p style="font-size:11px;color:var(--muted);margin-bottom:2px">Ce que tes parties révèlent — Éclair et ascensions confondus. 2 fiches par jour, pas plus.</p>';
+  notes.slice(0,2).forEach(n=>{ const f=(S.eclDiag&&S.eclDiag[n]&&S.eclDiag[n].f)||nf[n];
+    x+='<div class="agj-row"><span class="agj-nom">'+n+'</span>'+
+    (f?'<button class="blien" onclick="openFiche(\''+f+'\')">📄 réviser</button>':'')+'</div>'; });
   const suite=notes.slice(2,6);
   if(suite.length) x+='<p style="font-size:10.5px;color:var(--muted);margin-top:7px">Ensuite : '+suite.join(' · ')+'</p>';
   e.innerHTML=x;
