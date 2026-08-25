@@ -2238,7 +2238,7 @@
     <div class="bonusbox">
       <div class="brow"><span class="bk">Sans stage</span><span>L'app est gratuite : ta séance de Parcours et 3 ascensions d'Arène par jour.</span></div>
       <div class="brow"><span class="bk">Avec un stage</span><span><b>Un vrai stage de révision pendant tes vacances</b> — et l'app en accès gratuit, comme tout le monde.</span></div>
-      <div class="brow gold"><span class="bk">Année complète</span><span><b>Le stage Medi Pro + les 4 stages vacances</b> + <b>le Parcours et l'Arène en illimité</b> toute l'année. C'est le seul pack qui débloque toute l'app. Tu arrives prêt à la rentrée.</span></div>
+      <div class="brow gold"><span class="bk">Pack année complète</span><span><b>Medi Pro + les 4 stages vacances.</b> Et réservé à ce pack, rien d'autre : <b>toute l'app en illimité</b> — Parcours et Arène, toute l'année.</span></div>
     </div>
     <div class="shop">
       <div class="shopcard2">
@@ -2264,6 +2264,7 @@
         </div>
       </div>
     </div>
+    <button class="stagelien" style="margin-top:12px" onclick="window.open('https://www.medeos-sante.fr/packs/stages-vacances#stages','_blank')">Le pack année complète — <b>Medi Pro + les 4 stages, avec toute l'app en illimité</b> →</button>
     </div>
   </section>
 
@@ -3259,12 +3260,21 @@ function banniereOf(){ const v=S.ar&&S.ar.skin&&S.ar.skin.ban; return BANNIERES.
 /* fond d'une bannière : voile sombre (lisibilité) + image si dispo + dégradé en filet de sécurité */
 function banFond(b){ return "background-image:linear-gradient(rgba(21,17,34,.38),rgba(21,17,34,.52))"+(b.img?",url('"+b.img+"')":"")+","+b.css+";background-size:cover;background-position:center"; }
 function arT(k){ if(!S.ar) return 0; S.ar.mats=S.ar.mats||{}; return S.ar.mats[k]||0; }
-/* la mémoire de la progression : un point par jour (trophées par matière + notions solides) */
+/* l'avancée réelle du Parcours : les fiches travaillées en séance, par matière */
+function fichesFaites(){
+  const par={Anatomie:0,Biologie:0,Chimie:0,Physique:0}; let tot=0;
+  if(S.sdone && typeof SEANCES!=='undefined'){
+    SEANCES.forEach(s=>{ if(S.sdone[s.id]){ const n=(s.fiches||[]).length; par[s.mat]=(par[s.mat]||0)+n; tot+=n; } });
+  }
+  return {par:par,tot:tot};
+}
+/* la mémoire de la progression : un point par jour — l'AVANCÉE EN FICHES d'abord, le reste en appui */
 function histoSnap(){
   if(!S.ar) return;
   S.histo=S.histo||[];
   const d=arDay();
-  const pt={d:d, T:S.ar.T||0, m:{}, sol:(typeof notionsEtat==='function'?notionsEtat().sol:0)};
+  const ff=fichesFaites();
+  const pt={d:d, T:S.ar.T||0, m:{}, ft:ff.tot, f:ff.par, sol:(typeof notionsEtat==='function'?notionsEtat().sol:0)};
   ARENES.forEach(a=>pt.m[a.k]=arT(a.k));
   const last=S.histo[S.histo.length-1];
   if(last && last.d===d) S.histo[S.histo.length-1]=pt;
@@ -3642,27 +3652,28 @@ function renderProgression(){
   const MATS=['Anatomie','Biologie','Chimie','Physique'];
   const H=(S.histo||[]).slice(-14);
   let inner;
-  if(!S.ar || !H.length || (H.length===1 && H[0].T===0)){
-    inner='<h3>📈 Ta progression</h3>'+
-      '<p style="font-size:12px;color:var(--muted);line-height:1.5">Ta courbe naît de ta première victoire — une séance, une ascension ou le QCM du Jour, et elle commence à monter.</p>';
+  const auj=H.length?H[H.length-1]:null;
+  if(!S.ar || !auj || (H.length===1 && !(auj.ft>0))){
+    inner='<h3>📈 Ton avancée</h3>'+
+      '<p style="font-size:12px;color:var(--muted);line-height:1.5">Ta courbe naît de ta première séance : chaque fiche travaillée la fait monter, matière par matière.</p>';
     cibles.forEach(e=>e.innerHTML=inner);
     return;
   }
-  /* si un seul jour : on ancre un zéro la veille pour qu'une ligne existe */
-  const pts=H.length===1?[{d:'',T:0,m:{Anatomie:0,Biologie:0,Chimie:0,Physique:0},sol:0},H[0]]:H.slice();
+  const pts=H.length===1?[{d:'',ft:0,f:{Anatomie:0,Biologie:0,Chimie:0,Physique:0}},auj]:H.slice();
   const W=320, HT=132, PL=8, PR=8, PT=10, PB=20;
-  const maxY=Math.max(20, ...pts.map(p=>p.T));
+  const val=p=>(p.ft||0);
+  const maxY=Math.max(4, ...pts.map(val));
   const X=i=>PL+(W-PL-PR)*(pts.length===1?1:i/(pts.length-1));
   const Y=v=>PT+(HT-PT-PB)*(1-v/maxY);
   const lisse=vals=>{
-    let d='M'+X(0).toFixed(1)+','+Y(vals[0]).toFixed(1);
+    let dd='M'+X(0).toFixed(1)+','+Y(vals[0]).toFixed(1);
     for(let i=1;i<vals.length;i++){
       const x0=X(i-1),y0=Y(vals[i-1]),x1=X(i),y1=Y(vals[i]),mx=((x0+x1)/2).toFixed(1);
-      d+=' C'+mx+','+y0.toFixed(1)+' '+mx+','+y1.toFixed(1)+' '+x1.toFixed(1)+','+y1.toFixed(1);
+      dd+=' C'+mx+','+y0.toFixed(1)+' '+mx+','+y1.toFixed(1)+' '+x1.toFixed(1)+','+y1.toFixed(1);
     }
-    return d;
+    return dd;
   };
-  const tot=pts.map(p=>p.T);
+  const tot=pts.map(val);
   const aire=lisse(tot)+' L'+X(pts.length-1).toFixed(1)+','+(HT-PB)+' L'+X(0).toFixed(1)+','+(HT-PB)+' Z';
   let svg='<svg viewBox="0 0 '+W+' '+HT+'" style="width:100%;display:block">';
   svg+='<defs><linearGradient id="pgrad" x1="0" y1="0" x2="0" y2="1">'+
@@ -3672,26 +3683,24 @@ function renderProgression(){
          '<text x="'+(W-PR)+'" y="'+(y-3)+'" text-anchor="end" style="font-size:8px;fill:rgba(107,70,193,.45);font-weight:800">'+Math.round(maxY*k)+'</text>'; });
   svg+='<path d="'+aire+'" fill="url(#pgrad)"/>';
   svg+='<path d="'+lisse(tot)+'" fill="none" stroke="#6B46C1" stroke-width="2.5" stroke-linecap="round"/>';
-  MATS.forEach(m=>{ const vals=pts.map(p=>(p.m&&p.m[m])||0);
+  MATS.forEach(m=>{ const vals=pts.map(pp=>(pp.f&&pp.f[m])||0);
     if(Math.max(...vals)>0) svg+='<path d="'+lisse(vals)+'" fill="none" stroke="'+COUL[m]+'" stroke-width="1.4" stroke-linecap="round" opacity=".85"/>'; });
   const xe=X(pts.length-1).toFixed(1), ye=Y(tot[tot.length-1]).toFixed(1);
   svg+='<circle cx="'+xe+'" cy="'+ye+'" r="4.5" fill="#6B46C1"/><circle cx="'+xe+'" cy="'+ye+'" r="7.5" fill="rgba(107,70,193,.22)"/>';
   const j0=pts[0].d?('J−'+(pts.length-1)):'départ';
   svg+='<text x="'+PL+'" y="'+(HT-6)+'" style="font-size:8.5px;fill:var(--muted);font-weight:800">'+j0+'</text>'+
-       '<text x="'+(W-PR)+'" y="'+(HT-6)+'" text-anchor="end" style="font-size:8.5px;fill:#6B46C1;font-weight:900">aujourd\'hui · '+fmtT(tot[tot.length-1])+' 🏆</text>';
+       '<text x="'+(W-PR)+'" y="'+(HT-6)+'" text-anchor="end" style="font-size:8.5px;fill:#6B46C1;font-weight:900">aujourd\'hui · '+tot[tot.length-1]+' fiche'+(tot[tot.length-1]>1?'s':'')+'</text>';
   svg+='</svg>';
-  /* la légende : valeur du jour + delta 7 jours par matière */
   const ref=H.length>7?H[H.length-8]:H[0];
   let leg='<div class="pg-leg">';
-  MATS.forEach(m=>{ const now=(H[H.length-1].m&&H[H.length-1].m[m])||0, av=(ref.m&&ref.m[m])||0, dl=now-av;
-    leg+='<span class="pg-chip"><i style="background:'+COUL[m]+'"></i>'+m.slice(0,4)+' <b>'+fmtT(now)+'</b>'+
-         (dl>0?' <em>+'+fmtT(dl)+'</em>':'')+'</span>'; });
-  const dT=(H[H.length-1].T-(ref.T||0));
-  leg+='</div><p class="pg-note">'+(dT>0?'+'+fmtT(dT)+' 🏆 sur 7 jours — ta courbe monte, reviens la nourrir demain.':'Ta courbe attend ta prochaine victoire.')+'</p>';
-  inner='<h3>📈 Ta progression</h3>'+svg+leg;
+  MATS.forEach(m=>{ const now=(auj.f&&auj.f[m])||0, av=(ref.f&&ref.f[m])||0, dl=now-av;
+    leg+='<span class="pg-chip"><i style="background:'+COUL[m]+'"></i>'+m.slice(0,4)+' <b>'+now+'</b>'+
+         (dl>0?' <em>+'+dl+'</em>':'')+'</span>'; });
+  const dF=(auj.ft||0)-((ref.ft)||0);
+  leg+='</div><p class="pg-note">'+(dF>0?'+'+dF+' fiche'+(dF>1?'s':'')+' travaillée'+(dF>1?'s':'')+' sur 7 jours — ta courbe monte, reviens la nourrir.':'Ta prochaine séance fait monter la courbe.')+'</p>';
+  inner='<h3>📈 Ton avancée</h3>'+svg+leg;
   cibles.forEach(e=>e.innerHTML=inner);
 }
-
 /* une fiche recommandée ne s'ouvre que si le Parcours l'a déjà servie (ou année complète) */
 function diagOuvrable(f){ return !!(S.stage || (S.vues && S.vues[f])); }
 function diagStats(){
