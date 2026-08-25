@@ -2949,7 +2949,16 @@ const AVATARS=[
   {id:'interne',    nom:'L\'Interne',       em:'🎖️', seuil:4600,  img:'img/profil/av-interne.png'},
   {id:'chef',       nom:'Chef de clinique', em:'🏛️', seuil:6400,  img:'img/profil/av-chef.png'},
   {id:'praticien',  nom:'Le Praticien',     em:'🎓', seuil:8600,  img:'img/profil/av-praticien.png'},
-  {id:'professeur', nom:'Le Professeur',    em:'👑', seuil:10000, img:'img/profil/av-professeur.png'}
+  {id:'professeur', nom:'Le Professeur',    em:'👑', seuil:10000, img:'img/profil/av-professeur.png'},
+  /* — les EXPLOITS : ces photos ne s'achètent pas en trophées, elles se gagnent — */
+  {id:'flamme',      nom:'La Flamme',       em:'🔥', img:'img/profil/av-flamme.png',
+   expl:'Série de 7 jours',  cond:function(){ return (S.streakMax||S.streak||0)>=7; }},
+  {id:'sansfaute',   nom:'Le Sans-faute',   em:'💯', img:'img/profil/av-sans-faute.png',
+   expl:'Une ascension 10/10', cond:function(){ return !!(S.ar&&S.ar.parfait); }},
+  {id:'marathonien', nom:'Le Marathonien',  em:'🏃', img:'img/profil/av-marathonien.png',
+   expl:'30 ascensions',     cond:function(){ return ((S.ar&&S.ar.runsDone)||0)>=30; }},
+  {id:'curieux',     nom:'Le Curieux',      em:'🤓', img:'img/profil/av-curieux.png',
+   expl:'20 fiches lues',    cond:function(){ return Object.keys(S.vues||{}).length>=20; }}
 ];
 const BANNIERES=[
   {id:'violet',  nom:'Violet Medeos',   seuil:0,     css:'linear-gradient(120deg,#3A2A66,#6B46C1)'},
@@ -2965,7 +2974,7 @@ const BANNIERES=[
   {id:'legende', nom:'La Légende',      seuil:10000, img:'img/profil/ban-legende.jpg', css:'linear-gradient(120deg,#4C2A85,#E29C5C)'}
 ];
 function skinTmax(){ return S.ar? Math.max(S.ar.Tmax||0, S.ar.T||0) : 0; }
-function skinOk(it){ return skinTmax()>=it.seuil; }
+function skinOk(it){ return it.cond ? !!it.cond() : skinTmax()>=it.seuil; }
 function avatarOf(){ const v=S.ar&&S.ar.skin&&S.ar.skin.av; return AVATARS.find(a=>a.id===v&&skinOk(a))||AVATARS[0]; }
 function banniereOf(){ const v=S.ar&&S.ar.skin&&S.ar.skin.ban; return BANNIERES.find(b=>b.id===v&&skinOk(b))||BANNIERES[0]; }
 /* fond d'une bannière : voile sombre (lisibilité) + image si dispo + dégradé en filet de sécurité */
@@ -3232,8 +3241,9 @@ function renderRoad(){
               : now ? '<span class="rtag n">Prochain palier</span>'
                     : '<span class="rtag l">À venir</span>';
     const gi2=GRADES.findIndex(g=>g[1]===s.n);
-    const JAL={'Première garde':'jalon-premiere-garde','Salle de garde':'jalon-salle-de-garde','Tour de salle':'jalon-tour-de-salle','Staff du matin':'jalon-staff','Salle d\'étude':'jalon-tour-de-salle','Ordre de mérite':'jalon-sommet'};
-    const jic=JAL[s.n]? '<img class="rji" src="img/icones/'+JAL[s.n]+'.png" alt="">' : s.em;
+    /* les blasons dédiés (Série L) remplissent le nœud comme les écussons de grade */
+    const JAL={'Première garde':'blason-premiere-garde','Salle d\'étude':'blason-salle-etude','Salle de garde':'blason-salle-de-garde','Tour de salle':'blason-tour-de-salle','Staff du matin':'blason-staff-matin'};
+    const jic=JAL[s.n]? '<img src="img/profil/'+JAL[s.n]+'.png" alt="" onerror="this.replaceWith(\''+s.em+'\')">' : s.em;
     const face=(got||now) ? (gi2>=0?'<img src="img/grade-'+(gi2+1)+'.png" alt="">':jic) : '<img class="ticn" src="img/icones/cadenas-medeos.png" alt="">';
     /* les récompenses de personnalisation gagnées à CE palier : photo de profil + bannière */
     let butin='';
@@ -3347,7 +3357,7 @@ function renderSkin(){
     return '<button class="sktile'+(on?' on':'')+(ok?'':' lock')+'" onclick="choisirSkin(\'av\',\''+a.id+'\')" aria-label="'+a.nom+'">'+
       '<span class="skem">'+a.em+'</span>'+
       '<img src="'+a.img+'"'+(a.fit==='zoom'?' class="zoom"':'')+' alt="" onerror="this.remove()">'+
-      (ok?'':'<span class="sklock">🔒<i>'+fmtT(a.seuil)+' 🏆</i></span>')+
+      (ok?'':'<span class="sklock">🔒<i>'+(a.expl||fmtT(a.seuil)+' 🏆')+'</i></span>')+
       '</button>';
   }).join('');
   document.getElementById('skin-bans').innerHTML=BANNIERES.map(bn=>{
@@ -3363,7 +3373,9 @@ function choisirSkin(type,id){
   const it=(type==='av'?AVATARS:BANNIERES).find(x=>x.id===id); if(!it) return;
   const note=document.querySelector('#sheet-skin .skin-note');
   if(!skinOk(it)){
-    if(note){ note.textContent='Encore '+fmtT(it.seuil-skinTmax())+' 🏆 pour débloquer « '+it.nom+' »';
+    if(note){ note.textContent = it.cond
+        ? 'À gagner : '+it.expl+' — pour débloquer « '+it.nom+' »'
+        : 'Encore '+fmtT(it.seuil-skinTmax())+' 🏆 pour débloquer « '+it.nom+' »';
       note.animate([{transform:'translateX(0)'},{transform:'translateX(-4px)'},{transform:'translateX(4px)'},{transform:'translateX(0)'}],{duration:240}); }
     return;
   }
@@ -3497,24 +3509,24 @@ function renderPick(){
    étape 3 : l'Arène se découvre. Jamais revu une fois fait (S.tuto). ═══ */
 const TUTOS={
   biblio:[
-    {img:'axo-mains',    t:"Bienvenue dans l'Univers Medeos ! Ici, c'est la <b>Bibliothèque</b> : fiches, panoramas et métiers de la santé — tout est en accès libre."},
-    {sel:'#rescards-free', t:"Chaque carte s'ouvre librement. Lis, referme, reviens — rien n'est chronométré, rien n'est noté."},
-    {sel:'#mainnav',     t:"En bas, les trois mondes : la <b>Bibliothèque</b>, ton <b>Parcours</b> de révision et l'<b>Arène</b>."},
-    {img:'axo-encourage', t:"Le Parcours et l'Arène s'ouvrent avec un compte gratuit — ta progression y est gardée pour de bon.",
+    {img:'axo-guide-bienvenue', t:"Bienvenue dans l'Univers Medeos ! Ici, c'est la <b>Bibliothèque</b> : fiches, panoramas et métiers de la santé — tout est en accès libre."},
+    {sel:'#rescards-free', img:'axo-guide-carte', t:"Chaque carte s'ouvre librement. Lis, referme, reviens — rien n'est chronométré, rien n'est noté."},
+    {sel:'#mainnav', img:'axo-guide-pointe-bas', t:"En bas, les trois mondes : la <b>Bibliothèque</b>, ton <b>Parcours</b> de révision et l'<b>Arène</b>."},
+    {img:'axo-guide-bravo', t:"Le Parcours et l'Arène s'ouvrent avec un compte gratuit — ta progression y est gardée pour de bon.",
      btn:"Découvrir le Parcours →", act:function(){ go('home'); }, skip:"Explorer la Bibliothèque d'abord"}
   ],
   home:[
-    {img:'axo-canon',   t:"Voici ton <b>Parcours</b> : deux fiches par jour, un rythme tenable, une méthode qui fait tenir les notions."},
-    {sel:'#seance',     t:"Ta <b>séance du jour</b> t'attend ici : lecture, rappel de mémoire, comparaison, puis QCM."},
-    {sel:'#pt-flame', img:'axo-fiche', t:"Chaque jour travaillé allonge ta série 🔥. Un oubli est pardonné — un seul."},
-    {img:'axo-encourage', t:"Tout ce que tu lis ici arme l'Arène. Bonne première séance !", btn:"C'est parti !"}
+    {img:'axo-guide-bienvenue', t:"Voici ton <b>Parcours</b> : deux fiches par jour, un rythme tenable, une méthode qui fait tenir les notions."},
+    {sel:'#seance', img:'axo-guide-pointe-haut', t:"Ta <b>séance du jour</b> t'attend ici : lecture, rappel de mémoire, comparaison, puis QCM."},
+    {sel:'#pt-flame', img:'axo-guide-pointe-haut', t:"Chaque jour travaillé allonge ta série 🔥. Un oubli est pardonné — un seul."},
+    {img:'axo-guide-bravo', t:"Tout ce que tu lis ici arme l'Arène. Bonne première séance !", btn:"C'est parti !"}
   ],
   arene:[
     {img:'mascotte-arene-prete-au-combat', t:"Bienvenue dans l'<b>Arène</b> ! Ici, tes réponses te font gagner des trophées 🏆 et grimper les grades."},
-    {sel:'#ar-cur',    t:"Quatre arènes, une par matière. Les flèches te font passer de l'une à l'autre."},
-    {sel:'#ar-start',  t:"Le bouton d'or lance une <b>ascension</b> : 10 questions de ton niveau. Chaque case se joue — bien jugée elle rapporte des trophées, mal jugée elle en coûte."},
-    {sel:'#ar-limite', t:"Tu as <b>3 ascensions par jour</b> — elles se rechargent chaque matin à 6 h."},
-    {img:'mascotte-arene-grade-franchi', t:"Premier objectif : <b>400 🏆</b>, le grade Primant. La Route des trophées t'attend. Bonne ascension !", btn:"Entrer dans l'Arène"}
+    {sel:'#ar-cur', img:'axo-guide-pointe-haut', t:"Quatre arènes, une par matière. Les flèches te font passer de l'une à l'autre."},
+    {sel:'#ar-start', img:'axo-guide-pointe-bas', t:"Le bouton d'or lance une <b>ascension</b> : 10 questions de ton niveau. Chaque case se joue — bien jugée elle rapporte des trophées, mal jugée elle en coûte."},
+    {sel:'#ar-limite', img:'axo-guide-pointe-bas', t:"Tu as <b>3 ascensions par jour</b> — elles se rechargent chaque matin à 6 h."},
+    {img:'axo-guide-bravo', t:"Premier objectif : <b>400 🏆</b>, le grade Primant. La Route des trophées t'attend. Bonne ascension !", btn:"Entrer dans l'Arène"}
   ]
 };
 let TU=null;
@@ -4153,9 +4165,23 @@ function seanceCredit(){
   else S.sjour=arDay();                       /* seule une séance du FIL consomme le jour */
   delete S.sr;                                 /* la séance finie n'est plus « en cours » */
   S.points=(S.points||0)+20; S.qcm=(S.qcm||0)+2;
-  if(!S.streak) S.streak=1;
+  majStreak();
   SR.credited=true;
   saveS();
+}
+/* ═══ LA SÉRIE 🔥 — un jour travaillé (séance OU ascension) = +1.
+   Un jour d'oubli est couvert par le bonus ; deux jours sans venir, elle repart à 1. ═══ */
+function _jourMoins(n){ const d=new Date(Date.now()-6*3600*1000); d.setDate(d.getDate()-n);
+  return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); }
+function majStreak(){
+  const auj=arDay();
+  if(S.stDay===auj){ return; }                                  /* déjà compté aujourd'hui */
+  if(S.stDay===_jourMoins(1) || S.stDay===_jourMoins(2)) S.streak=(S.streak||0)+1;  /* consécutif, ou un oubli pardonné */
+  else S.streak=1;
+  S.stDay=auj;
+  S.streakMax=Math.max(S.streakMax||0,S.streak);
+  saveS();
+  if(typeof renderPtop==='function') renderPtop();
 }
 function seanceFin(){
   const s=SR.s;
@@ -4917,6 +4943,8 @@ function closeRun(anticipee){
   let T=avant+dT;
   S.ar.T=T;
   S.ar.Tmax=Math.max(S.ar.Tmax||0,T);   /* meilleur total atteint : débloque photos et bannières */
+  if(run.ok>=RUN_LEN) S.ar.parfait=Date.now();   /* exploit : une ascension 10/10 */
+  if(run.lignes.length) majStreak();             /* une ascension jouée nourrit la série 🔥 */
   const gi=gradeIdx(T);
   S.ar.gold=Math.max(S.ar.gold, Math.floor(T/GOLD)*GOLD, GRADES[gi][0]);
   arAdd(arCourante(), T-avant);          /* les trophées vont à l'arène jouée : total = somme des 4 */
@@ -4949,6 +4977,12 @@ function closeRun(anticipee){
   ligne('Tes trophées',fmtT(T)+' 🏆','',true);
 
   const monte=gi>run.g0;
+  /* l'illustration du moment : grade franchi > belle ascension > ascension difficile > neutre */
+  { const il=document.getElementById('arend-axo');
+    if(il) il.src = monte ? 'img/moment-grade-franchi.png'
+                  : run.ok>=8 ? 'img/moment-ascension-reussie.png'
+                  : run.ok<4  ? 'img/moment-ascension-difficile.png'
+                  : 'img/app-noeud-valide.png'; }
   document.getElementById('arend-title').textContent = anticipee ? 'Ascension arrêtée' : (monte?'Grade franchi':'Ascension terminée');
   document.getElementById('arend-lead').textContent =
     anticipee ? 'On s\'arrête ici — ce que tu as joué est compté, rien n\'est perdu.'
