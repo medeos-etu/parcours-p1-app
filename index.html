@@ -3644,61 +3644,42 @@ function notionsEtat(){
 }
 /* ═══ LA COURBE DE PROGRESSION — le visuel signature : total en aire violette,
    les 4 matières en courbes fines colorées, sur les 14 derniers jours. ═══ */
+function totalFichesMat(){
+  const t={Anatomie:0,Biologie:0,Chimie:0,Physique:0};
+  if(typeof ABANK!=='undefined'){ const vu={};
+    ABANK.forEach(q=>{ if(!vu[q.f]){ vu[q.f]=1; t[q.mat]=(t[q.mat]||0)+1; } }); }
+  return t;
+}
+/* ═══ TON AVANCÉE — le diagramme qui S'ÉLARGIT : chaque fiche travaillée pousse
+   le point de sa matière vers le bord. La photo de la progression, d'un coup d'œil. ═══ */
 function renderProgression(){
   const cibles=['prog-home','prog-profil'].map(id=>document.getElementById(id)).filter(Boolean);
   if(!cibles.length) return;
   if(S.ar) histoSnap();
   const COUL={Anatomie:'#C05B4D',Biologie:'#2E7D53',Chimie:'#B8895A',Physique:'#3A5A9A'};
   const MATS=['Anatomie','Biologie','Chimie','Physique'];
-  const H=(S.histo||[]).slice(-14);
-  let inner;
-  const auj=H.length?H[H.length-1]:null;
-  if(!S.ar || !auj || (H.length===1 && !(auj.ft>0))){
-    inner='<h3>📈 Ton avancée</h3>'+
-      '<p style="font-size:12px;color:var(--muted);line-height:1.5">Ta courbe naît de ta première séance : chaque fiche travaillée la fait monter, matière par matière.</p>';
-    cibles.forEach(e=>e.innerHTML=inner);
-    return;
-  }
-  const pts=H.length===1?[{d:'',ft:0,f:{Anatomie:0,Biologie:0,Chimie:0,Physique:0}},auj]:H.slice();
-  const W=320, HT=132, PL=8, PR=8, PT=10, PB=20;
-  const val=p=>(p.ft||0);
-  const maxY=Math.max(4, ...pts.map(val));
-  const X=i=>PL+(W-PL-PR)*(pts.length===1?1:i/(pts.length-1));
-  const Y=v=>PT+(HT-PT-PB)*(1-v/maxY);
-  const lisse=vals=>{
-    let dd='M'+X(0).toFixed(1)+','+Y(vals[0]).toFixed(1);
-    for(let i=1;i<vals.length;i++){
-      const x0=X(i-1),y0=Y(vals[i-1]),x1=X(i),y1=Y(vals[i]),mx=((x0+x1)/2).toFixed(1);
-      dd+=' C'+mx+','+y0.toFixed(1)+' '+mx+','+y1.toFixed(1)+' '+x1.toFixed(1)+','+y1.toFixed(1);
-    }
-    return dd;
-  };
-  const tot=pts.map(val);
-  const aire=lisse(tot)+' L'+X(pts.length-1).toFixed(1)+','+(HT-PB)+' L'+X(0).toFixed(1)+','+(HT-PB)+' Z';
-  let svg='<svg viewBox="0 0 '+W+' '+HT+'" style="width:100%;display:block">';
-  svg+='<defs><linearGradient id="pgrad" x1="0" y1="0" x2="0" y2="1">'+
-       '<stop offset="0%" stop-color="rgba(107,70,193,.35)"/><stop offset="100%" stop-color="rgba(107,70,193,.02)"/></linearGradient></defs>';
-  [0.5,1].forEach(k=>{ const y=Y(maxY*k).toFixed(1);
-    svg+='<line x1="'+PL+'" y1="'+y+'" x2="'+(W-PR)+'" y2="'+y+'" stroke="rgba(107,70,193,.1)" stroke-dasharray="3 4"/>'+
-         '<text x="'+(W-PR)+'" y="'+(y-3)+'" text-anchor="end" style="font-size:8px;fill:rgba(107,70,193,.45);font-weight:800">'+Math.round(maxY*k)+'</text>'; });
-  svg+='<path d="'+aire+'" fill="url(#pgrad)"/>';
-  svg+='<path d="'+lisse(tot)+'" fill="none" stroke="#6B46C1" stroke-width="2.5" stroke-linecap="round"/>';
-  MATS.forEach(m=>{ const vals=pts.map(pp=>(pp.f&&pp.f[m])||0);
-    if(Math.max(...vals)>0) svg+='<path d="'+lisse(vals)+'" fill="none" stroke="'+COUL[m]+'" stroke-width="1.4" stroke-linecap="round" opacity=".85"/>'; });
-  const xe=X(pts.length-1).toFixed(1), ye=Y(tot[tot.length-1]).toFixed(1);
-  svg+='<circle cx="'+xe+'" cy="'+ye+'" r="4.5" fill="#6B46C1"/><circle cx="'+xe+'" cy="'+ye+'" r="7.5" fill="rgba(107,70,193,.22)"/>';
-  const j0=pts[0].d?('J−'+(pts.length-1)):'départ';
-  svg+='<text x="'+PL+'" y="'+(HT-6)+'" style="font-size:8.5px;fill:var(--muted);font-weight:800">'+j0+'</text>'+
-       '<text x="'+(W-PR)+'" y="'+(HT-6)+'" text-anchor="end" style="font-size:8.5px;fill:#6B46C1;font-weight:900">aujourd\'hui · '+tot[tot.length-1]+' fiche'+(tot[tot.length-1]>1?'s':'')+'</text>';
-  svg+='</svg>';
-  const ref=H.length>7?H[H.length-8]:H[0];
-  let leg='<div class="pg-leg">';
-  MATS.forEach(m=>{ const now=(auj.f&&auj.f[m])||0, av=(ref.f&&ref.f[m])||0, dl=now-av;
-    leg+='<span class="pg-chip"><i style="background:'+COUL[m]+'"></i>'+m.slice(0,4)+' <b>'+now+'</b>'+
-         (dl>0?' <em>+'+dl+'</em>':'')+'</span>'; });
-  const dF=(auj.ft||0)-((ref.ft)||0);
-  leg+='</div><p class="pg-note">'+(dF>0?'+'+dF+' fiche'+(dF>1?'s':'')+' travaillée'+(dF>1?'s':'')+' sur 7 jours — ta courbe monte, reviens la nourrir.':'Ta prochaine séance fait monter la courbe.')+'</p>';
-  inner='<h3>📈 Ton avancée</h3>'+svg+leg;
+  const ff=fichesFaites(), tt=totalFichesMat();
+  const cx=110, cy=96, RR=68;
+  const ang={Anatomie:-90,Biologie:0,Chimie:90,Physique:180};
+  const pt=(m,r)=>{ const a=ang[m]*Math.PI/180; return (cx+Math.cos(a)*r).toFixed(1)+','+(cy+Math.sin(a)*r).toFixed(1); };
+  const frac=m=>tt[m]? (ff.par[m]||0)/tt[m] : 0;
+  const poly=MATS.map(m=>pt(m,Math.max(0.05,frac(m))*RR)).join(' ');
+  const grille=[0.25,0.5,0.75,1].map(k=>'<polygon points="'+MATS.map(m=>pt(m,RR*k)).join(' ')+'" fill="none" stroke="rgba(107,70,193,.13)" stroke-width="1"/>').join('');
+  const axes=MATS.map(m=>{ const q=pt(m,RR).split(','); return '<line x1="'+cx+'" y1="'+cy+'" x2="'+q[0]+'" y2="'+q[1]+'" stroke="rgba(107,70,193,.13)"/>'; }).join('');
+  const sommets=MATS.map(m=>{ const q=pt(m,Math.max(0.05,frac(m))*RR).split(',');
+    return '<circle cx="'+q[0]+'" cy="'+q[1]+'" r="3.4" fill="'+COUL[m]+'"/>'; }).join('');
+  const labs='<text x="'+cx+'" y="'+(cy-RR-8)+'" text-anchor="middle" class="rlab" fill="'+COUL.Anatomie+'">Anatomie '+(ff.par.Anatomie||0)+'/'+tt.Anatomie+'</text>'+
+    '<text x="'+(cx+RR+6)+'" y="'+(cy+3)+'" text-anchor="start" class="rlab" fill="'+COUL.Biologie+'">Bio '+(ff.par.Biologie||0)+'/'+tt.Biologie+'</text>'+
+    '<text x="'+cx+'" y="'+(cy+RR+15)+'" text-anchor="middle" class="rlab" fill="'+COUL.Chimie+'">Chimie '+(ff.par.Chimie||0)+'/'+tt.Chimie+'</text>'+
+    '<text x="'+(cx-RR-6)+'" y="'+(cy+3)+'" text-anchor="end" class="rlab" fill="'+COUL.Physique+'">Physique '+(ff.par.Physique||0)+'/'+tt.Physique+'</text>';
+  const totF=Object.values(tt).reduce((a,b)=>a+b,0);
+  let inner='<h3>📈 Ton avancée</h3>'+
+    '<div style="display:flex;justify-content:center"><svg viewBox="0 0 220 200" style="width:230px;max-width:70vw">'+
+    grille+axes+
+    '<polygon points="'+poly+'" fill="rgba(107,70,193,.28)" stroke="#6B46C1" stroke-width="2.2" stroke-linejoin="round"/>'+
+    sommets+labs+'</svg></div>'+
+    '<p style="text-align:center;font-size:12.5px;font-weight:800;margin-top:2px">'+ff.tot+' fiche'+(ff.tot>1?'s':'')+' travaillée'+(ff.tot>1?'s':'')+' sur '+totF+'</p>'+
+    '<p class="pg-note">'+(ff.tot?'Chaque séance élargit ton diagramme — matière par matière, vers le bord.':'Ta première séance donne naissance à ton diagramme.')+'</p>';
   cibles.forEach(e=>e.innerHTML=inner);
 }
 /* une fiche recommandée ne s'ouvre que si le Parcours l'a déjà servie (ou année complète) */
@@ -3735,19 +3716,7 @@ function renderDiag(){
     e.innerHTML=x+'<p style="font-size:12px;color:var(--muted);line-height:1.5">Joue à l\'Éclair et à l\'Arène : ton radar des matières et tes priorités de révision apparaîtront ici.</p>';
     return;
   }
-  /* — le radar des 4 matières (SVG) — */
-  const cx=90, cy=78, RR=58;
-  const ang={Anatomie:-90,Biologie:0,Chimie:90,Physique:180};
-  const pt=(m,r)=>{ const a=ang[m]*Math.PI/180; return (cx+Math.cos(a)*r).toFixed(1)+','+(cy+Math.sin(a)*r).toFixed(1); };
-  const poly=MATS.map(m=>pt(m,Math.max(0.08,st[m].score)*RR)).join(' ');
-  const grille=[0.33,0.66,1].map(k=>'<polygon points="'+MATS.map(m=>pt(m,RR*k)).join(' ')+'" fill="none" stroke="rgba(107,70,193,.15)" stroke-width="1"/>').join('');
-  const axes=MATS.map(m=>'<line x1="'+cx+'" y1="'+cy+'" x2="'+pt(m,RR).split(',')[0]+'" y2="'+pt(m,RR).split(',')[1]+'" stroke="rgba(107,70,193,.15)"/>').join('');
-  const labs='<text x="'+cx+'" y="'+(cy-RR-7)+'" text-anchor="middle" class="rlab" fill="'+COUL.Anatomie+'">Anatomie</text>'+
-    '<text x="'+(cx+RR+7)+'" y="'+(cy+3)+'" text-anchor="start" class="rlab" fill="'+COUL.Biologie+'">Bio</text>'+
-    '<text x="'+cx+'" y="'+(cy+RR+14)+'" text-anchor="middle" class="rlab" fill="'+COUL.Chimie+'">Chimie</text>'+
-    '<text x="'+(cx-RR-7)+'" y="'+(cy+3)+'" text-anchor="end" class="rlab" fill="'+COUL.Physique+'">Physique</text>';
-  x+='<div style="display:flex;justify-content:center"><svg viewBox="0 0 180 160" style="width:200px;max-width:60vw">'+grille+axes+
-     '<polygon points="'+poly+'" fill="rgba(107,70,193,.25)" stroke="#6B46C1" stroke-width="2" stroke-linejoin="round"/>'+labs+'</svg></div>';
+  /* (le radar vit dans « Ton avancée » — ici : priorité et réussite) */
   /* — la matière à prioriser — */
   const jouees=MATS.filter(m=>st[m].joue);
   const prio=(jouees.length?jouees:MATS).slice().sort((a,b)=>st[a].score-st[b].score)[0];
