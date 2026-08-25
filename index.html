@@ -847,6 +847,9 @@
   .mj-row.coffre.ok{background:linear-gradient(90deg,rgba(252,211,77,.22),rgba(226,156,92,.08))}
   .mj-row.coffre .mj-c{background:none;font-size:15px}
 
+  /* — la vignette d'avancée (coin du Parcours) — */
+  .mini-rad{width:38px;height:38px;border:none;background:none;padding:0;cursor:pointer;flex-shrink:0;display:block}
+
   /* — la courbe de progression — */
   .pg-leg{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
   .pg-chip{display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:800;color:#3A3730;
@@ -1760,6 +1763,7 @@
     <header class="ptop">
       <span class="pavatar"><img src="img/axo-canon.png" alt=""></span>
       <div class="ptxt"><b id="pt-hello">Ton entraînement</b><span>Ta préparation P1</span></div>
+      <button class="mini-rad" id="mini-rad" onclick="go('profil')" title="Ton avancée" aria-label="Ton avancée"></button>
       <span class="pflame" id="pt-flame" hidden style="cursor:pointer" onclick="toggleFlamme(event)">🔥 1 j</span>
       <div class="flampop" id="flamme-pop" hidden onclick="event.stopPropagation()">
         <b id="fp-titre">Ta série</b>
@@ -1773,7 +1777,6 @@
 
     <div class="card qjcard" id="qj-home"></div>
 
-    <div class="card" id="prog-home"></div>
 
 
 
@@ -3653,8 +3656,9 @@ function totalFichesMat(){
 /* ═══ TON AVANCÉE — le diagramme qui S'ÉLARGIT : chaque fiche travaillée pousse
    le point de sa matière vers le bord. La photo de la progression, d'un coup d'œil. ═══ */
 function renderProgression(){
-  const cibles=['prog-home','prog-profil'].map(id=>document.getElementById(id)).filter(Boolean);
-  if(!cibles.length) return;
+  const cibles=['prog-profil'].map(id=>document.getElementById(id)).filter(Boolean);
+  const mini=document.getElementById('mini-rad');
+  if(!cibles.length && !mini) return;
   if(S.ar) histoSnap();
   const COUL={Anatomie:'#C05B4D',Biologie:'#2E7D53',Chimie:'#B8895A',Physique:'#3A5A9A'};
   const MATS=['Anatomie','Biologie','Chimie','Physique'];
@@ -3681,6 +3685,14 @@ function renderProgression(){
     '<p style="text-align:center;font-size:12.5px;font-weight:800;margin-top:2px">'+ff.tot+' fiche'+(ff.tot>1?'s':'')+' travaillée'+(ff.tot>1?'s':'')+' sur '+totF+'</p>'+
     '<p class="pg-note">'+(ff.tot?'Chaque séance élargit ton diagramme — matière par matière, vers le bord.':'Ta première séance donne naissance à ton diagramme.')+'</p>';
   cibles.forEach(e=>e.innerHTML=inner);
+  /* la vignette du coin : le même diagramme, miniature, cliquable vers le profil */
+  if(mini){
+    const mpt=(m,r)=>{ const a=ang[m]*Math.PI/180; return (30+Math.cos(a)*r).toFixed(1)+','+(30+Math.sin(a)*r).toFixed(1); };
+    const mpoly=MATS.map(m=>mpt(m,Math.max(0.08,frac(m))*24)).join(' ');
+    const mgr=[0.5,1].map(kk=>'<polygon points="'+MATS.map(m=>mpt(m,24*kk)).join(' ')+'" fill="none" stroke="rgba(107,70,193,.22)" stroke-width="1"/>').join('');
+    mini.innerHTML='<svg viewBox="0 0 60 60" style="width:100%;height:100%">'+mgr+
+      '<polygon points="'+mpoly+'" fill="rgba(107,70,193,.32)" stroke="#6B46C1" stroke-width="1.6" stroke-linejoin="round"/></svg>';
+  }
 }
 /* une fiche recommandée ne s'ouvre que si le Parcours l'a déjà servie (ou année complète) */
 function diagOuvrable(f){ return !!(S.stage || (S.vues && S.vues[f])); }
