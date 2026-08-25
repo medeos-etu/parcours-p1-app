@@ -2002,13 +2002,11 @@
           <div class="bat" id="ar-start-t">ENTRER DANS L'ARÈNE</div>
           <div class="bas" id="ar-start-s">2 ascensions restantes</div>
         </button>
-        <button class="sidepan" id="ar-rankbtn" onclick="openSheet('sheet-rank')"><span class="spi"><img src="img/icones/icone-classement.png" alt="" onerror="this.replaceWith('📊')"></span><span class="spl">Rang</span></button>
       </div>
 
       <div class="sidecol">
         <div class="card qjcard" id="qj-arene"></div>
         <div class="card qjcard" id="ec-entree"></div>
-        <div class="card" id="ar-sideacc" style="display:none"></div>
         <div class="card" id="ar-stagecard" style="display:none;border:1px solid var(--tung)">
           <p style="font-size:12.5px;font-weight:800">Tes ascensions du jour sont faites. 👏</p>
           <p style="font-size:11.5px;color:var(--muted);line-height:1.55;margin-top:3px">Avec l'année complète Medeos, les ascensions sont illimitées.</p>
@@ -2177,7 +2175,7 @@
         <span class="pv"><span class="pg" id="a-pot-g">+20</span><span style="color:var(--line);font-weight:600">/</span><span class="pl" id="a-pot-l">−20</span></span>
         <span class="pr" id="a-pot-r"></span>
       </div>
-      <button class="whyq" id="a-why" onclick="toggleWhy()">Pourquoi cette question ?</button>
+
       <div class="whybox" id="a-whybox" style="display:none"></div>
       <p class="q-note">Sélectionne la ou les propositions exactes, puis vérifie.</p>
       <div class="items" id="a-items"></div>
@@ -3473,19 +3471,12 @@ const ABANK=[
 
 ];
 
-/* ================= L'ASCENSION (Arène) — moteur v3.1 (25/08/2026) =================
-   Deux compteurs : R = niveau estimé (Elo interne, départ 1000, jamais montré comme un rang)
-                    T = trophées (route de carrière, plancher définitif, ne se réinitialise jamais)
-   Pot : E = 1/(1+10^((D−R)/400)) · G = clamp(round(40×(1−E)),8,32) · L = 40 − G
-   BARÈME PAR CASE (v4) : chaque item bien jugé rapporte +gU (=G/5), chaque item mal jugé coûte
-   −lU (=max(1,5·gU ; L/5·bande)) — le ratio 1,5 rend le hasard perdant (simulation longue durée).
-   Cocher les 5 cases n'est jamais une réponse (aucune question n'a 5 items vrais) : non compté.
-   Elo en score fractionnel : Sc = nOk/5.
-   Modulateurs : calibration (20 premières) = perte 0 ET seul le sans-faute encaisse ·
-   perte ×0,70/0,85/1 selon la bande de grade · bonus de série +2 (plafond +16/+8) ·
-   anti-lecture <3 s = rien compté ni mesuré · aucun bonus de vitesse, jamais.
-   Clôture : ΔT = Σ + série ; garantie 6 sans-faute/10 ; plancher −60 ; planchers de grade et paliers dorés.
-   Rien n'est exposé en notice : le pot s'annonce sous l'énoncé, le décompte se montre après. */
+/* ================= L'ASCENSION (Arène) — moteur v5 (25/08/2026) =================
+   FORMAT : 5 QCM d'une minute, uniquement sur les fiches déjà travaillées dans le Parcours.
+   BARÈME FIXE, sans statistique inventée : +2 🏆 par case bien jugée, −2 🏆 par case fausse.
+   Une ascension va donc de −50 à +50 🏆 ; deux ascensions par jour, donc ±100 au maximum.
+   Les trophées ne descendent jamais sous zéro et ne se remettent jamais à zéro.
+   R (niveau interne) continue d'exister pour ordonner le tirage, mais n'est JAMAIS montré. */
 
 const GRADES=[[0,'Aspirant','🩺'],[400,'Primant','📗'],[1000,'Carabin','⭐'],[1900,'Externe','🏥'],
               [3100,'Externe des hôpitaux','🚑'],[4600,'Interne','🎖️'],[6400,'Chef de clinique','🏛️'],
@@ -4238,10 +4229,19 @@ function renderCurArena(){
     if(areneArmee(a.k) && !dispo){ bt.textContent='BIENTÔT'; bs.textContent='cette arène ouvre plus tard'; bb.disabled=true; }
     else if(!areneArmee(a.k)){ }
     else if(!S.stage && S.ar.runs<=0){ bt.textContent='REVIENS DEMAIN'; bs.textContent='tes '+RUN_PER_DAY+' ascensions du jour sont faites'; bb.disabled=true; }
-    else if(!S.ar.runsDone){ bt.innerHTML='<img src="img/icones/nav-arene.png" alt=""> COMBATTRE'; bs.textContent='ta première ascension — pendant la calibration, impossible de perdre'; bb.disabled=false; }
-    else { bt.innerHTML='<img src="img/icones/nav-arene.png" alt=""> COMBATTRE';
-      bs.textContent='10 questions dans '+a.nom+' — viens chercher tes trophées';
-      bb.disabled=false; }
+    else {
+      /* la taille réelle de la prochaine ascension, et l'état du stock */
+      const arm=(typeof fichesArmees==='function')?fichesArmees():{};
+      const banque=ABANK.filter(q=>q.mat===a.k && arm[q.f]);
+      const now2=Date.now();
+      const neuves=banque.filter(q=>!S.ar.seen[q.id] || (now2-S.ar.seen[q.id])>REVU_J*864e5).length;
+      const taille=Math.min(RUN_LEN,banque.length);
+      bt.innerHTML='<img src="img/icones/nav-arene.png" alt=""> COMBATTRE';
+      bs.textContent = neuves<taille
+        ? taille+' QCM dans '+a.nom+' — tu vas recroiser des questions déjà vues, ton Parcours en ouvrira d\'autres'
+        : taille+' QCM d\'une minute dans '+a.nom+' — viens chercher tes trophées';
+      bb.disabled=false;
+    }
     /* pont sobre vers les stages : uniquement quand les ascensions du jour sont épuisées */
     const sc=document.getElementById('ar-stagecard');
     if(sc) sc.style.display=(!S.stage && S.ar.runs<=0)?'block':'none';
@@ -6053,7 +6053,9 @@ function pickQuestions(){
   const LEN=Math.min(RUN_LEN,BANK.length);
   if(LEN<2) return [];
   let dispo=BANK.filter(q=>!S.ar.seen[q.id] || (now-S.ar.seen[q.id])>REVU_J*864e5);
-  if(dispo.length<LEN){ BANK.forEach(q=>{ delete S.ar.seen[q.id]; }); saveS(); dispo=BANK.slice(); }
+  /* stock épuisé : on recycle (revoir n'est pas grave), mais l'app le DIT au lieu de faire semblant */
+  S.ar._recycle = dispo.length<LEN;
+  if(S.ar._recycle){ BANK.forEach(q=>{ delete S.ar.seen[q.id]; }); saveS(); dispo=BANK.slice(); }
   const out=[], used={};
   const add=(q,slot)=>{ out.push({q:q,slot:slot}); used[q.id]=1; };
   const jeune=q=>qM(q)<CAL_M;
@@ -6137,27 +6139,15 @@ function showAQ(){
   segs('asegs',run.qs.length,run.i+1);
   document.getElementById('a-count').textContent='Question '+(run.i+1)+' / '+run.qs.length;
   document.getElementById('a-meta').innerHTML='<span class="pmat">'+q.mat+'</span><span>'+q.n+'</span>'+
-    (cur.slot==='défi'||cur.slot==='révision'?'<span class="pslot">'+cur.slot+'</span>':'')+
+
     (q.f?'<span class="pfiche">📄 De ta fiche « '+(TITRES_FICHES[q.f]||q.n)+' »</span>':'');
   document.getElementById('a-enonce').textContent=q.q;
-  /* ⭐ le badge de pot, sous l'énoncé, AVANT la réponse — les extrêmes réellement encaissables */
-  const gAff = run.boost ? Math.round(P.Gmax*BOOST_MULT) : P.Gmax;
-  document.getElementById('a-pot-g').textContent='+'+gAff;
-  document.getElementById('a-pot-l').textContent=P.Lmax?('−'+P.Lmax):'−0';
+  /* le barème, annoncé simplement : identique pour toutes les questions, aucune statistique inventée */
   const gUAff = run.boost ? Math.round(P.gU*BOOST_MULT) : P.gU;
-  let raison = 'Chaque case bien jugée : +'+gUAff+' 🏆'+(P.lU?(' · chaque case fausse : −'+P.lU+' 🏆'):' · rien à perdre')+'. ';
-  raison += P.jeune
-    ? 'Difficulté estimée '+stars(P.D)+' — question en calibration, enjeu réduit de moitié.'
-    : 'Difficulté '+stars(P.D)+' — le pot est calculé pour ton niveau.';
-  if(P.cal) raison+=' Calibration '+Math.min(CAL_N,S.ar.n+1)+'/'+CAL_N+' — tu ne peux rien perdre, et seul le sans-faute encaisse.';
-  else if(bande()<1) raison+=' Perte allégée à ton grade.';
-  if(run.boost) raison+=' Retour en douceur : gains ×1,5.';
-  document.getElementById('a-pot-r').textContent=raison;
-  document.getElementById('a-whybox').style.display='none';
-  document.getElementById('a-whybox').innerHTML='<b>'+q.mat+' · '+q.n+'</b><br>Difficulté apprise : '+stars(P.D)+
-    ' ('+(P.m>=CAL_M?P.m+' réponses reçues':'seulement '+P.m+' réponses — pot réduit')+')<br>'+
-    'Ta probabilité estimée de la réussir : '+Math.round(P.p*100)+' %<br>Slot occupé : '+cur.slot+
-    ' — le mix est le même à chaque ascension : 6 à ton niveau, 2 d\'échauffement, 1 difficile, 1 révision.';
+  document.getElementById('a-pot-g').textContent='+'+(gUAff*5);
+  document.getElementById('a-pot-l').textContent='−'+(P.lU*5);
+  document.getElementById('a-pot-r').textContent='+'+gUAff+' 🏆 par case bien jugée · −'+P.lU+' 🏆 par case fausse.'+(run.boost?' Retour en douceur : gains ×1,5.':'');
+  { const w=document.getElementById('a-whybox'); if(w){ w.style.display='none'; w.innerHTML=''; } }
   const box=document.getElementById('a-items'); box.innerHTML='';
   q.it.forEach((it,idx)=>{
     const b=document.createElement('button'); b.className='item aq';
@@ -6199,7 +6189,7 @@ function aCheck(timeout){
   const vite = !timeout && (Date.now()-run.t0)<ANTI_READ && cur.slot!=='révision';
   /* v3.1 — pertes PAR CASE, gains par palier : sans-faute = pot entier · 4/5 = moitié du pot · ≤3/5 = rien.
      Pourquoi le palier : avec un gain linéaire par case, cocher tout à l'aveugle rapportait (3-4 items
-     vrais par question). Calibration : seul le sans-faute encaisse, et rien ne se perd.
+     vrais par question).
      Temps écoulé : aucune case créditée, perte maximale. Anti-lecture (<3 s) : RIEN n'est compté ni mesuré. */
   let nOk=0;
   document.querySelectorAll('#a-items .item').forEach((b,idx)=>{
@@ -6254,8 +6244,7 @@ function aCheck(timeout){
     const gTot=timeout?0:nOk*gUP;
     const lTot=(timeout?5:(5-nOk))*P.lU;
     d=gTot-lTot;
-    if(P.cal) note='Calibration '+Math.min(CAL_N,S.ar.n)+'/'+CAL_N+' — chaque case juste rapporte, aucune ne coûte.';
-    else if(!juste && !timeout) note=nOk+' case'+(nOk>1?'s':'')+' bien jugée'+(nOk>1?'s':'')+' : +'+(nOk*gUP)+' 🏆 · '+(5-nOk)+' fausse'+((5-nOk)>1?'s':'')+' : −'+((5-nOk)*P.lU)+' 🏆.';
+    if(!juste && !timeout) note=nOk+' case'+(nOk>1?'s':'')+' bien jugée'+(nOk>1?'s':'')+' : +'+(nOk*gUP)+' 🏆 · '+(5-nOk)+' fausse'+((5-nOk)>1?'s':'')+' : −'+((5-nOk)*P.lU)+' 🏆.';
     if(juste){ run.serie++; if(run.serie>=2 && run.bonus<capSerie()) run.bonus=Math.min(capSerie(),run.bonus+STREAK_STEP); }
     else run.serie=0;
   }
@@ -6318,13 +6307,10 @@ function closeRun(anticipee){
   stopChrono();
   const brut=run.som+run.bonus;
   let dT=brut, garantie=false, plafond=false;
-  if(run.ok>=GUARANTEE && dT<0){ dT=0; garantie=true; }
-  if(dT<RUN_FLOOR){ dT=RUN_FLOOR; plafond=true; }
   const avant=S.ar.T;
-  /* le total = la somme des 4 arènes ; on protège le plancher de grade ET le zéro de l'arène jouée */
-  const plancher=Math.max(GRADES[gradeIdx(avant)][0], S.ar.gold);
-  const dAvantPlancher=dT;                     /* mémorisé pour afficher la ligne « plancher » si le clamp joue */
-  dT=Math.max(dT, plancher-avant, -arT(arCourante()));
+  /* le compte est transparent : la somme des cases. On ne descend simplement jamais sous zéro. */
+  const dAvantPlancher=dT;
+  dT=Math.max(dT, -avant, -arT(arCourante()));
   let T=avant+dT;
   S.ar.T=T;
   S.ar.Tmax=Math.max(S.ar.Tmax||0,T);   /* meilleur total atteint : débloque photos et bannières */
