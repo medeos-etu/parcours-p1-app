@@ -5179,7 +5179,9 @@ function seanceFin(){
    Les notions ratées deviennent une séance complète (lecture → rappel → comparaison → questions).
    Elle ne consomme PAS la séance du jour : réparer ses erreurs est toujours permis. */
 function preparerRevision(){
-  const er=S.lastErrs||[];
+  /* règle du fil : on ne répare que sur des fiches DÉJÀ débloquées par le Parcours —
+     les erreurs sur des fiches jamais servies vont au diagnostic et à la révision espacée */
+  const er=(S.lastErrs||[]).filter(e=>typeof diagOuvrable==='function' && diagOuvrable(e.f));
   if(!er.length){ go('home'); return; }
   const fiches=er.slice(0,2).map(e=>e.f);
   S.revN=(S.revN||0)+1;
@@ -5994,18 +5996,23 @@ function closeRun(anticipee){
   /* diagnostic → Bibliothèque */
   const par={}; run.errs.forEach(q=>{ par[q.n]=par[q.n]||{mat:q.mat,c:0,f:q.f}; par[q.n].c++; });
   const noms=Object.keys(par), box=document.getElementById('arend-diag'); box.innerHTML='';
+  { const reparables=(S.lastErrs||[]).filter(e=>typeof diagOuvrable==='function' && diagOuvrable(e.f)).length;
+    ['arend-diagbtn','arend-trainbtn'].forEach(id=>{ const b2=document.getElementById(id); if(b2) b2.style.display=reparables?'':'none'; }); }
   if(noms.length){
     document.getElementById('arend-diagtitle').textContent='Tes erreurs portent sur';
     noms.sort((a,b)=>par[b].c-par[a].c).forEach(nm=>{
       const d=document.createElement('div'); d.className='diagrow';
       d.style.cursor='pointer';
+      const libre=par[nm].f && typeof diagOuvrable==='function' && diagOuvrable(par[nm].f);
       d.innerHTML='<div class="dn"><span class="dm">'+par[nm].mat+'</span>'+nm+'</div>'+
-        '<span class="dc" style="color:var(--violet);font-weight:800">📄 la fiche</span>';
-      if(par[nm].f) d.onclick=()=>openFiche(par[nm].f);
+        (libre?'<span class="dc" style="color:var(--violet);font-weight:800">📄 la fiche</span>':'');
+      if(!libre) d.style.cursor='default';
+      if(libre) d.onclick=()=>openFiche(par[nm].f);
       box.appendChild(d);
     });
     document.getElementById('arend-diagbtn').textContent='Travailler ces notions dans le Parcours';
-    document.getElementById('arend-trainbtn').style.display = run.ok<6 ? 'block' : 'none';
+    { const reparables=(S.lastErrs||[]).filter(e=>typeof diagOuvrable==='function' && diagOuvrable(e.f)).length;
+      document.getElementById('arend-trainbtn').style.display = (reparables && run.ok<6) ? 'block' : 'none'; }
   } else {
     document.getElementById('arend-diagtitle').textContent='Rien à reprendre';
     const d=document.createElement('div'); d.className='diagrow';
