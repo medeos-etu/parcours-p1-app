@@ -774,6 +774,22 @@
     background:linear-gradient(90deg,transparent,rgba(252,211,77,.16),transparent);animation:lbshine 3.4s ease-in-out infinite}
   @keyframes lbshine{0%,55%{left:-60%}100%{left:130%}}
 
+  /* — L'Éclair : vrai/faux minute — */
+  .ec-time{margin-left:auto;font-variant-numeric:tabular-nums;font-weight:900;font-size:13px}
+  .ec-barbox{height:6px;border-radius:99px;background:rgba(107,70,193,.12);overflow:hidden;margin:4px 0 12px}
+  .ec-barbox i{display:block;height:100%;width:100%;background:linear-gradient(90deg,#FCD34D,#E29C5C);transition:width 1s linear}
+  .ec-btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+  .ec-vrai,.ec-faux{border:none;cursor:pointer;font-family:Fredoka,Inter,sans-serif;font-weight:700;font-size:18px;
+    padding:18px;border-radius:16px;color:#fff}
+  .ec-vrai{background:linear-gradient(180deg,#4CAF7D,#2E7D53);box-shadow:0 3px 0 #1F5A3A}
+  .ec-faux{background:linear-gradient(180deg,#E07B6A,#C05B4D);box-shadow:0 3px 0 #8F4237}
+  .ec-vrai:active,.ec-faux:active{transform:translateY(2px);box-shadow:none}
+  #ec-card.okf{animation:ecok .3s ease}
+  #ec-card.kof{animation:ecko .3s ease}
+  @keyframes ecok{0%{box-shadow:0 0 0 3px rgba(46,125,83,.5)}100%{box-shadow:none}}
+  @keyframes ecko{0%{box-shadow:0 0 0 3px rgba(192,91,77,.45)}100%{box-shadow:none}}
+  .ec-combo{color:#B87A33;font-weight:900}
+
   /* — le QCM du Jour : la porte de 90 secondes — */
   .qjcard{padding:10px 12px}
   .qj-row{display:flex;align-items:center;gap:10px;cursor:pointer}
@@ -1325,7 +1341,7 @@
   @keyframes respire2{0%,100%{transform:scale(1)}50%{transform:scale(1.013)}}
   .seance{position:relative;background:var(--card);border:1px solid rgba(107,70,193,.30);border-radius:20px;
     padding:20px 18px 18px;box-shadow:0 10px 26px rgba(26,26,46,.09);animation:respire2 3s ease-in-out infinite;overflow:hidden}
-  .seance .se-axo{position:absolute;right:8px;bottom:4px;height:88px;opacity:.95;pointer-events:none}
+  .seance .se-axo{cursor:pointer;position:absolute;right:8px;bottom:4px;height:88px;opacity:.95;pointer-events:none}
   .se-sur{font-size:11px;font-weight:900;letter-spacing:.12em;color:var(--violet);text-transform:uppercase}
   .se-titre{font-size:24px;font-weight:900;letter-spacing:-.02em;line-height:1.18;margin-top:6px;max-width:85%}
   .se-ligne{font-size:13px;color:var(--muted);line-height:1.5;margin-top:7px;max-width:85%}
@@ -1905,6 +1921,9 @@
 
       <div class="sidecol">
         <div class="card qjcard" id="qj-arene"></div>
+        <div class="card qjcard">
+          <div class="qj-row" onclick="startEclair()"><span class="qj-ic">⚡</span><div class="qj-bd"><b>L'Éclair</b><span>60 secondes de vrai/faux — combo, record, trophées à la première partie du jour</span></div><span class="qj-go">Jouer</span></div>
+        </div>
         <div class="card" id="mj-arene"></div>
         <div class="card" id="ar-sideacc" style="display:none"></div>
         <div class="card" id="ar-stagecard" style="display:none;border:1px solid var(--tung)">
@@ -1993,6 +2012,22 @@
         <p style="font-size:12.5px;color:var(--muted);line-height:1.6;margin-top:6px" id="quit-txt">Elle s'arrête ici : les questions déjà jouées comptent, celles qui restent sont perdues.</p>
         <button class="btn" style="margin-top:14px" onclick="closeSheet('sheet-quit')">Continuer l'ascension</button>
         <button class="btn ghost" style="margin-top:8px" id="quit-btn" onclick="closeSheet('sheet-quit');closeRun(true)">Quitter — je garde mes points joués</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ FENÊTRE : ton compagnon (la mascotte a un nom et une humeur) ═══ -->
+  <div class="modal" id="sheet-axo" onclick="if(event.target===this)closeSheet('sheet-axo')">
+    <div class="sheet" style="max-width:390px">
+      <div class="sheet-b" style="text-align:center;padding:20px 18px 18px">
+        <img id="axo-img" src="img/axo-mains.png" alt="" style="height:104px;display:block;margin:0 auto 8px" onerror="this.remove()">
+        <p id="axo-nom-t" style="font-family:Fredoka,Inter,sans-serif;font-size:18px;font-weight:600"></p>
+        <p id="axo-etat" style="font-size:12.5px;color:var(--muted);line-height:1.6;margin-top:6px"></p>
+        <div style="display:flex;gap:7px;margin-top:14px">
+          <input class="field" id="axo-nom-inp" placeholder="Son nom (ex : Axo, Plume, Doc…)" maxlength="14" style="flex:1;margin:0">
+          <button class="btn small" onclick="axoRenommer()">C'est son nom</button>
+        </div>
+        <p style="font-size:10.5px;color:var(--muted);margin-top:8px">Ton compagnon suit ta préparation — il grandira avec toi.</p>
       </div>
     </div>
   </div>
@@ -2228,6 +2263,34 @@
     </div>
   </section>
 
+  <!-- ======= L'ÉCLAIR : 60 secondes de vrai/faux ======= -->
+  <section class="scr nonav" id="eclair">
+    <div class="lect-top"><button class="x" onclick="quitterEclair()" aria-label="Quitter">←</button><b style="font-size:14px;font-weight:800">⚡ L'Éclair</b><span class="ec-time" id="ec-time">60 s</span></div>
+    <div class="ec-barbox"><i id="ec-bar"></i></div>
+    <div id="ec-jeu">
+      <div class="card" id="ec-card" style="text-align:center">
+        <span class="pmat" id="ec-mat"></span>
+        <p id="ec-item" style="font-size:15px;font-weight:700;line-height:1.5;margin:12px 0 4px;min-height:88px"></p>
+        <p style="font-size:11px;color:var(--muted)">Score <b id="ec-score">0</b> <span id="ec-combo" class="ec-combo"></span></p>
+      </div>
+      <div class="ec-btns">
+        <button class="ec-vrai" onclick="ecRep(true)">VRAI</button>
+        <button class="ec-faux" onclick="ecRep(false)">FAUX</button>
+      </div>
+      <p style="font-size:10.5px;color:var(--muted);text-align:center;margin-top:10px">Juge chaque affirmation — c'est exactement le geste de l'Arène.</p>
+    </div>
+    <div id="ec-fin" style="display:none">
+      <div class="card" style="text-align:center">
+        <img src="img/moment-ascension-reussie.png" alt="" style="height:96px;margin:0 auto 8px;display:block" onerror="this.remove()">
+        <p style="font-family:Fredoka,Inter,sans-serif;font-size:18px;font-weight:600">Temps écoulé !</p>
+        <p id="ec-fin-s" style="font-size:12.5px;margin-top:6px;font-weight:800"></p>
+        <p id="ec-fin-r" style="font-size:11.5px;color:var(--muted);margin-top:6px;line-height:1.5"></p>
+        <button class="btn" style="margin-top:12px" onclick="startEclair()">Rejouer</button>
+        <button class="btn ghost" style="margin-top:8px" onclick="quitterEclair()">Retour à l'Arène</button>
+      </div>
+    </div>
+  </section>
+
   <!-- ======= L'AGENDA DES J ======= -->
   <section class="scr nonav" id="agenda">
     <div class="lect-top"><button class="x" onclick="go('biblio')" aria-label="Retour">←</button><b style="font-size:14px;font-weight:800">⏰ L'Agenda des J</b></div>
@@ -2318,7 +2381,7 @@
 <script>
 /* ================= Navigation & état ================= */
 const TABS=['home','arene','biblio','social','etapes','profil'];
-const BG_DE={arene:'arene',arun:'arene',argrade:'arene',arend:'arene',
+const BG_DE={arene:'arene',arun:'arene',argrade:'arene',arend:'arene',eclair:'arene',
   biblio:'biblio',agenda:'biblio',social:'social'};   /* tout le reste = ambiance Parcours */
 function setBg(id){
   /* la porte gère seule son image de fond (gate-tease) : aucune ambiance d'univers en plus */
@@ -3778,6 +3841,95 @@ function tutoEnd(){
   if(flTemp && typeof renderPtop==='function') renderPtop();   /* la flamme reprend son état réel */
 }
 
+/* ═══ L'ÉCLAIR — 60 secondes de vrai/faux. Un item à la fois : le réservoir,
+   c'est TOUS les items de la banque (210 questions × 5 = plus de 1 000 affirmations).
+   La première partie du jour rapporte (1 🏆 par bonne réponse, plafonné à 15) ;
+   ensuite on joue pour le record. ═══ */
+let EC=null, ecTimer=null;
+function ecPool(){
+  const out=[];
+  ABANK.forEach(q=>q.it.forEach(it=>out.push({t:it[1], v:!!it[2], mat:q.mat})));
+  return out;
+}
+function startEclair(){
+  const pool=ecPool();
+  for(let i=pool.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [pool[i],pool[j]]=[pool[j],pool[i]]; }
+  EC={pool:pool,i:0,score:0,combo:0,maxCombo:0,left:60,fini:false};
+  document.getElementById('ec-jeu').style.display='block';
+  document.getElementById('ec-fin').style.display='none';
+  const b=document.getElementById('ec-bar'); if(b) b.style.width='100%';
+  const t=document.getElementById('ec-time'); if(t) t.textContent='60 s';
+  go('eclair'); ecShow(); son('go');
+  clearInterval(ecTimer);
+  ecTimer=setInterval(()=>{
+    if(!EC||EC.fini) return;
+    EC.left--;
+    const b2=document.getElementById('ec-bar'); if(b2) b2.style.width=Math.max(0,EC.left/60*100)+'%';
+    const t2=document.getElementById('ec-time'); if(t2) t2.textContent=Math.max(0,EC.left)+' s';
+    if(EC.left<=0) ecFin();
+  },1000);
+}
+function ecShow(){
+  const it=EC.pool[EC.i];
+  document.getElementById('ec-item').textContent=it.t;
+  document.getElementById('ec-mat').textContent=it.mat;
+  document.getElementById('ec-score').textContent=EC.score;
+  document.getElementById('ec-combo').textContent=EC.combo>=2?('combo ×'+EC.combo):'';
+}
+function ecRep(v){
+  if(!EC||EC.fini) return;
+  const it=EC.pool[EC.i], ok=(v===it.v);
+  if(ok){ EC.score++; EC.combo++; EC.maxCombo=Math.max(EC.maxCombo,EC.combo); son('ok'); }
+  else { EC.combo=0; son('ko'); }
+  const c=document.getElementById('ec-card');
+  if(c){ c.classList.remove('okf','kof'); void c.offsetWidth; c.classList.add(ok?'okf':'kof'); }
+  EC.i=(EC.i+1)%EC.pool.length;
+  ecShow();
+}
+function ecFin(){
+  if(!EC||EC.fini) return;
+  EC.fini=true; clearInterval(ecTimer);
+  S.ecl=S.ecl||{}; const d=arDay();
+  const premier=(S.ecl.day!==d); let gain=0;
+  if(premier){ gain=Math.min(15,EC.score); if(gain) mjCredit(gain); S.ecl.day=d; S.ecl.gain=gain; }
+  S.ecl.best=Math.max(S.ecl.best||0,EC.score);
+  saveS(); son(EC.score>=15?'fanfare':'coffre');
+  document.getElementById('ec-jeu').style.display='none';
+  document.getElementById('ec-fin').style.display='block';
+  document.getElementById('ec-fin-s').textContent=EC.score+' bonne'+(EC.score>1?'s':'')+' réponse'+(EC.score>1?'s':'')+' en 60 s · meilleur combo ×'+EC.maxCombo+' · record '+(S.ecl.best||0);
+  document.getElementById('ec-fin-r').textContent = premier
+    ? (gain? '+'+gain+' 🏆 — la première partie du jour rapporte. Ensuite, on joue pour le record.' : 'Retente demain : la première partie du jour rapporte des trophées.')
+    : 'Les trophées, c\'était la première partie du jour — celle-ci, c\'était pour le record.';
+  if(typeof renderIdBar==='function') renderIdBar();
+}
+function quitterEclair(){ EC=null; clearInterval(ecTimer); go('arene'); }
+
+/* ═══ LE COMPAGNON — la mascotte a un nom (choisi par l'élève) et une humeur
+   qui reflète la journée : fier, rayonnant, ou gardien de la flamme. Jamais culpabilisant. ═══ */
+function axoNom(){ return (S.axoNom||'').trim()||'Axo'; }
+function axoEtat(){
+  const M=(typeof mjState==='function')?mjState():{};
+  if(M.coffre) return {t:axoNom()+' rayonne — coffre ouvert, journée pleine. À demain pour la suite !', img:'axo-guide-bravo'};
+  if(typeof seanceJourFaite==='function' && seanceJourFaite()) return {t:axoNom()+' est fier de toi : ta séance du jour est faite. L\'Arène t\'attend si tu en veux encore.', img:'axo-encourage'};
+  if((S.streak||0)>=1 && S.stDay!==arDay()) return {t:axoNom()+' veille sur ta flamme de '+S.streak+' jour'+(S.streak>1?'s':'')+' — une séance ou une ascension, et elle grandit. 🔥', img:'axo-mains'};
+  return {t:axoNom()+' t\'attend pour commencer la journée — ta séance est prête.', img:'axo-mains'};
+}
+function ouvrirAxo(){
+  const e=axoEtat();
+  const im=document.getElementById('axo-img'); if(im) im.src='img/'+e.img+'.png';
+  const nt=document.getElementById('axo-nom-t'); if(nt) nt.textContent=axoNom();
+  const et=document.getElementById('axo-etat'); if(et) et.textContent=e.t;
+  const inp=document.getElementById('axo-nom-inp'); if(inp) inp.value=(S.axoNom||'');
+  openSheet('sheet-axo');
+}
+function axoRenommer(){
+  const inp=document.getElementById('axo-nom-inp'); if(!inp) return;
+  const n=(inp.value||'').trim().slice(0,14);
+  S.axoNom=n||null; saveS(); son('pop');
+  ouvrirAxo();
+  if(typeof renderSeance==='function') renderSeance();
+}
+
 /* ═══ LES DÉFIS DU JOUR (v2) — trois défis TIRÉS CHAQUE JOUR d'un pool :
    un facile, un moyen, un corsé. Les corsés demandent de jouer BIEN, pas juste de jouer.
    Le coffre grossit avec les jours de coffres enchaînés : +40 → +60 (3 j) → +80 (7 j).
@@ -4190,7 +4342,7 @@ function renderSeance(){
   const b=document.getElementById('seance'); if(!b) return;
   /* la mascotte change de pose chaque jour — stable dans la journée, nouvelle tête chaque matin */
   const AXO_POSES=['axo-encourage','axo-canon','axo-mains','mascotte-arene-prete-au-combat','mascotte-arene-retour'];
-  const axo='<img class="se-axo" src="img/'+AXO_POSES[(parseInt(arDay().split('-').join(''),10))%AXO_POSES.length]+'.png" alt="">';
+  const axo='<img class="se-axo" onclick="ouvrirAxo()" src="img/'+AXO_POSES[(parseInt(arDay().split('-').join(''),10))%AXO_POSES.length]+'.png" alt="" title="Ton compagnon">';
   const dit=(txt,pose)=>'<div class="se-guide"><img src="img/'+(pose||'axo-canon')+'.png" alt=""><span class="sg-b">'+txt+'</span></div>';
   const illu=s=>s&&s.img
     ? '<img class="se-illu" src="img/parcours/'+s.img+'" onerror="this.remove();" alt="">'
