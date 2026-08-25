@@ -1960,7 +1960,7 @@
         <button class="sidepan" onclick="openSheet('sheet-road')"><span class="spi"><img src="img/icones/icone-route.png" alt="" onerror="this.replaceWith('🛣️')"></span><span class="spl">Route</span></button>
         <button class="bigaction" id="ar-start" onclick="startRun()">
           <div class="bat" id="ar-start-t">ENTRER DANS L'ARÈNE</div>
-          <div class="bas" id="ar-start-s">3 ascensions restantes</div>
+          <div class="bas" id="ar-start-s">2 ascensions restantes</div>
         </button>
         <button class="sidepan" id="ar-rankbtn" onclick="openSheet('sheet-rank')"><span class="spi"><img src="img/icones/icone-classement.png" alt="" onerror="this.replaceWith('📊')"></span><span class="spl">Rang</span></button>
       </div>
@@ -1973,7 +1973,7 @@
         </div>
         <div class="card" id="ar-sideacc" style="display:none"></div>
         <div class="card" id="ar-stagecard" style="display:none;border:1px solid var(--tung)">
-          <p style="font-size:12.5px;font-weight:800">Tes 3 ascensions du jour sont faites. 👏</p>
+          <p style="font-size:12.5px;font-weight:800">Tes ascensions du jour sont faites. 👏</p>
           <p style="font-size:11.5px;color:var(--muted);line-height:1.55;margin-top:3px">Avec l'année complète Medeos, les ascensions sont illimitées.</p>
           <button class="btn ghost small" style="margin-top:9px" onclick="voirStages()">Voir les stages</button>
           <button class="blien" style="display:block;margin:8px auto 0;font-size:10.5px" onclick="go('profil')">Déjà l'année complète ? J'ai un code</button>
@@ -2182,7 +2182,7 @@
       </div>
 
       <div class="card" id="arend-stagecard" style="display:none;width:100%;max-width:400px;text-align:left;border:1px solid var(--tung)">
-        <p style="font-size:12.5px;font-weight:800">Tes 3 ascensions du jour sont faites. 👏</p>
+        <p style="font-size:12.5px;font-weight:800">Tes ascensions du jour sont faites. 👏</p>
         <p style="font-size:11.5px;color:var(--muted);line-height:1.55;margin-top:3px">Avec l'année complète Medeos, les ascensions sont illimitées.</p>
         <button class="btn ghost small" style="margin-top:9px" onclick="voirStages()">Voir les stages</button>
           <button class="blien" style="display:block;margin:8px auto 0;font-size:10.5px" onclick="go('profil')">Déjà l'année complète ? J'ai un code</button>
@@ -3197,7 +3197,7 @@ const GRADES=[[0,'Aspirant','🩺'],[400,'Primant','📗'],[1000,'Carabin','⭐'
               [3100,'Externe des hôpitaux','🚑'],[4600,'Interne','🎖️'],[6400,'Chef de clinique','🏛️'],
               [8600,'Praticien hospitalier','🎓'],[10000,'Professeur','👑']];
 const POT=40, POT_CAL=20, CAL_M=30, CAL_N=20;
-const RUN_LEN=10, RUN_PER_DAY=3, TIME_Q=45, T0=0, R0=1000;   /* trophées à 0, niveau interne à 1000 */
+const RUN_LEN=10, RUN_PER_DAY=2, TIME_Q=45, T0=0, R0=1000;   /* trophées à 0, niveau interne à 1000 */
 const LOSS_BAND=[0.70,0.70,0.70,0.85,0.85,0.85,1,1,1];
 const STREAK_STEP=2, STREAK_CAP=16, STREAK_CAP_HI=8;
 const GUARANTEE=6, RUN_FLOOR=-60, GOLD=100;
@@ -3879,10 +3879,9 @@ function renderCurArena(){
   const a=ARENES[arView]||ARENES[0];
   const ouverte=arOuverte(a), dispo=arDispo(a);
   let voile='';
-  if(!areneOuvrable()){
-    const n=(typeof seancesFaites==='function')?seancesFaites().length:0;
-    voile='<div class="slock"><span class="l1">🔒</span><b>L\'Arène s\'ouvre après '+ARENE_SEUIL_SEANCES+' séances de Parcours</b>'+
-      '<span>'+n+'/'+ARENE_SEUIL_SEANCES+' faite'+(n>1?'s':'')+' — en attendant, entraîne-toi sans enjeu sur tes fiches.</span></div>';
+  if(!areneArmee(a.k)){
+    voile='<div class="slock"><span class="l1">🔒</span><b>Cette arène s\'ouvre par ton Parcours</b>'+
+      '<span>Travaille des fiches de '+(a.sous||a.k)+' dans ton Parcours — chaque fiche vue arme cette arène.</span></div>';
   }
   else if(!dispo) voile='<div class="slock"><span class="l1">🔜</span><b>Bientôt</b><span>Les questions arrivent — cette arène ouvre très vite</span></div>';
   const parts=Array.from({length:7},(x,i)=>'<i class="part" style="left:'+(8+i*13)+'%;animation-duration:'+(7+(i*2.3)%6)+'s;animation-delay:-'+(i*1.7)+'s"></i>').join('');
@@ -3902,10 +3901,10 @@ function renderCurArena(){
   }
   const bt=document.getElementById('ar-start-t'), bs=document.getElementById('ar-start-s'), bb=document.getElementById('ar-start');
   if(bt&&bs&&bb){
-    if(!areneOuvrable()){ bt.textContent='S\'ENTRAÎNER D\'ABORD'; bs.textContent='QCM sans enjeu, sur tes fiches du Parcours'; bb.disabled=false; bb.onclick=startEntrainement; }
+    if(!areneArmee(a.k)){ bt.textContent='S\'ENTRAÎNER D\'ABORD'; bs.textContent='QCM sans enjeu, sur tes fiches du Parcours'; bb.disabled=false; bb.onclick=startEntrainement; }
     else { bb.onclick=startRun; }
-    if(areneOuvrable() && !dispo){ bt.textContent='BIENTÔT'; bs.textContent='cette arène ouvre plus tard'; bb.disabled=true; }
-    else if(!areneOuvrable()){ }
+    if(areneArmee(a.k) && !dispo){ bt.textContent='BIENTÔT'; bs.textContent='cette arène ouvre plus tard'; bb.disabled=true; }
+    else if(!areneArmee(a.k)){ }
     else if(!S.stage && S.ar.runs<=0){ bt.textContent='REVIENS DEMAIN'; bs.textContent='tes '+RUN_PER_DAY+' ascensions du jour sont faites'; bb.disabled=true; }
     else if(!S.ar.runsDone){ bt.innerHTML='<img src="img/icones/nav-arene.png" alt=""> COMBATTRE'; bs.textContent='ta première ascension — pendant la calibration, impossible de perdre'; bb.disabled=false; }
     else { bt.innerHTML='<img src="img/icones/nav-arene.png" alt=""> COMBATTRE';
@@ -3998,7 +3997,7 @@ const TUTOS={
     {img:'mascotte-arene-prete-au-combat', t:"Bienvenue dans l'<b>Arène</b> ! Ici, tes réponses te font gagner des trophées 🏆 et grimper les grades."},
     {sel:'#ar-cur', img:'axo-guide-pointe-haut', t:"Quatre arènes, une par matière. Les flèches te font passer de l'une à l'autre."},
     {sel:'#ar-start', img:'axo-guide-pointe-bas', t:"Le bouton d'or lance une <b>ascension</b> : 10 questions de ton niveau. Chaque case se joue — bien jugée elle rapporte des trophées, mal jugée elle en coûte."},
-    {sel:'#ar-limite', img:'axo-guide-pointe-bas', t:"Tu as <b>3 ascensions par jour</b> — elles se rechargent chaque matin à 6 h."},
+    {sel:'#ar-limite', img:'axo-guide-pointe-bas', t:"Tu as <b>2 ascensions par jour</b> — elles se rechargent chaque matin à 6 h."},
     {img:'axo-guide-bravo', t:"Premier objectif : <b>400 🏆</b>, le grade Primant. La Route des trophées t'attend. Bonne ascension !", btn:"Entrer dans l'Arène"}
   ]
 };
@@ -4824,10 +4823,14 @@ function qcmDuJour(){
 }
 /* ═══ L'ARÈNE SE MÉRITE — elle s'ouvre après 2 séances de Parcours.
    Avant : le mode ENTRAÎNEMENT, sans enjeu, uniquement sur les fiches déjà vues. ═══ */
-const ARENE_SEUIL_SEANCES=2;
+function areneArmee(mat){
+  /* une arène ne vit que de SES fiches vues dans le Parcours (2 questions débloquées minimum) */
+  const deb=(typeof fichesDebloquees==='function')?fichesDebloquees():{};
+  return ABANK.filter(q=>q.mat===mat && deb[q.f]).length>=2;
+}
 function areneOuvrable(){
   if(S.stage) return true;
-  return (typeof seancesFaites==='function'?seancesFaites().length:0)>=ARENE_SEUIL_SEANCES;
+  return ARENES.some(a=>areneArmee(a.k));
 }
 function startEntrainement(){
   const deb=(typeof fichesDebloquees==='function')?fichesDebloquees():{};
@@ -5694,10 +5697,15 @@ function potOf(q){
 function pickQuestions(){
   const now=Date.now(), R=S.ar.R;
   const _ar=arCourante();
-  if(typeof initVues==='function') initVues();   /* sans ça, S.vues est vide au tout premier lancement */
-  const BANK=ABANK.filter(q=>q.mat===_ar);      /* toute la matière : on peut avancer au-delà du Parcours */
+  /* L'ARÈNE NE SERT QUE LE PARCOURS : uniquement les questions des fiches déjà vues.
+     L'ascension grandit avec le fil (2 questions au début, 10 au complet),
+     et les fiches du JOUR y entrent en priorité. */
+  const deb=(typeof fichesDebloquees==='function')?fichesDebloquees():{};
+  const BANK=ABANK.filter(q=>q.mat===_ar && deb[q.f]);
+  const LEN=Math.min(RUN_LEN,BANK.length);
+  if(LEN<2) return [];
   let dispo=BANK.filter(q=>!S.ar.seen[q.id] || (now-S.ar.seen[q.id])>REVU_J*864e5);
-  if(dispo.length<RUN_LEN){ S.ar.seen={}; saveS(); dispo=BANK.slice(); }
+  if(dispo.length<LEN){ BANK.forEach(q=>{ delete S.ar.seen[q.id]; }); saveS(); dispo=BANK.slice(); }
   const out=[], used={};
   const add=(q,slot)=>{ out.push({q:q,slot:slot}); used[q.id]=1; };
   const jeune=q=>qM(q)<CAL_M;
@@ -5725,7 +5733,11 @@ function pickQuestions(){
   garde=0;
   while(out.length<RUN_LEN && garde++<40){ const av=out.length; prendre(0.55,0.75,'cœur',1,true); if(out.length===av) break; }
   for(let i=out.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); const t=out[i]; out[i]=out[j]; out[j]=t; }
-  return out.slice(0,RUN_LEN);
+  /* les fiches de la séance du JOUR passent devant : l'ascension du jour valide le travail du jour */
+  const cur=(typeof seanceCourante==='function')?seanceCourante():null;
+  const dj=(cur&&cur.fiches)?cur.fiches:[];
+  out.sort((x,y)=>{ const ax=dj.includes(x.q.f)?0:1, ay=dj.includes(y.q.f)?0:1; return ax-ay; });
+  return out.slice(0,LEN);
 }
 
 /* ---- la boucle ---- */
@@ -5755,9 +5767,11 @@ function doStartRun(){
   if(S.stage){ S.ar.runs=Math.max(S.ar.runs,1); }
 
   if(S.ar.runs<=0){ renderArene(); go('arene'); return; }
+  const qsTirees=pickQuestions();
+  if(!qsTirees.length){ renderArene(); go('arene'); return; }   /* arène pas encore armée : rien n'est consommé */
   if(!S.stage) S.ar.runs--;
   S.ar.runsDone++; S.ar.played=Date.now(); saveS();
-  run={qs:pickQuestions(),i:0,ok:0,som:0,serie:0,bonus:0,lignes:[],errs:[],
+  run={qs:qsTirees,i:0,ok:0,som:0,serie:0,bonus:0,lignes:[],errs:[],
        T0:S.ar.T,g0:gradeIdx(S.ar.T),answered:false,sel:new Set(),t0:0,
        boost:S.ar.boost>0};
   if(S.ar.boost>0){ S.ar.boost--; saveS(); }
