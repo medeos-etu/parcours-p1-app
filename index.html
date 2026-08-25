@@ -1786,6 +1786,7 @@
     <div class="seance" id="seance"></div>
 
     <div class="card qjcard" id="qj-home"></div>
+    <div class="card qjcard" id="ec-home"></div>
 
 
 
@@ -2223,15 +2224,6 @@
           <b>Guide méthodologique</b>
           <p>Rédigé par des étudiants ayant excellé en P1, en s'appuyant sur les études scientifiques de l'apprentissage — la théorie ET la pratique, réunies.</p>
           <div class="rc-meta">🛠️ Le guide complet</div>
-        </div>
-      </div>
-      <div class="rescard" onclick="go('agenda')">
-        <span class="pricechip">GRATUIT</span>
-        <img src="img/cover-agenda.jpg" alt="">
-        <div class="rc-body">
-          <b>L'Agenda des J</b>
-          <p>Ajoute un cours : l'agenda planifie ses révisions à J+1, J+3, J+7, J+14 et J+30, et te dit chaque jour ce qu'il y a à revoir.</p>
-          <div class="rc-meta">⏰ Révisions espacées</div>
         </div>
       </div>
       <div class="rescard" onclick="window.open('https://medeos-sante.fr/ressources/agenda-p1?src=parcours-app','_blank')">
@@ -4347,7 +4339,10 @@ function eclCredit(parMat){
   const vise=Math.max(-20,Math.min(60,brut));
   const fac=brut!==0?vise/brut:0;
   const dm={}; let somme=0;
-  Object.keys(parMat).forEach(m=>{ dm[m]=Math.round(parMat[m]*fac); somme+=dm[m]; });
+  S.ar.mats=S.ar.mats||{};
+  Object.keys(parMat).forEach(m=>{ dm[m]=Math.round(parMat[m]*fac);
+    if(dm[m]<0) dm[m]=Math.max(dm[m], -(S.ar.mats[m]||0));   /* une arène ne descend pas sous 0 : T suit */
+    somme+=dm[m]; });
   /* l'arrondi par matière ne doit jamais faire déborder le cadre −20/+60 annoncé :
      le résidu d'arrondi se réabsorbe sur la matière au plus gros écart */
   if(somme!==vise && Object.keys(dm).length){
@@ -4442,6 +4437,8 @@ function ecFin(){
     S.ecl.day=d; S.ecl.gain=applique;
   }
   S.ecl.best=Math.max(S.ecl.best||0,EC.score);
+  const gAvantEcl=(typeof gradeIdx==='function' && S.ar)?gradeIdx((S.ar.T||0)-applique):0;
+  const gApresEcl=(typeof gradeIdx==='function' && S.ar)?gradeIdx(S.ar.T||0):0;
   /* le diagnostic CUMULÉ : ce qui pèche, partie après partie */
   S.eclDiag=S.eclDiag||{};
   Object.keys(EC.err).forEach(n=>{ S.eclDiag[n]=S.eclDiag[n]||{c:0,f:EC.err[n].f}; S.eclDiag[n].c+=EC.err[n].c; });
@@ -4449,6 +4446,9 @@ function ecFin(){
   document.getElementById('ec-jeu').style.display='none';
   document.getElementById('ec-fin').style.display='block';
   document.getElementById('ec-fin-s').textContent=EC.score+' bonne'+(EC.score>1?'s':'')+' réponse'+(EC.score>1?'s':'')+' · '+EC.ko+' erreur'+(EC.ko>1?'s':'')+' · combo ×'+EC.maxCombo+' · record '+(S.ecl.best||0);
+  if(gApresEcl>gAvantEcl){ son('fanfare');
+    const fs=document.getElementById('ec-fin-s');
+    if(fs) fs.textContent='🏆 Nouveau grade : '+GRADES[gApresEcl][1]+' ! · '+fs.textContent; }
   document.getElementById('ec-fin-r').textContent = EC.premier
     ? ((applique>=0?'+':'−')+Math.abs(applique)+' 🏆 — la partie comptée du jour, au barème de l\'Arène.')
     : 'Partie pour le record — les trophées, c\'était la partie comptée du jour.';
@@ -4473,7 +4473,9 @@ function ecFin(){
   if(typeof renderIdBar==='function') renderIdBar();
 }
 function renderEcl(){
-  const e=document.getElementById('ec-entree'); if(!e) return;
+  const cibles=['ec-entree','ec-home'].map(id=>document.getElementById(id)).filter(Boolean);
+  if(!cibles.length) return;
+  const e={set innerHTML(v){ cibles.forEach(el=>el.innerHTML=v); }};
   const fait=ecFaitAuj();
   e.innerHTML = !fait
     ? '<div class="qj-row" onclick="startEclair()"><span class="qj-ic">⚡</span><div class="qj-bd"><b>L\'Éclair</b>'+
@@ -4492,7 +4494,7 @@ function axoNom(){ return (S.axoNom||'').trim()||'Axo'; }
 function axoEtat(){
   const M=(typeof mjState==='function')?mjState():{};
   if(M.coffre) return {t:axoNom()+' rayonne — coffre ouvert, journée pleine. À demain pour la suite !', img:'axo-guide-bravo'};
-  if(typeof seanceJourFaite==='function' && seanceJourFaite()) return {t:axoNom()+' est fier de toi : ta séance du jour est faite. L\'Arène t\'attend si tu en veux encore.', img:'axo-encourage'};
+  if(S.sjour===arDay()) return {t:axoNom()+' est fier de toi : ta séance du jour est faite. L\'Arène t\'attend si tu en veux encore.', img:'axo-encourage'};
   if((S.streak||0)>=1 && S.stDay!==arDay()) return {t:axoNom()+' veille sur ta flamme de '+S.streak+' jour'+(S.streak>1?'s':'')+' — une séance ou une ascension, et elle grandit. 🔥', img:'axo-mains'};
   return {t:axoNom()+' t\'attend pour commencer la journée — ta séance est prête.', img:'axo-mains'};
 }
@@ -6283,11 +6285,12 @@ function closeRun(anticipee){
   /* le compteur « compte » de l'ancien au nouveau total */
   { const els=bl.querySelectorAll('.bline .bv'); const el=els[els.length-1];
     if(el && T!==avant){ const t0=performance.now();
+      const cibleT=S.ar.T;   /* inclut les récompenses de jauges créditées pendant la clôture */
       const tick=t=>{ const k=Math.min(1,(t-t0)/950);
-        el.textContent=fmtT(Math.round(avant+(T-avant)*(1-Math.pow(1-k,3))))+' 🏆';
+        el.textContent=fmtT(Math.round(avant+(cibleT-avant)*(1-Math.pow(1-k,3))))+' 🏆';
         if(k<1) requestAnimationFrame(tick); };
       requestAnimationFrame(tick); }
-    else if(el) el.textContent=fmtT(T)+' 🏆'; }
+    else if(el) el.textContent=fmtT(S.ar.T)+' 🏆'; }
 
   const monte=gi>run.g0;
   /* l'illustration du moment : grade franchi > belle ascension > ascension difficile > neutre */
