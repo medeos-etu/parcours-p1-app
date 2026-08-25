@@ -742,6 +742,21 @@
   .skban .sklock i{font-size:11px}
   .skin-note{font-size:11px;color:var(--muted);margin-top:12px;text-align:center;line-height:1.5}
 
+  /* — « Voir tout le classement » : plaque de tournoi, liseré or, reflet qui balaie — */
+  .lbbtn{width:100%;margin-top:10px;border:none;cursor:pointer;font-family:Fredoka,Inter,sans-serif;font-weight:600;
+    font-size:13px;letter-spacing:.02em;color:#FCD34D;display:flex;align-items:center;justify-content:center;gap:8px;
+    padding:11px 14px;border-radius:13px;position:relative;overflow:hidden;
+    background:linear-gradient(160deg,#2B2340,#1F1B2E);
+    box-shadow:inset 0 0 0 1px rgba(252,211,77,.38), inset 0 1px 0 rgba(255,255,255,.08), 0 4px 12px rgba(31,27,46,.32);
+    transition:transform .15s ease, box-shadow .15s ease}
+  .lbbtn:hover{transform:translateY(-1px);box-shadow:inset 0 0 0 1px rgba(252,211,77,.65), 0 6px 16px rgba(31,27,46,.45)}
+  .lbbtn:active{transform:translateY(1px)}
+  .lbbtn .ic{width:17px;height:17px;object-fit:contain;filter:drop-shadow(0 1px 2px rgba(0,0,0,.4))}
+  .lbbtn .chev{font-size:15px;line-height:1;margin-left:2px;opacity:.8}
+  .lbbtn::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;transform:skewX(-18deg);
+    background:linear-gradient(90deg,transparent,rgba(252,211,77,.16),transparent);animation:lbshine 3.4s ease-in-out infinite}
+  @keyframes lbshine{0%,55%{left:-60%}100%{left:130%}}
+
   /* — barème par case : le ± de chaque item et la case « fausse bien laissée » — */
   .idelta{font-weight:900;font-size:11px;font-variant-numeric:tabular-nums}
   .idelta.up{color:#2E7D53}
@@ -3347,7 +3362,7 @@ function renderSideAcc(){
     const top3=coh.slice(0,3).map((p,i)=>'<div class="lbmini"><span class="p">'+(i+1)+'</span><span class="n">'+p.n+'</span><span class="t">'+fmtT(p.v)+' 🏆</span></div>').join('');
     b.innerHTML='<h3>📊 Le classement</h3>'+top3+
       '<p style="font-size:12px;font-weight:800;color:var(--violet);margin-top:8px">'+(S.ar.runsDone?'Ta place : '+(mieux+1)+'ᵉ · 🏆 '+fmtT(S.ar.T):'Ta place apparaît après ta première ascension.')+'</p>'+
-      '<button class="btn ghost small" style="margin-top:9px" onclick="openSheet(\'sheet-rank\')">Voir tout le classement</button>';
+      '<button class="lbbtn" onclick="openSheet(\'sheet-rank\')"><img class="ic" src="img/icones/icone-classement.png" alt="" onerror="this.remove()">Voir tout le classement<span class="chev">›</span></button>';
   } else {
     b.innerHTML='<h3>🎮 Tu joues en invité</h3>'+
       '<p style="font-size:11.5px;color:var(--muted);line-height:1.5;margin-top:3px">Crée ton compte pour garder tes trophées et entrer au classement général.</p>'+
