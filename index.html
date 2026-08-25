@@ -3836,14 +3836,15 @@ function mjState(){
   return S.mj;
 }
 function mjCoffreVal(){ const n=(S.mjChest&&S.mjChest.n)||0; return n>=7?80:(n>=3?60:40); }
-function mjCredit(x){
+function mjCredit(x,mat){
   if(!S.ar) initAr();
+  const cible=(mat && S.ar.mats && MJ_MATS.indexOf(mat)>=0) ? mat : arCourante();   /* l'arène de la matière si on la connaît */
   S.ar.T=(S.ar.T||0)+x;
   S.ar.Tmax=Math.max(S.ar.Tmax||0,S.ar.T);
   S.ar.gold=Math.max(S.ar.gold||0, Math.floor(S.ar.T/GOLD)*GOLD, GRADES[gradeIdx(S.ar.T)][0]);
-  arAdd(arCourante(),x);
+  arAdd(cible,x);
   S.ar.wdt=(S.ar.wdt||0)+x;
-  S.ar.wdm=S.ar.wdm||{}; S.ar.wdm[arCourante()]=(S.ar.wdm[arCourante()]||0)+x;
+  S.ar.wdm=S.ar.wdm||{}; S.ar.wdm[cible]=(S.ar.wdm[cible]||0)+x;
 }
 /* les jauges se remplissent avec le vrai travail, où qu'il ait lieu dans l'app */
 function mjTrack(kind,data){
@@ -4414,7 +4415,7 @@ function libreFin(){
   if(LB.jour && !qjFaitAuj()){
     gQJ = LB.ok ? [10,15,25][mjSeed(arDay())%3] : 5;   /* récompense mystère du jour */
     S.qj={day:arDay(), fait:1, gain:gQJ};
-    mjCredit(gQJ);
+    mjCredit(gQJ, LB.qs[0] && LB.qs[0].mat);   /* les trophées vont à l'arène de la matière du jour */
     son(LB.ok?'coffre':'pop');
     saveS();
     if(typeof renderQj==='function') renderQj();
