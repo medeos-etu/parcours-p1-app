@@ -803,6 +803,19 @@
     box-shadow:0 2px 0 #B87A33, inset 0 1px 0 rgba(255,255,255,.5)}
   .qj-row:active .qj-go{transform:translateY(1px);box-shadow:0 1px 0 #B87A33}
 
+  /* — la bande compacte « Ta journée » — */
+  .mjc{display:flex;align-items:center;gap:9px;width:100%;border:none;background:none;cursor:pointer;padding:2px 0;font-family:inherit}
+  .mjc-t{font-size:15px;flex-shrink:0}
+  .mjc-it{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;min-width:0}
+  .mjc-it i{font-style:normal;font-size:13px;line-height:1}
+  .mjc-it .mjc-bar{width:100%;height:5px;border-radius:99px;background:rgba(107,70,193,.12);overflow:hidden;display:block}
+  .mjc-it .mjc-bar b{display:block;height:100%;background:linear-gradient(90deg,#8B5CF6,#6B46C1);border-radius:99px;transition:width .4s ease}
+  .mjc-it.ok .mjc-bar b{background:#2E7D53}
+  .mjc-it em{font-style:normal;font-size:9px;font-weight:900;color:var(--muted);font-variant-numeric:tabular-nums}
+  .mjc-it.ok em{color:#2E7D53}
+  .mjc-cof{flex-shrink:0;font-size:11px;font-weight:900;color:#4A3208;background:linear-gradient(180deg,#FCD34D,#E29C5C);border-radius:9px;padding:5px 8px}
+  .mjc-ch{color:var(--muted);font-size:15px;flex-shrink:0}
+
   /* — les jauges de ta journée — */
   .mj-jauge{padding:6px 0}
   .mj-jh{display:flex;align-items:center;gap:7px}
@@ -1739,7 +1752,7 @@
     <div class="seance" id="seance"></div>
 
     <div class="card qjcard" id="qj-home"></div>
-    <div class="card" id="mj-home"></div>
+    <div class="card qjcard" id="mj-home"></div>
 
 
 
@@ -1922,9 +1935,9 @@
       <div class="sidecol">
         <div class="card qjcard" id="qj-arene"></div>
         <div class="card qjcard">
-          <div class="qj-row" onclick="startEclair()"><span class="qj-ic">⚡</span><div class="qj-bd"><b>L'Éclair</b><span>60 secondes de vrai/faux — combo, record, trophées à la première partie du jour</span></div><span class="qj-go">Jouer</span></div>
+          <div class="qj-row" onclick="startEclair()"><span class="qj-ic">⚡</span><div class="qj-bd"><b>L'Éclair</b><span>60 secondes de vrai/faux — ça démarre doux, ça monte · trophées à la première partie du jour</span></div><span class="qj-go">Jouer</span></div>
         </div>
-        <div class="card" id="mj-arene"></div>
+        <div class="card qjcard" id="mj-arene"></div>
         <div class="card" id="ar-sideacc" style="display:none"></div>
         <div class="card" id="ar-stagecard" style="display:none;border:1px solid var(--tung)">
           <p style="font-size:12.5px;font-weight:800">Tes 3 ascensions du jour sont faites. 👏</p>
@@ -2013,6 +2026,14 @@
         <button class="btn" style="margin-top:14px" onclick="closeSheet('sheet-quit')">Continuer l'ascension</button>
         <button class="btn ghost" style="margin-top:8px" id="quit-btn" onclick="closeSheet('sheet-quit');closeRun(true)">Quitter — je garde mes points joués</button>
       </div>
+    </div>
+  </div>
+
+  <!-- ═══ FENÊTRE : le détail de ta journée ═══ -->
+  <div class="modal" id="sheet-jour" onclick="if(event.target===this)closeSheet('sheet-jour')">
+    <div class="sheet">
+      <div class="sheet-h"><b>🎯 Ta journée</b><button onclick="closeSheet('sheet-jour')">✕</button></div>
+      <div class="sheet-b" id="jour-corps"></div>
     </div>
   </div>
 
@@ -2285,6 +2306,7 @@
         <p style="font-family:Fredoka,Inter,sans-serif;font-size:18px;font-weight:600">Temps écoulé !</p>
         <p id="ec-fin-s" style="font-size:12.5px;margin-top:6px;font-weight:800"></p>
         <p id="ec-fin-r" style="font-size:11.5px;color:var(--muted);margin-top:6px;line-height:1.5"></p>
+        <div id="ec-diag" style="text-align:left"></div>
         <button class="btn" style="margin-top:12px" onclick="startEclair()">Rejouer</button>
         <button class="btn ghost" style="margin-top:8px" onclick="quitterEclair()">Retour à l'Arène</button>
       </div>
@@ -3719,6 +3741,7 @@ function openSheet(id){
   if(id==='sheet-road') renderRoad();
   if(id==='sheet-rank'){ renderCompte(); renderLB(); }
   if(id==='sheet-skin') renderSkin();
+  if(id==='sheet-jour') renderJourSheet();
   m.classList.add('on');
 }
 function closeSheet(id){ const m=document.getElementById(id); if(m) m.classList.remove('on'); }
@@ -3847,14 +3870,25 @@ function tutoEnd(){
    ensuite on joue pour le record. ═══ */
 let EC=null, ecTimer=null;
 function ecPool(){
-  const out=[];
-  ABANK.forEach(q=>q.it.forEach(it=>out.push({t:it[1], v:!!it[2], mat:q.mat})));
-  return out;
+  /* trois paniers par difficulté de la question d'origine : on démarre DOUX, ça monte */
+  const A=[],B=[],C=[];
+  ABANK.forEach(q=>{ const cible=q.D<=950?A:(q.D<=1045?B:C);
+    q.it.forEach(it=>cible.push({t:it[1], v:!!it[2], mat:q.mat, n:q.n, f:q.f})); });
+  [A,B,C].forEach(arr=>{ for(let i=arr.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]]; } });
+  return [A,B,C];
+}
+function ecTire(){
+  const n=EC.count++;
+  let k;
+  if(n<8) k=0;
+  else if(n<16) k=Math.random()<0.5?0:1;
+  else { const r=Math.random(); k=r<0.2?0:(r<0.6?1:2); }
+  for(let t=0;t<3;t++){ const P=EC.pools[(k+t)%3]; if(P.length) return P.pop(); }
+  return null;
 }
 function startEclair(){
-  const pool=ecPool();
-  for(let i=pool.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [pool[i],pool[j]]=[pool[j],pool[i]]; }
-  EC={pool:pool,i:0,score:0,combo:0,maxCombo:0,left:60,fini:false};
+  EC={pools:ecPool(),count:0,cur:null,score:0,combo:0,maxCombo:0,left:60,fini:false,err:{}};
+  EC.cur=ecTire();
   document.getElementById('ec-jeu').style.display='block';
   document.getElementById('ec-fin').style.display='none';
   const b=document.getElementById('ec-bar'); if(b) b.style.width='100%';
@@ -3870,20 +3904,21 @@ function startEclair(){
   },1000);
 }
 function ecShow(){
-  const it=EC.pool[EC.i];
+  const it=EC.cur; if(!it){ ecFin(); return; }
   document.getElementById('ec-item').textContent=it.t;
   document.getElementById('ec-mat').textContent=it.mat;
   document.getElementById('ec-score').textContent=EC.score;
   document.getElementById('ec-combo').textContent=EC.combo>=2?('combo ×'+EC.combo):'';
 }
 function ecRep(v){
-  if(!EC||EC.fini) return;
-  const it=EC.pool[EC.i], ok=(v===it.v);
+  if(!EC||EC.fini||!EC.cur) return;
+  const it=EC.cur, ok=(v===it.v);
   if(ok){ EC.score++; EC.combo++; EC.maxCombo=Math.max(EC.maxCombo,EC.combo); son('ok'); }
-  else { EC.combo=0; son('ko'); }
+  else { EC.combo=0; son('ko');
+    EC.err[it.n]=EC.err[it.n]||{c:0,f:it.f}; EC.err[it.n].c++; }   /* le diagnostic se construit */
   const c=document.getElementById('ec-card');
   if(c){ c.classList.remove('okf','kof'); void c.offsetWidth; c.classList.add(ok?'okf':'kof'); }
-  EC.i=(EC.i+1)%EC.pool.length;
+  EC.cur=ecTire();
   ecShow();
 }
 function ecFin(){
@@ -3900,6 +3935,15 @@ function ecFin(){
   document.getElementById('ec-fin-r').textContent = premier
     ? (gain? '+'+gain+' 🏆 — la première partie du jour rapporte. Ensuite, on joue pour le record.' : 'Retente demain : la première partie du jour rapporte des trophées.')
     : 'Les trophées, c\'était la première partie du jour — celle-ci, c\'était pour le record.';
+  const dg=document.getElementById('ec-diag');
+  if(dg){
+    const errs=Object.keys(EC.err).sort((x,y)=>EC.err[y].c-EC.err[x].c).slice(0,3);
+    dg.innerHTML = errs.length
+      ? '<p style="font-size:11px;font-weight:900;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin:12px 0 4px">Cette partie a repéré</p>'+
+        errs.map(n=>'<div class="agj-row"><span class="agj-nom">'+n+'</span>'+
+          (EC.err[n].f?'<button class="blien" onclick="openFiche(\''+EC.err[n].f+'\')">📄 la fiche</button>':'')+'</div>').join('')
+      : '<p style="font-size:11px;color:#2E7D53;font-weight:800;margin-top:12px">Aucun point faible repéré sur cette partie 👏</p>';
+  }
   if(typeof renderIdBar==='function') renderIdBar();
 }
 function quitterEclair(){ EC=null; clearInterval(ecTimer); go('arene'); }
@@ -4036,15 +4080,27 @@ function renderQj(){
   ['qj-home','qj-arene'].forEach(id=>{ const e=document.getElementById(id); if(e) e.innerHTML=x; });
 }
 function renderMissions(){
+  /* la bande DISCRÈTE des écrans principaux : trois mini-jauges + le coffre, le détail au clic */
   const M=mjState();
-  let x='<h3>🎯 Ta journée</h3>';
+  const mini=MJ3.map(j=>{ const v=Math.min(j.goal,M[j.k]||0), ok=!!M.done[j.k];
+    return '<span class="mjc-it'+(ok?' ok':'')+'"><i>'+j.ic+'</i><span class="mjc-bar"><b style="width:'+Math.round(v/j.goal*100)+'%"></b></span><em>'+(ok?'✓':v+'/'+j.goal)+'</em></span>';
+  }).join('');
+  const cv=M.coffre||mjCoffreVal();
+  const x='<button class="mjc" onclick="openSheet(\'sheet-jour\')" aria-label="Ta journée">'+
+    '<span class="mjc-t">🎯</span>'+mini+
+    '<span class="mjc-cof'+(M.coffre?' ok':'')+'">🎁 +'+cv+'</span><span class="mjc-ch">›</span></button>';
+  ['mj-arene','mj-home'].forEach(id=>{ const e=document.getElementById(id); if(e) e.innerHTML=x; });
+}
+function renderJourSheet(){
+  const b=document.getElementById('jour-corps'); if(!b) return;
+  const M=mjState();
+  let x='';
   MJ3.forEach(j=>{
     const v=Math.min(j.goal,M[j.k]||0), ok=!!M.done[j.k];
-    const pct=Math.round(v/j.goal*100);
     x+='<div class="mj-jauge'+(ok?' ok':'')+'"><div class="mj-jh"><span class="mj-ji">'+j.ic+'</span>'+
        '<span class="mj-jt">'+j.t+' <i>· '+j.sub+'</i></span>'+
        '<span class="mj-jv">'+(ok?'✓ +'+j.r:v+'/'+j.goal)+'</span></div>'+
-       '<div class="mj-bar"><i style="width:'+pct+'%"></i></div></div>';
+       '<div class="mj-bar"><i style="width:'+Math.round(v/j.goal*100)+'%"></i></div></div>';
   });
   const B=MJ_BONUS.find(xx=>xx.id===M.bonus);
   if(B){ const bok=!!M.done.bonus;
@@ -4055,7 +4111,7 @@ function renderMissions(){
   x+= M.coffre
     ? '<div class="mj-row coffre ok"><span class="mj-c">🎁</span><span class="mj-t">Coffre ouvert'+(chain>=2?' — '+chain+' jours d\'affilée':'')+'. À demain.</span><span class="mj-r">+'+M.coffre+' 🏆</span></div>'
     : '<div class="mj-row coffre"><span class="mj-c">🎁</span><span class="mj-t">Les 3 jauges pleines → le coffre s\'ouvre'+(cv>40?' (il a grossi avec tes jours enchaînés)':'')+'</span><span class="mj-r">+'+cv+' 🏆</span></div>';
-  ['mj-arene','mj-home'].forEach(id=>{ const e=document.getElementById(id); if(e) e.innerHTML=x; });
+  b.innerHTML=x;
 }
 
 /* ═══ L'AGENDA DES J — révisions espacées J+1 · +3 · +7 · +14 · +30.
