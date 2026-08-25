@@ -3881,8 +3881,11 @@ function renderCurArena(){
   const ouverte=arOuverte(a), dispo=arDispo(a);
   let voile='';
   if(!areneArmee(a.k)){
-    voile='<div class="slock"><span class="l1">🔒</span><b>Cette arène s\'ouvre par ton Parcours</b>'+
-      '<span>Travaille des fiches de '+(a.sous||a.k)+' dans ton Parcours — chaque fiche vue arme cette arène.</span></div>';
+    voile = !areneOuvrable()
+      ? '<div class="slock"><span class="l1">🔒</span><b>L\'Arène se déverrouille par ta première séance</b>'+
+        '<span>2 fiches de révision dans ton Parcours, et ta première arène s\'allume — avec des questions sur CES fiches-là.</span></div>'
+      : '<div class="slock"><span class="l1">🔒</span><b>Cette arène s\'ouvre par ton Parcours</b>'+
+        '<span>Travaille des fiches de '+(a.sous||a.k)+' dans ton Parcours — chaque fiche vue arme cette arène.</span></div>';
   }
   else if(!dispo) voile='<div class="slock"><span class="l1">🔜</span><b>Bientôt</b><span>Les questions arrivent — cette arène ouvre très vite</span></div>';
   const parts=Array.from({length:7},(x,i)=>'<i class="part" style="left:'+(8+i*13)+'%;animation-duration:'+(7+(i*2.3)%6)+'s;animation-delay:-'+(i*1.7)+'s"></i>').join('');
@@ -3992,7 +3995,7 @@ const TUTOS={
     {img:'axo-guide-bienvenue', t:"Voici ton <b>Parcours</b> : deux fiches par jour, un rythme tenable, une méthode qui fait tenir les notions."},
     {sel:'#seance', img:'axo-guide-pointe-haut', t:"Ta <b>séance du jour</b> t'attend ici : lecture, rappel de mémoire, comparaison, puis QCM."},
     {sel:'#pt-flame', img:'axo-guide-pointe-haut', t:"Chaque jour travaillé allonge ta série 🔥. Un oubli est pardonné — un seul."},
-    {img:'axo-guide-bravo', t:"Tout ce que tu lis ici arme l'Arène. Bonne première séance !", btn:"C'est parti !"}
+    {img:'axo-guide-bravo', t:"Et l'Arène ? Elle est verrouillée pour l'instant : <b>ta première séance — 2 fiches — la déverrouille</b>, avec des questions sur ce que tu viens d'apprendre. Bonne première séance !", btn:"C'est parti !"}
   ],
   arene:[
     {img:'mascotte-arene-prete-au-combat', t:"Bienvenue dans l'<b>Arène</b> ! Ici, tes réponses te font gagner des trophées 🏆 et grimper les grades."},
