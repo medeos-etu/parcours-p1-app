@@ -2368,13 +2368,6 @@
     </div>
     <div class="card" id="p-maitrise"></div>
     <div class="card" id="p-diag"></div>
-    <div class="card">
-      <h3>Réglages</h3>
-      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
-        <span style="font-size:12px;color:#3A3730">Les sons de l'app</span>
-        <button class="iosw" id="sw-son" role="switch" onclick="S.son=(S.son===false);saveS();this.classList.toggle('on',S.son!==false)" aria-label="Sons"><span class="knob"></span></button>
-      </div>
-    </div>
     <div class="card" id="p-code">
       <h3>⚔️ Accès illimité</h3>
       <div id="code-zone"></div>
@@ -2465,8 +2458,7 @@ function go(id){
   if(id==='profil'){ if(typeof renderSimCard==='function'){ renderSimCard(); renderAvancee(); } if(typeof renderProfilHead==='function') renderProfilHead();
     if(typeof renderCodeZone==='function') renderCodeZone();
     if(typeof renderMaitrise==='function') renderMaitrise();
-    if(typeof renderDiag==='function') renderDiag();
-    { const v=document.getElementById('sw-son'); if(v) v.classList.toggle('on',S.son!==false); } }
+    if(typeof renderDiag==='function') renderDiag(); }
   if(id==='agenda' && typeof renderAgenda==='function'){ renderAgenda(); }
   if((id==='home'||id==='arene') && typeof renderMissions==='function'){ renderMissions(); if(typeof renderQj==='function') renderQj(); if(typeof renderEcl==='function') renderEcl(); }
   if(id==='home' && typeof renderParcours==='function'){ renderParcours(); }
