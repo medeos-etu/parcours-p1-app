@@ -859,6 +859,11 @@
   .pg-chip em{font-style:normal;color:#2E7D53;font-weight:900}
   .pg-note{font-size:10.5px;color:var(--muted);margin-top:8px;text-align:center}
 
+  /* — la prochaine victoire (diagnostic, ton positif) — */
+  .dvic{display:flex;align-items:center;gap:9px;justify-content:space-between;flex-wrap:wrap;
+    background:rgba(46,125,83,.07);border:1.5px solid rgba(46,125,83,.3);border-radius:12px;
+    padding:10px 12px;margin-top:10px;font-size:12px;line-height:1.45}
+
   /* — le tableau de bord diagnostic — */
   .rlab{font-size:9px;font-weight:800}
   .dprio{display:flex;flex-direction:column;gap:2px;border:1.5px solid;border-radius:12px;padding:9px 12px;margin:6px 0 10px;background:rgba(255,255,255,.5)}
@@ -3753,17 +3758,14 @@ function renderDiag(){
   const ns=(S.ar&&S.ar.notions)||{};
   Object.keys(ns).forEach(n=>{ const d=(ns[n].ko||0)-(ns[n].ok||0); if(d>0) sc[n]=(sc[n]||0)+d*2; });
   const notes=Object.keys(sc).sort((a,b)=>sc[b]-sc[a]);
-  if(notes.length){
-    x+='<p style="font-size:11px;font-weight:900;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin:12px 0 3px">À réviser en priorité</p>';
-    notes.slice(0,2).forEach(n=>{ const f=(S.eclDiag&&S.eclDiag[n]&&S.eclDiag[n].f)||nf[n];
-      const libre=f&&diagOuvrable(f);
-      x+='<div class="agj-row"><span class="agj-nom">'+n+'</span>'+
-        (libre?'<button class="blien" onclick="openFiche(\''+f+'\')">📄 réviser</button>'
-              :'<span style="font-size:10px;font-weight:800;color:var(--muted)">🔒 arrive dans ton Parcours</span>')+'</div>';
-    });
-    const suite=notes.slice(2,6);
-    if(suite.length) x+='<p style="font-size:10.5px;color:var(--muted);margin-top:6px">Ensuite : '+suite.join(' · ')+'</p>';
-    x+='<p style="font-size:10px;color:var(--muted);margin-top:4px">Une fiche se révise quand ton Parcours l\'a ouverte.</p>';
+  /* jamais une liste de lacunes : UNE victoire à prendre, et seulement si elle est actionnable */
+  const dispo=notes.find(n=>{ const f=(S.eclDiag&&S.eclDiag[n]&&S.eclDiag[n].f)||nf[n]; return f&&diagOuvrable(f); });
+  if(dispo){
+    const f=(S.eclDiag&&S.eclDiag[dispo]&&S.eclDiag[dispo].f)||nf[dispo];
+    x+='<div class="dvic"><span>💪 <b>Ta prochaine victoire :</b> '+dispo+'</span>'+
+       '<button class="blien" onclick="openFiche(\''+f+'\')">📄 revoir la fiche</button></div>';
+  } else if(notes.length){
+    x+='<p style="font-size:11px;color:var(--muted);line-height:1.5;margin-top:10px">Ton Parcours te fera retravailler tes points fragiles au bon moment — rien à gérer toi-même.</p>';
   }
   e.innerHTML=x;
 }
@@ -4178,8 +4180,7 @@ function ecFin(){
       let z='<p style="font-size:11px;font-weight:900;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin:10px 0 4px">🩺 À réviser en priorité</p>';
       cum.slice(0,2).forEach(n=>{ const f=S.eclDiag[n].f, libre=f&&diagOuvrable(f);
         z+='<div class="agj-row"><span class="agj-nom">'+n+'</span>'+
-        (libre?'<button class="blien" onclick="openFiche(\''+f+'\')">📄 réviser</button>'
-              :'<span style="font-size:10px;font-weight:800;color:var(--muted)">🔒 arrive dans ton Parcours</span>')+'</div>'; });
+        (libre?'<button class="blien" onclick="openFiche(\''+f+'\')">📄 réviser</button>':'')+'</div>'; });
       const suite=cum.slice(2,5);
       if(suite.length) z+='<p style="font-size:10.5px;color:var(--muted);margin-top:6px">Ensuite : '+suite.join(' · ')+'</p>';
       z+='';
