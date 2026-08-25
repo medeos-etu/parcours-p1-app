@@ -2254,9 +2254,15 @@ function go(id){
   if(id==='home' && typeof renderParcours==='function'){ renderParcours(); }
   if(id==='arene' && typeof renderArene==='function'){ renderArene(); }
   window.scrollTo({top:0});
-  /* visite guidée : chaque monde se présente à la première arrivée (Parcours/Arène : une fois connecté) */
+  /* visite guidée : chaque monde se présente à la première arrivée.
+     La visite Bibliothèque est réservée aux NON connectés (c'est l'accueil des nouveaux) —
+     un connecté ne la voit jamais, et elle se marque faite pour de bon. */
   if(typeof startTuto==='function'){
-    const kT=(id==='biblio')?'biblio':((id==='home'||id==='arene')&&accOk()?id:null);
+    let kT=null;
+    if(id==='biblio'){
+      if(accOk()){ if(!tutoFait('biblio')){ S.tuto=S.tuto||{}; S.tuto.biblio=Date.now(); saveS(); } }
+      else kT='biblio';
+    } else if((id==='home'||id==='arene') && accOk()) kT=id;
     if(kT && !tutoFait(kT)) setTimeout(()=>{ const sc=document.getElementById(id); if(sc&&sc.classList.contains('on')) startTuto(kT); },450);
   }
 }
