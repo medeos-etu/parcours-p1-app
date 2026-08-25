@@ -783,6 +783,12 @@
   .mj-t{flex:1;min-width:0;font-size:12px;font-weight:700;line-height:1.35}
   .mj-row.ok .mj-t{color:var(--muted)}
   .mj-r{font-size:11px;font-weight:900;color:#B87A33;flex-shrink:0;font-variant-numeric:tabular-nums}
+  .mj-p{font-style:normal;font-size:10px;font-weight:900;color:var(--violet);margin-left:4px;font-variant-numeric:tabular-nums}
+  .mj-tier{font-style:normal;font-size:8.5px;font-weight:900;letter-spacing:.05em;text-transform:uppercase;margin-left:6px;
+    padding:1.5px 5px;border-radius:5px;vertical-align:1px}
+  .mj-tier.t0{color:#2E7D53;background:rgba(46,125,83,.1)}
+  .mj-tier.t1{color:#B87A33;background:rgba(184,122,51,.12)}
+  .mj-tier.t2{color:#C05B4D;background:rgba(192,91,77,.12)}
   .mj-row.coffre{background:linear-gradient(90deg,rgba(252,211,77,.10),transparent);border-radius:10px;padding:8px 7px;margin-top:3px;border-bottom:none}
   .mj-row.coffre.ok{background:linear-gradient(90deg,rgba(252,211,77,.22),rgba(226,156,92,.08))}
   .mj-row.coffre .mj-c{background:none;font-size:15px}
@@ -3737,20 +3743,48 @@ function tutoEnd(){
   if(flTemp && typeof renderPtop==='function') renderPtop();   /* la flamme reprend son état réel */
 }
 
-/* ═══ LES MISSIONS DU JOUR — trois actes d'APPRENTISSAGE, récompense en escalier.
-   Règle d'or : aucun trophée sans avoir appris quelque chose. Le coffre vaut plus
-   que les trois missions réunies : on finit ce qu'on a commencé. ═══ */
-const MJ_DEF=[
-  {k:'se',  t:'Fais ta séance du jour',    r:5},
-  {k:'asc', t:'Termine une ascension',     r:10},
-  {k:'sf',  t:'Réussis un sans-faute',     r:20}
-];
-const MJ_COFFRE=40;
+/* ═══ LES DÉFIS DU JOUR (v2) — trois défis TIRÉS CHAQUE JOUR d'un pool :
+   un facile, un moyen, un corsé. Les corsés demandent de jouer BIEN, pas juste de jouer.
+   Le coffre grossit avec les jours de coffres enchaînés : +40 → +60 (3 j) → +80 (7 j).
+   Règle d'or inchangée : aucun trophée sans acte d'apprentissage. ═══ */
+const MJ_MATS=['Anatomie','Biologie','Chimie','Physique'];
+const MJ_POOL={
+  facile:[
+    {id:'se',   t:'Fais ta séance du jour',            r:5,  ok:M=>!!M.se},
+    {id:'asc',  t:'Termine une ascension',             r:5,  ok:M=>M.asc>=1},
+    {id:'sf2',  t:'Réussis 2 sans-faute',              r:5,  ok:M=>M.sf>=2, p:M=>Math.min(2,M.sf)+'/2'}
+  ],
+  moyen:[
+    {id:'tro30',  t:'Gagne 30 🏆 en ascension',        r:15, ok:M=>M.tro>=30, p:M=>Math.min(30,M.tro)+'/30'},
+    {id:'chain2', t:'Enchaîne 2 sans-faute d\'affilée', r:15, ok:M=>M.chain>=2},
+    {id:'run6',   t:'Fais 6 sans-faute ou plus dans une ascension', r:15, ok:M=>M.best>=6},
+    {id:'matsf',  t:'Réussis un sans-faute en __MAT__', r:15, ok:M=>!!M.matok}
+  ],
+  corse:[
+    {id:'run8',   t:'Fais 8/10 ou mieux dans une ascension', r:25, ok:M=>M.best>=8},
+    {id:'chain3', t:'Enchaîne 3 sans-faute d\'affilée', r:25, ok:M=>M.chain>=3},
+    {id:'star4',  t:'Sans-faute sur une question 4★ ou plus', r:25, ok:M=>!!M.star4},
+    {id:'tro60',  t:'Gagne 60 🏆 en ascension',        r:25, ok:M=>M.tro>=60, p:M=>Math.min(60,M.tro)+'/60'}
+  ]
+};
+function mjSeed(d){ let x=7; for(let i=0;i<d.length;i++) x=(x*31+d.charCodeAt(i))%9973; return x; }
 function mjState(){
   const d=arDay();
-  if(!S.mj || S.mj.day!==d) S.mj={day:d};
+  if(!S.mj || S.mj.day!==d){
+    const s=mjSeed(d);
+    S.mj={day:d, se:0, asc:0, sf:0, chain:0, tro:0, best:0, star4:0, matok:0, done:{}, coffre:0,
+          mat:MJ_MATS[s%4],
+          def:[MJ_POOL.facile[s%MJ_POOL.facile.length].id,
+               MJ_POOL.moyen[(s*7+3)%MJ_POOL.moyen.length].id,
+               MJ_POOL.corse[(s*13+5)%MJ_POOL.corse.length].id]};
+  }
   return S.mj;
 }
+function mjDefs(){
+  const M=mjState(), all=[].concat(MJ_POOL.facile,MJ_POOL.moyen,MJ_POOL.corse);
+  return M.def.map(id=>all.find(d=>d.id===id)).filter(Boolean);
+}
+function mjCoffreVal(){ const n=(S.mjChest&&S.mjChest.n)||0; return n>=7?80:(n>=3?60:40); }
 function mjCredit(x){
   if(!S.ar) initAr();
   S.ar.T=(S.ar.T||0)+x;
@@ -3760,28 +3794,46 @@ function mjCredit(x){
   S.ar.wdt=(S.ar.wdt||0)+x;
   S.ar.wdm=S.ar.wdm||{}; S.ar.wdm[arCourante()]=(S.ar.wdm[arCourante()]||0)+x;
 }
-function mjEvent(k){
-  const M=mjState();
-  if(M[k]) return;
-  const def=MJ_DEF.find(d=>d.k===k); if(!def) return;
-  M[k]=Date.now();
-  mjCredit(def.r);
-  if(MJ_DEF.every(d=>M[d.k]) && !M.coffre){ M.coffre=Date.now(); mjCredit(MJ_COFFRE); }
+/* les compteurs du jour se nourrissent du jeu réel */
+function mjTrack(kind,data){
+  const M=mjState(); data=data||{};
+  if(kind==='se') M.se=1;
+  if(kind==='sf'){ M.sf++; M.chain=Math.max(M.chain,data.chain||0);
+    if(data.star>=4) M.star4=1;
+    if(data.mat===M.mat) M.matok=1; }
+  if(kind==='run'){ M.asc++; M.best=Math.max(M.best,data.ok||0); if((data.dT||0)>0) M.tro+=data.dT; }
+  /* on encaisse les défis accomplis */
+  mjDefs().forEach(d=>{
+    if(M.done[d.id] || !d.ok(M)) return;
+    M.done[d.id]=Date.now();
+    mjCredit(d.r);
+  });
+  if(mjDefs().every(d=>M.done[d.id]) && !M.coffre){
+    const C=S.mjChest||{n:0,last:null};
+    C.n = (C.last===_jourMoins(1)) ? C.n+1 : 1;
+    C.last=M.day; S.mjChest=C;
+    M.coffre=mjCoffreVal();
+    mjCredit(M.coffre);
+  }
   saveS(); renderMissions();
   if(typeof renderIdBar==='function') renderIdBar();
 }
 function renderMissions(){
-  const M=mjState();
-  const faits=MJ_DEF.filter(d=>M[d.k]).length;
-  let x='<h3>🎯 Missions du jour</h3>';
-  MJ_DEF.forEach(d=>{
-    const ok=!!M[d.k];
+  const M=mjState(), defs=mjDefs();
+  const tiers=['facile','moyen','corsé'];
+  let x='<h3>🎯 Défis du jour</h3>';
+  defs.forEach((d,i)=>{
+    const ok=!!M.done[d.id];
+    const txt=d.t.replace('__MAT__',M.mat);
+    const prog=(!ok && d.p)?' <i class="mj-p">'+d.p(M)+'</i>':'';
     x+='<div class="mj-row'+(ok?' ok':'')+'"><span class="mj-c">'+(ok?'✓':'○')+'</span>'+
-       '<span class="mj-t">'+d.t+'</span><span class="mj-r">+'+d.r+' 🏆</span></div>';
+       '<span class="mj-t">'+txt+prog+'<i class="mj-tier t'+i+'">'+tiers[i]+'</i></span>'+
+       '<span class="mj-r">+'+d.r+' 🏆</span></div>';
   });
+  const cv=M.coffre||mjCoffreVal(), chain=(S.mjChest&&S.mjChest.n)||0;
   x+= M.coffre
-    ? '<div class="mj-row coffre ok"><span class="mj-c">🎁</span><span class="mj-t">Coffre ouvert — bien joué. À demain pour la suite.</span><span class="mj-r">+'+MJ_COFFRE+' 🏆</span></div>'
-    : '<div class="mj-row coffre"><span class="mj-c">🎁</span><span class="mj-t">Les 3 faites → le coffre s\'ouvre</span><span class="mj-r">+'+MJ_COFFRE+' 🏆</span></div>';
+    ? '<div class="mj-row coffre ok"><span class="mj-c">🎁</span><span class="mj-t">Coffre ouvert'+(chain>=2?' — '+chain+' jours d\'affilée':'')+'. Demain : trois nouveaux défis.</span><span class="mj-r">+'+M.coffre+' 🏆</span></div>'
+    : '<div class="mj-row coffre"><span class="mj-c">🎁</span><span class="mj-t">Les 3 relevés → le coffre s\'ouvre'+(cv>40?' (coffres enchaînés : il a grossi)':(chain>=1?' — enchaîne les jours, il grossira':''))+'</span><span class="mj-r">+'+cv+' 🏆</span></div>';
   ['mj-arene','mj-home'].forEach(id=>{ const e=document.getElementById(id); if(e) e.innerHTML=x; });
 }
 
@@ -4499,7 +4551,7 @@ function seanceCredit(){
   else S.sjour=arDay();                       /* seule une séance du FIL consomme le jour */
   delete S.sr;                                 /* la séance finie n'est plus « en cours » */
   S.points=(S.points||0)+20; S.qcm=(S.qcm||0)+2;
-  majStreak(); if(typeof mjEvent==='function') mjEvent('se');
+  majStreak(); if(typeof mjTrack==='function') mjTrack('se');
   SR.credited=true;
   saveS();
 }
@@ -5212,7 +5264,7 @@ function aCheck(timeout){
     juste?st.ok++:st.ko++; S.ar.notions[q.n]=st;
     if(!juste) run.errs.push(q);
     if(juste) run.ok++;
-    if(juste && typeof mjEvent==='function') mjEvent('sf');
+    if(juste && typeof mjTrack==='function') mjTrack('sf',{chain:run.serie, star:(P.D<865?1:(P.D<955?2:(P.D<1045?3:(P.D<1135?4:5)))), mat:q.mat});
     /* l'encaissement par palier */
     let gTot=0;
     if(nOk===5) gTot=gainPlein;
@@ -5295,7 +5347,7 @@ function closeRun(anticipee){
   S.ar.Tmax=Math.max(S.ar.Tmax||0,T);   /* meilleur total atteint : débloque photos et bannières */
   if(run.ok>=RUN_LEN) S.ar.parfait=Date.now();   /* exploit : une ascension 10/10 */
   if(run.lignes.length) majStreak();             /* une ascension jouée nourrit la série 🔥 */
-  if(run.lignes.length>=RUN_LEN && typeof mjEvent==='function') mjEvent('asc');
+  if(run.lignes.length>=RUN_LEN && typeof mjTrack==='function') mjTrack('run',{ok:run.ok, dT:T-avant});
   const gi=gradeIdx(T);
   S.ar.gold=Math.max(S.ar.gold, Math.floor(T/GOLD)*GOLD, GRADES[gi][0]);
   arAdd(arCourante(), T-avant);          /* les trophées vont à l'arène jouée : total = somme des 4 */
