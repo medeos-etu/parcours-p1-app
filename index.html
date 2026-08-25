@@ -2387,8 +2387,6 @@
       <p style="font-size:10.5px;color:var(--muted);margin-top:8px">Les points mesurent ton travail : ils comptent pour les grades de l'Arène et les étapes franchies.</p>
     </div>
     <div class="card" id="prog-profil"></div>
-    <div class="card" id="p-maitrise"></div>
-    <div class="card" id="p-diag"></div>
     <div class="card" id="p-code">
       <h3>⚔️ Accès illimité</h3>
       <div id="code-zone"></div>
@@ -2478,8 +2476,7 @@ function go(id){
   document.body.classList.toggle('in-arene', id==='arene');
   if(id==='profil'){ if(typeof renderSimCard==='function'){ renderSimCard(); renderAvancee(); } if(typeof renderProfilHead==='function') renderProfilHead();
     if(typeof renderCodeZone==='function') renderCodeZone();
-    if(typeof renderMaitrise==='function') renderMaitrise();
-    if(typeof renderDiag==='function') renderDiag(); }
+ }
   if(id==='agenda' && typeof renderAgenda==='function'){ renderAgenda(); }
   if((id==='home'||id==='arene') && typeof renderMissions==='function'){ renderMissions(); if(typeof renderQj==='function') renderQj(); if(typeof renderEcl==='function') renderEcl(); }
   if((id==='home'||id==='profil') && typeof renderProgression==='function') renderProgression();
