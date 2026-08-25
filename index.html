@@ -332,6 +332,7 @@
   .chrono-row{display:flex;align-items:center;justify-content:space-between;font-size:10.5px;color:var(--muted);font-variant-numeric:tabular-nums;margin-top:5px}
   .qmeta{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:11px;color:var(--muted);font-weight:700;margin-bottom:8px}
   .qmeta .pmat{background:rgba(107,70,193,.1);color:var(--violet);border-radius:999px;padding:3px 9px;font-size:9.5px;letter-spacing:.06em;text-transform:uppercase}
+  .qmeta .pfiche{background:rgba(107,70,193,.09);color:var(--violet);border-radius:999px;padding:3px 9px;font-size:9.5px;font-weight:800;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .qmeta .pslot{background:rgba(226,156,92,.16);color:#8A5A2B;border-radius:999px;padding:3px 9px;font-size:9.5px;letter-spacing:.06em;text-transform:uppercase}
   /* le badge de pot : annoncé AVANT la réponse — le geste central */
   .pot{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin-top:10px}
@@ -3996,7 +3997,7 @@ const TUTOS={
   arene:[
     {img:'mascotte-arene-prete-au-combat', t:"Bienvenue dans l'<b>Arène</b> ! Ici, tes réponses te font gagner des trophées 🏆 et grimper les grades."},
     {sel:'#ar-cur', img:'axo-guide-pointe-haut', t:"Quatre arènes, une par matière. Les flèches te font passer de l'une à l'autre."},
-    {sel:'#ar-start', img:'axo-guide-pointe-bas', t:"Le bouton d'or lance une <b>ascension</b> : 10 questions de ton niveau. Chaque case se joue — bien jugée elle rapporte des trophées, mal jugée elle en coûte."},
+    {sel:'#ar-start', img:'axo-guide-pointe-bas', t:"Le bouton d'or lance une <b>ascension</b> . Chaque question vient d'une <b>fiche que tu as déjà travaillée</b> — et chaque case se joue : bien jugée elle rapporte, mal jugée elle coûte."},
     {sel:'#ar-limite', img:'axo-guide-pointe-bas', t:"Tu as <b>2 ascensions par jour</b> — elles se rechargent chaque matin à 6 h."},
     {img:'axo-guide-bravo', t:"Premier objectif : <b>400 🏆</b>, le grade Primant. La Route des trophées t'attend. Bonne ascension !", btn:"Entrer dans l'Arène"}
   ]
@@ -5789,7 +5790,8 @@ function showAQ(){
   segs('asegs',run.qs.length,run.i+1);
   document.getElementById('a-count').textContent='Question '+(run.i+1)+' / '+run.qs.length;
   document.getElementById('a-meta').innerHTML='<span class="pmat">'+q.mat+'</span><span>'+q.n+'</span>'+
-    (cur.slot==='défi'||cur.slot==='révision'?'<span class="pslot">'+cur.slot+'</span>':'');
+    (cur.slot==='défi'||cur.slot==='révision'?'<span class="pslot">'+cur.slot+'</span>':'')+
+    (q.f?'<span class="pfiche">📄 De ta fiche « '+(TITRES_FICHES[q.f]||q.n)+' »</span>':'');
   document.getElementById('a-enonce').textContent=q.q;
   /* ⭐ le badge de pot, sous l'énoncé, AVANT la réponse — les extrêmes réellement encaissables */
   const gAff = run.boost ? Math.round(P.Gmax*BOOST_MULT) : P.Gmax;
