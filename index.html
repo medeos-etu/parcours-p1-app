@@ -4389,7 +4389,9 @@ function libreFin(){
   if(LB.seance){
     const slug=LB.slugRef||LB.qs[0].f;
     S.oublis=S.oublis||{}; S.oublis[slug]=S.oublis[slug]||{};
-    S.oublis[slug].qcm={ok:LB.ok, total:LB.qs.length}; S.oublis[slug].quand=arDay(); saveS();
+    S.oublis[slug].qcm={ok:LB.ok, total:LB.qs.length}; S.oublis[slug].quand=arDay();
+    if(S.ar) LB.qs.forEach(q=>{ S.ar.seen[q.id]=Date.now(); });   /* pas de doublon séance → Arène le même jour */
+    saveS();
     /* LE BILAN DE LA NOTION — on regarde ce qu'on vient d'apprendre avant d'avancer */
     const o=S.oublis[slug];
     const premiere = SR && Math.floor(SR.etape/4)===0;
@@ -4422,6 +4424,7 @@ function libreFin(){
     gQJ = LB.ok ? [10,15,25][mjSeed(arDay())%3] : 5;   /* récompense mystère du jour */
     S.qj={day:arDay(), fait:1, gain:gQJ};
     mjCredit(gQJ, LB.qs[0] && LB.qs[0].mat);   /* les trophées vont à l'arène de la matière du jour */
+    if(S.ar && LB.qs[0]){ S.ar.seen[LB.qs[0].id]=Date.now(); }   /* l'Arène ne la resservira pas de sitôt */
     son(LB.ok?'coffre':'pop');
     saveS();
     if(typeof renderQj==='function') renderQj();
