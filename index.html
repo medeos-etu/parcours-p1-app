@@ -1387,7 +1387,7 @@
   @keyframes respire2{0%,100%{transform:scale(1)}50%{transform:scale(1.013)}}
   .seance{position:relative;background:var(--card);border:1px solid rgba(107,70,193,.30);border-radius:20px;
     padding:20px 18px 18px;box-shadow:0 10px 26px rgba(26,26,46,.09);animation:respire2 3s ease-in-out infinite;overflow:hidden}
-  .seance .se-axo{cursor:pointer;position:absolute;right:8px;bottom:4px;height:88px;opacity:.95;pointer-events:none}
+  .seance .se-axo{cursor:pointer;position:absolute;right:8px;bottom:4px;height:88px;opacity:.95}   /* cliquable : ouvre le Compagnon (pointer-events:none rendait l'onclick mort) */
   .se-sur{font-size:11px;font-weight:900;letter-spacing:.12em;color:var(--violet);text-transform:uppercase}
   .se-titre{font-size:24px;font-weight:900;letter-spacing:-.02em;line-height:1.18;margin-top:6px;max-width:85%}
   .se-ligne{font-size:13px;color:var(--muted);line-height:1.5;margin-top:7px;max-width:85%}
@@ -4348,6 +4348,13 @@ function eclCredit(parMat){
   const fac=brut!==0?vise/brut:0;
   const dm={}; let somme=0;
   Object.keys(parMat).forEach(m=>{ dm[m]=Math.round(parMat[m]*fac); somme+=dm[m]; });
+  /* l'arrondi par matière ne doit jamais faire déborder le cadre −20/+60 annoncé :
+     le résidu d'arrondi se réabsorbe sur la matière au plus gros écart */
+  if(somme!==vise && Object.keys(dm).length){
+    const res=vise-somme;
+    const mM=Object.keys(dm).sort((x,y)=>Math.abs(dm[y])-Math.abs(dm[x]))[0];
+    dm[mM]+=res; somme+=res;
+  }
   const avant=S.ar.T;
   const plancher=Math.max(GRADES[gradeIdx(avant)][0], S.ar.gold||0);
   if(avant+somme<plancher){
@@ -6232,6 +6239,7 @@ function closeRun(anticipee){
   const avant=S.ar.T;
   /* le total = la somme des 4 arènes ; on protège le plancher de grade ET le zéro de l'arène jouée */
   const plancher=Math.max(GRADES[gradeIdx(avant)][0], S.ar.gold);
+  const dAvantPlancher=dT;                     /* mémorisé pour afficher la ligne « plancher » si le clamp joue */
   dT=Math.max(dT, plancher-avant, -arT(arCourante()));
   let T=avant+dT;
   S.ar.T=T;
@@ -6269,7 +6277,7 @@ function closeRun(anticipee){
   if(run.bonus) ligne('Bonus de série','+'+run.bonus,'up2');
   if(garantie) ligne('<b>'+run.ok+'/10 → garantie appliquée</b> : tu ne perds rien','0','up2');
   if(plafond) ligne('Perte plafonnée','−60','slate');
-  if(T-avant!==dT) ligne('Plancher atteint : ta route est protégée','','slate');
+  if(dT!==dAvantPlancher) ligne('Plancher atteint : ta route est protégée','','slate');   /* (T-avant!==dT était toujours faux : la ligne ne sortait jamais) */
   ligne('Total de l\'ascension',(T-avant>=0?'+':'−')+fmtT(Math.abs(T-avant))+' 🏆',(T-avant>=0?'up2':'slate'),true);
   ligne('Tes trophées',fmtT(avant)+' 🏆','',true);
   /* le compteur « compte » de l'ancien au nouveau total */
@@ -6399,7 +6407,9 @@ function renderArene(){
   st.disabled=(!S.stage && S.ar.runs<=0);
   /* ne jamais écraser la structure deux-lignes du bouton or : on écrit dans ses spans */
   { const stt=document.getElementById('ar-start-t'), sts=document.getElementById('ar-start-s');
-    if(stt&&sts){
+    /* quota épuisé : renderCurArena a déjà écrit « REVIENS DEMAIN » — ne pas le remplacer
+       par « Commencer une ascension » sur un bouton désactivé */
+    if(stt&&sts && (S.stage || S.ar.runs>0)){
       if(S.ar.runsDone){ stt.textContent='Commencer une ascension'; }
       else { stt.textContent='Commencer ma première ascension'; sts.textContent='pendant la calibration, impossible de perdre'; }
     } }
