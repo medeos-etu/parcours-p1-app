@@ -847,6 +847,17 @@
   .mj-row.coffre.ok{background:linear-gradient(90deg,rgba(252,211,77,.22),rgba(226,156,92,.08))}
   .mj-row.coffre .mj-c{background:none;font-size:15px}
 
+  /* — le tableau de bord diagnostic — */
+  .rlab{font-size:9px;font-weight:800}
+  .dprio{display:flex;flex-direction:column;gap:2px;border:1.5px solid;border-radius:12px;padding:9px 12px;margin:6px 0 10px;background:rgba(255,255,255,.5)}
+  .dprio b{font-size:12.5px;font-weight:900}
+  .dprio span{font-size:10.5px;color:var(--muted)}
+  .dmat{display:flex;align-items:center;gap:9px;padding:4px 0}
+  .dmn{width:64px;font-size:10.5px;font-weight:900;flex-shrink:0}
+  .dmb{flex:1;height:8px;border-radius:99px;background:rgba(107,70,193,.08);overflow:hidden}
+  .dmb i{display:block;height:100%;border-radius:99px;transition:width .5s ease}
+  .dmv{width:36px;text-align:right;font-size:10.5px;font-weight:900;color:var(--muted);font-variant-numeric:tabular-nums;flex-shrink:0}
+
   /* — la maîtrise : notions solides — */
   .mait-bar{height:10px;border-radius:99px;background:rgba(107,70,193,.1);overflow:hidden;margin-top:8px}
   .mait-bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#8B5CF6,#6B46C1);transition:width .5s ease}
@@ -3604,26 +3615,84 @@ function notionsEtat(){
   Object.keys(ns).forEach(n=>{ const s=ns[n]; if(s.ok>=2 && s.ok>s.ko) sol++; });
   return {tot:Object.keys(all).length, sol:sol};
 }
+/* une fiche recommandée ne s'ouvre que si le Parcours l'a déjà servie (ou année complète) */
+function diagOuvrable(f){ return !!(S.stage || (S.vues && S.vues[f])); }
+function diagStats(){
+  const MATS=['Anatomie','Biologie','Chimie','Physique'];
+  const nm={}, tot={};
+  if(typeof ABANK!=='undefined') ABANK.forEach(q=>{ nm[q.n]=q.mat; tot[q.mat]=(tot[q.mat]||0); });
+  const parN={};
+  if(typeof ABANK!=='undefined'){ const vu={}; ABANK.forEach(q=>{ if(!vu[q.n]){ vu[q.n]=1; tot[q.mat]=(tot[q.mat]||0)+1; } }); }
+  const st={};
+  MATS.forEach(m=>st[m]={ok:0,ko:0,sol:0,tot:tot[m]||0,ecl:0});
+  const ns=(S.ar&&S.ar.notions)||{};
+  Object.keys(ns).forEach(n=>{ const m=nm[n]; if(!m) return;
+    st[m].ok+=ns[n].ok||0; st[m].ko+=ns[n].ko||0;
+    if((ns[n].ok||0)>=2 && ns[n].ok>ns[n].ko) st[m].sol++; });
+  Object.keys(S.eclDiag||{}).forEach(n=>{ const m=nm[n]; if(m) st[m].ecl+=(S.eclDiag[n].c||0); });
+  MATS.forEach(m=>{ const s=st[m];
+    s.joue=s.ok+s.ko>0 || s.ecl>0;
+    s.reussite = (s.ok+s.ko)>0 ? s.ok/(s.ok+s.ko) : null;
+    /* score radar 0..1 : moitié réussite, moitié couverture en notions solides */
+    s.score = ((s.reussite===null?0:s.reussite)*0.6) + (s.tot? (s.sol/s.tot)*0.4 : 0);
+  });
+  return st;
+}
 function renderDiag(){
-  /* LE diagnostic de l'élève : Éclair + ascensions d'Arène fusionnés, priorisés.
-     Il dit quoi apprendre — 2 fiches recommandées par jour, pas plus. */
   const e=document.getElementById('p-diag'); if(!e) return;
+  const MATS=['Anatomie','Biologie','Chimie','Physique'];
+  const COUL={Anatomie:'#C05B4D',Biologie:'#2E7D53',Chimie:'#B8895A',Physique:'#3A5A9A'};
+  const st=diagStats();
+  const joue=MATS.some(m=>st[m].joue);
+  let x='<h3>🩺 Ton diagnostic</h3>';
+  if(!joue){
+    e.innerHTML=x+'<p style="font-size:12px;color:var(--muted);line-height:1.5">Joue à l\'Éclair et à l\'Arène : ton radar des matières et tes priorités de révision apparaîtront ici.</p>';
+    return;
+  }
+  /* — le radar des 4 matières (SVG) — */
+  const cx=90, cy=78, RR=58;
+  const ang={Anatomie:-90,Biologie:0,Chimie:90,Physique:180};
+  const pt=(m,r)=>{ const a=ang[m]*Math.PI/180; return (cx+Math.cos(a)*r).toFixed(1)+','+(cy+Math.sin(a)*r).toFixed(1); };
+  const poly=MATS.map(m=>pt(m,Math.max(0.08,st[m].score)*RR)).join(' ');
+  const grille=[0.33,0.66,1].map(k=>'<polygon points="'+MATS.map(m=>pt(m,RR*k)).join(' ')+'" fill="none" stroke="rgba(107,70,193,.15)" stroke-width="1"/>').join('');
+  const axes=MATS.map(m=>'<line x1="'+cx+'" y1="'+cy+'" x2="'+pt(m,RR).split(',')[0]+'" y2="'+pt(m,RR).split(',')[1]+'" stroke="rgba(107,70,193,.15)"/>').join('');
+  const labs='<text x="'+cx+'" y="'+(cy-RR-7)+'" text-anchor="middle" class="rlab" fill="'+COUL.Anatomie+'">Anatomie</text>'+
+    '<text x="'+(cx+RR+7)+'" y="'+(cy+3)+'" text-anchor="start" class="rlab" fill="'+COUL.Biologie+'">Bio</text>'+
+    '<text x="'+cx+'" y="'+(cy+RR+14)+'" text-anchor="middle" class="rlab" fill="'+COUL.Chimie+'">Chimie</text>'+
+    '<text x="'+(cx-RR-7)+'" y="'+(cy+3)+'" text-anchor="end" class="rlab" fill="'+COUL.Physique+'">Physique</text>';
+  x+='<div style="display:flex;justify-content:center"><svg viewBox="0 0 180 160" style="width:200px;max-width:60vw">'+grille+axes+
+     '<polygon points="'+poly+'" fill="rgba(107,70,193,.25)" stroke="#6B46C1" stroke-width="2" stroke-linejoin="round"/>'+labs+'</svg></div>';
+  /* — la matière à prioriser — */
+  const jouees=MATS.filter(m=>st[m].joue);
+  const prio=(jouees.length?jouees:MATS).slice().sort((a,b)=>st[a].score-st[b].score)[0];
+  x+='<div class="dprio" style="border-color:'+COUL[prio]+'"><b style="color:'+COUL[prio]+'">Matière à prioriser : '+prio+'</b>'+
+     '<span>'+(st[prio].reussite!==null? Math.round(st[prio].reussite*100)+' % de réussite · ':'')+st[prio].sol+' notion'+(st[prio].sol>1?'s':'')+' solide'+(st[prio].sol>1?'s':'')+' sur '+st[prio].tot+'</span></div>';
+  /* — les 4 lignes de stats — */
+  MATS.forEach(m=>{ const s=st[m];
+    const pc=s.reussite!==null?Math.round(s.reussite*100):null;
+    x+='<div class="dmat"><span class="dmn" style="color:'+COUL[m]+'">'+m+'</span>'+
+       '<span class="dmb"><i style="width:'+Math.round(s.score*100)+'%;background:'+COUL[m]+'"></i></span>'+
+       '<span class="dmv">'+(pc===null?'—':pc+' %')+'</span></div>';
+  });
+  /* — à réviser : 2 fiches, verrouillées tant que le Parcours ne les a pas servies — */
   const nf={}; if(typeof ABANK!=='undefined') ABANK.forEach(q=>{ if(!nf[q.n]) nf[q.n]=q.f; });
   const sc={};
   Object.keys(S.eclDiag||{}).forEach(n=>{ sc[n]=(sc[n]||0)+(S.eclDiag[n].c||0); });
   const ns=(S.ar&&S.ar.notions)||{};
-  Object.keys(ns).forEach(n=>{ const d=ns[n].ko-(ns[n].ok||0); if(d>0) sc[n]=(sc[n]||0)+d*2; });   /* l'Arène pèse double : question complète ratée */
-  const notes=Object.keys(sc).sort((x,y)=>sc[y]-sc[x]);
-  if(!notes.length){
-    e.innerHTML='<h3>🩺 Ton diagnostic</h3><p style="font-size:12px;color:var(--muted);line-height:1.5">Joue à l\'Éclair et à l\'Arène : tes erreurs dessineront ici ce qu\'il faut apprendre en priorité.</p>';
-    return;
+  Object.keys(ns).forEach(n=>{ const d=(ns[n].ko||0)-(ns[n].ok||0); if(d>0) sc[n]=(sc[n]||0)+d*2; });
+  const notes=Object.keys(sc).sort((a,b)=>sc[b]-sc[a]);
+  if(notes.length){
+    x+='<p style="font-size:11px;font-weight:900;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin:12px 0 3px">À réviser en priorité</p>';
+    notes.slice(0,2).forEach(n=>{ const f=(S.eclDiag&&S.eclDiag[n]&&S.eclDiag[n].f)||nf[n];
+      const libre=f&&diagOuvrable(f);
+      x+='<div class="agj-row"><span class="agj-nom">'+n+'</span>'+
+        (libre?'<button class="blien" onclick="openFiche(\''+f+'\')">📄 réviser</button>'
+              :'<span style="font-size:10px;font-weight:800;color:var(--muted)">🔒 arrive dans ton Parcours</span>')+'</div>';
+    });
+    const suite=notes.slice(2,6);
+    if(suite.length) x+='<p style="font-size:10.5px;color:var(--muted);margin-top:6px">Ensuite : '+suite.join(' · ')+'</p>';
+    x+='<p style="font-size:10px;color:var(--muted);margin-top:4px">2 fiches par jour, pas plus — et une fiche se révise quand ton Parcours l\'a ouverte.</p>';
   }
-  let x='<h3>🩺 Ton diagnostic</h3><p style="font-size:11px;color:var(--muted);margin-bottom:2px">Ce que tes parties révèlent — Éclair et ascensions confondus. 2 fiches par jour, pas plus.</p>';
-  notes.slice(0,2).forEach(n=>{ const f=(S.eclDiag&&S.eclDiag[n]&&S.eclDiag[n].f)||nf[n];
-    x+='<div class="agj-row"><span class="agj-nom">'+n+'</span>'+
-    (f?'<button class="blien" onclick="openFiche(\''+f+'\')">📄 réviser</button>':'')+'</div>'; });
-  const suite=notes.slice(2,6);
-  if(suite.length) x+='<p style="font-size:10.5px;color:var(--muted);margin-top:7px">Ensuite : '+suite.join(' · ')+'</p>';
   e.innerHTML=x;
 }
 function renderMaitrise(){
@@ -4034,8 +4103,10 @@ function ecFin(){
     const cum=Object.keys(S.eclDiag).sort((x,y)=>S.eclDiag[y].c-S.eclDiag[x].c);
     if(cum.length){
       let z='<p style="font-size:11px;font-weight:900;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin:10px 0 4px">🩺 À réviser en priorité</p>';
-      cum.slice(0,2).forEach(n=>{ z+='<div class="agj-row"><span class="agj-nom">'+n+'</span>'+
-        (S.eclDiag[n].f?'<button class="blien" onclick="openFiche(\''+S.eclDiag[n].f+'\')">📄 réviser</button>':'')+'</div>'; });
+      cum.slice(0,2).forEach(n=>{ const f=S.eclDiag[n].f, libre=f&&diagOuvrable(f);
+        z+='<div class="agj-row"><span class="agj-nom">'+n+'</span>'+
+        (libre?'<button class="blien" onclick="openFiche(\''+f+'\')">📄 réviser</button>'
+              :'<span style="font-size:10px;font-weight:800;color:var(--muted)">🔒 arrive dans ton Parcours</span>')+'</div>'; });
       const suite=cum.slice(2,5);
       if(suite.length) z+='<p style="font-size:10.5px;color:var(--muted);margin-top:6px">Ensuite : '+suite.join(' · ')+'</p>';
       z+='<p style="font-size:10px;color:var(--muted);margin-top:4px">2 fiches par jour, pas plus — la régularité bat le gavage.</p>';
