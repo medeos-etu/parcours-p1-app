@@ -1202,7 +1202,16 @@
   }
 
   /* ═══════ PARCOURS v2 (spec panel 24/08) ═══════ */
-  .ptop{display:flex;align-items:center;gap:10px;padding:2px 2px 0}
+  .ptop{display:flex;align-items:center;gap:10px;padding:2px 2px 0;position:relative}
+  /* — la bulle de la flamme : petit popover ancré sous la flamme, pas de grande fenêtre — */
+  .flampop{position:absolute;top:calc(100% + 9px);right:0;z-index:80;width:min(270px,82vw);
+    background:#FFFDF9;border:1px solid var(--line);border-radius:14px;padding:12px 13px;text-align:left;
+    box-shadow:0 12px 30px rgba(31,27,46,.18);animation:fpin .18s ease-out}
+  .flampop::before{content:"";position:absolute;top:-6px;right:20px;width:10px;height:10px;background:#FFFDF9;
+    border-left:1px solid var(--line);border-top:1px solid var(--line);transform:rotate(45deg)}
+  .flampop b{font-size:13px;font-weight:900;display:block}
+  .flampop p{font-size:11.5px;color:var(--muted);line-height:1.55;margin-top:6px}
+  @keyframes fpin{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
   .pavatar{width:34px;height:34px;border-radius:50%;overflow:hidden;flex-shrink:0;background:linear-gradient(145deg,var(--violet),var(--violet-deep))}
   .pavatar img{width:100%;height:100%;object-fit:cover;object-position:50% 4%;transform:scale(1.22);transform-origin:50% 0}
   .ptxt{flex:1;min-width:0}
@@ -1600,7 +1609,12 @@
     <header class="ptop">
       <span class="pavatar"><img src="img/axo-canon.png" alt=""></span>
       <div class="ptxt"><b id="pt-hello">Ton entraînement</b><span>Ta préparation P1</span></div>
-      <span class="pflame" id="pt-flame" hidden style="cursor:pointer" onclick="openSheet('sheet-flamme')">🔥 1 j</span>
+      <span class="pflame" id="pt-flame" hidden style="cursor:pointer" onclick="toggleFlamme(event)">🔥 1 j</span>
+      <div class="flampop" id="flamme-pop" hidden onclick="event.stopPropagation()">
+        <b id="fp-titre">Ta série</b>
+        <p>Un jour travaillé — une séance ou une ascension — fait grandir ta série de 1.</p>
+        <p>Un oubli est pardonné grâce à <b style="display:inline">un jour de bonus — un seul</b>. Deux jours sans venir, et elle repart de zéro.</p>
+      </div>
     </header>
 
     <div class="seance" id="seance"></div>
@@ -1870,18 +1884,6 @@
         <p style="font-size:12.5px;color:var(--muted);line-height:1.6;margin-top:6px" id="quit-txt">Elle s'arrête ici : les questions déjà jouées comptent, celles qui restent sont perdues.</p>
         <button class="btn" style="margin-top:14px" onclick="closeSheet('sheet-quit')">Continuer l'ascension</button>
         <button class="btn ghost" style="margin-top:8px" id="quit-btn" onclick="closeSheet('sheet-quit');closeRun(true)">Quitter — je garde mes points joués</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- ═══ FENÊTRE : la série (flamme) ═══ -->
-  <div class="modal" id="sheet-flamme" onclick="if(event.target===this)closeSheet('sheet-flamme')">
-    <div class="sheet">
-      <div class="sheet-h"><b>🔥 Ta série</b><button onclick="closeSheet('sheet-flamme')">✕</button></div>
-      <div class="sheet-b">
-        <p id="flamme-jours" style="font-size:15px;font-weight:800"></p>
-        <p style="font-size:12.5px;color:var(--muted);line-height:1.6;margin-top:8px">Chaque jour où tu travailles — une séance de Parcours ou une ascension d'Arène — ta série grandit de 1.</p>
-        <p style="font-size:12.5px;color:var(--muted);line-height:1.6;margin-top:8px">Un oubli ? Ta série tient grâce à <b>un jour de bonus — un seul</b>. Deux jours sans venir, et elle repart de zéro.</p>
       </div>
     </div>
   </div>
@@ -3453,12 +3455,22 @@ function openSheet(id){
   const m=document.getElementById(id); if(!m) return;
   if(id==='sheet-road') renderRoad();
   if(id==='sheet-rank'){ renderCompte(); renderLB(); }
-  if(id==='sheet-flamme'){ const e=document.getElementById('flamme-jours');
-    if(e) e.textContent='🔥 '+(S.streak||0)+' jour'+((S.streak||0)>1?'s':'')+' d\'affilée'; }
   if(id==='sheet-skin') renderSkin();
   m.classList.add('on');
 }
 function closeSheet(id){ const m=document.getElementById(id); if(m) m.classList.remove('on'); }
+/* la bulle de la flamme : petit popover, se referme au clic ailleurs */
+function toggleFlamme(ev){
+  if(ev) ev.stopPropagation();
+  const p=document.getElementById('flamme-pop'); if(!p) return;
+  if(p.hidden){
+    const n=S.streak||0;
+    document.getElementById('fp-titre').textContent=n+' jour'+(n>1?'s':'')+' d\'affilée';
+    p.hidden=false;
+    setTimeout(()=>document.addEventListener('click',fermerFlamme,{once:true}),0);
+  } else p.hidden=true;
+}
+function fermerFlamme(){ const p=document.getElementById('flamme-pop'); if(p) p.hidden=true; }
 
 /* ═══ LES 4 BOUTONS D'ARÈNE ═══ */
 function renderPick(){
