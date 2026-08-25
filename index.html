@@ -2293,7 +2293,8 @@
     <div id="ec-jeu">
       <div class="card" id="ec-card" style="text-align:center">
         <span class="pmat" id="ec-mat"></span>
-        <p id="ec-item" style="font-size:15px;font-weight:700;line-height:1.5;margin:12px 0 4px;min-height:88px"></p>
+        <p id="ec-notion" style="font-size:12px;font-weight:900;color:var(--violet);margin-top:8px"></p>
+        <p id="ec-item" style="font-size:15px;font-weight:700;line-height:1.5;margin:8px 0 4px;min-height:88px"></p>
         <p style="font-size:11px;color:var(--muted)">Score <b id="ec-score">0</b> <span id="ec-combo" class="ec-combo"></span></p>
       </div>
       <div class="ec-btns">
@@ -3872,11 +3873,15 @@ function tutoEnd(){
    ensuite on joue pour le record. ═══ */
 let EC=null, ecTimer=null, ecCd=null;
 function ecFaitAuj(){ return !!(S.ecl && S.ecl.day===arDay()); }
+/* un item n'entre dans l'Éclair que s'il se suffit à lui-même : les référents orphelins
+   (« Son rôle… », « Elle traverse… », « Cette paire… ») dépendent de l'énoncé d'origine */
+const EC_ORPHELIN=/^\s*(Il |Elle |Ils |Elles |Son |Sa |Ses |Ce |Cet |Cette |Leur |Leurs |Celui|Celle|Ceux|Cela |Ça |C'est (lui|elle)|On le |On la |On les )/;
 function ecPool(){
   /* trois paniers par difficulté de la question d'origine : on démarre DOUX, ça monte */
   const A=[],B=[],C=[];
   ABANK.forEach(q=>{ const cible=q.D<=950?A:(q.D<=1045?B:C);
-    q.it.forEach(it=>cible.push({t:it[1], v:!!it[2], mat:q.mat, n:q.n, f:q.f, qid:q.id})); });
+    q.it.forEach(it=>{ if(EC_ORPHELIN.test(it[1])) return;
+      cible.push({t:it[1], v:!!it[2], mat:q.mat, n:q.n, f:q.f, qid:q.id}); }); });
   [A,B,C].forEach(arr=>{ for(let i=arr.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]]; } });
   return [A,B,C];
 }
@@ -3942,6 +3947,7 @@ function ecShow(){
   const it=EC.cur; if(!it){ ecFin(); return; }
   document.getElementById('ec-item').textContent=it.t;
   document.getElementById('ec-mat').textContent=it.mat;
+  { const nn=document.getElementById('ec-notion'); if(nn) nn.textContent=it.n; }
   document.getElementById('ec-score').textContent=EC.score;
   document.getElementById('ec-combo').textContent=EC.combo>=2?('combo ×'+EC.combo):'';
 }
