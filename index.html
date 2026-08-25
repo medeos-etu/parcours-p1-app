@@ -3447,7 +3447,7 @@ const TUTOS={
   home:[
     {img:'axo-canon',   t:"Voici ton <b>Parcours</b> : deux fiches par jour, un rythme tenable, une méthode qui fait tenir les notions."},
     {sel:'#seance',     t:"Ta <b>séance du jour</b> t'attend ici : lecture, rappel de mémoire, comparaison, puis QCM."},
-    {img:'axo-fiche',   t:"Chaque jour travaillé allonge ta série 🔥. Un oubli est pardonné — un seul."},
+    {sel:'#pt-flame', img:'axo-fiche', t:"Chaque jour travaillé allonge ta série 🔥. Un oubli est pardonné — un seul."},
     {img:'axo-encourage', t:"Tout ce que tu lis ici arme l'Arène. Bonne première séance !", btn:"C'est parti !"}
   ],
   arene:[
@@ -3481,7 +3481,9 @@ function tutoShow(){
   /* le projecteur se pose sur l'élément présenté ; sans cible, plein voile */
   let r=null;
   if(st.sel){ const el=document.querySelector(st.sel);
-    if(el){ try{ el.scrollIntoView({block:'center'}); }catch(e){} r=el.getBoundingClientRect(); } }
+    /* la flamme est masquée tant que la série est à zéro : on la révèle le temps de l'étape */
+    if(el && el.hidden && st.sel==='#pt-flame'){ el.hidden=false; if(!(S.streak>=1)) el.textContent='🔥 0 j'; TU.flammeTemp=true; }
+    if(el && !el.hidden){ try{ el.scrollIntoView({block:'center'}); }catch(e){} r=el.getBoundingClientRect(); } }
   if(r && r.width>0){
     const p=8;
     hole.style.left=(r.left-p)+'px'; hole.style.top=(r.top-p)+'px';
@@ -3502,10 +3504,12 @@ function tutoNext(){
 }
 function tutoEnd(){
   if(!TU) return;
+  const flTemp=TU.flammeTemp;
   S.tuto=S.tuto||{}; S.tuto[TU.k]=Date.now(); saveS();
   TU=null;
   document.getElementById('tuto').hidden=true;
   window.removeEventListener('resize',tutoReplace);
+  if(flTemp && typeof renderPtop==='function') renderPtop();   /* la flamme reprend son état réel */
 }
 
 /* ═══ PORTIER D'ONBOARDING — aucune question tant qu'on se balade.
