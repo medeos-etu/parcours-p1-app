@@ -3671,15 +3671,27 @@ async function activerCode(){
   if(!inp) return;
   const brut=(inp.value||'').trim().toUpperCase().replace(/\s+/g,'');
   if(!brut){ if(msg) msg.textContent='Entre ton code.'; return; }
-  let h='';
-  try{
-    const buf=await crypto.subtle.digest('SHA-256', new TextEncoder().encode(brut));
-    h=Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
-  }catch(e){ if(msg) msg.textContent='Vérification impossible ici — ouvre l\'app depuis son adresse en ligne.'; return; }
-  if(!CODES_ANNEE.includes(h)){ if(msg) msg.textContent='Code non reconnu — vérifie les tirets et les caractères.'; return; }
   const uses=JSON.parse(localStorage.getItem('m4_codes_uses')||'[]');
-  if(uses.includes(h)){ if(msg) msg.textContent='Ce code a déjà été utilisé.'; return; }
-  uses.push(h); localStorage.setItem('m4_codes_uses',JSON.stringify(uses));
+  if(uses.includes(brut)){ if(msg) msg.textContent='Ce code a déjà été utilisé.'; return; }
+  if(msg) msg.textContent='Vérification…';
+  /* 1) validation serveur : les codes sont générés automatiquement à l'achat du pack,
+        le serveur reconnaît celui de chaque acheteur */
+  let ok=false;
+  try{
+    const r=await fetch('https://www.medeos-sante.fr/api/app-code',{method:'POST',
+      headers:{'Content-Type':'application/json'},body:JSON.stringify({code:brut})});
+    if(r.ok){ const j=await r.json(); ok=!!j.ok; }
+  }catch(e){}
+  /* 2) repli hors-ligne : les codes historiques embarqués (empreintes SHA-256) */
+  if(!ok){
+    try{
+      const buf=await crypto.subtle.digest('SHA-256', new TextEncoder().encode(brut));
+      const h=Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
+      ok=CODES_ANNEE.includes(h) && !uses.includes(h);
+    }catch(e){}
+  }
+  if(!ok){ if(msg) msg.textContent='Code non reconnu — vérifie les tirets et les caractères.'; return; }
+  uses.push(brut); localStorage.setItem('m4_codes_uses',JSON.stringify(uses));
   S.stage=true; S.codeAnnee=Date.now(); saveS();
   renderCodeZone(); renderAcces(); renderState();
   if(typeof renderCurArena==='function') renderCurArena();
