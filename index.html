@@ -1968,6 +1968,9 @@
       <div class="sidecol">
         <div class="card qjcard" id="qj-arene"></div>
         <div class="card qjcard" id="ec-entree"></div>
+        <div class="card qjcard">
+          <div class="qj-row" onclick="startEntrainement()"><span class="qj-ic">🎯</span><div class="qj-bd"><b>Entraînement</b><span>QCM sans enjeu, uniquement sur tes fiches du Parcours</span></div><span class="qj-go">Réviser</span></div>
+        </div>
         <div class="card" id="ar-sideacc" style="display:none"></div>
         <div class="card" id="ar-stagecard" style="display:none;border:1px solid var(--tung)">
           <p style="font-size:12.5px;font-weight:800">Tes 3 ascensions du jour sont faites. 👏</p>
@@ -2490,7 +2493,8 @@ function go(id){
     if(id==='biblio'){
       if(accOk()){ if(!tutoFait('biblio')){ S.tuto=S.tuto||{}; S.tuto.biblio=Date.now(); saveS(); } }
       else kT='biblio';
-    } else if((id==='home'||id==='arene') && accOk()) kT=id;
+    } else if(id==='home' && accOk()) kT='home';
+    else if(id==='arene' && accOk() && (typeof areneOuvrable!=='function'||areneOuvrable())) kT='arene';
     if(kT && !tutoFait(kT)) setTimeout(()=>{ const sc=document.getElementById(id); if(sc&&sc.classList.contains('on')) startTuto(kT); },450);
   }
 }
@@ -3875,7 +3879,12 @@ function renderCurArena(){
   const a=ARENES[arView]||ARENES[0];
   const ouverte=arOuverte(a), dispo=arDispo(a);
   let voile='';
-  if(!dispo) voile='<div class="slock"><span class="l1">🔜</span><b>Bientôt</b><span>Les questions arrivent — cette arène ouvre très vite</span></div>';
+  if(!areneOuvrable()){
+    const n=(typeof seancesFaites==='function')?seancesFaites().length:0;
+    voile='<div class="slock"><span class="l1">🔒</span><b>L\'Arène s\'ouvre après '+ARENE_SEUIL_SEANCES+' séances de Parcours</b>'+
+      '<span>'+n+'/'+ARENE_SEUIL_SEANCES+' faite'+(n>1?'s':'')+' — en attendant, entraîne-toi sans enjeu sur tes fiches.</span></div>';
+  }
+  else if(!dispo) voile='<div class="slock"><span class="l1">🔜</span><b>Bientôt</b><span>Les questions arrivent — cette arène ouvre très vite</span></div>';
   const parts=Array.from({length:7},(x,i)=>'<i class="part" style="left:'+(8+i*13)+'%;animation-duration:'+(7+(i*2.3)%6)+'s;animation-delay:-'+(i*1.7)+'s"></i>').join('');
   b.innerHTML=voile+
     '<div class="sscene '+a.sky+'"><div class="decor"></div>'+parts+
@@ -3893,7 +3902,10 @@ function renderCurArena(){
   }
   const bt=document.getElementById('ar-start-t'), bs=document.getElementById('ar-start-s'), bb=document.getElementById('ar-start');
   if(bt&&bs&&bb){
-    if(!dispo){ bt.textContent='BIENTÔT'; bs.textContent='cette arène ouvre plus tard'; bb.disabled=true; }
+    if(!areneOuvrable()){ bt.textContent='S\'ENTRAÎNER D\'ABORD'; bs.textContent='QCM sans enjeu, sur tes fiches du Parcours'; bb.disabled=false; bb.onclick=startEntrainement; }
+    else { bb.onclick=startRun; }
+    if(areneOuvrable() && !dispo){ bt.textContent='BIENTÔT'; bs.textContent='cette arène ouvre plus tard'; bb.disabled=true; }
+    else if(!areneOuvrable()){ }
     else if(!S.stage && S.ar.runs<=0){ bt.textContent='REVIENS DEMAIN'; bs.textContent='tes '+RUN_PER_DAY+' ascensions du jour sont faites'; bb.disabled=true; }
     else if(!S.ar.runsDone){ bt.innerHTML='<img src="img/icones/nav-arene.png" alt=""> COMBATTRE'; bs.textContent='ta première ascension — pendant la calibration, impossible de perdre'; bb.disabled=false; }
     else { bt.innerHTML='<img src="img/icones/nav-arene.png" alt=""> COMBATTRE';
@@ -4810,6 +4822,28 @@ function qcmDuJour(){
   const pool=facile.length?facile:ABANK.filter(q=>q.mat===mat);
   return [pool[mjSeed(d)%pool.length]];     /* la même pour tout le monde aujourd'hui */
 }
+/* ═══ L'ARÈNE SE MÉRITE — elle s'ouvre après 2 séances de Parcours.
+   Avant : le mode ENTRAÎNEMENT, sans enjeu, uniquement sur les fiches déjà vues. ═══ */
+const ARENE_SEUIL_SEANCES=2;
+function areneOuvrable(){
+  if(S.stage) return true;
+  return (typeof seancesFaites==='function'?seancesFaites().length:0)>=ARENE_SEUIL_SEANCES;
+}
+function startEntrainement(){
+  const deb=(typeof fichesDebloquees==='function')?fichesDebloquees():{};
+  const pool=ABANK.filter(q=>deb[q.f]);
+  if(pool.length<3){
+    LB={qs:[],i:0,ok:0,mat:null,jour:false,sel:new Set(),done:false};
+    go('home');
+    return;
+  }
+  const arr=pool.slice();
+  for(let i=arr.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]]; }
+  LB={qs:arr.slice(0,5),i:0,ok:0,mat:null,jour:false,sel:new Set(),done:false};
+  document.getElementById('libre-titre').textContent='Entraînement · sur tes fiches';
+  document.getElementById('libre-note').textContent='Sans chrono, sans trophées — uniquement ce que tu as déjà vu dans ton Parcours.';
+  libreShow(); go('libre');
+}
 function startLibre(mat){
   LB={qs:libreQs(mat,5),i:0,ok:0,mat:mat,jour:false,sel:new Set(),done:false};
   document.getElementById('libre-titre').textContent='Entraînement · '+(mat||'toutes matières');
@@ -5701,6 +5735,7 @@ function startRun(){ ensureOnb(preRun); }
 let cdTimer=null;
 function preRun(){
   initAr();
+  if(!areneOuvrable()){ renderArene(); go('arene'); return; }   /* l'Arène n'est pas encore ouverte */
   if(S.ar.runs<=0 && !S.stage){ renderArene(); go('arene'); return; }
   const e=document.getElementById('cd-num');
   let n=3; if(e) e.textContent=n;
