@@ -3879,7 +3879,7 @@ function renderQj(){
   const x = fait
     ? '<div class="qj-row ok"><span class="qj-ic">☀️</span><div class="qj-bd"><b>QCM du Jour — fait ✓</b>'+
       '<span>+'+((S.qj&&S.qj.gain)||0)+' 🏆 · à demain pour la suivante.</span></div></div>'
-    : '<div class="qj-row" onclick="startQcmJour()"><span class="qj-ic">☀️</span><div class="qj-bd"><b>Le QCM du Jour</b>'+
+    : '<div class="qj-row" onclick="startQcmJour()"><span class="qj-ic">☀️</span><div class="qj-bd"><b>Le QCM du Jour · '+(qcmDuJour()[0]||{}).mat+'</b>'+
       '<span>Une question, 90 secondes — la même pour tout le monde, récompense mystère 🎁</span></div><span class="qj-go">Jouer</span></div>';
   ['qj-home','qj-arene'].forEach(id=>{ const e=document.getElementById(id); if(e) e.innerHTML=x; });
 }
@@ -4320,8 +4320,14 @@ function libreQs(mat,n){
   return arr.slice(0,n);
 }
 function qcmDuJour(){
-  const d=new Date(); const seed=d.getFullYear()*10000+(d.getMonth()+1)*100+d.getDate();
-  return [ABANK[seed % ABANK.length]];      /* la même pour tout le monde aujourd'hui */
+  /* la matière TOURNE chaque jour (ana → bio → chimie → physique), la question est
+     tirée parmi les ACCESSIBLES (1-2 étoiles) : une porte d'entrée doit se franchir. */
+  const d=arDay();
+  const jours=Math.floor(new Date(d+'T12:00:00').getTime()/864e5);
+  const mat=MJ_MATS[jours%4];
+  const facile=ABANK.filter(q=>q.mat===mat && q.D<=950);
+  const pool=facile.length?facile:ABANK.filter(q=>q.mat===mat);
+  return [pool[mjSeed(d)%pool.length]];     /* la même pour tout le monde aujourd'hui */
 }
 function startLibre(mat){
   LB={qs:libreQs(mat,5),i:0,ok:0,mat:mat,jour:false,sel:new Set(),done:false};
