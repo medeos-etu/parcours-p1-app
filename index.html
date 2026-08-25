@@ -904,6 +904,12 @@
   .agj-day b{font-size:9.5px;text-transform:uppercase;letter-spacing:.03em}
   .agj-day span{font-size:13px;font-weight:900;color:var(--violet)}
 
+  /* — le sélecteur année / semaine du classement — */
+  .lbportee{display:flex;gap:6px;margin-bottom:9px}
+  .lbportee button{flex:1;border:1px solid var(--line);background:var(--card);border-radius:11px;padding:8px 6px;
+    font-family:inherit;font-size:12px;font-weight:800;color:var(--muted);cursor:pointer}
+  .lbportee button.on{background:linear-gradient(180deg,#8B5CF6,#6B46C1);color:#fff;border-color:transparent}
+
   /* — le podium du classement : or, argent, bronze sur leurs marches — */
   .lbpodium{display:flex;align-items:flex-end;justify-content:center;gap:8px;margin:6px 0 14px}
   .pd{display:flex;flex-direction:column;align-items:center;gap:3px;flex:1;max-width:112px;min-width:0}
@@ -2030,7 +2036,7 @@
   <!-- ═══ FENÊTRE : classement ═══ -->
   <div class="modal" id="sheet-rank" onclick="if(event.target===this)closeSheet('sheet-rank')">
     <div class="sheet">
-      <div class="sheet-h"><b>📊 Le classement de la semaine</b><button onclick="closeSheet('sheet-rank')">✕</button></div>
+      <div class="sheet-h"><b>📊 Le classement</b><button onclick="closeSheet('sheet-rank')">✕</button></div>
       <div class="sheet-b">
         <div class="lbtabs" id="ar-lbtabs"></div>
         <div id="ar-lb"></div>
@@ -4892,12 +4898,26 @@ const LB_TABS=[['general','Général'],['Anatomie','🫀 Anatomie'],['Biologie',
 /* ═══ UNE cohorte cohérente : chaque joueur fictif a ses 4 compteurs,
    le général = LA SOMME EXACTE des 4. Mêmes joueurs dans tous les onglets. ═══ */
 let LB_PLAYERS=null;
+/* ═══ LA COHORTE D'ENTRAÎNEMENT — des rivaux au rythme réaliste, PAS de faux élèves :
+   ils sont présentés comme ce qu'ils sont (des rythmes de référence), et ils PROGRESSENT
+   chaque jour selon une courbe logistique déterministe (même valeur pour tout le monde,
+   au même moment, sans serveur). ═══ */
+function lbJour(){ return Math.floor((Date.now()-6*3600*1000)/864e5)-20690; }   /* jours depuis l'ancrage */
+function lbScore(i,j){
+  const base=90+((i*37)%160);                 /* d'où il part */
+  const plaf=1400+Math.round(7200*Math.exp(-i*0.11));   /* où il plafonne (les têtes montent plus haut) */
+  const k=0.035+((i*13)%9)/500;               /* sa vitesse */
+  const v=plaf/(1+(plaf/base-1)*Math.exp(-k*Math.max(0,j)));
+  return Math.round(v);
+}
 function lbJoueurs(){
-  if(LB_PLAYERS) return LB_PLAYERS;
+  const jour=lbJour();
+  if(LB_PLAYERS && LB_PLAYERS._j===jour) return LB_PLAYERS;
   const MATS=['Anatomie','Biologie','Chimie','Physique'];
-  LB_PLAYERS=[];
+  LB_PLAYERS=[]; LB_PLAYERS._j=jour;
   for(let i=0;i<LB_SIZE;i++){
-    const force=5400*Math.exp(-i*0.13)+((i*53)%47);
+    const force=lbScore(i,jour);
+    const forceAv7=lbScore(i,jour-7);
     /* chaque joueur a ses matières fortes et faibles — multiplicateurs à RESTES DISTINCTS
        modulo 5 + décalages, sinon deux matières sortent identiques (bug : 7 ≡ 17 [mod 5],
        Anatomie et Physique avaient exactement les mêmes trophées) */
@@ -4907,19 +4927,32 @@ function lbJoueurs(){
     let total=0;
     MATS.forEach((m,k)=>{ vals[m]=Math.round(force*g[k]/somme); total+=vals[m]; });
     const medeos = i<6 ? (i%5!==4) : (i<14 ? i%3===0 : i%6===0);
-    LB_PLAYERS.push({n:LB_NAMES[i%LB_NAMES.length], vals:vals, total:total, m:medeos});
+    /* ce qu'il a gagné cette semaine : la différence avec son score d'il y a 7 jours */
+    const sem=Math.max(0,force-forceAv7);
+    const semVals={};
+    MATS.forEach((m,k2)=>{ semVals[m]=Math.round(sem*g[k2]/somme); });
+    LB_PLAYERS.push({n:LB_NAMES[i%LB_NAMES.length], vals:vals, total:total, m:medeos, sem:sem, semVals:semVals});
   }
   return LB_PLAYERS;
 }
+/* l'année Medeos court du 1er septembre au 31 août : le classement annuel repart à la rentrée */
+function anneeMedeos(){ const d=new Date(Date.now()-6*3600*1000); return d.getMonth()>=8 ? d.getFullYear() : d.getFullYear()-1; }
+let lbPortee='annee';   /* 'annee' | 'semaine' */
 function lbCohorte(tab){
   const js=lbJoueurs();
-  const coh=js.map(p=>({n:p.n, v: tab==='general'? p.total : p.vals[tab], m:p.m}));
+  const sem=(lbPortee==='semaine');
+  const coh=js.map(p=>({n:p.n, m:p.m,
+    v: sem ? (tab==='general'? p.sem : (p.semVals?p.semVals[tab]:0))
+           : (tab==='general'? p.total : p.vals[tab]) }));
   coh.sort((a,b)=>b.v-a.v);       /* l'ordre change selon la matière — normal et réaliste */
   return coh;
 }
 function monScore(tab){
   if(!S.ar) return 0;
-  if(tab==='general') return S.ar.T||0;
+  if(lbPortee==='semaine') return maSemaine(tab);
+  /* annuel : les trophées gagnés depuis la rentrée du 1er septembre */
+  const dep=(S.ar.annee===anneeMedeos())?(S.ar.anneeT0||0):0;
+  if(tab==='general') return Math.max(0,(S.ar.T||0)-dep);
   return arT(tab);
 }
 function maSemaine(tab){
@@ -4930,6 +4963,14 @@ function maSemaine(tab){
 function renderLbTabs(){
   const box=document.getElementById('ar-lbtabs'); if(!box) return;
   box.innerHTML='';
+  const p=document.createElement('div'); p.className='lbportee';
+  [['annee','🏛️ L\'année'],['semaine','📅 La semaine']].forEach(([k,nom])=>{
+    const b=document.createElement('button');
+    b.textContent=nom; if(k===lbPortee) b.className='on';
+    b.onclick=()=>{ lbPortee=k; renderLbTabs(); renderLB(); };
+    p.appendChild(b);
+  });
+  box.appendChild(p);
   LB_TABS.forEach(([k,nom])=>{
     const b=document.createElement('button');
     b.textContent=nom; if(k===lbTab) b.className='on';
@@ -5992,6 +6033,7 @@ function initAr(){
   if(S.ar.Tmax===undefined) S.ar.Tmax=S.ar.T||0;
   if(S.ar.day!==arDay()){ S.ar.day=arDay(); S.ar.runs=RUN_PER_DAY; }  /* aucune pénalité d'absence */
   if(S.ar.wk!==arWeek()){ S.ar.wk=arWeek(); S.ar.wdt=0; S.ar.wdm={}; }             /* seul le classement repart */
+  if(S.ar.annee!==anneeMedeos()){ S.ar.annee=anneeMedeos(); S.ar.anneeT0=S.ar.T||0; }   /* rentrée : le classement annuel repart */
   histoSnap();
   if(S.ar.played && Date.now()-S.ar.played>BOOST_J*864e5 && !S.ar.boost) S.ar.boost=BOOST_RUNS;
   saveS();
@@ -6569,7 +6611,9 @@ function renderLB(){
     if(coupe){ sep(); coupe=false; }
     row(i+1,p.n,p.v,!!p.me,p.m);
   });
-  note.textContent='Sur ta progression de la semaine : tout le monde peut gagner sa semaine. Il repart à zéro chaque lundi — ta route, jamais.';
+  note.textContent = lbPortee==='semaine'
+    ? 'Ta semaine : tout le monde repart à zéro chaque lundi — ta route, jamais. Ta cohorte d\'entraînement progresse chaque jour, elle aussi.'
+    : 'Ton année Medeos, du 1er septembre au 31 août — elle repart à la rentrée. Tu affrontes une cohorte d\'entraînement : des rythmes de référence, pas de vrais élèves.';
 }
 
 /* ================= Bibliothèque ================= */
