@@ -1801,7 +1801,7 @@
         <div class="card" id="ar-sideacc" style="display:none"></div>
         <div class="card" id="ar-stagecard" style="display:none;border:1px solid var(--tung)">
           <p style="font-size:12.5px;font-weight:800">Tes 3 ascensions du jour sont faites. 👏</p>
-          <p style="font-size:11.5px;color:var(--muted);line-height:1.55;margin-top:3px">Les élèves des stages Medeos, eux, continuent : ascensions illimitées ici — et surtout leur stage de révision, avec plus de 2 000 QCM d'entraînement, des concours blancs et quelqu'un qui répond.</p>
+          <p style="font-size:11.5px;color:var(--muted);line-height:1.55;margin-top:3px">Les élèves de l'année complète Medeos, eux, continuent : ascensions illimitées ici — et leurs stages de révision, avec plus de 2 000 QCM d'entraînement, des concours blancs et quelqu'un qui répond.</p>
           <button class="btn ghost small" style="margin-top:9px" onclick="voirStages()">Voir les stages</button>
         </div>
       </div>
@@ -1984,7 +1984,7 @@
 
       <div class="card" id="arend-stagecard" style="display:none;width:100%;max-width:400px;text-align:left;border:1px solid var(--tung)">
         <p style="font-size:12.5px;font-weight:800">Tes 3 ascensions du jour sont faites. 👏</p>
-        <p style="font-size:11.5px;color:var(--muted);line-height:1.55;margin-top:3px">Les élèves des stages Medeos, eux, continuent : ascensions illimitées ici — et surtout leur stage de révision, avec plus de 2 000 QCM d'entraînement, des concours blancs et quelqu'un qui répond.</p>
+        <p style="font-size:11.5px;color:var(--muted);line-height:1.55;margin-top:3px">Les élèves de l'année complète Medeos, eux, continuent : ascensions illimitées ici — et leurs stages de révision, avec plus de 2 000 QCM d'entraînement, des concours blancs et quelqu'un qui répond.</p>
         <button class="btn ghost small" style="margin-top:9px" onclick="voirStages()">Voir les stages</button>
       </div>
       <button class="btn" style="max-width:320px" onclick="go('arene')">Retour à l'Arène</button>
@@ -2043,7 +2043,8 @@
     <h2 id="rayon-stages">⚡ Réviser sans limite</h2>
     <div class="bonusbox">
       <div class="brow"><span class="bk">Sans stage</span><span>L'app est gratuite : ta séance de Parcours et 3 ascensions d'Arène par jour.</span></div>
-      <div class="brow gold"><span class="bk">Avec un stage</span><span><b>Un vrai stage de révision pendant tes vacances</b> + <b>le Parcours et l'Arène en illimité</b> toute l'année. Tu arrives prêt à la rentrée.</span></div>
+      <div class="brow"><span class="bk">Avec un stage</span><span><b>Un vrai stage de révision pendant tes vacances</b> — et l'app en accès gratuit, comme tout le monde.</span></div>
+      <div class="brow gold"><span class="bk">Année complète</span><span><b>Les quatre stages de l'année + la pré-rentrée offerte</b> + <b>le Parcours et l'Arène en illimité</b> toute l'année. Tu arrives prêt à la rentrée.</span></div>
     </div>
     <div class="shop">
       <div class="shopcard2">
@@ -3434,7 +3435,7 @@ function renderCurArena(){
   /* le bouton d'action reflète l'arène regardée */
   const lim=document.getElementById('ar-limite');
   if(lim){
-    if(S.stage) lim.innerHTML='<span class="inf">∞ Ascensions illimitées — élève de stage</span>';
+    if(S.stage) lim.innerHTML='<span class="inf">∞ Ascensions illimitées — année complète Medeos</span>';
     else lim.innerHTML='<span class="pips2">'+Array.from({length:RUN_PER_DAY},(x,i)=>'<span class="pip2'+(i<S.ar.runs?' on':'')+'"></span>').join('')+'</span>'+
       '<span>Il te reste '+S.ar.runs+' ascension'+(S.ar.runs>1?'s':'')+' aujourd\'hui · recharge chaque matin à 6 h</span>';
   }
@@ -3609,13 +3610,13 @@ function renderAcces(){
   const a=document.getElementById('p-acces'), s=document.getElementById('p-acces-sub'), b=document.getElementById('p-stagebtn');
   if(!a) return;
   if(S.stage){
-    a.textContent='Élève de stage — accès illimité ⚔️';
+    a.textContent='Année complète — accès illimité ⚔️';
     s.textContent='Ascensions illimitées, tout le Parcours et la Bibliothèque. Bon entraînement.';
     if(b) b.textContent='Démo : repasser en accès découverte';
   } else {
     a.textContent='Accès découverte — 3 ascensions par jour';
     s.textContent='Le Parcours et la Bibliothèque sont ouverts. L\'Arène se recharge chaque matin.';
-    if(b) b.textContent='Démo : activer un compte élève de stage';
+    if(b) b.textContent='Démo : activer un compte année complète';
   }
 }
 
@@ -4324,7 +4325,7 @@ function renderAvancee(){
     '<span class="chip"><img src="img/icones/flamme-medeos.png" style="width:13px;vertical-align:-2px" alt=""> '+(S.streak||0)+' jour'+(S.streak>1?'s':'')+'</span></div>'+
     (faites.length?'<p style="font-size:11.5px;color:var(--muted);margin-top:8px">Dernière notion travaillée : « '+faites[faites.length-1].titre+' »</p>':'')+
     '<button class="btn ghost small" style="margin-top:9px" onclick="renderChemin();go(\'chemin\')">Revoir mes séances passées</button>'+
-    '<p style="font-size:11px;color:var(--muted);line-height:1.55;margin-top:11px;border-top:1px solid var(--line);padding-top:9px">🚀 <b>Pour accélérer :</b> les élèves en stage Medeos s\'entraînent en illimité — séances, ascensions, plus de 2 000 QCM. <button class="blien" style="font-size:11px" onclick="voirStages()">Voir les stages</button></p>';
+    '<p style="font-size:11px;color:var(--muted);line-height:1.55;margin-top:11px;border-top:1px solid var(--line);padding-top:9px">🚀 <b>Pour accélérer :</b> avec l\'année complète Medeos, on s\'entraîne en illimité — séances, ascensions, plus de 2 000 QCM. <button class="blien" style="font-size:11px" onclick="voirStages()">Voir les stages</button></p>';
 }
 
 
@@ -4635,7 +4636,7 @@ function heroMail(){
     '<p style="font-size:11px;color:var(--muted);margin-top:1px">Demain matin, quand tes 2 nouvelles fiches seront prêtes.</p></div>'+
     '<label class="iosw"><input type="checkbox" '+(on?'checked':'')+' onchange="S.mailOn=this.checked;saveS()"><span class="knob"></span></label>'+
     '</div>'+
-    '<button class="stagelien" onclick="voirStages()">Et si un jour tu veux réviser sans limite — <b>les stages sont là</b> →</button>';
+    '<button class="stagelien" onclick="voirStages()">Et si un jour tu veux réviser sans limite — <b>l\'année complète est là</b> →</button>';
 }
 /* ---- état ---- */
 /* Le « jour » Medeos bascule à 6 h du matin, HEURE LOCALE : on recule l'horloge de 6 h
@@ -5016,7 +5017,7 @@ function closeRun(anticipee){
     document.getElementById('arend-trainbtn').style.display='none';
   }
   pips('arend-pips',S.ar.runs);
-  document.getElementById('arend-runs').textContent=S.stage? 'Ascensions illimitées — élève de stage' : S.ar.runs+' sur '+RUN_PER_DAY+' restantes';
+  document.getElementById('arend-runs').textContent=S.stage? 'Ascensions illimitées — année complète' : S.ar.runs+' sur '+RUN_PER_DAY+' restantes';
   document.getElementById('arend-again').style.display=(S.stage||S.ar.runs>0)?'block':'none';
   { const sc=document.getElementById('arend-stagecard'); if(sc) sc.style.display=(!S.stage && S.ar.runs<=0)?'block':'none'; }
   run=null; renderState();
@@ -5129,12 +5130,12 @@ function renderLB(){
     w.innerHTML='<span class="pos">🔒</span><span class="nm3" style="color:var(--violet)">Ta place t\'attend ici</span>'+
       '<span class="tr" style="color:var(--violet)">'+fmtT(monScore(lbTab))+' 🏆</span>';
     box.appendChild(w);
-    note.textContent='Crée ton compte pour prendre ta place. Les élèves Medeos s\'entraînent en illimité — ça se voit au classement.';
+    note.textContent='Crée ton compte pour prendre ta place. Les élèves de l\'année complète s\'entraînent en illimité — ça se voit au classement.';
     return;
   }
   if(!S.ar.runsDone){
     coh.slice(0,5).forEach((p,i)=>row(i+1,p.n,p.v,false,p.m));
-    note.textContent='Ta ligne apparaît après ta première ascension. Badge Medeos = élève d\'un stage, entraînement illimité.';
+    note.textContent='Ta ligne apparaît après ta première ascension. Badge Medeos = élève de l\'année complète, entraînement illimité.';
     return;
   }
   const maSem=monScore(lbTab);
