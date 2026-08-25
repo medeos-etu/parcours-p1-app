@@ -742,6 +742,16 @@
   .skban .sklock i{font-size:11px}
   .skin-note{font-size:11px;color:var(--muted);margin-top:12px;text-align:center;line-height:1.5}
 
+  /* — le butin d'un palier de la Route : mini photo de profil + mini bannière gagnées — */
+  .rloot{display:flex;align-items:center;gap:6px;margin-top:7px}
+  .rl-av{position:relative;width:26px;height:26px;border-radius:9px;overflow:hidden;flex-shrink:0;
+    background:linear-gradient(180deg,#8B5CF6,#4C2A85);box-shadow:0 1px 4px rgba(31,27,46,.25)}
+  .rl-av .rl-em{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:13px}
+  .rl-av img{position:relative;width:100%;height:100%;object-fit:cover}
+  .rl-ban{width:44px;height:20px;border-radius:6px;flex-shrink:0;box-shadow:0 1px 4px rgba(31,27,46,.25)}
+  .rl-t{font-size:10px;font-weight:800;color:var(--muted);line-height:1.3}
+  .rstep.got .rl-t{color:#B87A33}
+
   /* — « Voir tout le classement » : plaque de tournoi, liseré or, reflet qui balaie — */
   .lbbtn{width:100%;margin-top:10px;border:none;cursor:pointer;font-family:Fredoka,Inter,sans-serif;font-weight:600;
     font-size:13px;letter-spacing:.02em;color:#FCD34D;display:flex;align-items:center;justify-content:center;gap:8px;
@@ -3223,10 +3233,21 @@ function renderRoad(){
     const JAL={'Première garde':'jalon-premiere-garde','Salle de garde':'jalon-salle-de-garde','Tour de salle':'jalon-tour-de-salle','Staff du matin':'jalon-staff','Salle d\'étude':'jalon-tour-de-salle','Ordre de mérite':'jalon-sommet'};
     const jic=JAL[s.n]? '<img class="rji" src="img/icones/'+JAL[s.n]+'.png" alt="">' : s.em;
     const face=(got||now) ? (gi2>=0?'<img src="img/grade-'+(gi2+1)+'.png" alt="">':jic) : '<img class="ticn" src="img/icones/cadenas-medeos.png" alt="">';
+    /* les récompenses de personnalisation gagnées à CE palier : photo de profil + bannière */
+    let butin='';
+    if(typeof AVATARS!=='undefined'){
+      const avs=AVATARS.filter(a=>a.seuil===s.t&&s.t>0), bans=BANNIERES.filter(b=>b.seuil===s.t&&s.t>0);
+      if(avs.length||bans.length){
+        butin='<div class="rloot">'+
+          avs.map(a=>'<span class="rl-av" title="'+a.nom+'"><span class="rl-em">'+a.em+'</span><img src="'+a.img+'" alt="" onerror="this.remove()"></span>').join('')+
+          bans.map(b=>'<span class="rl-ban" title="Bannière · '+b.nom+'" style="background-image:'+(b.img?"url('"+b.img+"'),":'')+b.css+';background-size:cover;background-position:center"></span>').join('')+
+          '<span class="rl-t">'+(got?'Photo et bannière débloquées':'+ photo et bannière de profil')+'</span></div>';
+      }
+    }
     d.innerHTML='<div class="rnode">'+face+'</div>'+
       '<div class="rbody"><div class="rtr">'+fmtT(s.t)+' 🏆</div>'+
       '<div class="rname">'+s.n+'</div>'+
-      '<div class="rrew">'+s.r+'</div>'+tag+'</div>';
+      '<div class="rrew">'+s.r+'</div>'+butin+tag+'</div>';
     box.appendChild(d);
   });
 }
