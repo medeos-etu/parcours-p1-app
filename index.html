@@ -904,6 +904,14 @@
   .agj-day b{font-size:9.5px;text-transform:uppercase;letter-spacing:.03em}
   .agj-day span{font-size:13px;font-weight:900;color:var(--violet)}
 
+  /* — les jours travaillés de la semaine — */
+  .jsembox{margin-top:12px;border-top:1px solid var(--line);padding-top:10px}
+  .jsemrow{display:flex;gap:6px}
+  .jsem{flex:1;text-align:center;font-size:11px;font-weight:900;color:var(--muted);
+    background:rgba(107,70,193,.07);border-radius:9px;padding:7px 0}
+  .jsem.ok{background:linear-gradient(180deg,#FCD34D,#E29C5C);color:#4A3208}
+  .jsem.fut{opacity:.45}
+
   /* — les rythmes de référence (objectifs, pas des personnes) — */
   .lbryth{margin-top:12px;border-top:1px solid var(--line);padding-top:10px}
   .lbryth-t{font-size:11px;font-weight:900;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:7px}
@@ -4626,10 +4634,12 @@ function son(nom){
 }
 
 const MJ_MATS=['Anatomie','Biologie','Chimie','Physique'];
+/* les jauges récompensent la RÉGULARITÉ, l'Arène récompense la PERFORMANCE :
+   elles doivent rester un complément (≈15 % des trophées), pas la source principale */
 const MJ3=[
-  {k:'app',  ic:'📖', t:'Apprends', sub:'2 fiches lues',                 goal:2,  r:10},
-  {k:'rev',  ic:'🔁', t:'Révise',   sub:'2 révisions',                   goal:2,  r:10},
-  {k:'joue', ic:'⚔️', t:'Joue',     sub:'20 🏆 gagnés en ascension',     goal:20, r:10}
+  {k:'app',  ic:'📖', t:'Apprends', sub:'2 fiches lues',                 goal:2,  r:5},
+  {k:'rev',  ic:'🔁', t:'Révise',   sub:'2 révisions',                   goal:2,  r:5},
+  {k:'joue', ic:'⚔️', t:'Joue',     sub:'20 🏆 gagnés en ascension',     goal:20, r:5}
 ];
 const MJ_BONUS=[
   {id:'chain2', t:'Enchaîne 2 sans-faute d\'affilée',              ok:M=>M.chain>=2},
@@ -4638,7 +4648,7 @@ const MJ_BONUS=[
   {id:'matsf',  t:'Réussis un sans-faute en __MAT__',              ok:M=>!!M.matok},
   {id:'run8',   t:'Fais 8/10 ou mieux dans une ascension',         ok:M=>M.best>=8}
 ];
-const MJ_BONUS_R=25;
+const MJ_BONUS_R=15;
 function mjSeed(d){ let x=7; for(let i=0;i<d.length;i++) x=(x*31+d.charCodeAt(i))%9973; return x; }
 function mjState(){
   const d=arDay();
@@ -4650,7 +4660,7 @@ function mjState(){
   }
   return S.mj;
 }
-function mjCoffreVal(){ const n=(S.mjChest&&S.mjChest.n)||0; return n>=7?80:(n>=3?60:40); }
+function mjCoffreVal(){ const n=(S.mjChest&&S.mjChest.n)||0; return n>=7?40:(n>=3?30:20); }
 function mjCredit(x,mat){
   if(!S.ar) initAr();
   const cible=(mat && S.ar.mats && MJ_MATS.indexOf(mat)>=0) ? mat : arCourante();   /* l'arène de la matière si on la connaît */
@@ -4906,17 +4916,11 @@ let lbTab='general';
 const LB_TABS=[['general','Général'],['Anatomie','🫀 Anatomie'],['Biologie','🧬 Bio·Histo'],['Chimie','⚗️ Chimie'],['Physique','🩻 Physique']];
 /* ═══ UNE cohorte cohérente : chaque joueur fictif a ses 4 compteurs,
    le général = LA SOMME EXACTE des 4. Mêmes joueurs dans tous les onglets. ═══ */
-/* l'année Medeos court du 1er septembre au 31 août : le classement annuel repart à la rentrée */
-function anneeMedeos(){ const d=new Date(Date.now()-6*3600*1000); return d.getMonth()>=8 ? d.getFullYear() : d.getFullYear()-1; }
-let lbPortee='annee';   /* 'annee' | 'semaine' */
 
 function monScore(tab){
+  /* les trophées ne se remettent JAMAIS à zéro : ni le lundi, ni à la rentrée */
   if(!S.ar) return 0;
-  if(lbPortee==='semaine') return maSemaine(tab);
-  /* annuel : les trophées gagnés depuis la rentrée du 1er septembre */
-  const dep=(S.ar.annee===anneeMedeos())?(S.ar.anneeT0||0):0;
-  if(tab==='general') return Math.max(0,(S.ar.T||0)-dep);
-  return arT(tab);
+  return tab==='general' ? (S.ar.T||0) : arT(tab);
 }
 function maSemaine(tab){
   if(!S.ar) return 0;
@@ -4926,14 +4930,6 @@ function maSemaine(tab){
 function renderLbTabs(){
   const box=document.getElementById('ar-lbtabs'); if(!box) return;
   box.innerHTML='';
-  const p=document.createElement('div'); p.className='lbportee';
-  [['annee','🏛️ L\'année'],['semaine','📅 La semaine']].forEach(([k,nom])=>{
-    const b=document.createElement('button');
-    b.textContent=nom; if(k===lbPortee) b.className='on';
-    b.onclick=()=>{ lbPortee=k; renderLbTabs(); renderLB(); };
-    p.appendChild(b);
-  });
-  box.appendChild(p);
   LB_TABS.forEach(([k,nom])=>{
     const b=document.createElement('button');
     b.textContent=nom; if(k===lbTab) b.className='on';
@@ -5513,6 +5509,8 @@ function _jourMoins(n){ const d=new Date(Date.now()-6*3600*1000); d.setDate(d.ge
   return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); }
 function majStreak(){
   const auj=arDay();
+  S.joursActifs=S.joursActifs||[];
+  if(S.joursActifs.indexOf(auj)<0){ S.joursActifs.push(auj); if(S.joursActifs.length>90) S.joursActifs=S.joursActifs.slice(-90); }
   if(S.stDay===auj){ return; }                                  /* déjà compté aujourd'hui */
   if(S.stDay===_jourMoins(1) || S.stDay===_jourMoins(2)) S.streak=(S.streak||0)+1;  /* consécutif, ou un oubli pardonné */
   else if(S.stDay===_jourMoins(3) && (S.gels||0)>0){ S.gels--; S.streak=(S.streak||0)+1; }  /* le gel sauve 2 jours d'absence */
@@ -6001,7 +5999,6 @@ function initAr(){
     S.ar.wdtPrev=S.ar.wdt||0;
     S.ar.wk=arWeek(); S.ar.wdt=0; S.ar.wdm={};
   }
-  if(S.ar.annee!==anneeMedeos()){ S.ar.annee=anneeMedeos(); S.ar.anneeT0=S.ar.T||0; }   /* rentrée : le classement annuel repart */
   histoSnap();
   if(S.ar.played && Date.now()-S.ar.played>BOOST_J*864e5 && !S.ar.boost) S.ar.boost=BOOST_RUNS;
   saveS();
@@ -6525,49 +6522,57 @@ function renderLB(){
   const note=document.getElementById('ar-lbnote');
   renderLbTabs();
   if(!S.ar) initAr();
-  const sem=(lbPortee==='semaine');
-  /* — le podium : TES matières, or / argent / bronze (données réelles, zéro faux joueur) — */
+  const sem=Math.max(0,S.ar.wdt||0), prev=S.ar.wdtPrev||0, rec=Math.max(S.ar.wdtRec||0,sem);
+  /* — le podium : les matières où tu as le plus avancé (données réelles) — */
   const MATS=ARENES.map(a=>a.k);
-  const val=m=> sem ? Math.max(0,(S.ar.wdm&&S.ar.wdm[m])||0) : arT(m);
-  const tri=MATS.slice().sort((a,b)=>val(b)-val(a));
-  const total=sem?Math.max(0,S.ar.wdt||0):monScore('general');
-  if(total>0){
+  const tri=MATS.slice().sort((a,b)=>arT(b)-arT(a));
+  if((S.ar.T||0)>0){
     const d=document.createElement('div'); d.className='lbpodium';
     const step=(m,pos,cls)=>{ if(!m) return '';
       const a=ARENES.find(x=>x.k===m)||{};
       return '<div class="pd '+cls+'"><span class="pdav"><img src="img/icones/'+(EMBLEMES[m]||'')+'.png" alt="" onerror="this.replaceWith(\''+(a.em||'')+'\')"></span>'+
-        '<span class="pdn">'+(a.sous||m)+'</span><span class="pdt">'+fmtT(val(m))+' 🏆</span><span class="pdsock">'+pos+'</span></div>'; };
+        '<span class="pdn">'+(a.sous||m)+'</span><span class="pdt">'+fmtT(arT(m))+' 🏆</span><span class="pdsock">'+pos+'</span></div>'; };
     d.innerHTML=step(tri[1],2,'silver')+step(tri[0],1,'gold')+step(tri[2],3,'bronze');
     box.appendChild(d);
+    const lg=document.createElement('p'); lg.className='pg-note'; lg.textContent='Là où tu as le plus avancé — tes trophées ne redescendent jamais d\'eux-mêmes.';
+    box.appendChild(lg);
   }
-  /* — ta ligne, et ton propre passé comme adversaire — */
-  const ligne=(txt,val2,cls)=>{ const d=document.createElement('div'); d.className='lbrow'+(cls||'');
-    d.innerHTML='<span class="nm3">'+txt+'</span><span class="tr">'+val2+'</span>'; box.appendChild(d); };
-  if(sem){
-    ligne('<b>Cette semaine</b>', '<b>'+fmtT(Math.max(0,S.ar.wdt||0))+' 🏆</b>', ' me2');
-    ligne('La semaine dernière', fmtT(S.ar.wdtPrev||0)+' 🏆');
-    ligne('Ton record sur une semaine', fmtT(Math.max(S.ar.wdtRec||0,S.ar.wdt||0))+' 🏆');
+  const ligne=(txt,val,cls)=>{ const d=document.createElement('div'); d.className='lbrow'+(cls||'');
+    d.innerHTML='<span class="nm3">'+txt+'</span><span class="tr">'+val+'</span>'; box.appendChild(d); };
+  ligne('<b>Tes trophées</b>','<b>'+fmtT(S.ar.T||0)+' 🏆</b>',' me2');
+  ligne('Cette semaine','+'+fmtT(sem)+' 🏆');
+  ligne('La semaine dernière','+'+fmtT(prev)+' 🏆');
+  ligne('Ta meilleure semaine','+'+fmtT(rec)+' 🏆');
+  /* — les jours travaillés de la semaine : la régularité, mesurée honnêtement — */
+  const auj=new Date(Date.now()-6*3600*1000);
+  const lun=new Date(auj); lun.setDate(auj.getDate()-((auj.getDay()+6)%7));
+  const noms=['L','M','M','J','V','S','D'];
+  let jours='';
+  for(let i=0;i<7;i++){
+    const d=new Date(lun); d.setDate(lun.getDate()+i);
+    const cle=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+    const fait=(S.joursActifs||[]).indexOf(cle)>=0;
+    const futur=d>auj;
+    jours+='<span class="jsem'+(fait?' ok':'')+(futur?' fut':'')+'">'+noms[i]+'</span>';
+  }
+  const jb=document.createElement('div'); jb.className='jsembox';
+  jb.innerHTML='<p class="lbryth-t">Ta semaine de travail</p><div class="jsemrow">'+jours+'</div>';
+  box.appendChild(jb);
+  /* — l'objectif : SON propre record, pas un seuil inventé — */
+  const ob=document.createElement('div'); ob.className='lbryth';
+  if(rec>0 && sem<rec){
+    ob.innerHTML='<p class="lbryth-t">Ton objectif de la semaine</p>'+
+      '<div class="lbr'+(sem>=rec?' ok':'')+'"><span class="lbr-n">Battre ton record</span>'+
+      '<span class="lbr-b"><i style="width:'+Math.min(100,Math.round(sem/rec*100))+'%"></i></span>'+
+      '<span class="lbr-v">'+fmtT(rec)+'</span></div>'+
+      '<p class="pg-note">Encore '+fmtT(rec-sem)+' 🏆 pour faire ta meilleure semaine.</p>';
+  } else if(rec>0){
+    ob.innerHTML='<p class="lbryth-t">Ton objectif de la semaine</p><p class="pg-note">🏅 Nouvelle meilleure semaine : '+fmtT(sem)+' 🏆. Tout ce que tu ajoutes maintenant creuse l\'écart.</p>';
   } else {
-    ligne('<b>Ton année Medeos</b>', '<b>'+fmtT(monScore('general'))+' 🏆</b>', ' me2');
-    ligne('Ton meilleur total atteint', fmtT(S.ar.Tmax||S.ar.T||0)+' 🏆');
-    const gi=gradeIdx(S.ar.T||0), suiv=GRADES[gi+1];
-    ligne('Ton grade', GRADES[gi][2]+' '+GRADES[gi][1]+(suiv?' <span style="color:var(--muted)">· '+fmtT(suiv[0]-(S.ar.T||0))+' avant '+suiv[1]+'</span>':''));
+    ob.innerHTML='<p class="lbryth-t">Ton objectif de la semaine</p><p class="pg-note">Ta première semaine est en cours — elle deviendra le record à battre.</p>';
   }
-  /* — les rythmes de référence : des objectifs, pas des personnes — */
-  const RYTHMES=[['Régulier',150],['Soutenu',350],['Intensif',700]];
-  const ref=sem?Math.max(0,S.ar.wdt||0):Math.round(monScore('general')/Math.max(1,Math.ceil(((Date.now()-(S.ar.debut||Date.now()))/864e5)/7)));
-  const rb=document.createElement('div'); rb.className='lbryth';
-  rb.innerHTML='<p class="lbryth-t">Les rythmes de référence <i>(🏆 par semaine)</i></p>'+
-    RYTHMES.map(([nom,v])=>{
-      const atteint=ref>=v;
-      return '<div class="lbr'+(atteint?' ok':'')+'"><span class="lbr-n">'+nom+'</span>'+
-        '<span class="lbr-b"><i style="width:'+Math.min(100,Math.round(ref/v*100))+'%"></i></span>'+
-        '<span class="lbr-v">'+v+(atteint?' ✓':'')+'</span></div>';
-    }).join('');
-  box.appendChild(rb);
-  note.innerHTML = sem
-    ? 'Ta semaine repart à zéro chaque lundi — ta route, jamais. <b>Le classement entre élèves ouvrira quand vous serez assez nombreux</b> : ici, pas de faux concurrents.'
-    : 'Ton année Medeos court du 1<sup>er</sup> septembre au 31 août. <b>Le classement entre élèves ouvrira quand vous serez assez nombreux</b> : ici, pas de faux concurrents.';
+  box.appendChild(ob);
+  note.innerHTML='Tes trophées ne se remettent jamais à zéro — ni le lundi, ni à la rentrée. Seul le compteur de la semaine repart, pour te montrer ton rythme. <b>Le classement entre élèves ouvrira quand vous serez assez nombreux.</b>';
 }
 
 /* ═══ SWIPE : on fait défiler les univers au doigt, comme dans Clash ═══ */
