@@ -5733,10 +5733,8 @@ function pickQuestions(){
   garde=0;
   while(out.length<RUN_LEN && garde++<40){ const av=out.length; prendre(0.55,0.75,'cœur',1,true); if(out.length===av) break; }
   for(let i=out.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); const t=out[i]; out[i]=out[j]; out[j]=t; }
-  /* les fiches de la séance du JOUR passent devant : l'ascension du jour valide le travail du jour */
-  const cur=(typeof seanceCourante==='function')?seanceCourante():null;
-  const dj=(cur&&cur.fiches)?cur.fiches:[];
-  out.sort((x,y)=>{ const ax=dj.includes(x.q.f)?0:1, ay=dj.includes(y.q.f)?0:1; return ax-ay; });
+  /* INTERLEAVING : l'ascension mélange TOUTES les fiches déjà vues de la matière —
+     les fiches du jour y entrent naturellement (jamais servies → favorisées), sans dominer */
   return out.slice(0,LEN);
 }
 
