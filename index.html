@@ -1933,9 +1933,7 @@
 
       <div class="sidecol">
         <div class="card qjcard" id="qj-arene"></div>
-        <div class="card qjcard">
-          <div class="qj-row" onclick="startEclair()"><span class="qj-ic">⚡</span><div class="qj-bd"><b>L'Éclair</b><span>60 secondes de vrai/faux — ça démarre doux, ça monte · trophées à la première partie du jour</span></div><span class="qj-go">Jouer</span></div>
-        </div>
+        <div class="card qjcard" id="ec-entree"></div>
         <div class="card" id="ar-sideacc" style="display:none"></div>
         <div class="card" id="ar-stagecard" style="display:none;border:1px solid var(--tung)">
           <p style="font-size:12.5px;font-weight:800">Tes 3 ascensions du jour sont faites. 👏</p>
@@ -2287,6 +2285,11 @@
   <section class="scr nonav" id="eclair">
     <div class="lect-top"><button class="x" onclick="quitterEclair()" aria-label="Quitter">←</button><b style="font-size:14px;font-weight:800">⚡ L'Éclair</b><span class="ec-time" id="ec-time">60 s</span></div>
     <div class="ec-barbox"><i id="ec-bar"></i></div>
+    <div id="ec-count" style="display:none;text-align:center;padding:40px 0">
+      <p style="font-family:Fredoka,Inter,sans-serif;font-size:16px;font-weight:600">Prépare-toi…</p>
+      <div class="cdnum" id="ec-count-n">3</div>
+      <p style="font-size:11.5px;color:var(--muted)">Bonne réponse +3 🏆 · erreur −2 🏆 — comme en ascension.</p>
+    </div>
     <div id="ec-jeu">
       <div class="card" id="ec-card" style="text-align:center">
         <span class="pmat" id="ec-mat"></span>
@@ -2451,7 +2454,7 @@ function go(id){
     if(typeof renderMaitrise==='function') renderMaitrise();
     { const v=document.getElementById('sw-son'); if(v) v.classList.toggle('on',S.son!==false); } }
   if(id==='agenda' && typeof renderAgenda==='function'){ renderAgenda(); }
-  if((id==='home'||id==='arene') && typeof renderMissions==='function'){ renderMissions(); if(typeof renderQj==='function') renderQj(); }
+  if((id==='home'||id==='arene') && typeof renderMissions==='function'){ renderMissions(); if(typeof renderQj==='function') renderQj(); if(typeof renderEcl==='function') renderEcl(); }
   if(id==='home' && typeof renderParcours==='function'){ renderParcours(); }
   if(id==='arene' && typeof renderArene==='function'){ renderArene(); }
   window.scrollTo({top:0});
@@ -3867,12 +3870,13 @@ function tutoEnd(){
    c'est TOUS les items de la banque (210 questions × 5 = plus de 1 000 affirmations).
    La première partie du jour rapporte (1 🏆 par bonne réponse, plafonné à 15) ;
    ensuite on joue pour le record. ═══ */
-let EC=null, ecTimer=null;
+let EC=null, ecTimer=null, ecCd=null;
+function ecFaitAuj(){ return !!(S.ecl && S.ecl.day===arDay()); }
 function ecPool(){
   /* trois paniers par difficulté de la question d'origine : on démarre DOUX, ça monte */
   const A=[],B=[],C=[];
   ABANK.forEach(q=>{ const cible=q.D<=950?A:(q.D<=1045?B:C);
-    q.it.forEach(it=>cible.push({t:it[1], v:!!it[2], mat:q.mat, n:q.n, f:q.f})); });
+    q.it.forEach(it=>cible.push({t:it[1], v:!!it[2], mat:q.mat, n:q.n, f:q.f, qid:q.id})); });
   [A,B,C].forEach(arr=>{ for(let i=arr.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]]; } });
   return [A,B,C];
 }
@@ -3885,14 +3889,46 @@ function ecTire(){
   for(let t=0;t<3;t++){ const P=EC.pools[(k+t)%3]; if(P.length) return P.pop(); }
   return null;
 }
+/* les trophées de l'Éclair suivent les règles de l'Arène : planchers de grade et paliers dorés protégés */
+function eclCredit(d){
+  if(!S.ar) initAr();
+  const avant=S.ar.T;
+  const plancher=Math.max(GRADES[gradeIdx(avant)][0], S.ar.gold||0);
+  let T=avant+d; if(T<plancher) T=plancher;
+  d=T-avant;
+  S.ar.T=T; S.ar.Tmax=Math.max(S.ar.Tmax||0,T);
+  S.ar.gold=Math.max(S.ar.gold||0, Math.floor(T/GOLD)*GOLD, GRADES[gradeIdx(T)][0]);
+  arAdd(arCourante(),d);
+  S.ar.wdt=(S.ar.wdt||0)+d; S.ar.wdm=S.ar.wdm||{}; S.ar.wdm[arCourante()]=(S.ar.wdm[arCourante()]||0)+d;
+  return d;
+}
 function startEclair(){
-  EC={pools:ecPool(),count:0,cur:null,score:0,combo:0,maxCombo:0,left:60,fini:false,err:{}};
+  if(ecFaitAuj() && !S.stage){ renderEcl(); go('arene'); return; }   /* une partie par jour — sauf année complète */
+  EC={pools:ecPool(),count:0,cur:null,score:0,ko:0,gain:0,combo:0,maxCombo:0,left:60,fini:false,err:{},
+      premier:!ecFaitAuj()};
   EC.cur=ecTire();
-  document.getElementById('ec-jeu').style.display='block';
+  document.getElementById('ec-jeu').style.display='none';
   document.getElementById('ec-fin').style.display='none';
-  const b=document.getElementById('ec-bar'); if(b) b.style.width='100%';
-  const t=document.getElementById('ec-time'); if(t) t.textContent='60 s';
-  go('eclair'); ecShow(); son('go');
+  document.getElementById('ec-count').style.display='block';
+  const bx=document.getElementById('ec-bar'); if(bx) bx.style.width='100%';
+  const tx=document.getElementById('ec-time'); if(tx) tx.textContent='60 s';
+  go('eclair');
+  /* le décompte 3·2·1 avant de partir */
+  let n=3; const cn=document.getElementById('ec-count-n'); if(cn){ cn.textContent=n; cn.style.animation='none'; void cn.offsetWidth; cn.style.animation=''; }
+  son('tick');
+  clearInterval(ecCd);
+  ecCd=setInterval(()=>{
+    n--;
+    if(n<=0){ clearInterval(ecCd); ecLance(); return; }
+    son('tick');
+    if(cn){ cn.textContent=n; cn.style.animation='none'; void cn.offsetWidth; cn.style.animation=''; }
+  },1000);
+}
+function ecLance(){
+  son('go');
+  document.getElementById('ec-count').style.display='none';
+  document.getElementById('ec-jeu').style.display='block';
+  ecShow();
   clearInterval(ecTimer);
   ecTimer=setInterval(()=>{
     if(!EC||EC.fini) return;
@@ -3912,9 +3948,12 @@ function ecShow(){
 function ecRep(v){
   if(!EC||EC.fini||!EC.cur) return;
   const it=EC.cur, ok=(v===it.v);
-  if(ok){ EC.score++; EC.combo++; EC.maxCombo=Math.max(EC.maxCombo,EC.combo); son('ok'); }
-  else { EC.combo=0; son('ko');
-    EC.err[it.n]=EC.err[it.n]||{c:0,f:it.f}; EC.err[it.n].c++; }   /* le diagnostic se construit */
+  if(ok){ EC.score++; EC.combo++; EC.maxCombo=Math.max(EC.maxCombo,EC.combo); son('ok');
+    if(EC.premier) EC.gain+=3; }
+  else { EC.ko++; EC.combo=0; son('ko');
+    if(EC.premier && S.ar && S.ar.n>=CAL_N) EC.gain-=2;              /* calibration : on ne perd rien */
+    EC.err[it.n]=EC.err[it.n]||{c:0,f:it.f}; EC.err[it.n].c++;
+    if(S.ar && it.qid) S.ar.errs[it.qid]=Date.now(); }               /* nourrit la révision espacée de l'Arène */
   const c=document.getElementById('ec-card');
   if(c){ c.classList.remove('okf','kof'); void c.offsetWidth; c.classList.add(ok?'okf':'kof'); }
   EC.cur=ecTire();
@@ -3924,28 +3963,59 @@ function ecFin(){
   if(!EC||EC.fini) return;
   EC.fini=true; clearInterval(ecTimer);
   S.ecl=S.ecl||{}; const d=arDay();
-  const premier=(S.ecl.day!==d); let gain=0;
-  if(premier){ gain=Math.min(15,EC.score); if(gain) mjCredit(gain); S.ecl.day=d; S.ecl.gain=gain; }
+  let applique=0;
+  if(EC.premier){
+    applique=eclCredit(Math.max(-20,Math.min(60,EC.gain)));
+    S.ecl.day=d; S.ecl.gain=applique;
+  }
   S.ecl.best=Math.max(S.ecl.best||0,EC.score);
+  /* le diagnostic CUMULÉ : ce qui pèche, partie après partie */
+  S.eclDiag=S.eclDiag||{};
+  Object.keys(EC.err).forEach(n=>{ S.eclDiag[n]=S.eclDiag[n]||{c:0,f:EC.err[n].f}; S.eclDiag[n].c+=EC.err[n].c; });
   saveS(); son(EC.score>=15?'fanfare':'coffre');
   document.getElementById('ec-jeu').style.display='none';
   document.getElementById('ec-fin').style.display='block';
-  document.getElementById('ec-fin-s').textContent=EC.score+' bonne'+(EC.score>1?'s':'')+' réponse'+(EC.score>1?'s':'')+' en 60 s · meilleur combo ×'+EC.maxCombo+' · record '+(S.ecl.best||0);
-  document.getElementById('ec-fin-r').textContent = premier
-    ? (gain? '+'+gain+' 🏆 — la première partie du jour rapporte. Ensuite, on joue pour le record.' : 'Retente demain : la première partie du jour rapporte des trophées.')
-    : 'Les trophées, c\'était la première partie du jour — celle-ci, c\'était pour le record.';
+  document.getElementById('ec-fin-s').textContent=EC.score+' bonne'+(EC.score>1?'s':'')+' réponse'+(EC.score>1?'s':'')+' · '+EC.ko+' erreur'+(EC.ko>1?'s':'')+' · combo ×'+EC.maxCombo+' · record '+(S.ecl.best||0);
+  document.getElementById('ec-fin-r').textContent = EC.premier
+    ? ((applique>=0?'+':'−')+Math.abs(applique)+' 🏆 — la partie comptée du jour, au barème de l\'Arène.')
+    : 'Partie pour le record — les trophées, c\'était la partie comptée du jour.';
   const dg=document.getElementById('ec-diag');
   if(dg){
     const errs=Object.keys(EC.err).sort((x,y)=>EC.err[y].c-EC.err[x].c).slice(0,3);
-    dg.innerHTML = errs.length
-      ? '<p style="font-size:11px;font-weight:900;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin:12px 0 4px">Cette partie a repéré</p>'+
+    const cum=Object.keys(S.eclDiag).sort((x,y)=>S.eclDiag[y].c-S.eclDiag[x].c).slice(0,3);
+    let z='';
+    if(errs.length){
+      z+='<p style="font-size:11px;font-weight:900;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin:12px 0 4px">Cette partie a repéré</p>'+
         errs.map(n=>'<div class="agj-row"><span class="agj-nom">'+n+'</span>'+
-          (EC.err[n].f?'<button class="blien" onclick="openFiche(\''+EC.err[n].f+'\')">📄 la fiche</button>':'')+'</div>').join('')
-      : '<p style="font-size:11px;color:#2E7D53;font-weight:800;margin-top:12px">Aucun point faible repéré sur cette partie 👏</p>';
+          (EC.err[n].f?'<button class="blien" onclick="openFiche(\''+EC.err[n].f+'\')">📄 la fiche</button>':'')+'</div>').join('');
+    } else z+='<p style="font-size:11px;color:#2E7D53;font-weight:800;margin-top:12px">Aucun point faible repéré sur cette partie 👏</p>';
+    const cum2=cum.filter(n=>!errs.includes(n));
+    if(cum2.length){
+      z+='<p style="font-size:11px;font-weight:900;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin:12px 0 4px">Ton bilan, toutes parties confondues</p>'+
+        cum2.map(n=>'<div class="agj-row"><span class="agj-nom">'+n+'</span>'+
+          (S.eclDiag[n].f?'<button class="blien" onclick="openFiche(\''+S.eclDiag[n].f+'\')">📄 la fiche</button>':'')+'</div>').join('');
+    }
+    dg.innerHTML=z;
   }
+  /* rejouer : réservé à l'année complète (une partie par jour sinon) */
+  const rj=document.querySelector('#ec-fin .btn:not(.ghost)');
+  if(rj) rj.style.display=S.stage?'':'none';
+  if(typeof renderEcl==='function') renderEcl();
   if(typeof renderIdBar==='function') renderIdBar();
 }
-function quitterEclair(){ EC=null; clearInterval(ecTimer); go('arene'); }
+function renderEcl(){
+  const e=document.getElementById('ec-entree'); if(!e) return;
+  const fait=ecFaitAuj();
+  e.innerHTML = !fait
+    ? '<div class="qj-row" onclick="startEclair()"><span class="qj-ic">⚡</span><div class="qj-bd"><b>L\'Éclair</b>'+
+      '<span>60 s de vrai/faux — ça démarre doux, ça monte · +3 par bonne, −2 par erreur, comme en ascension</span></div><span class="qj-go">Jouer</span></div>'
+    : (S.stage
+      ? '<div class="qj-row" onclick="startEclair()"><span class="qj-ic">⚡</span><div class="qj-bd"><b>L\'Éclair — record '+(S.ecl.best||0)+'</b>'+
+        '<span>Partie du jour comptée ('+((S.ecl.gain||0)>=0?'+':'−')+Math.abs(S.ecl.gain||0)+' 🏆) · rejoue pour le record</span></div><span class="qj-go">Rejouer</span></div>'
+      : '<div class="qj-row ok"><span class="qj-ic">⚡</span><div class="qj-bd"><b>L\'Éclair — fait ✓</b>'+
+        '<span>'+((S.ecl.gain||0)>=0?'+':'−')+Math.abs(S.ecl.gain||0)+' 🏆 aujourd\'hui · record '+(S.ecl.best||0)+' · à demain !</span></div></div>');
+}
+function quitterEclair(){ EC=null; clearInterval(ecTimer); clearInterval(ecCd); go('arene'); }
 
 /* ═══ LE COMPAGNON — la mascotte a un nom (choisi par l'élève) et une humeur
    qui reflète la journée : fier, rayonnant, ou gardien de la flamme. Jamais culpabilisant. ═══ */
