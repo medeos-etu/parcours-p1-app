@@ -7718,43 +7718,37 @@ function initAr(){
   if(S.ar.played && Date.now()-S.ar.played>BOOST_J*864e5 && !S.ar.boost) S.ar.boost=BOOST_RUNS;
   saveS();
 }
-function qD(q){ const o=S.ar.qd[q.id]; return o?o[0]:q.D; }
-function qM(q){ const o=S.ar.qd[q.id]; return o?o[1]:q.M; }
-function eProb(D,R){ return 1/(1+Math.pow(10,(D-R)/400)); }
-function kR(){ return S.ar.n<=20?60:(S.ar.n<=100?40:24); }
-function kD(m){ return Math.max(2,24/(1+m/50)); }
 function gradeIdx(T){ let i=0; for(let k=0;k<GRADES.length;k++){ if(T>=GRADES[k][0]) i=k; } return i; }
-function bande(){ return LOSS_BAND[gradeIdx(S.ar.T)]; }
 function capSerie(){ return gradeIdx(S.ar.T)>=6?STREAK_CAP_HI:STREAK_CAP; }
 function fmtT(v){ return Math.round(v).toLocaleString('fr-FR'); }
 function stars(D){ const s=D<865?1:(D<955?2:(D<1045?3:(D<1135?4:5))); return '★'.repeat(s)+'☆'.repeat(5-s); }
-function errPct(q){ return Math.max(5,Math.min(95,Math.round((1-eProb(qD(q),1000))*100))); }
 
 /* ---- le pot, annoncé avant la réponse ---- */
 function potOf(q){
-  const D=qD(q), m=qM(q), p=eProb(D,S.ar.R);
-  const P = m<CAL_M ? POT_CAL : POT;
-  const G = Math.max(Math.round(P*0.2), Math.min(Math.round(P*0.8), Math.round(P*(1-p))));
-  const brut = P-G;
-  let L = brut;
-  const cal = S.ar.n<CAL_N;
-  if(cal) L=0; else L=Math.round(brut*bande());
-  /* v3 — le pot se joue CASE PAR CASE : chacun des 5 items porte sa part du pot.
-     gU = gain par case bien jugée · lU = perte par case mal jugée (0 en calibration). */
-  const gU=Math.max(1,Math.round(G/5));
-  /* la case fausse coûte au moins 1,5× ce que la case juste rapporte : répondre au hasard
-     doit rester PERDANT (vérifié par simulation longue durée) */
-  const lU=cal?0:Math.max(Math.round(Math.max(1,Math.round(G/5))*1.5), Math.round((brut/5)*bande()), 1);
-  return {P:P,G:G,L:L,Lbrut:brut,p:p,m:m,D:D,cal:cal,jeune:m<CAL_M,
-          gU:gU,lU:lU,Gmax:gU*5,Lmax:lU*5};
+  /* BARÈME FIXE (26/08/2026) — ce que l'app affiche est enfin ce qu'elle applique.
+     Avant, le gain et la perte variaient avec la difficulté et le niveau estimé :
+     de +2 à +6 par case bien jugée, de −5 à −9 par case fausse. Une question pouvait
+     donc valoir +30 ou −45, alors que l'écran promettait « +2 par case juste, −2 par
+     erreur ». C'était intenable : l'élève ne pouvait pas compter ses points.
+     Désormais : +2 par case bien jugée, −2 par case mal jugée, quelle que soit la
+     question. Une question va de −10 à +10, une ascension de −100 à +100.
+     La difficulté continue d'exister — elle sert au tirage et au niveau interne (p),
+     jamais au barème. Les 20 premières questions ne coûtent rien (calibration). */
+  const cal = S.ar.n<CAL_N;          /* les 20 premières questions ne coûtent rien */
+  const gU=2, lU=cal?0:2;
+  return {P:POT,G:gU*5,L:lU*5,Lbrut:lU*5,cal:cal,gU:gU,lU:lU,Gmax:gU*5,Lmax:lU*5};
 }
 
 /* ---- sélection : mix 6/2/1/1, publié et invariable ---- */
 function pickQuestions(){
-  const now=Date.now(), R=S.ar.R;
+  const now=Date.now();
   if(typeof initVues==='function') initVues();
-  /* LE GRAND AMPHI MÊLE LES MATIÈRES, mais seulement ce que le Parcours a ouvert :
-     le bagage entier de l'élève, un QCM = une matière, le lot en alterne. */
+  /* TIRAGE ALÉATOIRE (26/08/2026) — il n'y a plus de difficulté de question.
+     Avant, chaque question portait une difficulté estimée qui se recalculait à chaque
+     passage, et le tirage visait une « zone de flow » autour du niveau supposé de
+     l'élève. Supprimé : toutes les questions se valent, on tire au hasard dans ce que
+     le Parcours a ouvert. Restent deux règles qui n'ont rien à voir avec la difficulté :
+     on ne resert pas une question vue récemment, et on replace une erreur ancienne. */
   const BANK=qsOuvertes(null);
   const LEN=Math.min(RUN_LEN,BANK.length);
   if(LEN<2) return [];
@@ -7764,30 +7758,14 @@ function pickQuestions(){
   if(S.ar._recycle){ BANK.forEach(q=>{ delete S.ar.seen[q.id]; }); saveS(); dispo=BANK.slice(); }
   const out=[], used={};
   const add=(q,slot)=>{ out.push({q:q,slot:slot}); used[q.id]=1; };
-  const jeune=q=>qM(q)<CAL_M;
-  const prendre=(lo,hi,slot,k,libre)=>{
-    const cible=(lo+hi)/2;
-    const cand=dispo.filter(q=>!used[q.id]).map(q=>({q:q,p:eProb(qD(q),R)}));
-    cand.sort((a,b)=>Math.abs(a.p-cible)-Math.abs(b.p-cible));
-    if(slot==='échauffement'&&S.vues){ cand.sort((a,b)=>((S.vues[b.q.f]?1:0)-(S.vues[a.q.f]?1:0))||
-      (Math.abs(eProb(qD(a.q),R)-cible)-Math.abs(eProb(qD(b.q),R)-cible))); }
-    for(let i=0;i<cand.length && k>0;i++){
-      if(!libre && jeune(cand[i].q) && out.some(o=>jeune(o.q))) continue;   /* ≤ 1 non calibrée par ascension */
-      add(cand[i].q,slot); k--;
-    }
-  };
-  /* 1 révision espacée : une erreur d'il y a ≥ 3 jours, la plus ancienne d'abord —
-     DANS l'arène courante uniquement (sinon une question de chimie surgit dans Le Bloc) */
+  /* une révision espacée : l'erreur la plus ancienne, si elle date d'au moins 3 jours */
   const rev=BANK.filter(q=>S.ar.errs[q.id] && (now-S.ar.errs[q.id])>=REVISION_J*864e5)
                  .sort((a,b)=>S.ar.errs[a.id]-S.ar.errs[b.id])[0];
   if(rev) add(rev,'révision');
-  prendre(0.55,0.75,'cœur',6);
-  prendre(0.80,0.92,'échauffement',2);
-  prendre(0.30,0.50,'défi',1);
-  let garde=0;
-  while(out.length<RUN_LEN && garde++<40){ const av=out.length; prendre(0.55,0.75,'cœur',1); if(out.length===av) break; }
-  garde=0;
-  while(out.length<RUN_LEN && garde++<40){ const av=out.length; prendre(0.55,0.75,'cœur',1,true); if(out.length===av) break; }
+  /* le reste : au hasard, sans préférence */
+  const reste=dispo.filter(q=>!used[q.id]);
+  for(let i=reste.length-1;i>0;i--){ const k=Math.floor(Math.random()*(i+1)); const t=reste[i]; reste[i]=reste[k]; reste[k]=t; }
+  for(let i=0;i<reste.length && out.length<RUN_LEN;i++) add(reste[i],'libre');
   for(let i=out.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); const t=out[i]; out[i]=out[j]; out[j]=t; }
   /* INTERLEAVING INTER-MATIÈRES : on alterne les matières autant que possible dans le lot,
      pour que deux questions voisines viennent rarement de la même matière */
@@ -7946,12 +7924,7 @@ function aCheck(timeout){
     note='Trop rapide pour être lu — non compté : ni gain, ni perte, ni mesure.';
   } else {
     /* R : le niveau estimé bouge à chaque question — en score FRACTIONNEL (4 cases sur 5 ≠ 0) */
-    const Sc = timeout ? 0 : nOk/5;
-    S.ar.R=Math.round(S.ar.R+kR()*(Sc-P.p));
     S.ar.n++; S.qcm++;
-    /* D : la question apprend sa vraie difficulté */
-    if(P.m<400){ const nD=Math.round(P.D+kD(P.m)*(P.p-Sc)); S.ar.qd[q.id]=[nD,P.m+1]; }
-    else S.ar.qd[q.id]=[P.D,P.m];
     /* anti-répétition, révision espacée, diagnostic */
     S.ar.seen[q.id]=Date.now();
     if(juste) delete S.ar.errs[q.id]; else S.ar.errs[q.id]=Date.now();
