@@ -6398,9 +6398,13 @@ function renderSalle(){
   });
 
   if(enPlus){
-    const plafond=slugs.reduce((m,s2)=>Math.max(m,parF[s2].length),0);
+    /* On annonce le VRAI supplément, jamais un chiffre rond inventé : si toutes les
+       fiches ouvrent le même nombre en plus, on le dit net ; sinon on dit « jusqu'à ». */
+    const sups=slugs.map(s2=>parF[s2].length-jouables(s2)).filter(v=>v>0);
+    const mx=Math.max.apply(null,sups), mn=Math.min.apply(null,sups);
+    const combien=(mn===mx? '+'+mx : 'jusqu\'à +'+mx);
     x+='<button class="salle-plus" onclick="go(\'profil\')">'+
-       'Chaque fiche t\'ouvre <b>'+QUOTA_FICHE+' QCM</b> — elle en garde <b>jusqu\'à '+plafond+'</b> pour le pack année complète des stages Medeos.</button>';
+       '<b>'+combien+' QCM par fiche</b> avec le pack année complète Medeos.</button>';
   } else {
     x+='<p class="salle-hint">Tes prochaines séances de Parcours ouvriront d\'autres fiches ici.</p>';
   }
