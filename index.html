@@ -1401,15 +1401,18 @@
      largeur ÉGALE encadrent la scène, qui reste donc pile au centre de l'écran.
      (Le hors-flux ne marchait pas : l'écran de l'Arène coupe ce qui dépasse.) */
   @media (min-width:1180px){
-    body.in-amphi #arene.scr.on{max-width:1240px}
+    /* LA MÊME LARGEUR DANS LES DEUX LIEUX. Avant, seul l'Amphi passait à 1240 px pour
+       loger le classement à côté de la scène : la barre de profil et le sélecteur de
+       lieu s'élargissaient de 120 px en changeant de lieu, ce qui n'a aucun sens
+       puisque ce sont les mêmes éléments. L'Arène tient désormais une seule largeur. */
+    #arene.scr.on{max-width:1240px}
     #vue-amphi{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,660px) minmax(0,1fr);
       gap:14px 16px;align-items:start;max-width:none;position:static}
     #vue-amphi > *{grid-column:2}
     #vue-amphi .sidecol{display:flex;grid-column:3;grid-row:1;justify-self:start;width:100%;max-width:260px}
   }
   @media (min-width:1440px){
-    #arene.scr.on{max-width:1280px}
-    body.in-amphi #arene.scr.on{max-width:1400px}
+    #arene.scr.on{max-width:1400px}
     #vue-amphi .sidecol{max-width:290px}
   }
 
@@ -2382,9 +2385,9 @@
   <!-- ═══ FENÊTRE : changer la séance du jour ═══ -->
   <div class="modal" id="sheet-seances" onclick="if(event.target===this)closeSheet('sheet-seances')">
     <div class="sheet">
-      <div class="sheet-h"><b>Choisis ta séance du jour</b><button onclick="closeSheet('sheet-seances')">✕</button></div>
+      <div class="sheet-h"><b>Changer de matière aujourd'hui</b><button onclick="closeSheet('sheet-seances')">✕</button></div>
       <div class="sheet-b">
-        <p style="font-size:11px;color:var(--muted);margin-bottom:10px">Le Parcours avance par groupes de 2 fiches. Choisis ton groupe du jour — les autres t'attendront : tout finit par y passer.</p>
+        <p style="font-size:11px;color:var(--muted);margin-bottom:10px">Pas le cœur à cette matière aujourd'hui ? Prends la suivante d'une autre. Celle que tu sautes reste en tête du fil : elle revient demain.</p>
         <div id="seances-liste"></div>
       </div>
     </div>
@@ -6336,8 +6339,12 @@ function classementJoueurs(){
     const estMoi = moi && c.id===moi;
     const T = estMoi ? (S.ar.T||0) : (typeof c.T==='number'? c.T : null);
     if(T===null) return;                 /* jamais de total supposé */
+    /* une entrée de registre sans identifiant lisible n'entre pas au classement :
+       mieux vaut une ligne de moins qu'une ligne qui affiche « undefined ». */
+    const nom = c.id || (estMoi ? (localStorage.getItem('m4_prenom')||null) : null);
+    if(!nom) return;
     const av=(estMoi? avatarOf() : (AVATARS.find(a=>a.id===(c.skin&&c.skin.av))||AVATARS[0]));
-    out.push({id:c.id, T:T, av:av.img});
+    out.push({id:nom, T:T, av:av.img});
   });
   out.sort((a,b)=>b.T-a.T);
   return out;
@@ -7446,7 +7453,7 @@ function renderSeance(){
       '<div class="se-ligne">'+cur.ligne+'</div>'+
       '<button class="gbtn" id="se-go">'+(premiere?'Commencer':'Continuer')+'</button>'+
       '<div class="se-next">Ensuite : '+prochainsTitres(2).join(' · ')+'</div>'+
-      '<button class="se-alt" onclick="ouvrirChoixSeance()">Changer de matière ou de fiches</button>'+illu(cur);
+      (seancesAlternatives().length? '<button class="se-alt" onclick="ouvrirChoixSeance()">Changer de matière aujourd\'hui</button>' : '')+illu(cur);
     document.getElementById('se-go').onclick=cur.act;
     return;
   }
@@ -8693,13 +8700,30 @@ function fermerLecteur(){
   if(SR){ sauverSR(); }         /* en pleine séance : PAUSE, pas abandon — la carte « reprendre » attend sur l'accueil */
   SR=null; closeFiche();
 }
+/* CHANGER DE MATIÈRE, PAS CHOISIR SON PROGRAMME.
+   Avant, cette fenêtre déroulait TOUTES les séances restantes — jusqu'à 108 lignes.
+   Ce n'est pas un catalogue : c'est une porte de sortie pour le jour où l'on n'a pas
+   le cœur à faire la matière du jour. On propose donc la PROCHAINE séance de chacune
+   des autres matières, trois au plus, et rien d'autre. Le fil n'est pas cassé : la
+   séance sautée reste la première non faite, elle revient d'elle-même demain. */
+function seancesAlternatives(){
+  const cur=seanceCourante();
+  const faite=s=>!!(s.fait&&s.fait());
+  const out=[];
+  ['Anatomie','Biologie','Chimie','Physique'].forEach(m=>{
+    if(cur && m===cur.mat) return;
+    const s=SEANCES.find(x=>x.mat===m && !faite(x));
+    if(s) out.push(s);
+  });
+  return out.slice(0,3);
+}
 function ouvrirChoixSeance(){
   const box=document.getElementById('seances-liste'); box.innerHTML='';
   const EMB={Anatomie:'embleme-anatomie',Biologie:'embleme-biologie',Chimie:'embleme-chimie',Physique:'embleme-physique'};
-  SEANCES.filter(s=>!(s.fait&&s.fait())).forEach(s=>{
+  seancesAlternatives().forEach(s=>{
     const b=document.createElement('button'); b.className='pioche-row';
     b.innerHTML='<img class="pimg" style="width:40px;height:40px;object-fit:contain;box-shadow:none" src="img/icones/'+(EMB[s.mat]||'')+'.png" alt="">'+
-      '<div><b>'+s.titre+'</b><span>'+s.mat+(s.chap?' · '+s.chap:'')+' · '+s.fiches.length+' fiches</span></div>';
+      '<div><b>'+s.titre+'</b><span>'+s.mat+(s.chap?' · '+s.chap:'')+' · '+s.fiches.length+' fiche'+(s.fiches.length>1?'s':'')+'</span></div>';
     b.onclick=()=>{ closeSheet('sheet-seances'); startSeance(s); };
     box.appendChild(b);
   });
