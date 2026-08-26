@@ -807,6 +807,15 @@
   @keyframes toastin{from{opacity:0;transform:translate(-50%,14px)}to{opacity:1;transform:translate(-50%,0)}}
   @keyframes toastout{to{opacity:0;transform:translate(-50%,10px)}}
 
+  /* — le bilan de fin de séance — */
+  .fin-fiche{display:flex;flex-direction:column;gap:2px;background:rgba(107,70,193,.05);border-radius:12px;
+    padding:9px 12px;margin-top:8px}
+  .fin-fiche b{font-size:12.5px;font-weight:800}
+  .fin-fiche span{font-size:11.5px;color:var(--muted);line-height:1.45}
+  .fin-bascule{font-size:12.5px;line-height:1.55;text-align:center;margin-top:10px;
+    background:linear-gradient(180deg,rgba(252,211,77,.14),rgba(226,156,92,.08));
+    border:1px solid rgba(226,156,92,.3);border-radius:12px;padding:10px 12px}
+
   /* — la mascotte en grande scène — */
   .axoscene{position:relative;border-radius:18px;overflow:hidden;background-size:cover;background-position:center;
     background-color:rgba(107,70,193,.06);padding:14px 14px 12px;text-align:center;margin:4px 0}
@@ -6452,20 +6461,22 @@ function seanceFin(){
   const f=document.getElementById('libre-fin'); document.getElementById('libre-card').style.display='none';
   f.style.display='block'; go('libre');
   document.getElementById('libre-fin-t').textContent='Séance terminée ✓';
-  { const r=axoRepl('seance_terminee'); if(r){ const t=document.getElementById('libre-fin-t');
-      t.insertAdjacentHTML('afterend','<div class="guide-row" style="margin:8px 0"><img src="img/'+r.pose+'.png" alt="" onerror="this.remove()"><span class="sg-b">'+r.texte+'</span></div>'); } }
-  let bilan='Lu, restitué, comparé, testé — c\'est comme ça qu\'une notion s\'installe.';
+  { const il=document.querySelector('#libre-fin .axo'); if(il) il.style.display='none'; }   /* une seule mascotte : la grande */
+  /* le bilan : ce que tu as travaillé, et ce que tu t'étais noté — plus de « QCM : — » */
+  let bilan='<p style="text-align:center;font-size:13px;font-weight:700">Lu, restitué, comparé. C\'est comme ça qu\'une notion s\'installe.</p>';
   s.fiches.forEach(sl=>{
     const o=(S.oublis||{})[sl]||{};
-    bilan+='\n\n📄 '+(TITRES_FICHES[sl]||sl)+' — QCM : '+(o.qcm? o.qcm.ok+'/'+o.qcm.total : '—')+
-      (o.oublie? '\n✏️ À retenir : '+o.oublie : '');
+    bilan+='<div class="fin-fiche"><b>📄 '+(TITRES_FICHES[sl]||sl)+'</b>'+
+      (o.oublie? '<span>✏️ Tu avais noté : '+o.oublie+'</span>' : '<span>revue et comparée ✓</span>')+'</div>';
   });
-  bilan+='\n\n🎯 Direction ta salle d\'entraînement : on teste tout de suite ce que tu viens de voir.';
-  document.getElementById('libre-fin-s').textContent=bilan;
-  document.getElementById('libre-fin-s').style.whiteSpace='pre-line';
+  const salle=(ARENES.find(x=>x.k===s.mat)||{}).nom||'ta salle';
+  bilan+=axoScene('vers_entrainement');
+  bilan+='<p class="fin-bascule">⚔️ On quitte le Parcours : direction <b>l\'Arène</b>, salle <b>'+salle+'</b>, pour tester ce que tu viens de voir.</p>';
+  document.getElementById('libre-fin-s').innerHTML=bilan;
+  document.getElementById('libre-fin-s').style.whiteSpace='normal';
   document.getElementById('libre-fin-s').style.textAlign='left';
   const enc=document.getElementById('libre-encore'); enc.style.display='block';
-  enc.textContent='🎯 M\'entraîner sur ces fiches';
+  enc.innerHTML='⚔️ Aller dans l\'Arène · salle '+salle;
   /* le Parcours GLISSE vers la salle d'entraînement de la matière du jour */
   enc.onclick=()=>{ S.entrRetour=1; saveS(); if(typeof startEntrainement==='function') startEntrainement(s.mat); else go('arene'); };
   { const cont=document.getElementById('libre-cont'); if(cont) cont.style.display='none'; }
