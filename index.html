@@ -1056,7 +1056,12 @@
   .mj-row.coffre .mj-c{background:none;font-size:15px}
 
   /* — la vignette d'avancée (coin du Parcours) — */
-  .mini-rad{width:38px;height:38px;border:none;background:none;padding:0;cursor:pointer;flex-shrink:0;display:block}
+  /* toute l'identité en haut du Parcours mène au profil : une cible large et
+     évidente, plutôt qu'un petit losange sans étiquette */
+  .ptop-moi{flex:1;min-width:0;display:flex;align-items:center;gap:10px;border:none;background:none;
+    padding:4px 6px 4px 0;margin:0;cursor:pointer;font-family:inherit;text-align:left;border-radius:14px}
+  .ptop-moi:hover{background:rgba(107,70,193,.06)}
+  .ptop-moi:active{transform:scale(.99)}
 
   /* — la courbe de progression — */
   .pg-leg{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
@@ -1439,13 +1444,34 @@
   .shopcard p{font-size:11.5px;color:rgba(250,246,240,.75);line-height:1.55;margin-top:5px}
   .shopcard .sc-price{font-size:20px;font-weight:900;margin-top:9px;font-variant-numeric:tabular-nums}
   .shopcard .sc-price small{font-size:11px;font-weight:700;color:rgba(250,246,240,.65)}
-  .sc-btns{display:flex;gap:8px;margin-top:11px}
+  .sc-btns{display:flex;gap:8px;margin-top:11px;flex-wrap:wrap}
+  /* sur téléphone la carte est étroite : les deux boutons s'empilent au lieu de
+     casser « En savoir plus » sur trois lignes */
+  @media (max-width:719px){ .sc-btns{flex-direction:column;gap:7px} }
   .sc-buy{flex:1;border:none;cursor:pointer;font-family:inherit;font-weight:900;font-size:13px;
     padding:12px;border-radius:12px;background:linear-gradient(180deg,#FCD34D,#E29C5C);color:#4A3208;
     box-shadow:0 3px 0 #B87A33, inset 0 1px 0 rgba(255,255,255,.5)}
   .sc-buy:active{transform:translateY(2px);box-shadow:0 1px 0 #B87A33}
   .sc-more{flex:1;border:1px solid rgba(255,255,255,.28);background:none;cursor:pointer;font-family:inherit;
     font-weight:800;font-size:12.5px;padding:12px;border-radius:12px;color:#fff}
+
+  /* ═══ ORDINATEUR : on se sert de la largeur au lieu de laisser un grand vide ═══ */
+  @media (min-width:1024px){
+    /* le Parcours : la séance à gauche, le chemin déjà construit à droite */
+    #home.scr.on{max-width:1020px;display:grid;align-content:start;gap:16px 22px;
+      grid-template-columns:minmax(0,1.6fr) minmax(260px,1fr);
+      grid-template-areas:"tete tete" "seance chemin"}
+    #home .ptop{grid-area:tete}
+    #home .seance{grid-area:seance}
+    #home .built{grid-area:chemin;margin:0}
+    /* l'étagère se dresse en colonne : plus de défilement horizontal caché */
+    #home .built .brow{flex-direction:column;overflow:visible;gap:9px;padding:2px 0}
+    #home .built .bsc{width:100%;flex-direction:row;display:flex;align-items:center;gap:11px}
+    #home .built .bsc .pvig{width:48px;height:48px;flex-shrink:0}
+    #home .built .bsc .bst{font-size:11.5px;margin-top:0;-webkit-line-clamp:2}
+    /* les écrans d'une seule carte se centrent au lieu de flotter en haut */
+    #libre.scr.on, #rappel.scr.on{justify-content:center}
+  }
 
   /* ═══ LES FONDS D'UNIVERS : chaque monde enveloppe TOUT l'écran, fondu au passage ═══ */
   #bgs{position:fixed;inset:0;z-index:0;pointer-events:none}
@@ -2083,9 +2109,10 @@
   <!-- ======= ACCUEIL ======= -->
   <section class="scr" id="home">
     <header class="ptop">
-      <span class="pavatar" id="pt-avatar"><img src="img/axo-canon.png" alt=""></span>
-      <div class="ptxt"><b id="pt-hello">Ton entraînement</b><span>Ta préparation P1</span></div>
-      <button class="mini-rad" id="mini-rad" onclick="go('profil')" title="Ton avancée" aria-label="Ton avancée"></button>
+      <button class="ptop-moi" onclick="go('profil')" aria-label="Voir mon profil">
+        <span class="pavatar" id="pt-avatar"><img src="img/axo-canon.png" alt=""></span>
+        <span class="ptxt"><b id="pt-hello">Ton entraînement</b><span>Ta préparation P1</span></span>
+      </button>
       <span class="pflame" id="pt-flame" hidden style="cursor:pointer" onclick="toggleFlamme(event)">🔥 1 j</span>
       <div class="flampop" id="flamme-pop" hidden onclick="event.stopPropagation()">
         <b id="fp-titre">Ta série</b>
@@ -2603,7 +2630,7 @@
         </div>
       </div>
     </div>
-    <button class="stagelien" style="margin-top:12px" onclick="window.open('https://www.medeos-sante.fr/packs/stages-vacances#stages','_blank')">Le pack année complète — <b>Medi Pro + les 4 stages, avec toute l'app en illimité</b> →</button>
+    <button class="stagelien" style="margin-top:12px" onclick="window.open('https://www.medeos-sante.fr/packs/stages-vacances#pack-annee','_blank')">Le pack année complète — <b>Medi Pro + les 4 stages, avec toute l'app en illimité</b> →</button>
     </div>
   </section>
 
