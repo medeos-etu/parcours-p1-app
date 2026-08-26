@@ -796,6 +796,17 @@
   @keyframes ecko{0%{box-shadow:0 0 0 3px rgba(192,91,77,.45)}100%{box-shadow:none}}
   .ec-combo{color:#B87A33;font-weight:900}
 
+  /* — le message flottant de la mascotte — */
+  .axotoast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom));transform:translateX(-50%);
+    z-index:320;display:flex;align-items:center;gap:9px;max-width:min(420px,92vw);
+    background:#FFFDF9;border-radius:16px;padding:10px 14px 10px 10px;
+    box-shadow:0 12px 34px rgba(31,27,46,.28);animation:toastin .3s ease-out}
+  .axotoast img{height:44px;flex-shrink:0}
+  .axotoast span{font-size:12.5px;font-weight:700;line-height:1.45;color:#1A1A2E}
+  .axotoast.out{animation:toastout .4s ease-in forwards}
+  @keyframes toastin{from{opacity:0;transform:translate(-50%,14px)}to{opacity:1;transform:translate(-50%,0)}}
+  @keyframes toastout{to{opacity:0;transform:translate(-50%,10px)}}
+
   /* — la mascotte en grande scène — */
   .axoscene{position:relative;border-radius:18px;overflow:hidden;background-size:cover;background-position:center;
     background-color:rgba(107,70,193,.06);padding:14px 14px 12px;text-align:center;margin:4px 0}
@@ -817,6 +828,8 @@
   #ms-amphi.on{background:linear-gradient(180deg,#FCD34D,#E29C5C);color:#4A3208;
     box-shadow:0 2px 10px rgba(226,156,92,.45)}
   #arene .modeswitch{margin-left:auto;margin-right:auto}
+
+  .salles-reste{text-align:center;font-size:11px;color:rgba(250,246,240,.5);margin-top:10px}
 
   /* — les 4 salles — */
   .salles{display:grid;grid-template-columns:1fr;gap:9px}
@@ -2056,6 +2069,7 @@
       <div id="vue-salles">
         <div class="guide-row" id="salles-dit"></div>
         <div class="salles" id="salles-grille"></div>
+        <p class="salles-reste" id="salles-reste"></p>
       </div>
 
       <!-- ═══ LE GRAND AMPHI : la compétition ═══ -->
@@ -4391,6 +4405,11 @@ function renderSalles(){
   if(!S.ar) initAr();
   const dit=document.getElementById('salles-dit');
   const ouvertes=ARENES.filter(a=>salleStock(a.k)>0).length;
+  { const rr=document.getElementById('salles-reste');
+    const q=(typeof entrRestants==='function')?entrRestants():3;
+    if(rr) rr.textContent = S.stage ? 'Entraînement illimité — année complète'
+      : (q>0 ? q+' entraînement'+(q>1?'s':'')+' possible'+(q>1?'s':'')+' aujourd\'hui'
+             : 'Tu as bien travaillé aujourd\'hui — de nouvelles sessions demain matin.'); }
   if(dit) dit.outerHTML=axoBulle(ouvertes?'salle_ouverte_premiere_fois':'salles_toutes_fermees').replace('guide-row','guide-row" id="salles-dit');
   g.innerHTML=ARENES.map(a=>{
     const n=salleStock(a.k), ouverte=n>0;
@@ -4732,6 +4751,14 @@ function axoRepl(moment){
   const m=AXO_DIT[moment]; if(!m) return null;
   const l=m.lignes[Math.floor(Math.random()*m.lignes.length)];
   return {texte:(l||'').split('__NOM__').join(axoNom()), pose:m.pose||'axo-mains', fond:m.fond||null};
+}
+/* un petit message flottant de la mascotte, sans fenêtre */
+function toastAxo(moment){
+  const r=axoRepl(moment); if(!r) return;
+  const d=document.createElement('div'); d.className='axotoast';
+  d.innerHTML='<img src="img/'+r.pose+'.png" alt="" onerror="this.remove()"><span>'+r.texte+'</span>';
+  document.body.appendChild(d);
+  setTimeout(()=>{ d.classList.add('out'); setTimeout(()=>d.remove(),400); },4200);
 }
 /* la bulle standard : la mascotte + ce qu'elle dit */
 function axoBulle(moment,cls){
@@ -5338,21 +5365,34 @@ function areneOuvrable(){
   if(S.stage) return true;
   return ARENES.some(a=>areneArmee(a.k));
 }
-function startEntrainement(){
-  const deb=(typeof fichesDebloquees==='function')?fichesDebloquees():{};
-  const pool=ABANK.filter(q=>deb[q.f]);
-  if(!pool.length){ go('home'); return; }              /* rien de travaillé : direction la séance */
+const ENTR_PAR_JOUR=3;
+function entrRestants(){
+  const d=arDay();
+  if(!S.entr || S.entr.day!==d) S.entr={day:d,n:0};
+  return Math.max(0, ENTR_PAR_JOUR-(S.entr.n||0));
+}
+function startEntrainement(mat){
+  /* L'ENTRAÎNEMENT D'UNE SALLE : uniquement les fiches de CETTE matière déjà travaillées.
+     Limité à 3 séances par jour (au-delà ce n'est plus de la révision), sauf année complète.
+     Il ressert d'abord ce qui a déjà été croisé en Amphi : il révise sans griller la fraîcheur. */
+  if(!S.stage && !S.entrRetour && entrRestants()<=0){
+    if(typeof toastAxo==='function') toastAxo('journee_deja_terminee');
+    go('arene'); return;
+  }
+  const arm=(typeof fichesArmees==='function')?fichesArmees():{};
+  const pool=ABANK.filter(q=>arm[q.f] && (!mat || q.mat===mat));
+  if(!pool.length){ if(typeof toastAxo==='function') toastAxo('salles_toutes_fermees'); go('home'); return; }
+  S.entr=S.entr||{day:arDay(),n:0}; S.entr.n=(S.entr.n||0)+1; saveS();
   const arr=pool.slice();
-  for(let i=arr.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]]; }
-  /* PRIORITÉ AUX DÉJÀ-VUES : l'entraînement est de la révision, il préserve la fraîcheur
-     des questions que l'Arène te réserve — et il ne marque jamais rien comme « servi ». */
+  for(let i2=arr.length-1;i2>0;i2--){ const j2=Math.floor(Math.random()*(i2+1)); [arr[i2],arr[j2]]=[arr[j2],arr[i2]]; }
   if(S.ar && S.ar.seen) arr.sort((a,b)=>(S.ar.seen[b.id]?1:0)-(S.ar.seen[a.id]?1:0));
   const n=Math.min(5,arr.length);
-  LB={qs:arr.slice(0,n),i:0,ok:0,mat:null,jour:false,sel:new Set(),done:false};
-  document.getElementById('libre-titre').textContent='Entraînement · sur tes fiches';
+  LB={qs:arr.slice(0,n),i:0,ok:0,mat:mat||null,jour:false,sel:new Set(),done:false,entrainement:true};
+  const sa=ARENES.find(x=>x.k===mat);
+  document.getElementById('libre-titre').textContent = sa ? sa.nom+' · entraînement' : 'Entraînement';
   document.getElementById('libre-note').textContent = n<5
-    ? n+' question'+(n>1?'s':'')+' sur ce que tu as déjà travaillé — tes prochaines séances en apporteront d\'autres.'
-    : 'Sans chrono ni trophées — de la révision : tu peux recroiser des questions déjà vues, c\'est fait pour.';
+    ? n+' question'+(n>1?'s':'')+' sur ce que tu as travaillé — tes prochaines séances en ouvriront d\'autres.'
+    : 'Sans chrono ni trophées : on révise ce que tu as déjà vu.';
   libreShow(); go('libre');
 }
 function startLibre(mat){
