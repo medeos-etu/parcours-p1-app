@@ -5937,9 +5937,9 @@ function diagOuvrable(f){ return !!(S.stage || fichesDebloquees()[f]); }
 function diagStats(){
   const MATS=['Anatomie','Biologie','Chimie','Physique'];
   const nm={}, tot={};
-  if(typeof ABANK!=='undefined') ABANK.forEach(q=>{ nm[q.n]=q.mat; tot[q.mat]=(tot[q.mat]||0); });
+  if(typeof ABANK!=='undefined') ABANK.forEach(q=>{ if(q.ar) return; nm[q.n]=q.mat; tot[q.mat]=(tot[q.mat]||0); });
   const parN={};
-  if(typeof ABANK!=='undefined'){ const vu={}; ABANK.forEach(q=>{ if(!vu[q.n]){ vu[q.n]=1; tot[q.mat]=(tot[q.mat]||0)+1; } }); }
+  if(typeof ABANK!=='undefined'){ const vu={}; ABANK.forEach(q=>{ if(q.ar) return; if(!vu[q.n]){ vu[q.n]=1; tot[q.mat]=(tot[q.mat]||0)+1; } }); }
   const st={};
   MATS.forEach(m=>st[m]={ok:0,ko:0,sol:0,tot:tot[m]||0,ecl:0});
   const ns=(S.ar&&S.ar.notions)||{};
@@ -6267,7 +6267,7 @@ function renderCurArena(){
     else {
       /* la taille réelle de la prochaine ascension, et l'état du stock */
       const arm=(typeof fichesArmees==='function')?fichesArmees():{};
-      const banque=ABANK.filter(q=>q.mat===a.k && arm[q.f]);
+      const banque=qsAmphi(a.k);
       const now2=Date.now();
       const neuves=banque.filter(q=>!S.ar.seen[q.id] || (now2-S.ar.seen[q.id])>REVU_J*864e5).length;
       const taille=Math.min(RUN_LEN,banque.length);
@@ -6406,7 +6406,9 @@ function setLieu(l){
 const QUOTA_FICHE=3;
 function accesIllimite(){ return !!S.stage; }
 function qsDeFiche(slug){
-  const t=ABANK.filter(q=>q.f===slug);
+  /* q.ar === 1 : question RÉSERVÉE AU GRAND AMPHI. Elle n'apparaît jamais à
+     l'entraînement — c'est tout l'intérêt : on ne peut pas la réviser à l'avance. */
+  const t=ABANK.filter(q=>q.f===slug && !q.ar);
   return accesIllimite()? t : t.slice(0,QUOTA_FICHE);
 }
 function qsOuvertes(mat){
@@ -6425,7 +6427,13 @@ function salleStock(mat){ return qsOuvertes(mat).length; }
    question sur une fiche non travaillée. */
 function qsAmphi(mat){
   const arm=(typeof fichesArmees==='function')?fichesArmees():{};
-  return ABANK.filter(q=>arm[q.f] && (!mat||q.mat===mat));
+  const res=ABANK.filter(q=>q.ar && arm[q.f] && (!mat||q.mat===mat));
+  if(res.length>=RUN_LEN) return res;
+  /* Toutes les fiches n'ont pas encore leurs questions d'arène. Plutôt que de refuser
+     l'ascension, on complète avec les questions d'entraînement des fiches lues — jamais
+     avec une fiche non travaillée. À mesure que les questions d'arène arrivent, ce
+     rattrapage s'efface tout seul. */
+  return res.concat(ABANK.filter(q=>!q.ar && arm[q.f] && (!mat||q.mat===mat)));
 }
 function renderSalles(){
   const g=document.getElementById('salles-grille'); if(!g) return;
@@ -6559,7 +6567,7 @@ function renderAmphi(){
       '</div>'+
       '<div class="amphi-bd"><div class="amphi-t">Le Grand Amphi</div>'+
       '<div class="amphi-s">'+RUN_LEN+' QCM · toutes matières mêlées · '+stock+' questions dans ton bagage</div>'+
-      '<div class="amphi-s" style="margin-top:4px;opacity:.85">Il pioche dans <b>toutes</b> les questions de tes fiches lues — pas seulement celles que tu as travaillées en Salle.</div>'+
+      '<div class="amphi-s" style="margin-top:4px;opacity:.85">Ses questions ne sont pas celles des Salles : <b>on ne peut pas les réviser à l\'avance</b>. Elles portent sur tes fiches lues, rien d\'autre.</div>'+
       '<div class="amphi-s" style="margin-top:6px;font-style:italic">'+(axoRepl(S.ar.runs>0?'amphi_avant_ascension':'ascensions_epuisees')||{}).texte+'</div>'+
       '<div class="amphi-tro"><img class="ticn" src="img/icones/trophee-medeos.png" alt=""> '+fmtT(S.ar.T||0)+' trophées</div></div>';
   } else {
@@ -7434,7 +7442,7 @@ function fichesArmees(){
 }
 function areneArmee(mat){
   const arm=fichesArmees();
-  return ABANK.filter(q=>q.mat===mat && arm[q.f]).length>=2;
+  return ABANK.filter(q=>q.mat===mat && arm[q.f] && !q.ar).length>=2;
 }
 function areneOuvrable(){
   if(S.stage) return true;
@@ -7454,7 +7462,7 @@ function renderSalle(){
   const arm=(typeof fichesArmees==='function')?fichesArmees():{};
   /* les fiches de cette salle, dans l'ordre où le Parcours les a ouvertes */
   const parF={};
-  ABANK.forEach(q=>{ if(q.mat===salleMat && arm[q.f]) (parF[q.f]=parF[q.f]||[]).push(q); });
+  ABANK.forEach(q=>{ if(q.mat===salleMat && arm[q.f] && !q.ar) (parF[q.f]=parF[q.f]||[]).push(q); });
   const slugs=Object.keys(parF);
   const jouables=s2=>qsDeFiche(s2).length;
   const ouvert=slugs.reduce((k,s2)=>k+jouables(s2),0);
@@ -8041,7 +8049,7 @@ function marquerVue(slug){
 }
 function poolArme(mat){
   initVues();
-  return ABANK.filter(q=>q.mat===mat && q.f && S.vues[q.f]);
+  return ABANK.filter(q=>q.mat===mat && q.f && S.vues[q.f] && !q.ar);
 }
 
 
