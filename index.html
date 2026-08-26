@@ -808,6 +808,14 @@
   @keyframes toastout{to{opacity:0;transform:translate(-50%,10px)}}
 
   /* — le formulaire de profil — */
+  /* le dernier écran du point de départ : des étiquettes VISIBLES, pas des
+     placeholders qui disparaissent dès que le champ est rempli */
+  .id-lab{display:block;font-size:11px;font-weight:900;color:var(--muted);
+    text-transform:uppercase;letter-spacing:.06em}
+  .id-lab input{margin-top:5px;text-transform:none;letter-spacing:normal}
+  .id-pourquoi{display:block;font-size:11px;font-weight:600;color:#3A3730;line-height:1.55;
+    margin-top:7px;text-transform:none;letter-spacing:normal}
+  .id-pourquoi b{color:var(--violet)}
   .pf-intro{font-size:12px;color:#3A3730;line-height:1.5;margin-bottom:10px}
   .pf-grid{display:grid;gap:8px;grid-template-columns:1fr}
   @media (min-width:560px){ .pf-grid{grid-template-columns:1fr 1fr} .pf-grid input:last-child{grid-column:1/-1} }
@@ -2050,12 +2058,16 @@
       <img class="axo" src="img/axo-fiche.png" alt="" style="height:104px">
       <h2>Ton point de départ est prêt.</h2>
       <p style="max-width:400px">Dernière chose : dis-nous qui tu es, pour qu'on l'enregistre à ton nom et qu'on puisse t'accompagner.</p>
-      <div style="width:100%;max-width:380px;display:grid;gap:9px">
-        <input class="field" id="id-prenom" placeholder="Prénom" autocomplete="given-name" oninput="majIdent()">
-        <input class="field" id="id-nom" placeholder="Nom" autocomplete="family-name" oninput="majIdent()">
-        <input class="field" id="id-tel" type="tel" inputmode="tel" placeholder="Téléphone" autocomplete="tel" oninput="majIdent()">
+      <div style="width:100%;max-width:380px;display:grid;gap:12px;text-align:left">
+        <label class="id-lab">Ton prénom
+          <input class="field" id="id-prenom" placeholder="Ex. Lucas" autocomplete="given-name" oninput="majIdent()"></label>
+        <label class="id-lab">Ton nom
+          <input class="field" id="id-nom" placeholder="Ex. Crepin" autocomplete="family-name" oninput="majIdent()"></label>
+        <label class="id-lab">Ton téléphone
+          <input class="field" id="id-tel" type="tel" inputmode="tel" placeholder="Ex. 06 12 34 56 78" autocomplete="tel" oninput="majIdent()">
+          <span class="id-pourquoi"><b>Pourquoi ton numéro ?</b> Parce que l'accompagnement Medeos passe par des humains, pas par un robot : c'est par là qu'on te répond quand tu bloques, et qu'on te prévient des échéances à ne pas rater.</span>
+        </label>
       </div>
-      <p style="font-size:11px;color:var(--muted);max-width:380px;line-height:1.55">Ton numéro nous sert à te retrouver et à t'accompagner pendant ta préparation.</p>
       <button class="btn" id="id-cta" style="max-width:320px" disabled onclick="finSim()">Voir ce qu'il faut retenir</button>
     </div>
   </section>
@@ -6818,14 +6830,25 @@ function closeFiche(){
 }
 
 
-/* ═══ L'ARÈNE NE SERT QUE CE QUE TU AS VU — le Parcours l'arme, notion par notion.
-   Départ : les premières fiches du Parcours (8 par matière). Chaque fiche lue en ajoute. ═══ */
+/* ═══ LES FICHES RÉELLEMENT LUES — rien d'autre. ═══
+   CORRIGÉ le 26/08 : S.vues était pré-rempli avec les 8 premières fiches de chaque
+   matière (~32), si bien que la récompense « Le Curieux — 20 fiches lues » tombait
+   avant même la première lecture. On ne compte plus que ce que l'élève a ouvert. */
 function initVues(){
-  if(S.vues) return;
-  S.vues={};
-  ['Anatomie','Biologie','Chimie','Physique'].forEach(m=>{
-    ABANK.filter(q=>q.mat===m).slice(0,8).forEach(q=>{ if(q.f) S.vues[q.f]=1; });
-  });
+  if(S.vues && S.vuesV2) return;
+  const vraies={};
+  /* plancher honnête : les fiches des séances TERMINÉES. Celle qu'il est en train
+     de lire s'ajoutera d'elle-même par openFiche — on ne compte jamais d'avance. */
+  if(typeof fichesArmees==='function'){
+    try{ Object.keys(fichesArmees()).forEach(f=>{ vraies[f]=1; }); }catch(e){}
+  }
+  S.vues=vraies; S.vuesV2=1;
+  /* une récompense décrochée par erreur ne reste pas acquise — et elle pourra
+     s'annoncer pour de vrai le jour où elle sera méritée */
+  if(S.skinsVus && Object.keys(S.vues).length<20){
+    S.skinsVus=S.skinsVus.filter(k=>k!=='av:curieux');
+    if(S.ar && S.ar.skin && S.ar.skin.av==='curieux') delete S.ar.skin.av;
+  }
   saveS();
 }
 function marquerVue(slug){
@@ -6960,7 +6983,11 @@ function seanceFin(){
   const enc=document.getElementById('libre-encore'); enc.style.display='block';
   enc.innerHTML='⚔️ Aller dans l\'Arène · salle '+salle;
   /* le Parcours GLISSE vers la salle d'entraînement de la matière du jour */
-  enc.onclick=()=>{ S.entrRetour=1; saveS(); if(typeof startEntrainement==='function') startEntrainement(s.mat); else go('arene'); };
+  /* on ENTRE dans la salle : c'est à l'élève de choisir ce qu'il y fait, pas à
+     nous de lui lancer un QCM dans les mains */
+  enc.onclick=()=>{ S.entrRetour=1; saveS();
+    if(typeof ouvrirSalle==='function' && typeof salleStock==='function' && salleStock(s.mat)>0) ouvrirSalle(s.mat);
+    else { go('arene'); if(typeof setLieu==='function') setLieu('salles'); } };
   { const cont=document.getElementById('libre-cont'); if(cont) cont.style.display='none'; }
   SR=null; renderState();
 }
