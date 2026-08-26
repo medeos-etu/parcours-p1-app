@@ -838,6 +838,8 @@
   .axoscene{position:relative;border-radius:18px;overflow:hidden;background-size:cover;background-position:center;
     background-color:rgba(107,70,193,.06);padding:14px 14px 12px;text-align:center;margin:4px 0}
   .axoscene img{height:96px;display:block;margin:0 auto 6px;filter:drop-shadow(0 10px 20px rgba(0,0,0,.28))}
+  .axoscene.nu{background-color:transparent;padding:2px 0 0;margin:10px 0 2px}
+  .axoscene.nu img{height:104px;margin-bottom:2px}
   .axoscene p{font-size:13px;font-weight:700;line-height:1.55;color:#1A1A2E;max-width:340px;margin:0 auto}
   body.in-arene .axoscene p, body.in-amphi .axoscene p{color:#FAF6F0}
 
@@ -1347,7 +1349,16 @@
 
 
   /* ═══ ORDI : le lobby en 3 colonnes, toute la largeur, toujours sans scroll ═══ */
-  .sidecol{display:flex;flex-direction:column;gap:12px}
+  /* le panneau du classement n'apparaît qu'à partir de la largeur où il tient à côté
+     de la scène ; en dessous, c'est le bouton .amphi-lb qui ouvre la fenêtre */
+  #vue-amphi{position:relative}
+  .sidecol{display:none;flex-direction:column;gap:12px}
+  .amphi-lb{position:absolute;top:12px;right:12px;z-index:5;display:inline-flex;align-items:center;gap:6px;
+    cursor:pointer;font-family:inherit;font-size:11.5px;font-weight:800;color:#FAF6F0;
+    background:rgba(18,14,32,.62);border:1px solid rgba(255,255,255,.22);border-radius:99px;padding:7px 12px;
+    backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 4px 12px rgba(0,0,0,.4)}
+  .amphi-lb img{width:15px;height:15px;object-fit:contain}
+  .amphi-lb:active{transform:scale(.95)}
   /* — le classement de l'Amphi : une ligne par élève, ses vrais trophées — */
   .lbrow{display:flex;align-items:center;gap:9px;padding:8px 9px;border-radius:12px;background:rgba(107,70,193,.05)}
   .lbrow+.lbrow{margin-top:6px}
@@ -1403,7 +1414,8 @@
     #vue-amphi{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,660px) minmax(0,1fr);
       gap:14px 16px;align-items:start;max-width:none;position:static}
     #vue-amphi > *{grid-column:2}
-    #vue-amphi .sidecol{grid-column:3;grid-row:1;justify-self:start;width:100%;max-width:260px}
+    #vue-amphi .sidecol{display:flex;grid-column:3;grid-row:1;justify-self:start;width:100%;max-width:260px}
+    .amphi-lb{display:none}
   }
   @media (min-width:1440px){
     #arene.scr.on{max-width:1280px}
@@ -2293,6 +2305,10 @@
 
       <!-- ═══ LE GRAND AMPHI : la compétition ═══ -->
       <div id="vue-amphi" style="display:none">
+        <!-- sur téléphone, le classement se replie en un bouton posé sur la scène -->
+        <button class="amphi-lb" onclick="openSheet('sheet-rank')" aria-label="Voir le classement">
+          <img src="img/icones/icone-classement.png" alt="" onerror="this.remove()"><span>Classement</span>
+        </button>
         <div class="amphi" id="amphi-scene"></div>
         <div class="ar-limite" id="ar-limite"></div>
         <div class="actionbar">
@@ -5533,7 +5549,7 @@ const TUTOS={
     {img:'axo-guide-bienvenue', t:"Voici ton <b>Parcours</b> : deux fiches par jour, un rythme tenable, une méthode qui fait tenir les notions."},
     {sel:'#seance', img:'axo-guide-pointe-haut', t:"Ta <b>séance du jour</b> t'attend ici : lecture, rappel de mémoire, comparaison, puis QCM."},
     {sel:'#pt-flame', img:'axo-guide-pointe-haut', t:"Chaque jour travaillé allonge ta série 🔥. Un oubli est pardonné — un seul."},
-    {img:'axo-guide-bravo', t:"Et l'Arène ? Elle est verrouillée pour l'instant : <b>ta première séance — 2 fiches — la déverrouille</b>, avec des questions sur ce que tu viens d'apprendre. Bonne première séance !", btn:"C'est parti !"}
+    {img:'axo-guide-bravo', t:"Et l'Arène ? <b>Elle s'ouvre dès que tu as fini ta première séance.</b> Tu y retrouves tes deux fiches du jour en questions, sans rien risquer. Bonne première séance !", btn:"C'est parti !"}
   ],
   arene:[
     {img:'axo-guide-bienvenue', t:"Bienvenue dans l'Arène ! Ici il y a <b>deux endroits</b>, et ils ne servent pas à la même chose. Je te montre."},
@@ -5816,7 +5832,9 @@ function axoBulle(moment,cls){
 /* la version « grande scène » : pose en grand, réplique dessous */
 function axoScene(moment){
   const r=axoRepl(moment); if(!r) return '';
-  return '<div class="axoscene"'+(r.fond?' style="background-image:url(\'img/'+r.fond+'\')"':'')+'>'+
+  /* une « scène » n'a de sens qu'avec un décor : sans image de fond, la mascotte
+     parle à même la page, sans cadre grisé autour d'elle */
+  return '<div class="axoscene'+(r.fond?'':' nu')+'"'+(r.fond?' style="background-image:url(\'img/'+r.fond+'\')"':'')+'>'+
          '<img src="img/'+r.pose+'.png" alt="" onerror="this.remove()">'+
          '<p>'+r.texte+'</p></div>';
 }
@@ -6620,6 +6638,7 @@ function libreFin(){
   }
   document.getElementById('libre-card').style.display='none';
   const f=document.getElementById('libre-fin'); f.style.display='block';
+  { const il=f.querySelector(':scope > img'); if(il) il.style.display=''; }   /* rendue après un bilan de séance */
   let gQJ=0;
   if(LB.jour && !qjFaitAuj()){
     gQJ = LB.ok ? [10,15,25][mjSeed(arDay())%3] : 5;   /* récompense mystère du jour */
@@ -6846,7 +6865,7 @@ function seanceEtape(){
   if(phase===0){                              /* LECTURE */
     openFiche(slug);
     const nb=document.getElementById('lect-suivant');
-    if(nb){ nb.style.display='inline-block'; nb.textContent='J\'ai lu → à toi';
+    if(nb){ nb.style.display='inline-block'; nb.textContent='J\'ai lu →';
       nb.onclick=()=>{ SR.etape++; closeFiche(); setTimeout(seanceEtape,360); }; }
     return;
   }
@@ -6921,7 +6940,10 @@ function seanceFin(){
   const f=document.getElementById('libre-fin'); document.getElementById('libre-card').style.display='none';
   f.style.display='block'; go('libre');
   document.getElementById('libre-fin-t').textContent='Séance terminée ✓';
-  { const il=document.querySelector('#libre-fin .axo'); if(il) il.style.display='none'; }   /* une seule mascotte : la grande */
+  { const il=document.querySelector('#libre-fin > img'); if(il) il.style.display='none'; }   /* une seule mascotte : celle qui parle */
+  /* on n'est plus dans « Entraînement » : l'entête dit ce que c'est vraiment */
+  { const t2=document.getElementById('libre-titre'); if(t2) t2.textContent='Bilan de ta séance';
+    const n2=document.getElementById('libre-note'); if(n2) n2.textContent=s.titre||''; }
   /* le bilan : ce que tu as travaillé, et ce que tu t'étais noté — plus de « QCM : — » */
   let bilan='<p style="text-align:center;font-size:13px;font-weight:700">Lu, restitué, comparé. C\'est comme ça qu\'une notion s\'installe.</p>';
   s.fiches.forEach(sl=>{
