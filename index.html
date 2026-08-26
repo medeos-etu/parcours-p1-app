@@ -8752,14 +8752,17 @@ function ouvrirMetiers(){
 function ouvrirPanoramas(){
   const box=document.getElementById('pioche-corps');
   document.getElementById('pioche-titre').textContent='Les 4 panoramas de la P1';
+  /* Les couvertures des panoramas, celles du site — pas les décors d'arène, qui
+     n'ont rien à voir avec ces pages et donnaient à la Bibliothèque quatre vignettes
+     de combat pour illustrer de la lecture. */
   const P=[
-    ['anatomie','Anatomie','Le corps humain, région par région : ce que la P1 attend vraiment de toi.','arene-anatomie.jpg'],
-    ['biologie','Biologie','La cellule, moteur du vivant — le cœur du programme.','arene-biologie.jpg'],
-    ['chimie','Chimie','De l\'atome aux molécules du vivant, le saut lycée → P1.','arene-chimie.jpg'],
-    ['physique','Physique','Les lois physiques qui font marcher le corps.','arene-physique.jpg']];
+    ['anatomie','Anatomie','Le corps humain, région par région : ce que la P1 attend vraiment de toi.','pano_cover_anatomie.png'],
+    ['biologie','Biologie','La cellule, moteur du vivant — le cœur du programme.','pano_cover_biologie.png'],
+    ['chimie','Chimie','De l\'atome aux molécules du vivant, le saut lycée → P1.','pano_cover_chimie.png'],
+    ['physique','Physique','Les lois physiques qui font marcher le corps.','pano_cover_physique.png']];
   box.innerHTML='<div class="rescards">'+P.map(p=>
     '<div class="rescard" onclick="window.open(\'https://medeos-sante.fr/ressources/panorama-p1/'+p[0]+'?src=parcours-app\',\'_blank\')">'+
-      '<span class="pricechip">GRATUIT</span><img src="img/'+p[3]+'" alt="">'+
+      '<span class="pricechip">GRATUIT</span><img src="images/panorama/'+p[3]+'" onerror="this.src=\'img/cover-panorama.jpg\'" alt="">'+
       '<div class="rc-body"><b>Panorama '+p[1]+'</b><p>'+p[2]+'</p><div class="rc-meta">📖 40 à 55 min</div></div>'+
     '</div>').join('')+'</div>';
   openSheet('sheet-pioche');
