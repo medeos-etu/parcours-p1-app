@@ -4924,14 +4924,22 @@ function renderProfilForm(){
       '<div class="pf-recap"><div><b>'+pre+' '+(P.nom||'')+'</b>'+
         '<span>'+[P.classe,P.projet].filter(Boolean).join(' · ')+'</span></div></div>'+
       '<p class="pf-etat ok" style="margin-top:9px">Complet ✓ — rempli par ton point de départ.</p>'+
-      '<button class="btn ghost small" style="margin-top:9px" onclick="go(\'sim1\')">Refaire le point</button>';
+      /* « Refaire le point » vit sur la carte du point de départ, juste en dessous :
+         ici on ne propose que la retouche courte, pas deux fois le même bouton. */
+      '<button class="blien" style="margin-top:8px" onclick="prepIdent();go(\'simid\')">modifier mes coordonnées</button>';
     return;
   }
   const reste=!S.bonusSeance||S.bonusSeance!==arDay();
+  const dejaFait=!!S.point;
   b.innerHTML='<h3>👤 Ton profil</h3>'+
-    '<p class="pf-intro">Il se remplit tout seul en répondant au point de départ : ta fac, ta classe, ton projet, tes chances réelles. Deux minutes, une seule fois.'+
-    (reste?' Et il t\'ouvre <b>une séance de Parcours de plus aujourd\'hui</b> 🎁':'')+'</p>'+
-    '<button class="gbtn" onclick="go(\'sim1\')">🧭 Faire le point · 2 min</button>';
+    '<p class="pf-intro">'+
+      (dejaFait
+        ? 'Ton point de départ est fait — il ne manque plus que de quoi te reconnaître : ton nom et ton téléphone.'
+        : 'Il se remplit tout seul en répondant au point de départ : ta fac, ta classe, ton projet, et les vraies chances qui vont avec. Deux minutes, une seule fois.')+
+      (reste?' Et il t\'ouvre <b>une séance de Parcours de plus aujourd\'hui</b> 🎁':'')+'</p>'+
+    (dejaFait
+      ? '<button class="gbtn" onclick="prepIdent();go(\'simid\')">👤 Compléter mon profil · 1 min</button>'
+      : '<button class="gbtn" onclick="go(\'sim1\')">🧭 Faire le point · 2 min</button>');
 }
 function majProfil(champ,val){
   S.profil=S.profil||{};
@@ -6919,12 +6927,10 @@ function renderProfQs(){
 function renderSimCard(){
   const c=document.getElementById('p-simcard'); if(!c) return;
   const pt=S.point;
-  if(!pt){
-    c.innerHTML='<h3>🧭 Fais le point</h3>'+
-      '<p style="font-size:12px;color:#3A3730;line-height:1.55;margin-top:3px">Ta fac, ton profil, tes choix de préparation — et les vraies chances qui vont avec. Tout est enregistré ici pour te guider ensuite.</p>'+
-      '<button class="gbtn" style="margin-top:10px" onclick="go(\'sim1\')">Faire le point · 2 min</button>';
-    return;
-  }
+  /* pas de doublon : tant que le point n'est pas fait, c'est la carte « Ton profil »
+     qui invite. Cette carte-ci ne sert qu'à MONTRER le résultat. */
+  if(!pt){ c.style.display='none'; c.innerHTML=''; return; }
+  c.style.display='';
   /* le point est fait : on le montre, avec les choix qui augmentent ses chances */
   if(pt.toi>100||pt.temoin>100){                       /* anciens points cassés par le parseur (« 13100 ») */
     if(pt.toi>100) pt.toi=parseInt(String(pt.toi).replace(/100$/,''))||47;
