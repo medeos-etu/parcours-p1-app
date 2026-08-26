@@ -4991,7 +4991,7 @@ function renderSalles(){
     const tot=ARENES.reduce((s,a2)=>s+salleStock(a2.k),0);
     if(rr) rr.textContent = tot? 'Tous tes QCM débloqués t\'attendent ici — révise autant que tu veux.' : ''; }
   /* LE CARROUSEL : la salle choisie en grand, ses voisines qui dépassent de chaque côté */
-  g.innerHTML=ARENES.map((a,i2)=>{
+  const carte=(a,i2)=>{
     const n=salleStock(a.k), ouverte=n>0;
     return '<div class="salle-card'+(ouverte?'':' lock')+'" data-i="'+i2+'">'+
       '<div class="sc-vis" style="background-image:url(\'img/arene-'+a.tag+'.jpg\')">'+
@@ -5004,39 +5004,68 @@ function renderSalles(){
         '<div class="sc-nom">'+a.nom+'</div>'+
         '<div class="sc-n">'+(ouverte? n+' question'+(n>1?'s':'')+' prêtes' : 'ton Parcours ouvrira cette salle')+'</div>'+
       '</div></div>';
-  }).join('');
+  };
+  /* TROIS blocs identiques : quand on sort d'un côté, on rentre de l'autre — carrousel sans fin */
+  const bloc=ARENES.map(carte).join('');
+  g.innerHTML=bloc+bloc+bloc;
   /* les pastilles de position */
   const dt=document.getElementById('salles-dots');
   if(dt){ dt.innerHTML=ARENES.map((a,i2)=>'<span class="sdot'+(i2===(S.ar.salleVue||0)?' on':'')+'" onclick="allerSalle('+i2+')"></span>').join(''); }
   setTimeout(()=>{ allerSalle(S.ar.salleVue||0,true); salleScroll(); },30);
 }
-function allerSalle(i2,instant){
-  const g=document.getElementById('salles-grille'); if(!g) return;
-  const c=g.children[i2]; if(!c) return;
-  S.ar.salleVue=i2; saveS();
+let salleBoucle=false;
+function centreSalle(g,pos,instant){
+  const c=g.children[pos]; if(!c) return;
   g.scrollTo({left:c.offsetLeft-(g.clientWidth-c.clientWidth)/2, behavior:instant?'auto':'smooth'});
-  [...g.children].forEach((cc,k)=>cc.classList.toggle('centre',k===i2));
+}
+function allerSalle(i2,instant){
+  /* i2 = index RÉEL (0-3) : on vise sa copie dans le bloc du milieu */
+  const g=document.getElementById('salles-grille'); if(!g||!g.children.length) return;
+  const n=ARENES.length;
+  i2=((i2%n)+n)%n;
+  S.ar.salleVue=i2; saveS();
+  centreSalle(g, n+i2, instant);
+  [...g.children].forEach((cc,k)=>cc.classList.toggle('centre',k%n===i2));
   majActionSalle(i2);
   const dt=document.getElementById('salles-dots');
   if(dt) [...dt.children].forEach((d,k)=>d.classList.toggle('on',k===i2));
 }
 function salleSuivante(d){
-  const i2=Math.max(0,Math.min(ARENES.length-1,(S.ar.salleVue||0)+d));
-  allerSalle(i2);
+  const g=document.getElementById('salles-grille'); if(!g||!g.children.length) return;
+  const n=ARENES.length;
+  /* on avance depuis la carte réellement au centre, sans jamais buter */
+  const centre=g.scrollLeft+g.clientWidth/2;
+  let pos=0,bd=1e9;
+  [...g.children].forEach((c,k)=>{ const dd=Math.abs(c.offsetLeft+c.clientWidth/2-centre); if(dd<bd){bd=dd;pos=k;} });
+  const cible=Math.max(0,Math.min(g.children.length-1,pos+d));
+  centreSalle(g,cible);
 }
 /* la salle centrée devient la salle courante quand on fait glisser */
 function salleScroll(){
-  const g=document.getElementById('salles-grille'); if(!g||!S.ar) return;
+  const g=document.getElementById('salles-grille'); if(!g||!S.ar||salleBoucle) return;
+  const n=ARENES.length;
   const centre=g.scrollLeft+g.clientWidth/2;
-  let best=0,bd=1e9;
-  [...g.children].forEach((c,k)=>{ const d=Math.abs(c.offsetLeft+c.clientWidth/2-centre); if(d<bd){bd=d;best=k;} });
-  [...g.children].forEach((c,k)=>c.classList.toggle('centre',k===best));
-  if(best!==S.ar.salleVue){
-    S.ar.salleVue=best; saveS();
+  let pos=0,bd=1e9;
+  [...g.children].forEach((c,k)=>{ const d=Math.abs(c.offsetLeft+c.clientWidth/2-centre); if(d<bd){bd=d;pos=k;} });
+  const reel=pos%n;
+  [...g.children].forEach((c,k)=>c.classList.toggle('centre',k%n===reel));
+  if(reel!==S.ar.salleVue){
+    S.ar.salleVue=reel; saveS();
     const dt=document.getElementById('salles-dots');
-    if(dt) [...dt.children].forEach((d,k)=>d.classList.toggle('on',k===best));
+    if(dt) [...dt.children].forEach((d,k)=>d.classList.toggle('on',k===reel));
   }
-  majActionSalle(best);
+  majActionSalle(reel);
+  /* la boucle : sorti du bloc du milieu, on saute d'un bloc sans que ça se voie */
+  if(pos<n || pos>=2*n){
+    const saut=(pos<n? 1 : -1)*n;
+    const c=g.children[pos+saut];
+    if(c){
+      salleBoucle=true;
+      const delta=c.offsetLeft-g.children[pos].offsetLeft;
+      g.scrollLeft+=delta;
+      setTimeout(()=>{ salleBoucle=false; },60);
+    }
+  }
 }
 /* le bouton d'action reflète TOUJOURS la salle au centre : elle est la salle choisie */
 function majActionSalle(i2){
