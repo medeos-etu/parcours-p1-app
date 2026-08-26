@@ -815,6 +815,7 @@
   body.in-arene .axoscene p, body.in-amphi .axoscene p{color:#FAF6F0}
 
   /* ═══ LES DEUX LIEUX ═══ */
+  .mswrap{display:flex;justify-content:center;width:100%}
   /* la bascule : une petite pilule discrète, centrée sous la barre de profil */
   .modeswitch{display:inline-flex;width:max-content;max-width:100%;gap:2px;margin:8px auto 12px;padding:2.5px;
     border-radius:999px;background:rgba(12,9,24,.45);border:1px solid rgba(255,255,255,.09);
@@ -1206,21 +1207,17 @@
   .lbmini .t{font-weight:800;font-variant-numeric:tabular-nums}
   @media (min-width:1024px){
     #arene.scr.on{max-width:1120px;padding:22px 32px calc(110px + env(safe-area-inset-bottom))}
-    #arene #arene-live{display:grid;min-height:0;flex:1;
-      grid-template-columns:250px minmax(0,1fr) 300px;
-      grid-template-rows:auto minmax(0,1fr) auto auto;
-      grid-template-areas:
-        "top   top    top"
-        "pick  stage  side"
-        "pick  limite side"
-        "pick  action side";
-      gap:16px 16px;align-items:stretch}
-    #ar-limite{grid-area:limite;margin:0}
-    #ar-idbar{grid-area:top}
-    #arene .stage{grid-area:stage;min-height:0}
-    #arene .arenapick{grid-area:pick;grid-template-columns:1fr;align-content:start;gap:12px}
-    #arene .actionbar{grid-area:action;margin-top:0}
-    #arene .sidecol{display:flex;grid-area:side;min-height:0;overflow-y:auto;justify-content:flex-start}
+    /* la colonne principale : barre de profil, bascule centrée, puis le lieu choisi */
+    #arene #arene-live{display:flex;flex-direction:column;min-height:0;flex:1;gap:14px}
+    /* Le Grand Amphi : la scène et l'action à gauche, les cartes à droite */
+    #vue-amphi{display:grid;grid-template-columns:minmax(0,1fr) 300px;grid-template-rows:auto auto auto;
+      gap:14px 16px;align-items:start}
+    #vue-amphi .amphi{grid-column:1;grid-row:1}
+    #vue-amphi .ar-limite{grid-column:1;grid-row:2;margin:0}
+    #vue-amphi .actionbar{grid-column:1;grid-row:3;margin-top:0}
+    #vue-amphi .sidecol{display:flex;flex-direction:column;grid-column:2;grid-row:1/4;gap:12px;min-height:0}
+    #vue-amphi .amphi-vis{height:260px}
+    #vue-salles .salles{grid-template-columns:1fr 1fr}
     /* les 4 boutons d'arène deviennent des cartes horizontales */
     .apick{flex-direction:row;justify-content:flex-start;gap:12px;padding:13px 14px;border-radius:16px}
     .apick .ae{font-size:28px}
@@ -1237,7 +1234,7 @@
   }
   @media (min-width:1440px){
     #arene.scr.on{max-width:1280px}
-    #arene #arene-live{grid-template-columns:280px minmax(0,1fr) 330px;gap:20px}
+    #vue-amphi{grid-template-columns:minmax(0,1fr) 330px;gap:16px 20px}
   }
 
   /* ═══ BIBLIOTHÈQUE : badge gratuit + rayon des stages ═══ */
@@ -2060,7 +2057,7 @@
       <div class="lobbytop" id="ar-idbar"></div>
 
       <!-- LA BASCULE : deux lieux, un sélecteur sobre et centré -->
-      <div style="display:flex;justify-content:center"><div class="modeswitch" role="tablist">
+      <div class="mswrap"><div class="modeswitch" role="tablist">
         <button id="ms-salles" class="on" role="tab" onclick="setLieu('salles')">Les Salles</button>
         <button id="ms-amphi" role="tab" onclick="setLieu('amphi')">Le Grand Amphi</button>
       </div></div>
