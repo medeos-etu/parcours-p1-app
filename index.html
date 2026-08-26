@@ -2000,7 +2000,7 @@
     </div>
     <p style="font-size:10.5px;color:var(--muted);text-align:center;line-height:1.5">À gauche, <b>le chiffre publié par ta fac</b> pour la filière que tu vises. À droite, ce que ce même chiffre devient chez les étudiants qui arrivent préparés, d'après les enquêtes étudiantes — un seul effet, jamais compté deux fois. Ce sont des moyennes observées, pas une prédiction sur toi.</p>
     <div class="lever">
-      <div class="lt">Tu comptes faire une pré-rentrée ? <span style="font-weight:400;font-size:11px;color:var(--muted)">(préparer l'été avant)</span></div>
+      <div class="lt">Tu comptes préparer ta rentrée à l'avance ? <span style="font-weight:400;font-size:11px;color:var(--muted)">(travailler l'été qui précède)</span></div>
       <div class="opt-group">
         <button class="opt" data-c="-0.606" onclick="selSim(this,'prerentree')">Non</button>
         <button class="opt" data-c="0.225" onclick="selSim(this,'prerentree')">Oui</button>
@@ -2950,7 +2950,7 @@ function validateFacs(){
   calcSim(); go('sim3');
 }
 const REVEALS={
-  prerentree:"Dans les enquêtes étudiantes : 35 % de réussite sans pré-rentrée, 56 % avec — et les études publiées confirment un effet réel. Arriver en ayant déjà vu les notions, c'est réviser au lieu de découvrir.",
+  prerentree:"Dans les enquêtes étudiantes : 35 % de réussite chez ceux qui arrivent sans avoir rien préparé, 56 % chez ceux qui ont préparé leur rentrée — et les études publiées confirment un effet réel. Arriver en ayant déjà vu les notions, c'est réviser au lieu de découvrir.",
   heures:"Dans les mêmes enquêtes : 44 % (6-8 h), 55 % (8-10 h), 61 % (10 h et plus). Mais le volume ne vaut que s'il est efficace — six heures où tu retiens vraiment battent douze heures de relecture passive."
 };
 function selSim(btn,key){
@@ -2971,8 +2971,8 @@ function pct(l){ const p=1/(1+Math.exp(-l)); return Math.max(3,Math.min(75,Math.
    Refait après un constat de Lucas : le modèle gonflait. Trois corrections.
    ① LA BASE EST UN FAIT : le taux réellement publié de la fac, POUR LA FILIÈRE
      choisie (à Lille : 16 % en médecine, pas les 29,8 % des cinq filières réunies).
-   ② UN SEUL EFFET, PLAFONNÉ : la seule association bien documentée (pré-rentrée,
-     35 % → 56 % dans les enquêtes) vaut +0,86 en log-odds. On ne dépasse JAMAIS
+   ② UN SEUL EFFET, PLAFONNÉ : la seule association bien documentée (préparer sa
+     rentrée à l'avance, 35 % → 56 % dans les enquêtes) vaut +0,86 en log-odds. On ne dépasse JAMAIS
      ce plafond, même quand l'élève coche tout — les heures se partagent le même
      budget au lieu de s'y ajouter. Avant, les deux leviers cumulés multipliaient
      la cote par 4,6, en additionnant deux corrélations qui décrivent le même élève.
@@ -2980,7 +2980,7 @@ function pct(l){ const p=1/(1+Math.exp(-l)); return Math.max(3,Math.min(75,Math.
      suivant, pas la promesse : annoncer « 4 chances sur 100 » à un élève sur la
      foi d'un coefficient invérifiable, c'est vendre de la peur. */
 const EFFET_MAX = logit(0.56) - logit(0.35);        /* ≈ 0,86 — l'effet mesuré, une seule fois */
-const PART_PRE = 0.70, PART_HEURES = 0.30;          /* la pré-rentrée porte l'essentiel */
+const PART_PRE = 0.70, PART_HEURES = 0.30;          /* préparer sa rentrée porte l'essentiel */
 function upliftSim(){
   let u=0;
   if(sim.prerentree!==null && sim.prerentree>0) u += EFFET_MAX*PART_PRE;
@@ -6776,7 +6776,7 @@ const PROF_QS=[
   {k:'classe', q:'Où en es-tu ?', ops:['Première','Terminale','Bac en poche','Parent d\'élève'],
    fb:{'Première':'✓ Tu as le temps de construire une vraie avance — ton Parcours est calibré pour ça.',
        'Terminale':'✓ La bonne année pour anticiper : tes conseils et les chiffres de ta fac seront calés Terminale.',
-       'Bac en poche':'✓ On oriente tout vers la pré-rentrée — le dernier moment utile avant la P1.',
+       'Bac en poche':'✓ On oriente tout vers l\'été qui précède ta rentrée — le dernier moment utile avant la P1.',
        'Parent d\'élève':'✓ On adapte : les repères et les chiffres qui comptent pour un parent.'}},
   {k:'filiere', q:'Vers quoi ton cœur penche ?', ops:['Médecine','Pharmacie','Dentaire','Kinésithérapie','Sage-femme','Je ne sais pas encore'],
    fb:{'Je ne sais pas encore':'✓ Très bien — commence par les 6 fiches métiers, elles sont faites pour choisir.',
@@ -6835,8 +6835,8 @@ function renderSimCard(){
     saveS();
   }
   let indics=[];
-  if(pt.prerentree<0) indics.push('<b>La pré-rentrée est ton levier n°1</b> — tu as répondu « non » : c\'est le choix qui change le plus tes chances.');
-  else indics.push('<b>Pré-rentrée prévue</b> — le bon choix, garde-le.');
+  if(pt.prerentree<0) indics.push('<b>Préparer ta rentrée est ton levier n°1</b> — tu as répondu « non » : c\'est le choix qui change le plus tes chances.');
+  else indics.push('<b>Tu comptes préparer ta rentrée</b> — le bon réflexe, garde-le.');
   if(pt.pc>0) indics.push('<b>Physique-chimie gardée</b> — tu arriveras en terrain connu.');
   else if(pt.pc===-0.21) indics.push('<b>Spé pas encore choisie</b> — si tu peux, garde la physique-chimie : la P1 en est remplie.');
   else indics.push('<b>Sans la spé physique-chimie</b>, ton Parcours compte double : il couvre exactement ce terrain.');
