@@ -796,6 +796,53 @@
   @keyframes ecko{0%{box-shadow:0 0 0 3px rgba(192,91,77,.45)}100%{box-shadow:none}}
   .ec-combo{color:#B87A33;font-weight:900}
 
+  /* ═══ LES DEUX LIEUX ═══ */
+  .modeswitch{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0 12px}
+  .modeswitch button{border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05);border-radius:14px;
+    padding:9px 10px;cursor:pointer;font-family:inherit;text-align:left;transition:all .2s ease}
+  .modeswitch button b{display:block;font-family:Fredoka,Inter,sans-serif;font-size:13.5px;font-weight:600;color:rgba(250,246,240,.75)}
+  .modeswitch button span{display:block;font-size:10px;color:rgba(250,246,240,.45);margin-top:1px;line-height:1.3}
+  .modeswitch button.on{background:linear-gradient(180deg,rgba(139,92,246,.35),rgba(107,70,193,.25));border-color:rgba(167,139,250,.55)}
+  .modeswitch button.on b{color:#fff}
+  .modeswitch button.on span{color:rgba(250,246,240,.7)}
+  #ms-amphi.on{background:linear-gradient(180deg,rgba(252,211,77,.28),rgba(226,156,92,.16));border-color:rgba(252,211,77,.5)}
+  #ms-amphi.on b{color:#FCD34D}
+
+  /* — les 4 salles — */
+  .salles{display:grid;grid-template-columns:1fr;gap:9px}
+  @media (min-width:640px){ .salles{grid-template-columns:1fr 1fr} }
+  .salle{display:flex;align-items:center;gap:11px;width:100%;padding:0;border:1px solid rgba(255,255,255,.12);
+    background:linear-gradient(160deg,rgba(43,35,64,.9),rgba(31,27,46,.9));border-radius:16px;overflow:hidden;
+    cursor:pointer;text-align:left;transition:transform .16s ease,border-color .16s ease}
+  .salle:hover{transform:translateY(-2px);border-color:rgba(167,139,250,.45)}
+  .salle.lock{cursor:default;opacity:.65}
+  .sa-vis{width:78px;height:78px;flex-shrink:0;background-size:cover;background-position:center;position:relative;display:block}
+  .sa-lock{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:20px;background:rgba(20,16,34,.55)}
+  .sa-bd{flex:1;min-width:0;padding:9px 0}
+  .sa-bd b{display:block;font-family:Fredoka,Inter,sans-serif;font-size:15px;font-weight:600;color:#fff}
+  .sa-mat{display:block;font-size:9.5px;font-weight:900;letter-spacing:.07em;text-transform:uppercase;color:rgba(250,246,240,.5);margin-top:1px}
+  .sa-n{display:block;font-size:11px;color:rgba(250,246,240,.65);margin-top:3px;line-height:1.35}
+  .sa-go{flex-shrink:0;margin-right:12px;font-family:Fredoka,Inter,sans-serif;font-weight:600;font-size:12.5px;color:#fff;
+    background:linear-gradient(180deg,#8B5CF6,#6B46C1);border-radius:11px;padding:8px 14px}
+
+  /* — le Grand Amphi : solennel, doré — */
+  .amphi{border-radius:20px;overflow:hidden;border:1px solid rgba(252,211,77,.3);
+    box-shadow:0 18px 44px rgba(10,8,20,.5), inset 0 0 0 1px rgba(255,255,255,.05)}
+  .amphi-vis{position:relative;height:190px;background:url('img/profil/ban-amphi.jpg') center/cover no-repeat,
+    linear-gradient(160deg,#2B2340,#1F1B2E);display:flex;align-items:flex-end;justify-content:center}
+  .amphi-vis.lock{filter:grayscale(.45) brightness(.72)}
+  .amphi-glow{position:absolute;inset:0;background:radial-gradient(60% 70% at 50% 78%, rgba(252,211,77,.28), transparent 70%)}
+  .amphi-axo{position:relative;height:132px;filter:drop-shadow(0 14px 26px rgba(0,0,0,.55))}
+  .amphi-cadenas{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:34px;
+    filter:drop-shadow(0 4px 10px rgba(0,0,0,.5))}
+  .amphi-bd{background:linear-gradient(180deg,rgba(31,27,46,.96),rgba(24,20,38,.98));padding:14px 16px;text-align:center}
+  .amphi-t{font-family:Fredoka,Inter,sans-serif;font-size:21px;font-weight:600;color:#FCD34D;letter-spacing:.01em}
+  .amphi-s{font-size:12px;color:rgba(250,246,240,.72);line-height:1.55;margin-top:4px}
+  .amphi-s b{color:#fff}
+  .amphi-tro{display:inline-flex;align-items:center;gap:6px;margin-top:9px;font-family:Fredoka,Inter,sans-serif;font-weight:600;
+    font-size:13px;color:#4A3208;background:linear-gradient(180deg,#FCD34D,#E29C5C);border-radius:11px;padding:6px 13px}
+  body.in-amphi .lobbytop .pcard{box-shadow:inset 0 1px 0 rgba(252,211,77,.2)}
+
   /* — le QCM du Jour : la porte de 90 secondes — */
   .qjcard{padding:10px 12px}
   .qj-row{display:flex;align-items:center;gap:10px;cursor:pointer}
@@ -1989,34 +2036,44 @@
 
       <div class="lobbytop" id="ar-idbar"></div>
 
-      <div class="stage">
-        <div class="stagebox" id="ar-cur"></div>
+      <!-- LA BASCULE : deux lieux, deux ambiances -->
+      <div class="modeswitch">
+        <button id="ms-salles" class="on" onclick="setLieu('salles')"><b>🎯 Les Salles</b><span>s'entraîner, matière par matière</span></button>
+        <button id="ms-amphi" onclick="setLieu('amphi')"><b>🏛️ Le Grand Amphi</b><span>la compétition, toutes matières</span></button>
       </div>
 
-      <div class="arenapick" id="ar-pick"></div>
-
-      <div class="ar-limite" id="ar-limite"></div>
-      <div class="actionbar">
-        <button class="sidepan" onclick="openSheet('sheet-road')"><span class="spi"><img src="img/icones/icone-route.png" alt="" onerror="this.replaceWith('🛣️')"></span><span class="spl">Route</span></button>
-        <button class="bigaction" id="ar-start" onclick="startRun()">
-          <div class="bat" id="ar-start-t">ENTRER DANS L'ARÈNE</div>
-          <div class="bas" id="ar-start-s">2 ascensions restantes</div>
-        </button>
+      <!-- ═══ LES SALLES : l'entraînement, sans enjeu ═══ -->
+      <div id="vue-salles">
+        <div class="guide-row" id="salles-dit"></div>
+        <div class="salles" id="salles-grille"></div>
       </div>
 
-      <div class="sidecol">
-        <div class="card qjcard" id="qj-arene"></div>
-        <div class="card qjcard" id="ec-entree"></div>
-        <div class="card" id="ar-stagecard" style="display:none;border:1px solid var(--tung)">
-          <p style="font-size:12.5px;font-weight:800">Tes ascensions du jour sont faites. 👏</p>
-          <p style="font-size:11.5px;color:var(--muted);line-height:1.55;margin-top:3px">Avec l'année complète Medeos, les ascensions sont illimitées.</p>
-          <button class="btn ghost small" style="margin-top:9px" onclick="voirStages()">Voir les stages</button>
-          <button class="blien" style="display:block;margin:8px auto 0;font-size:10.5px" onclick="go('profil')">Déjà l'année complète ? J'ai un code</button>
+      <!-- ═══ LE GRAND AMPHI : la compétition ═══ -->
+      <div id="vue-amphi" style="display:none">
+        <div class="amphi" id="amphi-scene"></div>
+        <div class="ar-limite" id="ar-limite"></div>
+        <div class="actionbar">
+          <button class="sidepan" onclick="openSheet('sheet-road')"><span class="spi"><img src="img/icones/icone-route.png" alt="" onerror="this.replaceWith('🛣️')"></span><span class="spl">Route</span></button>
+          <button class="bigaction" id="ar-start" onclick="startRun()">
+            <div class="bat" id="ar-start-t">ENTRER DANS LE GRAND AMPHI</div>
+            <div class="bas" id="ar-start-s">2 ascensions par jour</div>
+          </button>
+        </div>
+        <div class="sidecol">
+          <div class="card qjcard" id="qj-arene"></div>
+          <div class="card qjcard" id="ec-entree"></div>
+          <div class="card" id="ar-stagecard" style="display:none;border:1px solid var(--tung)">
+            <p style="font-size:12.5px;font-weight:800">Tes ascensions du jour sont faites. 👏</p>
+            <p style="font-size:11.5px;color:var(--muted);line-height:1.55;margin-top:3px">Avec l'année complète Medeos, les ascensions sont illimitées.</p>
+            <button class="btn ghost small" style="margin-top:9px" onclick="voirStages()">Voir les stages</button>
+            <button class="blien" style="display:block;margin:8px auto 0;font-size:10.5px" onclick="go('profil')">Déjà l'année complète ? J'ai un code</button>
+          </div>
         </div>
       </div>
 
       <!-- moteur : éléments alimentés par le JS, jamais affichés ici -->
       <div style="display:none" aria-hidden="true">
+        <div class="stagebox" id="ar-cur"></div><div class="arenapick" id="ar-pick"></div>
         <div class="grade" id="ar-grade"></div><div class="gplate" id="ar-top"></div>
         <div class="delta" id="ar-next"></div>
         <div class="repere"><div class="bar"><i id="ar-progbar"></i></div><b id="ar-progtxt"></b></div>
@@ -3570,8 +3627,9 @@ function histoSnap(){
   else S.histo.push(pt);
   if(S.histo.length>60) S.histo=S.histo.slice(-60);
 }
-function arAdd(k,d){ S.ar.mats=S.ar.mats||{}; S.ar.mats[k]=Math.max(0,(S.ar.mats[k]||0)+d); }
-function arTotal(){ return ARENES.reduce((a,x)=>a+arT(x.k),0); }
+/* les trophées ne se répartissent plus par matière : un seul compteur, le général */
+function arAdd(k,d){ }
+function arTotal(){ return S.ar? (S.ar.T||0) : 0; }
 function arDispo(a){ return typeof ABANK!=='undefined' && ABANK.some(q=>q.mat===a.k); }
 function arOuverte(a){ return a.seuil===0 || (S.ar? S.ar.T:0)>=a.seuil; }
 function arCourante(){ return (S.ar && S.ar.arene) || 'Anatomie'; }
@@ -4287,6 +4345,83 @@ function toggleFlamme(ev){
   } else p.hidden=true;
 }
 function fermerFlamme(){ const p=document.getElementById('flamme-pop'); if(p) p.hidden=true; }
+
+/* ═══════════════════════════════════════════════════════════════════
+   DEUX LIEUX, DEUX RÔLES (refonte 26/08/2026)
+   🎯 LES SALLES  — 4 salles, une par matière. On s'y entraîne sur les fiches
+      déjà travaillées dans le Parcours. Aucun trophée, aucun risque.
+   🏛️ LE GRAND AMPHI — la compétition : toutes les matières mêlées, +2/−2 par
+      case, les trophées vont au SEUL compteur général. Ouvert après 4 jours
+      de Parcours, pas avant : on n'entre pas dans l'amphi sans bagage.
+   ═══════════════════════════════════════════════════════════════════ */
+const AMPHI_SEUIL_JOURS=4;
+let lieuArene='salles';
+function joursParcours(){ return (typeof seancesFaites==='function')?seancesFaites().length:0; }
+function amphiOuvrable(){ return S.stage || joursParcours()>=AMPHI_SEUIL_JOURS; }
+function setLieu(l){
+  lieuArene=l;
+  const ms=document.getElementById('ms-salles'), ma=document.getElementById('ms-amphi');
+  if(ms) ms.classList.toggle('on', l==='salles');
+  if(ma) ma.classList.toggle('on', l==='amphi');
+  const vs=document.getElementById('vue-salles'), va=document.getElementById('vue-amphi');
+  if(vs) vs.style.display = l==='salles'?'':'none';
+  if(va) va.style.display = l==='amphi'?'':'none';
+  document.body.classList.toggle('in-amphi', l==='amphi');
+  if(l==='salles') renderSalles(); else renderAmphi();
+  if(typeof son==='function') son('pop');
+}
+
+/* — LES SALLES — */
+function salleStock(mat){
+  const arm=(typeof fichesArmees==='function')?fichesArmees():{};
+  return ABANK.filter(q=>q.mat===mat && arm[q.f]).length;
+}
+function renderSalles(){
+  const g=document.getElementById('salles-grille'); if(!g) return;
+  if(!S.ar) initAr();
+  const dit=document.getElementById('salles-dit');
+  const ouvertes=ARENES.filter(a=>salleStock(a.k)>0).length;
+  if(dit) dit.innerHTML='<img src="img/'+(ouvertes?'axo-guide-carte':'axo-guide-bienvenue')+'.png" alt="" onerror="this.remove()">'+
+    '<span class="sg-b">'+(ouvertes
+      ? 'Ici on s\'entraîne, matière par matière, sur ce que tu as déjà travaillé. Aucun trophée en jeu : c\'est ton terrain d\'essai.'
+      : 'Chaque salle s\'ouvre quand ton Parcours te fait travailler sa matière. Commence par ta séance du jour !')+'</span>';
+  g.innerHTML=ARENES.map(a=>{
+    const n=salleStock(a.k), ouverte=n>0;
+    return '<button class="salle'+(ouverte?'':' lock')+'" '+(ouverte?'onclick="startEntrainement(\''+a.k+'\')"':'')+'>'+
+      '<span class="sa-vis" style="background-image:url(\'img/arene-'+a.tag+'.jpg\')">'+
+        (ouverte?'':'<span class="sa-lock">🔒</span>')+'</span>'+
+      '<span class="sa-bd"><b>'+a.nom+'</b><span class="sa-mat">'+(a.sous||a.k)+'</span>'+
+      '<span class="sa-n">'+(ouverte? n+' question'+(n>1?'s':'')+' prêtes' : 'travaille cette matière dans ton Parcours')+'</span></span>'+
+      (ouverte?'<span class="sa-go">S\'entraîner</span>':'')+
+    '</button>';
+  }).join('');
+}
+
+/* — LE GRAND AMPHI — */
+function renderAmphi(){
+  const sc=document.getElementById('amphi-scene'); if(!sc) return;
+  if(!S.ar) initAr();
+  const ok=amphiOuvrable(), j=joursParcours();
+  if(ok){
+    const arm=(typeof fichesArmees==='function')?fichesArmees():{};
+    const stock=ABANK.filter(q=>arm[q.f]).length;
+    sc.innerHTML='<div class="amphi-vis"><div class="amphi-glow"></div>'+
+      '<img class="amphi-axo" src="img/mascotte-arene-prete-au-combat.png" alt="" onerror="this.remove()">'+
+      '</div>'+
+      '<div class="amphi-bd"><div class="amphi-t">Le Grand Amphi</div>'+
+      '<div class="amphi-s">'+RUN_LEN+' QCM · toutes matières mêlées · '+stock+' questions dans ton bagage</div>'+
+      '<div class="amphi-tro"><img class="ticn" src="img/icones/trophee-medeos.png" alt=""> '+fmtT(S.ar.T||0)+' trophées</div></div>';
+  } else {
+    sc.innerHTML='<div class="amphi-vis lock"><div class="amphi-glow"></div>'+
+      '<img class="amphi-axo" src="img/axo-guide-pointe-haut.png" alt="" onerror="this.remove()">'+
+      '<span class="amphi-cadenas">🔒</span></div>'+
+      '<div class="amphi-bd"><div class="amphi-t">Le Grand Amphi t\'attend</div>'+
+      '<div class="amphi-s">Il ouvre après <b>'+AMPHI_SEUIL_JOURS+' jours de Parcours</b> — tu en as fait '+j+'. '+
+      'Ici, les matières se mélangent, chaque case juste vaut <b>+2 🏆</b>, chaque erreur <b>−2</b>, et tes trophées te placent au classement.</div>'+
+      '<button class="btn small" style="margin-top:10px" onclick="go(\'home\')">Continuer mon Parcours</button></div>';
+  }
+  if(typeof renderCurArena==='function') renderCurArena();
+}
 
 /* ═══ LES 4 BOUTONS D'ARÈNE ═══ */
 function renderPick(){
@@ -5294,6 +5429,23 @@ function libreFin(){
     if(typeof renderQj==='function') renderQj();
     if(typeof renderIdBar==='function') renderIdBar();
   }
+  if(LB.entrainement && S.entrRetour){
+    /* retour au Parcours : la boucle du jour est bouclée */
+    delete S.entrRetour; saveS();
+    document.getElementById('libre-card').style.display='none';
+    const f2=document.getElementById('libre-fin'); f2.style.display='block';
+    document.getElementById('libre-fin-t').textContent='Ta journée est complète 🎉';
+    const fs2=document.getElementById('libre-fin-s');
+    fs2.style.whiteSpace='normal'; fs2.style.textAlign='center';
+    fs2.textContent=LB.ok+' sur '+LB.qs.length+' — tu as lu, restitué, comparé, puis testé. C\'est exactement comme ça qu\'une notion tient.';
+    const enc2=document.getElementById('libre-encore'); enc2.style.display='block';
+    enc2.textContent='Revenir à mon Parcours';
+    enc2.onclick=()=>go('home');
+    { const c2=document.getElementById('libre-cont'); if(c2) c2.style.display='none'; }
+    S.qcm=(S.qcm||0)+LB.qs.length; saveS();
+    if(typeof son==='function') son('coffre');
+    return;
+  }
   document.getElementById('libre-fin-t').textContent = LB.jour
     ? (LB.ok? 'Bien joué — +'+gQJ+' 🏆. À demain pour la suivante.' : 'Piégeuse. +'+gQJ+' 🏆 quand même — à demain pour ta revanche.')
     : LB.ok+' sur '+LB.qs.length+(LB.ok>=4?' — solide.':(LB.ok>=2?' — ça se construit.':' — ces notions t\'attendent dans le fil guidé.'));
@@ -5445,9 +5597,10 @@ function sauverSR(){
 function seanceEtape(){
   if(!SR) return;
   const s=SR.s;
-  /* étapes par fiche : 0 lecture · 1 rappel actif · 2 comparaison · 3 QCM — puis fiche suivante */
-  const fi=Math.floor(SR.etape/4);            /* quelle fiche (0 ou 1) */
-  const phase=SR.etape%4;
+  /* étapes par fiche : 0 lecture · 1 rappel actif · 2 comparaison — les QCM ont migré
+     dans les salles d'entraînement de l'Arène (sinon la banque s'épuise deux fois plus vite) */
+  const fi=Math.floor(SR.etape/3);
+  const phase=SR.etape%3;
   if(fi>=s.fiches.length){ seanceFin(); return; }
   const slug=s.fiches[fi];
   sauverSR();
@@ -5479,17 +5632,6 @@ function seanceEtape(){
         SR.etape++; closeFiche(); setTimeout(seanceEtape,360); }; }
     return;
   }
-  /* phase 3 : LES 3 QUESTIONS de la fiche (la sienne + 2 notions voisines déjà vues) */
-  const propres=ABANK.filter(x=>x.f===slug);
-  const voisines=ABANK.filter(x=>x.mat===s.mat && x.f!==slug && S.vues && S.vues[x.f]);
-  /* mélange des voisines : sinon les 2 premières du tableau reviennent à CHAQUE séance */
-  for(let i=voisines.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [voisines[i],voisines[j]]=[voisines[j],voisines[i]]; }
-  const qs=[...propres, ...voisines].slice(0,3);
-  if(!qs.length){ SR.etape++; seanceEtape(); return; }
-  LB={qs:qs,i:0,ok:0,mat:s.mat,jour:false,sel:new Set(),done:false,seance:true,slugRef:slug};
-  document.getElementById('libre-titre').textContent=TITRES_FICHES[slug]||s.titre;
-  document.getElementById('libre-note').textContent='Les questions de la fiche que tu viens de travailler.';
-  libreShow(); go('libre');
 }
 function rappelComparer(){
   if(!SR) { go('home'); return; }
@@ -5541,13 +5683,14 @@ function seanceFin(){
     bilan+='\n\n📄 '+(TITRES_FICHES[sl]||sl)+' — QCM : '+(o.qcm? o.qcm.ok+'/'+o.qcm.total : '—')+
       (o.oublie? '\n✏️ À retenir : '+o.oublie : '');
   });
-  bilan+='\n\n⚔️ Ces notions viennent d\'armer ton Arène — le bon moment pour monter.';
+  bilan+='\n\n🎯 Direction ta salle d\'entraînement : on teste tout de suite ce que tu viens de voir.';
   document.getElementById('libre-fin-s').textContent=bilan;
   document.getElementById('libre-fin-s').style.whiteSpace='pre-line';
   document.getElementById('libre-fin-s').style.textAlign='left';
   const enc=document.getElementById('libre-encore'); enc.style.display='block';
-  enc.textContent='⚔️ Tenter une ascension dans l\'Arène';
-  enc.onclick=()=>go('arene');
+  enc.textContent='🎯 M\'entraîner sur ces fiches';
+  /* le Parcours GLISSE vers la salle d'entraînement de la matière du jour */
+  enc.onclick=()=>{ S.entrRetour=1; saveS(); if(typeof startEntrainement==='function') startEntrainement(s.mat); else go('arene'); };
   { const cont=document.getElementById('libre-cont'); if(cont) cont.style.display='none'; }
   SR=null; renderState();
 }
@@ -6044,12 +6187,11 @@ function potOf(q){
 /* ---- sélection : mix 6/2/1/1, publié et invariable ---- */
 function pickQuestions(){
   const now=Date.now(), R=S.ar.R;
-  const _ar=arCourante();
-  /* L'ARÈNE NE SERT QUE LE PARCOURS : uniquement les questions des fiches déjà vues.
-     L'ascension grandit avec le fil (2 questions au début, 10 au complet),
-     et les fiches du JOUR y entrent en priorité. */
+  if(typeof initVues==='function') initVues();
+  /* LE GRAND AMPHI MÊLE LES MATIÈRES, mais seulement ce que le Parcours a ouvert :
+     le bagage entier de l'élève, un QCM = une matière, le lot en alterne. */
   const arm=(typeof fichesArmees==='function')?fichesArmees():{};
-  const BANK=ABANK.filter(q=>q.mat===_ar && arm[q.f]);
+  const BANK=ABANK.filter(q=>arm[q.f]);
   const LEN=Math.min(RUN_LEN,BANK.length);
   if(LEN<2) return [];
   let dispo=BANK.filter(q=>!S.ar.seen[q.id] || (now-S.ar.seen[q.id])>REVU_J*864e5);
@@ -6072,7 +6214,7 @@ function pickQuestions(){
   };
   /* 1 révision espacée : une erreur d'il y a ≥ 3 jours, la plus ancienne d'abord —
      DANS l'arène courante uniquement (sinon une question de chimie surgit dans Le Bloc) */
-  const rev=ABANK.filter(q=>q.mat===_ar && S.ar.errs[q.id] && (now-S.ar.errs[q.id])>=REVISION_J*864e5)
+  const rev=BANK.filter(q=>S.ar.errs[q.id] && (now-S.ar.errs[q.id])>=REVISION_J*864e5)
                  .sort((a,b)=>S.ar.errs[a.id]-S.ar.errs[b.id])[0];
   if(rev) add(rev,'révision');
   prendre(0.55,0.75,'cœur',6);
@@ -6083,9 +6225,20 @@ function pickQuestions(){
   garde=0;
   while(out.length<RUN_LEN && garde++<40){ const av=out.length; prendre(0.55,0.75,'cœur',1,true); if(out.length===av) break; }
   for(let i=out.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); const t=out[i]; out[i]=out[j]; out[j]=t; }
-  /* INTERLEAVING : l'ascension mélange TOUTES les fiches déjà vues de la matière —
-     les fiches du jour y entrent naturellement (jamais servies → favorisées), sans dominer */
-  return out.slice(0,LEN);
+  /* INTERLEAVING INTER-MATIÈRES : on alterne les matières autant que possible dans le lot,
+     pour que deux questions voisines viennent rarement de la même matière */
+  const fin=[], parMat={};
+  out.forEach(o=>{ (parMat[o.q.mat]=parMat[o.q.mat]||[]).push(o); });
+  let mats=Object.keys(parMat);
+  while(fin.length<out.length){
+    mats = mats.filter(m=>parMat[m].length);
+    if(!mats.length) break;
+    mats.sort((a,b)=>parMat[b].length-parMat[a].length);
+    const prev=fin.length?fin[fin.length-1].q.mat:null;
+    const choix=mats.find(m=>m!==prev)||mats[0];
+    fin.push(parMat[choix].shift());
+  }
+  return fin.slice(0,LEN);
 }
 
 /* ---- la boucle ---- */
@@ -6438,6 +6591,12 @@ function fillGradeProgress(idG,idN,idB,idT){
   }
 }
 function renderArene(){
+  if(typeof setLieu==='function' && document.getElementById('vue-salles')){
+    /* au premier passage, on ouvre sur les Salles tant que l'Amphi est fermé */
+    if(!S.ar) initAr();
+    const cible=(lieuArene==='amphi' || amphiOuvrable()) ? lieuArene : 'salles';
+    setLieu(cible);
+  }
   initAr();
   renderIdBar();
   renderCurArena();
