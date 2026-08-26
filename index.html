@@ -1709,6 +1709,14 @@
   .se-sub{font-size:12px;color:var(--muted);text-align:center;margin-top:8px}
   .se-mot{font-size:12px;color:#3A3730;background:rgba(107,70,193,.06);border-radius:11px;padding:9px 11px;margin-top:11px;line-height:1.5;max-width:88%}
   .se-next{font-size:11px;color:var(--muted);margin-top:11px;line-height:1.5}
+  /* LA FIN DU PARCOURS — un vrai palier, pas une phrase de plus. */
+  .se-fin{display:flex;gap:9px;margin-top:13px;flex-wrap:wrap}
+  .se-fin>div{flex:1;min-width:88px;background:linear-gradient(180deg,rgba(107,70,193,.09),rgba(107,70,193,.04));
+    border:1.5px solid rgba(107,70,193,.22);border-radius:14px;padding:11px 8px;text-align:center}
+  .se-fin b{display:block;font-family:Fredoka,inherit;font-size:23px;font-weight:800;color:var(--violet);line-height:1.1}
+  .se-fin span{display:block;font-size:10.5px;color:var(--muted);margin-top:3px;letter-spacing:.02em}
+  .se-fin-bandeau{margin-top:12px;border-radius:14px;padding:12px 13px;line-height:1.5;font-size:12.5px;
+    color:#3A3730;background:rgba(226,156,92,.10);border:1.5px solid rgba(226,156,92,.30)}
   .se-btn2{display:block;width:100%;margin-top:9px;border:1.5px solid rgba(107,70,193,.32);
     background:rgba(107,70,193,.06);color:var(--violet);border-radius:15px;padding:13px 12px;
     font-family:inherit;font-size:13.5px;font-weight:800;cursor:pointer;line-height:1.35;text-align:center}
@@ -6246,6 +6254,9 @@ function renderPtop(){
 
 function renderSeance(){
   const b=document.getElementById('seance'); if(!b) return;
+  /* « 2 fiches » ou « 1 fiche » — jamais un chiffre écrit en dur : trois séances du
+     Parcours n'en portent qu'une (les dernières d'Anatomie, de Chimie, de Physique). */
+  const nF=s=>{ const k=s? s.fiches.length : 2; return k+' fiche'+(k>1?'s':''); };
   /* la mascotte change de pose chaque jour — stable dans la journée, nouvelle tête chaque matin */
   const AXO_POSES=['axo-encourage','axo-canon','axo-mains','mascotte-arene-prete-au-combat','mascotte-arene-retour'];
   const axo='<img class="se-axo" onclick="ouvrirAxo()" src="img/'+AXO_POSES[(parseInt(arDay().split('-').join(''),10))%AXO_POSES.length]+'.png" alt="" title="Ton compagnon">';
@@ -6257,7 +6268,8 @@ function renderSeance(){
   /* la journée est faite mais le point de départ n'a jamais été fait : on ne laisse
      JAMAIS l'élève sur un « reviens demain » sans lui montrer l'autre porte. */
   const offreDeb=()=> (seanceJourFaite() && !profilComplet())
-    ? '<button class="se-btn2" onclick="go(\'sim1\')">🎁 Ouvrir mes 2 fiches suivantes maintenant'+
+    ? '<button class="se-btn2" onclick="go(\'sim1\')">🎁 Ouvrir '+(()=>{const s=seanceCourante();
+        return s? (s.fiches.length>1? 'mes '+s.fiches.length+' fiches suivantes':'ma fiche suivante') : 'la suite';})()+' maintenant'+
       '<small>2 minutes de questions sur ton profil et ta fac — pas besoin d\'attendre demain.</small></button>'
     : '';
   if(S.sr && !SR){
@@ -6338,28 +6350,58 @@ function renderSeance(){
   /* C — séance faite. DEUX CHEMINS, jamais un mur : s'entraîner sur ce qu'on vient
      de voir, ou remplir son point de départ et ouvrir la suite tout de suite. */
   const peutDebloquer = !profilComplet();
-  /* IL N'Y A PLUS RIEN APRÈS : on ne promet pas des fiches qui n'existent pas.
-     Le fil du Parcours est fini — on le dit, et on oriente vers ce qui reste ouvert. */
-  const fini = !seanceCourante();
+  const derniere = seancesFaites().slice(-1)[0] || null;
+  const suite = seanceCourante();
+  /* LE BOUT DU FIL. Deux situations très différentes, qu'on ne confond plus :
+     — il ne reste RIEN à faire : le Parcours est terminé, on le dit et on le fête ;
+     — il reste des séances, mais elles ont toutes été mises de côté : ce n'est pas
+       une fin, c'est un tas qu'on peut reprendre. Avant, les deux affichaient
+       « Parcours terminé » — l'élève qui avait passé ses dernières séances croyait
+       avoir fini alors qu'il lui restait du travail. */
+  const restantes = SEANCES.filter(s=>!(s.fait&&s.fait()));
+  const fini = restantes.length===0;
   if(fini){
-    b.innerHTML=dit('Tu es arrivé au bout du fil. Bravo, sincèrement.','axo-guide-bravo')+
-      '<div class="se-sur">Parcours terminé ✓</div>'+
-      '<div class="se-titre">Tu as travaillé toutes les séances disponibles.</div>'+
-      '<div class="se-ligne">'+seancesFaites().length+' séances, '+Object.keys(fichesArmees()).length+' fiches travaillées. '+
-        'De nouvelles séances s\'ajouteront — en attendant, tout ce que tu as vu reste ouvert dans les Salles, '+
-        'et le Grand Amphi ne s\'épuise pas.</div>'+
+    const nS=seancesFaites().length, nF2=Object.keys(fichesArmees()).length, nQ=qsOuvertes(null).length;
+    b.innerHTML=dit('Tu es arrivé au bout du fil. Bravo — sincèrement.','axo-guide-bravo')+
+      '<div class="se-sur">Parcours terminé</div>'+
+      '<div class="se-titre">Tu as travaillé les '+nS+' séances du Parcours.</div>'+
+      '<div class="se-fin">'+
+        '<div><b>'+nS+'</b><span>séance'+(nS>1?'s':'')+'</span></div>'+
+        '<div><b>'+nF2+'</b><span>fiche'+(nF2>1?'s':'')+' lue'+(nF2>1?'s':'')+'</span></div>'+
+        '<div><b>'+nQ+'</b><span>QCM ouverts</span></div>'+
+      '</div>'+
+      '<div class="se-fin-bandeau">Le fil s\'arrête ici, mais rien ne se referme : <b>tout ce que tu as lu reste ouvert dans les Salles</b>, '+
+        'et le Grand Amphi ne s\'épuise pas — il retire au hasard dans tes '+nQ+' questions. '+
+        'Quand de nouvelles séances seront prêtes, elles apparaîtront ici.</div>'+
       '<button class="gbtn" onclick="allerSalles()">Réviser dans les Salles</button>'+
       '<button class="se-btn2" onclick="go(\'arene\');setLieu(\'amphi\')">⚔️ Monter dans le Grand Amphi</button>'+
       '<button class="se-alt" onclick="renderChemin();go(\'chemin\')">Revoir mes séances passées</button>'+
-      heroMail()+axo;
+      /* pas de mascotte flottante sur ces deux cartes : la bulle du haut la montre déjà,
+         et sur une carte aussi longue elle passait par-dessus le dernier lien */
+      heroMail();
+    return;
+  }
+  if(!suite){
+    /* tout ce qui reste a été mis de côté — on ne fait pas passer ça pour une fin */
+    const n=restantes.length;
+    b.innerHTML=dit('Il te reste du travail : tu l\'as juste mis de côté.','axo-mains')+
+      '<div class="se-sur">Séances mises de côté</div>'+
+      '<div class="se-titre">'+n+' séance'+(n>1?'s':'')+' t\'attend'+(n>1?'ent':'')+' encore.</div>'+
+      '<div class="se-ligne">Tu les as passées pour avancer plus vite. Elles ne sont pas perdues — remets-les dans le fil quand tu veux.</div>'+
+      '<button class="gbtn" onclick="S.skip={};saveS();renderParcours()">Les remettre dans le fil</button>'+
+      '<button class="se-btn2" onclick="allerSalles()">M\'entraîner dans les Salles</button>'+
+      '<button class="se-alt" onclick="renderChemin();go(\'chemin\')">Revoir mes séances passées</button>'+
+      /* pas de mascotte flottante sur ces deux cartes : la bulle du haut la montre déjà,
+         et sur une carte aussi longue elle passait par-dessus le dernier lien */
+      heroMail();
     return;
   }
   b.innerHTML=dit(peutDebloquer? 'Séance bouclée. À toi de choisir la suite.' : 'Séance bouclée. Bien joué.','axo-encourage')+
     '<div class="se-sur">Séance faite ✓</div>'+
     '<div class="se-titre">Tu as travaillé aujourd\'hui.</div>'+
-    '<div class="se-ligne">2 fiches, travaillées à fond. '+
-      (peutDebloquer? 'Tu peux les tester maintenant, ou ouvrir tout de suite les deux suivantes.'
-                    : '<b>Reviens demain matin : tes 2 prochaines fiches seront prêtes.</b> En attendant, l\'Arène est à toi.')+'</div>'+
+    '<div class="se-ligne">'+nF(derniere)+', travaillée'+(derniere&&derniere.fiches.length>1?'s':'')+' à fond. '+
+      (peutDebloquer? 'Tu peux les tester maintenant, ou ouvrir tout de suite '+(suite&&suite.fiches.length>1?'les '+suite.fiches.length+' suivantes':'la suivante')+'.'
+                    : '<b>Reviens demain matin : '+nF(suite)+' '+(suite&&suite.fiches.length>1?'seront prêtes':'sera prête')+'.</b> En attendant, l\'Arène est à toi.')+'</div>'+
     '<button class="gbtn" onclick="allerSalles()">M\'entraîner sur mes fiches du jour</button>'+
     (peutDebloquer? '<p class="se-ou">— OU —</p>'+offreDeb() : '')+
     (seancesFaites().length?'<button class="se-alt" onclick="renderChemin();go(\'chemin\')">Revoir mes séances passées</button>':'')+
