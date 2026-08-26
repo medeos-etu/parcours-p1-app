@@ -710,10 +710,12 @@
   .lobbytop .pedit:active{background:rgba(255,255,255,.28)}
   .lobbytop .pn{font-family:Fredoka,Inter,sans-serif;font-size:14px;font-weight:600;color:#fff;line-height:1.15;letter-spacing:.01em}
   .lobbytop .pg{font-size:10.5px;color:rgba(250,246,240,.60);margin-top:1px}
+  /* le compteur de trophées EST le bouton du classement : c'est le geste naturel */
   .goldplate{display:inline-flex;align-items:center;gap:5px;flex-shrink:0;font-family:Fredoka,Inter,sans-serif;
     background:linear-gradient(180deg,#FCD34D,#E29C5C);color:#4A3208;font-weight:600;font-size:14px;
-    padding:8px 13px;border-radius:12px;font-variant-numeric:tabular-nums;
+    padding:8px 13px;border-radius:12px;font-variant-numeric:tabular-nums;border:none;cursor:pointer;
     box-shadow:0 3px 0 #B87A33, 0 6px 14px rgba(184,122,51,.34), inset 0 1px 0 rgba(255,255,255,.5)}
+  .goldplate:active{transform:translateY(2px);box-shadow:0 1px 0 #B87A33, inset 0 1px 0 rgba(255,255,255,.5)}
   .connectbtn{flex-shrink:0;border:none;cursor:pointer;font-family:inherit;font-weight:900;font-size:12px;
     padding:9px 13px;border-radius:12px;background:linear-gradient(180deg,#FCD34D,#E29C5C);color:#4A3208;
     box-shadow:0 3px 0 #B87A33, inset 0 1px 0 rgba(255,255,255,.5)}
@@ -1361,12 +1363,7 @@
      de la scène ; en dessous, c'est le bouton .amphi-lb qui ouvre la fenêtre */
   #vue-amphi{position:relative}
   .sidecol{display:none;flex-direction:column;gap:12px}
-  .amphi-lb{position:absolute;top:12px;right:12px;z-index:5;display:inline-flex;align-items:center;gap:6px;
-    cursor:pointer;font-family:inherit;font-size:11.5px;font-weight:800;color:#FAF6F0;
-    background:rgba(18,14,32,.62);border:1px solid rgba(255,255,255,.22);border-radius:99px;padding:7px 12px;
-    backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 4px 12px rgba(0,0,0,.4)}
-  .amphi-lb img{width:15px;height:15px;object-fit:contain}
-  .amphi-lb:active{transform:scale(.95)}
+
   /* — le classement de l'Amphi : une ligne par élève, ses vrais trophées — */
   .lbrow{display:flex;align-items:center;gap:9px;padding:8px 9px;border-radius:12px;background:rgba(107,70,193,.05)}
   .lbrow+.lbrow{margin-top:6px}
@@ -1423,7 +1420,6 @@
       gap:14px 16px;align-items:start;max-width:none;position:static}
     #vue-amphi > *{grid-column:2}
     #vue-amphi .sidecol{display:flex;grid-column:3;grid-row:1;justify-self:start;width:100%;max-width:260px}
-    .amphi-lb{display:none}
   }
   @media (min-width:1440px){
     #arene.scr.on{max-width:1280px}
@@ -2317,10 +2313,6 @@
 
       <!-- ═══ LE GRAND AMPHI : la compétition ═══ -->
       <div id="vue-amphi" style="display:none">
-        <!-- sur téléphone, le classement se replie en un bouton posé sur la scène -->
-        <button class="amphi-lb" onclick="openSheet('sheet-rank')" aria-label="Voir le classement">
-          <img src="img/icones/icone-classement.png" alt="" onerror="this.remove()"><span>Classement</span>
-        </button>
         <div class="amphi" id="amphi-scene"></div>
         <div class="ar-limite" id="ar-limite"></div>
         <div class="actionbar">
@@ -3000,12 +2992,24 @@ function validateFacs(){
     box.appendChild(row);
   });
   const data=chosen.filter(f=>f[1]>0);
-  sim.facTaux = data.length ? data.reduce((a,f)=>a+f[1],0)/data.length : 28.7;
-  if(chosen.length>1){
-    const n=document.createElement('p'); n.style.cssText='font-size:11px;color:var(--muted)';
-    n.textContent='Pour la suite de la simulation, on prend la moyenne de ta sélection : '+String(Math.round(sim.facTaux*10)/10).replace('.',',')+' %.';
-    box.appendChild(n);
-  }
+  /* LE TAUX QUI COMPTE EST CELUI DE SA FILIÈRE, pas celui des cinq réunies.
+     f[1] agrège médecine + pharma + dentaire + sage-femme + kiné : à Lille,
+     29,8 % toutes filières, mais 16,0 % en médecine seule. Les places par
+     filière sont dans f[4] — on s'en sert. */
+  const idx = fils.length ? fils.map(x=>FIL_IDX[x]) : [0,1,2,3,4];
+  const tauxFil = f => {
+    if(!f[2] || !f[4]) return f[1];
+    const places = idx.reduce((s,i)=>s+(f[4][i]||0),0);
+    return Math.max(0.5, 100*places/f[2]);      /* jamais 0 : le calcul deviendrait infini */
+  };
+  sim.facTaux = data.length ? data.reduce((a,f)=>a+tauxFil(f),0)/data.length : 28.7;
+  sim.filNoms = fils.length ? fils.map(x=>FIL_NOM[FIL_IDX[x]]) : null;
+  { const n=document.createElement('p'); n.style.cssText='font-size:11px;color:var(--muted);line-height:1.55';
+    const t=String(Math.round(sim.facTaux*10)/10).replace('.',',');
+    n.innerHTML = sim.filNoms
+      ? 'Pour la suite, on ne garde que <b>'+sim.filNoms.join(' et ')+'</b>'+(chosen.length>1?' sur ta sélection de facs':'')+' : <b style="color:var(--violet)">'+t+' %</b>. C\'est ce taux-là qui te concerne, pas celui des cinq filières réunies.'
+      : 'Pour la suite, on prend l\'ensemble des filières'+(chosen.length>1?' sur ta sélection':'')+' : <b>'+t+' %</b>.';
+    box.appendChild(n); }
   calcSim(); go('sim3');
 }
 const REVEALS={
@@ -4779,7 +4783,9 @@ function renderRoad(){
 
 
 /* ═══ EN-TÊTE DE L'ARÈNE — identité, arène courante, rang (épuré) ═══ */
-function renderIdBar(){
+/* ⚠️ VERSION MORTE — une seconde renderIdBar plus bas l'écrase par hoisting.
+   Renommée pour qu'on ne la modifie plus par erreur. */
+function renderIdBar_morte(){
   const b=document.getElementById('ar-idbar'); if(!b) return;
   if(!S.ar) initAr();
   if(accOk()){
@@ -4837,11 +4843,11 @@ function renderIdBar(){
     const c=S.ar.compte;
     b.innerHTML='<div class="pcard" style="cursor:pointer;'+banFond(ban)+'" onclick="go(\'profil\')">'+pav+
       '<div style="min-width:0"><div class="pn">'+c.id+'</div><div class="pg">'+GRADES[gi][2]+' '+GRADES[gi][1]+'</div></div>'+acts+'</div>'+
-      '<span class="goldplate"><img class="ticn g" src="img/icones/trophee-medeos.png" alt=""> '+fmtT(S.ar.T)+'</span>';
+      '<button class="goldplate" onclick="openSheet(\'sheet-rank\')" title="Voir le classement" aria-label="Voir le classement"><img class="ticn g" src="img/icones/trophee-medeos.png" alt=""> '+fmtT(S.ar.T)+'</button>';
   } else {
     b.innerHTML='<div class="pcard" style="cursor:pointer;'+banFond(ban)+'" onclick="go(\'profil\')">'+pav+
       '<div style="min-width:0"><div class="pn">Invité</div><div class="pg">Progression non gardée</div></div>'+acts+'</div>'+
-      '<span class="goldplate"><img class="ticn g" src="img/icones/trophee-medeos.png" alt=""> '+fmtT(S.ar.T)+'</span>'+
+      '<button class="goldplate" onclick="openSheet(\'sheet-rank\')" title="Voir le classement" aria-label="Voir le classement"><img class="ticn g" src="img/icones/trophee-medeos.png" alt=""> '+fmtT(S.ar.T)+'</button>'+
       '<button class="connectbtn" onclick="focusAcc()">Se connecter</button>';
   }
 }
@@ -7352,8 +7358,10 @@ function allerSalles(){
   if(typeof setLieu==='function') setLieu('salles');
 }
 function sortirSim(){
-  const c=seanceCourante();
-  if(c && !seanceJourFaite()){ c.act(); } else { go('home'); }
+  /* on RAMÈNE au Parcours, on ne lance rien : c'est l'élève qui ouvre sa séance
+     quand il le décide (même règle qu'à la sortie d'une séance vers la salle) */
+  go('home');
+  if(typeof renderParcours==='function') renderParcours();
 }
 let CONSULT=false;
 function consulterFiche(slug){ CONSULT=true; openFiche(slug); }
