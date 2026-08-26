@@ -893,30 +893,26 @@
     box-shadow:0 3px 0 #4C2A85}
   .sc-go:active{transform:translateY(2px);box-shadow:none}
   .sc-go.off{background:rgba(255,255,255,.08);color:rgba(250,246,240,.6);box-shadow:none}
-  /* Les flèches : TOUJOURS visibles, au doigt comme à la souris — on ne suppose
-     jamais que l'élève devine qu'il faut faire glisser. Elles se posent juste à
-     l'intérieur de la carte centrée (même pourcentage que les marges du rail). */
-  .sflech{position:absolute;top:78px;z-index:4;width:44px;height:44px;border-radius:50%;cursor:pointer;
-    border:1.5px solid rgba(255,255,255,.28);background:rgba(12,9,24,.62);color:#fff;
-    font-family:inherit;font-size:22px;font-weight:700;line-height:1;
+  /* Les flèches vivent SOUS la carte, de chaque côté des points : jamais posées
+     sur l'image, et toujours visibles — au doigt comme à la souris. */
+  .salles-nav{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:8px}
+  .sflech{width:40px;height:40px;border-radius:50%;cursor:pointer;flex-shrink:0;
+    border:1.5px solid rgba(255,255,255,.22);background:rgba(255,255,255,.07);color:#FAF6F0;
+    font-family:inherit;font-size:21px;font-weight:700;line-height:1;
     display:flex;align-items:center;justify-content:center;
-    backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
-    box-shadow:0 4px 14px rgba(0,0,0,.45);transition:transform .12s ease,background .15s ease}
-  .sflech:hover{background:rgba(24,18,44,.85);border-color:rgba(167,139,250,.7)}
-  .sflech:active{transform:scale(.92)}
-  .sflech.g{left:calc(9% + 6px)} .sflech.d{right:calc(9% + 6px)}
+    transition:transform .12s ease,background .15s ease,border-color .15s ease}
+  .sflech:hover{background:rgba(167,139,250,.2);border-color:rgba(167,139,250,.6)}
+  .sflech:active{transform:scale(.9)}
   @media (min-width:1024px){
     .salle-card{flex-basis:46%;max-width:640px}
     .salles::before,.salles::after{flex-basis:27%}
     .sc-vis{height:250px}
     .sc-nom{font-size:26px}
-    .sflech{top:108px;width:48px;height:48px;font-size:24px}
-    .sflech.g{left:calc(27% + 10px)} .sflech.d{right:calc(27% + 10px)}
+    .sflech{width:44px;height:44px;font-size:23px}
   }
   @media (min-width:1440px){
     .salle-card{flex-basis:38%}
     .salles::before,.salles::after{flex-basis:31%}
-    .sflech.g{left:calc(31% + 10px)} .sflech.d{right:calc(31% + 10px)}
   }
   .salle-action{display:block;width:100%;max-width:420px;margin:12px auto 0;border:none;cursor:pointer;
     font-family:Fredoka,Inter,sans-serif;font-weight:600;font-size:15.5px;color:#fff;
@@ -925,7 +921,7 @@
   .salle-action b{font-weight:700}
   .salle-action:active{transform:translateY(3px);box-shadow:0 1px 0 #4C2A85}
   .salle-action.off{background:rgba(255,255,255,.07);color:rgba(250,246,240,.6);box-shadow:none}
-  .salles-dots{display:flex;justify-content:center;gap:7px;margin-top:2px}
+  .salles-dots{display:flex;align-items:center;justify-content:center;gap:7px}
   .sdot{width:7px;height:7px;border-radius:50%;background:rgba(250,246,240,.22);cursor:pointer;transition:all .2s ease}
   .sdot.on{background:linear-gradient(180deg,#8B5CF6,#6B46C1);width:20px;border-radius:99px}
 
@@ -2283,11 +2279,14 @@
       <div id="vue-salles">
         <div class="guide-row" id="salles-dit"></div>
         <div class="sallesbox">
-          <button class="sflech g" onclick="salleSuivante(-1)" aria-label="Salle précédente">‹</button>
           <div class="salles" id="salles-grille" onscroll="salleScroll()"></div>
+        </div>
+        <!-- la barre de navigation : une flèche de chaque côté des points -->
+        <div class="salles-nav">
+          <button class="sflech g" onclick="salleSuivante(-1)" aria-label="Salle précédente">‹</button>
+          <div class="salles-dots" id="salles-dots"></div>
           <button class="sflech d" onclick="salleSuivante(1)" aria-label="Salle suivante">›</button>
         </div>
-        <div class="salles-dots" id="salles-dots"></div>
         <button class="salle-action" id="salle-action"></button>
         <p class="salles-reste" id="salles-reste"></p>
       </div>
