@@ -834,14 +834,20 @@
 
   /* — LES SALLES : un carrousel, la salle choisie au centre — */
   .sallesbox{position:relative}
-  .salles{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;
-    padding:4px 0 8px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  /* une seule carte au centre, en grand ; les voisines ne dépassent que d'un bout */
+  .salles{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;
+    padding:6px 0 10px;scrollbar-width:none;-webkit-overflow-scrolling:touch;
+    scroll-padding-inline:12%}
   .salles::-webkit-scrollbar{display:none}
-  .salle-card{flex:0 0 78%;max-width:420px;scroll-snap-align:center;border-radius:20px;overflow:hidden;
+  .salles::before,.salles::after{content:'';flex:0 0 12%}
+  .salle-card{flex:0 0 76%;scroll-snap-align:center;border-radius:22px;overflow:hidden;
     background:linear-gradient(160deg,rgba(43,35,64,.95),rgba(31,27,46,.95));
-    border:1px solid rgba(255,255,255,.10);transition:transform .25s ease,border-color .25s ease,opacity .25s ease}
-  .salle-card.lock{opacity:.72}
-  .sc-vis{position:relative;height:150px;background-size:cover;background-position:center}
+    border:1px solid rgba(255,255,255,.10);
+    transform:scale(.92);opacity:.55;transition:transform .3s ease,opacity .3s ease,border-color .3s ease}
+  .salle-card.centre{transform:scale(1);opacity:1;border-color:rgba(167,139,250,.4);
+    box-shadow:0 18px 40px rgba(10,8,20,.5)}
+  .salle-card.lock.centre{opacity:.85}
+  .sc-vis{position:relative;height:190px;background-size:cover;background-position:center}
   .sc-veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,16,34,.1),rgba(24,20,38,.85))}
   .sc-cad{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:38px;height:38px;object-fit:contain;
     filter:drop-shadow(0 4px 10px rgba(0,0,0,.5))}
@@ -860,7 +866,12 @@
     background:rgba(12,9,24,.6);color:#fff;font-size:19px;line-height:1;backdrop-filter:blur(6px);
     box-shadow:0 3px 12px rgba(0,0,0,.35);display:none}
   .sflech.g{left:-4px} .sflech.d{right:-4px}
-  @media (min-width:900px){ .sflech{display:block} .salle-card{flex-basis:52%} }
+  @media (min-width:900px){ .sflech{display:block} }
+  @media (min-width:1024px){
+    .sallesbox{max-width:760px;margin:0 auto}
+    .salle-card{flex-basis:72%}
+    .sc-vis{height:230px}
+  }
   .salles-dots{display:flex;justify-content:center;gap:7px;margin-top:2px}
   .sdot{width:7px;height:7px;border-radius:50%;background:rgba(250,246,240,.22);cursor:pointer;transition:all .2s ease}
   .sdot.on{background:linear-gradient(180deg,#8B5CF6,#6B46C1);width:20px;border-radius:99px}
@@ -4986,13 +4997,14 @@ function renderSalles(){
   /* les pastilles de position */
   const dt=document.getElementById('salles-dots');
   if(dt){ dt.innerHTML=ARENES.map((a,i2)=>'<span class="sdot'+(i2===(S.ar.salleVue||0)?' on':'')+'" onclick="allerSalle('+i2+')"></span>').join(''); }
-  setTimeout(()=>allerSalle(S.ar.salleVue||0,true),30);
+  setTimeout(()=>{ allerSalle(S.ar.salleVue||0,true); salleScroll(); },30);
 }
 function allerSalle(i2,instant){
   const g=document.getElementById('salles-grille'); if(!g) return;
   const c=g.children[i2]; if(!c) return;
   S.ar.salleVue=i2; saveS();
   g.scrollTo({left:c.offsetLeft-(g.clientWidth-c.clientWidth)/2, behavior:instant?'auto':'smooth'});
+  [...g.children].forEach((cc,k)=>cc.classList.toggle('centre',k===i2));
   const dt=document.getElementById('salles-dots');
   if(dt) [...dt.children].forEach((d,k)=>d.classList.toggle('on',k===i2));
 }
@@ -5006,6 +5018,7 @@ function salleScroll(){
   const centre=g.scrollLeft+g.clientWidth/2;
   let best=0,bd=1e9;
   [...g.children].forEach((c,k)=>{ const d=Math.abs(c.offsetLeft+c.clientWidth/2-centre); if(d<bd){bd=d;best=k;} });
+  [...g.children].forEach((c,k)=>c.classList.toggle('centre',k===best));
   if(best!==S.ar.salleVue){
     S.ar.salleVue=best; saveS();
     const dt=document.getElementById('salles-dots');
