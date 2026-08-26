@@ -1667,6 +1667,16 @@
   .flampop p{font-size:11.5px;color:var(--muted);line-height:1.55;margin-top:6px}
   /* la Route de la Flamme : ce qui est gagné, ce qui vient, ce qui reste */
   #fp-route{margin-top:9px;border-top:1px solid var(--line2);padding-top:8px}
+  #fp-regle{margin-top:10px;border-top:1px solid var(--line2);padding-top:9px}
+  .flampop .fpt{font-size:10px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--muted);margin:0 0 6px}
+  .fpg{display:flex;align-items:flex-start;gap:8px;font-size:11px;line-height:1.5;color:var(--muted);margin-top:7px}
+  .fpg .fpi{flex:0 0 auto;font-size:12.5px;line-height:1.35}
+  .fpg .fpx{flex:1;min-width:0;display:block}
+  .fpg .fpx b{display:inline;font-size:11px;font-weight:900;color:var(--ink)}
+  .fpg.on .fpx b{color:#2E7D53}
+  .flampop .fpe2{font-size:11px;font-weight:800;color:#8A5B24;margin-top:8px}
+  .flampop .fpe2 b{display:inline;font-size:11px}
   .fpr{display:flex;align-items:center;gap:8px;padding:4px 0;font-size:11px;line-height:1.4}
   .fpr .fpj{flex-shrink:0;width:34px;font-weight:900;font-variant-numeric:tabular-nums;color:var(--muted)}
   .fpr .fpq{flex:1;min-width:0;color:var(--muted)}
@@ -2130,7 +2140,7 @@
         <b id="fp-titre">Ta série</b>
         <p id="fp-next" style="color:#B87A33;font-weight:800"></p>
         <div id="fp-route"></div>
-        <p id="fp-gel">Un oubli est pardonné grâce à <b style="display:inline">un jour de bonus — un seul</b>. Deux jours sans venir, et elle repart de zéro.</p>
+        <div id="fp-regle"></div>
       </div>
     </header>
 
@@ -5354,8 +5364,20 @@ function toggleFlamme(ev){
                  '<span class="fpq">'+e[1]+'</span>'+
                  '<span class="fpe">'+(eu?'✓':(suivant?'⏳':'🔒'))+'</span></div>';
         }).join(''); } }
-    const fg=document.getElementById('fp-gel');
-    if(fg && (S.gels||0)>0) fg.innerHTML='🧊 Tu as <b style="display:inline">'+S.gels+' gel'+(S.gels>1?'s':'')+' de série</b> : il te protège jusqu\'à deux jours d\'absence.';
+    /* LA RÈGLE, EN CLAIR : deux filets, et ce qu'il reste vraiment à l'élève */
+    { const fr2=document.getElementById('fp-regle');
+      if(fr2){
+        const g=(S.gels||0), a14=(Math.max(S.streakMax||0,n)>=14);
+        fr2.innerHTML=
+          '<p class="fpt">Comment elle tient</p>'+
+          '<div class="fpg"><span class="fpi">🃏</span><span class="fpx"><b>Un jour oublié est pardonné</b> — toujours, sans rien faire. Tu sautes un jour, tu reviens le lendemain : ta série continue de monter.</span></div>'+
+          '<div class="fpg'+(g>0?' on':'')+'"><span class="fpi">🧊</span><span class="fpx"><b>Le gel de série</b>, offert au 14ᵉ jour, couvre un jour d\'absence de plus : tu peux en sauter deux d\'affilée sans rien perdre. Il se consomme dès qu\'il te sauve.</span></div>'+
+          '<div class="fpg"><span class="fpi">↩️</span><span class="fpx"><b>Sinon</b>, deux jours sans venir et la série repart à 1. Ce que tu as appris, lui, ne bouge pas.</span></div>'+
+          '<p class="fpe2">'+(g>0
+            ? '🧊 Tu as <b>'+g+' gel'+(g>1?'s':'')+' en réserve.</b>'
+            : (a14 ? 'Ton gel a déjà servi — il ne s\'en regagne pas pour l\'instant.'
+                   : 'Tu n\'as pas encore de gel : il t\'attend au 14ᵉ jour.'))+'</p>';
+      } }
     p.hidden=false;
     setTimeout(()=>document.addEventListener('click',fermerFlamme,{once:true}),0);
   } else p.hidden=true;
