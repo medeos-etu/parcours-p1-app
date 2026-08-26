@@ -1367,15 +1367,12 @@
     #arene.scr.on{max-width:1120px;padding:22px 32px calc(110px + env(safe-area-inset-bottom))}
     /* la colonne principale : barre de profil, bascule centrée, puis le lieu choisi */
     #arene #arene-live{display:flex;flex-direction:column;min-height:0;flex:1;gap:14px}
-    /* Le Grand Amphi : la scène et l'action, le classement à droite — l'ensemble centré */
-    #vue-amphi{display:grid;grid-template-columns:minmax(0,1fr) 258px;
-      grid-template-rows:auto auto auto auto;gap:14px 18px;align-items:start;
-      width:100%;max-width:1000px;margin:0 auto}
-    #vue-amphi .amphi{grid-column:1;grid-row:1}
-    #vue-amphi .ar-limite{grid-column:1;grid-row:2;margin:0}
-    #vue-amphi .actionbar{grid-column:1;grid-row:3;margin-top:0}
-    #vue-amphi #ar-stagecard{grid-column:1;grid-row:4}
-    #vue-amphi .sidecol{grid-column:2;grid-row:1/5}
+    /* Le Grand Amphi : la scène reste CENTRÉE dans l'écran. Le classement se pose
+       à côté d'elle en sortant du flux — il ne la décale donc jamais d'un pixel. */
+    #vue-amphi{display:flex;flex-direction:column;gap:14px;position:relative;
+      width:100%;max-width:660px;margin:0 auto}
+    #vue-amphi .ar-limite{margin:0}
+    #vue-amphi .actionbar{margin-top:0}
     #vue-amphi .amphi-vis{height:290px}
 
     /* les 4 boutons d'arène deviennent des cartes horizontales */
@@ -1392,9 +1389,20 @@
     /* les autres écrans respirent aussi */
     .scr{max-width:840px;padding:30px 36px calc(90px + env(safe-area-inset-bottom));gap:16px}
   }
+  /* Assez de place pour poser le classement à côté : deux colonnes latérales de
+     largeur ÉGALE encadrent la scène, qui reste donc pile au centre de l'écran.
+     (Le hors-flux ne marchait pas : l'écran de l'Arène coupe ce qui dépasse.) */
+  @media (min-width:1180px){
+    body.in-amphi #arene.scr.on{max-width:1240px}
+    #vue-amphi{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,660px) minmax(0,1fr);
+      gap:14px 16px;align-items:start;max-width:none;position:static}
+    #vue-amphi > *{grid-column:2}
+    #vue-amphi .sidecol{grid-column:3;grid-row:1;justify-self:start;width:100%;max-width:260px}
+  }
   @media (min-width:1440px){
     #arene.scr.on{max-width:1280px}
-    #vue-amphi{max-width:1080px;grid-template-columns:minmax(0,1fr) 290px}
+    body.in-amphi #arene.scr.on{max-width:1400px}
+    #vue-amphi .sidecol{max-width:290px}
   }
 
   /* ═══ BIBLIOTHÈQUE : badge gratuit + rayon des stages ═══ */
@@ -2344,7 +2352,6 @@
     <div class="sheet">
       <div class="sheet-h"><b>📊 Le classement</b><button onclick="closeSheet('sheet-rank')">✕</button></div>
       <div class="sheet-b">
-        <div class="lbtabs" id="ar-lbtabs"></div>
         <div id="ar-lb"></div>
         <p class="note-in" id="ar-lbnote"></p>
       </div>
@@ -5137,7 +5144,7 @@ function renderSideAcc(){
   const sem=Math.max(0,S.ar.wdt||0);
   b.innerHTML='<h3>📊 Le classement</h3>'+lignes+
     '<p class="lb-vide">'+(joueurs.length<2
-      ? 'Tu es seul en lice pour l\'instant. Les autres élèves s\'ajouteront ici avec leurs vrais trophées — on n\'invente aucun concurrent.'
+      ? 'Tu es seul en lice pour l\'instant. Les autres élèves s\'ajouteront ici avec leurs trophées.'
       : 'Chaque trophée vient d\'une case réellement bien jugée.')+'</p>'+
     '<div class="lbsem"><span>Cette semaine</span><b>+'+fmtT(sem)+' 🏆</b></div>'+
     '<button class="lbbtn" onclick="openSheet(\'sheet-rank\')"><img class="ic" src="img/icones/icone-classement.png" alt="" onerror="this.remove()">Voir le détail<span class="chev">›</span></button>';
@@ -6143,35 +6150,6 @@ function renderAcces(){
 
 
 /* ═══ CLASSEMENTS : Général (somme des 4) + un par matière ═══ */
-let lbTab='general';
-const LB_TABS=[['general','Général'],['Anatomie','🫀 Anatomie'],['Biologie','🧬 Bio·Histo'],['Chimie','⚗️ Chimie'],['Physique','🩻 Physique']];
-/* ═══ UNE cohorte cohérente : chaque joueur fictif a ses 4 compteurs,
-   le général = LA SOMME EXACTE des 4. Mêmes joueurs dans tous les onglets. ═══ */
-
-function monScore(tab){
-  /* les trophées ne se remettent JAMAIS à zéro : ni le lundi, ni à la rentrée */
-  if(!S.ar) return 0;
-  return tab==='general' ? (S.ar.T||0) : arT(tab);
-}
-function maSemaine(tab){
-  if(!S.ar) return 0;
-  if(tab==='general') return Math.max(0,S.ar.wdt||0);
-  return Math.max(0,(S.ar.wdm&&S.ar.wdm[tab])||0);
-}
-function renderLbTabs(){
-  const box=document.getElementById('ar-lbtabs'); if(!box) return;
-  box.innerHTML='';
-  LB_TABS.forEach(([k,nom])=>{
-    const b=document.createElement('button');
-    b.textContent=nom; if(k===lbTab) b.className='on';
-    b.onclick=()=>{ lbTab=k; renderLbTabs(); renderLB(); };
-    box.appendChild(b);
-  });
-}
-
-
-
-
 /* ═══ LA CARTE COMPLÈTE DU PARCOURS — les 17 nœuds du Monde 1 (PARCOURS-MONDE1.md),
    tous VISIBLES : on sait toujours ce qui attend. ═══ */
 
@@ -7941,22 +7919,26 @@ function renderArene(){
 function renderLB(){
   const box=document.getElementById('ar-lb'); box.innerHTML='';
   const note=document.getElementById('ar-lbnote');
-  renderLbTabs();
   if(!S.ar) initAr();
   const sem=Math.max(0,S.ar.wdt||0), prev=S.ar.wdtPrev||0, rec=Math.max(S.ar.wdtRec||0,sem);
-  /* — le podium : les matières où tu as le plus avancé (données réelles) — */
-  const MATS=ARENES.map(a=>a.k);
-  const tri=MATS.slice().sort((a,b)=>arT(b)-arT(a));
-  if((S.ar.T||0)>0){
-    const d=document.createElement('div'); d.className='lbpodium';
-    const step=(m,pos,cls)=>{ if(!m) return '';
-      const a=ARENES.find(x=>x.k===m)||{};
-      return '<div class="pd '+cls+'"><span class="pdav"><img src="img/icones/'+(EMBLEMES[m]||'')+'.png" alt="" onerror="this.replaceWith(\''+(a.em||'')+'\')"></span>'+
-        '<span class="pdn">'+(a.sous||m)+'</span><span class="pdt">'+fmtT(arT(m))+' 🏆</span><span class="pdsock">'+pos+'</span></div>'; };
-    d.innerHTML=step(tri[1],2,'silver')+step(tri[0],1,'gold')+step(tri[2],3,'bronze');
+  /* — le classement : les joueurs réels, du plus haut total au plus bas — */
+  if(accOk()){
+    const moi=S.ar.compte.id, joueurs=classementJoueurs();
+    const d=document.createElement('div');
+    d.innerHTML=joueurs.map((j,i)=>{
+      const g=GRADES[gradeIdx(j.T)];
+      return '<div class="lbrow'+(j.id===moi?' moi':'')+'">'+
+        '<span class="lbp">'+(i+1)+'</span>'+
+        '<span class="lbav"><img src="'+j.av+'" alt="" onerror="this.remove()"></span>'+
+        '<span class="lbn">'+j.id+'<i>'+g[2]+' '+g[1]+'</i></span>'+
+        '<span class="lbt">'+fmtT(j.T)+'</span></div>';
+    }).join('');
     box.appendChild(d);
-    const lg=document.createElement('p'); lg.className='pg-note'; lg.textContent='Là où tu as le plus avancé — tes trophées ne redescendent jamais d\'eux-mêmes.';
-    box.appendChild(lg);
+    if(joueurs.length<2){
+      const lg=document.createElement('p'); lg.className='pg-note';
+      lg.textContent='Les autres élèves s\'ajouteront ici avec leurs trophées.';
+      box.appendChild(lg);
+    }
   }
   /* un seul bloc : le total, et le rythme de la semaine en dessous */
   const res=document.createElement('div'); res.className='lbresume';
