@@ -4462,6 +4462,8 @@ const ABANK=[
    déjà travaillées dans le Parcours.
    BARÈME FIXE, sans statistique inventée : +2 🏆 par case bien jugée, −2 🏆 par case fausse.
    Une question a 5 cases : elle va donc de −10 à +10 🏆, une ascension de −100 à +100.
+   Le nombre de propositions VRAIES varie de 1 à 5, avec une moyenne tenue à 2,5 : c'est
+   cette moyenne qui rend « cocher tout » sans intérêt, sans avoir à l'interdire.
    ⚠️ Tout texte affiché qui annonce un nombre de questions ou une durée doit lire RUN_LEN
    et TIME_Q — jamais un chiffre écrit à la main.
    Les trophées ne descendent jamais sous zéro et ne se remettent jamais à zéro.
@@ -7921,11 +7923,17 @@ function aCheck(timeout){
   const juste = !timeout && missing.length===0 && wrong.length===0;
   if(!vite) son(juste?'ok':'ko');
   const gUP = run.boost ? Math.round(P.gU*BOOST_MULT) : P.gU;
-  /* garde anti-loterie : cocher les 5 cases n'est jamais une réponse (aucune question n'a 5 items vrais) */
-  const toutCoche = !timeout && run.sel.size===5;
-
-  /* LE ± PAR CASE, sans condition : chaque case dit ce qu'elle rapporte ou ce qu'elle coûte */
-  if(!vite && !toutCoche) document.querySelectorAll('#a-items .item').forEach((b,idx)=>{
+  /* ANTI-LOTERIE PAR LES MATHÉMATIQUES (26/08/2026), et non plus par un interdit.
+     Avant : cocher les cinq cases n'était jamais compté, ce qui rendait injouable toute
+     question à 5 propositions vraies. Désormais une telle question existe — et « cocher
+     tout » se neutralise tout seul, à condition que la banque tienne une MOYENNE DE 2,5
+     propositions vraies par question. Le calcul : cocher tout rapporte 2·V − 2·(5−V), soit
+     −6 à 1 vraie, −2 à 2, +2 à 3, +6 à 4, +10 à 5. Avec la répartition 30/25/20/15/10 %
+     (moyenne 2,5), l'espérance de cette stratégie est exactement 0 : elle ne rapporte rien.
+     ⚠️ Si la répartition de la banque dérive vers le haut, la faille se rouvre — le script
+     de contrôle mesure cette moyenne à chaque intégration. */
+  document.querySelectorAll('#a-items .item').forEach((b,idx)=>{
+    if(vite) return;
     const bon=!!q.it[idx][2], pris=run.sel.has(idx)&&!timeout;
     const bienJuge = !timeout && (bon===pris);
     const v=b.querySelector('.verdict');
@@ -7936,8 +7944,6 @@ function aCheck(timeout){
   let d=0, note='';
   if(vite){
     note='Trop rapide pour être lu — non compté : ni gain, ni perte, ni mesure.';
-  } else if(toutCoche){
-    note='Tout cocher n\'est pas une réponse — non compté : ni gain, ni perte.';
   } else {
     /* R : le niveau estimé bouge à chaque question — en score FRACTIONNEL (4 cases sur 5 ≠ 0) */
     const Sc = timeout ? 0 : nOk/5;
@@ -7964,7 +7970,7 @@ function aCheck(timeout){
     else run.serie=0;
   }
   run.som+=d;
-  run.lignes.push({n:run.i+1,mat:q.mat,notion:q.n,ok:juste&&!vite&&!toutCoche,k:nOk,v:(vite||toutCoche)?1:0,d:d});
+  run.lignes.push({n:run.i+1,mat:q.mat,notion:q.n,ok:juste&&!vite,k:nOk,v:vite?1:0,d:d});
   saveS(); renderState();
 
   /* la correction occupe la place principale, le delta est secondaire */
