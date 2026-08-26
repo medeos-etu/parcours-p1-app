@@ -807,6 +807,24 @@
   @keyframes toastin{from{opacity:0;transform:translate(-50%,14px)}to{opacity:1;transform:translate(-50%,0)}}
   @keyframes toastout{to{opacity:0;transform:translate(-50%,10px)}}
 
+  /* — le formulaire de profil — */
+  .pf-intro{font-size:12px;color:#3A3730;line-height:1.5;margin-bottom:10px}
+  .pf-grid{display:grid;gap:8px;grid-template-columns:1fr}
+  @media (min-width:560px){ .pf-grid{grid-template-columns:1fr 1fr} .pf-grid input:last-child{grid-column:1/-1} }
+  .pf-grid input{margin:0}
+  .pf-lab{font-size:11px;font-weight:900;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin:12px 0 6px}
+  .pf-opts{display:flex;flex-wrap:wrap;gap:6px}
+  .pf-opt{border:1.5px solid var(--line);background:var(--card);border-radius:999px;padding:7px 13px;
+    font-family:inherit;font-size:12px;font-weight:700;color:#3A3730;cursor:pointer;transition:all .18s ease}
+  .pf-opt:hover{border-color:rgba(107,70,193,.4)}
+  .pf-opt.on{background:linear-gradient(180deg,#8B5CF6,#6B46C1);color:#fff;border-color:transparent}
+  .pf-etat{font-size:11px;color:var(--muted);margin-top:11px;line-height:1.45}
+  .pf-etat.ok{color:#2E7D53;font-weight:800}
+  .pf-recap{display:flex;align-items:center;gap:10px}
+  .pf-recap b{display:block;font-size:13px}
+  .pf-recap span{display:block;font-size:11px;color:var(--muted);margin-top:1px}
+  .pf-recap button{margin-left:auto}
+
   /* — le bilan de fin de séance — */
   .fin-fiche{display:flex;flex-direction:column;gap:2px;background:rgba(107,70,193,.05);border-radius:12px;
     padding:9px 12px;margin-top:8px}
@@ -2590,6 +2608,7 @@
       <p style="font-size:10.5px;color:var(--muted);margin-top:8px">Les points mesurent ton travail : ils comptent pour les grades de l'Arène et les étapes franchies.</p>
     </div>
     <div class="card" id="prog-profil"></div>
+    <div class="card" id="p-profil"></div>
     <div class="card" id="p-code">
       <h3>⚔️ Accès illimité</h3>
       <div id="code-zone"></div>
@@ -2679,6 +2698,7 @@ function go(id){
   document.body.classList.toggle('in-arene', id==='arene');
   if(id==='profil'){ if(typeof renderSimCard==='function'){ renderSimCard(); renderAvancee(); } if(typeof renderProfilHead==='function') renderProfilHead();
     if(typeof renderCodeZone==='function') renderCodeZone();
+    if(typeof renderProfilForm==='function') renderProfilForm();
  }
   if(id==='agenda' && typeof renderAgenda==='function'){ renderAgenda(); }
   if((id==='home'||id==='arene') && typeof renderMissions==='function'){ renderMissions(); if(typeof renderQj==='function') renderQj(); if(typeof renderEcl==='function') renderEcl(); }
@@ -4747,6 +4767,75 @@ function renderMaitrise(){
     '<div class="mait-bar"><i style="width:'+Math.max(pct,m.sol?3:0)+'%"></i></div>'+
     '<p style="font-size:10.5px;color:var(--muted);margin-top:7px">Une notion devient solide après au moins 2 questions réussies dessus, avec plus de réussites que d\'erreurs. Tout compte : Arène, QCM du Jour, QCM de séance.</p>';
 }
+/* ═══ TON PROFIL — le compléter débloque une séance de Parcours SUPPLÉMENTAIRE
+   le jour même : on ne laisse pas l'élève sur sa faim au premier jour. ═══ */
+const PROF_CLASSES=['Seconde','Première','Terminale','Déjà en études'];
+const PROF_NOTES=['moins de 10','10 à 12','12 à 14','14 à 16','plus de 16'];
+const PROF_PROJETS=['Médecine','Pharmacie','Dentaire','Sage-femme','Kinésithérapie','Je ne sais pas encore'];
+function profilComplet(){
+  const P=S.profil||{};
+  return !!(localStorage.getItem('m4_prenom') && P.nom && P.tel && P.classe && P.notes && P.projet);
+}
+function renderProfilForm(){
+  const b=document.getElementById('p-profil'); if(!b) return;
+  const P=S.profil||{};
+  if(profilComplet() && !S.profilEdit){
+    b.innerHTML='<h3>👤 Ton profil</h3>'+
+      '<div class="pf-recap">'+
+        '<div><b>'+(localStorage.getItem('m4_prenom')||'')+' '+(P.nom||'')+'</b><span>'+(P.classe||'')+' · '+(P.projet||'')+'</span></div>'+
+        '<button class="blien" onclick="S.profilEdit=1;renderProfilForm()">modifier</button>'+
+      '</div>';
+    return;
+  }
+  const opts=(liste,val,champ)=>liste.map(o=>'<button class="pf-opt'+(val===o?' on':'')+'" onclick="majProfil(\''+champ+'\',\''+o.replace(/'/g,"\\'")+'\')">'+o+'</button>').join('');
+  b.innerHTML='<h3>👤 Ton profil</h3>'+
+    (S.bonusSeance===arDay()||S.profilFait
+      ? '<p class="pf-intro">Tes informations — elles servent à te reconnaître et à t\'accompagner.</p>'
+      : '<p class="pf-intro">Complète-le et je te débloque <b>une deuxième séance de Parcours aujourd\'hui</b> 🎁</p>')+
+    '<div class="pf-grid">'+
+      '<input class="field" id="pf-prenom" placeholder="Prénom" value="'+(localStorage.getItem('m4_prenom')||'')+'" oninput="majProfil(\'prenom\',this.value)">'+
+      '<input class="field" id="pf-nom" placeholder="Nom" value="'+(P.nom||'')+'" oninput="majProfil(\'nom\',this.value)">'+
+      '<input class="field" id="pf-tel" type="tel" placeholder="Téléphone" value="'+(P.tel||'')+'" oninput="majProfil(\'tel\',this.value)">'+
+    '</div>'+
+    '<p class="pf-lab">Ta classe</p><div class="pf-opts">'+opts(PROF_CLASSES,P.classe,'classe')+'</div>'+
+    '<p class="pf-lab">Ta moyenne générale, à peu près</p><div class="pf-opts">'+opts(PROF_NOTES,P.notes,'notes')+'</div>'+
+    '<p class="pf-lab">Ce que tu vises</p><div class="pf-opts">'+opts(PROF_PROJETS,P.projet,'projet')+'</div>'+
+    '<p class="pf-etat" id="pf-etat"></p>';
+  majEtatProfil();
+}
+function majProfil(champ,val){
+  S.profil=S.profil||{};
+  if(champ==='prenom'){ localStorage.setItem('m4_prenom',(val||'').trim()); if(typeof applyPrenom==='function') applyPrenom(); }
+  else S.profil[champ]=val;
+  saveS();
+  if(['classe','notes','projet'].includes(champ)) renderProfilForm();
+  else majEtatProfil();
+  verifBonusProfil();
+}
+function majEtatProfil(){
+  const e=document.getElementById('pf-etat'); if(!e) return;
+  const P=S.profil||{};
+  const manque=[];
+  if(!localStorage.getItem('m4_prenom')) manque.push('ton prénom');
+  if(!P.nom) manque.push('ton nom'); if(!P.tel) manque.push('ton téléphone');
+  if(!P.classe) manque.push('ta classe'); if(!P.notes) manque.push('ta moyenne'); if(!P.projet) manque.push('ton projet');
+  e.textContent = manque.length? 'Il manque encore : '+manque.join(', ')+'.' : 'Profil complet ✓';
+  e.className='pf-etat'+(manque.length?'':' ok');
+}
+function verifBonusProfil(){
+  if(!profilComplet() || S.profilFait) return;
+  S.profilFait=Date.now();
+  S.profilEdit=0;
+  /* LA RÉCOMPENSE : une séance de Parcours de plus, aujourd'hui même */
+  S.bonusSeance=arDay();
+  saveS();
+  if(typeof confettis==='function') confettis();
+  if(typeof son==='function') son('fanfare');
+  if(typeof toastAxo==='function') toastAxo('profil_complete');
+  renderProfilForm();
+  if(typeof renderSeance==='function') renderSeance();
+  setTimeout(()=>{ if(confirm('Profil complet 🎁 Une deuxième séance de Parcours vient de se débloquer pour aujourd\'hui. On y va ?')) go('home'); },900);
+}
 function renderProfilHead(){
   const h=document.getElementById('profil-hdr'); if(!h||!S.ar) return;
   const av=avatarOf(), ban=banniereOf();
@@ -5848,7 +5937,10 @@ SEANCES.forEach(s=>{ s.ligne=s.mat+' · 2 fiches + leurs questions · ~10 minute
 
 const MONDES=['Ce qu\'on ne te dit pas sur la P1','Le corps','La vie en petit','La matière','L\'arme secrète'];
 
-function seanceJourFaite(){ return !S.stage && S.sjour===arDay(); }
+/* une séance par jour — DEUX le jour où l'élève complète son profil */
+function seancesMaxJour(){ return 1 + ((S.bonusSeance===arDay())?1:0); }
+function seancesFaitesJour(){ return (S.sj && S.sj.day===arDay())? (S.sj.n||0) : 0; }
+function seanceJourFaite(){ return !S.stage && seancesFaitesJour()>=seancesMaxJour(); }
 function seanceCourante(){
   S.skip=S.skip||{};
   return SEANCES.find(s=>s.act && !(s.fait&&s.fait()) && !S.skip[s.id]) || null;
@@ -5931,6 +6023,17 @@ function renderSeance(){
     return;
   }
   const cur=seanceCourante();
+  if(cur && !seanceJourFaite() && seancesFaitesJour()>=1 && S.bonusSeance===arDay()){
+    /* la séance offerte par le profil complété */
+    b.innerHTML=dit('Séance bonus débloquée grâce à ton profil — on enchaîne ?','axo-guide-bravo')+
+      '<div class="se-sur">🎁 Ta séance bonus</div>'+
+      '<div class="se-titre">'+cur.titre+'</div>'+
+      '<div class="se-ligne">'+cur.ligne+'</div>'+
+      '<button class="gbtn" id="se-go">Commencer</button>'+
+      '<div class="se-next">Ensuite : '+prochainsTitres(2).join(' · ')+'</div>'+illu(cur);
+    document.getElementById('se-go').onclick=cur.act;
+    return;
+  }
   if(cur && !seanceJourFaite()){
     /* A1/B — la séance servie, jamais choisie */
     const premiere=!S.nodeDone;
@@ -6228,6 +6331,12 @@ function libreFin(){
     const enc2=document.getElementById('libre-encore'); enc2.style.display='block';
     enc2.textContent='Revenir à mon Parcours';
     enc2.onclick=()=>go('home');
+    /* première journée bouclée : on ouvre la porte de la Bibliothèque */
+    if((typeof seancesFaites==='function'?seancesFaites().length:0)<=2){
+      const c4=document.getElementById('libre-cont');
+      if(c4){ c4.style.display='block'; c4.textContent='📚 Découvrir la Bibliothèque';
+        c4.onclick=()=>go('biblio'); }
+    }
     { const c2=document.getElementById('libre-cont'); if(c2) c2.style.display='none'; }
     S.qcm=(S.qcm||0)+LB.qs.length; saveS();
     if(typeof son==='function') son('coffre');
@@ -6436,7 +6545,8 @@ function seanceCredit(){
   const s=SR.s;
   S.sdone=S.sdone||{}; S.sdone[s.id]=Date.now();   /* la date nourrit l'Agenda des J */
   if(s.rev){ delete S.revSeance; }            /* la révision s'efface une fois réparée */
-  else S.sjour=arDay();                       /* seule une séance du FIL consomme le jour */
+  else { S.sjour=arDay();                     /* seule une séance du FIL consomme le jour */
+    S.sj=(S.sj&&S.sj.day===arDay())?{day:arDay(),n:(S.sj.n||0)+1}:{day:arDay(),n:1}; }
   delete S.sr;                                 /* la séance finie n'est plus « en cours » */
   S.points=(S.points||0)+20; S.qcm=(S.qcm||0)+2;
   majStreak();
