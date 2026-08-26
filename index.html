@@ -782,21 +782,6 @@
   .tfly i{position:absolute;font-size:17px;font-style:normal;opacity:0;animation:tflyup 1.15s ease-in forwards}
   @keyframes tflyup{0%{opacity:0;transform:translate(0,0) scale(.8)}15%{opacity:1}100%{opacity:0;transform:translate(40vw,-62vh) scale(.5)}}
 
-  /* — L'Éclair : vrai/faux minute — */
-  .ec-time{margin-left:auto;font-variant-numeric:tabular-nums;font-weight:900;font-size:13px}
-  .ec-barbox{height:6px;border-radius:99px;background:rgba(107,70,193,.12);overflow:hidden;margin:4px 0 12px}
-  .ec-barbox i{display:block;height:100%;width:100%;background:linear-gradient(90deg,#FCD34D,#E29C5C);transition:width 1s linear}
-  .ec-btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
-  .ec-vrai,.ec-faux{border:none;cursor:pointer;font-family:Fredoka,Inter,sans-serif;font-weight:700;font-size:18px;
-    padding:18px;border-radius:16px;color:#fff}
-  .ec-vrai{background:linear-gradient(180deg,#4CAF7D,#2E7D53);box-shadow:0 3px 0 #1F5A3A}
-  .ec-faux{background:linear-gradient(180deg,#E07B6A,#C05B4D);box-shadow:0 3px 0 #8F4237}
-  .ec-vrai:active,.ec-faux:active{transform:translateY(2px);box-shadow:none}
-  #ec-card.okf{animation:ecok .3s ease}
-  #ec-card.kof{animation:ecko .3s ease}
-  @keyframes ecok{0%{box-shadow:0 0 0 3px rgba(46,125,83,.5)}100%{box-shadow:none}}
-  @keyframes ecko{0%{box-shadow:0 0 0 3px rgba(192,91,77,.45)}100%{box-shadow:none}}
-  .ec-combo{color:#B87A33;font-weight:900}
 
   /* — le message flottant de la mascotte — */
   .axotoast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom));transform:translateX(-50%);
@@ -1025,19 +1010,6 @@
   .amphi-tro{display:inline-flex;align-items:center;gap:6px;margin-top:9px;font-family:Fredoka,Inter,sans-serif;font-weight:600;
     font-size:13px;color:#4A3208;background:linear-gradient(180deg,#FCD34D,#E29C5C);border-radius:11px;padding:6px 13px}
   body.in-amphi .lobbytop .pcard{box-shadow:inset 0 1px 0 rgba(252,211,77,.2)}
-
-  /* — le QCM du Jour : la porte de 90 secondes — */
-  .qjcard{padding:10px 12px}
-  .qj-row{display:flex;align-items:center;gap:10px;cursor:pointer}
-  .qj-row.ok{cursor:default}
-  .qj-ic{font-size:22px;flex-shrink:0}
-  .qj-bd{flex:1;min-width:0}
-  .qj-bd b{font-size:13px;font-weight:800;display:block}
-  .qj-bd span{font-size:11px;color:var(--muted);line-height:1.4;display:block;margin-top:1px}
-  .qj-go{flex-shrink:0;font-family:Fredoka,Inter,sans-serif;font-weight:600;font-size:13px;color:#4A3208;
-    background:linear-gradient(180deg,#FCD34D,#E29C5C);border-radius:11px;padding:8px 16px;
-    box-shadow:0 2px 0 #B87A33, inset 0 1px 0 rgba(255,255,255,.5)}
-  .qj-row:active .qj-go{transform:translateY(1px);box-shadow:0 1px 0 #B87A33}
 
   /* — la bande compacte « Ta journée » — */
   .mjc{display:flex;align-items:center;gap:9px;width:100%;border:none;background:none;cursor:pointer;padding:2px 0;font-family:inherit}
@@ -2676,41 +2648,6 @@
     <div id="salle-corps"></div>
   </section>
 
-  <!-- ======= L'ÉCLAIR : 60 secondes de vrai/faux ======= -->
-  <section class="scr nonav" id="eclair">
-    <div class="lect-top"><button class="x" onclick="quitterEclair()" aria-label="Quitter">←</button><b style="font-size:14px;font-weight:800">⚡ L'Éclair</b><span class="ec-time" id="ec-time">60 s</span></div>
-    <div class="ec-barbox"><i id="ec-bar"></i></div>
-    <div id="ec-count" style="display:none;text-align:center;padding:40px 0">
-      <p style="font-family:Fredoka,Inter,sans-serif;font-size:16px;font-weight:600">Prépare-toi…</p>
-      <div class="cdnum" id="ec-count-n">3</div>
-      <p style="font-size:11.5px;color:var(--muted)">Bonne réponse +2 🏆 · erreur −2 🏆 — au barème de l'Arène, chaque matière vers son arène.</p>
-    </div>
-    <div id="ec-jeu">
-      <div class="card" id="ec-card" style="text-align:center">
-        <span class="pmat" id="ec-mat"></span>
-        <p id="ec-notion" style="font-size:12px;font-weight:900;color:var(--violet);margin-top:8px"></p>
-        <p id="ec-item" style="font-size:15px;font-weight:700;line-height:1.5;margin:8px 0 4px;min-height:88px"></p>
-        <p style="font-size:11px;color:var(--muted)">Score <b id="ec-score">0</b> <span id="ec-combo" class="ec-combo"></span></p>
-      </div>
-      <div class="ec-btns">
-        <button class="ec-vrai" onclick="ecRep(true)">VRAI</button>
-        <button class="ec-faux" onclick="ecRep(false)">FAUX</button>
-      </div>
-      <p style="font-size:10.5px;color:var(--muted);text-align:center;margin-top:10px">Juge chaque affirmation — c'est exactement le geste de l'Arène.</p>
-    </div>
-    <div id="ec-fin" style="display:none">
-      <div class="card" style="text-align:center">
-        <img src="img/moment-ascension-reussie.png" alt="" style="height:96px;margin:0 auto 8px;display:block" onerror="this.remove()">
-        <p style="font-family:Fredoka,Inter,sans-serif;font-size:18px;font-weight:600">Temps écoulé !</p>
-        <p id="ec-fin-s" style="font-size:12.5px;margin-top:6px;font-weight:800"></p>
-          <div id="ec-diag" style="text-align:left"></div>
-        <p id="ec-fin-r" style="font-size:11.5px;color:var(--muted);margin-top:6px;line-height:1.5"></p>
-        <button class="btn" style="margin-top:12px" onclick="startEclair()">Rejouer</button>
-        <button class="btn ghost" style="margin-top:8px" onclick="quitterEclair()">Retour à l'Arène</button>
-      </div>
-    </div>
-  </section>
-
   <!-- ======= L'AGENDA DES J ======= -->
   <section class="scr nonav" id="agenda">
     <div class="lect-top"><button class="x" onclick="go('biblio')" aria-label="Retour">←</button><b style="font-size:14px;font-weight:800">⏰ L'Agenda des J</b></div>
@@ -2795,7 +2732,7 @@
 <script>
 /* ================= Navigation & état ================= */
 const TABS=['home','arene','biblio','social','etapes','profil'];
-const BG_DE={arene:'arene',arun:'arene',argrade:'arene',arend:'arene',eclair:'arene',salle:'arene',
+const BG_DE={arene:'arene',arun:'arene',argrade:'arene',arend:'arene',salle:'arene',
   biblio:'biblio',agenda:'biblio',social:'social'};   /* tout le reste = ambiance Parcours */
 function setBg(id){
   /* la porte gère seule son image de fond (gate-tease) : aucune ambiance d'univers en plus */
@@ -2845,7 +2782,7 @@ function go(id){
     if(typeof renderProfilForm==='function') renderProfilForm();
  }
   if(id==='agenda' && typeof renderAgenda==='function'){ renderAgenda(); }
-  if((id==='home'||id==='arene') && typeof renderMissions==='function'){ renderMissions(); if(typeof renderQj==='function') renderQj(); if(typeof renderEcl==='function') renderEcl(); }
+  if((id==='home'||id==='arene') && typeof renderMissions==='function') renderMissions();
   if((id==='home'||id==='profil') && typeof renderProgression==='function') renderProgression();
   if(['home','arene','profil'].includes(id) && typeof verifSkins==='function') setTimeout(verifSkins,700);
   if(id==='home' && typeof renderParcours==='function'){ renderParcours(); }
@@ -4974,7 +4911,7 @@ function renderDiag(){
   const joue=MATS.some(m=>st[m].joue);
   let x='<h3>🩺 Ton diagnostic</h3>';
   if(!joue){
-    e.innerHTML=x+'<p style="font-size:12px;color:var(--muted);line-height:1.5">Joue à l\'Éclair et à l\'Arène : ton radar des matières et tes priorités de révision apparaîtront ici.</p>';
+    e.innerHTML=x+'<p style="font-size:12px;color:var(--muted);line-height:1.5">Entraîne-toi dans les Salles et dans le Grand Amphi : ton radar des matières et tes priorités de révision apparaîtront ici.</p>';
     return;
   }
   /* (le radar vit dans « Ton avancée » — ici : priorité et réussite) */
@@ -5018,7 +4955,7 @@ function renderMaitrise(){
   e.innerHTML='<h3>📚 Ta maîtrise</h3>'+
     '<p style="font-size:12.5px;font-weight:800">'+m.sol+' notion'+(m.sol>1?'s':'')+' solide'+(m.sol>1?'s':'')+' sur '+m.tot+'</p>'+
     '<div class="mait-bar"><i style="width:'+Math.max(pct,m.sol?3:0)+'%"></i></div>'+
-    '<p style="font-size:10.5px;color:var(--muted);margin-top:7px">Une notion devient solide après au moins 2 questions réussies dessus, avec plus de réussites que d\'erreurs. Tout compte : Arène, QCM du Jour, QCM de séance.</p>';
+    '<p style="font-size:10.5px;color:var(--muted);margin-top:7px">Une notion devient solide après au moins 2 questions réussies dessus, avec plus de réussites que d\'erreurs. Tout compte : les Salles comme le Grand Amphi.</p>';
 }
 /* ═══ TON PROFIL — le compléter débloque une séance de Parcours SUPPLÉMENTAIRE
    le jour même : on ne laisse pas l'élève sur sa faim au premier jour. ═══ */
@@ -5651,203 +5588,9 @@ function tutoEnd(){
   if(flTemp && typeof renderPtop==='function') renderPtop();   /* la flamme reprend son état réel */
 }
 
-/* ═══ L'ÉCLAIR — 60 secondes de vrai/faux. Un item à la fois : le réservoir,
-   c'est TOUS les items de la banque (210 questions × 5 = plus de 1 000 affirmations).
-   La première partie du jour rapporte (1 🏆 par bonne réponse, plafonné à 15) ;
-   ensuite on joue pour le record. ═══ */
-let EC=null, ecTimer=null, ecCd=null;
-const ECLAIR_SEUIL_FICHES=6;   /* ≈ 3 jours de Parcours : de quoi mélanger les matières */
-function eclairOuvrable(){
-  return Object.keys((typeof fichesArmees==='function')?fichesArmees():{}).length>=ECLAIR_SEUIL_FICHES;
-}
-function ecFaitAuj(){ return !!(S.ecl && S.ecl.day===arDay()); }
-/* un item n'entre dans l'Éclair que s'il se suffit à lui-même : les référents orphelins
-   (« Son rôle… », « Elle traverse… », « Cette paire… ») dépendent de l'énoncé d'origine */
-const EC_ORPHELIN=/^\s*(Il |Elle |Ils |Elles |Son |Sa |Ses |Ce |Cet |Cette |Leur |Leurs |Celui|Celle|Ceux|Cela |Ça |C'est (lui|elle)|On le |On la |On les )/;
-function ecPool(){
-  /* trois paniers par difficulté de la question d'origine : on démarre DOUX, ça monte */
-  const A=[],B=[],C=[];
-  const arm=(typeof fichesArmees==='function')?fichesArmees():{};
-  ABANK.forEach(q=>{ if(!arm[q.f]) return;              /* uniquement le déjà-vu du Parcours */
-    const cible=q.D<=950?A:(q.D<=1045?B:C);
-    q.it.forEach(it=>{ if(EC_ORPHELIN.test(it[1])) return;
-      cible.push({t:it[1], v:!!it[2], mat:q.mat, n:q.n, f:q.f, qid:q.id}); }); });
-  [A,B,C].forEach(arr=>{ for(let i=arr.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]]; } });
-  return [A,B,C];
-}
-function ecTire(){
-  const n=EC.count++;
-  let k;
-  if(n<8) k=0;
-  else if(n<16) k=Math.random()<0.5?0:1;
-  else { const r=Math.random(); k=r<0.2?0:(r<0.6?1:2); }
-  /* flux ÉQUILIBRÉ : vrai ou faux tiré à pile ou face — répondre au hasard ne rapporte rien */
-  const want=Math.random()<0.5;
-  for(let t=0;t<3;t++){
-    const P=EC.pools[(k+t)%3];
-    for(let i=P.length-1;i>=0;i--){ if(P[i].v===want){ const it=P[i]; P.splice(i,1); return it; } }
-  }
-  for(let t=0;t<3;t++){ const P=EC.pools[(k+t)%3]; if(P.length) return P.pop(); }
-  return null;
-}
-/* les trophées de l'Éclair : chaque matière crédite SON arène, avec les règles de l'Arène
-   (cadre −20/+60 par partie, planchers de grade et paliers dorés protégés) */
-/* les trophées de l'Éclair s'ajoutent au TOTAL GÉNÉRAL (pas à une arène particulière) :
-   le général = les 4 arènes + l'Éclair. Cadre −20/+60, planchers de grade protégés. */
-function eclCredit(parMat){
-  if(!S.ar) initAr();
-  let brut=0; Object.keys(parMat).forEach(m=>{ brut+=parMat[m]; });
-  let d=Math.max(-20,Math.min(60,brut));
-  const avant=S.ar.T;
-  const plancher=Math.max(GRADES[gradeIdx(avant)][0], S.ar.gold||0);
-  if(avant+d<plancher) d=plancher-avant;
-  S.ar.T=avant+d;
-  S.ar.Tmax=Math.max(S.ar.Tmax||0,S.ar.T);
-  S.ar.gold=Math.max(S.ar.gold||0, Math.floor(S.ar.T/GOLD)*GOLD, GRADES[gradeIdx(S.ar.T)][0]);
-  S.ar.wdt=(S.ar.wdt||0)+d;
-  histoSnap();
-  return d;
-}
-function startEclair(){
-  if(!eclairOuvrable()){ renderEcl(); go('arene'); return; }
-  if(ecFaitAuj() && !S.stage){ renderEcl(); go('arene'); return; }   /* une partie par jour — sauf année complète */
-  EC={pools:ecPool(),count:0,cur:null,score:0,ko:0,gain:0,combo:0,maxCombo:0,left:60,fini:false,err:{},
-      premier:!ecFaitAuj()};
-  EC.cur=ecTire();
-  document.getElementById('ec-jeu').style.display='none';
-  document.getElementById('ec-fin').style.display='none';
-  document.getElementById('ec-count').style.display='block';
-  const bx=document.getElementById('ec-bar'); if(bx) bx.style.width='100%';
-  const tx=document.getElementById('ec-time'); if(tx) tx.textContent='60 s';
-  go('eclair');
-  /* le décompte 3·2·1 avant de partir */
-  let n=3; const cn=document.getElementById('ec-count-n'); if(cn){ cn.textContent=n; cn.style.animation='none'; void cn.offsetWidth; cn.style.animation=''; }
-  son('tick');
-  clearInterval(ecCd);
-  ecCd=setInterval(()=>{
-    n--;
-    if(n<=0){ clearInterval(ecCd); ecLance(); return; }
-    son('tick');
-    if(cn){ cn.textContent=n; cn.style.animation='none'; void cn.offsetWidth; cn.style.animation=''; }
-  },1000);
-}
-function ecLance(){
-  son('go');
-  document.getElementById('ec-count').style.display='none';
-  document.getElementById('ec-jeu').style.display='block';
-  ecShow();
-  clearInterval(ecTimer);
-  ecTimer=setInterval(()=>{
-    if(!EC||EC.fini) return;
-    EC.left--;
-    const b2=document.getElementById('ec-bar'); if(b2) b2.style.width=Math.max(0,EC.left/60*100)+'%';
-    const t2=document.getElementById('ec-time'); if(t2) t2.textContent=Math.max(0,EC.left)+' s';
-    if(EC.left<=0) ecFin();
-  },1000);
-}
-function ecShow(){
-  const it=EC.cur; if(!it){ ecFin(); return; }
-  EC.verrou=Date.now()+850;   /* anti-mitraille : on lit avant de juger */
-  document.getElementById('ec-item').textContent=it.t;
-  document.getElementById('ec-mat').textContent=it.mat;
-  { const nn=document.getElementById('ec-notion'); if(nn) nn.textContent=it.n; }
-  document.getElementById('ec-score').textContent=EC.score;
-  document.getElementById('ec-combo').textContent=EC.combo>=2?('combo ×'+EC.combo):'';
-}
-function ecRep(v){
-  if(!EC||EC.fini||!EC.cur) return;
-  if(EC.verrou && Date.now()<EC.verrou) return;   /* trop tôt : lis l'affirmation */
-  const it=EC.cur, ok=(v===it.v);
-  EC.parMat=EC.parMat||{};
-  if(ok){ EC.score++; EC.combo++; EC.maxCombo=Math.max(EC.maxCombo,EC.combo); son('ok');
-    if(EC.premier) EC.parMat[it.mat]=(EC.parMat[it.mat]||0)+2; }
-  else { EC.ko++; EC.combo=0; son('ko');
-    if(EC.premier && S.ar && S.ar.n>=CAL_N) EC.parMat[it.mat]=(EC.parMat[it.mat]||0)-2;   /* calibration : on ne perd rien */
-    EC.err[it.n]=EC.err[it.n]||{c:0,f:it.f}; EC.err[it.n].c++;
-    if(S.ar && it.qid) S.ar.errs[it.qid]=Date.now(); }               /* nourrit la révision espacée de l'Arène */
-  const c=document.getElementById('ec-card');
-  if(c){ c.classList.remove('okf','kof'); void c.offsetWidth; c.classList.add(ok?'okf':'kof'); }
-  EC.cur=ecTire();
-  ecShow();
-}
-function ecFin(){
-  if(!EC||EC.fini) return;
-  EC.fini=true; clearInterval(ecTimer);
-  S.ecl=S.ecl||{}; const d=arDay();
-  let applique=0;
-  if(EC.premier){
-    applique=eclCredit(EC.parMat||{});
-    S.ecl.day=d; S.ecl.gain=applique;
-  }
-  S.ecl.best=Math.max(S.ecl.best||0,EC.score);
-  const gAvantEcl=(typeof gradeIdx==='function' && S.ar)?gradeIdx((S.ar.T||0)-applique):0;
-  const gApresEcl=(typeof gradeIdx==='function' && S.ar)?gradeIdx(S.ar.T||0):0;
-  /* le diagnostic CUMULÉ : ce qui pèche, partie après partie */
-  S.eclDiag=S.eclDiag||{};
-  Object.keys(EC.err).forEach(n=>{ S.eclDiag[n]=S.eclDiag[n]||{c:0,f:EC.err[n].f}; S.eclDiag[n].c+=EC.err[n].c; });
-  saveS(); son(EC.score>=15?'fanfare':'coffre');
-  if(applique>0) trophFly(Math.min(14,Math.max(4,Math.round(applique/4))));
-  document.getElementById('ec-jeu').style.display='none';
-  document.getElementById('ec-fin').style.display='block';
-  document.getElementById('ec-fin-s').textContent=EC.score+' bonne'+(EC.score>1?'s':'')+' réponse'+(EC.score>1?'s':'')+' · '+EC.ko+' erreur'+(EC.ko>1?'s':'')+' · combo ×'+EC.maxCombo+' · record '+(S.ecl.best||0);
-  if(gApresEcl>gAvantEcl){ son('fanfare');
-    const fs=document.getElementById('ec-fin-s');
-    if(fs) fs.textContent='🏆 Nouveau grade : '+GRADES[gApresEcl][1]+' ! · '+fs.textContent; }
-  document.getElementById('ec-fin-r').textContent = EC.premier
-    ? ((applique>=0?'+':'−')+Math.abs(applique)+' 🏆 — la partie comptée du jour, au barème de l\'Arène.')
-    : 'Partie pour le record — les trophées, c\'était la partie comptée du jour.';
-  const dg=document.getElementById('ec-diag');
-  if(dg){
-    const cum=Object.keys(S.eclDiag).sort((x,y)=>S.eclDiag[y].c-S.eclDiag[x].c);
-    if(cum.length){
-      let z='<p style="font-size:11px;font-weight:900;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin:10px 0 4px">🩺 À réviser en priorité</p>';
-      cum.slice(0,2).forEach(n=>{ const f=S.eclDiag[n].f, libre=f&&diagOuvrable(f);
-        z+='<div class="agj-row"><span class="agj-nom">'+n+'</span>'+
-        (libre?'<button class="blien" onclick="openFiche(\''+f+'\')">📄 réviser</button>':'')+'</div>'; });
-      const suite=cum.slice(2,5);
-      if(suite.length) z+='<p style="font-size:10.5px;color:var(--muted);margin-top:6px">Ensuite : '+suite.join(' · ')+'</p>';
-      z+='';
-      dg.innerHTML=z;
-    } else dg.innerHTML='<p style="font-size:11px;color:#2E7D53;font-weight:800;margin-top:10px">Aucun point faible repéré 👏</p>';
-  }
-  /* rejouer : réservé à l'année complète (une partie par jour sinon) */
-  const rj=document.querySelector('#ec-fin .btn:not(.ghost)');
-  if(rj) rj.style.display=S.stage?'':'none';
-  if(typeof renderEcl==='function') renderEcl();
-  if(typeof renderIdBar==='function') renderIdBar();
-}
-function renderEcl(){
-  const cibles=['ec-entree','ec-home'].map(id=>document.getElementById(id)).filter(Boolean);
-  if(!cibles.length) return;
-  const e={set innerHTML(v){ cibles.forEach(el=>el.innerHTML=v); }};
-  if(!eclairOuvrable()){
-    const n=Object.keys((typeof fichesArmees==='function')?fichesArmees():{}).length;
-    e.innerHTML='<div class="qj-row ok"><span class="qj-ic">⚡</span><div class="qj-bd"><b>L\'Éclair — verrouillé</b>'+
-      '<span>Il s\'ouvre après 3 jours de Parcours ('+n+'/'+ECLAIR_SEUIL_FICHES+' fiches) — 60 s de vrai/faux sur tout ce que tu as vu, toutes matières mêlées.</span></div></div>';
-    return;
-  }
-  const fait=ecFaitAuj();
-  e.innerHTML = !fait
-    ? '<div class="qj-row" onclick="startEclair()"><span class="qj-ic">⚡</span><div class="qj-bd"><b>L\'Éclair</b>'+
-      '<span>60 s de vrai/faux — ça démarre doux, ça monte · +2 par bonne, −2 par erreur, chaque matière vers son arène</span></div><span class="qj-go">Jouer</span></div>'
-    : (S.stage
-      ? '<div class="qj-row" onclick="startEclair()"><span class="qj-ic">⚡</span><div class="qj-bd"><b>L\'Éclair — record '+(S.ecl.best||0)+'</b>'+
-        '<span>Partie du jour comptée ('+((S.ecl.gain||0)>=0?'+':'−')+Math.abs(S.ecl.gain||0)+' 🏆) · rejoue pour le record</span></div><span class="qj-go">Rejouer</span></div>'
-      : '<div class="qj-row ok"><span class="qj-ic">⚡</span><div class="qj-bd"><b>L\'Éclair — fait ✓</b>'+
-        '<span>'+((S.ecl.gain||0)>=0?'+':'−')+Math.abs(S.ecl.gain||0)+' 🏆 aujourd\'hui · record '+(S.ecl.best||0)+' · à demain !</span></div></div>');
-}
-function trophFly(n){
-  const box=document.createElement('div'); box.className='tfly'; box.setAttribute('aria-hidden','true');
-  let s='';
-  for(let i=0;i<n;i++){ s+='<i style="left:'+(28+((i*37)%42))+'%;top:'+(38+((i*13)%22))+'%;animation-delay:'+(i*0.07).toFixed(2)+'s">🏆</i>'; }
-  box.innerHTML=s; document.body.appendChild(box);
-  setTimeout(()=>box.remove(),1800);
-}
-function quitterEclair(){ EC=null; clearInterval(ecTimer); clearInterval(ecCd); go('arene'); }
-
 /* ═══ LA VOIX DE LA MASCOTTE — 47 moments de vie, 4 variantes chacun, chaque réplique
    associée à sa pose. C'est elle qui accompagne l'élève d'un bout à l'autre de l'app. ═══ */
-const AXO_DIT={"accueil_premier_jour":{"pose":"axo-guide-bienvenue","lignes":["Salut, moi c'est __NOM__. Je reste avec toi tout le long. On commence doucement : deux fiches, et c'est tout.","Bienvenue. Moi c'est __NOM__. Ici on avance par petits pas, tous les jours. Pas de sprint, pas de panique.","Enchanté, moi c'est __NOM__. Tu n'as besoin de rien connaître pour commencer : on part de zéro, ensemble.","Moi c'est __NOM__, ton binôme de route. Première chose à faire : ouvrir ta première fiche. Le reste suivra."]},"accueil_retour":{"pose":"mascotte-arene-retour","lignes":["Te revoilà. Deux fiches t'attendent, ni plus ni moins.","Content de te voir. On reprend là où on s'est arrêtés.","Salut. Tu es là, c'est déjà l'essentiel. On y va ?","Bonjour. Hier est derrière, aujourd'hui est à écrire. Deux fiches et ta journée est faite."]},"accueil_serie_en_danger":{"pose":"axo-guide-pointe-haut","lignes":["Ta série tient encore aujourd'hui. Une séance suffit à la garder.","Petit rappel : il te reste la journée pour nourrir ta série. Dix minutes, ça passe.","Ta série a chaud. Une ascension ou une séance, et elle repart.","Rien n'est perdu pour ta série. Il te reste le temps qu'il faut."]},"seance_debut":{"pose":"axo-guide-carte","lignes":["Le programme du jour : deux fiches. Tu lis, tu écris de mémoire, tu compares. C'est tout.","On y va. Lecture d'abord, sans stylo. Tu écriras juste après.","Deux fiches, trois étapes. Tu n'as rien d'autre à gérer aujourd'hui.","Installe-toi. Aucun chronomètre ici, tu prends le temps qu'il te faut."]},"seance_fiche_lue":{"pose":"axo-fiche","lignes":["Fiche lue. Ne relis pas une deuxième fois : c'est le rappel qui fait tenir.","Voilà. Maintenant on ferme, et on voit ce qui reste dans ta tête.","Lecture terminée. Le vrai travail commence maintenant, pas avant.","Tu as tout lu. Relire rassure, écrire fait retenir. On écrit."]},"seance_deuxieme_fiche":{"pose":"axo-fiche","lignes":["Deuxième fiche, la dernière du jour. Même méthode : lire, écrire, comparer.","Plus qu'une. Tu connais le déroulé maintenant.","Fiche deux sur deux. Encore dix minutes et ta journée est faite.","On enchaîne avec la seconde. Même rythme, aucune raison de forcer."]},"seance_rappel_avant":{"pose":"axo-guide-pointe-haut","lignes":["Écris ce que tu retiens, sans regarder. Les trous font partie du travail.","À toi. Tout ce qui sort de ta tête compte, même en désordre.","Pas besoin d'être complet. Ce moment un peu inconfortable, c'est celui qui grave.","Vide ta mémoire sur la page. Approximatif vaut largement mieux que rien."]},"seance_rappel_apres":{"pose":"axo-mains","lignes":["C'est écrit, c'est gagné. Peu importe la quantité, tu viens de fournir l'effort utile.","Voilà le plus dur fait. Ce que tu as oublié, tu vas le voir tout de suite.","Bien. Ce petit effort-là, c'est exactement celui que la plupart des gens évitent.","Terminé. On va comparer maintenant, tranquillement et sans se juger."]},"seance_comparaison":{"pose":"axo-fiche","lignes":["Regarde les écarts sans t'en vouloir. Chaque oubli repéré est un oubli en moins.","Compare tranquillement. Ce que tu as raté aujourd'hui, tu le reverras.","Les trous que tu vois, ce sont tes prochaines révisions. Rien de plus.","Note ce qui manque. C'est la carte de ce qu'il te reste à travailler."]},"seance_terminee":{"pose":"axo-guide-bravo","lignes":["Séance bouclée. Deux fiches de plus dans ta tête, et une journée de gagnée.","C'est fait. Tu peux fermer l'application l'esprit tranquille.","Bravo, tu es allé au bout. C'est la régularité qui construit, pas les grosses journées.","Séance terminée. Demain, deux nouvelles fiches. Rien de plus, rien de moins."]},"vers_entrainement":{"pose":"axo-guide-pointe-bas","lignes":["Envie de tester ce que tu viens de lire ? Les Salles t'attendent, sans enjeu.","Tu peux t'arrêter là. Ou aller t'entraîner cinq minutes sur ce que tu viens de voir.","L'entraînement t'attend dans les Salles. Rien à perdre, c'est fait pour se tromper.","Petite suite possible : quelques questions sur tes fiches du jour."]},"entrainement_debut":{"pose":"mascotte-arene-prete-au-combat","lignes":["Ici, tu ne joues rien. Trompe-toi autant que tu veux, c'est même le but.","Entraînement sur ce que tu as déjà vu. Aucune conséquence, aucun classement.","On y va tranquillement. Une question, une correction, on avance.","Ces questions viennent de tes fiches. Si ça bloque, c'est une information utile."]},"entrainement_bon_score":{"pose":"mascotte-arene-bonne-reponse","lignes":["Solide. Ces notions-là, tu peux les considérer comme installées.","Très bien joué. Tu peux passer à autre chose, celles-ci sont acquises.","Beau passage. Le travail de tes fiches se voit directement ici.","Franchement bien. Garde ce rythme, il paye plus que les longues journées."]},"entrainement_score_moyen":{"pose":"axo-encourage","lignes":["Moitié-moitié, c'est normal à ce stade. Tu sais maintenant où creuser.","Correct. Les questions ratées reviendront, tu les auras la prochaine fois.","Ni excellent ni raté : juste une notion en cours d'installation.","C'est en train de rentrer. Reviens dans deux jours, tu verras la différence."]},"entrainement_faible":{"pose":"mascotte-arene-reponse-ratee","lignes":["Rude, mais tu viens d'apprendre exactement ce qui te manque. C'est utile.","Ça a piqué. C'est le signe que ces fiches méritent un deuxième passage.","Pas de panique : personne ne retient tout du premier coup. Vraiment personne.","Un résultat bas ne dit rien de ton niveau, juste de ta fraîcheur sur ce chapitre."]},"entrainement_trois_erreurs":{"pose":"mascotte-arene-reponse-ratee","lignes":["Trois de suite. Ce chapitre n'est pas encore posé : la fiche mérite un passage.","Ça enchaîne les ratés. Fais une pause d'une minute, ça débloque souvent.","Trois erreurs d'affilée : ce n'est pas toi, c'est la notion qui est neuve.","Bloqué là-dessus ? Relis la fiche, puis reviens. Ça ira beaucoup mieux."]},"salles_toutes_fermees":{"pose":"axo-guide-carte","lignes":["Les Salles s'ouvrent avec tes fiches. Fais ta première séance, et elles s'allument.","Rien à s'entraîner encore : on ne t'interroge que sur ce que tu as lu.","Encore vide ici. Une séance de Parcours, et la première salle ouvre.","Les quatre salles attendent tes fiches. Le Parcours d'abord, l'entraînement ensuite."]},"salle_ouverte_premiere_fois":{"pose":"axo-guide-bienvenue","lignes":["Première salle ouverte. Ici on s'entraîne sur tes fiches, sans enjeu et sans limite.","Ça y est, tu as de quoi t'entraîner. Autant de fois que tu veux.","Une salle vient de s'ouvrir. Elle grandira à chaque nouvelle fiche.","Ta première salle est prête. Entre, essaye, rate : rien n'est compté ici."]},"salles_accueil":{"pose":"axo-guide-carte","lignes":["Tes salles s'agrandissent à chaque séance. Choisis celle que tu veux revoir.","Ici, rien n'est compté. Tu peux refaire les mêmes questions autant de fois que tu veux.","Les flèches ou le glissement, comme tu préfères : c'est la salle du milieu que tu ouvres.","Toutes tes fiches travaillées sont rangées là-dedans, matière par matière."]},"salle_entree":{"pose":"axo-guide-pointe-bas","lignes":["Deux façons de t'entraîner : au hasard, ou une fiche précise. Les deux se valent.","Au hasard pour tester ta mémoire, fiche par fiche pour réparer un trou. À toi de voir.","Rien n'est compté ici. Trompe-toi tant que tu veux, c'est même le meilleur moment pour ça.","Tire au sort si tu veux du neuf, choisis ta fiche si tu sais déjà où ça coince."]},"amphi_verrouille":{"pose":"mascotte-arene-chrono","lignes":["Le Grand Amphi ouvre après quatre jours de Parcours. Le temps de te poser des bases.","Pas encore l'Amphi. On y va quand tu as de quoi répondre, pas avant.","Encore un peu de patience : quatre jours de Parcours et les portes s'ouvrent.","L'Amphi mélange toutes les matières. Autant y arriver avec quelques fiches en tête."]},"amphi_debloque":{"pose":"axo-guide-bienvenue","fond":"moment-nouvelle-arene","lignes":["Le Grand Amphi t'ouvre ses portes. Toutes les matières mêlées, deux ascensions par jour.","Tu as tenu quatre jours : l'Amphi est à toi. Là, chaque réponse compte.","Les portes sont ouvertes. Vas-y sans pression, la première fois sert surtout à voir.","Nouvel endroit débloqué. C'est plus exigeant, et c'est pour ça que c'est intéressant."]},"amphi_avant_ascension":{"pose":"mascotte-arene-prete-au-combat","lignes":["Dix questions. Prends ton temps sur chacune, la précipitation coûte plus que le doute.","Respire un coup. Tu as le droit de ne pas savoir, ça arrivera à tout le monde.","C'est parti. Lis chaque proposition jusqu'au bout avant de valider.","Deux ascensions par jour, celle-ci est la tienne. Concentre-toi, sans te crisper."]},"ascension_bonne_reponse":{"pose":"mascotte-arene-bonne-reponse","lignes":["Exact. C'est ton travail de fiche qui remonte.","Bien vu. Chaque case juste fait monter ton compteur.","Juste, et bien juste. On enchaîne.","Ça, tu le savais. Question suivante."]},"ascension_erreur":{"pose":"mascotte-arene-reponse-ratee","lignes":["Ratée. Lis bien la correction, c'est là que tout se joue.","Non, mais tu viens de repérer un trou. Elle reviendra dans quelques jours.","Erreur classique. Beaucoup tombent dedans, toi tu ne referas plus.","Pas grave. Une case fausse ne change rien à ta trajectoire."]},"ascension_derniere_question":{"pose":"mascotte-arene-chrono","lignes":["Dernière question. Dix secondes de plus valent mieux qu'un clic pressé.","La dernière. Relis l'énoncé une fois avant de valider.","Plus qu'une. Termine-la proprement, le bilan arrive juste après.","Fin d'ascension. Celle-ci mérite autant d'attention que la première."]},"ascension_terminee_forte":{"pose":"axo-guide-bravo","fond":"moment-ascension-reussie","lignes":["Grosse ascension. Ce niveau-là vient directement de ta régularité.","Vraiment solide. Tu peux être content de toi ce soir.","Belle ascension. Rien de magique là-dedans : ce sont tes séances qui parlent.","Excellent passage. Note quand même tes deux erreurs, elles valent de l'or."]},"ascension_terminee_moyenne":{"pose":"axo-encourage","lignes":["Ascension honnête. Les questions ratées reviendront, c'est prévu.","Correct. Regarde tes erreurs deux minutes, ça vaut dix minutes de relecture.","Tu tiens la route. Ce qui compte, c'est la pente sur plusieurs semaines.","Journée moyenne, et alors ? C'est un point de départ, pas un verdict."]},"ascension_terminee_difficile":{"pose":"axo-mains","fond":"moment-ascension-difficile","lignes":["Ascension difficile. Ça arrive à tout le monde, et ça ne dit rien de la suite.","Dure, celle-là. Les notions étaient neuves : c'est normal, pas grave.","Résultat bas, effort réel. Tu as quand même appris quelque chose aujourd'hui.","Ce genre de journée existe. Demain, deux fiches, et on repart."]},"ascension_abandonnee":{"pose":"axo-mains","lignes":["Ascension arrêtée. Ce que tu as joué est compté, le reste ne te coûte rien.","Tu as coupé en route. C'est parfois la bonne décision, franchement.","Arrêtée. Reviens quand ta tête est disponible, ça ira mieux.","Pas le bon moment ? Les Salles sont là, elles ne demandent rien."]},"ascensions_epuisees":{"pose":"mascotte-arene-ascensions-epuisees","lignes":["Deux ascensions faites, c'est fini pour aujourd'hui. Repose ta tête, elle trie.","Plus d'ascension aujourd'hui. C'est voulu : le cerveau apprend aussi à l'arrêt.","Tu as tout donné pour aujourd'hui. Les Salles restent ouvertes si tu veux continuer.","Compteur à zéro jusqu'à demain. Deux par jour, c'est déjà beaucoup."]},"premiere_ascension_terminee":{"pose":"axo-guide-bravo","lignes":["Première ascension bouclée. Peu importe le résultat, tu sais à quoi ça ressemble.","Ça y est, tu es entré dans l'Amphi. Le plus dur était de cliquer.","Première fois faite. Les suivantes seront plus lisibles, tu verras.","Baptême terminé. Personne ne brille à sa première ascension, personne."]},"grade_franchi":{"pose":"mascotte-arene-grade-franchi","fond":"moment-grade-franchi","lignes":["Nouveau grade. Personne ne pourra te le reprendre.","Tu changes de grade. C'est la somme de tes journées, pas un coup de chance.","Grade franchi. Prends une seconde pour le regarder, tu l'as construit.","Tu montes d'un cran. Ce sont tes petites séances mises bout à bout."]},"classement_semaine":{"pose":"mascotte-arene-classement","fond":"moment-classement-semaine","lignes":["Voilà ce que tu as gagné cette semaine. Tes trophées, eux, ne redescendent jamais.","Ton bilan de la semaine. Ne le compare qu'à celui de la semaine dernière.","Semaine terminée. Peu importe le chiffre, il vient de tes journées.","Une semaine de plus au compteur. C'est la ligne du temps qui compte, pas la case."]},"trophee_debloque":{"pose":"axo-guide-bravo","lignes":["Récompense débloquée. Tu ne la cherchais même pas, c'est ce qui la rend bonne.","Nouvelle récompense. Regarde-la, elle raconte quelque chose de ton travail.","Une de plus dans ta collection. Elle reste sur ton profil, définitivement.","Débloqué. Petite récompense pour une habitude qui, elle, vaut cher."]},"qcm_du_jour_propose":{"pose":"axo-guide-pointe-haut","lignes":["Une question, la même pour tout le monde aujourd'hui. Trente secondes suffisent.","La question du jour t'attend. Même si tu n'as pas vu le chapitre, tente.","Une seule question aujourd'hui. Petite habitude, gros effet sur la durée.","Trente secondes de curiosité, ça se trouve toujours. Elle t'attend dans l'Arène."]},"qcm_du_jour_reussi":{"pose":"mascotte-arene-bonne-reponse","lignes":["Juste. Bien joué, à demain pour la suivante.","Trouvée. Une de plus, et ta série avance.","Exact. Certains ont séché dessus, pas toi.","Bonne réponse. C'est court, mais ça compte autant que le reste."]},"qcm_du_jour_rate":{"pose":"mascotte-arene-reponse-ratee","lignes":["Ratée, et alors ? Tu connais la réponse maintenant, c'était le but.","Non. Mais tu retiendras mieux celle-ci que trois que tu aurais eues juste.","Perdue pour aujourd'hui. Lis la correction, elle vaut la question.","Manquée. Une question par jour, ça fait aussi des jours où on se trompe."]},"eclair_verrouille":{"pose":"mascotte-arene-chrono","lignes":["L'Éclair arrive plus tard. Le vrai ou faux en vitesse demande des bases posées.","Encore fermé. Avance dans ton Parcours, l'Éclair s'ouvrira tout seul.","Pas maintenant. Ce format va vite, mieux vaut y venir avec des réflexes.","L'Éclair attend son heure. La vitesse vient après la compréhension, jamais avant."]},"eclair_record":{"pose":"axo-guide-bravo","lignes":["Meilleur résultat battu. Tes réflexes se construisent, ça se voit.","Tu viens de te dépasser. Contre toi-même : la seule comparaison qui compte.","Nouveau sommet personnel. Soixante secondes bien utilisées.","Tu montes en vitesse. Signe que les notions deviennent automatiques."]},"serie_perdue":{"pose":"axo-mains","lignes":["Série repartie à zéro. Ce que tu as appris pendant ces jours-là, lui, reste.","Tu as coupé ta série. Ce n'est pas un échec, c'est un compteur.","Le compteur retombe, pas ton niveau. On en relance une aujourd'hui ?","Une série cassée, ça se remplace. On en recommence une aujourd'hui, sans se retourner."]},"serie_palier":{"pose":"axo-guide-bravo","lignes":["Nouveau palier de série. Tenir dans la durée, c'est le plus dur, et tu le fais.","Ta série franchit un cap. La régularité bat le travail intense à tous les coups.","Beau compteur. Ces jours-là s'additionnent bien plus que tu ne le crois.","Palier atteint. Ce n'est pas de la chance, c'est une habitude installée."]},"profil_incomplet":{"pose":"axo-guide-pointe-bas","lignes":["Il te manque le point de départ. Deux minutes de questions, et ton profil se remplit tout seul.","Ton profil est à moitié rempli. Le point de départ s'occupe du reste, en deux minutes.","Fais le point quand tu veux : tes chances réelles, et une séance de Parcours de plus aujourd'hui.","Le point de départ t'attend. Rien d'urgent — mais il ouvre tes deux fiches suivantes tout de suite."]},"profil_complete":{"pose":"mascotte-arene-retour","lignes":["Profil complet. On sait à qui on parle — c'est tout ce qu'il fallait.","C'est réglé. Concentre-toi sur le travail, je m'occupe du reste.","Merci, tout est en ordre. On retourne aux fiches ?","Voilà, tu existes officiellement ici. Bienvenue pour de bon."]},"bibliotheque_arrivee":{"pose":"axo-guide-carte","lignes":["La Bibliothèque est en accès libre. Fiches, panoramas, métiers : tu prends ce qui t'attire.","Ici, rien n'est imposé. De la curiosité, c'est aussi comme ça qu'on apprend.","Bienvenue dans la Bibliothèque. Aucun compteur ici, juste de la lecture.","Tu peux te promener. Cinq minutes de curiosité valent mieux qu'une heure forcée."]},"nouvelle_matiere":{"pose":"axo-guide-carte","lignes":["Nouvelle matière au programme. Les premiers jours sont toujours flous, c'est normal.","Tu ouvres un nouveau chapitre de ton Parcours. On repart doucement.","Terrain neuf. Ne cherche pas à tout retenir aujourd'hui.","Changement de matière. Ton cerveau râle deux jours, puis il s'habitue."]},"session_tard_le_soir":{"pose":"axo-mains","lignes":["Il est tard. Une fiche vaut mieux que deux si tu tombes de sommeil.","Séance de nuit ? D'accord, mais dormir fait partie de la méthode.","Tard, mais tu es là. Fais court ce soir, tu seras plus efficace demain.","À cette heure-ci, la mémoire fixe mal. Vas-y doucement, ou garde ça pour demain."]},"journee_deja_terminee":{"pose":"axo-mains","lignes":["Tout est fait pour aujourd'hui. Tu peux fermer, c'est mérité.","Ta journée est complète. En rajouter ne rapporte rien, sauf de la fatigue.","Rien ne t'attend jusqu'à demain. Profite du reste de ta soirée.","Journée bouclée. S'arrêter au bon moment fait partie du travail."]},"retour_apres_absence":{"pose":"mascotte-arene-retour","lignes":["Ça faisait un moment. On ne rattrape rien, on reprend simplement : deux fiches.","Te revoilà. Aucun reproche ici, juste la suite de la route.","Content de te retrouver. Le Parcours t'attendait là où tu l'as laissé.","Absent quelques jours, et alors ? Ce qui compte, c'est que tu sois revenu."]}};
+const AXO_DIT={"accueil_premier_jour":{"pose":"axo-guide-bienvenue","lignes":["Salut, moi c'est __NOM__. Je reste avec toi tout le long. On commence doucement : deux fiches, et c'est tout.","Bienvenue. Moi c'est __NOM__. Ici on avance par petits pas, tous les jours. Pas de sprint, pas de panique.","Enchanté, moi c'est __NOM__. Tu n'as besoin de rien connaître pour commencer : on part de zéro, ensemble.","Moi c'est __NOM__, ton binôme de route. Première chose à faire : ouvrir ta première fiche. Le reste suivra."]},"accueil_retour":{"pose":"mascotte-arene-retour","lignes":["Te revoilà. Deux fiches t'attendent, ni plus ni moins.","Content de te voir. On reprend là où on s'est arrêtés.","Salut. Tu es là, c'est déjà l'essentiel. On y va ?","Bonjour. Hier est derrière, aujourd'hui est à écrire. Deux fiches et ta journée est faite."]},"accueil_serie_en_danger":{"pose":"axo-guide-pointe-haut","lignes":["Ta série tient encore aujourd'hui. Une séance suffit à la garder.","Petit rappel : il te reste la journée pour nourrir ta série. Dix minutes, ça passe.","Ta série a chaud. Une ascension ou une séance, et elle repart.","Rien n'est perdu pour ta série. Il te reste le temps qu'il faut."]},"seance_debut":{"pose":"axo-guide-carte","lignes":["Le programme du jour : deux fiches. Tu lis, tu écris de mémoire, tu compares. C'est tout.","On y va. Lecture d'abord, sans stylo. Tu écriras juste après.","Deux fiches, trois étapes. Tu n'as rien d'autre à gérer aujourd'hui.","Installe-toi. Aucun chronomètre ici, tu prends le temps qu'il te faut."]},"seance_fiche_lue":{"pose":"axo-fiche","lignes":["Fiche lue. Ne relis pas une deuxième fois : c'est le rappel qui fait tenir.","Voilà. Maintenant on ferme, et on voit ce qui reste dans ta tête.","Lecture terminée. Le vrai travail commence maintenant, pas avant.","Tu as tout lu. Relire rassure, écrire fait retenir. On écrit."]},"seance_deuxieme_fiche":{"pose":"axo-fiche","lignes":["Deuxième fiche, la dernière du jour. Même méthode : lire, écrire, comparer.","Plus qu'une. Tu connais le déroulé maintenant.","Fiche deux sur deux. Encore dix minutes et ta journée est faite.","On enchaîne avec la seconde. Même rythme, aucune raison de forcer."]},"seance_rappel_avant":{"pose":"axo-guide-pointe-haut","lignes":["Écris ce que tu retiens, sans regarder. Les trous font partie du travail.","À toi. Tout ce qui sort de ta tête compte, même en désordre.","Pas besoin d'être complet. Ce moment un peu inconfortable, c'est celui qui grave.","Vide ta mémoire sur la page. Approximatif vaut largement mieux que rien."]},"seance_rappel_apres":{"pose":"axo-mains","lignes":["C'est écrit, c'est gagné. Peu importe la quantité, tu viens de fournir l'effort utile.","Voilà le plus dur fait. Ce que tu as oublié, tu vas le voir tout de suite.","Bien. Ce petit effort-là, c'est exactement celui que la plupart des gens évitent.","Terminé. On va comparer maintenant, tranquillement et sans se juger."]},"seance_comparaison":{"pose":"axo-fiche","lignes":["Regarde les écarts sans t'en vouloir. Chaque oubli repéré est un oubli en moins.","Compare tranquillement. Ce que tu as raté aujourd'hui, tu le reverras.","Les trous que tu vois, ce sont tes prochaines révisions. Rien de plus.","Note ce qui manque. C'est la carte de ce qu'il te reste à travailler."]},"seance_terminee":{"pose":"axo-guide-bravo","lignes":["Séance bouclée. Deux fiches de plus dans ta tête, et une journée de gagnée.","C'est fait. Tu peux fermer l'application l'esprit tranquille.","Bravo, tu es allé au bout. C'est la régularité qui construit, pas les grosses journées.","Séance terminée. Demain, deux nouvelles fiches. Rien de plus, rien de moins."]},"vers_entrainement":{"pose":"axo-guide-pointe-bas","lignes":["Envie de tester ce que tu viens de lire ? Les Salles t'attendent, sans enjeu.","Tu peux t'arrêter là. Ou aller t'entraîner cinq minutes sur ce que tu viens de voir.","L'entraînement t'attend dans les Salles. Rien à perdre, c'est fait pour se tromper.","Petite suite possible : quelques questions sur tes fiches du jour."]},"entrainement_debut":{"pose":"mascotte-arene-prete-au-combat","lignes":["Ici, tu ne joues rien. Trompe-toi autant que tu veux, c'est même le but.","Entraînement sur ce que tu as déjà vu. Aucune conséquence, aucun classement.","On y va tranquillement. Une question, une correction, on avance.","Ces questions viennent de tes fiches. Si ça bloque, c'est une information utile."]},"entrainement_bon_score":{"pose":"mascotte-arene-bonne-reponse","lignes":["Solide. Ces notions-là, tu peux les considérer comme installées.","Très bien joué. Tu peux passer à autre chose, celles-ci sont acquises.","Beau passage. Le travail de tes fiches se voit directement ici.","Franchement bien. Garde ce rythme, il paye plus que les longues journées."]},"entrainement_score_moyen":{"pose":"axo-encourage","lignes":["Moitié-moitié, c'est normal à ce stade. Tu sais maintenant où creuser.","Correct. Les questions ratées reviendront, tu les auras la prochaine fois.","Ni excellent ni raté : juste une notion en cours d'installation.","C'est en train de rentrer. Reviens dans deux jours, tu verras la différence."]},"entrainement_faible":{"pose":"mascotte-arene-reponse-ratee","lignes":["Rude, mais tu viens d'apprendre exactement ce qui te manque. C'est utile.","Ça a piqué. C'est le signe que ces fiches méritent un deuxième passage.","Pas de panique : personne ne retient tout du premier coup. Vraiment personne.","Un résultat bas ne dit rien de ton niveau, juste de ta fraîcheur sur ce chapitre."]},"entrainement_trois_erreurs":{"pose":"mascotte-arene-reponse-ratee","lignes":["Trois de suite. Ce chapitre n'est pas encore posé : la fiche mérite un passage.","Ça enchaîne les ratés. Fais une pause d'une minute, ça débloque souvent.","Trois erreurs d'affilée : ce n'est pas toi, c'est la notion qui est neuve.","Bloqué là-dessus ? Relis la fiche, puis reviens. Ça ira beaucoup mieux."]},"salles_toutes_fermees":{"pose":"axo-guide-carte","lignes":["Les Salles s'ouvrent avec tes fiches. Fais ta première séance, et elles s'allument.","Rien à s'entraîner encore : on ne t'interroge que sur ce que tu as lu.","Encore vide ici. Une séance de Parcours, et la première salle ouvre.","Les quatre salles attendent tes fiches. Le Parcours d'abord, l'entraînement ensuite."]},"salle_ouverte_premiere_fois":{"pose":"axo-guide-bienvenue","lignes":["Première salle ouverte. Ici on s'entraîne sur tes fiches, sans enjeu et sans limite.","Ça y est, tu as de quoi t'entraîner. Autant de fois que tu veux.","Une salle vient de s'ouvrir. Elle grandira à chaque nouvelle fiche.","Ta première salle est prête. Entre, essaye, rate : rien n'est compté ici."]},"salles_accueil":{"pose":"axo-guide-carte","lignes":["Tes salles s'agrandissent à chaque séance. Choisis celle que tu veux revoir.","Ici, rien n'est compté. Tu peux refaire les mêmes questions autant de fois que tu veux.","Les flèches ou le glissement, comme tu préfères : c'est la salle du milieu que tu ouvres.","Toutes tes fiches travaillées sont rangées là-dedans, matière par matière."]},"salle_entree":{"pose":"axo-guide-pointe-bas","lignes":["Deux façons de t'entraîner : au hasard, ou une fiche précise. Les deux se valent.","Au hasard pour tester ta mémoire, fiche par fiche pour réparer un trou. À toi de voir.","Rien n'est compté ici. Trompe-toi tant que tu veux, c'est même le meilleur moment pour ça.","Tire au sort si tu veux du neuf, choisis ta fiche si tu sais déjà où ça coince."]},"amphi_verrouille":{"pose":"mascotte-arene-chrono","lignes":["Le Grand Amphi ouvre après quatre jours de Parcours. Le temps de te poser des bases.","Pas encore l'Amphi. On y va quand tu as de quoi répondre, pas avant.","Encore un peu de patience : quatre jours de Parcours et les portes s'ouvrent.","L'Amphi mélange toutes les matières. Autant y arriver avec quelques fiches en tête."]},"amphi_debloque":{"pose":"axo-guide-bienvenue","fond":"moment-nouvelle-arene","lignes":["Le Grand Amphi t'ouvre ses portes. Toutes les matières mêlées, deux ascensions par jour.","Tu as tenu quatre jours : l'Amphi est à toi. Là, chaque réponse compte.","Les portes sont ouvertes. Vas-y sans pression, la première fois sert surtout à voir.","Nouvel endroit débloqué. C'est plus exigeant, et c'est pour ça que c'est intéressant."]},"amphi_avant_ascension":{"pose":"mascotte-arene-prete-au-combat","lignes":["Dix questions. Prends ton temps sur chacune, la précipitation coûte plus que le doute.","Respire un coup. Tu as le droit de ne pas savoir, ça arrivera à tout le monde.","C'est parti. Lis chaque proposition jusqu'au bout avant de valider.","Deux ascensions par jour, celle-ci est la tienne. Concentre-toi, sans te crisper."]},"ascension_bonne_reponse":{"pose":"mascotte-arene-bonne-reponse","lignes":["Exact. C'est ton travail de fiche qui remonte.","Bien vu. Chaque case juste fait monter ton compteur.","Juste, et bien juste. On enchaîne.","Ça, tu le savais. Question suivante."]},"ascension_erreur":{"pose":"mascotte-arene-reponse-ratee","lignes":["Ratée. Lis bien la correction, c'est là que tout se joue.","Non, mais tu viens de repérer un trou. Elle reviendra dans quelques jours.","Erreur classique. Beaucoup tombent dedans, toi tu ne referas plus.","Pas grave. Une case fausse ne change rien à ta trajectoire."]},"ascension_derniere_question":{"pose":"mascotte-arene-chrono","lignes":["Dernière question. Dix secondes de plus valent mieux qu'un clic pressé.","La dernière. Relis l'énoncé une fois avant de valider.","Plus qu'une. Termine-la proprement, le bilan arrive juste après.","Fin d'ascension. Celle-ci mérite autant d'attention que la première."]},"ascension_terminee_forte":{"pose":"axo-guide-bravo","fond":"moment-ascension-reussie","lignes":["Grosse ascension. Ce niveau-là vient directement de ta régularité.","Vraiment solide. Tu peux être content de toi ce soir.","Belle ascension. Rien de magique là-dedans : ce sont tes séances qui parlent.","Excellent passage. Note quand même tes deux erreurs, elles valent de l'or."]},"ascension_terminee_moyenne":{"pose":"axo-encourage","lignes":["Ascension honnête. Les questions ratées reviendront, c'est prévu.","Correct. Regarde tes erreurs deux minutes, ça vaut dix minutes de relecture.","Tu tiens la route. Ce qui compte, c'est la pente sur plusieurs semaines.","Journée moyenne, et alors ? C'est un point de départ, pas un verdict."]},"ascension_terminee_difficile":{"pose":"axo-mains","fond":"moment-ascension-difficile","lignes":["Ascension difficile. Ça arrive à tout le monde, et ça ne dit rien de la suite.","Dure, celle-là. Les notions étaient neuves : c'est normal, pas grave.","Résultat bas, effort réel. Tu as quand même appris quelque chose aujourd'hui.","Ce genre de journée existe. Demain, deux fiches, et on repart."]},"ascension_abandonnee":{"pose":"axo-mains","lignes":["Ascension arrêtée. Ce que tu as joué est compté, le reste ne te coûte rien.","Tu as coupé en route. C'est parfois la bonne décision, franchement.","Arrêtée. Reviens quand ta tête est disponible, ça ira mieux.","Pas le bon moment ? Les Salles sont là, elles ne demandent rien."]},"ascensions_epuisees":{"pose":"mascotte-arene-ascensions-epuisees","lignes":["Deux ascensions faites, c'est fini pour aujourd'hui. Repose ta tête, elle trie.","Plus d'ascension aujourd'hui. C'est voulu : le cerveau apprend aussi à l'arrêt.","Tu as tout donné pour aujourd'hui. Les Salles restent ouvertes si tu veux continuer.","Compteur à zéro jusqu'à demain. Deux par jour, c'est déjà beaucoup."]},"premiere_ascension_terminee":{"pose":"axo-guide-bravo","lignes":["Première ascension bouclée. Peu importe le résultat, tu sais à quoi ça ressemble.","Ça y est, tu es entré dans l'Amphi. Le plus dur était de cliquer.","Première fois faite. Les suivantes seront plus lisibles, tu verras.","Baptême terminé. Personne ne brille à sa première ascension, personne."]},"grade_franchi":{"pose":"mascotte-arene-grade-franchi","fond":"moment-grade-franchi","lignes":["Nouveau grade. Personne ne pourra te le reprendre.","Tu changes de grade. C'est la somme de tes journées, pas un coup de chance.","Grade franchi. Prends une seconde pour le regarder, tu l'as construit.","Tu montes d'un cran. Ce sont tes petites séances mises bout à bout."]},"classement_semaine":{"pose":"mascotte-arene-classement","fond":"moment-classement-semaine","lignes":["Voilà ce que tu as gagné cette semaine. Tes trophées, eux, ne redescendent jamais.","Ton bilan de la semaine. Ne le compare qu'à celui de la semaine dernière.","Semaine terminée. Peu importe le chiffre, il vient de tes journées.","Une semaine de plus au compteur. C'est la ligne du temps qui compte, pas la case."]},"trophee_debloque":{"pose":"axo-guide-bravo","lignes":["Récompense débloquée. Tu ne la cherchais même pas, c'est ce qui la rend bonne.","Nouvelle récompense. Regarde-la, elle raconte quelque chose de ton travail.","Une de plus dans ta collection. Elle reste sur ton profil, définitivement.","Débloqué. Petite récompense pour une habitude qui, elle, vaut cher."]},"serie_perdue":{"pose":"axo-mains","lignes":["Série repartie à zéro. Ce que tu as appris pendant ces jours-là, lui, reste.","Tu as coupé ta série. Ce n'est pas un échec, c'est un compteur.","Le compteur retombe, pas ton niveau. On en relance une aujourd'hui ?","Une série cassée, ça se remplace. On en recommence une aujourd'hui, sans se retourner."]},"serie_palier":{"pose":"axo-guide-bravo","lignes":["Nouveau palier de série. Tenir dans la durée, c'est le plus dur, et tu le fais.","Ta série franchit un cap. La régularité bat le travail intense à tous les coups.","Beau compteur. Ces jours-là s'additionnent bien plus que tu ne le crois.","Palier atteint. Ce n'est pas de la chance, c'est une habitude installée."]},"profil_incomplet":{"pose":"axo-guide-pointe-bas","lignes":["Il te manque le point de départ. Deux minutes de questions, et ton profil se remplit tout seul.","Ton profil est à moitié rempli. Le point de départ s'occupe du reste, en deux minutes.","Fais le point quand tu veux : tes chances réelles, et une séance de Parcours de plus aujourd'hui.","Le point de départ t'attend. Rien d'urgent — mais il ouvre tes deux fiches suivantes tout de suite."]},"profil_complete":{"pose":"mascotte-arene-retour","lignes":["Profil complet. On sait à qui on parle — c'est tout ce qu'il fallait.","C'est réglé. Concentre-toi sur le travail, je m'occupe du reste.","Merci, tout est en ordre. On retourne aux fiches ?","Voilà, tu existes officiellement ici. Bienvenue pour de bon."]},"bibliotheque_arrivee":{"pose":"axo-guide-carte","lignes":["La Bibliothèque est en accès libre. Fiches, panoramas, métiers : tu prends ce qui t'attire.","Ici, rien n'est imposé. De la curiosité, c'est aussi comme ça qu'on apprend.","Bienvenue dans la Bibliothèque. Aucun compteur ici, juste de la lecture.","Tu peux te promener. Cinq minutes de curiosité valent mieux qu'une heure forcée."]},"nouvelle_matiere":{"pose":"axo-guide-carte","lignes":["Nouvelle matière au programme. Les premiers jours sont toujours flous, c'est normal.","Tu ouvres un nouveau chapitre de ton Parcours. On repart doucement.","Terrain neuf. Ne cherche pas à tout retenir aujourd'hui.","Changement de matière. Ton cerveau râle deux jours, puis il s'habitue."]},"session_tard_le_soir":{"pose":"axo-mains","lignes":["Il est tard. Une fiche vaut mieux que deux si tu tombes de sommeil.","Séance de nuit ? D'accord, mais dormir fait partie de la méthode.","Tard, mais tu es là. Fais court ce soir, tu seras plus efficace demain.","À cette heure-ci, la mémoire fixe mal. Vas-y doucement, ou garde ça pour demain."]},"journee_deja_terminee":{"pose":"axo-mains","lignes":["Tout est fait pour aujourd'hui. Tu peux fermer, c'est mérité.","Ta journée est complète. En rajouter ne rapporte rien, sauf de la fatigue.","Rien ne t'attend jusqu'à demain. Profite du reste de ta soirée.","Journée bouclée. S'arrêter au bon moment fait partie du travail."]},"retour_apres_absence":{"pose":"mascotte-arene-retour","lignes":["Ça faisait un moment. On ne rattrape rien, on reprend simplement : deux fiches.","Te revoilà. Aucun reproche ici, juste la suite de la route.","Content de te retrouver. Le Parcours t'attendait là où tu l'as laissé.","Absent quelques jours, et alors ? Ce qui compte, c'est que tu sois revenu."]}};
 function axoRepl(moment){
   const m=AXO_DIT[moment]; if(!m) return null;
   const l=m.lignes[Math.floor(Math.random()*m.lignes.length)];
@@ -6002,15 +5745,6 @@ function mjTrack(kind,data){
   }
   saveS(); renderMissions();
   if(typeof renderIdBar==='function') renderIdBar();
-}
-function renderQj(){
-  const fait=qjFaitAuj();
-  const x = fait
-    ? '<div class="qj-row ok"><span class="qj-ic">☀️</span><div class="qj-bd"><b>QCM du Jour — fait ✓</b>'+
-      '<span>+'+((S.qj&&S.qj.gain)||0)+' 🏆 · à demain pour la suivante.</span></div></div>'
-    : '<div class="qj-row" onclick="startQcmJour()"><span class="qj-ic">☀️</span><div class="qj-bd"><b>Le QCM du Jour · '+(qcmDuJour()[0]||{}).mat+'</b>'+
-      '<span>Une question, 90 secondes — la même pour tout le monde, récompense mystère 🎁</span></div><span class="qj-go">Jouer</span></div>';
-  ['qj-home','qj-arene'].forEach(id=>{ const e=document.getElementById(id); if(e) e.innerHTML=x; });
 }
 function renderMissions(){
   /* la bande DISCRÈTE des écrans principaux : trois mini-jauges + le coffre, le détail au clic */
@@ -6435,25 +6169,15 @@ function renderChemin(){
 function renderParcours(){ renderPtop(); renderSeance(); renderBuilt(); }
 
 
-/* ═══ ENTRAÎNEMENT LIBRE — les questions de la banque, sans classement ni chrono.
-   « QCM du jour » = 1 question, la même pour tous (tirée par la date). ═══ */
-let LB={qs:[],i:0,ok:0,mat:null,jour:false,sel:new Set(),done:false};
+/* ═══ ENTRAÎNEMENT LIBRE — les questions déjà ouvertes par le Parcours,
+   sans classement ni chrono. ═══ */
+let LB={qs:[],i:0,ok:0,mat:null,sel:new Set(),done:false};
 function libreQs(mat,n){
   /* jamais une question sur une fiche non travaillée : on n'interroge que sur du lu */
   const pool=qsOuvertes(mat);
   const arr=pool.slice();
   for(let i=arr.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]]; }
   return arr.slice(0,n);
-}
-function qcmDuJour(){
-  /* la matière TOURNE chaque jour (ana → bio → chimie → physique), la question est
-     tirée parmi les ACCESSIBLES (1-2 étoiles) : une porte d'entrée doit se franchir. */
-  const d=arDay();
-  const jours=Math.floor(new Date(d+'T12:00:00').getTime()/864e5);
-  const mat=MJ_MATS[jours%4];
-  const facile=ABANK.filter(q=>q.mat===mat && q.D<=950);
-  const pool=facile.length?facile:ABANK.filter(q=>q.mat===mat);
-  return [pool[mjSeed(d)%pool.length]];     /* la même pour tout le monde aujourd'hui */
 }
 /* ═══ L'ARÈNE SE MÉRITE — elle s'ouvre après 2 séances de Parcours.
    Avant : le mode ENTRAÎNEMENT, sans enjeu, uniquement sur les fiches déjà vues. ═══ */
@@ -6576,7 +6300,7 @@ function startEntrainement(mat,slug,combien){
   for(let i2=arr.length-1;i2>0;i2--){ const j2=Math.floor(Math.random()*(i2+1)); [arr[i2],arr[j2]]=[arr[j2],arr[i2]]; }
   if(S.ar && S.ar.seen) arr.sort((a,b)=>(S.ar.seen[b.id]?1:0)-(S.ar.seen[a.id]?1:0));
   const n=slug? arr.length : Math.min(combien||5,arr.length);
-  LB={qs:arr.slice(0,n),i:0,ok:0,mat:mat||null,jour:false,sel:new Set(),done:false,entrainement:true,salleSlug:slug||null};
+  LB={qs:arr.slice(0,n),i:0,ok:0,mat:mat||null,sel:new Set(),done:false,entrainement:true,salleSlug:slug||null};
   const sa=ARENES.find(x=>x.k===mat);
   document.getElementById('libre-titre').textContent = slug ? (TITRES_FICHES[slug]||'Révision')
     : (sa ? sa.nom+' · entraînement' : 'Entraînement');
@@ -6586,17 +6310,9 @@ function startEntrainement(mat,slug,combien){
   libreShow(); go('libre');
 }
 function startLibre(mat){
-  LB={qs:libreQs(mat,5),i:0,ok:0,mat:mat,jour:false,sel:new Set(),done:false};
+  LB={qs:libreQs(mat,5),i:0,ok:0,mat:mat,sel:new Set(),done:false};
   document.getElementById('libre-titre').textContent='Entraînement · '+(mat||'toutes matières');
   document.getElementById('libre-note').textContent='Sans chrono, sans trophées. Juste toi et la question.';
-  libreShow(); go('libre');
-}
-function qjFaitAuj(){ return !!(S.qj && S.qj.day===arDay() && S.qj.fait); }
-function startQcmJour(){
-  if(qjFaitAuj()){ go('home'); return; }
-  LB={qs:qcmDuJour(),i:0,ok:0,mat:null,jour:true,sel:new Set(),done:false};
-  document.getElementById('libre-titre').textContent='Le QCM du jour';
-  document.getElementById('libre-note').textContent='Une question, la même pour tout le monde aujourd\'hui.';
   libreShow(); go('libre');
 }
 function libreShow(){
@@ -6605,7 +6321,7 @@ function libreShow(){
   document.getElementById('libre-card').style.display='block';
   document.getElementById('libre-fin').style.display='none';
   document.getElementById('libre-meta').innerHTML='<span class="lm-mat">'+q.mat+'</span><span>'+q.n+'</span>'+
-    (LB.jour?'':'<span style="margin-left:auto">'+(LB.i+1)+' sur '+LB.qs.length+'</span>');
+    '<span style="margin-left:auto">'+(LB.i+1)+' sur '+LB.qs.length+'</span>';
   document.getElementById('libre-q').textContent=q.q;
   const box=document.getElementById('libre-opts'); box.innerHTML='';
   q.it.forEach((it,idx)=>{
@@ -6683,17 +6399,6 @@ function libreFin(){
   document.getElementById('libre-card').style.display='none';
   const f=document.getElementById('libre-fin'); f.style.display='block';
   { const il=f.querySelector(':scope > img'); if(il) il.style.display=''; }   /* rendue après un bilan de séance */
-  let gQJ=0;
-  if(LB.jour && !qjFaitAuj()){
-    gQJ = LB.ok ? [10,15,25][mjSeed(arDay())%3] : 5;   /* récompense mystère du jour */
-    S.qj={day:arDay(), fait:1, gain:gQJ};
-    mjCredit(gQJ, LB.qs[0] && LB.qs[0].mat);   /* les trophées vont à l'arène de la matière du jour */
-    if(S.ar && LB.qs[0]){ S.ar.seen[LB.qs[0].id]=Date.now(); }   /* l'Arène ne la resservira pas de sitôt */
-    son(LB.ok?'coffre':'pop');
-    saveS();
-    if(typeof renderQj==='function') renderQj();
-    if(typeof renderIdBar==='function') renderIdBar();
-  }
   if(LB.entrainement && S.entrRetour){
     /* retour au Parcours : la boucle du jour est bouclée */
     delete S.entrRetour; saveS();
@@ -6723,16 +6428,14 @@ function libreFin(){
     return;
   }
   const part3=LB.qs.length?LB.ok/LB.qs.length:0;
-  document.getElementById('libre-fin-t').textContent = LB.jour
-    ? (LB.ok? 'Bien joué — +'+gQJ+' 🏆. À demain pour la suivante.' : 'Piégeuse. +'+gQJ+' 🏆 quand même — à demain pour ta revanche.')
-    : LB.ok+' sur '+LB.qs.length+(part3>=0.8?' — solide.':(part3>=0.5?' — ça se construit.':' — ces notions méritent un deuxième passage.'));
+  document.getElementById('libre-fin-t').textContent =
+    LB.ok+' sur '+LB.qs.length+(part3>=0.8?' — solide.':(part3>=0.5?' — ça se construit.':' — ces notions méritent un deuxième passage.'));
   const fs3=document.getElementById('libre-fin-s');
   fs3.style.whiteSpace='normal'; fs3.style.textAlign='center';
-  if(LB.jour) fs3.textContent='La même question pour tout le monde — demain, une nouvelle.';
-  else fs3.innerHTML='Chaque question corrigée compte, même ratée.'+
+  fs3.innerHTML='Chaque question corrigée compte, même ratée.'+
     axoScene(part3>=0.8?'entrainement_bon_score':(part3>=0.5?'entrainement_score_moyen':'entrainement_faible'));
   const enc=document.getElementById('libre-encore');
-  enc.style.display=LB.jour?'none':'block';
+  enc.style.display='block';
   /* on relance exactement le même type de session, jamais une pioche au large */
   if(LB.entrainement){
     enc.textContent = LB.salleSlug? 'Refaire cette fiche' : 'Une autre session';
