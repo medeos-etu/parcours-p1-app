@@ -1341,7 +1341,24 @@
 
 
   /* ═══ ORDI : le lobby en 3 colonnes, toute la largeur, toujours sans scroll ═══ */
-  .sidecol{display:none;flex-direction:column;gap:12px}
+  .sidecol{display:flex;flex-direction:column;gap:12px}
+  /* — le classement de l'Amphi : une ligne par élève, ses vrais trophées — */
+  .lbrow{display:flex;align-items:center;gap:9px;padding:8px 9px;border-radius:12px;background:rgba(107,70,193,.05)}
+  .lbrow+.lbrow{margin-top:6px}
+  .lbrow.moi{background:linear-gradient(180deg,rgba(139,92,246,.16),rgba(107,70,193,.1));
+    border:1px solid rgba(139,92,246,.35)}
+  .lbrow .lbp{width:16px;text-align:center;font-weight:900;font-size:12px;color:var(--tung);font-variant-numeric:tabular-nums}
+  .lbrow .lbav{width:30px;height:30px;border-radius:50%;overflow:hidden;flex-shrink:0;
+    background:linear-gradient(145deg,var(--violet),var(--violet-deep));display:flex;align-items:center;justify-content:center}
+  .lbrow .lbav img{width:100%;height:100%;object-fit:cover}
+  .lbrow .lbn{flex:1;min-width:0;font-size:12px;font-weight:800;line-height:1.25;
+    overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .lbrow .lbn i{display:block;font-style:normal;font-size:10px;font-weight:700;color:var(--muted);margin-top:1px}
+  .lbrow .lbt{font-size:12.5px;font-weight:900;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .lb-vide{font-size:10.5px;color:var(--muted);line-height:1.5;margin-top:9px}
+  .lbsem{display:flex;align-items:center;justify-content:space-between;margin-top:10px;
+    padding-top:9px;border-top:1px solid var(--line2);font-size:11.5px}
+  .lbsem b{font-size:12.5px;font-variant-numeric:tabular-nums}
   .lbmini{display:flex;align-items:center;gap:8px;font-size:11.5px;padding:5px 0;border-bottom:1px solid var(--line2)}
   .lbmini .p{width:16px;font-weight:900;color:var(--tung);font-variant-numeric:tabular-nums}
   .lbmini .n{flex:1;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -1350,11 +1367,16 @@
     #arene.scr.on{max-width:1120px;padding:22px 32px calc(110px + env(safe-area-inset-bottom))}
     /* la colonne principale : barre de profil, bascule centrée, puis le lieu choisi */
     #arene #arene-live{display:flex;flex-direction:column;min-height:0;flex:1;gap:14px}
-    /* Le Grand Amphi : UNE seule colonne, centrée — la scène, le compteur, l'action */
-    #vue-amphi{display:flex;flex-direction:column;gap:14px;width:100%;max-width:680px;margin:0 auto}
-    #vue-amphi .ar-limite{margin:0}
-    #vue-amphi .actionbar{margin-top:0}
-    #vue-amphi .amphi-vis{height:300px}
+    /* Le Grand Amphi : la scène et l'action, le classement à droite — l'ensemble centré */
+    #vue-amphi{display:grid;grid-template-columns:minmax(0,1fr) 258px;
+      grid-template-rows:auto auto auto auto;gap:14px 18px;align-items:start;
+      width:100%;max-width:1000px;margin:0 auto}
+    #vue-amphi .amphi{grid-column:1;grid-row:1}
+    #vue-amphi .ar-limite{grid-column:1;grid-row:2;margin:0}
+    #vue-amphi .actionbar{grid-column:1;grid-row:3;margin-top:0}
+    #vue-amphi #ar-stagecard{grid-column:1;grid-row:4}
+    #vue-amphi .sidecol{grid-column:2;grid-row:1/5}
+    #vue-amphi .amphi-vis{height:290px}
 
     /* les 4 boutons d'arène deviennent des cartes horizontales */
     .apick{flex-direction:row;justify-content:flex-start;gap:12px;padding:13px 14px;border-radius:16px}
@@ -1372,7 +1394,7 @@
   }
   @media (min-width:1440px){
     #arene.scr.on{max-width:1280px}
-    #vue-amphi{max-width:740px}
+    #vue-amphi{max-width:1080px;grid-template-columns:minmax(0,1fr) 290px}
   }
 
   /* ═══ BIBLIOTHÈQUE : badge gratuit + rayon des stages ═══ */
@@ -2269,6 +2291,8 @@
             <button class="btn ghost small" style="margin-top:9px" onclick="voirStages()">Voir les stages</button>
           <button class="blien" style="display:block;margin:8px auto 0;font-size:10.5px" onclick="go('profil')">Déjà l'année complète ? J'ai un code</button>
         </div>
+        <!-- le classement : qui est à combien de trophées — jamais un faux concurrent -->
+        <div class="sidecol"><div class="card" id="ar-sideacc"></div></div>
       </div>
 
       <!-- moteur : éléments alimentés par le JS, jamais affichés ici -->
@@ -2845,7 +2869,25 @@ function resetApp(){ localStorage.clear(); location.reload(); }
 
 /* ---- État du joueur (départ à zéro, tout se gagne) ---- */
 let S = JSON.parse(localStorage.getItem('m4_state')||'{"points":0,"streak":0,"qcm":0,"nodeDone":false,"simSeen":false,"libSeen":false,"sansFaute":false}');
-function saveS(){ localStorage.setItem('m4_state',JSON.stringify(S)); }
+function saveS(){
+  localStorage.setItem('m4_state',JSON.stringify(S));
+  majRegistreT();
+}
+/* Le total de trophées suit le COMPTE, pas l'appareil : sans ça, un deuxième compte
+   ne pourrait jamais apparaître au classement avec son vrai score. */
+let _regT=null;
+function majRegistreT(){
+  try{
+    if(typeof S==='undefined' || !S.ar || !S.ar.compte || typeof accRegistre!=='function') return;
+    const T=S.ar.T||0;
+    if(_regT===T) return;                       /* rien n'a bougé : on n'écrit pas */
+    _regT=T;
+    const reg=accRegistre(), k=(S.ar.compte.id||'').toLowerCase();
+    if(!reg[k]) return;
+    reg[k].T=T;
+    localStorage.setItem('m4_comptes',JSON.stringify(reg));
+  }catch(e){}
+}
 function renderState(){
   renderParcours();
   /* écran Étapes : les badges se comptent en ACQUIS (jamais « sur 12 ») */
@@ -5071,24 +5113,52 @@ function renderSideAcc(){
   const b=document.getElementById('ar-sideacc'); if(!b) return;
   if(!S.ar) initAr();
   b.style.display='block';
-  if(accOk()){
-    const sem=Math.max(0,S.ar.wdt||0), prev=S.ar.wdtPrev||0;
-    const delta=sem-prev;
-    const top3='<div class="lbmini"><span class="n">Cette semaine</span><span class="t">'+fmtT(sem)+' 🏆</span></div>'+
-      '<div class="lbmini"><span class="n">Semaine dernière</span><span class="t">'+fmtT(prev)+' 🏆</span></div>'+
-      '<div class="lbmini"><span class="n">Ton record</span><span class="t">'+fmtT(Math.max(S.ar.wdtRec||0,sem))+' 🏆</span></div>';
-    b.innerHTML='<h3>📊 Ta progression</h3>'+top3+
-      '<p style="font-size:12px;font-weight:800;color:var(--violet);margin-top:8px">'+
-        (sem>0 ? (prev>0 ? (delta>=0?'+'+fmtT(delta)+' 🏆 par rapport à la semaine dernière':fmtT(Math.abs(delta))+' 🏆 de moins que la semaine dernière — il reste des jours.') : 'Ta première semaine est lancée.') : 'Une ascension, et ta semaine démarre.')+'</p>'+
-      '<button class="lbbtn" onclick="openSheet(\'sheet-rank\')"><img class="ic" src="img/icones/icone-classement.png" alt="" onerror="this.remove()">Voir tout le classement<span class="chev">›</span></button>';
-  } else {
-    b.innerHTML='<h3>🎮 Tu joues en invité</h3>'+
-      '<p style="font-size:11.5px;color:var(--muted);line-height:1.5;margin-top:3px">Crée ton compte pour garder tes trophées et entrer au classement général.</p>'+
-      '<button class="btn small" style="margin-top:9px" onclick="focusAcc()">Se connecter</button>'+
-      '<button class="btn ghost small" style="margin-top:7px" onclick="openSheet(\'sheet-rank\')">Voir le classement</button>';
+  if(!accOk()){
+    b.innerHTML='<h3>📊 Le classement</h3>'+
+      '<p class="lb-vide">Tes trophées ne comptent au classement que si tu as un compte — c\'est lui qui te garde ta place.</p>'+
+      '<button class="btn small" style="margin-top:9px" onclick="focusAcc()">Créer mon compte</button>';
+    return;
   }
+  /* LES JOUEURS RÉELS, RIEN D'AUTRE : aujourd'hui l'app garde les comptes sur
+     l'appareil, donc la liste est celle des comptes qui ont vraiment joué ici.
+     Aucun nom inventé, aucun trophée fictif — même règle que les faux avis. */
+  const moi=S.ar.compte.id;
+  const joueurs=classementJoueurs();
+  const gi=t=>GRADES[gradeIdx(t)];
+  let lignes='';
+  joueurs.forEach((j,i)=>{
+    const g=gi(j.T), estMoi=(j.id===moi);
+    lignes+='<div class="lbrow'+(estMoi?' moi':'')+'">'+
+      '<span class="lbp">'+(i+1)+'</span>'+
+      '<span class="lbav"><img src="'+j.av+'" alt="" onerror="this.remove()"></span>'+
+      '<span class="lbn">'+j.id+'<i>'+g[2]+' '+g[1]+'</i></span>'+
+      '<span class="lbt">'+fmtT(j.T)+'</span></div>';
+  });
+  const sem=Math.max(0,S.ar.wdt||0);
+  b.innerHTML='<h3>📊 Le classement</h3>'+lignes+
+    '<p class="lb-vide">'+(joueurs.length<2
+      ? 'Tu es seul en lice pour l\'instant. Les autres élèves s\'ajouteront ici avec leurs vrais trophées — on n\'invente aucun concurrent.'
+      : 'Chaque trophée vient d\'une case réellement bien jugée.')+'</p>'+
+    '<div class="lbsem"><span>Cette semaine</span><b>+'+fmtT(sem)+' 🏆</b></div>'+
+    '<button class="lbbtn" onclick="openSheet(\'sheet-rank\')"><img class="ic" src="img/icones/icone-classement.png" alt="" onerror="this.remove()">Voir le détail<span class="chev">›</span></button>';
 }
-
+/* Les comptes qui ont vraiment joué sur cet appareil, du plus haut total au plus bas.
+   Le jour où les scores passeront par le serveur, seule cette fonction changera. */
+function classementJoueurs(){
+  const reg=(typeof accRegistre==='function')?accRegistre():{};
+  const moi=S.ar.compte? S.ar.compte.id : null;
+  const out=[];
+  Object.keys(reg).forEach(k=>{
+    const c=reg[k];
+    const estMoi = moi && c.id===moi;
+    const T = estMoi ? (S.ar.T||0) : (typeof c.T==='number'? c.T : null);
+    if(T===null) return;                 /* jamais de total supposé */
+    const av=(estMoi? avatarOf() : (AVATARS.find(a=>a.id===(c.skin&&c.skin.av))||AVATARS[0]));
+    out.push({id:c.id, T:T, av:av.img});
+  });
+  out.sort((a,b)=>b.T-a.T);
+  return out;
+}
 /* parcourir les arènes aux flèches, comme dans Clash */
 let arView=0;
 function arenaStep(d){
@@ -5408,6 +5478,7 @@ function renderAmphi(){
       '<div class="amphi-s" style="margin-top:7px">Il ouvre après <b>'+AMPHI_SEUIL_JOURS+' jours de Parcours</b> — tu en as fait '+j+'. '+
       'Ici les matières se mélangent : <b>+2 🏆</b> par case juste, <b>−2</b> par erreur, et chaque trophée gagné reste sur ton compteur.</div></div>';
   }
+  if(typeof renderSideAcc==='function') renderSideAcc();   /* le classement, à droite */
   if(typeof renderCurArena==='function') renderCurArena();
 }
 
