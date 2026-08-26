@@ -2045,15 +2045,15 @@
       <p class="lever-reveal" id="rev-heures" style="display:none"></p>
     </div>
     <p style="font-size:10px;color:var(--muted);text-align:center;min-height:14px" id="cap-note"></p>
-    <button class="btn" onclick="prepIdent();go('simid')">Continuer</button>
+    <button class="btn" onclick="prepIdent('sim5');go('simid')">Continuer</button>
   </section>
 
   <!-- dernière marche du point : à qui on parle -->
   <section class="scr nonav" id="simid">
-    <div class="lect-top"><button class="x" onclick="go('sim5')" aria-label="Retour">←</button></div>
+    <div class="lect-top"><button class="x" onclick="fermerIdent()" aria-label="Retour">←</button></div>
     <div class="center" style="justify-content:flex-start">
       <img class="axo" src="img/axo-fiche.png" alt="" style="height:104px">
-      <h2>Ton point de départ est prêt.</h2>
+      <h2 id="id-titre">Ton point de départ est prêt.</h2>
       <p style="max-width:400px">Dernière chose : dis-nous qui tu es, pour qu'on l'enregistre à ton nom et qu'on puisse t'accompagner.</p>
       <div style="width:100%;max-width:380px;display:grid;gap:12px;text-align:left">
         <label class="id-lab">Ton prénom
@@ -2065,7 +2065,7 @@
           <span class="id-pourquoi"><b>Pourquoi ton numéro ?</b> Parce que l'accompagnement Medeos passe par des humains, pas par un robot : c'est par là qu'on te répond quand tu bloques, et qu'on te prévient des échéances à ne pas rater.</span>
         </label>
       </div>
-      <button class="btn" id="id-cta" style="max-width:320px" disabled onclick="finSim()">Voir ce qu'il faut retenir</button>
+      <button class="btn" id="id-cta" style="max-width:320px" disabled>Voir ce qu'il faut retenir</button>
     </div>
   </section>
 
@@ -2111,7 +2111,7 @@
   <!-- ======= ACCUEIL ======= -->
   <section class="scr" id="home">
     <header class="ptop">
-      <span class="pavatar"><img src="img/axo-canon.png" alt=""></span>
+      <span class="pavatar" id="pt-avatar"><img src="img/axo-canon.png" alt=""></span>
       <div class="ptxt"><b id="pt-hello">Ton entraînement</b><span>Ta préparation P1</span></div>
       <button class="mini-rad" id="mini-rad" onclick="go('profil')" title="Ton avancée" aria-label="Ton avancée"></button>
       <span class="pflame" id="pt-flame" hidden style="cursor:pointer" onclick="toggleFlamme(event)">🔥 1 j</span>
@@ -2464,7 +2464,6 @@
         <div class="skingrid" id="skin-avs"></div>
         <p class="skin-t">Ta bannière</p>
         <div class="skinbans" id="skin-bans"></div>
-        <p class="skin-note">Touche une photo ou une bannière : elle te dira comment elle se gagne 🏆</p>
       </div>
     </div>
   </div>
@@ -3054,12 +3053,32 @@ function calcSim(){
   document.getElementById('finTemoin').textContent='≈ '+temoin+' sur 100';
   document.getElementById('finval').textContent='≈ '+(started?toi:temoin)+' sur 100';
 }
-function prepIdent(){
+/* D'où l'on arrive : du questionnaire (on continue vers le bilan) ou du profil
+   (on enregistre et on revient). Sans ça, la flèche « retour » renvoyait dans tout
+   le questionnaire, sans porte de sortie. */
+let identRetour='sim5';
+function prepIdent(retour){
+  identRetour = retour || 'sim5';
+  { const t=document.getElementById('id-titre');
+    if(t) t.textContent = identRetour==='sim5' ? 'Ton point de départ est prêt.' : 'Tes coordonnées';
+    const c=document.getElementById('id-cta');
+    if(c){ c.textContent = identRetour==='sim5' ? "Voir ce qu'il faut retenir" : 'Enregistrer';
+           c.onclick = identRetour==='sim5' ? finSim : fermerIdent; } }
   const P=S.profil||{};
   const g=(i,v)=>{ const e=document.getElementById(i); if(e) e.value=v||''; };
   g('id-prenom', localStorage.getItem('m4_prenom'));
   g('id-nom', P.nom); g('id-tel', P.tel);
   majIdent();
+}
+function fermerIdent(){
+  /* on n'appelle JAMAIS finSim ici : il recalculerait le point de départ à partir
+     d'un questionnaire qu'on n'a pas rejoué, et écraserait le vrai résultat. */
+  if(typeof verifBonusProfil==='function') verifBonusProfil(true);
+  go(identRetour);
+  if(identRetour==='profil'){
+    if(typeof renderProfilForm==='function') renderProfilForm();
+    if(typeof renderSimCard==='function') renderSimCard();
+  }
 }
 function majIdent(){
   const v=i=>{ const e=document.getElementById(i); return e? e.value.trim() : ''; };
@@ -5021,7 +5040,7 @@ function renderProfilForm(){
       '<p class="pf-etat ok" style="margin-top:9px">Complet ✓ — rempli par ton point de départ.</p>'+
       /* « Refaire le point » vit sur la carte du point de départ, juste en dessous :
          ici on ne propose que la retouche courte, pas deux fois le même bouton. */
-      '<button class="blien" style="margin-top:8px" onclick="prepIdent();go(\'simid\')">modifier mes coordonnées</button>';
+      '<button class="blien" style="margin-top:8px" onclick="prepIdent(\'profil\');go(\'simid\')">modifier mes coordonnées</button>';
     return;
   }
   const reste=!S.bonusSeance||S.bonusSeance!==arDay();
@@ -5033,7 +5052,7 @@ function renderProfilForm(){
         : 'Il se remplit tout seul en répondant au point de départ : ta fac, ta classe, ton projet, et les vraies chances qui vont avec. Deux minutes, une seule fois.')+
       (reste?' Et il t\'ouvre <b>une séance de Parcours de plus aujourd\'hui</b> 🎁':'')+'</p>'+
     (dejaFait
-      ? '<button class="gbtn" onclick="prepIdent();go(\'simid\')">👤 Compléter mon profil · 1 min</button>'
+      ? '<button class="gbtn" onclick="prepIdent(\'profil\');go(\'simid\')">👤 Compléter mon profil · 1 min</button>'
       : '<button class="gbtn" onclick="go(\'sim1\')">🧭 Faire le point · 2 min</button>');
 }
 function majProfil(champ,val){
@@ -6253,6 +6272,12 @@ function renderPtop(){
   const hello=document.getElementById('pt-hello'); if(!hello) return;
   const pn=localStorage.getItem('m4_prenom');
   hello.textContent = pn ? 'Salut '+pn : 'Ton entraînement';
+  /* la photo de profil CHOISIE, pas une image figée */
+  { const pa=document.getElementById('pt-avatar');
+    if(pa && typeof avatarOf==='function'){
+      const av=avatarOf();
+      pa.innerHTML='<img src="'+av.img+'"'+(av.fit==='zoom'?' class="zoom"':'')+' alt="" onerror="this.remove()">';
+    } }
   const f=document.getElementById('pt-flame');
   if(f){ if(S.streak>=1){ f.hidden=false;
     const hF=14+Math.min(8,S.streak);   /* la flamme grandit avec la série (plafonnée) */
