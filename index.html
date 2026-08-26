@@ -833,14 +833,15 @@
   .salles-reste{text-align:center;font-size:11px;color:rgba(250,246,240,.5);margin-top:10px}
 
   /* — LES SALLES : un carrousel, la salle choisie au centre — */
-  .sallesbox{position:relative}
+  /* le carrousel sort de la colonne : les cartes voisines sont coupées par le BORD DE L'ÉCRAN */
+  .sallesbox{position:relative;width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw)}
   /* une seule carte au centre, en grand ; les voisines ne dépassent que d'un bout */
   .salles{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;
     padding:6px 0 10px;scrollbar-width:none;-webkit-overflow-scrolling:touch;
     scroll-padding-inline:12%}
   .salles::-webkit-scrollbar{display:none}
-  .salles::before,.salles::after{content:'';flex:0 0 12%}
-  .salle-card{flex:0 0 76%;scroll-snap-align:center;border-radius:22px;overflow:hidden;
+  .salles::before,.salles::after{content:'';flex:0 0 9%}
+  .salle-card{flex:0 0 82%;scroll-snap-align:center;border-radius:22px;overflow:hidden;
     background:linear-gradient(160deg,rgba(43,35,64,.95),rgba(31,27,46,.95));
     border:1px solid rgba(255,255,255,.10);
     transform:scale(.92);opacity:.55;transition:transform .3s ease,opacity .3s ease,border-color .3s ease}
@@ -865,13 +866,25 @@
   .sflech{position:absolute;top:70px;z-index:3;width:34px;height:34px;border-radius:50%;border:none;cursor:pointer;
     background:rgba(12,9,24,.6);color:#fff;font-size:19px;line-height:1;backdrop-filter:blur(6px);
     box-shadow:0 3px 12px rgba(0,0,0,.35);display:none}
-  .sflech.g{left:-4px} .sflech.d{right:-4px}
+  .sflech.g{left:10px} .sflech.d{right:10px}
   @media (min-width:900px){ .sflech{display:block} }
   @media (min-width:1024px){
-    .sallesbox{max-width:760px;margin:0 auto}
-    .salle-card{flex-basis:72%}
-    .sc-vis{height:230px}
+    .salle-card{flex-basis:46%;max-width:640px}
+    .salles::before,.salles::after{flex-basis:27%}
+    .sc-vis{height:250px}
+    .sc-nom{font-size:26px}
   }
+  @media (min-width:1440px){
+    .salle-card{flex-basis:38%}
+    .salles::before,.salles::after{flex-basis:31%}
+  }
+  .salle-action{display:block;width:100%;max-width:420px;margin:12px auto 0;border:none;cursor:pointer;
+    font-family:Fredoka,Inter,sans-serif;font-weight:600;font-size:15.5px;color:#fff;
+    background:linear-gradient(180deg,#8B5CF6,#6B46C1);border-radius:15px;padding:13px 16px;
+    box-shadow:0 4px 0 #4C2A85, 0 10px 22px rgba(76,42,133,.35);transition:transform .12s ease}
+  .salle-action b{font-weight:700}
+  .salle-action:active{transform:translateY(3px);box-shadow:0 1px 0 #4C2A85}
+  .salle-action.off{background:rgba(255,255,255,.07);color:rgba(250,246,240,.6);box-shadow:none}
   .salles-dots{display:flex;justify-content:center;gap:7px;margin-top:2px}
   .sdot{width:7px;height:7px;border-radius:50%;background:rgba(250,246,240,.22);cursor:pointer;transition:all .2s ease}
   .sdot.on{background:linear-gradient(180deg,#8B5CF6,#6B46C1);width:20px;border-radius:99px}
@@ -2116,6 +2129,7 @@
           <button class="sflech d" onclick="salleSuivante(1)" aria-label="Salle suivante">›</button>
         </div>
         <div class="salles-dots" id="salles-dots"></div>
+        <button class="salle-action" id="salle-action"></button>
         <p class="salles-reste" id="salles-reste"></p>
       </div>
 
@@ -4989,9 +5003,6 @@ function renderSalles(){
         '<div class="sc-mat">'+(a.sous||a.k)+'</div>'+
         '<div class="sc-nom">'+a.nom+'</div>'+
         '<div class="sc-n">'+(ouverte? n+' question'+(n>1?'s':'')+' prêtes' : 'ton Parcours ouvrira cette salle')+'</div>'+
-        (ouverte
-          ? '<button class="sc-go" onclick="ouvrirSalle(\''+a.k+'\')">Entrer dans la salle</button>'
-          : '<button class="sc-go off" onclick="go(\'home\')">Aller au Parcours</button>')+
       '</div></div>';
   }).join('');
   /* les pastilles de position */
@@ -5005,6 +5016,7 @@ function allerSalle(i2,instant){
   S.ar.salleVue=i2; saveS();
   g.scrollTo({left:c.offsetLeft-(g.clientWidth-c.clientWidth)/2, behavior:instant?'auto':'smooth'});
   [...g.children].forEach((cc,k)=>cc.classList.toggle('centre',k===i2));
+  majActionSalle(i2);
   const dt=document.getElementById('salles-dots');
   if(dt) [...dt.children].forEach((d,k)=>d.classList.toggle('on',k===i2));
 }
@@ -5023,6 +5035,23 @@ function salleScroll(){
     S.ar.salleVue=best; saveS();
     const dt=document.getElementById('salles-dots');
     if(dt) [...dt.children].forEach((d,k)=>d.classList.toggle('on',k===best));
+  }
+  majActionSalle(best);
+}
+/* le bouton d'action reflète TOUJOURS la salle au centre : elle est la salle choisie */
+function majActionSalle(i2){
+  const b2=document.getElementById('salle-action'); if(!b2) return;
+  const a=ARENES[i2]; if(!a){ b2.style.display='none'; return; }
+  const n=salleStock(a.k);
+  b2.style.display='block';
+  if(n>0){
+    b2.className='salle-action';
+    b2.innerHTML='Entrer dans <b>'+a.nom+'</b>';
+    b2.onclick=()=>ouvrirSalle(a.k);
+  } else {
+    b2.className='salle-action off';
+    b2.innerHTML='<b>'+a.nom+'</b> s\'ouvre par ton Parcours';
+    b2.onclick=()=>go('home');
   }
 }
 
