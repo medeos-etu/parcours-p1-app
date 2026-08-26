@@ -1995,10 +1995,10 @@
     <div class="lect-top"><button class="x" onclick="go('sim4')" aria-label="Retour">←</button></div>
     <h2 class="scr-title">Voilà ce qui change la donne.</h2>
     <div class="jauges">
-      <div class="jg temoin"><div class="lab">Même profil, sans les 2 leviers</div><div class="val" id="v-temoin">≈ 12</div><div class="cent">sur 100, en moyenne</div><div class="track"><i id="b-temoin"></i></div></div>
-      <div class="jg toi idle" id="jg-toi"><div class="lab">Ce scénario de préparation</div><div class="val" id="v-toi">—</div><div class="cent" id="toi-hint">choisis tes 2 leviers ↓</div><div class="track"><i id="b-toi" style="width:0"></i></div></div>
+      <div class="jg temoin"><div class="lab">Le taux réel de ta fac</div><div class="val" id="v-temoin">≈ 12</div><div class="cent">sur 100, chiffre publié</div><div class="track"><i id="b-temoin"></i></div></div>
+      <div class="jg toi idle" id="jg-toi"><div class="lab">Ceux qui arrivent préparés</div><div class="val" id="v-toi">—</div><div class="cent" id="toi-hint">choisis tes 2 leviers ↓</div><div class="track"><i id="b-toi" style="width:0"></i></div></div>
     </div>
-    <p style="font-size:10.5px;color:var(--muted);text-align:center">Le taux de ta fac est une moyenne qui mélange tous les scénarios — ces deux jauges en isolent deux. Même profil, même fac : seule la préparation bouge. Estimation construite sur les taux réels des facs et des enquêtes étudiantes.</p>
+    <p style="font-size:10.5px;color:var(--muted);text-align:center;line-height:1.5">À gauche, <b>le chiffre publié par ta fac</b> pour la filière que tu vises. À droite, ce que ce même chiffre devient chez les étudiants qui arrivent préparés, d'après les enquêtes étudiantes — un seul effet, jamais compté deux fois. Ce sont des moyennes observées, pas une prédiction sur toi.</p>
     <div class="lever">
       <div class="lt">Tu comptes faire une pré-rentrée ? <span style="font-weight:400;font-size:11px;color:var(--muted)">(préparer l'été avant)</span></div>
       <div class="opt-group">
@@ -2045,9 +2045,9 @@
     <div class="center">
       <h2>Ce qu'il faut retenir</h2>
       <div class="card" style="width:100%;max-width:380px;text-align:center">
-        <p style="font-size:13px;color:var(--muted)">Profil identique. Fac identique.</p>
-        <p style="font-size:16px;font-weight:800;margin-top:6px">Sans préparation : <span style="color:#55524B" id="finTemoin">≈ 12 sur 100</span></p>
-        <p style="font-size:16px;font-weight:800">Ton scénario préparé : <span style="color:var(--violet)" id="finval">≈ 47 sur 100</span></p>
+        <p style="font-size:13px;color:var(--muted)">Même fac, même filière.</p>
+        <p style="font-size:16px;font-weight:800;margin-top:6px">Taux publié : <span style="color:#55524B" id="finTemoin">≈ 12 sur 100</span></p>
+        <p style="font-size:16px;font-weight:800">Chez ceux qui arrivent préparés : <span style="color:var(--violet)" id="finval">≈ 47 sur 100</span></p>
       </div>
       <p style="max-width:380px"><b style="color:var(--ink)">Ce ne sont pas les plus doués qui réussissent la P1 : ce sont les mieux préparés.</b> La fac se choisit une fois, ton profil est déjà largement construit — la préparation est le seul levier entièrement entre tes mains.</p>
       <div class="card" style="width:100%;max-width:380px;text-align:left">
@@ -2967,13 +2967,34 @@ function noterSim4(){
 }
 function logit(p){ return Math.log(p/(1-p)); }
 function pct(l){ const p=1/(1+Math.exp(-l)); return Math.max(3,Math.min(75,Math.round(p*100))); }
-const WORST={prerentree:-0.606,heures:-0.257};
+/* ════ LE POINT DE DÉPART — v2, 26/08/2026 ════
+   Refait après un constat de Lucas : le modèle gonflait. Trois corrections.
+   ① LA BASE EST UN FAIT : le taux réellement publié de la fac, POUR LA FILIÈRE
+     choisie (à Lille : 16 % en médecine, pas les 29,8 % des cinq filières réunies).
+   ② UN SEUL EFFET, PLAFONNÉ : la seule association bien documentée (pré-rentrée,
+     35 % → 56 % dans les enquêtes) vaut +0,86 en log-odds. On ne dépasse JAMAIS
+     ce plafond, même quand l'élève coche tout — les heures se partagent le même
+     budget au lieu de s'y ajouter. Avant, les deux leviers cumulés multipliaient
+     la cote par 4,6, en additionnant deux corrélations qui décrivent le même élève.
+   ③ LE BULLETIN NE DÉPLACE PLUS LE CHIFFRE. Il nourrit les conseils de l'écran
+     suivant, pas la promesse : annoncer « 4 chances sur 100 » à un élève sur la
+     foi d'un coefficient invérifiable, c'est vendre de la peur. */
+const EFFET_MAX = logit(0.56) - logit(0.35);        /* ≈ 0,86 — l'effet mesuré, une seule fois */
+const PART_PRE = 0.70, PART_HEURES = 0.30;          /* la pré-rentrée porte l'essentiel */
+function upliftSim(){
+  let u=0;
+  if(sim.prerentree!==null && sim.prerentree>0) u += EFFET_MAX*PART_PRE;
+  if(sim.heures!==null){
+    const r = sim.heures>0.4 ? 1 : (sim.heures>0 ? 0.5 : 0);
+    u += EFFET_MAX*PART_HEURES*r;
+  }
+  return u;
+}
 function calcSim(){
-  const INT=-1.0 + (logit(sim.facTaux/100)-logit(0.287));
-  const profil=sim.mention+sim.pc;
-  const temoin=pct(INT+profil+WORST.prerentree+WORST.heures);
+  const base=logit(sim.facTaux/100);
+  const temoin=pct(base);
   const started = sim.prerentree!==null||sim.heures!==null;
-  const toi=pct(INT+profil+(sim.prerentree??WORST.prerentree)+(sim.heures??WORST.heures));
+  const toi=pct(base+upliftSim());
   document.getElementById('v-temoin').textContent='≈ '+temoin;
   document.getElementById('b-temoin').style.width=temoin+'%';
   const jt=document.getElementById('jg-toi');
@@ -2984,9 +3005,9 @@ function calcSim(){
     document.getElementById('b-toi').style.width=toi+'%';
   }
   const cap=document.getElementById('cap-note');
-  if(started && toi>=75) cap.textContent='Au-delà, la simulation s\'arrête : personne ne peut promettre plus.';
-  else if(temoin<=4) cap.textContent='La simulation s\'arrête là : ces moyennes ne disent rien de TOI — elles disent ce que la préparation change.';
-  else cap.textContent='';
+  cap.textContent = started
+    ? 'On n\'ajoute jamais plus que l\'effet réellement mesuré, même si tu coches tout.'
+    : '';
   document.getElementById('finTemoin').textContent='≈ '+temoin+' sur 100';
   document.getElementById('finval').textContent='≈ '+(started?toi:temoin)+' sur 100';
 }
