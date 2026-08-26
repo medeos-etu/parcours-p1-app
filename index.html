@@ -704,7 +704,10 @@
   .lobbytop .pav2 .pem{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:17px}
   .lobbytop .pav2 img{position:relative;width:100%;height:100%;object-fit:cover}
   .lobbytop .pav2 img.zoom{object-position:50% 8%;transform:scale(1.5)}
-  .lobbytop .pacts{margin-left:auto;display:flex;gap:6px;flex-shrink:0}
+  .lobbytop .pacts{display:flex;gap:6px;flex-shrink:0}
+  /* le compteur de trophées vit DANS la carte, comme la série dans le Parcours */
+  .lobbytop .pcard .goldplate{margin-left:auto;font-size:13px;padding:6px 11px;border-radius:11px;
+    box-shadow:0 2px 0 #B87A33, inset 0 1px 0 rgba(255,255,255,.45)}
   .lobbytop .pedit{flex-shrink:0;width:26px;height:26px;border-radius:9px;display:flex;align-items:center;justify-content:center;
     font-size:12.5px;color:rgba(250,246,240,.9);background:rgba(255,255,255,.15);border:none;cursor:pointer;padding:0}
   .lobbytop .pedit:active{background:rgba(255,255,255,.28)}
@@ -1058,14 +1061,15 @@
   /* — la vignette d'avancée (coin du Parcours) — */
   /* toute l'identité en haut du Parcours mène au profil : une cible large et
      évidente, plutôt qu'un petit losange sans étiquette */
-  .ptop-moi{flex:1;min-width:0;display:flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.14);
-    padding:8px 11px;margin:0;cursor:pointer;font-family:inherit;text-align:left;border-radius:14px;
-    box-shadow:inset 0 1px 0 rgba(255,255,255,.16)}
   /* la bannière choisie habille l'entête du Parcours EXACTEMENT comme celle de
-     l'Arène : une seule identité visuelle d'un monde à l'autre */
+     l'Arène, et la série vit DEDANS — une seule barre, une seule identité. */
+  .ptop-moi{flex:1;min-width:0;display:flex;align-items:center;gap:9px;border:1px solid rgba(255,255,255,.14);
+    padding:8px 10px 8px 11px;border-radius:14px;box-shadow:inset 0 1px 0 rgba(255,255,255,.16)}
+  .ptop-id{flex:1;min-width:0;display:flex;align-items:center;gap:10px;border:none;background:none;
+    padding:0;margin:0;cursor:pointer;font-family:inherit;text-align:left}
+  .ptop-id:active{transform:scale(.99)}
   .ptop-moi .ptxt b{color:#fff}
   .ptop-moi .ptxt span{color:rgba(250,246,240,.72)}
-  .ptop-moi:active{transform:scale(.99)}
 
   /* — la courbe de progression — */
   .pg-leg{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
@@ -1654,20 +1658,34 @@
   @keyframes flick{0%,100%{transform:scale(1) rotate(-3deg)}50%{transform:scale(1.14) rotate(3deg)}}
 
   /* — la bulle de la flamme : petit popover ancré sous la flamme, pas de grande fenêtre — */
-  .flampop{position:absolute;top:calc(100% + 9px);right:0;z-index:80;width:min(270px,82vw);
+  .flampop{position:absolute;top:calc(100% + 9px);right:0;z-index:80;width:min(310px,90vw);
     background:#FFFDF9;border:1px solid var(--line);border-radius:14px;padding:12px 13px;text-align:left;
     box-shadow:0 12px 30px rgba(31,27,46,.18);animation:fpin .18s ease-out}
   .flampop::before{content:"";position:absolute;top:-6px;right:20px;width:10px;height:10px;background:#FFFDF9;
     border-left:1px solid var(--line);border-top:1px solid var(--line);transform:rotate(45deg)}
   .flampop b{font-size:13px;font-weight:900;display:block}
   .flampop p{font-size:11.5px;color:var(--muted);line-height:1.55;margin-top:6px}
+  /* la Route de la Flamme : ce qui est gagné, ce qui vient, ce qui reste */
+  #fp-route{margin-top:9px;border-top:1px solid var(--line2);padding-top:8px}
+  .fpr{display:flex;align-items:center;gap:8px;padding:4px 0;font-size:11px;line-height:1.4}
+  .fpr .fpj{flex-shrink:0;width:34px;font-weight:900;font-variant-numeric:tabular-nums;color:var(--muted)}
+  .fpr .fpq{flex:1;min-width:0;color:var(--muted)}
+  .fpr .fpe{flex-shrink:0;font-size:11px;opacity:.5}
+  .fpr.got .fpj,.fpr.got .fpq{color:#2E7D53}
+  .fpr.got .fpe{opacity:1}
+  .fpr.next{background:rgba(226,156,92,.12);border-radius:9px;padding:5px 7px;margin:2px -7px}
+  .fpr.next .fpj,.fpr.next .fpq{color:#8A5B24;font-weight:800}
+  .fpr.next .fpe{opacity:1}
   @keyframes fpin{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
   .pavatar{width:34px;height:34px;border-radius:50%;overflow:hidden;flex-shrink:0;background:linear-gradient(145deg,var(--violet),var(--violet-deep))}
   .pavatar img{width:100%;height:100%;object-fit:cover;object-position:50% 4%;transform:scale(1.22);transform-origin:50% 0}
   .ptxt{flex:1;min-width:0}
   .ptxt b{font-size:15px;font-weight:800;letter-spacing:-.01em;display:block;line-height:1.2}
   .ptxt span{font-size:11px;color:var(--muted)}
-  .pflame{font-size:12px;font-weight:900;color:#8A5B24;background:rgba(226,156,92,.16);padding:5px 11px;border-radius:999px}
+  .pflame{flex-shrink:0;font-family:inherit;font-size:12px;font-weight:900;color:#4A3208;cursor:pointer;
+    background:linear-gradient(180deg,#FCD34D,#E29C5C);border:none;padding:6px 11px;border-radius:999px;
+    box-shadow:0 2px 0 #B87A33, inset 0 1px 0 rgba(255,255,255,.45)}
+  .pflame:active{transform:translateY(1px);box-shadow:0 1px 0 #B87A33}
 
   /* le héros */
   @keyframes respire2{0%,100%{transform:scale(1)}50%{transform:scale(1.013)}}
@@ -2101,14 +2119,17 @@
   <!-- ======= ACCUEIL ======= -->
   <section class="scr" id="home">
     <header class="ptop">
-      <button class="ptop-moi" onclick="go('profil')" aria-label="Voir mon profil">
-        <span class="pavatar" id="pt-avatar"><img src="img/axo-canon.png" alt=""></span>
-        <span class="ptxt"><b id="pt-hello">Ton entraînement</b><span>Ta préparation P1</span></span>
-      </button>
-      <span class="pflame" id="pt-flame" hidden style="cursor:pointer" onclick="toggleFlamme(event)">🔥 1 j</span>
+      <div class="ptop-moi">
+        <button class="ptop-id" onclick="go('profil')" aria-label="Voir mon profil">
+          <span class="pavatar" id="pt-avatar"><img src="img/axo-canon.png" alt=""></span>
+          <span class="ptxt"><b id="pt-hello">Ton entraînement</b><span>Ta préparation P1</span></span>
+        </button>
+        <button class="pflame" id="pt-flame" hidden onclick="toggleFlamme(event)" aria-label="Ta série">🔥 1 j</button>
+      </div>
       <div class="flampop" id="flamme-pop" hidden onclick="event.stopPropagation()">
         <b id="fp-titre">Ta série</b>
         <p id="fp-next" style="color:#B87A33;font-weight:800"></p>
+        <div id="fp-route"></div>
         <p id="fp-gel">Un oubli est pardonné grâce à <b style="display:inline">un jour de bonus — un seul</b>. Deux jours sans venir, et elle repart de zéro.</p>
       </div>
     </header>
@@ -4839,12 +4860,12 @@ function renderIdBar(){
   if(accOk()){
     const c=S.ar.compte;
     b.innerHTML='<div class="pcard" style="cursor:pointer;'+banFond(ban)+'" onclick="go(\'profil\')">'+pav+
-      '<div style="min-width:0"><div class="pn">'+c.id+'</div><div class="pg">'+GRADES[gi][2]+' '+GRADES[gi][1]+'</div></div>'+acts+'</div>'+
-      '<button class="goldplate" onclick="openSheet(\'sheet-rank\')" title="Voir le classement" aria-label="Voir le classement"><img class="ticn g" src="img/icones/trophee-medeos.png" alt=""> '+fmtT(S.ar.T)+'</button>';
+      '<div style="min-width:0"><div class="pn">'+c.id+'</div><div class="pg">'+GRADES[gi][2]+' '+GRADES[gi][1]+'</div></div>'+
+      '<button class="goldplate" onclick="event.stopPropagation();openSheet(\'sheet-rank\')" title="Voir le classement" aria-label="Voir le classement"><img class="ticn g" src="img/icones/trophee-medeos.png" alt=""> '+fmtT(S.ar.T)+'</button>'+acts+'</div>';
   } else {
     b.innerHTML='<div class="pcard" style="cursor:pointer;'+banFond(ban)+'" onclick="go(\'profil\')">'+pav+
-      '<div style="min-width:0"><div class="pn">Invité</div><div class="pg">Progression non gardée</div></div>'+acts+'</div>'+
-      '<button class="goldplate" onclick="openSheet(\'sheet-rank\')" title="Voir le classement" aria-label="Voir le classement"><img class="ticn g" src="img/icones/trophee-medeos.png" alt=""> '+fmtT(S.ar.T)+'</button>'+
+      '<div style="min-width:0"><div class="pn">Invité</div><div class="pg">Progression non gardée</div></div>'+
+      '<button class="goldplate" onclick="event.stopPropagation();openSheet(\'sheet-rank\')" title="Voir le classement" aria-label="Voir le classement"><img class="ticn g" src="img/icones/trophee-medeos.png" alt=""> '+fmtT(S.ar.T)+'</button>'+acts+'</div>'+
       '<button class="connectbtn" onclick="focusAcc()">Se connecter</button>';
   }
 }
@@ -5323,6 +5344,16 @@ function toggleFlamme(ev){
     const nx=FLAMME_ROUTE.find(x=>x[0]>n);
     const fn=document.getElementById('fp-next');
     if(fn) fn.textContent = nx ? '🎁 Dans '+(nx[0]-n)+' jour'+((nx[0]-n)>1?'s':'')+' : '+nx[1] : '🎁 Tu as débloqué toute la Route de la Flamme.';
+    /* TOUTE la route, pour qu'on voie ce qu'il y a à gagner et pas seulement l'étape d'après */
+    { const fr=document.getElementById('fp-route');
+      if(fr){ const max=Math.max(S.streakMax||0,n);
+        fr.innerHTML=FLAMME_ROUTE.map(function(e){
+          const eu=max>=e[0], suivant=(nx && e[0]===nx[0]);
+          return '<div class="fpr'+(eu?' got':'')+(suivant?' next':'')+'">'+
+                 '<span class="fpj">'+e[0]+' j</span>'+
+                 '<span class="fpq">'+e[1]+'</span>'+
+                 '<span class="fpe">'+(eu?'✓':(suivant?'⏳':'🔒'))+'</span></div>';
+        }).join(''); } }
     const fg=document.getElementById('fp-gel');
     if(fg && (S.gels||0)>0) fg.innerHTML='🧊 Tu as <b style="display:inline">'+S.gels+' gel'+(S.gels>1?'s':'')+' de série</b> : il te protège jusqu\'à deux jours d\'absence.';
     p.hidden=false;
@@ -6147,6 +6178,22 @@ function renderSeance(){
   /* C — séance faite. DEUX CHEMINS, jamais un mur : s'entraîner sur ce qu'on vient
      de voir, ou remplir son point de départ et ouvrir la suite tout de suite. */
   const peutDebloquer = !profilComplet();
+  /* IL N'Y A PLUS RIEN APRÈS : on ne promet pas des fiches qui n'existent pas.
+     Le fil du Parcours est fini — on le dit, et on oriente vers ce qui reste ouvert. */
+  const fini = !seanceCourante();
+  if(fini){
+    b.innerHTML=dit('Tu es arrivé au bout du fil. Bravo, sincèrement.','axo-guide-bravo')+
+      '<div class="se-sur">Parcours terminé ✓</div>'+
+      '<div class="se-titre">Tu as travaillé toutes les séances disponibles.</div>'+
+      '<div class="se-ligne">'+seancesFaites().length+' séances, '+Object.keys(fichesArmees()).length+' fiches travaillées. '+
+        'De nouvelles séances s\'ajouteront — en attendant, tout ce que tu as vu reste ouvert dans les Salles, '+
+        'et le Grand Amphi ne s\'épuise pas.</div>'+
+      '<button class="gbtn" onclick="allerSalles()">Réviser dans les Salles</button>'+
+      '<button class="se-btn2" onclick="go(\'arene\');setLieu(\'amphi\')">⚔️ Monter dans le Grand Amphi</button>'+
+      '<button class="se-alt" onclick="renderChemin();go(\'chemin\')">Revoir mes séances passées</button>'+
+      heroMail()+axo;
+    return;
+  }
   b.innerHTML=dit(peutDebloquer? 'Séance bouclée. À toi de choisir la suite.' : 'Séance bouclée. Bien joué.','axo-encourage')+
     '<div class="se-sur">Séance faite ✓</div>'+
     '<div class="se-titre">Tu as travaillé aujourd\'hui.</div>'+
@@ -6188,7 +6235,9 @@ function renderChemin(){
     const d=document.createElement('button'); d.type='button';
     d.className='pnode '+(fait?'done':(now?'now':'lock2'));
     d.innerHTML='<span class="pvig"><img src="img/parcours/'+(s.img||'generique-'+(s.mat||'').toLowerCase()+'.png')+'" onerror="this.src=\'img/parcours/generique-'+(s.mat||'anatomie').toLowerCase()+'.png\'" alt=""></span>'+
-      '<span class="pinf"><span class="pnom">'+s.titre+'</span><span class="ptag">'+s.ligne+'</span></span>'+
+      /* une séance déjà franchie n'a plus besoin de sa durée ni de sa méthode :
+         répétée huit fois, la ligne devient du bruit. On garde la matière. */
+      '<span class="pinf"><span class="pnom">'+s.titre+'</span><span class="ptag">'+(fait? s.mat+' · '+(s.fiches||[]).length+' fiches' : s.ligne)+'</span></span>'+
       '<span class="pgo">'+(fait?'Revoir':(now?'▶ Continuer':(cur&&s.id===cur.id?'Demain':'À venir')))+'</span>';
     if(now){ d.onclick=()=>{ if(s.act) s.act(); }; }
     else if(fait){ d.onclick=()=>ouvrirBilanSeance(s); }
