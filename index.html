@@ -6395,7 +6395,11 @@ function seanceEtape(){
       document.getElementById('compare-retenu').textContent = SR.note || '(tu n\'avais rien écrit)';
       document.getElementById('compare-oublis').value=''; }
     const nb=document.getElementById('lect-suivant');
-    if(nb){ nb.style.display='inline-block'; nb.textContent='Comparé → les questions';
+    /* les questions ont migré dans les Salles : après la comparaison vient la fiche suivante,
+       ou la fin de la séance si c'était la dernière */
+    const reste = (fi+1) < s.fiches.length;
+    if(nb){ nb.style.display='inline-block';
+      nb.textContent = reste ? 'Comparé → fiche suivante' : 'Comparé → terminer ma séance';
       nb.onclick=()=>{
         S.oublis=S.oublis||{};
         S.oublis[slug]={retenu:SR.note||'', oublie:(document.getElementById('compare-oublis').value||'').trim(), quand:arDay()};
