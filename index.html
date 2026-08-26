@@ -2584,7 +2584,7 @@
         <img src="img/stage-vacances.png" alt="Stages Vacances" loading="lazy">
         <div class="sc2-body">
           <span class="sc-tag">Stages des vacances scolaires</span>
-          <p>Quatre stages guidés pendant vos vacances de Terminale qui vous transmettent les bases de la première année de santé. Un parcours qui reprend là où vous vous êtes arrêté, à votre rythme.</p>
+          <p>Quatre stages guidés pendant tes vacances de Terminale, qui te transmettent les bases de la première année de santé. Un parcours qui reprend là où tu t'es arrêté, à ton rythme.</p>
           <div class="sc-btns">
             <button class="sc-buy" onclick="window.open('https://www.medeos-sante.fr/packs/stages-vacances#stages','_blank')">Acheter</button>
             <button class="sc-more" onclick="window.open('https://www.medeos-sante.fr/packs/stages-vacances','_blank')">En savoir plus</button>
@@ -2595,7 +2595,7 @@
         <img src="img/stage-medipro.png" alt="Medi Pro" loading="lazy">
         <div class="sc2-body">
           <span class="sc-tag">Stage de pré-rentrée</span>
-          <p>Un stage intensif juste avant la rentrée qui vous transmet les bases académiques et une méthode avancée. Vos questions trouvent une réponse à tout moment, et votre tuteur vous accompagne.</p>
+          <p>Un stage intensif juste avant la rentrée, qui te transmet les bases académiques et une méthode avancée. Tes questions trouvent une réponse à tout moment, et ton tuteur t'accompagne.</p>
           <div class="sc-btns">
             <button class="sc-buy" onclick="window.open('https://www.medeos-sante.fr/packs/medi-pro#packs','_blank')">Acheter</button>
             <button class="sc-more" onclick="window.open('https://www.medeos-sante.fr/packs/medi-pro','_blank')">En savoir plus</button>
@@ -2683,7 +2683,7 @@
     <div class="card">
       <h3>Tes chiffres</h3>
       <div style="display:flex;gap:8px;flex-wrap:wrap">
-        <span class="chip" id="p-streak">🔥 0 jour</span><span class="chip" id="p-points">✨ 0 point</span><span class="chip" id="p-qcm">0 QCM joué</span>
+        <span class="chip" id="p-streak">🔥 0 jour</span><span class="chip" id="p-points">✨ 0 point</span><span class="chip" id="p-qcm">0 QCM joué</span><span class="chip" id="p-tro">0 trophée</span>
       </div>
       <p style="font-size:10.5px;color:var(--muted);margin-top:8px">Les points mesurent ton travail : ils comptent pour les grades de l'Arène et les étapes franchies.</p>
     </div>
@@ -2874,6 +2874,7 @@ function renderState(){
   { const e=document.getElementById('p-streak'); if(e) e.textContent='🔥 '+S.streak+(S.streak>1?' jours':' jour'); }
   { const e=document.getElementById('p-points'); if(e) e.textContent='✨ '+S.points+(S.points>1?' points':' point'); }
   { const e=document.getElementById('p-qcm'); if(e) e.textContent=S.qcm+' QCM joué'+(S.qcm>1?'s':''); }
+  { const e=document.getElementById('p-tro'); if(e && S.ar) e.innerHTML='<img class="ticn" src="img/icones/trophee-medeos.png" alt=""> '+fmtT(S.ar.T||0)+' trophées'; }
   { const e=document.getElementById('session-streak'); if(e) e.textContent='🔥 Assiduité : '+S.streak+(S.streak>1?' jours':' jour')+' · un jour de bonus si tu oublies'; }
   renderArene();
 }
@@ -5998,7 +5999,7 @@ const SEANCES=[  /* chaque groupe de 2 fiches a une VRAIE logique pédagogique *
    fiches:['physique-concentration-molaire-ponderale','physique-analyse-dimensionnelle']} /* les unités + les dimensions */
 ];
 
-SEANCES.forEach(s=>{ s.ligne=s.mat+' · 2 fiches + leurs questions · ~10 minutes';
+SEANCES.forEach(s=>{ s.ligne=s.mat+' · 2 fiches · lire, restituer, comparer · ~10 minutes';
   s.act=()=>startSeance(s); s.fait=()=>!!(S.sdone&&S.sdone[s.id]); });
 
 const MONDES=['Ce qu\'on ne te dit pas sur la P1','Le corps','La vie en petit','La matière','L\'arme secrète'];
@@ -6116,7 +6117,7 @@ function renderSeance(){
   }
   if(cur && !seanceJourFaite()){
     /* A1/B — la séance servie, jamais choisie */
-    const premiere=!S.nodeDone;
+    const premiere = (typeof seancesFaites==='function') ? seancesFaites().length===0 : !S.nodeDone;
     const momAcc = premiere ? 'accueil_premier_jour'
       : ((S.streak||0)>=1 && S.stDay!==arDay() ? 'accueil_serie_en_danger' : 'accueil_retour');
     const rAcc=axoRepl(momAcc)||{texte:'Prêt ? Je t\'ai préparé la suite.',pose:'axo-mains'};
@@ -6848,7 +6849,8 @@ function renderSimCard(){
   const PUCE=['①','②','③','④','⑤'];
   indics=indics.map((x,i)=>PUCE[i]+' '+x);
   c.innerHTML='<h3>🧭 Ton point de départ <span style="font-size:10px;color:var(--muted);font-weight:700">· fait le '+(pt.quand||'')+'</span></h3>'+
-    '<p style="font-size:13px;font-weight:800;margin-top:6px">Scénario préparé : <span style="color:var(--violet)">≈ '+pt.toi+' sur 100</span> <span style="font-size:11px;color:var(--muted);font-weight:700">(sans préparation : ≈ '+pt.temoin+')</span></p>'+
+    '<p style="font-size:13px;font-weight:800;margin-top:6px">Taux publié par ta fac : <span style="color:#55524B">≈ '+pt.temoin+' sur 100</span></p>'+
+    '<p style="font-size:13px;font-weight:800">Chez ceux qui arrivent préparés : <span style="color:var(--violet)">≈ '+pt.toi+' sur 100</span></p>'+
     '<p style="font-size:11.5px;font-weight:800;margin-top:10px">Ce que tes réponses disent de ta préparation :</p>'+
     indics.map(x=>'<p style="font-size:11.5px;line-height:1.5;margin-top:5px">'+x+'</p>').join('')+
     '<button class="btn ghost small" style="margin-top:10px" onclick="go(\'sim1\')">Refaire le point</button>';
@@ -6857,13 +6859,12 @@ function renderAvancee(){
   const c=document.getElementById('p-avancee'); if(!c) return;
   const faites=seancesFaites();
   const t=S.ar? S.ar.T:0;
-  c.innerHTML='<h3>📈 Ton avancée</h3>'+
-    '<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">'+
-    '<span class="chip">📚 '+faites.length+' séance'+(faites.length>1?'s':'')+' franchie'+(faites.length>1?'s':'')+'</span>'+
-    '<span class="chip"><img class="ticn" src="img/icones/trophee-medeos.png" alt=""> '+fmtT(t)+' trophées</span>'+
-    '<span class="chip">'+(S.qcm||0)+' QCM joués</span>'+
-    '<span class="chip"><img src="img/icones/flamme-medeos.png" style="width:13px;vertical-align:-2px" alt=""> '+(S.streak||0)+' jour'+(S.streak>1?'s':'')+'</span></div>'+
-    (faites.length?'<p style="font-size:11.5px;color:var(--muted);margin-top:8px">Dernière notion travaillée : « '+faites[faites.length-1].titre+' »</p>':'')+
+  /* cette carte ne répète plus « Tes chiffres » ni le diagramme : elle ne porte
+     que ce qu'elle est seule à dire — où en est le chemin. */
+  c.innerHTML='<h3>📚 Ton chemin</h3>'+
+    '<p style="font-size:12.5px;font-weight:800;margin-top:3px">'+faites.length+' séance'+(faites.length>1?'s':'')+' franchie'+(faites.length>1?'s':'')+'</p>'+
+    (faites.length?'<p style="font-size:11.5px;color:var(--muted);margin-top:4px">Dernière notion travaillée : « '+faites[faites.length-1].titre+' »</p>'
+                  :'<p style="font-size:11.5px;color:var(--muted);margin-top:4px">Ta première séance t\'attend dans le Parcours.</p>')+
     '<button class="btn ghost small" style="margin-top:9px" onclick="renderChemin();go(\'chemin\')">Revoir mes séances passées</button>';
 }
 
@@ -7126,7 +7127,7 @@ function ouvrirChoixSeance(){
   SEANCES.filter(s=>!(s.fait&&s.fait())).forEach(s=>{
     const b=document.createElement('button'); b.className='pioche-row';
     b.innerHTML='<img class="pimg" style="width:40px;height:40px;object-fit:contain;box-shadow:none" src="img/icones/'+(EMB[s.mat]||'')+'.png" alt="">'+
-      '<div><b>'+s.titre+'</b><span>'+s.mat+' · 2 fiches + leurs questions</span></div>';
+      '<div><b>'+s.titre+'</b><span>'+s.mat+' · 2 fiches</span></div>';
     b.onclick=()=>{ closeSheet('sheet-seances'); startSeance(s); };
     box.appendChild(b);
   });
