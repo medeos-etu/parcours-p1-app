@@ -1455,21 +1455,9 @@
   .sc-more{flex:1;border:1px solid rgba(255,255,255,.28);background:none;cursor:pointer;font-family:inherit;
     font-weight:800;font-size:12.5px;padding:12px;border-radius:12px;color:#fff}
 
-  /* ═══ ORDINATEUR : on se sert de la largeur au lieu de laisser un grand vide ═══ */
+  /* ═══ ORDINATEUR ═══ */
   @media (min-width:1024px){
-    /* le Parcours : la séance à gauche, le chemin déjà construit à droite */
-    #home.scr.on{max-width:1020px;display:grid;align-content:start;gap:16px 22px;
-      grid-template-columns:minmax(0,1.6fr) minmax(260px,1fr);
-      grid-template-areas:"tete tete" "seance chemin"}
-    #home .ptop{grid-area:tete}
-    #home .seance{grid-area:seance}
-    #home .built{grid-area:chemin;margin:0}
-    /* l'étagère se dresse en colonne : plus de défilement horizontal caché */
-    #home .built .brow{flex-direction:column;overflow:visible;gap:9px;padding:2px 0}
-    #home .built .bsc{width:100%;flex-direction:row;display:flex;align-items:center;gap:11px}
-    #home .built .bsc .pvig{width:48px;height:48px;flex-shrink:0}
-    #home .built .bsc .bst{font-size:11.5px;margin-top:0;-webkit-line-clamp:2}
-    /* les écrans d'une seule carte se centrent au lieu de flotter en haut */
+    /* les écrans d'une seule carte se centrent au lieu de flotter en haut de l'écran */
     #libre.scr.on, #rappel.scr.on{justify-content:center}
   }
 
