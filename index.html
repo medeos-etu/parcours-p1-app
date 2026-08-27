@@ -1190,12 +1190,21 @@
 
   /* — visite guidée : voile percé d'un projecteur + carte de la mascotte — */
   #tuto{position:fixed;inset:0;z-index:300;cursor:pointer}
+  /* La carte de fin d'entraînement prend une photo sombre en fond le jour où la journée
+     est bouclée : le texte gris sur fond gris devenait illisible. Sous cette photo, on
+     pose un voile et on repasse tout en clair. */
+  #libre-fin.sombre{position:relative;color:#FFFDF9;border:none}
+  #libre-fin.sombre::before{content:'';position:absolute;inset:0;border-radius:inherit;
+    background:linear-gradient(180deg,rgba(16,12,28,.42),rgba(16,12,28,.80));pointer-events:none}
+  #libre-fin.sombre > *{position:relative;z-index:1}
+  #libre-fin.sombre #libre-fin-t{color:#FFFDF9;text-shadow:0 2px 10px rgba(0,0,0,.55)}
+  #libre-fin.sombre #libre-fin-s{color:rgba(255,253,249,.92);text-shadow:0 1px 8px rgba(0,0,0,.5)}
   .tuto-hole{position:fixed;left:50vw;top:40vh;width:0;height:0;border-radius:18px;
     box-shadow:0 0 0 200vmax rgba(12,9,24,.82);pointer-events:none;
     transition:left .35s ease,top .35s ease,width .35s ease,height .35s ease}
   .tuto-box{position:fixed;left:14px;right:14px;max-width:430px;margin:0 auto;background:#FFFDF9;border-radius:18px;
     padding:14px 15px 12px;box-shadow:0 18px 44px rgba(10,8,20,.5);text-align:center;cursor:default}
-  .tuto-axo{height:84px;display:block;margin:-54px auto 4px;filter:drop-shadow(0 10px 18px rgba(0,0,0,.35))}
+  .tuto-axo{height:84px;display:block;margin:-54px auto 4px;filter:drop-shadow(0 11px 7px rgba(0,0,0,.30))}
   .tuto-bulle{font-size:13.5px;line-height:1.6;color:#1A1A2E;font-weight:600}
   .tuto-pips{display:flex;gap:5px;justify-content:center;margin:10px 0 2px}
   .tuto-pips i{width:7px;height:7px;border-radius:50%;background:rgba(107,70,193,.18)}
@@ -1704,7 +1713,9 @@
   @keyframes respire2{0%,100%{transform:scale(1)}50%{transform:scale(1.013)}}
   .seance{position:relative;background:var(--card);border:1px solid rgba(107,70,193,.30);border-radius:20px;
     padding:20px 18px 18px;box-shadow:0 10px 26px rgba(26,26,46,.09);animation:respire2 3s ease-in-out infinite;overflow:hidden}
-  .seance .se-axo{cursor:pointer;position:absolute;right:8px;bottom:4px;height:88px;opacity:.95}   /* cliquable : ouvre le Compagnon (pointer-events:none rendait l'onclick mort) */
+  .seance .se-axo{cursor:pointer;position:absolute;right:2px;bottom:-2px;height:88px;opacity:.95}
+  /* le dernier lien de la carte passait sous la mascotte : on lui réserve sa place */
+  .seance .stagelien{padding-right:88px}   /* cliquable : ouvre le Compagnon (pointer-events:none rendait l'onclick mort) */
   .se-sur{font-size:11px;font-weight:900;letter-spacing:.12em;color:var(--violet);text-transform:uppercase}
   .se-titre{font-size:24px;font-weight:900;letter-spacing:-.02em;line-height:1.18;margin-top:6px;max-width:85%}
   .se-ligne{font-size:13px;color:var(--muted);line-height:1.5;margin-top:7px;max-width:85%}
@@ -2017,7 +2028,7 @@
     <div class="center" style="justify-content:flex-start">
       <p style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700">Les vrais chiffres, voie PASS</p>
       <div id="fac-results" style="width:100%;max-width:400px;display:flex;flex-direction:column;gap:8px"></div>
-      <p style="font-size:10.5px;color:var(--muted)">D'une fac à l'autre, le taux va de 14,5 % à 43,4 % — le diplôme est le même. Moyenne nationale : 28,7 %.</p>
+      <p style="font-size:10.5px;color:var(--muted)" id="fac-repere"></p>
       <div class="card" style="text-align:left;max-width:400px"><p style="font-size:12.5px;line-height:1.55;color:#3A3730"><b>Ces taux sont des moyennes.</b> Ils mélangent des candidats très préparés et d'autres qui ont tout découvert en septembre. La suite sépare les deux.</p></div>
       <button class="btn" style="max-width:320px" onclick="go('sim4')">Voir ce qui change la donne</button>
     </div>
@@ -2089,10 +2100,27 @@
           <input class="field" id="id-prenom" placeholder="Ex. Lucas" autocomplete="given-name" oninput="majIdent()"></label>
         <label class="id-lab">Ton nom
           <input class="field" id="id-nom" placeholder="Ex. Crepin" autocomplete="family-name" oninput="majIdent()"></label>
-        <label class="id-lab">Ton téléphone
-          <input class="field" id="id-tel" type="tel" inputmode="tel" placeholder="Ex. 06 12 34 56 78" autocomplete="tel" oninput="majIdent()">
-          <span class="id-pourquoi"><b>Pourquoi ton numéro ?</b> Parce que l'accompagnement Medeos passe par des humains, pas par un robot : c'est par là qu'on te répond quand tu bloques, et qu'on te prévient des échéances à ne pas rater.</span>
-        </label>
+        <div class="id-lab" style="border:1.5px solid var(--line);border-radius:14px;padding:11px 12px">
+          <label style="display:flex;gap:9px;align-items:flex-start;cursor:pointer;font-weight:700">
+            <input type="checkbox" id="id-telok" onchange="majTelZone()" style="margin-top:2px;width:18px;height:18px;flex-shrink:0;accent-color:var(--violet)">
+            <span>Je veux bien recevoir un message de Medeos <span style="font-weight:600;color:var(--muted)">(facultatif)</span></span>
+          </label>
+          <span class="id-pourquoi" style="display:block;margin-top:7px">On suit tous les étudiants qui se préparent avec nous. Si tu nous le permets, on t'enverra un message pour t'encourager et pour mieux comprendre ce qui te motive. Tu peux dire non : ça ne change rien à ton accès.</span>
+          <div id="id-telzone" style="display:none;margin-top:10px">
+            <div style="display:flex;gap:8px">
+              <select class="field" id="id-indic" style="max-width:132px" onchange="majIdent()">
+                <option value="+33">🇫🇷 +33</option><option value="+32">🇧🇪 +32</option>
+                <option value="+41">🇨🇭 +41</option><option value="+352">🇱🇺 +352</option>
+                <option value="+1">🇨🇦 +1</option><option value="+212">🇲🇦 +212</option>
+                <option value="+213">🇩🇿 +213</option><option value="+216">🇹🇳 +216</option>
+                <option value="+221">🇸🇳 +221</option><option value="+262">🇷🇪 +262</option>
+                <option value="+590">🇬🇵 +590</option><option value="+596">🇲🇶 +596</option>
+                <option value="autre">Autre</option>
+              </select>
+              <input class="field" id="id-tel" type="tel" inputmode="tel" placeholder="6 12 34 56 78" autocomplete="tel" oninput="majIdent()" style="flex:1">
+            </div>
+          </div>
+        </div>
       </div>
       <button class="btn" id="id-cta" style="max-width:320px" disabled>Voir ce qu'il faut retenir</button>
     </div>
@@ -2191,11 +2219,11 @@
       <button class="btn" id="libre-btn" style="margin-top:12px" disabled>Valider</button>
     </div>
     <div class="card" id="libre-fin" style="display:none;text-align:center">
-      <img src="img/axo-encourage.png" alt="" style="height:84px;margin:0 auto 6px;display:block">
+      <img src="img/axo-encourage.png" alt="" id="libre-fin-axo" style="height:84px;margin:0 auto 6px;display:block">
       <p style="font-size:15px;font-weight:900" id="libre-fin-t"></p>
       <p style="font-size:12px;color:var(--muted);margin-top:4px" id="libre-fin-s"></p>
       <button class="btn" style="margin-top:11px" id="libre-encore">Encore 5 questions</button>
-      <button class="btn ghost" style="margin-top:7px" onclick="go('home')">Retour au Parcours</button>
+      <button class="btn ghost" style="margin-top:7px" id="libre-cont" onclick="go('home')">Retour au Parcours</button>
     </div>
   </section>
 
@@ -2968,24 +2996,27 @@ function validateFacs(){
   const fils=[...document.querySelectorAll('#onb3 .opt.sel')]
     .filter(b=>(b.getAttribute('onclick')||'').includes('selFiliere'))
     .map(b=>b.textContent).filter(x=>FIL_IDX[x]!==undefined);
+  const idxFil = fils.length ? fils.map(x=>FIL_IDX[x]) : [0,1,2,3,4];
+  const placesFil = f => (f[4]? idxFil.reduce((s,i)=>s+(f[4][i]||0),0) : f[3]);
+  const tauxDe = f => (!f[2]||!f[4]) ? f[1] : Math.max(0.5, 100*placesFil(f)/f[2]);
+  const nomFil = fils.length ? fils.map(x=>FIL_NOM[FIL_IDX[x]]).join(' et ') : 'santé, toutes filières';
   avec.forEach(f=>{
     const row=document.createElement('div'); row.className='card'; row.style.textAlign='left';
     if(f[1]>0){
-      let dont='';
-      if(f[4] && fils.length){
-        dont='<p style="font-size:11px;margin:-3px 0 7px;line-height:1.5">dont '+fils.map(x=>{
-          const n=f[4][FIL_IDX[x]];
-          return n>0 ? '<b style="color:var(--violet)">'+n.toLocaleString('fr-FR')+' en '+FIL_NOM[FIL_IDX[x]]+'</b>'
-                     : '<b style="color:#8A6238">'+FIL_NOM[FIL_IDX[x]]+' : 0 par cette voie ici</b>';
-        }).join(' · ')+'</p>';
-      }
+      const pl=placesFil(f), tx=tauxDe(f);
+      const dont = (f[4] && fils.length>1)
+        ? '<p style="font-size:11px;margin:-3px 0 7px;line-height:1.5">'+fils.map(x=>{
+            const n=f[4][FIL_IDX[x]];
+            return n>0 ? '<b style="color:var(--violet)">'+n.toLocaleString('fr-FR')+' en '+FIL_NOM[FIL_IDX[x]]+'</b>'
+                       : '<b style="color:#8A6238">'+FIL_NOM[FIL_IDX[x]]+' : 0 par cette voie ici</b>';
+          }).join(' · ')+'</p>' : '';
       row.innerHTML=`<b style="font-size:13.5px;font-weight:800">${f[0]==='la moyenne nationale'?'France entière':f[0]}</b>
-        <p style="font-size:11.5px;color:var(--muted);margin:3px 0 7px">${f[2].toLocaleString('fr-FR')} candidats → <b style="color:var(--ink)">${f[3].toLocaleString('fr-FR')} ont eu une place en santé</b>, toutes filières confondues</p>
+        <p style="font-size:11.5px;color:var(--muted);margin:3px 0 7px">${f[2].toLocaleString('fr-FR')} candidats → <b style="color:var(--ink)">${pl.toLocaleString('fr-FR')} places en ${nomFil}</b></p>
         ${dont}
-        <div class="repere"><div class="bar"><i style="width:${Math.min(100,f[1]/43.35*100)}%"></i></div><b>${String(f[1]).replace('.',',')} %</b></div>`;
+        <div class="repere"><div class="bar"><i style="width:${Math.min(100,tx/43.35*100)}%"></i></div><b>${String(Math.round(tx*10)/10).replace('.',',')} %</b></div>`;
     } else {
       row.innerHTML=`<b style="font-size:13.5px;font-weight:800">${f[0]}</b>
-        <p style="font-size:11.5px;color:var(--muted);margin-top:3px">Données non publiées pour cette fac — on utilise la moyenne nationale (28,7 %).</p>`;
+        <p style="font-size:11.5px;color:var(--muted);margin-top:3px">Données non publiées pour cette fac — on prend la moyenne nationale de tes filières.</p>`;
     }
     box.appendChild(row);
   });
@@ -2994,6 +3025,12 @@ function validateFacs(){
      f[1] agrège médecine + pharma + dentaire + sage-femme + kiné : à Lille,
      29,8 % toutes filières, mais 16,0 % en médecine seule. Les places par
      filière sont dans f[4] — on s'en sert. */
+  { /* le repère national, exprimé dans LES MÊMES filières — sinon on comparait
+       un taux de médecine à une moyenne toutes filières confondues. */
+    const r=document.getElementById('fac-repere');
+    if(r){ const tn=tauxDe(NAT);
+      r.innerHTML='D\'une fac à l\'autre le taux varie du simple au triple — le diplôme, lui, est le même. '+
+        'En <b>'+nomFil+'</b>, la moyenne nationale est de <b>'+String(Math.round(tn*10)/10).replace('.',',')+' %</b>.'; } }
   const idx = fils.length ? fils.map(x=>FIL_IDX[x]) : [0,1,2,3,4];
   const tauxFil = f => {
     if(!f[2] || !f[4]) return f[1];
@@ -3011,7 +3048,7 @@ function validateFacs(){
   calcSim(); go('sim3');
 }
 const REVEALS={
-  prerentree:"Dans les enquêtes étudiantes : 35 % de réussite chez ceux qui arrivent sans avoir rien préparé, 56 % chez ceux qui ont préparé leur rentrée — et les études publiées confirment un effet réel. Arriver en ayant déjà vu les notions, c'est réviser au lieu de découvrir.",
+  prerentree:"Les enquêtes étudiantes montrent un écart net entre ceux qui découvrent tout en septembre et ceux qui ont préparé leur rentrée, et les études publiées confirment un effet réel. C'est cet écart-là, mesuré, qu'on applique à ton taux — jamais plus. Arriver en ayant déjà vu les notions, c'est réviser au lieu de découvrir.",
   heures:"Dans les mêmes enquêtes : 44 % (6-8 h), 55 % (8-10 h), 61 % (10 h et plus). Mais le volume ne vaut que s'il est efficace — six heures où tu retiens vraiment battent douze heures de relecture passive."
 };
 function selSim(btn,key){
@@ -3086,8 +3123,15 @@ function prepIdent(retour){
   const P=S.profil||{};
   const g=(i,v)=>{ const e=document.getElementById(i); if(e) e.value=v||''; };
   g('id-prenom', localStorage.getItem('m4_prenom'));
-  g('id-nom', P.nom); g('id-tel', P.tel);
-  majIdent();
+  g('id-nom', P.nom);
+  { const c=document.getElementById('id-telok');
+    if(c){ c.checked=!!P.telOk;
+      const num=String(P.tel||'').replace(/^\+\d+\s*/,'');
+      g('id-tel', num);
+      const m=String(P.tel||'').match(/^(\+\d+)/);
+      if(m){ const s=document.getElementById('id-indic');
+        if(s && [...s.options].some(o=>o.value===m[1])) s.value=m[1]; } } }
+  if(typeof majTelZone==='function') majTelZone(); else majIdent();
 }
 function fermerIdent(){
   /* on n'appelle JAMAIS finSim ici : il recalculerait le point de départ à partir
@@ -3099,15 +3143,27 @@ function fermerIdent(){
     if(typeof renderSimCard==='function') renderSimCard();
   }
 }
+function majTelZone(){
+  const c=document.getElementById('id-telok'), z=document.getElementById('id-telzone');
+  if(z) z.style.display = (c && c.checked) ? 'block' : 'none';
+  majIdent();
+}
 function majIdent(){
   const v=i=>{ const e=document.getElementById(i); return e? e.value.trim() : ''; };
   const pr=v('id-prenom'), no=v('id-nom'), te=v('id-tel');
+  const veut=!!(document.getElementById('id-telok')||{}).checked;
+  const ind=v('id-indic')||'+33';
   S.profil=S.profil||{};
   if(pr){ localStorage.setItem('m4_prenom',pr); if(typeof applyPrenom==='function') applyPrenom(); }
-  S.profil.nom=no; S.profil.tel=te; saveS();
+  S.profil.nom=no;
+  S.profil.telOk=veut;
+  S.profil.tel = (veut && te) ? (ind==='autre'? te : ind+' '+te) : '';
+  saveS();
   const cta=document.getElementById('id-cta');
-  const ok = pr.length>1 && no.length>1 && (te.replace(/\D/g,'').length>=8);
-  if(cta) cta.disabled=!ok;
+  /* Le téléphone ne conditionne RIEN : seuls le prénom et le nom sont demandés.
+     S'il a coché la case, on attend quand même un numéro plausible avant de valider. */
+  const numOk = !veut || te.replace(/\D/g,'').length>=6;
+  if(cta) cta.disabled = !(pr.length>1 && no.length>1 && numOk);
 }
 function simNum(id,def){ const el=document.getElementById(id); const m=el&&el.textContent.match(/\d+/); return m?parseInt(m[0]):def; }
 function finSim(){ calcSim();
@@ -6024,7 +6080,8 @@ function renderProgression(){
   const cx=155, cy=112, RR=86;
   const ang={Anatomie:-90,Biologie:0,Chimie:90,Physique:180};
   const pt=(m,r)=>{ const a=ang[m]*Math.PI/180; return (cx+Math.cos(a)*r).toFixed(1)+','+(cy+Math.sin(a)*r).toFixed(1); };
-  const frac=m=>tt[m]? (ff.par[m]||0)/tt[m] : 0;
+  const brut=m=>tt[m]? (ff.par[m]||0)/tt[m] : 0;
+  const frac=m=>{ const x=Math.min(1,Math.max(0,brut(m))); return Math.log(1+9*x)/Math.log(10); };
   const poly=MATS.map(m=>pt(m,Math.max(0.05,frac(m))*RR)).join(' ');
   const grille=[0.25,0.5,0.75,1].map(k=>'<polygon points="'+MATS.map(m=>pt(m,RR*k)).join(' ')+'" fill="none" stroke="rgba(107,70,193,'+(k===1?'.2':'.09')+'" stroke-width="1"/>').join('');
   const axes=MATS.map(m=>{ const q=pt(m,RR).split(','); return '<line x1="'+cx+'" y1="'+cy+'" x2="'+q[0]+'" y2="'+q[1]+'" stroke="rgba(107,70,193,.07)"/>'; }).join('');
@@ -6041,7 +6098,7 @@ function renderProgression(){
     grille+axes+
     '<polygon points="'+poly+'" fill="url(#avgrad)" stroke="#6B46C1" stroke-width="2.5" stroke-linejoin="round"/>'+
     sommets+labs+'</svg></div>'+
-    '<p class="pg-note">'+(ff.tot?'Chaque séance élargit ton diagramme — matière par matière, vers le bord.':'Ta première séance donne naissance à ton diagramme.')+'</p>'+
+    '<p class="pg-note">'+(ff.tot?'Chaque séance élargit ton diagramme. Les premières poussent fort — plus tu approches du bord, plus il faut de séances pour gagner du terrain.':'Ta première séance donne naissance à ton diagramme.')+'</p>'+
     '<div style="margin-top:10px;border-top:1px solid var(--line);padding-top:10px;display:flex;align-items:center;gap:10px;flex-wrap:wrap">'+
     '<p style="flex:1;min-width:200px;font-size:11px;color:var(--muted);line-height:1.55">🚀 <b>Pour accélérer :</b> avec l\'année complète Medeos, on s\'entraîne en illimité — stages de révision pendant les vacances, fiches et QCM en illimité.</p>'+
     '<button class="btn small" style="flex-shrink:0" onclick="window.open(\'https://www.medeos-sante.fr/packs/stages-vacances#stages\',\'_blank\')">En savoir plus</button></div>';
@@ -6164,7 +6221,7 @@ function renderProfilForm(){
   b.innerHTML='<h3>👤 Ton profil</h3>'+
     '<p class="pf-intro">'+
       (dejaFait
-        ? 'Ton point de départ est fait — il ne manque plus que de quoi te reconnaître : ton nom et ton téléphone.'
+        ? 'Ton point de départ est fait — il ne manque plus que de quoi te reconnaître : ton prénom et ton nom.'
         : 'Il se remplit tout seul en répondant au point de départ : ta fac, ta classe, ton projet, et les vraies chances qui vont avec. Deux minutes, une seule fois.')+
       (reste?' Et il t\'ouvre <b>une séance de Parcours de plus aujourd\'hui</b> 🎁':'')+'</p>'+
     (dejaFait
@@ -6185,7 +6242,7 @@ function majEtatProfil(){
   const P=S.profil||{};
   const manque=[];
   if(!localStorage.getItem('m4_prenom')) manque.push('ton prénom');
-  if(!P.nom) manque.push('ton nom'); if(!P.tel) manque.push('ton téléphone');
+  if(!P.nom) manque.push('ton nom');
   if(!P.classe) manque.push('ta classe'); if(!P.notes) manque.push('ta moyenne'); if(!P.projet) manque.push('ton projet');
   e.textContent = manque.length? 'Il manque encore : '+manque.join(', ')+'.' : 'Profil complet ✓';
   e.className='pf-etat'+(manque.length?'':' ok');
@@ -6753,7 +6810,12 @@ function renderPick(){
    étape 3 : l'Arène se découvre. Jamais revu une fois fait (S.tuto). ═══ */
 const TUTOS={
   biblio:[
-    {img:'axo-guide-bienvenue', t:"Bienvenue dans l'Univers Medeos ! Ici, c'est la <b>Bibliothèque</b> : fiches, panoramas et métiers de la santé — tout est en accès libre."},
+    /* LE POURQUOI AVANT LE COMMENT. On présentait les lieux sans avoir dit à quoi sert
+       l'application. Le premier écran dit maintenant l'intention, et rien d'autre. */
+    {img:'axo-guide-bienvenue', t:"Salut ! Ici, on prépare <b>ta première année de santé</b>. Pas en te noyant : en te prenant par la main, quelques notions chaque jour, jusqu'à la rentrée."},
+    {img:'axo-guide-carte', t:"On anticipe les <b>matières fondamentales de la première année</b> — anatomie, biologie, chimie, physique. Le jour où le cours tombera, tu l'auras déjà vu : tu réviseras au lieu de découvrir."},
+    {img:'axo-guide-pointe-bas', t:"Deux fiches par jour, dix minutes. C'est tout ce qu'on te demande. <b>La régularité fait le travail</b>, pas les grosses journées."},
+    {img:'axo-guide-bienvenue', t:"Et ici, c'est la <b>Bibliothèque</b> : fiches, panoramas et métiers de la santé — tout est en accès libre."},
     {sel:'#rescards-free', img:'axo-guide-carte', t:"Chaque carte s'ouvre librement. Lis, referme, reviens — rien n'est chronométré, rien n'est noté."},
     {sel:'#mainnav', img:'axo-guide-pointe-bas', t:"En bas, les trois mondes : la <b>Bibliothèque</b>, ton <b>Parcours</b> de révision et l'<b>Arène</b>."},
     {img:'axo-guide-bravo', t:"Le Parcours et l'Arène s'ouvrent avec un compte gratuit — ta progression y est gardée pour de bon.",
@@ -7803,7 +7865,10 @@ function libreFin(){
     document.getElementById('libre-fin-t').textContent='Ta journée est complète 🎉';
     { const c3=document.getElementById('libre-fin');
       if(c3){ c3.style.backgroundImage="url('img/moment-entrainement-fini.png')";
-        c3.style.backgroundSize='cover'; c3.style.backgroundPosition='center'; } }
+        c3.style.backgroundSize='cover'; c3.style.backgroundPosition='center';
+        c3.classList.add('sombre'); } }
+    /* la scène de la mascotte est rendue plus bas : celle du haut ferait doublon */
+    { const a3=document.getElementById('libre-fin-axo'); if(a3) a3.style.display='none'; }
     const fs2=document.getElementById('libre-fin-s');
     fs2.style.whiteSpace='normal'; fs2.style.textAlign='center';
     const part=LB.qs.length?LB.ok/LB.qs.length:0;
@@ -7812,13 +7877,15 @@ function libreFin(){
     const enc2=document.getElementById('libre-encore'); enc2.style.display='block';
     enc2.textContent='Revenir à mon Parcours';
     enc2.onclick=()=>go('home');
-    /* première journée bouclée : on ouvre la porte de la Bibliothèque */
-    if((typeof seancesFaites==='function'?seancesFaites().length:0)<=2){
-      const c4=document.getElementById('libre-cont');
-      if(c4){ c4.style.display='block'; c4.textContent='📚 Découvrir la Bibliothèque';
-        c4.onclick=()=>go('biblio'); }
-    }
-    { const c2=document.getElementById('libre-cont'); if(c2) c2.style.display='none'; }
+    /* Un seul chemin de retour : le bouton principal dit déjà « Revenir à mon Parcours ».
+       Le second bouton ne sert que les tout premiers jours, pour ouvrir la Bibliothèque. */
+    { const c4=document.getElementById('libre-cont');
+      if(c4){
+        if((typeof seancesFaites==='function'?seancesFaites().length:0)<=2){
+          c4.style.display='block'; c4.textContent='📚 Découvrir la Bibliothèque';
+          c4.onclick=()=>go('biblio');
+        } else { c4.style.display='none'; }
+      } }
     S.qcm=(S.qcm||0)+LB.qs.length; saveS();
     if(typeof son==='function') son('coffre');
     return;
@@ -9376,7 +9443,9 @@ function renderLB(){
 /* ═══ SWIPE : on fait défiler les univers au doigt, comme dans Clash ═══ */
 (function(){
   let x0=null,y0=null;
+  const dansUnCarrousel=el=>!!(el && el.closest && el.closest('.sallesbox, [data-glisse-local]'));
   document.addEventListener('touchstart',e=>{ if(e.touches.length!==1) return;
+    if(dansUnCarrousel(e.target)){ x0=null; return; }   /* le carrousel garde son geste */
     x0=e.touches[0].clientX; y0=e.touches[0].clientY; },{passive:true});
   document.addEventListener('touchend',e=>{
     if(x0===null) return;
