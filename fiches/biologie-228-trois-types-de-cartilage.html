@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Le cervelet : morphologie et pédoncules — Fiche Medeos</title>
+<title>Hyalin, élastique, fibrocartilage — Fiche Medeos</title>
 <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
@@ -63,8 +63,6 @@
             letter-spacing:.8px; text-transform:uppercase; }
         .mnemo-box b { color:#4C2A85; }
 
-
-    /* --- petit tableau Medeos --- */
     .tbl-wrap { margin: 20px 0; overflow-x: auto; }
     table.tbl { width: 100%; border-collapse: separate; border-spacing: 0; background: #fff; border: 1px solid #dccff2; border-radius: 12px; overflow: hidden; font-size: 14.5px; box-shadow: 0 3px 12px rgba(107,70,193,.08); }
     table.tbl th { background: #F1ECFA; color: #4C2A85; font-size: 11.5px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; text-align: left; padding: 11px 14px; }
@@ -72,8 +70,7 @@
     table.tbl td b { color: #4C2A85; }
     table.tbl td .gl { color: #6b6275; font-weight: 400; font-size: 13.5px; }
     .tbl-note { font-size: 12.5px; color: #6b6275; margin: -10px 4px 20px; font-weight: 500; }
-    @media print { .tbl-wrap { page-break-inside: avoid; } table.tbl { font-size: 16px; box-shadow: none; } table.tbl th { font-size: 12.5px; } }
-    @media (max-width: 600px) { table.tbl { font-size: 13.5px; } table.tbl th, table.tbl td { padding: 9px 10px; } }
+
     .recap { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
     .recap .box { border-radius: 12px; padding: 15px 18px; font-size: 14px; line-height: 1.5; }
     .recap .retenir { background: #F1ECFA; border: 1px solid #dccff2; }
@@ -82,7 +79,6 @@
     .recap .retenir .lbl { color: #6B46C1; }
     .recap .piege .lbl { color: #9a6d00; }
     .recap b { font-weight: 700; color: #1A1A2E; }
-    .recap .gl { color: #6b6275; font-weight: 400; }
     .qcm-cta { display: flex; align-items: center; gap: 16px; text-decoration: none; color: inherit; background: #fff; border: 1px solid #d6c6f0; border-radius: 14px; padding: 18px 22px; margin: 24px 0 6px; box-shadow: 0 9px 26px -16px rgba(107,70,193,.4); transition: transform .18s ease, box-shadow .18s ease; }
     .qcm-cta:hover { transform: translateY(-2px); box-shadow: 0 16px 38px -16px rgba(107,70,193,.5); }
     .qcm-cta:focus-visible { outline: 3px solid #6B46C1; outline-offset: 2px; }
@@ -116,6 +112,10 @@
         .step .n { width: 30px; height: 30px; font-size: 14px; }
         .step .txt { font-size: 16.5px; line-height: 1.5; padding-top: 2px; }
         .pass-tip { padding: 16px 22px; margin: 18px 0; font-size: 16.5px; box-shadow: none; }
+        .tbl-wrap { page-break-inside: avoid; }
+        table.tbl { font-size: 16px; box-shadow: none; }
+        table.tbl th { font-size: 12.5px; }
+        .tbl-note { font-size: 14px; }
         .recap { gap: 16px; margin: 18px 0; }
         .recap .box { padding: 15px 20px; font-size: 15.5px; }
         .recap .box .lbl { font-size: 12.5px; }
@@ -136,6 +136,8 @@
         .recap { grid-template-columns: 1fr; }
         .intro, .pass-tip, .step .txt, .recap .box { text-align: left; }
         .schema-box::before { color: rgba(107,70,193,0.20); font-size: 11px; letter-spacing: 1px; max-width: 90%; }
+        table.tbl { font-size: 13.5px; }
+        table.tbl th, table.tbl td { padding: 9px 10px; }
     }
 
     /* === mobile-polish + zoom-bar ordi only === */
@@ -177,95 +179,97 @@
 
     <header class="hook-header">
         <div class="brand-tag">Ressource gratuite</div>
-        <h1 class="course-title">Le cervelet : morphologie et pédoncules</h1>
-        <p class="punch">Sous la <span class="accent">tente du cervelet</span>, il y a… le cervelet.</p>
-        <p class="punch">Un petit organe discret, branché au tronc par <span class="accent">3 paires de câbles</span>.</p>
+        <h1 class="course-title">Hyalin, élastique, fibrocartilage</h1>
+        <p class="punch">Une même substance fondamentale. <span class="accent">Trois tissus.</span></p>
+        <p class="punch">Ce sont les <span class="accent">fibres</span> qui changent — et ça suffit.</p>
     </header>
 
-    <p class="intro">Tu viens de nommer les deux replis de la dure-mère : la faux du cerveau, et la <strong>tente du cervelet</strong>. Ce qui se trouve juste <em class="hl">sous cette tente</em>, c'est justement lui. On a vu le cerveau (le chef), le diencéphale (le centre de tri), les ventricules et les méninges (la protection) : place maintenant à un <strong>petit organe discret mais essentiel</strong>. Sans lui, tu ne pourrais même pas attraper ta tasse de café sans la renverser ☕.</p>
-
-    <p class="intro">Le <strong>cervelet</strong> (= « petit cerveau ») est situé en <strong>arrière du tronc cérébral</strong> et <strong>sous le cerveau</strong>, dans la <strong>fosse crânienne postérieure</strong>. Il est séparé du cerveau par la <strong>tente du cervelet</strong> — ce repli de dure-mère que tu viens de voir.</p>
-
-    <figure class="schema-box" style="margin: 20px 0;">
-        <span class="schema-num">La tente du cervelet</span>
-        <img src="../images/anatomie/ch8_tente_cervelet.png" alt="Coupe sagittale médiane simplifiée de l'encéphale : le cerveau en haut, la tente du cervelet en bleu formant un plancher horizontal, le cervelet en dessous et en arrière, le tronc cérébral vertical au centre" onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
-        <figcaption class="caption"><strong>Repère d'abord la membrane bleue</strong> — c'est la <strong>tente du cervelet</strong>, et elle se comporte comme un plancher. Au-dessus : le <strong>cerveau</strong>. En dessous, en arrière du <strong>tronc cérébral</strong> : le <strong>cervelet</strong>. Une seule chose à retenir sur ce schéma : ce qui est <strong>sous la tente</strong>, c'est le cervelet.</figcaption>
-    </figure>
+    <p class="intro">Tu viens d'entourer un anneau trachéal de son périchondre — et cet anneau, on l'a dit au passage, est en <strong>cartilage hyalin</strong>. Voici pourquoi ce mot était là. Depuis le début du chapitre, on parle du cartilage <strong>au singulier</strong> : des chondroblastes, une MEC dominée par les <strong>agrécans</strong> et le <strong>collagène II</strong>. Il en existe en réalité <strong>3 variétés</strong>. Ce qui change de l'une à l'autre, ce sont les <em class="hl">fibres</em> — et cette seule différence suffit à créer trois tissus qui n'encaissent pas les mêmes contraintes.</p>
 
     <div class="steps">
-        <div class="steps-title">Sa morphologie — comme le cerveau, il possède…</div>
+        <div class="steps-title">Les 3 types, un par un</div>
         <ol>
             <li class="step">
                 <span class="n">1</span>
-                <span class="txt"><span class="lead">2 hémisphères</span> <span class="gl">(droit et gauche)</span>, réunis par une partie centrale : le <b>vermis</b> <span class="gl">(= « ver » en latin, car il ressemble à un ver de terre)</span>.</span>
+                <span class="txt"><span class="lead">Le cartilage hyalin.</span> Du grec <b>hyalos = verre</b> : il a un <b>aspect vitreux</b>. C'est le <b>plus abondant</b> de l'organisme. Où le trouve-t-on ? Sur les <b>surfaces articulaires des diarthroses</b> ; dans les <b>anneaux trachéaux et bronchiques</b>, où il joue son rôle de « <b>ressort</b> » évitant l'écrasement lors des dépressions inspiratoires ; dans les <b>cartilages costaux</b> <span class="gl">(jonction côtes–sternum)</span> ; dans le <b>cartilage de croissance</b> — une <b>forme modifiée du hyalin</b> qui permet l'accroissement en longueur des os pendant le développement ; et dans le <b>larynx</b>, <b>sauf l'épiglotte</b>.</span>
             </li>
             <li class="step">
                 <span class="n">2</span>
-                <span class="txt"><span class="lead">Un cortex cérébelleux en surface.</span> De la <b>substance grise</b>, plissée en <b>fines lamelles</b> : les <b>folia</b>.</span>
+                <span class="txt"><span class="lead">Le cartilage élastique.</span> Il contient des <b>fibres élastiques</b> <b>en plus</b> des fibres de collagène II, ce qui lui confère une <b>élasticité renforcée</b>. Où ? Le <b>pavillon de l'oreille</b>, les <b>ailes du nez</b>, et l'<b>épiglotte</b> <span class="gl">(au carrefour aéro-digestif)</span> — c'est elle, l'exception du larynx.</span>
             </li>
             <li class="step">
                 <span class="n">3</span>
-                <span class="txt"><span class="lead">De la substance blanche en profondeur.</span> On l'appelle l'<b>arbre de vie</b>, car en coupe ça ressemble à un arbre.</span>
+                <span class="txt"><span class="lead">Le fibrocartilage.</span> Il se distingue par des <b>trousseaux de fibres de collagène de type I</b>, abondantes et <b>orientées dans la même direction</b>, <b>en plus du collagène de type II</b> <span class="gl">(toujours présent, comme dans tout cartilage)</span>. C'est cette combinaison <b>collagène I + II</b> qui lui donne une résistance à la fois à la <b>pression</b> <span class="gl">(collagène II + agrécans)</span>, à la <b>traction</b> <span class="gl">(collagène I)</span> et à la <b>torsion</b>. Où ? <b>Disques intervertébraux</b>, <b>ménisques articulaires</b>, <b>symphyse pubienne</b>, <b>enthèses</b> <span class="gl">(ex : tendon d'Achille)</span>.</span>
             </li>
         </ol>
     </div>
 
     <figure class="schema-box" style="margin: 20px 0;">
-        <span class="schema-num">Le cervelet — vue postérieure et coupe</span>
-        <img src="../images/anatomie/ch8_cervelet.png" alt="Planche en deux panneaux. À gauche, vue postérieure du cervelet : les deux hémisphères cérébelleux striés de fines lamelles, séparés par le vermis médian. À droite, coupe sagittale médiane du tronc cérébral et du cervelet : la substance blanche ramifiée en arbre de vie, le quatrième ventricule, et les trois pédoncules cérébelleux supérieur, moyen et inférieur reliant le cervelet au tronc" onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
-        <figcaption class="caption"><strong>Deux panneaux, deux lectures.</strong> À <strong>gauche</strong>, le cervelet vu <strong>de dos</strong> : les <strong>2 hémisphères</strong>, striés de fines lamelles — ce sont les <strong>folia</strong> — et la bande médiane qui les réunit, le <strong>vermis</strong>. À <strong>droite</strong>, le même cervelet <strong>coupé en deux</strong> : la substance blanche y apparaît ramifiée, c'est l'<strong>arbre de vie</strong>. <span style="opacity:.8">Sur ce panneau de droite, les trois fines bandes colorées coincées entre le cervelet et le tronc cérébral portent déjà leur nom : ce sont les <strong>pédoncules cérébelleux</strong> — supérieur, moyen, inférieur. Laisse-les de côté pour l'instant, c'est la suite de la fiche.</span></figcaption>
+        <span class="schema-num">Les 3 types de cartilage</span>
+        <img src="../images/biologie/ch12_3_types_cartilage.png" alt="Comparaison des trois types de cartilage : hyalin homogène et bleuté, élastique parcouru d'un réseau de fibres élastiques sombres, fibrocartilage avec des trousseaux de fibres parallèles" onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
+        <figcaption class="caption"><strong>Regarde le fond, pas les cellules</strong> — les chondrocytes se ressemblent dans les trois. À gauche, le <strong>hyalin</strong> : matrice homogène, presque vide, d'où l'aspect vitreux. Au centre, l'<strong>élastique</strong> : un réseau dense de <strong>fibres élastiques</strong> sombres qui court dans tous les sens. À droite, le <strong>fibrocartilage</strong> : de gros <strong>trousseaux orientés dans la même direction</strong>, avec les cellules alignées entre eux.</figcaption>
     </figure>
 
-    <div class="mnemo-box"><span class="lbl">Le mnémo — le ver et l'arbre</span><b>2 hémisphères</b> réunis par le <b>vermis</b> (= « ver » en latin, car il ressemble à un ver de terre). — De la substance blanche en profondeur (l'<b>arbre de vie</b>, car en coupe ça ressemble à un arbre).</div>
-
-    <p class="intro">Justement : comment ce petit organe est-il <strong>relié au reste</strong> ? Le cervelet est rattaché au <strong>tronc cérébral</strong> — juste devant lui — par <strong>3 paires de pédoncules cérébelleux</strong>, de gros câbles de substance blanche : <strong>supérieur</strong>, <strong>moyen</strong>, <strong>inférieur</strong>. C'est par là que <em class="hl">transitent toutes les infos motrices</em>.</p>
-
-    <div class="mnemo-box"><span class="lbl">Le mnémo — un pédoncule par étage</span>Le plus simple pour les retenir : <b>un pédoncule par étage du tronc cérébral</b> 🏢. <span style="opacity:.75">Tu découvriras ces 3 étages juste après.</span></div>
+    <p class="intro"><strong>Une précision qui piège, avant le tableau.</strong> Le cartilage est <strong>à la fois élastique et rigide</strong> <em class="hl">quelle que soit la variété</em> — et cette propriété-là ne vient <strong>pas</strong> des fibres élastiques, mais de la composition de la <strong>substance fondamentale</strong>. Autrement dit : le cartilage hyalin est <strong>déjà</strong> élastique. Ce que les fibres élastiques apportent au cartilage élastique, c'est une <strong>élasticité renforcée</strong>, pas l'élasticité tout court.</p>
 
     <div class="tbl-wrap">
         <table class="tbl">
             <thead>
-                <tr><th>Pédoncule</th><th>Il le relie à…</th><th>Ce qui y circule</th></tr>
+                <tr><th>Critère</th><th>Hyalin</th><th>Élastique</th><th>Fibrocartilage</th></tr>
             </thead>
             <tbody>
-                <tr><td>🔵 <b>Supérieur</b></td><td>Le <b>mésencéphale</b> <span class="gl">(étage du haut)</span></td><td>Surtout des <b>sorties</b> — la correction calculée par le cervelet repart vers le thalamus, puis le cortex.</td></tr>
-                <tr><td>🟡 <b>Moyen</b> <span class="gl">(le plus volumineux)</span></td><td>Le <b>pont</b> <span class="gl">(étage du milieu)</span></td><td>Surtout des <b>entrées</b> — l'intention de mouvement envoyée par le cortex cérébral.</td></tr>
-                <tr><td>🔴 <b>Inférieur</b></td><td>Le <b>bulbe</b> <span class="gl">(étage du bas)</span></td><td>Surtout des <b>entrées</b> — la position réelle du corps <span class="gl">(moelle épinière)</span> et l'équilibre <span class="gl">(oreille interne)</span>.</td></tr>
+                <tr>
+                    <td><b>Aspect</b></td>
+                    <td>Vitreux</td>
+                    <td>Souple</td>
+                    <td>Dense, fibreux</td>
+                </tr>
+                <tr>
+                    <td><b>Collagène</b></td>
+                    <td>Type <b>II</b></td>
+                    <td>Type <b>II</b> + <b>fibres élastiques</b></td>
+                    <td>Type <b>I</b> + type <b>II</b></td>
+                </tr>
+                <tr>
+                    <td><b>Résistance</b></td>
+                    <td>Pression</td>
+                    <td>Déformation élastique</td>
+                    <td>Pression + traction + torsion</td>
+                </tr>
+                <tr>
+                    <td><b>Localisations</b></td>
+                    <td>Articulations, trachée, larynx, croissance</td>
+                    <td>Oreille, nez, épiglotte</td>
+                    <td>Disques intervertébraux, ménisques, symphyse pubienne</td>
+                </tr>
             </tbody>
         </table>
     </div>
+    <p class="tbl-note">Une seule ligne commande tout le tableau : celle des <strong>collagènes</strong>. Apprends-la en premier, les trois autres lignes en découlent.</p>
 
-    <p class="intro">Retiens la <strong>logique</strong> plutôt que la liste : le cervelet <strong>reçoit</strong> d'un côté l'intention (moyen) et de l'autre la réalité du terrain (inférieur), il <strong>compare</strong> les deux, puis <strong>renvoie</strong> la correction (supérieur).</p>
-
-    <p class="intro">💧 Et le <strong>4<sup>e</sup> ventricule</strong> dans tout ça ? Le cervelet n'est pas collé directement sur le tronc — il y est relié par <strong>3 pédoncules de chaque côté</strong> (supérieur, moyen, inférieur — donc <strong>6 au total</strong>). Ces pédoncules forment les <strong>bords latéraux</strong> du 4<sup>e</sup> ventricule : entre eux, il reste un <strong>espace creux en losange</strong> dont le <strong>plancher</strong> est la face postérieure du tronc, et le <strong>toit</strong>, le cervelet. C'est là que le LCR circule tranquillement.</p>
-
-    <figure class="schema-box" style="margin: 20px 0;">
-        <span class="schema-num">Le 4<sup>e</sup> ventricule, cervelet retiré</span>
-        <img src="../images/anatomie/ch8_tronc_cerebral_posterieur.png" alt="Vue postérieure du tronc cérébral, cervelet retiré : les trois étages empilés, les trois pédoncules cérébelleux coupés de chaque côté, et au centre le quatrième ventricule ouvert en forme de losange" onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
-        <figcaption class="caption"><strong>Le cervelet a été retiré</strong> pour qu'on voie l'arrière du tronc. De chaque côté, les <strong>3 pédoncules cérébelleux coupés</strong> — les câbles qui le reliaient au tronc. Entre eux, le creux en <strong>losange</strong> : c'est le <strong>4<sup>e</sup> ventricule</strong>. Ses bords latéraux, ce sont les pédoncules ; son plancher, la face postérieure du tronc ; son toit, le cervelet qu'on a enlevé. <strong>Et vérifie le mnémo au passage</strong> : chaque pédoncule part de sa propre couleur — le <strong>supérieur</strong> du <strong>bleu</strong> <span style="opacity:.8">(mésencéphale)</span>, le <strong>moyen</strong> du <strong>jaune</strong> <span style="opacity:.8">(pont)</span>, l'<strong>inférieur</strong> du <strong>rouge</strong> <span style="opacity:.8">(bulbe)</span>. Un pédoncule par étage, il est dessiné.</figcaption>
-    </figure>
+    <p class="intro">Reviens une seconde sur le hyalin des voies aériennes. Dans la fiche précédente, c'était la destruction du <strong>périchondre</strong> qui mettait la trachée en danger ; ici, c'est le <strong>cartilage lui-même</strong> qui est détruit. Une <strong>périchondrite</strong> — maladie inflammatoire qui détruit les cartilages — peut entraîner une <strong>insuffisance respiratoire très grave</strong> si elle atteint les cartilages trachéaux et bronchiques : sans le « ressort » cartilagineux, <em class="hl">les voies aériennes s'écrasent lors de l'inspiration</em>.</p>
 
     <div class="pass-tip">
-        Devant une question sur le cervelet, pose-toi deux questions <strong>dans cet ordre</strong> : <strong>où est-il</strong> (sous la tente du cervelet, en arrière du tronc, dans la fosse crânienne postérieure) et <strong>par quoi est-il branché</strong> (3 paires de pédoncules, un par étage du tronc). Le losange du 4<sup>e</sup> ventricule tombe alors tout seul : ses bords, ce sont les <strong>pédoncules</strong>.
+        Devant un QCM, la question qui tranche est toujours la même : <strong>quelles fibres ?</strong> Collagène II seul → <strong>hyalin</strong>. Collagène II + fibres élastiques → <strong>élastique</strong>. Trousseaux de collagène I orientés, en plus du II → <strong>fibrocartilage</strong>. Et retiens le sens de la règle : le collagène I n'apparaît <strong>que</strong> dans le fibrocartilage — il est <strong>absent du cartilage hyalin</strong>.
     </div>
 
-    <p class="intro">Tu sais maintenant <strong>où</strong> il se trouve et <strong>comment</strong> il est câblé. Ce que le cervelet fait de tout ce qui entre et sort par ces câbles, c'est la suite.</p>
+    <p class="intro">Tu sais maintenant <strong>de quoi</strong> chaque cartilage est fait. Reste à savoir <strong>comment il grandit</strong> — et il y a deux façons, qui vont en sens opposés.</p>
 
     <div class="recap">
         <div class="box retenir">
             <span class="lbl">À retenir</span>
-            <b>Cervelet</b> = en arrière du tronc, sous le cerveau, dans la <b>fosse crânienne postérieure</b>, sous la <b>tente du cervelet</b>. <b>2 hémisphères + vermis</b> · cortex plissé en <b>folia</b> · substance blanche = <b>arbre de vie</b>. Relié au tronc par <b>3 paires de pédoncules</b>, <b>un par étage</b> : supérieur → mésencéphale, moyen → pont, inférieur → bulbe.
+            Trois types, un seul paramètre qui change : les <b>fibres</b>. <b>Hyalin</b> = collagène II, vitreux, le plus abondant <span style="color:#6b6275">(articulations, anneaux trachéaux et bronchiques, cartilages costaux, cartilage de croissance, larynx sauf l'épiglotte)</span>. <b>Élastique</b> = collagène II + fibres élastiques <span style="color:#6b6275">(oreille, ailes du nez, épiglotte)</span>. <b>Fibrocartilage</b> = trousseaux de collagène I + collagène II <span style="color:#6b6275">(disques intervertébraux, ménisques, symphyse pubienne, enthèses)</span>.
         </div>
         <div class="box piege">
             <span class="lbl">Le piège</span>
-            Cerveau et cervelet ont tous les deux <b>2 hémisphères</b>, mais pas le même pont entre eux : le cerveau a le <b>corps calleux</b>, le cervelet a le <b>vermis</b>. Un QCM qui relie les hémisphères <b>cérébelleux</b> par le corps calleux est <b>FAUX</b>.
+            Deux erreurs classiques. <b>1.</b> Croire que le fibrocartilage <b>n'a que</b> du collagène I : le type <b>II y est toujours présent</b>, comme dans tout cartilage — le I s'y <b>ajoute</b>. <b>2.</b> Ranger l'épiglotte avec le reste du larynx : le larynx est <b>hyalin sauf l'épiglotte</b>, qui est <b>élastique</b>.
         </div>
     </div>
 
-    <a class="qcm-cta" style="display:none" href="/ressources/qcm-decouverte/decouverte-anatomie-cervelet" target="_top">
+    <a class="qcm-cta" style="display:none" href="/ressources/qcm-decouverte/decouverte-biologie-types-cartilage" target="_top">
         <span class="qcm-body">
             <span class="qcm-k">Vérifie en 3 questions</span>
-            <span class="qcm-t">QCM — Cervelet &amp; pédoncules</span>
+            <span class="qcm-t">QCM — Les 3 types de cartilage</span>
         </span>
         <span class="qcm-arrow" aria-hidden="true">→</span>
     </a>

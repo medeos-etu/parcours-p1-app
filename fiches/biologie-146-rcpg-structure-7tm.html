@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Le cervelet : morphologie et pédoncules — Fiche Medeos</title>
+<title>Les RCPG : 7 passages dans la membrane — Fiche Medeos</title>
 <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
@@ -63,17 +63,6 @@
             letter-spacing:.8px; text-transform:uppercase; }
         .mnemo-box b { color:#4C2A85; }
 
-
-    /* --- petit tableau Medeos --- */
-    .tbl-wrap { margin: 20px 0; overflow-x: auto; }
-    table.tbl { width: 100%; border-collapse: separate; border-spacing: 0; background: #fff; border: 1px solid #dccff2; border-radius: 12px; overflow: hidden; font-size: 14.5px; box-shadow: 0 3px 12px rgba(107,70,193,.08); }
-    table.tbl th { background: #F1ECFA; color: #4C2A85; font-size: 11.5px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; text-align: left; padding: 11px 14px; }
-    table.tbl td { padding: 12px 14px; border-top: 1px solid #ece5f7; color: #2c3e50; line-height: 1.5; vertical-align: top; }
-    table.tbl td b { color: #4C2A85; }
-    table.tbl td .gl { color: #6b6275; font-weight: 400; font-size: 13.5px; }
-    .tbl-note { font-size: 12.5px; color: #6b6275; margin: -10px 4px 20px; font-weight: 500; }
-    @media print { .tbl-wrap { page-break-inside: avoid; } table.tbl { font-size: 16px; box-shadow: none; } table.tbl th { font-size: 12.5px; } }
-    @media (max-width: 600px) { table.tbl { font-size: 13.5px; } table.tbl th, table.tbl td { padding: 9px 10px; } }
     .recap { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
     .recap .box { border-radius: 12px; padding: 15px 18px; font-size: 14px; line-height: 1.5; }
     .recap .retenir { background: #F1ECFA; border: 1px solid #dccff2; }
@@ -82,7 +71,6 @@
     .recap .retenir .lbl { color: #6B46C1; }
     .recap .piege .lbl { color: #9a6d00; }
     .recap b { font-weight: 700; color: #1A1A2E; }
-    .recap .gl { color: #6b6275; font-weight: 400; }
     .qcm-cta { display: flex; align-items: center; gap: 16px; text-decoration: none; color: inherit; background: #fff; border: 1px solid #d6c6f0; border-radius: 14px; padding: 18px 22px; margin: 24px 0 6px; box-shadow: 0 9px 26px -16px rgba(107,70,193,.4); transition: transform .18s ease, box-shadow .18s ease; }
     .qcm-cta:hover { transform: translateY(-2px); box-shadow: 0 16px 38px -16px rgba(107,70,193,.5); }
     .qcm-cta:focus-visible { outline: 3px solid #6B46C1; outline-offset: 2px; }
@@ -93,6 +81,18 @@
     .chapter-footer { text-align: center; margin-top: 22px; padding-top: 16px; border-top: 1px solid #e6dfd1; color: #7a8088; font-size: 12px; }
     .chapter-footer strong { color: #6b6275; }
     .bio-hint { display: none; }
+
+    .fiche-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14.5px; background: #fff; border: 1px solid #dccff2; border-radius: 12px; overflow: hidden; box-shadow: 0 3px 12px rgba(107,70,193,0.08); }
+    .fiche-table caption { caption-side: top; text-align: left; font-size: 15px; font-weight: 800; color: #4C2A85; padding: 0 2px 10px; }
+    .fiche-table th, .fiche-table td { padding: 11px 14px; text-align: left; vertical-align: top; line-height: 1.5; border-bottom: 1px solid #ece5f7; }
+    .fiche-table thead th { background: #F1ECFA; color: #4C2A85; font-size: 12px; letter-spacing: 0.8px; text-transform: uppercase; font-weight: 800; }
+    .fiche-table tbody th { font-weight: 800; color: #1A1A2E; width: 30%; }
+    .fiche-table tbody tr:last-child th, .fiche-table tbody tr:last-child td { border-bottom: none; }
+    .fiche-table b { color: #4C2A85; }
+    .fiche-table .gl { color: #6b6275; font-weight: 400; font-size: 13.5px; }
+    .tbl-wrap { margin: 20px 0; overflow-x: auto; }
+    .tbl-wrap .fiche-table { margin: 0; }
+
     /* ===== IMPRESSION / PDF — format REEL 9:16 (1080×1920), agrandi pour remplir ===== */
     @media print {
         @page { size: 1080px 1920px; margin: 42px; }
@@ -126,7 +126,9 @@
         .bio-hint { display: block; text-align: center; margin: 12px 0 0; font-size: 17px; font-weight: 800; color: #6B46C1; }
         .bio-hint strong { color: #4C2A85; }
         .chapter-footer { margin-top: 14px; padding-top: 12px; font-size: 14px; }
-        .schema-2up, .schema-box, .steps, .recap, .pass-tip, .qcm-cta { page-break-inside: avoid; }
+        .fiche-table { font-size: 16px; margin: 18px 0; }
+        .fiche-table caption { font-size: 18px; }
+        .schema-2up, .schema-box, .steps, .recap, .pass-tip, .qcm-cta, .fiche-table, .mnemo-box { page-break-inside: avoid; }
     }
     @media (max-width: 600px) {
         body { padding: 14px; }
@@ -165,6 +167,9 @@
         .qcm-cta { padding: 15px 16px; gap: 12px; }
         .qcm-cta .qcm-t { font-size: 16px; }
         .qcm-cta .qcm-arrow { width: 38px; height: 38px; font-size: 18px; }
+        .fiche-table { font-size: 13.5px; }
+        .fiche-table th, .fiche-table td { padding: 9px 10px; }
+        .fiche-table tbody th { width: 34%; }
         /* boutons de la lightbox plus gros au doigt */
         #medeos-lightbox button[aria-label="Fermer"] { width: 46px; height: 46px; font-size: 26px; }
     }
@@ -172,104 +177,84 @@
 </head>
 <body>
 <div class="page-container">
-
     <div class="prod-brand"><img src="../images/logo-medeos-violet.png" alt="Medeos"></div>
 
     <header class="hook-header">
         <div class="brand-tag">Ressource gratuite</div>
-        <h1 class="course-title">Le cervelet : morphologie et pédoncules</h1>
-        <p class="punch">Sous la <span class="accent">tente du cervelet</span>, il y a… le cervelet.</p>
-        <p class="punch">Un petit organe discret, branché au tronc par <span class="accent">3 paires de câbles</span>.</p>
+        <h1 class="course-title">Les RCPG : 7 passages dans la membrane</h1>
+        <p class="punch">La <span class="accent">plus grande famille</span> de récepteurs chez l'homme : plus de 800 gènes.</p>
+        <p class="punch">Un serpent qui traverse 7 fois le mur — et la cible de <span class="accent">30 % des médicaments</span>.</p>
     </header>
 
-    <p class="intro">Tu viens de nommer les deux replis de la dure-mère : la faux du cerveau, et la <strong>tente du cervelet</strong>. Ce qui se trouve juste <em class="hl">sous cette tente</em>, c'est justement lui. On a vu le cerveau (le chef), le diencéphale (le centre de tri), les ventricules et les méninges (la protection) : place maintenant à un <strong>petit organe discret mais essentiel</strong>. Sans lui, tu ne pourrais même pas attraper ta tasse de café sans la renverser ☕.</p>
-
-    <p class="intro">Le <strong>cervelet</strong> (= « petit cerveau ») est situé en <strong>arrière du tronc cérébral</strong> et <strong>sous le cerveau</strong>, dans la <strong>fosse crânienne postérieure</strong>. Il est séparé du cerveau par la <strong>tente du cervelet</strong> — ce repli de dure-mère que tu viens de voir.</p>
-
-    <figure class="schema-box" style="margin: 20px 0;">
-        <span class="schema-num">La tente du cervelet</span>
-        <img src="../images/anatomie/ch8_tente_cervelet.png" alt="Coupe sagittale médiane simplifiée de l'encéphale : le cerveau en haut, la tente du cervelet en bleu formant un plancher horizontal, le cervelet en dessous et en arrière, le tronc cérébral vertical au centre" onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
-        <figcaption class="caption"><strong>Repère d'abord la membrane bleue</strong> — c'est la <strong>tente du cervelet</strong>, et elle se comporte comme un plancher. Au-dessus : le <strong>cerveau</strong>. En dessous, en arrière du <strong>tronc cérébral</strong> : le <strong>cervelet</strong>. Une seule chose à retenir sur ce schéma : ce qui est <strong>sous la tente</strong>, c'est le cervelet.</figcaption>
-    </figure>
+    <p class="intro">La fiche précédente a trié les récepteurs en deux selon la solubilité du ligand : <strong>dehors</strong> pour les hydrophiles, <strong>dedans</strong> pour les hydrophobes — et la voie intracellulaire est refermée, elle va parler directement à l'ADN. On reste donc maintenant <em class="hl">dehors, dans la membrane</em>, et on ouvre la première grande famille de récepteurs membranaires : les <strong>RCPG</strong>, Récepteurs Couplés aux Protéines G. Ce sont la <strong>plus grande famille de récepteurs</strong> chez l'homme : <strong>plus de 800 gènes différents</strong>, environ <strong>4 % de notre génome</strong>. Sur 100 gènes que tu portes, à peu près 4 servent à fabriquer ce type de récepteur.</p>
 
     <div class="steps">
-        <div class="steps-title">Sa morphologie — comme le cerveau, il possède…</div>
+        <div class="steps-title">La structure caractéristique : le « serpent à 7 boucles »</div>
         <ol>
             <li class="step">
                 <span class="n">1</span>
-                <span class="txt"><span class="lead">2 hémisphères</span> <span class="gl">(droit et gauche)</span>, réunis par une partie centrale : le <b>vermis</b> <span class="gl">(= « ver » en latin, car il ressemble à un ver de terre)</span>.</span>
+                <span class="txt"><span class="lead">Les 7 domaines transmembranaires (7 TM).</span> La protéine traverse <b>7 fois</b> la membrane plasmique — d'où le nom « 7 TM ». Ces 7 passages forment une structure en <b>serpentin</b> qui ondule à travers la membrane. C'est la <b>signature visuelle</b> des RCPG : si tu vois « 7 TM » → c'est un RCPG.</span>
             </li>
             <li class="step">
                 <span class="n">2</span>
-                <span class="txt"><span class="lead">Un cortex cérébelleux en surface.</span> De la <b>substance grise</b>, plissée en <b>fines lamelles</b> : les <b>folia</b>.</span>
+                <span class="txt"><span class="lead">Le domaine extracellulaire</span> <span class="gl">(dehors de la cellule)</span><span class="lead">.</span> C'est la <b>zone de capture du ligand</b> — la serrure 🔒. Exemples de ligands : <b>adrénaline</b>, <b>dopamine</b>, <b>sérotonine</b>, <b>histamine</b>.</span>
             </li>
             <li class="step">
                 <span class="n">3</span>
-                <span class="txt"><span class="lead">De la substance blanche en profondeur.</span> On l'appelle l'<b>arbre de vie</b>, car en coupe ça ressemble à un arbre.</span>
+                <span class="txt"><span class="lead">Le domaine intracellulaire</span> <span class="gl">(dedans de la cellule)</span><span class="lead">.</span> C'est la <b>zone d'activation</b>, celle qui interagit avec la <b>protéine G</b>. Cette protéine G est composée de <b>3 sous-unités : α, β, γ</b>.</span>
             </li>
         </ol>
     </div>
 
-    <figure class="schema-box" style="margin: 20px 0;">
-        <span class="schema-num">Le cervelet — vue postérieure et coupe</span>
-        <img src="../images/anatomie/ch8_cervelet.png" alt="Planche en deux panneaux. À gauche, vue postérieure du cervelet : les deux hémisphères cérébelleux striés de fines lamelles, séparés par le vermis médian. À droite, coupe sagittale médiane du tronc cérébral et du cervelet : la substance blanche ramifiée en arbre de vie, le quatrième ventricule, et les trois pédoncules cérébelleux supérieur, moyen et inférieur reliant le cervelet au tronc" onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
-        <figcaption class="caption"><strong>Deux panneaux, deux lectures.</strong> À <strong>gauche</strong>, le cervelet vu <strong>de dos</strong> : les <strong>2 hémisphères</strong>, striés de fines lamelles — ce sont les <strong>folia</strong> — et la bande médiane qui les réunit, le <strong>vermis</strong>. À <strong>droite</strong>, le même cervelet <strong>coupé en deux</strong> : la substance blanche y apparaît ramifiée, c'est l'<strong>arbre de vie</strong>. <span style="opacity:.8">Sur ce panneau de droite, les trois fines bandes colorées coincées entre le cervelet et le tronc cérébral portent déjà leur nom : ce sont les <strong>pédoncules cérébelleux</strong> — supérieur, moyen, inférieur. Laisse-les de côté pour l'instant, c'est la suite de la fiche.</span></figcaption>
-    </figure>
+    <div class="mnemo-box"><span class="lbl">L'image mentale &amp; le mnémo</span>Imaginez un <b>serpent</b> qui traverse <b>7 fois</b> un mur (la membrane). Sa <b>tête (dehors)</b> attrape la proie (le ligand), et sa <b>queue (dedans)</b> active une machine (la protéine G).<br>🔑 <b>7 TM = RCPG</b> — 7 Traversées Membranaires = Récepteur Couplé aux Protéines G.</div>
 
-    <div class="mnemo-box"><span class="lbl">Le mnémo — le ver et l'arbre</span><b>2 hémisphères</b> réunis par le <b>vermis</b> (= « ver » en latin, car il ressemble à un ver de terre). — De la substance blanche en profondeur (l'<b>arbre de vie</b>, car en coupe ça ressemble à un arbre).</div>
+    <p class="intro">Les trois noms des sous-unités — <strong>α, β, γ</strong> — suffisent pour l'instant. Ce que fait chacune d'elles, et les détails moléculaires qui vont avec, seront vus en détail dans les <strong>cours magistraux de première année</strong> : ce n'est pas ce qu'on te demande d'anticiper.</p>
 
-    <p class="intro">Justement : comment ce petit organe est-il <strong>relié au reste</strong> ? Le cervelet est rattaché au <strong>tronc cérébral</strong> — juste devant lui — par <strong>3 paires de pédoncules cérébelleux</strong>, de gros câbles de substance blanche : <strong>supérieur</strong>, <strong>moyen</strong>, <strong>inférieur</strong>. C'est par là que <em class="hl">transitent toutes les infos motrices</em>.</p>
-
-    <div class="mnemo-box"><span class="lbl">Le mnémo — un pédoncule par étage</span>Le plus simple pour les retenir : <b>un pédoncule par étage du tronc cérébral</b> 🏢. <span style="opacity:.75">Tu découvriras ces 3 étages juste après.</span></div>
+    <p class="intro">Et cette famille n'est pas une curiosité de cours. Plus de <strong>30 % des médicaments actuels</strong> ciblent des RCPG — c'est le chiffre à garder en tête, parce qu'il transforme une ligne de biologie cellulaire en <em class="hl">outil de médecine quotidienne</em>.</p>
 
     <div class="tbl-wrap">
-        <table class="tbl">
-            <thead>
-                <tr><th>Pédoncule</th><th>Il le relie à…</th><th>Ce qui y circule</th></tr>
-            </thead>
-            <tbody>
-                <tr><td>🔵 <b>Supérieur</b></td><td>Le <b>mésencéphale</b> <span class="gl">(étage du haut)</span></td><td>Surtout des <b>sorties</b> — la correction calculée par le cervelet repart vers le thalamus, puis le cortex.</td></tr>
-                <tr><td>🟡 <b>Moyen</b> <span class="gl">(le plus volumineux)</span></td><td>Le <b>pont</b> <span class="gl">(étage du milieu)</span></td><td>Surtout des <b>entrées</b> — l'intention de mouvement envoyée par le cortex cérébral.</td></tr>
-                <tr><td>🔴 <b>Inférieur</b></td><td>Le <b>bulbe</b> <span class="gl">(étage du bas)</span></td><td>Surtout des <b>entrées</b> — la position réelle du corps <span class="gl">(moelle épinière)</span> et l'équilibre <span class="gl">(oreille interne)</span>.</td></tr>
-            </tbody>
-        </table>
+    <table class="fiche-table">
+        <caption>Importance médicale — des médicaments que tu connais déjà</caption>
+        <thead>
+            <tr><th scope="col">Médicament</th><th scope="col">Ce qu'il fait sur le RCPG</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Bêta-bloquants <span class="gl">(ex : propranolol)</span></th>
+                <td><b>Bloquent</b> les récepteurs β-adrénergiques <span class="gl">(RCPG)</span> → hypertension, anxiété</td>
+            </tr>
+            <tr>
+                <th scope="row">Antihistaminiques <span class="gl">(ex : cétirizine, Zyrtec)</span></th>
+                <td><b>Bloquent</b> les récepteurs H1 à l'histamine <span class="gl">(RCPG)</span> → allergies</td>
+            </tr>
+            <tr>
+                <th scope="row">Morphine</th>
+                <td><b>Active</b> les récepteurs opioïdes <span class="gl">(RCPG)</span> → analgésique puissant</td>
+            </tr>
+            <tr>
+                <th scope="row">Antipsychotiques</th>
+                <td><b>Antagonistes</b> des récepteurs de la dopamine <span class="gl">(RCPG)</span></td>
+            </tr>
+        </tbody>
+    </table>
     </div>
 
-    <p class="intro">Retiens la <strong>logique</strong> plutôt que la liste : le cervelet <strong>reçoit</strong> d'un côté l'intention (moyen) et de l'autre la réalité du terrain (inférieur), il <strong>compare</strong> les deux, puis <strong>renvoie</strong> la correction (supérieur).</p>
-
-    <p class="intro">💧 Et le <strong>4<sup>e</sup> ventricule</strong> dans tout ça ? Le cervelet n'est pas collé directement sur le tronc — il y est relié par <strong>3 pédoncules de chaque côté</strong> (supérieur, moyen, inférieur — donc <strong>6 au total</strong>). Ces pédoncules forment les <strong>bords latéraux</strong> du 4<sup>e</sup> ventricule : entre eux, il reste un <strong>espace creux en losange</strong> dont le <strong>plancher</strong> est la face postérieure du tronc, et le <strong>toit</strong>, le cervelet. C'est là que le LCR circule tranquillement.</p>
-
-    <figure class="schema-box" style="margin: 20px 0;">
-        <span class="schema-num">Le 4<sup>e</sup> ventricule, cervelet retiré</span>
-        <img src="../images/anatomie/ch8_tronc_cerebral_posterieur.png" alt="Vue postérieure du tronc cérébral, cervelet retiré : les trois étages empilés, les trois pédoncules cérébelleux coupés de chaque côté, et au centre le quatrième ventricule ouvert en forme de losange" onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
-        <figcaption class="caption"><strong>Le cervelet a été retiré</strong> pour qu'on voie l'arrière du tronc. De chaque côté, les <strong>3 pédoncules cérébelleux coupés</strong> — les câbles qui le reliaient au tronc. Entre eux, le creux en <strong>losange</strong> : c'est le <strong>4<sup>e</sup> ventricule</strong>. Ses bords latéraux, ce sont les pédoncules ; son plancher, la face postérieure du tronc ; son toit, le cervelet qu'on a enlevé. <strong>Et vérifie le mnémo au passage</strong> : chaque pédoncule part de sa propre couleur — le <strong>supérieur</strong> du <strong>bleu</strong> <span style="opacity:.8">(mésencéphale)</span>, le <strong>moyen</strong> du <strong>jaune</strong> <span style="opacity:.8">(pont)</span>, l'<strong>inférieur</strong> du <strong>rouge</strong> <span style="opacity:.8">(bulbe)</span>. Un pédoncule par étage, il est dessiné.</figcaption>
-    </figure>
+    <p class="intro">Tu as maintenant l'<strong>anatomie</strong> du RCPG : sept traversées en serpentin, une tête dehors qui capte le ligand, une queue dedans posée sur la protéine G. La fiche suivante le <strong>met en marche</strong> — ce qui se passe, étape par étape, entre l'arrivée du ligand et la réaction de la cellule.</p>
 
     <div class="pass-tip">
-        Devant une question sur le cervelet, pose-toi deux questions <strong>dans cet ordre</strong> : <strong>où est-il</strong> (sous la tente du cervelet, en arrière du tronc, dans la fosse crânienne postérieure) et <strong>par quoi est-il branché</strong> (3 paires de pédoncules, un par étage du tronc). Le losange du 4<sup>e</sup> ventricule tombe alors tout seul : ses bords, ce sont les <strong>pédoncules</strong>.
+        Si un QCM mentionne « <strong>7 domaines transmembranaires</strong> » → c'est <strong>forcément un RCPG</strong>. Compte les traversées avant même de lire la suite de l'item : c'est le repère le plus rapide du chapitre. Même réflexe devant un nom de médicament courant — propranolol, cétirizine, morphine, antipsychotique : derrière, il y a un RCPG.
     </div>
-
-    <p class="intro">Tu sais maintenant <strong>où</strong> il se trouve et <strong>comment</strong> il est câblé. Ce que le cervelet fait de tout ce qui entre et sort par ces câbles, c'est la suite.</p>
 
     <div class="recap">
         <div class="box retenir">
             <span class="lbl">À retenir</span>
-            <b>Cervelet</b> = en arrière du tronc, sous le cerveau, dans la <b>fosse crânienne postérieure</b>, sous la <b>tente du cervelet</b>. <b>2 hémisphères + vermis</b> · cortex plissé en <b>folia</b> · substance blanche = <b>arbre de vie</b>. Relié au tronc par <b>3 paires de pédoncules</b>, <b>un par étage</b> : supérieur → mésencéphale, moyen → pont, inférieur → bulbe.
+            <b>RCPG = Récepteur Couplé aux Protéines G</b>, la plus grande famille de récepteurs chez l'homme <span style="opacity:.75">(&gt; 800 gènes, ~4 % du génome)</span>. Trois parties : <b>7 domaines transmembranaires</b> en serpentin, un domaine <b>extracellulaire</b> qui capte le ligand <span style="opacity:.75">(adrénaline, dopamine, sérotonine, histamine)</span>, un domaine <b>intracellulaire</b> qui active la <b>protéine G</b> à 3 sous-unités <b>α, β, γ</b>. Plus de <b>30 %</b> des médicaments actuels les ciblent.
         </div>
         <div class="box piege">
             <span class="lbl">Le piège</span>
-            Cerveau et cervelet ont tous les deux <b>2 hémisphères</b>, mais pas le même pont entre eux : le cerveau a le <b>corps calleux</b>, le cervelet a le <b>vermis</b>. Un QCM qui relie les hémisphères <b>cérébelleux</b> par le corps calleux est <b>FAUX</b>.
+            Deux chiffres dans cette fiche, deux objets différents. <b>7</b> = le nombre de fois où <b>le récepteur</b> traverse la membrane. <b>3</b> = le nombre de sous-unités de <b>la protéine G</b> <span style="opacity:.75">(α, β, γ)</span>. Un item qui annonce « 3 domaines transmembranaires » ou « 7 sous-unités » a interverti les deux : c'est <b>FAUX</b>.
         </div>
     </div>
-
-    <a class="qcm-cta" style="display:none" href="/ressources/qcm-decouverte/decouverte-anatomie-cervelet" target="_top">
-        <span class="qcm-body">
-            <span class="qcm-k">Vérifie en 3 questions</span>
-            <span class="qcm-t">QCM — Cervelet &amp; pédoncules</span>
-        </span>
-        <span class="qcm-arrow" aria-hidden="true">→</span>
-    </a>
-    <div class="bio-hint">📲 Pour faire le QCM gratuit → <strong>lien en bio</strong></div>
 
     <footer class="chapter-footer">
         <p>Une fiche <strong>Medeos</strong> · pour anticiper la P1, sereinement. · medeos-sante.fr</p>

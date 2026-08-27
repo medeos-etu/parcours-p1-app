@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Le cervelet : morphologie et pédoncules — Fiche Medeos</title>
+<title>Chondroblaste actif, chondrocyte quiescent — Fiche Medeos</title>
 <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
@@ -63,17 +63,6 @@
             letter-spacing:.8px; text-transform:uppercase; }
         .mnemo-box b { color:#4C2A85; }
 
-
-    /* --- petit tableau Medeos --- */
-    .tbl-wrap { margin: 20px 0; overflow-x: auto; }
-    table.tbl { width: 100%; border-collapse: separate; border-spacing: 0; background: #fff; border: 1px solid #dccff2; border-radius: 12px; overflow: hidden; font-size: 14.5px; box-shadow: 0 3px 12px rgba(107,70,193,.08); }
-    table.tbl th { background: #F1ECFA; color: #4C2A85; font-size: 11.5px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; text-align: left; padding: 11px 14px; }
-    table.tbl td { padding: 12px 14px; border-top: 1px solid #ece5f7; color: #2c3e50; line-height: 1.5; vertical-align: top; }
-    table.tbl td b { color: #4C2A85; }
-    table.tbl td .gl { color: #6b6275; font-weight: 400; font-size: 13.5px; }
-    .tbl-note { font-size: 12.5px; color: #6b6275; margin: -10px 4px 20px; font-weight: 500; }
-    @media print { .tbl-wrap { page-break-inside: avoid; } table.tbl { font-size: 16px; box-shadow: none; } table.tbl th { font-size: 12.5px; } }
-    @media (max-width: 600px) { table.tbl { font-size: 13.5px; } table.tbl th, table.tbl td { padding: 9px 10px; } }
     .recap { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
     .recap .box { border-radius: 12px; padding: 15px 18px; font-size: 14px; line-height: 1.5; }
     .recap .retenir { background: #F1ECFA; border: 1px solid #dccff2; }
@@ -82,7 +71,6 @@
     .recap .retenir .lbl { color: #6B46C1; }
     .recap .piege .lbl { color: #9a6d00; }
     .recap b { font-weight: 700; color: #1A1A2E; }
-    .recap .gl { color: #6b6275; font-weight: 400; }
     .qcm-cta { display: flex; align-items: center; gap: 16px; text-decoration: none; color: inherit; background: #fff; border: 1px solid #d6c6f0; border-radius: 14px; padding: 18px 22px; margin: 24px 0 6px; box-shadow: 0 9px 26px -16px rgba(107,70,193,.4); transition: transform .18s ease, box-shadow .18s ease; }
     .qcm-cta:hover { transform: translateY(-2px); box-shadow: 0 16px 38px -16px rgba(107,70,193,.5); }
     .qcm-cta:focus-visible { outline: 3px solid #6B46C1; outline-offset: 2px; }
@@ -168,6 +156,17 @@
         /* boutons de la lightbox plus gros au doigt */
         #medeos-lightbox button[aria-label="Fermer"] { width: 46px; height: 46px; font-size: 26px; }
     }
+
+    /* --- petit tableau Medeos --- */
+    .tbl-wrap { margin: 20px 0; overflow-x: auto; }
+    table.tbl { width: 100%; border-collapse: separate; border-spacing: 0; background: #fff; border: 1px solid #dccff2; border-radius: 12px; overflow: hidden; font-size: 14.5px; box-shadow: 0 3px 12px rgba(107,70,193,.08); }
+    table.tbl th { background: #F1ECFA; color: #4C2A85; font-size: 11.5px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; text-align: left; padding: 11px 14px; }
+    table.tbl td { padding: 12px 14px; border-top: 1px solid #ece5f7; color: #2c3e50; line-height: 1.5; vertical-align: top; }
+    table.tbl td b { color: #4C2A85; }
+    table.tbl td .gl { color: #6b6275; font-weight: 400; font-size: 13.5px; }
+    .tbl-note { font-size: 12.5px; color: #6b6275; margin: -10px 4px 20px; font-weight: 500; }
+    @media print { .tbl-wrap { page-break-inside: avoid; } table.tbl { font-size: 16px; box-shadow: none; } table.tbl th { font-size: 12.5px; } }
+    @media (max-width: 600px) { table.tbl { font-size: 13.5px; } table.tbl th, table.tbl td { padding: 9px 10px; } }
 </style>
 </head>
 <body>
@@ -177,95 +176,70 @@
 
     <header class="hook-header">
         <div class="brand-tag">Ressource gratuite</div>
-        <h1 class="course-title">Le cervelet : morphologie et pédoncules</h1>
-        <p class="punch">Sous la <span class="accent">tente du cervelet</span>, il y a… le cervelet.</p>
-        <p class="punch">Un petit organe discret, branché au tronc par <span class="accent">3 paires de câbles</span>.</p>
+        <h1 class="course-title">Chondroblaste actif, chondrocyte quiescent</h1>
+        <p class="punch">Le cartilage est <span class="accent">pauvre en cellules</span> — il n'en a que deux.</p>
+        <p class="punch">Et ces deux-là sont en réalité <span class="accent">deux états de la même cellule</span>.</p>
     </header>
 
-    <p class="intro">Tu viens de nommer les deux replis de la dure-mère : la faux du cerveau, et la <strong>tente du cervelet</strong>. Ce qui se trouve juste <em class="hl">sous cette tente</em>, c'est justement lui. On a vu le cerveau (le chef), le diencéphale (le centre de tri), les ventricules et les méninges (la protection) : place maintenant à un <strong>petit organe discret mais essentiel</strong>. Sans lui, tu ne pourrais même pas attraper ta tasse de café sans la renverser ☕.</p>
+    <p class="intro">La fiche précédente a posé la formule du cartilage, et l'un de ses cinq traits disait : <strong>pauvre en cellules</strong>. Ouvrons la boîte. Le cartilage ne contient que <strong>deux types cellulaires</strong> en conditions normales : le <strong>chondroblaste</strong>, la cellule active, et le <strong>chondrocyte</strong>, la cellule quiescente. Cette dualité, tu la connais déjà : elle <em class="hl">rappelle le couple fibroblaste/fibrocyte</em> du TC classique, vu au chapitre 11.</p>
 
-    <p class="intro">Le <strong>cervelet</strong> (= « petit cerveau ») est situé en <strong>arrière du tronc cérébral</strong> et <strong>sous le cerveau</strong>, dans la <strong>fosse crânienne postérieure</strong>. Il est séparé du cerveau par la <strong>tente du cervelet</strong> — ce repli de dure-mère que tu viens de voir.</p>
-
-    <figure class="schema-box" style="margin: 20px 0;">
-        <span class="schema-num">La tente du cervelet</span>
-        <img src="../images/anatomie/ch8_tente_cervelet.png" alt="Coupe sagittale médiane simplifiée de l'encéphale : le cerveau en haut, la tente du cervelet en bleu formant un plancher horizontal, le cervelet en dessous et en arrière, le tronc cérébral vertical au centre" onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
-        <figcaption class="caption"><strong>Repère d'abord la membrane bleue</strong> — c'est la <strong>tente du cervelet</strong>, et elle se comporte comme un plancher. Au-dessus : le <strong>cerveau</strong>. En dessous, en arrière du <strong>tronc cérébral</strong> : le <strong>cervelet</strong>. Une seule chose à retenir sur ce schéma : ce qui est <strong>sous la tente</strong>, c'est le cervelet.</figcaption>
-    </figure>
+    <p class="intro">Commençons par la cellule qui travaille. Le <strong>chondroblaste</strong> est la cellule responsable de la <strong>synthèse et du dépôt</strong> des éléments de la MEC cartilagineuse. Tout, dans son allure, raconte ce métier.</p>
 
     <div class="steps">
-        <div class="steps-title">Sa morphologie — comme le cerveau, il possède…</div>
+        <div class="steps-title">Le chondroblaste, trait par trait</div>
         <ol>
             <li class="step">
                 <span class="n">1</span>
-                <span class="txt"><span class="lead">2 hémisphères</span> <span class="gl">(droit et gauche)</span>, réunis par une partie centrale : le <b>vermis</b> <span class="gl">(= « ver » en latin, car il ressemble à un ver de terre)</span>.</span>
+                <span class="txt"><span class="lead">La forme et le logement.</span> Une cellule de forme <b>ovoïde</b>, située dans une poche creusée dans la MEC : le <b>chondroplaste</b> <span class="gl">(retiens ce mot, il revient dans tout le chapitre)</span>. Elle est liée à la MEC via de <b>fins prolongements radiés</b>.</span>
             </li>
             <li class="step">
                 <span class="n">2</span>
-                <span class="txt"><span class="lead">Un cortex cérébelleux en surface.</span> De la <b>substance grise</b>, plissée en <b>fines lamelles</b> : les <b>folia</b>.</span>
+                <span class="txt"><span class="lead">Le noyau.</span> <b>Unique</b>, arrondi, <b>central</b>, <b>volumineux</b>, avec une <b>chromatine déroulée</b> <span class="gl">(l'euchromatine : la forme active de la chromatine)</span> et un <b>nucléole visible</b>.</span>
             </li>
             <li class="step">
                 <span class="n">3</span>
-                <span class="txt"><span class="lead">De la substance blanche en profondeur.</span> On l'appelle l'<b>arbre de vie</b>, car en coupe ça ressemble à un arbre.</span>
+                <span class="txt"><span class="lead">L'équipement de synthèse.</span> Un <b>REG très développé</b> <span class="gl">(le réticulum endoplasmique granuleux : la synthèse des protéines de la MEC)</span> et un <b>appareil de Golgi développé</b> <span class="gl">(la modification post-traductionnelle de ces protéines)</span>.</span>
+            </li>
+            <li class="step">
+                <span class="n">4</span>
+                <span class="txt"><span class="lead">La sortie.</span> Des <b>vésicules de sécrétion</b> sous la membrane : c'est par elles que la MEC est <b>libérée</b>.</span>
+            </li>
+            <li class="step">
+                <span class="n">5</span>
+                <span class="txt"><span class="lead">Les réserves.</span> Du <b>glycogène</b> et des <b>enclaves lipidiques</b>, visibles en <b>microscopie électronique</b>.</span>
             </li>
         </ol>
     </div>
 
-    <figure class="schema-box" style="margin: 20px 0;">
-        <span class="schema-num">Le cervelet — vue postérieure et coupe</span>
-        <img src="../images/anatomie/ch8_cervelet.png" alt="Planche en deux panneaux. À gauche, vue postérieure du cervelet : les deux hémisphères cérébelleux striés de fines lamelles, séparés par le vermis médian. À droite, coupe sagittale médiane du tronc cérébral et du cervelet : la substance blanche ramifiée en arbre de vie, le quatrième ventricule, et les trois pédoncules cérébelleux supérieur, moyen et inférieur reliant le cervelet au tronc" onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
-        <figcaption class="caption"><strong>Deux panneaux, deux lectures.</strong> À <strong>gauche</strong>, le cervelet vu <strong>de dos</strong> : les <strong>2 hémisphères</strong>, striés de fines lamelles — ce sont les <strong>folia</strong> — et la bande médiane qui les réunit, le <strong>vermis</strong>. À <strong>droite</strong>, le même cervelet <strong>coupé en deux</strong> : la substance blanche y apparaît ramifiée, c'est l'<strong>arbre de vie</strong>. <span style="opacity:.8">Sur ce panneau de droite, les trois fines bandes colorées coincées entre le cervelet et le tronc cérébral portent déjà leur nom : ce sont les <strong>pédoncules cérébelleux</strong> — supérieur, moyen, inférieur. Laisse-les de côté pour l'instant, c'est la suite de la fiche.</span></figcaption>
-    </figure>
+    <div class="mnemo-box"><span class="lbl">Le mnémo</span><b>Chondroblaste = cellule de synthèse.</b> Retiens : ovoïde, dans un chondroplaste, noyau actif (euchromatine, nucléole), REG++ et Golgi développé → synthèse intense de MEC. C'est la même logique que le <b>fibroblaste</b> du TC (chapitre 11), mais adapté au cartilage.</div>
 
-    <div class="mnemo-box"><span class="lbl">Le mnémo — le ver et l'arbre</span><b>2 hémisphères</b> réunis par le <b>vermis</b> (= « ver » en latin, car il ressemble à un ver de terre). — De la substance blanche en profondeur (l'<b>arbre de vie</b>, car en coupe ça ressemble à un arbre).</div>
-
-    <p class="intro">Justement : comment ce petit organe est-il <strong>relié au reste</strong> ? Le cervelet est rattaché au <strong>tronc cérébral</strong> — juste devant lui — par <strong>3 paires de pédoncules cérébelleux</strong>, de gros câbles de substance blanche : <strong>supérieur</strong>, <strong>moyen</strong>, <strong>inférieur</strong>. C'est par là que <em class="hl">transitent toutes les infos motrices</em>.</p>
-
-    <div class="mnemo-box"><span class="lbl">Le mnémo — un pédoncule par étage</span>Le plus simple pour les retenir : <b>un pédoncule par étage du tronc cérébral</b> 🏢. <span style="opacity:.75">Tu découvriras ces 3 étages juste après.</span></div>
-
-    <div class="tbl-wrap">
-        <table class="tbl">
-            <thead>
-                <tr><th>Pédoncule</th><th>Il le relie à…</th><th>Ce qui y circule</th></tr>
-            </thead>
-            <tbody>
-                <tr><td>🔵 <b>Supérieur</b></td><td>Le <b>mésencéphale</b> <span class="gl">(étage du haut)</span></td><td>Surtout des <b>sorties</b> — la correction calculée par le cervelet repart vers le thalamus, puis le cortex.</td></tr>
-                <tr><td>🟡 <b>Moyen</b> <span class="gl">(le plus volumineux)</span></td><td>Le <b>pont</b> <span class="gl">(étage du milieu)</span></td><td>Surtout des <b>entrées</b> — l'intention de mouvement envoyée par le cortex cérébral.</td></tr>
-                <tr><td>🔴 <b>Inférieur</b></td><td>Le <b>bulbe</b> <span class="gl">(étage du bas)</span></td><td>Surtout des <b>entrées</b> — la position réelle du corps <span class="gl">(moelle épinière)</span> et l'équilibre <span class="gl">(oreille interne)</span>.</td></tr>
-            </tbody>
-        </table>
-    </div>
-
-    <p class="intro">Retiens la <strong>logique</strong> plutôt que la liste : le cervelet <strong>reçoit</strong> d'un côté l'intention (moyen) et de l'autre la réalité du terrain (inférieur), il <strong>compare</strong> les deux, puis <strong>renvoie</strong> la correction (supérieur).</p>
-
-    <p class="intro">💧 Et le <strong>4<sup>e</sup> ventricule</strong> dans tout ça ? Le cervelet n'est pas collé directement sur le tronc — il y est relié par <strong>3 pédoncules de chaque côté</strong> (supérieur, moyen, inférieur — donc <strong>6 au total</strong>). Ces pédoncules forment les <strong>bords latéraux</strong> du 4<sup>e</sup> ventricule : entre eux, il reste un <strong>espace creux en losange</strong> dont le <strong>plancher</strong> est la face postérieure du tronc, et le <strong>toit</strong>, le cervelet. C'est là que le LCR circule tranquillement.</p>
+    <p class="intro">Passons à l'autre. Le <strong>chondrocyte</strong> correspond à la <strong>forme quiescente</strong> — au repos — du chondroblaste. Ce n'est pas une cellule différente : c'est <em class="hl">un chondroblaste qui a cessé son activité de synthèse</em>. Et tout ce qu'on vient de décrire se dégonfle, point par point. Il est <strong>rétracté</strong>, plus petit que le chondroblaste. Son <strong>noyau est petit</strong>, avec une chromatine moins déroulée : l'<strong>hétérochromatine</strong> domine. Il n'a <strong>pas de nucléole visible</strong>. Et ses organites sont peu développés — REG réduit, Golgi discret. Une cellule qui ne fabrique plus n'a plus besoin de son atelier.</p>
 
     <figure class="schema-box" style="margin: 20px 0;">
-        <span class="schema-num">Le 4<sup>e</sup> ventricule, cervelet retiré</span>
-        <img src="../images/anatomie/ch8_tronc_cerebral_posterieur.png" alt="Vue postérieure du tronc cérébral, cervelet retiré : les trois étages empilés, les trois pédoncules cérébelleux coupés de chaque côté, et au centre le quatrième ventricule ouvert en forme de losange" onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
-        <figcaption class="caption"><strong>Le cervelet a été retiré</strong> pour qu'on voie l'arrière du tronc. De chaque côté, les <strong>3 pédoncules cérébelleux coupés</strong> — les câbles qui le reliaient au tronc. Entre eux, le creux en <strong>losange</strong> : c'est le <strong>4<sup>e</sup> ventricule</strong>. Ses bords latéraux, ce sont les pédoncules ; son plancher, la face postérieure du tronc ; son toit, le cervelet qu'on a enlevé. <strong>Et vérifie le mnémo au passage</strong> : chaque pédoncule part de sa propre couleur — le <strong>supérieur</strong> du <strong>bleu</strong> <span style="opacity:.8">(mésencéphale)</span>, le <strong>moyen</strong> du <strong>jaune</strong> <span style="opacity:.8">(pont)</span>, l'<strong>inférieur</strong> du <strong>rouge</strong> <span style="opacity:.8">(bulbe)</span>. Un pédoncule par étage, il est dessiné.</figcaption>
+        <span class="schema-num">Chondroblaste (actif) vs chondrocyte (quiescent)</span>
+        <img src="../images/biologie/ch12_chondroblaste_chondrocyte.png" alt="Comparaison d'un chondroblaste actif et d'un chondrocyte quiescent, chacun dans son chondroplaste" onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
+        <figcaption class="caption"><strong>Ce qu'il faut y voir</strong> — les deux cellules sont dessinées dans leur <strong>chondroplaste</strong>, la poche creusée dans la MEC. À gauche, le <strong>chondroblaste actif</strong> remplit sa poche : gros noyau clair et central avec un <strong>nucléole</strong> bien visible, empilements de <strong>REG</strong> (en bleu) tout autour, <strong>Golgi</strong> (en jaune), petites <strong>vésicules de sécrétion</strong> sous la membrane, et de <strong>fins prolongements radiés</strong> qui partent vers la matrice. À droite, le <strong>chondrocyte quiescent</strong> : la cellule s'est <strong>rétractée</strong> au milieu de sa poche, son noyau est petit et sombre — c'est l'<strong>hétérochromatine</strong> qui domine — et il ne reste que quelques organites.</figcaption>
     </figure>
 
     <div class="pass-tip">
-        Devant une question sur le cervelet, pose-toi deux questions <strong>dans cet ordre</strong> : <strong>où est-il</strong> (sous la tente du cervelet, en arrière du tronc, dans la fosse crânienne postérieure) et <strong>par quoi est-il branché</strong> (3 paires de pédoncules, un par étage du tronc). Le losange du 4<sup>e</sup> ventricule tombe alors tout seul : ses bords, ce sont les <strong>pédoncules</strong>.
+        Une seule question à te poser devant une cellule cartilagineuse : <strong>est-ce qu'elle fabrique ?</strong> Si oui → <strong>chondroblaste</strong> : ovoïde, gros noyau clair, nucléole, REG++, Golgi, vésicules de sécrétion. Si non → <strong>chondrocyte</strong> : rétracté, petit noyau sombre, pas de nucléole, organites réduits. La terminaison du mot donne déjà la réponse, et c'est <strong>exactement la même logique que fibroblaste ≠ fibrocyte</strong> (ch. 11) : <strong>-blaste</strong> = cellule <strong>active</strong>, <strong>-cyte</strong> = cellule <strong>quiescente</strong>.
     </div>
-
-    <p class="intro">Tu sais maintenant <strong>où</strong> il se trouve et <strong>comment</strong> il est câblé. Ce que le cervelet fait de tout ce qui entre et sort par ces câbles, c'est la suite.</p>
 
     <div class="recap">
         <div class="box retenir">
             <span class="lbl">À retenir</span>
-            <b>Cervelet</b> = en arrière du tronc, sous le cerveau, dans la <b>fosse crânienne postérieure</b>, sous la <b>tente du cervelet</b>. <b>2 hémisphères + vermis</b> · cortex plissé en <b>folia</b> · substance blanche = <b>arbre de vie</b>. Relié au tronc par <b>3 paires de pédoncules</b>, <b>un par étage</b> : supérieur → mésencéphale, moyen → pont, inférieur → bulbe.
+            Deux types cellulaires seulement, et ce sont <b>deux états de la même cellule</b>. <b>Chondroblaste</b> = actif : ovoïde, dans un <b>chondroplaste</b>, <b>fins prolongements radiés</b>, noyau unique arrondi central volumineux, chromatine déroulée, nucléole visible, <b>REG très développé</b>, Golgi développé, vésicules de sécrétion, glycogène et enclaves lipidiques en microscopie électronique. <b>Chondrocyte</b> = quiescent : rétracté, petit noyau, hétérochromatine, pas de nucléole, organites peu développés.
         </div>
         <div class="box piege">
             <span class="lbl">Le piège</span>
-            Cerveau et cervelet ont tous les deux <b>2 hémisphères</b>, mais pas le même pont entre eux : le cerveau a le <b>corps calleux</b>, le cervelet a le <b>vermis</b>. Un QCM qui relie les hémisphères <b>cérébelleux</b> par le corps calleux est <b>FAUX</b>.
+            <b>En conditions normales, le noyau est unique.</b> Mais pendant la <b>croissance interstitielle</b> <span class="gl">(quand le cartilage grandit de l'intérieur — fin du chapitre)</span>, les chondroblastes se divisent par mitose et peuvent être <b>transitoirement binucléés</b> : c'est <b>physiologique</b>. En revanche, un noyau <b>durablement double</b> en dehors de toute mitose oriente vers une <b>situation pathologique</b>. Ne coche donc pas « cellule binucléée = anormal » les yeux fermés : tout dépend si la mitose est en cours.
         </div>
     </div>
 
-    <a class="qcm-cta" style="display:none" href="/ressources/qcm-decouverte/decouverte-anatomie-cervelet" target="_top">
+    <a class="qcm-cta" style="display:none" href="/ressources/qcm-decouverte/decouverte-biologie-types-cartilage" target="_top">
         <span class="qcm-body">
-            <span class="qcm-k">Vérifie en 3 questions</span>
-            <span class="qcm-t">QCM — Cervelet &amp; pédoncules</span>
+            <span class="qcm-k">Vérifie en 4 questions</span>
+            <span class="qcm-t">QCM — Le cartilage</span>
         </span>
         <span class="qcm-arrow" aria-hidden="true">→</span>
     </a>
@@ -276,7 +250,6 @@
     </footer>
 
 </div>
-
 <div id="medeos-lightbox" role="dialog" aria-label="Schéma agrandi" aria-modal="true" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(26,26,46,0.92);overflow:auto;-webkit-overflow-scrolling:touch;touch-action:pinch-zoom;cursor:zoom-out;">
     <button type="button" aria-label="Fermer" onclick="closeLightbox()" style="position:fixed;top:14px;right:16px;z-index:10003;width:42px;height:42px;border-radius:50%;border:none;background:rgba(255,255,255,0.14);color:#fff;font-size:24px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);">&times;</button>
     <div id="medeos-zoom-bar" style="position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:10003;display:flex;gap:8px;align-items:center;background:rgba(255,255,255,0.14);backdrop-filter:blur(4px);padding:7px 10px;border-radius:999px;">
