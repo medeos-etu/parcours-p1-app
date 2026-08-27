@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le fractionnement cellulaire par centrifugation — Fiche Medeos</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 15px; line-height: 1.6; color: #2c3e50; background: #f6f8fb; padding: 22px; max-width: 760px; margin: 0 auto; }
+    .page-container { position: relative; }
+    .page-container::before { display: none; }
+    .page-container > * { position: relative; z-index: 1; }
+    .prod-brand { margin: 0 4px 10px; }
+    .prod-brand img { height: 30px; width: auto; display: block; border-radius: 6px; }
+    .hook-header { background: #FAF6F0; border-radius: 14px; padding: 26px 30px 22px; box-shadow: 0 4px 18px rgba(76,42,133,0.08); border: 1px solid #efe7d8; }
+    .hook-header .brand-tag { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #6B46C1; font-weight: 600; opacity: 0.85; margin-bottom: 12px; }
+    .hook-header .course-title { font-size: 28px; line-height: 1.1; font-weight: 800; color: #4C2A85; letter-spacing: -0.7px; margin: 0 0 12px; }
+    .hook-header .punch { font-size: 18px; line-height: 1.3; font-weight: 800; color: #1A1A2E; letter-spacing: -0.3px; margin: 0; }
+    .hook-header .punch span.accent { color: #6B46C1; }
+    .hook-header .punch + .punch { margin-top: 5px; }
+    .intro { font-size: 15.5px; line-height: 1.7; color: #2c3e50; margin: 20px 2px; }
+    .intro strong { font-weight: 700; color: #4C2A85; }
+    em.hl { background: linear-gradient(180deg, transparent 60%, #FCD34D 60%); font-style: normal; padding: 0 2px; }
+    .schema-box { background: #fff; border: 2px solid #6B46C1; padding: 12px; text-align: center; border-radius: 12px; box-shadow: 0 4px 15px rgba(107, 70, 193, 0.15); position: relative; overflow: hidden; }
+    .schema-box::before { content: 'medeos-sante.fr'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: 'Inter', Arial, sans-serif; font-size: 14px; font-weight: 700; color: rgba(120,120,120,0.13); letter-spacing: 2px; text-transform: uppercase; pointer-events: none; user-select: none; z-index: 5; white-space: nowrap; max-width: 92%; overflow: hidden; }
+    .schema-box img { max-width: 100%; max-height: 300px; height: auto; border-radius: 8px; display: block; margin: 0 auto; cursor: zoom-in; }
+    .schema-box .schema-num { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 0.6px; text-transform: uppercase; color: #6B46C1; margin-bottom: 6px; }
+    .schema-box .caption { font-size: 12px; color: #6b6275; margin-top: 9px; font-weight: 500; }
+    .schema-box .caption strong { color: #6B46C1; }
+    .schema-box .file-target { display: none; margin-top: 10px; padding: 8px 12px; background: #e8f5e9; border: 1px solid #a5d6a7; border-radius: 6px; font-family: 'SFMono-Regular', Consolas, monospace; font-size: 11.5px; color: #1b5e20; text-align: left; line-height: 1.5; }
+    .schema-box .file-target strong { color: #2e7d32; }
+    .schema-box .generation-prompt { background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border: 2px dashed #ff9800; border-radius: 8px; padding: 13px; margin-top: 12px; text-align: left; font-size: 11.5px; color: #e65100; line-height: 1.55; white-space: pre-wrap; }
+    .schema-box .generation-prompt strong { color: #bf360c; display: block; margin-bottom: 8px; font-size: 12.5px; background: #ffcc80; padding: 7px 11px; border-radius: 4px; }
+    .schema-box .copy-prompt-btn { display: none; margin-top: 8px; padding: 6px 12px; background: #ff9800; color: #fff; border: none; border-radius: 4px; font-size: 12px; cursor: pointer; font-weight: 600; }
+    .schema-box .copy-prompt-btn:hover { background: #f57c00; }
+    .schema-box .generation-prompt { display: none; }
+    .schema-box.img-missing .generation-prompt { display: block; }
+    .schema-box.img-missing .copy-prompt-btn { display: inline-block; }
+    .schema-box.img-missing .file-target { display: block !important; }
+    .schema-2up { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; align-items: stretch; }
+    .schema-2up .schema-box { margin: 0; display: flex; flex-direction: column; }
+    .schema-2up .schema-box img { height: 230px; width: 100%; max-height: none; object-fit: contain; }
+    .schema-2up .schema-box .caption { margin-top: auto; }
+    @media (max-width: 720px) { .schema-2up { grid-template-columns: 1fr; } .schema-2up .schema-box img { height: auto; max-height: 300px; } }
+    .steps { background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%); border-left: 5px solid #6B46C1; border-radius: 0 12px 12px 0; padding: 18px 22px; margin: 20px 0; box-shadow: 0 2px 10px rgba(107,70,193,0.08); }
+    .steps .steps-title { font-size: 15px; font-weight: 800; color: #4C2A85; margin-bottom: 13px; }
+    .steps ol { list-style: none; margin: 0; padding: 0; }
+    .step { display: grid; grid-template-columns: 28px 1fr; gap: 12px; align-items: start; margin-bottom: 12px; }
+    .step:last-child { margin-bottom: 0; }
+    .step .n { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 999px; background: #6B46C1; color: #fff; font-size: 13px; font-weight: 800; }
+    .step .txt { font-size: 14.5px; line-height: 1.5; color: #2c3e50; padding-top: 2px; }
+    .step .txt b { color: #4C2A85; font-weight: 700; }
+    .step .txt .gl { color: #6b6275; font-weight: 400; }
+    .step .txt .lead { font-weight: 800; color: #1A1A2E; }
+    .pass-tip { background: #fdf6ec; border-left: 6px solid #B8895A; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; box-shadow: 0 3px 12px rgba(184,137,90,0.14); font-size: 14.5px; line-height: 1.55; }
+    .pass-tip::before { content: "Le réflexe P1"; display: block; font-weight: 700; font-size: 12px; color: #9a6a37; margin-bottom: 7px; letter-spacing: 0.8px; text-transform: uppercase; }
+    .pass-tip strong { color: #9a6a37; }
+
+        .mnemo-box { background:#F3EEFB; border-left:6px solid #6B46C1; padding:15px 20px; margin:20px 0;
+            border-radius:0 8px 8px 0; box-shadow:0 3px 12px rgba(107,70,193,.13); font-size:14.5px; line-height:1.6; }
+        .mnemo-box .lbl { display:block; font-weight:700; font-size:12px; color:#6B46C1; margin-bottom:7px;
+            letter-spacing:.8px; text-transform:uppercase; }
+        .mnemo-box b { color:#4C2A85; }
+
+        /* Tableau clair — utilisé quand la notion n'a pas de figure. */
+        .table-wrap { margin: 20px 0; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .mini-table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid #e2d8f5;
+            border-radius: 12px; overflow: hidden; box-shadow: 0 3px 12px rgba(107,70,193,.09); font-size: 14.5px; }
+        .mini-table caption { caption-side: top; text-align: left; font-size: 15px; font-weight: 800;
+            color: #4C2A85; padding: 0 2px 11px; }
+        .mini-table th, .mini-table td { padding: 11px 15px; text-align: left; vertical-align: top;
+            line-height: 1.5; border-bottom: 1px solid #efe9f8; }
+        .mini-table thead th { background: #F3EEFB; color: #4C2A85; font-size: 12px; font-weight: 700;
+            letter-spacing: .8px; text-transform: uppercase; }
+        .mini-table tbody th { font-weight: 700; color: #4C2A85; width: 33%; }
+        .mini-table tbody tr:last-child th, .mini-table tbody tr:last-child td { border-bottom: none; }
+        .mini-table td b { color: #1A1A2E; font-weight: 700; }
+        .mini-table .gl { color: #6b6275; font-weight: 400; }
+
+    .recap { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
+    .recap .box { border-radius: 12px; padding: 15px 18px; font-size: 14px; line-height: 1.5; }
+    .recap .retenir { background: #F1ECFA; border: 1px solid #dccff2; }
+    .recap .piege { background: #FFFBEB; border: 1px solid #F6E4A8; }
+    .recap .box .lbl { display: block; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 7px; }
+    .recap .retenir .lbl { color: #6B46C1; }
+    .recap .piege .lbl { color: #9a6d00; }
+    .recap b { font-weight: 700; color: #1A1A2E; }
+    .qcm-cta { display: flex; align-items: center; gap: 16px; text-decoration: none; color: inherit; background: #fff; border: 1px solid #d6c6f0; border-radius: 14px; padding: 18px 22px; margin: 24px 0 6px; box-shadow: 0 9px 26px -16px rgba(107,70,193,.4); transition: transform .18s ease, box-shadow .18s ease; }
+    .qcm-cta:hover { transform: translateY(-2px); box-shadow: 0 16px 38px -16px rgba(107,70,193,.5); }
+    .qcm-cta:focus-visible { outline: 3px solid #6B46C1; outline-offset: 2px; }
+    .qcm-cta .qcm-body { flex: 1; }
+    .qcm-cta .qcm-k { font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #6B46C1; }
+    .qcm-cta .qcm-t { font-size: 18px; font-weight: 800; color: #1A1A2E; margin-top: 3px; letter-spacing: -0.3px; }
+    .qcm-cta .qcm-arrow { flex: none; width: 42px; height: 42px; border-radius: 11px; background: #6B46C1; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700; }
+    .chapter-footer { text-align: center; margin-top: 22px; padding-top: 16px; border-top: 1px solid #e6dfd1; color: #7a8088; font-size: 12px; }
+    .chapter-footer strong { color: #6b6275; }
+    .bio-hint { display: none; }
+    /* ===== IMPRESSION / PDF — format REEL 9:16 (1080×1920), agrandi pour remplir ===== */
+    @media print {
+        @page { size: 1080px 1920px; margin: 42px; }
+        body { background: #fff; padding: 0; max-width: 996px; font-size: 17px; }
+        .page-container::before { display: none; }
+        .prod-brand { margin: 0 0 12px; }
+        .prod-brand img { height: 42px; }
+        .hook-header { padding: 22px 30px; box-shadow: none; }
+        .hook-header .brand-tag { font-size: 12px; margin-bottom: 10px; }
+        .hook-header .course-title { font-size: 34px; margin-bottom: 10px; }
+        .hook-header .punch { font-size: 21px; }
+        .intro { font-size: 17px; line-height: 1.55; margin: 18px 2px; }
+        .schema-2up { margin: 18px 0; gap: 20px; }
+        .schema-box { padding: 12px; box-shadow: none; }
+        .schema-2up .schema-box img { height: 300px; }
+        .schema-box .schema-num { font-size: 12.5px; margin-bottom: 5px; }
+        .schema-box .caption { font-size: 14px; margin-top: 8px; }
+        .steps { padding: 20px 26px; margin: 18px 0; box-shadow: none; }
+        .steps .steps-title { font-size: 19px; margin-bottom: 13px; }
+        .step { margin-bottom: 11px; gap: 13px; }
+        .step .n { width: 30px; height: 30px; font-size: 14px; }
+        .step .txt { font-size: 16.5px; line-height: 1.5; padding-top: 2px; }
+        .pass-tip { padding: 16px 22px; margin: 18px 0; font-size: 16.5px; box-shadow: none; }
+        .mnemo-box { padding: 16px 22px; margin: 18px 0; font-size: 16.5px; box-shadow: none; }
+        .table-wrap { margin: 18px 0; overflow: visible; }
+        .mini-table { font-size: 16px; box-shadow: none; }
+        .mini-table caption { font-size: 19px; padding-bottom: 10px; }
+        .mini-table th, .mini-table td { padding: 12px 16px; }
+        .recap { gap: 16px; margin: 18px 0; }
+        .recap .box { padding: 15px 20px; font-size: 15.5px; }
+        .recap .box .lbl { font-size: 12.5px; }
+        .qcm-cta { padding: 17px 24px; margin: 18px 0 6px; box-shadow: none; }
+        .qcm-cta .qcm-k { font-size: 12.5px; }
+        .qcm-cta .qcm-t { font-size: 20px; }
+        .qcm-cta .qcm-arrow { width: 44px; height: 44px; font-size: 20px; }
+        .bio-hint { display: block; text-align: center; margin: 12px 0 0; font-size: 17px; font-weight: 800; color: #6B46C1; }
+        .bio-hint strong { color: #4C2A85; }
+        .chapter-footer { margin-top: 14px; padding-top: 12px; font-size: 14px; }
+        .schema-2up, .schema-box, .steps, .recap, .pass-tip, .qcm-cta, .mnemo-box, .table-wrap { page-break-inside: avoid; }
+    }
+    @media (max-width: 600px) {
+        body { padding: 14px; }
+        .hook-header { padding: 22px 18px 18px; }
+        .hook-header .course-title { font-size: 24px; }
+        .hook-header .punch { font-size: 16px; }
+        .recap { grid-template-columns: 1fr; }
+        .intro, .pass-tip, .step .txt, .recap .box { text-align: left; }
+        .schema-box::before { color: rgba(107,70,193,0.20); font-size: 11px; letter-spacing: 1px; max-width: 90%; }
+    }
+
+    /* === mobile-polish + zoom-bar ordi only === */
+    /* La barre de zoom (− / 100 % / +) est réservée à l'ordinateur : sur mobile,
+       le pinch-to-zoom natif suffit. On la masque sous la largeur tactile. */
+    @media (max-width: 768px) {
+        #medeos-zoom-bar { display: none !important; }
+    }
+    /* Agencement mobile soigné : le titre ne déborde jamais, le hook respire. */
+    @media (max-width: 600px) {
+        body { padding: 14px 13px 18px; }
+        .hook-header { padding: 20px 17px 16px; }
+        .hook-header .course-title {
+            font-size: clamp(20px, 6.4vw, 25px);
+            line-height: 1.12;
+            letter-spacing: -0.4px;
+            overflow-wrap: anywhere;
+            hyphens: auto;
+        }
+        .hook-header .punch { font-size: clamp(14.5px, 4.4vw, 17px); line-height: 1.3; }
+        .hook-header .brand-tag { font-size: 10.5px; letter-spacing: 1.2px; }
+        .intro { font-size: 15px; }
+        .schema-2up { gap: 14px; }
+        .steps { padding: 18px 16px; }
+        .steps .steps-title { font-size: 15px; }
+        .step .txt { font-size: 14.5px; }
+        .mini-table { font-size: 14px; }
+        .mini-table th, .mini-table td { padding: 10px 12px; }
+        .qcm-cta { padding: 15px 16px; gap: 12px; }
+        .qcm-cta .qcm-t { font-size: 16px; }
+        .qcm-cta .qcm-arrow { width: 38px; height: 38px; font-size: 18px; }
+        /* boutons de la lightbox plus gros au doigt */
+        #medeos-lightbox button[aria-label="Fermer"] { width: 46px; height: 46px; font-size: 26px; }
+    }
+</style>
+</head>
+<body>
+<div class="page-container">
+    <div class="prod-brand"><img src="../images/logo-medeos-violet.png" alt="Medeos"></div>
+
+    <header class="hook-header">
+        <div class="brand-tag">Ressource gratuite</div>
+        <h1 class="course-title">Le fractionnement cellulaire par centrifugation</h1>
+        <p class="punch">Faire briller un organite, c'est bien.</p>
+        <p class="punch">Le <span class="accent">sortir de la cellule</span> pour l'étudier seul, c'est autre chose.</p>
+    </header>
+
+    <p class="intro">Avec la microscopie à fluorescence, tu regardes la cellule entière et tu repères <em class="hl">où</em> se trouvent les structures. Mais pour étudier un organite en lui-même, il faut pouvoir le mettre à part. C'est exactement ce que fait le <strong>fractionnement cellulaire</strong> : il permet d'<strong>isoler les différents organites</strong> par centrifugations successives à vitesses croissantes, pour pouvoir les étudier séparément.</p>
+
+    <div class="mnemo-box"><span class="lbl">L'analogie — les billes</span>Imagine que tu mettes des <b>billes de différentes tailles</b> dans l'eau et que tu fasses tourner le tube très vite. Les <b>grosses billes lourdes tombent au fond en premier</b>, les moyennes après, et les petites restent en suspension. C'est pareil avec les organites !</div>
+
+    <p class="intro"><strong>La règle de base</strong> tient en une ligne : plus un organite est <em class="hl">gros et lourd</em>, plus il tombe vite au fond du tube — on dit qu'il <strong>sédimente</strong> ; plus il est <em class="hl">petit et léger</em>, plus il reste en suspension dans le liquide. Reste à comprendre les chiffres. Le « <strong>g</strong> » est la <strong>force de gravité terrestre</strong> : sur Terre, la gravité attire tout vers le bas avec une force de <strong>1 g</strong>. Dans une centrifugeuse, <strong>1 000 g</strong> signifie une force <strong>1 000 fois plus forte</strong> que la gravité terrestre, et <strong>100 000 g</strong>, 100 000 fois plus forte. Si tu pèses 70 kg sur Terre, tu « pèserais » <strong>70 000 kg</strong> à 1 000 g : c'est cette force énorme qui fait tomber les organites au fond du tube.</p>
+
+    <div class="steps">
+        <div class="steps-title">Les 5 étapes, du plus lourd au plus léger</div>
+        <ol>
+            <li class="step">
+                <span class="n">0</span>
+                <span class="txt"><span class="lead">Casser les cellules</span> <span class="gl">(lyse cellulaire)</span>. On broie les cellules dans un liquide spécial, <b>isotonique</b> <span class="gl">(même concentration que l'intérieur de la cellule)</span>. Résultat : un « smoothie cellulaire » avec tous les organites mélangés, mais <b>intacts</b> — pas éclatés.</span>
+            </li>
+            <li class="step">
+                <span class="n">1</span>
+                <span class="txt"><span class="lead">1<sup>re</sup> centrifugation, vitesse LENTE (1 000 g).</span> Les organites les plus lourds tombent au fond. <b>Culot : les NOYAUX</b> <span class="gl">(les plus gros et lourds)</span>. Le <b>surnageant</b>, le liquide du dessus, contient tout le reste : on le récupère pour continuer.</span>
+            </li>
+            <li class="step">
+                <span class="n">2</span>
+                <span class="txt"><span class="lead">2<sup>e</sup> centrifugation, vitesse MOYENNE (10 000 g).</span> On reprend le surnageant d'avant et on tourne plus vite. <b>Culot : MITOCHONDRIES + LYSOSOMES</b> <span class="gl">(taille moyenne)</span>. On garde encore le surnageant.</span>
+            </li>
+            <li class="step">
+                <span class="n">3</span>
+                <span class="txt"><span class="lead">3<sup>e</sup> centrifugation, vitesse TRÈS RAPIDE (100 000 g).</span> C'est l'<b>ultracentrifugation</b>. <b>Culot : les MICROSOMES</b> <span class="gl">(= des morceaux de réticulum endoplasmique fragmenté)</span>.</span>
+            </li>
+            <li class="step">
+                <span class="n">4</span>
+                <span class="txt"><span class="lead">Surnageant final = le CYTOSOL.</span> C'est le liquide qui reste après toutes les centrifugations. Il contient toutes les <b>protéines solubles</b> <span class="gl">(dissoutes dans l'eau)</span> qui n'appartiennent à aucun organite 💧</span>
+            </li>
+        </ol>
+    </div>
+
+    <div class="table-wrap">
+        <table class="mini-table">
+            <caption>À chaque vitesse, son culot</caption>
+            <thead>
+                <tr><th scope="col">Vitesse</th><th scope="col">Ce qui tombe au fond (culot)</th></tr>
+            </thead>
+            <tbody>
+                <tr><th scope="row">1 000 g</th><td><b>Noyaux</b> 🟣</td></tr>
+                <tr><th scope="row">10 000 g</th><td><b>Mitochondries + lysosomes</b> 🟠</td></tr>
+                <tr><th scope="row">100 000 g</th><td><b>Microsomes</b> — le réticulum endoplasmique 🔵</td></tr>
+                <tr><th scope="row">Surnageant final</th><td><b>Cytosol</b> et ses protéines solubles 💧</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="mnemo-box"><span class="lbl">Le mnémo — N-M-L</span><b>Inverse de l'ordre alphabétique ! N</b>oyaux → <b>M</b>itochondries → mi<b>L</b> (Lysosomes / Microsomes = RE). L-M-N dans l'alphabet, mais <b>N-M-L</b> pour la centrifugation 🔄<br><b>Logique :</b> les organites à double membrane (N et M) sont plus lourds → tombent au fond en premier.</div>
+
+    <div class="pass-tip">
+        Deux détails font tomber les QCM. Un : à chaque tour, on ne recommence pas avec le culot, on garde le <strong>surnageant</strong> et on centrifuge plus vite. Deux : la lyse se fait en milieu <strong>isotonique</strong>, sinon l'eau entrerait dans les organites et les ferait éclater — et il n'y aurait plus rien à séparer. Retiens aussi la logique du chapitre : isoler des organites ? → <strong>centrifugation</strong>.
+    </div>
+
+    <div class="recap">
+        <div class="box retenir">
+            <span class="lbl">À retenir</span>
+            Centrifugation <b>différentielle</b> = vitesses croissantes. <b>1 000 g</b> → noyaux · <b>10 000 g</b> → mitochondries et lysosomes · <b>100 000 g</b> → microsomes (réticulum endoplasmique) · <b>surnageant final</b> → cytosol. Le <b>g</b> est un multiple de la gravité terrestre.
+        </div>
+        <div class="box piege">
+            <span class="lbl">Le piège</span>
+            Les <b>microsomes</b> ne sont pas un organite de la cellule : ce sont des <b>morceaux de réticulum endoplasmique</b> créés par le broyage. Et attention à l'ordre : gros et lourd sédimente <b>en premier</b>, donc les noyaux tombent à la vitesse la <b>plus lente</b>, pas la plus rapide.
+        </div>
+    </div>
+
+    <a class="qcm-cta" style="display:none" href="/ressources/qcm-decouverte/decouverte-biologie-methodes-etude" target="_top">
+        <span class="qcm-body">
+            <span class="qcm-k">Vérifie en 3 questions</span>
+            <span class="qcm-t">QCM — Méthodes d'étude</span>
+        </span>
+        <span class="qcm-arrow" aria-hidden="true">→</span>
+    </a>
+    <div class="bio-hint">📲 Pour faire le QCM gratuit → <strong>lien en bio</strong></div>
+
+    <footer class="chapter-footer">
+        <p>Une fiche <strong>Medeos</strong> · pour anticiper la P1, sereinement. · medeos-sante.fr</p>
+    </footer>
+
+</div>
+
+<div id="medeos-lightbox" role="dialog" aria-label="Schéma agrandi" aria-modal="true" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(26,26,46,0.92);overflow:auto;-webkit-overflow-scrolling:touch;touch-action:pinch-zoom;cursor:zoom-out;">
+    <button type="button" aria-label="Fermer" onclick="closeLightbox()" style="position:fixed;top:14px;right:16px;z-index:10003;width:42px;height:42px;border-radius:50%;border:none;background:rgba(255,255,255,0.14);color:#fff;font-size:24px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);">&times;</button>
+    <div id="medeos-zoom-bar" style="position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:10003;display:flex;gap:8px;align-items:center;background:rgba(255,255,255,0.14);backdrop-filter:blur(4px);padding:7px 10px;border-radius:999px;">
+        <button type="button" aria-label="Dézoomer" onclick="lbZoom(-1,event)" style="width:38px;height:38px;border-radius:50%;border:none;background:rgba(255,255,255,0.9);color:#1A1A2E;font-size:22px;font-weight:700;line-height:1;cursor:pointer;">&minus;</button>
+        <button type="button" aria-label="Réinitialiser le zoom" onclick="lbReset(event)" style="height:38px;padding:0 14px;border-radius:999px;border:none;background:rgba(255,255,255,0.9);color:#1A1A2E;font-size:13px;font-weight:700;cursor:pointer;">100&nbsp;%</button>
+        <button type="button" aria-label="Zoomer" onclick="lbZoom(1,event)" style="width:38px;height:38px;border-radius:50%;border:none;background:rgba(255,255,255,0.9);color:#1A1A2E;font-size:22px;font-weight:700;line-height:1;cursor:pointer;">+</button>
+    </div>
+    <div id="medeos-lightbox-stage" onclick="lbStageClick(event)" style="min-height:100%;display:flex;align-items:center;justify-content:center;padding:64px 16px;">
+        <div style="position:relative;display:inline-flex;">
+            <img id="medeos-lightbox-img" src="" alt="Schéma agrandi" ondblclick="lbToggleZoom(event)" style="display:block;border-radius:10px;box-shadow:0 10px 40px rgba(0,0,0,0.5);transform-origin:center center;transition:transform .18s ease;max-width:none;cursor:zoom-in;">
+            <div aria-hidden="true" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;">
+                <span style="font-family:'Inter',Arial,sans-serif;font-size:clamp(11px,4vw,30px);font-weight:700;letter-spacing:clamp(1px,1vw,6px);text-transform:uppercase;color:rgba(120,120,120,0.16);white-space:nowrap;">medeos-sante.fr</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var lbScale = 1, lbBaseW = 0;
+    function openLightbox(src) {
+        var lb = document.getElementById('medeos-lightbox');
+        var img = document.getElementById('medeos-lightbox-img');
+        lbScale = 1;
+        img.onload = function () {
+            // Taille de base : on s'aligne sur la largeur dispo (max 96vw) ou la taille native si plus petite.
+            var availW = Math.min(window.innerWidth * 0.96, this.naturalWidth);
+            var availH = window.innerHeight * 0.84;
+            var ratio = Math.min(availW / this.naturalWidth, availH / this.naturalHeight, 1);
+            lbBaseW = Math.max(120, Math.round(this.naturalWidth * ratio));
+            this.style.width = lbBaseW + 'px';
+            this.style.height = 'auto';
+            lbApply();
+        };
+        img.src = src;
+        lb.style.display = 'block';
+        lb.scrollTop = 0; lb.scrollLeft = 0;
+        document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+        document.getElementById('medeos-lightbox').style.display = 'none';
+        document.body.style.overflow = '';
+    }
+    function lbApply() {
+        var img = document.getElementById('medeos-lightbox-img');
+        img.style.transform = 'scale(' + lbScale + ')';
+        img.style.cursor = lbScale > 1 ? 'zoom-out' : 'zoom-in';
+        var lbl = document.querySelector('#medeos-zoom-bar button[onclick^="lbReset"]');
+        if (lbl) lbl.innerHTML = Math.round(lbScale * 100) + '&nbsp;%';
+    }
+    function lbZoom(dir, e) {
+        if (e) { e.stopPropagation(); e.preventDefault(); }
+        lbScale = Math.min(4, Math.max(1, +(lbScale + dir * 0.5).toFixed(2)));
+        lbApply();
+    }
+    function lbReset(e) { if (e) { e.stopPropagation(); e.preventDefault(); } lbScale = 1; lbApply(); }
+    function lbToggleZoom(e) { if (e) { e.stopPropagation(); e.preventDefault(); } lbScale = lbScale > 1 ? 1 : 2; lbApply(); }
+    function lbStageClick(e) { if (e.target.id === 'medeos-lightbox-stage') closeLightbox(); } // clic dans le vide = fermer
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeLightbox();
+        else if (document.getElementById('medeos-lightbox').style.display === 'block') {
+            if (e.key === '+' || e.key === '=') lbZoom(1);
+            else if (e.key === '-') lbZoom(-1);
+            else if (e.key === '0') lbReset();
+        }
+    });
+    document.getElementById('medeos-lightbox').addEventListener('wheel', function (e) {
+        if (this.style.display !== 'block') return;
+        if (e.ctrlKey || Math.abs(e.deltaY) > 0) { /* molette = zoom */ }
+        e.preventDefault();
+        lbScale = Math.min(4, Math.max(1, +(lbScale - Math.sign(e.deltaY) * 0.25).toFixed(2)));
+        lbApply();
+    }, { passive: false });
+    function schemaMissing(img) { img.style.display = 'none'; var b = img.closest('.schema-box'); if (b) b.classList.add('img-missing'); }
+</script>
+</body>
+</html>

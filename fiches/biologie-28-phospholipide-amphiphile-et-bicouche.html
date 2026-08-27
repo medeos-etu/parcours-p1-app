@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le phospholipide amphiphile : pourquoi la membrane est une bicouche — Fiche Medeos</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 15px; line-height: 1.6; color: #2c3e50; background: #f6f8fb; padding: 22px; max-width: 760px; margin: 0 auto; }
+    .page-container { position: relative; }
+    .page-container::before { display: none; }
+    .page-container > * { position: relative; z-index: 1; }
+    .prod-brand { margin: 0 4px 10px; }
+    .prod-brand img { height: 30px; width: auto; display: block; border-radius: 6px; }
+    .hook-header { background: #FAF6F0; border-radius: 14px; padding: 26px 30px 22px; box-shadow: 0 4px 18px rgba(76,42,133,0.08); border: 1px solid #efe7d8; }
+    .hook-header .brand-tag { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #6B46C1; font-weight: 600; opacity: 0.85; margin-bottom: 12px; }
+    .hook-header .course-title { font-size: 28px; line-height: 1.1; font-weight: 800; color: #4C2A85; letter-spacing: -0.7px; margin: 0 0 12px; }
+    .hook-header .punch { font-size: 18px; line-height: 1.3; font-weight: 800; color: #1A1A2E; letter-spacing: -0.3px; margin: 0; }
+    .hook-header .punch span.accent { color: #6B46C1; }
+    .hook-header .punch + .punch { margin-top: 5px; }
+    .intro { font-size: 15.5px; line-height: 1.7; color: #2c3e50; margin: 20px 2px; }
+    .intro strong { font-weight: 700; color: #4C2A85; }
+    em.hl { background: linear-gradient(180deg, transparent 60%, #FCD34D 60%); font-style: normal; padding: 0 2px; }
+    .schema-box { background: #fff; border: 2px solid #6B46C1; padding: 12px; text-align: center; border-radius: 12px; box-shadow: 0 4px 15px rgba(107, 70, 193, 0.15); position: relative; overflow: hidden; }
+    .schema-box::before { content: 'medeos-sante.fr'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: 'Inter', Arial, sans-serif; font-size: 14px; font-weight: 700; color: rgba(120,120,120,0.13); letter-spacing: 2px; text-transform: uppercase; pointer-events: none; user-select: none; z-index: 5; white-space: nowrap; max-width: 92%; overflow: hidden; }
+    .schema-box img { max-width: 100%; max-height: 300px; height: auto; border-radius: 8px; display: block; margin: 0 auto; cursor: zoom-in; }
+    .schema-box .schema-num { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 0.6px; text-transform: uppercase; color: #6B46C1; margin-bottom: 6px; }
+    .schema-box .caption { font-size: 12px; color: #6b6275; margin-top: 9px; font-weight: 500; }
+    .schema-box .caption strong { color: #6B46C1; }
+    .schema-box .file-target { display: none; margin-top: 10px; padding: 8px 12px; background: #e8f5e9; border: 1px solid #a5d6a7; border-radius: 6px; font-family: 'SFMono-Regular', Consolas, monospace; font-size: 11.5px; color: #1b5e20; text-align: left; line-height: 1.5; }
+    .schema-box .file-target strong { color: #2e7d32; }
+    .schema-box .generation-prompt { background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border: 2px dashed #ff9800; border-radius: 8px; padding: 13px; margin-top: 12px; text-align: left; font-size: 11.5px; color: #e65100; line-height: 1.55; white-space: pre-wrap; }
+    .schema-box .generation-prompt strong { color: #bf360c; display: block; margin-bottom: 8px; font-size: 12.5px; background: #ffcc80; padding: 7px 11px; border-radius: 4px; }
+    .schema-box .copy-prompt-btn { display: none; margin-top: 8px; padding: 6px 12px; background: #ff9800; color: #fff; border: none; border-radius: 4px; font-size: 12px; cursor: pointer; font-weight: 600; }
+    .schema-box .copy-prompt-btn:hover { background: #f57c00; }
+    .schema-box .generation-prompt { display: none; }
+    .schema-box.img-missing .generation-prompt { display: block; }
+    .schema-box.img-missing .copy-prompt-btn { display: inline-block; }
+    .schema-box.img-missing .file-target { display: block !important; }
+    .schema-2up { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; align-items: stretch; }
+    .schema-2up .schema-box { margin: 0; display: flex; flex-direction: column; }
+    .schema-2up .schema-box img { height: 230px; width: 100%; max-height: none; object-fit: contain; }
+    .schema-2up .schema-box .caption { margin-top: auto; }
+    @media (max-width: 720px) { .schema-2up { grid-template-columns: 1fr; } .schema-2up .schema-box img { height: auto; max-height: 300px; } }
+    .steps { background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%); border-left: 5px solid #6B46C1; border-radius: 0 12px 12px 0; padding: 18px 22px; margin: 20px 0; box-shadow: 0 2px 10px rgba(107,70,193,0.08); }
+    .steps .steps-title { font-size: 15px; font-weight: 800; color: #4C2A85; margin-bottom: 13px; }
+    .steps ol { list-style: none; margin: 0; padding: 0; }
+    .step { display: grid; grid-template-columns: 28px 1fr; gap: 12px; align-items: start; margin-bottom: 12px; }
+    .step:last-child { margin-bottom: 0; }
+    .step .n { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 999px; background: #6B46C1; color: #fff; font-size: 13px; font-weight: 800; }
+    .step .txt { font-size: 14.5px; line-height: 1.5; color: #2c3e50; padding-top: 2px; }
+    .step .txt b { color: #4C2A85; font-weight: 700; }
+    .step .txt .gl { color: #6b6275; font-weight: 400; }
+    .step .txt .lead { font-weight: 800; color: #1A1A2E; }
+    .pass-tip { background: #fdf6ec; border-left: 6px solid #B8895A; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; box-shadow: 0 3px 12px rgba(184,137,90,0.14); font-size: 14.5px; line-height: 1.55; }
+    .pass-tip::before { content: "Le réflexe P1"; display: block; font-weight: 700; font-size: 12px; color: #9a6a37; margin-bottom: 7px; letter-spacing: 0.8px; text-transform: uppercase; }
+    .pass-tip strong { color: #9a6a37; }
+
+        .mnemo-box { background:#F3EEFB; border-left:6px solid #6B46C1; padding:15px 20px; margin:20px 0;
+            border-radius:0 8px 8px 0; box-shadow:0 3px 12px rgba(107,70,193,.13); font-size:14.5px; line-height:1.6; }
+        .mnemo-box .lbl { display:block; font-weight:700; font-size:12px; color:#6B46C1; margin-bottom:7px;
+            letter-spacing:.8px; text-transform:uppercase; }
+        .mnemo-box b { color:#4C2A85; }
+
+    .recap { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
+    .recap .box { border-radius: 12px; padding: 15px 18px; font-size: 14px; line-height: 1.5; }
+    .recap .retenir { background: #F1ECFA; border: 1px solid #dccff2; }
+    .recap .piege { background: #FFFBEB; border: 1px solid #F6E4A8; }
+    .recap .box .lbl { display: block; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 7px; }
+    .recap .retenir .lbl { color: #6B46C1; }
+    .recap .piege .lbl { color: #9a6d00; }
+    .recap b { font-weight: 700; color: #1A1A2E; }
+    .qcm-cta { display: flex; align-items: center; gap: 16px; text-decoration: none; color: inherit; background: #fff; border: 1px solid #d6c6f0; border-radius: 14px; padding: 18px 22px; margin: 24px 0 6px; box-shadow: 0 9px 26px -16px rgba(107,70,193,.4); transition: transform .18s ease, box-shadow .18s ease; }
+    .qcm-cta:hover { transform: translateY(-2px); box-shadow: 0 16px 38px -16px rgba(107,70,193,.5); }
+    .qcm-cta:focus-visible { outline: 3px solid #6B46C1; outline-offset: 2px; }
+    .qcm-cta .qcm-body { flex: 1; }
+    .qcm-cta .qcm-k { font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #6B46C1; }
+    .qcm-cta .qcm-t { font-size: 18px; font-weight: 800; color: #1A1A2E; margin-top: 3px; letter-spacing: -0.3px; }
+    .qcm-cta .qcm-arrow { flex: none; width: 42px; height: 42px; border-radius: 11px; background: #6B46C1; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700; }
+    .chapter-footer { text-align: center; margin-top: 22px; padding-top: 16px; border-top: 1px solid #e6dfd1; color: #7a8088; font-size: 12px; }
+    .chapter-footer strong { color: #6b6275; }
+    .bio-hint { display: none; }
+    /* ===== IMPRESSION / PDF — format REEL 9:16 (1080×1920), agrandi pour remplir ===== */
+    @media print {
+        @page { size: 1080px 1920px; margin: 42px; }
+        body { background: #fff; padding: 0; max-width: 996px; font-size: 17px; }
+        .page-container::before { display: none; }
+        .prod-brand { margin: 0 0 12px; }
+        .prod-brand img { height: 42px; }
+        .hook-header { padding: 22px 30px; box-shadow: none; }
+        .hook-header .brand-tag { font-size: 12px; margin-bottom: 10px; }
+        .hook-header .course-title { font-size: 34px; margin-bottom: 10px; }
+        .hook-header .punch { font-size: 21px; }
+        .intro { font-size: 17px; line-height: 1.55; margin: 18px 2px; }
+        .schema-2up { margin: 18px 0; gap: 20px; }
+        .schema-box { padding: 12px; box-shadow: none; }
+        .schema-2up .schema-box img { height: 300px; }
+        .schema-box .schema-num { font-size: 12.5px; margin-bottom: 5px; }
+        .schema-box .caption { font-size: 14px; margin-top: 8px; }
+        .steps { padding: 20px 26px; margin: 18px 0; box-shadow: none; }
+        .steps .steps-title { font-size: 19px; margin-bottom: 13px; }
+        .step { margin-bottom: 11px; gap: 13px; }
+        .step .n { width: 30px; height: 30px; font-size: 14px; }
+        .step .txt { font-size: 16.5px; line-height: 1.5; padding-top: 2px; }
+        .pass-tip { padding: 16px 22px; margin: 18px 0; font-size: 16.5px; box-shadow: none; }
+        .recap { gap: 16px; margin: 18px 0; }
+        .recap .box { padding: 15px 20px; font-size: 15.5px; }
+        .recap .box .lbl { font-size: 12.5px; }
+        .qcm-cta { padding: 17px 24px; margin: 18px 0 6px; box-shadow: none; }
+        .qcm-cta .qcm-k { font-size: 12.5px; }
+        .qcm-cta .qcm-t { font-size: 20px; }
+        .qcm-cta .qcm-arrow { width: 44px; height: 44px; font-size: 20px; }
+        .bio-hint { display: block; text-align: center; margin: 12px 0 0; font-size: 17px; font-weight: 800; color: #6B46C1; }
+        .bio-hint strong { color: #4C2A85; }
+        .chapter-footer { margin-top: 14px; padding-top: 12px; font-size: 14px; }
+        .schema-2up, .schema-box, .steps, .recap, .pass-tip, .qcm-cta { page-break-inside: avoid; }
+    }
+    @media (max-width: 600px) {
+        body { padding: 14px; }
+        .hook-header { padding: 22px 18px 18px; }
+        .hook-header .course-title { font-size: 24px; }
+        .hook-header .punch { font-size: 16px; }
+        .recap { grid-template-columns: 1fr; }
+        .intro, .pass-tip, .step .txt, .recap .box { text-align: left; }
+        .schema-box::before { color: rgba(107,70,193,0.20); font-size: 11px; letter-spacing: 1px; max-width: 90%; }
+    }
+
+    /* === mobile-polish + zoom-bar ordi only === */
+    /* La barre de zoom (− / 100 % / +) est réservée à l'ordinateur : sur mobile,
+       le pinch-to-zoom natif suffit. On la masque sous la largeur tactile. */
+    @media (max-width: 768px) {
+        #medeos-zoom-bar { display: none !important; }
+    }
+    /* Agencement mobile soigné : le titre ne déborde jamais, le hook respire. */
+    @media (max-width: 600px) {
+        body { padding: 14px 13px 18px; }
+        .hook-header { padding: 20px 17px 16px; }
+        .hook-header .course-title {
+            font-size: clamp(20px, 6.4vw, 25px);
+            line-height: 1.12;
+            letter-spacing: -0.4px;
+            overflow-wrap: anywhere;
+            hyphens: auto;
+        }
+        .hook-header .punch { font-size: clamp(14.5px, 4.4vw, 17px); line-height: 1.3; }
+        .hook-header .brand-tag { font-size: 10.5px; letter-spacing: 1.2px; }
+        .intro { font-size: 15px; }
+        .schema-2up { gap: 14px; }
+        .steps { padding: 18px 16px; }
+        .steps .steps-title { font-size: 15px; }
+        .step .txt { font-size: 14.5px; }
+        .qcm-cta { padding: 15px 16px; gap: 12px; }
+        .qcm-cta .qcm-t { font-size: 16px; }
+        .qcm-cta .qcm-arrow { width: 38px; height: 38px; font-size: 18px; }
+        /* boutons de la lightbox plus gros au doigt */
+        #medeos-lightbox button[aria-label="Fermer"] { width: 46px; height: 46px; font-size: 26px; }
+    }
+</style>
+</head>
+<body>
+<div class="page-container">
+
+    <div class="prod-brand"><img src="../images/logo-medeos-violet.png" alt="Medeos"></div>
+
+    <header class="hook-header">
+        <div class="brand-tag">Ressource gratuite</div>
+        <h1 class="course-title">Le phospholipide amphiphile : pourquoi la membrane est une bicouche</h1>
+        <p class="punch">Une molécule à <span class="accent">deux natures opposées</span>.</p>
+        <p class="punch">Mets-la dans l'eau : la membrane s'organise <span class="accent">toute seule</span>.</p>
+    </header>
+
+    <p class="intro">La fiche précédente a posé les trois ingrédients de la membrane : lipides, protéines, glucides. On descend maintenant d'un cran, dans la première de ces catégories, jusqu'à la molécule qui donne sa forme à toute la membrane : le <strong>phospholipide</strong>. Ce sont les <strong>lipides majoritaires</strong> de la membrane <em>(≈ 55 % des lipides membranaires)</em>, et ce sont des molécules <strong>amphiphiles</strong> — c'est-à-dire qu'elles ont <em class="hl">deux natures opposées</em> dans une seule et même molécule.</p>
+
+    <div class="steps">
+        <div class="steps-title">Amphiphile : une molécule, deux natures opposées</div>
+        <ol>
+            <li class="step">
+                <span class="n">1</span>
+                <span class="txt"><span class="lead">Une tête polaire, hydrophile.</span> Elle porte des <b>charges électriques</b> et <b>aime l'eau</b> : elle interagit avec les molécules d'eau.</span>
+            </li>
+            <li class="step">
+                <span class="n">2</span>
+                <span class="txt"><span class="lead">Des queues apolaires, hydrophobes.</span> Ce sont des <b>chaînes d'acides gras</b> de <b>14 à 24 carbones</b>. Elles <b>fuient l'eau</b> et se regroupent entre elles.</span>
+            </li>
+        </ol>
+    </div>
+
+    <div class="mnemo-box"><span class="lbl">L'analogie — pourquoi amphiphile ?</span>Un phospholipide, c'est comme un personnage bizarre qui a la tête qui <b>aime l'eau</b> (tête polaire) et les pieds qui <b>fuient l'eau</b> (queues hydrophobes). Naturellement, ces molécules s'organisent spontanément en <b>bicouche</b> : les têtes se tournent vers l'eau (extérieur et intérieur de la cellule), tandis que les pieds se cachent au milieu pour échapper à l'eau. Voilà comment naît la membrane ! 🎯</div>
+
+    <p class="intro">L'analogie donne l'image. Reste à comprendre pourquoi cette organisation en <strong>deux</strong> couches s'impose, et pas une seule. Il y a <strong>deux raisons complémentaires</strong> — l'une fonctionnelle, l'autre physique.</p>
+
+    <div class="steps">
+        <div class="steps-title">Pourquoi une bicouche ?</div>
+        <ol>
+            <li class="step">
+                <span class="n">1</span>
+                <span class="txt"><span class="lead">Imperméabilité sélective.</span> Les molécules <b>polaires (chargées)</b> circulent sans peine dans l'eau… jusqu'à ce qu'elles rencontrent le <b>cœur hydrophobe</b> — les queues grasses — au centre de la membrane. Cette couche centrale agit comme une <b>barrière imperméable</b> à la plupart des molécules polaires. Sans elle, <b>tout traverserait la membrane facilement</b>, ce qui serait catastrophique pour la cellule.</span>
+            </li>
+            <li class="step">
+                <span class="n">2</span>
+                <span class="txt"><span class="lead">Stabilité structurale.</span> Imagine un phospholipide tout seul en milieu aqueux <span class="gl">(dans l'eau)</span> : ses deux natures opposées <span class="gl">(la tête aime l'eau, les queues la fuient)</span> le mettent en <b>conflit</b>. Pour résoudre ce problème, les phospholipides s'organisent <b>spontanément en bicouche</b> : les têtes polaires restent en contact avec l'eau <span class="gl">(à l'extérieur et à l'intérieur de la cellule)</span>, les queues hydrophobes se cachent ensemble au milieu. C'est une organisation <b>thermodynamiquement stable</b> et <b>énergétiquement favorable</b> <span class="gl">(c'est l'état qui coûte le moins d'énergie : une fois formée, rien ne pousse la bicouche à se défaire)</span>.</span>
+            </li>
+        </ol>
+    </div>
+
+    <p class="intro">En résumé : la bicouche est la <strong>meilleure solution</strong> pour satisfaire à la fois la nécessité de contrôler ce qui traverse la membrane <em>(imperméabilité)</em> <strong>et</strong> la nécessité physique d'une organisation stable en milieu aqueux. Personne ne « construit » la membrane : elle <em class="hl">s'auto-organise</em>.</p>
+
+    <figure class="schema-box" style="margin: 20px 0;">
+        <span class="schema-num">Structure de la bicouche lipidique</span>
+        <img src="../images/biologie/ch2_bicouche_lipidique.png" alt="Structure de la bicouche lipidique membranaire et ses composants : phospholipides avec têtes polaires vers les milieux aqueux et queues hydrophobes au centre" onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
+        <figcaption class="caption"><strong>La bicouche, en image</strong> — repère d'abord les <strong>deux rangées de têtes polaires</strong>, tournées chacune vers un milieu aqueux <em>(extracellulaire en haut, cytoplasme en bas)</em>. Puis la <strong>zone centrale</strong> où toutes les queues se font face : c'est le cœur hydrophobe, la vraie barrière. Le schéma montre aussi d'autres lipides insérés entre les phospholipides — le <strong>cholestérol</strong> et les <strong>glycolipides</strong> : on les traite dans la fiche suivante.</figcaption>
+    </figure>
+
+    <p class="intro">Dernier étage de détail : tous les phospholipides ne sont pas bâtis sur le même « squelette » <em>(leur structure de base)</em>. On en distingue <strong>deux grands types</strong>.</p>
+
+    <div class="steps">
+        <div class="steps-title">Les 2 squelettes de phospholipides</div>
+        <ol>
+            <li class="step">
+                <span class="n">1</span>
+                <span class="txt"><span class="lead">Les glycérophospholipides — 70 % des phospholipides.</span> Construits sur un squelette de <b>glycérol</b>, avec <b>2 acides gras</b> attachés. Exemples : la <b>phosphatidylcholine</b> <span class="gl">(la plus abondante)</span> et la <b>phosphatidyléthanolamine</b>.</span>
+            </li>
+            <li class="step">
+                <span class="n">2</span>
+                <span class="txt"><span class="lead">Les sphingolipides — 30 % des phospholipides.</span> Construits sur un squelette de <b>sphingosine</b> <span class="gl">(une chaîne plus complexe)</span>, avec <b>1 seul acide gras</b>. Exemple : la <b>sphingomyéline</b>, très abondante dans la <b>myéline</b> cérébrale.</span>
+            </li>
+        </ol>
+    </div>
+
+    <div class="pass-tip">
+        Tous les phospholipides ont <strong>la même fonction</strong> : former la bicouche membranaire. Les variations <em>(glycérol ou sphingosine, 1 ou 2 acides gras)</em> permettent une certaine diversité, mais le concept reste le même — <strong>tête hydrophile + queues hydrophobes</strong>.
+    </div>
+
+    <div class="recap">
+        <div class="box retenir">
+            <span class="lbl">À retenir</span>
+            Les phospholipides = <b>≈ 55 % des lipides</b> membranaires. Ils sont <b>amphiphiles</b> : <b>tête polaire hydrophile</b> (chargée) + <b>queues apolaires hydrophobes</b> (acides gras de <b>14 à 24 carbones</b>). En milieu aqueux, ils s'organisent <b>spontanément en bicouche</b>, pour deux raisons : <b>imperméabilité sélective</b> (cœur hydrophobe) et <b>stabilité thermodynamique</b>. Deux squelettes : <b>glycérophospholipides</b> (70 %, glycérol, 2 acides gras) et <b>sphingolipides</b> (30 %, sphingosine, 1 acide gras).
+        </div>
+        <div class="box piege">
+            <span class="lbl">Le piège</span>
+            Ne confonds pas les deux niveaux de pourcentages : <b>55 %</b>, c'est la part des phospholipides <b>parmi les lipides</b> de la membrane. <b>70 / 30</b>, c'est la répartition <b>à l'intérieur des phospholipides</b> (glycérophospholipides / sphingolipides). Et attention au nombre d'acides gras : <b>2</b> pour le glycérol, <b>1</b> seul pour la sphingosine — l'inverse est <b>FAUX</b>.
+        </div>
+    </div>
+
+    <a class="qcm-cta" style="display:none" href="/ressources/qcm-decouverte/decouverte-biologie-membrane-plasmique" target="_top">
+        <span class="qcm-body">
+            <span class="qcm-k">Vérifie en 3 questions</span>
+            <span class="qcm-t">QCM — La bicouche lipidique</span>
+        </span>
+        <span class="qcm-arrow" aria-hidden="true">→</span>
+    </a>
+    <div class="bio-hint">📲 Pour faire le QCM gratuit → <strong>lien en bio</strong></div>
+
+    <footer class="chapter-footer">
+        <p>Une fiche <strong>Medeos</strong> · pour anticiper la P1, sereinement. · medeos-sante.fr</p>
+    </footer>
+
+</div>
+
+<div id="medeos-lightbox" role="dialog" aria-label="Schéma agrandi" aria-modal="true" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(26,26,46,0.92);overflow:auto;-webkit-overflow-scrolling:touch;touch-action:pinch-zoom;cursor:zoom-out;">
+    <button type="button" aria-label="Fermer" onclick="closeLightbox()" style="position:fixed;top:14px;right:16px;z-index:10003;width:42px;height:42px;border-radius:50%;border:none;background:rgba(255,255,255,0.14);color:#fff;font-size:24px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);">&times;</button>
+    <div id="medeos-zoom-bar" style="position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:10003;display:flex;gap:8px;align-items:center;background:rgba(255,255,255,0.14);backdrop-filter:blur(4px);padding:7px 10px;border-radius:999px;">
+        <button type="button" aria-label="Dézoomer" onclick="lbZoom(-1,event)" style="width:38px;height:38px;border-radius:50%;border:none;background:rgba(255,255,255,0.9);color:#1A1A2E;font-size:22px;font-weight:700;line-height:1;cursor:pointer;">&minus;</button>
+        <button type="button" aria-label="Réinitialiser le zoom" onclick="lbReset(event)" style="height:38px;padding:0 14px;border-radius:999px;border:none;background:rgba(255,255,255,0.9);color:#1A1A2E;font-size:13px;font-weight:700;cursor:pointer;">100&nbsp;%</button>
+        <button type="button" aria-label="Zoomer" onclick="lbZoom(1,event)" style="width:38px;height:38px;border-radius:50%;border:none;background:rgba(255,255,255,0.9);color:#1A1A2E;font-size:22px;font-weight:700;line-height:1;cursor:pointer;">+</button>
+    </div>
+    <div id="medeos-lightbox-stage" onclick="lbStageClick(event)" style="min-height:100%;display:flex;align-items:center;justify-content:center;padding:64px 16px;">
+        <div style="position:relative;display:inline-flex;">
+            <img id="medeos-lightbox-img" src="" alt="Schéma agrandi" ondblclick="lbToggleZoom(event)" style="display:block;border-radius:10px;box-shadow:0 10px 40px rgba(0,0,0,0.5);transform-origin:center center;transition:transform .18s ease;max-width:none;cursor:zoom-in;">
+            <div aria-hidden="true" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;">
+                <span style="font-family:'Inter',Arial,sans-serif;font-size:clamp(11px,4vw,30px);font-weight:700;letter-spacing:clamp(1px,1vw,6px);text-transform:uppercase;color:rgba(120,120,120,0.16);white-space:nowrap;">medeos-sante.fr</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var lbScale = 1, lbBaseW = 0;
+    function openLightbox(src) {
+        var lb = document.getElementById('medeos-lightbox');
+        var img = document.getElementById('medeos-lightbox-img');
+        lbScale = 1;
+        img.onload = function () {
+            // Taille de base : on s'aligne sur la largeur dispo (max 96vw) ou la taille native si plus petite.
+            var availW = Math.min(window.innerWidth * 0.96, this.naturalWidth);
+            var availH = window.innerHeight * 0.84;
+            var ratio = Math.min(availW / this.naturalWidth, availH / this.naturalHeight, 1);
+            lbBaseW = Math.max(120, Math.round(this.naturalWidth * ratio));
+            this.style.width = lbBaseW + 'px';
+            this.style.height = 'auto';
+            lbApply();
+        };
+        img.src = src;
+        lb.style.display = 'block';
+        lb.scrollTop = 0; lb.scrollLeft = 0;
+        document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+        document.getElementById('medeos-lightbox').style.display = 'none';
+        document.body.style.overflow = '';
+    }
+    function lbApply() {
+        var img = document.getElementById('medeos-lightbox-img');
+        img.style.transform = 'scale(' + lbScale + ')';
+        img.style.cursor = lbScale > 1 ? 'zoom-out' : 'zoom-in';
+        var lbl = document.querySelector('#medeos-zoom-bar button[onclick^="lbReset"]');
+        if (lbl) lbl.innerHTML = Math.round(lbScale * 100) + '&nbsp;%';
+    }
+    function lbZoom(dir, e) {
+        if (e) { e.stopPropagation(); e.preventDefault(); }
+        lbScale = Math.min(4, Math.max(1, +(lbScale + dir * 0.5).toFixed(2)));
+        lbApply();
+    }
+    function lbReset(e) { if (e) { e.stopPropagation(); e.preventDefault(); } lbScale = 1; lbApply(); }
+    function lbToggleZoom(e) { if (e) { e.stopPropagation(); e.preventDefault(); } lbScale = lbScale > 1 ? 1 : 2; lbApply(); }
+    function lbStageClick(e) { if (e.target.id === 'medeos-lightbox-stage') closeLightbox(); } // clic dans le vide = fermer
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeLightbox();
+        else if (document.getElementById('medeos-lightbox').style.display === 'block') {
+            if (e.key === '+' || e.key === '=') lbZoom(1);
+            else if (e.key === '-') lbZoom(-1);
+            else if (e.key === '0') lbReset();
+        }
+    });
+    document.getElementById('medeos-lightbox').addEventListener('wheel', function (e) {
+        if (this.style.display !== 'block') return;
+        if (e.ctrlKey || Math.abs(e.deltaY) > 0) { /* molette = zoom */ }
+        e.preventDefault();
+        lbScale = Math.min(4, Math.max(1, +(lbScale - Math.sign(e.deltaY) * 0.25).toFixed(2)));
+        lbApply();
+    }, { passive: false });
+    function schemaMissing(img) { img.style.display = 'none'; var b = img.closest('.schema-box'); if (b) b.classList.add('img-missing'); }
+</script>
+</body>
+</html>
