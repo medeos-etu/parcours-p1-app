@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Golgi, endosome, lysosome : trier, expédier, digérer — Fiche Medeos</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 15px; line-height: 1.6; color: #2c3e50; background: #f6f8fb; padding: 22px; max-width: 760px; margin: 0 auto; }
+    .page-container { position: relative; }
+    .page-container::before { display: none; }
+    .page-container > * { position: relative; z-index: 1; }
+    .prod-brand { margin: 0 4px 10px; }
+    .prod-brand img { height: 30px; width: auto; display: block; border-radius: 6px; }
+    .hook-header { background: #FAF6F0; border-radius: 14px; padding: 26px 30px 22px; box-shadow: 0 4px 18px rgba(76,42,133,0.08); border: 1px solid #efe7d8; }
+    .hook-header .brand-tag { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #6B46C1; font-weight: 600; opacity: 0.85; margin-bottom: 12px; }
+    .hook-header .course-title { font-size: 28px; line-height: 1.1; font-weight: 800; color: #4C2A85; letter-spacing: -0.7px; margin: 0 0 12px; }
+    .hook-header .punch { font-size: 18px; line-height: 1.3; font-weight: 800; color: #1A1A2E; letter-spacing: -0.3px; margin: 0; }
+    .hook-header .punch span.accent { color: #6B46C1; }
+    .hook-header .punch + .punch { margin-top: 5px; }
+    .intro { font-size: 15.5px; line-height: 1.7; color: #2c3e50; margin: 20px 2px; }
+    .intro strong { font-weight: 700; color: #4C2A85; }
+    em.hl { background: linear-gradient(180deg, transparent 60%, #FCD34D 60%); font-style: normal; padding: 0 2px; }
+    .schema-box { background: #fff; border: 2px solid #6B46C1; padding: 12px; text-align: center; border-radius: 12px; box-shadow: 0 4px 15px rgba(107, 70, 193, 0.15); position: relative; overflow: hidden; }
+    .schema-box::before { content: 'medeos-sante.fr'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: 'Inter', Arial, sans-serif; font-size: 14px; font-weight: 700; color: rgba(120,120,120,0.13); letter-spacing: 2px; text-transform: uppercase; pointer-events: none; user-select: none; z-index: 5; white-space: nowrap; max-width: 92%; overflow: hidden; }
+    .schema-box img { max-width: 100%; max-height: 300px; height: auto; border-radius: 8px; display: block; margin: 0 auto; cursor: zoom-in; }
+    .schema-box .schema-num { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 0.6px; text-transform: uppercase; color: #6B46C1; margin-bottom: 6px; }
+    .schema-box .caption { font-size: 12px; color: #6b6275; margin-top: 9px; font-weight: 500; }
+    .schema-box .caption strong { color: #6B46C1; }
+    .schema-box .file-target { display: none; margin-top: 10px; padding: 8px 12px; background: #e8f5e9; border: 1px solid #a5d6a7; border-radius: 6px; font-family: 'SFMono-Regular', Consolas, monospace; font-size: 11.5px; color: #1b5e20; text-align: left; line-height: 1.5; }
+    .schema-box .file-target strong { color: #2e7d32; }
+    .schema-box .generation-prompt { background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border: 2px dashed #ff9800; border-radius: 8px; padding: 13px; margin-top: 12px; text-align: left; font-size: 11.5px; color: #e65100; line-height: 1.55; white-space: pre-wrap; }
+    .schema-box .generation-prompt strong { color: #bf360c; display: block; margin-bottom: 8px; font-size: 12.5px; background: #ffcc80; padding: 7px 11px; border-radius: 4px; }
+    .schema-box .copy-prompt-btn { display: none; margin-top: 8px; padding: 6px 12px; background: #ff9800; color: #fff; border: none; border-radius: 4px; font-size: 12px; cursor: pointer; font-weight: 600; }
+    .schema-box .copy-prompt-btn:hover { background: #f57c00; }
+    .schema-box .generation-prompt { display: none; }
+    .schema-box.img-missing .generation-prompt { display: block; }
+    .schema-box.img-missing .copy-prompt-btn { display: inline-block; }
+    .schema-box.img-missing .file-target { display: block !important; }
+    .schema-2up { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; align-items: stretch; }
+    .schema-2up .schema-box { margin: 0; display: flex; flex-direction: column; }
+    .schema-2up .schema-box img { height: 230px; width: 100%; max-height: none; object-fit: contain; }
+    .schema-2up .schema-box .caption { margin-top: auto; }
+    @media (max-width: 720px) { .schema-2up { grid-template-columns: 1fr; } .schema-2up .schema-box img { height: auto; max-height: 300px; } }
+    .steps { background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%); border-left: 5px solid #6B46C1; border-radius: 0 12px 12px 0; padding: 18px 22px; margin: 20px 0; box-shadow: 0 2px 10px rgba(107,70,193,0.08); }
+    .steps .steps-title { font-size: 15px; font-weight: 800; color: #4C2A85; margin-bottom: 13px; }
+    .steps ol { list-style: none; margin: 0; padding: 0; }
+    .step { display: grid; grid-template-columns: 28px 1fr; gap: 12px; align-items: start; margin-bottom: 12px; }
+    .step:last-child { margin-bottom: 0; }
+    .step .n { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 999px; background: #6B46C1; color: #fff; font-size: 13px; font-weight: 800; }
+    .step .txt { font-size: 14.5px; line-height: 1.5; color: #2c3e50; padding-top: 2px; }
+    .step .txt b { color: #4C2A85; font-weight: 700; }
+    .step .txt .gl { color: #6b6275; font-weight: 400; }
+    .step .txt .lead { font-weight: 800; color: #1A1A2E; }
+    .pass-tip { background: #fdf6ec; border-left: 6px solid #B8895A; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; box-shadow: 0 3px 12px rgba(184,137,90,0.14); font-size: 14.5px; line-height: 1.55; }
+    .pass-tip::before { content: "Le réflexe P1"; display: block; font-weight: 700; font-size: 12px; color: #9a6a37; margin-bottom: 7px; letter-spacing: 0.8px; text-transform: uppercase; }
+    .pass-tip strong { color: #9a6a37; }
+
+        .mnemo-box { background:#F3EEFB; border-left:6px solid #6B46C1; padding:15px 20px; margin:20px 0;
+            border-radius:0 8px 8px 0; box-shadow:0 3px 12px rgba(107,70,193,.13); font-size:14.5px; line-height:1.6; }
+        .mnemo-box .lbl { display:block; font-weight:700; font-size:12px; color:#6B46C1; margin-bottom:7px;
+            letter-spacing:.8px; text-transform:uppercase; }
+        .mnemo-box b { color:#4C2A85; }
+
+    .recap { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
+    .recap .box { border-radius: 12px; padding: 15px 18px; font-size: 14px; line-height: 1.5; }
+    .recap .retenir { background: #F1ECFA; border: 1px solid #dccff2; }
+    .recap .piege { background: #FFFBEB; border: 1px solid #F6E4A8; }
+    .recap .box .lbl { display: block; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 7px; }
+    .recap .retenir .lbl { color: #6B46C1; }
+    .recap .piege .lbl { color: #9a6d00; }
+    .recap b { font-weight: 700; color: #1A1A2E; }
+    .qcm-cta { display: flex; align-items: center; gap: 16px; text-decoration: none; color: inherit; background: #fff; border: 1px solid #d6c6f0; border-radius: 14px; padding: 18px 22px; margin: 24px 0 6px; box-shadow: 0 9px 26px -16px rgba(107,70,193,.4); transition: transform .18s ease, box-shadow .18s ease; }
+    .qcm-cta:hover { transform: translateY(-2px); box-shadow: 0 16px 38px -16px rgba(107,70,193,.5); }
+    .qcm-cta:focus-visible { outline: 3px solid #6B46C1; outline-offset: 2px; }
+    .qcm-cta .qcm-body { flex: 1; }
+    .qcm-cta .qcm-k { font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #6B46C1; }
+    .qcm-cta .qcm-t { font-size: 18px; font-weight: 800; color: #1A1A2E; margin-top: 3px; letter-spacing: -0.3px; }
+    .qcm-cta .qcm-arrow { flex: none; width: 42px; height: 42px; border-radius: 11px; background: #6B46C1; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700; }
+    .chapter-footer { text-align: center; margin-top: 22px; padding-top: 16px; border-top: 1px solid #e6dfd1; color: #7a8088; font-size: 12px; }
+    .chapter-footer strong { color: #6b6275; }
+    .bio-hint { display: none; }
+    /* ===== IMPRESSION / PDF — format REEL 9:16 (1080×1920), agrandi pour remplir ===== */
+    @media print {
+        @page { size: 1080px 1920px; margin: 42px; }
+        body { background: #fff; padding: 0; max-width: 996px; font-size: 17px; }
+        .page-container::before { display: none; }
+        .prod-brand { margin: 0 0 12px; }
+        .prod-brand img { height: 42px; }
+        .hook-header { padding: 22px 30px; box-shadow: none; }
+        .hook-header .brand-tag { font-size: 12px; margin-bottom: 10px; }
+        .hook-header .course-title { font-size: 34px; margin-bottom: 10px; }
+        .hook-header .punch { font-size: 21px; }
+        .intro { font-size: 17px; line-height: 1.55; margin: 18px 2px; }
+        .schema-2up { margin: 18px 0; gap: 20px; }
+        .schema-box { padding: 12px; box-shadow: none; }
+        .schema-2up .schema-box img { height: 300px; }
+        .schema-box .schema-num { font-size: 12.5px; margin-bottom: 5px; }
+        .schema-box .caption { font-size: 14px; margin-top: 8px; }
+        .steps { padding: 20px 26px; margin: 18px 0; box-shadow: none; }
+        .steps .steps-title { font-size: 19px; margin-bottom: 13px; }
+        .step { margin-bottom: 11px; gap: 13px; }
+        .step .n { width: 30px; height: 30px; font-size: 14px; }
+        .step .txt { font-size: 16.5px; line-height: 1.5; padding-top: 2px; }
+        .pass-tip { padding: 16px 22px; margin: 18px 0; font-size: 16.5px; box-shadow: none; }
+        .recap { gap: 16px; margin: 18px 0; }
+        .recap .box { padding: 15px 20px; font-size: 15.5px; }
+        .recap .box .lbl { font-size: 12.5px; }
+        .qcm-cta { padding: 17px 24px; margin: 18px 0 6px; box-shadow: none; }
+        .qcm-cta .qcm-k { font-size: 12.5px; }
+        .qcm-cta .qcm-t { font-size: 20px; }
+        .qcm-cta .qcm-arrow { width: 44px; height: 44px; font-size: 20px; }
+        .bio-hint { display: block; text-align: center; margin: 12px 0 0; font-size: 17px; font-weight: 800; color: #6B46C1; }
+        .bio-hint strong { color: #4C2A85; }
+        .chapter-footer { margin-top: 14px; padding-top: 12px; font-size: 14px; }
+        .schema-2up, .schema-box, .steps, .recap, .pass-tip, .qcm-cta { page-break-inside: avoid; }
+    }
+    @media (max-width: 600px) {
+        body { padding: 14px; }
+        .hook-header { padding: 22px 18px 18px; }
+        .hook-header .course-title { font-size: 24px; }
+        .hook-header .punch { font-size: 16px; }
+        .recap { grid-template-columns: 1fr; }
+        .intro, .pass-tip, .step .txt, .recap .box { text-align: left; }
+        .schema-box::before { color: rgba(107,70,193,0.20); font-size: 11px; letter-spacing: 1px; max-width: 90%; }
+    }
+
+    /* === mobile-polish + zoom-bar ordi only === */
+    /* La barre de zoom (− / 100 % / +) est réservée à l'ordinateur : sur mobile,
+       le pinch-to-zoom natif suffit. On la masque sous la largeur tactile. */
+    @media (max-width: 768px) {
+        #medeos-zoom-bar { display: none !important; }
+    }
+    /* Agencement mobile soigné : le titre ne déborde jamais, le hook respire. */
+    @media (max-width: 600px) {
+        body { padding: 14px 13px 18px; }
+        .hook-header { padding: 20px 17px 16px; }
+        .hook-header .course-title {
+            font-size: clamp(20px, 6.4vw, 25px);
+            line-height: 1.12;
+            letter-spacing: -0.4px;
+            overflow-wrap: anywhere;
+            hyphens: auto;
+        }
+        .hook-header .punch { font-size: clamp(14.5px, 4.4vw, 17px); line-height: 1.3; }
+        .hook-header .brand-tag { font-size: 10.5px; letter-spacing: 1.2px; }
+        .intro { font-size: 15px; }
+        .schema-2up { gap: 14px; }
+        .steps { padding: 18px 16px; }
+        .steps .steps-title { font-size: 15px; }
+        .step .txt { font-size: 14.5px; }
+        .qcm-cta { padding: 15px 16px; gap: 12px; }
+        .qcm-cta .qcm-t { font-size: 16px; }
+        .qcm-cta .qcm-arrow { width: 38px; height: 38px; font-size: 18px; }
+        /* boutons de la lightbox plus gros au doigt */
+        #medeos-lightbox button[aria-label="Fermer"] { width: 46px; height: 46px; font-size: 26px; }
+    }
+
+    /* --- petit tableau Medeos (remplace une figure absente) --- */
+    .tbl-wrap { margin: 20px 0; overflow-x: auto; }
+    table.tbl { width: 100%; border-collapse: separate; border-spacing: 0; background: #fff; border: 1px solid #dccff2; border-radius: 12px; overflow: hidden; font-size: 14.5px; box-shadow: 0 3px 12px rgba(107,70,193,.08); }
+    table.tbl th { background: #F1ECFA; color: #4C2A85; font-size: 11.5px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; text-align: left; padding: 11px 14px; }
+    table.tbl td { padding: 12px 14px; border-top: 1px solid #ece5f7; color: #2c3e50; line-height: 1.5; vertical-align: top; }
+    table.tbl td b { color: #4C2A85; }
+    table.tbl td .gl { color: #6b6275; font-weight: 400; font-size: 13.5px; }
+    .tbl-note { font-size: 12.5px; color: #6b6275; margin: -10px 4px 20px; font-weight: 500; }
+    @media print { .tbl-wrap { page-break-inside: avoid; } table.tbl { font-size: 16px; box-shadow: none; } table.tbl th { font-size: 12.5px; } }
+    @media (max-width: 600px) { table.tbl { font-size: 13.5px; } table.tbl th, table.tbl td { padding: 9px 10px; } }
+</style>
+</head>
+
+<body>
+<div class="page-container">
+
+    <div class="prod-brand"><img src="../images/logo-medeos-violet.png" alt="Medeos"></div>
+
+    <header class="hook-header">
+        <div class="brand-tag">Ressource gratuite</div>
+        <h1 class="course-title">Golgi, endosome, lysosome : trier, expédier, digérer</h1>
+        <p class="punch">La protéine quitte le RE dans une <span class="accent">vésicule</span>.</p>
+        <p class="punch">Au bout du voyage : on la modifie, on l'<span class="accent">étiquette</span>, on décide où elle va — ou on la détruit.</p>
+    </header>
+
+    <p class="intro">Tu viens de voir que les protéines <strong>membranaires</strong>, <strong>sécrétées</strong> et <strong>lysosomales</strong> sont fabriquées sur les ribosomes du <strong>RE rugueux</strong>, puis quittent le RE dans une <strong>vésicule de transport</strong>. Cette vésicule a une adresse précise, et c'est là que commence cette fiche. On suit le colis jusqu'au bout de la chaîne.</p>
+
+    <p class="intro">L'<strong>appareil de Golgi</strong> est constitué de <strong>saccules membranaires empilés</strong> — les <strong>dictyosomes</strong>. Et il est <strong>polarisé</strong> : <em class="hl">ses deux extrémités ne font pas le même travail</em>. On y distingue trois régions.</p>
+
+    <div class="steps">
+        <div class="steps-title">Traverser le Golgi, de l'entrée à la sortie</div>
+        <ol>
+            <li class="step">
+                <span class="n">1</span>
+                <span class="txt"><span class="lead">La face cis.</span> C'est la <b>face de réception</b> : elle <b>reçoit les vésicules du RE</b>. Tout ce qui entre dans le Golgi entre par là.</span>
+            </li>
+            <li class="step">
+                <span class="n">2</span>
+                <span class="txt"><span class="lead">La région médiane.</span> C'est là que se font les <b>modifications des glycoprotéines</b> <span class="gl">(les protéines sur lesquelles on ajoute des sucres)</span>.</span>
+            </li>
+            <li class="step">
+                <span class="n">3</span>
+                <span class="txt"><span class="lead">La face trans.</span> C'est la <b>face de maturation</b> : <b>tri</b> et <b>envoi vers les destinations</b>. C'est le quai de départ du Golgi.</span>
+            </li>
+        </ol>
+    </div>
+
+    <figure class="schema-box" style="margin: 20px 0;">
+        <span class="schema-num">L'appareil de Golgi</span>
+        <img src="../images/biologie/ch3_appareil_golgi.png" alt="Appareil de Golgi : pile de saccules avec la face cis de réception recevant les vésicules du RE en haut, et la face trans d'expédition en bas envoyant vers la membrane plasmique, l'extérieur et les lysosomes" onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
+        <figcaption class="caption"><strong>La pile et son sens de circulation</strong> — Suis la flèche : elle entre en haut, « <strong>du RE</strong> », sur la <strong>face cis</strong> (réception). Elle descend de saccule en saccule. Elle ressort en bas par la <strong>face trans</strong> (expédition), qui se divise alors en <strong>trois destinations</strong> : membrane plasmique, extérieur, lysosomes.</figcaption>
+    </figure>
+
+    <div class="mnemo-box"><span class="lbl">L'analogie — le centre de tri postal</span>Imagine le Golgi comme un <b>centre de tri postal</b> : il reçoit les « colis » (protéines) du RE, les modifie (ajoute des « étiquettes » = sucres), puis les envoie vers leur destination finale (membrane, extérieur, lysosomes…).</div>
+
+    <p class="intro">Traverser la pile, ce n'est pas seulement se déplacer : le Golgi <strong>travaille</strong> sur ce qui le traverse. Il a <strong>trois fonctions</strong>, et la troisième est la plus inattendue.</p>
+
+    <div class="steps">
+        <div class="steps-title">Les 3 fonctions du Golgi</div>
+        <ol>
+            <li class="step">
+                <span class="n">1</span>
+                <span class="txt"><span class="lead">Modification des protéines.</span> <b>Ajout de sucres</b> <span class="gl">(c'est la glycosylation)</span>.</span>
+            </li>
+            <li class="step">
+                <span class="n">2</span>
+                <span class="txt"><span class="lead">Tri des protéines.</span> <b>Orientation vers leur destination finale</b>.</span>
+            </li>
+            <li class="step">
+                <span class="n">3</span>
+                <span class="txt"><span class="lead">Formation des lysosomes.</span> C'est le Golgi lui-même qui <b>fabrique</b> l'organite chargé de détruire. <span class="gl">C'est celle qu'on oublie quand on récite les fonctions du Golgi.</span></span>
+            </li>
+        </ol>
+    </div>
+
+    <p class="intro">Cette troisième fonction ouvre la fin de la chaîne : le Golgi ne fait pas qu'expédier, <em class="hl">il fabrique l'organite qui détruit</em>. Deux organites ferment cette chaîne, et on les confond souvent.</p>
+
+    <div class="tbl-wrap">
+        <table class="tbl">
+            <thead>
+                <tr><th>Organite</th><th>Ce qu'il reçoit</th><th>Ce qu'il en fait</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>♻️ <b>Endosome</b><br><span class="gl">le centre de tri</span></td>
+                    <td>Ce qui <b>entre</b> dans la cellule <span class="gl">(par endocytose : la cellule l'a fait entrer en l'enveloppant dans une vésicule)</span></td>
+                    <td>Il <b>décide</b> : ce qui doit être <b>recyclé</b> repart vers la membrane, ce qui doit être <b>dégradé</b> est envoyé au lysosome</td>
+                </tr>
+                <tr>
+                    <td>🗑️ <b>Lysosome</b><br><span class="gl">la poubelle / le digesteur</span></td>
+                    <td>Tout ce qui doit être <b>éliminé</b> <span class="gl">(débris, bactéries, organites usés…)</span></td>
+                    <td>Il <b>digère</b>, grâce à des <b>enzymes puissantes</b> <span class="gl">(des hydrolases, actives à pH acide)</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="mnemo-box"><span class="lbl">L'analogie — station de recyclage et incinérateur</span>♻️ <b>ENDOSOME = station de recyclage</b> — trie ce qui entre : recyclage ou destruction.<br>🗑️ <b>LYSOSOME = incinérateur / digesteur</b> — détruit tout ce qui lui est envoyé.<br>⚡ <b>En résumé :</b> l'endosome trie et recycle → ce qui doit être détruit va au lysosome → le lysosome digère !</div>
+
+    <p class="intro"><strong>Et quand le digesteur tombe en panne ?</strong> Quand une <strong>enzyme du lysosome manque</strong>, les déchets s'accumulent dans la cellule. Cela provoque des <strong>maladies de surcharge</strong> — par exemple la <strong>maladie de Gaucher</strong>.</p>
+
+    <div class="pass-tip">
+        Retiens le <strong>sens de la marche</strong> : RE → <strong>cis</strong> (réception) → médiane (modification) → <strong>trans</strong> (tri et envoi). Un QCM qui fait entrer les vésicules du RE par la face <strong>trans</strong> est <strong>FAUX</strong>. Et si une proposition demande d'où viennent les lysosomes, la réponse est dans les fonctions du Golgi : c'est <strong>lui</strong> qui les <strong>fabrique</strong>.
+    </div>
+
+    <p class="intro">Le <strong>système endomembranaire</strong> est maintenant complet : le <strong>RE</strong> (rugueux + lisse), l'<strong>appareil de Golgi</strong>, les <strong>lysosomes</strong> et les <strong>endosomes</strong> — des organites qui travaillent ensemble via le <strong>transport vésiculaire</strong>. Une machine est revenue à chaque étage de cette chaîne sans qu'on l'ouvre jamais : le <strong>ribosome</strong>. C'est elle qu'on démonte ensuite.</p>
+
+    <div class="recap">
+        <div class="box retenir">
+            <span class="lbl">À retenir</span>
+            Le <b>Golgi</b> = saccules empilés (<b>dictyosomes</b>), <b>polarisés</b> : <b>cis</b> (réception, vient du RE) → <b>médiane</b> (modification des glycoprotéines) → <b>trans</b> (tri et envoi). Trois fonctions : <b>modification</b>, <b>tri</b>, <b>formation des lysosomes</b>. L'<b>endosome</b> trie ce qui entre par endocytose : recyclage vers la membrane, ou envoi au lysosome. Le <b>lysosome</b> digère avec ses <b>hydrolases</b> à <b>pH acide</b>.
+        </div>
+        <div class="box piege">
+            <span class="lbl">Le piège</span>
+            Ne confonds pas les deux dernières étapes : l'<b>endosome décide</b>, le <b>lysosome exécute</b>. N'inverse pas non plus les faces du Golgi — <b>cis = réception</b>, <b>trans = expédition</b>. Enfin, une enzyme lysosomale manquante fait <b>s'accumuler les déchets</b> : c'est une <b>maladie de surcharge</b> (Gaucher).
+        </div>
+    </div>
+
+    <a class="qcm-cta" style="display:none" href="/ressources/qcm-decouverte/decouverte-biologie-appareil-golgi" target="_top">
+        <span class="qcm-body">
+            <span class="qcm-k">Vérifie en 3 questions</span>
+            <span class="qcm-t">QCM — L'appareil de Golgi</span>
+        </span>
+        <span class="qcm-arrow" aria-hidden="true">→</span>
+    </a>
+    <div class="bio-hint">📲 Pour faire le QCM gratuit → <strong>lien en bio</strong></div>
+
+    <footer class="chapter-footer">
+        <p>Une fiche <strong>Medeos</strong> · pour anticiper la P1, sereinement. · medeos-sante.fr</p>
+    </footer>
+
+</div>
+
+<div id="medeos-lightbox" role="dialog" aria-label="Schéma agrandi" aria-modal="true" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(26,26,46,0.92);overflow:auto;-webkit-overflow-scrolling:touch;touch-action:pinch-zoom;cursor:zoom-out;">
+    <button type="button" aria-label="Fermer" onclick="closeLightbox()" style="position:fixed;top:14px;right:16px;z-index:10003;width:42px;height:42px;border-radius:50%;border:none;background:rgba(255,255,255,0.14);color:#fff;font-size:24px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);">&times;</button>
+    <div id="medeos-zoom-bar" style="position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:10003;display:flex;gap:8px;align-items:center;background:rgba(255,255,255,0.14);backdrop-filter:blur(4px);padding:7px 10px;border-radius:999px;">
+        <button type="button" aria-label="Dézoomer" onclick="lbZoom(-1,event)" style="width:38px;height:38px;border-radius:50%;border:none;background:rgba(255,255,255,0.9);color:#1A1A2E;font-size:22px;font-weight:700;line-height:1;cursor:pointer;">&minus;</button>
+        <button type="button" aria-label="Réinitialiser le zoom" onclick="lbReset(event)" style="height:38px;padding:0 14px;border-radius:999px;border:none;background:rgba(255,255,255,0.9);color:#1A1A2E;font-size:13px;font-weight:700;cursor:pointer;">100&nbsp;%</button>
+        <button type="button" aria-label="Zoomer" onclick="lbZoom(1,event)" style="width:38px;height:38px;border-radius:50%;border:none;background:rgba(255,255,255,0.9);color:#1A1A2E;font-size:22px;font-weight:700;line-height:1;cursor:pointer;">+</button>
+    </div>
+    <div id="medeos-lightbox-stage" onclick="lbStageClick(event)" style="min-height:100%;display:flex;align-items:center;justify-content:center;padding:64px 16px;">
+        <div style="position:relative;display:inline-flex;">
+            <img id="medeos-lightbox-img" src="" alt="Schéma agrandi" ondblclick="lbToggleZoom(event)" style="display:block;border-radius:10px;box-shadow:0 10px 40px rgba(0,0,0,0.5);transform-origin:center center;transition:transform .18s ease;max-width:none;cursor:zoom-in;">
+            <div aria-hidden="true" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;">
+                <span style="font-family:'Inter',Arial,sans-serif;font-size:clamp(11px,4vw,30px);font-weight:700;letter-spacing:clamp(1px,1vw,6px);text-transform:uppercase;color:rgba(120,120,120,0.16);white-space:nowrap;">medeos-sante.fr</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var lbScale = 1, lbBaseW = 0;
+    function openLightbox(src) {
+        var lb = document.getElementById('medeos-lightbox');
+        var img = document.getElementById('medeos-lightbox-img');
+        lbScale = 1;
+        img.onload = function () {
+            // Taille de base : on s'aligne sur la largeur dispo (max 96vw) ou la taille native si plus petite.
+            var availW = Math.min(window.innerWidth * 0.96, this.naturalWidth);
+            var availH = window.innerHeight * 0.84;
+            var ratio = Math.min(availW / this.naturalWidth, availH / this.naturalHeight, 1);
+            lbBaseW = Math.max(120, Math.round(this.naturalWidth * ratio));
+            this.style.width = lbBaseW + 'px';
+            this.style.height = 'auto';
+            lbApply();
+        };
+        img.src = src;
+        lb.style.display = 'block';
+        lb.scrollTop = 0; lb.scrollLeft = 0;
+        document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+        document.getElementById('medeos-lightbox').style.display = 'none';
+        document.body.style.overflow = '';
+    }
+    function lbApply() {
+        var img = document.getElementById('medeos-lightbox-img');
+        img.style.transform = 'scale(' + lbScale + ')';
+        img.style.cursor = lbScale > 1 ? 'zoom-out' : 'zoom-in';
+        var lbl = document.querySelector('#medeos-zoom-bar button[onclick^="lbReset"]');
+        if (lbl) lbl.innerHTML = Math.round(lbScale * 100) + '&nbsp;%';
+    }
+    function lbZoom(dir, e) {
+        if (e) { e.stopPropagation(); e.preventDefault(); }
+        lbScale = Math.min(4, Math.max(1, +(lbScale + dir * 0.5).toFixed(2)));
+        lbApply();
+    }
+    function lbReset(e) { if (e) { e.stopPropagation(); e.preventDefault(); } lbScale = 1; lbApply(); }
+    function lbToggleZoom(e) { if (e) { e.stopPropagation(); e.preventDefault(); } lbScale = lbScale > 1 ? 1 : 2; lbApply(); }
+    function lbStageClick(e) { if (e.target.id === 'medeos-lightbox-stage') closeLightbox(); } // clic dans le vide = fermer
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeLightbox();
+        else if (document.getElementById('medeos-lightbox').style.display === 'block') {
+            if (e.key === '+' || e.key === '=') lbZoom(1);
+            else if (e.key === '-') lbZoom(-1);
+            else if (e.key === '0') lbReset();
+        }
+    });
+    document.getElementById('medeos-lightbox').addEventListener('wheel', function (e) {
+        if (this.style.display !== 'block') return;
+        if (e.ctrlKey || Math.abs(e.deltaY) > 0) { /* molette = zoom */ }
+        e.preventDefault();
+        lbScale = Math.min(4, Math.max(1, +(lbScale - Math.sign(e.deltaY) * 0.25).toFixed(2)));
+        lbApply();
+    }, { passive: false });
+    function schemaMissing(img) { img.style.display = 'none'; var b = img.closest('.schema-box'); if (b) b.classList.add('img-missing'); }
+</script>
+</body>
+</html>
