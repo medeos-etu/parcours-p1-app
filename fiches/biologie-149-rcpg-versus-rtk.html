@@ -114,7 +114,7 @@
         .bio-hint { display: block; text-align: center; margin: 12px 0 0; font-size: 17px; font-weight: 800; color: #6B46C1; }
         .bio-hint strong { color: #4C2A85; }
         .chapter-footer { margin-top: 14px; padding-top: 12px; font-size: 14px; }
-        .schema-2up, .schema-box, .steps, .recap, .pass-tip, .qcm-cta { page-break-inside: avoid; }
+        .schema-2up, .schema-box, .steps, .recap, .pass-tip, .qcm-cta, .fiche-table, .mnemo-box { page-break-inside: avoid; }
     }
     @media (max-width: 600px) {
         body { padding: 14px; }
@@ -179,7 +179,7 @@
         <p class="punch">En QCM, un seul mot de l'énoncé suffit souvent à <span class="accent">trancher</span>.</p>
     </header>
 
-    <p class="intro">Les fiches précédentes ont décrit les deux familles séparément : le <strong>RCPG</strong> avec son « serpent à 7 boucles » et sa protéine G, le <strong>RTK</strong> avec sa dimérisation et son autophosphorylation. Chacune a sa logique, et tu l'as déroulée en entier. Cette fiche ne les redéroule pas : elle les met <em class="hl">face à face</em>. Parce qu'en QCM, on te demande rarement de raconter un mécanisme complet — on te donne un <strong>indice</strong> (un nombre de traversées, un ligand, un mot comme « dimérisation ») et on attend que tu retrouves la bonne famille. Quatre critères suffisent.</p>
+    <p class="intro">Les fiches précédentes ont décrit les deux familles séparément : le <strong>RCPG</strong> avec son « serpent à 7 boucles » et sa protéine G, le <strong>RTK</strong> avec sa dimérisation et son autophosphorylation. Chacune a sa logique, et tu les as déroulées l'une après l'autre. Cette fiche ne les redéroule pas : elle les met <em class="hl">face à face</em>. Parce qu'en QCM, on te demande rarement de raconter un mécanisme complet — on te donne un <strong>indice</strong> (un nombre de traversées, un ligand, un mot comme « dimérisation ») et on attend que tu retrouves la bonne famille. Quatre critères suffisent.</p>
 
     <table class="fiche-table">
         <caption>RCPG vs RTK — les quatre critères qui départagent</caption>
@@ -219,7 +219,7 @@
             </li>
             <li class="step">
                 <span class="n">2</span>
-                <span class="txt"><span class="lead">L'activité enzymatique.</span> C'est la vraie différence de fond. Le RTK est <b>lui-même une enzyme</b> : sa partie intracellulaire est un <b>domaine kinase</b>, il phosphoryle directement des <b>tyrosines</b> sur d'autres protéines. Le RCPG n'a <b>aucune activité enzymatique propre</b> : c'est exactement pour ça qu'il lui faut un intermédiaire, la <b>protéine G</b> attachée à sa face interne. Toutes les autres lignes du tableau découlent de celle-là.</span>
+                <span class="txt"><span class="lead">L'activité enzymatique.</span> C'est la vraie différence de fond. Le RTK est <b>lui-même une enzyme</b> : sa partie intracellulaire est un <b>domaine kinase</b>, et il phosphoryle directement <span class="gl">(= il ajoute un groupement phosphate)</span> des <b>tyrosines</b> <span class="gl">(un des 20 acides aminés)</span> sur d'autres protéines. Le RCPG n'a <b>aucune activité enzymatique propre</b> : c'est exactement pour ça qu'il lui faut un intermédiaire, la <b>protéine G</b> attachée à sa face interne. Toutes les autres lignes du tableau découlent de celle-là.</span>
             </li>
             <li class="step">
                 <span class="n">3</span>
@@ -227,7 +227,7 @@
             </li>
             <li class="step">
                 <span class="n">4</span>
-                <span class="txt"><span class="lead">Les ligands.</span> Côté RCPG : <b>adrénaline</b>, <b>dopamine</b>, <b>sérotonine</b>, <b>histamine</b>. Côté RTK : <b>insuline</b>, <b>EGF</b>, <b>facteurs de croissance</b> <span class="gl">(le signal de départ pour la croissance et la division cellulaire)</span>. Un nom d'hormone ou de facteur dans l'énoncé, et la famille est déjà donnée.</span>
+                <span class="txt"><span class="lead">Les ligands.</span> Côté RCPG : <b>adrénaline</b>, <b>dopamine</b>, <b>sérotonine</b>, <b>histamine</b>. Côté RTK : <b>insuline</b>, <b>EGF</b>, <b>facteurs de croissance</b> <span class="gl">(le signal de départ pour la croissance et la division cellulaire)</span>. Un seul de ces noms dans l'énoncé, et la famille est déjà donnée.</span>
             </li>
         </ol>
     </div>
@@ -238,7 +238,7 @@
 
     <div class="mnemo-box"><span class="lbl">Le mnémo — 7 TM = RCPG</span><b>7 TM = RCPG</b> (7 Traversées Membranaires = Récepteur Couplé aux Protéines G).<br><br>Si un QCM mentionne « 7 domaines transmembranaires » → c'est forcément un RCPG !</div>
 
-    <p class="intro">Une fois le tri fait, les deux familles se rejoignent : activées, elles déclenchent toutes les deux une <strong>cascade de signalisation</strong> à l'intérieur de la cellule. C'est ce qui se joue en aval que tu vas voir maintenant.</p>
+    <p class="intro">Une fois le tri fait, les deux familles se rejoignent sur un point : activées, elles déclenchent toutes les deux une <strong>cascade de signalisation</strong> à l'intérieur de la cellule. Côté RCPG, cette cascade commence par de petites molécules fabriquées <em class="hl">dedans</em> — les <strong>seconds messagers</strong>. C'est ce qui t'attend maintenant.</p>
 
     <div class="recap">
         <div class="box retenir">
@@ -247,7 +247,7 @@
         </div>
         <div class="box piege">
             <span class="lbl">Le piège</span>
-            N'inverse pas l'activité enzymatique. C'est le <b>RTK</b> qui est lui-même une enzyme et qui phosphoryle <b>directement</b> ; le RCPG, lui, en a besoin d'une autre et passe par la protéine G. Un énoncé qui fait phosphoryler directement un RCPG est <b>FAUX</b>.
+            N'inverse pas l'activité enzymatique. C'est le <b>RTK</b> qui est lui-même une enzyme et qui phosphoryle <b>directement</b> ; le RCPG, lui, n'en a aucune et doit passer par la protéine G. Un énoncé qui prête au RCPG une <b>phosphorylation directe</b>, sans protéine G, est <b>FAUX</b>.
         </div>
     </div>
 
