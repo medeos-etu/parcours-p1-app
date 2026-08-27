@@ -1723,6 +1723,46 @@
   .se-sub{font-size:12px;color:var(--muted);text-align:center;margin-top:8px}
   .se-mot{font-size:12px;color:#3A3730;background:rgba(107,70,193,.06);border-radius:11px;padding:9px 11px;margin-top:11px;line-height:1.5;max-width:88%}
   .se-next{font-size:11px;color:var(--muted);margin-top:11px;line-height:1.5}
+  /* ═══ LA CARTE DE LA ROUTE ═══ */
+  .rt-ask{background:var(--card);border:1.5px solid var(--line);border-radius:20px;padding:18px 16px;margin-top:6px}
+  .rt-ask h3{font-family:Fredoka,Inter,sans-serif;font-size:19px;font-weight:600;line-height:1.25}
+  .rt-ask p{font-size:12.5px;color:var(--muted);line-height:1.55;margin-top:7px}
+  .rt-ans{display:grid;gap:8px;margin-top:14px}
+  .rt-ans button{border:1.5px solid rgba(107,70,193,.28);background:rgba(107,70,193,.05);color:var(--ink);
+    border-radius:14px;padding:13px 14px;font-family:inherit;font-size:14px;font-weight:800;cursor:pointer;text-align:left}
+  .rt-ans button:hover{border-color:var(--violet);background:rgba(107,70,193,.10)}
+  .rt-ans button small{display:block;font-weight:600;font-size:11.5px;color:var(--muted);margin-top:3px}
+
+  .rt-head{background:linear-gradient(160deg,#2A2140,#1A1530);border-radius:20px;padding:18px 16px;color:#FAF6F0;position:relative;overflow:hidden}
+  .rt-head .rt-j{font-family:Fredoka,Inter,sans-serif;font-size:44px;font-weight:800;line-height:1;color:#FCD34D}
+  .rt-head .rt-l{font-size:12.5px;color:rgba(250,246,240,.82);margin-top:5px;line-height:1.5}
+  .rt-head .rt-p{font-size:11.5px;color:rgba(250,246,240,.62);margin-top:9px;line-height:1.55}
+  .rt-chg{position:absolute;top:12px;right:12px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.16);
+    color:rgba(250,246,240,.85);border-radius:10px;padding:5px 9px;font-size:10.5px;font-family:inherit;cursor:pointer}
+
+  .rt-route{position:relative;margin:16px 0 4px;padding-left:34px}
+  .rt-route::before{content:"";position:absolute;left:13px;top:8px;bottom:8px;width:3px;border-radius:3px;
+    background:linear-gradient(180deg,var(--violet),rgba(107,70,193,.18))}
+  .rt-n{position:relative;margin-bottom:12px}
+  .rt-n::before{content:"";position:absolute;left:-27px;top:14px;width:15px;height:15px;border-radius:50%;
+    background:var(--card);border:3px solid var(--violet)}
+  .rt-n.passe::before{background:var(--violet)}
+  .rt-n.stage::before{border-color:#B8895A;background:#FDF6EC}
+  .rt-n.fin::before{border-color:#FCD34D;background:#FCD34D;box-shadow:0 0 0 5px rgba(252,211,77,.22)}
+  .rt-c{background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:12px 13px}
+  .rt-c .rt-q{font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:800}
+  .rt-c > b{display:block;font-size:14.5px;font-weight:800;margin-top:3px;line-height:1.3}
+  .rt-c span b{font-weight:800;color:var(--ink)}
+  .rt-c span{display:block;font-size:12px;color:var(--muted);line-height:1.55;margin-top:5px}
+  .rt-n.stage .rt-c{background:#FDF6EC;border-color:#EBD8BE}
+  .rt-n.stage .rt-q{color:#9a6a37}
+  .rt-lock{display:inline-flex;align-items:center;gap:5px;margin-top:8px;background:rgba(184,137,90,.13);
+    border:1px solid rgba(184,137,90,.30);border-radius:9px;padding:4px 8px;font-size:11px;font-weight:700;color:#8A6238}
+  .rt-n.fin .rt-c{background:linear-gradient(160deg,#FFFBEB,#FFF6D8);border-color:#F3DFA0}
+  .rt-n.fin .rt-q{color:#9a6d00}
+  .rt-sans{background:rgba(107,70,193,.06);border:1px solid rgba(107,70,193,.16);border-radius:14px;
+    padding:12px 13px;margin-top:6px;font-size:12px;color:#3A3730;line-height:1.6}
+  .rt-sans b{color:var(--violet)}
   /* LA FIN DU PARCOURS — un vrai palier, pas une phrase de plus. */
   .se-fin{display:flex;gap:9px;margin-top:13px;flex-wrap:wrap}
   .se-fin>div{flex:1;min-width:88px;background:linear-gradient(180deg,rgba(107,70,193,.09),rgba(107,70,193,.04));
@@ -2257,6 +2297,19 @@
       </div>
     </div>
   </div>
+
+  <!-- ═══ LA ROUTE JUSQU'À LA RENTRÉE ═══
+       Le Parcours n'est pas une liste à finir : c'est un accompagnement quotidien
+       jusqu'à la rentrée. Encore faut-il que l'élève VOIE cette route. On lui demande
+       la seule chose qu'on ne peut pas deviner — la date de sa rentrée — et on lui
+       dresse la carte de ce qui l'attend : les jours qui restent, ce que le Parcours
+       lui aura donné d'ici là, et les stages de vacances qui jalonnent l'année.
+       Les stages portent un cadenas, et la carte dit clairement que la route se
+       marche sans eux. ═══ -->
+  <section class="scr nonav" id="carte">
+    <div class="lect-top"><button class="x" onclick="go('home')" aria-label="Retour">←</button><b style="font-size:14px;font-weight:800">Ta route jusqu'à la rentrée</b></div>
+    <div id="carte-corps"></div>
+  </section>
 
   <!-- ═══ DESTINATION : « Ton chemin » ═══ -->
   <section class="scr nonav" id="chemin">
@@ -6080,7 +6133,8 @@ function renderProgression(){
   const cx=155, cy=112, RR=86;
   const ang={Anatomie:-90,Biologie:0,Chimie:90,Physique:180};
   const pt=(m,r)=>{ const a=ang[m]*Math.PI/180; return (cx+Math.cos(a)*r).toFixed(1)+','+(cy+Math.sin(a)*r).toFixed(1); };
-  const brut=m=>tt[m]? (ff.par[m]||0)/tt[m] : 0;
+  const HORIZON=45;   /* fiches par matière d'ici la rentrée, à deux fiches par jour */
+  const brut=m=>Math.min(1,(ff.par[m]||0)/HORIZON);
   const frac=m=>{ const x=Math.min(1,Math.max(0,brut(m))); return Math.log(1+9*x)/Math.log(10); };
   const poly=MATS.map(m=>pt(m,Math.max(0.05,frac(m))*RR)).join(' ');
   const grille=[0.25,0.5,0.75,1].map(k=>'<polygon points="'+MATS.map(m=>pt(m,RR*k)).join(' ')+'" fill="none" stroke="rgba(107,70,193,'+(k===1?'.2':'.09')+'" stroke-width="1"/>').join('');
@@ -6098,7 +6152,7 @@ function renderProgression(){
     grille+axes+
     '<polygon points="'+poly+'" fill="url(#avgrad)" stroke="#6B46C1" stroke-width="2.5" stroke-linejoin="round"/>'+
     sommets+labs+'</svg></div>'+
-    '<p class="pg-note">'+(ff.tot?'Chaque séance élargit ton diagramme. Les premières poussent fort — plus tu approches du bord, plus il faut de séances pour gagner du terrain.':'Ta première séance donne naissance à ton diagramme.')+'</p>'+
+    '<p class="pg-note">'+(ff.tot?'Chaque séance élargit ton diagramme. Le bord, c\'est ce qu\'un élève régulier traverse d\'ici la rentrée — pas la bibliothèque entière, que personne ne finit.':'Ta première séance donne naissance à ton diagramme.')+'</p>'+
     '<div style="margin-top:10px;border-top:1px solid var(--line);padding-top:10px;display:flex;align-items:center;gap:10px;flex-wrap:wrap">'+
     '<p style="flex:1;min-width:200px;font-size:11px;color:var(--muted);line-height:1.55">🚀 <b>Pour accélérer :</b> avec l\'année complète Medeos, on s\'entraîne en illimité — stages de révision pendant les vacances, fiches et QCM en illimité.</p>'+
     '<button class="btn small" style="flex-shrink:0" onclick="window.open(\'https://www.medeos-sante.fr/packs/stages-vacances#stages\',\'_blank\')">En savoir plus</button></div>';
@@ -6822,7 +6876,7 @@ const TUTOS={
      btn:"Découvrir le Parcours →", act:function(){ go('home'); }, skip:"Explorer la Bibliothèque d'abord"}
   ],
   home:[
-    {img:'axo-guide-bienvenue', t:"Voici ton <b>Parcours</b> : deux fiches par jour, un rythme tenable, une méthode qui fait tenir les notions."},
+    {img:'axo-guide-bienvenue', t:"Voici ton <b>Parcours</b> : deux fiches par jour, un rythme tenable, une méthode qui fait tenir les notions. Ce n'est pas une liste à finir — <b>c'est ce qui t'accompagne jusqu'à ta rentrée</b>."},
     {sel:'#seance', img:'axo-guide-pointe-haut', t:"Ta <b>séance du jour</b> t'attend ici : lecture, rappel de mémoire, comparaison, puis QCM."},
     {sel:'#pt-flame', img:'axo-guide-pointe-haut', t:"Chaque jour travaillé allonge ta série 🔥. Un oubli est pardonné — un seul."},
     {img:'axo-guide-bravo', t:"Et l'Arène ? <b>Elle s'ouvre dès que tu as fini ta première séance.</b> Tu y retrouves tes deux fiches du jour en questions, sans rien risquer. Bonne première séance !", btn:"C'est parti !"}
@@ -7515,6 +7569,7 @@ function renderSeance(){
       '<div class="se-ligne">'+cur.ligne+'</div>'+
       '<button class="gbtn" id="se-go">'+(premiere?'Commencer':'Continuer')+'</button>'+
       '<div class="se-next">Ensuite : '+prochainsTitres(2).join(' · ')+'</div>'+
+      '<button class="se-alt" onclick="ouvrirCarte()">🗺️ Ma route jusqu\'à la rentrée</button>'+
       (seancesAlternatives().length? '<button class="se-alt" onclick="ouvrirChoixSeance()">Changer de matière aujourd\'hui</button>' : '')+illu(cur);
     document.getElementById('se-go').onclick=cur.act;
     return;
@@ -7534,19 +7589,20 @@ function renderSeance(){
   const fini = restantes.length===0;
   if(fini){
     const nS=seancesFaites().length, nF2=Object.keys(fichesArmees()).length, nQ=qsOuvertes(null).length;
-    b.innerHTML=dit('Tu es arrivé au bout du fil. Bravo — sincèrement.','axo-guide-bravo')+
-      '<div class="se-sur">Parcours terminé</div>'+
-      '<div class="se-titre">Tu as travaillé les '+nS+' séances du Parcours.</div>'+
+    b.innerHTML=dit('Tu as pris tout ce qu\'il y avait à prendre pour aujourd\'hui. Bravo — sincèrement.','axo-guide-bravo')+
+      '<div class="se-sur">Tu es à jour</div>'+
+      '<div class="se-titre">Tu as travaillé les '+nS+' séances disponibles.</div>'+
       '<div class="se-fin">'+
         '<div><b>'+nS+'</b><span>séance'+(nS>1?'s':'')+'</span></div>'+
         '<div><b>'+nF2+'</b><span>fiche'+(nF2>1?'s':'')+' lue'+(nF2>1?'s':'')+'</span></div>'+
         '<div><b>'+nQ+'</b><span>QCM ouverts</span></div>'+
       '</div>'+
-      '<div class="se-fin-bandeau">Le fil s\'arrête ici, mais rien ne se referme : <b>tout ce que tu as lu reste ouvert dans les Salles</b>, '+
-        'et le Grand Amphi ne s\'épuise pas — il retire au hasard dans les '+qsAmphi(null).length+' questions de tes fiches. '+
-        'Quand de nouvelles séances seront prêtes, elles apparaîtront ici.</div>'+
+      '<div class="se-fin-bandeau">Le Parcours n\'est pas une liste à cocher : c\'est un accompagnement quotidien <b>jusqu\'à ta rentrée</b>. '+
+        'De nouvelles fiches s\'ajoutent régulièrement et apparaîtront ici. En attendant, <b>tout ce que tu as lu reste ouvert dans les Salles</b>, '+
+        'et le Grand Amphi ne s\'épuise pas — il retire au hasard dans les '+qsAmphi(null).length+' questions de tes fiches.</div>'+
       '<button class="gbtn" onclick="allerSalles()">Réviser dans les Salles</button>'+
       '<button class="se-btn2" onclick="go(\'arene\');setLieu(\'amphi\')">⚔️ Monter dans le Grand Amphi</button>'+
+      '<button class="se-alt" onclick="ouvrirCarte()">🗺️ Ma route jusqu\'à la rentrée</button>'+
       '<button class="se-alt" onclick="renderChemin();go(\'chemin\')">Revoir mes séances passées</button>'+
       /* pas de mascotte flottante sur ces deux cartes : la bulle du haut la montre déjà,
          et sur une carte aussi longue elle passait par-dessus le dernier lien */
@@ -7575,6 +7631,7 @@ function renderSeance(){
       (peutDebloquer? 'Tu peux les tester maintenant, ou ouvrir tout de suite '+(suite&&suite.fiches.length>1?'les '+suite.fiches.length+' suivantes':'la suivante')+'.'
                     : '<b>Reviens demain matin : '+nF(suite)+' '+(suite&&suite.fiches.length>1?'seront prêtes':'sera prête')+'.</b> En attendant, l\'Arène est à toi.')+'</div>'+
     '<button class="gbtn" onclick="allerSalles()">M\'entraîner sur mes fiches du jour</button>'+
+    '<button class="se-alt" onclick="ouvrirCarte()">🗺️ Ma route jusqu\'à la rentrée</button>'+
     (peutDebloquer? '<p class="se-ou">— OU —</p>'+offreDeb() : '')+
     (seancesFaites().length?'<button class="se-alt" onclick="renderChemin();go(\'chemin\')">Revoir mes séances passées</button>':'')+
     heroMail()+axo;
@@ -7625,6 +7682,131 @@ function renderChemin(){
     if(cs) cs.textContent = n? 'Chaque séance passée est une victoire — et la route continue.' : 'Deux fiches par jour, et la route se construit.'; }
 }
 function renderParcours(){ renderPtop(); renderSeance(); renderBuilt(); }
+
+/* ═══ LA ROUTE JUSQU'À LA RENTRÉE ═══
+   Le Parcours accompagne jusqu'à la rentrée, il ne se termine pas. Pour que ça se voie,
+   on demande la seule chose qu'on ne peut pas deviner — l'année de la rentrée — et on
+   dresse la carte : les jours qui restent, ce que le Parcours aura donné d'ici là, et
+   les stages de vacances qui jalonnent l'année.
+   ⚠️ Les dates exactes des vacances dépendent de la zone scolaire : on ne les invente
+   pas. On nomme les périodes, comme le site. */
+const RENTREE_JOUR = 1, RENTREE_MOIS = 8;      /* 1er septembre */
+function dateRentree(){
+  const an = S.profil && S.profil.rentreeAn;
+  return an ? new Date(an, RENTREE_MOIS, RENTREE_JOUR) : null;
+}
+function joursAvantRentree(){
+  const d = dateRentree(); if(!d) return null;
+  return Math.max(0, Math.ceil((d - new Date()) / 864e5));
+}
+function poserRentree(an){
+  S.profil = S.profil || {};
+  S.profil.rentreeAn = an || null;         /* null = « je ne sais pas encore » */
+  S.profil.rentreeDite = true;
+  saveS(); renderCarte();
+}
+/* les périodes de vacances d'une année scolaire, nommées et jamais datées au jour près */
+function periodesEntre(debut, fin){
+  const out = [];
+  for(let an = debut.getFullYear(); an <= fin.getFullYear(); an++){
+    out.push({m:new Date(an,9,25),  nom:'Vacances de la Toussaint',   quand:'fin octobre '+an,        emo:'🍂'});
+    out.push({m:new Date(an,11,22), nom:'Vacances de Noël',           quand:'fin décembre '+an,       emo:'❄️'});
+    out.push({m:new Date(an+1,1,14),nom:'Vacances d\'hiver',          quand:'février '+(an+1)+' · selon ta zone', emo:'⛷️'});
+    out.push({m:new Date(an+1,3,14),nom:'Vacances de printemps',      quand:'avril '+(an+1)+' · selon ta zone',   emo:'🌷'});
+  }
+  return out.filter(p => p.m > debut && p.m < fin).sort((a,b)=>a.m-b.m);
+}
+function renderCarte(){
+  const b = document.getElementById('carte-corps'); if(!b) return;
+  const dit = (t,pose) => '<div class="se-guide" style="margin-bottom:10px"><img src="img/'+(pose||'axo-guide-carte')+'.png" alt=""><span class="sg-b">'+t+'</span></div>';
+
+  /* ── on ne connaît pas encore sa rentrée : on la demande, et rien d'autre ── */
+  if(!(S.profil && S.profil.rentreeDite)){
+    const an = new Date().getFullYear();
+    const choix = [an, an+1, an+2].map(y =>
+      '<button onclick="poserRentree('+y+')">Septembre '+y+
+      '<small>'+(y===an?'j\'entre en première année dans quelques semaines':(y===an+1?'je suis en Terminale cette année':'je suis en Première cette année'))+'</small></button>').join('');
+    b.innerHTML = dit('Dis-moi quand commence ta première année — je te montre la route.','axo-guide-carte')+
+      '<div class="rt-ask"><h3>Quand commence ta première année de santé ?</h3>'+
+      '<p>C\'est la seule chose que je ne peux pas deviner. Avec cette date, je te dresse la carte de tout ce qui t\'attend d\'ici là.</p>'+
+      '<div class="rt-ans">'+choix+
+      '<button onclick="poserRentree(null)">Je ne sais pas encore<small>on avance quand même — tu me le diras plus tard</small></button>'+
+      '</div></div>';
+    return;
+  }
+
+  const d = dateRentree();
+  const j = joursAvantRentree();
+  const faites = (typeof seancesFaites==='function') ? seancesFaites().length : 0;
+  const lues = (typeof fichesArmees==='function') ? Object.keys(fichesArmees()).length : 0;
+  const chg = '<button class="rt-chg" onclick="S.profil.rentreeDite=false;saveS();renderCarte()">changer</button>';
+
+  /* ── « je ne sais pas encore » : pas de compte à rebours inventé ── */
+  if(!d){
+    b.innerHTML = dit('Pas de date, pas de problème. La route est la même : un peu chaque jour.','axo-mains')+
+      '<div class="rt-head">'+chg+'<div class="rt-j">·</div>'+
+      '<div class="rt-l">Tu ne connais pas encore ta date de rentrée.</div>'+
+      '<div class="rt-p">Ça ne change rien à ce qu\'on fait : deux fiches par jour, et on avance. Reviens me le dire quand tu le sauras — je te dresserai la carte complète.</div></div>'+
+      '<div class="rt-sans">Ce que tu as déjà construit : <b>'+faites+' séance'+(faites>1?'s':'')+'</b> et <b>'+lues+' fiche'+(lues>1?'s':'')+'</b> travaillée'+(lues>1?'s':'')+'. Rien de tout ça ne se perd.</div>';
+    return;
+  }
+
+  const seances = j;                       /* une séance par jour ouvrable dans l'app */
+  const fiches = seances * 2;
+  const mois = Math.round(j/30.4);
+  const per = periodesEntre(new Date(), d);
+  const nomMois = m => ['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'][m];
+
+  let x = dit('Voilà la route. Elle est longue, mais on la fait ensemble, deux fiches à la fois.','axo-guide-carte');
+  x += '<div class="rt-head">'+chg+'<div class="rt-j">'+j+'</div>'+
+    '<div class="rt-l">jours avant ta rentrée du <b>1<sup>er</sup> septembre '+d.getFullYear()+'</b>.</div>'+
+    '<div class="rt-p">Environ <b>'+mois+' mois</b> devant toi. Au rythme de deux fiches par jour, ça représente à peu près <b>'+fiches.toLocaleString('fr-FR')+' fiches</b> — de quoi arriver en ayant déjà vu, au lieu de découvrir.</div></div>';
+
+  x += '<div class="rt-route">';
+  /* aujourd'hui */
+  x += '<div class="rt-n passe"><div class="rt-c"><div class="rt-q">Aujourd\'hui</div>'+
+    '<b>Tu es ici</b><span>'+(faites? faites+' séance'+(faites>1?'s':'')+' faite'+(faites>1?'s':'')+', '+lues+' fiche'+(lues>1?'s':'')+' travaillée'+(lues>1?'s':'')+'.' : 'Ta première séance t\'attend dans le Parcours.')+'</span></div></div>';
+
+  /* le Grand Amphi, s'il n'est pas encore ouvert */
+  if(typeof amphiOuvrable==='function' && !amphiOuvrable()){
+    const reste = Math.max(1, (typeof AMPHI_SEUIL_JOURS!=='undefined'?AMPHI_SEUIL_JOURS:4) - ((typeof joursParcours==='function')?joursParcours():0));
+    x += '<div class="rt-n"><div class="rt-c"><div class="rt-q">Dans '+reste+' jour'+(reste>1?'s':'')+'</div>'+
+      '<b>⚔️ Le Grand Amphi s\'ouvre</b><span>Les questions classées, toutes matières mêlées, sur les fiches que tu auras lues.</span></div></div>';
+  }
+
+  /* les vacances, et le stage qui va avec */
+  let prec = new Date();
+  per.forEach(p => {
+    const dj = Math.max(0, Math.round((p.m - prec)/864e5));
+    prec = p.m;
+    x += '<div class="rt-n stage"><div class="rt-c"><div class="rt-q">'+p.quand+'</div>'+
+      '<b>'+p.emo+' '+p.nom+'</b>'+
+      '<span>D\'ici là, environ <b>'+dj+' séances</b> de Parcours — soit <b>'+(dj*2)+' fiches</b> de plus.<br>'+
+      'Pendant ces vacances, un <b>stage Medeos</b> de 12 jours reprend le programme là où tu en es.</span>'+
+      '<span class="rt-lock">🔒 avec le pack année complète</span>'+
+      '</div></div>';
+  });
+
+  /* l'été qui précède, et la rentrée */
+  const ete = new Date(d.getFullYear(), 6, 5);
+  if(ete > new Date()){
+    const dj = Math.max(0, Math.round((ete - prec)/864e5)); prec = ete;
+    x += '<div class="rt-n stage"><div class="rt-c"><div class="rt-q">juillet-août '+d.getFullYear()+'</div>'+
+      '<b>☀️ L\'été juste avant</b>'+
+      '<span>Encore environ <b>'+dj+' séances</b>. C\'est la dernière ligne droite : le <b>stage de pré-rentrée</b> transmet les bases académiques et la méthode, avec un tuteur qui répond.</span>'+
+      '<span class="rt-lock">🔒 avec le pack année complète</span></div></div>';
+  }
+  const dj = Math.max(0, Math.round((d - prec)/864e5));
+  x += '<div class="rt-n fin"><div class="rt-c"><div class="rt-q">1<sup>er</sup> septembre '+d.getFullYear()+'</div>'+
+    '<b>🎓 Ta rentrée</b><span>Les '+dj+' derniers jours, puis tu y es. Tu arrives avec des notions déjà vues, une méthode et des réflexes — pas avec une page blanche.</span></div></div>';
+  x += '</div>';
+
+  x += '<div class="rt-sans">La route se marche <b>sans les stages</b> : le Parcours te donne deux fiches par jour tout du long, et les Salles gardent tout ce que tu as lu. '+
+    'Les stages sont là pour ceux qui veulent aller plus vite pendant les vacances — pas pour débloquer la suite.</div>';
+  x += '<button class="se-alt" style="margin-top:10px" onclick="voirStages()">Voir ce que contiennent les stages</button>';
+  b.innerHTML = x;
+}
+function ouvrirCarte(){ renderCarte(); go('carte'); }
 
 
 /* ═══ ENTRAÎNEMENT LIBRE — les questions déjà ouvertes par le Parcours,
