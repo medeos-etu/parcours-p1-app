@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>L'u.m.a. : l'unité pour peser un seul atome — Fiche Medeos</title>
+<title>La tonotopie : base aiguë, apex grave — Fiche Medeos</title>
 <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
@@ -56,6 +56,13 @@
     .pass-tip { background: #fdf6ec; border-left: 6px solid #B8895A; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; box-shadow: 0 3px 12px rgba(184,137,90,0.14); font-size: 14.5px; line-height: 1.55; }
     .pass-tip::before { content: "Le réflexe P1"; display: block; font-weight: 700; font-size: 12px; color: #9a6a37; margin-bottom: 7px; letter-spacing: 0.8px; text-transform: uppercase; }
     .pass-tip strong { color: #9a6a37; }
+
+        .mnemo-box { background:#F3EEFB; border-left:6px solid #6B46C1; padding:15px 20px; margin:20px 0;
+            border-radius:0 8px 8px 0; box-shadow:0 3px 12px rgba(107,70,193,.13); font-size:14.5px; line-height:1.6; }
+        .mnemo-box .lbl { display:block; font-weight:700; font-size:12px; color:#6B46C1; margin-bottom:7px;
+            letter-spacing:.8px; text-transform:uppercase; }
+        .mnemo-box b { color:#4C2A85; }
+
     .recap { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
     .recap .box { border-radius: 12px; padding: 15px 18px; font-size: 14px; line-height: 1.5; }
     .recap .retenir { background: #F1ECFA; border: 1px solid #dccff2; }
@@ -149,17 +156,6 @@
         /* boutons de la lightbox plus gros au doigt */
         #medeos-lightbox button[aria-label="Fermer"] { width: 46px; height: 46px; font-size: 26px; }
     }
-
-    /* --- petit tableau Medeos (remplace une figure absente) --- */
-    .tbl-wrap { margin: 20px 0; overflow-x: auto; }
-    table.tbl { width: 100%; border-collapse: separate; border-spacing: 0; background: #fff; border: 1px solid #dccff2; border-radius: 12px; overflow: hidden; font-size: 14.5px; box-shadow: 0 3px 12px rgba(107,70,193,.08); }
-    table.tbl th { background: #F1ECFA; color: #4C2A85; font-size: 11.5px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; text-align: left; padding: 11px 14px; }
-    table.tbl td { padding: 12px 14px; border-top: 1px solid #ece5f7; color: #2c3e50; line-height: 1.5; vertical-align: top; }
-    table.tbl td b { color: #4C2A85; }
-    table.tbl td .gl { color: #6b6275; font-weight: 400; font-size: 13.5px; }
-    .tbl-note { font-size: 12.5px; color: #6b6275; margin: -10px 4px 20px; font-weight: 500; }
-    @media print { .tbl-wrap { page-break-inside: avoid; } table.tbl { font-size: 16px; box-shadow: none; } table.tbl th { font-size: 12.5px; } }
-    @media (max-width: 600px) { table.tbl { font-size: 13.5px; } table.tbl th, table.tbl td { padding: 9px 10px; } }
 </style>
 </head>
 <body>
@@ -169,85 +165,51 @@
 
     <header class="hook-header">
         <div class="brand-tag">Ressource gratuite</div>
-        <h1 class="course-title">L'u.m.a. : l'unité pour peser un seul atome</h1>
-        <p class="punch">1 atome de carbone ≈ 1,99 × 10⁻²³ gramme. <span class="accent">Illisible.</span></p>
-        <p class="punch">On change d'unité, et sa masse redevient un nombre simple : <span class="accent">12</span>.</p>
+        <h1 class="course-title">La tonotopie : base aiguë, apex grave</h1>
+        <p class="punch">La cochlée n'est pas <span class="accent">un</span> capteur.</p>
+        <p class="punch">C'est une <span class="accent">carte de fréquences</span> — chaque zone est accordée sur un son.</p>
     </header>
 
-    <p class="intro">La fiche précédente t'a appris à <strong>compter</strong> les atomes : la mole, ce paquet de <strong>6,022 × 10²³</strong> entités qu'on a inventé parce qu'un atome est bien trop petit pour être manipulé tout seul. Reste l'autre moitié du problème : combien <strong>pèse</strong>-t-il, cet atome ? Sur une balance, la réponse est décourageante — 1 atome de carbone ≈ <strong>1,99 × 10⁻²³ grammes</strong>. Aucun calcul n'est possible avec un nombre pareil. Alors on a fait exactement ce qu'on avait fait pour le comptage : on a <em class="hl">changé d'unité</em>.</p>
+    <p class="intro">Tu viens de voir des cellules ciliées toutes construites sur le même modèle : des cils qui s'inclinent, un signal électrique qui part vers le nerf VIII. Il manque une dimension. Selon l'endroit de la spirale où elles se trouvent, ces cellules <strong>ne répondent pas aux mêmes sons</strong> : <em class="hl">la cochlée ne traite pas toutes les fréquences au même endroit</em> — chaque zone est « accordée » sur une fréquence précise. C'est la <strong>tonotopie</strong>.</p>
+
+    <p class="intro">Ce qui change d'un bout à l'autre de la spirale, c'est la <strong>membrane basilaire</strong>, celle qui porte l'organe de Corti : elle n'a ni la même largeur ni la même rigidité à la base et au sommet.</p>
 
     <div class="steps">
-        <div class="steps-title">L'u.m.a., en trois temps</div>
+        <div class="steps-title">D'un bout à l'autre de la spirale</div>
         <ol>
             <li class="step">
                 <span class="n">1</span>
-                <span class="txt"><span class="lead">Le problème : le gramme est une unité beaucoup trop grande.</span> La masse réelle d'un atome est <b>ridiculement petite</b> <span class="gl">(1,99 × 10⁻²³ g pour le carbone)</span>. Écrire ça dans chaque exercice serait illisible.</span>
+                <span class="txt"><span class="lead">La base de la cochlée.</span> C'est le début du tube, <b>près de la fenêtre ovale</b>. Là, la membrane basilaire est <b>étroite et rigide</b> → elle vibre pour les <b>sons aigus</b> 🎵 <span class="gl">(hautes fréquences)</span>.</span>
             </li>
             <li class="step">
                 <span class="n">2</span>
-                <span class="txt"><span class="lead">La solution : on prend un étalon et on le coupe en 12.</span> L'<b>unité de masse atomique</b> — u.m.a., ou simplement <b>u</b> — vaut <b>1/12 de la masse d'un atome de ¹²C</b>. Conséquence immédiate : au lieu de dire 1,99 × 10⁻²³ g, on dit qu'un atome de ¹²C pèse <b>12 u.m.a.</b> <span class="gl">Facile.</span></span>
-            </li>
-            <li class="step">
-                <span class="n">3</span>
-                <span class="txt"><span class="lead">La règle pratique : 1 u.m.a. ≈ 1 proton ≈ 1 neutron.</span> Le ¹²C compte justement <b>12 nucléons</b> <span class="gl">(6 protons + 6 neutrons)</span> : couper sa masse en 12, c'est donc peser un nucléon. Les électrons, eux, ne changent rien à l'affaire <span class="gl">(masse du proton ≈ masse du neutron ≈ 2000 × masse de l'électron : toute la masse est dans le noyau)</span>. D'où la règle : <b>masse d'un atome (en u.m.a.) ≈ A</b>, son nombre de nucléons.</span>
+                <span class="txt"><span class="lead">L'apex de la cochlée.</span> C'est le <b>sommet de la spirale</b>, tout au bout du tube. Là, la membrane basilaire est <b>large et souple</b> → elle vibre pour les <b>sons graves</b> 🎵 <span class="gl">(basses fréquences)</span>.</span>
             </li>
         </ol>
     </div>
 
-    <p class="intro">Autrement dit, dès qu'on t'écrit un <strong>nucléide</strong>, tu connais déjà sa masse : c'est le <strong>A</strong> posé en haut à gauche du symbole, celui-là même qui te sert à trouver le nombre de neutrons avec <strong>N = A − Z</strong>. Trois exemples pour t'en convaincre.</p>
+    <figure class="schema-box" style="margin: 20px 0;">
+        <span class="schema-num">La tonotopie cochléaire</span>
+        <img src="../images/anatomie/ch11_tonotopie_cochlee.png" alt="La cochlée en spirale avec un dégradé de couleur : base bleue codant les aigus, apex rouge codant les graves" onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
+        <figcaption class="caption"><strong>Où regarder</strong> — la cochlée est dessinée dans sa forme réelle, en spirale, avec un <strong>dégradé</strong> qui suit le tube. À l'entrée, la <strong>base</strong> (près de la fenêtre ovale) porte les <strong>aigus</strong> — jusqu'à 20 000 Hz. En remontant la spirale, les fréquences <strong>descendent</strong> (4 000, 1 000, 200 Hz), jusqu'à l'<strong>apex</strong>, la pointe, qui porte les <strong>graves</strong> — 20 Hz. Lis le dégradé comme une règle graduée : chaque position = une hauteur de son.</figcaption>
+    </figure>
 
-    <div class="tbl-wrap">
-        <table class="tbl">
-            <thead>
-                <tr><th>Atome</th><th>Composition du noyau</th><th>A</th><th>Masse</th></tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><b>¹H</b> <span class="gl">hydrogène</span></td>
-                    <td>1 proton, 0 neutron</td>
-                    <td>1</td>
-                    <td><b>≈ 1 u.m.a.</b></td>
-                </tr>
-                <tr>
-                    <td><b>¹²C</b> <span class="gl">carbone 12</span></td>
-                    <td>6 protons, 6 neutrons</td>
-                    <td>12</td>
-                    <td><b>= 12 u.m.a.</b> <span class="gl">(par définition)</span></td>
-                </tr>
-                <tr>
-                    <td><b>⁵⁶Fe</b> <span class="gl">fer 56</span></td>
-                    <td>26 protons, 30 neutrons</td>
-                    <td>56</td>
-                    <td><b>≈ 56 u.m.a.</b></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <p class="tbl-note">Une seule ligne porte un « = » : celle du <strong>¹²C</strong>, parce que c'est lui, l'étalon qui définit l'unité. Partout ailleurs, c'est « ≈ ».</p>
+    <div class="mnemo-box"><span class="lbl">Le mnémo — la logique pour retenir</span>💡 Une <b>base</b>, c'est une fondation — du béton, donc <b>rigide</b>. Et une membrane rigide, comme une corde de guitare tendue, vibre vite → <b>son aigu</b>. À l'inverse, l'<b>apex</b> (le sommet, la pointe libre de la spirale) est souple — une membrane souple vibre lentement → <b>son grave</b>. <b>Base = fondation rigide = aigu. Apex = pointe libre = grave.</b></div>
 
     <div class="pass-tip">
-        Devant un nucléide, tu n'as <strong>rien à calculer</strong> pour connaître sa masse : le nombre écrit en haut à gauche du symbole, le <strong>A</strong>, est déjà sa masse en u.m.a. ⁵⁶Fe → 56 u.m.a. ¹³C → 13 u.m.a. C'est le même A qui te donnait le nombre de neutrons avec N = A − Z. <strong>Un seul nombre, deux services</strong> — et ce n'est pas fini.
+        🏥 <strong>En clinique — la surdité de perception.</strong> Quand les cellules ciliées sont détruites <strong>(bruit chronique, vieillissement)</strong>, elles <strong>ne repoussent pas</strong> → surdité définitive. Et les <strong>aigus partent en premier</strong> : les cellules de la <strong>base</strong> sont les plus exposées — c'est pourquoi les personnes âgées n'entendent plus les fréquences hautes. Prévention : <strong>bouchons en concert</strong>, <strong>volume raisonnable au casque</strong>.
     </div>
 
     <div class="recap">
         <div class="box retenir">
             <span class="lbl">À retenir</span>
-            <b>1 u.m.a. = 1/12 de la masse d'un atome de ¹²C</b>, c'est-à-dire à peu près la masse d'<b>un proton</b>, ou d'<b>un neutron</b>. Comme les électrons ne pèsent presque rien, la masse d'un atome en u.m.a. est <b>à peu près son A</b>.
+            <b>Base</b> = près de la fenêtre ovale, membrane <b>étroite et rigide</b> → <b>aigus</b> (hautes fréquences). <b>Apex</b> = sommet de la spirale, membrane <b>large et souple</b> → <b>graves</b> (basses fréquences). Entre les deux, toutes les fréquences dans l'ordre : la cochlée est une <b>carte des fréquences</b>.
         </div>
         <div class="box piege">
             <span class="lbl">Le piège</span>
-            La masse se lit sur <b>A</b> (en haut), jamais sur <b>Z</b> (en bas). Pour ⁵⁶Fe, la réponse est <b>56 u.m.a.</b>, pas 26 : Z ne compte que les protons, alors que la masse compte les protons <b>et</b> les neutrons.
+            Ne les inverse pas. La base est l'<b>entrée</b> du tube et code les <b>aigus</b> ; l'apex est le <b>sommet</b> et code les <b>graves</b>. Un QCM qui écrit « la base de la cochlée code les basses fréquences » est <b>FAUX</b>.
         </div>
     </div>
-
-    <a class="qcm-cta" style="display:none" href="/ressources/qcm-decouverte/decouverte-chimie-uma" target="_top">
-        <span class="qcm-body">
-            <span class="qcm-k">Vérifie en 3 questions</span>
-            <span class="qcm-t">QCM — L'u.m.a.</span>
-        </span>
-        <span class="qcm-arrow" aria-hidden="true">→</span>
-    </a>
-    <div class="bio-hint">📲 Pour faire le QCM gratuit → <strong>lien en bio</strong></div>
 
     <footer class="chapter-footer">
         <p>Une fiche <strong>Medeos</strong> · pour anticiper la P1, sereinement. · medeos-sante.fr</p>

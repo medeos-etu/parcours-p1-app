@@ -71,6 +71,13 @@
     .recap .retenir .lbl { color: #6B46C1; }
     .recap .piege .lbl { color: #9a6d00; }
     .recap b { font-weight: 700; color: #1A1A2E; }
+    .qcm-cta { display: flex; align-items: center; gap: 16px; text-decoration: none; color: inherit; background: #fff; border: 1px solid #d6c6f0; border-radius: 14px; padding: 18px 22px; margin: 24px 0 6px; box-shadow: 0 9px 26px -16px rgba(107,70,193,.4); transition: transform .18s ease, box-shadow .18s ease; }
+    .qcm-cta:hover { transform: translateY(-2px); box-shadow: 0 16px 38px -16px rgba(107,70,193,.5); }
+    .qcm-cta:focus-visible { outline: 3px solid #6B46C1; outline-offset: 2px; }
+    .qcm-cta .qcm-body { flex: 1; }
+    .qcm-cta .qcm-k { font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #6B46C1; }
+    .qcm-cta .qcm-t { font-size: 18px; font-weight: 800; color: #1A1A2E; margin-top: 3px; letter-spacing: -0.3px; }
+    .qcm-cta .qcm-arrow { flex: none; width: 42px; height: 42px; border-radius: 11px; background: #6B46C1; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700; }
     .chapter-footer { text-align: center; margin-top: 22px; padding-top: 16px; border-top: 1px solid #e6dfd1; color: #7a8088; font-size: 12px; }
     .chapter-footer strong { color: #6b6275; }
     .bio-hint { display: none; }
@@ -100,10 +107,14 @@
         .recap { gap: 16px; margin: 18px 0; }
         .recap .box { padding: 15px 20px; font-size: 15.5px; }
         .recap .box .lbl { font-size: 12.5px; }
+        .qcm-cta { padding: 17px 24px; margin: 18px 0 6px; box-shadow: none; }
+        .qcm-cta .qcm-k { font-size: 12.5px; }
+        .qcm-cta .qcm-t { font-size: 20px; }
+        .qcm-cta .qcm-arrow { width: 44px; height: 44px; font-size: 20px; }
         .bio-hint { display: block; text-align: center; margin: 12px 0 0; font-size: 17px; font-weight: 800; color: #6B46C1; }
         .bio-hint strong { color: #4C2A85; }
         .chapter-footer { margin-top: 14px; padding-top: 12px; font-size: 14px; }
-        .schema-2up, .schema-box, .steps, .recap, .pass-tip { page-break-inside: avoid; }
+        .schema-2up, .schema-box, .steps, .recap, .pass-tip, .qcm-cta { page-break-inside: avoid; }
     }
     @media (max-width: 600px) {
         body { padding: 14px; }
@@ -139,6 +150,9 @@
         .steps { padding: 18px 16px; }
         .steps .steps-title { font-size: 15px; }
         .step .txt { font-size: 14.5px; }
+        .qcm-cta { padding: 15px 16px; gap: 12px; }
+        .qcm-cta .qcm-t { font-size: 16px; }
+        .qcm-cta .qcm-arrow { width: 38px; height: 38px; font-size: 18px; }
         /* boutons de la lightbox plus gros au doigt */
         #medeos-lightbox button[aria-label="Fermer"] { width: 46px; height: 46px; font-size: 26px; }
     }
@@ -163,7 +177,7 @@
         <ol>
             <li class="step">
                 <span class="n">1</span>
-                <span class="txt"><span class="lead">Taille.</span> <b>6 à 10 µm</b> de longueur, <b>0,2 µm</b> de diamètre <span class="gl">(cinq fois plus long qu'une microvillosité)</span>.</span>
+                <span class="txt"><span class="lead">Taille.</span> <b>6 à 10 µm</b> de longueur, <b>0,2 µm</b> de diamètre <span class="gl">(une microvillosité, elle, fait 1 à 2 µm sur 0,1 µm)</span>.</span>
             </li>
             <li class="step">
                 <span class="n">2</span>
@@ -171,7 +185,7 @@
             </li>
             <li class="step">
                 <span class="n">3</span>
-                <span class="txt"><span class="lead">Ancrage.</span> Le <b>corpuscule basal</b>, à <b>9 triplets</b>, <b>dérivé du centriole</b> <span class="gl">(c'est lui qui tient le cil à la base, dans le cytoplasme)</span>.</span>
+                <span class="txt"><span class="lead">Ancrage.</span> Le <b>corpuscule basal</b>, à <b>9 triplets</b>, <b>dérivé du centriole</b> <span class="gl">(c'est lui qui tient le cil à sa base)</span>.</span>
             </li>
             <li class="step">
                 <span class="n">4</span>
@@ -200,7 +214,7 @@
         Deux chiffres cohabitent dans la même structure, et c'est là qu'on se trompe. Le <strong>cil</strong> lui-même est en <strong>9+2</strong> : 9 doublets + 2 centraux. Le <strong>corpuscule basal</strong> qui l'ancre, lui, est en <strong>9 triplets</strong>, et il dérive du <strong>centriole</strong>. Doublets en haut, triplets en bas.
     </div>
 
-    <div class="mnemo-box"><span class="lbl">Le mnémo</span>💡 <b>Fonction respiratoire</b> : Dans les voies respiratoires, le battement coordonné des cils crée un "tapis roulant" mucociliaire. Le mucus piège les poussières et microbes inhalés, et les cils le font remonter vers le pharynx où il est avalé et détruit par l'estomac.</div>
+    <div class="mnemo-box"><span class="lbl">Le mnémo — le tapis roulant mucociliaire</span>💡 <b>Fonction respiratoire</b> : Dans les voies respiratoires, le battement coordonné des cils crée un « tapis roulant » mucociliaire. Le mucus piège les poussières et microbes inhalés, et les cils le font remonter vers le pharynx où il est avalé et détruit par l'estomac.</div>
 
     <p class="intro">C'est aussi ce qui explique un épithélium que tu as déjà croisé : la <strong>trachée</strong> et les <strong>bronches</strong> sont tapissées d'un épithélium <em class="hl">pseudostratifié cylindrique cilié</em>, avec des cellules caliciformes qui fabriquent le mucus, et des cils qui le font avancer. La forme suit la fonction.</p>
 
@@ -214,6 +228,17 @@
             Ne confonds pas l'<b>axonème</b> du cil (9 <b>doublets</b> + 2 centraux) et le <b>corpuscule basal</b> qui l'ancre (9 <b>triplets</b>, dérivé du centriole). Et retiens que le battement <b>consomme de l'ATP</b> : la dynéine ne travaille pas gratuitement.
         </div>
     </div>
+
+    <p class="intro">Deuxième spécialisation réglée : longue, mobile, faite pour déplacer. Il en reste une — et c'est la seule dont le <strong>nom</strong> te tend un piège : elle s'appelle « stéréo<em class="hl">cil</em> », mais ce n'est pas un cil.</p>
+
+    <a class="qcm-cta" style="display:none" href="/ressources/qcm-decouverte/decouverte-biologie-specialisations-apicales" target="_top">
+        <span class="qcm-body">
+            <span class="qcm-k">Vérifie en 3 questions</span>
+            <span class="qcm-t">QCM — Les spécialisations apicales</span>
+        </span>
+        <span class="qcm-arrow" aria-hidden="true">→</span>
+    </a>
+    <div class="bio-hint">📲 Pour faire le QCM gratuit → <strong>lien en bio</strong></div>
 
     <footer class="chapter-footer">
         <p>Une fiche <strong>Medeos</strong> · pour anticiper la P1, sereinement. · medeos-sante.fr</p>

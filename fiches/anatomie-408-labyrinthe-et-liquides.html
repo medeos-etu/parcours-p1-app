@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>L'u.m.a. : l'unité pour peser un seul atome — Fiche Medeos</title>
+<title>Le labyrinthe osseux et ses 2 liquides — Fiche Medeos</title>
 <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
@@ -56,6 +56,13 @@
     .pass-tip { background: #fdf6ec; border-left: 6px solid #B8895A; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; box-shadow: 0 3px 12px rgba(184,137,90,0.14); font-size: 14.5px; line-height: 1.55; }
     .pass-tip::before { content: "Le réflexe P1"; display: block; font-weight: 700; font-size: 12px; color: #9a6a37; margin-bottom: 7px; letter-spacing: 0.8px; text-transform: uppercase; }
     .pass-tip strong { color: #9a6a37; }
+
+        .mnemo-box { background:#F3EEFB; border-left:6px solid #6B46C1; padding:15px 20px; margin:20px 0;
+            border-radius:0 8px 8px 0; box-shadow:0 3px 12px rgba(107,70,193,.13); font-size:14.5px; line-height:1.6; }
+        .mnemo-box .lbl { display:block; font-weight:700; font-size:12px; color:#6B46C1; margin-bottom:7px;
+            letter-spacing:.8px; text-transform:uppercase; }
+        .mnemo-box b { color:#4C2A85; }
+
     .recap { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
     .recap .box { border-radius: 12px; padding: 15px 18px; font-size: 14px; line-height: 1.5; }
     .recap .retenir { background: #F1ECFA; border: 1px solid #dccff2; }
@@ -149,17 +156,6 @@
         /* boutons de la lightbox plus gros au doigt */
         #medeos-lightbox button[aria-label="Fermer"] { width: 46px; height: 46px; font-size: 26px; }
     }
-
-    /* --- petit tableau Medeos (remplace une figure absente) --- */
-    .tbl-wrap { margin: 20px 0; overflow-x: auto; }
-    table.tbl { width: 100%; border-collapse: separate; border-spacing: 0; background: #fff; border: 1px solid #dccff2; border-radius: 12px; overflow: hidden; font-size: 14.5px; box-shadow: 0 3px 12px rgba(107,70,193,.08); }
-    table.tbl th { background: #F1ECFA; color: #4C2A85; font-size: 11.5px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; text-align: left; padding: 11px 14px; }
-    table.tbl td { padding: 12px 14px; border-top: 1px solid #ece5f7; color: #2c3e50; line-height: 1.5; vertical-align: top; }
-    table.tbl td b { color: #4C2A85; }
-    table.tbl td .gl { color: #6b6275; font-weight: 400; font-size: 13.5px; }
-    .tbl-note { font-size: 12.5px; color: #6b6275; margin: -10px 4px 20px; font-weight: 500; }
-    @media print { .tbl-wrap { page-break-inside: avoid; } table.tbl { font-size: 16px; box-shadow: none; } table.tbl th { font-size: 12.5px; } }
-    @media (max-width: 600px) { table.tbl { font-size: 13.5px; } table.tbl th, table.tbl td { padding: 9px 10px; } }
 </style>
 </head>
 <body>
@@ -169,81 +165,64 @@
 
     <header class="hook-header">
         <div class="brand-tag">Ressource gratuite</div>
-        <h1 class="course-title">L'u.m.a. : l'unité pour peser un seul atome</h1>
-        <p class="punch">1 atome de carbone ≈ 1,99 × 10⁻²³ gramme. <span class="accent">Illisible.</span></p>
-        <p class="punch">On change d'unité, et sa masse redevient un nombre simple : <span class="accent">12</span>.</p>
+        <h1 class="course-title">Le labyrinthe osseux et ses 2 liquides</h1>
+        <p class="punch">L'oreille externe et l'oreille moyenne, c'était de l'<span class="accent">air</span> et de la mécanique.</p>
+        <p class="punch">Ici, plus rien de tout ça : du <span class="accent">liquide</span> et des cellules.</p>
     </header>
 
-    <p class="intro">La fiche précédente t'a appris à <strong>compter</strong> les atomes : la mole, ce paquet de <strong>6,022 × 10²³</strong> entités qu'on a inventé parce qu'un atome est bien trop petit pour être manipulé tout seul. Reste l'autre moitié du problème : combien <strong>pèse</strong>-t-il, cet atome ? Sur une balance, la réponse est décourageante — 1 atome de carbone ≈ <strong>1,99 × 10⁻²³ grammes</strong>. Aucun calcul n'est possible avec un nombre pareil. Alors on a fait exactement ce qu'on avait fait pour le comptage : on a <em class="hl">changé d'unité</em>.</p>
+    <p class="intro">La vibration vient de franchir la <strong>fenêtre ovale</strong>. Elle entre maintenant dans un milieu totalement différent : plus d'air, plus de mécanique, mais du <em class="hl">liquide et des cellules</em>. C'est l'oreille interne qui fait la vraie conversion : les vibrations du liquide deviennent un <strong>signal nerveux</strong>.</p>
+
+    <p class="intro">Elle est creusée dans la partie la plus dure de l'os temporal, le <strong>rocher</strong> — une protection maximale pour la structure la plus fragile du système. Et pour cause : contrairement aux osselets, qui sont mécaniques et réparables, les <strong>cellules ciliées</strong> de la cochlée sont <strong>irremplaçables</strong>. Une fois détruites, elles ne repoussent pas — c'est la <em class="hl">cause n°1 de surdité définitive</em>.</p>
+
+    <p class="intro">Avant d'entrer dans la cochlée, il faut voir l'architecture. Ces cavités creusées dans le rocher forment le <strong>labyrinthe osseux</strong>. À l'intérieur flottent des tubes souples — le <strong>labyrinthe membraneux</strong> — remplis d'<strong>endolymphe</strong>. Et entre l'os et ces tubes circule un deuxième liquide : la <strong>périlymphe</strong>.</p>
+
+    <div class="mnemo-box"><span class="lbl">Le mnémo — les 2 liquides</span><b>Périlymphe</b> = entre l'os et les tubes membraneux. <b>Endolymphe</b> = à l'intérieur des tubes. C'est l'endolymphe qui baigne directement les cellules ciliées.</div>
 
     <div class="steps">
-        <div class="steps-title">L'u.m.a., en trois temps</div>
+        <div class="steps-title">Ce que contient le labyrinthe osseux</div>
         <ol>
             <li class="step">
                 <span class="n">1</span>
-                <span class="txt"><span class="lead">Le problème : le gramme est une unité beaucoup trop grande.</span> La masse réelle d'un atome est <b>ridiculement petite</b> <span class="gl">(1,99 × 10⁻²³ g pour le carbone)</span>. Écrire ça dans chaque exercice serait illisible.</span>
+                <span class="txt"><span class="lead">La cochlée</span> <span class="gl">(le limaçon 🐌)</span>. Un <b>tube spiralé</b> de 2,5 tours, qui abrite l'<b>organe de Corti</b>. Sa fonction : l'<b>audition</b> — la transduction, c'est-à-dire le passage du son à l'influx nerveux.</span>
             </li>
             <li class="step">
                 <span class="n">2</span>
-                <span class="txt"><span class="lead">La solution : on prend un étalon et on le coupe en 12.</span> L'<b>unité de masse atomique</b> — u.m.a., ou simplement <b>u</b> — vaut <b>1/12 de la masse d'un atome de ¹²C</b>. Conséquence immédiate : au lieu de dire 1,99 × 10⁻²³ g, on dit qu'un atome de ¹²C pèse <b>12 u.m.a.</b> <span class="gl">Facile.</span></span>
+                <span class="txt"><span class="lead">Le vestibule.</span> Deux sacs : l'<b>utricule</b> et le <b>saccule</b>. Sa fonction : l'<b>équilibre statique</b> — les accélérations linéaires et la gravité.</span>
             </li>
             <li class="step">
                 <span class="n">3</span>
-                <span class="txt"><span class="lead">La règle pratique : 1 u.m.a. ≈ 1 proton ≈ 1 neutron.</span> Le ¹²C compte justement <b>12 nucléons</b> <span class="gl">(6 protons + 6 neutrons)</span> : couper sa masse en 12, c'est donc peser un nucléon. Les électrons, eux, ne changent rien à l'affaire <span class="gl">(masse du proton ≈ masse du neutron ≈ 2000 × masse de l'électron : toute la masse est dans le noyau)</span>. D'où la règle : <b>masse d'un atome (en u.m.a.) ≈ A</b>, son nombre de nucléons.</span>
+                <span class="txt"><span class="lead">Les 3 canaux semi-circulaires.</span> Trois tubes en arc, orientés dans les <b>3 plans de l'espace</b>. Leur fonction : l'<b>équilibre dynamique</b> — les rotations de la tête.</span>
             </li>
         </ol>
     </div>
 
-    <p class="intro">Autrement dit, dès qu'on t'écrit un <strong>nucléide</strong>, tu connais déjà sa masse : c'est le <strong>A</strong> posé en haut à gauche du symbole, celui-là même qui te sert à trouver le nombre de neutrons avec <strong>N = A − Z</strong>. Trois exemples pour t'en convaincre.</p>
-
-    <div class="tbl-wrap">
-        <table class="tbl">
-            <thead>
-                <tr><th>Atome</th><th>Composition du noyau</th><th>A</th><th>Masse</th></tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><b>¹H</b> <span class="gl">hydrogène</span></td>
-                    <td>1 proton, 0 neutron</td>
-                    <td>1</td>
-                    <td><b>≈ 1 u.m.a.</b></td>
-                </tr>
-                <tr>
-                    <td><b>¹²C</b> <span class="gl">carbone 12</span></td>
-                    <td>6 protons, 6 neutrons</td>
-                    <td>12</td>
-                    <td><b>= 12 u.m.a.</b> <span class="gl">(par définition)</span></td>
-                </tr>
-                <tr>
-                    <td><b>⁵⁶Fe</b> <span class="gl">fer 56</span></td>
-                    <td>26 protons, 30 neutrons</td>
-                    <td>56</td>
-                    <td><b>≈ 56 u.m.a.</b></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <p class="tbl-note">Une seule ligne porte un « = » : celle du <strong>¹²C</strong>, parce que c'est lui, l'étalon qui définit l'unité. Partout ailleurs, c'est « ≈ ».</p>
+    <figure class="schema-box" style="margin: 20px 0;">
+        <span class="schema-num">Le labyrinthe osseux</span>
+        <img src="../images/anatomie/ch11_labyrinthe_osseux.png" alt="Le labyrinthe osseux de l'oreille interne : cochlée en spirale, vestibule et trois canaux semi-circulaires" onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
+        <figcaption class="caption"><strong>Une seule cavité, trois parties</strong> — repère la <strong>spirale de la cochlée</strong> (audition), le <strong>vestibule</strong> qui la prolonge, et les <strong>3 canaux semi-circulaires</strong> en arc (équilibre). Sur la cochlée, retrouve aussi les deux fenêtres : l'<strong>ovale</strong> (l'entrée) et la <strong>ronde</strong> (l'amortisseur).</figcaption>
+    </figure>
 
     <div class="pass-tip">
-        Devant un nucléide, tu n'as <strong>rien à calculer</strong> pour connaître sa masse : le nombre écrit en haut à gauche du symbole, le <strong>A</strong>, est déjà sa masse en u.m.a. ⁵⁶Fe → 56 u.m.a. ¹³C → 13 u.m.a. C'est le même A qui te donnait le nombre de neutrons avec N = A − Z. <strong>Un seul nombre, deux services</strong> — et ce n'est pas fini.
+        ⚖️ <strong>Le vestibule et les canaux semi-circulaires</strong> (à retenir en surface) : le même labyrinthe osseux contient aussi les capteurs de l'<strong>équilibre</strong> — vestibule pour l'équilibre statique, canaux semi-circulaires pour les rotations. C'est pour ça que le nerf VIII s'appelle <strong>vestibulo-cochléaire</strong> : il transporte à la fois l'audition et l'équilibre. On ne détaille pas le mécanisme ici — ce n'est pas l'objet du chapitre.
     </div>
+
+    <p class="intro">Tu as l'architecture : une coque osseuse ultra-dure, des tubes souples à l'intérieur, deux liquides, et trois parties dont une seule s'occupe du son. Dans la fiche suivante, on entre dans la <strong>cochlée</strong> elle-même pour suivre, couloir par couloir, ce que devient la vibration une fois dans le liquide.</p>
 
     <div class="recap">
         <div class="box retenir">
             <span class="lbl">À retenir</span>
-            <b>1 u.m.a. = 1/12 de la masse d'un atome de ¹²C</b>, c'est-à-dire à peu près la masse d'<b>un proton</b>, ou d'<b>un neutron</b>. Comme les électrons ne pèsent presque rien, la masse d'un atome en u.m.a. est <b>à peu près son A</b>.
+            <b>Cochlée</b> 🐌 = l'audition (cellules ciliées → nerf VIII) · <b>Vestibule + canaux semi-circulaires</b> = l'équilibre. Deux fonctions dans un même labyrinthe osseux, rempli de <b>liquide</b>.
         </div>
         <div class="box piege">
             <span class="lbl">Le piège</span>
-            La masse se lit sur <b>A</b> (en haut), jamais sur <b>Z</b> (en bas). Pour ⁵⁶Fe, la réponse est <b>56 u.m.a.</b>, pas 26 : Z ne compte que les protons, alors que la masse compte les protons <b>et</b> les neutrons.
+            « L'oreille interne contient de l'air » → <b>FAUX</b>. Seules l'oreille externe et l'oreille moyenne contiennent de l'air. L'oreille interne est remplie de <b>liquide</b> — c'est pour ça que les osselets doivent amplifier ×20.
         </div>
     </div>
 
-    <a class="qcm-cta" style="display:none" href="/ressources/qcm-decouverte/decouverte-chimie-uma" target="_top">
+    <a class="qcm-cta" style="display:none" href="/ressources/qcm-decouverte/decouverte-anatomie-oreille" target="_top">
         <span class="qcm-body">
             <span class="qcm-k">Vérifie en 3 questions</span>
-            <span class="qcm-t">QCM — L'u.m.a.</span>
+            <span class="qcm-t">QCM — L'oreille interne</span>
         </span>
         <span class="qcm-arrow" aria-hidden="true">→</span>
     </a>
