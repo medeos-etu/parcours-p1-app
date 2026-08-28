@@ -56,6 +56,15 @@
     .pass-tip { background: #fdf6ec; border-left: 6px solid #B8895A; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; box-shadow: 0 3px 12px rgba(184,137,90,0.14); font-size: 14.5px; line-height: 1.55; }
     .pass-tip::before { content: "Le réflexe P1"; display: block; font-weight: 700; font-size: 12px; color: #9a6a37; margin-bottom: 7px; letter-spacing: 0.8px; text-transform: uppercase; }
     .pass-tip strong { color: #9a6a37; }
+    .tbl-wrap { margin: 20px 0; overflow-x: auto; }
+    table.tbl { width: 100%; border-collapse: separate; border-spacing: 0; background: #fff; border: 1px solid #dccff2; border-radius: 12px; overflow: hidden; font-size: 14.5px; box-shadow: 0 3px 12px rgba(107,70,193,.08); }
+    table.tbl th { background: #F1ECFA; color: #4C2A85; font-size: 11.5px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; text-align: left; padding: 11px 14px; }
+    table.tbl td { padding: 12px 14px; border-top: 1px solid #ece5f7; color: #2c3e50; line-height: 1.5; vertical-align: top; }
+    table.tbl td b { color: #4C2A85; }
+    table.tbl td .gl { color: #6b6275; font-weight: 400; font-size: 13.5px; }
+    .tbl-note { font-size: 12.5px; color: #6b6275; margin: -10px 4px 20px; font-weight: 500; }
+    @media print { .tbl-wrap { page-break-inside: avoid; } table.tbl { font-size: 16px; box-shadow: none; } table.tbl th { font-size: 12.5px; } }
+    @media (max-width: 600px) { table.tbl { font-size: 13.5px; } table.tbl th, table.tbl td { padding: 9px 10px; } }
 
         .mnemo-box { background:#F3EEFB; border-left:6px solid #6B46C1; padding:15px 20px; margin:20px 0;
             border-radius:0 8px 8px 0; box-shadow:0 3px 12px rgba(107,70,193,.13); font-size:14.5px; line-height:1.6; }
@@ -196,8 +205,8 @@
 
     <figure class="schema-box" style="margin: 20px 0;">
         <span class="schema-num">Le trajet du son — 4 étapes, de l'air au cerveau</span>
-        <img src="../images/anatomie/ch11_trajet_son_vue_ensemble.png" alt="Coupe simplifiée de l'oreille montrant les trois compartiments et le chemin du son du pavillon jusqu'au cerveau" onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
-        <figcaption class="caption">Lis la coupe <strong>de gauche à droite</strong>, c'est le sens du son. Trois zones colorées se suivent : <strong>oreille externe (air)</strong> → <strong>oreille moyenne (air)</strong> → <strong>oreille interne (liquide)</strong>. La flèche pointillée suit le trajet <em>pavillon → conduit → tympan → osselets (×20) → fenêtre ovale → cochlée</em> ; à droite, la flèche pleine qui sort de la cochlée, c'est le <strong>nerf VIII</strong> qui part vers le cerveau. Les 4 encadrés numérotés reprennent chaque étape.</figcaption>
+        <img src="../images/anatomie/ch11_trajet_son_vue_ensemble.png" alt="Le trajet du son en quatre vignettes : capter avec le pavillon et le tympan, amplifier avec les trois osselets, convertir dans la cochlée, transmettre par le nerf VIII jusqu'au cortex auditif" onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
+        <figcaption class="caption"><strong>Ce qu'il faut y voir</strong> — quatre vignettes à lire <strong>de gauche à droite</strong>, une par étape. <strong>Capter</strong> : les ondes sonores arrivent sur le pavillon, le conduit les mène au tympan, qui vibre. <strong>Amplifier</strong> : les 3 osselets, et l'étiquette « ≈ 20 × plus de force » ; en dessous, la trompe d'Eustache qui équilibre la pression. <strong>Convertir</strong> : l'étrier appuie sur la fenêtre ovale, la cochlée ondule, et le petit cercle zoome sur les <strong>cellules ciliées</strong> qui font le passage en signal nerveux. <strong>Transmettre</strong> : le nerf VIII, un relais dans le tronc cérébral, le thalamus, puis la tache rouge — le <strong>cortex auditif</strong> du lobe temporal. La bande du bas est le résumé : externe → moyenne → interne, et les milieux traversés, <strong>air → air → liquide</strong>.</figcaption>
     </figure>
 
     <div class="mnemo-box"><span class="lbl">Le mnémo — les 3 compartiments en 1 phrase</span><b>Externe</b> = le micro 📡 | <b>Moyenne</b> = l'ampli 🔧 | <b>Interne</b> = le convertisseur ⚡. De dehors en dedans : <b>E → M → I</b>, remplis d'<b>air → air → liquide</b>.</div>
@@ -218,7 +227,7 @@
                 <tr>
                     <td><b>🔧 Moyenne</b></td>
                     <td>Air</td>
-                    <td>Caisse du tympan + 3 osselets (M→E→É) + trompe d'Eustache</td>
+                    <td>Caisse du tympan <span class="gl">(la cavité de l'oreille moyenne)</span> + 3 osselets (M→E→É) + trompe d'Eustache</td>
                     <td><b>Amplifier ×20</b></td>
                     <td>Ampli 🔊</td>
                 </tr>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L'effet inductif (I) et la force des acides — Fiche Medeos</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 15px; line-height: 1.6; color: #2c3e50; background: #f6f8fb; padding: 22px; max-width: 760px; margin: 0 auto; }
+    .page-container { position: relative; }
+    .page-container::before { display: none; }
+    .page-container > * { position: relative; z-index: 1; }
+    .prod-brand { margin: 0 4px 10px; }
+    .prod-brand img { height: 30px; width: auto; display: block; border-radius: 6px; }
+    .hook-header { background: #FAF6F0; border-radius: 14px; padding: 26px 30px 22px; box-shadow: 0 4px 18px rgba(76,42,133,0.08); border: 1px solid #efe7d8; }
+    .hook-header .brand-tag { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #6B46C1; font-weight: 600; opacity: 0.85; margin-bottom: 12px; }
+    .hook-header .course-title { font-size: 28px; line-height: 1.1; font-weight: 800; color: #4C2A85; letter-spacing: -0.7px; margin: 0 0 12px; }
+    .hook-header .punch { font-size: 18px; line-height: 1.3; font-weight: 800; color: #1A1A2E; letter-spacing: -0.3px; margin: 0; }
+    .hook-header .punch span.accent { color: #6B46C1; }
+    .hook-header .punch + .punch { margin-top: 5px; }
+    .intro { font-size: 15.5px; line-height: 1.7; color: #2c3e50; margin: 20px 2px; }
+    .intro strong { font-weight: 700; color: #4C2A85; }
+    em.hl { background: linear-gradient(180deg, transparent 60%, #FCD34D 60%); font-style: normal; padding: 0 2px; }
+    .schema-box { background: #fff; border: 2px solid #6B46C1; padding: 12px; text-align: center; border-radius: 12px; box-shadow: 0 4px 15px rgba(107, 70, 193, 0.15); position: relative; overflow: hidden; }
+    .schema-box::before { content: 'medeos-sante.fr'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: 'Inter', Arial, sans-serif; font-size: 14px; font-weight: 700; color: rgba(120,120,120,0.13); letter-spacing: 2px; text-transform: uppercase; pointer-events: none; user-select: none; z-index: 5; white-space: nowrap; max-width: 92%; overflow: hidden; }
+    .schema-box img { max-width: 100%; max-height: 300px; height: auto; border-radius: 8px; display: block; margin: 0 auto; cursor: zoom-in; }
+    .schema-box .schema-num { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 0.6px; text-transform: uppercase; color: #6B46C1; margin-bottom: 6px; }
+    .schema-box .caption { font-size: 12px; color: #6b6275; margin-top: 9px; font-weight: 500; }
+    .schema-box .caption strong { color: #6B46C1; }
+    .schema-box .file-target { display: none; margin-top: 10px; padding: 8px 12px; background: #e8f5e9; border: 1px solid #a5d6a7; border-radius: 6px; font-family: 'SFMono-Regular', Consolas, monospace; font-size: 11.5px; color: #1b5e20; text-align: left; line-height: 1.5; }
+    .schema-box .file-target strong { color: #2e7d32; }
+    .schema-box .generation-prompt { background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border: 2px dashed #ff9800; border-radius: 8px; padding: 13px; margin-top: 12px; text-align: left; font-size: 11.5px; color: #e65100; line-height: 1.55; white-space: pre-wrap; }
+    .schema-box .generation-prompt strong { color: #bf360c; display: block; margin-bottom: 8px; font-size: 12.5px; background: #ffcc80; padding: 7px 11px; border-radius: 4px; }
+    .schema-box .copy-prompt-btn { display: none; margin-top: 8px; padding: 6px 12px; background: #ff9800; color: #fff; border: none; border-radius: 4px; font-size: 12px; cursor: pointer; font-weight: 600; }
+    .schema-box .copy-prompt-btn:hover { background: #f57c00; }
+    .schema-box .generation-prompt { display: none; }
+    .schema-box.img-missing .generation-prompt { display: block; }
+    .schema-box.img-missing .copy-prompt-btn { display: inline-block; }
+    .schema-box.img-missing .file-target { display: block !important; }
+    .schema-2up { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; align-items: stretch; }
+    .schema-2up .schema-box { margin: 0; display: flex; flex-direction: column; }
+    .schema-2up .schema-box img { height: 230px; width: 100%; max-height: none; object-fit: contain; }
+    .schema-2up .schema-box .caption { margin-top: auto; }
+    @media (max-width: 720px) { .schema-2up { grid-template-columns: 1fr; } .schema-2up .schema-box img { height: auto; max-height: 300px; } }
+    .steps { background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%); border-left: 5px solid #6B46C1; border-radius: 0 12px 12px 0; padding: 18px 22px; margin: 20px 0; box-shadow: 0 2px 10px rgba(107,70,193,0.08); }
+    .steps .steps-title { font-size: 15px; font-weight: 800; color: #4C2A85; margin-bottom: 13px; }
+    .steps ol { list-style: none; margin: 0; padding: 0; }
+    .step { display: grid; grid-template-columns: 28px 1fr; gap: 12px; align-items: start; margin-bottom: 12px; }
+    .step:last-child { margin-bottom: 0; }
+    .step .n { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 999px; background: #6B46C1; color: #fff; font-size: 13px; font-weight: 800; }
+    .step .txt { font-size: 14.5px; line-height: 1.5; color: #2c3e50; padding-top: 2px; }
+    .step .txt b { color: #4C2A85; font-weight: 700; }
+    .step .txt .gl { color: #6b6275; font-weight: 400; }
+    .step .txt .lead { font-weight: 800; color: #1A1A2E; }
+    .pass-tip { background: #fdf6ec; border-left: 6px solid #B8895A; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; box-shadow: 0 3px 12px rgba(184,137,90,0.14); font-size: 14.5px; line-height: 1.55; }
+    .pass-tip::before { content: "Le réflexe P1"; display: block; font-weight: 700; font-size: 12px; color: #9a6a37; margin-bottom: 7px; letter-spacing: 0.8px; text-transform: uppercase; }
+    .pass-tip strong { color: #9a6a37; }
+
+        .mnemo-box { background:#F3EEFB; border-left:6px solid #6B46C1; padding:15px 20px; margin:20px 0;
+            border-radius:0 8px 8px 0; box-shadow:0 3px 12px rgba(107,70,193,.13); font-size:14.5px; line-height:1.6; }
+        .mnemo-box .lbl { display:block; font-weight:700; font-size:12px; color:#6B46C1; margin-bottom:7px;
+            letter-spacing:.8px; text-transform:uppercase; }
+        .mnemo-box b { color:#4C2A85; }
+
+    .tbl-wrap { margin: 20px 0; overflow-x: auto; }
+    table.tbl { width: 100%; border-collapse: separate; border-spacing: 0; background: #fff; border: 1px solid #dccff2; border-radius: 12px; overflow: hidden; font-size: 14.5px; box-shadow: 0 3px 12px rgba(107,70,193,.08); }
+    table.tbl th { background: #F1ECFA; color: #4C2A85; font-size: 11.5px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; text-align: left; padding: 11px 14px; }
+    table.tbl td { padding: 12px 14px; border-top: 1px solid #ece5f7; color: #2c3e50; line-height: 1.5; vertical-align: top; }
+    table.tbl td b { color: #4C2A85; }
+    table.tbl td .gl { color: #6b6275; font-weight: 400; font-size: 13.5px; }
+    table.tbl td.hd { background: #FAF7FE; color: #4C2A85; font-weight: 700; font-size: 13.5px; }
+    .tbl-note { font-size: 12.5px; color: #6b6275; margin: -10px 4px 20px; font-weight: 500; }
+
+    .recap { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
+    .recap .box { border-radius: 12px; padding: 15px 18px; font-size: 14px; line-height: 1.5; }
+    .recap .retenir { background: #F1ECFA; border: 1px solid #dccff2; }
+    .recap .piege { background: #FFFBEB; border: 1px solid #F6E4A8; }
+    .recap .box .lbl { display: block; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 7px; }
+    .recap .retenir .lbl { color: #6B46C1; }
+    .recap .piege .lbl { color: #9a6d00; }
+    .recap b { font-weight: 700; color: #1A1A2E; }
+    .qcm-cta { display: flex; align-items: center; gap: 16px; text-decoration: none; color: inherit; background: #fff; border: 1px solid #d6c6f0; border-radius: 14px; padding: 18px 22px; margin: 24px 0 6px; box-shadow: 0 9px 26px -16px rgba(107,70,193,.4); transition: transform .18s ease, box-shadow .18s ease; }
+    .qcm-cta:hover { transform: translateY(-2px); box-shadow: 0 16px 38px -16px rgba(107,70,193,.5); }
+    .qcm-cta:focus-visible { outline: 3px solid #6B46C1; outline-offset: 2px; }
+    .qcm-cta .qcm-body { flex: 1; }
+    .qcm-cta .qcm-k { font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #6B46C1; }
+    .qcm-cta .qcm-t { font-size: 18px; font-weight: 800; color: #1A1A2E; margin-top: 3px; letter-spacing: -0.3px; }
+    .qcm-cta .qcm-arrow { flex: none; width: 42px; height: 42px; border-radius: 11px; background: #6B46C1; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700; }
+    .chapter-footer { text-align: center; margin-top: 22px; padding-top: 16px; border-top: 1px solid #e6dfd1; color: #7a8088; font-size: 12px; }
+    .chapter-footer strong { color: #6b6275; }
+    .bio-hint { display: none; }
+    /* ===== IMPRESSION / PDF — format REEL 9:16 (1080×1920), agrandi pour remplir ===== */
+    @media print {
+        @page { size: 1080px 1920px; margin: 42px; }
+        body { background: #fff; padding: 0; max-width: 996px; font-size: 17px; }
+        .page-container::before { display: none; }
+        .prod-brand { margin: 0 0 12px; }
+        .prod-brand img { height: 42px; }
+        .hook-header { padding: 22px 30px; box-shadow: none; }
+        .hook-header .brand-tag { font-size: 12px; margin-bottom: 10px; }
+        .hook-header .course-title { font-size: 34px; margin-bottom: 10px; }
+        .hook-header .punch { font-size: 21px; }
+        .intro { font-size: 17px; line-height: 1.55; margin: 18px 2px; }
+        .schema-2up { margin: 18px 0; gap: 20px; }
+        .schema-box { padding: 12px; box-shadow: none; }
+        .schema-2up .schema-box img { height: 300px; }
+        .schema-box .schema-num { font-size: 12.5px; margin-bottom: 5px; }
+        .schema-box .caption { font-size: 14px; margin-top: 8px; }
+        .steps { padding: 20px 26px; margin: 18px 0; box-shadow: none; }
+        .steps .steps-title { font-size: 19px; margin-bottom: 13px; }
+        .step { margin-bottom: 11px; gap: 13px; }
+        .step .n { width: 30px; height: 30px; font-size: 14px; }
+        .step .txt { font-size: 16.5px; line-height: 1.5; padding-top: 2px; }
+        .pass-tip { padding: 16px 22px; margin: 18px 0; font-size: 16.5px; box-shadow: none; }
+        .tbl-wrap { page-break-inside: avoid; }
+        table.tbl { font-size: 16px; box-shadow: none; }
+        table.tbl th { font-size: 12.5px; }
+        .recap { gap: 16px; margin: 18px 0; }
+        .recap .box { padding: 15px 20px; font-size: 15.5px; }
+        .recap .box .lbl { font-size: 12.5px; }
+        .qcm-cta { padding: 17px 24px; margin: 18px 0 6px; box-shadow: none; }
+        .qcm-cta .qcm-k { font-size: 12.5px; }
+        .qcm-cta .qcm-t { font-size: 20px; }
+        .qcm-cta .qcm-arrow { width: 44px; height: 44px; font-size: 20px; }
+        .bio-hint { display: block; text-align: center; margin: 12px 0 0; font-size: 17px; font-weight: 800; color: #6B46C1; }
+        .bio-hint strong { color: #4C2A85; }
+        .chapter-footer { margin-top: 14px; padding-top: 12px; font-size: 14px; }
+        .schema-2up, .schema-box, .steps, .recap, .pass-tip, .qcm-cta, .mnemo-box { page-break-inside: avoid; }
+    }
+    @media (max-width: 600px) {
+        body { padding: 14px; }
+        .hook-header { padding: 22px 18px 18px; }
+        .hook-header .course-title { font-size: 24px; }
+        .hook-header .punch { font-size: 16px; }
+        .recap { grid-template-columns: 1fr; }
+        .intro, .pass-tip, .step .txt, .recap .box { text-align: left; }
+        .schema-box::before { color: rgba(107,70,193,0.20); font-size: 11px; letter-spacing: 1px; max-width: 90%; }
+        table.tbl { font-size: 13.5px; }
+        table.tbl th, table.tbl td { padding: 9px 10px; }
+    }
+
+    /* === mobile-polish + zoom-bar ordi only === */
+    /* La barre de zoom (− / 100 % / +) est réservée à l'ordinateur : sur mobile,
+       le pinch-to-zoom natif suffit. On la masque sous la largeur tactile. */
+    @media (max-width: 768px) {
+        #medeos-zoom-bar { display: none !important; }
+    }
+    /* Agencement mobile soigné : le titre ne déborde jamais, le hook respire. */
+    @media (max-width: 600px) {
+        body { padding: 14px 13px 18px; }
+        .hook-header { padding: 20px 17px 16px; }
+        .hook-header .course-title {
+            font-size: clamp(20px, 6.4vw, 25px);
+            line-height: 1.12;
+            letter-spacing: -0.4px;
+            overflow-wrap: anywhere;
+            hyphens: auto;
+        }
+        .hook-header .punch { font-size: clamp(14.5px, 4.4vw, 17px); line-height: 1.3; }
+        .hook-header .brand-tag { font-size: 10.5px; letter-spacing: 1.2px; }
+        .intro { font-size: 15px; }
+        .schema-2up { gap: 14px; }
+        .steps { padding: 18px 16px; }
+        .steps .steps-title { font-size: 15px; }
+        .step .txt { font-size: 14.5px; }
+        .qcm-cta { padding: 15px 16px; gap: 12px; }
+        .qcm-cta .qcm-t { font-size: 16px; }
+        .qcm-cta .qcm-arrow { width: 38px; height: 38px; font-size: 18px; }
+        /* boutons de la lightbox plus gros au doigt */
+        #medeos-lightbox button[aria-label="Fermer"] { width: 46px; height: 46px; font-size: 26px; }
+    }
+</style>
+</head>
+<body>
+<div class="page-container">
+
+    <div class="prod-brand"><img src="../images/logo-medeos-violet.png" alt="Medeos"></div>
+
+    <header class="hook-header">
+        <div class="brand-tag">Ressource gratuite</div>
+        <h1 class="course-title">L'effet inductif (I) et la force des acides</h1>
+        <p class="punch">Depuis les carbocations, un phénomène revient sans jamais avoir été <span class="accent">nommé</span>.</p>
+        <p class="punch">Il s'appelle l'<span class="accent">effet inductif</span> — et il prédit des pKa qu'on a mesurés.</p>
+    </header>
+
+    <p class="intro">Depuis les carbocations, on répète la même phrase : chaque groupe alkyle voisin du C⁺ lui <strong>donne un peu de densité électronique</strong>, la charge positive est mieux <strong>diluée</strong>, donc le carbocation est plus stable. Mais on n'avait pas encore mis de <em class="hl">nom</em> dessus. En chimie organique, ce type de déplacement d'électrons à l'intérieur d'une molécule s'appelle un <strong>effet électronique</strong> — et celui-là, c'est l'<strong>effet inductif (I)</strong>.</p>
+
+    <div class="mnemo-box"><span class="lbl">L'analogie — un petit courant</span>Quand deux atomes liés n'ont pas la même <b>électronégativité</b>, le plus électronégatif <b>attire</b> les électrons de la liaison vers lui. Ce déplacement se transmet le long de la chaîne de liaisons σ, <b>comme un petit courant électrique</b>. — et pour l'atténuation : « Le 1<sup>er</sup> voisin le ressent fort, le 3<sup>ème</sup> à peine, le 4<sup>ème</sup> plus du tout. »</div>
+
+    <div class="tbl-wrap">
+        <table class="tbl">
+            <thead>
+                <tr><th></th><th>Effet −I (attracteur)</th><th>Effet +I (donneur)</th></tr>
+            </thead>
+            <tbody>
+                <tr><td class="hd">Le groupe est…</td><td><b>plus électronégatif</b> que le carbone</td><td><b>moins électronégatif</b> que le carbone auquel il est lié</td></tr>
+                <tr><td class="hd">Il fait quoi ?</td><td>il <b>attire</b> les électrons de la liaison σ <b>vers lui</b></td><td>il <b>cède</b> une partie de sa densité électronique à ce carbone</td></tr>
+                <tr><td class="hd">Exemples</td><td>−F, −Cl, −Br, −OH, −NO₂, −COOH</td><td>−CH₃, −C₂H₅ <span class="gl">(les alkyles en général)</span></td></tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="tbl-note">La colonne de droite, tu la connais déjà : c'est exactement ce que font les alkyles autour d'un carbocation — ils cèdent leurs électrons au C⁺ qui en manque, ce qui dilue la charge positive. Ce que cette fiche ajoute, c'est la colonne du milieu : un groupe peut aussi <b>attirer</b>.</p>
+
+    <div class="steps">
+        <div class="steps-title">3 propriétés à retenir sur l'effet inductif</div>
+        <ol>
+            <li class="step">
+                <span class="n">1</span>
+                <span class="txt"><span class="lead">Il passe par les liaisons σ.</span> Pas besoin de double liaison ni de conjugaison : il suffit d'une chaîne de liaisons simples pour que l'effet se transmette.</span>
+            </li>
+            <li class="step">
+                <span class="n">2</span>
+                <span class="txt"><span class="lead">Il s'atténue très vite avec la distance.</span> Il est <b>quasi nul après 3 liaisons</b> : l'effet inductif ne porte <b>pas loin</b>.</span>
+            </li>
+            <li class="step">
+                <span class="n">3</span>
+                <span class="txt"><span class="lead">Il est permanent.</span> Toujours présent dans la molécule, <b>qu'il y ait réaction ou pas</b>. Ce n'est pas un effet qui « se déclenche » au moment de réagir.</span>
+            </li>
+        </ol>
+    </div>
+
+    <p class="intro">Tout ça pourrait rester théorique. Sauf que ça <strong>prédit des valeurs mesurées</strong> — les pKa. Voici comment un groupe attracteur rend un acide plus fort : quand un acide <strong>HA</strong> perd son H⁺, il forme sa <strong>base conjuguée A⁻</strong>, chargée négativement. Si un groupe <strong>attracteur</strong> est présent, il attire une partie de cette charge − vers lui → la charge est mieux <strong>répartie</strong> → A⁻ est plus <strong>stable</strong> → l'équilibre est déplacé vers la perte du H⁺ → l'acide est <em class="hl">plus fort</em> (pKa plus bas).</p>
+
+    <div class="tbl-wrap">
+        <table class="tbl">
+            <thead>
+                <tr><th>Acide</th><th>Nb de Cl</th><th>pKa</th><th>Lecture</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>CH₃COOH</td><td>0</td><td><b>4,8</b></td><td>référence, pas de Cl</td></tr>
+                <tr><td>Cl−CH₂COOH</td><td>1</td><td><b>2,9</b></td><td>1 Cl → plus acide</td></tr>
+                <tr><td>Cl₂CH−COOH</td><td>2</td><td><b>1,3</b></td><td>2 Cl → encore plus acide</td></tr>
+                <tr><td>Cl₃C−COOH</td><td>3</td><td><b>0,6</b></td><td>3 Cl → très acide</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="tbl-note">Chaque Cl ajouté est un groupe −I supplémentaire qui stabilise davantage la base conjuguée COO⁻. <b>L'effet −I est cumulatif</b> : plus il y a de Cl, mieux la charge − est dispersée, et plus l'acide est fort.</p>
+
+    <div class="pass-tip">
+        Devant deux acides à comparer, ne regarde pas les molécules en entier : regarde ce qu'il y a <strong>autour du groupe acide</strong>. Des groupes attracteurs <strong>(−I)</strong> → A⁻ mieux stabilisée → acide plus fort → <strong>pKa plus bas</strong>. Des groupes donneurs <strong>(+I)</strong> → l'inverse. Et n'oublie jamais la distance : un Cl porté par le carbone voisin du COOH pèse beaucoup plus lourd qu'un Cl placé trois ou quatre liaisons plus loin.
+    </div>
+
+    <p class="intro">L'effet inductif n'est pas le seul moyen de déplacer des électrons dans une molécule. Il en existe un second, qui ne passe pas par les liaisons σ et qui, lui, <strong>ne s'atténue pas</strong> : l'<strong>effet mésomère</strong>. C'est la suite.</p>
+
+    <div class="recap">
+        <div class="box retenir">
+            <span class="lbl">À retenir</span>
+            L'effet inductif, c'est une <b>différence d'électronégativité</b> qui se propage le long des <b>liaisons σ</b>. <b>−I</b> = le groupe attire (−F, −Cl, −Br, −OH, −NO₂, −COOH) · <b>+I</b> = le groupe donne (les alkyles). Il passe par σ, s'atténue très vite, il est permanent. Un attracteur près d'un acide stabilise A⁻ → <b>acide plus fort, pKa plus bas</b>.
+        </div>
+        <div class="box piege">
+            <span class="lbl">Le piège</span>
+            L'effet inductif ne porte <b>pas loin</b> : quasi nul après <b>3 liaisons</b>. Ce n'est donc pas le nombre de groupes attracteurs présents dans la molécule qui compte, c'est leur nombre <b>à proximité du groupe acide</b>. Un attracteur en bout de chaîne ne changera presque rien au pKa.
+        </div>
+    </div>
+
+    <a class="qcm-cta" style="display:none" href="/ressources/qcm-decouverte/decouverte-chimie-effet-inductif" target="_top">
+        <span class="qcm-body">
+            <span class="qcm-k">Vérifie en 3 questions</span>
+            <span class="qcm-t">QCM — Effet inductif &amp; acidité</span>
+        </span>
+        <span class="qcm-arrow" aria-hidden="true">→</span>
+    </a>
+    <div class="bio-hint">📲 Pour faire le QCM gratuit → <strong>lien en bio</strong></div>
+
+    <footer class="chapter-footer">
+        <p>Une fiche <strong>Medeos</strong> · pour anticiper la P1, sereinement. · medeos-sante.fr</p>
+    </footer>
+
+</div>
+
+<div id="medeos-lightbox" role="dialog" aria-label="Schéma agrandi" aria-modal="true" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(26,26,46,0.92);overflow:auto;-webkit-overflow-scrolling:touch;touch-action:pinch-zoom;cursor:zoom-out;">
+    <button type="button" aria-label="Fermer" onclick="closeLightbox()" style="position:fixed;top:14px;right:16px;z-index:10003;width:42px;height:42px;border-radius:50%;border:none;background:rgba(255,255,255,0.14);color:#fff;font-size:24px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);">&times;</button>
+    <div id="medeos-zoom-bar" style="position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:10003;display:flex;gap:8px;align-items:center;background:rgba(255,255,255,0.14);backdrop-filter:blur(4px);padding:7px 10px;border-radius:999px;">
+        <button type="button" aria-label="Dézoomer" onclick="lbZoom(-1,event)" style="width:38px;height:38px;border-radius:50%;border:none;background:rgba(255,255,255,0.9);color:#1A1A2E;font-size:22px;font-weight:700;line-height:1;cursor:pointer;">&minus;</button>
+        <button type="button" aria-label="Réinitialiser le zoom" onclick="lbReset(event)" style="height:38px;padding:0 14px;border-radius:999px;border:none;background:rgba(255,255,255,0.9);color:#1A1A2E;font-size:13px;font-weight:700;cursor:pointer;">100&nbsp;%</button>
+        <button type="button" aria-label="Zoomer" onclick="lbZoom(1,event)" style="width:38px;height:38px;border-radius:50%;border:none;background:rgba(255,255,255,0.9);color:#1A1A2E;font-size:22px;font-weight:700;line-height:1;cursor:pointer;">+</button>
+    </div>
+    <div id="medeos-lightbox-stage" onclick="lbStageClick(event)" style="min-height:100%;display:flex;align-items:center;justify-content:center;padding:64px 16px;">
+        <div style="position:relative;display:inline-flex;">
+            <img id="medeos-lightbox-img" src="" alt="Schéma agrandi" ondblclick="lbToggleZoom(event)" style="display:block;border-radius:10px;box-shadow:0 10px 40px rgba(0,0,0,0.5);transform-origin:center center;transition:transform .18s ease;max-width:none;cursor:zoom-in;">
+            <div aria-hidden="true" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;">
+                <span style="font-family:'Inter',Arial,sans-serif;font-size:clamp(11px,4vw,30px);font-weight:700;letter-spacing:clamp(1px,1vw,6px);text-transform:uppercase;color:rgba(120,120,120,0.16);white-space:nowrap;">medeos-sante.fr</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var lbScale = 1, lbBaseW = 0;
+    function openLightbox(src) {
+        var lb = document.getElementById('medeos-lightbox');
+        var img = document.getElementById('medeos-lightbox-img');
+        lbScale = 1;
+        img.onload = function () {
+            // Taille de base : on s'aligne sur la largeur dispo (max 96vw) ou la taille native si plus petite.
+            var availW = Math.min(window.innerWidth * 0.96, this.naturalWidth);
+            var availH = window.innerHeight * 0.84;
+            var ratio = Math.min(availW / this.naturalWidth, availH / this.naturalHeight, 1);
+            lbBaseW = Math.max(120, Math.round(this.naturalWidth * ratio));
+            this.style.width = lbBaseW + 'px';
+            this.style.height = 'auto';
+            lbApply();
+        };
+        img.src = src;
+        lb.style.display = 'block';
+        lb.scrollTop = 0; lb.scrollLeft = 0;
+        document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+        document.getElementById('medeos-lightbox').style.display = 'none';
+        document.body.style.overflow = '';
+    }
+    function lbApply() {
+        var img = document.getElementById('medeos-lightbox-img');
+        img.style.transform = 'scale(' + lbScale + ')';
+        img.style.cursor = lbScale > 1 ? 'zoom-out' : 'zoom-in';
+        var lbl = document.querySelector('#medeos-zoom-bar button[onclick^="lbReset"]');
+        if (lbl) lbl.innerHTML = Math.round(lbScale * 100) + '&nbsp;%';
+    }
+    function lbZoom(dir, e) {
+        if (e) { e.stopPropagation(); e.preventDefault(); }
+        lbScale = Math.min(4, Math.max(1, +(lbScale + dir * 0.5).toFixed(2)));
+        lbApply();
+    }
+    function lbReset(e) { if (e) { e.stopPropagation(); e.preventDefault(); } lbScale = 1; lbApply(); }
+    function lbToggleZoom(e) { if (e) { e.stopPropagation(); e.preventDefault(); } lbScale = lbScale > 1 ? 1 : 2; lbApply(); }
+    function lbStageClick(e) { if (e.target.id === 'medeos-lightbox-stage') closeLightbox(); } // clic dans le vide = fermer
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeLightbox();
+        else if (document.getElementById('medeos-lightbox').style.display === 'block') {
+            if (e.key === '+' || e.key === '=') lbZoom(1);
+            else if (e.key === '-') lbZoom(-1);
+            else if (e.key === '0') lbReset();
+        }
+    });
+    document.getElementById('medeos-lightbox').addEventListener('wheel', function (e) {
+        if (this.style.display !== 'block') return;
+        if (e.ctrlKey || Math.abs(e.deltaY) > 0) { /* molette = zoom */ }
+        e.preventDefault();
+        lbScale = Math.min(4, Math.max(1, +(lbScale - Math.sign(e.deltaY) * 0.25).toFixed(2)));
+        lbApply();
+    }, { passive: false });
+    function schemaMissing(img) { img.style.display = 'none'; var b = img.closest('.schema-box'); if (b) b.classList.add('img-missing'); }
+</script>
+</body>
+</html>

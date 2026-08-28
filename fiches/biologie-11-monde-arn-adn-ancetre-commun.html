@@ -52,6 +52,7 @@
     .step .txt { font-size: 14.5px; line-height: 1.5; color: #2c3e50; padding-top: 2px; }
     .step .txt b { color: #4C2A85; font-weight: 700; }
     .step .txt .gl { color: #6b6275; font-weight: 400; }
+    .gl { color: #6b6275; font-weight: 400; }
     .step .txt .lead { font-weight: 800; color: #1A1A2E; }
     .pass-tip { background: #fdf6ec; border-left: 6px solid #B8895A; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; box-shadow: 0 3px 12px rgba(184,137,90,0.14); font-size: 14.5px; line-height: 1.55; }
     .pass-tip::before { content: "Le réflexe P1"; display: block; font-weight: 700; font-size: 12px; color: #9a6a37; margin-bottom: 7px; letter-spacing: 0.8px; text-transform: uppercase; }
@@ -173,7 +174,7 @@
     <p class="intro">La fiche précédente s'arrête au moment où la <strong>foudre</strong> et les <strong>rayons UV</strong> viennent de produire les premières molécules organiques, qui flottent dans la soupe primitive. Les briques sont là, mais rien ne vit encore. Les scientifiques pensent que la vie a commencé par l'<strong>ARN</strong> <span class="gl">(acide ribonucléique)</span> : <em class="hl">parmi toutes ces molécules, c'est elle qui a pris le pouvoir</em>.</p>
 
     <div class="steps">
-        <div class="steps-title">Du monde ARN au système actuel, en 4 temps</div>
+        <div class="steps-title">Le monde ARN : une molécule qui fait tout</div>
         <ol>
             <li class="step">
                 <span class="n">1</span>
@@ -183,30 +184,48 @@
                 <span class="n">2</span>
                 <span class="txt"><span class="lead">Grâce à cette double capacité, l'ARN se débrouille seul.</span> Il pouvait se <b>copier lui-même</b> <span class="gl">(se répliquer)</span>, créer les <b>premières protéines</b>, et évoluer par <b>sélection naturelle</b> : les ARN les plus efficaces survivent et se multiplient. Avant l'apparition de l'ADN et des protéines, <b>l'ARN faisait tout le travail tout seul</b> — c'est pour ça qu'on parle du <b>« monde ARN »</b> comme première forme de vie.</span>
             </li>
+        </ol>
+    </div>
+
+    <figure class="schema-box" style="margin: 20px 0;">
+        <span class="schema-num">Le monde ARN : de la soupe primitive aux premières cellules</span>
+        <img src="../images/biologie/ch1_monde_arn.png" alt="De la soupe primitive à la première cellule : molécules organiques, molécule d'ARN assurant le stockage de l'information et la catalyse, sélection naturelle, première cellule formée d'une membrane et d'ARN" onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
+        <figcaption class="caption"><strong>Quatre vignettes, de gauche à droite.</strong> <strong>Soupe primitive</strong> : les éclairs et les flèches UV frappent l'océan, et il en sort les <strong>sucres</strong>, les <strong>acides aminés</strong> et les <strong>nucléotides</strong> — exactement là où la fiche précédente s'était arrêtée. <strong>Molécule ARN</strong> : c'est la vignette à lire lentement, parce que les deux fonctions y sont dessinées séparément — en haut « <strong>Fonction 1 : stockage information</strong> », en bas « <strong>Fonction 2 : enzyme (ribozyme)</strong> » avec un substrat transformé en produit, et la flèche qui boucle sur elle-même à gauche, c'est l'<strong>auto-réplication</strong>. <strong>Évolution</strong> : plusieurs ARN partent dans toutes les directions — <strong>« les ARN les plus efficaces survivent »</strong>. <strong>Première cellule</strong> : regarde son étiquette, elle dit « <strong>membrane + ARN</strong> », rien d'autre. Ni ADN, ni protéines à ce stade.</figcaption>
+    </figure>
+
+    <div class="steps">
+        <div class="steps-title">La transition vers l'ADN, et ce que l'ARN garde</div>
+        <ol>
             <li class="step">
-                <span class="n">3</span>
+                <span class="n">1</span>
                 <span class="txt"><span class="lead">L'ADN prend le relais du stockage.</span> L'ARN est une molécule <b>fragile et instable</b>. L'évolution a donc favorisé l'apparition de l'<b>ADN</b> comme support de l'information génétique : il est <b>plus stable chimiquement</b> <span class="gl">(pas de groupe hydroxyle en 2' — ce petit groupe OH que porte l'ARN, l'ADN ne l'a pas)</span>, et sa <b>double hélice</b> protège mieux l'information génétique.</span>
             </li>
             <li class="step">
-                <span class="n">4</span>
+                <span class="n">2</span>
                 <span class="txt"><span class="lead">Mais l'ARN ne disparaît pas.</span> Il conserve un rôle d'<b>intermédiaire</b> <span class="gl">(l'ARN messager, ARNm)</span> et un rôle de <b>catalyseur</b> <span class="gl">(les ribosomes ; catalyseur = ce rôle d'enzyme, la fonction 2)</span>. Ces deux rôles sont toujours actifs dans chacune de tes cellules.</span>
             </li>
         </ol>
     </div>
 
-    <div class="mnemo-box"><span class="lbl">Le mnémo — la trace fossile</span>L'ARN a une propriété extraordinaire : c'est une molécule <b>« 2 en 1 »</b>. <b>Point clé :</b> le <b>ribosome</b>, qui fabrique toutes les protéines, est lui-même un <b>ribozyme</b> ! Son cœur catalytique est fait d'<b>ARN</b>, pas de protéines. C'est une <b>« trace fossile »</b> du monde ARN primitif.</div>
+    <figure class="schema-box" style="margin: 20px 0;">
+        <span class="schema-num">Du monde ARN à la spécialisation ADN / ARN / protéines</span>
+        <img src="../images/biologie/ch1_transition_arn_adn.png" alt="À gauche le monde ARN, une molécule fragile et instable portant un groupe OH en 2' et assurant seule information et catalyse ; à droite le monde ADN plus ARN plus protéines, où l'ADN stocke, l'ARN sert d'intermédiaire et de catalyseur, et les protéines font les enzymes" onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
+        <figcaption class="caption"><strong>Le schéma se lit en deux moitiés, séparées par la flèche « ÉVOLUTION ».</strong> À gauche, le <strong>monde ARN</strong> : la fiole fêlée et le verre renversé disent « <strong>fragile</strong> » et « <strong>instable</strong> », et la flèche pointe le coupable — le <strong>groupe OH en 2'</strong>, celui que l'ADN n'a pas. En bas : « <strong>ARN seul = information + catalyse</strong> », c'est la molécule 2 en 1. À droite, le travail est réparti sur trois : l'<strong>ADN</strong> en double hélice <span>(cadenas « stable », bouclier « protégé »)</span> ne fait plus que <strong>stocker</strong> ; l'<strong>ARN</strong>, en orange, garde ses <strong>deux</strong> rôles — <strong>intermédiaire (ARNm)</strong> et <strong>catalyseur (ribosomes)</strong> ; les <strong>protéines</strong> deviennent les enzymes. C'est le piège de la fiche, dessiné : l'ARN est toujours là, à droite aussi.</figcaption>
+    </figure>
 
     <p class="intro">Reste une dernière étape. Ce système — <strong>ADN</strong> pour stocker, <strong>ARN</strong> pour transmettre et catalyser — n'a pas été inventé plusieurs fois : <strong>toutes les formes de vie actuelles descendent d'un ancêtre commun</strong>. C'était un organisme <strong>unicellulaire procaryote primitif</strong>, dont l'ADN comportait environ <strong>600 gènes</strong>. Au fil des millions d'années, par <strong>duplication</strong> et <strong>mutation</strong> des gènes, on arrive aux <strong>20 000 à 30 000 gènes</strong> que porte aujourd'hui chacune de tes cellules.</p>
 
     <figure class="schema-box" style="margin: 20px 0;">
         <span class="schema-num">L'ancêtre commun universel</span>
         <img src="../images/biologie/ch1_ancetre_commun.png" alt="De l'ancêtre commun universel, un procaryote primitif à environ 600 gènes, à la diversité actuelle du vivant" onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
-        <figcaption class="caption"><strong>Un seul point de départ</strong> — à gauche, le procaryote primitif et ses <strong>~600 gènes</strong> ; à droite, la diversité du vivant actuel. Ce qu'il faut voir : toutes les branches partent du <strong>même point</strong>, et le génome s'enrichit par <strong>duplication</strong> et <strong>mutation</strong> des gènes existants, pas par apparition de nouveaux ancêtres.</figcaption>
+        <figcaption class="caption"><strong>Un seul point de départ</strong> — à gauche, le procaryote primitif, son <strong>ADN circulaire</strong> et ses <strong>~600 gènes</strong> ; à droite, la diversité du vivant actuel, jusqu'aux <strong>20 000 à 30 000 gènes</strong> de l'humain. Ce qu'il faut voir : toutes les branches partent du <strong>même point</strong>, et le génome s'enrichit par <strong>duplication</strong> et <strong>mutation</strong> des gènes existants, pas par apparition de nouveaux ancêtres. <strong>Attention à deux étiquettes fautives sur ce schéma</strong> : lis « 3 à 4 <strong>milliards</strong> d'années » et non « 3-4 M », et « milliards d'années » sur l'axe du bas — c'est bien il y a <strong>3 à 4 milliards d'années</strong> que la vie apparaît.</figcaption>
     </figure>
 
     <div class="pass-tip">
         Deux chiffres à ne pas mélanger : <strong>~600 gènes</strong> chez l'ancêtre commun, <strong>20 000 à 30 000 gènes</strong> chez l'humain aujourd'hui. Et un seul mécanisme pour passer de l'un à l'autre : la <strong>duplication</strong> et la <strong>mutation</strong> des gènes.
     </div>
+
+    <div class="mnemo-box"><span class="lbl">L'analogie — la trace fossile</span><b>Point clé :</b> le <b>ribosome</b>, qui fabrique toutes les protéines, est lui-même un <b>ribozyme</b> ! Son cœur catalytique est fait d'<b>ARN</b>, pas de protéines. C'est une <b>« trace fossile »</b> du monde ARN primitif.</div>
 
     <div class="recap">
         <div class="box retenir">

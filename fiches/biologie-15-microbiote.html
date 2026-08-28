@@ -52,6 +52,7 @@
     .step .txt { font-size: 14.5px; line-height: 1.5; color: #2c3e50; padding-top: 2px; }
     .step .txt b { color: #4C2A85; font-weight: 700; }
     .step .txt .gl { color: #6b6275; font-weight: 400; }
+    .gl { color: #6b6275; font-weight: 400; }
     .step .txt .lead { font-weight: 800; color: #1A1A2E; }
     .pass-tip { background: #fdf6ec; border-left: 6px solid #B8895A; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; box-shadow: 0 3px 12px rgba(184,137,90,0.14); font-size: 14.5px; line-height: 1.55; }
     .pass-tip::before { content: "Le réflexe P1"; display: block; font-weight: 700; font-size: 12px; color: #9a6a37; margin-bottom: 7px; letter-spacing: 0.8px; text-transform: uppercase; }
@@ -166,11 +167,11 @@
     <header class="hook-header">
         <div class="brand-tag">Ressource gratuite</div>
         <h1 class="course-title">Le microbiote : 1 à 2 kg d'alliées</h1>
-        <p class="punch">Une bactérie, tu sais maintenant à quoi ça <span class="accent">ressemble</span>.</p>
-        <p class="punch">Dans ton intestin, il y en a <span class="accent">autant</span> que tu as de cellules.</p>
+        <p class="punch">Tu viens de <span class="accent">séparer</span> les procaryotes des eucaryotes.</p>
+        <p class="punch">Dans ton intestin, il y a <span class="accent">autant</span> des premiers que des seconds.</p>
     </header>
 
-    <p class="intro">La fiche précédente a ouvert <strong>une</strong> bactérie : paroi, membrane, ribosomes 70S, nucléoïde. Celle-ci change d'échelle. Le <strong>microbiote</strong> désigne l'ensemble des micro-organismes — bactéries, archées, champignons, virus — qui vivent <strong>en symbiose</strong> avec notre corps. C'est le premier moment du chapitre où la biologie cellulaire devient <em class="hl">directement de la médecine</em> : ces bactéries-là ne nous attaquent pas, elles travaillent pour nous.</p>
+    <p class="intro">La fiche précédente a posé les <strong>codes-barres</strong> qui séparent les <strong>procaryotes</strong> <span class="gl">(ARNr 16S)</span> des <strong>eucaryotes</strong> <span class="gl">(ARNr 18S)</span> — deux mondes bien rangés, chacun sur sa branche. Celle-ci les fait cohabiter. Le <strong>microbiote</strong> désigne l'ensemble des micro-organismes — bactéries, archées, champignons, virus — qui vivent <strong>en symbiose</strong> avec notre corps. C'est le premier moment du chapitre où la biologie cellulaire devient <em class="hl">directement de la médecine</em> : ces bactéries-là ne nous attaquent pas, elles travaillent pour nous.</p>
 
     <div class="steps">
         <div class="steps-title">Le microbiote intestinal, en chiffres</div>
@@ -214,6 +215,12 @@
         </ol>
     </div>
 
+    <figure class="schema-box" style="margin: 20px 0;">
+        <span class="schema-num">Les trois grandes fonctions du microbiote intestinal</span>
+        <img src="../images/biologie/ch1_microbiote_roles.png" alt="Les trois familles de rôles du microbiote intestinal : fonctions métaboliques, fonctions immunitaires et fonctions neurologiques" onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
+        <figcaption class="caption"><strong>Trois colonnes, trois familles</strong> — et une image par famille, qui te donne l'endroit du corps concerné. <strong>Vert, fonctions métaboliques</strong> : l'intestin, avec les flèches qui traversent la paroi — digestion des fibres, acides gras, vitamines <strong>K</strong> et <strong>B12</strong>. <strong>Bleu, fonctions immunitaires</strong> : le bouclier, et les bactéries repoussées à l'extérieur — c'est l'<strong>effet barrière</strong> dessiné. <strong>Violet, fonctions neurologiques</strong> : la double flèche entre le cerveau et l'intestin, c'est l'<strong>axe intestin-cerveau</strong>. <strong>⚠️ Le bandeau du bas est à corriger</strong> : il affiche « 10<sup>14</sup> bactéries », alors que le chiffre à retenir est celui du cours — de l'ordre de <strong>10<sup>13</sup></strong>, soit à peu près autant que nos propres cellules. Les deux autres valeurs du bandeau, elles, sont bonnes : <strong>1000+ espèces</strong> et <strong>1-2 kg</strong>.</figcaption>
+    </figure>
+
     <p class="intro">Un mot à connaître pour la suite : la <strong>dysbiose</strong>. C'est le <strong>déséquilibre du microbiote</strong>, et il est associé à de nombreuses pathologies : <strong>obésité</strong>, <strong>diabète</strong>, <strong>maladies inflammatoires intestinales</strong>, <strong>dépression</strong>… Tu comprends pourquoi le sujet intéresse autant la médecine : ce n'est plus un détail de biologie, c'est un facteur de maladie.</p>
 
     <p class="intro">Deux points à savoir citer, sans les développer. D'abord, l'intestin n'est pas le seul territoire : il existe aussi un <strong>microbiote cutané</strong> <span style="color:#6b6275">(protège la peau, participe à l'immunité locale)</span>, un <strong>microbiote buccal</strong> <span style="color:#6b6275">(700 espèces, rôle dans la santé dentaire)</span> et un <strong>microbiote vaginal</strong> <span style="color:#6b6275">(dominé par les lactobacilles, protège contre les infections)</span>. Ensuite, l'application médicale : la <strong>transplantation de microbiote fécal (TMF)</strong> — on transfère le microbiote d'un donneur sain vers un patient malade — est utilisée pour traiter les <strong>infections récidivantes à <em>Clostridium difficile</em></strong>.</p>
@@ -228,6 +235,8 @@
             Le microbiote n'est <b>pas fait que de bactéries</b> : c'est l'ensemble des micro-organismes vivant en symbiose avec nous — <b>bactéries</b>, <b>archées</b>, <b>champignons</b> et <b>virus</b>. Et attention au ratio : selon la formulation de l'énoncé, <b>10:1</b> <span style="color:#6b6275">(version ancienne)</span> ou <b>1:1</b> <span style="color:#6b6275">(version 2016)</span>.
         </div>
     </div>
+
+    <p class="intro">Des bactéries qui vivent <strong>dans</strong> nous sans nous nuire, tu viens de voir que c'est possible — et même permanent. Il reste à découvrir jusqu'où cette cohabitation a pu aller : <em class="hl">certaines bactéries ne sont pas seulement entrées dans notre corps, elles sont entrées dans nos cellules — et n'en sont jamais ressorties</em>. C'est la fiche suivante.</p>
 
     <a class="qcm-cta" style="display:none" href="/ressources/qcm-decouverte/decouverte-biologie-microbiote" target="_top">
         <span class="qcm-body">
