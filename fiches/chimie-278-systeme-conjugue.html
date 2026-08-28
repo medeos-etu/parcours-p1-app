@@ -67,6 +67,9 @@
     .chem .chem-lbl { display: block; font-size: 11.5px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; color: #6B46C1; margin-bottom: 9px; }
     .chem .chem-eq { font-family: 'SFMono-Regular', Consolas, 'Courier New', monospace; font-size: 17px; font-weight: 700; color: #1A1A2E; line-height: 1.6; overflow-wrap: anywhere; }
     .chem .chem-eq .brk { color: #c0392b; }
+    .chem .chem-eq + .chem-eq { margin-top: 9px; }
+    .chem .chem-eq .nm { font-family: 'Segoe UI', Tahoma, sans-serif; font-size: 13px; font-weight: 600; color: #6b6275; margin-right: 12px; }
+    .chem .chem-eq .vd { font-family: 'Segoe UI', Tahoma, sans-serif; font-size: 13.5px; font-weight: 700; margin-left: 12px; }
     .chem .chem-note { font-size: 12.5px; color: #6b6275; margin-top: 10px; line-height: 1.5; }
     .recap { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
     .recap .box { border-radius: 12px; padding: 15px 18px; font-size: 14px; line-height: 1.5; }
@@ -179,16 +182,18 @@
         <p class="punch">Voici enfin ce que c'est, ce qui la <span class="accent">casse</span> — et ce qu'elle change.</p>
     </header>
 
-    <p class="intro">Jusqu'ici la conjugaison est apparue comme une <strong>condition</strong> : l'effet mésomère ne peut pas fonctionner sans elle, parce qu'il faut que les <strong>orbitales p se chevauchent sans interruption</strong>. On a repoussé la définition deux fois — la voici. Jusqu'à maintenant, on a travaillé avec des alcènes qui n'avaient <strong>qu'une seule</strong> double liaison C=C. Mais certaines molécules en possèdent <strong>plusieurs</strong>. Et quand ces doubles liaisons sont séparées par <em class="hl">exactement une liaison simple</em>, quelque chose de spécial se produit : les électrons π ne restent plus « coincés » dans leur double liaison — ils peuvent <strong>circuler</strong> sur toute la zone.</p>
+    <p class="intro">Jusqu'ici la conjugaison est apparue comme une <strong>condition</strong> : l'effet mésomère ne peut pas fonctionner sans elle, parce qu'il faut que les <strong>orbitales p se chevauchent sans interruption</strong>. On a repoussé la définition deux fois — la voici.</p>
+
+    <p class="intro">Jusqu'à maintenant, on a travaillé avec des alcènes qui n'avaient <strong>qu'une seule</strong> double liaison C=C. Mais certaines molécules en possèdent <strong>plusieurs</strong>. Et quand ces doubles liaisons sont séparées par <em class="hl">exactement une liaison simple</em>, quelque chose de spécial se produit : les électrons π ne restent plus « coincés » dans leur double liaison — ils peuvent <strong>circuler</strong> sur toute la zone.</p>
 
     <p class="intro">Un système est <strong>conjugué</strong> quand il y a une alternance régulière de liaisons doubles et simples, <strong>sans interruption</strong> : <strong>C=C−C=C</strong>. Concrètement, ça veut dire trois choses.</p>
 
     <div class="steps">
-        <div class="steps-title">Système conjugué = alternance continue C=C−C=C</div>
+        <div class="steps-title">Les 3 conditions, concrètement</div>
         <ol>
             <li class="step">
                 <span class="n">1</span>
-                <span class="txt"><span class="lead">Chaque atome de la chaîne est sp².</span> <span class="gl">(= il possède une orbitale p perpendiculaire au plan)</span></span>
+                <span class="txt"><span class="lead">Chaque atome de la chaîne est sp².</span> <span class="gl">(= il possède une orbitale p perpendiculaire au plan de la molécule)</span></span>
             </li>
             <li class="step">
                 <span class="n">2</span>
@@ -213,8 +218,8 @@
 
     <div class="chem">
         <span class="chem-lbl">Conjugué ou pas — le seul point à vérifier</span>
-        <div class="chem-eq">buta-1,3-diène &nbsp; CH₂=CH−CH=CH₂ &nbsp; ✅ conjugué</div>
-        <div class="chem-eq">penta-1,4-diène &nbsp; CH₂=CH−<span class="brk">CH₂</span>−CH=CH₂ &nbsp; ❌ isolé</div>
+        <div class="chem-eq"><span class="nm">buta-1,3-diène</span>CH₂=CH−CH=CH₂<span class="vd">✅ conjugué</span></div>
+        <div class="chem-eq"><span class="nm">penta-1,4-diène</span>CH₂=CH−<span class="brk">CH₂</span>−CH=CH₂<span class="vd">❌ isolé</span></div>
         <div class="chem-note">Même nombre de doubles liaisons dans les deux cas. La différence tient au carbone du milieu : sp² à gauche, <b>sp³ à droite</b>.</div>
     </div>
 
@@ -226,25 +231,27 @@
         <div class="steps-title">Les 3 conséquences concrètes de la conjugaison</div>
         <ol>
             <li class="step">
-                <span class="n">①</span>
+                <span class="n">1</span>
                 <span class="txt"><span class="lead">La liaison simple du milieu raccourcit.</span> Dans le buta-1,3-diène (CH₂=CH<b>−</b>CH=CH₂), la liaison C−C simple entre les deux doubles liaisons ne mesure pas <b>1,54 Å</b> <span class="gl">(comme une liaison simple normale)</span> mais <b>1,47 Å</b>. Pourquoi ? Parce que les électrons π circulent <b>aussi à travers elle</b> — elle a un « caractère partiel de double liaison ». C'est une <b>preuve directe</b> que la délocalisation est réelle.</span>
             </li>
             <li class="step">
-                <span class="n">②</span>
-                <span class="txt"><span class="lead">La molécule est plus stable</span> <span class="gl">(énergie plus basse)</span>. Un système conjugué a une énergie <b>plus basse</b> qu'un système avec des doubles liaisons isolées. Cette stabilisation s'appelle <b>énergie de résonance</b>.</span>
+                <span class="n">2</span>
+                <span class="txt"><span class="lead">La molécule est plus stable.</span> Un système conjugué a une énergie <b>plus basse</b> qu'un système avec des doubles liaisons isolées. Cette stabilisation s'appelle <b>énergie de résonance</b>.</span>
             </li>
             <li class="step">
-                <span class="n">③</span>
+                <span class="n">3</span>
                 <span class="txt"><span class="lead">La molécule reste plane.</span> Pour que les orbitales p se chevauchent bien, il faut qu'elles restent <b>parallèles</b> → la molécule préfère rester <b>plane</b>. Si on tordait la molécule, le chevauchement diminuerait et on <b>perdrait la stabilisation</b>. C'est pour ça que les systèmes conjugués <span class="gl">(comme le benzène)</span> sont plats.</span>
             </li>
         </ol>
     </div>
 
-    <div class="mnemo-box"><span class="lbl">L'analogie — les pieds de table</span>Délocaliser des électrons sur plusieurs atomes, c'est comme <b>répartir un poids sur plusieurs pieds de table au lieu d'un seul</b> : c'est plus stable.</div>
+    <div class="mnemo-box"><span class="lbl">L'analogie — les pieds de table, pourquoi c'est plus stable</span>Délocaliser des électrons sur plusieurs atomes, c'est comme <b>répartir un poids sur plusieurs pieds de table au lieu d'un seul</b> : c'est plus stable.</div>
 
     <div class="pass-tip">
         Devant une molécule à plusieurs doubles liaisons, ne compte pas les doubles liaisons : regarde <strong>ce qu'il y a entre elles</strong>. Une seule liaison simple et des atomes tous sp² → système conjugué. Un carbone <strong>sp³</strong> au milieu → doubles liaisons isolées, plus d'effet mésomère possible. Et si un énoncé te donne une liaison simple à <strong>1,47 Å</strong>, il te dit en creux qu'il y a délocalisation.
     </div>
+
+    <p class="intro">Reste à voir ce que la conjugaison fait quand elle rencontre une <strong>charge</strong>. Un carbocation collé à une double liaison, c'est exactement la même délocalisation — mais cette fois appliquée à une charge + à diluer. Et ça <em class="hl">bouscule l'échelle de stabilité des carbocations</em> que tu connais déjà. C'est la fiche suivante.</p>
 
     <div class="recap">
         <div class="box retenir">

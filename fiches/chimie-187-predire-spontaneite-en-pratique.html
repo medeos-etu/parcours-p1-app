@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prédire la spontanéité en pratique et calculer ΔᵣG° à partir de ΔᵣH° et ΔᵣS° — Fiche Medeos</title>
+<title>Prédire la spontanéité en pratique : ΔG = ΔH − TΔS — Fiche Medeos</title>
 <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
@@ -187,15 +187,17 @@
 
     <header class="hook-header">
         <div class="brand-tag">Ressource gratuite</div>
-        <h1 class="course-title">Prédire la spontanéité en pratique et calculer ΔᵣG° à partir de ΔᵣH° et ΔᵣS°</h1>
+        <h1 class="course-title">Prédire la spontanéité en pratique : ΔG = ΔH − TΔS</h1>
         <p class="punch">Le tableau des 4 cas donne le <span class="accent">verdict</span>.</p>
         <p class="punch">La formule donne le <span class="accent">chiffre</span> — mais seulement si les unités sont bonnes.</p>
     </header>
 
-    <p class="intro">Tu viens de voir les <strong>4 cas ΔH / ΔS</strong> : signes <strong>opposés</strong> → le résultat est fixé quelle que soit T ; <strong>même signe</strong> → il y a compétition, et c'est la température qui tranche, autour de la température d'inversion <strong>T* = ΔH / ΔS</strong>. Ici, on ne réexplique pas le tableau : <em class="hl">on l'applique</em>. Et on ajoute la troisième méthode de calcul de ΔᵣG°, celle qui part de ΔᵣH° et ΔᵣS°.</p>
+    <p class="intro">Tu viens de voir les <strong>4 cas ΔH / ΔS</strong> : signes <strong>opposés</strong> → le résultat est fixé quelle que soit T ; <strong>même signe</strong> → il y a compétition, et c'est la température qui tranche, autour de la température d'inversion <strong>T* = ΔH / ΔS</strong>. Ici, on ne réexplique pas le tableau : <em class="hl">on l'applique</em>. Et on y ajoute la formule qui sort ΔᵣG° dès qu'on connaît ΔᵣH° et ΔᵣS° — <strong>la première des trois routes</strong> qui mènent à ΔᵣG° <span style="color:#6b6275">(les deux autres sont dans les fiches suivantes ; toutes les trois tombent au concours)</span>.</p>
+
+    <p class="intro">📎 <strong>Notation</strong> : le <strong>ᵣ</strong> <span style="color:#6b6275">(indice « r » de réactionnel)</span> précise que ΔᵣG° est la variation d'énergie libre pour une <strong>réaction donnée</strong>, exprimée par mole de réaction ; le <strong>°</strong> indique les <strong>conditions standard</strong> (25 °C, 1 bar). Dans ΔG = ΔH − TΔS, le ᵣ est souvent omis par simplification — au concours, les deux notations sont acceptées.</p>
 
     <div class="formula-hero">
-        <span class="fh-k">Méthode 3 — via ΔH et ΔS</span>
+        <span class="fh-k">Calcul de ΔᵣG° via H et S</span>
         <span class="fh-f">ΔᵣG° = ΔᵣH° − T × ΔᵣS°</span>
         <span class="fh-note"><b>T en Kelvin</b>, toujours. Et <b>ΔH° est souvent donné en kJ/mol</b> alors que <b>ΔS° est en J·K⁻¹·mol⁻¹</b> → convertir avant de calculer !</span>
     </div>
@@ -227,7 +229,7 @@
         <ol>
             <li class="step">
                 <span class="n">1</span>
-                <span class="txt"><span class="lead">Spontanée à 25 °C (≈ 300 K) ?</span> ΔG = ΔH − TΔS = 60 000 − 300 × 200 = 60 000 − 60 000 = <b>0 J</b> → ΔG = 0 → on est pile à la <b>température d'inversion</b> !</span>
+                <span class="txt"><span class="lead">Spontanée à 25 °C (≈ 300 K) ?</span> ΔG = ΔH − TΔS = 60 000 − 300 × 200 = 60 000 − 60 000 = <b>0 J</b> → ΔG = 0 → <b>ni spontanée, ni non spontanée</b> : c'est l'équilibre. On est pile à la <b>température d'inversion</b> !</span>
             </li>
             <li class="step">
                 <span class="n">2</span>
@@ -240,7 +242,7 @@
         </ol>
     </div>
 
-    <p class="intro">Voilà le réflexe qui fait gagner le plus de temps au concours : très souvent, <strong>on n'a même pas besoin de calculer</strong>. Regarde d'abord les signes. Trois réactions, données dans les conditions standard :</p>
+    <p class="intro">Voilà le réflexe qui fait gagner le plus de temps au concours : très souvent, <em class="hl">on n'a même pas besoin de calculer</em>. La méthode tient en deux lignes. Signes <strong>opposés</strong> → le signe de ΔG est fixé, aucun calcul à faire. <strong>Même signe</strong> → ΔG dépend de T, calcule <strong>T* = |ΔH°/ΔS°|</strong>. Applique-la à ce QCM type concours : trois réactions, données dans les conditions standard, et cinq propositions à trancher.</p>
 
     <div class="tbl-wrap">
         <table class="tbl">
@@ -256,7 +258,7 @@
     </div>
 
     <div class="pass-tip">
-        La méthode tient en deux lignes. Signes <strong>opposés</strong> → le signe de ΔG est fixé, aucun calcul à faire. <strong>Même signe</strong> → ΔG dépend de T, calcule <strong>T* = |ΔH°/ΔS°|</strong>. Les cinq propositions du QCM se cochent alors sans hésiter :
+        Les cinq propositions se départagent alors immédiatement :
         <span class="qcm-line">✅ <strong>A</strong> — « (a) est spontanée à toute température » → <strong>VRAI</strong>.</span>
         <span class="qcm-line">❌ <strong>B</strong> — « (b) est spontanée à 25 °C » → <strong>FAUX</strong> : ΔG = +270 200 J &gt; 0.</span>
         <span class="qcm-line">✅ <strong>C</strong> — « la température d'inversion de (b) est 3 000 K » → <strong>VRAI</strong>.</span>
@@ -264,7 +266,7 @@
         <span class="qcm-line">✅ <strong>E</strong> — « (c) a une température d'inversion de 750 K » → <strong>VRAI</strong>.</span>
     </div>
 
-    <p class="intro">Tu sais maintenant sortir un ΔᵣG° dès qu'on te donne ΔᵣH° et ΔᵣS°. Reste la route la plus fréquente au concours : celle qui part directement d'un tableau de valeurs de formation — c'est la fiche suivante.</p>
+    <p class="intro">Tu sais maintenant sortir un ΔᵣG° dès qu'on te donne ΔᵣH° et ΔᵣS°. Reste la deuxième route : celle qui part directement d'un <strong>tableau d'enthalpies libres de formation ΔfG°</strong> — c'est la fiche suivante.</p>
 
     <div class="recap">
         <div class="box retenir">

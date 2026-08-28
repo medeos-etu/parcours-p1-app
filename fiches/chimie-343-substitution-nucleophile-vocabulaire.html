@@ -156,6 +156,14 @@
         /* boutons de la lightbox plus gros au doigt */
         #medeos-lightbox button[aria-label="Fermer"] { width: 46px; height: 46px; font-size: 26px; }
     }
+
+    .formula-hero { background: #fff; border: 2px solid #6B46C1; border-radius: 12px; padding: 16px 20px; margin: 20px 0; text-align: center; box-shadow: 0 4px 15px rgba(107,70,193,.13); }
+    .formula-hero .fh-k { display: block; font-size: 11px; font-weight: 800; letter-spacing: .9px; text-transform: uppercase; color: #6B46C1; margin-bottom: 9px; }
+    .formula-hero .fh-f { font-size: 21px; font-weight: 800; color: #1A1A2E; letter-spacing: -.2px; line-height: 1.35; }
+    .formula-hero .fh-note { font-size: 12.5px; color: #6b6275; margin-top: 9px; font-weight: 500; }
+    .formula-hero .fh-note b { color: #4C2A85; }
+    @media print { .formula-hero { page-break-inside: avoid; box-shadow: none; } .formula-hero .fh-f { font-size: 25px; } .formula-hero .fh-note { font-size: 14px; } }
+    @media (max-width: 600px) { .formula-hero { padding: 15px 15px; } .formula-hero .fh-f { font-size: 18px; } }
 </style>
 </head>
 <body>
@@ -170,7 +178,7 @@
         <p class="punch">Toute la question, c'est de savoir dans quel ordre.</p>
     </header>
 
-    <p class="intro">La fiche précédente s'est arrêtée au moment où le groupe partant s'en va : le <strong>−OH</strong> ne part pas tel quel, il faut d'abord le protoner en <strong>−OH₂⁺</strong> pour qu'il puisse partir sous forme d'eau. Tu sais aussi que la <strong>classe</strong> de l'alcool (I°, II°, III°) détermine l'encombrement autour du carbone et la stabilité du carbocation éventuel. Ce sont les deux pré-requis. Passons à l'étape suivante : <em class="hl">une fois que le groupe partant est parti, qui vient le remplacer ?</em></p>
+    <p class="intro">La fiche précédente s'est arrêtée au moment où le groupe partant s'en va : le <strong>−OH</strong> ne part pas tel quel, il faut d'abord le protoner en <strong>−OH₂⁺</strong> pour qu'il puisse partir sous forme d'eau. Tu sais aussi que la <strong>classe</strong> de l'alcool (I°, II°, III°) détermine l'encombrement autour du carbone et la stabilité du <strong>carbocation</strong> éventuel <span style="color:#6b6275">(le C⁺ qu'on obtiendrait en retirant ce −OH)</span>. Ce sont les deux pré-requis. Passons à l'étape suivante : <em class="hl">une fois que le groupe partant est parti, qui vient le remplacer ?</em></p>
 
     <p class="intro">Pour comprendre le mécanisme de remplacement, prenons un exemple simple — pas directement avec un alcool, c'est plus facile à visualiser avec un halogénoalcane. Imagine un <strong>bromoéthane</strong> (CH₃CH₂−Br) : le brome Br est un bon groupe partant. Plongeons cette molécule dans une solution contenant des ions <strong>CN⁻</strong> (cyanure). Voici ce qu'on observe : le Br⁻ quitte le carbone, et le CN vient prendre sa place. Le résultat ? On a <strong>remplacé</strong> le Br par un CN → on obtient un <strong>nitrile</strong> (CH₃CH₂−CN), un composé complètement différent du départ.</p>
 
@@ -200,28 +208,36 @@
         </ol>
     </div>
 
-    <p class="intro">D'où le bilan général d'une substitution nucléophile (SN) : <strong>Nu⁻ + R−GP → R−Nu + GP⁻</strong>. Ce bilan est toujours le même — le Nu <strong>entre</strong>, le GP <strong>sort</strong>. Mais, et c'est là que ça devient passionnant, il y a <strong>deux façons</strong> radicalement différentes de réaliser cette substitution.</p>
+    <div class="formula-hero">
+        <span class="fh-k">Bilan général d'une substitution nucléophile (SN)</span>
+        <p class="fh-f">Nu⁻ + R−GP → R−Nu + GP⁻</p>
+        <p class="fh-note">Ce bilan est <b>toujours le même</b> : le Nu <b>entre</b>, le GP <b>sort</b>.</p>
+    </div>
+
+    <p class="intro">Mais — et c'est là que ça devient passionnant — il y a <strong>deux façons</strong> radicalement différentes de réaliser cette substitution. Soit tout se passe <strong>en même temps</strong> <span style="color:#6b6275">(le Nu entre pendant que le GP sort)</span>, soit ça se fait <strong>en deux temps</strong> <span style="color:#6b6275">(le GP part d'abord, puis le Nu arrive après)</span>. Ces deux mécanismes portent des noms : <strong>SN2</strong> et <strong>SN1</strong>.</p>
+
+    <div class="mnemo-box"><span class="lbl">Le mnémo</span><b>SN2</b> = les <b>2</b> acteurs (Nu + GP) bougent <b>en même temps</b> → 1 seule étape, tout simultané. <b>SN1</b> = les acteurs bougent <b>1 par 1</b>, dans l'ordre : d'abord le GP part, puis le Nu arrive → 2 étapes séquentielles. 🧠 Le chiffre = le nombre de molécules qui interviennent dans l'étape qui détermine la vitesse.</div>
+
+    <p class="intro">Reste la question clé : <em class="hl">qu'est-ce qui détermine si la réaction suit la voie SN1 ou SN2 ?</em> L'idée fondamentale est celle de la <strong>stabilité du carbocation</strong>.</p>
 
     <div class="steps">
-        <div class="steps-title">Les deux voies possibles — le chiffre te dit tout</div>
+        <div class="steps-title">Ce qui décide de la voie</div>
         <ol>
             <li class="step">
                 <span class="n">2</span>
-                <span class="txt"><span class="lead">SN2 — tout se passe en même temps.</span> Le Nu entre <b>pendant</b> que le GP sort : une seule étape. Ici, <b>aucun carbocation ne se forme jamais</b> — on contourne l'instabilité, pas besoin de stabiliser un C⁺ puisqu'il n'existe pas. Du coup, le seul critère qui compte, c'est l'<b>accessibilité du carbone</b> : un C peu encombré <span class="gl">(substrat I°)</span> est facilement accessible → SN2 favorisée ; un C très encombré <span class="gl">(III°)</span> est inaccessible → SN2 impossible.</span>
+                <span class="txt"><span class="lead">SN2 — on contourne l'instabilité.</span> Ici, <b>aucun carbocation ne se forme jamais</b> : pas besoin d'en stabiliser un puisqu'il n'existe pas ! Du coup, le seul critère qui compte, c'est l'<b>accessibilité du carbone</b> : un C <b>peu encombré</b> <span class="gl">(substrat I°)</span> est facilement accessible → <b>SN2 favorisée</b> ; un C très encombré <span class="gl">(III°)</span> est inaccessible → <b>SN2 impossible</b>.</span>
             </li>
             <li class="step">
                 <span class="n">1</span>
-                <span class="txt"><span class="lead">SN1 — ça se fait en deux temps.</span> Le GP part <b>d'abord</b>, puis le Nu arrive <b>après</b>. Le départ du GP crée un <b>carbocation</b> (C⁺), et pour que ça marche ce carbocation doit être <b>stable</b> — sinon il ne se forme pas. Or un carbocation III° est très bien stabilisé <span class="gl">(3 groupes +I)</span>. Voilà pourquoi la SN1 se fait majoritairement sur les <b>substrats tertiaires</b> : elle mise sur la stabilité.</span>
+                <span class="txt"><span class="lead">SN1 — on mise sur la stabilité.</span> Le départ du GP crée un <b>carbocation</b> (C⁺), et pour que ça marche, ce carbocation doit être <b>stable</b> — sinon il ne se forme pas. Or un carbocation III° est très bien stabilisé <span class="gl">(3 groupes +I)</span>. Voilà pourquoi la SN1 se fait <b>majoritairement sur les substrats tertiaires</b>.</span>
             </li>
         </ol>
     </div>
 
-    <div class="mnemo-box"><span class="lbl">Le mnémo</span><b>SN2</b> = les <b>2</b> acteurs (Nu + GP) bougent <b>en même temps</b> → 1 seule étape, tout simultané. <b>SN1</b> = les acteurs bougent <b>1 par 1</b>, dans l'ordre : d'abord le GP part, puis le Nu arrive → 2 étapes séquentielles. 🧠 Le chiffre = le nombre de molécules qui interviennent dans l'étape qui détermine la vitesse.</div>
-
     <p class="intro">Retiens la bifurcation, pas encore les détails : les deux fiches suivantes déroulent ces mécanismes étape par étape, la <strong>SN2</strong> d'abord, la <strong>SN1</strong> ensuite.</p>
 
     <div class="pass-tip">
-        Devant une substitution, repère d'abord <strong>qui sort</strong> (le GP) et <strong>qui entre</strong> (le Nu) — puis regarde la <strong>classe du substrat</strong>, c'est elle qui tranche. Le problème n'est pas le même des deux côtés : en <strong>SN2</strong> c'est l'<strong>encombrement</strong> → les substrats peu encombrés (I°) gagnent ; en <strong>SN1</strong> c'est la <strong>stabilité du carbocation</strong> → les substrats qui donnent un C⁺ stable (III°) gagnent.
+        Devant une substitution, commence toujours par nommer les acteurs : <strong>qui sort</strong> (le groupe partant, ou nucléofuge) et <strong>qui entre</strong> (le nucléophile). Tu tiens le bilan de la réaction en une ligne. Ensuite seulement, regarde la <strong>classe du substrat</strong> (I°, II°, III°) : c'est elle qui tranche entre les deux voies.
     </div>
 
     <div class="recap">
@@ -231,7 +247,7 @@
         </div>
         <div class="box piege">
             <span class="lbl">Le piège</span>
-            Le chiffre de SN1 / SN2 n'est <b>pas</b> le nombre d'étapes qu'on voit, c'est le nombre de molécules qui interviennent dans l'étape <b>qui détermine la vitesse</b>. La SN1 a bien 2 étapes, et pourtant son ordre est <b>1</b> : le nucléophile n'intervient pas dans l'étape lente.
+            Le chiffre de SN1 / SN2 n'est <b>pas</b> le nombre d'étapes qu'on voit. La SN1 a bien <b>2 étapes</b>, et pourtant son ordre est <b>1</b> : sa vitesse ne dépend <b>que</b> du substrat, le nucléophile n'intervient pas dans l'étape lente.
         </div>
     </div>
 

@@ -63,6 +63,14 @@
             letter-spacing:.8px; text-transform:uppercase; }
         .mnemo-box b { color:#4C2A85; }
 
+    .qcm-cta { display: flex; align-items: center; gap: 16px; text-decoration: none; color: inherit; background: #fff; border: 1px solid #d6c6f0; border-radius: 14px; padding: 18px 22px; margin: 24px 0 6px; box-shadow: 0 9px 26px -16px rgba(107,70,193,.4); transition: transform .18s ease, box-shadow .18s ease; }
+    .qcm-cta:hover { transform: translateY(-2px); box-shadow: 0 16px 38px -16px rgba(107,70,193,.5); }
+    .qcm-cta:focus-visible { outline: 3px solid #6B46C1; outline-offset: 2px; }
+    .qcm-cta .qcm-body { flex: 1; }
+    .qcm-cta .qcm-k { font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #6B46C1; }
+    .qcm-cta .qcm-t { font-size: 18px; font-weight: 800; color: #1A1A2E; margin-top: 3px; letter-spacing: -0.3px; }
+    .qcm-cta .qcm-arrow { flex: none; width: 42px; height: 42px; border-radius: 11px; background: #6B46C1; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700; }
+    .bio-hint { display: none; }
     .recap { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
     .recap .box { border-radius: 12px; padding: 15px 18px; font-size: 14px; line-height: 1.5; }
     .recap .retenir { background: #F1ECFA; border: 1px solid #dccff2; }
@@ -96,11 +104,17 @@
         .step .n { width: 30px; height: 30px; font-size: 14px; }
         .step .txt { font-size: 16.5px; line-height: 1.5; padding-top: 2px; }
         .pass-tip { padding: 16px 22px; margin: 18px 0; font-size: 16.5px; box-shadow: none; }
+        .qcm-cta { padding: 17px 24px; margin: 18px 0 6px; box-shadow: none; }
+        .qcm-cta .qcm-k { font-size: 12.5px; }
+        .qcm-cta .qcm-t { font-size: 20px; }
+        .qcm-cta .qcm-arrow { width: 44px; height: 44px; font-size: 20px; }
+        .bio-hint { display: block; text-align: center; margin: 12px 0 0; font-size: 17px; font-weight: 800; color: #6B46C1; }
+        .bio-hint strong { color: #4C2A85; }
         .recap { gap: 16px; margin: 18px 0; }
         .recap .box { padding: 15px 20px; font-size: 15.5px; }
         .recap .box .lbl { font-size: 12.5px; }
         .chapter-footer { margin-top: 14px; padding-top: 12px; font-size: 14px; }
-        .schema-2up, .schema-box, .steps, .recap, .pass-tip, .mnemo-box { page-break-inside: avoid; }
+        .schema-2up, .schema-box, .steps, .recap, .pass-tip, .mnemo-box, .qcm-cta { page-break-inside: avoid; }
     }
     @media (max-width: 600px) {
         body { padding: 14px; }
@@ -136,6 +150,9 @@
         .steps { padding: 18px 16px; }
         .steps .steps-title { font-size: 15px; }
         .step .txt { font-size: 14.5px; }
+        .qcm-cta { padding: 15px 16px; gap: 12px; }
+        .qcm-cta .qcm-t { font-size: 16px; }
+        .qcm-cta .qcm-arrow { width: 38px; height: 38px; font-size: 18px; }
         /* boutons de la lightbox plus gros au doigt */
         #medeos-lightbox button[aria-label="Fermer"] { width: 46px; height: 46px; font-size: 26px; }
     }
@@ -157,7 +174,9 @@
 
     <p class="intro"><strong>La règle cruciale : les doublets non liants sont plus « gros ».</strong> Un doublet <strong>non liant (E)</strong> occupe <strong>plus d'espace</strong> qu'un doublet liant (X). Pourquoi ?</p>
 
-    <div class="mnemo-box"><span class="lbl">L'analogie — le nuage électronique</span>Imagine deux électrons dans un doublet comme un « <b>nuage</b> » électronique : • Un <b>doublet liant (X)</b> est <b>attiré par 2 noyaux</b> (celui de l'atome central + celui de l'atome voisin) → le nuage est « étiré » entre les deux, il est <b>comprimé</b>, plus mince. • Un <b>doublet non liant (E)</b> n'est attiré que par <b>1 seul noyau</b> (l'atome central) → le nuage est <b>plus libre</b>, il s'étale davantage autour du noyau, il est plus « gros » et occupe plus d'espace angulaire.</div>
+    <div class="mnemo-box"><span class="lbl">L'analogie — le nuage électronique</span>Imagine deux électrons dans un doublet comme un « <b>nuage</b> » électronique :<br>
+    • Un <b>doublet liant (X)</b> est <b>attiré par 2 noyaux</b> (celui de l'atome central + celui de l'atome voisin) → le nuage est « étiré » entre les deux, il est <b>comprimé</b>, plus mince.<br>
+    • Un <b>doublet non liant (E)</b> n'est attiré que par <b>1 seul noyau</b> (l'atome central) → le nuage est <b>plus libre</b>, il s'étale davantage autour du noyau, il est plus « gros » et occupe plus d'espace angulaire.</div>
 
     <p class="intro"><strong>Conséquence</strong> : les doublets E repoussent plus fort les autres doublets → les <strong>angles se ferment</strong> quand il y a des doublets non liants.</p>
 
@@ -174,7 +193,7 @@
         <ol>
             <li class="step">
                 <span class="n">1</span>
-                <span class="txt"><span class="lead">CH₄</span> — AX₄, <b>0 doublet E</b> : angle = <b>109°28'</b>. <span class="gl">Aucun doublet non liant sur le carbone : c'est l'angle de départ, celui que les deux suivants vont refermer.</span></span>
+                <span class="txt"><span class="lead">CH₄</span> — AX₄, <b>0 doublet E</b> : angle = <b>109°28'</b> → <b>tétraèdre parfait</b>. <span class="gl">Aucun doublet non liant sur le carbone : rien ne vient déformer la figure, c'est l'angle de référence que les deux suivants vont refermer.</span></span>
             </li>
             <li class="step">
                 <span class="n">2</span>
@@ -190,7 +209,7 @@
     <p class="intro"><strong>Règle générale</strong> : doublet E &gt; doublet liant en termes de répulsion → <em class="hl">E–E &gt; E–X &gt; X–X</em>. Deux doublets non liants se repoussent plus fort que ne le font un doublet non liant et une liaison, qui se repoussent eux-mêmes plus fort que deux liaisons entre elles.</p>
 
     <div class="pass-tip">
-        Devant une étiquette AXₘEₙ, regarde <strong>n</strong> avant de parler d'angle. n = 0 → l'angle reste celui de départ. Chaque <strong>E</strong> en plus le <strong>referme</strong> un peu. Et si on te fait comparer deux molécules qui ont le même nombre de doublets autour de l'atome central, la réponse tient en une ligne : c'est celle qui a le plus de <strong>E</strong> qui a le plus <strong>petit</strong> angle.
+        Devant une étiquette AXₘEₙ, regarde <strong>n</strong> avant de parler d'angle. n = 0 → aucun doublet non liant, rien ne referme l'angle. Chaque <strong>E</strong> en plus le <strong>referme</strong> un peu. Et si on te fait comparer deux molécules qui ont le même nombre de doublets autour de l'atome central, la réponse tient en une ligne : c'est celle qui a le plus de <strong>E</strong> qui a le plus <strong>petit</strong> angle.
     </div>
 
     <p class="intro">Cette règle ne sert pas qu'ici : tu vas la réappliquer <strong>telle quelle</strong> dans toute la suite du chapitre. À chaque fois qu'un E apparaît dans l'étiquette, l'angle annoncé se referme.</p>
@@ -198,13 +217,22 @@
     <div class="recap">
         <div class="box retenir">
             <span class="lbl">À retenir</span>
-            Un doublet <b>non liant (E)</b> n'est attiré que par <b>1 seul noyau</b> : son nuage s'étale, il est plus « gros » qu'un doublet liant et occupe plus d'espace angulaire. Il repousse donc <b>plus fort</b>. Conséquence : plus <b>n</b> est grand, plus l'angle <b>se ferme</b> — <b>109°28'</b> (CH₄) → <b>107°</b> (NH₃) → <b>104,5°</b> (H₂O).
+            Un doublet <b>non liant (E)</b> n'est attiré que par <b>1 seul noyau</b> : son nuage s'étale, il est plus « gros » qu'un doublet liant et occupe plus d'espace angulaire. Il repousse donc <b>plus fort</b> — ordre de répulsion : <b>E–E &gt; E–X &gt; X–X</b>. Conséquence : plus <b>n</b> est grand, plus l'angle <b>se ferme</b> — <b>109°28'</b> (CH₄) → <b>107°</b> (NH₃) → <b>104,5°</b> (H₂O).
         </div>
         <div class="box piege">
             <span class="lbl">Le piège</span>
-            Croire que le nombre <b>total</b> de doublets suffit à fixer l'angle. CH₄, NH₃ et H₂O ont tous les trois <b>4 doublets</b> autour de l'atome central — et pourtant 109°28', 107° et 104,5°. Ce qui change, c'est <b>n</b>. Et l'ordre de répulsion ne s'inverse jamais : <b>E–E &gt; E–X &gt; X–X</b>.
+            Croire que le nombre <b>total</b> de doublets suffit à fixer l'angle. CH₄, NH₃ et H₂O ont tous les trois <b>4 doublets</b> autour de l'atome central — et pourtant 109°28', 107° et 104,5°. Ce qui change, ce n'est pas le total, c'est <b>n</b>.
         </div>
     </div>
+
+    <a class="qcm-cta" style="display:none" href="/ressources/qcm-decouverte/decouverte-chimie-vsepr-geometries" target="_top">
+        <span class="qcm-body">
+            <span class="qcm-k">Vérifie en 3 questions</span>
+            <span class="qcm-t">QCM — VSEPR et géométries</span>
+        </span>
+        <span class="qcm-arrow" aria-hidden="true">→</span>
+    </a>
+    <div class="bio-hint">📲 Pour faire le QCM gratuit → <strong>lien en bio</strong></div>
 
     <footer class="chapter-footer">
         <p>Une fiche <strong>Medeos</strong> · pour anticiper la P1, sereinement. · medeos-sante.fr</p>

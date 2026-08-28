@@ -161,6 +161,15 @@
     .tbl-note { font-size: 12.5px; color: #6b6275; margin: -10px 4px 20px; font-weight: 500; }
     @media print { .tbl-wrap { page-break-inside: avoid; } table.tbl { font-size: 16px; box-shadow: none; } table.tbl th { font-size: 12.5px; } }
     @media (max-width: 600px) { table.tbl { font-size: 13.5px; } table.tbl th, table.tbl td { padding: 9px 10px; } }
+
+    /* --- formule mise en avant --- */
+    .formula-hero { background: #fff; border: 2px solid #6B46C1; border-radius: 12px; padding: 16px 20px; margin: 20px 0; text-align: center; box-shadow: 0 4px 15px rgba(107,70,193,.13); }
+    .formula-hero .fh-k { display: block; font-size: 11px; font-weight: 800; letter-spacing: .9px; text-transform: uppercase; color: #6B46C1; margin-bottom: 9px; }
+    .formula-hero .fh-f { font-size: 21px; font-weight: 800; color: #1A1A2E; letter-spacing: -.2px; line-height: 1.35; }
+    .formula-hero .fh-note { font-size: 12.5px; color: #6b6275; margin-top: 9px; font-weight: 500; }
+    .formula-hero .fh-note b { color: #4C2A85; }
+    @media print { .formula-hero { page-break-inside: avoid; box-shadow: none; } .formula-hero .fh-f { font-size: 25px; } .formula-hero .fh-note { font-size: 14px; } }
+    @media (max-width: 600px) { .formula-hero { padding: 15px 15px; } .formula-hero .fh-f { font-size: 18px; } }
 </style>
 </head>
 <body>
@@ -172,10 +181,10 @@
         <div class="brand-tag">Ressource gratuite</div>
         <h1 class="course-title">SN1 : le groupe partant s'en va d'abord</h1>
         <p class="punch">En SN2, <span class="accent">aucun carbocation</span> ne se forme jamais.</p>
-        <p class="punch">En SN1, le carbocation est justement <span class="accent">l'étape lente</span>.</p>
+        <p class="punch">En SN1, sa formation est justement <span class="accent">l'étape lente</span>.</p>
     </header>
 
-    <p class="intro">Tu viens de voir la <strong>SN2</strong> : une seule étape, le nucléophile entre par l'arrière pendant que le groupe partant sort, et <em class="hl">aucun carbocation ne se forme jamais</em>. La <strong>SN1</strong> est le miroir exact : ici, le GP s'en va <strong>d'abord</strong>, tout seul, et le nucléophile n'arrive qu'après. Le nom le confirme — <strong>S</strong>ubstitution <strong>N</strong>ucléophile d'ordre <strong>1</strong> : la vitesse ne dépend <strong>que</strong> du substrat (R−GP), le nucléophile n'intervient pas dans l'étape qui détermine la vitesse.</p>
+    <p class="intro">Tu viens de voir la <strong>SN2</strong> : une seule étape, le nucléophile (Nu) entre par l'arrière pendant que le groupe partant (GP) sort, et <em class="hl">aucun carbocation ne se forme jamais</em>. La <strong>SN1</strong> est le miroir exact : ici, le GP s'en va <strong>d'abord</strong>, tout seul, et le nucléophile n'arrive qu'après. Le nom le confirme — <strong>S</strong>ubstitution <strong>N</strong>ucléophile d'ordre <strong>1</strong> : la vitesse ne dépend <strong>que</strong> du substrat (R−GP), le nucléophile n'intervient pas dans l'étape qui détermine la vitesse.</p>
 
     <div class="steps">
         <div class="steps-title">Les deux étapes — ce qui se passe concrètement</div>
@@ -219,7 +228,15 @@
     </div>
     <p class="tbl-note">C'est cette géométrie <b>plate</b> qui laisse une face libre au-dessus et une face libre en dessous du carbocation. Ce que le nucléophile en fait, c'est la fiche suivante.</p>
 
-    <p class="intro">De ces deux étapes découle tout le reste. <strong>Cinétique d'ordre 1</strong> : <strong>v = k[R−GP]</strong> — la vitesse ne dépend <strong>PAS</strong> du nucléophile, puisqu'il n'intervient qu'à l'étape 2, qui est rapide. <strong>Substrat favorisé : III° &gt; II° &gt;&gt; I°</strong> — c'est l'inverse de la SN2 ! Le carbocation III° est le plus stable (3 groupes +I) → il se forme facilement. Un carbocation I° est trop instable → <em class="hl">SN1 impossible sur un substrat I°</em>.</p>
+    <p class="intro">De ces deux étapes découle tout le reste, à commencer par la <strong>cinétique</strong>. Seule l'étape 1 fixe la vitesse, et elle ne met en jeu que le substrat : la SN1 est donc d'<strong>ordre 1</strong>.</p>
+
+    <div class="formula-hero">
+        <span class="fh-k">Cinétique de la SN1</span>
+        <p class="fh-f">v = k[R−GP]</p>
+        <p class="fh-note">La vitesse ne dépend <b>PAS</b> du nucléophile — il n'intervient qu'à l'étape 2, qui est rapide.</p>
+    </div>
+
+    <p class="intro">Deuxième conséquence : le <strong>substrat favorisé</strong>, <strong>III° &gt; II° &gt;&gt; I°</strong> — c'est <em class="hl">l'inverse de la SN2</em>. Le carbocation III° est le plus stable <strong>(3 groupes +I)</strong> → il se forme facilement. Un carbocation I° est trop instable → <strong>SN1 impossible sur un substrat I°</strong>.</p>
 
     <div class="steps">
         <div class="steps-title">Les conditions — et pourquoi un solvant « protique » cette fois</div>
@@ -236,7 +253,7 @@
     </div>
 
     <div class="pass-tip">
-        Devant une substitution, commence <strong>toujours</strong> par la classe du substrat : compte les carbones liés au C qui porte le groupe partant. <strong>III°</strong> → trop encombré pour une attaque arrière, donc <strong>SN1</strong>, automatiquement. <strong>I°</strong> → pas de carbocation stable possible, donc <strong>SN1 exclue</strong>. Seul le substrat <strong>II°</strong> demande de regarder les conditions : Nu faible + solvant protique → SN1.
+        Devant une SN1, le premier réflexe est <strong>énergétique</strong> : demande-toi si le carbocation peut exister. Compte les carbones liés au C qui porte le groupe partant. <strong>III°</strong> <span style="font-weight:400">(trois carbones autour)</span> → le C⁺ est bien stabilisé par ses 3 groupes +I, l'étape lente se fait → la SN1 est <strong>possible</strong>. <strong>I°</strong> <span style="font-weight:400">(un seul carbone voisin)</span> → le C⁺ serait trop instable, l'étape 1 ne démarre pas → <strong>pas de SN1</strong>.
     </div>
 
     <div class="recap">

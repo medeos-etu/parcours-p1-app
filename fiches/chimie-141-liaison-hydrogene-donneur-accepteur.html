@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La liaison hydrogène : donneur A–H et accepteur :B — Fiche Medeos</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 15px; line-height: 1.6; color: #2c3e50; background: #f6f8fb; padding: 22px; max-width: 760px; margin: 0 auto; }
+    .page-container { position: relative; }
+    .page-container::before { display: none; }
+    .page-container > * { position: relative; z-index: 1; }
+    .prod-brand { margin: 0 4px 10px; }
+    .prod-brand img { height: 30px; width: auto; display: block; border-radius: 6px; }
+    .hook-header { background: #FAF6F0; border-radius: 14px; padding: 26px 30px 22px; box-shadow: 0 4px 18px rgba(76,42,133,0.08); border: 1px solid #efe7d8; }
+    .hook-header .brand-tag { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #6B46C1; font-weight: 600; opacity: 0.85; margin-bottom: 12px; }
+    .hook-header .course-title { font-size: 28px; line-height: 1.1; font-weight: 800; color: #4C2A85; letter-spacing: -0.7px; margin: 0 0 12px; }
+    .hook-header .punch { font-size: 18px; line-height: 1.3; font-weight: 800; color: #1A1A2E; letter-spacing: -0.3px; margin: 0; }
+    .hook-header .punch span.accent { color: #6B46C1; }
+    .hook-header .punch + .punch { margin-top: 5px; }
+    .intro { font-size: 15.5px; line-height: 1.7; color: #2c3e50; margin: 20px 2px; }
+    .intro strong { font-weight: 700; color: #4C2A85; }
+    em.hl { background: linear-gradient(180deg, transparent 60%, #FCD34D 60%); font-style: normal; padding: 0 2px; }
+    .schema-box { background: #fff; border: 2px solid #6B46C1; padding: 12px; text-align: center; border-radius: 12px; box-shadow: 0 4px 15px rgba(107, 70, 193, 0.15); position: relative; overflow: hidden; }
+    .schema-box::before { content: 'medeos-sante.fr'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: 'Inter', Arial, sans-serif; font-size: 14px; font-weight: 700; color: rgba(120,120,120,0.13); letter-spacing: 2px; text-transform: uppercase; pointer-events: none; user-select: none; z-index: 5; white-space: nowrap; max-width: 92%; overflow: hidden; }
+    .schema-box img { max-width: 100%; max-height: 300px; height: auto; border-radius: 8px; display: block; margin: 0 auto; cursor: zoom-in; }
+    .schema-box .schema-num { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 0.6px; text-transform: uppercase; color: #6B46C1; margin-bottom: 6px; }
+    .schema-box .caption { font-size: 12px; color: #6b6275; margin-top: 9px; font-weight: 500; }
+    .schema-box .caption strong { color: #6B46C1; }
+    .schema-box .caption .gl { color: #8a8298; font-weight: 400; font-style: italic; }
+    .schema-box .file-target { display: none; margin-top: 10px; padding: 8px 12px; background: #e8f5e9; border: 1px solid #a5d6a7; border-radius: 6px; font-family: 'SFMono-Regular', Consolas, monospace; font-size: 11.5px; color: #1b5e20; text-align: left; line-height: 1.5; }
+    .schema-box .file-target strong { color: #2e7d32; }
+    .schema-box .generation-prompt { background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border: 2px dashed #ff9800; border-radius: 8px; padding: 13px; margin-top: 12px; text-align: left; font-size: 11.5px; color: #e65100; line-height: 1.55; white-space: pre-wrap; }
+    .schema-box .generation-prompt strong { color: #bf360c; display: block; margin-bottom: 8px; font-size: 12.5px; background: #ffcc80; padding: 7px 11px; border-radius: 4px; }
+    .schema-box .copy-prompt-btn { display: none; margin-top: 8px; padding: 6px 12px; background: #ff9800; color: #fff; border: none; border-radius: 4px; font-size: 12px; cursor: pointer; font-weight: 600; }
+    .schema-box .copy-prompt-btn:hover { background: #f57c00; }
+    .schema-box .generation-prompt { display: none; }
+    .schema-box.img-missing .generation-prompt { display: block; }
+    .schema-box.img-missing .copy-prompt-btn { display: inline-block; }
+    .schema-box.img-missing .file-target { display: block !important; }
+    .schema-2up { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; align-items: stretch; }
+    .schema-2up .schema-box { margin: 0; display: flex; flex-direction: column; }
+    .schema-2up .schema-box img { height: 230px; width: 100%; max-height: none; object-fit: contain; }
+    .schema-2up .schema-box .caption { margin-top: auto; }
+    @media (max-width: 720px) { .schema-2up { grid-template-columns: 1fr; } .schema-2up .schema-box img { height: auto; max-height: 300px; } }
+    .steps { background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%); border-left: 5px solid #6B46C1; border-radius: 0 12px 12px 0; padding: 18px 22px; margin: 20px 0; box-shadow: 0 2px 10px rgba(107,70,193,0.08); }
+    .steps .steps-title { font-size: 15px; font-weight: 800; color: #4C2A85; margin-bottom: 13px; }
+    .steps ol { list-style: none; margin: 0; padding: 0; }
+    .step { display: grid; grid-template-columns: 28px 1fr; gap: 12px; align-items: start; margin-bottom: 12px; }
+    .step:last-child { margin-bottom: 0; }
+    .step .n { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 999px; background: #6B46C1; color: #fff; font-size: 13px; font-weight: 800; }
+    .step .txt { font-size: 14.5px; line-height: 1.5; color: #2c3e50; padding-top: 2px; }
+    .step .txt b { color: #4C2A85; font-weight: 700; }
+    .step .txt .gl { color: #6b6275; font-weight: 400; }
+    .step .txt .lead { font-weight: 800; color: #1A1A2E; }
+    .steps .steps-body { font-size: 14.5px; line-height: 1.65; color: #2c3e50; }
+    .steps .steps-body + .steps-body { margin-top: 9px; }
+    .steps .steps-body b { color: #4C2A85; }
+    .pass-tip { background: #fdf6ec; border-left: 6px solid #B8895A; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; box-shadow: 0 3px 12px rgba(184,137,90,0.14); font-size: 14.5px; line-height: 1.55; }
+    .pass-tip::before { content: "Le réflexe P1"; display: block; font-weight: 700; font-size: 12px; color: #9a6a37; margin-bottom: 7px; letter-spacing: 0.8px; text-transform: uppercase; }
+    .pass-tip strong { color: #9a6a37; }
+
+        .mnemo-box { background:#F3EEFB; border-left:6px solid #6B46C1; padding:15px 20px; margin:20px 0;
+            border-radius:0 8px 8px 0; box-shadow:0 3px 12px rgba(107,70,193,.13); font-size:14.5px; line-height:1.6; }
+        .mnemo-box .lbl { display:block; font-weight:700; font-size:12px; color:#6B46C1; margin-bottom:7px;
+            letter-spacing:.8px; text-transform:uppercase; }
+        .mnemo-box b { color:#4C2A85; }
+
+    .tbl-wrap { margin: 20px 0; overflow-x: auto; }
+    table.tbl { width: 100%; border-collapse: separate; border-spacing: 0; background: #fff; border: 1px solid #dccff2; border-radius: 12px; overflow: hidden; font-size: 14.5px; box-shadow: 0 3px 12px rgba(107,70,193,.08); }
+    table.tbl th { background: #F1ECFA; color: #4C2A85; font-size: 11.5px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; text-align: left; padding: 11px 14px; }
+    table.tbl td { padding: 12px 14px; border-top: 1px solid #ece5f7; color: #2c3e50; line-height: 1.5; vertical-align: top; }
+    table.tbl td b { color: #4C2A85; }
+    table.tbl td .gl { color: #6b6275; font-weight: 400; font-size: 13.5px; }
+    .tbl-note { font-size: 12.5px; color: #6b6275; margin: -10px 4px 20px; font-weight: 500; }
+
+    .recap { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
+    .recap .box { border-radius: 12px; padding: 15px 18px; font-size: 14px; line-height: 1.5; }
+    .recap .retenir { background: #F1ECFA; border: 1px solid #dccff2; }
+    .recap .piege { background: #FFFBEB; border: 1px solid #F6E4A8; }
+    .recap .box .lbl { display: block; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 7px; }
+    .recap .retenir .lbl { color: #6B46C1; }
+    .recap .piege .lbl { color: #9a6d00; }
+    .recap b { font-weight: 700; color: #1A1A2E; }
+    .chapter-footer { text-align: center; margin-top: 22px; padding-top: 16px; border-top: 1px solid #e6dfd1; color: #7a8088; font-size: 12px; }
+    .chapter-footer strong { color: #6b6275; }
+    /* ===== IMPRESSION / PDF — format REEL 9:16 (1080×1920), agrandi pour remplir ===== */
+    @media print {
+        @page { size: 1080px 1920px; margin: 42px; }
+        body { background: #fff; padding: 0; max-width: 996px; font-size: 17px; }
+        .page-container::before { display: none; }
+        .prod-brand { margin: 0 0 12px; }
+        .prod-brand img { height: 42px; }
+        .hook-header { padding: 22px 30px; box-shadow: none; }
+        .hook-header .brand-tag { font-size: 12px; margin-bottom: 10px; }
+        .hook-header .course-title { font-size: 34px; margin-bottom: 10px; }
+        .hook-header .punch { font-size: 21px; }
+        .intro { font-size: 17px; line-height: 1.55; margin: 18px 2px; }
+        .schema-2up { margin: 18px 0; gap: 20px; }
+        .schema-box { padding: 12px; box-shadow: none; }
+        .schema-2up .schema-box img { height: 300px; }
+        .schema-box .schema-num { font-size: 12.5px; margin-bottom: 5px; }
+        .schema-box .caption { font-size: 14px; margin-top: 8px; }
+        .steps { padding: 20px 26px; margin: 18px 0; box-shadow: none; }
+        .steps .steps-title { font-size: 19px; margin-bottom: 13px; }
+        .steps .steps-body { font-size: 16.5px; }
+        .step { margin-bottom: 11px; gap: 13px; }
+        .step .n { width: 30px; height: 30px; font-size: 14px; }
+        .step .txt { font-size: 16.5px; line-height: 1.5; padding-top: 2px; }
+        .pass-tip { padding: 16px 22px; margin: 18px 0; font-size: 16.5px; box-shadow: none; }
+        .mnemo-box { padding: 16px 22px; margin: 18px 0; font-size: 16.5px; box-shadow: none; }
+        .tbl-wrap { page-break-inside: avoid; }
+        table.tbl { font-size: 16px; box-shadow: none; }
+        table.tbl th { font-size: 12.5px; }
+        .tbl-note { font-size: 14px; }
+        .recap { gap: 16px; margin: 18px 0; }
+        .recap .box { padding: 15px 20px; font-size: 15.5px; }
+        .recap .box .lbl { font-size: 12.5px; }
+        .chapter-footer { margin-top: 14px; padding-top: 12px; font-size: 14px; }
+        .schema-2up, .schema-box, .steps, .recap, .pass-tip, .mnemo-box { page-break-inside: avoid; }
+    }
+    @media (max-width: 600px) {
+        body { padding: 14px; }
+        .hook-header { padding: 22px 18px 18px; }
+        .hook-header .course-title { font-size: 24px; }
+        .hook-header .punch { font-size: 16px; }
+        .recap { grid-template-columns: 1fr; }
+        .intro, .pass-tip, .step .txt, .recap .box { text-align: left; }
+        .schema-box::before { color: rgba(107,70,193,0.20); font-size: 11px; letter-spacing: 1px; max-width: 90%; }
+        table.tbl { font-size: 13.5px; }
+        table.tbl th, table.tbl td { padding: 9px 10px; }
+    }
+
+    /* === mobile-polish + zoom-bar ordi only === */
+    /* La barre de zoom (− / 100 % / +) est réservée à l'ordinateur : sur mobile,
+       le pinch-to-zoom natif suffit. On la masque sous la largeur tactile. */
+    @media (max-width: 768px) {
+        #medeos-zoom-bar { display: none !important; }
+    }
+    /* Agencement mobile soigné : le titre ne déborde jamais, le hook respire. */
+    @media (max-width: 600px) {
+        body { padding: 14px 13px 18px; }
+        .hook-header { padding: 20px 17px 16px; }
+        .hook-header .course-title {
+            font-size: clamp(20px, 6.4vw, 25px);
+            line-height: 1.12;
+            letter-spacing: -0.4px;
+            overflow-wrap: anywhere;
+            hyphens: auto;
+        }
+        .hook-header .punch { font-size: clamp(14.5px, 4.4vw, 17px); line-height: 1.3; }
+        .hook-header .brand-tag { font-size: 10.5px; letter-spacing: 1.2px; }
+        .intro { font-size: 15px; }
+        .schema-2up { gap: 14px; }
+        .steps { padding: 18px 16px; }
+        .steps .steps-title { font-size: 15px; }
+        .step .txt { font-size: 14.5px; }
+        /* boutons de la lightbox plus gros au doigt */
+        #medeos-lightbox button[aria-label="Fermer"] { width: 46px; height: 46px; font-size: 26px; }
+    }
+</style>
+</head>
+<body>
+<div class="page-container">
+
+    <div class="prod-brand"><img src="../images/logo-medeos-violet.png" alt="Medeos"></div>
+
+    <header class="hook-header">
+        <div class="brand-tag">Ressource gratuite</div>
+        <h1 class="course-title">La liaison hydrogène : donneur A–H et accepteur :B</h1>
+        <p class="punch">Un H presque <span class="accent">nu</span>, et un doublet qui l'attire.</p>
+        <p class="punch">Deux rôles <span class="accent">opposés</span> — s'il en manque un, il n'y a pas de liaison.</p>
+    </header>
+
+    <p class="intro">Van der Waals est refermé : Keesom, Debye et London existent entre toutes les molécules, mais tout cela reste <strong>≤ 10 kJ/mol</strong>. Il existe une interaction plus forte, qui mérite une section entière : la <strong>liaison hydrogène</strong>. Elle vaut <strong>10 à 40 kJ/mol</strong> — soit jusqu'à <em class="hl">100 fois plus que Debye</em>. C'est une <strong>attraction électrostatique entre un H très appauvri en électrons et un doublet d'électrons d'un voisin</strong>.</p>
+
+    <p class="intro"><strong>Pourquoi H devient-il si δ+ ?</strong> Quand H est lié par covalence à un atome <strong>très électronégatif</strong> — <strong>F, O ou N</strong> — cet atome tire le nuage électronique tellement fort vers lui que l'hydrogène se retrouve <strong>quasi dépouillé de ses électrons</strong>. C'est beaucoup plus intense que dans un <strong>C–H</strong> ordinaire : c'est exactement pour ça que C–H ne forme pas de liaison hydrogène.</p>
+
+    <div class="mnemo-box"><span class="lbl">Le mnémo — le crochet</span>« <b>H n'est plus qu'un noyau presque nu, avec une charge δ+ très forte.</b> […] C'est ce <b>H δ+</b> qui est le « <b>crochet</b> » de la liaison. »</div>
+
+    <div class="steps">
+        <div class="steps-title">Deux partenaires, deux rôles opposés et complémentaires</div>
+        <ol>
+            <li class="step">
+                <span class="n">1</span>
+                <span class="txt"><span class="lead">Le donneur A–H</span> — il « donne » le H δ+. <b>A est F, O ou N.</b> Par son électronégativité, A appauvrit H qui devient δ+. C'est ce H δ+ qui est le crochet de la liaison. <span class="gl">Exemples de donneurs : O–H dans l'eau, N–H dans une amine, F–H dans HF.</span></span>
+            </li>
+            <li class="step">
+                <span class="n">2</span>
+                <span class="txt"><span class="lead">L'accepteur :B</span> — il « reçoit » le H δ+ grâce à son <b>doublet non liant</b>. <b>B est aussi F, O ou N.</b> Son doublet libre <span class="gl">(paire d'électrons non engagée dans une liaison)</span> est attiré par le H δ+. <b>Sans doublet libre, pas d'accepteur.</b> <span class="gl">Exemples : le :O de l'eau, le :N d'une amine, le :O d'un carbonyle C=O.</span></span>
+            </li>
+            <li class="step">
+                <span class="n">3</span>
+                <span class="txt"><span class="lead">Les deux conditions, réunies en même temps.</span> Côté donneur : <b>un H lié à F, O ou N</b> → H est δ+. Côté accepteur : <b>un atome F, O ou N portant un doublet non liant libre</b> → doublet disponible pour l'attraction. <b>Une seule des deux ne suffit jamais.</b></span>
+            </li>
+        </ol>
+    </div>
+
+    <p class="intro"><strong>Une même molécule peut être donneur ET accepteur à la fois.</strong> C'est le cas de l'eau : chaque molécule H₂O possède <strong>deux O–H</strong> (deux donneurs potentiels) et <strong>deux doublets libres sur O</strong> (deux accepteurs potentiels). C'est pour ça que l'eau forme un <strong>réseau tridimensionnel dense</strong> de liaisons H, ce qui explique son point d'ébullition <em class="hl">anormalement élevé</em> (100 °C) malgré sa faible masse molaire (18 g/mol).</p>
+
+    <p class="intro">Dernière propriété, et c'est celle qui la sépare de tout ce que tu viens de voir : la liaison hydrogène est <strong>directionnelle</strong>. L'angle <strong>A–H···B est proche de 180°</strong> — les trois atomes sont quasi alignés. Les forces de Van der Waals, elles, étaient <strong>non directionnelles</strong> : l'orientation des molécules ne leur importait pas. Ici, si l'alignement n'y est pas, la liaison ne se fait pas.</p>
+
+    <figure class="schema-box" style="margin: 20px 0;">
+        <span class="schema-num">Anatomie d'une liaison hydrogène</span>
+        <img src="../images/chimie/chimie_ch06_fig_liaison_h_notation.png" alt="Notation d'une liaison hydrogène : le donneur A-H relié par un trait plein au H, puis trois points en pointillés vers le doublet non liant de l'accepteur B, l'ensemble A-H-B formant un angle proche de 180 degrés" onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
+        <figcaption class="caption"><strong>Trois choses à repérer.</strong> À gauche, le <strong>donneur A–H</strong> : un trait plein, c'est une vraie liaison covalente. Au milieu, les <strong>trois points</strong> ··· : c'est la liaison hydrogène elle-même, et elle seule a droit à cette notation. À droite, l'<strong>accepteur :B</strong> avec son <strong>doublet non liant</strong>. Et regarde la géométrie de l'ensemble : <strong>A, H et B sont quasi alignés, angle proche de 180°</strong>. <strong>A et B</strong> sont pris parmi <strong>F, O et N</strong>.</figcaption>
+    </figure>
+
+    <p class="intro"><strong>Mini-exercice.</strong> Pour chaque molécule, indique si elle est <strong>donneur</strong>, <strong>accepteur</strong>, <strong>les deux</strong> ou <strong>aucun</strong>. Cache la colonne de droite, puis vérifie.</p>
+
+    <div class="tbl-wrap">
+        <table class="tbl">
+            <thead>
+                <tr><th>Molécule</th><th>Ce qu'on regarde</th><th>Réponse</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>a)</b> CH₃OCH₃<br><span class="gl">diméthyléther</span></td>
+                    <td>O possède des doublets non liants → accepteur ✅. Mais pas de O–H ni N–H → pas donneur ❌</td>
+                    <td><b>Accepteur uniquement</b></td>
+                </tr>
+                <tr>
+                    <td><b>b)</b> CH₃NH₂<br><span class="gl">méthylamine</span></td>
+                    <td>N–H présent → donneur ✅. N possède un doublet non liant → accepteur ✅</td>
+                    <td><b>Les deux</b></td>
+                </tr>
+                <tr>
+                    <td><b>c)</b> CH₃CH₂CH₃<br><span class="gl">propane</span></td>
+                    <td>Que des C–H et C–C → pas de F, O ou N</td>
+                    <td><b>Aucun</b></td>
+                </tr>
+                <tr>
+                    <td><b>d)</b> CH₃COOH<br><span class="gl">acide acétique</span></td>
+                    <td>O–H → donneur ✅. Le O du C=O et le O du OH ont des doublets → accepteur ✅</td>
+                    <td><b>Les deux</b></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="pass-tip">
+        Devant une molécule, deux questions <strong>dans cet ordre</strong>. <strong>1)</strong> Y a-t-il un <strong>H lié à F, O ou N</strong> ? → elle est donneur. <strong>2)</strong> Y a-t-il un <strong>F, O ou N portant un doublet libre</strong> ? → elle est accepteur. Et pour qu'une liaison H se forme entre deux molécules, il faut un <strong>donneur d'un côté</strong> et un <strong>accepteur de l'autre</strong>.
+    </div>
+
+    <div class="recap">
+        <div class="box retenir">
+            <span class="lbl">À retenir</span>
+            Liaison hydrogène = <b>A–H ··· :B</b>, avec <b>A et B pris parmi F, O et N</b>. <b>10 à 40 kJ/mol</b>, et <b>directionnelle</b> : angle A–H···B proche de <b>180°</b>. Une même molécule peut être <b>donneur et accepteur</b> — l'eau l'est deux fois de chaque côté, d'où son réseau 3D et ses 100 °C pour M = 18 g/mol.
+        </div>
+        <div class="box piege">
+            <span class="lbl">Le piège</span>
+            <b>Erreur classique au QCM :</b> on te présente <b>C–H</b> et on te demande si une liaison H est possible. La réponse est <b>non</b> — le carbone n'est pas assez électronégatif pour rendre H suffisamment δ+. Il faut impérativement <b>F, O ou N</b> côté donneur.
+        </div>
+    </div>
+
+    <footer class="chapter-footer">
+        <p>Une fiche <strong>Medeos</strong> · pour anticiper la P1, sereinement. · medeos-sante.fr</p>
+    </footer>
+
+</div>
+
+<div id="medeos-lightbox" role="dialog" aria-label="Schéma agrandi" aria-modal="true" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(26,26,46,0.92);overflow:auto;-webkit-overflow-scrolling:touch;touch-action:pinch-zoom;cursor:zoom-out;">
+    <button type="button" aria-label="Fermer" onclick="closeLightbox()" style="position:fixed;top:14px;right:16px;z-index:10003;width:42px;height:42px;border-radius:50%;border:none;background:rgba(255,255,255,0.14);color:#fff;font-size:24px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);">&times;</button>
+    <div id="medeos-zoom-bar" style="position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:10003;display:flex;gap:8px;align-items:center;background:rgba(255,255,255,0.14);backdrop-filter:blur(4px);padding:7px 10px;border-radius:999px;">
+        <button type="button" aria-label="Dézoomer" onclick="lbZoom(-1,event)" style="width:38px;height:38px;border-radius:50%;border:none;background:rgba(255,255,255,0.9);color:#1A1A2E;font-size:22px;font-weight:700;line-height:1;cursor:pointer;">&minus;</button>
+        <button type="button" aria-label="Réinitialiser le zoom" onclick="lbReset(event)" style="height:38px;padding:0 14px;border-radius:999px;border:none;background:rgba(255,255,255,0.9);color:#1A1A2E;font-size:13px;font-weight:700;cursor:pointer;">100&nbsp;%</button>
+        <button type="button" aria-label="Zoomer" onclick="lbZoom(1,event)" style="width:38px;height:38px;border-radius:50%;border:none;background:rgba(255,255,255,0.9);color:#1A1A2E;font-size:22px;font-weight:700;line-height:1;cursor:pointer;">+</button>
+    </div>
+    <div id="medeos-lightbox-stage" onclick="lbStageClick(event)" style="min-height:100%;display:flex;align-items:center;justify-content:center;padding:64px 16px;">
+        <div style="position:relative;display:inline-flex;">
+            <img id="medeos-lightbox-img" src="" alt="Schéma agrandi" ondblclick="lbToggleZoom(event)" style="display:block;border-radius:10px;box-shadow:0 10px 40px rgba(0,0,0,0.5);transform-origin:center center;transition:transform .18s ease;max-width:none;cursor:zoom-in;">
+            <div aria-hidden="true" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;">
+                <span style="font-family:'Inter',Arial,sans-serif;font-size:clamp(11px,4vw,30px);font-weight:700;letter-spacing:clamp(1px,1vw,6px);text-transform:uppercase;color:rgba(120,120,120,0.16);white-space:nowrap;">medeos-sante.fr</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var lbScale = 1, lbBaseW = 0;
+    function openLightbox(src) {
+        var lb = document.getElementById('medeos-lightbox');
+        var img = document.getElementById('medeos-lightbox-img');
+        lbScale = 1;
+        img.onload = function () {
+            // Taille de base : on s'aligne sur la largeur dispo (max 96vw) ou la taille native si plus petite.
+            var availW = Math.min(window.innerWidth * 0.96, this.naturalWidth);
+            var availH = window.innerHeight * 0.84;
+            var ratio = Math.min(availW / this.naturalWidth, availH / this.naturalHeight, 1);
+            lbBaseW = Math.max(120, Math.round(this.naturalWidth * ratio));
+            this.style.width = lbBaseW + 'px';
+            this.style.height = 'auto';
+            lbApply();
+        };
+        img.src = src;
+        lb.style.display = 'block';
+        lb.scrollTop = 0; lb.scrollLeft = 0;
+        document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+        document.getElementById('medeos-lightbox').style.display = 'none';
+        document.body.style.overflow = '';
+    }
+    function lbApply() {
+        var img = document.getElementById('medeos-lightbox-img');
+        img.style.transform = 'scale(' + lbScale + ')';
+        img.style.cursor = lbScale > 1 ? 'zoom-out' : 'zoom-in';
+        var lbl = document.querySelector('#medeos-zoom-bar button[onclick^="lbReset"]');
+        if (lbl) lbl.innerHTML = Math.round(lbScale * 100) + '&nbsp;%';
+    }
+    function lbZoom(dir, e) {
+        if (e) { e.stopPropagation(); e.preventDefault(); }
+        lbScale = Math.min(4, Math.max(1, +(lbScale + dir * 0.5).toFixed(2)));
+        lbApply();
+    }
+    function lbReset(e) { if (e) { e.stopPropagation(); e.preventDefault(); } lbScale = 1; lbApply(); }
+    function lbToggleZoom(e) { if (e) { e.stopPropagation(); e.preventDefault(); } lbScale = lbScale > 1 ? 1 : 2; lbApply(); }
+    function lbStageClick(e) { if (e.target.id === 'medeos-lightbox-stage') closeLightbox(); } // clic dans le vide = fermer
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeLightbox();
+        else if (document.getElementById('medeos-lightbox').style.display === 'block') {
+            if (e.key === '+' || e.key === '=') lbZoom(1);
+            else if (e.key === '-') lbZoom(-1);
+            else if (e.key === '0') lbReset();
+        }
+    });
+    document.getElementById('medeos-lightbox').addEventListener('wheel', function (e) {
+        if (this.style.display !== 'block') return;
+        if (e.ctrlKey || Math.abs(e.deltaY) > 0) { /* molette = zoom */ }
+        e.preventDefault();
+        lbScale = Math.min(4, Math.max(1, +(lbScale - Math.sign(e.deltaY) * 0.25).toFixed(2)));
+        lbApply();
+    }, { passive: false });
+    function schemaMissing(img) { img.style.display = 'none'; var b = img.closest('.schema-box'); if (b) b.classList.add('img-missing'); }
+</script>
+</body>
+</html>

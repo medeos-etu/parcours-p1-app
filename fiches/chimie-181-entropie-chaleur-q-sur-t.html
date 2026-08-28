@@ -156,6 +156,21 @@
         /* boutons de la lightbox plus gros au doigt */
         #medeos-lightbox button[aria-label="Fermer"] { width: 46px; height: 46px; font-size: 26px; }
     }
+
+    /* --- encadré formule + petit tableau Medeos (remplacent une figure absente) --- */
+    .formula { background: #fff; border: 2px solid #6B46C1; border-radius: 12px; padding: 16px 18px; margin: 20px 0; text-align: center; box-shadow: 0 4px 15px rgba(107,70,193,.14); }
+    .formula .fx-lbl { display: block; font-size: 11px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; color: #6B46C1; margin-bottom: 9px; }
+    .formula .fx { display: block; font-size: 27px; line-height: 1.25; font-weight: 800; color: #4C2A85; letter-spacing: -0.4px; }
+    .formula .fx-note { display: block; font-size: 12.5px; color: #6b6275; margin-top: 9px; font-weight: 600; }
+    .tbl-wrap { margin: 20px 0; overflow-x: auto; }
+    table.tbl { width: 100%; border-collapse: separate; border-spacing: 0; background: #fff; border: 1px solid #dccff2; border-radius: 12px; overflow: hidden; font-size: 14.5px; box-shadow: 0 3px 12px rgba(107,70,193,.08); }
+    table.tbl th { background: #F1ECFA; color: #4C2A85; font-size: 11.5px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; text-align: left; padding: 11px 14px; }
+    table.tbl td { padding: 12px 14px; border-top: 1px solid #ece5f7; color: #2c3e50; line-height: 1.5; vertical-align: top; }
+    table.tbl td b { color: #4C2A85; }
+    table.tbl td .gl { color: #6b6275; font-weight: 400; font-size: 13.5px; }
+    .tbl-note { font-size: 12.5px; color: #6b6275; margin: -10px 4px 20px; font-weight: 500; }
+    @media print { .tbl-wrap, .formula { page-break-inside: avoid; } .formula { box-shadow: none; } .formula .fx { font-size: 31px; } table.tbl { font-size: 16px; box-shadow: none; } table.tbl th { font-size: 12.5px; } }
+    @media (max-width: 600px) { .formula .fx { font-size: 21px; } table.tbl { font-size: 13.5px; } table.tbl th, table.tbl td { padding: 9px 10px; } }
 </style>
 </head>
 <body>
@@ -167,40 +182,39 @@
         <div class="brand-tag">Ressource gratuite</div>
         <h1 class="course-title">ΔS = Q/T, et pourquoi la chaleur va du chaud vers le froid</h1>
         <p class="punch">Le 2<sup>e</sup> principe te dit <span class="accent">dans quel sens</span> vont les choses.</p>
-        <p class="punch">Il te manquait de quoi le <span class="accent">calculer</span>. C'est cette formule.</p>
+        <p class="punch">Il te manquait de quoi mettre un <span class="accent">chiffre</span> dessus. C'est cette formule.</p>
     </header>
 
-    <p class="intro">Tu viens de poser le <strong>2<sup>e</sup> principe</strong> : une transformation ne se fait spontanément que si <strong>ΔS<sub>univers</sub> ≥ 0</strong>. C'est une boussole — mais tu n'as encore aucun moyen de mettre un <strong>chiffre</strong> sur cette variation d'entropie. Voici l'outil qui manquait : il fait mieux que compter, il <em class="hl">démontre</em> que la chaleur va du chaud vers le froid.</p>
+    <p class="intro">Tu viens de poser le <strong>2<sup>e</sup> principe</strong> : une transformation ne se fait spontanément que si <strong>ΔS<sub>univers</sub> ≥ 0</strong>. C'est une boussole — mais tu n'as encore aucun moyen de mettre un <strong>chiffre</strong> sur cette variation d'entropie. Voici l'outil qui manquait, et il fait plus que donner un chiffre : il <em class="hl">démontre</em> que la chaleur va du chaud vers le froid.</p>
 
     <p class="intro">Avant tout, clarifions <strong>deux mots qu'on confond souvent</strong> :</p>
 
-    <div style="overflow-x:auto; margin:20px 0;">
-        <table style="width:100%; border-collapse:separate; border-spacing:0; border-radius:12px; overflow:hidden; box-shadow:0 3px 12px rgba(107,70,193,0.14); font-size:14.5px; line-height:1.5;">
+    <div class="tbl-wrap">
+        <table class="tbl">
             <thead>
-                <tr style="background:#6B46C1; color:#fff;">
-                    <th style="padding:11px 15px; text-align:left; font-weight:700; letter-spacing:0.2px; width:30%;">Le mot</th>
-                    <th style="padding:11px 15px; text-align:left; font-weight:700; letter-spacing:0.2px;">Ce que c'est vraiment</th>
-                </tr>
+                <tr><th style="width:30%;">Le mot</th><th>Ce que c'est vraiment</th></tr>
             </thead>
             <tbody>
-                <tr style="background:#fff;">
-                    <td style="padding:12px 15px; border-bottom:1px solid #e0d6f3; vertical-align:top;"><b style="color:#4C2A85;">La température T</b></td>
-                    <td style="padding:12px 15px; border-bottom:1px solid #e0d6f3; color:#2c3e50;">Une <b style="color:#1A1A2E;">mesure</b> — elle indique à quel point les molécules d'un objet sont agitées <b style="color:#1A1A2E;">en ce moment</b>. C'est comme la vitesse d'une voiture sur le compteur. 100 °C = les molécules vibrent vite. 0 °C = elles vibrent lentement.</td>
+                <tr>
+                    <td><b>La température T</b></td>
+                    <td>Une <b>mesure</b> — elle indique à quel point les molécules d'un objet sont agitées <b>en ce moment</b>. C'est comme la vitesse d'une voiture sur le compteur. 100 °C = les molécules vibrent vite. 0 °C = elles vibrent lentement.</td>
                 </tr>
-                <tr style="background:#faf8fe;">
-                    <td style="padding:12px 15px; vertical-align:top;"><b style="color:#4C2A85;">La chaleur Q</b></td>
-                    <td style="padding:12px 15px; color:#2c3e50;">Un <b style="color:#1A1A2E;">transfert</b> — de l'énergie qui se déplace d'un objet vers un autre parce qu'ils sont à des températures différentes. C'est comme le carburant qui passe d'un réservoir à un autre. Quand tu poses une casserole froide sur un feu, la chaleur Q circule du feu vers la casserole — et la température de la casserole monte.</td>
+                <tr>
+                    <td><b>La chaleur Q</b></td>
+                    <td>Un <b>transfert</b> — de l'énergie qui se déplace d'un objet vers un autre parce qu'ils sont à des températures différentes. C'est comme le carburant qui passe d'un réservoir à un autre. Quand tu poses une casserole froide sur un feu, la chaleur Q circule du feu vers la casserole — et la température de la casserole monte.</td>
                 </tr>
             </tbody>
         </table>
     </div>
 
+    <div class="mnemo-box"><span class="lbl">L'analogie — le réservoir</span><b>La température, c'est le niveau d'eau dans un réservoir. La chaleur, c'est l'eau qui coule d'un réservoir à un autre.</b> On peut avoir beaucoup d'eau qui coule (grande Q) sans que le niveau monte beaucoup si le réservoir est déjà grand (grande T).</div>
+
     <p class="intro">Donc : quand un système <strong>reçoit</strong> de la chaleur (Q &gt; 0), ses molécules s'agitent davantage → plus de désordre. Quand il en <strong>cède</strong> (Q &lt; 0), elles se calment → moins de désordre. On peut quantifier ça :</p>
 
-    <div style="background:#fff; border:2px solid #6B46C1; border-radius:12px; padding:16px 18px; margin:20px 0; text-align:center; box-shadow:0 4px 15px rgba(107,70,193,0.15);">
-        <div style="font-size:11px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase; color:#6B46C1; margin-bottom:8px;">Entropie et chaleur</div>
-        <div style="font-size:27px; font-weight:800; color:#1A1A2E; letter-spacing:-0.3px;">ΔS = Q / T</div>
-        <div style="font-size:12.5px; color:#6b6275; margin-top:9px; font-weight:500;">Q en <b style="color:#6B46C1;">joules (J)</b> · T en <b style="color:#6B46C1;">kelvins (K)</b> · donc ΔS en <b style="color:#6B46C1;">J/K</b>, l'unité de l'entropie</div>
+    <div class="formula">
+        <span class="fx-lbl">Entropie et chaleur</span>
+        <span class="fx">ΔS = Q / T</span>
+        <span class="fx-note">Q en joules (J) · T en kelvins (K) · donc ΔS en J/K, l'unité de l'entropie</span>
     </div>
 
     <div class="steps">
@@ -216,37 +230,30 @@
             </li>
             <li class="step">
                 <span class="n">3</span>
-                <span class="txt"><span class="lead">T grand → ΔS petit.</span> Si le système est <b>déjà très chaud</b> (déjà très agité), recevoir 100 J de plus ne change presque rien. Si <b>T est petit</b> (peu agité), les mêmes 100 J font un <b>effet énorme</b>.</span>
+                <span class="txt"><span class="lead">T grand → ΔS petit.</span> Si le système est <b>déjà très chaud</b> (déjà très agité), recevoir 100 J de plus ne change presque rien — <b>c'est comme verser un verre d'eau dans la mer</b>. Si <b>T est petit</b> (peu agité), les mêmes 100 J font un <b>effet énorme</b>.</span>
             </li>
         </ol>
     </div>
 
-    <div class="mnemo-box"><span class="lbl">L'analogie — le réservoir</span>Analogie : <b>la température, c'est le niveau d'eau dans un réservoir</b>. <b>La chaleur, c'est l'eau qui coule d'un réservoir à un autre</b>. On peut avoir beaucoup d'eau qui coule (grande Q) sans que le niveau monte beaucoup si le réservoir est déjà grand (grande T). — et pour l'effet de T : si le système est déjà très chaud (déjà très agité), recevoir 100 J de plus ne change presque rien — <b>c'est comme verser un verre d'eau dans la mer</b>.</div>
-
     <p class="intro">Et c'est cette formule qui <strong>explique pourquoi la chaleur va du chaud vers le froid</strong>. Imagine un objet <strong>chaud à 400 K</strong> et un objet <strong>froid à 200 K</strong>. On transfère <strong>100 J</strong>, et on fait le bilan dans les deux sens :</p>
 
-    <div style="overflow-x:auto; margin:20px 0;">
-        <table style="width:100%; border-collapse:separate; border-spacing:0; border-radius:12px; overflow:hidden; box-shadow:0 3px 12px rgba(107,70,193,0.14); font-size:14px; line-height:1.5;">
+    <div class="tbl-wrap">
+        <table class="tbl">
             <thead>
-                <tr style="background:#6B46C1; color:#fff;">
-                    <th style="padding:11px 14px; text-align:left; font-weight:700;">Transfert de 100 J</th>
-                    <th style="padding:11px 14px; text-align:left; font-weight:700;">Objet chaud (400 K)</th>
-                    <th style="padding:11px 14px; text-align:left; font-weight:700;">Objet froid (200 K)</th>
-                    <th style="padding:11px 14px; text-align:left; font-weight:700;">Bilan total</th>
-                </tr>
+                <tr><th>Transfert de 100 J</th><th>Objet chaud (400 K)</th><th>Objet froid (200 K)</th><th>Bilan total</th></tr>
             </thead>
             <tbody>
-                <tr style="background:#fff;">
-                    <td style="padding:12px 14px; border-bottom:1px solid #e0d6f3; vertical-align:top;"><b style="color:#4C2A85;">Du chaud vers le froid</b></td>
-                    <td style="padding:12px 14px; border-bottom:1px solid #e0d6f3; color:#2c3e50; vertical-align:top;">il <b style="color:#1A1A2E;">perd</b> :<br>−100 / 400 = <b style="color:#1A1A2E;">−0,25 J/K</b></td>
-                    <td style="padding:12px 14px; border-bottom:1px solid #e0d6f3; color:#2c3e50; vertical-align:top;">il <b style="color:#1A1A2E;">gagne</b> :<br>+100 / 200 = <b style="color:#1A1A2E;">+0,50 J/K</b></td>
-                    <td style="padding:12px 14px; border-bottom:1px solid #e0d6f3; color:#2c3e50; vertical-align:top;">−0,25 + 0,50 = <b style="color:#1A1A2E;">+0,25 J/K &gt; 0</b><br>→ <b style="color:#4C2A85;">spontané ✅</b></td>
+                <tr>
+                    <td><b>Du chaud vers le froid</b></td>
+                    <td>il <b>perd</b> :<br>−100 / 400 = <b>−0,25 J/K</b></td>
+                    <td>il <b>gagne</b> :<br>+100 / 200 = <b>+0,50 J/K</b></td>
+                    <td>−0,25 + 0,50 = <b>+0,25 J/K &gt; 0</b><br>→ <b>spontané ✅</b></td>
                 </tr>
-                <tr style="background:#faf8fe;">
-                    <td style="padding:12px 14px; vertical-align:top;"><b style="color:#4C2A85;">Du froid vers le chaud</b></td>
-                    <td style="padding:12px 14px; color:#2c3e50; vertical-align:top;">il <b style="color:#1A1A2E;">gagne</b> :<br>+100 / 400 = <b style="color:#1A1A2E;">+0,25 J/K</b></td>
-                    <td style="padding:12px 14px; color:#2c3e50; vertical-align:top;">il <b style="color:#1A1A2E;">perd</b> :<br>−100 / 200 = <b style="color:#1A1A2E;">−0,50 J/K</b></td>
-                    <td style="padding:12px 14px; color:#2c3e50; vertical-align:top;">−0,50 + 0,25 = <b style="color:#1A1A2E;">−0,25 J/K &lt; 0</b><br>→ <b style="color:#9a6d00;">impossible ❌</b></td>
+                <tr>
+                    <td><b>Du froid vers le chaud</b></td>
+                    <td>il <b>gagne</b> :<br>+100 / 400 = <b>+0,25 J/K</b></td>
+                    <td>il <b>perd</b> :<br>−100 / 200 = <b>−0,50 J/K</b></td>
+                    <td>+0,25 − 0,50 = <b>−0,25 J/K &lt; 0</b><br>→ <b>impossible ❌</b></td>
                 </tr>
             </tbody>
         </table>
@@ -268,6 +275,15 @@
             Ne confonds pas <b>température</b> et <b>chaleur</b> : T est une <b>mesure</b> de l'agitation, Q est un <b>transfert</b> d'énergie. Et n'oublie jamais le T du dénominateur : les mêmes 100 J valent <b>+0,50 J/K</b> à 200 K, mais seulement <b>+0,25 J/K</b> à 400 K.
         </div>
     </div>
+
+    <a class="qcm-cta" style="display:none" href="#" target="_top">
+        <span class="qcm-body">
+            <span class="qcm-k">Vérifie en 3 questions</span>
+            <span class="qcm-t">QCM — Entropie et chaleur</span>
+        </span>
+        <span class="qcm-arrow" aria-hidden="true">→</span>
+    </a>
+    <div class="bio-hint">📲 Pour faire le QCM gratuit → <strong>lien en bio</strong></div>
 
     <footer class="chapter-footer">
         <p>Une fiche <strong>Medeos</strong> · pour anticiper la P1, sereinement. · medeos-sante.fr</p>

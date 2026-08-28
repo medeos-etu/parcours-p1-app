@@ -191,58 +191,58 @@
         <p class="punch">Il en faut <span class="accent">quatre</span> — comme une adresse postale complète.</p>
     </header>
 
-    <p class="intro">Depuis deux fiches, on se sert de <strong>n</strong> et de <strong>l</strong> sans les avoir vraiment définis : n pour le chiffre de l'orbitale, l pour sa lettre et sa forme, puis les deux ensemble pour compter les surfaces nodales. On a déjà vu <strong>n</strong> <span class="gl">(le numéro de couche)</span> et <strong>l</strong> <span class="gl">(la forme de l'OA)</span>. Mais pour décrire <em class="hl">complètement</em> un électron, il faut <strong>4 nombres quantiques</strong> au total — comme une adresse postale complète : <strong>pays → ville → rue → numéro de porte</strong>.</p>
+    <p class="intro">Depuis deux fiches, on se sert de <strong>n</strong> et de <strong>l</strong> sans avoir dit ce qu'ils sont vraiment : on a déjà vu <strong>n</strong> <span style="color:#6b6275">(le numéro de couche)</span> et <strong>l</strong> <span style="color:#6b6275">(la forme de l'OA)</span>, puis les deux ensemble pour compter les surfaces nodales. Mais pour décrire <em class="hl">complètement</em> un électron, il faut <strong>4 nombres quantiques</strong> au total — comme une adresse postale complète : <strong>pays → ville → rue → numéro de porte</strong>.</p>
 
     <p class="intro">Chacun de ces quatre nombres répond à une question différente, et ils se rangent du plus large au plus fin. Voici la vue d'ensemble : c'est la carte mentale à avoir en tête avant d'entrer dans le détail.</p>
 
     <div class="tbl-wrap">
         <table class="tbl">
             <thead>
-                <tr><th>Nombre</th><th>Symbole</th><th>Ce qu'il détermine</th><th>Analogie</th></tr>
+                <tr><th>Nombre</th><th>Symbole</th><th>Ce qu'il détermine</th><th>Valeurs possibles</th></tr>
             </thead>
             <tbody>
-                <tr><td><b>Principal</b></td><td><b>n</b></td><td>Couche / taille de l'OA</td><td>🏢 L'étage de l'immeuble</td></tr>
-                <tr><td><b>Azimutal</b> <span class="gl">(secondaire)</span></td><td><b>l</b></td><td>Sous-couche / forme de l'OA</td><td>🚪 L'appartement à cet étage</td></tr>
-                <tr><td><b>Magnétique</b></td><td><b>m<sub>l</sub></b></td><td>Orientation de l'OA</td><td>🛋️ La pièce dans l'appartement</td></tr>
-                <tr><td><b>Spin</b></td><td><b>s</b> <span class="gl">(ou m<sub>s</sub>)</span></td><td>Rotation propre de l'électron</td><td>👤 La personne (max 2 par pièce)</td></tr>
+                <tr><td><b>Principal</b></td><td><b>n</b></td><td>Couche / taille de l'OA</td><td>n = 1, 2, 3, 4… <span class="gl">(entier &gt; 0)</span></td></tr>
+                <tr><td><b>Azimutal</b> <span class="gl">(secondaire)</span></td><td><b>l</b></td><td>Sous-couche / forme de l'OA</td><td>l = 0, 1, 2… <span class="gl">jusqu'à (n − 1)</span></td></tr>
+                <tr><td><b>Magnétique</b></td><td><b>m<sub>l</sub></b></td><td>Orientation de l'OA</td><td>m<sub>l</sub> = −l, …, 0, …, +l</td></tr>
+                <tr><td><b>Spin</b></td><td><b>s</b> <span class="gl">(ou m<sub>s</sub>)</span></td><td>Rotation propre de l'électron</td><td>s = +1/2 <span class="gl">(↑)</span> ou −1/2 <span class="gl">(↓)</span></td></tr>
             </tbody>
         </table>
     </div>
-
-    <div class="mnemo-box"><span class="lbl">L'analogie — l'immeuble</span>🏢 <b>n</b> = l'étage de l'immeuble — 🚪 <b>l</b> = l'appartement à cet étage — 🛋️ <b>m<sub>l</sub></b> = la pièce dans l'appartement — 👤 <b>spin</b> = la personne (max 2 par pièce)</div>
 
     <div class="steps">
         <div class="steps-title">Les quatre niveaux, du plus large au plus fin</div>
         <ol>
             <li class="step">
                 <span class="n">1</span>
-                <span class="txt"><span class="lead">n — le nombre quantique principal.</span> Il donne la <b>couche</b> électronique et la <b>taille</b> de l'OA. Plus n est grand, plus l'OA est <b>grande</b> et plus l'électron est <b>loin du noyau</b>. C'est le niveau le plus large : <b>l'étage</b>.</span>
+                <span class="txt"><span class="lead">n — le nombre quantique principal.</span> Il donne la <b>couche</b> électronique et la <b>taille</b> de l'OA. Plus n est grand, plus l'OA est <b>grande</b> et plus l'électron est <b>loin du noyau</b>. C'est le niveau le plus large de l'adresse.</span>
             </li>
             <li class="step">
                 <span class="n">2</span>
-                <span class="txt"><span class="lead">l — le nombre quantique azimutal</span> <span class="gl">(ou secondaire)</span><span class="lead">.</span> À l'intérieur d'une couche, il désigne la <b>sous-couche</b> et détermine la <b>forme</b> de l'orbitale — celle qu'on a vue avec les OA s, p, d et f. C'est <b>l'appartement</b> à cet étage.</span>
+                <span class="txt"><span class="lead">l — le nombre quantique azimutal</span> <span class="gl">(ou secondaire)</span><span class="lead">.</span> À l'intérieur d'une couche, il désigne la <b>sous-couche</b> et détermine la <b>forme</b> de l'orbitale — celle qu'on a vue avec les OA s, p, d et f. Ses valeurs <b>dépendent de n</b> : on ne peut pas mettre n'importe quelle sous-couche sur n'importe quelle couche.</span>
             </li>
             <li class="step">
                 <span class="n">3</span>
-                <span class="txt"><span class="lead">m<sub>l</sub> — le nombre quantique magnétique.</span> La forme étant fixée, il reste à savoir comment elle est posée dans l'espace : m<sub>l</sub> détermine l'<b>orientation</b> de l'orbitale <span class="gl">(axe x, y ou z pour les p par exemple)</span>. C'est <b>la pièce</b> dans l'appartement.</span>
+                <span class="txt"><span class="lead">m<sub>l</sub> — le nombre quantique magnétique.</span> La forme étant fixée, il reste à savoir comment elle est posée dans l'espace : m<sub>l</sub> détermine son <b>orientation</b> <span class="gl">(axe x, y ou z pour les p par exemple)</span>. Avec n et l, il achève de désigner <b>une orbitale précise</b>.</span>
             </li>
             <li class="step">
                 <span class="n">4</span>
-                <span class="txt"><span class="lead">s (ou m<sub>s</sub>) — le spin.</span> Les trois premiers nombres ont fini de décrire l'orbitale. Le quatrième décrit l'électron lui-même : il caractérise sa <b>rotation propre</b> sur lui-même, <b>comme une toupie qui tourne</b>. C'est <b>la personne</b> — au maximum 2 par pièce.</span>
+                <span class="txt"><span class="lead">s (ou m<sub>s</sub>) — le spin.</span> Les trois premiers nombres ont fini de décrire l'orbitale. Le quatrième décrit l'électron lui-même : il caractérise sa <b>rotation propre</b> sur lui-même, <b>comme une toupie qui tourne</b>.</span>
             </li>
         </ol>
     </div>
 
+    <div class="mnemo-box"><span class="lbl">L'analogie — l'immeuble</span>🏢 <b>n</b> = l'étage de l'immeuble — 🚪 <b>l</b> = l'appartement à cet étage — 🛋️ <b>m<sub>l</sub></b> = la pièce dans l'appartement — 👤 <b>spin</b> = la personne (max 2 par pièce)</div>
+
     <div class="pass-tip">
-        Quand un énoncé te lâche une suite de nombres, ne cherche pas à tout calculer d'un coup : demande-toi d'abord <strong>de quel niveau d'adresse</strong> chacun parle. Étage, appartement, pièce, ou personne ? Ce réflexe suffit souvent à repérer qu'une proposition mélange deux étages de la description — l'<strong>orbitale</strong> d'un côté, l'<strong>électron</strong> de l'autre.
+        Quand un énoncé te donne une suite de nombres, ne cherche pas à tout calculer d'un coup : demande-toi d'abord <strong>de quel niveau d'adresse</strong> chacun parle. Étage, appartement, pièce, ou personne ? Ce réflexe suffit souvent à repérer qu'une proposition mélange deux étages de la description — l'<strong>orbitale</strong> d'un côté, l'<strong>électron</strong> de l'autre.
     </div>
 
-    <p class="intro">Cette carte posée, on peut reprendre les quatre nombres <strong>un par un</strong> : quelles valeurs chacun a le droit de prendre, et ce que ça change concrètement. C'est ce que font les fiches suivantes.</p>
+    <p class="intro">Cette carte posée, on peut reprendre les quatre nombres <strong>un par un</strong> : d'où viennent ces valeurs, combien d'orbitales et d'électrons elles autorisent, et ce que ça change concrètement. C'est ce que font les fiches suivantes.</p>
 
     <div class="recap">
         <div class="box retenir">
             <span class="lbl">À retenir</span>
-            Il faut <b>4 nombres quantiques</b> pour décrire complètement un électron : <b>n</b> <span class="gl">(couche, taille)</span>, <b>l</b> <span class="gl">(sous-couche, forme)</span>, <b>m<sub>l</sub></b> <span class="gl">(orientation)</span>, <b>s</b> <span class="gl">(rotation propre)</span>. Une adresse complète : pays → ville → rue → numéro de porte.
+            Il faut <b>4 nombres quantiques</b> pour décrire complètement un électron : <b>n</b> <span style="color:#6b6275">(couche, taille)</span>, <b>l</b> <span style="color:#6b6275">(sous-couche, forme)</span>, <b>m<sub>l</sub></b> <span style="color:#6b6275">(orientation)</span>, <b>s</b> <span style="color:#6b6275">(rotation propre)</span>. Une adresse complète : pays → ville → rue → numéro de porte.
         </div>
         <div class="box piege">
             <span class="lbl">Le piège</span>

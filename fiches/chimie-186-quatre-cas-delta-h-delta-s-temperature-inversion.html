@@ -170,6 +170,16 @@
         /* boutons de la lightbox plus gros au doigt */
         #medeos-lightbox button[aria-label="Fermer"] { width: 46px; height: 46px; font-size: 26px; }
     }
+
+    /* --- formule mise en avant (remplace une figure absente) --- */
+    .formula-hero { background: #fff; border: 2px solid #6B46C1; border-radius: 12px; padding: 16px 20px; margin: 20px 0; text-align: center; box-shadow: 0 4px 15px rgba(107,70,193,.13); }
+    .formula-hero .fh-k { display: block; font-size: 11px; font-weight: 800; letter-spacing: .9px; text-transform: uppercase; color: #6B46C1; margin-bottom: 9px; }
+    .formula-hero .fh-f { font-size: 21px; font-weight: 800; color: #1A1A2E; letter-spacing: -.2px; line-height: 1.35; }
+    .formula-hero .fh-or { display: inline-block; font-size: 12.5px; font-weight: 700; color: #6b6275; text-transform: uppercase; letter-spacing: 1px; margin: 0 14px; }
+    .formula-hero .fh-note { font-size: 12.5px; color: #6b6275; margin-top: 9px; font-weight: 500; }
+    .formula-hero .fh-note b { color: #4C2A85; }
+    @media print { .formula-hero { page-break-inside: avoid; box-shadow: none; } .formula-hero .fh-f { font-size: 25px; } .formula-hero .fh-note { font-size: 14px; } }
+    @media (max-width: 600px) { .formula-hero { padding: 15px 15px; } .formula-hero .fh-f { font-size: 18px; } .formula-hero .fh-or { display: block; margin: 6px 0; } }
 </style>
 </head>
 <body>
@@ -214,11 +224,11 @@
             </li>
             <li class="step">
                 <span class="n">3</span>
-                <span class="txt"><span class="lead">Conflit — ΔH gagne à froid.</span> ΔH favorise la spontanéité, mais ΔS la pénalise <span class="gl">(négatif → −TΔS devient positif et croît avec T)</span>. À <b>basse T</b>, TΔS est petit → ΔH l'emporte → ΔG &lt; 0. À haute T, −TΔS devient trop grand → ΔG &gt; 0. Exemple : <b>solidification de l'eau</b> H₂O(l) → H₂O(s) — spontanée en dessous de 0 °C, non spontanée au-dessus.</span>
+                <span class="txt"><span class="lead">Conflit — ΔH gagne à froid.</span> ΔH favorise la spontanéité, mais ΔS la pénalise <span class="gl">(négatif → −TΔS devient positif et croît avec T)</span>. À <b>basse T</b>, TΔS est petit → ΔH l'emporte → ΔG &lt; 0. À haute T, −TΔS devient trop grand → ΔG &gt; 0. Exemple : <b>solidification de l'eau</b> H₂O(l) → H₂O(s) <span class="gl">(ΔH &lt; 0 : elle libère la chaleur de cristallisation ; ΔS &lt; 0 : le cristal est plus ordonné)</span> — spontanée en dessous de 0 °C, non spontanée au-dessus.</span>
             </li>
             <li class="step">
                 <span class="n">4</span>
-                <span class="txt"><span class="lead">Conflit — ΔS gagne à chaud.</span> ΔH pénalise la spontanéité, mais ΔS la favorise <span class="gl">(positif → −TΔS devient négatif et de plus en plus grand quand T augmente)</span>. À <b>haute T</b>, −TΔS l'emporte sur ΔH → ΔG &lt; 0. À basse T, ΔH domine → ΔG &gt; 0. Exemple : <b>fusion de la glace</b> H₂O(s) → H₂O(l) — spontanée au-dessus de 0 °C, non spontanée en dessous.</span>
+                <span class="txt"><span class="lead">Conflit — ΔS gagne à chaud.</span> ΔH pénalise la spontanéité, mais ΔS la favorise <span class="gl">(positif → −TΔS devient négatif et de plus en plus grand <b>en valeur absolue</b> quand T augmente)</span>. À <b>haute T</b>, −TΔS l'emporte sur ΔH → ΔG &lt; 0. À basse T, ΔH domine → ΔG &gt; 0. Exemple : <b>fusion de la glace</b> H₂O(s) → H₂O(l) <span class="gl">(ΔH &gt; 0 : elle absorbe la chaleur ; ΔS &gt; 0 : le liquide est plus désordonné)</span> — spontanée au-dessus de 0 °C, non spontanée en dessous.</span>
             </li>
         </ol>
     </div>
@@ -228,7 +238,13 @@
         <b>Même signe</b> (ΔH et ΔS du même signe) → <b>compétition</b> → c'est la <b>température T</b> qui tranche.
     </div>
 
-    <p class="intro">Reste une question pour les 2 cas « dépend de T » : <em class="hl">à quelle température exactement ça bascule ?</em> Il existe une température où <strong>ΔG = 0</strong> — ni spontanée, ni non spontanée : c'est l'<strong>équilibre</strong>. En deçà ou au-delà, la spontanéité bascule. C'est la <strong>température d'inversion T*</strong>, et elle tient en une ligne : <strong>T* = ΔH / ΔS</strong> <span class="gl">(ΔH en J, ΔS en J·K⁻¹ → résultat en K)</span>.</p>
+    <p class="intro">Reste une question pour les 2 cas « dépend de T » : <em class="hl">à quelle température exactement ça bascule ?</em> Il existe une température où <strong>ΔG = 0</strong> — ni spontanée, ni non spontanée : c'est l'<strong>équilibre</strong>. En deçà ou au-delà, la spontanéité bascule. C'est la <strong>température d'inversion T*</strong>, et elle tient en une ligne.</p>
+
+    <div class="formula-hero">
+        <span class="fh-k">Température d'inversion</span>
+        <span class="fh-f">T* = ΔH / ΔS</span>
+        <span class="fh-note"><b>ΔH en J</b>, <b>ΔS en J·K⁻¹</b> → résultat en <b>K</b>.</span>
+    </div>
 
     <div class="steps">
         <div class="steps-title">📐 T* sur un exemple : la glace qui fond</div>
@@ -251,6 +267,8 @@
     <div class="pass-tip">
         Regarde <strong>les deux signes avant tout calcul</strong>. Signes <strong>opposés</strong> → le résultat est fixé, il n'y a <strong>pas</strong> de température d'inversion à chercher. Signes <strong>identiques</strong> → il y en a une : compare T à <strong>T* = ΔH / ΔS</strong>.
     </div>
+
+    <p class="intro">Le tableau donne le verdict, T* donne la bascule. Reste à les <strong>appliquer</strong> sur des chiffres — et à sortir un ΔᵣG° dès qu'on te donne ΔᵣH° et ΔᵣS°. C'est la fiche suivante.</p>
 
     <div class="recap">
         <div class="box retenir">

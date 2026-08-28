@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>m+n = 6 : octaèdre, pyramide, plan carré — Fiche Medeos</title>
+<title>m+n = 6 : octaèdre, pyramide à base carrée, plan carré — Fiche Medeos</title>
 <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
@@ -70,7 +70,8 @@
     table.tbl td b { color: #4C2A85; }
     table.tbl td .gl { color: #6b6275; font-weight: 400; font-size: 13.5px; }
     .tbl-note { font-size: 12.5px; color: #6b6275; margin: -10px 4px 20px; font-weight: 500; }
-    @media print { .tbl-wrap { page-break-inside: avoid; } table.tbl { font-size: 16px; box-shadow: none; } table.tbl th { font-size: 12.5px; } }
+    .tbl-note b { color: #4C2A85; }
+    @media print { .tbl-wrap { page-break-inside: avoid; } table.tbl { font-size: 16px; box-shadow: none; } table.tbl th { font-size: 12.5px; } .tbl-note { font-size: 14px; } }
     @media (max-width: 600px) { table.tbl { font-size: 13.5px; } table.tbl th, table.tbl td { padding: 9px 10px; } }
 
     .recap { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
@@ -175,7 +176,7 @@
 
     <header class="hook-header">
         <div class="brand-tag">Ressource gratuite</div>
-        <h1 class="course-title">m + n = 6 : octaèdre, pyramide, plan carré</h1>
+        <h1 class="course-title">m+n = 6 : octaèdre, pyramide à base carrée, plan carré</h1>
         <p class="punch">Six doublets autour de A → figure de répulsion <span class="accent">octaèdre</span>, tout à 90°.</p>
         <p class="punch">Il ne reste qu'une question : <span class="accent">où mettre les doublets E ?</span></p>
     </header>
@@ -197,7 +198,7 @@
     <p class="tbl-note">Les trois lignes partent de la <b>même</b> figure de répulsion — l'octaèdre. Seul change le nombre de doublets E.</p>
 
     <figure class="schema-box" style="margin: 20px 0;">
-        <span class="schema-num">Les 3 géométries pour m+n = 6</span>
+        <span class="schema-num">Figure 6 — les 3 géométries pour m + n = 6</span>
         <img src="../images/chimie/chimie_ch05_fig06_mn6.png" alt="Les trois géométries pour m+n=6 : AX6 octaèdre, AX5E pyramide à base carrée, AX4E2 plan carré" onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
         <figcaption class="caption"><strong>Le même squelette d'octaèdre, trois fois</strong> — deux branches verticales et quatre branches autour, à 90° les unes des autres. À gauche <strong>AX₆</strong> : six X → octaèdre. Au milieu <strong>AX₅E₁</strong> : une branche porte un E → pyramide à base carrée. À droite <strong>AX₄E₂</strong> : regarde <em class="hl">où sont les deux E</em> — un en haut, un en bas, donc à 180° l'un de l'autre, et les quatre X restants forment un carré.</figcaption>
     </figure>
@@ -211,11 +212,11 @@
             </li>
             <li class="step">
                 <span class="n">2</span>
-                <span class="txt"><span class="lead">Un seul doublet E → pyramide à base carrée.</span> Puisque les positions se valent, tu poses le E sur n'importe quelle branche. On <b>masque</b> ce doublet non liant <span class="gl">(il est invisible : la géométrie moléculaire ne décrit que les atomes)</span> et il reste <b>5 atomes X</b> → géométrie <b>pyramide à base carrée</b>, angles ~90°. Exemple : <b>BrF₅</b>.</span>
+                <span class="txt"><span class="lead">Un seul doublet E → pyramide à base carrée.</span> Puisque les positions se valent, tu poses le E sur n'importe quelle branche — le choix n'a aucune conséquence. On <b>masque</b> ce doublet non liant <span class="gl">(il est invisible : la géométrie moléculaire ne décrit que les atomes)</span> et il reste <b>5 atomes X</b> → géométrie <b>pyramide à base carrée</b>.</span>
             </li>
             <li class="step">
                 <span class="n">3</span>
-                <span class="txt"><span class="lead">Deux doublets E → ils se placent en trans.</span> Comme toutes les positions se valent, ce qui décide n'est plus « quelle position », mais <b>l'écartement entre les deux E</b> : ils se mettent <b>en trans, à 180° l'un de l'autre</b>, pour minimiser la répulsion. On masque les deux, il reste <b>4 atomes X</b> formant un carré → géométrie <b>plan carré</b>, 90°. Exemple : <b>XeF₄</b>.</span>
+                <span class="txt"><span class="lead">Deux doublets E → ils se placent en trans.</span> Comme toutes les positions se valent, ce qui décide n'est plus « quelle position », mais <b>l'écartement entre les deux E</b> : ils se mettent <b>en trans, à 180° l'un de l'autre</b>, pour minimiser la répulsion. On masque les deux, il reste <b>4 atomes X</b> formant un carré → géométrie <b>plan carré</b>.</span>
             </li>
         </ol>
     </div>
@@ -223,7 +224,7 @@
     <p class="intro">Regarde bien ce que tu viens de faire, parce que c'est le <strong>miroir exact</strong> de la fiche précédente. Même question posée deux fois — <em class="hl">où placer les doublets E ?</em> — et deux réponses opposées. À <strong>m + n = 5</strong>, les positions de la bipyramide trigonale ne sont <strong>pas</strong> équivalentes : c'est ce qui impose l'équatorial. À <strong>m + n = 6</strong>, elles le sont toutes, donc cet argument-là n'a plus rien à décider ; ce qui tranche, c'est l'écartement maximal entre les deux E, d'où le <strong>trans</strong>. Deux logiques différentes, à ne surtout pas mélanger — et avec ça, le catalogue des cinq figures de répulsion est complet.</p>
 
     <div class="pass-tip">
-        Au concours, on te donne la molécule et tu dois <strong>systématiquement</strong> donner m, n, la figure de répulsion, la géométrie moléculaire <strong>ET</strong> l'angle. Pour XeF₄ : m = 4, n = 2 → <strong>AX₄E₂</strong> ; m + n = 6 → figure de répulsion <strong>octaèdre</strong> ; les 2 doublets E en trans → géométrie moléculaire <strong>plan carré</strong> ; angle <strong>90°</strong>. Les quatre réponses, à chaque fois, dans cet ordre.
+        À m + n = 6, tu n'as jamais à choisir <strong>quelle</strong> position : elles sont toutes équivalentes. La seule question est <strong>combien de doublets E</strong> — 0 → octaèdre, 1 → pyramide à base carrée, 2 → plan carré, en trans. Et côté angle, rien à arbitrer : <strong>90°</strong> partout (~90° pour AX₅E₁), un seul angle à donner, là où m + n = 5 t'en demandait deux (90° et 120°).
     </div>
 
     <div class="recap">

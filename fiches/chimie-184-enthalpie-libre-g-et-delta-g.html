@@ -156,6 +156,14 @@
         /* boutons de la lightbox plus gros au doigt */
         #medeos-lightbox button[aria-label="Fermer"] { width: 46px; height: 46px; font-size: 26px; }
     }
+
+    /* --- encadré formule Medeos (même bloc que les fiches 181 / 182 / 183) --- */
+    .formula { background: #fff; border: 2px solid #6B46C1; border-radius: 12px; padding: 16px 18px; margin: 20px 0; text-align: center; box-shadow: 0 4px 15px rgba(107,70,193,.14); }
+    .formula .fx-lbl { display: block; font-size: 11px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; color: #6B46C1; margin-bottom: 9px; }
+    .formula .fx { display: block; font-size: 27px; line-height: 1.25; font-weight: 800; color: #4C2A85; letter-spacing: -0.4px; }
+    .formula .fx-note { display: block; font-size: 12.5px; color: #6b6275; margin-top: 9px; font-weight: 600; }
+    @media print { .formula { page-break-inside: avoid; box-shadow: none; } .formula .fx { font-size: 31px; } }
+    @media (max-width: 600px) { .formula .fx { font-size: 21px; } }
 </style>
 </head>
 <body>
@@ -165,11 +173,11 @@
     <header class="hook-header">
         <div class="brand-tag">Ressource gratuite</div>
         <h1 class="course-title">L'enthalpie libre G = H − TS et sa variation ΔG = ΔH − TΔS</h1>
-        <p class="punch">La bonne boussole, c'est ΔS<sub>univers</sub> — mais elle est <span class="accent">immesurable</span>.</p>
+        <p class="punch">La bonne boussole, c'est ΔS<sub>univers</sub> — mais personne ne sait la <span class="accent">calculer</span>.</p>
         <p class="punch">Gibbs a trouvé le raccourci : une grandeur qui ne regarde que le <span class="accent">système</span>.</p>
     </header>
 
-    <p class="intro">Tu mélanges deux réactifs dans un tube à essai. <strong>Est-ce que la réaction va se produire toute seule, ou pas ?</strong> C'est LA grande question de la chimie. En théorie, tu connais déjà la réponse grâce au 2<sup>e</sup> principe : si ΔS<sub>univers</sub> ≥ 0, la réaction se fait. En pratique, c'est <em class="hl">inutilisable</em>.</p>
+    <p class="intro">L'entropie est en place : tu sais prédire son signe, la calculer, et tu viens de voir qu'elle <strong>saute</strong> aux changements d'état. Place maintenant à la grandeur qui va s'en servir. Tu mélanges deux réactifs dans un tube à essai. <strong>Est-ce que la réaction va se produire toute seule, ou pas ?</strong> C'est LA grande question de la chimie. En théorie, tu connais déjà la réponse grâce au 2<sup>e</sup> principe : si ΔS<sub>univers</sub> ≥ 0, la réaction se fait. En pratique, c'est <em class="hl">inutilisable</em>.</p>
 
     <div class="steps">
         <div class="steps-title">Le problème — et l'astuce de Gibbs</div>
@@ -189,13 +197,27 @@
         </ol>
     </div>
 
-    <p class="intro">Cette grandeur, c'est l'<strong>enthalpie libre</strong> (ou énergie de Gibbs) : <strong>G = H − TS</strong>. <strong>G</strong> en J·mol⁻¹ — l'énergie « <strong>disponible</strong> » pour faire un travail utile · <strong>H</strong> l'enthalpie, l'énergie totale du système vue au chapitre 7 · <strong>T</strong> la température, en <strong>Kelvin</strong> · <strong>S</strong> l'entropie, le désordre.</p>
+    <p class="intro">Cette grandeur, c'est l'<strong>enthalpie libre</strong> — on dit aussi l'énergie de Gibbs.</p>
+
+    <div class="formula">
+        <span class="fx-lbl">Enthalpie libre de Gibbs</span>
+        <span class="fx">G = H − TS</span>
+        <span class="fx-note">G l'enthalpie libre (J ou J·mol⁻¹), l'énergie « disponible » pour faire un travail utile · H l'enthalpie, l'énergie totale du système vue au Ch. 7 · T la température, en kelvins (K) · S l'entropie, le désordre</span>
+    </div>
 
     <p class="intro">Comment lire cette formule intuitivement ? <strong>G = H − TS</strong> signifie : l'énergie libre = l'énergie totale − l'énergie « <em class="hl">gaspillée en désordre</em> ». Le terme <strong>TS</strong> représente l'énergie que le système « perd » sous forme de désordre — cette énergie-là n'est plus disponible pour faire quelque chose d'utile. Ce qui reste, <strong>G</strong>, est l'énergie réellement <strong>utilisable</strong>.</p>
 
     <div class="mnemo-box"><span class="lbl">L'analogie — le salaire</span>Imagine ton <b>salaire (H)</b>. Tu paies des <b>charges fixes (TS)</b>. Ce qui te reste pour vivre <b>(G)</b> = salaire − charges. Plus les charges sont élevées (beaucoup de désordre × haute température), moins il te reste d'énergie libre.</div>
 
-    <p class="intro">Comme H et S, <strong>G est une fonction d'état</strong> : sa variation ne dépend que de l'état initial et final, pas du chemin suivi. Et au concours, on travaille toujours avec la <strong>variation</strong> de G lors d'une réaction : <strong>ΔG = ΔH − TΔS</strong>. C'est la formule la plus importante du chapitre. Elle dit : la variation d'énergie libre = variation d'enthalpie − température × variation d'entropie. C'est un <strong>bras de fer</strong> entre deux forces.</p>
+    <p class="intro">Comme H et S, <strong>G est une fonction d'état</strong> : sa variation ne dépend que de l'état initial et final, pas du chemin suivi. Et au concours, on travaille toujours avec la <strong>variation</strong> de G lors d'une réaction.</p>
+
+    <div class="formula">
+        <span class="fx-lbl">Variation d'enthalpie libre</span>
+        <span class="fx">ΔG = ΔH − TΔS</span>
+        <span class="fx-note">La formule la plus importante du chapitre — celle que tu appliqueras à chaque exercice</span>
+    </div>
+
+    <p class="intro">Elle dit : la variation d'énergie libre = variation d'enthalpie − température × variation d'entropie. C'est un <strong>bras de fer</strong> entre deux forces.</p>
 
     <div class="steps">
         <div class="steps-title">Le bras de fer de ΔG = ΔH − TΔS</div>
@@ -224,7 +246,7 @@
             </li>
             <li class="step">
                 <span class="n">2</span>
-                <span class="txt"><span class="lead">L'application.</span> ΔG = ΔH − TΔS = 15 000 − 300 × 50 = 15 000 − 15 000 = <b>0 J/mol</b>. Les deux termes valent exactement la même chose : on est <b>à la limite</b> ! <span class="gl">(avec les vraies valeurs — T = 298 K, ΔS = +65 — ΔG est légèrement négatif, mais tout juste)</span></span>
+                <span class="txt"><span class="lead">L'application.</span> ΔG = ΔH − TΔS = 15 000 − 300 × 50 = 15 000 − 15 000 = <b>0 J/mol</b>. Les deux termes valent exactement la même chose : on est <b>à la limite</b> ! <span class="gl">(avec les vraies valeurs — T = 298 K, ΔS = +65 — ΔG est légèrement négatif : la dissolution se fait bel et bien toute seule à 25 °C, mais tout juste)</span></span>
             </li>
             <li class="step">
                 <span class="n">3</span>
@@ -244,7 +266,7 @@
         </div>
         <div class="box piege">
             <span class="lbl">Le piège</span>
-            <b>T est en Kelvin</b> — toujours. Dans G = H − TS comme dans ΔG = ΔH − TΔS, la température se compte en K, jamais en °C. Sur NH₄Cl, les 25 °C deviennent 300 K <b>avant</b> d'entrer dans le calcul.
+            <b>T est en kelvins</b> — toujours. Dans G = H − TS comme dans ΔG = ΔH − TΔS, la température se compte en K, jamais en °C. Sur NH₄Cl, les 25 °C deviennent <b>298 K</b> — arrondis à 300 K pour le calcul mental — <b>avant</b> d'entrer dans la formule.
         </div>
     </div>
 

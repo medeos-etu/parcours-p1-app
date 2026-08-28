@@ -157,7 +157,7 @@
         #medeos-lightbox button[aria-label="Fermer"] { width: 46px; height: 46px; font-size: 26px; }
     }
 
-    /* --- petit tableau Medeos (remplace une figure absente) --- */
+    /* --- petit tableau Medeos --- */
     .tbl-wrap { margin: 20px 0; overflow-x: auto; }
     table.tbl { width: 100%; border-collapse: separate; border-spacing: 0; background: #fff; border: 1px solid #dccff2; border-radius: 12px; overflow: hidden; font-size: 14.5px; box-shadow: 0 3px 12px rgba(107,70,193,.08); }
     table.tbl th { background: #F1ECFA; color: #4C2A85; font-size: 11.5px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; text-align: left; padding: 11px 14px; }
@@ -168,7 +168,7 @@
     @media print { .tbl-wrap { page-break-inside: avoid; } table.tbl { font-size: 16px; box-shadow: none; } table.tbl th { font-size: 12.5px; } }
     @media (max-width: 600px) { table.tbl { font-size: 13.5px; } table.tbl th, table.tbl td { padding: 9px 10px; } }
 
-    /* --- formule mise en avant (remplace une figure absente) --- */
+    /* --- définition mise en avant --- */
     .formula-hero { background: #fff; border: 2px solid #6B46C1; border-radius: 12px; padding: 16px 20px; margin: 20px 0; text-align: center; box-shadow: 0 4px 15px rgba(107,70,193,.13); }
     .formula-hero .fh-k { display: block; font-size: 11px; font-weight: 800; letter-spacing: .9px; text-transform: uppercase; color: #6B46C1; margin-bottom: 9px; }
     .formula-hero .fh-f { font-size: 21px; font-weight: 800; color: #1A1A2E; letter-spacing: -.2px; line-height: 1.35; }
@@ -191,7 +191,7 @@
         <p class="punch">Le spin, lui, décrit <span class="accent">l'électron</span> qui l'occupe.</p>
     </header>
 
-    <p class="intro">On vient de le poser : chaque triplet <strong>(n, l, mₗ)</strong> identifie une OA unique — l'étage, l'appartement, la pièce. L'adresse de l'orbitale est complète, mais on n'a encore rien dit de <em class="hl">celui qui l'habite</em>. C'est le rôle du quatrième nombre quantique, le <strong>spin</strong>, noté s (ou mₛ) : il caractérise la <strong>rotation propre</strong> de l'électron sur lui-même. C'est le seul des quatre qui ne parle pas de l'orbitale.</p>
+    <p class="intro">On vient de le poser : chaque triplet <strong>(n, l, mₗ)</strong> identifie une orbitale atomique <span class="gl">(OA)</span> unique — l'étage, l'appartement, la pièce. L'adresse de l'orbitale est complète, mais on n'a encore rien dit de <em class="hl">celui qui l'habite</em>. C'est le rôle du quatrième nombre quantique, le <strong>spin</strong>, noté s (ou mₛ) : il caractérise la <strong>rotation propre</strong> de l'électron sur lui-même. C'est le seul des quatre qui ne parle pas de l'orbitale.</p>
 
     <div class="formula-hero">
         <span class="fh-k">Deux valeurs possibles, et deux seulement</span>
@@ -204,7 +204,7 @@
         <ol>
             <li class="step">
                 <span class="n">1</span>
-                <span class="txt"><span class="lead">Une orbitale peut être vide, à moitié occupée ou pleine.</span> Le cours prend l'exemple de l'OA <b>1s</b> : elle peut contenir <b>0, 1 ou 2 électrons</b>. Jamais trois.</span>
+                <span class="txt"><span class="lead">Une orbitale peut être vide, à moitié occupée ou pleine.</span> Prends l'OA <b>1s</b> : elle peut contenir <b>0, 1 ou 2 électrons</b>. Jamais trois.</span>
             </li>
             <li class="step">
                 <span class="n">2</span>
@@ -241,9 +241,9 @@
         Devant une proposition sur le spin, demande-toi de <strong>quoi</strong> elle parle. Si elle fait dépendre le spin de la couche <span class="gl">(n)</span>, de la forme <span class="gl">(l)</span> ou de l'orientation <span class="gl">(mₗ)</span> de l'orbitale, elle est fausse : le spin n'appartient pas à l'orbitale. Et s'il apparaît une valeur autre que <strong>+1/2</strong> ou <strong>−1/2</strong>, même réflexe.
     </div>
 
-    <div class="mnemo-box"><span class="lbl">L'analogie — la toupie et la chambre</span>Le spin caractérise la <b>rotation propre de l'électron sur lui-même</b> (comme une <b>toupie</b> qui tourne). Une orbitale atomique est comme une <b>chambre</b> qui peut accueillir <b>au maximum 2 électrons</b>, mais ils doivent avoir des <b>spins opposés (↑↓)</b>.</div>
+    <div class="mnemo-box"><span class="lbl">Le mnémo</span>s = <b>👤 La personne (max 2 par pièce)</b>. Le spin caractérise la <b>rotation propre de l'électron sur lui-même</b> (comme une <b>toupie</b> qui tourne). Une orbitale atomique est comme une <b>chambre</b> qui peut accueillir <b>au maximum 2 électrons</b>, mais ils doivent avoir des <b>spins opposés (↑↓)</b>.</div>
 
-    <p class="intro">L'adresse est maintenant complète. Le triplet (n, l, mₗ) désigne l'orbitale, le spin distingue les deux électrons qui peuvent s'y trouver : chaque électron de l'atome a donc son <strong>quadruplet (n, l, mₗ, s)</strong> à lui. Et c'est cette limite de <strong>deux par pièce</strong> qui commande toute la suite — la façon dont les électrons se rangent dans les orbitales.</p>
+    <p class="intro">L'adresse est maintenant complète. Le triplet (n, l, mₗ) désigne l'orbitale, le spin distingue les deux électrons qui peuvent s'y trouver : chaque électron de l'atome a donc son <strong>quadruplet (n, l, mₗ, s)</strong> à lui. Et c'est cette limite de <strong>deux par pièce</strong> qui rend le comptage possible : on peut maintenant prendre une couche entière et dire combien d'orbitales et combien d'électrons elle contient.</p>
 
     <div class="recap">
         <div class="box retenir">
