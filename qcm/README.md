@@ -57,15 +57,18 @@ la seule adaptation est que **la source n'est plus le chapitre de cours, mais la
 Pas quatre sur cinq. Une question mal rangée est pire qu'une question manquante :
 l'élève se croit fautif alors qu'on ne lui a jamais donné la réponse.
 
-## L'objectif, par fiche : 35 QCM en 7 lots de 5
+## L'objectif, par fiche : 7 QCM
+**Un lot = un QCM de 5 items A-E.**
+
 | lots | QCM | pour qui |
 |---|---|---|
-| 1-2 | 10 | **accès gratuit** — l'essentiel de la fiche |
-| 3-5 | 15 | **pack année complète** — cas limites, pièges fins, applications |
-| 6-7 | 10 | **arène** — jamais jouables à l'entraînement, elles classent |
+| 1-2 | 2 | **accès gratuit** — l'essentiel de la fiche |
+| 3-5 | 3 | **pack année complète** — cas limites, pièges fins, applications |
+| 6-7 | 2 | **arène** — jamais jouables à l'entraînement, elles classent |
 
-Chaque question porte son numéro de `lot` (1 à 7). Les 35 questions d'une fiche ne se
-répètent pas entre elles : ni le même énoncé, ni le même fait testé deux fois.
+Soit **7 questions et 35 items par fiche**. Chaque question porte son numéro de `lot`
+(1 à 7). Sept questions pour toute une fiche : chacune doit compter, aucune ne répète
+une autre, et ensemble elles balaient la fiche entière.
 
 ## Le périmètre du moment
 Les **45 premiers jours de Parcours**, soit les 112 fiches des chapitres :
