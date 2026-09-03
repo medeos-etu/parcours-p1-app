@@ -68,6 +68,26 @@ MATIERES.forEach(mat => {
   }));
 });
 
+/* ── 1 bis. les gros chapitres deviennent plusieurs territoires ──
+   Un territoire de 33 fiches (physique, ch. 1) n'est pas un petit objectif : la barre
+   avance de 3 % par fiche et l'élève ne conquiert rien pendant trois semaines. On
+   découpe donc tout chapitre de plus de 12 fiches en parties équilibrées de 12 fiches
+   au plus (≈ 6 séances, une semaine) : « Eau, solutions et concentrations — 1/3 ».
+   Le numéro de chapitre ne change pas : les parties partagent la même vignette. */
+const MAX_FICHES = 12;
+MATIERES.forEach(mat => {
+  const f = files[mat]; let i = 0;
+  while (i < f.length) {
+    let j = i; while (j < f.length && f[j].chap === f[i].chap) j++;
+    const n = j - i;
+    if (n > MAX_FICHES) {
+      const k = Math.ceil(n / MAX_FICHES);
+      for (let q = i; q < j; q++) f[q].chap = f[q].chap + ' — ' + (Math.floor((q - i) * k / n) + 1) + '/' + k;
+    }
+    i = j;
+  }
+});
+
 /* ── 2. on découpe en paires ── */
 const paquets = {};
 MATIERES.forEach(mat => {
