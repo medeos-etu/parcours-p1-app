@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dissociation partielle : α et i = 1 + α — Fiche Medeos</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 15px; line-height: 1.6; color: #2c3e50; background: #f6f8fb; padding: 22px; max-width: 760px; margin: 0 auto; }
+    .page-container { position: relative; }
+    .page-container::before { display: none; }
+    .page-container > * { position: relative; z-index: 1; }
+    .prod-brand { margin: 0 4px 10px; }
+    .prod-brand img { height: 30px; width: auto; display: block; border-radius: 6px; }
+    .hook-header { background: #FAF6F0; border-radius: 14px; padding: 26px 30px 22px; box-shadow: 0 4px 18px rgba(76,42,133,0.08); border: 1px solid #efe7d8; }
+    .hook-header .brand-tag { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #6B46C1; font-weight: 600; opacity: 0.85; margin-bottom: 12px; }
+    .hook-header .course-title { font-size: 28px; line-height: 1.1; font-weight: 800; color: #4C2A85; letter-spacing: -0.7px; margin: 0 0 12px; }
+    .hook-header .punch { font-size: 18px; line-height: 1.3; font-weight: 800; color: #1A1A2E; letter-spacing: -0.3px; margin: 0; }
+    .hook-header .punch span.accent { color: #6B46C1; }
+    .hook-header .punch + .punch { margin-top: 5px; }
+    .intro { font-size: 15.5px; line-height: 1.7; color: #2c3e50; margin: 20px 2px; }
+    .intro strong { font-weight: 700; color: #4C2A85; }
+    em.hl { background: linear-gradient(180deg, transparent 60%, #FCD34D 60%); font-style: normal; padding: 0 2px; }
+    .schema-box { background: #fff; border: 2px solid #6B46C1; padding: 12px; text-align: center; border-radius: 12px; box-shadow: 0 4px 15px rgba(107, 70, 193, 0.15); position: relative; overflow: hidden; }
+    .schema-box::before { content: 'medeos-sante.fr'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: 'Inter', Arial, sans-serif; font-size: 14px; font-weight: 700; color: rgba(120,120,120,0.13); letter-spacing: 2px; text-transform: uppercase; pointer-events: none; user-select: none; z-index: 5; white-space: nowrap; max-width: 92%; overflow: hidden; }
+    .schema-box img { max-width: 100%; max-height: 300px; height: auto; border-radius: 8px; display: block; margin: 0 auto; cursor: zoom-in; }
+    .schema-box .schema-num { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 0.6px; text-transform: uppercase; color: #6B46C1; margin-bottom: 6px; }
+    .schema-box .caption { font-size: 12px; color: #6b6275; margin-top: 9px; font-weight: 500; }
+    .schema-box .caption strong { color: #6B46C1; }
+    .schema-box .file-target { display: none; margin-top: 10px; padding: 8px 12px; background: #e8f5e9; border: 1px solid #a5d6a7; border-radius: 6px; font-family: 'SFMono-Regular', Consolas, monospace; font-size: 11.5px; color: #1b5e20; text-align: left; line-height: 1.5; }
+    .schema-box .file-target strong { color: #2e7d32; }
+    .schema-box .generation-prompt { background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border: 2px dashed #ff9800; border-radius: 8px; padding: 13px; margin-top: 12px; text-align: left; font-size: 11.5px; color: #e65100; line-height: 1.55; white-space: pre-wrap; }
+    .schema-box .generation-prompt strong { color: #bf360c; display: block; margin-bottom: 8px; font-size: 12.5px; background: #ffcc80; padding: 7px 11px; border-radius: 4px; }
+    .schema-box .copy-prompt-btn { display: none; margin-top: 8px; padding: 6px 12px; background: #ff9800; color: #fff; border: none; border-radius: 4px; font-size: 12px; cursor: pointer; font-weight: 600; }
+    .schema-box .copy-prompt-btn:hover { background: #f57c00; }
+    .schema-box .generation-prompt { display: none; }
+    .schema-box.img-missing .generation-prompt { display: block; }
+    .schema-box.img-missing .copy-prompt-btn { display: inline-block; }
+    .schema-box.img-missing .file-target { display: block !important; }
+    .schema-2up { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; align-items: stretch; }
+    .schema-2up .schema-box { margin: 0; display: flex; flex-direction: column; }
+    .schema-2up .schema-box img { height: 230px; width: 100%; max-height: none; object-fit: contain; }
+    .schema-2up .schema-box .caption { margin-top: auto; }
+    @media (max-width: 720px) { .schema-2up { grid-template-columns: 1fr; } .schema-2up .schema-box img { height: auto; max-height: 300px; } }
+    .steps { background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%); border-left: 5px solid #6B46C1; border-radius: 0 12px 12px 0; padding: 18px 22px; margin: 20px 0; box-shadow: 0 2px 10px rgba(107,70,193,0.08); }
+    .steps .steps-title { font-size: 15px; font-weight: 800; color: #4C2A85; margin-bottom: 13px; }
+    .steps ol { list-style: none; margin: 0; padding: 0; }
+    .step { display: grid; grid-template-columns: 28px 1fr; gap: 12px; align-items: start; margin-bottom: 12px; }
+    .step:last-child { margin-bottom: 0; }
+    .step .n { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 999px; background: #6B46C1; color: #fff; font-size: 13px; font-weight: 800; }
+    .step .txt { font-size: 14.5px; line-height: 1.5; color: #2c3e50; padding-top: 2px; }
+    .step .txt b { color: #4C2A85; font-weight: 700; }
+    .step .txt .gl { color: #6b6275; font-weight: 400; }
+    .step .txt .lead { font-weight: 800; color: #1A1A2E; }
+    .pass-tip { background: #fdf6ec; border-left: 6px solid #B8895A; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; box-shadow: 0 3px 12px rgba(184,137,90,0.14); font-size: 14.5px; line-height: 1.55; }
+    .pass-tip::before { content: "Le réflexe P1"; display: block; font-weight: 700; font-size: 12px; color: #9a6a37; margin-bottom: 7px; letter-spacing: 0.8px; text-transform: uppercase; }
+    .pass-tip strong { color: #9a6a37; }
+
+        .mnemo-box { background:#F3EEFB; border-left:6px solid #6B46C1; padding:15px 20px; margin:20px 0;
+            border-radius:0 8px 8px 0; box-shadow:0 3px 12px rgba(107,70,193,.13); font-size:14.5px; line-height:1.6; }
+        .mnemo-box .lbl { display:block; font-weight:700; font-size:12px; color:#6B46C1; margin-bottom:7px;
+            letter-spacing:.8px; text-transform:uppercase; }
+        .mnemo-box b { color:#4C2A85; }
+
+    .recap { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
+    .recap .box { border-radius: 12px; padding: 15px 18px; font-size: 14px; line-height: 1.5; }
+    .recap .retenir { background: #F1ECFA; border: 1px solid #dccff2; }
+    .recap .piege { background: #FFFBEB; border: 1px solid #F6E4A8; }
+    .recap .box .lbl { display: block; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 7px; }
+    .recap .retenir .lbl { color: #6B46C1; }
+    .recap .piege .lbl { color: #9a6d00; }
+    .recap b { font-weight: 700; color: #1A1A2E; }
+    .qcm-cta { display: flex; align-items: center; gap: 16px; text-decoration: none; color: inherit; background: #fff; border: 1px solid #d6c6f0; border-radius: 14px; padding: 18px 22px; margin: 24px 0 6px; box-shadow: 0 9px 26px -16px rgba(107,70,193,.4); transition: transform .18s ease, box-shadow .18s ease; }
+    .qcm-cta:hover { transform: translateY(-2px); box-shadow: 0 16px 38px -16px rgba(107,70,193,.5); }
+    .qcm-cta:focus-visible { outline: 3px solid #6B46C1; outline-offset: 2px; }
+    .qcm-cta .qcm-body { flex: 1; }
+    .qcm-cta .qcm-k { font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #6B46C1; }
+    .qcm-cta .qcm-t { font-size: 18px; font-weight: 800; color: #1A1A2E; margin-top: 3px; letter-spacing: -0.3px; }
+    .qcm-cta .qcm-arrow { flex: none; width: 42px; height: 42px; border-radius: 11px; background: #6B46C1; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700; }
+    .chapter-footer { text-align: center; margin-top: 22px; padding-top: 16px; border-top: 1px solid #e6dfd1; color: #7a8088; font-size: 12px; }
+    .chapter-footer strong { color: #6b6275; }
+    .bio-hint { display: none; }
+    /* ===== IMPRESSION / PDF — format REEL 9:16 (1080×1920), agrandi pour remplir ===== */
+    @media print {
+        @page { size: 1080px 1920px; margin: 42px; }
+        body { background: #fff; padding: 0; max-width: 996px; font-size: 17px; }
+        .page-container::before { display: none; }
+        .prod-brand { margin: 0 0 12px; }
+        .prod-brand img { height: 42px; }
+        .hook-header { padding: 22px 30px; box-shadow: none; }
+        .hook-header .brand-tag { font-size: 12px; margin-bottom: 10px; }
+        .hook-header .course-title { font-size: 34px; margin-bottom: 10px; }
+        .hook-header .punch { font-size: 21px; }
+        .intro { font-size: 17px; line-height: 1.55; margin: 18px 2px; }
+        .schema-2up { margin: 18px 0; gap: 20px; }
+        .schema-box { padding: 12px; box-shadow: none; }
+        .schema-2up .schema-box img { height: 300px; }
+        .schema-box .schema-num { font-size: 12.5px; margin-bottom: 5px; }
+        .schema-box .caption { font-size: 14px; margin-top: 8px; }
+        .steps { padding: 20px 26px; margin: 18px 0; box-shadow: none; }
+        .steps .steps-title { font-size: 19px; margin-bottom: 13px; }
+        .step { margin-bottom: 11px; gap: 13px; }
+        .step .n { width: 30px; height: 30px; font-size: 14px; }
+        .step .txt { font-size: 16.5px; line-height: 1.5; padding-top: 2px; }
+        .pass-tip { padding: 16px 22px; margin: 18px 0; font-size: 16.5px; box-shadow: none; }
+        .recap { gap: 16px; margin: 18px 0; }
+        .recap .box { padding: 15px 20px; font-size: 15.5px; }
+        .recap .box .lbl { font-size: 12.5px; }
+        .qcm-cta { padding: 17px 24px; margin: 18px 0 6px; box-shadow: none; }
+        .qcm-cta .qcm-k { font-size: 12.5px; }
+        .qcm-cta .qcm-t { font-size: 20px; }
+        .qcm-cta .qcm-arrow { width: 44px; height: 44px; font-size: 20px; }
+        .bio-hint { display: block; text-align: center; margin: 12px 0 0; font-size: 17px; font-weight: 800; color: #6B46C1; }
+        .bio-hint strong { color: #4C2A85; }
+        .chapter-footer { margin-top: 14px; padding-top: 12px; font-size: 14px; }
+        .schema-2up, .schema-box, .steps, .recap, .pass-tip, .qcm-cta { page-break-inside: avoid; }
+    }
+    @media (max-width: 600px) {
+        body { padding: 14px; }
+        .hook-header { padding: 22px 18px 18px; }
+        .hook-header .course-title { font-size: 24px; }
+        .hook-header .punch { font-size: 16px; }
+        .recap { grid-template-columns: 1fr; }
+        .intro, .pass-tip, .step .txt, .recap .box { text-align: left; }
+        .schema-box::before { color: rgba(107,70,193,0.20); font-size: 11px; letter-spacing: 1px; max-width: 90%; }
+    }
+
+    /* === mobile-polish + zoom-bar ordi only === */
+    /* La barre de zoom (− / 100 % / +) est réservée à l'ordinateur : sur mobile,
+       le pinch-to-zoom natif suffit. On la masque sous la largeur tactile. */
+    @media (max-width: 768px) {
+        #medeos-zoom-bar { display: none !important; }
+    }
+    /* Agencement mobile soigné : le titre ne déborde jamais, le hook respire. */
+    @media (max-width: 600px) {
+        body { padding: 14px 13px 18px; }
+        .hook-header { padding: 20px 17px 16px; }
+        .hook-header .course-title {
+            font-size: clamp(20px, 6.4vw, 25px);
+            line-height: 1.12;
+            letter-spacing: -0.4px;
+            overflow-wrap: anywhere;
+            hyphens: auto;
+        }
+        .hook-header .punch { font-size: clamp(14.5px, 4.4vw, 17px); line-height: 1.3; }
+        .hook-header .brand-tag { font-size: 10.5px; letter-spacing: 1.2px; }
+        .intro { font-size: 15px; }
+        .schema-2up { gap: 14px; }
+        .steps { padding: 18px 16px; }
+        .steps .steps-title { font-size: 15px; }
+        .step .txt { font-size: 14.5px; }
+        .qcm-cta { padding: 15px 16px; gap: 12px; }
+        .qcm-cta .qcm-t { font-size: 16px; }
+        .qcm-cta .qcm-arrow { width: 38px; height: 38px; font-size: 18px; }
+        /* boutons de la lightbox plus gros au doigt */
+        #medeos-lightbox button[aria-label="Fermer"] { width: 46px; height: 46px; font-size: 26px; }
+    }
+</style>
+</head>
+<body>
+<div class="page-container">
+
+    <div class="prod-brand"><img src="../images/logo-medeos-violet.png" alt="Medeos"></div>
+
+    <header class="hook-header">
+        <div class="brand-tag">Ressource gratuite</div>
+        <h1 class="course-title">Dissociation partielle : α et i = 1 + α</h1>
+        <p class="punch">Entre « pas dissocié » et « totalement dissocié », il y a <span class="accent">tout un intermédiaire</span>.</p>
+        <p class="punch">Un seul nombre le mesure : <span class="accent">α</span>.</p>
+    </header>
+
+    <p class="intro">Les deux fiches précédentes comptaient les particules en supposant une <strong>dissociation totale</strong> : ω = n × C, avec n entier — 1 pour le glucose, 2 pour NaCl, 3 pour CaCl₂ dans le tableau d'avancement. Mais <em class="hl">certains solutés ne se dissocient que partiellement dans l'eau</em> : les <strong>acides faibles</strong> et les <strong>bases faibles</strong>. Dans ce cas, n n'est plus un nombre entier rond mais une valeur intermédiaire entre <strong>1</strong> (pas dissocié du tout) et <strong>2</strong> (totalement dissocié, pour un électrolyte binaire). Comment quantifie-t-on ça ?</p>
+
+    <p class="intro"><strong>Un mot de vocabulaire avant de commencer.</strong> Un <strong>électrolyte binaire</strong>, c'est un soluté qui ne libère que <em class="hl">deux ions : un positif, un négatif</em>. NaCl (Na⁺ + Cl⁻) en est un, l'acide acétique aussi. CaCl₂, qui libère trois particules, n'en est pas un. Toute cette fiche parle du cas binaire — retiens-le, c'est la limite de validité des formules qui suivent.</p>
+
+    <p class="intro"><strong>Le coefficient de dissociation α.</strong> Pour un électrolyte binaire AB qui se dissocie partiellement dans l'eau selon <strong>AB ⇌ A⁺ + B⁻</strong>, on définit α = <em class="hl">la fraction des molécules AB qui se sont dissociées à l'équilibre</em>, par rapport à la quantité initiale C₀. Rien de plus : une fraction, entre <strong>0</strong> et <strong>1</strong> — soit entre 0 % et 100 % de dissociation.</p>
+
+    <div style="overflow-x:auto; margin:20px 0;">
+        <table style="width:100%; border-collapse:separate; border-spacing:0; border-radius:12px; overflow:hidden; box-shadow:0 3px 12px rgba(107,70,193,0.14); font-size:14.5px; line-height:1.5;">
+            <thead>
+                <tr style="background:#6B46C1; color:#fff;">
+                    <th style="padding:11px 15px; text-align:left; font-weight:700;">Valeur de α</th>
+                    <th style="padding:11px 15px; text-align:left; font-weight:700;">Ce que ça veut dire</th>
+                    <th style="padding:11px 15px; text-align:left; font-weight:700;">Solutés concernés</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background:#ffffff;">
+                    <td style="padding:11px 15px; border-bottom:1px solid #e0d6f3;"><b style="color:#4C2A85;">α = 0</b></td>
+                    <td style="padding:11px 15px; border-bottom:1px solid #e0d6f3; color:#2c3e50;">aucune molécule dissociée</td>
+                    <td style="padding:11px 15px; border-bottom:1px solid #e0d6f3; color:#2c3e50;">le <b>glucose</b>, l'<b>urée</b> : ils restent intacts dans l'eau</td>
+                </tr>
+                <tr style="background:#F3EEFB;">
+                    <td style="padding:11px 15px; border-bottom:1px solid #e0d6f3;"><b style="color:#4C2A85;">α = 1</b> <span style="color:#6b6275;">(= 100 %)</span></td>
+                    <td style="padding:11px 15px; border-bottom:1px solid #e0d6f3; color:#2c3e50;">dissociation totale</td>
+                    <td style="padding:11px 15px; border-bottom:1px solid #e0d6f3; color:#2c3e50;">le <b>NaCl</b>, HCl : toutes les molécules sont cassées en ions</td>
+                </tr>
+                <tr style="background:#ffffff;">
+                    <td style="padding:11px 15px;"><b style="color:#4C2A85;">0 &lt; α &lt; 1</b></td>
+                    <td style="padding:11px 15px; color:#2c3e50;">dissociation partielle</td>
+                    <td style="padding:11px 15px; color:#2c3e50;">cas typique des <b>acides faibles</b> comme l'acide acétique CH₃COOH : α ≈ <b>0,013</b> = 1,3 % à 0,1 mol/L</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p class="intro"><strong>Ce qu'il y a dans le bécher à l'équilibre.</strong> Si tu pars de <strong>C₀</strong> mol/L de AB, à l'équilibre il te reste <strong>C₀(1−α)</strong> sous forme intacte AB, et tu as <strong>C₀α</strong> de A⁺ + <strong>C₀α</strong> de B⁻ en solution. L'osmolarité se calcule alors en additionnant <em class="hl">toutes les particules présentes</em> — les intactes et les dissociées :</p>
+
+    <div style="margin:20px 0; background:linear-gradient(135deg,#4C2A85 0%,#6B46C1 100%); color:#fff; border-radius:14px; padding:19px 22px; text-align:center; box-shadow:0 6px 20px rgba(76,42,133,0.25);">
+        <div style="font-size:11.5px; letter-spacing:1.3px; text-transform:uppercase; font-weight:700; opacity:0.85; margin-bottom:8px;">Osmolarité avec dissociation partielle · électrolyte binaire</div>
+        <div style="font-size:20px; font-weight:800; line-height:1.35; letter-spacing:-0.3px;">ω = C₀(1−α) + C₀α + C₀α = <span style="white-space:nowrap;">(1 + α) × C₀</span></div>
+        <div style="font-size:12.5px; opacity:0.9; margin-top:9px; line-height:1.5;">α = coefficient de dissociation (entre 0 et 1) · C₀ = concentration initiale du soluté avant dissociation</div>
+    </div>
+
+    <p class="intro"><strong>Le coefficient d'ionisation i — la version « tout-en-un ».</strong> On définit aussi un coefficient d'ionisation noté <strong>i</strong>, qui te dit en pratique <em class="hl">combien de particules tu as réellement en solution par molécule de soluté de départ</em>. Pour un électrolyte binaire AB : <strong>i = 1 + α</strong>, donc <strong>ω = i × C₀</strong>.</p>
+
+    <div class="steps">
+        <div class="steps-title">Pourquoi 1 + α ? La moyenne pondérée</div>
+        <ol>
+            <li class="step">
+                <span class="n">1</span>
+                <span class="txt"><span class="lead">Les deux extrêmes.</span> Imagine <b>1 molécule de AB</b> au départ. Si elle ne se dissocie pas, elle reste à <b>1 particule</b>. Si elle se dissocie totalement, elle devient <b>2 particules</b> <span class="gl">(A⁺ + B⁻)</span>.</span>
+            </li>
+            <li class="step">
+                <span class="n">2</span>
+                <span class="txt"><span class="lead">Le mélange des deux.</span> Avec une dissociation partielle α : une fraction <b>(1−α)</b> reste sous forme AB intacte → ça compte pour <b>1</b> particule chacune. Une fraction <b>α</b> s'est dissociée → ça compte pour <b>2</b> particules chacune.</span>
+            </li>
+            <li class="step">
+                <span class="n">3</span>
+                <span class="txt"><span class="lead">On pondère.</span> <b>i = (1−α)·1 + α·2 = 1 − α + 2α = 1 + α</b>.</span>
+            </li>
+        </ol>
+    </div>
+
+    <p class="intro"><strong>i remplace le « n » qu'on utilisait au début.</strong> Le « n » était simpliste : il valait toujours un entier (1, 2, 3…) et supposait implicitement une dissociation totale. Le « i » est plus subtil : il peut prendre <em class="hl">n'importe quelle valeur entre 1 et 2</em>, selon le pourcentage de dissociation.</p>
+
+    <div style="overflow-x:auto; margin:20px 0;">
+        <table style="width:100%; border-collapse:separate; border-spacing:0; border-radius:12px; overflow:hidden; box-shadow:0 3px 12px rgba(107,70,193,0.14); font-size:14.5px; line-height:1.5;">
+            <thead>
+                <tr style="background:#6B46C1; color:#fff;">
+                    <th style="padding:11px 15px; text-align:left; font-weight:700;">Soluté</th>
+                    <th style="padding:11px 15px; text-align:left; font-weight:700;">α</th>
+                    <th style="padding:11px 15px; text-align:left; font-weight:700;">i = 1 + α</th>
+                    <th style="padding:11px 15px; text-align:left; font-weight:700;">n (cas total)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background:#ffffff;">
+                    <td style="padding:11px 15px; border-bottom:1px solid #e0d6f3; color:#2c3e50;"><b style="color:#4C2A85;">Glucose</b> <span style="color:#6b6275;">(non électrolyte)</span></td>
+                    <td style="padding:11px 15px; border-bottom:1px solid #e0d6f3; color:#2c3e50;">0</td>
+                    <td style="padding:11px 15px; border-bottom:1px solid #e0d6f3;"><b style="color:#1A1A2E;">1</b></td>
+                    <td style="padding:11px 15px; border-bottom:1px solid #e0d6f3; color:#2c3e50;">1 ✓ (i = n)</td>
+                </tr>
+                <tr style="background:#F3EEFB;">
+                    <td style="padding:11px 15px; border-bottom:1px solid #e0d6f3; color:#2c3e50;"><b style="color:#4C2A85;">Acide acétique</b> <span style="color:#6b6275;">à 0,1 mol/L</span></td>
+                    <td style="padding:11px 15px; border-bottom:1px solid #e0d6f3; color:#2c3e50;">0,013</td>
+                    <td style="padding:11px 15px; border-bottom:1px solid #e0d6f3;"><b style="color:#1A1A2E;">1,013</b></td>
+                    <td style="padding:11px 15px; border-bottom:1px solid #e0d6f3; color:#6b6275;">non défini</td>
+                </tr>
+                <tr style="background:#ffffff;">
+                    <td style="padding:11px 15px; border-bottom:1px solid #e0d6f3; color:#2c3e50;"><b style="color:#4C2A85;">Acide faible</b> <span style="color:#6b6275;">« moitié dissocié »</span></td>
+                    <td style="padding:11px 15px; border-bottom:1px solid #e0d6f3; color:#2c3e50;">0,5</td>
+                    <td style="padding:11px 15px; border-bottom:1px solid #e0d6f3;"><b style="color:#1A1A2E;">1,5</b></td>
+                    <td style="padding:11px 15px; border-bottom:1px solid #e0d6f3; color:#6b6275;">non défini</td>
+                </tr>
+                <tr style="background:#F3EEFB;">
+                    <td style="padding:11px 15px; color:#2c3e50;"><b style="color:#4C2A85;">NaCl</b> <span style="color:#6b6275;">(un sel, donc un électrolyte fort)</span></td>
+                    <td style="padding:11px 15px; color:#2c3e50;">1</td>
+                    <td style="padding:11px 15px;"><b style="color:#1A1A2E;">2</b></td>
+                    <td style="padding:11px 15px; color:#2c3e50;">2 ✓ (i = n)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="pass-tip">
+        Aux <strong>extrêmes</strong> (α = 0 ou α = 1), i et n donnent le même résultat — donc la formule ω = n·C₀ utilisée jusqu'ici reste valable. Mais <strong>entre les deux</strong>, seul i te donne la vraie osmolarité. <strong>La formule ω = i·C₀ est la version générale qui marche dans 100 % des cas.</strong> Avec une réserve à ne jamais oublier : <strong>i = 1 + α ne vaut que pour un électrolyte binaire</strong>. Devant CaCl₂ ou AlCl₃, tu reviens au tableau d'avancement et à ω = n·C₀.
+    </div>
+
+    <div class="steps">
+        <div class="steps-title">3 exemples concrets pour fixer α — tous à 100 mmol/L</div>
+        <ol>
+            <li class="step">
+                <span class="n">1</span>
+                <span class="txt"><span class="lead">Glucose à 100 mmol/L.</span> Non électrolyte, <b>α = 0</b> → ω = (1+0) × 100 = <b>100 mOsm/L</b>. La solution contient 100 mmol/L de molécules de glucose intactes.</span>
+            </li>
+            <li class="step">
+                <span class="n">2</span>
+                <span class="txt"><span class="lead">NaCl à 100 mmol/L.</span> Électrolyte fort, dissociation totale, <b>α = 1</b> → ω = (1+1) × 100 = <b>200 mOsm/L</b>. La solution contient 100 mmol/L de Na⁺ + 100 mmol/L de Cl⁻ = 200 mmol/L de particules.</span>
+            </li>
+            <li class="step">
+                <span class="n">3</span>
+                <span class="txt"><span class="lead">Acide acétique à 100 mmol/L.</span> Acide faible, <b>α ≈ 0,013</b> (1,3 %) → ω = (1 + 0,013) × 100 ≈ <b>101,3 mOsm/L</b>. Quasiment toutes les molécules restent sous forme non dissociée <span class="gl">(le CH₃COOH intact — le « AB » de la formule)</span> : l'osmolarité est très proche de C₀ <span class="gl">(comme pour un non électrolyte)</span>.</span>
+            </li>
+        </ol>
+    </div>
+
+    <div class="mnemo-box">
+        <span class="lbl">Le mnémo</span>
+        « Retiens que <b>α est la fraction dissociée</b>, et que la formule <b>ω = (1+α)·C₀</b> marche pour <b>TOUT</b> électrolyte binaire — fort ou faible. »
+    </div>
+
+    <div class="recap">
+        <div class="box retenir">
+            <span class="lbl">À retenir</span>
+            <b>α</b> = fraction des molécules dissociées à l'équilibre, rapportée à C₀. Il te donne d'un coup l'état du bécher — <b>C₀(1−α)</b> intact, <b>C₀α</b> de chaque ion — et l'osmolarité : <b>ω = (1+α)·C₀ = i·C₀</b>, avec <b>i = 1 + α</b>.
+        </div>
+        <div class="box piege">
+            <span class="lbl">Le piège</span>
+            Vouloir un <b>n entier</b> à tout prix. Écris ω = 2 × C₀ pour l'acide acétique à 100 mmol/L « parce qu'il donne 2 ions », et tu annonces <b>200 mOsm/L</b> au lieu de ≈ <b>101,3</b> — presque le double. Tant que α n'est ni 0 ni 1, seul <b>i = 1 + α</b> donne la vraie osmolarité.
+        </div>
+    </div>
+
+    <a class="qcm-cta" style="display:none" href="/ressources/qcm-decouverte/decouverte-physique-coefficient-dissociation" target="_top">
+        <span class="qcm-body">
+            <span class="qcm-k">Vérifie en 3 questions</span>
+            <span class="qcm-t">QCM — Coefficient de dissociation</span>
+        </span>
+        <span class="qcm-arrow" aria-hidden="true">→</span>
+    </a>
+    <div class="bio-hint">📲 Pour faire le QCM gratuit → <strong>lien en bio</strong></div>
+
+    <footer class="chapter-footer">
+        <p>Une fiche <strong>Medeos</strong> · pour anticiper la P1, sereinement. · medeos-sante.fr</p>
+    </footer>
+
+</div>
+
+<div id="medeos-lightbox" role="dialog" aria-label="Schéma agrandi" aria-modal="true" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(26,26,46,0.92);overflow:auto;-webkit-overflow-scrolling:touch;touch-action:pinch-zoom;cursor:zoom-out;">
+    <button type="button" aria-label="Fermer" onclick="closeLightbox()" style="position:fixed;top:14px;right:16px;z-index:10003;width:42px;height:42px;border-radius:50%;border:none;background:rgba(255,255,255,0.14);color:#fff;font-size:24px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);">&times;</button>
+    <div id="medeos-zoom-bar" style="position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:10003;display:flex;gap:8px;align-items:center;background:rgba(255,255,255,0.14);backdrop-filter:blur(4px);padding:7px 10px;border-radius:999px;">
+        <button type="button" aria-label="Dézoomer" onclick="lbZoom(-1,event)" style="width:38px;height:38px;border-radius:50%;border:none;background:rgba(255,255,255,0.9);color:#1A1A2E;font-size:22px;font-weight:700;line-height:1;cursor:pointer;">&minus;</button>
+        <button type="button" aria-label="Réinitialiser le zoom" onclick="lbReset(event)" style="height:38px;padding:0 14px;border-radius:999px;border:none;background:rgba(255,255,255,0.9);color:#1A1A2E;font-size:13px;font-weight:700;cursor:pointer;">100&nbsp;%</button>
+        <button type="button" aria-label="Zoomer" onclick="lbZoom(1,event)" style="width:38px;height:38px;border-radius:50%;border:none;background:rgba(255,255,255,0.9);color:#1A1A2E;font-size:22px;font-weight:700;line-height:1;cursor:pointer;">+</button>
+    </div>
+    <div id="medeos-lightbox-stage" onclick="lbStageClick(event)" style="min-height:100%;display:flex;align-items:center;justify-content:center;padding:64px 16px;">
+        <div style="position:relative;display:inline-flex;">
+            <img id="medeos-lightbox-img" src="" alt="Schéma agrandi" ondblclick="lbToggleZoom(event)" style="display:block;border-radius:10px;box-shadow:0 10px 40px rgba(0,0,0,0.5);transform-origin:center center;transition:transform .18s ease;max-width:none;cursor:zoom-in;">
+            <div aria-hidden="true" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;">
+                <span style="font-family:'Inter',Arial,sans-serif;font-size:clamp(11px,4vw,30px);font-weight:700;letter-spacing:clamp(1px,1vw,6px);text-transform:uppercase;color:rgba(120,120,120,0.16);white-space:nowrap;">medeos-sante.fr</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var lbScale = 1, lbBaseW = 0;
+    function openLightbox(src) {
+        var lb = document.getElementById('medeos-lightbox');
+        var img = document.getElementById('medeos-lightbox-img');
+        lbScale = 1;
+        img.onload = function () {
+            // Taille de base : on s'aligne sur la largeur dispo (max 96vw) ou la taille native si plus petite.
+            var availW = Math.min(window.innerWidth * 0.96, this.naturalWidth);
+            var availH = window.innerHeight * 0.84;
+            var ratio = Math.min(availW / this.naturalWidth, availH / this.naturalHeight, 1);
+            lbBaseW = Math.max(120, Math.round(this.naturalWidth * ratio));
+            this.style.width = lbBaseW + 'px';
+            this.style.height = 'auto';
+            lbApply();
+        };
+        img.src = src;
+        lb.style.display = 'block';
+        lb.scrollTop = 0; lb.scrollLeft = 0;
+        document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+        document.getElementById('medeos-lightbox').style.display = 'none';
+        document.body.style.overflow = '';
+    }
+    function lbApply() {
+        var img = document.getElementById('medeos-lightbox-img');
+        img.style.transform = 'scale(' + lbScale + ')';
+        img.style.cursor = lbScale > 1 ? 'zoom-out' : 'zoom-in';
+        var lbl = document.querySelector('#medeos-zoom-bar button[onclick^="lbReset"]');
+        if (lbl) lbl.innerHTML = Math.round(lbScale * 100) + '&nbsp;%';
+    }
+    function lbZoom(dir, e) {
+        if (e) { e.stopPropagation(); e.preventDefault(); }
+        lbScale = Math.min(4, Math.max(1, +(lbScale + dir * 0.5).toFixed(2)));
+        lbApply();
+    }
+    function lbReset(e) { if (e) { e.stopPropagation(); e.preventDefault(); } lbScale = 1; lbApply(); }
+    function lbToggleZoom(e) { if (e) { e.stopPropagation(); e.preventDefault(); } lbScale = lbScale > 1 ? 1 : 2; lbApply(); }
+    function lbStageClick(e) { if (e.target.id === 'medeos-lightbox-stage') closeLightbox(); } // clic dans le vide = fermer
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeLightbox();
+        else if (document.getElementById('medeos-lightbox').style.display === 'block') {
+            if (e.key === '+' || e.key === '=') lbZoom(1);
+            else if (e.key === '-') lbZoom(-1);
+            else if (e.key === '0') lbReset();
+        }
+    });
+    document.getElementById('medeos-lightbox').addEventListener('wheel', function (e) {
+        if (this.style.display !== 'block') return;
+        if (e.ctrlKey || Math.abs(e.deltaY) > 0) { /* molette = zoom */ }
+        e.preventDefault();
+        lbScale = Math.min(4, Math.max(1, +(lbScale - Math.sign(e.deltaY) * 0.25).toFixed(2)));
+        lbApply();
+    }, { passive: false });
+    function schemaMissing(img) { img.style.display = 'none'; var b = img.closest('.schema-box'); if (b) b.classList.add('img-missing'); }
+</script>
+</body>
+</html>
