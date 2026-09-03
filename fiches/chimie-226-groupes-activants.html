@@ -85,6 +85,14 @@
     .recap .retenir .lbl { color: #6B46C1; }
     .recap .piege .lbl { color: #9a6d00; }
     .recap b { font-weight: 700; color: #1A1A2E; }
+    .qcm-cta { display: flex; align-items: center; gap: 16px; text-decoration: none; color: inherit; background: #fff; border: 1px solid #d6c6f0; border-radius: 14px; padding: 18px 22px; margin: 24px 0 6px; box-shadow: 0 9px 26px -16px rgba(107,70,193,.4); transition: transform .18s ease, box-shadow .18s ease; }
+    .qcm-cta:hover { transform: translateY(-2px); box-shadow: 0 16px 38px -16px rgba(107,70,193,.5); }
+    .qcm-cta:focus-visible { outline: 3px solid #6B46C1; outline-offset: 2px; }
+    .qcm-cta .qcm-body { flex: 1; }
+    .qcm-cta .qcm-k { font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #6B46C1; }
+    .qcm-cta .qcm-t { font-size: 18px; font-weight: 800; color: #1A1A2E; margin-top: 3px; letter-spacing: -0.3px; }
+    .qcm-cta .qcm-arrow { flex: none; width: 42px; height: 42px; border-radius: 11px; background: #6B46C1; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700; }
+    .bio-hint { display: none; }
     .chapter-footer { text-align: center; margin-top: 22px; padding-top: 16px; border-top: 1px solid #e6dfd1; color: #7a8088; font-size: 12px; }
     .chapter-footer strong { color: #6b6275; }
     /* ===== IMPRESSION / PDF — format REEL 9:16 (1080×1920), agrandi pour remplir ===== */
@@ -119,8 +127,14 @@
         .recap { gap: 16px; margin: 18px 0; }
         .recap .box { padding: 15px 20px; font-size: 15.5px; }
         .recap .box .lbl { font-size: 12.5px; }
+        .qcm-cta { padding: 17px 24px; margin: 18px 0 6px; box-shadow: none; }
+        .qcm-cta .qcm-k { font-size: 12.5px; }
+        .qcm-cta .qcm-t { font-size: 20px; }
+        .qcm-cta .qcm-arrow { width: 44px; height: 44px; font-size: 20px; }
+        .bio-hint { display: block; text-align: center; margin: 12px 0 0; font-size: 17px; font-weight: 800; color: #6B46C1; }
+        .bio-hint strong { color: #4C2A85; }
         .chapter-footer { margin-top: 14px; padding-top: 12px; font-size: 14px; }
-        .schema-2up, .schema-box, .steps, .recap, .pass-tip, .mnemo-box { page-break-inside: avoid; }
+        .schema-2up, .schema-box, .steps, .recap, .pass-tip, .mnemo-box, .qcm-cta { page-break-inside: avoid; }
     }
     @media (max-width: 600px) {
         body { padding: 14px; }
@@ -179,7 +193,7 @@
 
     <p class="intro">Prenons un exemple concret : le <strong>phénol</strong> <span class="gl">(C₆H₅−OH)</span>. Le benzène garde toujours ses <strong>6 e⁻ π</strong> — ceux qui comptent pour la règle de Hückel et l'aromaticité, et ce nombre ne change pas. Mais l'oxygène du groupe −OH a des <strong>électrons libres</strong> sur lui. Ces électrons exercent une <strong>influence</strong> sur le nuage π du cycle : ils le « tirent vers eux » depuis l'extérieur, ce qui rend certaines positions du cycle plus riches en électrons que d'autres.</p>
 
-    <div class="mnemo-box"><span class="lbl">L'analogie</span>C'est comme si un <b>aimant en dehors du cycle</b> créait une <b>zone d'accumulation électronique à l'intérieur</b> — sans modifier le nombre total d'e⁻ π du cycle, mais en <b>redistribuant leur densité</b>.<span class="tbl-quote">(Tableau V.5 : 💨 <b>Propulseur puissant</b> : envoie des e⁻ directement vers o/p → ces positions débordent d'e⁻ → E⁺ fonce dessus.)</span></div>
+    <div class="mnemo-box"><span class="lbl">L'analogie — l'aimant posé à côté du cycle</span>C'est comme si un <b>aimant en dehors du cycle</b> créait une <b>zone d'accumulation électronique à l'intérieur</b> — sans modifier le nombre total d'e⁻ π du cycle, mais en <b>redistribuant leur densité</b>.</div>
 
     <p class="intro">⚠️ <strong>Important :</strong> le cycle <strong>reste aromatique</strong> avec ses 6 e⁻ π. Ce qui change, c'est la <strong>répartition</strong> de la densité électronique selon les positions — certaines deviennent plus riches, plus attractives pour E⁺.</p>
 
@@ -271,6 +285,15 @@
             « Le cycle gagne des électrons π » → <b>FAUX ❌</b>. Le nombre d'e⁻ π ne bouge pas : ils sont <b>redistribués</b>, pas ajoutés. Et les électrons ne se répartissent pas partout : ils se concentrent <b>uniquement en ortho et para</b> — les positions <b>méta ne reçoivent rien</b>.
         </div>
     </div>
+
+    <a class="qcm-cta" style="display:none" href="#" target="_top">
+        <span class="qcm-body">
+            <span class="qcm-k">Vérifie en 3 questions</span>
+            <span class="qcm-t">QCM — Groupes activants</span>
+        </span>
+        <span class="qcm-arrow" aria-hidden="true">→</span>
+    </a>
+    <div class="bio-hint">📲 Pour faire le QCM gratuit → <strong>lien en bio</strong></div>
 
     <footer class="chapter-footer">
         <p>Une fiche <strong>Medeos</strong> · pour anticiper la P1, sereinement. · medeos-sante.fr</p>

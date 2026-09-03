@@ -81,6 +81,7 @@
     table.tbl td { padding: 12px 14px; border-top: 1px solid #ece5f7; color: #2c3e50; line-height: 1.5; vertical-align: top; }
     table.tbl td b { color: #4C2A85; }
     table.tbl td .gl { color: #6b6275; font-weight: 400; font-size: 13.5px; }
+    table.tbl caption { caption-side: top; text-align: left; font-size: 15px; font-weight: 800; color: #4C2A85; padding: 0 0 10px 2px; }
     .tbl-note { font-size: 12.5px; color: #6b6275; margin: -10px 4px 20px; font-weight: 500; }
 
     .recap { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
@@ -201,7 +202,7 @@
         <p class="punch">Résultat, la SEAr ralentit — et E⁺ finit en <span class="accent">méta</span>, faute de mieux.</p>
     </header>
 
-    <p class="intro">La fiche précédente a posé la <strong>règle des activants</strong> : un groupe qui <strong>donne</strong> des e⁻ au cycle le rend plus riche → la SEAr <strong>accélère</strong> et E⁺ arrive en <strong>ortho/para</strong>. On reprend maintenant exactement le même raisonnement, <em class="hl">mais dans l'autre sens</em> : que se passe-t-il quand le substituant, au lieu de donner, <strong>aspire</strong> les électrons du cycle ?</p>
+    <p class="intro">La fiche précédente a posé la <strong>règle des activants</strong> : un groupe qui <strong>donne</strong> des e⁻ au cycle le rend plus riche → la SEAr <strong>accélère</strong> et E⁺ arrive en <strong>ortho/para</strong>. On reprend maintenant exactement le même raisonnement, <em class="hl">mais dans l'autre sens</em> : que se passe-t-il quand le substituant, au lieu de donner, <strong>aspire</strong> les électrons du cycle ? Et, en fin de fiche, la famille qui refuse de choisir entre les deux : les <strong>halogènes</strong>.</p>
 
     <div class="steps">
         <div class="steps-title">Comment savoir si un groupe va donner ou aspirer les e⁻ du cycle ?</div>
@@ -296,20 +297,61 @@
         </table>
     </div>
 
-    <div class="mnemo-box"><span class="lbl">Le mnémo</span>🌪️ <b>Aspirateur ciblé</b> : aspire les e⁻ surtout en o/p → méta devient la position la moins vide → E⁺ va en méta par défaut.<br>🌪️🌪️ <b>Aspirateur maximal</b> (−NO₂, −CN) : aspire partout mais surtout en o/p → méta = seule option encore un peu praticable.</div>
+    <div class="mnemo-box"><span class="lbl">L'image — l'aspirateur</span>🌪️ <b>Aspirateur ciblé</b> : aspire les e⁻ surtout en o/p → méta devient la position la moins vide → E⁺ va en méta par défaut.<br>🌪️🌪️ <b>Aspirateur maximal</b> (−NO₂, −CN) : aspire partout mais surtout en o/p → méta = seule option encore un peu praticable.</div>
+
+    <p class="intro">⚠️ <strong>Reste une famille qui casse cette logique : les halogènes</strong> (−F, −Cl, −Br, −I). Ils font <em class="hl">les deux choses en même temps</em> — donner ET aspirer — et c'est le piège préféré des QCM, le <strong>piège n°1 de la première année</strong>. Prenons le <strong>chlorobenzène</strong> <span class="gl">(C₆H₅−Cl)</span> : l'atome de chlore fait deux choses contradictoires.</p>
+
+    <div class="steps">
+        <div class="steps-title">Le chlorobenzène — deux effets contradictoires</div>
+        <ol>
+            <li class="step">
+                <span class="n">1</span>
+                <span class="txt"><span class="lead">Il aspire les e⁻ globalement.</span> Le chlore est très <b>électronégatif</b> <span class="gl">(comme l'oxygène, les halogènes veulent des e⁻)</span>. À travers la liaison C−Cl, il tire les électrons vers lui → le cycle est <b>globalement appauvri</b> → la SEAr est <b>plus lente</b>. C'est un <b>désactivant</b>.</span>
+            </li>
+            <li class="step">
+                <span class="n">2</span>
+                <span class="txt"><span class="lead">Il renvoie des e⁻ localement en o/p.</span> Mais en même temps, le chlore a des <b>électrons libres</b> <span class="gl">(comme l'oxygène de −OH)</span>. Ces électrons libres influencent les positions <b>ortho et para</b> du cycle, les rendant relativement plus riches. Résultat : E⁺ va quand même en <b>ortho/para</b>.</span>
+            </li>
+        </ol>
+    </div>
+
+    <div class="tbl-wrap">
+        <table class="tbl">
+            <caption>Les halogènes : chaque effet contrôle un paramètre différent</caption>
+            <thead>
+                <tr><th>Ce que fait l'halogène</th><th>Conséquence</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Il <b>aspire</b> les e⁻ du cycle <span class="gl">(électronégativité)</span></td>
+                    <td>Contrôle la <b>VITESSE</b> → plus lent = <b>désactivant</b></td>
+                </tr>
+                <tr>
+                    <td>Il <b>renvoie</b> ses e⁻ libres vers o/p</td>
+                    <td>Contrôle la <b>POSITION</b> → enrichit o/p = oriente <b>ortho/para</b></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="formula-hero">
+        <span class="fh-k">En une phrase</span>
+        <div class="fh-f">Les halogènes sont les seuls désactivants qui orientent en ortho/para</div>
+        <div class="fh-note">Applique-le à la nitration du chlorobenzène <span class="gl">(HNO₃/H₂SO₄)</span> : on obtient un mélange de <b>2-chloronitrobenzène</b> (ortho) et de <b>4-chloronitrobenzène</b> (para) — mais <b>lentement</b>.</div>
+    </div>
 
     <div class="pass-tip">
-        Devant un benzène substitué, pose-toi la question dans cet ordre : l'atome branché sur le cycle a-t-il des <strong>électrons libres à donner</strong>, ou est-il <strong>déjà avide d'électrons</strong> ? S'il aspire, tu as les deux réponses d'un coup : réaction <strong>plus lente</strong>, et E⁺ en <strong>méta</strong>.
+        Devant un benzène substitué, pose-toi la question dans cet ordre : l'atome branché sur le cycle a-t-il des <strong>électrons libres à donner</strong>, ou est-il <strong>déjà avide d'électrons</strong> ? S'il aspire, tu as les deux réponses d'un coup : réaction <strong>plus lente</strong>, et E⁺ en <strong>méta</strong>. Une seule famille échappe à ce raccourci : les <strong>halogènes</strong>, où vitesse et position vont dans des <strong>directions opposées</strong>.
     </div>
 
     <div class="recap">
         <div class="box retenir">
             <span class="lbl">À retenir</span>
-            Groupe <b>aspirateur</b> (−NO₂, −CN, −COOH, −CHO, −COR) → cycle plus <b>pauvre</b> en e⁻ → SEAr <b>plus lente</b> = <b>désactivant</b> → E⁺ arrive en <b>méta</b>. C'est le symétrique exact des activants, dans l'autre sens.
+            Groupe <b>aspirateur</b> (−NO₂, −CN, −COOH, −CHO, −COR) → cycle plus <b>pauvre</b> en e⁻ → SEAr <b>plus lente</b> = <b>désactivant</b> → E⁺ arrive en <b>méta</b>. C'est le symétrique exact des activants, dans l'autre sens. <b>Une seule exception</b> : les <b>halogènes</b> (−F, −Cl, −Br, −I), désactivants <span class="gl">(donc lents)</span> mais qui orientent en <b>ortho/para</b>.
         </div>
         <div class="box piege">
             <span class="lbl">Le piège</span>
-            « E⁺ va en méta parce que méta est riche en électrons » → <b>FAUX ❌</b>. Méta n'est pas riche : c'est simplement la position <b>la moins appauvrie</b>, celle que −NO₂ vide le moins. Un choix <b>par défaut</b>, pas par préférence.
+            « Le chlorobenzène est désactivant, donc la SEAr donne un produit méta. » → <b>FAUX ❌</b> Désactivant = vrai <span class="gl">(réaction lente)</span>. Méta = faux <span class="gl">(ortho/para)</span>. Et l'autre travers : E⁺ ne va pas en méta parce que méta serait <b>riche</b> — c'est simplement la position <b>la moins appauvrie</b>.
         </div>
     </div>
 

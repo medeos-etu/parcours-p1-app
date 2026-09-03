@@ -158,12 +158,13 @@
     }
 
     /* --- encadré formule Medeos (même bloc que les fiches 181 / 182) --- */
-    .formula { background: #fff; border: 2px solid #6B46C1; border-radius: 12px; padding: 16px 18px; margin: 20px 0; text-align: center; box-shadow: 0 4px 15px rgba(107,70,193,.14); }
-    .formula .fx-lbl { display: block; font-size: 11px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; color: #6B46C1; margin-bottom: 9px; }
-    .formula .fx { display: block; font-size: 27px; line-height: 1.25; font-weight: 800; color: #4C2A85; letter-spacing: -0.4px; }
-    .formula .fx-note { display: block; font-size: 12.5px; color: #6b6275; margin-top: 9px; font-weight: 600; }
-    @media print { .formula { page-break-inside: avoid; box-shadow: none; } .formula .fx { font-size: 31px; } }
-    @media (max-width: 600px) { .formula .fx { font-size: 21px; } }
+    .formula-hero { background: #fff; border: 2px solid #6B46C1; border-radius: 12px; padding: 16px 20px; margin: 20px 0; text-align: center; box-shadow: 0 4px 15px rgba(107,70,193,.13); }
+    .formula-hero .fh-k { display: block; font-size: 11px; font-weight: 800; letter-spacing: .9px; text-transform: uppercase; color: #6B46C1; margin-bottom: 9px; }
+    .formula-hero .fh-f { font-size: 21px; font-weight: 800; color: #1A1A2E; letter-spacing: -.2px; line-height: 1.35; }
+    .formula-hero .fh-note { font-size: 12.5px; color: #6b6275; margin-top: 9px; font-weight: 500; }
+    .formula-hero .fh-note b { color: #4C2A85; }
+    @media print { .formula-hero { page-break-inside: avoid; box-shadow: none; } .formula-hero .fh-f { font-size: 25px; } .formula-hero .fh-note { font-size: 14px; } }
+    @media (max-width: 600px) { .formula-hero { padding: 15px 15px; } .formula-hero .fh-f { font-size: 18px; } }
 </style>
 </head>
 <body>
@@ -179,10 +180,10 @@
 
     <p class="intro">Le 3<sup>e</sup> principe vient de te donner le <strong>point de départ</strong> de l'entropie : S = 0 pour un cristal parfait à 0 K. À partir de là, plus on chauffe le corps, plus S monte. Tu as vu un peu plus tôt <em>pourquoi</em> : quand un système <strong>reçoit</strong> de la chaleur, ses molécules s'agitent davantage, donc le désordre augmente — et ça se quantifie avec <strong>ΔS = Q / T</strong>. Reste le cas où <em class="hl">toute la chaleur échangée sert à changer d'état</em> : là, l'entropie ne monte plus doucement, elle subit un <strong>saut brutal</strong>, comme l'enthalpie. Et ce saut se calcule.</p>
 
-    <div class="formula">
-        <span class="fx-lbl">Entropie de changement d'état</span>
-        <span class="fx">ΔS<sub>changement</sub> = ΔH<sub>changement</sub> / T<sub>changement</sub></span>
-        <span class="fx-note">ΔH en J·mol⁻¹ · T la température du changement d'état, en kelvins (K) · donc ΔS en J·K⁻¹·mol⁻¹</span>
+    <div class="formula-hero">
+        <span class="fh-k">Entropie de changement d'état</span>
+        <span class="fh-f">ΔS<sub>changement</sub> = ΔH<sub>changement</sub> / T<sub>changement</sub></span>
+        <span class="fh-note">ΔH en J·mol⁻¹ · T la température du changement d'état, en kelvins (K) · donc ΔS en J·K⁻¹·mol⁻¹</span>
     </div>
 
     <p class="intro">T est toujours positive : c'est donc le <strong>signe de ΔH</strong>, à lui seul, qui donne le signe de ΔS. Les deux exemples de l'eau le montrent.</p>
