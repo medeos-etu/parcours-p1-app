@@ -26,10 +26,17 @@ const fichiers = (!cible || cible === '--tout')
 
 let nQ = 0, nI = 0, ok = 0, ancreKO = 0, sansAncre = 0, ficheKO = 0, pas5 = 0, vraies = 0;
 const rejets = [];
+/* un lot = un QCM de cinq items. Sept lots par fiche : 1-2 gratuit, 3-5 pack, 6-7 arène.
+   On vérifie ici que chaque fiche servie a bien ses sept lots, une fois chacun. */
+const lots = {}, enonces = {};
 fichiers.forEach(nom => {
   let j; try { j = JSON.parse(fs.readFileSync(path.join(APP, 'qcm', nom), 'utf8')); } catch (e) { return; }
   (j.questions || []).forEach((q, k) => {
     nQ++;
+    (lots[q.fiche] = lots[q.fiche] || []).push(q.lot);
+    const cle = norm(q.q || '');
+    if (enonces[cle]) rejets.push({ nom, k, cause: 'énoncé déjà posé dans ' + enonces[cle] });
+    else enonces[cle] = nom + ' #' + k;
     const t = texteFiche(q.fiche);
     if (!t) { ficheKO++; rejets.push({ nom, k, cause: 'fiche introuvable : ' + q.fiche }); return; }
     if (!q.items || q.items.length !== 5) { pas5++; rejets.push({ nom, k, cause: (q.items || []).length + ' items au lieu de 5' }); return; }
@@ -57,6 +64,31 @@ console.log('    citations introuvables dans la fiche                 : ' + ancr
 if (pas5) console.log('    questions hors format 5 items                        : ' + pas5);
 if (ficheKO) console.log('    fiches introuvables                                  : ' + ficheKO);
 if (nQ) console.log('    moyenne des propositions vraies                      : ' + (vraies / nQ).toFixed(2) + '  (cible 2,5 · le gabarit dit « jamais plus de 60 % »)');
+
+/* les sept lots, fiche par fiche */
+const fichesVues = Object.keys(lots), incompletes = [];
+fichesVues.forEach(f => {
+  const l = lots[f].slice().sort((a, b) => a - b);
+  const attendu = [1, 2, 3, 4, 5, 6, 7];
+  const manque = attendu.filter(n => !l.includes(n));
+  const double = attendu.filter(n => l.filter(x => x === n).length > 1);
+  const hors = l.filter(n => !attendu.includes(n));
+  if (manque.length || double.length || hors.length) {
+    incompletes.push(f + ' — ' + [
+      manque.length ? 'lot(s) manquant(s) : ' + manque.join(', ') : '',
+      double.length ? 'lot(s) en double : ' + double.join(', ') : '',
+      hors.length ? 'lot(s) hors 1-7 : ' + hors.join(', ') : '',
+    ].filter(Boolean).join(' · '));
+  }
+});
+console.log('    fiches servies                                       : ' + fichesVues.length
+  + ' · complètes (7 lots, une fois chacun) : ' + (fichesVues.length - incompletes.length));
+if (incompletes.length) {
+  console.log('\n  LOTS INCOMPLETS (' + incompletes.length + ') :');
+  incompletes.slice(0, 12).forEach(x => console.log('    ' + x));
+  if (incompletes.length > 12) console.log('    … et ' + (incompletes.length - 12) + ' autres');
+  rejets.push({ nom: '(lots)', k: '', cause: incompletes.length + ' fiche(s) sans ses sept lots' });
+}
 if (rejets.length) {
   console.log('\n  À CORRIGER (' + rejets.length + ') :');
   rejets.slice(0, 12).forEach(r => console.log('    ' + r.nom + ' #' + r.k + ' — ' + r.cause));
