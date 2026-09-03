@@ -34,6 +34,35 @@ const parCh = {};
   });
 })(SITE);
 
+/* ON AJOUTE LA BANQUE DE L'APP — 1 138 questions écrites depuis les ANCIENNES fiches.
+   Elles viennent des mêmes cours, mais leur rattachement au chapitre doit être déduit :
+   on compare le nom de l'ancienne fiche aux titres des nouvelles, dans la même matière. */
+{
+  const h = fs.readFileSync(path.join(APP, 'index.html'), 'utf8');
+  const i = h.indexOf('const ABANK=['), j2 = h.indexOf('\n];', i);
+  const B = eval(h.slice(i + 12, j2 + 2)).filter(q => q && q.f && q.mat && q.q && Array.isArray(q.it));
+  const norm = s2 => String(s2).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, ' ');
+  const mots = s2 => new Set(norm(s2).split(' ').filter(w => w.length > 3));
+  const cand = {};
+  Object.keys(man).forEach(m => { cand[m] = man[m].map(x => ({ ch: x.chapitre, m: mots(x.slug + ' ' + (x.titre || '')) })); });
+  const chapDe = {};
+  [...new Set(B.map(q => q.f))].forEach(f => {
+    const mat = String(f).split('-')[0]; const C = cand[mat]; if (!C) return;
+    const mf = mots(String(f).replace(/^[a-z]+-/, ''));
+    let best = null, sc = 0;
+    C.forEach(c => { let k = 0; mf.forEach(w => { if (c.m.has(w)) k++; }); const v = k / Math.max(1, mf.size); if (v > sc) { sc = v; best = c.ch; } });
+    if (sc >= 0.34) chapDe[f] = best;
+  });
+  B.forEach(q => {
+    const mat = String(q.mat).toLowerCase(); const ch = chapDe[q.f];
+    if (ch == null) return;
+    (parCh[mat + '|' + ch] = parCh[mat + '|' + ch] || []).push({
+      src: 'app:' + q.f, lot: q.ar ? 'arene' : 'app', q: q.q,
+      items: q.it.map(t => ({ t: t[1], v: !!t[2], e: t[3] || '' })),
+    });
+  });
+}
+
 fs.rmSync(DEST, { recursive: true, force: true });
 fs.mkdirSync(DEST, { recursive: true });
 
