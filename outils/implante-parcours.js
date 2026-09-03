@@ -170,6 +170,18 @@ const blocQcm = '\n' + DEB + '\n'
   + lignes.join(',\n') + '\n' + FIN;
 h = h.slice(0, iBank + 'const ABANK=['.length) + ancienBloc + blocQcm + h.slice(jBank);
 
+/* ── 5 bis. les vignettes de la carte réellement présentes ── */
+{
+  const dossierV = path.join(APP, 'img', 'parcours', 'territoires');
+  const vign = {};
+  if (fs.existsSync(dossierV)) fs.readdirSync(dossierV).filter(f => /\.(png|jpe?g|webp)$/i.test(f)).sort()
+    .forEach(f => { vign[f.replace(/\.(png|jpe?g|webp)$/i, '')] = f; });
+  const iV = h.indexOf('/* ==VIGNETTES== */'), jV = h.indexOf('/* ==/VIGNETTES== */');
+  if (iV < 0 || jV < 0) { console.log('marqueurs VIGNETTES introuvables — carte sans vignettes'); }
+  else h = h.slice(0, iV) + '/* ==VIGNETTES== */\nconst VIGNETTES=' + JSON.stringify(vign) + ';\n' + h.slice(jV);
+  console.log('vignettes    : ' + Object.keys(vign).length + ' présentes dans img/parcours/territoires/');
+}
+
 /* ── 6. écriture ── */
 if (ESSAI) { console.log('\n(essai : rien écrit · ' + lignes.length + ' questions prêtes)'); process.exit(0); }
 fs.writeFileSync(P + '.avant-parcours', fs.readFileSync(P));

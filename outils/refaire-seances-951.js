@@ -63,6 +63,7 @@ MATIERES.forEach(mat => {
   files[mat] = M[CLE[mat]].map(e => ({
     slug: slugDe(e.fiche),
     chap: titreChap(mat, e),
+    num: e.chapitre,
     titre: propre(e.titre),
   }));
 });
@@ -84,14 +85,18 @@ while (reste > 0) {
     if (curseur[mat] >= paquets[mat].length) return;
     const paire = paquets[mat][curseur[mat]++]; reste--;
     const chaps = [...new Set(paire.map(x => x.chap))];
-    seances.push({
+    const nums = [...new Set(paire.map(x => x.num))];
+    const s = {
       id: 'p' + (seances.length + 1),
       img: IMAGE[mat],
       mat: mat,
       chap: chaps.join(' → '),
+      chn: nums[0],                              /* numéro du chapitre : la vignette du territoire s'en sert */
       titre: paire.map(x => x.titre).join(' · '),
       fiches: paire.map(x => x.slug),
-    });
+    };
+    if (nums.length > 1) s.chn2 = nums[1];       /* la séance enjambe deux chapitres */
+    seances.push(s);
   });
 }
 

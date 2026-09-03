@@ -44,7 +44,8 @@ const srv = http.createServer((rq, rs) => {
     seances: typeof SEANCES!=='undefined' ? SEANCES.length : -1,
     titres: typeof TITRES_FICHES!=='undefined' ? Object.keys(TITRES_FICHES).length : -1,
     banque: typeof ABANK!=='undefined' ? ABANK.length : -1,
-    jalons: typeof JALONS!=='undefined' ? JALONS.map(j=>j.n).join(' ') : 'absent',
+    territoires: typeof territoires==='function' ? territoires().length : -1,
+    chn: typeof SEANCES!=='undefined' ? SEANCES.filter(s=>s.chn).length : -1,
     illu: typeof illuRoute==='function' ? illuRoute().length : -1,
     premiere: typeof seanceCourante==='function' && seanceCourante() ? seanceCourante().titre : null,
     qcmPremiere: (typeof seanceCourante==='function' && seanceCourante()) ? seanceCourante().fiches.map(f=>qsDeFicheToutes(f).length).join('+') : null,
@@ -77,6 +78,10 @@ const srv = http.createServer((rq, rs) => {
   await ev(`(()=>{ try{ S.sdone=S.sdone||{}; SEANCES.slice(0,7).forEach(s=>{ S.sdone[s.id]=Date.now(); }); saveS(); renderParcours(); }catch(e){} })()`);
   await ev(`go('home')`); await cap('09-home-apres-7');
   await ev(`try{ ouvrirCarte(); }catch(e){}`); await cap('10-carte-apres-7');
+  /* la carte d'un élève à 60 séances : des territoires conquis, d'autres en cours, le reste à découvrir */
+  await ev(`(()=>{ try{ SEANCES.slice(7,60).forEach(s=>{ S.sdone[s.id]=Date.now(); }); saveS(); _terr=null; ouvrirCarte(); }catch(e){ console.error('60 : '+e.message); } })()`);
+  await page.waitForTimeout(500); await page.screenshot({ path: path.join(OUT, '10b-carte-apres-60.png'), fullPage: true }); console.log('  📸 10b-carte-apres-60 (page entière)');
+  await ev(`(()=>{ try{ SEANCES.slice(7,60).forEach(s=>{ delete S.sdone[s.id]; }); saveS(); _terr=null; }catch(e){} })()`);
   await ev(`try{ go('arene'); if(typeof setLieu==='function') setLieu('salles'); }catch(e){}`); await cap('11-salles');
 
   /* le bilan de fin de séance, avec un jalon franchi (la 7e) */
