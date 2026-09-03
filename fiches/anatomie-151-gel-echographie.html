@@ -175,7 +175,7 @@
     <div class="schema-box" style="margin: 20px 0;">
         <span class="schema-num">Les deux impédances en présence</span>
         <p style="font-size: 21px; font-weight: 800; color: #4C2A85; line-height: 1.45; margin: 6px 0 2px;">Z_air ≈ 440&nbsp;&nbsp;·&nbsp;&nbsp;Z_tissu ≈ 1,6 × 10⁶</p>
-        <p class="caption">En kg·m⁻²·s⁻¹. L'<strong>air</strong> est très « mou » acoustiquement ; les <strong>tissus mous</strong> sont ~3 500 fois plus « durs ». C'est l'écart le plus violent que la sonde puisse rencontrer.</p>
+        <p class="caption">En kg·m⁻²·s⁻¹. L'<strong>air</strong> est très « mou » acoustiquement ; les <strong>tissus mous</strong> sont <strong>~3 500 fois plus « durs »</strong> — c'est l'ordre de grandeur à retenir (avec ces deux valeurs précises, le rapport vaut ≈ 3 600 : c'est l'étape 1 ci-dessous). C'est l'écart le plus violent que la sonde puisse rencontrer.</p>
     </div>
 
     <div class="steps">
@@ -191,7 +191,7 @@
             </li>
             <li class="step">
                 <span class="n">3</span>
-                <span class="txt"><span class="lead">Conclure.</span> R ≈ 1² = <b>0,999</b> <span class="gl">(= 99,9 %)</span> et T ≈ 1 − 0,999 = <b>0,001</b> <span class="gl">(= 0,1 %)</span>. Autrement dit : <b>99,9 % de l'ultrason rebondit</b> sur la fine couche d'air entre la sonde et la peau. Seulement 0,1 % pénètre dans le corps.</span>
+                <span class="txt"><span class="lead">Conclure.</span> R ≈ (Z₂/Z₂)² = <b>1² = 1</b> — soit, en valeur numérique, <b>R ≈ 0,999</b> <span class="gl">(= 99,9 %)</span>. Le budget R + T = 1 donne le reste : <b>T ≈ 0,001</b> <span class="gl">(= 0,1 %)</span>. Autrement dit : <b>99,9 % de l'ultrason rebondit</b> sur la fine couche d'air entre la sonde et la peau. Seulement 0,1 % pénètre dans le corps.</span>
             </li>
         </ol>
     </div>
@@ -220,7 +220,7 @@
     <div class="mnemo-box"><span class="lbl">Le mnémo</span><b>Air = invisible. Os = bloque tout. Tissus mous = parfait.</b></div>
 
     <div class="pass-tip">
-        Devant une interface, ne te lance pas tout de suite dans le calcul : regarde d'abord si <strong>l'un des deux Z est négligeable devant l'autre</strong>. Si oui, la fraction tend vers <strong>Z₂/Z₂ = 1</strong>, donc <strong>R → 1</strong> et <strong>T → 0</strong>, sans écrire une seule ligne de plus. C'est exactement le cas de l'interface air/tissu, avec son rapport de ~3 600.
+        Devant une interface, ne te lance pas tout de suite dans le calcul : regarde d'abord si <strong>l'un des deux Z est négligeable devant l'autre</strong>. Si oui, la fraction vaut <strong>1 en valeur absolue</strong> <span style="color:#6b6275;">(ici Z₂/Z₂ = 1)</span>, donc <strong>R → 1</strong> et <strong>T → 0</strong>, sans écrire une seule ligne de plus. C'est exactement le cas de l'interface air/tissu, avec son rapport de ~3 600.
     </div>
 
     <div class="recap">

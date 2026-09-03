@@ -167,7 +167,7 @@
         <div class="brand-tag">Ressource gratuite</div>
         <h1 class="course-title">La formule R = ((Z₂−Z₁)/(Z₂+Z₁))²</h1>
         <p class="punch">Le contraste d'impédance, maintenant <span class="accent">écrit</span>.</p>
-        <p class="punch">Deux étages à construire — puis on vérifie qu'elle redonne bien <span class="accent">0 et 1</span>.</p>
+        <p class="punch">Deux temps, plus un dernier étage — puis on vérifie qu'elle redonne bien <span class="accent">0 et 1</span>.</p>
     </header>
 
     <p class="intro">La fiche précédente a établi une chose : à une interface, ce qui décide du rebond, ce n'est pas la valeur de Z₁ ni celle de Z₂ séparément, c'est <strong>l'écart entre les deux</strong>. Deux Z énormes et identiques (os → os) ne renvoient rien du tout. Reste à traduire mathématiquement ce « contraste entre Z₁ et Z₂ ». <em class="hl">Ça se construit en deux temps, plus un dernier étage.</em></p>
@@ -196,7 +196,7 @@
         <p class="caption">R et T sont <strong>sans unité, entre 0 et 1</strong> (parfois exprimés en pourcentage). « <strong>Incidence normale</strong> » = l'onde arrive perpendiculaire à l'interface — la formule générale avec angle existe, mais elle est plus complexe : <strong>on l'admet</strong>.</p>
     </div>
 
-    <p class="intro">Une formule, ça se vérifie. On la teste <strong>aux extrêmes</strong>, sur les deux cas déjà croisés dans le tableau des configurations : deux milieux identiques d'un côté, un contraste maximal de l'autre.</p>
+    <p class="intro">Une formule, ça se vérifie. On la teste <strong>aux extrêmes</strong>, sur les cas déjà croisés dans le tableau des configurations : deux milieux identiques à une borne, un contraste maximal à l'autre, et le cas intermédiaire au milieu.</p>
 
     <table style="width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14.5px; background: #fff; border: 1px solid #dccff2; border-radius: 12px; overflow: hidden;">
         <tr style="background: #F1ECFA;">
@@ -211,7 +211,7 @@
             <td style="padding: 10px 16px; border-top: 1px solid #ede7f7;">0</td>
             <td style="padding: 10px 16px; border-top: 1px solid #ede7f7;"><b>0</b></td>
             <td style="padding: 10px 16px; border-top: 1px solid #ede7f7;"><b>1</b></td>
-            <td style="padding: 10px 16px; border-top: 1px solid #ede7f7;">Tout passe, rien ne rebondit → <b>aucune image</b>.</td>
+            <td style="padding: 10px 16px; border-top: 1px solid #ede7f7;">Tout passe, rien ne rebondit → <b>aucune image</b>. C'est ce qu'on cherche <b>entre la sonde et la peau</b> <span style="color:#6b6275;">(le rôle du gel).</span></td>
         </tr>
         <tr style="background: #F3EEFB;">
             <td style="padding: 11px 16px; border-top: 1px solid #dccff2;"><b style="color:#4C2A85;">Z₁ ≈ Z₂</b><br><span style="color:#6b6275;">(tissus mous similaires)</span></td>
@@ -240,7 +240,7 @@
     <div class="recap">
         <div class="box retenir">
             <span class="lbl">À retenir</span>
-            <b>R = ((Z₂ − Z₁) / (Z₂ + Z₁))²</b> et <b>T = 1 − R = 4·Z₁·Z₂ / (Z₂ + Z₁)²</b>, en <b>incidence normale</b>. Deux étages : une <b>différence relative</b> (l'écart, normalisé entre 0 et 1), puis un <b>carré</b>, parce que R est une proportion d'<b>énergie</b> et que l'énergie va toujours comme le carré de l'amplitude.
+            <b>R = ((Z₂ − Z₁) / (Z₂ + Z₁))²</b> et <b>T = 1 − R = 4·Z₁·Z₂ / (Z₂ + Z₁)²</b>, en <b>incidence normale</b>. On la bâtit en <b>deux temps</b> — la différence <b>Z₂ − Z₁</b>, divisée par la somme <b>Z₂ + Z₁</b> pour la normaliser, ce qui donne la <b>différence relative d'impédance</b> — puis un <b>dernier étage</b> : le <b>carré</b>, parce que R est une proportion d'<b>énergie</b> et que l'énergie va toujours comme le carré de l'amplitude.
         </div>
         <div class="box piege">
             <span class="lbl">Le piège</span>

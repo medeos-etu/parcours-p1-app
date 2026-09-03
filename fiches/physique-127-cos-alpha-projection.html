@@ -217,12 +217,18 @@
         </tr>
     </table>
 
-    <p class="intro">Quand α augmente de 0° à 90°, <strong>cos α décroît</strong> de 1 jusqu'à 0 pendant que <strong>sin α croît</strong> de 0 jusqu'à 1 — les deux lignes du tableau sont le <strong>miroir</strong> l'une de l'autre.</p>
+    <p class="intro">Quand α augmente de 0° à 90°, <strong>cos α décroît</strong> régulièrement de 1 jusqu'à 0 pendant que <strong>sin α croît</strong> régulièrement de 0 jusqu'à 1. À <strong>45°</strong>, exactement au milieu, <em class="hl">cos α = sin α = √2/2 ≈ 0,71</em> : c'est l'angle d'équilibre. Les deux lignes du tableau sont le <strong>miroir</strong> l'une de l'autre — si tu connais les cos, tu connais les sin en lisant le tableau de droite à gauche.</p>
 
     <div class="schema-box" style="margin: 20px 0;">
         <span class="schema-num">⚠️ Ces nombres ont-ils une unité ?</span>
         <p style="font-size: 21px; font-weight: 800; color: #4C2A85; line-height: 1.4; margin: 6px 0 2px;">Non. cos α et sin α sont sans dimension.</p>
         <p class="caption">Ce sont des <strong>proportions</strong>, des « pourcentages » de l'hypoténuse : on divise une longueur par une autre longueur → les unités s'annulent (cm ÷ cm = nombre pur). Concrètement, cos 60° = 0,5 signifie « l'adjacent fait exactement la moitié de l'hypoténuse » — que celle-ci mesure 1 cm, 5 m ou 12 km. Pour récupérer une longueur réelle : <strong>longueur projetée = longueur totale × cos α</strong>.</p>
+    </div>
+
+    <div class="schema-box" style="margin: 20px 0;">
+        <span class="schema-num">Une autre façon de voir — le cercle trigonométrique</span>
+        <p style="font-size: 19px; font-weight: 800; color: #4C2A85; line-height: 1.45; margin: 6px 0 2px;">Cercle de rayon 1 : cos α = abscisse de P · sin α = ordonnée de P</p>
+        <p class="caption">Trace un <strong>cercle de rayon 1</strong> centré sur l'origine d'un repère, puis place un point <strong>P</strong> au bout d'un rayon incliné d'un angle α au-dessus de l'horizontale. C'est le même triangle qu'à l'étape 1 : le rayon = l'<strong>hypoténuse</strong> (de longueur 1), la projection horizontale = l'<strong>adjacent</strong> (= cos α), la projection verticale = l'<strong>opposé</strong> (= sin α). Et c'est ce qui montre <strong>pourquoi</strong> cos 0° = 1 <span style="color:#6b6275;">(le point est tout à droite)</span> et cos 90° = 0 <span style="color:#6b6275;">(le point est tout en haut, à la verticale)</span>.</p>
     </div>
 
     <p class="intro">C'est exactement ce qui se joue dans la formule Doppler. Le sang coule dans son artère à la vitesse <strong>v</strong>, dans la direction de l'artère. Mais la sonde est inclinée d'un angle α : <em class="hl">elle ne « voit » pas toute la vitesse v</em>, seulement la composante qui pointe vers elle — la <strong>projection de v sur l'axe de la sonde</strong> :</p>
@@ -262,7 +268,7 @@
         </div>
         <div class="box piege">
             <span class="lbl">Le piège</span>
-            Une sonde <b>perpendiculaire</b> au vaisseau (α = 90°) donne <b>cos α = 0</b>, donc <b>aucun signal</b> — même si le sang y file à 200 cm/s. « Bien voir le vaisseau » et « bien le mesurer » sont deux choses différentes.
+            Une sonde <b>perpendiculaire</b> au vaisseau (α = 90°) donne <b>cos α = 0</b>, donc <b>aucun signal</b> — <b>quelle que soit la vitesse réelle du sang</b>. « Bien voir le vaisseau » et « bien le mesurer » sont deux choses différentes.
         </div>
     </div>
 

@@ -170,7 +170,7 @@
         <p class="punch">Et c'est le <span class="accent">délai</span> entre les deux qui dessine l'image.</p>
     </header>
 
-    <p class="intro">Tu sais maintenant ce qui <strong>rebondit</strong> à une interface, ce qui <strong>passe</strong>, et ce qui <strong>s'éteint</strong> en chemin parce que le milieu absorbe. Il reste une seule question, et c'est la dernière du chapitre : <em class="hl">comment la sonde transforme-t-elle tous ces échos en image ?</em> Réponse : grâce à des cristaux qui ont une propriété double, dite <strong>effet piézoélectrique</strong>.</p>
+    <p class="intro">Tu sais maintenant ce qui <strong>rebondit</strong> à une interface, ce qui <strong>passe</strong>, et ce qui <strong>s'éteint</strong> en chemin parce que le milieu absorbe. Tu sais aussi que l'appareil allume un <strong>point lumineux</strong> à la profondeur de chaque écho reçu. Restent les deux dernières questions du chapitre : <em class="hl">qui fabrique l'ultrason — et qui l'écoute au retour ?</em> Puis : <em class="hl">comment un délai devient-il une profondeur ?</em> Réponse à la première : des cristaux qui ont une propriété double, dite <strong>effet piézoélectrique</strong>.</p>
 
     <div class="steps">
         <div class="steps-title">Une propriété double — la sonde fait tout, toute seule</div>
@@ -190,30 +190,10 @@
         </ol>
     </div>
 
-    <div class="steps">
-        <div class="steps-title">🩺 La mécanique de l'image écho en une image</div>
-        <ol>
-            <li class="step">
-                <span class="n">1</span>
-                <span class="txt"><span class="lead">Une seule impulsion part.</span> Tu envoies une impulsion d'ultrason avec la sonde ; elle traverse le corps <b>en ligne droite</b>.</span>
-            </li>
-            <li class="step">
-                <span class="n">2</span>
-                <span class="txt"><span class="lead">Une série d'échos revient.</span> À chaque interface rencontrée <span class="gl">(peau, graisse, muscle, foie, vaisseau…)</span>, un petit pourcentage rebondit vers la sonde. Elle reçoit donc <b>plusieurs échos, chacun avec un délai différent</b> — les échos profonds reviennent plus tard.</span>
-            </li>
-            <li class="step">
-                <span class="n">3</span>
-                <span class="txt"><span class="lead">L'ordinateur convertit chaque délai en profondeur.</span> Il mesure le temps de retour de chaque écho et, connaissant la vitesse du son dans les tissus <span class="gl">(c ≈ 1 540 m/s)</span>, il calcule la profondeur de chaque interface.</span>
-            </li>
-            <li class="step">
-                <span class="n">4</span>
-                <span class="txt"><span class="lead">Il allume un point lumineux</span> à la bonne profondeur. <b>La collection de tous ces points = l'image échographique</b> que tu vois à l'écran.</span>
-            </li>
-        </ol>
-    </div>
+    <p class="intro">👉 <strong>Et comment ce délai devient-il une distance ?</strong> Par la relation la plus simple de la physique : <strong>distance = vitesse × temps</strong>. Pendant Δt, l'ultrason parcourt <strong>c × Δt</strong>, avec c ≈ 1 540 m/s dans les tissus mous. Tout tient dans une seule précaution — savoir ce que cette distance représente vraiment.</p>
 
     <div class="pass-tip">
-        ⚠️ <strong>Piège ⭐⭐⭐ — Facteur 2 aller-retour.</strong> L'ultrason parcourt <strong>deux fois</strong> la distance sonde ↔ interface <em class="hl">(aller + retour)</em>. D'où le facteur 2 au dénominateur de la formule.
+        ⚠️ <strong>Piège ⭐⭐⭐ — Facteur 2 aller-retour.</strong> L'ultrason parcourt <strong>deux fois</strong> la distance sonde ↔ interface <em class="hl">(aller + retour)</em>. Donc c × Δt, ce n'est pas y : c'est <strong>2y</strong>. D'où le facteur 2 au dénominateur de la formule.
     </div>
 
     <div class="schema-box" style="margin: 20px 0;">
@@ -233,7 +213,7 @@
         </div>
         <div class="box piege">
             <span class="lbl">Le piège</span>
-            Le <b>2</b> du dénominateur. Le trajet est parcouru <b>deux fois</b>, donc l'oublier revient à annoncer une profondeur <b>deux fois trop grande</b>. C'est exactement le même réflexe que le facteur 2 de la formule Doppler médicale — <b>même cause, même 2</b>.
+            Le <b>2</b> du dénominateur. Le trajet est parcouru <b>deux fois</b>, donc l'oublier revient à annoncer une profondeur <b>deux fois trop grande</b>. Même cause qu'en Doppler — <b>l'aller-retour</b> — mais le 2 ne porte pas sur la même chose : là-bas c'est le <b>décalage de fréquence</b> qui est doublé, ici c'est le <b>trajet</b>.
         </div>
     </div>
 

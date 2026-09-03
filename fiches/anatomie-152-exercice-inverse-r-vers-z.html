@@ -170,7 +170,7 @@
         <p class="punch">Il y a <span class="accent">deux</span> réponses — et le QCM attend les deux.</p>
     </header>
 
-    <p class="intro">Jusqu'ici, tu partais des <strong>impédances</strong> et tu calculais R : le contraste tissu/os, le contraste air/peau. En QCM, on inverse souvent le calcul classique : on te donne <strong>R = 0,25</strong> <em class="hl">(= 25 % de l'onde réfléchie à l'interface)</em>, et on te demande le rapport <strong>Z₂/Z₁</strong>. Même chemin, parcouru à l'envers — avec un piège planté au milieu.</p>
+    <p class="intro">Jusqu'ici, tu partais des <strong>impédances</strong> pour en tirer R — c'est ce que tu viens de faire sur l'interface <strong>air / peau</strong>, où R monte à 99,9 %. En QCM, on inverse souvent le calcul classique : on te donne <strong>R = 0,25</strong> <em class="hl">(= 25 % de l'onde réfléchie à l'interface)</em>, et on te demande le rapport <strong>Z₂/Z₁</strong>. Même chemin, parcouru à l'envers — avec un piège planté au milieu.</p>
 
     <div class="schema-box" style="margin: 20px 0;">
         <span class="schema-num">L'énoncé</span>
@@ -187,7 +187,7 @@
             </li>
             <li class="step">
                 <span class="n">2</span>
-                <span class="txt"><span class="lead">Prendre la racine carrée des deux côtés.</span> <b>(Z₂ − Z₁) / (Z₂ + Z₁) = ± √0,25 = ± 0,5</b>. C'est ici que tout se joue — lis l'encadré juste en dessous avant d'aller plus loin.</span>
+                <span class="txt"><span class="lead">Prendre la racine carrée des deux côtés.</span> <b>(Z₂ − Z₁) / (Z₂ + Z₁) = ± √0,25 = ± 0,5</b>. C'est ici que tout se joue : l'encadré ⚠️ qui suit ces trois étapes te dit pourquoi.</span>
             </li>
             <li class="step">
                 <span class="n">3</span>
@@ -230,17 +230,17 @@
     <p class="intro"><strong>Pourquoi physiquement ?</strong> Parce que <strong>R est un carré</strong>, donc il ne distingue pas le sens de la marche : tu peux aller du milieu 1 vers le milieu 2 <em class="hl">(Z₂ = 3·Z₁)</em> ou du milieu 2 vers le milieu 1 <em class="hl">(Z₂ = Z₁/3)</em>, tu obtiens <strong>le même pourcentage de rebond</strong>. Le rebond ne dépend que de l'<strong>écart</strong> entre les deux Z, pas de qui est le plus dur.</p>
 
     <div class="pass-tip">
-        Pose le <strong>±</strong> sur ta feuille au moment exact de la racine carrée — à l'étape 2, pas à la fin. Ensuite, tu déroules <strong>deux lignes de calcul en parallèle</strong>, une par signe : elles ne se mélangent jamais. Oublier le « − », c'est perdre la moitié des réponses sur une question que tu savais faire.
+        Pose le <strong>±</strong> sur ta feuille au moment exact de la racine carrée — à l'étape 2, pas à la fin. Ensuite, tu déroules <strong>deux lignes de calcul en parallèle</strong>, une par signe, jusqu'au bout : elles ne se mélangent jamais et elles ne se recoupent jamais.
     </div>
 
     <div class="recap">
         <div class="box retenir">
             <span class="lbl">À retenir</span>
-            Pour remonter de R au rapport des impédances, on prend la racine carrée : <b>(Z₂ − Z₁) / (Z₂ + Z₁) = ± √R</b>. Avec <b>R = 0,25</b> → <b>± 0,5</b> → deux solutions valides : <b>Z₂ = 3·Z₁</b> ou <b>Z₂ = Z₁/3</b>.
+            Pour remonter de R au rapport des impédances, on prend la racine carrée : <b>(Z₂ − Z₁) / (Z₂ + Z₁) = ± √R</b>. Avec <b>R = 0,25</b> → <b>± 0,5</b> → deux solutions valides : <b>Z₂ = 3·Z₁</b> ou <b>Z₂ = Z₁/3</b>, c'est-à-dire <b>Z₂/Z₁ = 3 ou 1/3</b>.
         </div>
         <div class="box piege">
             <span class="lbl">Le piège</span>
-            <b>R n'est pas un rapport d'impédances</b> : c'est une fraction d'énergie <span style="color:#6b6275;">(0,25 = 25 % de l'onde réfléchie)</span>. Et comme c'est un <b>carré</b>, il ne te dira <b>jamais</b> lequel des deux milieux est le plus dur — seulement de combien ils s'écartent.
+            <b>R n'est pas un rapport d'impédances.</b> R = 0,25, c'est une <b>fraction d'énergie</b> <span style="color:#6b6275;">(25 % de l'onde réfléchie à l'interface)</span>. Ça ne veut donc <b>pas</b> dire Z₂/Z₁ = 0,25 : il faut passer par la racine carrée, puis résoudre. Les deux vraies réponses sont <b>3</b> et <b>1/3</b>.
         </div>
     </div>
 

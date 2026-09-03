@@ -170,7 +170,7 @@
         <p class="punch">Il reste un calcul qui tient sur un <span class="accent">Post-it</span>.</p>
     </header>
 
-    <p class="intro">Tu as la formule Doppler médicale, et tu sais ce que fait son <strong>cos α</strong> : projeter la vitesse du sang sur l'axe de la sonde. Il ne reste plus qu'à la faire tourner — <strong>deux fois</strong>, sur une carotide, avec des chiffres calibrés pour le calcul de tête. Ce ne sont pas deux exercices différents : c'est <em class="hl">le même geste, deux fois</em>. Et on ajoute la seule chose qui manquait encore — <strong>lire cliniquement le résultat</strong>.</p>
+    <p class="intro">Tu as la formule Doppler médicale, et tu sais ce que fait son <strong>cos α</strong> : projeter la vitesse du sang sur l'axe de la sonde. Il ne reste plus qu'à la faire tourner — <strong>deux fois</strong>, sur une carotide : une première fois avec des chiffres arrondis, calibrés pour le calcul de tête, une seconde avec les valeurs exactes d'un énoncé de QCM. Ce ne sont pas deux exercices différents : c'est <em class="hl">le même geste, deux fois</em>. Et on ajoute la seule chose qui manquait encore — <strong>lire cliniquement le résultat</strong>.</p>
 
     <div class="schema-box" style="margin: 20px 0;">
         <span class="schema-num">Le point de départ — on isole v</span>
@@ -201,18 +201,24 @@
             </li>
             <li class="step">
                 <span class="n">5</span>
-                <span class="txt"><span class="lead">On remplace les valeurs</span> — et on sépare chiffres et puissances de 10 pour rester en calcul mental.</span>
+                <span class="txt"><span class="lead">On remplace les valeurs</span> — puis on convertit le résultat en <b>cm/s</b>, l'unité affichée par l'écran de l'écho.</span>
             </li>
         </ol>
     </div>
 
     <p class="intro">Avant de chiffrer, <strong>lis le sens du flux</strong>. Ici, l'axe d'émission de la sonde pointe dans le même sens que le flux sanguin : le sang <strong>s'éloigne</strong> de la sonde. Conséquence prévisible : f' &lt; f, donc <em class="hl">Δf est négatif</em> — décalage vers le grave, par analogie avec l'ambulance qui s'éloigne.</p>
 
+    <figure class="schema-box" style="margin: 20px 0;">
+        <span class="schema-num">La scène qu'on chiffre</span>
+        <img src="../images/physique/physique_ch4_fig05_doppler_vasculaire.png" alt="Sonde Doppler posée sur la peau, inclinée d'un angle alpha par rapport à une artère : émission de la fréquence f, écho de retour à la fréquence f', globules rouges circulant à la vitesse v" onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
+        <figcaption class="caption">Regarde l'<strong>axe d'émission de la sonde</strong> : il pointe dans le <strong>même sens</strong> que le flux sanguin → le sang <strong>s'éloigne</strong>. Tu sais donc <em class="hl">avant tout calcul</em> que <strong>Δf sera négatif</strong>. L'angle <strong>α</strong> est celui entre cet axe et le flux : c'est lui qu'on lira à 60°.</figcaption>
+    </figure>
+
     <table style="width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14.5px; background: #fff; border: 1px solid #dccff2; border-radius: 12px; overflow: hidden;">
         <tr style="background: #F1ECFA;">
             <th style="text-align: left; padding: 11px 15px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #6B46C1;">Ce qu'on lit</th>
-            <th style="text-align: left; padding: 11px 15px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #6B46C1;">1ʳᵉ carotide</th>
-            <th style="text-align: left; padding: 11px 15px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #6B46C1;">2ᵉ carotide</th>
+            <th style="text-align: left; padding: 11px 15px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #6B46C1;">Cas 1 — calcul de tête</th>
+            <th style="text-align: left; padding: 11px 15px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #6B46C1;">Cas 2 — énoncé de QCM</th>
         </tr>
         <tr>
             <td style="padding: 10px 15px; border-top: 1px solid #ede7f7;">Fréquence émise <b>f</b></td>
@@ -251,7 +257,9 @@
         </tr>
     </table>
 
-    <p class="intro">Tout le premier calcul tient sur un Post-it : <strong>1 500 × 2 000 = 3 millions</strong>, <strong>3 millions / 5 millions = 0,6</strong>. Pas besoin de calculatrice. <span style="color:#6b6275;">La vraie célérité des tissus mous est 1 540 m/s ; on arrondit à 1 500 pour le calcul mental, et en QCM avec calculatrice on garde 1 540 — comme dans la deuxième colonne.</span></p>
+    <p class="intro">Tout le premier calcul tient sur un Post-it : <strong>1 500 × 2 000 = 3 millions</strong>, <strong>3 millions / 5 millions = 0,6</strong>. Pas besoin de calculatrice.</p>
+
+    <p class="intro"><strong>Pourquoi deux valeurs de c ?</strong> La vraie célérité des ultrasons dans les tissus mous est <strong>1 540 m/s</strong>. On l'arrondit à <strong>1 500</strong> quand l'énoncé est calibré pour le calcul mental ; en QCM avec calculatrice, on garde <strong>1 540</strong> — c'est le cas 2.</p>
 
     <p class="intro">🩺 <strong>Et cliniquement ?</strong> <strong>60 cm/s</strong> est dans la fourchette normale d'une carotide commune <strong>en milieu de cycle</strong> — le pic systolique monte à <strong>80-100 cm/s</strong>, la diastole tombe à <strong>20-30 cm/s</strong>. <strong>92 cm/s</strong> tombe donc, lui, dans la fourchette normale <strong>en pic systolique</strong>. Si on avait trouvé <strong>250 cm/s</strong> avec les mêmes réglages → suspicion de <strong>sténose carotidienne</strong> <em class="hl">(un rétrécissement qui accélère le flux)</em> → indication d'imagerie complémentaire pour évaluer le <strong>risque d'AVC</strong>.</p>
 
