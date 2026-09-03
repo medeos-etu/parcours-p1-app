@@ -28,6 +28,7 @@
     .schema-box .schema-num { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 0.6px; text-transform: uppercase; color: #6B46C1; margin-bottom: 6px; }
     .schema-box .caption { font-size: 12px; color: #6b6275; margin-top: 9px; font-weight: 500; }
     .schema-box .caption strong { color: #6B46C1; }
+    .schema-box .caption .gl { color: #8a8298; font-weight: 400; font-style: italic; }
     .schema-box .file-target { display: none; margin-top: 10px; padding: 8px 12px; background: #e8f5e9; border: 1px solid #a5d6a7; border-radius: 6px; font-family: 'SFMono-Regular', Consolas, monospace; font-size: 11.5px; color: #1b5e20; text-align: left; line-height: 1.5; }
     .schema-box .file-target strong { color: #2e7d32; }
     .schema-box .generation-prompt { background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border: 2px dashed #ff9800; border-radius: 8px; padding: 13px; margin-top: 12px; text-align: left; font-size: 11.5px; color: #e65100; line-height: 1.55; white-space: pre-wrap; }
@@ -197,12 +198,12 @@
         </ol>
     </div>
 
-    <p class="intro">Applique-le au cas de référence, celui que tu vas croiser en boucle : <strong>−CHO</strong> contre <strong>−CH₂OH</strong>. Les deux commencent par un C, donc les règles 1 et 2 sont bloquées au premier atome. Rappel des numéros atomiques : <strong>O a Z = 8</strong>, <strong>H a Z = 1</strong>.</p>
+    <p class="intro">Applique-le au cas de référence, celui que tu vas croiser en boucle : <strong>−CHO</strong> contre <strong>−CH₂OH</strong>. Les deux commencent par un C : la <strong>règle 1</strong> ne tranche pas, et la <strong>règle 2</strong> t'envoie à la couche suivante, c'est-à-dire aux voisins de ce premier C. Sauf que du côté du −CHO, ce premier C porte une <strong>double liaison C=O</strong> — et c'est là que la règle 3 entre en jeu. Rappel des numéros atomiques : <strong>O a Z = 8</strong>, <strong>H a Z = 1</strong>.</p>
 
     <div class="tbl-wrap">
         <table class="tbl">
             <thead>
-                <tr><th>Substituant</th><th>Ce qu'il voit après dédoublement</th><th>Score</th></tr>
+                <tr><th>Substituant</th><th>Les atomes vus par son premier C</th><th>Score</th></tr>
             </thead>
             <tbody>
                 <tr>
