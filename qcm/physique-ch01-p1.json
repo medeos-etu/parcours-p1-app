@@ -1,0 +1,825 @@
+{
+  "matiere": "Physique",
+  "chapitre": 1,
+  "questions": [
+    {
+      "fiche": "physique-001-calcul-mental-decomposer.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives aux quatre raccourcis de multiplication mentale, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Multiplier par 5 revient à multiplier par 10, puis à diviser le résultat par 2.",
+          "v": true,
+          "e": "VRAI. C'est le premier des quatre raccourcis : × 5 = × 10 ÷ 2. Sur un exemple : 34 × 5 = 340 ÷ 2 = 170.",
+          "sourceQuote": "× 5 = × 10 ÷ 2 34 × 5 = 340 ÷ 2 = 170"
+        },
+        {
+          "t": "Multiplier par 9 revient à multiplier par 10, puis à ajouter une fois le nombre de départ.",
+          "v": false,
+          "e": "FAUX : pour × 9, on RETIRE une fois le nombre de départ (× 9 = × 10 − × 1). Ainsi 27 × 9 = 270 − 27 = 243. Ajouter une fois le nombre correspondrait à × 11.",
+          "sourceQuote": "× 9 = × 10 − × 1 27 × 9 = 270 − 27 = 243"
+        },
+        {
+          "t": "43 × 11 = 430 + 43 = 473.",
+          "v": true,
+          "e": "VRAI. × 11 = × 10 + × 1 : on multiplie par 10 puis on ajoute une fois le nombre. 430 + 43 = 473.",
+          "sourceQuote": "× 11 = × 10 + × 1 43 × 11 = 430 + 43 = 473"
+        },
+        {
+          "t": "Multiplier par 25 revient à multiplier par 100, puis à diviser par 2.",
+          "v": false,
+          "e": "FAUX : × 25 = × 100 ÷ 4, et non ÷ 2. Sur 16 × 25 : 1600 ÷ 4 = 400. Diviser par 2 donnerait 800, soit le double du bon résultat.",
+          "sourceQuote": "× 25 = × 100 ÷ 4 16 × 25 = 1600 ÷ 4 = 400"
+        },
+        {
+          "t": "Ces quatre raccourcis couvrent la totalité des multiplications rencontrées.",
+          "v": false,
+          "e": "FAUX : ils en couvrent environ 90 %. Pour tout le reste, la stratégie est de décomposer en facteurs ronds + reste.",
+          "sourceQuote": "quatre tours de magie qui suffisent pour 90 % des multiplications que tu rencontreras"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-001-calcul-mental-decomposer.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la décomposition en facteurs ronds et reste, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Pour 18 × 7, on s'appuie sur 20, plus rond, puis on retire ce qu'on a ajouté en trop.",
+          "v": true,
+          "e": "VRAI. 18 est arrondi vers le haut à 20, puis on retire le surplus : (20 × 7) − (2 × 7).",
+          "sourceQuote": "On s'appuie sur le 20, plus rond, puis on retire ce qu'on a ajouté en trop"
+        },
+        {
+          "t": "18 × 7 = (20 × 7) + (2 × 7) = 154.",
+          "v": false,
+          "e": "FAUX : puisque 18 a été arrondi vers le haut, il faut retirer 2 × 7 et non l'ajouter. Le calcul juste est (20 × 7) − (2 × 7) = 140 − 14 = 126.",
+          "sourceQuote": "18 × 7 = (20 × 7) − (2 × 7) = 140 − 14 = 126"
+        },
+        {
+          "t": "14 × 6 = (10 × 6) + (4 × 6) = 84.",
+          "v": true,
+          "e": "VRAI. On coupe le 14 en 10 + 4 : 60 + 24 = 84.",
+          "sourceQuote": "14 × 6 = (10 × 6) + (4 × 6) = 60 + 24 = 84"
+        },
+        {
+          "t": "Pour 32 × 15, c'est le nombre 32 que l'on découpe en 10 + 5.",
+          "v": false,
+          "e": "FAUX : c'est le multiplicateur, 15, qui est coupé en 10 + 5 : 32 × (10 + 5) = 320 + 160 = 480. Couper 32 en 10 + 5 n'a d'ailleurs aucun sens, 10 + 5 valant 15.",
+          "sourceQuote": "Ici c'est le multiplicateur qu'on coupe, en 10 + 5 : 32 × 15 = 32 × (10 + 5) = 320 + 160 = 480"
+        },
+        {
+          "t": "Le nombre que l'on choisit de découper est libre : on prend celui qui donne les morceaux les plus ronds.",
+          "v": true,
+          "e": "VRAI. Rien n'impose de découper le premier facteur plutôt que le second : on choisit celui qui donne les morceaux les plus ronds.",
+          "sourceQuote": "Le choix du nombre à découper est libre — prends toujours celui qui donne les morceaux les plus ronds"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-001-calcul-mental-decomposer.html",
+      "origine": "reprise",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au principe général du calcul mental en P1, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "En P1, la calculette est autorisée, ce qui permet de gagner du temps sur les opérations simples.",
+          "v": false,
+          "e": "FAUX : la calculette n'est pas autorisée, tout doit être fait de tête. C'est précisément la raison d'être de cette boîte à outils de calcul mental.",
+          "sourceQuote": "tu n'as PAS le droit à la calculette. Tout doit être fait de tête"
+        },
+        {
+          "t": "La plupart des calculs des QCM sont conçus pour être faisables de tête en quelques secondes, à condition de les décomposer intelligemment.",
+          "v": true,
+          "e": "VRAI. C'est la règle d'or du calcul mental : les énoncés sont construits pour être trivialisés par une bonne décomposition.",
+          "sourceQuote": "La plupart des calculs des QCM sont conçus pour être faisables de tête en quelques secondes, à condition de les décomposer intelligemment"
+        },
+        {
+          "t": "Un énoncé bien conçu ne te demandera presque jamais de faire 7 × 23 brutalement ; il te donnera plutôt une forme du type 23 × 5 ou 23 × 10.",
+          "v": true,
+          "e": "VRAI. Ces deux formes se font en deux secondes. Si un calcul semble lourd, c'est généralement le signe qu'on ne l'a pas réécrit dans la bonne forme.",
+          "sourceQuote": "il te donnera plutôt 23 × 5, ou 23 × 10, qui se font en deux secondes"
+        },
+        {
+          "t": "Le bon réflexe devant un calcul lourd est de poser l'opération comme à l'école primaire.",
+          "v": false,
+          "e": "FAUX : le bon réflexe n'est pas de poser l'opération, c'est de la réécrire, c'est-à-dire de la décomposer pour la rendre triviale.",
+          "sourceQuote": "Le bon réflexe n'est pas de poser l'opération comme à l'école primaire — c'est de la réécrire"
+        },
+        {
+          "t": "Les quinze minutes investies dans le calcul mental sont du temps perdu pour le reste du programme.",
+          "v": false,
+          "e": "FAUX : c'est exactement l'inverse. Quinze minutes investies sur le calcul mental font gagner des heures sur tout le reste du programme.",
+          "sourceQuote": "Quinze minutes investies ici te feront gagner des heures sur tout le reste du programme"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-001-calcul-mental-decomposer.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives au blocage devant un calcul comme 7 × 23, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le blocage vient d'abord de ce qu'on n'a pas ce résultat en mémoire.",
+          "v": true,
+          "e": "VRAI. Le cerveau bloque parce que le résultat de 7 × 23 n'est pas mémorisé, et l'on en conclut à tort que l'on est nul en calcul mental.",
+          "sourceQuote": "tu n'as pas ce résultat en mémoire et tu te dis « je suis nul en calcul mental »"
+        },
+        {
+          "t": "Se dire « je suis nul en calcul mental » est le bon diagnostic lorsqu'un calcul coince.",
+          "v": false,
+          "e": "FAUX : le problème n'est pas celui qui calcule, c'est que le calcul n'est pas écrit dans la bonne forme. Le bon diagnostic porte sur la forme de l'opération, pas sur soi.",
+          "sourceQuote": "le problème n'est pas toi : c'est que le calcul n'est pas écrit dans la bonne forme"
+        },
+        {
+          "t": "Les énoncés sont construits pour décourager le calcul de tête.",
+          "v": false,
+          "e": "FAUX : ils sont au contraire construits pour qu'on calcule de tête, c'est-à-dire pour se prêter à une décomposition simple.",
+          "sourceQuote": "Mais les énoncés sont construits pour qu'on calcule de tête"
+        },
+        {
+          "t": "Sans réflexe de calcul mental, on perd un temps fou sur des opérations toutes simples, temps qui manque ensuite pour répondre aux QCM eux-mêmes.",
+          "v": true,
+          "e": "VRAI. Le coût n'est pas le calcul lui-même mais le temps qu'il vole aux questions.",
+          "sourceQuote": "tu perdras un temps fou sur des opérations toutes simples — temps qui te manquera pour répondre aux QCM eux-mêmes"
+        },
+        {
+          "t": "Les divisions et les puissances de 10 obéissent à une logique différente de celle des multiplications.",
+          "v": false,
+          "e": "FAUX : elles se traitent exactement pareil. Le geste est le même : on ne pose pas l'opération, on la réécrit en morceaux faisables de tête.",
+          "sourceQuote": "Les divisions et les puissances de 10 se traitent exactement pareil"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-001-calcul-mental-decomposer.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au réflexe « si c'est dur, ce n'est pas le bon angle », laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dès qu'un calcul semble lourd, il faut s'arrêter et chercher la décomposition qui le rend trivial.",
+          "v": true,
+          "e": "VRAI. C'est tout le mnémo : la lourdeur ressentie est un signal, pas une fatalité — elle invite à réécrire le calcul.",
+          "sourceQuote": "Dès qu'un calcul te semble lourd, arrête-toi et cherche la décomposition qui le rend trivial"
+        },
+        {
+          "t": "23 × 5 = (23 × 10) ÷ 2 = 115.",
+          "v": true,
+          "e": "VRAI. 23 × 10 = 230, puis 230 ÷ 2 = 115. Trois secondes, sans calculette.",
+          "sourceQuote": "Mais 23 × 5 = (23 × 10) ÷ 2 = 230 ÷ 2 = 115"
+        },
+        {
+          "t": "Un calcul qui demande plus de quelques secondes est le signe qu'une calculette serait nécessaire.",
+          "v": false,
+          "e": "FAUX : il existe des calculs un peu plus longs, de 10 à 20 secondes, mais ils restent toujours réalisables sans calculette grâce aux techniques de simplification.",
+          "sourceQuote": "il y a parfois des calculs un peu plus longs (10 à 20 secondes), mais ils restent toujours réalisables sans calculette"
+        },
+        {
+          "t": "Pour tout ce que les quatre raccourcis ne couvrent pas, la stratégie unique est de décomposer en facteurs ronds + reste.",
+          "v": true,
+          "e": "VRAI. Il n'y a que deux outils : les quatre raccourcis pour environ 90 % des cas, et la décomposition en facteurs ronds + reste pour tout le reste.",
+          "sourceQuote": "Pour tout le reste, une seule stratégie : décomposer en facteurs ronds + reste"
+        },
+        {
+          "t": "Une fois le calcul réécrit, il faut malgré tout poser l'opération pour vérifier.",
+          "v": false,
+          "e": "FAUX : le geste consiste justement à ne pas poser l'opération mais à la réécrire en morceaux que l'on sait faire de tête. La réécriture remplace la pose, elle ne s'y ajoute pas.",
+          "sourceQuote": "tu ne poses pas l'opération, tu la réécris en morceaux que tu sais faire de tête"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-001-calcul-mental-decomposer.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à l'application des raccourcis × 5, × 9, × 11 et × 25 à de nouveaux nombres, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "62 × 5 = 620 ÷ 2 = 310.",
+          "v": true,
+          "e": "VRAI. × 5 = × 10 ÷ 2 : 62 × 10 = 620, puis 620 ÷ 2 = 310.",
+          "sourceQuote": "× 5 = × 10 ÷ 2 34 × 5 = 340 ÷ 2 = 170"
+        },
+        {
+          "t": "48 × 9 = 480 + 48 = 528.",
+          "v": false,
+          "e": "FAUX : × 9 = × 10 − × 1, donc 480 − 48 = 432. Ajouter le nombre au lieu de le retirer donne 48 × 11, pas 48 × 9.",
+          "sourceQuote": "× 9 = × 10 − × 1 27 × 9 = 270 − 27 = 243"
+        },
+        {
+          "t": "36 × 11 = 360 − 36 = 324.",
+          "v": false,
+          "e": "FAUX : × 11 = × 10 + × 1, donc 360 + 36 = 396. Retirer le nombre au lieu de l'ajouter donne 36 × 9 = 324.",
+          "sourceQuote": "× 11 = × 10 + × 1 43 × 11 = 430 + 43 = 473"
+        },
+        {
+          "t": "24 × 25 = 2400 ÷ 4 = 800.",
+          "v": false,
+          "e": "FAUX sur le résultat : la mise en forme est bonne, mais 2400 ÷ 4 = 600, pas 800. 800 correspondrait à 2400 ÷ 3.",
+          "sourceQuote": "× 25 = × 100 ÷ 4 16 × 25 = 1600 ÷ 4 = 400"
+        },
+        {
+          "t": "25 × 11 = 250 + 25 = 275.",
+          "v": true,
+          "e": "VRAI. Le raccourci × 11 fonctionne quel que soit le nombre : 250 + 25 = 275.",
+          "sourceQuote": "× 11 = × 10 + × 1 43 × 11 = 430 + 43 = 473"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-001-calcul-mental-decomposer.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la décomposition appliquée à de nouveaux produits, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "19 × 6 = (20 × 6) − (1 × 6) = 114.",
+          "v": true,
+          "e": "VRAI. On s'appuie sur 20, plus rond, puis on retire le surplus : 120 − 6 = 114.",
+          "sourceQuote": "On s'appuie sur le 20, plus rond, puis on retire ce qu'on a ajouté en trop"
+        },
+        {
+          "t": "16 × 7 = (10 × 7) + (6 × 7) = 112.",
+          "v": true,
+          "e": "VRAI. On coupe le 16 en 10 + 6 : 70 + 42 = 112.",
+          "sourceQuote": "On coupe le 14 en 10 + 4 : 14 × 6 = (10 × 6) + (4 × 6) = 60 + 24 = 84"
+        },
+        {
+          "t": "21 × 15 = 21 × (10 + 5) = 210 + 150 = 360.",
+          "v": false,
+          "e": "FAUX : le morceau × 5 vaut la moitié du morceau × 10, soit 105 et non 150. Le résultat est 210 + 105 = 315.",
+          "sourceQuote": "Ici c'est le multiplicateur qu'on coupe, en 10 + 5 : 32 × 15 = 32 × (10 + 5) = 320 + 160 = 480"
+        },
+        {
+          "t": "27 × 8 = (30 × 8) − (3 × 8) = 240 − 24 = 206.",
+          "v": false,
+          "e": "FAUX sur le résultat : la décomposition sur le facteur rond 30 est correcte, mais 240 − 24 = 216, pas 206.",
+          "sourceQuote": "Pour tout le reste, une seule stratégie : décomposer en facteurs ronds + reste"
+        },
+        {
+          "t": "18 × 12 = (18 × 10) + (18 × 2) = 216.",
+          "v": true,
+          "e": "VRAI. C'est le multiplicateur que l'on coupe, ici en 10 + 2 : 180 + 36 = 216.",
+          "sourceQuote": "Ici c'est le multiplicateur qu'on coupe, en 10 + 5 : 32 × 15 = 32 × (10 + 5) = 320 + 160 = 480"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-002-divisions-puissances-de-10.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la division mentale de 0,2 par 8, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "0,2 / 8 = (2 / 8) × 0,1.",
+          "v": true,
+          "e": "VRAI. Première étape : sortir les zéros. On met la virgule de côté sous forme de puissance de 10 et il reste une fraction propre, 2 / 8.",
+          "sourceQuote": "Sortir les zéros. 0,2 / 8 = (2 / 8) × 0,1"
+        },
+        {
+          "t": "2 / 8 se simplifie en 1 / 4, soit 0,25.",
+          "v": true,
+          "e": "VRAI. Deuxième étape : simplifier la fraction restante. 2 / 8 = 1 / 4 = 0,25.",
+          "sourceQuote": "Simplifier la fraction. 2 / 8 = 1 / 4 = 0,25"
+        },
+        {
+          "t": "0,2 / 8 = 0,025.",
+          "v": true,
+          "e": "VRAI. On recombine la fraction simplifiée et la puissance de 10 mise de côté : 0,25 × 0,1 = 0,025. Cinq secondes en tout.",
+          "sourceQuote": "Résultat. 0,25 × 0,1 = 0,025"
+        },
+        {
+          "t": "0,2 / 8 = 0,25.",
+          "v": false,
+          "e": "FAUX : 0,25 n'est que la valeur de la fraction 2 / 8. Il reste à la multiplier par le 0,1 mis de côté, ce qui donne 0,025.",
+          "sourceQuote": "Résultat. 0,25 × 0,1 = 0,025"
+        },
+        {
+          "t": "Cette méthode impose de poser la division pour vérifier le résultat.",
+          "v": false,
+          "e": "FAUX : tout l'intérêt est justement de ne rien poser. La division se fait de tête, sans calculette et sans être posée.",
+          "sourceQuote": "Sans calculette. Sans poser la division."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-002-divisions-puissances-de-10.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux trois règles de manipulation des puissances de 10, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Pour multiplier deux puissances de 10, on additionne les exposants.",
+          "v": true,
+          "e": "VRAI. C'est la première des trois règles à automatiser.",
+          "sourceQuote": "Multiplier 10 a × 10 b = 10 a+b Tu les additionnes"
+        },
+        {
+          "t": "Pour diviser deux puissances de 10, on divise les exposants.",
+          "v": false,
+          "e": "FAUX : on les soustrait. Diviser deux puissances de 10 revient à retrancher l'exposant du dénominateur à celui du numérateur.",
+          "sourceQuote": "Diviser 10 a / 10 b = 10 a−b Tu les soustrais"
+        },
+        {
+          "t": "Pour élever une puissance de 10 à une puissance, on multiplie les exposants.",
+          "v": true,
+          "e": "VRAI. C'est la troisième règle : élever une puissance à une puissance revient à multiplier les deux exposants.",
+          "sourceQuote": "Élever (10 a ) b = 10 a×b Tu les multiplies"
+        },
+        {
+          "t": "La notation scientifique ne concerne que les nombres très grands.",
+          "v": false,
+          "e": "FAUX : elle sert autant aux nombres très grands, comme 6 × 10²³ atomes, qu'aux très petits, comme 10⁻⁹ mètres.",
+          "sourceQuote": "on jongle en permanence avec des nombres très grands (6 × 10²³ atomes…) ou très petits (10⁻⁹ mètres…)"
+        },
+        {
+          "t": "10³ × 10⁵ = 10⁸.",
+          "v": true,
+          "e": "VRAI. On additionne les exposants : 3 + 5 = 8.",
+          "sourceQuote": "Multiplier 10 a × 10 b = 10 a+b Tu les additionnes"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-002-divisions-puissances-de-10.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au réflexe « sortir les puissances de 10 avant de simplifier », laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "0,012 / 4 = (12 / 4) × 0,01.",
+          "v": false,
+          "e": "FAUX : 0,012 vaut 12 × 0,001, la puissance sortie est donc 0,001 et non 0,01. La réécriture correcte est (12 / 4) × 0,001.",
+          "sourceQuote": "(12 / 4) × 0,001 = 3 × 0,001"
+        },
+        {
+          "t": "0,012 / 4 = 0,03.",
+          "v": false,
+          "e": "FAUX : 12 / 4 = 3, que l'on multiplie par 0,001, ce qui donne 0,003. La valeur 0,03 est dix fois trop grande.",
+          "sourceQuote": "(12 / 4) × 0,001 = 3 × 0,001 0,003"
+        },
+        {
+          "t": "0,9 / 6 = 0,15.",
+          "v": true,
+          "e": "VRAI. On sort le 0,1 : (9 / 6) × 0,1 = 1,5 × 0,1 = 0,15.",
+          "sourceQuote": "(9 / 6) × 0,1 = 1,5 × 0,1 0,15"
+        },
+        {
+          "t": "Avant toute division, on sort les puissances de 10, puis on regarde si la fraction restante est une fraction connue du type 1/2, 1/3, 1/4, 1/5 ou 1/8.",
+          "v": true,
+          "e": "VRAI. C'est le réflexe à graver : la puissance de 10 d'abord, la fraction connue ensuite.",
+          "sourceQuote": "sors les puissances de 10 et regarde si la fraction qui reste est une fraction « connue » : 1/2, 1/3, 1/4, 1/5, 1/8"
+        },
+        {
+          "t": "Seule une minorité de divisions se ramène à ce schéma.",
+          "v": false,
+          "e": "FAUX : c'est la quasi-totalité des divisions qui se ramènent à une fraction connue multipliée par une puissance de 10.",
+          "sourceQuote": "La quasi-totalité des divisions se ramènent à ça"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-002-divisions-puissances-de-10.html",
+      "origine": "reprise",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives au calcul de 5 / 0,02, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "0,02 s'écrit 2 × 10⁻² en notation scientifique.",
+          "v": true,
+          "e": "VRAI. 0,02 vaut 2 centièmes, soit 2 × 10⁻². C'est la première étape : réécrire le décimal en notation scientifique.",
+          "sourceQuote": "Réécrire le décimal en notation scientifique. 0,02 = 2 × 10⁻²"
+        },
+        {
+          "t": "Diviser par 10⁻² revient à multiplier par 10² (= 100).",
+          "v": true,
+          "e": "VRAI. 1 / 10⁻² = 10⁺² : quand une puissance passe au dénominateur, son exposant change de signe.",
+          "sourceQuote": "Diviser par 10⁻² revient à multiplier par 10² (= 100)"
+        },
+        {
+          "t": "5 / 0,02 = (5 / 2) × 10² = 2,5 × 100 = 250.",
+          "v": true,
+          "e": "VRAI. 5 / (2 × 10⁻²) = (5/2) × 10² = 2,5 × 100 = 250.",
+          "sourceQuote": "5 / (2 × 10⁻²) = (5/2) × 10² = 2,5 × 100 = 250"
+        },
+        {
+          "t": "5 / 0,02 = 5 × 0,02 = 0,1.",
+          "v": false,
+          "e": "FAUX : diviser par un petit nombre donne un grand résultat. Diviser n'est pas multiplier : 5 / 0,02 = 250, pas 0,1.",
+          "sourceQuote": "5 / (2 × 10⁻²) = (5/2) × 10² = 2,5 × 100 = 250"
+        },
+        {
+          "t": "5 / 0,02 = 25.",
+          "v": false,
+          "e": "FAUX : il manque un facteur 10. Diviser par 10⁻² revient à multiplier par 100, donc (5/2) × 100 = 250, et non 25.",
+          "sourceQuote": "Diviser par 10⁻² revient à multiplier par 10² (= 100)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-002-divisions-puissances-de-10.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au calcul (6 × 10⁻³) × (5 × 10⁵) / (3 × 10⁻²), laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La partie chiffres vaut 6 × 5 × 3 = 90.",
+          "v": false,
+          "e": "FAUX : le 3 est au dénominateur, il divise. La partie chiffres vaut (6 × 5) / 3 = 30 / 3 = 10.",
+          "sourceQuote": "Séparer chiffres et puissances. (6 × 5 / 3) × (10⁻³ × 10⁵ / 10⁻²)"
+        },
+        {
+          "t": "La partie puissances vaut 10⁴, car −3 + 5 − (−2) = +4.",
+          "v": true,
+          "e": "VRAI. Le 10⁻² du dénominateur remonte en +2 : soustraire un exposant négatif revient à l'ajouter, d'où −3 + 5 + 2 = 4.",
+          "sourceQuote": "le 10⁻² du dénominateur remonte en +2 : −3 + 5 − (−2) = +4"
+        },
+        {
+          "t": "La partie puissances vaut 10⁰, soit 1.",
+          "v": false,
+          "e": "FAUX : l'exposant final est 4, pas 0. L'erreur consiste à traiter le « − (−2) » comme un « − 2 ».",
+          "sourceQuote": "La partie puissances. 10 −3+5−(−2) = 10 −3+5+2 = 10⁴"
+        },
+        {
+          "t": "Le résultat final vaut 10⁵.",
+          "v": true,
+          "e": "VRAI. On combine les deux morceaux : 10 × 10⁴ = 10⁵.",
+          "sourceQuote": "Combiner. 10 × 10⁴ = 10⁵"
+        },
+        {
+          "t": "Soustraire un exposant négatif revient à le retrancher une seconde fois.",
+          "v": false,
+          "e": "FAUX : soustraire un exposant négatif revient à l'ajouter. C'est exactement ce qui fait remonter le 10⁻² du dénominateur en +2.",
+          "sourceQuote": "Soustraire un exposant négatif, c'est ajouter"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-002-divisions-puissances-de-10.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à des produits et quotients en notation scientifique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "(4 × 10⁻²) × (2 × 10⁵) = 8 × 10³.",
+          "v": true,
+          "e": "VRAI. Chiffres : 4 × 2 = 8. Exposants additionnés : −2 + 5 = 3.",
+          "sourceQuote": "Multiplier 10 a × 10 b = 10 a+b Tu les additionnes"
+        },
+        {
+          "t": "(4 × 10⁻²) × (2 × 10⁵) = 8 × 10⁻¹⁰.",
+          "v": false,
+          "e": "FAUX : les exposants ont été multipliés (−2 × 5 = −10) au lieu d'être additionnés. Pour un produit, on additionne : −2 + 5 = 3, donc 8 × 10³.",
+          "sourceQuote": "Multiplier 10 a × 10 b = 10 a+b Tu les additionnes"
+        },
+        {
+          "t": "(9 × 10⁶) / (3 × 10²) = 3 × 10³.",
+          "v": false,
+          "e": "FAUX sur l'exposant : pour une division on soustrait, 6 − 2 = 4. Le résultat est 3 × 10⁴, soit 30 000.",
+          "sourceQuote": "Diviser 10 a / 10 b = 10 a−b Tu les soustrais"
+        },
+        {
+          "t": "(2 × 10³)² = 4 × 10⁵.",
+          "v": false,
+          "e": "FAUX sur l'exposant : élever une puissance à une puissance multiplie les exposants, 3 × 2 = 6. L'addition 3 + 2 = 5 est l'erreur classique. Le résultat est 4 × 10⁶.",
+          "sourceQuote": "Élever (10 a ) b = 10 a×b Tu les multiplies"
+        },
+        {
+          "t": "(2 × 10³)² = 4 × 10⁶.",
+          "v": true,
+          "e": "VRAI. Le chiffre est élevé au carré (2² = 4) et les exposants sont multipliés (3 × 2 = 6).",
+          "sourceQuote": "Élever (10 a ) b = 10 a×b Tu les multiplies"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-002-divisions-puissances-de-10.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à des divisions décimales à traiter de tête, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "0,36 / 9 = (36 / 9) × 0,01 = 0,04.",
+          "v": true,
+          "e": "VRAI. 0,36 vaut 36 × 0,01 : on sort le 0,01, il reste 36 / 9 = 4, d'où 0,04.",
+          "sourceQuote": "Sortir les zéros. 0,2 / 8 = (2 / 8) × 0,1"
+        },
+        {
+          "t": "0,42 / 6 = 0,07.",
+          "v": true,
+          "e": "VRAI. 0,42 vaut 42 × 0,01 : (42 / 6) × 0,01 = 7 × 0,01 = 0,07.",
+          "sourceQuote": "Sortir les zéros. 0,2 / 8 = (2 / 8) × 0,1"
+        },
+        {
+          "t": "0,42 / 6 = (42 / 6) × 0,1 = 0,7.",
+          "v": false,
+          "e": "FAUX : la puissance sortie est 0,01 et non 0,1, car 0,42 = 42 × 0,01. Le résultat est 0,07, dix fois plus petit.",
+          "sourceQuote": "Sortir les zéros. 0,2 / 8 = (2 / 8) × 0,1"
+        },
+        {
+          "t": "0,0024 / 8 = 0,003.",
+          "v": false,
+          "e": "FAUX : 0,0024 vaut 24 × 0,0001, donc (24 / 8) × 0,0001 = 3 × 0,0001 = 0,0003. La valeur 0,003 est dix fois trop grande.",
+          "sourceQuote": "sors les puissances de 10 et regarde si la fraction qui reste est une fraction « connue »"
+        },
+        {
+          "t": "1,2 / 8 = (12 / 8) × 0,1 = 0,15.",
+          "v": true,
+          "e": "VRAI. On sort le 0,1, il reste 12 / 8 = 1,5, d'où 1,5 × 0,1 = 0,15.",
+          "sourceQuote": "Sortir les zéros. 0,2 / 8 = (2 / 8) × 0,1"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-003-prefixes-si.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives aux préfixes du Système international et à leurs usages en biologie, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le préfixe milli (m) vaut 10⁻³ et c'est l'unité de l'ionogramme sanguin, exprimé en mmol/L.",
+          "v": true,
+          "e": "VRAI. m = 10⁻³, donc 1 mmol/L = 10⁻³ mol/L, l'unité dans laquelle sont rendus les électrolytes du sang.",
+          "sourceQuote": "1 mmol/L = 10⁻³ mol/L (ionogramme sanguin)"
+        },
+        {
+          "t": "Le préfixe micro (µ) vaut 10⁻⁴.",
+          "v": false,
+          "e": "FAUX : micro vaut 10⁻⁶, soit un millionième. 1 µg = 10⁻⁶ g, l'ordre de grandeur des médicaments dosés en microgrammes.",
+          "sourceQuote": "1 µg = 10⁻⁶ g (médicaments dosés en µg)"
+        },
+        {
+          "t": "Le préfixe nano (n) vaut 10⁻⁹ : les protons du sang circulent à environ 40 nmol/L.",
+          "v": true,
+          "e": "VRAI. n = 10⁻⁹ et 1 nmol/L = 10⁻⁹ mol/L. La concentration en H⁺ du sang vaut environ 40 nmol/L.",
+          "sourceQuote": "1 nmol/L = 10⁻⁹ mol/L (H⁺ sanguin ≈ 40 nmol/L)"
+        },
+        {
+          "t": "Le préfixe pico (p) vaut 10⁻⁹ et concerne les hormones circulantes.",
+          "v": false,
+          "e": "FAUX sur la valeur : pico vaut 10⁻¹², c'est nano qui vaut 10⁻⁹. Les hormones (TSH, T4, cortisol) se dosent bien en pg/mL, c'est-à-dire en 10⁻¹² g/mL.",
+          "sourceQuote": "1 pg/mL = 10⁻¹² g/mL (hormones : TSH, T4, cortisol)"
+        },
+        {
+          "t": "Un préfixe est une puissance de 10 écrite en une lettre collée devant l'unité.",
+          "v": true,
+          "e": "VRAI. C'est toute la définition : rien de décoratif, seulement une puissance de 10 abrégée en une lettre.",
+          "sourceQuote": "ces mêmes puissances de 10, écrites en une lettre collée devant l'unité"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-003-prefixes-si.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux cinq préfixes vitaux et au facteur 1000, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les cinq préfixes à connaître par cœur sont k, m, µ, n et p.",
+          "v": true,
+          "e": "VRAI. Ce sont les cinq préfixes vitaux : kilo, milli, micro, nano et pico.",
+          "sourceQuote": "k (kilo) = × 10³ · m (milli) = × 10⁻³ · µ (micro) = × 10⁻⁶ · n (nano) = × 10⁻⁹ · p (pico) = × 10⁻¹²"
+        },
+        {
+          "t": "D'une marche à l'autre, de milli à micro puis à nano puis à pico, on descend d'un facteur 10.",
+          "v": false,
+          "e": "FAUX : chaque marche vers le plus petit vaut un facteur 1000, soit trois zéros, et non un facteur 10.",
+          "sourceQuote": "Chaque saut vers le « plus petit » = facteur 1000 (3 zéros)"
+        },
+        {
+          "t": "Entre milli et micro, il y a un facteur 1000.",
+          "v": true,
+          "e": "VRAI. On descend de 1000 à chaque marche : milli, micro, nano, pico.",
+          "sourceQuote": "milli → micro → nano → pico : tu descends de 1000 à chaque marche"
+        },
+        {
+          "t": "1 mg vaut 100 µg.",
+          "v": false,
+          "e": "FAUX : milli et micro sont séparés d'un facteur 1000, donc 1 mg = 1000 µg.",
+          "sourceQuote": "Chaque saut vers le « plus petit » = facteur 1000 (3 zéros)"
+        },
+        {
+          "t": "Ces cinq préfixes ne servent qu'exceptionnellement en P1.",
+          "v": false,
+          "e": "FAUX : ils reviennent tous les jours en P1, d'où l'intérêt de les mémoriser comme l'alphabet.",
+          "sourceQuote": "En P1, ces 5 préfixes reviennent tous les jours"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-003-prefixes-si.html",
+      "origine": "reprise",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives aux préfixes situés hors des cinq préfixes vitaux, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le préfixe kilo (k) correspond au facteur 10³.",
+          "v": true,
+          "e": "VRAI. k = 10³ : 1 kg = 10³ g et 1 kJ = 10³ J.",
+          "sourceQuote": "1 kg = 10³ g, 1 kJ = 10³ J"
+        },
+        {
+          "t": "Le préfixe déci (d) correspond au facteur 10⁻¹, par exemple 1 dL = 0,1 L.",
+          "v": true,
+          "e": "VRAI. d = 10⁻¹ : 1 dL = 0,1 L, l'unité utilisée par exemple pour l'hémoglobine, rendue en g/dL.",
+          "sourceQuote": "1 dL = 0,1 L (hémoglobine en g/dL)"
+        },
+        {
+          "t": "Le préfixe centi (c) correspond au facteur 10⁻³.",
+          "v": false,
+          "e": "FAUX : centi vaut 10⁻², comme dans 1 cm = 10⁻² m ou 1 cL = 10⁻² L. C'est milli qui vaut 10⁻³.",
+          "sourceQuote": "1 cm = 10⁻² m, 1 cL = 10⁻² L"
+        },
+        {
+          "t": "Le préfixe méga (M) correspond au facteur 10⁶.",
+          "v": true,
+          "e": "VRAI. M = 10⁶, par exemple le mégaohm (MΩ) utilisé pour l'impédance électrique cellulaire.",
+          "sourceQuote": "méga M 10⁶ MΩ (impédance électrique cellulaire)"
+        },
+        {
+          "t": "Le préfixe femto (f) correspond au facteur 10⁻⁹.",
+          "v": false,
+          "e": "FAUX : femto vaut 10⁻¹⁵, c'est nano qui vaut 10⁻⁹. Le femtomole reste rare en P1.",
+          "sourceQuote": "femto f 10⁻¹⁵ 1 fmol (biologie moléculaire, rare en P1)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-003-prefixes-si.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la conversion entre unité nue et unité à préfixe, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "5 mg = 5 × 10⁻³ g = 0,005 g.",
+          "v": true,
+          "e": "VRAI. On remplace le préfixe milli par sa puissance de 10 : 5 × 10⁻³ g, soit 0,005 g.",
+          "sourceQuote": "5 mg = 5 × 10⁻³ g = 0,005 g"
+        },
+        {
+          "t": "0,002 mol/L s'écrit 2 µmol/L.",
+          "v": false,
+          "e": "FAUX : 0,002 mol/L = 2 × 10⁻³ mol/L, soit 2 mmol/L. Écrire µmol/L reviendrait à se tromper d'un facteur 1000.",
+          "sourceQuote": "0,002 mol/L = 2 × 10⁻³ mol/L = 2 mmol/L"
+        },
+        {
+          "t": "40 nmol/L de H⁺ équivaut à 4 × 10⁻⁸ mol/L.",
+          "v": true,
+          "e": "VRAI. 40 × 10⁻⁹ mol/L se réécrit 4 × 10⁻⁸ mol/L : le 40 se factorise en 4 × 10, ce qui remonte l'exposant de −9 à −8.",
+          "sourceQuote": "40 nmol/L = 40 × 10⁻⁹ mol/L = 4 × 10⁻⁸ mol/L"
+        },
+        {
+          "t": "Pour écrire une valeur avec un préfixe, on développe la puissance de 10 au lieu de la factoriser.",
+          "v": false,
+          "e": "FAUX : c'est justement en factorisant la puissance de 10 que l'on fait apparaître le préfixe, comme 0,002 mol/L qui devient 2 mmol/L.",
+          "sourceQuote": "Vers le préfixe : tu factorises la puissance de 10"
+        },
+        {
+          "t": "Passer de l'unité nue à l'unité avec préfixe demande un raisonnement différent de la conversion inverse.",
+          "v": false,
+          "e": "FAUX : c'est exactement le même geste, fait dans l'autre sens. Dans un sens on remplace le préfixe par sa puissance, dans l'autre on factorise la puissance pour retrouver le préfixe.",
+          "sourceQuote": "C'est exactement le même geste, fait dans l'autre sens"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-003-prefixes-si.html",
+      "origine": "reprise",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à la conversion de 1 µmol/mL en mol/L, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "1 µmol/mL = (10⁻⁶ mol) / (10⁻³ L).",
+          "v": true,
+          "e": "VRAI. On remplace chaque préfixe par sa puissance : µmol = 10⁻⁶ mol au numérateur, mL = 10⁻³ L au dénominateur.",
+          "sourceQuote": "1 µmol/mL = 10⁻⁶ mol / 10⁻³ L"
+        },
+        {
+          "t": "(10⁻⁶ mol) / (10⁻³ L) = 10⁻³ mol/L.",
+          "v": true,
+          "e": "VRAI. Les exposants se soustraient : −6 − (−3) = −3. Le « − (−3) » devient « + 3 ».",
+          "sourceQuote": "10⁻⁶ mol / 10⁻³ L = 10⁻³ mol/L"
+        },
+        {
+          "t": "1 µmol/mL = 1 mmol/L.",
+          "v": true,
+          "e": "VRAI. 10⁻³ mol/L s'écrit 1 mmol/L : c'est le résultat de la conversion.",
+          "sourceQuote": "10⁻³ mol/L = 1 mmol/L"
+        },
+        {
+          "t": "1 µmol/mL = 10⁻⁹ mol/L.",
+          "v": false,
+          "e": "FAUX : les exposants ont été additionnés au lieu d'être soustraits. La division donne 10⁻⁶ / 10⁻³ = 10⁻³, et non 10⁻⁹.",
+          "sourceQuote": "10⁻⁶ mol / 10⁻³ L = 10⁻³ mol/L"
+        },
+        {
+          "t": "1 µmol/mL = 10⁻⁶ mol/L.",
+          "v": false,
+          "e": "FAUX : c'est l'oubli du dénominateur. En négligeant que mL = 10⁻³ L, on garderait 10⁻⁶ ; en le prenant en compte, le résultat remonte à 10⁻³ mol/L, soit 1 mmol/L.",
+          "sourceQuote": "1 µmol/mL ne vaut pas 1 µmol/L"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-003-prefixes-si.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives aux concentrations physiologiques usuelles et à leurs ordres de grandeur, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "140 mmol/L de Na⁺ correspond à 1,4 mol/L.",
+          "v": false,
+          "e": "FAUX : 140 × 10⁻³ = 0,14 mol/L. La valeur 1,4 mol/L est dix fois trop grande pour la concentration normale du sodium sanguin.",
+          "sourceQuote": "140 × 10⁻³ = 0,14 mol/L"
+        },
+        {
+          "t": "2 pmol/L de TSH valent 2 × 10⁻⁹ mol/L.",
+          "v": false,
+          "e": "FAUX : pico vaut 10⁻¹², donc 2 pmol/L = 2 × 10⁻¹² mol/L, l'ordre de grandeur typique d'une hormone circulante.",
+          "sourceQuote": "2 pmol/L de TSH 2 × 10⁻¹² mol/L"
+        },
+        {
+          "t": "5 µg/mL d'un médicament équivaut à 5 mg/L.",
+          "v": true,
+          "e": "VRAI. 5 × 10⁻⁶ g / 10⁻³ L = 5 × 10⁻³ g/L, soit 5 mg/L.",
+          "sourceQuote": "5 × 10⁻⁶ g / 10⁻³ L = 5 × 10⁻³ g/L = 5 mg/L"
+        },
+        {
+          "t": "Une hormone circulante et un électrolyte ont des concentrations du même ordre de grandeur.",
+          "v": false,
+          "e": "FAUX : une hormone circule vers 10⁻¹² mol/L et un électrolyte vers 10⁻¹ mol/L. Les deux sont très loin l'une de l'autre.",
+          "sourceQuote": "une hormone circule à 10⁻¹² mol/L, un électrolyte à 10⁻¹ mol/L"
+        },
+        {
+          "t": "Entre une hormone circulante et un électrolyte, l'écart atteint 11 ordres de grandeur.",
+          "v": true,
+          "e": "VRAI. De 10⁻¹² mol/L à 10⁻¹ mol/L, il y a 11 ordres de grandeur d'écart — c'est ce qui rend les préfixes indispensables, faute de quoi il faudrait écrire des nombres à 12 décimales.",
+          "sourceQuote": "11 ordres de grandeur d'écart"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-003-prefixes-si.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives aux unités composées de deux préfixes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Ce piège tombe aussi bien sur une concentration, comme µmol/mL, que sur un débit, comme mL/min ou µL/h.",
+          "v": true,
+          "e": "VRAI. Les deux familles sont concernées : concentration et débit.",
+          "sourceQuote": "soit en concentration (µmol/mL), soit en débit (mL/min, µL/h…)"
+        },
+        {
+          "t": "Pour convertir une unité composée, il suffit de regarder le préfixe du numérateur.",
+          "v": false,
+          "e": "FAUX : il ne faut jamais se fier à la seule lettre du numérateur. On remplace chaque préfixe par sa puissance, numérateur ET dénominateur, puis on simplifie.",
+          "sourceQuote": "Ne te fie jamais à la seule lettre du numérateur"
+        },
+        {
+          "t": "1 nmol/µL vaut 1 mmol/L.",
+          "v": true,
+          "e": "VRAI. 10⁻⁹ mol / 10⁻⁶ L = 10⁻³ mol/L, soit 1 mmol/L.",
+          "sourceQuote": "Deux préfixes dans la même unité : tu les remplaces tous les deux, puis tu simplifies"
+        },
+        {
+          "t": "1 mmol/mL vaut 1 mmol/L.",
+          "v": false,
+          "e": "FAUX : 10⁻³ mol / 10⁻³ L = 1 mol/L, soit mille fois plus que 1 mmol/L. Les deux préfixes se simplifient, ils ne se recopient pas.",
+          "sourceQuote": "Remplace chaque préfixe par sa puissance, puis simplifie"
+        },
+        {
+          "t": "1 µg/mL et 1 µg/L désignent la même concentration.",
+          "v": false,
+          "e": "FAUX : 1 µg/mL = 10⁻⁶ g / 10⁻³ L = 10⁻³ g/L, soit 1 mg/L, mille fois plus que 1 µg/L.",
+          "sourceQuote": "1 µmol/mL ne vaut pas 1 µmol/L"
+        }
+      ]
+    }
+  ]
+}

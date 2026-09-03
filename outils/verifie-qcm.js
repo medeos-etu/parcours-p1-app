@@ -9,15 +9,26 @@ const fs = require('fs'), path = require('path');
 const APP = path.join(__dirname, '..');
 const norm = s => String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
   .replace(/[^a-z0-9]+/g, ' ').replace(/\s+/g, ' ').trim();
+/* DEUX LECTURES DE LA MÊME FICHE, ET C'EST NÉCESSAIRE.
+   Les encadrés mnémo de Lucas mettent la première lettre en gras : « <b>M</b>édial ».
+   Si l'on remplace chaque balise par une espace, le mot devient « m edial » et une
+   citation honnête — « Médial = vers le Milieu » — est rejetée à tort ; les agents
+   étaient contraints de citer des fragments tronqués. On garde donc les deux versions :
+   balises → espace (pour ne pas coller deux mots voisins) ET balises → rien (pour
+   recoller un mot coupé en son milieu). Une citation qui se retrouve dans l'une des
+   deux est ancrée. Le texte des <style> et <script> reste exclu : un item ne peut pas
+   s'appuyer sur du CSS, ni sur un libellé fabriqué par ::before. */
 const cache = {};
 const texteFiche = f => {
   if (f in cache) return cache[f];
   const p = path.join(APP, 'fiches', f);
-  cache[f] = fs.existsSync(p) ? norm(fs.readFileSync(p, 'utf8')
-    .replace(/<script[\s\S]*?<\/script>/g, ' ').replace(/<style[\s\S]*?<\/style>/g, ' ')
-    .replace(/<[^>]+>/g, ' ')) : null;
+  if (!fs.existsSync(p)) { cache[f] = null; return null; }
+  const brut = fs.readFileSync(p, 'utf8')
+    .replace(/<script[\s\S]*?<\/script>/g, ' ').replace(/<style[\s\S]*?<\/style>/g, ' ');
+  cache[f] = [norm(brut.replace(/<[^>]+>/g, ' ')), norm(brut.replace(/<[^>]+>/g, ''))];
   return cache[f];
 };
+const contient = (t, c) => t[0].includes(c) || t[1].includes(c);
 
 const cible = process.argv[2];
 const fichiers = (!cible || cible === '--tout')
@@ -38,7 +49,7 @@ fichiers.forEach(nom => {
     if (enonces[cle]) rejets.push({ nom, k, cause: 'énoncé déjà posé dans ' + enonces[cle] });
     else enonces[cle] = nom + ' #' + k;
     const t = texteFiche(q.fiche);
-    if (!t) { ficheKO++; rejets.push({ nom, k, cause: 'fiche introuvable : ' + q.fiche }); return; }
+    if (!t || !t[0]) { ficheKO++; rejets.push({ nom, k, cause: 'fiche introuvable : ' + q.fiche }); return; }
     if (!q.items || q.items.length !== 5) { pas5++; rejets.push({ nom, k, cause: (q.items || []).length + ' items au lieu de 5' }); return; }
     vraies += q.items.filter(i => i.v || i.isCorrect).length;
     let bon = true;
@@ -49,7 +60,7 @@ fichiers.forEach(nom => {
       /* la citation doit se retrouver dans la fiche — on compare une fois normalisé,
          pour que la ponctuation et les accents ne fassent pas échouer un vrai extrait */
       const c = norm(cit);
-      if (c.length < 12 || !t.includes(c)) {
+      if (c.length < 12 || !contient(t, c)) {
         ancreKO++; bon = false;
         rejets.push({ nom, k, cause: 'item ' + 'ABCDE'[n] + ' : citation absente de la fiche — « ' + String(cit).slice(0, 70) + ' »' });
       }

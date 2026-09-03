@@ -1,0 +1,279 @@
+{
+  "matiere": "chimie",
+  "chapitre": 1,
+  "questions": [
+    {
+      "fiche": "chimie-007-isotopes.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la définition des isotopes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Des isotopes sont des nucléides qui possèdent le même Z mais des nombres de masse A différents.",
+          "v": true,
+          "e": "VRAI. C'est la définition exacte : même nombre de protons, donc même élément, mais un nombre de nucléons A qui varie d'un isotope à l'autre.",
+          "sourceQuote": "des isotopes sont des nucléides (des espèces définies par A ET Z) qui ont le même Z (même élément) mais des A différents"
+        },
+        {
+          "t": "Deux isotopes d'un même élément possèdent le même nombre de neutrons.",
+          "v": false,
+          "e": "FAUX : c'est justement leur nombre de neutrons qui diffère. À Z fixé, un A différent signifie un nombre de neutrons différent — sans quoi les deux nucléides seraient identiques.",
+          "sourceQuote": "mais des A différents (nombre de neutrons différent)"
+        },
+        {
+          "t": "Un nucléide est une espèce définie par A ET Z.",
+          "v": true,
+          "e": "VRAI. Le nucléide demande deux nombres : le nombre de nucléons A et le numéro atomique Z. Les isotopes sont des nucléides qui partagent le second sans partager le premier.",
+          "sourceQuote": "des nucléides (des espèces définies par A ET Z)"
+        },
+        {
+          "t": "Environ 2400 isotopes sont connus, qu'ils soient naturels ou artificiels.",
+          "v": true,
+          "e": "VRAI. On recense environ 2400 isotopes, certains présents dans la nature, d'autres produits artificiellement.",
+          "sourceQuote": "il existe environ 2400 isotopes connus (naturels ou artificiels)"
+        },
+        {
+          "t": "L'élément chimique est défini par le couple formé de A et de Z.",
+          "v": false,
+          "e": "FAUX : l'élément est défini par Z uniquement, c'est-à-dire par le nombre de protons. C'est le nucléide, et non l'élément, qui réclame les deux nombres A et Z.",
+          "sourceQuote": "un élément est défini par Z uniquement, le nombre de protons"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-007-isotopes.html",
+      "origine": "reprise",
+      "arene": false,
+      "lot": 2,
+      "q": "Concernant les isotopes de l'hydrogène, parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le protium (¹H) possède 1 proton et aucun neutron.",
+          "v": true,
+          "e": "VRAI. Le protium a Z = 1 (1 proton), N = 0 et A = 1.",
+          "sourceQuote": "Isotope Notation Z (protons) N (neutrons) A Hydrogène (protium) ¹H 1 0 1"
+        },
+        {
+          "t": "Le deutérium (²H) possède 1 proton et 1 neutron.",
+          "v": true,
+          "e": "VRAI. Le deutérium a Z = 1, N = 1 et A = 2.",
+          "sourceQuote": "Z (protons) N (neutrons) A Hydrogène (protium) ¹H 1 0 1 Deutérium ²H (ou D) 1 1 2"
+        },
+        {
+          "t": "Le tritium (³H) possède 3 protons.",
+          "v": false,
+          "e": "FAUX : le tritium possède 1 seul proton (Z = 1, comme tous les isotopes de l'hydrogène) et 2 neutrons. Son nombre de masse A = 3 vient des nucléons (1 proton + 2 neutrons).",
+          "sourceQuote": "la colonne Z ne bouge jamais — 1 proton, c'est de l'hydrogène du premier au dernier"
+        },
+        {
+          "t": "Les trois isotopes de l'hydrogène possèdent le même nombre de neutrons.",
+          "v": false,
+          "e": "FAUX : ils ont des nombres de neutrons différents (0 pour le protium, 1 pour le deutérium, 2 pour le tritium). C'est leur nombre de protons (1) qui est identique.",
+          "sourceQuote": "Ce qui monte, c'est N, donc A."
+        },
+        {
+          "t": "Les isotopes de l'hydrogène, étant tous de même Z, ont les mêmes propriétés chimiques.",
+          "v": true,
+          "e": "VRAI. Même Z = 1 proton, donc 1 électron chacun (si neutres) et donc mêmes propriétés chimiques. Seules les masses diffèrent.",
+          "sourceQuote": "Même Z (= 1 proton) → même élément → donc 1 électron chacun si neutres → mêmes propriétés chimiques"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-007-isotopes.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la détermination du nombre de neutrons d'un isotope, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le nombre de neutrons se déduit du nombre de nucléons et du numéro atomique par la relation N = A − Z.",
+          "v": true,
+          "e": "VRAI. Puisque A = Z + N, il suffit de retrancher Z à A pour obtenir le nombre de neutrons.",
+          "sourceQuote": "Comme A = Z + N, on a N = A − Z"
+        },
+        {
+          "t": "Le nombre de neutrons est toujours fourni tel quel dans l'énoncé, il n'y a rien à en déduire.",
+          "v": false,
+          "e": "FAUX : le nombre de neutrons n'est pas donné, il se calcule. On lit A et Z, puis on pose N = A − Z.",
+          "sourceQuote": "Ne cherche pas les neutrons dans l'énoncé : calcule-les"
+        },
+        {
+          "t": "Pour le tritium ³H, le calcul donne 3 − 1 = 2 neutrons.",
+          "v": true,
+          "e": "VRAI. A = 3 et Z = 1, donc N = 3 − 1 = 2 neutrons.",
+          "sourceQuote": "Tritium ³H : 3 − 1 = 2 neutrons"
+        },
+        {
+          "t": "Pour le deutérium ²H, le calcul donne 2 neutrons.",
+          "v": false,
+          "e": "FAUX : A = 2 et Z = 1, donc N = 2 − 1 = 1 seul neutron. Le chiffre 2 est ici le nombre de nucléons, pas le nombre de neutrons.",
+          "sourceQuote": "Deutérium ²H : 2 − 1 = 1 neutron"
+        },
+        {
+          "t": "Devant un isotope, plusieurs calculs successifs sont nécessaires avant de pouvoir conclure.",
+          "v": false,
+          "e": "FAUX : une seule opération suffit, la soustraction N = A − Z. C'est le seul calcul à mener devant un isotope.",
+          "sourceQuote": "C'est le seul calcul à faire devant un isotope."
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-007-isotopes.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à ce qui varie et à ce qui reste identique d'un isotope de l'hydrogène à l'autre, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "S'ils sont électriquement neutres, les trois isotopes de l'hydrogène portent chacun 1 électron.",
+          "v": true,
+          "e": "VRAI. Ils ont tous Z = 1, donc 1 proton ; un atome neutre porte autant d'électrons que de protons, soit 1 électron chacun.",
+          "sourceQuote": "Même Z (= 1 proton) → même élément → donc 1 électron chacun si neutres"
+        },
+        {
+          "t": "À Z constant, une variation de A traduit une variation du nombre d'électrons.",
+          "v": false,
+          "e": "FAUX : à Z constant, ce qui varie avec A, c'est le nombre de neutrons, donc la masse. Le nombre d'électrons, lui, ne bouge pas.",
+          "sourceQuote": "A différents → nombre de neutrons différent → masses différentes"
+        },
+        {
+          "t": "Le protium, le deutérium et le tritium relèvent du même élément tout en ayant des masses différentes.",
+          "v": true,
+          "e": "VRAI. C'est toute la notion d'isotope : un seul et même élément, l'hydrogène, sous trois masses distinctes.",
+          "sourceQuote": "Même élément, masses différentes. L'hydrogène en donne l'exemple type, avec ses trois isotopes."
+        },
+        {
+          "t": "Dans la notation abrégée, le deutérium s'écrit T et le tritium D.",
+          "v": false,
+          "e": "FAUX : les deux symboles sont inversés. Le deutérium se note D et le tritium se note T.",
+          "sourceQuote": "Deutérium ²H (ou D) 1 1 2 Tritium ³H (ou T) 1 2 3"
+        },
+        {
+          "t": "Le nombre de nucléons vaut 1 pour le deutérium et 2 pour le tritium.",
+          "v": false,
+          "e": "FAUX : A vaut 2 pour le deutérium et 3 pour le tritium. La valeur 1 est celle du protium.",
+          "sourceQuote": "Isotope Notation Z (protons) N (neutrons) A Hydrogène (protium) ¹H 1 0 1 Deutérium ²H (ou D) 1 1 2 Tritium ³H (ou T) 1 2 3"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-007-isotopes.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à l'emploi des isotopes radioactifs, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'iode 131 est utilisé dans le traitement des cancers de la thyroïde.",
+          "v": true,
+          "e": "VRAI. L'iode 131 est employé en thérapie, contre les cancers de la thyroïde.",
+          "sourceQuote": "Iode 131 (¹³¹I) → traitement des cancers de la thyroïde"
+        },
+        {
+          "t": "Le technétium 99m est employé pour réaliser des scintigraphies.",
+          "v": true,
+          "e": "VRAI. Le technétium 99m sert à l'imagerie médicale, par scintigraphie.",
+          "sourceQuote": "Technétium 99m (⁹⁹ᵐTc) → scintigraphies (imagerie médicale)"
+        },
+        {
+          "t": "Le carbone 14 sert à la datation en archéologie.",
+          "v": true,
+          "e": "VRAI. Le carbone 14 est l'isotope employé pour dater des échantillons en archéologie.",
+          "sourceQuote": "Carbone 14 (¹⁴C) → datation en archéologie (hors médecine, mais exactement le même principe)"
+        },
+        {
+          "t": "La datation en archéologie relève de la médecine nucléaire.",
+          "v": false,
+          "e": "FAUX : la datation se situe hors du champ médical. Seul le principe physique mis en jeu est le même que celui de la médecine nucléaire.",
+          "sourceQuote": "datation en archéologie (hors médecine, mais exactement le même principe)"
+        },
+        {
+          "t": "L'emploi des isotopes radioactifs en médecine reste occasionnel et réservé à des situations rares.",
+          "v": false,
+          "e": "FAUX : ces isotopes sont utilisés quotidiennement en médecine nucléaire. Ce n'est ni marginal ni exceptionnel.",
+          "sourceQuote": "Les isotopes radioactifs sont utilisés quotidiennement en médecine nucléaire"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-007-isotopes.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à ce qui rend possible l'emploi médical des isotopes radioactifs, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Ces isotopes possèdent un Z différent de celui des éléments naturels correspondants.",
+          "v": false,
+          "e": "FAUX : ils ont exactement le même Z que les éléments naturels. C'est précisément pour cela que l'organisme les traite comme les éléments qu'ils remplacent.",
+          "sourceQuote": "Ces isotopes ont le même Z que les éléments naturels"
+        },
+        {
+          "t": "C'est leur différence de propriétés chimiques qui permet de les détecter dans l'organisme.",
+          "v": false,
+          "e": "FAUX : leurs propriétés chimiques sont identiques à celles des éléments naturels. La détection repose sur leurs propriétés nucléaires, pas sur leur chimie.",
+          "sourceQuote": "Ces isotopes ont le même Z que les éléments naturels → propriétés chimiques identiques"
+        },
+        {
+          "t": "Leurs propriétés nucléaires, différentes, permettent de les détecter ou de les utiliser en thérapie.",
+          "v": true,
+          "e": "VRAI. Le noyau, lui, se comporte autrement : c'est ce qui rend l'isotope repérable en imagerie, ou actif en traitement.",
+          "sourceQuote": "ils ont des propriétés nucléaires différentes, qui permettent de les détecter ou de les utiliser en thérapie"
+        },
+        {
+          "t": "L'organisme distingue chimiquement l'isotope radioactif de l'élément naturel correspondant.",
+          "v": false,
+          "e": "FAUX : le corps ne fait pas la différence. Chimiquement, l'isotope radioactif se comporte comme l'élément naturel, et c'est ce qui permet de l'y introduire.",
+          "sourceQuote": "ton corps ne fait pas la différence"
+        },
+        {
+          "t": "Le cortège électronique de ces isotopes est identique à celui de l'élément naturel, mais pas leur noyau.",
+          "v": true,
+          "e": "VRAI. Tout tient dans ce décalage : cortège électronique identique, donc chimie identique ; noyau différent, donc comportement nucléaire différent.",
+          "sourceQuote": "le cortège électronique est identique, le noyau non"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-007-isotopes.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives aux confusions classiques que soulèvent les isotopes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Passer de ²H à ³H revient à changer d'élément chimique.",
+          "v": false,
+          "e": "FAUX : modifier A ne fait pas changer d'élément. ²H et ³H restent de l'hydrogène, puisque Z = 1 dans les deux cas.",
+          "sourceQuote": "Changer A ne change pas l'élément : ²H et ³H, c'est toujours de l'hydrogène, car Z = 1."
+        },
+        {
+          "t": "La notion abordée juste après les isotopes maintient constant, non pas Z, mais le nombre d'électrons.",
+          "v": true,
+          "e": "VRAI. Les deux mots commencent par « iso- », mais ils ne gardent pas la même grandeur constante : Z pour les isotopes, le nombre d'électrons pour la notion suivante.",
+          "sourceQuote": "Le suivant garde constant, non pas Z, mais le nombre d'électrons"
+        },
+        {
+          "t": "Ces deux notions en « iso- » prêtent rarement à confusion en P1.",
+          "v": false,
+          "e": "FAUX : c'est au contraire une confusion très fréquemment exploitée dans les QCM. Il faut se demander à chaque fois quelle grandeur reste constante.",
+          "sourceQuote": "et les QCM adorent faire confondre les deux"
+        },
+        {
+          "t": "Le protium est le seul des trois isotopes de l'hydrogène dont le nombre de nucléons est égal au nombre de protons.",
+          "v": true,
+          "e": "VRAI. Le protium n'a aucun neutron : A = 1 et Z = 1 s'y confondent. Le deutérium (A = 2) et le tritium (A = 3) ont, eux, un A supérieur à Z.",
+          "sourceQuote": "Isotope Notation Z (protons) N (neutrons) A Hydrogène (protium) ¹H 1 0 1 Deutérium ²H (ou D) 1 1 2 Tritium ³H (ou T) 1 2 3"
+        },
+        {
+          "t": "Chez un isotope radioactif, les propriétés chimiques changent en même temps que les propriétés nucléaires.",
+          "v": false,
+          "e": "FAUX : seules les propriétés nucléaires changent. La chimie, elle, ne change jamais, puisque Z reste le même.",
+          "sourceQuote": "pour les isotopes radioactifs, les propriétés nucléaires, jamais la chimie"
+        }
+      ]
+    }
+  ]
+}

@@ -6642,16 +6642,37 @@ function setLieu(l){
 }
 
 /* — LES SALLES — */
-/* CE QUE L'ÉLÈVE PEUT JOUER : 3 questions par fiche travaillée. L'année complète
-   ouvre tout le stock de la fiche (jusqu'à 10) — la différence doit se VOIR,
-   fiche par fiche, sans jamais annoncer un chiffre que la banque n'a pas. */
-const QUOTA_FICHE=3;
+/* SEPT EMPLACEMENTS PAR FICHE, TOUJOURS LES MÊMES, remplis ou non :
+     lots 1-2  entraînement, accès gratuit
+     lots 3-5  entraînement, pack année complète
+     lots 6-7  arène (ar:1), jamais jouables à l'entraînement
+   L'app raisonne sur cette structure, pas sur ce qu'elle a sous la main : une fiche
+   dont les QCM ne sont pas encore écrits garde ses sept cases, simplement vides, et
+   les remplir plus tard ne demande aucune retouche de code. C'est ce qui permet
+   d'implanter le Parcours entier avant d'avoir écrit les 6 657 questions.
+   Le découpage vient du lot, plus du rang dans la banque : une fiche à qui il manque
+   le lot 1 ne fait plus glisser ses questions payantes dans le gratuit. */
+const LOTS_GRATUITS=2, LOTS_ENTRAINEMENT=5;
+const QUOTA_FICHE=LOTS_GRATUITS;      /* conservé : d'anciens écrans l'affichent */
 function accesIllimite(){ return !!S.stage; }
 function qsDeFiche(slug){
   /* q.ar === 1 : question RÉSERVÉE AU GRAND AMPHI. Elle n'apparaît jamais à
      l'entraînement — c'est tout l'intérêt : on ne peut pas la réviser à l'avance. */
+  const plafond = accesIllimite()? LOTS_ENTRAINEMENT : LOTS_GRATUITS;
   const t=ABANK.filter(q=>q.f===slug && !q.ar);
-  return accesIllimite()? t : t.slice(0,QUOTA_FICHE);
+  /* les questions d'avant les lots n'ont pas de `lo` : on les garde au rang, comme avant */
+  const parLot=t.filter(q=>q.lo);
+  if(parLot.length) return parLot.filter(q=>q.lo<=plafond).sort((a,b)=>a.lo-b.lo);
+  return accesIllimite()? t : t.slice(0,plafond);
+}
+/* CE QUI EST PRÉVU pour une fiche, rempli ou non — sert aux écrans qui annoncent
+   ce que l'année complète ouvrirait, sans mentir sur ce qui existe déjà. */
+function lotsPrevus(){ return {gratuit:LOTS_GRATUITS, pack:LOTS_ENTRAINEMENT-LOTS_GRATUITS, arene:7-LOTS_ENTRAINEMENT}; }
+function lotsEcrits(slug){
+  const t=ABANK.filter(q=>q.f===slug);
+  return {gratuit:t.filter(q=>q.lo&&q.lo<=LOTS_GRATUITS).length,
+          pack:t.filter(q=>q.lo&&q.lo>LOTS_GRATUITS&&q.lo<=LOTS_ENTRAINEMENT).length,
+          arene:t.filter(q=>q.lo&&q.lo>LOTS_ENTRAINEMENT).length};
 }
 function qsOuvertes(mat){
   const arm=(typeof fichesArmees==='function')?fichesArmees():{};
