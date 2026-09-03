@@ -7,7 +7,21 @@
    usage : node outils/verifie-qcm.js [fichier.json | --tout] */
 const fs = require('fs'), path = require('path');
 const APP = path.join(__dirname, '..');
-const norm = s => String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+/* LES ENTITÉS HTML SE DÉCODENT AVANT TOUT LE RESTE.
+   Une fiche qui écrit « Longueur &gt;&gt; largeur » donnait, une fois les balises
+   retirées, le texte « longueur gt gt largeur » : la citation honnête de l'élève —
+   « Longueur >> largeur » — était rejetée à tort, et les agents devaient contourner en
+   citant les phrases voisines. On décode d'abord ; le « > » devient alors une espace
+   comme n'importe quelle ponctuation, et la citation se retrouve. Même chose pour
+   l'espace insécable, qui traversait le contrôle sous la forme « nbsp ». */
+const ENTITES = { amp:'&', lt:'<', gt:'>', quot:'"', apos:'\'', nbsp:' ', laquo:'«', raquo:'»',
+  eacute:'é', egrave:'è', agrave:'à', ccedil:'ç', ocirc:'ô', ecirc:'ê', icirc:'î', ucirc:'û',
+  deg:'°', times:'×', divide:'÷', minus:'−', hellip:'…', ndash:'–', mdash:'—', rsquo:'\'', oelig:'œ' };
+const decode = s => String(s)
+  .replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16)))
+  .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(+n))
+  .replace(/&([a-z]+);/gi, (m, n) => ENTITES[n.toLowerCase()] !== undefined ? ENTITES[n.toLowerCase()] : m);
+const norm = s => decode(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
   .replace(/[^a-z0-9]+/g, ' ').replace(/\s+/g, ' ').trim();
 /* DEUX LECTURES DE LA MÊME FICHE, ET C'EST NÉCESSAIRE.
    Les encadrés mnémo de Lucas mettent la première lettre en gras : « <b>M</b>édial ».

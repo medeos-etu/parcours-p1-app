@@ -1,0 +1,825 @@
+{
+  "matiere": "chimie",
+  "chapitre": 1,
+  "questions": [
+    {
+      "fiche": "chimie-020-energie-de-transition.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la formule de transition directe, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Pour l'atome d'hydrogène, l'énergie d'une transition s'écrit ΔE = −13,6 × (1/nf² − 1/nᵢ²).",
+          "v": true,
+          "e": "VRAI. C'est la formule de transition directe de l'hydrogène : elle donne ΔE d'un seul coup, sans calculer séparément les deux niveaux.",
+          "sourceQuote": "ΔE = −13,6 × (1/nf² − 1/nᵢ²) eV"
+        },
+        {
+          "t": "Pour un hydrogénoïde comme He⁺ ou Li²⁺, la parenthèse reste la même et l'on ajoute seulement un facteur Z².",
+          "v": true,
+          "e": "VRAI. La parenthèse est identique dans les deux cas ; le seul ajout des hydrogénoïdes est la multiplication par Z².",
+          "sourceQuote": "Le seul ajout des hydrogénoïdes, c'est le × Z²"
+        },
+        {
+          "t": "Le Z² des hydrogénoïdes est un facteur propre aux transitions, sans rapport avec celui qui figure dans l'énergie d'un niveau.",
+          "v": false,
+          "e": "FAUX : c'est exactement le même Z² que celui de Eₙ = −13,6 × Z²/n². Il n'y a pas deux Z² différents à retenir.",
+          "sourceQuote": "le même Z² que dans Eₙ = −13,6 × Z²/n²"
+        },
+        {
+          "t": "Une fois cette formule connue, le calcul en trois temps (Eᵢ, puis E_f, puis leur différence) n'est plus valable.",
+          "v": false,
+          "e": "FAUX : le trajet complet en trois temps marche toujours et reste la sécurité en cas de doute. La formule directe est un raccourci, pas un remplacement.",
+          "sourceQuote": "Ça marche toujours, et ça reste ta sécurité en cas de doute."
+        },
+        {
+          "t": "Le résultat de cette formule s'obtient directement en joules.",
+          "v": false,
+          "e": "FAUX : le résultat sort en électronvolts (eV), pour l'hydrogène comme pour les hydrogénoïdes.",
+          "sourceQuote": "en eV pour H, × Z² en plus pour les hydrogénoïdes"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-020-energie-de-transition.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à ce que t'apprend le nombre ΔE obtenu, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un ΔE positif correspond à une absorption.",
+          "v": true,
+          "e": "VRAI. Le signe donne le sens de la transition : positif pour une absorption, négatif pour une émission.",
+          "sourceQuote": "Le signe donne le sens : + = absorption, − = émission"
+        },
+        {
+          "t": "Un ΔE négatif signifie que le niveau d'arrivée est plus haut que le niveau de départ.",
+          "v": false,
+          "e": "FAUX : un ΔE négatif signifie que l'électron descend en énergie, donc que le niveau d'arrivée est plus bas que le niveau de départ.",
+          "sourceQuote": "l'électron descend en énergie"
+        },
+        {
+          "t": "L'énergie du photon se lit sur |ΔE|, donc sur une valeur positive.",
+          "v": true,
+          "e": "VRAI. Pour l'énergie du photon on prend toujours la valeur absolue de ΔE.",
+          "sourceQuote": "Pour l'énergie du photon, on prend toujours |ΔE|"
+        },
+        {
+          "t": "Écrire que le photon émis vaut −12,1 eV est correct puisque ΔE est négatif dans une émission.",
+          "v": false,
+          "e": "FAUX : un photon ne transporte jamais une énergie négative. Le signe reste sur ΔE ; le photon, lui, vaut 12,1 eV.",
+          "sourceQuote": "un photon ne transporte jamais une énergie négative"
+        },
+        {
+          "t": "Ce nombre renseigne à la fois sur le sens de la transition et sur la valeur de l'énergie échangée.",
+          "v": true,
+          "e": "VRAI. Il dit deux choses à la fois : son signe donne le sens, sa valeur donne l'énergie mise en jeu.",
+          "sourceQuote": "il te dit deux choses à la fois — son signe, et sa valeur"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-020-energie-de-transition.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la façon dont la formule de transition est obtenue, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le point de départ est la définition : énergie d'arrivée moins énergie de départ.",
+          "v": true,
+          "e": "VRAI. Tout part de ΔE = E_f − Eᵢ, c'est-à-dire l'énergie d'arrivée moins l'énergie de départ.",
+          "sourceQuote": "rien d'autre que « l'énergie d'arrivée moins l'énergie de départ »"
+        },
+        {
+          "t": "Après substitution, les deux termes restent négatifs et s'additionnent.",
+          "v": false,
+          "e": "FAUX : le second terme est soustrait, et moins un moins fait un plus. Le deuxième terme redevient donc positif.",
+          "sourceQuote": "Moins un moins, ça fait un plus"
+        },
+        {
+          "t": "La dernière étape consiste à mettre −13,6 en facteur commun.",
+          "v": true,
+          "e": "VRAI. En mettant −13,6 en facteur, on obtient la forme compacte ΔE = −13,6 × (1/nf² − 1/nᵢ²).",
+          "sourceQuote": "On met −13,6 en facteur."
+        },
+        {
+          "t": "Cette formule ne concerne que les transitions d'émission ; en absorption, il faut repartir des deux niveaux séparément.",
+          "v": false,
+          "e": "FAUX : en absorption comme en émission, l'énergie échangée vaut exactement l'écart entre les deux niveaux. La formule couvre les deux sens.",
+          "sourceQuote": "Que ce soit en absorption ou en émission, l'énergie échangée correspond exactement à la différence d'énergie entre les deux niveaux"
+        },
+        {
+          "t": "La substitution fait apparaître des termes de la forme −13,6 × n².",
+          "v": false,
+          "e": "FAUX : les énergies de Bohr s'écrivent avec n² au dénominateur, soit −13,6/n², et non −13,6 × n².",
+          "sourceQuote": "On remplace par Bohr. ΔE = (−13,6/nf²) − (−13,6/nᵢ²)"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-020-energie-de-transition.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la transition n = 3 vers n = 1 de l'hydrogène, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "On pose nᵢ = 3 pour le départ et nf = 1 pour l'arrivée.",
+          "v": true,
+          "e": "VRAI. La première étape est toujours d'étiqueter les niveaux : ici le départ est n = 3 et l'arrivée n = 1.",
+          "sourceQuote": "identifier : nᵢ = 3 (départ), nf = 1 (arrivée)"
+        },
+        {
+          "t": "Le calcul aboutit à ΔE ≈ −15,1 eV.",
+          "v": false,
+          "e": "FAUX : −13,6 × 8/9 vaut environ −12,1 eV, et non −15,1 eV.",
+          "sourceQuote": "−13,6 × 8/9 = −12,1 eV"
+        },
+        {
+          "t": "Le signe du résultat indique une émission.",
+          "v": true,
+          "e": "VRAI. ΔE est négatif : l'électron descend en énergie, l'atome émet un photon.",
+          "sourceQuote": "ΔE est négatif → émission"
+        },
+        {
+          "t": "Le photon impliqué transporte environ 12,1 eV.",
+          "v": true,
+          "e": "VRAI. L'énergie du photon est |ΔE|, soit 12,1 eV.",
+          "sourceQuote": "le photon émis vaut |ΔE| = 12,1 eV"
+        },
+        {
+          "t": "Dans le calcul, la parenthèse (1 − 1/9) est transformée en (9/9 + 1/9).",
+          "v": false,
+          "e": "FAUX : on met les deux fractions au même dénominateur puis on soustrait : (9/9 − 1/9) = 8/9.",
+          "sourceQuote": "ΔE = −13,6 × (9/9 − 1/9) = −13,6 × 8/9"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-020-energie-de-transition.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à la transition n = 1 vers n = 3 de l'hydrogène, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'électron monte en énergie : il s'agit d'une absorption.",
+          "v": true,
+          "e": "VRAI. Le niveau d'arrivée est plus haut que le niveau de départ : l'électron monte, c'est une absorption.",
+          "sourceQuote": "nᵢ = 1, nf = 3 : l'électron monte"
+        },
+        {
+          "t": "Le calcul direct donne ΔE = +12,1 eV.",
+          "v": true,
+          "e": "VRAI. ΔE = −13,6 × (1/9 − 9/9) = −13,6 × (−8/9) = +12,1 eV, valeur positive comme il se doit pour une absorption.",
+          "sourceQuote": "−13,6 × (−8/9) = +12,1 eV"
+        },
+        {
+          "t": "Pour cette transition, on pose nᵢ = 3 et nf = 1.",
+          "v": false,
+          "e": "FAUX : les étiquettes sont inversées. Ici le départ est n = 1, donc nᵢ = 1, et l'arrivée est n = 3, donc nf = 3.",
+          "sourceQuote": "nᵢ = 1, nf = 3 : l'électron monte"
+        },
+        {
+          "t": "La transition inverse, de n = 3 vers n = 1, met en jeu la même énergie en valeur absolue.",
+          "v": true,
+          "e": "VRAI. Les deux transitions relient les mêmes niveaux : la valeur absolue est identique, seul le signe bascule.",
+          "sourceQuote": "la transition inverse a la même énergie en valeur absolue, seul le signe bascule"
+        },
+        {
+          "t": "Lors de cette transition, l'atome émet un photon de lumière.",
+          "v": false,
+          "e": "FAUX : en absorption, l'atome capte un photon, il n'en émet pas. L'émission correspond au trajet inverse.",
+          "sourceQuote": "en absorption, l'atome capte un photon et l'électron monte"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-020-energie-de-transition.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à l'ordre des termes dans la parenthèse de la formule de transition, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "C'est le niveau d'arrivée qui est écrit en premier dans la parenthèse.",
+          "v": true,
+          "e": "VRAI. nf ouvre la parenthèse ; nᵢ vient ensuite.",
+          "sourceQuote": "nf est écrit en premier dans la parenthèse"
+        },
+        {
+          "t": "Renverser la parenthèse retourne le signe du résultat obtenu.",
+          "v": true,
+          "e": "VRAI. Inverser l'ordre des deux termes change le signe de ΔE, donc l'interprétation absorption ou émission.",
+          "sourceQuote": "l'inverser retourne tous tes signes"
+        },
+        {
+          "t": "Cet ordre s'explique par le fait que le niveau d'arrivée est toujours le plus bas des deux.",
+          "v": false,
+          "e": "FAUX : l'ordre vient du E_f de la définition ΔE = E_f − Eᵢ, pas d'une hiérarchie entre les niveaux. Le niveau d'arrivée peut très bien être le plus haut, comme dans une absorption.",
+          "sourceQuote": "il vient du Ef de la définition"
+        },
+        {
+          "t": "Avec la parenthèse correctement écrite, une transition de n = 4 vers n = 2 donne un ΔE positif.",
+          "v": false,
+          "e": "FAUX : l'électron descend de n = 4 à n = 2, donc il perd de l'énergie et ΔE est négatif. C'est une émission.",
+          "sourceQuote": "l'électron descend en énergie"
+        },
+        {
+          "t": "Le signe de la transition et l'énergie du photon se lisent tous les deux sur |ΔE|.",
+          "v": false,
+          "e": "FAUX : deux valeurs, deux usages. Le signe se lit sur ΔE ; seule l'énergie du photon se lit sur |ΔE|.",
+          "sourceQuote": "le signe se lit sur ΔE, l'énergie du photon se lit sur |ΔE|"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-020-energie-de-transition.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives aux moyens de calculer l'énergie d'une transition, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'astuce mentale passe par 13,6 × 8 = 108,8, puis une division par 9 qui donne environ 12,1.",
+          "v": true,
+          "e": "VRAI. C'est le calcul mental proposé pour obtenir 12,1 sans poser l'opération.",
+          "sourceQuote": "13,6 × 8 = 108,8 puis ÷ 9 ≈ 12,1"
+        },
+        {
+          "t": "Une autre voie mentale consiste à retrancher environ 1,5 à 13,6.",
+          "v": true,
+          "e": "VRAI. 13,6 × 8/9 revient à ôter 13,6/9 ≈ 1,5 à 13,6, ce qui donne 12,1.",
+          "sourceQuote": "13,6 × 8/9 ≈ 13,6 − 13,6/9 ≈ 13,6 − 1,5 = 12,1"
+        },
+        {
+          "t": "Dans le calcul complet, la première énergie à déterminer est celle du niveau d'arrivée.",
+          "v": false,
+          "e": "FAUX : on calcule d'abord Eᵢ, l'énergie du niveau de départ, puis seulement E_f.",
+          "sourceQuote": "calculer Eᵢ = −13,6/nᵢ² eV"
+        },
+        {
+          "t": "L'énergie échangée lors d'une transition est transportée par un photon.",
+          "v": true,
+          "e": "VRAI. Le photon, grain de lumière, est le porteur de l'énergie échangée entre l'atome et la lumière.",
+          "sourceQuote": "Cette énergie est transportée par un photon (grain de lumière)"
+        },
+        {
+          "t": "Le calcul complet se passe de l'énergie du niveau d'arrivée : celle du niveau de départ suffit.",
+          "v": false,
+          "e": "FAUX : il faut les deux. Le deuxième temps du calcul est justement E_f, l'énergie du niveau d'arrivée.",
+          "sourceQuote": "calculer Ef = −13,6/nf² eV"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-021-energie-du-photon-lambda.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives aux formules de l'énergie d'un photon et à leurs symboles, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'énergie d'un photon s'écrit indifféremment ΔE = h × ν ou ΔE = h × c / λ.",
+          "v": true,
+          "e": "VRAI. Ce sont deux écritures équivalentes de la même énergie : l'une passe par la fréquence, l'autre par la longueur d'onde.",
+          "sourceQuote": "Deux écritures équivalentes : par la fréquence, ou par la longueur d'onde."
+        },
+        {
+          "t": "λ désigne la longueur d'onde du photon et s'exprime en mètres.",
+          "v": true,
+          "e": "VRAI. λ est la longueur d'onde, et l'unité de travail est le mètre.",
+          "sourceQuote": "Longueur d'onde du photon en mètres"
+        },
+        {
+          "t": "ν désigne la fréquence du photon et s'exprime en mètres par seconde.",
+          "v": false,
+          "e": "FAUX : ν est bien la fréquence, mais elle s'exprime en hertz (Hz). Les mètres par seconde sont l'unité de la vitesse de la lumière.",
+          "sourceQuote": "Fréquence du photon en Hz"
+        },
+        {
+          "t": "La constante de Planck h vaut 3 × 10⁸ J·s.",
+          "v": false,
+          "e": "FAUX : h vaut 6,63 × 10⁻³⁴ J·s. La valeur 3 × 10⁸ est celle de la vitesse de la lumière, en m/s.",
+          "sourceQuote": "Constante de Planck 6,63 × 10⁻³⁴ J·s"
+        },
+        {
+          "t": "La vitesse de la lumière c vaut 3 × 10⁸ m/s.",
+          "v": true,
+          "e": "VRAI. C'est la valeur de c, en mètres par seconde.",
+          "sourceQuote": "Vitesse de la lumière 3 × 10⁸ m/s"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-021-energie-du-photon-lambda.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives au retournement des formules du photon, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Pour obtenir la longueur d'onde à partir de l'énergie, on écrit λ = h × c / ΔE.",
+          "v": true,
+          "e": "VRAI. On isole λ dans ΔE = hc/λ, ce qui donne λ = hc/ΔE, en mètres.",
+          "sourceQuote": "λ = h × c / ΔE — résultat en mètres"
+        },
+        {
+          "t": "Pour obtenir la fréquence, on écrit ν = ΔE / h.",
+          "v": true,
+          "e": "VRAI. On isole ν dans ΔE = hν, ce qui donne ν = ΔE/h, en hertz.",
+          "sourceQuote": "ν = ΔE / h — résultat en Hz"
+        },
+        {
+          "t": "Quand on cherche la longueur d'onde, on part de l'écriture ΔE = h × ν.",
+          "v": false,
+          "e": "FAUX : pour la longueur d'onde, on part de l'écriture qui contient λ, soit ΔE = h × c / λ. L'écriture ΔE = h × ν sert à trouver la fréquence.",
+          "sourceQuote": "Tu connais ΔE et tu veux la longueur d'onde : ΔE = h × c / λ"
+        },
+        {
+          "t": "Ces deux formules retournées exigent que ΔE soit exprimé en joules.",
+          "v": true,
+          "e": "VRAI. C'est une condition absolue : sans ΔE en joules, ni λ ni ν ne sortent juste.",
+          "sourceQuote": "une condition absolue : ΔE doit être en Joules"
+        },
+        {
+          "t": "La longueur d'onde obtenue par λ = hc/ΔE sort directement en nanomètres.",
+          "v": false,
+          "e": "FAUX : elle sort en mètres. Le passage aux nanomètres demande une conversion supplémentaire.",
+          "sourceQuote": "tu obtiens λ en mètres"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-021-energie-du-photon-lambda.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à l'ordre des étapes du calcul, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "On commence par calculer ΔE avec Bohr, ce qui donne un résultat en eV.",
+          "v": true,
+          "e": "VRAI. Le premier temps est le calcul de la transition, dont le résultat sort en électronvolts.",
+          "sourceQuote": "Calculer ΔE avec Bohr. Tu appliques la formule de transition et tu obtiens un résultat en eV"
+        },
+        {
+          "t": "Pour l'énergie du photon, on conserve le signe de ΔE.",
+          "v": false,
+          "e": "FAUX : on garde la valeur absolue |ΔE|. Le signe sert seulement à dire s'il s'agit d'une absorption ou d'une émission.",
+          "sourceQuote": "Pour l'énergie du photon, tu gardes la valeur absolue |ΔE|"
+        },
+        {
+          "t": "La conversion en joules n'intervient qu'à la toute fin, une fois la longueur d'onde obtenue.",
+          "v": false,
+          "e": "FAUX : la conversion en joules est le deuxième temps, avant d'appliquer la formule du photon. C'est justement l'étape que tout le monde saute.",
+          "sourceQuote": "Convertir en Joules. ΔE(J) = ΔE(eV) × 1,6 × 10⁻¹⁹"
+        },
+        {
+          "t": "Le troisième temps consiste à convertir la longueur d'onde en nanomètres.",
+          "v": false,
+          "e": "FAUX : le troisième temps est l'application de la formule du photon, qui donne λ en mètres. La conversion en nanomètres vient en dernier.",
+          "sourceQuote": "Appliquer la formule. λ = (6,63 × 10⁻³⁴ × 3 × 10⁸) / ΔE(J)"
+        },
+        {
+          "t": "Le nanomètre est l'unité dans laquelle se lit un domaine spectral.",
+          "v": true,
+          "e": "VRAI. C'est pour cela qu'on convertit λ en nanomètres avant de conclure sur le domaine.",
+          "sourceQuote": "C'est l'unité dans laquelle on lit un domaine spectral."
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-021-energie-du-photon-lambda.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives au photon émis par l'hydrogène lors de la transition n = 2 vers n = 1, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Ce photon transporte une énergie de 10,2 eV.",
+          "v": true,
+          "e": "VRAI. ΔE = −13,6 × 3/4 = −10,2 eV, donc le photon vaut 10,2 eV en valeur absolue.",
+          "sourceQuote": "donc le photon vaut |ΔE| = 10,2 eV"
+        },
+        {
+          "t": "Converti en joules, cela donne environ 1,6 × 10⁻¹⁹ J.",
+          "v": false,
+          "e": "FAUX : 10,2 × 1,6 × 10⁻¹⁹ vaut environ 1,6 × 10⁻¹⁸ J. L'exposant est décalé d'un rang.",
+          "sourceQuote": "En Joules : 10,2 × 1,6 × 10⁻¹⁹ ≈ 16 × 10⁻¹⁹ = 1,6 × 10⁻¹⁸ J"
+        },
+        {
+          "t": "Sa longueur d'onde vaut environ 125 nm.",
+          "v": true,
+          "e": "VRAI. λ = hc/ΔE ≈ 20 × 10⁻²⁶ divisé par 1,6 × 10⁻¹⁸, soit 12,5 × 10⁻⁸ m, c'est-à-dire 125 nm.",
+          "sourceQuote": "λ = h × c / ΔE ≈ (20 × 10⁻²⁶) / (1,6 × 10⁻¹⁸) = 12,5 × 10⁻⁸ m = 125 nm"
+        },
+        {
+          "t": "Ce photon appartient au domaine ultraviolet.",
+          "v": true,
+          "e": "VRAI. 125 nm est inférieur à 400 nm : le photon est dans l'ultraviolet.",
+          "sourceQuote": "le photon est dans l'ultraviolet (UV)"
+        },
+        {
+          "t": "Le ΔE de cette transition vaut +10,2 eV, ce qui traduit une absorption.",
+          "v": false,
+          "e": "FAUX : ΔE vaut −10,2 eV. Le signe négatif signe une émission, et c'est bien un photon qui part de l'atome.",
+          "sourceQuote": "13,6 × 3 = 40,8 puis ÷ 4 = 10,2 ; négatif = émission"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-021-energie-du-photon-lambda.html",
+      "origine": "reprise",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux unités et conversions dans les calculs de photon, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "1 eV vaut 1,6 × 10⁻¹⁹ J.",
+          "v": true,
+          "e": "VRAI. C'est la conversion de référence entre électronvolt et joule.",
+          "sourceQuote": "1 eV = 1,6 × 10⁻¹⁹ J"
+        },
+        {
+          "t": "Pour convertir une longueur d'onde de mètres en nanomètres, on multiplie par 10⁹.",
+          "v": true,
+          "e": "VRAI. 1 m = 10⁹ nm : on multiplie la valeur en mètres par 10⁹ pour l'avoir en nanomètres.",
+          "sourceQuote": "1 m = 10⁹ nm. C'est l'unité"
+        },
+        {
+          "t": "Les énergies de Bohr sont directement exprimées en joules.",
+          "v": false,
+          "e": "FAUX : elles sortent en électronvolts. Il faut les convertir en joules avant d'utiliser les formules du photon.",
+          "sourceQuote": "Or les énergies de Bohr, elles, sortent en eV"
+        },
+        {
+          "t": "Le produit h × c vaut environ 20 × 10⁻²⁶ J·m.",
+          "v": true,
+          "e": "VRAI. 6,63 × 3 ≈ 20 : cette valeur permet de mener le calcul de tête.",
+          "sourceQuote": "h×c ≈ 20 × 10⁻²⁶ J·m"
+        },
+        {
+          "t": "Comme h et c sont des constantes universelles, on n'a jamais besoin de les retenir car l'énoncé les donne toujours.",
+          "v": false,
+          "e": "FAUX : elles sont souvent données, mais ce sont des incontournables à connaître presque par cœur. Mieux vaut ne pas dépendre de l'énoncé.",
+          "sourceQuote": "sont des incontournables à connaître (presque par cœur). Ne compte pas toujours sur l'énoncé pour te les donner."
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-021-energie-du-photon-lambda.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à l'erreur d'unités dans les calculs de photon, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'erreur classique consiste à utiliser ΔE en eV directement dans λ = hc/ΔE.",
+          "v": true,
+          "e": "VRAI. C'est l'erreur la plus fréquente : oublier de convertir avant d'appliquer la formule.",
+          "sourceQuote": "L'erreur classique : utiliser directement ΔE en eV dans λ = hc/ΔE ou ν = ΔE/h"
+        },
+        {
+          "t": "Une longueur d'onde qui sort en 10²⁰ ou en 10⁻⁴⁰ trahit un oubli de conversion.",
+          "v": true,
+          "e": "VRAI. Un ordre de grandeur absurde est le signal d'alarme : la conversion des eV en joules a sauté.",
+          "sourceQuote": "si ton λ sort avec des valeurs bizarres (genre 10²⁰ ou 10⁻⁴⁰), c'est que tu as oublié la conversion eV → J"
+        },
+        {
+          "t": "La conversion des eV en joules reste facultative à condition de préciser l'unité du résultat.",
+          "v": false,
+          "e": "FAUX : la conversion n'est pas facultative. Sans elle, le nombre obtenu n'a aucun sens, quelle que soit l'unité annoncée.",
+          "sourceQuote": "la conversion n'est pas facultative"
+        },
+        {
+          "t": "Les formules du photon travaillent en électronvolts.",
+          "v": false,
+          "e": "FAUX : elles travaillent en joules. Ce sont les énergies de Bohr qui sortent en électronvolts, d'où le décalage à corriger.",
+          "sourceQuote": "les formules du photon travaillent en Joules"
+        },
+        {
+          "t": "Cette erreur ne menace que le calcul de la longueur d'onde, jamais celui de la fréquence.",
+          "v": false,
+          "e": "FAUX : elle menace les deux. λ = hc/ΔE comme ν = ΔE/h réclament un ΔE en joules.",
+          "sourceQuote": "dans λ = hc/ΔE ou ν = ΔE/h"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-021-energie-du-photon-lambda.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Un atome émet un photon d'énergie 5,1 eV. Parmi les propositions suivantes relatives à ce photon, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Son énergie vaut environ 8,2 × 10⁻¹⁹ J.",
+          "v": true,
+          "e": "VRAI. 5,1 × 1,6 × 10⁻¹⁹ ≈ 8,2 × 10⁻¹⁹ J.",
+          "sourceQuote": "ΔE(J) = ΔE(eV) × 1,6 × 10⁻¹⁹"
+        },
+        {
+          "t": "Sa longueur d'onde vaut environ 2,45 × 10⁻⁷ nm.",
+          "v": false,
+          "e": "FAUX : 2,45 × 10⁻⁷ est la valeur en mètres. En nanomètres, il faut multiplier par 10⁹, ce qui donne environ 245 nm.",
+          "sourceQuote": "Convertir λ en nanomètres, si besoin. 1 m = 10⁹ nm"
+        },
+        {
+          "t": "Sa longueur d'onde vaut environ 245 nm.",
+          "v": true,
+          "e": "VRAI. λ ≈ 20 × 10⁻²⁶ divisé par 8,2 × 10⁻¹⁹, soit environ 2,45 × 10⁻⁷ m, c'est-à-dire 245 nm.",
+          "sourceQuote": "λ = (6,63 × 10⁻³⁴ × 3 × 10⁸) / ΔE(J) → tu obtiens λ en mètres"
+        },
+        {
+          "t": "Sa fréquence s'obtient en divisant son énergie par la vitesse de la lumière.",
+          "v": false,
+          "e": "FAUX : la fréquence s'obtient en divisant l'énergie par la constante de Planck, soit ν = ΔE / h.",
+          "sourceQuote": "ν = ΔE / h — résultat en Hz"
+        },
+        {
+          "t": "Il suffit de diviser 20 × 10⁻²⁶ par 5,1 pour obtenir directement sa longueur d'onde en mètres.",
+          "v": false,
+          "e": "FAUX : 5,1 est en électronvolts. Il faut d'abord passer aux joules, sinon le résultat est aberrant.",
+          "sourceQuote": "une condition absolue : ΔE doit être en Joules"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-022-series-spectrales.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives aux trois séries spectrales de l'hydrogène, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La série de Lyman rassemble les retombées vers n = 1 et se situe dans l'ultraviolet.",
+          "v": true,
+          "e": "VRAI. Toutes les transitions qui arrivent sur le niveau n = 1 forment la série de Lyman, dans le domaine ultraviolet.",
+          "sourceQuote": "Série de Lyman — vers n = 1. Toutes les retombées vers nf = 1 (2→1, 3→1, 4→1, 5→1…). Domaine : ultraviolet (UV)"
+        },
+        {
+          "t": "La série de Balmer rassemble les retombées vers n = 2 et se situe dans le visible.",
+          "v": true,
+          "e": "VRAI. Les transitions qui arrivent sur le niveau n = 2 forment la série de Balmer, dans le domaine visible.",
+          "sourceQuote": "Série de Balmer — vers n = 2. Toutes les retombées vers nf = 2 (3→2, 4→2, 5→2, 6→2…). Domaine : visible"
+        },
+        {
+          "t": "La série de Paschen rassemble les retombées vers n = 4.",
+          "v": false,
+          "e": "FAUX : la série de Paschen rassemble les retombées vers n = 3.",
+          "sourceQuote": "Série de Paschen — vers n = 3."
+        },
+        {
+          "t": "Les raies de Paschen appartiennent au domaine ultraviolet.",
+          "v": false,
+          "e": "FAUX : elles appartiennent à l'infrarouge. L'ultraviolet, c'est la série de Lyman.",
+          "sourceQuote": "Domaine : infrarouge (IR)"
+        },
+        {
+          "t": "Seules les transitions qui arrivent en n = 1 forment une série ; les autres restent isolées.",
+          "v": false,
+          "e": "FAUX : il y a trois séries principales à connaître, une pour chaque niveau d'arrivée n = 1, n = 2 et n = 3.",
+          "sourceQuote": "Il y en a trois principales à connaître."
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-022-series-spectrales.html",
+      "origine": "reprise",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la raison du regroupement des transitions en séries spectrales, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Regrouper les transitions selon leur niveau d'arrivée donne des familles de raies dans un même domaine spectral.",
+          "v": true,
+          "e": "VRAI. C'est tout le principe du classement : une famille par niveau d'arrivée, et chaque famille tombe dans un seul domaine spectral.",
+          "sourceQuote": "si on regroupe les transitions selon leur niveau d'arrivée nf, on obtient des familles de raies qui tombent toutes dans le même domaine spectral"
+        },
+        {
+          "t": "Il existe énormément de transitions possibles, du type 3→2, 4→2 ou 5→3.",
+          "v": true,
+          "e": "VRAI. Le nombre de transitions possibles est très grand : c'est justement pourquoi il a fallu les ranger.",
+          "sourceQuote": "il y a énormément de transitions possibles : 2→1, 3→1, 4→1, 3→2, 4→2, 5→3, etc."
+        },
+        {
+          "t": "Les transitions vers n = 1 ont un grand écart d'énergie, donc des photons très énergétiques et de courte longueur d'onde.",
+          "v": true,
+          "e": "VRAI. C'est ce grand écart d'énergie qui place la série de Lyman dans l'ultraviolet.",
+          "sourceQuote": "Les transitions vers n = 1 ont un grand ΔE → photons très énergétiques → courte longueur d'onde"
+        },
+        {
+          "t": "Les séries spectrales se classent selon le niveau de départ de l'électron.",
+          "v": false,
+          "e": "FAUX : elles se classent sur le niveau d'arrivée, jamais sur le niveau de départ.",
+          "sourceQuote": "La série se lit sur le niveau d'arrivée nf, jamais sur le niveau de départ."
+        },
+        {
+          "t": "Toutes les transitions, quel que soit leur niveau d'arrivée, tombent dans le même domaine spectral.",
+          "v": false,
+          "e": "FAUX : chaque niveau d'arrivée conduit à un domaine différent, du visible pour n = 2 à l'infrarouge pour n = 3.",
+          "sourceQuote": "Celles vers n = 2 (Balmer) produisent de la lumière visible. Celles vers n = 3 (Paschen) sont en infrarouge."
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-022-series-spectrales.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au domaine spectral de chaque famille de raies, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Ce sont les raies de la série de Balmer qui donnent les couleurs de l'hydrogène.",
+          "v": true,
+          "e": "VRAI. Rouge, bleu, violet : les belles couleurs de l'hydrogène viennent de la série qui arrive en n = 2.",
+          "sourceQuote": "C'est cette série qui donne les belles couleurs de l'hydrogène (rouge, bleu, violet…)"
+        },
+        {
+          "t": "Les photons de Balmer ont une énergie moyenne, qui les place dans la plage visible pour l'œil humain.",
+          "v": true,
+          "e": "VRAI. L'écart d'énergie moyen des transitions vers n = 2 donne des photons que l'œil humain perçoit.",
+          "sourceQuote": "ΔE moyen → photons d'énergie moyenne → dans la plage visible pour l'œil humain"
+        },
+        {
+          "t": "Les photons de Paschen sont très énergétiques, ce qui explique leur grande longueur d'onde.",
+          "v": false,
+          "e": "FAUX : les transitions vers n = 3 mettent en jeu un petit écart d'énergie, donc des photons peu énergétiques. C'est cette faible énergie qui donne une grande longueur d'onde.",
+          "sourceQuote": "Petit ΔE → photons peu énergétiques → grande longueur d'onde (la chaleur)"
+        },
+        {
+          "t": "Le domaine visible commence en dessous de 400 nm.",
+          "v": false,
+          "e": "FAUX : le visible commence à 400 nm. En dessous, on est dans l'ultraviolet.",
+          "sourceQuote": "Domaine : visible, 400 nm"
+        },
+        {
+          "t": "Ces familles de raies portent le nom de séries spectrales.",
+          "v": true,
+          "e": "VRAI. C'est le nom donné à ces regroupements de transitions par niveau d'arrivée.",
+          "sourceQuote": "Ces familles s'appellent des séries spectrales."
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-022-series-spectrales.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à l'appartenance de transitions précises à une série, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La transition 5 → 1 appartient à la série de Lyman.",
+          "v": true,
+          "e": "VRAI. Elle arrive en n = 1 : c'est donc Lyman, quel que soit son niveau de départ.",
+          "sourceQuote": "Toutes les retombées vers nf = 1 (2→1, 3→1, 4→1, 5→1…)"
+        },
+        {
+          "t": "La transition 6 → 3 appartient à la série de Paschen.",
+          "v": true,
+          "e": "VRAI. Elle arrive en n = 3 : c'est la série de Paschen, dans l'infrarouge.",
+          "sourceQuote": "Toutes les retombées vers nf = 3 (4→3, 5→3, 6→3…)"
+        },
+        {
+          "t": "La transition 3 → 2 appartient à la série de Lyman puisqu'elle part d'un niveau élevé.",
+          "v": false,
+          "e": "FAUX : elle arrive en n = 2, donc elle appartient à Balmer. Le niveau de départ n'entre pas dans le classement.",
+          "sourceQuote": "Toutes les retombées vers nf = 2 (3→2, 4→2, 5→2, 6→2…)"
+        },
+        {
+          "t": "La transition 4 → 1 relève de Balmer parce qu'elle traverse le niveau n = 2.",
+          "v": false,
+          "e": "FAUX : elle arrive en n = 1, donc elle relève de Lyman. Les niveaux traversés ne comptent pas.",
+          "sourceQuote": "Toutes les retombées vers nf = 1 (2→1, 3→1, 4→1, 5→1…)"
+        },
+        {
+          "t": "Le niveau de départ ne change pas la famille à laquelle la transition appartient.",
+          "v": true,
+          "e": "VRAI. Il modifie l'énergie exacte du photon, mais pas la série ni le domaine spectral.",
+          "sourceQuote": "Le niveau de départ change l'énergie exacte du photon, pas la famille à laquelle il appartient."
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-022-series-spectrales.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux moyens de retenir les trois séries, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le L de Lyman rappelle le chiffre 1, comme un unique bâton vertical.",
+          "v": true,
+          "e": "VRAI. C'est l'astuce proposée pour associer Lyman au niveau d'arrivée n = 1.",
+          "sourceQuote": "Lyman → n = 1 (L = 1 bâton vertical)"
+        },
+        {
+          "t": "Balmer se retient par la formule « Bien visible ».",
+          "v": true,
+          "e": "VRAI. Le B de Balmer et le B de « Bien visible » rappellent que cette série est celle du visible.",
+          "sourceQuote": "Balmer → Bien visible"
+        },
+        {
+          "t": "Le P de Paschen renvoie au niveau n = 2, deuxième lettre après le M.",
+          "v": false,
+          "e": "FAUX : le P renvoie au niveau n = 3, car P est la troisième lettre de l'alphabet après M.",
+          "sourceQuote": "Paschen → n = 3 (P = 3ᵉ lettre de l'alphabet après M)"
+        },
+        {
+          "t": "Dans le tableau des séries, la colonne des niveaux d'arrivée se lit 1, 2, 3 de haut en bas.",
+          "v": true,
+          "e": "VRAI. Lyman, Balmer, Paschen se suivent dans l'ordre des niveaux d'arrivée 1, 2, 3.",
+          "sourceQuote": "Lis la deuxième colonne de haut en bas : 1, 2, 3."
+        },
+        {
+          "t": "Une fois le niveau d'arrivée connu, il faut encore mémoriser à part le domaine spectral de chaque série.",
+          "v": false,
+          "e": "FAUX : le chiffre du niveau d'arrivée est le seul à retenir, le domaine spectral en découle.",
+          "sourceQuote": "C'est le seul chiffre à retenir — le domaine spectral en découle."
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-022-series-spectrales.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la transition 5 → 2 de l'hydrogène, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Elle appartient à la série de Balmer et donne un photon visible.",
+          "v": true,
+          "e": "VRAI. Elle arrive en n = 2 : c'est Balmer, donc du visible.",
+          "sourceQuote": "elle arrive en n = 2, donc c'est Balmer, donc du visible"
+        },
+        {
+          "t": "Elle relève de la série de Paschen parce qu'elle franchit le niveau n = 3.",
+          "v": false,
+          "e": "FAUX : passer par un niveau ne compte pas. Seul le niveau d'arrivée, ici n = 2, désigne la série.",
+          "sourceQuote": "Une transition 5→2 n'est pas « de la série de Paschen » parce qu'elle passe par 3"
+        },
+        {
+          "t": "Son photon a exactement la même énergie que celui de la transition 3 → 2, puisque les deux sont dans la même série.",
+          "v": false,
+          "e": "FAUX : le niveau de départ change l'énergie exacte du photon. Deux transitions d'une même série partagent le domaine spectral, pas la valeur de l'énergie.",
+          "sourceQuote": "Le niveau de départ change l'énergie exacte du photon, pas la famille à laquelle il appartient."
+        },
+        {
+          "t": "Comme 3 → 2 et 4 → 2, elle tombe dans le domaine visible.",
+          "v": true,
+          "e": "VRAI. Toutes les retombées vers n = 2 sont dans Balmer, donc dans le visible.",
+          "sourceQuote": "3→2, 4→2 et 5→2 : toutes dans Balmer, donc dans le visible"
+        },
+        {
+          "t": "Son domaine spectral se déduit de son niveau de départ, n = 5.",
+          "v": false,
+          "e": "FAUX : c'est le niveau d'arrivée qui donne la série, donc le domaine.",
+          "sourceQuote": "C'est le niveau d'arrivée nf qui donne la série, donc le domaine."
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-022-series-spectrales.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à l'enchaînement qui relie un niveau à un domaine spectral, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Plus l'écart d'énergie est grand, plus la longueur d'onde du photon est courte.",
+          "v": true,
+          "e": "VRAI. Un grand écart d'énergie donne un photon énergétique, de haute fréquence et de courte longueur d'onde.",
+          "sourceQuote": "Plus l'écart d'énergie ΔE est grand, plus le photon est énergétique (haute fréquence ν, courte longueur d'onde λ)"
+        },
+        {
+          "t": "Un photon de la série de Lyman est plus énergétique qu'un photon de la série de Paschen.",
+          "v": true,
+          "e": "VRAI. Les transitions vers n = 1 sont les plus énergétiques des trois séries ; celles vers n = 3 sont les moins énergétiques.",
+          "sourceQuote": "Les transitions vers n = 1 (Lyman) sont les plus énergétiques : UV."
+        },
+        {
+          "t": "Dans cet enchaînement, c'est la longueur d'onde qui fixe le numéro n du niveau.",
+          "v": false,
+          "e": "FAUX : la chaîne va dans l'autre sens. Le numéro n donne l'énergie du niveau, deux niveaux donnent l'écart d'énergie, cet écart donne la longueur d'onde, et la longueur d'onde donne le domaine.",
+          "sourceQuote": "le numéro n donne l'énergie E du niveau, deux niveaux donnent l'écart ΔE de la transition, ΔE donne la longueur d'onde λ du photon, et λ donne le domaine spectral"
+        },
+        {
+          "t": "Chaque maillon de cette chaîne a sa formule, mais aucune ne sert au maillon suivant.",
+          "v": false,
+          "e": "FAUX : chaque formule sert précisément au maillon suivant. C'est ce qui fait tenir tout le chapitre ensemble.",
+          "sourceQuote": "Chaque maillon a sa formule, et chaque formule sert au maillon suivant."
+        },
+        {
+          "t": "Une fréquence élevée correspond à un photon peu énergétique.",
+          "v": false,
+          "e": "FAUX : une haute fréquence accompagne un photon très énergétique, donc de courte longueur d'onde.",
+          "sourceQuote": "plus le photon est énergétique (haute fréquence ν, courte longueur d'onde λ)"
+        }
+      ]
+    }
+  ]
+}
