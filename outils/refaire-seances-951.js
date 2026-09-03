@@ -72,7 +72,7 @@ MATIERES.forEach(mat => {
    Un territoire de 33 fiches (physique, ch. 1) n'est pas un petit objectif : la barre
    avance de 3 % par fiche et l'élève ne conquiert rien pendant trois semaines. On
    découpe donc tout chapitre de plus de 12 fiches en parties équilibrées de 12 fiches
-   au plus (≈ 6 séances, une semaine) : « Eau, solutions et concentrations — 1/3 ».
+   au plus (≈ 6 séances, une semaine) : « Eau, solutions et concentrations — 1re partie ».
    Le numéro de chapitre ne change pas : les parties partagent la même vignette. */
 const MAX_FICHES = 12;
 MATIERES.forEach(mat => {
@@ -82,7 +82,8 @@ MATIERES.forEach(mat => {
     const n = j - i;
     if (n > MAX_FICHES) {
       const k = Math.ceil(n / MAX_FICHES);
-      for (let q = i; q < j; q++) f[q].chap = f[q].chap + ' — ' + (Math.floor((q - i) * k / n) + 1) + '/' + k;
+      /* « 1re partie », pas « 1/3 » : une fraction ne dit rien à un élève */
+      for (let q = i; q < j; q++) { const part = Math.floor((q - i) * k / n) + 1; f[q].chap = f[q].chap + ' — ' + (part === 1 ? '1re' : part + 'e') + ' partie'; }
     }
     i = j;
   }

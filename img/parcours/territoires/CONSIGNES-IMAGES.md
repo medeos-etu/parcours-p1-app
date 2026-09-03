@@ -91,34 +91,48 @@ texte ou un personnage, redemande « sans texte, sans personnage ».
 
 # Les illustrations des MONDES (prioritaires)
 
-Le Parcours est découpé en **11 mondes** qu'on termine l'un après l'autre. Chaque monde
-mérite sa grande image : c'est elle que l'élève voit en haut de l'écran « Tes mondes »,
-et dans la route des mondes. Sans elle, un simple emoji tient la place.
+Le Parcours est découpé en **22 mondes** qu'on traverse l'un après l'autre, comme les arènes
+d'un jeu : on les voit tous, empilés, ceux qu'on a passés en or, celui où l'on est ouvert,
+ceux qui restent verrouillés. Chaque monde a sa grande tuile : c'est l'image la plus vue de
+l'app. Sans elle, une teinte et un emoji tiennent la place.
 
-**Nom de fichier :** `monde-01.png` … `monde-11.png`. **Format carré** (1:1), ce sont des
-pastilles arrondies — pas des bannières.
+**Nom de fichier :** `monde-01.png` … `monde-22.png`. **Format paysage 3:2** (la tuile fait
+toute la largeur, 118 px de haut : garde le sujet au centre, le nom s'écrit en bas à gauche
+par-dessus un voile sombre — laisse le bas de l'image calme).
 
 **Style, à coller en tête de chaque demande :**
 
 > Illustration aquarelle douce et lumineuse, univers Medeos : collines crème (#FAF6F0),
 > ombres chaudes diluées (#E29C5C), touches d'or (#FCD34D), violet profond (#4C2A85) en
 > accent. UNE scène isolée au centre, vue en légère plongée, style « petit royaume de jeu
-> vidéo », propre, sans texte, sans personnage, sans chiffre, sans cadre. Format carré 1:1.
+> vidéo », propre, sans texte, sans personnage, sans chiffre, sans cadre. Format paysage 3:2,
+> bas de l'image dégagé.
 
 | Fichier | Monde | La scène |
 |---|---|---|
 | `monde-01.png` | Les Premiers Repères | Une boussole monumentale posée sur une plaine crème, quatre sentiers qui en partent vers les quatre horizons. |
 | `monde-02.png` | Les Briques du Vivant | Un mur en construction fait de briques translucides dorées, quelques-unes encore en lévitation. |
-| `monde-03.png` | L'Architecture | Un temple à colonnes vertébrales, dôme lisse comme un crâne, sur une butte. |
-| `monde-04.png` | Les Équilibres | Une immense balance de pierre claire en équilibre parfait, deux bassins d'eau colorée. |
-| `monde-05.png` | La Transmission | Deux tours reliées par une double hélice dorée qui se dédouble en montant. |
-| `monde-06.png` | Les Grands Flux | Un réseau de canaux et d'aqueducs qui rayonnent depuis une fontaine-cœur rouge sombre. |
-| `monde-07.png` | Les Organes | Une cité-organisme : plusieurs pavillons de formes différentes reliés par des conduits. |
-| `monde-08.png` | La Charpente | Une forteresse aux murs alvéolés comme de l'os spongieux, arches de cartilage translucide. |
-| `monde-09.png` | Le Mouvement | Un pont suspendu par des câbles-fibres tendus, en pleine traction, au-dessus d'un ravin. |
-| `monde-10.png` | Les Sens | Un phare dont la lentille est un œil, une conque en spirale à son pied. |
-| `monde-11.png` | Le Vivant en Molécules | Un jardin de molécules géantes : hélices, anneaux hexagonaux, chaînes ramifiées. |
+| `monde-03.png` | La Colonne Vertébrale | Une tour élancée faite de vertèbres empilées, terracotta et blanc, légèrement courbe. |
+| `monde-04.png` | La Cité Cellulaire | Un village miniature sous un dôme vert translucide : des maisons de formes toutes différentes. |
+| `monde-05.png` | Le Nuage d'Électrons | Un observatoire miel dont le toit est un nuage de points dorés flous, trois anneaux autour. |
+| `monde-06.png` | Les Acides et les Bases | Deux bassins reliés, l'un clair l'autre profond, un pont de pierre au milieu, une grande bibliothèque à casiers en fond. |
+| `monde-07.png` | Le Cycle de la Vie | Une horloge de jardin circulaire, verte et or, au centre d'un rond-point de sentiers. |
+| `monde-08.png` | La Transmission | Deux tours reliées par une double hélice dorée qui se dédouble en montant. |
+| `monde-09.png` | Le Cœur | Un cœur monumental terracotta au centre d'un jardin, deux ruisseaux qui en partent et y reviennent. |
+| `monde-10.png` | Les Grands Flux | Un réseau de canaux et d'aqueducs qui rayonnent depuis une fontaine centrale, écluses dorées. |
+| `monde-11.png` | Le Souffle | Un arbre-pavillon qui se ramifie comme des bronches, feuillage crème, ondes dorées gravées au sol. |
+| `monde-12.png` | Le Feu Intérieur | Une forge chaleureuse avec une cheminée dorée, un long canal de pierre claire qui serpente devant. |
+| `monde-13.png` | Les Filtres | Deux fontaines en forme de haricot reliées à un bassin central, une balance de pierre en arrière-plan. |
+| `monde-14.png` | La Charpente | Une forteresse aux murs alvéolés comme de l'os spongieux, arches de cartilage translucide. |
+| `monde-15.png` | La Forge | Un atelier de pierre où l'on forge un os long doré, une piste de course circulaire à côté. |
+| `monde-16.png` | Le Mouvement | Un pont suspendu par des câbles-fibres tendus, en pleine traction, au-dessus d'un ravin. |
+| `monde-17.png` | Le Réseau Nerveux | Un arbre aux branches très ramifiées, petites lumières dorées aux extrémités, sentiers lumineux. |
+| `monde-18.png` | Le Cerveau | Un observatoire au dôme plissé comme un cortex, lumière chaude à l'intérieur, carrefour de sentiers. |
+| `monde-19.png` | La Vision | Un phare dont la lentille est un œil, iris terracotta, reflet doré sur la plaine. |
+| `monde-20.png` | L'Ouïe | Une coquille en spirale sculptée en pierre crème, une distillerie miel à côté. |
+| `monde-21.png` | La Thyroïde | Une colonne courte coiffée d'un papillon de pierre terracotta, deux tours de laboratoire derrière. |
+| `monde-22.png` | Le Vivant en Molécules | Un jardin de molécules géantes : hélices, anneaux hexagonaux, chaînes ramifiées, au sommet d'une colline. |
 
 **Deux images de plus, utiles :**
-- `camp-stage.png` — un campement de tentes crème et or au bord du chemin, un feu doux, petit drapeau violet #6B46C1. (Remplace l'image sombre actuelle des stages.)
+- `camp-stage.png` — un campement de tentes crème et or au bord du chemin, un feu doux, petit drapeau violet #6B46C1. Format carré. (Remplace l'image sombre actuelle des stages.)
 - `banniere-mondes.png` — bannière **horizontale 3:1** : la route qui serpente entre plusieurs petits royaumes, vue de loin, lumière du matin.
