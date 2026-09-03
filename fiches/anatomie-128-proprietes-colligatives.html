@@ -56,7 +56,7 @@
     .pass-tip { background: #fdf6ec; border-left: 6px solid #B8895A; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; box-shadow: 0 3px 12px rgba(184,137,90,0.14); font-size: 14.5px; line-height: 1.55; }
     .pass-tip::before { content: "Le réflexe P1"; display: block; font-weight: 700; font-size: 12px; color: #9a6a37; margin-bottom: 7px; letter-spacing: 0.8px; text-transform: uppercase; }
     .pass-tip strong { color: #9a6a37; }
-    /* Même encadré, autres étiquettes : le danger commun aux deux cas et la leçon clinique. */
+    /* Même encadré, autre étiquette : la définition du mot « colligatif ». */
     .pass-tip.vocab-box::before { content: "Vocabulaire"; }
 
         .mnemo-box { background:#F3EEFB; border-left:6px solid #6B46C1; padding:15px 20px; margin:20px 0;
@@ -184,20 +184,20 @@
         <p class="punch">Leur nature, elle, ne compte <span class="accent">pour rien</span>.</p>
     </header>
 
-    <p class="intro">Tu viens de voir la première conséquence de l'osmolarité : la <strong>pression osmotique</strong> π = ω · R · T. Ce n'est pas le seul effet de l'osmolarité — il en existe <strong>3 autres</strong>, qui modifient le comportement physique du solvant dès qu'on y dissout des particules. Ces 4 effets partagent une caractéristique commune : ils dépendent uniquement du <em class="hl">nombre</em> de particules dissoutes par litre, et <strong>pas de leur nature</strong> (sel, sucre, urée, peu importe).</p>
+    <p class="intro">Depuis le début de ce chapitre, tu ne travailles qu'avec <strong>une seule</strong> conséquence de l'osmolarité : la <strong>pression osmotique</strong> π = ω · R · T — celle qui fait gonfler puis éclater un globule rouge, et dont la méthode de Hamburger vient de quantifier les effets tube par tube. Ce n'est pourtant pas le seul effet de l'osmolarité : il en existe <strong>3 autres</strong>, qui modifient le comportement physique du <strong>solvant</strong> — de l'eau, en ce qui nous concerne — dès qu'on y dissout des particules. Ces 4 effets partagent une caractéristique commune : ils dépendent uniquement du <em class="hl">nombre</em> de particules dissoutes par litre, et <strong>pas de leur nature</strong> (sel, sucre, urée, peu importe).</p>
 
     <div class="pass-tip vocab-box">
         Le mot <strong>colligatif</strong> vient du latin <em>colligatus</em> = « lié ensemble ». On l'utilise en physique pour désigner toute propriété d'une solution qui <strong>dépend uniquement du nombre total de particules dissoutes par litre</strong>, indépendamment de la nature des particules. Tu rencontreras ce mot dans tes manuels.
     </div>
 
-    <p class="intro">Voici les <strong>3 cousines</strong> de la pression osmotique. Elles racontent toutes la même histoire : dès qu'on dissout des particules dans un solvant (= de l'eau, en ce qui nous concerne), certaines propriétés physiques de ce solvant changent. Ce qui change diffère d'une cousine à l'autre, mais l'amplitude du changement dépend toujours du même paramètre — <strong>l'osmolarité ω</strong>.</p>
+    <p class="intro">Voici les <strong>3 cousines</strong> de la pression osmotique. Elles racontent toutes la même histoire : dès qu'on dissout des particules dans un solvant, certaines propriétés physiques de ce solvant changent. Ce qui change diffère d'une cousine à l'autre, mais l'amplitude du changement dépend toujours du même paramètre — <strong>l'osmolarité ω</strong>.</p>
 
     <div class="steps">
         <div class="steps-title">Les 3 autres effets, un par un</div>
         <ol>
             <li class="step">
                 <span class="n">1</span>
-                <span class="txt"><span class="lead">🧊 Cryoscopie — le point de congélation BAISSE.</span> <b>Pourquoi ?</b> Les particules dissoutes « gênent » les molécules d'eau qui voudraient se ranger en cristaux de glace. Du coup, l'eau doit descendre <b>plus bas que 0 °C</b> avant de geler. <span class="gl">C'est aussi la raison pour laquelle l'eau de mer ne gèle pas au même rythme que l'eau douce.</span></span>
+                <span class="txt"><span class="lead">🧊 Cryoscopie — le point de congélation BAISSE.</span> <b>Pourquoi ?</b> Les particules dissoutes « gênent » les molécules d'eau qui voudraient se ranger en cristaux de glace. Du coup, l'eau doit descendre <b>plus bas que 0 °C</b> avant de geler. <span class="gl">C'est pour la même raison que l'eau de mer ne gèle pas au même rythme que l'eau douce.</span></span>
             </li>
             <li class="step">
                 <span class="n">2</span>
@@ -231,18 +231,53 @@
 
     <div class="mnemo-box"><span class="lbl">Le mnémo — les 3 cousines</span>Voici les <b>3 cousines</b> de la pression osmotique. — <b>En hiver, on sale les routes</b> — c'est pour ça que la glace fond (le sel abaisse le point de congélation de l'eau). — <b>Quand tu sales l'eau des pâtes</b>, elle bout légèrement au-dessus de 100 °C. — <b>Une solution sucrée (sirop)</b> s'évapore beaucoup plus lentement qu'un verre d'eau pure.</div>
 
+    <div class="tbl-wrap">
+        <table class="tbl">
+            <thead>
+                <tr>
+                    <th>Propriété</th>
+                    <th>Loi</th>
+                    <th>Direction de l'effet</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="axe">Pression osmotique π</td>
+                    <td><b>π = ω · R · T</b></td>
+                    <td>π <b>augmente</b> avec ω <span class="gl">(van't Hoff)</span></td>
+                </tr>
+                <tr>
+                    <td class="axe">Cryoscopie <span class="gl">(point de congélation)</span></td>
+                    <td><b>Δθ<sub>c</sub> = K<sub>c</sub> × ω</b></td>
+                    <td>Le point de congélation <b>baisse</b></td>
+                </tr>
+                <tr>
+                    <td class="axe">Ébullioscopie <span class="gl">(point d'ébullition)</span></td>
+                    <td><b>Δθ<sub>eb</sub> = K<sub>eb</sub> × ω</b></td>
+                    <td>Le point d'ébullition <b>monte</b> <span class="gl">(eau salée bout &gt; 100 °C)</span></td>
+                </tr>
+                <tr>
+                    <td class="axe">Tonométrie <span class="gl">(pression de vapeur)</span></td>
+                    <td><b>ΔP / P° = x<sub>soluté</sub></b></td>
+                    <td>La pression de vapeur <b>diminue</b></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="tbl-note">Les quatre effets côte à côte : une seule cause dans la colonne de gauche, quatre directions différentes dans celle de droite.</p>
+
     <div class="pass-tip">
-        Ces trois lois se lisent toutes avec la même grandeur : <strong>l'osmolarité ω</strong>, c'est-à-dire un nombre de <strong>particules</strong> par litre — pas un nombre de molécules versées. Avant d'appliquer une formule, repasse donc par les dissociations : <strong>NaCl → 2 Osm/L</strong>, <strong>glucose → 1 Osm/L</strong>, <strong>CaCl₂ → 3 Osm/L</strong>. À concentration molaire égale, le CaCl₂ fera trois fois plus d'effet que le glucose.
+        Les deux lois en <strong>Δθ</strong> — cryoscopie et ébullioscopie — se lisent avec la même grandeur : <strong>l'osmolarité ω</strong>, c'est-à-dire un nombre de <strong>particules</strong> par litre, pas un nombre de molécules versées. <em>(La loi de Raoult, elle, s'écrit avec la fraction molaire du soluté.)</em> Avant d'appliquer une formule, repasse donc par les dissociations : <strong>NaCl → 2 Osm/L</strong>, <strong>glucose → 1 Osm/L</strong>, <strong>CaCl₂ → 3 Osm/L</strong>. À concentration molaire égale, le CaCl₂ fera trois fois plus d'effet que le glucose.
     </div>
 
     <div class="recap">
         <div class="box retenir">
             <span class="lbl">À retenir</span>
-            <b>4 effets, une seule cause</b> : le nombre de particules dissoutes par litre. La pression osmotique <b>monte</b> (π = ω·R·T) · le point de congélation <b>baisse</b> (Δθ<sub>c</sub> = K<sub>c</sub> × ω, avec K<sub>c</sub> = <b>1,86 °C·L·Osm⁻¹</b> pour l'eau) · le point d'ébullition <b>monte</b> (Δθ<sub>eb</sub> = K<sub>eb</sub> × ω) · la pression de vapeur <b>diminue</b> (ΔP / P° = x<sub>soluté</sub>).
+            <b>4 effets, une seule cause</b> : le nombre de particules dissoutes par litre — jamais leur nature. La pression osmotique <b>monte</b>, le point de congélation <b>baisse</b>, le point d'ébullition <b>monte</b>, la pression de vapeur <b>diminue</b>. Le seul chiffre à mémoriser ici : <b>K<sub>c</sub> = 1,86 °C·L·Osm⁻¹</b> pour l'eau.
         </div>
         <div class="box piege">
             <span class="lbl">Le piège</span>
-            « Colligatif » ne veut <b>pas</b> dire « qui dépend du soluté ». Une solution de glucose et une solution de NaCl <b>à la même osmolarité</b> abaissent le point de congélation <b>exactement pareil</b>. Et attention au sens : la congélation <b>baisse</b>, l'ébullition <b>monte</b> — les deux ne vont pas dans la même direction.
+            « Colligatif » ne veut <b>pas</b> dire « qui dépend du soluté » : c'est exactement l'inverse. Une solution de <b>glucose</b> et une solution de <b>NaCl</b> <b>à la même osmolarité</b> abaissent le point de congélation <b>exactement pareil</b>. Un QCM qui fait dépendre l'un de ces quatre effets de la <b>nature</b> du soluté est <b>FAUX</b>.
         </div>
     </div>
 

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>La longueur d'onde λ = c/f et la résolution d'un ultrason — Fiche Medeos</title>
+<title>La longueur d'onde λ = c / f — Fiche Medeos</title>
 <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
@@ -165,12 +165,18 @@
 
     <header class="hook-header">
         <div class="brand-tag">Ressource gratuite</div>
-        <h1 class="course-title">La longueur d'onde λ = c/f et la résolution d'un ultrason</h1>
+        <h1 class="course-title">La longueur d'onde λ = c / f</h1>
         <p class="punch">La fiche précédente a décrit l'onde dans le <span class="accent">temps</span>.</p>
         <p class="punch">Celle-ci la décrit dans l'<span class="accent">espace</span> — et ça fixe la finesse d'une échographie.</p>
     </header>
 
     <p class="intro">Tu sais déjà décrire une onde dans le temps : la <strong>période T</strong> est la durée d'un cycle complet (en secondes), et la <strong>fréquence f = 1/T</strong> compte les cycles qui tiennent en 1 seconde (en hertz). Il reste une troisième grandeur, qui décrit l'onde <strong>dans l'espace</strong>. Si tu pouvais figer le temps et regarder l'onde sonore qui se propage dans l'air, tu verrais des zones de compression alternées avec des zones de dilatation. La <strong>longueur d'onde λ</strong> (lettre grecque lambda), c'est la <em class="hl">distance, en mètres, entre deux compressions successives</em>.</p>
+
+    <figure class="schema-box" style="margin: 20px 0;">
+        <span class="schema-num">La longueur d'onde λ</span>
+        <img src="../images/physique/physique_ch4_fig_longueur_onde_lambda.png" alt="Onde sonore figée à un instant t : zones de compression et de dilatation, avec la longueur d'onde λ mesurée entre deux compressions consécutives" onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
+        <figcaption class="caption">L'onde est <strong>figée à un instant t</strong> : on ne regarde plus le temps qui passe, mais l'espace. Repère deux compressions consécutives, et lis la distance qui les sépare sur l'axe horizontal — <strong>c'est λ, en mètres</strong>.</figcaption>
+    </figure>
 
     <div class="steps">
         <div class="steps-title">D'où sort la formule ? Un raisonnement géométrique en 3 temps</div>
@@ -193,7 +199,7 @@
     <div class="schema-box" style="margin: 20px 0;">
         <span class="schema-num">Relation entre λ, fréquence et célérité</span>
         <p style="font-size: 30px; font-weight: 800; color: #4C2A85; letter-spacing: -0.5px; margin: 6px 0 2px;">λ = c × T = c / f</p>
-        <p class="caption">c = célérité de l'onde dans le milieu (m/s) · T = période (s) · f = fréquence (Hz). La deuxième égalité vient juste de remplacer <strong>T par 1/f</strong>.</p>
+        <p class="caption">c = célérité de l'onde dans le milieu (m/s — <strong>on la détaille dans la fiche suivante</strong>) · T = période (s) · f = fréquence (Hz). La deuxième égalité vient juste de remplacer <strong>T par 1/f</strong>.</p>
     </div>
 
     <div class="steps">
@@ -209,12 +215,6 @@
             </li>
         </ol>
     </div>
-
-    <figure class="schema-box" style="margin: 20px 0;">
-        <span class="schema-num">La longueur d'onde λ</span>
-        <img src="../images/physique/physique_ch4_fig_longueur_onde_lambda.png" alt="Onde sonore figée à un instant t : zones de compression et de dilatation, avec la longueur d'onde λ mesurée entre deux compressions consécutives" onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
-        <figcaption class="caption">L'onde est <strong>figée à un instant t</strong> : on ne regarde plus le temps qui passe, mais l'espace. Repère deux compressions consécutives, et lis la distance qui les sépare sur l'axe horizontal — <strong>c'est λ, en mètres</strong>.</figcaption>
-    </figure>
 
     <div class="steps">
         <div class="steps-title">🧪 Mini-exercice — Longueur d'onde d'un ultrason médical</div>

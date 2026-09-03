@@ -115,6 +115,7 @@
         .step .n { width: 30px; height: 30px; font-size: 14px; }
         .step .txt { font-size: 16.5px; line-height: 1.5; padding-top: 2px; }
         .pass-tip { padding: 16px 22px; margin: 18px 0; font-size: 16.5px; box-shadow: none; }
+        .mnemo-box { padding: 16px 22px; margin: 18px 0; font-size: 16.5px; box-shadow: none; }
         .tbl-wrap { page-break-inside: avoid; }
         table.tbl { font-size: 16px; box-shadow: none; }
         table.tbl th { font-size: 12.5px; }
@@ -128,7 +129,7 @@
         .bio-hint { display: block; text-align: center; margin: 12px 0 0; font-size: 17px; font-weight: 800; color: #6B46C1; }
         .bio-hint strong { color: #4C2A85; }
         .chapter-footer { margin-top: 14px; padding-top: 12px; font-size: 14px; }
-        .schema-2up, .schema-box, .steps, .recap, .pass-tip, .qcm-cta { page-break-inside: avoid; }
+        .schema-2up, .schema-box, .steps, .recap, .pass-tip, .qcm-cta, .mnemo-box { page-break-inside: avoid; }
     }
     @media (max-width: 600px) {
         body { padding: 14px; }
@@ -182,11 +183,11 @@
     <header class="hook-header">
         <div class="brand-tag">Ressource gratuite</div>
         <h1 class="course-title">Les 4 mécanismes d'œdème en synthèse</h1>
-        <p class="punch">Quatre patients, quatre maladies — et une seule <span class="accent">balance</span>.</p>
+        <p class="punch">Des maladies qui n'ont rien à voir entre elles — et une seule <span class="accent">balance</span>.</p>
         <p class="punch">Il n'existe que quatre façons de la faire basculer.</p>
     </header>
 
-    <p class="intro">Tu viens de voir avec Henri qu'un vrai patient <strong>additionne</strong> souvent plusieurs causes à la fois. C'est le moment de trier. Rappel de la définition : un <strong>œdème</strong> est l'accumulation anormale d'eau dans le compartiment interstitiel, entre les cellules — chevilles gonflées, visage bouffi le matin, parfois un ventre distendu (= ascite). Il survient <em class="hl">chaque fois que la balance de Starling bascule vers la sortie d'eau du vaisseau</em>, c'est-à-dire quand la filtration dépasse durablement la réabsorption. Quatre mécanismes principaux peuvent produire ce basculement. Les voici côte à côte.</p>
+    <p class="intro">Tu viens de voir avec Henri qu'un vrai patient <strong>additionne</strong> souvent plusieurs causes à la fois. C'est le moment de trier. Rappel de la définition : un <strong>œdème</strong> est l'accumulation anormale d'eau dans le compartiment interstitiel, entre les cellules — chevilles gonflées, visage bouffi le matin, parfois un ventre distendu (= <strong>ascite</strong>, quand le liquide s'accumule dans la cavité abdominale). Il survient <em class="hl">chaque fois que la balance de Starling bascule vers la sortie d'eau du vaisseau</em>, c'est-à-dire quand la filtration dépasse durablement la réabsorption. Quatre mécanismes principaux peuvent produire ce basculement. Les voici côte à côte.</p>
 
     <div class="tbl-wrap">
         <table class="tbl">
@@ -197,19 +198,19 @@
                 <tr><td class="hit"><b>↑ Pression hydrostatique (PHC)</b></td><td>Cœur défaillant → refoulement, ou obstacle veineux</td><td><b>Robert</b> <span class="gl">(insuffisance cardiaque)</span>, thrombose veineuse, station debout prolongée</td></tr>
                 <tr><td class="hit"><b>↓ Pression oncotique (π<sub>o</sub>)</b></td><td>Protéinémie effondrée <span class="gl">(synthèse insuffisante ou perte)</span></td><td><b>Aminata</b> <span class="gl">(kwashiorkor)</span>, <b>Henri</b> <span class="gl">(cirrhose)</span>, syndrome néphrotique</td></tr>
                 <tr><td class="hit"><b>↑ Perméabilité capillaire</b></td><td>Membrane lésée → fuite des protéines vers l'interstitium</td><td><b>Camille</b> <span class="gl">(choc anaphylactique)</span>, inflammation, brûlure, sepsis</td></tr>
-                <tr><td class="hit"><b>↓ Drainage lymphatique</b></td><td>Obstruction des vaisseaux lymphatiques</td><td>Curage ganglionnaire <span class="gl">(cancer du sein, lymphœdème du bras)</span>, filariose</td></tr>
+                <tr><td class="hit"><b>↓ Drainage lymphatique</b></td><td>Obstruction des vaisseaux lymphatiques</td><td><b>Marie</b> <span class="gl">(lymphœdème du bras après curage ganglionnaire, cancer du sein)</span>, filariose</td></tr>
             </tbody>
         </table>
     </div>
-    <p class="tbl-note"><strong>Comment lire ce tableau</strong> : la colonne de droite montre le même mécanisme physique derrière des maladies qui n'ont rien à voir entre elles. Une thrombose veineuse fait un œdème par le chemin de Robert — un obstacle en aval, donc un embouteillage de sang en amont. Un syndrome néphrotique fait le sien par le chemin d'Aminata : il manque des protéines dans le sang, qu'elles n'aient jamais été fabriquées ou qu'elles soient parties dans les urines.</p>
+    <p class="tbl-note"><strong>Comment lire ce tableau</strong> : la colonne de droite montre le même mécanisme physique derrière des maladies qui n'ont rien à voir entre elles. Une thrombose veineuse fait un œdème par le chemin de Robert — un obstacle en aval, donc un embouteillage de sang en amont. Un syndrome néphrotique fait le sien par le chemin d'Aminata : là aussi la <strong>protéinémie</strong> — le taux de protéines du sang — est effondrée, par synthèse insuffisante ou par perte.</p>
 
     <figure class="schema-box" style="margin: 20px 0;">
         <span class="schema-num">Les 4 mécanismes côte à côte</span>
         <img src="../images/physique/physique_ch3_fig08_4_mecanismes_oedemes.png" alt="Synthèse des quatre mécanismes d'œdème : augmentation de la pression hydrostatique capillaire, baisse de la pression oncotique, augmentation de la perméabilité capillaire, baisse du drainage lymphatique" onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
-        <figcaption class="caption"><strong>Synthèse des 4 mécanismes d'œdèmes</strong> — sur chaque vignette, cherche d'abord <strong>quelle flèche a changé</strong> par rapport au capillaire normal : la poussée qui sort du vaisseau, la traction qui rappelle l'eau, l'état de la paroi, ou le vaisseau lymphatique qui ramasse le surplus. Le résultat est toujours le même : de l'eau qui s'accumule dans l'interstitium.</figcaption>
+        <figcaption class="caption"><strong>Synthèse des 4 mécanismes d'œdèmes</strong> — sur chaque vignette, cherche d'abord <strong>ce qui a changé</strong> par rapport au capillaire normal : la poussée qui sort du vaisseau <strong>(1)</strong>, la traction qui rappelle l'eau <strong>(2)</strong>, l'état de la paroi <strong>(3)</strong>, ou le vaisseau lymphatique qui ramasse le surplus <strong>(4)</strong>. Le résultat est toujours le même : de l'eau qui s'accumule dans l'interstitium.</figcaption>
     </figure>
 
-    <p class="intro">Trois de ces mécanismes ont eu leur patient. Le quatrième, non — alors on le déplie ici.</p>
+    <p class="intro">Trois de ces mécanismes ont eu leur histoire de patient : <strong>Robert</strong>, <strong>Aminata</strong>, <strong>Camille</strong>. Le quatrième n'a été que nommé au passage — c'est la vignette 4 du schéma, celle de <strong>Marie</strong>. On le déplie ici.</p>
 
     <div class="steps">
         <div class="steps-title">Le 4ᵉ mécanisme : quand les égouts sont bouchés</div>
@@ -224,7 +225,7 @@
             </li>
             <li class="step">
                 <span class="n">3</span>
-                <span class="txt"><span class="lead">Ce qui bouche les égouts.</span> Deux causes classiques : une <b>chirurgie qui sectionne les vaisseaux lymphatiques</b> — c'est le curage ganglionnaire du cancer du sein, qui donne le <b>lymphœdème du bras</b> — ou un <b>parasite</b>, la filariose. Dans les deux cas, le bras ou la jambe enfle progressivement, du côté dont le drainage a été amputé.</span>
+                <span class="txt"><span class="lead">Ce qui bouche les égouts.</span> Deux causes classiques : une <b>chirurgie qui sectionne les vaisseaux lymphatiques</b> — le <b>curage ganglionnaire</b> <span class="gl">(l'ablation chirurgicale des ganglions lymphatiques)</span> pratiqué dans le cancer du sein, c'est le cas de <b>Marie</b> — ou un <b>parasite</b>, la filariose. Dans les deux cas, le bras ou la jambe enfle progressivement : c'est ce qu'on appelle un <b>lymphœdème</b>.</span>
             </li>
         </ol>
     </div>
@@ -232,7 +233,7 @@
     <div class="mnemo-box"><span class="lbl">Le mnémo</span><b>4 mécanismes d'œdèmes = 4 façons de faire basculer la balance de Starling : ↑ PHC, ↓ π<sub>o</sub>, ↑ perméabilité, ↓ drainage lymphatique.</b></div>
 
     <div class="pass-tip">
-        Devant un œdème, ne cherche pas la maladie : cherche <strong>laquelle des quatre entrées a bougé</strong>. Un obstacle en aval qui fait refluer le sang → ↑ PHC. Une protéinémie effondrée, par défaut de fabrication ou par perte → ↓ π<sub>o</sub>. Une paroi lésée qui laisse fuir les protéines → ↑ perméabilité. Un capillaire normal mais un drainage amputé → ↓ drainage lymphatique. Et garde Henri en tête : un vrai patient additionne souvent plusieurs entrées, ce n'est pas toujours un mécanisme « pur ».
+        Devant un œdème, ne cherche pas la maladie : cherche <strong>laquelle des quatre entrées a bougé</strong>. Un obstacle en aval qui fait refluer le sang → ↑ PHC. Une protéinémie effondrée, par défaut de fabrication ou par perte → ↓ π<sub>o</sub>. Une paroi lésée qui laisse fuir les protéines → ↑ perméabilité. Un capillaire normal mais un drainage amputé → ↓ drainage lymphatique.
     </div>
 
     <p class="intro">Le chapitre se referme ici. Regarde d'où on est parti : d'une règle de comptage — autant de charges positives que de charges négatives dans chaque compartiment — jusqu'à des chevilles qui gonflent. La leçon centrale : <em class="hl">une simple asymétrie ionique de part et d'autre d'une membrane suffit à générer un voltage, une pression osmotique, et toute la mécanique de l'eau dans le corps</em>. C'est l'idée matricielle de toute la biophysique médicale.</p>
@@ -240,11 +241,11 @@
     <div class="recap">
         <div class="box retenir">
             <span class="lbl">À retenir</span>
-            Quatre mécanismes, quatre entrées de la balance de Starling : <b>↑ PHC</b> (Robert, thrombose veineuse) · <b>↓ π<sub>o</sub></b> (Aminata, Henri, syndrome néphrotique) · <b>↑ perméabilité</b> (Camille, brûlure, sepsis) · <b>↓ drainage lymphatique</b> (curage ganglionnaire, filariose). Dans les trois premiers, le problème est <b>dans le capillaire</b>. Dans le quatrième, il est <b>dans les égouts</b>.
+            Quatre mécanismes, quatre entrées de la balance de Starling : <b>↑ PHC</b> (Robert, thrombose veineuse) · <b>↓ π<sub>o</sub></b> (Aminata, Henri, syndrome néphrotique) · <b>↑ perméabilité</b> (Camille, brûlure, sepsis) · <b>↓ drainage lymphatique</b> (Marie, curage ganglionnaire, filariose). Dans les trois premiers, le problème est <b>dans le capillaire</b>. Dans le quatrième, il est <b>dans les égouts</b>.
         </div>
         <div class="box piege">
             <span class="lbl">Le piège</span>
-            Henri n'est <b>pas</b> un 5ᵉ mécanisme : on n'en a que <b>quatre</b>. Sa cirrhose additionne des mécanismes déjà vus — ↓ π<sub>o</sub> (le foie ne fabrique plus assez d'albumine), ↑ pression hydrostatique (hypertension portale) et rétention de sodium par le SRAA. Un QCM qui présente la cirrhose comme un mécanisme à part est <b>FAUX</b>.
+            Henri n'est <b>pas</b> un 5ᵉ mécanisme : on n'en a que <b>quatre</b>. Sa cirrhose additionne des mécanismes déjà vus — ↓ π<sub>o</sub> (le foie ne fabrique plus assez d'albumine), ↑ pression hydrostatique (hypertension portale) et rétention de sodium par le <b>SRAA</b> (système rénine-angiotensine-aldostérone). Un QCM qui présente la cirrhose comme un mécanisme à part est <b>FAUX</b>.
         </div>
     </div>
 

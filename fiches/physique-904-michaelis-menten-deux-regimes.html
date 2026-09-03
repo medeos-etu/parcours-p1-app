@@ -156,6 +156,16 @@
         /* boutons de la lightbox plus gros au doigt */
         #medeos-lightbox button[aria-label="Fermer"] { width: 46px; height: 46px; font-size: 26px; }
     }
+
+    /* --- petit tableau Medeos (remplace une figure absente) --- */
+    .tbl-wrap { margin: 20px 0; overflow-x: auto; }
+    table.tbl { width: 100%; border-collapse: separate; border-spacing: 0; background: #fff; border: 1px solid #dccff2; border-radius: 12px; overflow: hidden; font-size: 14.5px; box-shadow: 0 3px 12px rgba(107,70,193,.08); }
+    table.tbl th { background: #F1ECFA; color: #4C2A85; font-size: 11.5px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; text-align: left; padding: 11px 14px; }
+    table.tbl td { padding: 12px 14px; border-top: 1px solid #ece5f7; color: #2c3e50; line-height: 1.5; vertical-align: top; }
+    table.tbl td b { color: #4C2A85; }
+    .tbl-note { font-size: 12.5px; color: #6b6275; margin: -10px 4px 20px; font-weight: 500; }
+    @media print { .tbl-wrap { page-break-inside: avoid; } table.tbl { font-size: 16px; box-shadow: none; } table.tbl th { font-size: 12.5px; } }
+    @media (max-width: 600px) { table.tbl { font-size: 13.5px; } table.tbl th, table.tbl td { padding: 9px 10px; } }
 </style>
 </head>
 <body>
@@ -202,25 +212,27 @@
 
     <p class="intro">La formule peut sembler abstraite, mais elle se comprend très bien en regardant ses <strong>deux cas limites</strong> :</p>
 
-    <table style="width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; background: #fff; border: 1px solid #dccff2; border-radius: 12px; overflow: hidden;">
-        <tr style="background: #F1ECFA;">
-            <th style="text-align: left; padding: 11px 16px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #6B46C1;">Le cas</th>
-            <th style="text-align: left; padding: 11px 16px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #6B46C1;">On simplifie</th>
-            <th style="text-align: left; padding: 11px 16px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #6B46C1;">Ce que ça donne</th>
-        </tr>
-        <tr>
-            <td style="padding: 11px 16px; border-top: 1px solid #ede7f7; vertical-align: top;"><b>Cas 1 — faible concentration</b><br><span style="color:#6b6275;">ΔC ≪ K<sub>m</sub></span></td>
-            <td style="padding: 11px 16px; border-top: 1px solid #ede7f7; vertical-align: top;">On néglige ΔC au dénominateur <span style="color:#6b6275;">(K<sub>m</sub> + ΔC ≈ K<sub>m</sub>)</span></td>
-            <td style="padding: 11px 16px; border-top: 1px solid #ede7f7; vertical-align: top;"><b>J<sub>v</sub> ≈ (J<sub>v,max</sub> / K<sub>m</sub>) × ΔC</b><br>Le flux est <b>proportionnel à ΔC</b> — comme une diffusion simple, mais plus rapide grâce aux transporteurs. C'est l'heure creuse du métro.</td>
-        </tr>
-        <tr>
-            <td style="padding: 11px 16px; border-top: 1px solid #ede7f7; vertical-align: top;"><b>Cas 2 — forte concentration</b><br><span style="color:#6b6275;">ΔC ≫ K<sub>m</sub></span></td>
-            <td style="padding: 11px 16px; border-top: 1px solid #ede7f7; vertical-align: top;">On néglige K<sub>m</sub> au dénominateur <span style="color:#6b6275;">(K<sub>m</sub> + ΔC ≈ ΔC)</span></td>
-            <td style="padding: 11px 16px; border-top: 1px solid #ede7f7; vertical-align: top;"><b>J<sub>v</sub> ≈ J<sub>v,max</sub> × ΔC / ΔC = J<sub>v,max</sub></b><br>Le flux <b>plafonne</b> à J<sub>v,max</sub>, quoi qu'on fasse avec ΔC. C'est l'heure de pointe : toutes les portes tournent à plein régime.</td>
-        </tr>
-    </table>
+    <div class="tbl-wrap">
+        <table class="tbl">
+            <thead>
+                <tr><th>Le cas</th><th>On simplifie</th><th>Ce que ça donne</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>Cas 1 — faible concentration</b><br><span style="color:#6b6275;">ΔC ≪ K<sub>m</sub></span></td>
+                    <td>On néglige ΔC au dénominateur <span style="color:#6b6275;">(K<sub>m</sub> + ΔC ≈ K<sub>m</sub>)</span></td>
+                    <td><b>J<sub>v</sub> ≈ (J<sub>v,max</sub> / K<sub>m</sub>) × ΔC</b><br>Le flux est <b>proportionnel à ΔC</b> — comme une diffusion simple, mais plus rapide grâce aux transporteurs. C'est l'heure creuse du métro.</td>
+                </tr>
+                <tr>
+                    <td><b>Cas 2 — forte concentration</b><br><span style="color:#6b6275;">ΔC ≫ K<sub>m</sub></span></td>
+                    <td>On néglige K<sub>m</sub> au dénominateur <span style="color:#6b6275;">(K<sub>m</sub> + ΔC ≈ ΔC)</span></td>
+                    <td><b>J<sub>v</sub> ≈ J<sub>v,max</sub> × ΔC / ΔC = J<sub>v,max</sub></b><br>Le flux <b>plafonne</b> à J<sub>v,max</sub>, quoi qu'on fasse avec ΔC. C'est l'heure de pointe : toutes les portes tournent à plein régime.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-    <div class="mnemo-box"><span class="lbl">L'astuce mathématique — pourquoi J<sub>v</sub> ne peut jamais dépasser J<sub>v,max</sub></span>Regarde la fraction <b>ΔC / (K<sub>m</sub> + ΔC)</b> au cœur de la formule. Comme on ajoute K<sub>m</sub> (qui est positif) au dénominateur, ce dernier est toujours plus grand que le numérateur. Donc <b>cette fraction est toujours strictement inférieure à 1</b>. Conséquence directe : J<sub>v</sub> = J<sub>v,max</sub> × (truc &lt; 1), donc J<sub>v</sub> est toujours strictement plus petit que J<sub>v,max</sub>. Quand ΔC devient gigantesque, la fraction s'approche de 1 (sans jamais l'atteindre) → J<sub>v</sub> s'approche de J<sub>v,max</sub> sans jamais le toucher exactement. Mathématiquement, J<sub>v,max</sub> est un <b>plafond asymptotique</b> : la courbe se rapproche de plus en plus mais ne le franchit jamais. C'est exactement ce qu'on attend d'une saturation.</div>
+    <div class="mnemo-box"><span class="lbl">L'astuce mathématique — pourquoi J<sub>v</sub> ne peut jamais dépasser J<sub>v,max</sub></span>💡 Regarde la fraction <b>ΔC / (K<sub>m</sub> + ΔC)</b> au cœur de la formule. Comme on ajoute K<sub>m</sub> (qui est positif) au dénominateur, ce dernier est toujours plus grand que le numérateur. Donc <b>cette fraction est toujours strictement inférieure à 1</b>.<br><br>Conséquence directe : J<sub>v</sub> = J<sub>v,max</sub> × (truc &lt; 1), donc J<sub>v</sub> est <b>toujours strictement plus petit</b> que J<sub>v,max</sub>. Quand ΔC devient gigantesque, la fraction s'approche de 1 (sans jamais l'atteindre) → J<sub>v</sub> s'approche de J<sub>v,max</sub> sans jamais le toucher exactement.<br><br>👉 Mathématiquement, J<sub>v,max</sub> est un <b>plafond asymptotique</b> : la courbe se rapproche de plus en plus mais ne le franchit jamais. C'est exactement ce qu'on attend d'une saturation.</div>
 
     <p class="intro"><strong>Application physiologique — pourquoi le diabète provoque une hyperglycémie persistante.</strong> Le glucose est absorbé dans les cellules par les transporteurs GLUT. Quand la glycémie sanguine monte (par exemple après un repas), l'entrée de glucose dans les cellules s'accélère… mais seulement jusqu'à un certain plafond. Si on dépasse la capacité maximale des GLUT (J<sub>v,max</sub>), le glucose <em class="hl">s'accumule dans le sang</em> sans pouvoir entrer plus vite dans les cellules — c'est l'<strong>hyperglycémie</strong>, signe biologique central du diabète. Cette saturation des transporteurs est l'une des raisons pour lesquelles un diabétique non traité reste hyperglycémique même au repos.</p>
 

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Le transport actif, la pompe Na⁺/K⁺ et le rein filtre — Fiche Medeos</title>
+<title>Le transport actif, la pompe Na⁺/K⁺ et le filtre rénal — Fiche Medeos</title>
 <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
@@ -156,6 +156,16 @@
         /* boutons de la lightbox plus gros au doigt */
         #medeos-lightbox button[aria-label="Fermer"] { width: 46px; height: 46px; font-size: 26px; }
     }
+
+    /* --- petit tableau Medeos (remplace une figure absente) --- */
+    .tbl-wrap { margin: 20px 0; overflow-x: auto; }
+    table.tbl { width: 100%; border-collapse: separate; border-spacing: 0; background: #fff; border: 1px solid #dccff2; border-radius: 12px; overflow: hidden; font-size: 14.5px; box-shadow: 0 3px 12px rgba(107,70,193,.08); }
+    table.tbl th { background: #F1ECFA; color: #4C2A85; font-size: 11.5px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; text-align: left; padding: 11px 14px; }
+    table.tbl td { padding: 12px 14px; border-top: 1px solid #ece5f7; color: #2c3e50; line-height: 1.5; vertical-align: top; }
+    table.tbl td b { color: #4C2A85; }
+    .tbl-note { font-size: 12.5px; color: #6b6275; margin: -10px 4px 20px; font-weight: 500; }
+    @media print { .tbl-wrap { page-break-inside: avoid; } table.tbl { font-size: 16px; box-shadow: none; } table.tbl th { font-size: 12.5px; } }
+    @media (max-width: 600px) { table.tbl { font-size: 13.5px; } table.tbl th, table.tbl td { padding: 9px 10px; } }
 </style>
 </head>
 <body>
@@ -165,12 +175,12 @@
 
     <header class="hook-header">
         <div class="brand-tag">Ressource gratuite</div>
-        <h1 class="course-title">Le transport actif, la pompe Na⁺/K⁺ et le rein filtre</h1>
+        <h1 class="course-title">Le transport actif, la pompe Na⁺/K⁺ et le filtre rénal</h1>
         <p class="punch">Jusqu'ici, tout ce qui traversait la membrane le faisait <span class="accent">gratuitement</span>.</p>
         <p class="punch">Reste le cas où la cellule doit <span class="accent">payer</span> — en ATP.</p>
     </header>
 
-    <p class="intro">Les deux fiches précédentes ont traité les transports qui ne coûtent rien à la cellule : la diffusion simple, puis la diffusion facilitée, où le glucose descend son gradient à travers une porte à tourniquet. Dans les deux cas, la molécule va <strong>dans le sens du gradient</strong>, du beaucoup vers le moins. Reste le cas inverse. Pour transporter une molécule <strong>contre son gradient</strong> — <em class="hl">la concentrer là où elle est déjà plus concentrée</em> — il faut de l'énergie. La cellule la fournit sous forme d'<strong>ATP</strong>, et c'est ce qui distingue les deux dernières familles de la classification.</p>
+    <p class="intro">Les fiches précédentes ont traité les transports qui ne coûtent rien à la cellule : la diffusion simple d'abord, puis la diffusion facilitée — le glucose qui descend son gradient à travers une porte à tourniquet, et la formule de <strong>Michaëlis-Menten</strong> qui en décrit les deux régimes. Dans tous les cas, la molécule va <strong>dans le sens du gradient</strong>, du beaucoup vers le moins. Reste le cas inverse. Pour transporter une molécule <strong>contre son gradient</strong> — <em class="hl">la concentrer là où elle est déjà plus concentrée</em> — il faut de l'énergie. La cellule la fournit sous forme d'<strong>ATP</strong>, et c'est ce qui distingue les deux dernières familles de la classification.</p>
 
     <div class="steps">
         <div class="steps-title">Payer, oui — mais de deux façons</div>
@@ -185,7 +195,7 @@
             </li>
             <li class="step">
                 <span class="n">3</span>
-                <span class="txt"><span class="lead">Transport actif secondaire.</span> La protéine n'hydrolyse pas d'ATP elle-même : elle utilise un <b>gradient ionique préalablement établi</b> <span class="gl">(gradient qui, lui, a bien été créé par de l'ATP)</span>. Exemple : le <b>symport Na⁺/glucose</b> de l'intestin grêle et du tube proximal du rein.</span>
+                <span class="txt"><span class="lead">Transport actif secondaire.</span> La protéine n'hydrolyse pas d'ATP elle-même : elle utilise un <b>gradient ionique préalablement établi</b> <span class="gl">(gradient qui, lui, a bien été créé par de l'ATP)</span>. Exemple : le <b>symport Na⁺/glucose</b> de l'intestin grêle et du tube proximal du rein <span class="gl">(un co-transport : le glucose entre en profitant de l'entrée du Na⁺)</span>.</span>
             </li>
         </ol>
     </div>
@@ -196,22 +206,25 @@
         <p class="caption">Cette pompe consomme à elle seule <strong>plus de 30 % de l'énergie totale du corps au repos</strong> — et <strong>plus de la moitié</strong> de l'énergie des cellules excitables (neurones, cardiomyocytes).</p>
     </div>
 
-    <div class="mnemo-box"><span class="lbl">L'astuce — reconnaître un transport actif en clinique</span>Quand un examen clinique mentionne une <b>dépendance énergétique</b>, une <b>concentration contre le gradient</b> ou une <b>inhibition par poison métabolique</b> (cyanure, ouabaïne…), c'est un <b>transport actif</b>.</div>
+    <div class="mnemo-box"><span class="lbl">L'astuce — reconnaître un transport actif en clinique</span>🧠 Quand un examen clinique mentionne une <b>dépendance énergétique</b>, une <b>concentration contre le gradient</b> ou une <b>inhibition par poison métabolique</b> (cyanure, ouabaïne…), c'est un <b>transport actif</b>.</div>
 
-    <p class="intro"><strong>Application typique — la filtration glomérulaire au rein.</strong> L'organe filtre par excellence du corps, c'est le <strong>rein</strong>. Il combine tous les mécanismes qu'on vient de voir : il filtre le sang sous pression (<strong>~120 mL/min pour les 2 reins</strong>), laisse passer certaines choses et en retient d'autres.</p>
+    <p class="intro"><strong>Application typique — la filtration glomérulaire au rein.</strong> L'organe filtre par excellence du corps, c'est le <strong>rein</strong>. Il combine tous les mécanismes qu'on vient de voir : il filtre le sang sous pression (<strong>~120 mL/min pour les 2 reins</strong>), et il trie — voici ce qui passe et ce qui reste.</p>
 
-    <table style="width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14.5px; background: #fff; border: 1px solid #dccff2; border-radius: 12px; overflow: hidden;">
-        <tr style="background: #F1ECFA;">
-            <th style="text-align: left; padding: 11px 18px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #6B46C1;">Ce qui passe le filtre</th>
-            <th style="text-align: left; padding: 11px 18px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #6B46C1;">Ce qui est retenu</th>
-        </tr>
-        <tr>
-            <td style="padding: 11px 18px; border-top: 1px solid #ede7f7; vertical-align: top;">L'<b>eau</b>, le <b>sel</b>, le <b>glucose</b>, l'<b>urée</b></td>
-            <td style="padding: 11px 18px; border-top: 1px solid #ede7f7; vertical-align: top;">Les <b>protéines</b> et les <b>cellules</b></td>
-        </tr>
-    </table>
+    <div class="tbl-wrap">
+        <table class="tbl">
+            <thead>
+                <tr><th>Ce qui passe le filtre</th><th>Ce qui est retenu</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>L'<b>eau</b>, le <b>sel</b>, le <b>glucose</b>, l'<b>urée</b></td>
+                    <td>Les <b>protéines</b> et les <b>cellules</b></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-    <p class="intro">Pour évaluer sa bonne santé, on mesure la <strong>clairance de la créatinine</strong> — une molécule qui passe librement le filtre rénal :</p>
+    <p class="intro">Pour évaluer la bonne santé de ce filtre, on mesure la <strong>clairance de la créatinine</strong> — une molécule qui passe librement le filtre rénal :</p>
 
     <div class="schema-box" style="margin: 20px 0;">
         <span class="schema-num">Clairance de la créatinine</span>
@@ -222,7 +235,7 @@
     <p class="intro">Et voilà bouclé le fil annoncé à la première page du chapitre. Quand ce filtre lâche, on le remplace par une membrane artificielle : c'est l'<strong>hémodialyse</strong>, où des litres d'urée doivent traverser une membrane semi-perméable sans que les protéines ne suivent. Même tri, même physique — <em class="hl">qu'est-ce qui passe, qu'est-ce qui est arrêté</em>.</p>
 
     <div class="pass-tip">
-        Deux réflexes. <strong>Un</strong> : dès qu'un énoncé parle de dépendance énergétique, de passage contre le gradient ou d'inhibition par un poison métabolique, c'est un <strong>transport actif</strong>, jamais une diffusion. <strong>Deux</strong> : le <strong>~120 mL/min</strong> de la filtration glomérulaire vaut pour les <strong>deux reins ensemble</strong>, et la clairance normale de la créatinine se lit dans la même fourchette (90-120 mL/min).
+        Le <strong>~120 mL/min</strong> de la filtration glomérulaire vaut pour les <strong>deux reins ensemble</strong>, jamais pour un seul. Et ne confonds pas les deux nombres qui se lisent dans la même fourchette : celui-là est le débit que les reins filtrent, alors que la <strong>clairance de la créatinine</strong> (90-120 mL/min) est ce qu'on <strong>calcule</strong> à partir de trois mesures — créatininurie, débit urinaire sur 24 h, créatininémie — pour vérifier que le filtre tient.
     </div>
 
     <div class="recap">
