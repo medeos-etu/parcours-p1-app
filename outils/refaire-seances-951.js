@@ -27,12 +27,42 @@ const IMAGE = { Anatomie: 'seance-coeur.png', Biologie: 'seance-mito.png', Chimi
 const propre = t => String(t).replace(/\s*—\s*Fiche Medeos\s*$/, '').trim();
 const slugDe = f => f.replace(/\.html$/, '');
 
+/* LES TITRES DE CHAPITRES TELS QUE L'ÉLÈVE LES LIT. Le manifeste tient ses titres des
+   noms de dossiers de cours — « Atome Structure Bohr », « Les methodes d etude », un
+   « L\ » cassé par une apostrophe. Sur la route, dans une séance, dans « chapitre
+   refermé », il faut du français. On les fixe ici, par matière et numéro. */
+const TITRES_CHAP = {
+  Anatomie: { 14: 'L\'œil', 15: 'L\'oreille' },
+  Biologie: {
+    1: 'Introduction à la biologie cellulaire', 2: 'La membrane plasmique', 3: 'Les organites cellulaires',
+    4: 'Les méthodes d\'étude de la cellule', 5: 'Le cycle cellulaire', 6: 'La méiose',
+    7: 'Spermatogenèse et ovogenèse', 8: 'Communication et signalisation cellulaire', 9: 'Histologie : les méthodes',
+    10: 'Les tissus épithéliaux', 11: 'Les tissus conjonctifs', 12: 'Le tissu cartilagineux',
+    13: 'Le tissu osseux', 14: 'Les tissus musculaires', 15: 'Le tissu nerveux',
+  },
+  Chimie: {
+    1: 'L\'atome et le modèle de Bohr', 2: 'Le modèle quantique et la configuration électronique',
+    3: 'La classification périodique', 4: 'Lewis, liaisons et polarité', 5: 'VSEPR, orbitales moléculaires et hybridation',
+    6: 'Liaisons faibles et interactions', 7: 'Thermodynamique : le premier principe', 8: 'Entropie, enthalpie libre et équilibres',
+    9: 'Cinétique : vitesse et catalyse', 10: 'Alcanes et cyclanes : nomenclature et conformations',
+    11: 'Alcènes et systèmes conjugués', 12: 'Aromatiques et substitution électrophile',
+    13: 'Stéréochimie : chiralité, R/S et E/Z', 14: 'Alcools et carbonyles : réactivité',
+    15: 'Amines, acides carboxyliques et dérivés', 16: 'Glucides : structure et cyclisation',
+    17: 'Lipides : acides gras et cholestérol', 18: 'Acides aminés et protéines',
+  },
+  Physique: {
+    1: 'Eau, solutions et concentrations', 2: 'pH, acides, bases et tampons',
+    3: 'Équilibres ioniques et effet Donnan', 4: 'Ondes acoustiques',
+  },
+};
+const titreChap = (mat, e) => (TITRES_CHAP[mat] && TITRES_CHAP[mat][e.chapitre]) || e.chapitreTitre;
+
 /* ── 1. chaque matière devient une file de fiches, chapitres dans l'ordre ── */
 const files = {};
 MATIERES.forEach(mat => {
   files[mat] = M[CLE[mat]].map(e => ({
     slug: slugDe(e.fiche),
-    chap: e.chapitreTitre,
+    chap: titreChap(mat, e),
     titre: propre(e.titre),
   }));
 });

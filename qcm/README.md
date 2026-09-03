@@ -78,3 +78,17 @@ d'élèves, elle n'est pas prioritaire.
 
 ## Où on en est
 `node outils/etat-qcm.js` répond à cette question, fiche par fiche.
+
+## Poser de nouveaux QCM dans l'app — la marche à suivre
+Lucas fournit les QCM au fur et à mesure. Trois commandes, dans cet ordre, et rien d'autre :
+
+```
+node outils/verifie-qcm.js --tout        # 100 % ancrés, 7 lots par fiche, sinon on corrige
+node outils/implante-parcours.js         # pose SEANCES, TITRES et les QCM par lot dans index.html
+vercel deploy --prod                     # met en ligne (projet parcours-p1-preview)
+```
+
+Un fichier JSON déposé dans `qcm/` est pris en compte à la prochaine implantation. Les
+emplacements existent déjà pour les 951 fiches : poser un QCM, c'est remplir une case.
+Les questions d'avant le Parcours (anciennes fiches) sont dans `_archive-anciennes-fiches.json`,
+plus dans l'app : aucune séance ne servait plus leurs fiches.

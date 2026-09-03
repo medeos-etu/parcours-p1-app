@@ -133,22 +133,42 @@ Object.keys(parFiche).sort().forEach(slug => {
   });
 });
 
-/* on retire l'ancien bloc s'il existe, puis on pose le neuf juste avant la fermeture */
-const iD = h.indexOf(DEB);
-if (iD >= 0) {
-  const iF = h.indexOf(FIN, iD);
-  h = h.slice(0, iD) + h.slice(iF + FIN.length);
-}
+/* LES QUESTIONS D'AVANT LE PARCOURS. Elles avaient été écrites pour les 219 anciennes
+   fiches, dont plus aucune n'est dans une séance : les Salles et l'Amphi ne piochent que
+   dans les fiches servies par le Parcours, donc ces questions ne peuvent plus être jouées
+   par personne — 1 137 questions, 1,6 Mo, chargées à chaque ouverture pour rien.
+   On les archive dans qcm/_archive-anciennes-fiches.json (et elles restent dans git),
+   puis la banque ne contient plus que les QCM du Parcours. --garder-anciennes pour
+   les conserver malgré tout. */
 const iBank = h.indexOf('const ABANK=[');
 const jBank = h.indexOf('\n];', iBank);
-const blocQcm = ',\n' + DEB + '\n'
+const GARDER = process.argv.includes('--garder-anciennes');
+let ancienBloc = '';
+{
+  const corpsBank = h.slice(iBank + 'const ABANK=['.length, jBank);
+  const iD = corpsBank.indexOf(DEB);
+  const sansParcours = iD >= 0 ? corpsBank.slice(0, iD).replace(/,\s*$/, '') : corpsBank;
+  let anciennes = [];
+  try { anciennes = eval('[' + sansParcours + '\n]'); } catch (e) { pb.push('banque illisible : ' + e.message); }
+  const orphelines = anciennes.filter(q => !q.lo);
+  if (orphelines.length && !GARDER) {
+    const arch = path.join(dossierQcm, '_archive-anciennes-fiches.json');
+    if (!fs.existsSync(arch)) fs.writeFileSync(arch, JSON.stringify(orphelines, null, 1));
+    console.log('anciennes    : ' + orphelines.length + ' questions sur d\'anciennes fiches → archivées dans qcm/_archive-anciennes-fiches.json, retirées de la banque');
+  } else if (orphelines.length) {
+    ancienBloc = sansParcours + ',\n';
+    console.log('anciennes    : ' + orphelines.length + ' questions conservées (--garder-anciennes)');
+  }
+}
+if (pb.length) { console.log('\nRIEN ÉCRIT.'); process.exit(1); }
+const blocQcm = '\n' + DEB + '\n'
   + '/* ── LES QCM DU PARCOURS — ' + lignes.length + ' questions sur ' + Object.keys(parFiche).length + ' fiches.\n'
   + '   Chaque question porte son lot (lo) : 1-2 entraînement gratuit, 3-5 entraînement\n'
   + '   pack année complète, 6-7 arène (ar:1). Écrites depuis la fiche, chaque item ancré\n'
   + '   par une citation littérale vérifiée par outils/verifie-qcm.js.\n'
   + '   Bloc remplacé en entier à chaque implantation : ne rien écrire à la main ici. ── */\n'
   + lignes.join(',\n') + '\n' + FIN;
-h = h.slice(0, jBank) + blocQcm + h.slice(jBank);
+h = h.slice(0, iBank + 'const ABANK=['.length) + ancienBloc + blocQcm + h.slice(jBank);
 
 /* ── 6. écriture ── */
 if (ESSAI) { console.log('\n(essai : rien écrit · ' + lignes.length + ' questions prêtes)'); process.exit(0); }
