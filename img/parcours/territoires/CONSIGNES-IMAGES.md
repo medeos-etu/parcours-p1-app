@@ -86,3 +86,39 @@ texte ou un personnage, redemande « sans texte, sans personnage ».
 - `bout-de-la-route.png` — un drapeau doré planté au sommet d'une colline crème, vue dégagée, sans monument.
 - `rentree.png` — le grand amphithéâtre doré de la carte-monde, vu de face, portes ouvertes, lumière chaude.
 - `camp-stage.png` — un campement de tentes crème et or au bord du chemin, un feu doux, petit drapeau Medeos violet #6B46C1.
+
+---
+
+# Les illustrations des MONDES (prioritaires)
+
+Le Parcours est découpé en **11 mondes** qu'on termine l'un après l'autre. Chaque monde
+mérite sa grande image : c'est elle que l'élève voit en haut de l'écran « Tes mondes »,
+et dans la route des mondes. Sans elle, un simple emoji tient la place.
+
+**Nom de fichier :** `monde-01.png` … `monde-11.png`. **Format carré** (1:1), ce sont des
+pastilles arrondies — pas des bannières.
+
+**Style, à coller en tête de chaque demande :**
+
+> Illustration aquarelle douce et lumineuse, univers Medeos : collines crème (#FAF6F0),
+> ombres chaudes diluées (#E29C5C), touches d'or (#FCD34D), violet profond (#4C2A85) en
+> accent. UNE scène isolée au centre, vue en légère plongée, style « petit royaume de jeu
+> vidéo », propre, sans texte, sans personnage, sans chiffre, sans cadre. Format carré 1:1.
+
+| Fichier | Monde | La scène |
+|---|---|---|
+| `monde-01.png` | Les Premiers Repères | Une boussole monumentale posée sur une plaine crème, quatre sentiers qui en partent vers les quatre horizons. |
+| `monde-02.png` | Les Briques du Vivant | Un mur en construction fait de briques translucides dorées, quelques-unes encore en lévitation. |
+| `monde-03.png` | L'Architecture | Un temple à colonnes vertébrales, dôme lisse comme un crâne, sur une butte. |
+| `monde-04.png` | Les Équilibres | Une immense balance de pierre claire en équilibre parfait, deux bassins d'eau colorée. |
+| `monde-05.png` | La Transmission | Deux tours reliées par une double hélice dorée qui se dédouble en montant. |
+| `monde-06.png` | Les Grands Flux | Un réseau de canaux et d'aqueducs qui rayonnent depuis une fontaine-cœur rouge sombre. |
+| `monde-07.png` | Les Organes | Une cité-organisme : plusieurs pavillons de formes différentes reliés par des conduits. |
+| `monde-08.png` | La Charpente | Une forteresse aux murs alvéolés comme de l'os spongieux, arches de cartilage translucide. |
+| `monde-09.png` | Le Mouvement | Un pont suspendu par des câbles-fibres tendus, en pleine traction, au-dessus d'un ravin. |
+| `monde-10.png` | Les Sens | Un phare dont la lentille est un œil, une conque en spirale à son pied. |
+| `monde-11.png` | Le Vivant en Molécules | Un jardin de molécules géantes : hélices, anneaux hexagonaux, chaînes ramifiées. |
+
+**Deux images de plus, utiles :**
+- `camp-stage.png` — un campement de tentes crème et or au bord du chemin, un feu doux, petit drapeau violet #6B46C1. (Remplace l'image sombre actuelle des stages.)
+- `banniere-mondes.png` — bannière **horizontale 3:1** : la route qui serpente entre plusieurs petits royaumes, vue de loin, lumière du matin.

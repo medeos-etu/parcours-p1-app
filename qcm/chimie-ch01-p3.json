@@ -1,279 +1,1371 @@
 {
-  "matiere": "chimie",
-  "chapitre": 1,
-  "questions": [
+ "matiere": "chimie",
+ "chapitre": 1,
+ "questions": [
+  {
+   "fiche": "chimie-007-isotopes.html",
+   "origine": "ecrite",
+   "arene": false,
+   "lot": 1,
+   "q": "Parmi les propositions suivantes relatives à la définition des isotopes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
     {
-      "fiche": "chimie-007-isotopes.html",
-      "origine": "ecrite",
-      "arene": false,
-      "lot": 1,
-      "q": "Parmi les propositions suivantes relatives à la définition des isotopes, laquelle (lesquelles) est (sont) exacte(s) ?",
-      "items": [
-        {
-          "t": "Des isotopes sont des nucléides qui possèdent le même Z mais des nombres de masse A différents.",
-          "v": true,
-          "e": "VRAI. C'est la définition exacte : même nombre de protons, donc même élément, mais un nombre de nucléons A qui varie d'un isotope à l'autre.",
-          "sourceQuote": "des isotopes sont des nucléides (des espèces définies par A ET Z) qui ont le même Z (même élément) mais des A différents"
-        },
-        {
-          "t": "Deux isotopes d'un même élément possèdent le même nombre de neutrons.",
-          "v": false,
-          "e": "FAUX : c'est justement leur nombre de neutrons qui diffère. À Z fixé, un A différent signifie un nombre de neutrons différent — sans quoi les deux nucléides seraient identiques.",
-          "sourceQuote": "mais des A différents (nombre de neutrons différent)"
-        },
-        {
-          "t": "Un nucléide est une espèce définie par A ET Z.",
-          "v": true,
-          "e": "VRAI. Le nucléide demande deux nombres : le nombre de nucléons A et le numéro atomique Z. Les isotopes sont des nucléides qui partagent le second sans partager le premier.",
-          "sourceQuote": "des nucléides (des espèces définies par A ET Z)"
-        },
-        {
-          "t": "Environ 2400 isotopes sont connus, qu'ils soient naturels ou artificiels.",
-          "v": true,
-          "e": "VRAI. On recense environ 2400 isotopes, certains présents dans la nature, d'autres produits artificiellement.",
-          "sourceQuote": "il existe environ 2400 isotopes connus (naturels ou artificiels)"
-        },
-        {
-          "t": "L'élément chimique est défini par le couple formé de A et de Z.",
-          "v": false,
-          "e": "FAUX : l'élément est défini par Z uniquement, c'est-à-dire par le nombre de protons. C'est le nucléide, et non l'élément, qui réclame les deux nombres A et Z.",
-          "sourceQuote": "un élément est défini par Z uniquement, le nombre de protons"
-        }
-      ]
+     "t": "Des isotopes sont des nucléides qui possèdent le même Z mais des nombres de masse A différents.",
+     "v": true,
+     "e": "VRAI. C'est la définition exacte : même nombre de protons, donc même élément, mais un nombre de nucléons A qui varie d'un isotope à l'autre.",
+     "sourceQuote": "des isotopes sont des nucléides (des espèces définies par A ET Z) qui ont le même Z (même élément) mais des A différents"
     },
     {
-      "fiche": "chimie-007-isotopes.html",
-      "origine": "reprise",
-      "arene": false,
-      "lot": 2,
-      "q": "Concernant les isotopes de l'hydrogène, parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
-      "items": [
-        {
-          "t": "Le protium (¹H) possède 1 proton et aucun neutron.",
-          "v": true,
-          "e": "VRAI. Le protium a Z = 1 (1 proton), N = 0 et A = 1.",
-          "sourceQuote": "Isotope Notation Z (protons) N (neutrons) A Hydrogène (protium) ¹H 1 0 1"
-        },
-        {
-          "t": "Le deutérium (²H) possède 1 proton et 1 neutron.",
-          "v": true,
-          "e": "VRAI. Le deutérium a Z = 1, N = 1 et A = 2.",
-          "sourceQuote": "Z (protons) N (neutrons) A Hydrogène (protium) ¹H 1 0 1 Deutérium ²H (ou D) 1 1 2"
-        },
-        {
-          "t": "Le tritium (³H) possède 3 protons.",
-          "v": false,
-          "e": "FAUX : le tritium possède 1 seul proton (Z = 1, comme tous les isotopes de l'hydrogène) et 2 neutrons. Son nombre de masse A = 3 vient des nucléons (1 proton + 2 neutrons).",
-          "sourceQuote": "la colonne Z ne bouge jamais — 1 proton, c'est de l'hydrogène du premier au dernier"
-        },
-        {
-          "t": "Les trois isotopes de l'hydrogène possèdent le même nombre de neutrons.",
-          "v": false,
-          "e": "FAUX : ils ont des nombres de neutrons différents (0 pour le protium, 1 pour le deutérium, 2 pour le tritium). C'est leur nombre de protons (1) qui est identique.",
-          "sourceQuote": "Ce qui monte, c'est N, donc A."
-        },
-        {
-          "t": "Les isotopes de l'hydrogène, étant tous de même Z, ont les mêmes propriétés chimiques.",
-          "v": true,
-          "e": "VRAI. Même Z = 1 proton, donc 1 électron chacun (si neutres) et donc mêmes propriétés chimiques. Seules les masses diffèrent.",
-          "sourceQuote": "Même Z (= 1 proton) → même élément → donc 1 électron chacun si neutres → mêmes propriétés chimiques"
-        }
-      ]
+     "t": "Deux isotopes d'un même élément possèdent le même nombre de neutrons.",
+     "v": false,
+     "e": "FAUX : c'est justement leur nombre de neutrons qui diffère. À Z fixé, un A différent signifie un nombre de neutrons différent — sans quoi les deux nucléides seraient identiques.",
+     "sourceQuote": "mais des A différents (nombre de neutrons différent)"
     },
     {
-      "fiche": "chimie-007-isotopes.html",
-      "origine": "ecrite",
-      "arene": false,
-      "lot": 3,
-      "q": "Parmi les propositions suivantes relatives à la détermination du nombre de neutrons d'un isotope, laquelle (lesquelles) est (sont) exacte(s) ?",
-      "items": [
-        {
-          "t": "Le nombre de neutrons se déduit du nombre de nucléons et du numéro atomique par la relation N = A − Z.",
-          "v": true,
-          "e": "VRAI. Puisque A = Z + N, il suffit de retrancher Z à A pour obtenir le nombre de neutrons.",
-          "sourceQuote": "Comme A = Z + N, on a N = A − Z"
-        },
-        {
-          "t": "Le nombre de neutrons est toujours fourni tel quel dans l'énoncé, il n'y a rien à en déduire.",
-          "v": false,
-          "e": "FAUX : le nombre de neutrons n'est pas donné, il se calcule. On lit A et Z, puis on pose N = A − Z.",
-          "sourceQuote": "Ne cherche pas les neutrons dans l'énoncé : calcule-les"
-        },
-        {
-          "t": "Pour le tritium ³H, le calcul donne 3 − 1 = 2 neutrons.",
-          "v": true,
-          "e": "VRAI. A = 3 et Z = 1, donc N = 3 − 1 = 2 neutrons.",
-          "sourceQuote": "Tritium ³H : 3 − 1 = 2 neutrons"
-        },
-        {
-          "t": "Pour le deutérium ²H, le calcul donne 2 neutrons.",
-          "v": false,
-          "e": "FAUX : A = 2 et Z = 1, donc N = 2 − 1 = 1 seul neutron. Le chiffre 2 est ici le nombre de nucléons, pas le nombre de neutrons.",
-          "sourceQuote": "Deutérium ²H : 2 − 1 = 1 neutron"
-        },
-        {
-          "t": "Devant un isotope, plusieurs calculs successifs sont nécessaires avant de pouvoir conclure.",
-          "v": false,
-          "e": "FAUX : une seule opération suffit, la soustraction N = A − Z. C'est le seul calcul à mener devant un isotope.",
-          "sourceQuote": "C'est le seul calcul à faire devant un isotope."
-        }
-      ]
+     "t": "Un nucléide est une espèce définie par A ET Z.",
+     "v": true,
+     "e": "VRAI. Le nucléide demande deux nombres : le nombre de nucléons A et le numéro atomique Z. Les isotopes sont des nucléides qui partagent le second sans partager le premier.",
+     "sourceQuote": "des nucléides (des espèces définies par A ET Z)"
     },
     {
-      "fiche": "chimie-007-isotopes.html",
-      "origine": "ecrite",
-      "arene": false,
-      "lot": 4,
-      "q": "Parmi les propositions suivantes relatives à ce qui varie et à ce qui reste identique d'un isotope de l'hydrogène à l'autre, laquelle (lesquelles) est (sont) exacte(s) ?",
-      "items": [
-        {
-          "t": "S'ils sont électriquement neutres, les trois isotopes de l'hydrogène portent chacun 1 électron.",
-          "v": true,
-          "e": "VRAI. Ils ont tous Z = 1, donc 1 proton ; un atome neutre porte autant d'électrons que de protons, soit 1 électron chacun.",
-          "sourceQuote": "Même Z (= 1 proton) → même élément → donc 1 électron chacun si neutres"
-        },
-        {
-          "t": "À Z constant, une variation de A traduit une variation du nombre d'électrons.",
-          "v": false,
-          "e": "FAUX : à Z constant, ce qui varie avec A, c'est le nombre de neutrons, donc la masse. Le nombre d'électrons, lui, ne bouge pas.",
-          "sourceQuote": "A différents → nombre de neutrons différent → masses différentes"
-        },
-        {
-          "t": "Le protium, le deutérium et le tritium relèvent du même élément tout en ayant des masses différentes.",
-          "v": true,
-          "e": "VRAI. C'est toute la notion d'isotope : un seul et même élément, l'hydrogène, sous trois masses distinctes.",
-          "sourceQuote": "Même élément, masses différentes. L'hydrogène en donne l'exemple type, avec ses trois isotopes."
-        },
-        {
-          "t": "Dans la notation abrégée, le deutérium s'écrit T et le tritium D.",
-          "v": false,
-          "e": "FAUX : les deux symboles sont inversés. Le deutérium se note D et le tritium se note T.",
-          "sourceQuote": "Deutérium ²H (ou D) 1 1 2 Tritium ³H (ou T) 1 2 3"
-        },
-        {
-          "t": "Le nombre de nucléons vaut 1 pour le deutérium et 2 pour le tritium.",
-          "v": false,
-          "e": "FAUX : A vaut 2 pour le deutérium et 3 pour le tritium. La valeur 1 est celle du protium.",
-          "sourceQuote": "Isotope Notation Z (protons) N (neutrons) A Hydrogène (protium) ¹H 1 0 1 Deutérium ²H (ou D) 1 1 2 Tritium ³H (ou T) 1 2 3"
-        }
-      ]
+     "t": "Environ 2400 isotopes sont connus, qu'ils soient naturels ou artificiels.",
+     "v": true,
+     "e": "VRAI. On recense environ 2400 isotopes, certains présents dans la nature, d'autres produits artificiellement.",
+     "sourceQuote": "il existe environ 2400 isotopes connus (naturels ou artificiels)"
     },
     {
-      "fiche": "chimie-007-isotopes.html",
-      "origine": "ecrite",
-      "arene": false,
-      "lot": 5,
-      "q": "Parmi les propositions suivantes relatives à l'emploi des isotopes radioactifs, laquelle (lesquelles) est (sont) exacte(s) ?",
-      "items": [
-        {
-          "t": "L'iode 131 est utilisé dans le traitement des cancers de la thyroïde.",
-          "v": true,
-          "e": "VRAI. L'iode 131 est employé en thérapie, contre les cancers de la thyroïde.",
-          "sourceQuote": "Iode 131 (¹³¹I) → traitement des cancers de la thyroïde"
-        },
-        {
-          "t": "Le technétium 99m est employé pour réaliser des scintigraphies.",
-          "v": true,
-          "e": "VRAI. Le technétium 99m sert à l'imagerie médicale, par scintigraphie.",
-          "sourceQuote": "Technétium 99m (⁹⁹ᵐTc) → scintigraphies (imagerie médicale)"
-        },
-        {
-          "t": "Le carbone 14 sert à la datation en archéologie.",
-          "v": true,
-          "e": "VRAI. Le carbone 14 est l'isotope employé pour dater des échantillons en archéologie.",
-          "sourceQuote": "Carbone 14 (¹⁴C) → datation en archéologie (hors médecine, mais exactement le même principe)"
-        },
-        {
-          "t": "La datation en archéologie relève de la médecine nucléaire.",
-          "v": false,
-          "e": "FAUX : la datation se situe hors du champ médical. Seul le principe physique mis en jeu est le même que celui de la médecine nucléaire.",
-          "sourceQuote": "datation en archéologie (hors médecine, mais exactement le même principe)"
-        },
-        {
-          "t": "L'emploi des isotopes radioactifs en médecine reste occasionnel et réservé à des situations rares.",
-          "v": false,
-          "e": "FAUX : ces isotopes sont utilisés quotidiennement en médecine nucléaire. Ce n'est ni marginal ni exceptionnel.",
-          "sourceQuote": "Les isotopes radioactifs sont utilisés quotidiennement en médecine nucléaire"
-        }
-      ]
-    },
-    {
-      "fiche": "chimie-007-isotopes.html",
-      "origine": "ecrite",
-      "arene": true,
-      "lot": 6,
-      "q": "Parmi les propositions suivantes relatives à ce qui rend possible l'emploi médical des isotopes radioactifs, laquelle (lesquelles) est (sont) exacte(s) ?",
-      "items": [
-        {
-          "t": "Ces isotopes possèdent un Z différent de celui des éléments naturels correspondants.",
-          "v": false,
-          "e": "FAUX : ils ont exactement le même Z que les éléments naturels. C'est précisément pour cela que l'organisme les traite comme les éléments qu'ils remplacent.",
-          "sourceQuote": "Ces isotopes ont le même Z que les éléments naturels"
-        },
-        {
-          "t": "C'est leur différence de propriétés chimiques qui permet de les détecter dans l'organisme.",
-          "v": false,
-          "e": "FAUX : leurs propriétés chimiques sont identiques à celles des éléments naturels. La détection repose sur leurs propriétés nucléaires, pas sur leur chimie.",
-          "sourceQuote": "Ces isotopes ont le même Z que les éléments naturels → propriétés chimiques identiques"
-        },
-        {
-          "t": "Leurs propriétés nucléaires, différentes, permettent de les détecter ou de les utiliser en thérapie.",
-          "v": true,
-          "e": "VRAI. Le noyau, lui, se comporte autrement : c'est ce qui rend l'isotope repérable en imagerie, ou actif en traitement.",
-          "sourceQuote": "ils ont des propriétés nucléaires différentes, qui permettent de les détecter ou de les utiliser en thérapie"
-        },
-        {
-          "t": "L'organisme distingue chimiquement l'isotope radioactif de l'élément naturel correspondant.",
-          "v": false,
-          "e": "FAUX : le corps ne fait pas la différence. Chimiquement, l'isotope radioactif se comporte comme l'élément naturel, et c'est ce qui permet de l'y introduire.",
-          "sourceQuote": "ton corps ne fait pas la différence"
-        },
-        {
-          "t": "Le cortège électronique de ces isotopes est identique à celui de l'élément naturel, mais pas leur noyau.",
-          "v": true,
-          "e": "VRAI. Tout tient dans ce décalage : cortège électronique identique, donc chimie identique ; noyau différent, donc comportement nucléaire différent.",
-          "sourceQuote": "le cortège électronique est identique, le noyau non"
-        }
-      ]
-    },
-    {
-      "fiche": "chimie-007-isotopes.html",
-      "origine": "ecrite",
-      "arene": true,
-      "lot": 7,
-      "q": "Parmi les propositions suivantes relatives aux confusions classiques que soulèvent les isotopes, laquelle (lesquelles) est (sont) exacte(s) ?",
-      "items": [
-        {
-          "t": "Passer de ²H à ³H revient à changer d'élément chimique.",
-          "v": false,
-          "e": "FAUX : modifier A ne fait pas changer d'élément. ²H et ³H restent de l'hydrogène, puisque Z = 1 dans les deux cas.",
-          "sourceQuote": "Changer A ne change pas l'élément : ²H et ³H, c'est toujours de l'hydrogène, car Z = 1."
-        },
-        {
-          "t": "La notion abordée juste après les isotopes maintient constant, non pas Z, mais le nombre d'électrons.",
-          "v": true,
-          "e": "VRAI. Les deux mots commencent par « iso- », mais ils ne gardent pas la même grandeur constante : Z pour les isotopes, le nombre d'électrons pour la notion suivante.",
-          "sourceQuote": "Le suivant garde constant, non pas Z, mais le nombre d'électrons"
-        },
-        {
-          "t": "Ces deux notions en « iso- » prêtent rarement à confusion en P1.",
-          "v": false,
-          "e": "FAUX : c'est au contraire une confusion très fréquemment exploitée dans les QCM. Il faut se demander à chaque fois quelle grandeur reste constante.",
-          "sourceQuote": "et les QCM adorent faire confondre les deux"
-        },
-        {
-          "t": "Le protium est le seul des trois isotopes de l'hydrogène dont le nombre de nucléons est égal au nombre de protons.",
-          "v": true,
-          "e": "VRAI. Le protium n'a aucun neutron : A = 1 et Z = 1 s'y confondent. Le deutérium (A = 2) et le tritium (A = 3) ont, eux, un A supérieur à Z.",
-          "sourceQuote": "Isotope Notation Z (protons) N (neutrons) A Hydrogène (protium) ¹H 1 0 1 Deutérium ²H (ou D) 1 1 2 Tritium ³H (ou T) 1 2 3"
-        },
-        {
-          "t": "Chez un isotope radioactif, les propriétés chimiques changent en même temps que les propriétés nucléaires.",
-          "v": false,
-          "e": "FAUX : seules les propriétés nucléaires changent. La chimie, elle, ne change jamais, puisque Z reste le même.",
-          "sourceQuote": "pour les isotopes radioactifs, les propriétés nucléaires, jamais la chimie"
-        }
-      ]
+     "t": "L'élément chimique est défini par le couple formé de A et de Z.",
+     "v": false,
+     "e": "FAUX : l'élément est défini par Z uniquement, c'est-à-dire par le nombre de protons. C'est le nucléide, et non l'élément, qui réclame les deux nombres A et Z.",
+     "sourceQuote": "un élément est défini par Z uniquement, le nombre de protons"
     }
-  ]
+   ]
+  },
+  {
+   "fiche": "chimie-007-isotopes.html",
+   "origine": "reprise",
+   "arene": false,
+   "lot": 2,
+   "q": "Concernant les isotopes de l'hydrogène, parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le protium (¹H) possède 1 proton et aucun neutron.",
+     "v": true,
+     "e": "VRAI. Le protium a Z = 1 (1 proton), N = 0 et A = 1.",
+     "sourceQuote": "Isotope Notation Z (protons) N (neutrons) A Hydrogène (protium) ¹H 1 0 1"
+    },
+    {
+     "t": "Le deutérium (²H) possède 1 proton et 1 neutron.",
+     "v": true,
+     "e": "VRAI. Le deutérium a Z = 1, N = 1 et A = 2.",
+     "sourceQuote": "Z (protons) N (neutrons) A Hydrogène (protium) ¹H 1 0 1 Deutérium ²H (ou D) 1 1 2"
+    },
+    {
+     "t": "Le tritium (³H) possède 3 protons.",
+     "v": false,
+     "e": "FAUX : le tritium possède 1 seul proton (Z = 1, comme tous les isotopes de l'hydrogène) et 2 neutrons. Son nombre de masse A = 3 vient des nucléons (1 proton + 2 neutrons).",
+     "sourceQuote": "la colonne Z ne bouge jamais — 1 proton, c'est de l'hydrogène du premier au dernier"
+    },
+    {
+     "t": "Les trois isotopes de l'hydrogène possèdent le même nombre de neutrons.",
+     "v": false,
+     "e": "FAUX : ils ont des nombres de neutrons différents (0 pour le protium, 1 pour le deutérium, 2 pour le tritium). C'est leur nombre de protons (1) qui est identique.",
+     "sourceQuote": "Ce qui monte, c'est N, donc A."
+    },
+    {
+     "t": "Les isotopes de l'hydrogène, étant tous de même Z, ont les mêmes propriétés chimiques.",
+     "v": true,
+     "e": "VRAI. Même Z = 1 proton, donc 1 électron chacun (si neutres) et donc mêmes propriétés chimiques. Seules les masses diffèrent.",
+     "sourceQuote": "Même Z (= 1 proton) → même élément → donc 1 électron chacun si neutres → mêmes propriétés chimiques"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-007-isotopes.html",
+   "origine": "ecrite",
+   "arene": false,
+   "lot": 3,
+   "q": "Parmi les propositions suivantes relatives à la détermination du nombre de neutrons d'un isotope, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le nombre de neutrons se déduit du nombre de nucléons et du numéro atomique par la relation N = A − Z.",
+     "v": true,
+     "e": "VRAI. Puisque A = Z + N, il suffit de retrancher Z à A pour obtenir le nombre de neutrons.",
+     "sourceQuote": "Comme A = Z + N, on a N = A − Z"
+    },
+    {
+     "t": "Le nombre de neutrons est toujours fourni tel quel dans l'énoncé, il n'y a rien à en déduire.",
+     "v": false,
+     "e": "FAUX : le nombre de neutrons n'est pas donné, il se calcule. On lit A et Z, puis on pose N = A − Z.",
+     "sourceQuote": "Ne cherche pas les neutrons dans l'énoncé : calcule-les"
+    },
+    {
+     "t": "Pour le tritium ³H, le calcul donne 3 − 1 = 2 neutrons.",
+     "v": true,
+     "e": "VRAI. A = 3 et Z = 1, donc N = 3 − 1 = 2 neutrons.",
+     "sourceQuote": "Tritium ³H : 3 − 1 = 2 neutrons"
+    },
+    {
+     "t": "Pour le deutérium ²H, le calcul donne 2 neutrons.",
+     "v": false,
+     "e": "FAUX : A = 2 et Z = 1, donc N = 2 − 1 = 1 seul neutron. Le chiffre 2 est ici le nombre de nucléons, pas le nombre de neutrons.",
+     "sourceQuote": "Deutérium ²H : 2 − 1 = 1 neutron"
+    },
+    {
+     "t": "Devant un isotope, plusieurs calculs successifs sont nécessaires avant de pouvoir conclure.",
+     "v": false,
+     "e": "FAUX : une seule opération suffit, la soustraction N = A − Z. C'est le seul calcul à mener devant un isotope.",
+     "sourceQuote": "C'est le seul calcul à faire devant un isotope."
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-007-isotopes.html",
+   "origine": "ecrite",
+   "arene": false,
+   "lot": 4,
+   "q": "Parmi les propositions suivantes relatives à ce qui varie et à ce qui reste identique d'un isotope de l'hydrogène à l'autre, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "S'ils sont électriquement neutres, les trois isotopes de l'hydrogène portent chacun 1 électron.",
+     "v": true,
+     "e": "VRAI. Ils ont tous Z = 1, donc 1 proton ; un atome neutre porte autant d'électrons que de protons, soit 1 électron chacun.",
+     "sourceQuote": "Même Z (= 1 proton) → même élément → donc 1 électron chacun si neutres"
+    },
+    {
+     "t": "À Z constant, une variation de A traduit une variation du nombre d'électrons.",
+     "v": false,
+     "e": "FAUX : à Z constant, ce qui varie avec A, c'est le nombre de neutrons, donc la masse. Le nombre d'électrons, lui, ne bouge pas.",
+     "sourceQuote": "A différents → nombre de neutrons différent → masses différentes"
+    },
+    {
+     "t": "Le protium, le deutérium et le tritium relèvent du même élément tout en ayant des masses différentes.",
+     "v": true,
+     "e": "VRAI. C'est toute la notion d'isotope : un seul et même élément, l'hydrogène, sous trois masses distinctes.",
+     "sourceQuote": "Même élément, masses différentes. L'hydrogène en donne l'exemple type, avec ses trois isotopes."
+    },
+    {
+     "t": "Dans la notation abrégée, le deutérium s'écrit T et le tritium D.",
+     "v": false,
+     "e": "FAUX : les deux symboles sont inversés. Le deutérium se note D et le tritium se note T.",
+     "sourceQuote": "Deutérium ²H (ou D) 1 1 2 Tritium ³H (ou T) 1 2 3"
+    },
+    {
+     "t": "Le nombre de nucléons vaut 1 pour le deutérium et 2 pour le tritium.",
+     "v": false,
+     "e": "FAUX : A vaut 2 pour le deutérium et 3 pour le tritium. La valeur 1 est celle du protium.",
+     "sourceQuote": "Isotope Notation Z (protons) N (neutrons) A Hydrogène (protium) ¹H 1 0 1 Deutérium ²H (ou D) 1 1 2 Tritium ³H (ou T) 1 2 3"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-007-isotopes.html",
+   "origine": "ecrite",
+   "arene": false,
+   "lot": 5,
+   "q": "Parmi les propositions suivantes relatives à l'emploi des isotopes radioactifs, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "L'iode 131 est utilisé dans le traitement des cancers de la thyroïde.",
+     "v": true,
+     "e": "VRAI. L'iode 131 est employé en thérapie, contre les cancers de la thyroïde.",
+     "sourceQuote": "Iode 131 (¹³¹I) → traitement des cancers de la thyroïde"
+    },
+    {
+     "t": "Le technétium 99m est employé pour réaliser des scintigraphies.",
+     "v": true,
+     "e": "VRAI. Le technétium 99m sert à l'imagerie médicale, par scintigraphie.",
+     "sourceQuote": "Technétium 99m (⁹⁹ᵐTc) → scintigraphies (imagerie médicale)"
+    },
+    {
+     "t": "Le carbone 14 sert à la datation en archéologie.",
+     "v": true,
+     "e": "VRAI. Le carbone 14 est l'isotope employé pour dater des échantillons en archéologie.",
+     "sourceQuote": "Carbone 14 (¹⁴C) → datation en archéologie (hors médecine, mais exactement le même principe)"
+    },
+    {
+     "t": "La datation en archéologie relève de la médecine nucléaire.",
+     "v": false,
+     "e": "FAUX : la datation se situe hors du champ médical. Seul le principe physique mis en jeu est le même que celui de la médecine nucléaire.",
+     "sourceQuote": "datation en archéologie (hors médecine, mais exactement le même principe)"
+    },
+    {
+     "t": "L'emploi des isotopes radioactifs en médecine reste occasionnel et réservé à des situations rares.",
+     "v": false,
+     "e": "FAUX : ces isotopes sont utilisés quotidiennement en médecine nucléaire. Ce n'est ni marginal ni exceptionnel.",
+     "sourceQuote": "Les isotopes radioactifs sont utilisés quotidiennement en médecine nucléaire"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-007-isotopes.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 6,
+   "q": "Parmi les propositions suivantes relatives à ce qui rend possible l'emploi médical des isotopes radioactifs, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Ces isotopes possèdent un Z différent de celui des éléments naturels correspondants.",
+     "v": false,
+     "e": "FAUX : ils ont exactement le même Z que les éléments naturels. C'est précisément pour cela que l'organisme les traite comme les éléments qu'ils remplacent.",
+     "sourceQuote": "Ces isotopes ont le même Z que les éléments naturels"
+    },
+    {
+     "t": "C'est leur différence de propriétés chimiques qui permet de les détecter dans l'organisme.",
+     "v": false,
+     "e": "FAUX : leurs propriétés chimiques sont identiques à celles des éléments naturels. La détection repose sur leurs propriétés nucléaires, pas sur leur chimie.",
+     "sourceQuote": "Ces isotopes ont le même Z que les éléments naturels → propriétés chimiques identiques"
+    },
+    {
+     "t": "Leurs propriétés nucléaires, différentes, permettent de les détecter ou de les utiliser en thérapie.",
+     "v": true,
+     "e": "VRAI. Le noyau, lui, se comporte autrement : c'est ce qui rend l'isotope repérable en imagerie, ou actif en traitement.",
+     "sourceQuote": "ils ont des propriétés nucléaires différentes, qui permettent de les détecter ou de les utiliser en thérapie"
+    },
+    {
+     "t": "L'organisme distingue chimiquement l'isotope radioactif de l'élément naturel correspondant.",
+     "v": false,
+     "e": "FAUX : le corps ne fait pas la différence. Chimiquement, l'isotope radioactif se comporte comme l'élément naturel, et c'est ce qui permet de l'y introduire.",
+     "sourceQuote": "ton corps ne fait pas la différence"
+    },
+    {
+     "t": "Le cortège électronique de ces isotopes est identique à celui de l'élément naturel, mais pas leur noyau.",
+     "v": true,
+     "e": "VRAI. Tout tient dans ce décalage : cortège électronique identique, donc chimie identique ; noyau différent, donc comportement nucléaire différent.",
+     "sourceQuote": "le cortège électronique est identique, le noyau non"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-007-isotopes.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 7,
+   "q": "Parmi les propositions suivantes relatives aux confusions classiques que soulèvent les isotopes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Passer de ²H à ³H revient à changer d'élément chimique.",
+     "v": false,
+     "e": "FAUX : modifier A ne fait pas changer d'élément. ²H et ³H restent de l'hydrogène, puisque Z = 1 dans les deux cas.",
+     "sourceQuote": "Changer A ne change pas l'élément : ²H et ³H, c'est toujours de l'hydrogène, car Z = 1."
+    },
+    {
+     "t": "La notion abordée juste après les isotopes maintient constant, non pas Z, mais le nombre d'électrons.",
+     "v": true,
+     "e": "VRAI. Les deux mots commencent par « iso- », mais ils ne gardent pas la même grandeur constante : Z pour les isotopes, le nombre d'électrons pour la notion suivante.",
+     "sourceQuote": "Le suivant garde constant, non pas Z, mais le nombre d'électrons"
+    },
+    {
+     "t": "Ces deux notions en « iso- » prêtent rarement à confusion en P1.",
+     "v": false,
+     "e": "FAUX : c'est au contraire une confusion très fréquemment exploitée dans les QCM. Il faut se demander à chaque fois quelle grandeur reste constante.",
+     "sourceQuote": "et les QCM adorent faire confondre les deux"
+    },
+    {
+     "t": "Le protium est le seul des trois isotopes de l'hydrogène dont le nombre de nucléons est égal au nombre de protons.",
+     "v": true,
+     "e": "VRAI. Le protium n'a aucun neutron : A = 1 et Z = 1 s'y confondent. Le deutérium (A = 2) et le tritium (A = 3) ont, eux, un A supérieur à Z.",
+     "sourceQuote": "Isotope Notation Z (protons) N (neutrons) A Hydrogène (protium) ¹H 1 0 1 Deutérium ²H (ou D) 1 1 2 Tritium ³H (ou T) 1 2 3"
+    },
+    {
+     "t": "Chez un isotope radioactif, les propriétés chimiques changent en même temps que les propriétés nucléaires.",
+     "v": false,
+     "e": "FAUX : seules les propriétés nucléaires changent. La chimie, elle, ne change jamais, puisque Z reste le même.",
+     "sourceQuote": "pour les isotopes radioactifs, les propriétés nucléaires, jamais la chimie"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-016-formule-rayon-bohr.html",
+   "origine": "ecrite",
+   "arene": false,
+   "lot": 1,
+   "q": "Parmi les propositions suivantes relatives à la formule rₙ = 0,53 × n² et à l'unité de son résultat, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Dans cette formule, le nombre 0,53 est le rayon de l'orbite n = 1.",
+     "v": true,
+     "e": "VRAI. Le 0,53 n'est pas un coefficient abstrait : c'est la valeur du rayon de la première orbite, exprimée en Ångström.",
+     "sourceQuote": "C'est le rayon de l'orbite n = 1, en Ångström"
+    },
+    {
+     "t": "Le rayon obtenu par cette formule s'exprime en Ångström.",
+     "v": true,
+     "e": "VRAI. Le résultat sort directement en Ångström, l'unité adaptée à la taille d'une orbite atomique.",
+     "sourceQuote": "Résultat en Ångström"
+    },
+    {
+     "t": "Un Ångström vaut 10⁻¹⁵ m.",
+     "v": false,
+     "e": "FAUX : un Ångström vaut 10⁻¹⁰ m. La valeur 10⁻¹⁵ m est cent mille fois trop petite pour décrire une orbite.",
+     "sourceQuote": "en Ångström (Å = 10⁻¹⁰ m)"
+    },
+    {
+     "t": "L'ordre de grandeur de ce rayon est celui du diamètre de l'atome.",
+     "v": true,
+     "e": "VRAI. Environ 10⁻¹⁰ m : c'est exactement l'ordre de grandeur du diamètre d'un atome, déjà rencontré plus tôt dans le chapitre.",
+     "sourceQuote": "c'est celui du diamètre de l'atome"
+    },
+    {
+     "t": "Cette formule donne l'énergie de l'électron sur l'orbite n.",
+     "v": false,
+     "e": "FAUX : elle donne la distance à laquelle l'électron tourne autour du noyau. L'énergie se calcule avec l'autre formule de Bohr.",
+     "sourceQuote": "à quelle distance du noyau l'électron tourne-t-il"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-016-formule-rayon-bohr.html",
+   "origine": "ecrite",
+   "arene": false,
+   "lot": 2,
+   "q": "Parmi les propositions suivantes relatives à la façon dont le niveau n intervient dans le rayon d'une orbite, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Plus n augmente, plus l'orbite est grande et plus l'électron s'éloigne du noyau.",
+     "v": true,
+     "e": "VRAI. Le n² multiplie le 0,53 : le rayon grandit avec n, donc l'électron tourne de plus en plus loin du noyau.",
+     "sourceQuote": "plus l'orbite est grande : l'électron s'éloigne du noyau"
+    },
+    {
+     "t": "Dans la formule du rayon, on multiplie par n².",
+     "v": true,
+     "e": "VRAI. Le n² est un facteur multiplicatif : r₃ = 0,53 × 9, et non 0,53 divisé par 9.",
+     "sourceQuote": "ici, on multiplie par n²"
+    },
+    {
+     "t": "Dans la formule du rayon comme dans celle de l'énergie, le n² se trouve au dénominateur.",
+     "v": false,
+     "e": "FAUX : le n² était au dénominateur pour l'énergie, mais il multiplie pour le rayon. C'est toute la différence entre les deux formules.",
+     "sourceQuote": "là, le n² était au dénominateur ; ici, on multiplie par n²"
+    },
+    {
+     "t": "Le rayon d'une orbite peut prendre une valeur négative.",
+     "v": false,
+     "e": "FAUX : un rayon est une distance, il est toujours positif. Aucun signe moins n'apparaît dans cette formule, contrairement à celle de l'énergie.",
+     "sourceQuote": "Un rayon est une distance : il est toujours positif"
+    },
+    {
+     "t": "Passer du niveau n = 1 au niveau n = 2 multiplie le rayon par deux.",
+     "v": false,
+     "e": "FAUX : il est multiplié par n² = 4. L'orbite n = 2 se situe quatre fois plus loin du noyau que l'orbite n = 1.",
+     "sourceQuote": "2,12 Å (4 fois plus loin)"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-016-formule-rayon-bohr.html",
+   "origine": "ecrite",
+   "arene": false,
+   "lot": 3,
+   "q": "Parmi les propositions suivantes relatives aux rayons des trois premières orbites de l'hydrogène, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le rayon de l'orbite n = 2 vaut 2,12 Å.",
+     "v": true,
+     "e": "VRAI. r₂ = 0,53 × 2² = 0,53 × 4 = 2,12 Å.",
+     "sourceQuote": "2,12 Å à n = 2"
+    },
+    {
+     "t": "Le rayon de l'orbite n = 3 vaut 4,77 Å.",
+     "v": true,
+     "e": "VRAI. r₃ = 0,53 × 3² = 0,53 × 9 = 4,77 Å.",
+     "sourceQuote": "4,77 Å à n = 3"
+    },
+    {
+     "t": "Le rayon de l'orbite n = 3 s'obtient par le calcul 0,53 × 3, soit 1,59 Å.",
+     "v": false,
+     "e": "FAUX : on multiplie par n² = 9, pas par n = 3. Le calcul correct est 0,53 × 9 = 4,77 Å.",
+     "sourceQuote": "ici, on multiplie par n²"
+    },
+    {
+     "t": "L'orbite n = 3 se situe neuf fois plus loin du noyau que l'orbite n = 1.",
+     "v": true,
+     "e": "VRAI. Le facteur entre les deux est n² = 9 : 4,77 Å contre 0,53 Å.",
+     "sourceQuote": "4,77 Å (9 fois plus loin)"
+    },
+    {
+     "t": "Chaque niveau suivant est n fois plus loin du noyau que le niveau n = 1.",
+     "v": false,
+     "e": "FAUX : chaque niveau est n² fois plus loin, pas n fois. C'est le carré qui creuse l'écart entre les orbites.",
+     "sourceQuote": "chaque niveau suivant est n² fois plus loin"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-016-formule-rayon-bohr.html",
+   "origine": "ecrite",
+   "arene": false,
+   "lot": 4,
+   "q": "Parmi les propositions suivantes relatives au rayon des orbites d'un hydrogénoïde tel que He⁺ ou Li²⁺, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le rayon s'obtient en divisant 0,53 × n² par Z.",
+     "v": true,
+     "e": "VRAI. On applique d'abord la formule de l'hydrogène, puis on divise le résultat par le numéro atomique Z.",
+     "sourceQuote": "Pour un hydrogénoïde, on divise par Z"
+    },
+    {
+     "t": "Pour He⁺ (Z = 2), le rayon de l'orbite n = 1 vaut 0,265 Å.",
+     "v": true,
+     "e": "VRAI. 0,53 × 1² = 0,53 Å, puis on divise par Z = 2 : 0,265 Å, soit deux fois plus petit que dans l'hydrogène.",
+     "sourceQuote": "He⁺ (Z = 2) → r₁ = 0,53 / 2 = 0,265 Å"
+    },
+    {
+     "t": "Pour Li²⁺ (Z = 3), le rayon de l'orbite n = 1 est trois fois plus grand que celui de l'hydrogène.",
+     "v": false,
+     "e": "FAUX : Z est au dénominateur, donc le rayon est trois fois plus PETIT, soit environ 0,18 Å.",
+     "sourceQuote": "Rayon → divise par Z"
+    },
+    {
+     "t": "Cette division par Z s'explique par un noyau qui attire plus fort et tire l'électron plus près.",
+     "v": true,
+     "e": "VRAI. Plus la charge du noyau est grande, plus l'attraction est forte, et plus l'électron est ramené près du noyau : le rayon diminue.",
+     "sourceQuote": "plus le noyau attire fort"
+    },
+    {
+     "t": "Cette formule s'adresse à des atomes possédant plusieurs électrons.",
+     "v": false,
+     "e": "FAUX : elle ne concerne que les espèces à un seul électron, comme He⁺ ou Li²⁺.",
+     "sourceQuote": "Et pour les autres atomes à 1 seul électron"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-016-formule-rayon-bohr.html",
+   "origine": "ecrite",
+   "arene": false,
+   "lot": 5,
+   "q": "Parmi les propositions suivantes comparant la formule du rayon et celle de l'énergie, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Pour le rayon, le n² multiplie, alors qu'il divisait pour l'énergie.",
+     "v": true,
+     "e": "VRAI. C'est la confusion la plus fréquente entre les deux formules : le n² change de place selon la grandeur calculée.",
+     "sourceQuote": "Pour le rayon, le n² multiplie (alors qu'il divisait pour l'énergie)"
+    },
+    {
+     "t": "Le rayon et l'énergie reposent sur deux causes physiques différentes : l'attraction du noyau n'intervient que pour le rayon.",
+     "v": false,
+     "e": "FAUX : c'est la même attraction du noyau qui agit dans les deux formules. Seule la façon dont Z y intervient change.",
+     "sourceQuote": "c'est la même attraction du noyau qui agit dans les deux formules"
+    },
+    {
+     "t": "Pour He⁺, le rayon s'obtient en divisant par 4.",
+     "v": false,
+     "e": "FAUX : on divise par Z = 2, pas par Z² = 4. Le Z est simple dans la formule du rayon, jamais au carré.",
+     "sourceQuote": "pour He⁺, on divise par 2, pas par 4"
+    },
+    {
+     "t": "Bohr a établi deux formules, une pour l'énergie et une pour le rayon.",
+     "v": true,
+     "e": "VRAI. L'une donne la hauteur de la marche (l'énergie), l'autre la taille de l'orbite (le rayon).",
+     "sourceQuote": "Bohr a établi deux formules"
+    },
+    {
+     "t": "Z multiplie l'énergie au carré et divise le rayon.",
+     "v": true,
+     "e": "VRAI. Z² pour l'énergie, division par Z pour le rayon : plus d'attraction rend l'électron plus lié et plus proche du noyau.",
+     "sourceQuote": "Z multiplie l'énergie (au carré) et divise le rayon"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-016-formule-rayon-bohr.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 6,
+   "q": "Parmi les propositions suivantes relatives au calcul du rayon d'orbites d'hydrogénoïdes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Pour Li²⁺ (Z = 3), le rayon de l'orbite n = 1 vaut environ 0,18 Å.",
+     "v": true,
+     "e": "VRAI. 0,53 × 1² = 0,53 Å, puis division par Z = 3 : 0,53 / 3 ≈ 0,18 Å.",
+     "sourceQuote": "Rayon → divise par Z (plus d'attraction = électron plus proche)"
+    },
+    {
+     "t": "Pour Be³⁺ (Z = 4), le rayon de l'orbite n = 2 vaut 2,12 Å, comme pour l'hydrogène.",
+     "v": false,
+     "e": "FAUX : la division par Z reste à faire. 0,53 × 2² = 2,12 Å, puis 2,12 / 4 = 0,53 Å.",
+     "sourceQuote": "Pour un hydrogénoïde, on divise par Z"
+    },
+    {
+     "t": "Pour He⁺ (Z = 2), le rayon de l'orbite n = 2 vaut 4,24 Å.",
+     "v": false,
+     "e": "FAUX : 0,53 × 2² = 2,12 Å, puis on divise par Z = 2, ce qui donne 1,06 Å. La valeur 4,24 Å reviendrait à multiplier par Z au lieu de diviser.",
+     "sourceQuote": "tu multiplies par n², et si l'énoncé parle d'un hydrogénoïde, tu divises par Z"
+    },
+    {
+     "t": "Pour Li²⁺, le rayon de l'orbite n = 1 est neuf fois plus petit que pour l'hydrogène.",
+     "v": false,
+     "e": "FAUX : il est trois fois plus petit. Le Z intervient à la puissance 1 dans la formule du rayon, jamais au carré.",
+     "sourceQuote": "le Z est simple, jamais au carré"
+    },
+    {
+     "t": "À niveau n égal, le rayon de l'hydrogène est plus grand que celui de He⁺.",
+     "v": true,
+     "e": "VRAI. He⁺ a un noyau plus chargé (Z = 2), donc une attraction plus forte et un rayon plus petit que celui de l'hydrogène.",
+     "sourceQuote": "un noyau plus chargé un rayon plus petit"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-016-formule-rayon-bohr.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 7,
+   "q": "Parmi les propositions suivantes relatives au contrôle de cohérence d'un résultat de rayon, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Un niveau plus haut doit donner un rayon plus grand.",
+     "v": true,
+     "e": "VRAI. C'est le premier contrôle à faire : si le rayon diminue quand n augmente, une opération a été inversée.",
+     "sourceQuote": "un niveau plus haut doit donner un rayon plus grand"
+    },
+    {
+     "t": "Un résultat donnant un rayon plus grand pour un noyau plus chargé signale une opération inversée.",
+     "v": true,
+     "e": "VRAI. Un noyau plus chargé attire davantage : le rayon doit diminuer. L'inverse trahit une multiplication mise à la place d'une division.",
+     "sourceQuote": "un noyau plus chargé un rayon plus petit. Si ce n'est pas le cas, tu as inversé une opération"
+    },
+    {
+     "t": "Deux valeurs numériques sont à mémoriser pour appliquer la formule du rayon.",
+     "v": false,
+     "e": "FAUX : une seule suffit, 0,53 Å. Tout le reste se déduit en multipliant par n², et en divisant par Z s'il s'agit d'un hydrogénoïde.",
+     "sourceQuote": "Une seule valeur à sortir de ta tête : 0,53 Å"
+    },
+    {
+     "t": "Face à un hydrogénoïde, on multiplie par Z après avoir multiplié par n².",
+     "v": false,
+     "e": "FAUX : on divise par Z. Multiplier ferait grandir l'orbite alors qu'un noyau plus chargé la resserre.",
+     "sourceQuote": "si l'énoncé parle d'un hydrogénoïde, tu divises par Z"
+    },
+    {
+     "t": "Les deux valeurs magiques à retenir pour l'hydrogène sont −13,6 Å et 0,53 eV.",
+     "v": false,
+     "e": "FAUX : les unités sont inversées. C'est −13,6 eV pour l'énergie du niveau n = 1 et 0,53 Å pour son rayon.",
+     "sourceQuote": "−13,6 eV (énergie du niveau n = 1), 0,53 Å (rayon du niveau n = 1)"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-017-niveaux-energie-hydrogene.html",
+   "origine": "ecrite",
+   "arene": false,
+   "lot": 1,
+   "q": "Parmi les propositions suivantes relatives au signe négatif des énergies de l'atome d'hydrogène, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "La référence E = 0 correspond à un électron infiniment loin du noyau.",
+     "v": true,
+     "e": "VRAI. C'est un choix de référence : on décide que l'électron libre, infiniment éloigné, a une énergie nulle.",
+     "sourceQuote": "on décide que E = 0 quand l'électron est infiniment loin du noyau"
+    },
+    {
+     "t": "Toute énergie d'un électron encore lié au noyau est négative.",
+     "v": true,
+     "e": "VRAI. Puisque le zéro est placé tout en haut de l'échelle, tout ce qui se situe en dessous, donc tout état lié, sort négatif.",
+     "sourceQuote": "toute énergie d'un électron lié est donc négative"
+    },
+    {
+     "t": "Ce signe moins vient d'une faute de signe dans la formule.",
+     "v": false,
+     "e": "FAUX : il n'y a aucune erreur. Le signe moins découle simplement de l'endroit où l'on a placé le zéro de l'échelle.",
+     "sourceQuote": "Ce n'est pas une faute de signe : c'est le zéro qu'on a placé ailleurs"
+    },
+    {
+     "t": "La référence E = 0 est placée sur le niveau n = 1.",
+     "v": false,
+     "e": "FAUX : elle est placée à l'infini, quand l'électron est libre. Le niveau n = 1 vaut, lui, −13,6 eV.",
+     "sourceQuote": "La référence E = 0 est fixée à l'infini, quand l'électron est libre"
+    },
+    {
+     "t": "Les énergies sont négatives parce que l'électron est repoussé par le noyau.",
+     "v": false,
+     "e": "FAUX : l'électron est attiré par le noyau. C'est justement cette attraction qui le maintient en dessous de la référence, donc à une énergie négative.",
+     "sourceQuote": "l'électron est attiré par le noyau (attraction électrique)"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-017-niveaux-energie-hydrogene.html",
+   "origine": "ecrite",
+   "arene": false,
+   "lot": 2,
+   "q": "Parmi les propositions suivantes relatives aux niveaux d'énergie de l'hydrogène et aux couches correspondantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le niveau n = 1, couche K, a pour énergie −13,6 eV.",
+     "v": true,
+     "e": "VRAI. E₁ = −13,6 / 1² = −13,6 eV : c'est la marche la plus basse de l'atome d'hydrogène.",
+     "sourceQuote": "n = 1 (couche K). E₁ = −13,6 / 1² = −13,6 eV"
+    },
+    {
+     "t": "Le niveau n = 2 correspond à la couche M.",
+     "v": false,
+     "e": "FAUX : le niveau n = 2 correspond à la couche L. La couche M est associée au niveau n = 3.",
+     "sourceQuote": "n = 2 (couche L). E₂ = −13,6 / 4"
+    },
+    {
+     "t": "L'énergie du niveau n = 3 vaut −1,51 eV.",
+     "v": true,
+     "e": "VRAI. E₃ = −13,6 / 9 = −1,51 eV, soit neuf fois moins profond que le niveau n = 1.",
+     "sourceQuote": "E₃ = −13,6 / 9 = −1,51 eV"
+    },
+    {
+     "t": "Le niveau n = 4, couche N, a pour énergie −0,85 eV.",
+     "v": true,
+     "e": "VRAI. E₄ = −13,6 / 16 = −0,85 eV : on est déjà tout près de la référence 0 eV.",
+     "sourceQuote": "n = 4 (couche N). E₄ = −13,6 / 16 = −0,85 eV"
+    },
+    {
+     "t": "L'énergie du niveau n = 2 vaut −6,8 eV.",
+     "v": false,
+     "e": "FAUX : elle vaut −3,4 eV. On divise −13,6 par 2² = 4, et non par 2.",
+     "sourceQuote": "E₂ = −13,6 / 4 = −3,4 eV"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-017-niveaux-energie-hydrogene.html",
+   "origine": "ecrite",
+   "arene": false,
+   "lot": 3,
+   "q": "Parmi les propositions suivantes relatives à l'évolution de l'énergie lorsque n augmente, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Plus n augmente, plus l'énergie augmente et se rapproche de 0.",
+     "v": true,
+     "e": "VRAI. On divise −13,6 par un nombre de plus en plus grand : le résultat devient de moins en moins négatif.",
+     "sourceQuote": "Plus n augmente, plus l'énergie augmente — elle devient moins négative et se rapproche de 0"
+    },
+    {
+     "t": "Le niveau n = 1 est celui dont l'énergie est la plus basse.",
+     "v": true,
+     "e": "VRAI. −13,6 eV est la valeur la plus basse de toute l'échelle de l'hydrogène.",
+     "sourceQuote": "n = 1 a l'énergie la plus basse, −13,6 eV"
+    },
+    {
+     "t": "Plus n augmente, plus l'énergie devient négative.",
+     "v": false,
+     "e": "FAUX : c'est l'inverse. L'énergie devient moins négative à mesure que n grandit, et tend vers 0.",
+     "sourceQuote": "elle devient moins négative et se rapproche de 0"
+    },
+    {
+     "t": "L'hydrogène possède des niveaux d'énergie inférieurs à −13,6 eV.",
+     "v": false,
+     "e": "FAUX : rien ne descend sous la première marche. −13,6 eV est le plancher de l'échelle.",
+     "sourceQuote": "aucune énergie n'est plus basse que celle-là"
+    },
+    {
+     "t": "Passer de n = 1 à n = 2 revient à multiplier −13,6 par 4.",
+     "v": false,
+     "e": "FAUX : on divise par 2² = 4, ce qui remonte l'énergie vers zéro et donne −3,4 eV.",
+     "sourceQuote": "On a divisé par 2² = 4, donc on est remonté vers zéro"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-017-niveaux-energie-hydrogene.html",
+   "origine": "ecrite",
+   "arene": false,
+   "lot": 4,
+   "q": "Parmi les propositions suivantes relatives à l'analogie de l'électron prisonnier, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "L'électron est attiré par le noyau par attraction électrique.",
+     "v": true,
+     "e": "VRAI. C'est cette attraction qui retient l'électron et justifie qu'on le décrive comme lié au noyau.",
+     "sourceQuote": "l'électron est attiré par le noyau (attraction électrique)"
+    },
+    {
+     "t": "Pour rapprocher l'électron du noyau, il faut descendre en énergie.",
+     "v": true,
+     "e": "VRAI. Se rapprocher du noyau, c'est aller vers les valeurs de plus en plus négatives de l'échelle.",
+     "sourceQuote": "pour le rapprocher il faut « descendre » en énergie"
+    },
+    {
+     "t": "Une énergie négative traduit le fait que l'électron est prisonnier du noyau.",
+     "v": true,
+     "e": "VRAI. Une énergie négative signifie que l'électron est retenu : il faudrait lui fournir de l'énergie pour le libérer.",
+     "sourceQuote": "énergie négative = l'électron est « prisonnier » du noyau"
+    },
+    {
+     "t": "Comme une énergie, un rayon peut prendre des valeurs négatives.",
+     "v": false,
+     "e": "FAUX : un rayon est une distance, toujours positive. Seule l'énergie peut être négative, à cause du choix de la référence.",
+     "sourceQuote": "Un rayon est une distance, il est toujours positif ; une énergie, non"
+    },
+    {
+     "t": "L'énergie d'un niveau de l'hydrogène s'écrit Eₙ = −13,6 × n².",
+     "v": false,
+     "e": "FAUX : on divise par n², on ne multiplie pas. La formule est Eₙ = −13,6 / n².",
+     "sourceQuote": "En = −13,6 / n² pour son énergie"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-017-niveaux-energie-hydrogene.html",
+   "origine": "ecrite",
+   "arene": false,
+   "lot": 5,
+   "q": "Parmi les propositions suivantes relatives à la comparaison de deux niveaux d'énergie entre eux, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "−13,6 eV se situe au-dessus de −3,4 eV sur l'échelle.",
+     "v": false,
+     "e": "FAUX : c'est l'inverse. −3,4 eV est plus proche de zéro, donc plus haut que −13,6 eV.",
+     "sourceQuote": "−3,4 eV est au-dessus de −13,6 eV, pas en dessous"
+    },
+    {
+     "t": "Avec des nombres négatifs, « plus grand » veut dire « plus proche de zéro ».",
+     "v": true,
+     "e": "VRAI. C'est la règle de lecture à appliquer sur toute cette échelle : la plus grande énergie est celle qui s'approche le plus de 0.",
+     "sourceQuote": "Avec des nombres négatifs, « plus grand » veut dire « plus proche de zéro »"
+    },
+    {
+     "t": "Le niveau n = 2 est quatre fois plus bas que le niveau n = 1.",
+     "v": false,
+     "e": "FAUX : il est quatre fois moins profond, donc plus haut. Il est situé au-dessus du niveau n = 1 sur l'échelle.",
+     "sourceQuote": "n = 2 n'est pas 4 fois plus bas : il est 4 fois moins profond"
+    },
+    {
+     "t": "Le niveau n = 2 est quatre fois moins profond que le niveau n = 1.",
+     "v": true,
+     "e": "VRAI. −3,4 eV est quatre fois moins profond que −13,6 eV : on a divisé par 2² = 4.",
+     "sourceQuote": "(4 fois moins profond)"
+    },
+    {
+     "t": "−13,6 eV est l'énergie la plus haute de l'atome d'hydrogène.",
+     "v": false,
+     "e": "FAUX : c'est la plus basse. L'énergie la plus haute est 0 eV, atteinte quand l'électron est libre.",
+     "sourceQuote": "C'est la marche la plus basse de tout l'atome d'hydrogène"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-017-niveaux-energie-hydrogene.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 6,
+   "q": "Parmi les propositions suivantes relatives à la lecture du diagramme d'énergie de l'hydrogène, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "L'axe vertical du diagramme est gradué en eV.",
+     "v": true,
+     "e": "VRAI. L'échelle verticale porte directement les énergies exprimées en électronvolts.",
+     "sourceQuote": "l'axe vertical est gradué en eV"
+    },
+    {
+     "t": "Les marches se resserrent à mesure que l'on monte.",
+     "v": true,
+     "e": "VRAI. Les niveaux se rapprochent les uns des autres quand n augmente, puisqu'ils convergent tous vers 0 eV.",
+     "sourceQuote": "les marches se resserrent quand on monte"
+    },
+    {
+     "t": "L'écart entre n = 1 et n = 2 est plus petit que celui entre n = 3 et n = 4.",
+     "v": false,
+     "e": "FAUX : c'est l'inverse. L'écart entre n = 1 et n = 2 est énorme (plus de 10 eV), celui entre n = 3 et n = 4 minuscule.",
+     "sourceQuote": "l'écart entre n = 1 et n = 2 est énorme, celui entre n = 3 et n = 4 minuscule"
+    },
+    {
+     "t": "La ligne 0 eV est tracée en pointillés tout en haut du diagramme.",
+     "v": true,
+     "e": "VRAI. Elle marque la référence de l'échelle, celle que l'électron atteint quand il devient libre.",
+     "sourceQuote": "et tout en haut, en pointillés, la ligne 0 eV"
+    },
+    {
+     "t": "La barre du niveau n = 1 se situe tout en haut du diagramme.",
+     "v": false,
+     "e": "FAUX : elle est tout en bas, à −13,6 eV. C'est la marche la plus basse de l'échelle.",
+     "sourceQuote": "Tout en bas, la barre bleue n = 1 à −13,6 eV"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-017-niveaux-energie-hydrogene.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 7,
+   "q": "Parmi les propositions suivantes relatives au recalcul de tête des niveaux et au contrôle du résultat, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Une seule valeur est à mémoriser, −13,6 eV, le reste se recalculant en divisant par n².",
+     "v": true,
+     "e": "VRAI. Toute l'échelle se reconstruit de tête à partir de cette unique valeur.",
+     "sourceQuote": "Tu n'as qu'une seule valeur à mémoriser : −13,6 eV"
+    },
+    {
+     "t": "Pour obtenir l'énergie du niveau n = 4, on divise −13,6 par 16.",
+     "v": true,
+     "e": "VRAI. n² = 16, donc E₄ = −13,6 / 16 = −0,85 eV.",
+     "sourceQuote": "÷ 9 pour n = 3, ÷ 16 pour n = 4"
+    },
+    {
+     "t": "Une énergie positive annoncée pour un électron encore lié à l'hydrogène doit alerter.",
+     "v": true,
+     "e": "VRAI. Tout électron lié se situe sous la référence 0 eV : une valeur positive signale une erreur dans l'énoncé ou dans le calcul.",
+     "sourceQuote": "Si un énoncé te sort une énergie positive pour un électron encore lié à l'hydrogène"
+    },
+    {
+     "t": "Quand n tend vers l'infini, l'énergie vaut −13,6 eV et l'électron reste retenu par le noyau.",
+     "v": false,
+     "e": "FAUX : quand n tend vers l'infini, l'énergie vaut 0 eV et l'électron est libre, il n'est plus retenu par le noyau.",
+     "sourceQuote": "E = 0 eV : c'est la référence elle-même. L'électron est libre — il n'est plus retenu par le noyau"
+    },
+    {
+     "t": "Une énergie de −20 eV est possible pour un niveau bas de l'hydrogène.",
+     "v": false,
+     "e": "FAUX : rien ne descend sous −13,6 eV, qui est la première marche et le plancher de l'échelle.",
+     "sourceQuote": "rien ne descend en dessous de la première marche"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-018-etats-fondamental-excite-ionise.html",
+   "origine": "ecrite",
+   "arene": false,
+   "lot": 1,
+   "q": "Parmi les propositions suivantes relatives aux trois états de l'atome d'hydrogène et à leur stabilité, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "L'état fondamental correspond à n = 1 et à l'énergie la plus basse.",
+     "v": true,
+     "e": "VRAI. C'est la situation par défaut de l'atome au repos : l'électron occupe la marche la plus basse.",
+     "sourceQuote": "L'état fondamental (n = 1). Énergie la plus basse, atome au repos, le plus stable"
+    },
+    {
+     "t": "Les états excités correspondent à n = 2, 3, 4… et sont instables.",
+     "v": true,
+     "e": "VRAI. L'électron y est monté d'une marche ou de plusieurs, mais la position n'est pas tenable.",
+     "sourceQuote": "Les états excités (n = 2, 3, 4…). Énergie plus haute, atome instable"
+    },
+    {
+     "t": "L'état fondamental est le moins stable des trois.",
+     "v": false,
+     "e": "FAUX : c'est au contraire le plus stable, celui de l'atome au repos, d'énergie la plus basse.",
+     "sourceQuote": "le plus stable (atome au repos)"
+    },
+    {
+     "t": "Dans l'état ionisé, l'atome est devenu H⁺.",
+     "v": true,
+     "e": "VRAI. L'électron a quitté l'atome : il ne reste que le noyau, soit H⁺.",
+     "sourceQuote": "il a quitté l'atome, qui devient H⁺"
+    },
+    {
+     "t": "Un atome placé dans un état excité y reste durablement.",
+     "v": false,
+     "e": "FAUX : un état excité est instable, l'atome va rapidement retomber vers un niveau plus bas.",
+     "sourceQuote": "instable (il va rapidement retomber)"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-018-etats-fondamental-excite-ionise.html",
+   "origine": "ecrite",
+   "arene": false,
+   "lot": 2,
+   "q": "Parmi les propositions suivantes relatives à l'énergie d'ionisation de l'hydrogène, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Ioniser l'hydrogène depuis n = 1 demande de fournir 13,6 eV.",
+     "v": true,
+     "e": "VRAI. C'est l'énergie d'ionisation de H : ce qu'il faut apporter pour arracher l'électron depuis la marche du bas.",
+     "sourceQuote": "il faut donc fournir 13,6 eV : c'est l'énergie d'ionisation de H"
+    },
+    {
+     "t": "Ioniser l'hydrogène, c'est remonter l'électron depuis −13,6 eV jusqu'à E = 0.",
+     "v": true,
+     "e": "VRAI. On parcourt toute l'échelle, de la première marche jusqu'à la référence placée en haut.",
+     "sourceQuote": "c'est faire remonter l'électron depuis la marche du bas, à −13,6 eV, jusqu'à E = 0"
+    },
+    {
+     "t": "L'énergie d'ionisation de l'hydrogène vaut −13,6 eV.",
+     "v": false,
+     "e": "FAUX : elle vaut +13,6 eV. C'est une énergie que l'on fournit, donc comptée positivement ; elle est égale à E₁ au signe près.",
+     "sourceQuote": "l'énergie d'ionisation de H, 13,6 eV, c'est exactement E₁ au signe près"
+    },
+    {
+     "t": "L'ionisation libère de l'énergie au lieu d'en demander.",
+     "v": false,
+     "e": "FAUX : il faut au contraire fournir de l'énergie pour arracher l'électron au noyau qui le retient.",
+     "sourceQuote": "Pour arracher l'électron (ioniser H), il faut donc fournir 13,6 eV"
+    },
+    {
+     "t": "Une fois ionisé, l'atome voit son électron redescendre spontanément vers n = 1.",
+     "v": false,
+     "e": "FAUX : l'électron a quitté l'atome, il ne redescendra pas tout seul. C'est la différence majeure avec un état excité.",
+     "sourceQuote": "Cette fois il ne redescendra pas tout seul"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-018-etats-fondamental-excite-ionise.html",
+   "origine": "ecrite",
+   "arene": false,
+   "lot": 3,
+   "q": "Parmi les propositions suivantes relatives à la différence entre un atome excité et un atome ionisé, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Dans un état excité, l'électron est toujours dans l'atome, simplement plus haut.",
+     "v": true,
+     "e": "VRAI. Seule sa hauteur sur l'échelle a changé : il n'a pas quitté l'atome.",
+     "sourceQuote": "dans un état excité, l'électron est toujours dans l'atome, simplement plus haut"
+    },
+    {
+     "t": "Dans l'état ionisé, l'électron a quitté l'atome.",
+     "v": true,
+     "e": "VRAI. Il a été arraché au noyau : c'est ce qui distingue l'ionisation d'une simple excitation.",
+     "sourceQuote": "L'état ionisé (n → ∞). E = 0 : l'électron est arraché du noyau"
+    },
+    {
+     "t": "Exciter un atome revient à l'ioniser.",
+     "v": false,
+     "e": "FAUX : exciter, c'est monter l'électron d'une marche ; ioniser, c'est le faire sortir de l'atome. Les deux situations sont distinctes.",
+     "sourceQuote": "Excité n'est pas ionisé"
+    },
+    {
+     "t": "Dans l'état ionisé, l'électron occupe une marche plus haute mais reste dans l'atome.",
+     "v": false,
+     "e": "FAUX : dans l'état ionisé, l'électron n'est plus dans l'atome du tout. C'est l'état excité qui correspond à une marche plus haute.",
+     "sourceQuote": "Dans la troisième, il n'y est plus"
+    },
+    {
+     "t": "Entre l'état fondamental et un état excité, seule la hauteur de l'électron change.",
+     "v": true,
+     "e": "VRAI. Dans ces deux états, l'électron reste dans l'atome : seule sa position sur l'échelle diffère.",
+     "sourceQuote": "dans les deux premières lignes il est toujours dans l'atome, seule sa hauteur change"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-018-etats-fondamental-excite-ionise.html",
+   "origine": "reprise",
+   "arene": false,
+   "lot": 4,
+   "q": "Parmi les propositions suivantes relatives aux limites et au domaine de validité du modèle de Bohr, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le modèle de Bohr fonctionne uniquement pour les atomes possédant un seul électron.",
+     "v": true,
+     "e": "VRAI. Le modèle ne vaut que pour les atomes à 1 électron : H, He⁺, Li²⁺…",
+     "sourceQuote": "Le modèle de Bohr fonctionne uniquement pour les atomes à 1 électron"
+    },
+    {
+     "t": "Dès qu'il y a plusieurs électrons, les interactions électron-électron rendent le modèle de Bohr inapplicable.",
+     "v": true,
+     "e": "VRAI. Les électrons se repoussent entre eux, et ces interactions font sortir la situation du cadre du modèle.",
+     "sourceQuote": "les interactions e⁻/e⁻ (les électrons se repoussent entre eux) rendent le modèle inapplicable"
+    },
+    {
+     "t": "Le modèle de Bohr s'applique à tous les atomes du tableau périodique sans exception.",
+     "v": false,
+     "e": "FAUX : il ne s'applique qu'aux espèces à un seul électron. Au-delà, il faut un modèle plus complet.",
+     "sourceQuote": "Dès qu'il y a plusieurs électrons"
+    },
+    {
+     "t": "Pour un atome polyélectronique, le modèle plus complet à utiliser décrit toujours l'électron sur une orbite circulaire précise.",
+     "v": false,
+     "e": "FAUX : le modèle plus complet ne décrit justement plus l'électron sur une orbite précise.",
+     "sourceQuote": "qui ne décrit plus l'électron sur une orbite précise"
+    },
+    {
+     "t": "He⁺ et Li²⁺ font partie des espèces auxquelles le modèle de Bohr peut s'appliquer.",
+     "v": true,
+     "e": "VRAI. Ces deux ions ne portent qu'un seul électron : ils ressemblent à l'hydrogène et relèvent du modèle.",
+     "sourceQuote": "ceux qui lui ressemblent, comme He⁺ ou Li²⁺"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-018-etats-fondamental-excite-ionise.html",
+   "origine": "ecrite",
+   "arene": false,
+   "lot": 5,
+   "q": "Parmi les propositions suivantes relatives à la distinction entre He et He⁺ vis-à-vis du modèle de Bohr, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "He⁺ ne possède qu'un seul électron.",
+     "v": true,
+     "e": "VRAI. L'ion He⁺ a perdu un électron : il n'en garde qu'un, ce qui le place dans le champ du modèle de Bohr.",
+     "sourceQuote": "He⁺ n'a qu'un électron, Bohr s'applique"
+    },
+    {
+     "t": "He possède deux électrons.",
+     "v": true,
+     "e": "VRAI. L'hélium neutre en porte deux, ce qui suffit à faire sortir le modèle de Bohr de son domaine de validité.",
+     "sourceQuote": "He en a deux, Bohr ne s'applique pas"
+    },
+    {
+     "t": "He et He⁺ se traitent de la même façon vis-à-vis du modèle de Bohr.",
+     "v": false,
+     "e": "FAUX : la charge change tout. Le modèle vaut pour He⁺ mais pas pour He, qui compte deux électrons.",
+     "sourceQuote": "Et He⁺ n'est pas He"
+    },
+    {
+     "t": "Le modèle de Bohr décrit correctement l'atome d'hélium neutre.",
+     "v": false,
+     "e": "FAUX : l'hélium neutre a deux électrons, qui se repoussent. Le modèle ne s'y applique pas.",
+     "sourceQuote": "He en a deux, Bohr ne s'applique pas"
+    },
+    {
+     "t": "C'est le symbole chimique, et non le nombre d'électrons, qui décide de l'applicabilité du modèle.",
+     "v": false,
+     "e": "FAUX : le seul critère est le nombre d'électrons. Deux espèces de même symbole, He et He⁺, ne se comportent pas de la même façon.",
+     "sourceQuote": "Le modèle de Bohr fonctionne uniquement pour les atomes à 1 électron"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-018-etats-fondamental-excite-ionise.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 6,
+   "q": "Parmi les propositions suivantes relatives à la lecture d'un énoncé décrivant l'état d'un atome d'hydrogène, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "« L'atome est dans son état fondamental » se traduit par n = 1.",
+     "v": true,
+     "e": "VRAI. C'est la traduction directe : l'électron occupe la marche la plus basse.",
+     "sourceQuote": "« L'atome est dans son état fondamental » = n = 1"
+    },
+    {
+     "t": "« L'atome est excité » se traduit par n ≥ 2.",
+     "v": true,
+     "e": "VRAI. Et l'information utile qui vient avec : l'atome va retomber.",
+     "sourceQuote": "« L'atome est excité » = n ≥ 2, et il va retomber"
+    },
+    {
+     "t": "« On ionise l'atome » signifie qu'on l'emmène jusqu'à E = 0.",
+     "v": true,
+     "e": "VRAI. Ioniser, c'est amener l'électron jusqu'au haut de l'échelle, là où il devient libre.",
+     "sourceQuote": "« On ionise l'atome » = on l'emmène jusqu'à E = 0"
+    },
+    {
+     "t": "Les 13,6 eV de l'ionisation de l'hydrogène n'ont aucun rapport avec la valeur de E₁.",
+     "v": false,
+     "e": "FAUX : c'est exactement E₁ au signe près, puisqu'on remonte toute l'échelle depuis la marche du bas.",
+     "sourceQuote": "c'est exactement E₁ au signe près"
+    },
+    {
+     "t": "Il faut poser la formule avant d'identifier l'état décrit par l'énoncé.",
+     "v": false,
+     "e": "FAUX : on repère d'abord l'état décrit, avant de sortir la moindre formule. C'est ce repérage qui indique quelle valeur utiliser.",
+     "sourceQuote": "Repère d'abord l'état que l'énoncé te décrit, avant de sortir la moindre formule"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-018-etats-fondamental-excite-ionise.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 7,
+   "q": "Parmi les propositions suivantes relatives à ce que l'on conserve du modèle de Bohr malgré ses limites, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "La quantification, les niveaux et les trois états restent vrais et au programme.",
+     "v": true,
+     "e": "VRAI. Les limites du modèle ne suppriment rien de ce qui vient d'être posé : ces notions restent exigibles.",
+     "sourceQuote": "la quantification, les niveaux, les trois états — reste vrai et reste au programme"
+    },
+    {
+     "t": "Les limites du modèle justifient de le mettre de côté.",
+     "v": false,
+     "e": "FAUX : ce n'est pas une raison de l'écarter. Il faut seulement savoir jusqu'où il vaut.",
+     "sourceQuote": "Ce n'est pas une raison de le mettre de côté"
+    },
+    {
+     "t": "Ces limites dispensent de savoir jusqu'où le modèle a le droit d'aller.",
+     "v": false,
+     "e": "FAUX : c'est précisément ce qu'il faut savoir. Connaître le domaine de validité fait partie de la maîtrise du modèle.",
+     "sourceQuote": "Il faut simplement savoir jusqu'où ce modèle a le droit d'aller"
+    },
+    {
+     "t": "Sur l'échelle de départ, la marche la plus basse est à −13,6 eV pour n = 1.",
+     "v": true,
+     "e": "VRAI. C'est le plancher de l'échelle sur laquelle se placent les trois états.",
+     "sourceQuote": "la marche la plus basse à −13,6 eV pour n = 1"
+    },
+    {
+     "t": "Les marches de cette échelle s'espacent de plus en plus quand on monte.",
+     "v": false,
+     "e": "FAUX : elles se resserrent au contraire à mesure que l'on monte vers 0 eV.",
+     "sourceQuote": "des marches de plus en plus resserrées au-dessus"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-019-absorption-emission-logique.html",
+   "origine": "reprise",
+   "arene": false,
+   "lot": 1,
+   "q": "Parmi les propositions suivantes relatives à la logique physique de la montée d'un électron entre niveaux, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Pour s'éloigner du noyau, l'électron doit lutter contre l'attraction du noyau et absorber de l'énergie.",
+     "v": true,
+     "e": "VRAI. Monter, c'est-à-dire s'éloigner, demande de lutter contre l'attraction du noyau, donc d'absorber de l'énergie.",
+     "sourceQuote": "l'électron doit lutter contre l'attraction du noyau"
+    },
+    {
+     "t": "Le passage de n = 1 à n = 2 se fait en absorbant un photon d'énergie.",
+     "v": true,
+     "e": "VRAI. C'est l'exemple donné pour la montée : l'électron capte un photon et gagne le niveau supérieur.",
+     "sourceQuote": "l'électron passe de n = 1 → n = 2 en absorbant un photon d'énergie"
+    },
+    {
+     "t": "Pour monter de niveau, l'électron émet spontanément de l'énergie, comme une balle qui tombe.",
+     "v": false,
+     "e": "FAUX : monter exige d'absorber de l'énergie, comme soulever une balle. C'est la descente qui correspond à l'émission, comme une balle qui tombe.",
+     "sourceQuote": "Monter, c'est comme soulever une balle : tu dois fournir de l'énergie"
+    },
+    {
+     "t": "Le noyau, chargé positivement, attire l'électron chargé négativement.",
+     "v": true,
+     "e": "VRAI. C'est cette attraction entre charges opposées qui rend la montée coûteuse en énergie.",
+     "sourceQuote": "le noyau (chargé +) attire l'électron (chargé −)"
+    },
+    {
+     "t": "En absorption, l'électron démarre sur un niveau haut et finit sur un niveau plus bas.",
+     "v": false,
+     "e": "FAUX : en absorption, il démarre en bas et finit plus haut. C'est l'émission qui part du haut vers le bas.",
+     "sourceQuote": "Il démarre en bas (nᵢ = 1, 2, 3…)"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-019-absorption-emission-logique.html",
+   "origine": "ecrite",
+   "arene": false,
+   "lot": 2,
+   "q": "Parmi les propositions suivantes relatives à la descente d'un électron vers un niveau inférieur, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "En descendant, l'électron perd de l'énergie et en émet.",
+     "v": true,
+     "e": "VRAI. L'énergie perdue en tombant ne disparaît pas : elle est émise vers l'extérieur.",
+     "sourceQuote": "il perd de l'énergie → il ÉMET de l'énergie"
+    },
+    {
+     "t": "Cette énergie part sous forme de lumière.",
+     "v": true,
+     "e": "VRAI. Elle est emportée par un photon : c'est ainsi qu'un atome qui retombe produit de la lumière.",
+     "sourceQuote": "Cette énergie part sous forme de lumière (un photon)"
+    },
+    {
+     "t": "Descendre d'un niveau exige de fournir de l'énergie à l'électron.",
+     "v": false,
+     "e": "FAUX : rien à fournir. L'électron est naturellement attiré vers le noyau, la descente se fait toute seule.",
+     "sourceQuote": "Là, rien à fournir : l'électron est naturellement attiré vers le noyau"
+    },
+    {
+     "t": "Descendre de niveau, c'est s'éloigner du noyau.",
+     "v": false,
+     "e": "FAUX : descendre, c'est se rapprocher du noyau. C'est monter qui correspond à s'en éloigner.",
+     "sourceQuote": "Pour DESCENDRE (se rapprocher du noyau)"
+    },
+    {
+     "t": "L'exemple donné pour la descente est un passage de n = 1 à n = 3.",
+     "v": false,
+     "e": "FAUX : l'exemple de descente est n = 3 → n = 1, avec émission d'un photon lumineux. Le passage de n = 1 à n = 3 serait une montée.",
+     "sourceQuote": "l'électron tombe de n = 3 → n = 1 en émettant un photon lumineux"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-019-absorption-emission-logique.html",
+   "origine": "ecrite",
+   "arene": false,
+   "lot": 3,
+   "q": "Parmi les propositions suivantes relatives aux notations nᵢ et nf, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "nᵢ désigne le niveau initial, là où l'électron commence.",
+     "v": true,
+     "e": "VRAI. C'est le point de départ de la transition, quel que soit le sens du déplacement.",
+     "sourceQuote": "Le niveau initial — là où l'électron commence"
+    },
+    {
+     "t": "nf désigne le niveau final, là où l'électron arrive.",
+     "v": true,
+     "e": "VRAI. C'est le point d'arrivée de la transition.",
+     "sourceQuote": "Le niveau final — là où l'électron arrive"
+    },
+    {
+     "t": "nf désigne le niveau de départ de la transition.",
+     "v": false,
+     "e": "FAUX : le départ, c'est nᵢ. Le nf est le niveau d'arrivée.",
+     "sourceQuote": "nᵢ = initial, nf = final"
+    },
+    {
+     "t": "Cette fiche introduit déjà la formule de calcul de l'énergie d'une transition.",
+     "v": false,
+     "e": "FAUX : elle ne contient volontairement aucun calcul. Elle installe le sens physique du déplacement et la notation, la formule vient ensuite.",
+     "sourceQuote": "Cette fiche n'a volontairement aucun calcul"
+    },
+    {
+     "t": "On écrit les deux nombres dans l'ordre nᵢ puis nf.",
+     "v": true,
+     "e": "VRAI. Départ d'abord, arrivée ensuite : c'est l'ordre dans lequel la formule les réclamera.",
+     "sourceQuote": "écris d'abord les deux nombres, dans l'ordre : nᵢ = … (départ) puis nf = … (arrivée)"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-019-absorption-emission-logique.html",
+   "origine": "ecrite",
+   "arene": false,
+   "lot": 4,
+   "q": "Parmi les propositions suivantes relatives au tableau comparant absorption et émission, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "En absorption, le photon est entrant.",
+     "v": true,
+     "e": "VRAI. L'électron reçoit de l'énergie : le photon entre dans l'atome.",
+     "sourceQuote": "L'électron reçoit de l'énergie (photon entrant)"
+    },
+    {
+     "t": "En émission, le photon est sortant.",
+     "v": true,
+     "e": "VRAI. L'électron libère de l'énergie : le photon quitte l'atome, c'est la lumière émise.",
+     "sourceQuote": "L'électron libère de l'énergie (photon sortant = lumière !)"
+    },
+    {
+     "t": "En émission, l'électron reçoit de l'énergie.",
+     "v": false,
+     "e": "FAUX : il en libère. C'est en absorption qu'il en reçoit.",
+     "sourceQuote": "il perd de l'énergie → il ÉMET de l'énergie"
+    },
+    {
+     "t": "En émission, l'électron finit sur un niveau plus haut.",
+     "v": false,
+     "e": "FAUX : il finit plus bas. Émettre, c'est descendre vers un niveau inférieur.",
+     "sourceQuote": "Il finit plus bas (nf = 1, 2, 3…)"
+    },
+    {
+     "t": "L'exemple d'absorption donné est nᵢ = 1 → nf = 3.",
+     "v": true,
+     "e": "VRAI. L'électron monte de n = 1 à n = 3 : le départ est bas, l'arrivée plus haute.",
+     "sourceQuote": "nᵢ = 1 → nf = 3 (l'électron monte de n = 1 à n = 3)"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-019-absorption-emission-logique.html",
+   "origine": "ecrite",
+   "arene": false,
+   "lot": 5,
+   "q": "Parmi les propositions suivantes relatives à l'attribution des valeurs à nᵢ et nf, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "nᵢ est toujours le plus petit des deux nombres.",
+     "v": false,
+     "e": "FAUX : nᵢ est le niveau de départ, qu'il soit grand ou petit. En émission, il est le plus grand des deux.",
+     "sourceQuote": "nᵢ n'est pas « le plus petit des deux »"
+    },
+    {
+     "t": "Dans l'exemple d'émission donné, nᵢ = 4 et nf = 2.",
+     "v": true,
+     "e": "VRAI. Le départ est en haut, l'arrivée plus bas : l'électron tombe de n = 4 vers n = 2.",
+     "sourceQuote": "En émission, le départ est en haut : nᵢ = 4 et nf = 2"
+    },
+    {
+     "t": "Ranger machinalement le petit nombre en nᵢ inverse le sens de la transition.",
+     "v": true,
+     "e": "VRAI. On transforme alors une émission en absorption, et l'ensemble du raisonnement part de travers.",
+     "sourceQuote": "Si tu ranges machinalement le petit nombre en nᵢ, tu inverses le sens de la transition"
+    },
+    {
+     "t": "Cette inversion reste sans conséquence pour la suite du chapitre.",
+     "v": false,
+     "e": "FAUX : elle se répercute dès la fiche suivante sur le signe du résultat.",
+     "sourceQuote": "tu inverses le sens de la transition — et, dès la fiche suivante, le signe du résultat"
+    },
+    {
+     "t": "Les étiquettes nᵢ et nf peuvent être posées après avoir appliqué la formule.",
+     "v": false,
+     "e": "FAUX : tant qu'elles ne sont pas posées, on ne touche à aucune formule. C'est ce geste qui sécurise le sens de la transition.",
+     "sourceQuote": "Tant que ces deux étiquettes ne sont pas posées sur ta feuille, ne touche à aucune formule"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-019-absorption-emission-logique.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 6,
+   "q": "Parmi les propositions suivantes relatives à la représentation des transitions sur la figure, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Sur les orbites, la flèche d'absorption part d'un grand cercle vers un plus petit.",
+     "v": false,
+     "e": "FAUX : elle part d'un petit cercle vers un plus grand. Absorber, c'est s'éloigner du noyau, donc gagner une orbite plus large.",
+     "sourceQuote": "part d'un petit cercle vers un plus grand"
+    },
+    {
+     "t": "S'éloigner du noyau et monter en énergie décrivent le même mouvement.",
+     "v": true,
+     "e": "VRAI. Les deux moitiés de la figure représentent la même chose : l'une avec des orbites, l'autre avec une échelle d'énergie.",
+     "sourceQuote": "s'éloigner du noyau et monter en énergie, c'est la même chose"
+    },
+    {
+     "t": "Sur les orbites, la flèche d'émission fait le trajet inverse, vers le noyau.",
+     "v": true,
+     "e": "VRAI. Émettre correspond à se rapprocher du noyau, donc à passer sur une orbite plus resserrée.",
+     "sourceQuote": "« émission d'énergie ↓ » fait le trajet inverse, vers le noyau"
+    },
+    {
+     "t": "Sur l'échelle d'énergie, la flèche d'émission monte vers les niveaux du haut.",
+     "v": false,
+     "e": "FAUX : c'est la flèche d'absorption qui monte. Celle d'émission redescend vers n = 1.",
+     "sourceQuote": "celle d'émission redescend vers n = 1"
+    },
+    {
+     "t": "Les deux moitiés de la figure décrivent deux phénomènes différents.",
+     "v": false,
+     "e": "FAUX : c'est le même mouvement dessiné de deux façons, une fois sur les orbites, une fois sur l'échelle d'énergie.",
+     "sourceQuote": "Même mouvement, deux façons de le dessiner"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-019-absorption-emission-logique.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 7,
+   "q": "Parmi les propositions suivantes relatives au moyen de trancher entre absorption et émission, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Comparer nf à nᵢ suffit à trancher.",
+     "v": true,
+     "e": "VRAI. Une seule comparaison, celle de l'arrivée au départ, décide du sens de la transition.",
+     "sourceQuote": "Une seule ligne suffit à trancher : compare nf à nᵢ"
+    },
+    {
+     "t": "Si l'arrivée est plus haute que le départ, il s'agit d'une absorption.",
+     "v": true,
+     "e": "VRAI. L'électron monte, donc il a fallu lui apporter de l'énergie.",
+     "sourceQuote": "Si l'arrivée est plus haute que le départ, c'est une absorption"
+    },
+    {
+     "t": "Une transition nᵢ = 2 → nf = 5 est une émission.",
+     "v": false,
+     "e": "FAUX : l'arrivée est plus haute que le départ, c'est donc une absorption.",
+     "sourceQuote": "Si elle est plus basse, c'est une émission"
+    },
+    {
+     "t": "Une transition nᵢ = 5 → nf = 2 correspond à une absorption de lumière.",
+     "v": false,
+     "e": "FAUX : l'arrivée est plus basse que le départ, c'est une émission : l'électron tombe vers le noyau et libère de la lumière.",
+     "sourceQuote": "Descendre = émettre (l'électron tombe vers le noyau et libère l'énergie sous forme de lumière)"
+    },
+    {
+     "t": "Écrire nᵢ puis nf évite la moitié des erreurs de ce chapitre.",
+     "v": true,
+     "e": "VRAI. Poser les deux étiquettes avant tout calcul est le geste qui sécurise le sens de la transition.",
+     "sourceQuote": "C'est le geste qui évite la moitié des erreurs sur ce chapitre"
+    }
+   ]
+  }
+ ]
 }

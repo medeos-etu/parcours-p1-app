@@ -3,276 +3,1099 @@
   "chapitre": 1,
   "questions": [
     {
-      "fiche": "physique-007-trois-etats-matiere.html",
-      "origine": "reprise",
-      "source": "physique/medi-plus-60j/phy-ch01-p2_exo_4.json",
+      "fiche": "physique-016-masse-molaire.html",
+      "origine": "ecrite",
       "arene": false,
       "lot": 1,
-      "q": "Parmi les propositions suivantes relatives aux propriétés des trois états de la matière, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "q": "Parmi les propositions suivantes relatives à la définition de la masse molaire M, laquelle (lesquelles) est (sont) exacte(s) ?",
       "items": [
         {
-          "t": "Le liquide possède un volume propre mais pas de forme propre.",
+          "t": "La masse molaire M est la masse d'une mole d'une espèce chimique.",
           "v": true,
-          "e": "VRAI. Le liquide a bien un volume propre, comme le solide, mais il n'a pas de forme propre : il épouse la forme de son contenant.",
-          "sourceQuote": "Le liquide a bien un volume propre — mais pas de forme propre : il épouse le contenant."
+          "e": "VRAI. C'est la définition même : M est la masse que pèse une mole entière — un paquet complet — de l'espèce considérée.",
+          "sourceQuote": "M = la masse d'une mole d'une espèce chimique"
         },
         {
-          "t": "Le gaz n'a ni volume propre ni forme propre et occupe tout l'espace disponible.",
-          "v": true,
-          "e": "VRAI. Le gaz est le seul des trois états à ne posséder aucune des deux : faute d'interactions pour le retenir, il occupe tout l'espace disponible.",
-          "sourceQuote": "Seul le gaz n'a ni l'un ni l'autre ."
-        },
-        {
-          "t": "Le solide est le seul des trois états à être ordonné (structure cristalline).",
-          "v": true,
-          "e": "VRAI. L'ordre est « ordonné (cristal) » pour le solide, et « non ordonné » aussi bien pour le liquide que pour le gaz.",
-          "sourceQuote": "Ordre Ordonné (cristal) Non ordonné Non ordonné"
-        },
-        {
-          "t": "La compressibilité est forte pour le solide et faible pour le gaz.",
+          "t": "La masse molaire s'exprime en mol/g.",
           "v": false,
-          "e": "FAUX : c'est exactement l'inverse. La compressibilité est très faible pour le solide, faible pour le liquide et forte pour le gaz.",
-          "sourceQuote": "Compressibilité Très faible Faible Forte"
+          "e": "FAUX : elle s'exprime en g/mol, c'est-à-dire une masse par mole. L'unité inversée mol/g n'a pas de sens pour une masse molaire.",
+          "sourceQuote": "exprimée en g/mol"
         },
         {
-          "t": "Dans le liquide, le mouvement des particules correspond à une vibration sur place sans déplacement.",
+          "t": "Pour un atome, M est numériquement égale à son nombre de nucléons A.",
+          "v": true,
+          "e": "VRAI. Pour un atome, la valeur de M en g/mol se lit directement sur le nombre de nucléons : 1 nucléon pour l'hydrogène donne 1 g/mol, 16 pour l'oxygène donnent 16 g/mol.",
+          "sourceQuote": "M est égale au nombre de nucléons A"
+        },
+        {
+          "t": "Pour une molécule, M est la moyenne des masses molaires atomiques des atomes qui la composent.",
           "v": false,
-          "e": "FAUX : la vibration sur place est le mouvement du solide. Dans le liquide, les particules sont animées d'une agitation thermique, appelée mouvement brownien.",
-          "sourceQuote": "Mouvement Vibration sur place Agitation thermique (mouvement brownien) Trajectoires libres entre chocs"
+          "e": "FAUX : c'est la somme, pas la moyenne. Pour l'eau, 1 + 1 + 16 = 18 g/mol ; une moyenne donnerait 6 g/mol, une valeur trois fois trop petite.",
+          "sourceQuote": "somme des masses molaires atomiques des atomes qui la composent"
+        },
+        {
+          "t": "La masse molaire fait le lien entre l'échelle atomique et l'échelle macroscopique.",
+          "v": true,
+          "e": "VRAI. Elle traduit un nombre de nucléons, grandeur du monde atomique, en grammes, grandeur de la balance : c'est exactement le pont entre les deux échelles.",
+          "sourceQuote": "entre l'atomique et le macroscopique"
         }
       ]
     },
     {
-      "fiche": "physique-007-trois-etats-matiere.html",
+      "fiche": "physique-016-masse-molaire.html",
       "origine": "ecrite",
       "arene": false,
       "lot": 2,
-      "q": "Parmi les propositions suivantes relatives aux changements d'état et au nom de chaque transition, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "q": "Parmi les propositions suivantes relatives au calcul de la masse molaire de l'eau, laquelle (lesquelles) est (sont) exacte(s) ?",
       "items": [
         {
-          "t": "Le passage de l'état solide à l'état liquide porte le nom de fusion.",
+          "t": "L'hydrogène, qui compte 1 nucléon, a une masse molaire de 1 g/mol.",
           "v": true,
-          "e": "VRAI. C'est la fusion : les particules gardent un contact entre elles mais peuvent désormais glisser les unes sur les autres.",
-          "sourceQuote": "Solide → Liquide : la fusion. Les particules gardent un contact mais peuvent désormais glisser les unes sur les autres."
+          "e": "VRAI. La règle tombe juste : un seul nucléon, donc 1 g/mol.",
+          "sourceQuote": "l'hydrogène a 1 nucléon → 1 g/mol"
         },
         {
-          "t": "Le passage de l'état liquide à l'état gazeux porte le nom de solidification.",
+          "t": "L'oxygène, qui compte 16 nucléons, a une masse molaire de 16 g/mol.",
+          "v": true,
+          "e": "VRAI. Seize nucléons donnent 16 g/mol : c'est la deuxième valeur qui sert dans le calcul de l'eau.",
+          "sourceQuote": "l'oxygène en a 16 → 16 g/mol"
+        },
+        {
+          "t": "La masse molaire de l'eau vaut 1 + 16 = 17 g/mol.",
           "v": false,
-          "e": "FAUX : le passage liquide → gaz est la vaporisation. La solidification, elle, fait partie des transitions inverses, obtenues par refroidissement.",
-          "sourceQuote": "Liquide → Gaz : la vaporisation. Les particules s'échappent les unes des autres"
+          "e": "FAUX : c'est le piège de l'indice oublié. La molécule d'eau contient deux hydrogènes, donc 1 + 1 + 16 = 18 g/mol, et non 17.",
+          "sourceQuote": "H₂O, ce n'est pas 1 + 16 = 17"
         },
         {
-          "t": "La sublimation désigne le passage direct de l'état solide à l'état gazeux, sans étape liquide.",
+          "t": "La masse molaire de l'eau vaut 18 g/mol, parce que l'hydrogène y est compté deux fois.",
           "v": true,
-          "e": "VRAI. La sublimation saute l'étape liquide : le solide part directement en gaz.",
-          "sourceQuote": "Solide → Gaz directement : la sublimation. On saute l'étape liquide."
+          "e": "VRAI. Deux atomes d'hydrogène à 1 g/mol chacun, plus un atome d'oxygène à 16 g/mol : 1 + 1 + 16 = 18 g/mol.",
+          "sourceQuote": "M(H₂O) = 1 + 1 + 16 = 18 g/mol"
         },
         {
-          "t": "L'exemple de sublimation à retenir est le CO₂ solide, appelé « glace carbonique ».",
-          "v": true,
-          "e": "VRAI. Le dioxyde de carbone solide, dit « glace carbonique », est l'exemple de référence de la sublimation.",
-          "sourceQuote": "L'exemple à connaître : le CO₂ solide, dit « glace carbonique »."
-        },
-        {
-          "t": "La condensation, la solidification et la condensation solide correspondent à un apport de chaleur.",
+          "t": "Un atome qui apparaît plusieurs fois dans la formule n'est compté qu'une seule fois dans l'addition.",
           "v": false,
-          "e": "FAUX : ces trois transitions inverses correspondent à un refroidissement. On retire de l'énergie, et les interactions reprennent le dessus.",
-          "sourceQuote": "Les transitions inverses — condensation , solidification , condensation solide — correspondent à un refroidissement ."
+          "e": "FAUX : chaque atome est compté autant de fois qu'il apparaît dans la formule. C'est précisément ce qui fait passer l'eau de 17 à 18 g/mol.",
+          "sourceQuote": "chacun compté autant de fois qu'il apparaît dans la formule"
         }
       ]
     },
     {
-      "fiche": "physique-007-trois-etats-matiere.html",
+      "fiche": "physique-016-masse-molaire.html",
       "origine": "ecrite",
       "arene": false,
       "lot": 3,
-      "q": "Parmi les propositions suivantes relatives aux interactions entre particules et à leur mouvement selon l'état, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "q": "Parmi les propositions suivantes relatives aux trois masses molaires qui reviennent dans tout le chapitre, laquelle (lesquelles) est (sont) exacte(s) ?",
       "items": [
         {
-          "t": "À l'état solide, les interactions entre particules sont très fortes.",
+          "t": "La masse molaire du glucose vaut 180 g/mol.",
           "v": true,
-          "e": "VRAI. Ce sont ces interactions très fortes qui immobilisent les particules et donnent au solide sa forme et son volume propres.",
-          "sourceQuote": "Interactions Très fortes Faibles Nulles ou négligeables"
+          "e": "VRAI. C'est l'une des trois valeurs à reconnaître d'emblée.",
+          "sourceQuote": "Les trois valeurs du chapitre : H₂O = 18, NaCl = 58,5, glucose = 180 g/mol"
         },
         {
-          "t": "À l'état liquide, les interactions entre particules sont nulles ou négligeables.",
+          "t": "La masse molaire du sel NaCl vaut 58,5 g/mol.",
+          "v": true,
+          "e": "VRAI. C'est la valeur du sel, celle qui revient dans tous les calculs sur le sérum physiologique.",
+          "sourceQuote": "Les trois valeurs du chapitre : H₂O = 18, NaCl = 58,5, glucose = 180 g/mol"
+        },
+        {
+          "t": "La masse molaire de l'eau est celle que l'on sait recalculer soi-même en quelques secondes.",
+          "v": true,
+          "e": "VRAI. L'eau se recalcule à partir de ses atomes (1 + 1 + 16), alors que le sel et le glucose sont fournis par l'énoncé.",
+          "sourceQuote": "tu sais la recalculer en trois secondes"
+        },
+        {
+          "t": "La masse molaire de l'eau vaut 58,5 g/mol.",
           "v": false,
-          "e": "FAUX : à l'état liquide les interactions sont faibles, pas nulles. Ce sont les interactions de l'état gazeux qui sont nulles ou négligeables.",
-          "sourceQuote": "Interactions Très fortes Faibles Nulles ou négligeables"
+          "e": "FAUX : 58,5 g/mol est la valeur du sel NaCl. L'eau vaut 18 g/mol.",
+          "sourceQuote": "Les trois valeurs du chapitre : H₂O = 18, NaCl = 58,5, glucose = 180 g/mol"
         },
         {
-          "t": "À l'état gazeux, les particules suivent des trajectoires libres entre chocs.",
-          "v": true,
-          "e": "VRAI. Plus rien ne les retient : elles se déplacent librement et ne changent de direction qu'en se heurtant.",
-          "sourceQuote": "Mouvement Vibration sur place Agitation thermique (mouvement brownien) Trajectoires libres entre chocs"
-        },
-        {
-          "t": "L'agitation thermique qui anime les particules d'un liquide porte aussi le nom de mouvement brownien.",
-          "v": true,
-          "e": "VRAI. Le mouvement caractéristique de l'état liquide est l'agitation thermique, également appelée mouvement brownien.",
-          "sourceQuote": "Mouvement Vibration sur place Agitation thermique (mouvement brownien) Trajectoires libres entre chocs"
-        },
-        {
-          "t": "Les deux critères qui distinguent les trois états sont la masse des particules et leur charge électrique.",
+          "t": "Les masses molaires du sel et du glucose sont, elles aussi, à recalculer à partir du nombre de nucléons.",
           "v": false,
-          "e": "FAUX : les deux critères sont l'intensité des interactions entre particules et la liberté de mouvement qui leur reste. Ni la masse ni la charge n'interviennent ici.",
-          "sourceQuote": "qui se distinguent par l'intensité des interactions entre particules et par leur liberté de mouvement"
+          "e": "FAUX : ces deux valeurs-là sont données par l'énoncé, il suffit de les reconnaître. Ce qu'on demande, c'est de savoir quoi en faire.",
+          "sourceQuote": "Valeur donnée par l'énoncé — à reconnaître"
         }
       ]
     },
     {
-      "fiche": "physique-007-trois-etats-matiere.html",
+      "fiche": "physique-016-masse-molaire.html",
       "origine": "ecrite",
       "arene": false,
       "lot": 4,
-      "q": "Parmi les propositions suivantes relatives au volume propre, à la forme propre et à la compressibilité, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "q": "Parmi les propositions suivantes relatives à la façon de lire une masse molaire, laquelle (lesquelles) est (sont) exacte(s) ?",
       "items": [
         {
-          "t": "« Volume propre » et « forme propre » désignent une seule et même propriété.",
-          "v": false,
-          "e": "FAUX : ce sont deux propriétés distinctes, rangées sur deux lignes différentes. Le liquide les sépare justement : il a un volume propre sans avoir de forme propre.",
-          "sourceQuote": "Volume propre et forme propre , ce n'est pas la même ligne."
-        },
-        {
-          "t": "Un liquide est incompressible : sa compressibilité est nulle.",
-          "v": false,
-          "e": "FAUX : un liquide n'est pas incompressible. Sa compressibilité est faible, ce qui n'est pas la même chose que nulle.",
-          "sourceQuote": "Et un liquide n'est pas incompressible : sa compressibilité est faible , pas nulle."
-        },
-        {
-          "t": "Un liquide se comprime plus facilement qu'un solide.",
+          "t": "Une masse molaire de 18 g/mol pour l'eau se lit « 1 mole d'eau pèse 18 g ».",
           "v": true,
-          "e": "VRAI. La compressibilité du solide est très faible et celle du liquide seulement faible : le liquide se comprime donc plus facilement, même si cela reste très peu.",
-          "sourceQuote": "Compressibilité Très faible Faible Forte"
+          "e": "VRAI. C'est la lecture à faire systématiquement : une phrase, et non une lettre dans une formule.",
+          "sourceQuote": "1 mole d'eau pèse 18 g"
         },
         {
-          "t": "Plus les interactions faiblissent, plus les particules gagnent en liberté.",
-          "v": true,
-          "e": "VRAI. C'est le sens de lecture du tableau : les interactions qui s'affaiblissent libèrent progressivement les particules.",
-          "sourceQuote": "plus les interactions faiblissent, plus les particules gagnent en liberté"
-        },
-        {
-          "t": "Quand les interactions faiblissent, la matière perd d'abord son volume propre, puis sa forme propre.",
+          "t": "Une masse molaire de 180 g/mol pour le glucose se lit « une molécule de glucose pèse 180 g ».",
           "v": false,
-          "e": "FAUX : l'ordre est inverse. La matière perd d'abord sa forme propre — le liquide épouse déjà son contenant — puis son volume propre en devenant gaz.",
-          "sourceQuote": "et plus l'état perd sa forme, puis son volume"
+          "e": "FAUX : ce sont 180 g pour une mole de glucose, c'est-à-dire pour un paquet entier d'entités — pas pour une seule molécule.",
+          "sourceQuote": "1 mole de glucose pèse 180 g"
+        },
+        {
+          "t": "Lue comme une phrase, la masse molaire devient une quantité que l'on peut se représenter sur une balance.",
+          "v": true,
+          "e": "VRAI. C'est tout l'intérêt de la lecture à voix haute : elle rend la valeur concrète, donc mémorisable.",
+          "sourceQuote": "quantité que tu peux te représenter sur une balance"
+        },
+        {
+          "t": "Formulée comme une phrase, la masse molaire reste malgré tout une simple lettre dans une formule.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. Formulée comme une phrase, elle cesse justement d'être une lettre abstraite pour devenir une masse que l'on peut se représenter.",
+          "sourceQuote": "la masse molaire cesse d'être une lettre dans une formule"
+        },
+        {
+          "t": "Cette lecture permet de retrouver le passage des grammes aux moles sans l'apprendre par cœur.",
+          "v": true,
+          "e": "VRAI. Si une mole d'eau pèse 18 g, on retrouve seul comment convertir une masse en quantité de matière.",
+          "sourceQuote": "sans jamais l'apprendre par cœur, la façon de passer des grammes aux moles"
         }
       ]
     },
     {
-      "fiche": "physique-007-trois-etats-matiere.html",
+      "fiche": "physique-016-masse-molaire.html",
       "origine": "ecrite",
       "arene": false,
       "lot": 5,
-      "q": "Parmi les propositions suivantes relatives au moteur des changements d'état et au comportement des particules pendant une transition, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "q": "Parmi les propositions suivantes relatives au problème que la masse molaire vient résoudre, laquelle (lesquelles) est (sont) exacte(s) ?",
       "items": [
         {
-          "t": "L'énergie d'agitation thermique des particules augmente avec la température.",
+          "t": "Une mole correspond à 6,022 × 10²³ entités.",
           "v": true,
-          "e": "VRAI. C'est le point de départ de tout le raisonnement : chauffer, c'est agiter davantage les particules.",
-          "sourceQuote": "L'énergie d'agitation thermique des particules augmente avec T"
+          "e": "VRAI. C'est la taille du paquet : le nombre d'entités que contient une mole.",
+          "sourceQuote": "une mole, c'est 𝒩 = 6,022 × 10²³ entités"
         },
         {
-          "t": "On passe à l'état suivant lorsque l'énergie d'agitation thermique dépasse les interactions qui maintiennent les particules ensemble.",
+          "t": "Au laboratoire, on compte les molécules une à une plutôt que de les peser.",
+          "v": false,
+          "e": "FAUX : au laboratoire, on ne compte pas les molécules, on les pèse. C'est bien pour cela qu'il faut un lien entre un nombre d'entités et une masse.",
+          "sourceQuote": "on ne compte pas les molécules"
+        },
+        {
+          "t": "La masse molaire est le chaînon entre les nucléons du monde atomique et les grammes de la balance.",
           "v": true,
-          "e": "VRAI. Le changement d'état survient au moment où l'agitation l'emporte sur les interactions qui tenaient les particules groupées.",
-          "sourceQuote": "Quand cette énergie dépasse les interactions qui maintiennent les particules ensemble, on passe à l'état suivant."
+          "e": "VRAI. D'un côté on parle de nucléons, de l'autre de grammes : la masse molaire est précisément ce qui relie les deux.",
+          "sourceQuote": "entre le monde des atomes, où on parle de nucléons, et la balance du labo, où on parle de grammes"
         },
         {
-          "t": "Lors de la fusion, les particules perdent tout contact et s'échappent les unes des autres.",
+          "t": "La masse molaire d'une espèce augmente avec la quantité que l'on en pèse.",
           "v": false,
-          "e": "FAUX : lors de la fusion, les particules gardent un contact et se contentent de glisser les unes sur les autres. C'est à la vaporisation qu'elles s'échappent les unes des autres.",
-          "sourceQuote": "Solide → Liquide : la fusion. Les particules gardent un contact mais peuvent désormais glisser les unes sur les autres."
+          "e": "FAUX : M est la masse d'une mole, une valeur propre à l'espèce. L'eau vaut 18 g/mol qu'on en pèse 1 g ou 1 kg.",
+          "sourceQuote": "M = la masse d'une mole d'une espèce chimique"
         },
         {
-          "t": "Un refroidissement apporte de l'énergie aux particules, ce qui affaiblit les interactions.",
+          "t": "Le nombre 6,022 × 10²³ donne la masse d'une mole.",
           "v": false,
-          "e": "FAUX : refroidir revient à retirer de l'énergie. Les interactions reprennent alors le dessus, et la matière revient vers un état plus lié.",
-          "sourceQuote": "On enlève de l'énergie, les interactions reprennent le dessus."
-        },
-        {
-          "t": "Lors de la vaporisation, des interactions résiduelles maintiennent les particules groupées dans un volume limité.",
-          "v": false,
-          "e": "FAUX : à la vaporisation il n'y a plus d'interactions à vaincre. Les particules occupent alors tout l'espace disponible.",
-          "sourceQuote": "Plus d'interactions à vaincre : elles occupent tout l'espace disponible."
+          "e": "FAUX : il en donne le nombre d'entités, pas la masse. La masse d'une mole, c'est la masse molaire, en g/mol.",
+          "sourceQuote": "une mole, c'est 𝒩 = 6,022 × 10²³ entités"
         }
       ]
     },
     {
-      "fiche": "physique-007-trois-etats-matiere.html",
+      "fiche": "physique-016-masse-molaire.html",
       "origine": "ecrite",
       "arene": true,
       "lot": 6,
-      "q": "Parmi les propositions suivantes relatives à la méthode permettant de reconstruire les propriétés des trois états, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "q": "Parmi les propositions suivantes relatives à la règle d'addition appliquée à d'autres molécules formées d'hydrogène et d'oxygène, laquelle (lesquelles) est (sont) exacte(s) ?",
       "items": [
         {
-          "t": "Le raisonnement conseillé part de la liberté de mouvement des particules pour en déduire ensuite l'intensité des interactions.",
-          "v": false,
-          "e": "FAUX : l'ordre est l'inverse. On se demande d'abord quelle est l'intensité des interactions, puis quelle liberté de mouvement en découle.",
-          "sourceQuote": "Pose-toi les deux questions dans cet ordre : quelle est l'intensité des interactions , et quelle liberté de mouvement en découle ?"
-        },
-        {
-          "t": "Des interactions très fortes conduisent à une vibration sur place, donc à un cristal ordonné doté d'une forme et d'un volume propres.",
+          "t": "Le dioxygène O₂ a une masse molaire de 32 g/mol.",
           "v": true,
-          "e": "VRAI. C'est la chaîne de raisonnement complète de l'état solide : interactions très fortes, vibration sur place, ordre cristallin, forme et volume propres.",
-          "sourceQuote": "Interactions très fortes → vibration sur place → cristal ordonné, forme et volume propres."
+          "e": "VRAI. Deux atomes d'oxygène à 16 g/mol chacun : 16 + 16 = 32 g/mol.",
+          "sourceQuote": "l'oxygène en a 16 → 16 g/mol"
         },
         {
-          "t": "Des interactions nulles conduisent à des trajectoires libres entre chocs, donc à un état sans forme propre ni volume propre.",
+          "t": "L'eau oxygénée H₂O₂ a une masse molaire de 34 g/mol.",
           "v": true,
-          "e": "VRAI. C'est la chaîne symétrique, celle de l'état gazeux : plus rien ne retient les particules, donc ni forme ni volume propres.",
-          "sourceQuote": "Interactions nulles → trajectoires libres entre chocs → ni forme, ni volume propre."
+          "e": "VRAI. On additionne les atomes présents : 1 + 1 + 16 + 16 = 34 g/mol.",
+          "sourceQuote": "somme des masses molaires atomiques des atomes qui la composent"
         },
         {
-          "t": "Apprendre par cœur les 18 cases du tableau est présenté comme indispensable.",
-          "v": false,
-          "e": "FAUX : justement pas. Deux questions posées dans le bon ordre suffisent à retrouver les propriétés, ce qui dispense de mémoriser les 18 cases.",
-          "sourceQuote": "Tu n'as pas besoin d'apprendre les 18 cases du tableau par cœur."
+          "t": "Ajouter un atome d'oxygène à une formule augmente sa masse molaire de 16 g/mol.",
+          "v": true,
+          "e": "VRAI. Chaque atome compte pour sa propre masse molaire, autant de fois qu'il apparaît : un oxygène de plus, c'est 16 g/mol de plus.",
+          "sourceQuote": "chacun compté autant de fois qu'il apparaît dans la formule"
         },
         {
-          "t": "Une fois les deux questions posées, il reste malgré tout à mémoriser séparément la ligne « compressibilité ».",
+          "t": "H₂O₂ a la même masse molaire que l'eau, puisque ce sont les mêmes atomes.",
           "v": false,
-          "e": "FAUX : une fois les deux questions posées, tout le reste se reconstruit — la compressibilité comprise, puisqu'elle découle elle aussi de l'intensité des interactions.",
-          "sourceQuote": "Tout le reste se reconstruit."
+          "e": "FAUX : ce ne sont pas les mêmes quantités d'atomes. L'eau vaut 1 + 1 + 16 = 18 g/mol, tandis que H₂O₂ contient un oxygène de plus, soit 34 g/mol.",
+          "sourceQuote": "M(H₂O) = 1 + 1 + 16 = 18 g/mol"
+        },
+        {
+          "t": "Le dioxygène O₂ a une masse molaire de 16 g/mol, car sa formule ne contient qu'une sorte d'atome.",
+          "v": false,
+          "e": "FAUX : on additionne tous les atomes présents, même identiques. Deux oxygènes donnent 16 + 16 = 32 g/mol.",
+          "sourceQuote": "somme des masses molaires atomiques des atomes qui la composent"
         }
       ]
     },
     {
-      "fiche": "physique-007-trois-etats-matiere.html",
+      "fiche": "physique-016-masse-molaire.html",
       "origine": "ecrite",
       "arene": true,
       "lot": 7,
-      "q": "Parmi les propositions suivantes relatives au schéma des trois états et au sens des transitions représentées, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "q": "Parmi les propositions suivantes relatives aux erreurs classiques du calcul d'une masse molaire, laquelle (lesquelles) est (sont) exacte(s) ?",
       "items": [
         {
-          "t": "Les flèches bleues du schéma correspondent à un apport d'énergie, c'est-à-dire à un chauffage.",
+          "t": "De deux atomes, celui qui compte le plus de nucléons a la plus grande masse molaire.",
           "v": true,
-          "e": "VRAI. Les flèches bleues signalent les transitions obtenues en chauffant : fusion, vaporisation, sublimation.",
-          "sourceQuote": "les flèches bleues correspondent à un apport d'énergie (chauffage), les blanches à une perte (refroidissement)"
+          "e": "VRAI. Pour un atome, la masse molaire suit le nombre de nucléons : plus il y en a, plus elle est grande.",
+          "sourceQuote": "M est égale au nombre de nucléons A"
         },
         {
-          "t": "Les flèches blanches du schéma signalent les transitions obtenues en chauffant la matière.",
+          "t": "Le sel a une masse molaire plus élevée que le glucose.",
           "v": false,
-          "e": "FAUX : les flèches blanches correspondent à une perte d'énergie, donc à un refroidissement. Ce sont les flèches bleues qui indiquent un chauffage.",
-          "sourceQuote": "les flèches bleues correspondent à un apport d'énergie (chauffage), les blanches à une perte (refroidissement)"
+          "e": "FAUX : c'est l'inverse. Le sel vaut 58,5 g/mol et le glucose 180 g/mol, soit environ trois fois plus.",
+          "sourceQuote": "Les trois valeurs du chapitre : H₂O = 18, NaCl = 58,5, glucose = 180 g/mol"
         },
         {
-          "t": "Les trois blocs de particules du schéma sont, dans l'ordre, serrées et ordonnées, tassées mais désordonnées, puis dispersées.",
+          "t": "La masse molaire d'une molécule est plus petite que celle de chacun des atomes qui la composent.",
+          "v": false,
+          "e": "FAUX : puisqu'on additionne les masses molaires atomiques, la molécule est forcément plus lourde que chacun de ses atomes pris isolément.",
+          "sourceQuote": "somme des masses molaires atomiques des atomes qui la composent"
+        },
+        {
+          "t": "Un indice oublié dans l'addition se repère facilement, car le résultat devient aberrant.",
+          "v": false,
+          "e": "FAUX : rien ne le signale. 17 au lieu de 18 reste une valeur crédible, et toute la suite du calcul part fausse sans alerte.",
+          "sourceQuote": "Un indice sauté au départ, et tout le calcul qui suit est faux — sans que rien ne le signale."
+        },
+        {
+          "t": "Compter les deux hydrogènes de l'eau au lieu d'un seul fait passer le résultat de 17 à 18 g/mol.",
           "v": true,
-          "e": "VRAI. C'est la traduction visuelle des trois états : le solide serré et ordonné, le liquide tassé mais désordonné, le gaz dispersé.",
-          "sourceQuote": "Repère d'abord les trois blocs de particules — serrées et ordonnées, tassées mais désordonnées, dispersées"
+          "e": "VRAI. C'est exactement l'écart entre l'erreur et le bon calcul : 1 + 16 = 17 contre 1 + 1 + 16 = 18 g/mol.",
+          "sourceQuote": "il y a deux hydrogènes → 1 + 1 + 16 = 18 g/mol"
+        }
+      ]
+    },
+
+    {
+      "fiche": "physique-017-trois-conversions-mole.html",
+      "origine": "reprise",
+      "source": "physique/medi-plus-60j/phy-ch01-p2_lot_1.json",
+      "arene": false,
+      "lot": 1,
+      "q": "Bilan : les trois conversions à automatiser (n = m/M, N = n × 𝒩, n = V/Vₘ). On donne 𝒩 = 6,022 × 10²³ mol⁻¹ et Vₘ = 22,4 L/mol (gaz à 0 °C et 1 atm). Quelle(s) proposition(s) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La formule n = m/M permet de passer d'une masse à une quantité de matière.",
+          "v": true,
+          "e": "VRAI. On a m grammes sur la balance, une mole en pèse M : en divisant, on obtient des moles.",
+          "sourceQuote": "n = m / M — de la masse vers les moles"
         },
         {
-          "t": "Sur le schéma, le bloc de particules dispersées représente l'état solide.",
-          "v": false,
-          "e": "FAUX : le bloc de particules dispersées est le troisième, celui du gaz. L'état solide correspond au premier bloc, aux particules serrées et ordonnées.",
-          "sourceQuote": "Repère d'abord les trois blocs de particules — serrées et ordonnées, tassées mais désordonnées, dispersées"
+          "t": "Le nombre d'entités N est sans unité.",
+          "v": true,
+          "e": "VRAI. N est un simple comptage, donc sans unité. C'est 𝒩 qui porte l'unité mol⁻¹.",
+          "sourceQuote": "N est un nombre d'entités, donc sans unité"
         },
         {
-          "t": "Les trois transitions inverses représentées sont la condensation, la solidification et l'évaporation.",
+          "t": "La formule n = V/Vₘ ne concerne que les gaz, avec Vₘ = 22,4 L/mol à 0 °C et 1 atm.",
+          "v": true,
+          "e": "VRAI. Un gaz ne se pèse pas, on lit son volume : c'est là que le volume molaire intervient.",
+          "sourceQuote": "n = V / Vm — le cas des gaz. Un gaz, on ne le pèse pas : on lit son volume."
+        },
+        {
+          "t": "Les formules n = m/M et n = V/Vₘ sont interchangeables pour n'importe quelle espèce.",
           "v": false,
-          "e": "FAUX : les trois transitions inverses sont la condensation, la solidification et la condensation solide. L'évaporation n'en fait pas partie.",
-          "sourceQuote": "Les transitions inverses — condensation , solidification , condensation solide — correspondent à un refroidissement ."
+          "e": "FAUX : n = V/Vₘ est réservée aux gaz. Pour un solide ou un liquide, seule n = m/M est utilisable.",
+          "sourceQuote": "n = V / Vm — le cas des gaz. Un gaz, on ne le pèse pas : on lit son volume."
+        },
+        {
+          "t": "Le nombre d'Avogadro 𝒩 et le nombre d'entités N désignent exactement la même chose.",
+          "v": false,
+          "e": "FAUX : 𝒩 est une constante fixe qui vaut 6,022 × 10²³ mol⁻¹, tandis que N est le nombre d'entités d'un échantillon donné, donc variable. Les deux ne coïncident que pour une mole.",
+          "sourceQuote": "Deux notations quasi jumelles, deux natures différentes"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-017-trois-conversions-mole.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives au sens de chacune des trois conversions, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Pour passer d'une masse en grammes à des moles, on divise par la masse molaire.",
+          "v": true,
+          "e": "VRAI. Une mole pèse M grammes : en divisant la masse par M, on obtient le nombre de moles.",
+          "sourceQuote": "Tu as m grammes sur ta balance, une mole en pèse M → tu divises, tu obtiens des moles"
+        },
+        {
+          "t": "Pour passer des moles au nombre d'entités, on multiplie par 6,022 × 10²³.",
+          "v": true,
+          "e": "VRAI. Chaque mole contient 6,022 × 10²³ entités : on multiplie le nombre de moles par cette constante et on obtient un nombre, sans unité.",
+          "sourceQuote": "Tu multiplies tes moles par 𝒩 → tu obtiens un nombre, sans unité"
+        },
+        {
+          "t": "Les entités comptées par une mole sont nécessairement des molécules.",
+          "v": false,
+          "e": "FAUX : ce peut être des atomes, des molécules, des ions, des électrons ou des photons. La mole compte des entités, quelles qu'elles soient.",
+          "sourceQuote": "Ces entités peuvent être des atomes, des molécules, des ions, des électrons, des photons — peu importe."
+        },
+        {
+          "t": "La conversion qui fait intervenir le volume molaire est posée dès maintenant, mais elle ne servira que plus tard.",
+          "v": true,
+          "e": "VRAI. Elle complète le trio dès le départ, même si son usage viendra plus loin dans le programme.",
+          "sourceQuote": "Retiens-la maintenant : le cours l'introduit ici, mais elle ne te servira que plus tard."
+        },
+        {
+          "t": "Le choix de la conversion se devine à l'intuition, sans regarder les unités.",
+          "v": false,
+          "e": "FAUX : il ne se devine pas, il se lit dans les unités de départ et d'arrivée. C'est ce qui rend le choix systématique.",
+          "sourceQuote": "Le choix de la formule ne se devine pas : il se lit dans les unités de départ et d'arrivée."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-017-trois-conversions-mole.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives aux 9 g de NaCl contenus dans le sérum physiologique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La masse molaire du sel utilisée dans ce calcul vaut 58,5 g/mol.",
+          "v": true,
+          "e": "VRAI. C'est la donnée de départ, avec la masse de 9 g.",
+          "sourceQuote": "M(NaCl) = 58,5 g/mol"
+        },
+        {
+          "t": "Ces 9 g correspondent à environ 0,154 mol.",
+          "v": true,
+          "e": "VRAI. On divise la masse par la masse molaire : 9 / 58,5 ≈ 0,154 mol.",
+          "sourceQuote": "n = 9 / 58,5 ≈ 0,154 mol, soit ≈ 154 mmol"
+        },
+        {
+          "t": "0,154 mol s'écrit aussi 15,4 mmol.",
+          "v": false,
+          "e": "FAUX : une mole vaut 1000 mmol, donc 0,154 mol font environ 154 mmol, et non 15,4 mmol.",
+          "sourceQuote": "n = 9 / 58,5 ≈ 0,154 mol, soit ≈ 154 mmol"
+        },
+        {
+          "t": "On obtient cette quantité de matière en multipliant 9 par 58,5.",
+          "v": false,
+          "e": "FAUX : des grammes vers les moles, on divise la masse par la masse molaire. Multiplier donnerait 526,5, une valeur sans aucun sens ici.",
+          "sourceQuote": "Des grammes vers les moles, c'est la première des trois conversions : n = m / M"
+        },
+        {
+          "t": "Le sérum physiologique contient 9 g de NaCl pour 100 mL.",
+          "v": false,
+          "e": "FAUX : il en contient 9 g par litre. Pour 100 mL, cela ferait dix fois moins, soit 0,9 g.",
+          "sourceQuote": "contient 9 g de NaCl par litre"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-017-trois-conversions-mole.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux unités de volume à employer dans ces formules, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "En P1, un volume se met par défaut en litres dans une formule de physique.",
+          "v": true,
+          "e": "VRAI. C'est la règle par défaut : dès qu'une formule contient un volume, on le met en litres.",
+          "sourceQuote": "par défaut, en physique du concours, V se met en litres (L)"
+        },
+        {
+          "t": "Un mètre cube vaut 100 litres.",
+          "v": false,
+          "e": "FAUX : 1 m³ = 1000 L. Une erreur d'un facteur 10 ici fausse tout le calcul qui suit.",
+          "sourceQuote": "Garde en tête les conversions : 1 m³ = 1000 L"
+        },
+        {
+          "t": "1 L = 1000 mL = 1 dm³.",
+          "v": true,
+          "e": "VRAI. Ces trois écritures désignent le même volume : c'est la conversion à avoir en tête avant tout calcul.",
+          "sourceQuote": "1 L = 1000 mL = 1 dm³"
+        },
+        {
+          "t": "Un volume donné en millilitres s'utilise tel quel dans le calcul.",
+          "v": false,
+          "e": "FAUX : il faut le convertir en litres avant de poser le calcul, sinon le résultat est faux d'un facteur 1000.",
+          "sourceQuote": "convertis-le en L avant de poser le calcul"
+        },
+        {
+          "t": "Ne pas convertir le volume donne un résultat 1000 fois trop petit ou trop grand.",
+          "v": true,
+          "e": "VRAI. C'est l'ordre de grandeur exact de l'erreur, et elle passe souvent inaperçue en pleine épreuve.",
+          "sourceQuote": "Sinon tu sortiras un résultat 1000× trop petit (ou trop grand)."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-017-trois-conversions-mole.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux symboles employés et à leurs unités, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La quantité de matière se donne en mol, la masse en g et la masse molaire en g/mol.",
+          "v": true,
+          "e": "VRAI. Ce sont les unités de référence des trois grandeurs qui entrent dans n = m/M.",
+          "sourceQuote": "Avec n en mol, m en g, M en g/mol, N sans unité"
+        },
+        {
+          "t": "Le nombre d'Avogadro vaut 6,022 × 10²³ et s'exprime en mol⁻¹.",
+          "v": true,
+          "e": "VRAI. C'est une constante, et son unité « par mole » est ce qui fait disparaître les moles dans la multiplication.",
+          "sourceQuote": "𝒩 est une constante qui vaut 6,022 × 10²³ et s'exprime en mol⁻¹"
+        },
+        {
+          "t": "La masse molaire est la masse d'une mole : c'est elle qui fait le pont entre l'atomique et le macroscopique.",
+          "v": true,
+          "e": "VRAI. Exprimée en g/mol, elle relie le monde des atomes à ce que l'on peut peser.",
+          "sourceQuote": "c'est la masse d'une mole, en g/mol : le pont entre l'atomique et le macroscopique"
+        },
+        {
+          "t": "Le volume molaire s'exprime en mol/L.",
+          "v": false,
+          "e": "FAUX : il s'exprime en L/mol, c'est-à-dire un volume par mole. L'unité inversée n'a pas de sens pour un volume molaire.",
+          "sourceQuote": "Le volume molaire Vm vaut 22,4 L/mol à 0 °C et 1 atm"
+        },
+        {
+          "t": "La masse se donne en kilogrammes.",
+          "v": false,
+          "e": "FAUX : elle se donne en grammes, pour rester cohérente avec la masse molaire exprimée en g/mol.",
+          "sourceQuote": "Avec n en mol, m en g, M en g/mol, N sans unité"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-017-trois-conversions-mole.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la méthode à appliquer devant un énoncé, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "On se demande d'abord ce que l'on a, puis ce que l'on demande.",
+          "v": true,
+          "e": "VRAI. Ces deux questions, dans cet ordre, désignent la conversion à utiliser sans hésitation.",
+          "sourceQuote": "qu'est-ce que j'ai (des grammes ? des moles ? un volume ?) et qu'est-ce qu'on me demande"
+        },
+        {
+          "t": "Aller d'une masse à un nombre d'entités suppose d'enchaîner deux formules.",
+          "v": true,
+          "e": "VRAI. On passe d'abord de la masse aux moles, puis des moles au nombre d'entités : jamais en une seule étape.",
+          "sourceQuote": "masse → moles → nombre, ce sont deux formules enchaînées, jamais une seule"
+        },
+        {
+          "t": "Une fois les 0,154 mol de NaCl connues, le nombre d'entités s'obtient en les multipliant par le nombre d'Avogadro.",
+          "v": true,
+          "e": "VRAI. La deuxième conversion s'applique telle quelle : on multiplie les moles par 6,022 × 10²³.",
+          "sourceQuote": "N = n × 𝒩 — des moles vers le nombre d'entités"
+        },
+        {
+          "t": "Une fois les moles connues, on divise par le nombre d'Avogadro pour obtenir le nombre d'entités.",
+          "v": false,
+          "e": "FAUX : on multiplie. Diviser donnerait un nombre minuscule, sans rapport avec un comptage d'entités.",
+          "sourceQuote": "N = n × 𝒩 — des moles vers le nombre d'entités"
+        },
+        {
+          "t": "Pour trouver la quantité de matière contenue dans 9 g de sel solide, on utilise la conversion par le volume molaire.",
+          "v": false,
+          "e": "FAUX : cette conversion est réservée aux gaz, dont on lit le volume. Pour une masse de solide, c'est n = m/M qui s'applique.",
+          "sourceQuote": "n = V / Vm — le cas des gaz. Un gaz, on ne le pèse pas : on lit son volume."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-017-trois-conversions-mole.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la conversion réservée aux gaz, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "À 0 °C et 1 atm, 22,4 L de gaz contiennent 1 mol.",
+          "v": true,
+          "e": "VRAI. C'est la définition même du volume molaire : 22,4 L pour une mole, dans ces conditions.",
+          "sourceQuote": "Le volume molaire Vm vaut 22,4 L/mol à 0 °C et 1 atm"
+        },
+        {
+          "t": "À 0 °C et 1 atm, 11,2 L de gaz contiennent 2 mol.",
+          "v": false,
+          "e": "FAUX : on divise le volume par 22,4, donc 11,2 L correspondent à 0,5 mol, et non à 2 mol.",
+          "sourceQuote": "divise le volume par 22,4 et tu retombes sur des moles"
+        },
+        {
+          "t": "Un volume exprimé en dm³ doit être multiplié par 1000 pour être utilisé en litres.",
+          "v": false,
+          "e": "FAUX : 1 dm³ vaut exactement 1 L, il n'y a aucune conversion à faire. Le facteur 1000 concerne le passage des millilitres aux litres.",
+          "sourceQuote": "1 L = 1000 mL = 1 dm³"
+        },
+        {
+          "t": "Le volume molaire vaut 22,4 L/mol quelles que soient la température et la pression.",
+          "v": false,
+          "e": "FAUX : cette valeur est donnée pour des conditions précises, 0 °C et 1 atm. En dehors, elle ne s'applique plus telle quelle.",
+          "sourceQuote": "volume molaire d'un gaz = 22,4 L/mol (à 0 °C et 1 atm)"
+        },
+        {
+          "t": "Pour un gaz, on lit un volume plutôt que de le peser.",
+          "v": true,
+          "e": "VRAI. C'est la raison d'être de cette troisième conversion : un gaz se mesure par son volume.",
+          "sourceQuote": "Un gaz, on ne le pèse pas : on lit son volume"
+        }
+      ]
+    },
+
+    {
+      "fiche": "physique-018-concentration-ponderale.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives aux deux termes de la concentration pondérale, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La masse placée au numérateur est celle du soluté seul.",
+          "v": true,
+          "e": "VRAI. On ne pèse pas le mélange : seule la masse de soluté entre dans le calcul.",
+          "sourceQuote": "c'est la masse du soluté seul — pas celle du mélange"
+        },
+        {
+          "t": "Le volume placé au dénominateur est celui de la solution, obtenu une fois le soluté dissous.",
+          "v": true,
+          "e": "VRAI. C'est le volume final de la solution, et non le volume de solvant dont on disposait au départ.",
+          "sourceQuote": "le volume final obtenu une fois le soluté dissous — pas le volume de solvant que tu avais au départ"
+        },
+        {
+          "t": "La concentration pondérale répond à la question « combien de moles dans 1 litre ? ».",
+          "v": false,
+          "e": "FAUX : elle répond à « combien de grammes dans 1 litre ? ». Compter des moles est le rôle d'une autre concentration.",
+          "sourceQuote": "combien de grammes dans 1 litre ?"
+        },
+        {
+          "t": "La concentration pondérale indique le nombre de molécules de soluté présentes par litre.",
+          "v": false,
+          "e": "FAUX : peser un soluté ne dit pas combien de molécules ont été versées. Elle mesure une masse, pas un nombre d'entités.",
+          "sourceQuote": "peser un soluté ne dit pas combien de molécules tu as versées"
+        },
+        {
+          "t": "La concentration pondérale est aussi appelée concentration massique.",
+          "v": true,
+          "e": "VRAI. Les deux noms désignent la même grandeur : une masse de soluté rapportée à un volume de solution.",
+          "sourceQuote": "Concentration pondérale (massique)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-018-concentration-ponderale.html",
+      "origine": "reprise",
+      "source": "physique/concours-blanc/phy-ch01-p3_ccb.json",
+      "arene": false,
+      "lot": 2,
+      "q": "À propos de la concentration pondérale Cp (en g/L), quelles propositions sont exactes ?",
+      "items": [
+        {
+          "t": "Cp s'exprime en g/L et s'obtient par Cp = m / V, où m est la masse de soluté et V le volume de solution.",
+          "v": true,
+          "e": "VRAI. On rapporte une masse de soluté au volume de solution, et le résultat s'exprime en g/L. C'est la concentration la plus directe à poser.",
+          "sourceQuote": "avec m = masse de soluté (g), V = volume de solution (L)"
+        },
+        {
+          "t": "Une glycémie normale est de l'ordre de 1 g/L à jeun.",
+          "v": true,
+          "e": "VRAI. C'est le premier des repères cliniques à connaître, et le plus utilisé.",
+          "sourceQuote": "Glycémie à jeun ~ 1 g/L"
+        },
+        {
+          "t": "Cp est strictement indépendante de la température.",
+          "v": false,
+          "e": "FAUX : elle dépend du volume de solution, et ce volume varie avec la température par dilatation thermique. L'écart reste négligeable en pratique pour les solutions aqueuses, mais l'indépendance stricte est fausse.",
+          "sourceQuote": "dépend du volume V, qui lui-même varie avec la température (dilatation thermique)"
+        },
+        {
+          "t": "Pour une solution aqueuse diluée, exprimer Cp en g/L ou en g/100 mL revient quasiment à la même chose si la densité est proche de 1.",
+          "v": true,
+          "e": "VRAI. Quand la densité de la solution avoisine 1, les deux écritures désignent la même mesure, au facteur 10 près.",
+          "sourceQuote": "C'est exactement la même chose si la densité de la solution est proche de 1"
+        },
+        {
+          "t": "Une protidémie normale est de l'ordre de 7 g/L.",
+          "v": false,
+          "e": "FAUX : la protidémie normale, qui mesure les protéines plasmatiques totales, est de l'ordre de 70 g/L. C'est un piège d'ordre de grandeur d'un facteur 10.",
+          "sourceQuote": "Protidémie protéines plasmatiques totales ~ 70 g/L"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-018-concentration-ponderale.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives aux repères de biologie clinique exprimés en g/L, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La cholestérolémie normale est de l'ordre de 2 g/L.",
+          "v": true,
+          "e": "VRAI. C'est le deuxième repère du tableau clinique, juste au-dessus de la glycémie.",
+          "sourceQuote": "Cholestérolémie ~ 2 g/L"
+        },
+        {
+          "t": "L'hémoglobine, chez l'homme adulte, est de l'ordre de 140 g/L.",
+          "v": true,
+          "e": "VRAI. C'est la valeur la plus élevée des quatre repères à connaître.",
+          "sourceQuote": "Hémoglobine chez l'homme adulte ~ 140 g/L"
+        },
+        {
+          "t": "De la glycémie à l'hémoglobine, l'écart d'ordre de grandeur est d'environ 14.",
+          "v": false,
+          "e": "FAUX : de 1 g/L à 140 g/L, l'écart est d'un facteur 140, et non 14.",
+          "sourceQuote": "Cent quarante fois d'écart"
+        },
+        {
+          "t": "Des valeurs aussi éloignées obligent à changer d'unité selon la molécule dosée.",
+          "v": false,
+          "e": "FAUX : malgré cet écart, ce sont la même unité et la même formule qui servent pour les quatre repères.",
+          "sourceQuote": "et pourtant la même unité, la même formule"
+        },
+        {
+          "t": "La posologie d'un médicament s'exprime en g/L, comme la glycémie.",
+          "v": false,
+          "e": "FAUX : une posologie s'exprime en mg/kg, c'est-à-dire rapportée au poids du patient, et non à un volume.",
+          "sourceQuote": "la posologie d'un médicament en mg/kg"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-018-concentration-ponderale.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux différentes écritures d'une même concentration, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le pourcentage massique s'entend en grammes pour 100 g de solvant.",
+          "v": true,
+          "e": "VRAI. C'est la définition du pourcentage massique : une masse de soluté rapportée à 100 g de solvant.",
+          "sourceQuote": "C'est-à-dire en grammes pour 100 g de solvant"
+        },
+        {
+          "t": "Une poche de perfusion porte l'indication « NaCl 0,9 % » plutôt que « 9 g/L ».",
+          "v": true,
+          "e": "VRAI. Les étiquettes sont écrites en pourcentage : savoir passer d'une écriture à l'autre est indispensable pour les décoder.",
+          "sourceQuote": "une poche de perfusion porte « NaCl 0,9 % », pas « 9 g/L »"
+        },
+        {
+          "t": "L'équivalence entre pourcentage massique et g/100 mL vaut pour n'importe quel liquide.",
+          "v": false,
+          "e": "FAUX : elle ne vaut que si la densité de la solution est proche de 1, ce qui est le cas des solutions aqueuses diluées, pas de tous les liquides.",
+          "sourceQuote": "pas pour n'importe quel liquide"
+        },
+        {
+          "t": "Les solutions aqueuses diluées, qui forment l'essentiel des liquides biologiques, ont une densité proche de 1.",
+          "v": true,
+          "e": "VRAI. C'est ce qui autorise, en pratique clinique, à traiter le pourcentage et les g/100 mL comme équivalents.",
+          "sourceQuote": "dans le cas des solutions aqueuses diluées, qui sont l'immense majorité des liquides biologiques"
+        },
+        {
+          "t": "g/L, pourcentage massique et g/100 mL désignent trois mesures qu'il ne faut surtout pas confondre.",
+          "v": false,
+          "e": "FAUX : ces trois écritures désignent une seule et même mesure, exprimée autrement. Il faut justement prendre l'habitude de les lire comme telles.",
+          "sourceQuote": "comme une seule et même mesure"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-018-concentration-ponderale.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à l'influence de la température sur une concentration pondérale, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Entre 20 et 37 °C, la variation atteint environ 0,5 % pour les solutions aqueuses biologiques.",
+          "v": true,
+          "e": "VRAI. C'est l'ordre de grandeur de l'effet : réel, mais minuscule.",
+          "sourceQuote": "pour les solutions aqueuses biologiques (~ 0,5 % sur la plage 20-37 °C)"
+        },
+        {
+          "t": "Pour calculer une glycémie à 37 °C, on ignore la dilatation.",
+          "v": true,
+          "e": "VRAI. Un écart de 0,5 % ne change aucun chiffre utile : dans un calcul, la dilatation se néglige.",
+          "sourceQuote": "Si l'énoncé demande de calculer une glycémie à 37 °C, tu ignores la dilatation"
+        },
+        {
+          "t": "Puisque la variation est négligeable en pratique, on peut affirmer qu'une concentration pondérale ne dépend pas de la température.",
+          "v": false,
+          "e": "FAUX : négligeable en pratique ne veut pas dire faux en théorie. À la question de principe, la réponse reste oui, elle en dépend.",
+          "sourceQuote": "Négligeable en pratique ne veut pas dire faux en QCM."
+        },
+        {
+          "t": "C'est le volume placé au dénominateur qui rend la concentration pondérale sensible à la température.",
+          "v": true,
+          "e": "VRAI. Le volume se dilate quand la température monte, et c'est lui qui fait varier le résultat.",
+          "sourceQuote": "parce qu'il y a un volume au dénominateur"
+        },
+        {
+          "t": "C'est la masse de soluté pesée qui varie avec la température.",
+          "v": false,
+          "e": "FAUX : c'est le volume qui varie par dilatation thermique, pas la masse pesée.",
+          "sourceQuote": "dépend du volume V, qui lui-même varie avec la température (dilatation thermique)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-018-concentration-ponderale.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives au calcul chiffré d'une concentration pondérale, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une poche de 500 mL dosée à 9 g/L contient 4,5 g de NaCl.",
+          "v": true,
+          "e": "VRAI. La concentration multipliée par le volume donne la masse : 9 × 0,5 = 4,5 g.",
+          "sourceQuote": "Cp = m / V avec m = masse de soluté (g), V = volume de solution (L)"
+        },
+        {
+          "t": "2 g de soluté dans 250 mL de solution donnent une concentration de 0,5 g/L.",
+          "v": false,
+          "e": "FAUX : 250 mL valent 0,25 L, donc 2 / 0,25 = 8 g/L. La valeur 0,5 correspond à l'opération inverse.",
+          "sourceQuote": "masse de soluté en g, volume de solution en L, résultat en g/L"
+        },
+        {
+          "t": "Garder le volume en millilitres au dénominateur donne une valeur 1000 fois trop petite.",
+          "v": true,
+          "e": "VRAI. Le volume doit être en litres pour obtenir des g/L ; le laisser en millilitres divise le résultat par 1000.",
+          "sourceQuote": "masse de soluté en g, volume de solution en L, résultat en g/L"
+        },
+        {
+          "t": "À masse de soluté constante, doubler le volume de solution double la concentration.",
+          "v": false,
+          "e": "FAUX : le volume est au dénominateur. Le doubler divise la concentration par deux.",
+          "sourceQuote": "Cp = m / V avec m = masse de soluté (g), V = volume de solution (L)"
+        },
+        {
+          "t": "À volume constant, doubler la masse de soluté laisse la concentration inchangée.",
+          "v": false,
+          "e": "FAUX : la masse est au numérateur. La doubler double la concentration.",
+          "sourceQuote": "Cp = m / V avec m = masse de soluté (g), V = volume de solution (L)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-018-concentration-ponderale.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à ce que la concentration pondérale dit et ne dit pas, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Sa grande qualité est de se mesurer directement.",
+          "v": true,
+          "e": "VRAI. On pèse, on dissout, on lit le volume : aucune conversion n'est nécessaire pour l'obtenir.",
+          "sourceQuote": "a une immense qualité : elle se mesure"
+        },
+        {
+          "t": "Peser un soluté renseigne sur le nombre de molécules versées.",
+          "v": false,
+          "e": "FAUX : une masse ne dit rien du nombre de molécules. C'est justement la limite de cette concentration.",
+          "sourceQuote": "peser un soluté ne dit pas combien de molécules tu as versées"
+        },
+        {
+          "t": "En clinique, la glycémie s'exprime en g/L et la natrémie en mmol/L.",
+          "v": true,
+          "e": "VRAI. Ce sont deux façons différentes de dire une concentration, chacune adaptée à ce que l'on veut savoir.",
+          "sourceQuote": "la glycémie en g/L, la natrémie en mmol/L"
+        },
+        {
+          "t": "Ces différentes façons d'exprimer une concentration décrivent des réalités différentes.",
+          "v": false,
+          "e": "FAUX : elles expriment la même réalité de manières différentes ; ce sont les questions auxquelles elles répondent qui diffèrent.",
+          "sourceQuote": "Des manières différentes d'exprimer la même réalité, qui répondent à des questions différentes."
+        },
+        {
+          "t": "Ce sont les grammes pesés, et non les molécules, qui réagissent.",
+          "v": false,
+          "e": "FAUX : ce sont les molécules qui réagissent, d'où la nécessité d'une concentration qui les compte.",
+          "sourceQuote": "et ce sont elles qui réagissent"
+        }
+      ]
+    },
+
+    {
+      "fiche": "physique-019-concentration-molaire.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la formule de la concentration molaire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La concentration molaire est le rapport de la quantité de soluté, en moles, au volume de solution, en litres.",
+          "v": true,
+          "e": "VRAI. C'est la définition : une quantité de matière rapportée à un volume de solution.",
+          "sourceQuote": "avec n = quantité de soluté (mol), V = volume de solution (L)"
+        },
+        {
+          "t": "Son unité est le mol/L, aussi noté M.",
+          "v": true,
+          "e": "VRAI. La lettre M pour « molaire » est une notation courante de cette unité — à ne pas confondre avec la masse molaire.",
+          "sourceQuote": "Unité : mol/L — aussi noté M pour « molaire »"
+        },
+        {
+          "t": "Le volume de la formule est celui du solvant, avant dissolution du soluté.",
+          "v": false,
+          "e": "FAUX : c'est le volume de solution, soluté dissous compris, donc le volume final.",
+          "sourceQuote": "C'est le volume de solution (la solution entière, soluté dissous compris)"
+        },
+        {
+          "t": "La quantité de soluté se donne en grammes.",
+          "v": false,
+          "e": "FAUX : elle se donne en moles. Compter en grammes, c'est le rôle de la concentration pondérale.",
+          "sourceQuote": "n en mol, V en L de solution"
+        },
+        {
+          "t": "Une concentration molaire se lit : « si je prends 1 litre de cette solution, j'y trouverai autant de moles de soluté ».",
+          "v": true,
+          "e": "VRAI. C'est la lecture en français de la formule, celle qui rend la valeur immédiatement concrète.",
+          "sourceQuote": "si je prends 1 litre de cette solution, j'y trouverai C moles de soluté"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-019-concentration-molaire.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la raison d'être de la concentration molaire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une même masse de deux solutés différents n'apporte pas le même nombre de molécules.",
+          "v": true,
+          "e": "VRAI. Tant qu'on ignore de quel soluté il s'agit, une masse ne renseigne pas sur le nombre de molécules apportées.",
+          "sourceQuote": "Une masse ne dit rien tant qu'on ne sait pas de quel soluté il s'agit."
+        },
+        {
+          "t": "1 g de sel apporte environ 3 fois plus de molécules que 1 g de glucose.",
+          "v": true,
+          "e": "VRAI. Le sel a une masse molaire environ trois fois plus petite : à masse égale, il apporte donc trois fois plus d'entités.",
+          "sourceQuote": "1 g de NaCl apporte 3 fois plus de molécules que 1 g de glucose"
+        },
+        {
+          "t": "Deux solutions à la même masse par litre ont forcément la même concentration molaire.",
+          "v": false,
+          "e": "FAUX : à masse égale par litre, deux solutés de masses molaires différentes n'apportent pas le même nombre de moles.",
+          "sourceQuote": "Deux solutions « à la même masse par litre » ne sont donc pas à la même concentration molaire"
+        },
+        {
+          "t": "La concentration molaire compte des moles, donc des molécules.",
+          "v": true,
+          "e": "VRAI. C'est exactement ce qui la rend indispensable dès qu'on parle de réaction, d'osmose ou de pH.",
+          "sourceQuote": "elle compte des moles, donc des molécules"
+        },
+        {
+          "t": "Ce sont les grammes apportés, et non le nombre de molécules, qui gouvernent la réaction, l'osmose et le pH.",
+          "v": false,
+          "e": "FAUX : ce qui compte n'est pas la masse pesée mais le nombre de molécules apportées, puisque ce sont elles qui agissent.",
+          "sourceQuote": "ce qui compte n'est donc pas combien de grammes ils pèsent"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-019-concentration-molaire.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la comparaison de 1 g de glucose et de 1 g de sel, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "1 g de glucose, de masse molaire 180 g/mol, représente environ 5,5 × 10⁻³ mol.",
+          "v": true,
+          "e": "VRAI. On divise la masse par la masse molaire : 1 / 180 ≈ 5,5 × 10⁻³ mol.",
+          "sourceQuote": "1 / 180 ≈ 5,5 × 10⁻³ mol"
+        },
+        {
+          "t": "1 g de sel, de masse molaire 58,5 g/mol, représente environ 1,7 × 10⁻² mol.",
+          "v": true,
+          "e": "VRAI. 1 / 58,5 ≈ 1,7 × 10⁻² mol, soit environ trois fois plus de moles que pour le glucose.",
+          "sourceQuote": "1 / 58,5 ≈ 1,7 × 10⁻² mol"
+        },
+        {
+          "t": "1 g de glucose contient environ 10²² molécules.",
+          "v": false,
+          "e": "FAUX : 1 g de glucose en contient environ 3,3 × 10²¹. L'ordre de 10²² est celui du gramme de sel.",
+          "sourceQuote": "3,3 × 10²¹ molécules"
+        },
+        {
+          "t": "À masse égale, c'est le soluté de plus grande masse molaire qui apporte le plus de molécules.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. Une masse molaire plus grande signifie des entités plus lourdes, donc moins nombreuses dans un gramme.",
+          "sourceQuote": "3 fois plus de molécules pour le sel que pour le glucose, à masse égale"
+        },
+        {
+          "t": "Le glucose et le sel ont ici la même masse molaire.",
+          "v": false,
+          "e": "FAUX : le glucose vaut 180 g/mol et le sel 58,5 g/mol. C'est cet écart qui explique toute la différence de comptage.",
+          "sourceQuote": "1 g de glucose M = 180 g/mol"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-019-concentration-molaire.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives au choix entre concentration pondérale et concentration molaire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Préparer une solution demande de peser : on raisonne alors en grammes.",
+          "v": true,
+          "e": "VRAI. À la paillasse, on pèse une masse : c'est la concentration pondérale qui sert.",
+          "sourceQuote": "Préparer une solution → tu pèses, donc tu raisonnes en grammes"
+        },
+        {
+          "t": "Prévoir ce que la solution va faire demande de passer en mol/L.",
+          "v": true,
+          "e": "VRAI. Prévoir un effet, c'est compter des molécules : on bascule alors en concentration molaire.",
+          "sourceQuote": "Prévoir ce que cette solution va faire → tu comptes des molécules, donc tu passes en mol/L"
+        },
+        {
+          "t": "La concentration molaire est la grandeur la plus utilisée en chimie, en biophysique et en clinique.",
+          "v": true,
+          "e": "VRAI. Dès qu'il s'agit de prévoir un comportement, c'est elle que l'on emploie.",
+          "sourceQuote": "la grandeur la plus utilisée en chimie, en biophysique et en clinique"
+        },
+        {
+          "t": "En passant de la masse à la mole, on continue de peser le soluté.",
+          "v": false,
+          "e": "FAUX : on arrête justement de le peser pour le compter. C'est tout le changement de point de vue.",
+          "sourceQuote": "on arrête de peser le soluté — on le compte"
+        },
+        {
+          "t": "C'est la concentration pondérale qui est la grandeur reine en chimie.",
+          "v": false,
+          "e": "FAUX : la grandeur reine en chimie est la concentration molaire. La pondérale, elle, sert surtout à préparer et à mesurer.",
+          "sourceQuote": "la grandeur reine en chimie"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-019-concentration-molaire.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à ce que compte réellement la concentration molaire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une mole est un paquet de 6,022 × 10²³ entités.",
+          "v": true,
+          "e": "VRAI. C'est la taille du paquet : compter en moles, c'est compter des entités par paquets.",
+          "sourceQuote": "une mole, c'est un paquet de 6,022 × 10²³ entités"
+        },
+        {
+          "t": "La quantité de soluté joue le rôle de compteur de molécules dans la formule.",
+          "v": true,
+          "e": "VRAI. C'est précisément son rôle : elle traduit la masse versée en nombre d'entités.",
+          "sourceQuote": "C'est le compteur de molécules"
+        },
+        {
+          "t": "Le volume de la formule se met en millilitres.",
+          "v": false,
+          "e": "FAUX : il se met en litres, comme dans toute formule de physique contenant un volume.",
+          "sourceQuote": "il se met en litres"
+        },
+        {
+          "t": "Osmoser désigne le fait de modifier le pH d'un compartiment.",
+          "v": false,
+          "e": "FAUX : osmoser, c'est attirer l'eau d'un compartiment vers l'autre. Modifier le pH est un effet distinct.",
+          "sourceQuote": "attirer l'eau d'un compartiment vers l'autre"
+        },
+        {
+          "t": "Le nombre 6,022 × 10²³ désigne le nombre de moles contenues dans un litre de solution.",
+          "v": false,
+          "e": "FAUX : il désigne le nombre d'entités contenues dans une mole. Le nombre de moles par litre, c'est la concentration molaire elle-même.",
+          "sourceQuote": "une mole, c'est un paquet de 6,022 × 10²³ entités"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-019-concentration-molaire.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives au calcul chiffré d'une concentration molaire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "0,2 mol de soluté dans 500 mL de solution donnent une concentration de 0,4 mol/L.",
+          "v": true,
+          "e": "VRAI. 500 mL valent 0,5 L, donc 0,2 / 0,5 = 0,4 mol/L.",
+          "sourceQuote": "avec n = quantité de soluté (mol), V = volume de solution (L)"
+        },
+        {
+          "t": "En gardant le volume en millilitres, on trouverait 4 × 10⁻⁴ mol/L, ce qui est le bon résultat.",
+          "v": false,
+          "e": "FAUX : le volume doit être converti en litres. Le laisser en millilitres donne un résultat 1000 fois trop petit.",
+          "sourceQuote": "il se met en litres"
+        },
+        {
+          "t": "À quantité de soluté constante, augmenter le volume de solution diminue la concentration.",
+          "v": true,
+          "e": "VRAI. Le volume est au dénominateur : à quantité fixée, plus la solution est volumineuse, plus elle est diluée.",
+          "sourceQuote": "avec n = quantité de soluté (mol), V = volume de solution (L)"
+        },
+        {
+          "t": "Une solution notée 0,15 M contient 0,15 mol de soluté par litre.",
+          "v": true,
+          "e": "VRAI. La lettre M est une autre écriture du mol/L : 0,15 M se lit 0,15 mole par litre de solution.",
+          "sourceQuote": "Unité : mol/L — aussi noté M pour « molaire »"
+        },
+        {
+          "t": "Le résultat du calcul s'exprime en moles, comme la quantité de soluté.",
+          "v": false,
+          "e": "FAUX : le résultat s'exprime en mol/L, puisqu'on rapporte des moles à un volume.",
+          "sourceQuote": "unité mol/L, aussi notée M"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-019-concentration-molaire.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives au nombre de molécules réellement présentes dans une solution, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans 2 L d'une solution à 0,5 mol/L, il y a 1 mole de soluté.",
+          "v": true,
+          "e": "VRAI. La quantité de soluté vaut la concentration multipliée par le volume : 0,5 × 2 = 1 mol.",
+          "sourceQuote": "avec n = quantité de soluté (mol), V = volume de solution (L)"
+        },
+        {
+          "t": "Cette mole de soluté représente environ 6,022 × 10²³ molécules.",
+          "v": true,
+          "e": "VRAI. Une mole, c'est un paquet de 6,022 × 10²³ entités — ici, autant de molécules de soluté.",
+          "sourceQuote": "une mole, c'est un paquet de 6,022 × 10²³ entités"
+        },
+        {
+          "t": "Une solution à 0,5 mol/L contient 0,5 mol de soluté, quel que soit le volume prélevé.",
+          "v": false,
+          "e": "FAUX : 0,5 mol/L signifie 0,5 mole par litre. Dans 2 L il y en a 1 mole, dans 0,5 L seulement 0,25 mole.",
+          "sourceQuote": "si je prends 1 litre de cette solution, j'y trouverai C moles de soluté"
+        },
+        {
+          "t": "Deux solutions de même concentration molaire contiennent le même nombre total de molécules, quels que soient leurs volumes.",
+          "v": false,
+          "e": "FAUX : la concentration est un nombre de moles par litre. À concentration égale, c'est le volume qui décide de la quantité totale.",
+          "sourceQuote": "avec n = quantité de soluté (mol), V = volume de solution (L)"
+        },
+        {
+          "t": "À volume égal, une solution deux fois plus concentrée en mol/L apporte deux fois plus de molécules.",
+          "v": true,
+          "e": "VRAI. Puisque la concentration molaire compte des moles, donc des molécules, doubler la concentration double le nombre de molécules apportées.",
+          "sourceQuote": "elle compte des moles, donc des molécules"
         }
       ]
     }

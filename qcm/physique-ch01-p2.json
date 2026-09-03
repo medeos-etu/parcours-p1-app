@@ -1,828 +1,1920 @@
 {
- "matiere": "physique",
- "chapitre": 1,
- "questions": [
-  {
-   "fiche": "physique-004-logarithmes-lire-recombiner.html",
-   "origine": "ecrite",
-   "arene": false,
-   "lot": 1,
-   "q": "Parmi les propositions suivantes relatives à la définition du logarithme décimal et à ses valeurs repères, laquelle (lesquelles) est (sont) exacte(s) ?",
-   "items": [
+  "matiere": "physique",
+  "chapitre": 1,
+  "questions": [
     {
-     "t": "Le log d'un nombre est la puissance de 10 qu'il faut élever pour atteindre ce nombre.",
-     "v": true,
-     "e": "VRAI. C'est la définition même du logarithme décimal : log(x) répond à la question « 10 puissance combien donne x ? ». Le log, c'est la puissance de 10 lue à l'envers.",
-     "sourceQuote": "c'est la puissance de 10 qu'il faut élever pour atteindre ce nombre"
+      "fiche": "physique-004-logarithmes-lire-recombiner.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la définition du logarithme décimal et à ses valeurs repères, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le log d'un nombre est la puissance de 10 qu'il faut élever pour atteindre ce nombre.",
+          "v": true,
+          "e": "VRAI. C'est la définition même du logarithme décimal : log(x) répond à la question « 10 puissance combien donne x ? ». Le log, c'est la puissance de 10 lue à l'envers.",
+          "sourceQuote": "c'est la puissance de 10 qu'il faut élever pour atteindre ce nombre"
+        },
+        {
+          "t": "Écrit sans indice en physique-chimie, « log » désigne le logarithme népérien.",
+          "v": false,
+          "e": "FAUX : écrit sans indice, « log » désigne le logarithme décimal, c'est-à-dire log₁₀ — le « 10 » est sous-entendu par convention. Le logarithme népérien, lui, s'écrit toujours « ln ».",
+          "sourceQuote": "log = log₁₀ par convention en physique-chimie, le « 10 » est sous-entendu"
+        },
+        {
+          "t": "log(1) = 1 et log(10) = 0.",
+          "v": false,
+          "e": "FAUX : les deux valeurs sont inversées. log(1) = 0 puisque 10⁰ = 1, et log(10) = 1 puisque 10¹ = 10.",
+          "sourceQuote": "log(1) = 0 · log(10) = 1"
+        },
+        {
+          "t": "log(0,1) = −1 et log(10⁻⁷) = −7.",
+          "v": true,
+          "e": "VRAI. 10⁻¹ = 0,1 donne log(0,1) = −1, et pour une puissance de 10 écrite telle quelle l'exposant se lit directement : log(10⁻⁷) = −7.",
+          "sourceQuote": "log(0,1) = −1 · log(10⁻⁷) = −7"
+        },
+        {
+          "t": "log(1 000 000) = 5.",
+          "v": false,
+          "e": "FAUX : log(1 000 000) = 6, puisque 1 000 000 s'écrit 10⁶. Pour une puissance de 10, le log compte les zéros — il y en a six.",
+          "sourceQuote": "log(1 000) · log(1 000 000) 3 · 6"
+        }
+      ]
     },
     {
-     "t": "Écrit sans indice en physique-chimie, « log » désigne le logarithme népérien.",
-     "v": false,
-     "e": "FAUX : écrit sans indice, « log » désigne le logarithme décimal, c'est-à-dire log₁₀ — le « 10 » est sous-entendu par convention. Le logarithme népérien, lui, s'écrit toujours « ln ».",
-     "sourceQuote": "log = log₁₀ par convention en physique-chimie, le « 10 » est sous-entendu"
+      "fiche": "physique-004-logarithmes-lire-recombiner.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux trois règles de recombinaison d'un logarithme, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un produit placé à l'intérieur du log devient une addition : log(a × b) = log(a) + log(b).",
+          "v": true,
+          "e": "VRAI. C'est la première règle : produit → on additionne. Le log transforme une multiplication en somme.",
+          "sourceQuote": "Produit → on additionne. log(a × b) = log(a) + log(b)"
+        },
+        {
+          "t": "Un quotient placé à l'intérieur du log devient une soustraction : log(a / b) = log(a) − log(b).",
+          "v": true,
+          "e": "VRAI. C'est la deuxième règle : quotient → on soustrait.",
+          "sourceQuote": "Quotient → on soustrait. log(a / b) = log(a) − log(b)"
+        },
+        {
+          "t": "Une puissance placée à l'intérieur du log descend devant lui : log(aⁿ) = n × log(a).",
+          "v": true,
+          "e": "VRAI. C'est la troisième règle : puissance → on multiplie par l'exposant. L'exposant descend devant le log et devient un facteur.",
+          "sourceQuote": "Puissance → on multiplie par l'exposant. log(aⁿ) = n × log(a)"
+        },
+        {
+          "t": "Le vrai piège du logarithme se situe dans sa lecture, la recombinaison étant l'étape facile.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. Lire un log est simple ; le vrai piège, c'est de le recombiner à partir des valeurs fournies.",
+          "sourceQuote": "Et le vrai piège n'est pas de le lire — c'est de le recombiner"
+        },
+        {
+          "t": "La règle du quotient ne concerne que les nombres supérieurs à 1.",
+          "v": false,
+          "e": "FAUX : la règle du quotient est au contraire le réflexe à appliquer pour tous les nombres inférieurs à 1, que l'on réécrit sous forme de fraction.",
+          "sourceQuote": "C'est le réflexe pour tous les nombres inférieurs à 1."
+        }
+      ]
     },
     {
-     "t": "log(1) = 1 et log(10) = 0.",
-     "v": false,
-     "e": "FAUX : les deux valeurs sont inversées. log(1) = 0 puisque 10⁰ = 1, et log(10) = 1 puisque 10¹ = 10.",
-     "sourceQuote": "log(1) = 0 · log(10) = 1"
+      "fiche": "physique-004-logarithmes-lire-recombiner.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au signe « − » du pH et à la notation « p » placée devant une grandeur, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans le sang, [H⁺] vaut environ 10⁻⁷·⁴ mol/L, ce qui donne log([H⁺]) = −7,4.",
+          "v": true,
+          "e": "VRAI. L'exposant se lit directement : le log d'une concentration de 10⁻⁷·⁴ mol/L vaut −7,4, une valeur négative et peu commode à manipuler.",
+          "sourceQuote": "Dans le sang, [H⁺] ≈ 10⁻⁷·⁴ mol/L → log([H⁺]) = −7,4"
+        },
+        {
+          "t": "Le signe « − » sert à retomber sur un nombre positif simple : pH = −log([H⁺]) = 7,4.",
+          "v": true,
+          "e": "VRAI. On ajoute le « − » uniquement pour transformer −7,4 en 7,4, un nombre positif et lisible.",
+          "sourceQuote": "On ajoute le signe « − » pour retomber sur un nombre positif simple : pH = −log([H⁺]) = 7,4"
+        },
+        {
+          "t": "Un « p » devant une grandeur signifie toujours « −log de cette grandeur ».",
+          "v": true,
+          "e": "VRAI. C'est la clé de lecture universelle : dès qu'un « p » précède une grandeur, il faut lire « −log de cette grandeur ».",
+          "sourceQuote": "À chaque fois que tu vois un « p » devant une grandeur, c'est « −log de cette grandeur »"
+        },
+        {
+          "t": "Cette notation « p » est propre au pH et ne se retrouve ni dans pKa, ni dans pOH, ni dans pI.",
+          "v": false,
+          "e": "FAUX : la même astuce se retrouve avec pKa, pOH, pKe et pI. Le « p » est une notation générale, pas une particularité du pH.",
+          "sourceQuote": "Tu retrouveras la même astuce avec pKa, pOH, pKe, pI"
+        },
+        {
+          "t": "Le signe « − » du pH traduit une propriété physique de l'ion H⁺ et non une commodité d'écriture.",
+          "v": false,
+          "e": "FAUX : ce signe est purement cosmétique. Il ne change rien à la grandeur mesurée, il rend seulement le nombre positif et donc plus facile à manipuler.",
+          "sourceQuote": "C'est purement cosmétique."
+        }
+      ]
     },
     {
-     "t": "log(0,1) = −1 et log(10⁻⁷) = −7.",
-     "v": true,
-     "e": "VRAI. 10⁻¹ = 0,1 donne log(0,1) = −1, et pour une puissance de 10 écrite telle quelle l'exposant se lit directement : log(10⁻⁷) = −7.",
-     "sourceQuote": "log(0,1) = −1 · log(10⁻⁷) = −7"
+      "fiche": "physique-004-logarithmes-lire-recombiner.html",
+      "origine": "reprise",
+      "arene": false,
+      "lot": 4,
+      "q": "À la différence du log, le logarithme népérien ln est rarement fourni par les énoncés. Quelle(s) proposition(s) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "On passe du log au ln avec la relation ln(x) ≈ 2,3 × log(x).",
+          "v": true,
+          "e": "VRAI. Le facteur de conversion est 2,3, c'est-à-dire ln(10). Toute la maîtrise du log se recycle donc directement pour le ln.",
+          "sourceQuote": "ln(x) ≈ 2,3 × log(x)"
+        },
+        {
+          "t": "La conversion s'écrit ln(x) ≈ log(x) / 2,3.",
+          "v": false,
+          "e": "FAUX : le sens est inversé. Le ln est plus grand que le log, donc on multiplie : ln(x) ≈ 2,3 × log(x). Vérification avec x = 10 : ln(10) ≈ 2,3 alors que log(10) = 1.",
+          "sourceQuote": "ln(10) ≈ 2,3 · ln(x) ≈ 2,3 × log(x)"
+        },
+        {
+          "t": "ln(2) ≈ 0,7 et ln(10) ≈ 2,3 sont à mémoriser, car les énoncés les fournissent moins souvent que les valeurs de log.",
+          "v": true,
+          "e": "VRAI. C'est l'asymétrie à connaître : les valeurs de log sont presque toujours données en début de sujet, celles de ln beaucoup moins. Ces deux valeurs se retiennent une bonne fois pour toutes.",
+          "sourceQuote": "Autant en mémoriser les valeurs clés une bonne fois pour toutes : ln(2) ≈ 0,7 · ln(10) ≈ 2,3"
+        },
+        {
+          "t": "Avec log(3) ≈ 0,48 et log(5) ≈ 0,7, on reconstruit log(15) = 0,48 + 0,7 = 1,18.",
+          "v": true,
+          "e": "VRAI. 15 = 3 × 5, donc la règle du produit donne directement log(15) = log(3) + log(5) = 0,48 + 0,7 = 1,18.",
+          "sourceQuote": "log(15) = log(3 × 5) = log(3) + log(5) = 0,48 + 0,7 = 1,18"
+        },
+        {
+          "t": "Comme pour le log, les énoncés de P1 fournissent presque toujours ln(2) et ln(10) en début de sujet.",
+          "v": false,
+          "e": "FAUX : c'est justement la différence entre les deux. Les valeurs de log sont presque toujours données, celles de ln le sont moins souvent — d'où l'intérêt de mémoriser ln(2) ≈ 0,7 et ln(10) ≈ 2,3.",
+          "sourceQuote": "les logarithmes népériens (ln) sont, eux, moins souvent donnés"
+        }
+      ],
+      "source": "app:physique-logarithmes-recombinaison"
     },
     {
-     "t": "log(1 000 000) = 5.",
-     "v": false,
-     "e": "FAUX : log(1 000 000) = 6, puisque 1 000 000 s'écrit 10⁶. Pour une puissance de 10, le log compte les zéros — il y en a six.",
-     "sourceQuote": "log(1 000) · log(1 000 000) 3 · 6"
+      "fiche": "physique-004-logarithmes-lire-recombiner.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à l'ordre de grandeur d'un logarithme et à son encadrement entre deux puissances de 10, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Pour un nombre qui est une puissance de 10, prendre le log revient à compter les zéros.",
+          "v": true,
+          "e": "VRAI. C'est l'image mentale à garder : 1 000 porte trois zéros et log(1 000) = 3 ; 1 000 000 en porte six et log(1 000 000) = 6.",
+          "sourceQuote": "Pour un nombre qui est une puissance de 10, le log « compte les zéros »"
+        },
+        {
+          "t": "log(2) ≈ 0,3 est compris entre 0 et 1 parce que 2 est compris entre 1 et 10.",
+          "v": true,
+          "e": "VRAI. Pour un nombre qui n'est pas une puissance de 10, le log interpole entre deux puissances : 2 étant entre 1 (10⁰) et 10 (10¹), son log est entre 0 et 1.",
+          "sourceQuote": "log(2) ≈ 0,3 (entre 0 et 1, car 2 est entre 1 et 10)"
+        },
+        {
+          "t": "log(50) ≈ 1,5, valeur située exactement à mi-chemin entre log(10) et log(100).",
+          "v": false,
+          "e": "FAUX : log(50) ≈ 1,7. La valeur est bien comprise entre 1 et 2, puisque 50 est compris entre 10 et 100, mais l'interpolation n'est pas linéaire et ne tombe pas au milieu.",
+          "sourceQuote": "log(50) ≈ 1,7 (entre 1 et 2, car 50 est entre 10 et 100)"
+        },
+        {
+          "t": "Un nombre qui n'est pas une puissance de 10 n'a pas de logarithme défini.",
+          "v": false,
+          "e": "FAUX : dans ce cas, le log interpole simplement entre les deux puissances de 10 qui encadrent le nombre. Il existe donc bel et bien, et il est encadrable de tête.",
+          "sourceQuote": "Pour les autres, il interpole entre deux puissances"
+        },
+        {
+          "t": "log(2) ≈ 0,48 et log(3) ≈ 0,30.",
+          "v": false,
+          "e": "FAUX : les deux valeurs sont interverties. log(2) ≈ 0,3 et log(3) ≈ 0,48 — c'est cohérent avec l'encadrement, 2 étant plus petit que 3.",
+          "sourceQuote": "log(6) = log(2 × 3) = log(2) + log(3) = 0,3 + 0,48 = 0,78"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-004-logarithmes-lire-recombiner.html",
+      "origine": "reprise",
+      "arene": true,
+      "lot": 6,
+      "q": "Un énoncé donne log(2) ≈ 0,3 et log(3) ≈ 0,48, puis demande log(1,5) et log(0,2) ; laquelle (lesquelles) de ces propositions est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le log d'un nombre compris entre 0 et 1 reste toujours positif.",
+          "v": false,
+          "e": "FAUX : il est négatif. log(0,5) = log(1/2) = −log(2) = −0,3, et de même log(0,1) = −1. Tout nombre inférieur à 1 a un logarithme négatif.",
+          "sourceQuote": "log(0,5) = log(1/2) = −log(2) = −0,3"
+        },
+        {
+          "t": "log(3/2) s'obtient en divisant : log(3) / log(2) = 1,6.",
+          "v": false,
+          "e": "FAUX : diviser deux logarithmes n'est pas une règle. C'est le quotient placé à l'intérieur du log qui devient une soustraction : log(3/2) = log(3) − log(2) = 0,48 − 0,3 = 0,18.",
+          "sourceQuote": "Produit → on additionne, quotient → on soustrait, puissance → on multiplie par l'exposant"
+        },
+        {
+          "t": "log(1,5) se reconstruit par la règle du quotient : log(3/2) = 0,48 − 0,3 = 0,18.",
+          "v": true,
+          "e": "VRAI. Un nombre décimal se ramène à une fraction de facteurs connus : 1,5 = 3/2, et le quotient devient alors une soustraction.",
+          "sourceQuote": "Quotient → on soustrait. log(a / b) = log(a) − log(b)"
+        },
+        {
+          "t": "log(0,2) = log(2/10) = 0,3 + 1 = 1,3.",
+          "v": false,
+          "e": "FAUX : la règle du quotient soustrait, elle n'additionne pas. log(0,2) = log(2) − log(10) = 0,3 − 1 = −0,7. Un nombre inférieur à 1 a d'ailleurs toujours un log négatif.",
+          "sourceQuote": "C'est le réflexe pour tous les nombres inférieurs à 1."
+        },
+        {
+          "t": "Les règles du log ne valent que pour les nombres entiers, ce qui bloque le calcul de log(1,5).",
+          "v": false,
+          "e": "FAUX : les trois règles valent pour tout nombre positif. Il suffit d'écrire 1,5 sous la forme 3/2 pour retomber sur des facteurs dont le log est donné.",
+          "sourceQuote": "Devant un log absent de l'énoncé, ne conclus jamais qu'il est incalculable"
+        }
+      ],
+      "source": "app:physique-logarithmes-recombinaison"
+    },
+    {
+      "fiche": "physique-004-logarithmes-lire-recombiner.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la conduite à tenir devant une valeur de logarithme absente de l'énoncé, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La seule question à se poser est de savoir comment décomposer ce nombre en facteurs dont le log est donné.",
+          "v": true,
+          "e": "VRAI. C'est le réflexe à automatiser : on cherche une décomposition en facteurs 2, 3, 5 ou 10 dont la valeur du log est fournie ou connue.",
+          "sourceQuote": "comment décomposer ce nombre en facteurs dont le log m'est donné ?"
+        },
+        {
+          "t": "log(20) = 1,3, en écrivant 20 = 2 × 10.",
+          "v": true,
+          "e": "VRAI. La règle du produit donne log(20) = log(2) + log(10) = 0,3 + 1 = 1,3, car log(10) = 1.",
+          "sourceQuote": "log(20) = log(2 × 10) = 0,3 + 1 = 1,3 (car log(10) = 1)"
+        },
+        {
+          "t": "log(36) = 0,78, puisque 36 = 6².",
+          "v": false,
+          "e": "FAUX : la décomposition 36 = 6² est la bonne, mais l'exposant doit descendre devant le log. log(6) = 0,78, donc log(36) = 2 × 0,78 = 1,56. La valeur 0,78 est celle de log(6), pas celle de log(36).",
+          "sourceQuote": "Puissance → on multiplie par l'exposant. log(aⁿ) = n × log(a)"
+        },
+        {
+          "t": "Une valeur de log qui n'apparaît pas dans l'énoncé doit être traitée comme incalculable.",
+          "v": false,
+          "e": "FAUX : il ne faut jamais conclure à l'incalculable. La valeur manquante se reconstruit à partir de celles qui sont données, en décomposant le nombre puis en appliquant les trois règles.",
+          "sourceQuote": "elle est reconstructible à partir de celles qui le sont"
+        },
+        {
+          "t": "Une fois la décomposition trouvée, il ne reste plus qu'à appliquer les 3 règles.",
+          "v": true,
+          "e": "VRAI. La décomposition est la seule étape qui demande de la réflexion ; ensuite, produit, quotient et puissance se traitent mécaniquement.",
+          "sourceQuote": "Puis applique les 3 règles."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-005-regle-dor-des-unites.html",
+      "origine": "reprise",
+      "arene": false,
+      "lot": 1,
+      "q": "Un énoncé de QCM te donne m = 9 g, V = 100 mL et M = 58,5 g/mol. Concernant le bon réflexe à avoir avant de calculer, laquelle (lesquelles) de ces propositions est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le bon réflexe est d'annoter chaque valeur avec son unité collée avant d'écrire le moindre calcul.",
+          "v": true,
+          "e": "VRAI. C'est la première étape de la méthode : on recopie au crayon m = 9 g, V = 100 mL, M = 58,5 g/mol, et la conversion à faire saute alors aux yeux — ici les millilitres à passer en litres.",
+          "sourceQuote": "Avant d'écrire un seul chiffre, recopie au crayon TOUTES les valeurs de l'énoncé avec leur unité"
+        },
+        {
+          "t": "Les rédacteurs d'énoncés mélangent parfois les unités exprès dans un même énoncé.",
+          "v": true,
+          "e": "VRAI. Le mélange d'unités dans un même énoncé est un piège volontaire : des grammes ici, des millilitres là. Ce n'est jamais un hasard de rédaction.",
+          "sourceQuote": "en mélangeant délibérément des unités différentes dans le même énoncé"
+        },
+        {
+          "t": "On peut commencer les calculs tout de suite : les unités se corrigeront d'elles-mêmes à la fin.",
+          "v": false,
+          "e": "FAUX : tant que les unités ne sont pas homogènes, aucun chiffre n'est posé. Une unité non convertie se propage dans tout le calcul et fausse le résultat sans jamais déclencher de signal d'alarme.",
+          "sourceQuote": "Tant que ce n'est pas fait, tu ne poses pas un seul chiffre"
+        },
+        {
+          "t": "Plus de 30 % des erreurs aux QCM de physique viennent d'une conversion d'unité oubliée.",
+          "v": true,
+          "e": "VRAI. C'est la première cause d'erreur, avant même les erreurs de formule — d'où l'intérêt d'un rituel systématique sur les unités.",
+          "sourceQuote": "plus de 30 % des erreurs aux QCM de physique viennent d'une conversion d'unité oubliée"
+        },
+        {
+          "t": "Un résultat mille fois trop grand signale forcément une erreur de formule.",
+          "v": false,
+          "e": "FAUX : un facteur 1000 est la signature typique d'une conversion oubliée — des grammes laissés en place quand la formule attend des kilogrammes, des millilitres au lieu de litres. La formule, elle, peut être parfaitement juste.",
+          "sourceQuote": "la formule attend des kilogrammes , tu fonces sans regarder, et tu sors un résultat 1000 fois trop grand"
+        }
+      ],
+      "source": "app:physique-analyse-dimensionnelle"
+    },
+    {
+      "fiche": "physique-005-regle-dor-des-unites.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux conversions de masse et de volume à connaître par cœur, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "1 kg = 10³ g = 10⁶ mg = 10⁹ µg.",
+          "v": true,
+          "e": "VRAI. C'est la ligne « Masse » du tableau, à connaître telle quelle : chaque marche vers le plus petit fait descendre de trois puissances de 10.",
+          "sourceQuote": "1 kg = 10 3 g = 10 6 mg = 10 9 µg"
+        },
+        {
+          "t": "1 kg = 10⁶ µg.",
+          "v": false,
+          "e": "FAUX : 1 kg = 10⁹ µg. Le facteur 10⁶ est celui qui relie le kilogramme au milligramme, pas au microgramme.",
+          "sourceQuote": "Trois lignes à connaître par cœur : 1 kg = 10 3 g = 10 6 mg = 10 9 µg"
+        },
+        {
+          "t": "1 m³ = 10³ L = 10⁶ mL.",
+          "v": true,
+          "e": "VRAI. C'est la ligne « Volume » : un mètre cube vaut mille litres, donc un million de millilitres.",
+          "sourceQuote": "1 m 3 = 10 3 L = 10 6 mL"
+        },
+        {
+          "t": "1 m³ = 10³ mL.",
+          "v": false,
+          "e": "FAUX : 1 m³ = 10⁶ mL. Le facteur 10³ relie le mètre cube au litre, et il faut encore un facteur 10³ pour passer du litre au millilitre.",
+          "sourceQuote": "1 m 3 = 10 3 L = 10 6 mL et 1 L = 1 dm 3 = 10 3 cm 3"
+        },
+        {
+          "t": "1 L = 1 dm³ = 10² cm³.",
+          "v": false,
+          "e": "FAUX : 1 L = 1 dm³ = 10³ cm³. L'équivalence litre / décimètre cube est juste, mais le passage au centimètre cube se fait avec un facteur mille, pas cent.",
+          "sourceQuote": "1 L = 1 dm 3 = 10 3 cm 3"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-005-regle-dor-des-unites.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la méthode à dérouler sur le brouillon avant de calculer, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La deuxième étape consiste à repérer les conversions à faire, qui sautent alors aux yeux.",
+          "v": true,
+          "e": "VRAI. Une fois toutes les valeurs recopiées avec leur unité, les conversions manquantes deviennent visibles d'un coup d'œil, sans avoir à les chercher.",
+          "sourceQuote": "Repère les conversions à faire. Elles te sautent alors aux yeux"
+        },
+        {
+          "t": "Sur l'exemple travaillé, la conversion à faire est mL → L, parce qu'une concentration molaire s'exprime en mol/L.",
+          "v": true,
+          "e": "VRAI. Le volume est donné en millilitres alors que l'unité cible d'une concentration molaire est le mol/L : il faut donc passer les mL en L avant de calculer.",
+          "sourceQuote": "ici, mL → L, parce qu'une concentration molaire s'exprime en mol/L"
+        },
+        {
+          "t": "La méthode se déroule sur le brouillon et tient en trois étapes avant tout calcul.",
+          "v": true,
+          "e": "VRAI. Recopier les valeurs avec leur unité, repérer les conversions, puis seulement calculer : trois étapes menées au crayon sur le brouillon.",
+          "sourceQuote": "La méthode 3 secondes, sur ton brouillon"
+        },
+        {
+          "t": "Ce réflexe coûte environ 20 secondes et en fait gagner 3.",
+          "v": false,
+          "e": "FAUX : les deux durées sont inversées. Le réflexe coûte 3 secondes et en fait gagner 20 — en plus d'éviter la faute bête.",
+          "sourceQuote": "Ce réflexe coûte 3 secondes, en fait gagner 20, et évite la faute bête."
+        },
+        {
+          "t": "Le réflexe « quelle est mon unité ? » n'a d'utilité qu'en épreuve, jamais en pratique.",
+          "v": false,
+          "e": "FAUX : c'est un réflexe de sécurité qui sauve littéralement des vies. Le cas de la dose calculée à partir d'un poids non converti en est l'illustration directe.",
+          "sourceQuote": "Le réflexe « quelle est mon unité ? » sauve littéralement des vies."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-005-regle-dor-des-unites.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives au cas clinique de l'interne calculant une dose médicamenteuse, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La posologie était exprimée en mg/L et le poids du patient en kilogrammes.",
+          "v": false,
+          "e": "FAUX : la posologie était en mg/kg et le poids du patient était noté en livres anglo-saxonnes. C'est précisément le décalage entre ces deux unités qui a créé l'erreur.",
+          "sourceQuote": "La posologie est en mg/kg . Le poids du patient est noté en livres anglo-saxonnes (lbs)"
+        },
+        {
+          "t": "L'interne a oublié la conversion 1 lb = 0,45 kg et a doublé la dose.",
+          "v": true,
+          "e": "VRAI. Une livre valant 0,45 kg, utiliser le nombre de livres comme s'il s'agissait de kilogrammes multiplie la dose par environ deux.",
+          "sourceQuote": "L'interne oublie la conversion ( 1 lb = 0,45 kg ) et double la dose."
+        },
+        {
+          "t": "L'oubli de cette conversion a conduit à administrer une dose deux fois trop faible.",
+          "v": false,
+          "e": "FAUX : la dose a été doublée, pas divisée. La conséquence a donc été un surdosage immédiat, pas un sous-dosage.",
+          "sourceQuote": "et double la dose. Conséquence : surdosage immédiat"
+        },
+        {
+          "t": "Ce type d'erreur a causé plusieurs décès aux États-Unis.",
+          "v": true,
+          "e": "VRAI. L'erreur de conversion d'unité n'est pas une faute scolaire sans portée : elle a entraîné des décès et figure parmi les cas types enseignés en pharmacologie.",
+          "sourceQuote": "Ce type d'erreur a causé plusieurs décès aux États-Unis"
+        },
+        {
+          "t": "Ce cas est purement théorique et ne figure pas parmi les cas enseignés en pharmacologie.",
+          "v": false,
+          "e": "FAUX : il fait au contraire partie des cas types enseignés en pharmacologie, précisément parce qu'il a eu des conséquences réelles.",
+          "sourceQuote": "fait partie des cas types enseignés en pharmacologie"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-005-regle-dor-des-unites.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à la conversion d'une température en kelvins, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La relation T(K) = T(°C) + 273 vaut pour une température absolue.",
+          "v": true,
+          "e": "VRAI. C'est la troisième ligne du tableau des conversions : pour une température absolue, on ajoute 273 à la valeur exprimée en degrés Celsius.",
+          "sourceQuote": "T(K) = T(°C) + 273 vaut pour une température absolue"
+        },
+        {
+          "t": "25 °C correspondent à 273 K.",
+          "v": false,
+          "e": "FAUX : 25 °C correspondent à 298 K. La valeur 273 est la constante que l'on ajoute, pas le résultat de la conversion.",
+          "sourceQuote": "25 °C, c'est 298 K"
+        },
+        {
+          "t": "Une température absolue se convertit en kelvins en retranchant 273 à la valeur en degrés Celsius.",
+          "v": false,
+          "e": "FAUX : on ajoute 273, on ne le retranche pas. La relation est T(K) = T(°C) + 273.",
+          "sourceQuote": "1 L = 1 dm 3 = 10 3 cm 3 · T(K) = T(°C) + 273"
+        },
+        {
+          "t": "La conversion de la température en kelvins fait partie des conversions à annoter avant de calculer.",
+          "v": true,
+          "e": "VRAI. Sur le brouillon, la température se note en kelvins juste à côté de la valeur en degrés Celsius, au même titre que les autres conversions repérées.",
+          "sourceQuote": "(et la température en kelvins, déjà annotée à côté du °C)"
+        },
+        {
+          "t": "La ligne « Température » est la moins piégeuse des trois lignes du tableau des conversions.",
+          "v": false,
+          "e": "FAUX : c'est au contraire celle qui cache la subtilité la plus piégeuse, à savoir la différence de traitement entre une température absolue et un écart de température.",
+          "sourceQuote": "La ligne « Température » cache la subtilité la plus piégeuse du tableau."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-005-regle-dor-des-unites.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la différence entre une température absolue et un écart de température, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un écart de température de 10 K correspond à un écart de 10 °C.",
+          "v": true,
+          "e": "VRAI. Un écart se transporte tel quel d'une échelle à l'autre : un ΔT de 10 K est bien un ΔT de 10 °C.",
+          "sourceQuote": "donc un ΔT de 10 K est un ΔT de 10 °C"
+        },
+        {
+          "t": "Cette égalité tient au fait que les 273 s'annulent dans la soustraction.",
+          "v": true,
+          "e": "VRAI. Chacune des deux températures gagne 273 en passant en kelvins ; dans la différence, les deux constantes se compensent et l'écart reste identique.",
+          "sourceQuote": "les 273 s'annulent dans la soustraction"
+        },
+        {
+          "t": "Un écart mesuré en kelvins est toujours supérieur de 273 au même écart exprimé en degrés Celsius.",
+          "v": false,
+          "e": "FAUX : le décalage de 273 ne s'applique qu'aux températures absolues. Un ΔT en K est rigoureusement égal au même ΔT en °C.",
+          "sourceQuote": "un ΔT en K = ΔT en °C, mais une T absolue non"
+        },
+        {
+          "t": "Une température absolue exprimée en degrés Celsius peut être reportée telle quelle dans une formule qui attend des kelvins.",
+          "v": false,
+          "e": "FAUX : une température absolue doit être convertie avant d'entrer dans la formule. Reporter 25 au lieu de 298 fausse tout le calcul.",
+          "sourceQuote": "mais une T absolue , non — elle, il faut la convertir"
+        },
+        {
+          "t": "Une température absolue se convertit, un écart de température non.",
+          "v": true,
+          "e": "VRAI. C'est la formulation la plus courte de la subtilité : la conversion +273 s'applique aux températures absolues, jamais aux écarts.",
+          "sourceQuote": "Une T absolue se convertit, un ΔT non."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-005-regle-dor-des-unites.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à l'application numérique des conversions de base, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "9 g correspondent à 9 × 10⁻³ kg.",
+          "v": true,
+          "e": "VRAI. Puisque 1 kg = 10³ g, on passe des grammes aux kilogrammes en divisant par 10³ : 9 g = 9 × 10⁻³ kg, soit 0,009 kg.",
+          "sourceQuote": "1 kg = 10 3 g = 10 6 mg = 10 9 µg"
+        },
+        {
+          "t": "100 mL correspondent à 0,1 L.",
+          "v": true,
+          "e": "VRAI. 1 m³ vaut 10³ L et 10⁶ mL, donc 1 L = 10³ mL. Il en découle que 100 mL = 100 / 10³ = 0,1 L.",
+          "sourceQuote": "1 m 3 = 10 3 L = 10 6 mL"
+        },
+        {
+          "t": "1 cm³ correspond à 1 mL.",
+          "v": true,
+          "e": "VRAI. Un litre vaut 10³ cm³ et vaut aussi 10³ mL : le centimètre cube et le millilitre sont donc le même volume. C'est ce qui rend les deux notations interchangeables sur une seringue.",
+          "sourceQuote": "1 L = 1 dm 3 = 10 3 cm 3"
+        },
+        {
+          "t": "1 mg correspond à 10⁻⁹ kg.",
+          "v": false,
+          "e": "FAUX : 1 kg = 10⁶ mg, donc 1 mg = 10⁻⁶ kg. Le facteur 10⁻⁹ est celui qui relie le microgramme au kilogramme.",
+          "sourceQuote": "Trois lignes à connaître par cœur : 1 kg = 10 3 g = 10 6 mg = 10 9 µg"
+        },
+        {
+          "t": "1 m³ correspond à 1 000 cm³.",
+          "v": false,
+          "e": "FAUX : 1 m³ = 10³ L et 1 L = 10³ cm³, donc 1 m³ = 10⁶ cm³, soit un million de centimètres cubes. Mille centimètres cubes ne font qu'un litre.",
+          "sourceQuote": "1 m 3 = 10 3 L = 10 6 mL et 1 L = 1 dm 3 = 10 3 cm 3"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-006-analyse-dimensionnelle.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives au principe qui permet de retrouver une formule à partir des unités, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La plupart des formules de physique se reconstruisent en regardant seulement les unités.",
+          "v": true,
+          "e": "VRAI. C'est tout l'intérêt de la démarche : une formule oubliée n'est pas une formule perdue, les unités suffisent le plus souvent à la retrouver.",
+          "sourceQuote": "la plupart des formules de physique se reconstruisent juste en regardant les unités"
+        },
+        {
+          "t": "Il n'existe en général qu'une seule combinaison des données qui donne l'unité cible, et c'est la formule cherchée.",
+          "v": true,
+          "e": "VRAI. C'est l'idée centrale : parmi toutes les façons de combiner les données disponibles, une seule reconstitue l'unité de la grandeur cherchée.",
+          "sourceQuote": "Il n'existe en général qu'une seule combinaison de tes données qui donne l'unité cible — et c'est ta formule"
+        },
+        {
+          "t": "Cette démarche porte le nom d'analyse fonctionnelle.",
+          "v": false,
+          "e": "FAUX : elle s'appelle l'analyse dimensionnelle, parce qu'elle raisonne sur les dimensions, c'est-à-dire sur les unités, et non sur les valeurs numériques.",
+          "sourceQuote": "C'est ce qu'on appelle l'analyse dimensionnelle"
+        },
+        {
+          "t": "Appliquer cette méthode suppose de connaître au préalable les formules par cœur.",
+          "v": false,
+          "e": "FAUX : c'est exactement l'inverse. Le but de la méthode est justement de montrer comment retrouver les formules sans les avoir mémorisées.",
+          "sourceQuote": "montrer comment les retrouver sans les mémoriser"
+        },
+        {
+          "t": "Les unités ne servent qu'à vérifier un calcul déjà posé, jamais à reconstruire une formule.",
+          "v": false,
+          "e": "FAUX : vérifier l'homogénéité n'est que leur premier usage. Elles savent faire bien plus, jusqu'à reconstruire une formule entière que l'on ne se rappelle plus.",
+          "sourceQuote": "Elles savent faire bien plus."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-006-analyse-dimensionnelle.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la méthode en trois questions, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La première question porte sur l'unité dans laquelle doit s'exprimer la grandeur cherchée.",
+          "v": true,
+          "e": "VRAI. On commence toujours par fixer la cible : dans quelle unité doit s'exprimer ce que l'on cherche.",
+          "sourceQuote": "Dans quelle unité doit s'exprimer ce que je cherche ?"
+        },
+        {
+          "t": "La deuxième question consiste à choisir, parmi les formules du cours, celle qui semble la plus familière.",
+          "v": false,
+          "e": "FAUX : la deuxième question ne porte pas sur les formules mais sur les unités des données dont on dispose. On raisonne sur les unités, pas sur les souvenirs.",
+          "sourceQuote": "Quelles unités ont mes données disponibles ?"
+        },
+        {
+          "t": "La troisième question consiste à trouver la combinaison, par multiplication ou par division, qui reconstitue l'unité cible.",
+          "v": true,
+          "e": "VRAI. Une fois la cible et les données identifiées, il reste à chercher quelle combinaison, par produit ou par quotient, redonne l'unité visée.",
+          "sourceQuote": "Quelle combinaison (× ou /) reconstitue l'unité cible ?"
+        },
+        {
+          "t": "Les trois questions se posent dans l'ordre suivant : les unités des données d'abord, l'unité cible ensuite.",
+          "v": false,
+          "e": "FAUX : l'ordre est l'inverse. On identifie d'abord l'unité de la cible, puis celles des données, et enfin la combinaison qui relie les deux.",
+          "sourceQuote": "Trois questions, dans l'ordre : quelle unité pour ma cible ? → quelles unités pour mes données ?"
+        },
+        {
+          "t": "Seule une addition des données permet de reconstituer l'unité cible.",
+          "v": false,
+          "e": "FAUX : les unités se combinent par multiplication ou par division, jamais par addition. C'est le produit ou le quotient qui fait apparaître ou disparaître une unité.",
+          "sourceQuote": "quelle combinaison (× ou /) reconstitue l'unité cible ?"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-006-analyse-dimensionnelle.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives aux formules reconstruites à partir des seules unités, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Avec n en mol et V en L, la combinaison qui donne des mol/L est C = n / V.",
+          "v": true,
+          "e": "VRAI. L'unité cible est le mol/L, c'est-à-dire des moles divisées par des litres : la division de n par V s'impose d'elle-même. Ainsi 0,5 mol dans 2 L donnent 0,25 mol/L.",
+          "sourceQuote": "C = n / V 0,5 mol dans 2 L → 0,25 mol/L"
+        },
+        {
+          "t": "Le nombre d'entités N s'obtient en divisant n par le nombre d'Avogadro.",
+          "v": false,
+          "e": "FAUX : c'est la multiplication qui convient. N est un nombre sans unité, et seul le produit mol × mol⁻¹ fait disparaître les moles ; la division, elle, laisserait des mol².",
+          "sourceQuote": "mol × mol −1 = sans unité ✓ — la multiplication s'impose toute seule"
+        },
+        {
+          "t": "1 mol de glucose correspond à environ 6 × 10²³ molécules.",
+          "v": true,
+          "e": "VRAI. En multipliant la quantité de matière par le nombre d'Avogadro, une mole donne bien de l'ordre de 6 × 10²³ molécules.",
+          "sourceQuote": "1 mol de glucose → 6 × 10 23 molécules"
+        },
+        {
+          "t": "N est une grandeur sans unité, ce que traduit le produit mol × mol⁻¹.",
+          "v": true,
+          "e": "VRAI. N est un simple dénombrement : des moles multipliées par des mol⁻¹ donnent un nombre pur, sans unité.",
+          "sourceQuote": "N sans unité n en mol 𝒩 en mol −1"
+        },
+        {
+          "t": "Une concentration exprimée en mol/L se lit comme des litres divisés par des moles.",
+          "v": false,
+          "e": "FAUX : mol/L se lit « des moles divisées par des litres ». L'inverse, des litres par mole, ne serait pas une concentration.",
+          "sourceQuote": "« mol / L » = des moles divisées par des litres"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-006-analyse-dimensionnelle.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la reconstruction de la formule reliant n, m et M, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La seule grandeur qui contient déjà des « mol » dans son unité est la masse molaire M, en g/mol.",
+          "v": true,
+          "e": "VRAI. On part de grammes et on veut des moles : la seule donnée qui apporte déjà des « mol » est M. C'est donc elle qui doit servir à faire disparaître les grammes.",
+          "sourceQuote": "La seule grandeur qui contient déjà des « mol » dans son unité est M (g/mol)"
+        },
+        {
+          "t": "Diviser par des g/mol revient à multiplier par des mol/g.",
+          "v": true,
+          "e": "VRAI. Diviser par une fraction revient à multiplier par son inverse : [g] ÷ [g/mol] devient [g] × [mol/g].",
+          "sourceQuote": "or diviser par une fraction revient à multiplier par son inverse, donc [g] × [mol/g]"
+        },
+        {
+          "t": "Les « g » du numérateur et du dénominateur s'annulent, si bien qu'il ne reste que des mol.",
+          "v": true,
+          "e": "VRAI. C'est la vérification qui valide la formule : l'unité obtenue est bien le mol, celle de la grandeur cherchée. Donc n = m / M.",
+          "sourceQuote": "les « g » du numérateur et du dénominateur s'annulent, il reste mol"
+        },
+        {
+          "t": "9 g de NaCl, de masse molaire 58,5 g/mol, représentent environ 1,54 mol.",
+          "v": false,
+          "e": "FAUX : 9 divisé par 58,5 donne environ 0,154 mol, et non 1,54. L'ordre de grandeur se contrôle d'ailleurs de tête : 9 g, c'est nettement moins que 58,5 g, donc bien moins d'une mole.",
+          "sourceQuote": "9 g de NaCl (M = 58,5) → ≈ 0,154 mol"
+        },
+        {
+          "t": "La masse molaire M s'exprime en mol/g.",
+          "v": false,
+          "e": "FAUX : la masse molaire s'exprime en g/mol, c'est-à-dire une masse par mole. C'est justement cette écriture qui permet aux grammes de s'annuler dans m / M.",
+          "sourceQuote": "m en g M en g/mol"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-006-analyse-dimensionnelle.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à l'usage des unités pour valider ou éliminer une formule, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Si la combinaison proposée donne la bonne unité, c'est la bonne formule.",
+          "v": true,
+          "e": "VRAI. C'est la règle d'or : l'unité obtenue sert de preuve. Quand elle tombe juste, la combinaison testée est la formule cherchée.",
+          "sourceQuote": "si la combinaison que tu proposes donne la bonne unité, tu as la bonne formule"
+        },
+        {
+          "t": "Si l'unité obtenue est fausse, la formule l'est aussi, et cela sans avoir à calculer.",
+          "v": true,
+          "e": "VRAI. La réciproque est tout aussi vraie et encore plus utile : une unité incohérente condamne la formule, sans poser le moindre chiffre.",
+          "sourceQuote": "Si l'unité est fausse, ta formule l'est aussi — sans même avoir à calculer"
+        },
+        {
+          "t": "Une réponse de QCM dont l'unité ne tombe pas juste peut malgré tout être exacte.",
+          "v": false,
+          "e": "FAUX : une réponse dont l'unité ne tombe pas juste est fausse, sans exception. C'est ce qui permet d'éliminer des propositions très vite.",
+          "sourceQuote": "Une réponse de QCM dont l'unité ne tombe pas juste est FAUSSE"
+        },
+        {
+          "t": "L'analyse dimensionnelle est un outil marginal, rarement utile en QCM.",
+          "v": false,
+          "e": "FAUX : c'est au contraire le réflexe qui sauve le plus souvent en QCM, parce qu'il permet à la fois de retrouver une formule et d'écarter des propositions.",
+          "sourceQuote": "c'est sans doute le réflexe qui te sauvera le plus souvent en QCM"
+        },
+        {
+          "t": "Écarter une proposition sur son unité impose d'avoir mené le calcul numérique jusqu'au bout.",
+          "v": false,
+          "e": "FAUX : le tri se fait sans même avoir à calculer. C'est précisément ce qui rend la méthode rentable en temps limité.",
+          "sourceQuote": "Une réponse de QCM dont l'unité ne tombe pas juste est FAUSSE , sans même avoir à calculer."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-006-analyse-dimensionnelle.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la reconstruction de la formule de la masse volumique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La masse volumique ρ, que l'on appelle aussi densité au lycée, s'exprime en g/cm³.",
+          "v": true,
+          "e": "VRAI. C'est l'unité cible du problème, et c'est elle qui va imposer la formule.",
+          "sourceQuote": "La masse volumique ρ — la « densité » que tu as vue au lycée — s'exprime en g/cm 3"
+        },
+        {
+          "t": "À partir de m en g et de V en cm³, la seule combinaison qui marche est ρ = m / V.",
+          "v": true,
+          "e": "VRAI. « g / cm³ » se lit « des grammes divisés par des cm³ » : la division de la masse par le volume reconstitue exactement l'unité cible.",
+          "sourceQuote": "« g / cm 3 » = des grammes divisés par des cm 3"
+        },
+        {
+          "t": "Un morceau de fer de 79 g occupant 10 cm³ a une masse volumique de 790 g/cm³.",
+          "v": false,
+          "e": "FAUX : il faut diviser, pas multiplier. 79 / 10 = 7,9 g/cm³, ce qui correspond bien à la densité du fer.",
+          "sourceQuote": "ρ = 79 / 10 = 7,9 g/cm 3"
+        },
+        {
+          "t": "La combinaison V / m donnerait elle aussi une masse volumique.",
+          "v": false,
+          "e": "FAUX : V / m s'exprimerait en cm³/g, soit l'inverse d'une masse volumique. L'unité cible étant g/cm³, seule la combinaison m / V convient.",
+          "sourceQuote": "la seule combinaison qui marche est ρ = m / V"
+        },
+        {
+          "t": "Retrouver cette formule impose d'aller la rechercher dans le cahier de cours.",
+          "v": false,
+          "e": "FAUX : la formule se retrouve sans la chercher nulle part, uniquement à partir des unités de la cible et des données.",
+          "sourceQuote": "Tu viens de retrouver la formule sans la chercher dans ton cahier, juste avec les unités."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-006-analyse-dimensionnelle.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives au sens d'une division et à la manipulation des unités, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les unités se manipulent comme des nombres : elles se multiplient, se divisent et s'annulent.",
+          "v": true,
+          "e": "VRAI. C'est ce qui rend la méthode utilisable : on traite les unités comme des facteurs algébriques, et celles qui se retrouvent au numérateur et au dénominateur disparaissent.",
+          "sourceQuote": "Les unités se manipulent comme des nombres — elles se multiplient, se divisent et s'annulent"
+        },
+        {
+          "t": "Le rapport M / m donne des 1/mol, ce qui n'a aucun sens physique pour une quantité de matière.",
+          "v": true,
+          "e": "VRAI. En inversant la division, on obtient (g/mol) / g = 1/mol : une unité qui ne correspond à aucune grandeur cherchée ici. C'est ce qui permet d'écarter ce candidat sans calculer.",
+          "sourceQuote": "L'inverse (M / m) donnerait 1/mol, ce qui n'a aucun sens physique"
+        },
+        {
+          "t": "Le sens de la division est imposé par les unités.",
+          "v": true,
+          "e": "VRAI. Ce n'est pas la mémoire qui décide quelle grandeur va au numérateur : c'est l'unité cible qui fixe le sens de la division.",
+          "sourceQuote": "le sens de la division est imposé par les unités"
+        },
+        {
+          "t": "Il suffit de vérifier que les bonnes lettres figurent dans la formule proposée pour la valider.",
+          "v": false,
+          "e": "FAUX : voir les bonnes lettres ne suffit pas. m / M et M / m contiennent exactement les mêmes lettres et n'ont pourtant pas la même unité, donc pas le même sens.",
+          "sourceQuote": "Ne te contente pas de « voir » les bonnes lettres"
+        },
+        {
+          "t": "Le rapport V / n, formé des mêmes données que C = n / V, s'exprime lui aussi en mol/L.",
+          "v": false,
+          "e": "FAUX : V / n s'exprime en L/mol, l'inverse d'une concentration. Une concentration en mol/L se lit « des moles divisées par des litres », donc c'est bien n / V.",
+          "sourceQuote": "« mol / L » = des moles divisées par des litres"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-012-compartiments-eau-organisme.html",
+      "origine": "reprise",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la répartition de l'eau dans l'organisme et à ses compartiments, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'eau représente environ 60 à 65 % de la masse corporelle totale d'un adulte.",
+          "v": true,
+          "e": "VRAI. Chez l'adulte, l'eau pèse pour 60 à 65 % de la masse corporelle totale.",
+          "sourceQuote": "L'eau représente 60 à 65 % de la masse corporelle totale d'un adulte"
+        },
+        {
+          "t": "L'eau intracellulaire représente environ 45 % de la masse corporelle, soit le compartiment le plus important.",
+          "v": true,
+          "e": "VRAI. Environ 45 % de la masse corporelle, soit ~28 L chez un adulte de 70 kg : de très loin le plus gros des trois compartiments.",
+          "sourceQuote": "45 % de la masse corporelle, soit ~ 28 L chez un adulte de 70 kg : de très loin le plus gros des trois"
+        },
+        {
+          "t": "L'eau plasmatique représente environ 15 % de la masse corporelle.",
+          "v": false,
+          "e": "FAUX : l'eau plasmatique pèse 4 à 5 % de la masse corporelle, soit ~3 L. Les ~15 % correspondent à l'eau interstitielle.",
+          "sourceQuote": "plasmatique 4-5 % (~3 L)"
+        },
+        {
+          "t": "Chez un adulte de 70 kg, le volume d'eau total est d'environ 42 L.",
+          "v": true,
+          "e": "VRAI. Les trois compartiments totalisent environ 42 L chez un adulte de 70 kg.",
+          "sourceQuote": "Total ~42 L chez un adulte de 70 kg"
+        },
+        {
+          "t": "Le tissu adipeux contient plus d'eau que les autres tissus, ce qui fait que les personnes obèses ont une proportion d'eau plus élevée.",
+          "v": false,
+          "e": "FAUX : le tissu adipeux contient moins d'eau. La proportion d'eau est donc plus basse chez l'adulte obèse, et plus élevée chez l'enfant.",
+          "sourceQuote": "le tissu adipeux contient moins d'eau"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-012-compartiments-eau-organisme.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la localisation et au volume de chacun des trois compartiments hydriques, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'eau interstitielle est celle qui baigne l'espace situé entre les cellules.",
+          "v": true,
+          "e": "VRAI. Le compartiment interstitiel est l'eau qui baigne l'espace entre les cellules.",
+          "sourceQuote": "C'est l'eau qui baigne l'espace entre les cellules"
+        },
+        {
+          "t": "Chez un adulte de 70 kg, le compartiment interstitiel représente environ 3 L.",
+          "v": false,
+          "e": "FAUX : le compartiment interstitiel pèse ~15 % de la masse corporelle, soit environ 10 L. Les ~3 L sont le volume du compartiment plasmatique.",
+          "sourceQuote": "15 % de la masse corporelle, soit ~ 10 L"
+        },
+        {
+          "t": "L'eau plasmatique est l'eau contenue dans le sang, à l'intérieur des vaisseaux.",
+          "v": true,
+          "e": "VRAI. Le compartiment plasmatique est l'eau du sang, à l'intérieur des vaisseaux.",
+          "sourceQuote": "C'est l'eau contenue dans le sang, à l'intérieur des vaisseaux"
+        },
+        {
+          "t": "Le compartiment plasmatique représente environ 4 à 5 % de la masse corporelle, soit environ 10 L chez un adulte de 70 kg.",
+          "v": false,
+          "e": "FAUX : le pourcentage est juste, mais 4 à 5 % de 70 kg font environ 3 L, et non 10 L.",
+          "sourceQuote": "4 à 5 % de la masse corporelle, soit ~ 3 L seulement"
+        },
+        {
+          "t": "L'eau intracellulaire se situe du même côté de la membrane cellulaire que l'eau interstitielle.",
+          "v": false,
+          "e": "FAUX : l'eau intracellulaire est à l'intérieur des cellules, donc de l'autre côté de la membrane cellulaire par rapport à l'eau interstitielle.",
+          "sourceQuote": "de l'autre côté de la membrane cellulaire"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-012-compartiments-eau-organisme.html",
+      "origine": "reprise",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à l'estimation des volumes d'eau d'un patient et à son usage clinique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'eau plasmatique d'une patiente de 80 kg est estimée à environ 4 L.",
+          "v": true,
+          "e": "VRAI. 5 % × 80 = 4 L.",
+          "sourceQuote": "eau plasmatique ≈ 5 % × 80 = 4 L"
+        },
+        {
+          "t": "Cette estimation permet à un anesthésiste de calculer la dose d'anesthésique en fonction du poids.",
+          "v": true,
+          "e": "VRAI. C'est l'un des usages cliniques directs de cette estimation.",
+          "sourceQuote": "permet à un anesthésiste de calculer la dose d'anesthésique en fonction du poids"
+        },
+        {
+          "t": "Elle aide aussi le réanimateur à savoir combien il peut « remplir » sans surcharger le cœur.",
+          "v": true,
+          "e": "VRAI. Connaître le volume plasmatique borne le remplissage vasculaire possible.",
+          "sourceQuote": "à un réanimateur de savoir combien il peut « remplir » sans surcharger le cœur"
+        },
+        {
+          "t": "L'eau totale de cette patiente de 80 kg est estimée à environ 80 L.",
+          "v": false,
+          "e": "FAUX : l'eau totale s'estime à 60 % × 80 = 48 L.",
+          "sourceQuote": "eau totale ≈ 60 % × 80 = 48 L"
+        },
+        {
+          "t": "Le pourcentage utilisé pour estimer l'eau plasmatique est de 15 %.",
+          "v": false,
+          "e": "FAUX : on applique 5 % pour le secteur plasmatique, ce qui donne 4 L chez cette patiente.",
+          "sourceQuote": "eau plasmatique ≈ 5 % × 80 = 4 L"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-012-compartiments-eau-organisme.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la régulation de l'eau entre les compartiments et à ses conséquences cliniques, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le corps régule strictement la répartition de l'eau entre ces compartiments.",
+          "v": true,
+          "e": "VRAI. Cette répartition n'est pas laissée au hasard : elle est strictement régulée.",
+          "sourceQuote": "Le corps régule strictement la répartition de l'eau entre ces compartiments"
+        },
+        {
+          "t": "Une rupture de cet équilibre reste purement biologique et ne se traduit par aucun signe clinique.",
+          "v": false,
+          "e": "FAUX : quand l'équilibre se rompt, cela se voit cliniquement.",
+          "sourceQuote": "Quand l'équilibre se rompt, ça se voit cliniquement"
+        },
+        {
+          "t": "Une soif intense, une hypotension ou des œdèmes peuvent traduire une rupture de cet équilibre.",
+          "v": true,
+          "e": "VRAI. Ce sont les manifestations cliniques citées d'un déséquilibre hydrique.",
+          "sourceQuote": "soif intense, hypotension, œdèmes"
+        },
+        {
+          "t": "Des troubles neurologiques apparaissent dès les déséquilibres les plus légers.",
+          "v": false,
+          "e": "FAUX : les troubles neurologiques sont réservés aux cas graves.",
+          "sourceQuote": "troubles neurologiques dans les cas graves"
+        },
+        {
+          "t": "Les trois compartiments hydriques sont séparés les uns des autres par des parois osseuses.",
+          "v": false,
+          "e": "FAUX : ils sont séparés par des membranes, et non par des parois osseuses.",
+          "sourceQuote": "trois compartiments séparés par des membranes"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-012-compartiments-eau-organisme.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux propriétés de la molécule d'eau rappelées en ouverture et à la lecture du schéma des compartiments, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La forme coudée de la molécule d'eau en fait un dipôle.",
+          "v": true,
+          "e": "VRAI. C'est sa géométrie coudée qui fait de l'eau un dipôle.",
+          "sourceQuote": "sa forme coudée qui en fait un dipôle"
+        },
+        {
+          "t": "L'eau doit son pouvoir de dissolution et d'hydratation des ions à une constante diélectrique égale à 8.",
+          "v": false,
+          "e": "FAUX : cette constante vaut 80, et non 8. C'est cette valeur élevée qui lui permet de dissoudre et d'hydrater tous les ions du vivant.",
+          "sourceQuote": "80 qui lui permet de dissoudre et d'hydrater tous les ions du vivant"
+        },
+        {
+          "t": "Les membranes qui séparent les compartiments sont étanches : l'eau ne passe pas de l'un à l'autre.",
+          "v": false,
+          "e": "FAUX : c'est justement à travers ces membranes que l'eau circule d'un compartiment à l'autre.",
+          "sourceQuote": "c'est à travers elles que l'eau circule d'un compartiment à l'autre"
+        },
+        {
+          "t": "Devant le schéma, il faut d'abord repérer les membranes, et seulement ensuite comparer les tailles des compartiments.",
+          "v": false,
+          "e": "FAUX : l'ordre de lecture proposé est l'inverse — on compare d'abord les tailles, on repère ensuite les membranes.",
+          "sourceQuote": "compare d'abord les tailles"
+        },
+        {
+          "t": "Le déséquilibre de la répartition de l'eau explique pourquoi une perfusion n'est jamais choisie au hasard à l'hôpital.",
+          "v": true,
+          "e": "VRAI. Le choix du soluté de perfusion découle de cette répartition entre compartiments.",
+          "sourceQuote": "pourquoi on ne choisit jamais une perfusion au hasard à l'hôpital"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-012-compartiments-eau-organisme.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à l'estimation des volumes hydriques d'un adulte de 60 kg d'indice de masse corporelle normal, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Son eau intracellulaire avoisine 27 L.",
+          "v": true,
+          "e": "VRAI. 45 % × 60 = 27 L.",
+          "sourceQuote": "intracellulaire ~45 % (~28 L)"
+        },
+        {
+          "t": "Son eau interstitielle avoisine 9 L.",
+          "v": true,
+          "e": "VRAI. 15 % × 60 = 9 L.",
+          "sourceQuote": "interstitielle ~15 % (~10 L)"
+        },
+        {
+          "t": "Son eau plasmatique avoisine 12 L.",
+          "v": false,
+          "e": "FAUX : le compartiment plasmatique pèse 4 à 5 % de la masse, soit environ 3 L pour 60 kg.",
+          "sourceQuote": "plasmatique 4-5 % (~3 L)"
+        },
+        {
+          "t": "Son eau totale se situe entre 36 et 39 L.",
+          "v": true,
+          "e": "VRAI. 60 % × 60 = 36 L et 65 % × 60 = 39 L.",
+          "sourceQuote": "L'eau représente 60 à 65 % de la masse corporelle totale d'un adulte"
+        },
+        {
+          "t": "Le volume interstitiel obtenu ici dépasse celui d'un adulte de 70 kg.",
+          "v": false,
+          "e": "FAUX : 9 L pour 60 kg contre environ 10 L pour 70 kg. À pourcentage égal, une masse plus faible donne un volume plus faible.",
+          "sourceQuote": "interstitielle ~15 % (~10 L)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-012-compartiments-eau-organisme.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la variabilité du pourcentage d'eau corporelle d'un individu à l'autre, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La proportion d'eau corporelle est plus élevée chez l'enfant.",
+          "v": true,
+          "e": "VRAI. Le pourcentage d'eau est plus élevé chez l'enfant.",
+          "sourceQuote": "plus élevé chez l'enfant"
+        },
+        {
+          "t": "Chez l'adulte âgé, la proportion d'eau corporelle est plus élevée que chez l'adulte jeune.",
+          "v": false,
+          "e": "FAUX : elle est plus basse chez l'adulte âgé, comme chez l'adulte obèse.",
+          "sourceQuote": "plus bas chez l'adulte âgé ou obèse"
+        },
+        {
+          "t": "Le pourcentage d'eau corporelle est une constante universelle, identique d'un individu à l'autre.",
+          "v": false,
+          "e": "FAUX : ce pourcentage n'est pas universel, il varie avec l'âge et la corpulence.",
+          "sourceQuote": "Le pourcentage n'est pas universel"
+        },
+        {
+          "t": "Appliquer 60 % au poids de n'importe quel patient donne toujours une estimation juste de son eau totale.",
+          "v": false,
+          "e": "FAUX : appliquer mécaniquement 60 % à n'importe quel patient conduit à se tromper sur son eau totale.",
+          "sourceQuote": "Appliquer mécaniquement 60 % à n'importe quel patient, c'est se tromper sur son eau totale"
+        },
+        {
+          "t": "L'estimation proposée pour la patiente de 80 kg s'appuie sur le fait que son indice de masse corporelle est normal.",
+          "v": true,
+          "e": "VRAI. L'énoncé précise un IMC normal, condition qui autorise l'emploi des pourcentages moyens.",
+          "sourceQuote": "Une patiente de 80 kg, IMC normal"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-013-un-litre-eau-55-moles.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives au calcul du nombre de moles d'eau contenues dans 1 L d'eau pure, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La masse molaire de l'eau vaut 18 g/mol.",
+          "v": true,
+          "e": "VRAI. Une mole d'eau pèse 1 + 1 + 16 = 18 g.",
+          "sourceQuote": "Donc 1 mole d'eau pèse M = 1 + 1 + 16 = 18 g/mol"
+        },
+        {
+          "t": "1 L d'eau, soit 1000 mL, pèse 1000 g.",
+          "v": true,
+          "e": "VRAI. Avec une densité de 1 g/mL, 1000 mL pèsent 1000 g.",
+          "sourceQuote": "L'eau a une densité de 1 g/mL, donc 1 L = 1000 mL pèse m = 1000 g"
+        },
+        {
+          "t": "Le nombre de moles s'obtient ici en multipliant la masse par la masse molaire.",
+          "v": false,
+          "e": "FAUX : on divise la masse par la masse molaire, n = m / M, soit 1000 / 18.",
+          "sourceQuote": "C'est exactement la formule n = m / M"
+        },
+        {
+          "t": "1 L d'eau pure contient environ 5,55 moles d'eau.",
+          "v": false,
+          "e": "FAUX : 1 L d'eau pure contient environ 55,5 moles, soit dix fois plus.",
+          "sourceQuote": "1 L d'eau pure contient ≈ 55,5 moles d'eau"
+        },
+        {
+          "t": "Dans H₂O, chaque atome d'hydrogène compte pour 16 g/mol et l'atome d'oxygène pour 1 g/mol.",
+          "v": false,
+          "e": "FAUX : les valeurs sont croisées. Chaque hydrogène compte 1 g/mol et l'oxygène 16 g/mol.",
+          "sourceQuote": "2 atomes H (1 g/mol chacun) + 1 atome O (16 g/mol)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-013-un-litre-eau-55-moles.html",
+      "origine": "reprise",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la valeur « 1 L d'eau pure ≈ 55,5 mol » et à l'excès d'eau dans les solutions biologiques, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'intuition « 1 L d'eau = 1 kilo » permet de retenir la masse de 1 L d'eau.",
+          "v": true,
+          "e": "VRAI. C'est le repère proposé pour ne jamais perdre la masse de départ du calcul.",
+          "sourceQuote": "1 L d'eau = 1 kilo"
+        },
+        {
+          "t": "Cette valeur est présentée comme l'une des valeurs les plus utilisées de toute la physiologie.",
+          "v": true,
+          "e": "VRAI. La quantité de matière d'eau dans 1 litre resservira dans tout le programme.",
+          "sourceQuote": "l'une des valeurs les plus utilisées de toute la physiologie"
+        },
+        {
+          "t": "Dans le plasma, l'eau est en énorme excès, ce qui justifie de la traiter comme « infinie » dans les approximations.",
+          "v": true,
+          "e": "VRAI. Cette domination écrasante autorise les approximations faites ensuite.",
+          "sourceQuote": "en traitant l'eau comme « infinie »"
+        },
+        {
+          "t": "Pour vérifier le raisonnement, on divise 18 par 1000 et on trouve environ 55,5.",
+          "v": false,
+          "e": "FAUX : on divise 1000 par 18, pas l'inverse. On cherche combien de fois 18 g tiennent dans 1000 g.",
+          "sourceQuote": "tu divises 1000 par 18, tu trouves ≈ 55,5"
+        },
+        {
+          "t": "Dans le plasma, il y a environ autant de molécules d'eau que de molécules de soluté.",
+          "v": false,
+          "e": "FAUX : il y a environ 200 fois plus de molécules d'eau que de molécules de soluté.",
+          "sourceQuote": "≈ 200 fois plus de molécules d'eau"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-013-un-litre-eau-55-moles.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la comparaison des concentrations de l'eau et des solutés dans le plasma, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les solutés du plasma — sels, glucose, urée — sont de l'ordre de 0,3 mol/L.",
+          "v": true,
+          "e": "VRAI. L'ensemble des solutés plasmatiques se situe autour de 0,3 mol/L.",
+          "sourceQuote": "sels, glucose, urée… ~ 0,3 mol/L"
+        },
+        {
+          "t": "Le résultat du calcul peut se lire comme une concentration : 55,5 mol d'eau par litre.",
+          "v": true,
+          "e": "VRAI. Les 55,5 mol contenues dans 1 L se lisent aussi comme une concentration de 55,5 mol/L.",
+          "sourceQuote": "on peut aussi lire le résultat ci-dessus comme une concentration : 55,5 mol d'eau par litre"
+        },
+        {
+          "t": "Les approximations que cet excès autorise ne concernent que le calcul des masses molaires.",
+          "v": false,
+          "e": "FAUX : elles concernent le pH, l'osmolarité et les équilibres biochimiques.",
+          "sourceQuote": "pH, osmolarité, équilibres biochimiques"
+        },
+        {
+          "t": "La concentration de l'eau dans le plasma est de l'ordre de 0,3 mol/L.",
+          "v": false,
+          "e": "FAUX : l'eau est à environ 55,5 mol/L ; ce sont les solutés qui se situent vers 0,3 mol/L.",
+          "sourceQuote": "le solvant ~ 55,5 mol/L"
+        },
+        {
+          "t": "Les solutés du plasma cités ici sont les protéines et les lipides.",
+          "v": false,
+          "e": "FAUX : les solutés cités sont les sels, le glucose et l'urée.",
+          "sourceQuote": "sels, glucose, urée…"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-013-un-litre-eau-55-moles.html",
+      "origine": "reprise",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives au mini-exercice de la goutte d'eau et au sens de la mole, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une goutte d'eau a un volume d'environ 0,05 mL.",
+          "v": true,
+          "e": "VRAI. C'est le volume de goutte pris comme référence.",
+          "sourceQuote": "une goutte d'eau (≈ 0,05 mL)"
+        },
+        {
+          "t": "Prendre 0,05 mL revient à prendre environ 20 000 fois moins de volume que 1 L, donc 20 000 fois moins de moles que 55,5.",
+          "v": true,
+          "e": "VRAI. La proportionnalité s'applique directement : X fois moins d'eau, X fois moins de moles.",
+          "sourceQuote": "on prend 20 000 fois moins de volume que 1 L, donc 20 000 fois moins de moles que 55,5"
+        },
+        {
+          "t": "La goutte contient environ 1700 milliards de milliards de molécules d'eau.",
+          "v": true,
+          "e": "VRAI. Soit environ 1,7 × 10²¹ molécules dans une simple goutte.",
+          "sourceQuote": "1700 milliards de milliards de molécules"
+        },
+        {
+          "t": "Pour faire le calcul de tête, on arrondit 55,5 à 60.",
+          "v": false,
+          "e": "FAUX : on arrondit 55,5 à 55, ce qui permet de faire 5 × 55 = 275 de tête.",
+          "sourceQuote": "on arrondit 55,5 ≈ 55"
+        },
+        {
+          "t": "Ce mini-exercice montre qu'avec la mole on manipule des unités plutôt que des paquets de 6 × 10²³.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. Toute la puissance de la mole est de manipuler des paquets de 6 × 10²³, et non des unités.",
+          "sourceQuote": "on manipule des paquets de 6 × 10²³, pas des unités"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-013-un-litre-eau-55-moles.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux unités de volume dans les calculs de quantité de matière, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dès qu'une formule contient un volume, le résultat dépend de l'unité choisie.",
+          "v": true,
+          "e": "VRAI. C'est la première précaution à prendre devant toute formule contenant un volume.",
+          "sourceQuote": "Dès qu'une formule contient un volume, le résultat dépend de l'unité choisie"
+        },
+        {
+          "t": "En physique, le volume s'exprime de préférence en millilitres.",
+          "v": false,
+          "e": "FAUX : le volume se met en litres.",
+          "sourceQuote": "V se met en litres"
+        },
+        {
+          "t": "Oublier de convertir un volume donné en millilitres conduit à un résultat 1000 fois trop petit.",
+          "v": false,
+          "e": "FAUX : l'erreur donne un résultat 1000 fois trop grand, et non trop petit.",
+          "sourceQuote": "tu sors un résultat 1000 fois trop grand"
+        },
+        {
+          "t": "0,05 mL vaut 5 × 10⁻⁵ L.",
+          "v": true,
+          "e": "VRAI. 0,05 / 1000 = 5 × 10⁻⁵ L.",
+          "sourceQuote": "0,05 mL = 0,05 / 1000 = 5 × 10⁻⁵ L"
+        },
+        {
+          "t": "Ce type d'erreur de conversion se repère immédiatement à la lecture du résultat.",
+          "v": false,
+          "e": "FAUX : le résultat reste plausible en apparence, et l'erreur passe sans être vue.",
+          "sourceQuote": "sans voir l'erreur"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-013-un-litre-eau-55-moles.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives au nombre de moles d'eau contenues dans différents volumes d'eau pure, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un demi-litre d'eau pure contient environ 27,8 mol d'eau.",
+          "v": true,
+          "e": "VRAI. 0,5 × 55,5 ≈ 27,75 mol.",
+          "sourceQuote": "1 L d'eau pure contient ≈ 55,5 moles d'eau"
+        },
+        {
+          "t": "Un verre de 200 mL d'eau pure contient environ 111 mol d'eau.",
+          "v": false,
+          "e": "FAUX : 0,2 × 55,5 ≈ 11,1 mol. La valeur 111 mol correspondrait à 2 L.",
+          "sourceQuote": "1 L d'eau pure contient ≈ 55,5 moles d'eau"
+        },
+        {
+          "t": "Pour tout volume d'eau, il faut refaire à chaque fois la division 1000 / 18.",
+          "v": false,
+          "e": "FAUX : une fois la valeur de 55,5 mol par litre mémorisée, une simple règle de trois suffit.",
+          "sourceQuote": "tu ne refais plus jamais 1000 / 18"
+        },
+        {
+          "t": "0,25 L d'eau pure contient de l'ordre de 14 mol d'eau.",
+          "v": true,
+          "e": "VRAI. 0,25 × 55,5 ≈ 13,9 mol.",
+          "sourceQuote": "n'importe quel volume d'eau se traite par une simple règle de trois"
+        },
+        {
+          "t": "Deux litres d'eau pure contiennent environ 55,5 mol d'eau.",
+          "v": false,
+          "e": "FAUX : 2 L en contiennent le double, soit environ 111 mol.",
+          "sourceQuote": "1 L d'eau pure contient ≈ 55,5 moles d'eau"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-013-un-litre-eau-55-moles.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives au passage des moles au nombre de molécules d'eau, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une quantité de 2,8 × 10⁻³ mol d'eau correspond à environ 1,7 × 10²¹ molécules.",
+          "v": true,
+          "e": "VRAI. 2,8 × 10⁻³ × 6 × 10²³ ≈ 1,7 × 10²¹ molécules.",
+          "sourceQuote": "N = 2,8 × 10⁻³ × 6 × 10²³ ≈ 1,7 × 10²¹ molécules"
+        },
+        {
+          "t": "Une mole d'eau pèse 6 × 10²³ g.",
+          "v": false,
+          "e": "FAUX : une mole d'eau pèse 18 g. Le nombre 6 × 10²³ est un nombre d'entités, pas une masse.",
+          "sourceQuote": "Donc 1 mole d'eau pèse M = 1 + 1 + 16 = 18 g/mol"
+        },
+        {
+          "t": "1 L d'eau pure contient de l'ordre de 3 × 10²⁵ molécules d'eau.",
+          "v": true,
+          "e": "VRAI. 55,5 mol × 6 × 10²³ ≈ 3,3 × 10²⁵ molécules.",
+          "sourceQuote": "avec N = n × 𝒩, où 𝒩 = 6 × 10²³ mol⁻¹"
+        },
+        {
+          "t": "1 L d'eau pure contient environ 55,5 molécules d'eau.",
+          "v": false,
+          "e": "FAUX : 55,5 est un nombre de moles, pas un nombre de molécules. Cela représente de l'ordre de 3 × 10²⁵ molécules.",
+          "sourceQuote": "1 L d'eau pure contient ≈ 55,5 moles d'eau"
+        },
+        {
+          "t": "Le nombre d'Avogadro est ici pris égal à 6 × 10²³ molécules par gramme.",
+          "v": false,
+          "e": "FAUX : il s'exprime en mol⁻¹, c'est-à-dire un nombre d'entités par mole, et non par gramme.",
+          "sourceQuote": "avec N = n × 𝒩, où 𝒩 = 6 × 10²³ mol⁻¹"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-014-solution-solvant-solute.html",
+      "origine": "reprise",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives au vocabulaire des solutions aqueuses, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une solution est un mélange homogène à l'échelle moléculaire de plusieurs corps, en une seule phase condensée.",
+          "v": true,
+          "e": "VRAI. C'est la définition exacte : homogénéité au niveau des molécules, dans une phase unique liquide ou solide.",
+          "sourceQuote": "Mélange homogène à l'échelle moléculaire de plusieurs corps, en une phase unique condensée"
+        },
+        {
+          "t": "Dans une solution, le solvant est le composé présent en plus faible quantité.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. Le solvant est le composé le plus représenté ; le soluté est celui en quantité moindre.",
+          "sourceQuote": "Le composé le plus représenté"
+        },
+        {
+          "t": "Une solution aqueuse est une solution dont le solvant est l'eau.",
+          "v": true,
+          "e": "VRAI. C'est le cas des liquides de l'organisme.",
+          "sourceQuote": "Solution dont le solvant est l'eau"
+        },
+        {
+          "t": "Dans une solution idéale, les molécules de soluté sont assez nombreuses pour interagir fortement entre elles.",
+          "v": false,
+          "e": "FAUX : dans une solution idéale, le soluté est très dilué et ses molécules sont trop éloignées pour interagir entre elles.",
+          "sourceQuote": "trop éloignées pour interagir entre elles"
+        },
+        {
+          "t": "La quasi-totalité des solutions biologiques sont très diluées et restent proches de l'idéalité.",
+          "v": true,
+          "e": "VRAI. C'est ce qui permet d'appliquer les formules simples aux liquides de l'organisme.",
+          "sourceQuote": "la quasi-totalité des solutions biologiques sont très diluées"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-014-solution-solvant-solute.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives au soluté et à la place des solutions aqueuses en biologie, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le soluté désigne le ou les composés présents en quantité moindre, dissous dans le solvant.",
+          "v": true,
+          "e": "VRAI. C'est la définition du soluté.",
+          "sourceQuote": "Le ou les composés en quantité moindre, dissous dans le solvant"
+        },
+        {
+          "t": "Tout mélange est une solution.",
+          "v": false,
+          "e": "FAUX : « mélange » ne veut pas dire « solution ». Une dispersion et un colloïde sont des mélanges qui ne sont pas des solutions.",
+          "sourceQuote": "« mélange » ne veut pas dire « solution »"
+        },
+        {
+          "t": "En biologie, les solutions aqueuses constituent un cas marginal.",
+          "v": false,
+          "e": "FAUX : c'est au contraire le cas omniprésent en biologie.",
+          "sourceQuote": "le cas omniprésent en biologie"
+        },
+        {
+          "t": "Une solution ne peut contenir qu'un seul soluté.",
+          "v": false,
+          "e": "FAUX : une solution peut contenir un ou plusieurs solutés dissous dans le même solvant.",
+          "sourceQuote": "Le ou les composés en quantité moindre, dissous dans le solvant"
+        },
+        {
+          "t": "Une solution met en jeu plusieurs corps.",
+          "v": true,
+          "e": "VRAI. Une solution est un mélange de plusieurs corps, jamais d'un seul.",
+          "sourceQuote": "Mélange homogène à l'échelle moléculaire de plusieurs corps"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-014-solution-solvant-solute.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la distinction entre solution, dispersion et colloïde, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans une dispersion, une phase est dispersée dans une autre, sans dissolution moléculaire.",
+          "v": true,
+          "e": "VRAI. C'est ce qui sépare la dispersion de la solution, homogène jusqu'à l'échelle des molécules.",
+          "sourceQuote": "Une phase est dispersée dans une autre, sans dissolution moléculaire"
+        },
+        {
+          "t": "Les particules d'un colloïde mesurent entre 1 et 100 nm.",
+          "v": true,
+          "e": "VRAI. C'est la gamme de taille qui caractérise un colloïde.",
+          "sourceQuote": "Particules entre 1 et 100 nm"
+        },
+        {
+          "t": "Les particules d'un colloïde sont assez grosses pour être visibles à l'œil nu.",
+          "v": false,
+          "e": "FAUX : elles ne se voient pas à l'œil nu ; elles se trahissent seulement en dispersant la lumière.",
+          "sourceQuote": "elles ne se voient pas à l'œil nu"
+        },
+        {
+          "t": "Un colloïde ne disperse pas la lumière.",
+          "v": false,
+          "e": "FAUX : il la disperse, et c'est précisément ce qui le rend décelable.",
+          "sourceQuote": "mais elles dispersent la lumière"
+        },
+        {
+          "t": "Une dispersion est une forme particulière de solution.",
+          "v": false,
+          "e": "FAUX : solution, dispersion et colloïde sont trois réalités différentes.",
+          "sourceQuote": "Une solution n'est pas la même chose qu'une dispersion ni qu'un colloïde"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-014-solution-solvant-solute.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la solution idéale et à la solution non idéale, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans une solution très concentrée, les interactions soluté-soluté deviennent visibles et les calculs se compliquent.",
+          "v": true,
+          "e": "VRAI. On parle alors de solution non idéale.",
+          "sourceQuote": "ces interactions soluté-soluté deviennent visibles et les calculs se compliquent"
+        },
+        {
+          "t": "Devant un liquide de l'organisme, il faut renoncer aux formules simples.",
+          "v": false,
+          "e": "FAUX : les liquides de l'organisme sont très dilués, donc les formules simples s'y appliquent sans précaution particulière.",
+          "sourceQuote": "tu peux appliquer les formules simples sans te poser de question"
+        },
+        {
+          "t": "Le plasma, l'urine et le liquide interstitiel comptent parmi les liquides concernés.",
+          "v": true,
+          "e": "VRAI. Ce sont les exemples donnés de liquides de l'organisme proches de l'idéalité.",
+          "sourceQuote": "plasma, urine, liquide interstitiel"
+        },
+        {
+          "t": "Le repère « 1 L d'eau contient environ 55,5 moles » est rappelé en ouverture de cette fiche.",
+          "v": true,
+          "e": "VRAI. C'est le repère laissé par l'étape précédente, réutilisé pour mesurer une solution.",
+          "sourceQuote": "1 L d'eau contient ≈ 55,5 moles"
+        },
+        {
+          "t": "Le caractère idéal d'une solution dépend de la nature du soluté et non de sa dilution.",
+          "v": false,
+          "e": "FAUX : c'est la dilution qui fait l'idéalité. Un soluté très dilué forme une solution idéale.",
+          "sourceQuote": "Quand un soluté est très dilué dans son solvant, on dit qu'il forme une solution idéale"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-014-solution-solvant-solute.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à ce qu'est une solution et à sa représentation, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une solution peut être liquide ou solide.",
+          "v": true,
+          "e": "VRAI. La phase unique exigée est une phase condensée, liquide ou solide.",
+          "sourceQuote": "en une phase unique condensée (liquide ou solide)"
+        },
+        {
+          "t": "Un mélange gazeux répond à la définition de la solution donnée ici.",
+          "v": false,
+          "e": "FAUX : la définition impose une phase condensée, liquide ou solide.",
+          "sourceQuote": "en une phase unique condensée (liquide ou solide)"
+        },
+        {
+          "t": "Une solution comporte au moins deux phases distinctes.",
+          "v": false,
+          "e": "FAUX : une solution est en une phase unique. Ce sont les dispersions qui mettent une phase dans une autre.",
+          "sourceQuote": "en une phase unique condensée"
+        },
+        {
+          "t": "Le schéma représente un solvant majoritaire dans lequel sont dispersés un ou plusieurs solutés en faible quantité.",
+          "v": true,
+          "e": "VRAI. Les proportions représentées sont l'essentiel du schéma.",
+          "sourceQuote": "une solution est constituée d'un solvant (majoritaire, ici l'eau) dans lequel sont dispersés un ou plusieurs solutés (en faible quantité)"
+        },
+        {
+          "t": "Sur ce schéma, le solvant représenté est un composé autre que l'eau.",
+          "v": false,
+          "e": "FAUX : le solvant majoritaire représenté est l'eau.",
+          "sourceQuote": "un solvant (majoritaire, ici l'eau)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-014-solution-solvant-solute.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à un mélange homogène contenant 95 % d'éthanol et 5 % d'eau, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "C'est l'éthanol qui y joue le rôle de solvant.",
+          "v": true,
+          "e": "VRAI. Le solvant est le composé le plus représenté, ici l'éthanol.",
+          "sourceQuote": "Le composé le plus représenté"
+        },
+        {
+          "t": "Ce mélange est une solution aqueuse.",
+          "v": false,
+          "e": "FAUX : une solution aqueuse a l'eau pour solvant. Ici l'eau est minoritaire, elle est donc le soluté.",
+          "sourceQuote": "Solution dont le solvant est l'eau"
+        },
+        {
+          "t": "L'eau restant le solvant de tout le vivant, elle demeure le solvant dans ce mélange.",
+          "v": false,
+          "e": "FAUX : ce n'est pas la nature du composé qui décide du rôle de solvant, c'est la quantité.",
+          "sourceQuote": "Ce n'est pas la nature du composé qui décide qui est solvant et qui est soluté — c'est la quantité"
+        },
+        {
+          "t": "En inversant les proportions — 95 % d'eau et 5 % d'éthanol — le mélange devient une solution aqueuse.",
+          "v": true,
+          "e": "VRAI. L'eau devient alors le composé majoritaire, donc le solvant.",
+          "sourceQuote": "Solution dont le solvant est l'eau"
+        },
+        {
+          "t": "Le fait que l'éthanol et l'eau soient tous deux liquides interdit de parler de solution.",
+          "v": false,
+          "e": "FAUX : une solution est justement en une phase unique condensée, liquide ou solide.",
+          "sourceQuote": "en une phase unique condensée (liquide ou solide)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-014-solution-solvant-solute.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la portée de ces définitions et aux confusions qu'elles évitent, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Nommer proprement solvant et soluté est un préalable à toute formule de concentration.",
+          "v": true,
+          "e": "VRAI. Les pièces du mélange se nomment avant de poser la moindre formule.",
+          "sourceQuote": "avant de poser la moindre formule de concentration, il faut nommer proprement les pièces du mélange"
+        },
+        {
+          "t": "Un colloïde est une solution dont les particules dépassent 100 nm.",
+          "v": false,
+          "e": "FAUX sur les deux points : un colloïde n'est pas une solution, et ses particules mesurent entre 1 et 100 nm.",
+          "sourceQuote": "Particules entre 1 et 100 nm"
+        },
+        {
+          "t": "La distinction entre solution idéale et solution non idéale prépare la suite du chapitre.",
+          "v": true,
+          "e": "VRAI. C'est la nuance annoncée comme préparant tout ce qui suit.",
+          "sourceQuote": "Dernière nuance, et elle prépare toute la suite du chapitre"
+        },
+        {
+          "t": "Un mélange homogène à l'œil nu mais hétérogène à l'échelle des molécules répond à la définition de la solution.",
+          "v": false,
+          "e": "FAUX : l'homogénéité exigée est celle de l'échelle moléculaire, pas celle de l'œil nu.",
+          "sourceQuote": "Mélange homogène à l'échelle moléculaire"
+        },
+        {
+          "t": "C'est la taille des particules qui distingue une solution d'une dispersion.",
+          "v": false,
+          "e": "FAUX : le critère est la dissolution moléculaire. Dans une dispersion, une phase est dispersée dans une autre sans dissolution à cette échelle.",
+          "sourceQuote": "Une phase est dispersée dans une autre, sans dissolution moléculaire"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-015-mole-nombre-avogadro.html",
+      "origine": "reprise",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la mole, au nombre d'Avogadro et aux repères d'échelle de l'atome, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une mole de quelque chose correspond à 6,022 × 10²³ entités élémentaires de ce quelque chose.",
+          "v": true,
+          "e": "VRAI. C'est la définition même de la mole.",
+          "sourceQuote": "1 mole = 𝒩 = 6,022 × 10²³ entités élémentaires"
+        },
+        {
+          "t": "Le nombre d'Avogadro 𝒩 = 6,022 × 10²³ correspond au nombre d'atomes contenus dans 12 g de carbone 12.",
+          "v": true,
+          "e": "VRAI. C'est la référence qui fixe la valeur de 𝒩.",
+          "sourceQuote": "nombre d'atomes contenus dans 12 g de carbone 12"
+        },
+        {
+          "t": "La masse d'un nucléon vaut environ 1,67 × 10⁻²⁷ kg, l'électron étant environ 2000 fois plus léger.",
+          "v": true,
+          "e": "VRAI. L'électron, environ 2000 fois plus léger, est négligé dans les bilans de masse.",
+          "sourceQuote": "masse d'un nucléon ≈ 1,67 × 10⁻²⁷ kg. L'électron est ~2000 fois plus léger"
+        },
+        {
+          "t": "L'unité de masse atomique est définie comme la masse entière d'un atome de ¹²C.",
+          "v": false,
+          "e": "FAUX : elle est définie comme le douzième de la masse d'un atome de ¹²C, soit environ 1,66 × 10⁻²⁷ kg.",
+          "sourceQuote": "1/12 de la masse d'un atome de ¹²C"
+        },
+        {
+          "t": "Les entités comptées par la mole ne peuvent être que des atomes ou des molécules, jamais des ions ou des électrons.",
+          "v": false,
+          "e": "FAUX : ce peut être des atomes, des molécules, des ions, des électrons ou des photons, peu importe.",
+          "sourceQuote": "ces entités peuvent être des atomes, des molécules, des ions, des électrons, des photons — peu importe"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-015-mole-nombre-avogadro.html",
+      "origine": "reprise",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à l'utilité de la mole et aux rappels d'atomistique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La mole est le « paquet » universel des chimistes et des physiciens.",
+          "v": true,
+          "e": "VRAI. C'est l'unité qui permet de compter ce qu'on ne peut pas voir.",
+          "sourceQuote": "« paquet » universel des chimistes et des physiciens"
+        },
+        {
+          "t": "Un atome est constitué d'un noyau, formé de protons et de neutrons appelés nucléons, et d'un cortège électronique.",
+          "v": true,
+          "e": "VRAI. C'est le rappel d'atomistique dont on ne garde ici que l'ordre de grandeur des masses.",
+          "sourceQuote": "un noyau (protons + neutrons = nucléons) et d'un cortège électronique"
+        },
+        {
+          "t": "Travailler en paquets de 6,022 × 10²³ entités permet d'écrire des nombres macroscopiques au lieu de jongler avec des 10²³.",
+          "v": true,
+          "e": "VRAI. C'est tout l'intérêt pratique du paquet : écrire 1 mol, 2 mol, plutôt que des puissances de dix.",
+          "sourceQuote": "Ça permet d'écrire des nombres macroscopiques (1 mol, 2 mol…) au lieu de jongler avec des 10²³"
+        },
+        {
+          "t": "Cette notion est accessoire et sans réelle importance pour la suite du programme.",
+          "v": false,
+          "e": "FAUX : elle est absolument cruciale, toute la suite du programme de physique s'appuyant dessus.",
+          "sourceQuote": "elle est absolument cruciale, parce que toute la suite du programme de physique s'appuie dessus"
+        },
+        {
+          "t": "On peut compter les molécules une par une, car elles ne sont pas si nombreuses.",
+          "v": false,
+          "e": "FAUX : on ne peut pas les compter une par une, il y en a beaucoup trop. C'est le problème que la mole résout.",
+          "sourceQuote": "on ne peut pas compter les molécules une par une — il y en a trop"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-015-mole-nombre-avogadro.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à l'unité de masse atomique et à sa valeur, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'unité de masse atomique vaut environ 1,66 × 10⁻²⁷ kg.",
+          "v": true,
+          "e": "VRAI. C'est la valeur de l'u.m.a., à distinguer des 1,67 × 10⁻²⁷ kg du nucléon.",
+          "sourceQuote": "soit ≈ 1,66 × 10⁻²⁷ kg"
+        },
+        {
+          "t": "1,66 × 10⁻²⁷ kg est la masse d'un nucléon et 1,67 × 10⁻²⁷ kg celle de l'unité de masse atomique.",
+          "v": false,
+          "e": "FAUX : les deux valeurs sont échangées. 1,67 est la masse d'un nucléon, 1,66 est l'u.m.a.",
+          "sourceQuote": "1,67 = la masse d'un nucléon"
+        },
+        {
+          "t": "Ces deux valeurs, 1,67 et 1,66 × 10⁻²⁷ kg, recouvrent la même définition.",
+          "v": false,
+          "e": "FAUX : ce sont deux nombres presque jumeaux mais deux définitions différentes.",
+          "sourceQuote": "deux nombres presque jumeaux, deux définitions différentes"
+        },
+        {
+          "t": "Retenir seulement « 1,6 × 10⁻²⁷ » suffit à distinguer les deux grandeurs.",
+          "v": false,
+          "e": "FAUX : à ce degré d'arrondi, un énoncé qui échange les deux valeurs passe inaperçu.",
+          "sourceQuote": "un QCM qui échange les deux passe inaperçu"
+        },
+        {
+          "t": "L'unité de masse atomique est l'unité de masse taillée pour l'échelle de l'atome.",
+          "v": true,
+          "e": "VRAI. Elle évite de manipuler des kilogrammes pour des objets aussi légers.",
+          "sourceQuote": "C'est l'unité de masse taillée pour l'échelle de l'atome"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-015-mole-nombre-avogadro.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives au rôle du carbone 12 dans la définition de l'unité de masse atomique et du nombre d'Avogadro, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le carbone 12 sert de référence pour l'unité de masse atomique comme pour le nombre d'Avogadro.",
+          "v": true,
+          "e": "VRAI. Il sert deux fois de référence, mais dans deux sens opposés.",
+          "sourceQuote": "Le carbone 12 sert une seconde fois de référence"
+        },
+        {
+          "t": "L'unité de masse atomique part d'un atome pour descendre à une masse, tandis que 𝒩 part d'une masse pour remonter à un nombre d'atomes.",
+          "v": true,
+          "e": "VRAI. C'est exactement ce qui sépare les deux définitions.",
+          "sourceQuote": "l'u.m.a. part d'un atome pour descendre à une masse, tandis que 𝒩 part d'une masse pour remonter à un nombre d'atomes"
+        },
+        {
+          "t": "𝒩 est le nombre d'atomes contenus dans 12 g de n'importe quel corps.",
+          "v": false,
+          "e": "FAUX : il s'agit de 12 g de carbone 12, et non de 12 g de n'importe quoi.",
+          "sourceQuote": "pas 12 g de n'importe quoi"
+        },
+        {
+          "t": "Le détail de la structure de l'atome est repris en profondeur ici.",
+          "v": false,
+          "e": "FAUX : ce détail relève de l'atomistique, et n'est pas refait ici ; on n'en garde que les ordres de grandeur.",
+          "sourceQuote": "le détail est traité en profondeur en Chimie ch.1 (Atomistique), on ne le refait pas ici"
+        },
+        {
+          "t": "Cette fiche donne déjà ce que pèse une mole.",
+          "v": false,
+          "e": "FAUX : la mole est ici définie comme un nombre. Ce qu'elle pèse relève de la masse molaire, qui vient ensuite.",
+          "sourceQuote": "Il te manque encore une chose pour te servir de ce paquet : savoir ce qu'il pèse"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-015-mole-nombre-avogadro.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à la nature des entités comptées par la mole, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La mole ne renseigne pas sur la nature de ce qu'on compte, seulement sur le nombre.",
+          "v": true,
+          "e": "VRAI. Elle dit combien, jamais quoi.",
+          "sourceQuote": "La mole ne dit rien sur la nature de ce que tu comptes ; elle dit seulement combien"
+        },
+        {
+          "t": "Une mole d'ions représente moins d'entités qu'une mole d'atomes.",
+          "v": false,
+          "e": "FAUX : le nombre d'entités d'une mole ne change jamais, quelle que soit l'entité comptée.",
+          "sourceQuote": "Regarde la colonne de droite : elle ne change jamais"
+        },
+        {
+          "t": "Une mole de photons, c'est 6,022 × 10²³ photons.",
+          "v": true,
+          "e": "VRAI. Le photon est une entité comme une autre pour la mole.",
+          "sourceQuote": "6,022 × 10²³ photons"
+        },
+        {
+          "t": "La mole est un paquet de 12 entités, comme la douzaine.",
+          "v": false,
+          "e": "FAUX : la douzaine sert seulement d'analogie. La mole est un paquet de 6,022 × 10²³ entités.",
+          "sourceQuote": "« douzaines » d'œufs (paquets de 12)"
+        },
+        {
+          "t": "L'analogie proposée compare le million d'habitants à un paquet de 100 000.",
+          "v": false,
+          "e": "FAUX : un million est un paquet de 1 000 000, pas de 100 000.",
+          "sourceQuote": "« millions » d'habitants (paquets de 1 000 000)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-015-mole-nombre-avogadro.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives aux ordres de grandeur associés à la mole et à la masse des atomes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La masse d'un atome de carbone 12, égale à douze fois l'unité de masse atomique, est de l'ordre de 2 × 10⁻²⁶ kg.",
+          "v": true,
+          "e": "VRAI. 12 × 1,66 × 10⁻²⁷ ≈ 2 × 10⁻²⁶ kg.",
+          "sourceQuote": "1/12 de la masse d'un atome de ¹²C, soit ≈ 1,66 × 10⁻²⁷ kg"
+        },
+        {
+          "t": "Estimer la masse d'un noyau de douze nucléons à partir de 1,67 × 10⁻²⁷ kg conduit au même ordre de grandeur.",
+          "v": true,
+          "e": "VRAI. 12 × 1,67 × 10⁻²⁷ ≈ 2 × 10⁻²⁶ kg : les deux chemins se rejoignent.",
+          "sourceQuote": "masse d'un nucléon ≈ 1,67 × 10⁻²⁷ kg"
+        },
+        {
+          "t": "Deux moles d'ions représentent environ 6 × 10²³ ions.",
+          "v": false,
+          "e": "FAUX : deux moles en représentent le double, soit environ 1,2 × 10²⁴ ions.",
+          "sourceQuote": "6,022 × 10²³ ions"
+        },
+        {
+          "t": "Une mole d'électrons pèse autant qu'une mole de nucléons.",
+          "v": false,
+          "e": "FAUX : l'électron est environ 2000 fois plus léger qu'un nucléon, donc une mole d'électrons pèse environ 2000 fois moins.",
+          "sourceQuote": "L'électron est ~2000 fois plus léger"
+        },
+        {
+          "t": "Un échantillon de 3,011 × 10²³ molécules correspond à deux moles.",
+          "v": false,
+          "e": "FAUX : 3,011 × 10²³ est la moitié de 6,022 × 10²³, cet échantillon correspond donc à une demi-mole.",
+          "sourceQuote": "1 mole = 𝒩 = 6,022 × 10²³ entités élémentaires"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-015-mole-nombre-avogadro.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à ce que la mole apporte et à ce qu'elle n'est pas, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'intérêt de la mole tient à ce qu'un seul nombre vaut pour tout ce qu'on veut compter.",
+          "v": true,
+          "e": "VRAI. Un nombre unique, quelle que soit l'entité comptée.",
+          "sourceQuote": "un seul nombre, valable pour tout ce qu'on veut compter"
+        },
+        {
+          "t": "La mole est une unité de masse.",
+          "v": false,
+          "e": "FAUX : la mole compte des entités élémentaires. Ce qu'un tel paquet pèse relève de la masse molaire.",
+          "sourceQuote": "1 mole = 𝒩 = 6,022 × 10²³ entités élémentaires"
+        },
+        {
+          "t": "La mole servira notamment aux concentrations, à l'osmolarité et au décodage du sérum physiologique.",
+          "v": true,
+          "e": "VRAI. Ce sont les usages annoncés pour la suite du programme.",
+          "sourceQuote": "Concentrations, osmolarité, décodage du sérum physiologique"
+        },
+        {
+          "t": "Comme la notion a déjà été vue en chimie, elle peut être survolée ici.",
+          "v": false,
+          "e": "FAUX : c'est précisément le piège. Cette notion courte ne doit pas être survolée.",
+          "sourceQuote": "Ne survole pas cette notion parce qu'elle est courte"
+        },
+        {
+          "t": "La mole a été conçue pour compter des objets macroscopiques tels que les œufs ou les habitants.",
+          "v": false,
+          "e": "FAUX : les œufs et les habitants ne sont qu'une analogie de comptage par paquets. La mole compte des entités élémentaires.",
+          "sourceQuote": "« douzaines » d'œufs (paquets de 12) ou de « millions » d'habitants (paquets de 1 000 000)"
+        }
+      ]
     }
-   ]
-  },
-  {
-   "fiche": "physique-004-logarithmes-lire-recombiner.html",
-   "origine": "ecrite",
-   "arene": false,
-   "lot": 2,
-   "q": "Parmi les propositions suivantes relatives aux trois règles de recombinaison d'un logarithme, laquelle (lesquelles) est (sont) exacte(s) ?",
-   "items": [
-    {
-     "t": "Un produit placé à l'intérieur du log devient une addition : log(a × b) = log(a) + log(b).",
-     "v": true,
-     "e": "VRAI. C'est la première règle : produit → on additionne. Le log transforme une multiplication en somme.",
-     "sourceQuote": "Produit → on additionne. log(a × b) = log(a) + log(b)"
-    },
-    {
-     "t": "Un quotient placé à l'intérieur du log devient une soustraction : log(a / b) = log(a) − log(b).",
-     "v": true,
-     "e": "VRAI. C'est la deuxième règle : quotient → on soustrait.",
-     "sourceQuote": "Quotient → on soustrait. log(a / b) = log(a) − log(b)"
-    },
-    {
-     "t": "Une puissance placée à l'intérieur du log descend devant lui : log(aⁿ) = n × log(a).",
-     "v": true,
-     "e": "VRAI. C'est la troisième règle : puissance → on multiplie par l'exposant. L'exposant descend devant le log et devient un facteur.",
-     "sourceQuote": "Puissance → on multiplie par l'exposant. log(aⁿ) = n × log(a)"
-    },
-    {
-     "t": "Le vrai piège du logarithme se situe dans sa lecture, la recombinaison étant l'étape facile.",
-     "v": false,
-     "e": "FAUX : c'est l'inverse. Lire un log est simple ; le vrai piège, c'est de le recombiner à partir des valeurs fournies.",
-     "sourceQuote": "Et le vrai piège n'est pas de le lire — c'est de le recombiner"
-    },
-    {
-     "t": "La règle du quotient ne concerne que les nombres supérieurs à 1.",
-     "v": false,
-     "e": "FAUX : la règle du quotient est au contraire le réflexe à appliquer pour tous les nombres inférieurs à 1, que l'on réécrit sous forme de fraction.",
-     "sourceQuote": "C'est le réflexe pour tous les nombres inférieurs à 1."
-    }
-   ]
-  },
-  {
-   "fiche": "physique-004-logarithmes-lire-recombiner.html",
-   "origine": "ecrite",
-   "arene": false,
-   "lot": 3,
-   "q": "Parmi les propositions suivantes relatives au signe « − » du pH et à la notation « p » placée devant une grandeur, laquelle (lesquelles) est (sont) exacte(s) ?",
-   "items": [
-    {
-     "t": "Dans le sang, [H⁺] vaut environ 10⁻⁷·⁴ mol/L, ce qui donne log([H⁺]) = −7,4.",
-     "v": true,
-     "e": "VRAI. L'exposant se lit directement : le log d'une concentration de 10⁻⁷·⁴ mol/L vaut −7,4, une valeur négative et peu commode à manipuler.",
-     "sourceQuote": "Dans le sang, [H⁺] ≈ 10⁻⁷·⁴ mol/L → log([H⁺]) = −7,4"
-    },
-    {
-     "t": "Le signe « − » sert à retomber sur un nombre positif simple : pH = −log([H⁺]) = 7,4.",
-     "v": true,
-     "e": "VRAI. On ajoute le « − » uniquement pour transformer −7,4 en 7,4, un nombre positif et lisible.",
-     "sourceQuote": "On ajoute le signe « − » pour retomber sur un nombre positif simple : pH = −log([H⁺]) = 7,4"
-    },
-    {
-     "t": "Un « p » devant une grandeur signifie toujours « −log de cette grandeur ».",
-     "v": true,
-     "e": "VRAI. C'est la clé de lecture universelle : dès qu'un « p » précède une grandeur, il faut lire « −log de cette grandeur ».",
-     "sourceQuote": "À chaque fois que tu vois un « p » devant une grandeur, c'est « −log de cette grandeur »"
-    },
-    {
-     "t": "Cette notation « p » est propre au pH et ne se retrouve ni dans pKa, ni dans pOH, ni dans pI.",
-     "v": false,
-     "e": "FAUX : la même astuce se retrouve avec pKa, pOH, pKe et pI. Le « p » est une notation générale, pas une particularité du pH.",
-     "sourceQuote": "Tu retrouveras la même astuce avec pKa, pOH, pKe, pI"
-    },
-    {
-     "t": "Le signe « − » du pH traduit une propriété physique de l'ion H⁺ et non une commodité d'écriture.",
-     "v": false,
-     "e": "FAUX : ce signe est purement cosmétique. Il ne change rien à la grandeur mesurée, il rend seulement le nombre positif et donc plus facile à manipuler.",
-     "sourceQuote": "C'est purement cosmétique."
-    }
-   ]
-  },
-  {
-   "fiche": "physique-004-logarithmes-lire-recombiner.html",
-   "origine": "reprise",
-   "arene": false,
-   "lot": 4,
-   "q": "À la différence du log, le logarithme népérien ln est rarement fourni par les énoncés. Quelle(s) proposition(s) est (sont) exacte(s) ?",
-   "items": [
-    {
-     "t": "On passe du log au ln avec la relation ln(x) ≈ 2,3 × log(x).",
-     "v": true,
-     "e": "VRAI. Le facteur de conversion est 2,3, c'est-à-dire ln(10). Toute la maîtrise du log se recycle donc directement pour le ln.",
-     "sourceQuote": "ln(x) ≈ 2,3 × log(x)"
-    },
-    {
-     "t": "La conversion s'écrit ln(x) ≈ log(x) / 2,3.",
-     "v": false,
-     "e": "FAUX : le sens est inversé. Le ln est plus grand que le log, donc on multiplie : ln(x) ≈ 2,3 × log(x). Vérification avec x = 10 : ln(10) ≈ 2,3 alors que log(10) = 1.",
-     "sourceQuote": "ln(10) ≈ 2,3 · ln(x) ≈ 2,3 × log(x)"
-    },
-    {
-     "t": "ln(2) ≈ 0,7 et ln(10) ≈ 2,3 sont à mémoriser, car les énoncés les fournissent moins souvent que les valeurs de log.",
-     "v": true,
-     "e": "VRAI. C'est l'asymétrie à connaître : les valeurs de log sont presque toujours données en début de sujet, celles de ln beaucoup moins. Ces deux valeurs se retiennent une bonne fois pour toutes.",
-     "sourceQuote": "Autant en mémoriser les valeurs clés une bonne fois pour toutes : ln(2) ≈ 0,7 · ln(10) ≈ 2,3"
-    },
-    {
-     "t": "Avec log(3) ≈ 0,48 et log(5) ≈ 0,7, on reconstruit log(15) = 0,48 + 0,7 = 1,18.",
-     "v": true,
-     "e": "VRAI. 15 = 3 × 5, donc la règle du produit donne directement log(15) = log(3) + log(5) = 0,48 + 0,7 = 1,18.",
-     "sourceQuote": "log(15) = log(3 × 5) = log(3) + log(5) = 0,48 + 0,7 = 1,18"
-    },
-    {
-     "t": "Comme pour le log, les énoncés de P1 fournissent presque toujours ln(2) et ln(10) en début de sujet.",
-     "v": false,
-     "e": "FAUX : c'est justement la différence entre les deux. Les valeurs de log sont presque toujours données, celles de ln le sont moins souvent — d'où l'intérêt de mémoriser ln(2) ≈ 0,7 et ln(10) ≈ 2,3.",
-     "sourceQuote": "les logarithmes népériens (ln) sont, eux, moins souvent donnés"
-    }
-   ],
-   "source": "app:physique-logarithmes-recombinaison"
-  },
-  {
-   "fiche": "physique-004-logarithmes-lire-recombiner.html",
-   "origine": "ecrite",
-   "arene": false,
-   "lot": 5,
-   "q": "Parmi les propositions suivantes relatives à l'ordre de grandeur d'un logarithme et à son encadrement entre deux puissances de 10, laquelle (lesquelles) est (sont) exacte(s) ?",
-   "items": [
-    {
-     "t": "Pour un nombre qui est une puissance de 10, prendre le log revient à compter les zéros.",
-     "v": true,
-     "e": "VRAI. C'est l'image mentale à garder : 1 000 porte trois zéros et log(1 000) = 3 ; 1 000 000 en porte six et log(1 000 000) = 6.",
-     "sourceQuote": "Pour un nombre qui est une puissance de 10, le log « compte les zéros »"
-    },
-    {
-     "t": "log(2) ≈ 0,3 est compris entre 0 et 1 parce que 2 est compris entre 1 et 10.",
-     "v": true,
-     "e": "VRAI. Pour un nombre qui n'est pas une puissance de 10, le log interpole entre deux puissances : 2 étant entre 1 (10⁰) et 10 (10¹), son log est entre 0 et 1.",
-     "sourceQuote": "log(2) ≈ 0,3 (entre 0 et 1, car 2 est entre 1 et 10)"
-    },
-    {
-     "t": "log(50) ≈ 1,5, valeur située exactement à mi-chemin entre log(10) et log(100).",
-     "v": false,
-     "e": "FAUX : log(50) ≈ 1,7. La valeur est bien comprise entre 1 et 2, puisque 50 est compris entre 10 et 100, mais l'interpolation n'est pas linéaire et ne tombe pas au milieu.",
-     "sourceQuote": "log(50) ≈ 1,7 (entre 1 et 2, car 50 est entre 10 et 100)"
-    },
-    {
-     "t": "Un nombre qui n'est pas une puissance de 10 n'a pas de logarithme défini.",
-     "v": false,
-     "e": "FAUX : dans ce cas, le log interpole simplement entre les deux puissances de 10 qui encadrent le nombre. Il existe donc bel et bien, et il est encadrable de tête.",
-     "sourceQuote": "Pour les autres, il interpole entre deux puissances"
-    },
-    {
-     "t": "log(2) ≈ 0,48 et log(3) ≈ 0,30.",
-     "v": false,
-     "e": "FAUX : les deux valeurs sont interverties. log(2) ≈ 0,3 et log(3) ≈ 0,48 — c'est cohérent avec l'encadrement, 2 étant plus petit que 3.",
-     "sourceQuote": "log(6) = log(2 × 3) = log(2) + log(3) = 0,3 + 0,48 = 0,78"
-    }
-   ]
-  },
-  {
-   "fiche": "physique-004-logarithmes-lire-recombiner.html",
-   "origine": "reprise",
-   "arene": true,
-   "lot": 6,
-   "q": "Un énoncé donne log(2) ≈ 0,3 et log(3) ≈ 0,48, puis demande log(1,5) et log(0,2) ; laquelle (lesquelles) de ces propositions est (sont) exacte(s) ?",
-   "items": [
-    {
-     "t": "Le log d'un nombre compris entre 0 et 1 reste toujours positif.",
-     "v": false,
-     "e": "FAUX : il est négatif. log(0,5) = log(1/2) = −log(2) = −0,3, et de même log(0,1) = −1. Tout nombre inférieur à 1 a un logarithme négatif.",
-     "sourceQuote": "log(0,5) = log(1/2) = −log(2) = −0,3"
-    },
-    {
-     "t": "log(3/2) s'obtient en divisant : log(3) / log(2) = 1,6.",
-     "v": false,
-     "e": "FAUX : diviser deux logarithmes n'est pas une règle. C'est le quotient placé à l'intérieur du log qui devient une soustraction : log(3/2) = log(3) − log(2) = 0,48 − 0,3 = 0,18.",
-     "sourceQuote": "Produit → on additionne, quotient → on soustrait, puissance → on multiplie par l'exposant"
-    },
-    {
-     "t": "log(1,5) se reconstruit par la règle du quotient : log(3/2) = 0,48 − 0,3 = 0,18.",
-     "v": true,
-     "e": "VRAI. Un nombre décimal se ramène à une fraction de facteurs connus : 1,5 = 3/2, et le quotient devient alors une soustraction.",
-     "sourceQuote": "Quotient → on soustrait. log(a / b) = log(a) − log(b)"
-    },
-    {
-     "t": "log(0,2) = log(2/10) = 0,3 + 1 = 1,3.",
-     "v": false,
-     "e": "FAUX : la règle du quotient soustrait, elle n'additionne pas. log(0,2) = log(2) − log(10) = 0,3 − 1 = −0,7. Un nombre inférieur à 1 a d'ailleurs toujours un log négatif.",
-     "sourceQuote": "C'est le réflexe pour tous les nombres inférieurs à 1."
-    },
-    {
-     "t": "Les règles du log ne valent que pour les nombres entiers, ce qui bloque le calcul de log(1,5).",
-     "v": false,
-     "e": "FAUX : les trois règles valent pour tout nombre positif. Il suffit d'écrire 1,5 sous la forme 3/2 pour retomber sur des facteurs dont le log est donné.",
-     "sourceQuote": "Devant un log absent de l'énoncé, ne conclus jamais qu'il est incalculable"
-    }
-   ],
-   "source": "app:physique-logarithmes-recombinaison"
-  },
-  {
-   "fiche": "physique-004-logarithmes-lire-recombiner.html",
-   "origine": "ecrite",
-   "arene": true,
-   "lot": 7,
-   "q": "Parmi les propositions suivantes relatives à la conduite à tenir devant une valeur de logarithme absente de l'énoncé, laquelle (lesquelles) est (sont) exacte(s) ?",
-   "items": [
-    {
-     "t": "La seule question à se poser est de savoir comment décomposer ce nombre en facteurs dont le log est donné.",
-     "v": true,
-     "e": "VRAI. C'est le réflexe à automatiser : on cherche une décomposition en facteurs 2, 3, 5 ou 10 dont la valeur du log est fournie ou connue.",
-     "sourceQuote": "comment décomposer ce nombre en facteurs dont le log m'est donné ?"
-    },
-    {
-     "t": "log(20) = 1,3, en écrivant 20 = 2 × 10.",
-     "v": true,
-     "e": "VRAI. La règle du produit donne log(20) = log(2) + log(10) = 0,3 + 1 = 1,3, car log(10) = 1.",
-     "sourceQuote": "log(20) = log(2 × 10) = 0,3 + 1 = 1,3 (car log(10) = 1)"
-    },
-    {
-     "t": "log(36) = 0,78, puisque 36 = 6².",
-     "v": false,
-     "e": "FAUX : la décomposition 36 = 6² est la bonne, mais l'exposant doit descendre devant le log. log(6) = 0,78, donc log(36) = 2 × 0,78 = 1,56. La valeur 0,78 est celle de log(6), pas celle de log(36).",
-     "sourceQuote": "Puissance → on multiplie par l'exposant. log(aⁿ) = n × log(a)"
-    },
-    {
-     "t": "Une valeur de log qui n'apparaît pas dans l'énoncé doit être traitée comme incalculable.",
-     "v": false,
-     "e": "FAUX : il ne faut jamais conclure à l'incalculable. La valeur manquante se reconstruit à partir de celles qui sont données, en décomposant le nombre puis en appliquant les trois règles.",
-     "sourceQuote": "elle est reconstructible à partir de celles qui le sont"
-    },
-    {
-     "t": "Une fois la décomposition trouvée, il ne reste plus qu'à appliquer les 3 règles.",
-     "v": true,
-     "e": "VRAI. La décomposition est la seule étape qui demande de la réflexion ; ensuite, produit, quotient et puissance se traitent mécaniquement.",
-     "sourceQuote": "Puis applique les 3 règles."
-    }
-   ]
-  },
-  {
-   "fiche": "physique-005-regle-dor-des-unites.html",
-   "origine": "reprise",
-   "arene": false,
-   "lot": 1,
-   "q": "Un énoncé de QCM te donne m = 9 g, V = 100 mL et M = 58,5 g/mol. Concernant le bon réflexe à avoir avant de calculer, laquelle (lesquelles) de ces propositions est (sont) exacte(s) ?",
-   "items": [
-    {
-     "t": "Le bon réflexe est d'annoter chaque valeur avec son unité collée avant d'écrire le moindre calcul.",
-     "v": true,
-     "e": "VRAI. C'est la première étape de la méthode : on recopie au crayon m = 9 g, V = 100 mL, M = 58,5 g/mol, et la conversion à faire saute alors aux yeux — ici les millilitres à passer en litres.",
-     "sourceQuote": "Avant d'écrire un seul chiffre, recopie au crayon TOUTES les valeurs de l'énoncé avec leur unité"
-    },
-    {
-     "t": "Les rédacteurs d'énoncés mélangent parfois les unités exprès dans un même énoncé.",
-     "v": true,
-     "e": "VRAI. Le mélange d'unités dans un même énoncé est un piège volontaire : des grammes ici, des millilitres là. Ce n'est jamais un hasard de rédaction.",
-     "sourceQuote": "en mélangeant délibérément des unités différentes dans le même énoncé"
-    },
-    {
-     "t": "On peut commencer les calculs tout de suite : les unités se corrigeront d'elles-mêmes à la fin.",
-     "v": false,
-     "e": "FAUX : tant que les unités ne sont pas homogènes, aucun chiffre n'est posé. Une unité non convertie se propage dans tout le calcul et fausse le résultat sans jamais déclencher de signal d'alarme.",
-     "sourceQuote": "Tant que ce n'est pas fait, tu ne poses pas un seul chiffre"
-    },
-    {
-     "t": "Plus de 30 % des erreurs aux QCM de physique viennent d'une conversion d'unité oubliée.",
-     "v": true,
-     "e": "VRAI. C'est la première cause d'erreur, avant même les erreurs de formule — d'où l'intérêt d'un rituel systématique sur les unités.",
-     "sourceQuote": "plus de 30 % des erreurs aux QCM de physique viennent d'une conversion d'unité oubliée"
-    },
-    {
-     "t": "Un résultat mille fois trop grand signale forcément une erreur de formule.",
-     "v": false,
-     "e": "FAUX : un facteur 1000 est la signature typique d'une conversion oubliée — des grammes laissés en place quand la formule attend des kilogrammes, des millilitres au lieu de litres. La formule, elle, peut être parfaitement juste.",
-     "sourceQuote": "la formule attend des kilogrammes , tu fonces sans regarder, et tu sors un résultat 1000 fois trop grand"
-    }
-   ],
-   "source": "app:physique-analyse-dimensionnelle"
-  },
-  {
-   "fiche": "physique-005-regle-dor-des-unites.html",
-   "origine": "ecrite",
-   "arene": false,
-   "lot": 2,
-   "q": "Parmi les propositions suivantes relatives aux conversions de masse et de volume à connaître par cœur, laquelle (lesquelles) est (sont) exacte(s) ?",
-   "items": [
-    {
-     "t": "1 kg = 10³ g = 10⁶ mg = 10⁹ µg.",
-     "v": true,
-     "e": "VRAI. C'est la ligne « Masse » du tableau, à connaître telle quelle : chaque marche vers le plus petit fait descendre de trois puissances de 10.",
-     "sourceQuote": "1 kg = 10 3 g = 10 6 mg = 10 9 µg"
-    },
-    {
-     "t": "1 kg = 10⁶ µg.",
-     "v": false,
-     "e": "FAUX : 1 kg = 10⁹ µg. Le facteur 10⁶ est celui qui relie le kilogramme au milligramme, pas au microgramme.",
-     "sourceQuote": "Trois lignes à connaître par cœur : 1 kg = 10 3 g = 10 6 mg = 10 9 µg"
-    },
-    {
-     "t": "1 m³ = 10³ L = 10⁶ mL.",
-     "v": true,
-     "e": "VRAI. C'est la ligne « Volume » : un mètre cube vaut mille litres, donc un million de millilitres.",
-     "sourceQuote": "1 m 3 = 10 3 L = 10 6 mL"
-    },
-    {
-     "t": "1 m³ = 10³ mL.",
-     "v": false,
-     "e": "FAUX : 1 m³ = 10⁶ mL. Le facteur 10³ relie le mètre cube au litre, et il faut encore un facteur 10³ pour passer du litre au millilitre.",
-     "sourceQuote": "1 m 3 = 10 3 L = 10 6 mL et 1 L = 1 dm 3 = 10 3 cm 3"
-    },
-    {
-     "t": "1 L = 1 dm³ = 10² cm³.",
-     "v": false,
-     "e": "FAUX : 1 L = 1 dm³ = 10³ cm³. L'équivalence litre / décimètre cube est juste, mais le passage au centimètre cube se fait avec un facteur mille, pas cent.",
-     "sourceQuote": "1 L = 1 dm 3 = 10 3 cm 3"
-    }
-   ]
-  },
-  {
-   "fiche": "physique-005-regle-dor-des-unites.html",
-   "origine": "ecrite",
-   "arene": false,
-   "lot": 3,
-   "q": "Parmi les propositions suivantes relatives à la méthode à dérouler sur le brouillon avant de calculer, laquelle (lesquelles) est (sont) exacte(s) ?",
-   "items": [
-    {
-     "t": "La deuxième étape consiste à repérer les conversions à faire, qui sautent alors aux yeux.",
-     "v": true,
-     "e": "VRAI. Une fois toutes les valeurs recopiées avec leur unité, les conversions manquantes deviennent visibles d'un coup d'œil, sans avoir à les chercher.",
-     "sourceQuote": "Repère les conversions à faire. Elles te sautent alors aux yeux"
-    },
-    {
-     "t": "Sur l'exemple travaillé, la conversion à faire est mL → L, parce qu'une concentration molaire s'exprime en mol/L.",
-     "v": true,
-     "e": "VRAI. Le volume est donné en millilitres alors que l'unité cible d'une concentration molaire est le mol/L : il faut donc passer les mL en L avant de calculer.",
-     "sourceQuote": "ici, mL → L, parce qu'une concentration molaire s'exprime en mol/L"
-    },
-    {
-     "t": "La méthode se déroule sur le brouillon et tient en trois étapes avant tout calcul.",
-     "v": true,
-     "e": "VRAI. Recopier les valeurs avec leur unité, repérer les conversions, puis seulement calculer : trois étapes menées au crayon sur le brouillon.",
-     "sourceQuote": "La méthode 3 secondes, sur ton brouillon"
-    },
-    {
-     "t": "Ce réflexe coûte environ 20 secondes et en fait gagner 3.",
-     "v": false,
-     "e": "FAUX : les deux durées sont inversées. Le réflexe coûte 3 secondes et en fait gagner 20 — en plus d'éviter la faute bête.",
-     "sourceQuote": "Ce réflexe coûte 3 secondes, en fait gagner 20, et évite la faute bête."
-    },
-    {
-     "t": "Le réflexe « quelle est mon unité ? » n'a d'utilité qu'en épreuve, jamais en pratique.",
-     "v": false,
-     "e": "FAUX : c'est un réflexe de sécurité qui sauve littéralement des vies. Le cas de la dose calculée à partir d'un poids non converti en est l'illustration directe.",
-     "sourceQuote": "Le réflexe « quelle est mon unité ? » sauve littéralement des vies."
-    }
-   ]
-  },
-  {
-   "fiche": "physique-005-regle-dor-des-unites.html",
-   "origine": "ecrite",
-   "arene": false,
-   "lot": 4,
-   "q": "Parmi les propositions suivantes relatives au cas clinique de l'interne calculant une dose médicamenteuse, laquelle (lesquelles) est (sont) exacte(s) ?",
-   "items": [
-    {
-     "t": "La posologie était exprimée en mg/L et le poids du patient en kilogrammes.",
-     "v": false,
-     "e": "FAUX : la posologie était en mg/kg et le poids du patient était noté en livres anglo-saxonnes. C'est précisément le décalage entre ces deux unités qui a créé l'erreur.",
-     "sourceQuote": "La posologie est en mg/kg . Le poids du patient est noté en livres anglo-saxonnes (lbs)"
-    },
-    {
-     "t": "L'interne a oublié la conversion 1 lb = 0,45 kg et a doublé la dose.",
-     "v": true,
-     "e": "VRAI. Une livre valant 0,45 kg, utiliser le nombre de livres comme s'il s'agissait de kilogrammes multiplie la dose par environ deux.",
-     "sourceQuote": "L'interne oublie la conversion ( 1 lb = 0,45 kg ) et double la dose."
-    },
-    {
-     "t": "L'oubli de cette conversion a conduit à administrer une dose deux fois trop faible.",
-     "v": false,
-     "e": "FAUX : la dose a été doublée, pas divisée. La conséquence a donc été un surdosage immédiat, pas un sous-dosage.",
-     "sourceQuote": "et double la dose. Conséquence : surdosage immédiat"
-    },
-    {
-     "t": "Ce type d'erreur a causé plusieurs décès aux États-Unis.",
-     "v": true,
-     "e": "VRAI. L'erreur de conversion d'unité n'est pas une faute scolaire sans portée : elle a entraîné des décès et figure parmi les cas types enseignés en pharmacologie.",
-     "sourceQuote": "Ce type d'erreur a causé plusieurs décès aux États-Unis"
-    },
-    {
-     "t": "Ce cas est purement théorique et ne figure pas parmi les cas enseignés en pharmacologie.",
-     "v": false,
-     "e": "FAUX : il fait au contraire partie des cas types enseignés en pharmacologie, précisément parce qu'il a eu des conséquences réelles.",
-     "sourceQuote": "fait partie des cas types enseignés en pharmacologie"
-    }
-   ]
-  },
-  {
-   "fiche": "physique-005-regle-dor-des-unites.html",
-   "origine": "ecrite",
-   "arene": false,
-   "lot": 5,
-   "q": "Parmi les propositions suivantes relatives à la conversion d'une température en kelvins, laquelle (lesquelles) est (sont) exacte(s) ?",
-   "items": [
-    {
-     "t": "La relation T(K) = T(°C) + 273 vaut pour une température absolue.",
-     "v": true,
-     "e": "VRAI. C'est la troisième ligne du tableau des conversions : pour une température absolue, on ajoute 273 à la valeur exprimée en degrés Celsius.",
-     "sourceQuote": "T(K) = T(°C) + 273 vaut pour une température absolue"
-    },
-    {
-     "t": "25 °C correspondent à 273 K.",
-     "v": false,
-     "e": "FAUX : 25 °C correspondent à 298 K. La valeur 273 est la constante que l'on ajoute, pas le résultat de la conversion.",
-     "sourceQuote": "25 °C, c'est 298 K"
-    },
-    {
-     "t": "Une température absolue se convertit en kelvins en retranchant 273 à la valeur en degrés Celsius.",
-     "v": false,
-     "e": "FAUX : on ajoute 273, on ne le retranche pas. La relation est T(K) = T(°C) + 273.",
-     "sourceQuote": "1 L = 1 dm 3 = 10 3 cm 3 · T(K) = T(°C) + 273"
-    },
-    {
-     "t": "La conversion de la température en kelvins fait partie des conversions à annoter avant de calculer.",
-     "v": true,
-     "e": "VRAI. Sur le brouillon, la température se note en kelvins juste à côté de la valeur en degrés Celsius, au même titre que les autres conversions repérées.",
-     "sourceQuote": "(et la température en kelvins, déjà annotée à côté du °C)"
-    },
-    {
-     "t": "La ligne « Température » est la moins piégeuse des trois lignes du tableau des conversions.",
-     "v": false,
-     "e": "FAUX : c'est au contraire celle qui cache la subtilité la plus piégeuse, à savoir la différence de traitement entre une température absolue et un écart de température.",
-     "sourceQuote": "La ligne « Température » cache la subtilité la plus piégeuse du tableau."
-    }
-   ]
-  },
-  {
-   "fiche": "physique-005-regle-dor-des-unites.html",
-   "origine": "ecrite",
-   "arene": true,
-   "lot": 6,
-   "q": "Parmi les propositions suivantes relatives à la différence entre une température absolue et un écart de température, laquelle (lesquelles) est (sont) exacte(s) ?",
-   "items": [
-    {
-     "t": "Un écart de température de 10 K correspond à un écart de 10 °C.",
-     "v": true,
-     "e": "VRAI. Un écart se transporte tel quel d'une échelle à l'autre : un ΔT de 10 K est bien un ΔT de 10 °C.",
-     "sourceQuote": "donc un ΔT de 10 K est un ΔT de 10 °C"
-    },
-    {
-     "t": "Cette égalité tient au fait que les 273 s'annulent dans la soustraction.",
-     "v": true,
-     "e": "VRAI. Chacune des deux températures gagne 273 en passant en kelvins ; dans la différence, les deux constantes se compensent et l'écart reste identique.",
-     "sourceQuote": "les 273 s'annulent dans la soustraction"
-    },
-    {
-     "t": "Un écart mesuré en kelvins est toujours supérieur de 273 au même écart exprimé en degrés Celsius.",
-     "v": false,
-     "e": "FAUX : le décalage de 273 ne s'applique qu'aux températures absolues. Un ΔT en K est rigoureusement égal au même ΔT en °C.",
-     "sourceQuote": "un ΔT en K = ΔT en °C, mais une T absolue non"
-    },
-    {
-     "t": "Une température absolue exprimée en degrés Celsius peut être reportée telle quelle dans une formule qui attend des kelvins.",
-     "v": false,
-     "e": "FAUX : une température absolue doit être convertie avant d'entrer dans la formule. Reporter 25 au lieu de 298 fausse tout le calcul.",
-     "sourceQuote": "mais une T absolue , non — elle, il faut la convertir"
-    },
-    {
-     "t": "Une température absolue se convertit, un écart de température non.",
-     "v": true,
-     "e": "VRAI. C'est la formulation la plus courte de la subtilité : la conversion +273 s'applique aux températures absolues, jamais aux écarts.",
-     "sourceQuote": "Une T absolue se convertit, un ΔT non."
-    }
-   ]
-  },
-  {
-   "fiche": "physique-005-regle-dor-des-unites.html",
-   "origine": "ecrite",
-   "arene": true,
-   "lot": 7,
-   "q": "Parmi les propositions suivantes relatives à l'application numérique des conversions de base, laquelle (lesquelles) est (sont) exacte(s) ?",
-   "items": [
-    {
-     "t": "9 g correspondent à 9 × 10⁻³ kg.",
-     "v": true,
-     "e": "VRAI. Puisque 1 kg = 10³ g, on passe des grammes aux kilogrammes en divisant par 10³ : 9 g = 9 × 10⁻³ kg, soit 0,009 kg.",
-     "sourceQuote": "1 kg = 10 3 g = 10 6 mg = 10 9 µg"
-    },
-    {
-     "t": "100 mL correspondent à 0,1 L.",
-     "v": true,
-     "e": "VRAI. 1 m³ vaut 10³ L et 10⁶ mL, donc 1 L = 10³ mL. Il en découle que 100 mL = 100 / 10³ = 0,1 L.",
-     "sourceQuote": "1 m 3 = 10 3 L = 10 6 mL"
-    },
-    {
-     "t": "1 cm³ correspond à 1 mL.",
-     "v": true,
-     "e": "VRAI. Un litre vaut 10³ cm³ et vaut aussi 10³ mL : le centimètre cube et le millilitre sont donc le même volume. C'est ce qui rend les deux notations interchangeables sur une seringue.",
-     "sourceQuote": "1 L = 1 dm 3 = 10 3 cm 3"
-    },
-    {
-     "t": "1 mg correspond à 10⁻⁹ kg.",
-     "v": false,
-     "e": "FAUX : 1 kg = 10⁶ mg, donc 1 mg = 10⁻⁶ kg. Le facteur 10⁻⁹ est celui qui relie le microgramme au kilogramme.",
-     "sourceQuote": "Trois lignes à connaître par cœur : 1 kg = 10 3 g = 10 6 mg = 10 9 µg"
-    },
-    {
-     "t": "1 m³ correspond à 1 000 cm³.",
-     "v": false,
-     "e": "FAUX : 1 m³ = 10³ L et 1 L = 10³ cm³, donc 1 m³ = 10⁶ cm³, soit un million de centimètres cubes. Mille centimètres cubes ne font qu'un litre.",
-     "sourceQuote": "1 m 3 = 10 3 L = 10 6 mL et 1 L = 1 dm 3 = 10 3 cm 3"
-    }
-   ]
-  },
-  {
-   "fiche": "physique-006-analyse-dimensionnelle.html",
-   "origine": "ecrite",
-   "arene": false,
-   "lot": 1,
-   "q": "Parmi les propositions suivantes relatives au principe qui permet de retrouver une formule à partir des unités, laquelle (lesquelles) est (sont) exacte(s) ?",
-   "items": [
-    {
-     "t": "La plupart des formules de physique se reconstruisent en regardant seulement les unités.",
-     "v": true,
-     "e": "VRAI. C'est tout l'intérêt de la démarche : une formule oubliée n'est pas une formule perdue, les unités suffisent le plus souvent à la retrouver.",
-     "sourceQuote": "la plupart des formules de physique se reconstruisent juste en regardant les unités"
-    },
-    {
-     "t": "Il n'existe en général qu'une seule combinaison des données qui donne l'unité cible, et c'est la formule cherchée.",
-     "v": true,
-     "e": "VRAI. C'est l'idée centrale : parmi toutes les façons de combiner les données disponibles, une seule reconstitue l'unité de la grandeur cherchée.",
-     "sourceQuote": "Il n'existe en général qu'une seule combinaison de tes données qui donne l'unité cible — et c'est ta formule"
-    },
-    {
-     "t": "Cette démarche porte le nom d'analyse fonctionnelle.",
-     "v": false,
-     "e": "FAUX : elle s'appelle l'analyse dimensionnelle, parce qu'elle raisonne sur les dimensions, c'est-à-dire sur les unités, et non sur les valeurs numériques.",
-     "sourceQuote": "C'est ce qu'on appelle l'analyse dimensionnelle"
-    },
-    {
-     "t": "Appliquer cette méthode suppose de connaître au préalable les formules par cœur.",
-     "v": false,
-     "e": "FAUX : c'est exactement l'inverse. Le but de la méthode est justement de montrer comment retrouver les formules sans les avoir mémorisées.",
-     "sourceQuote": "montrer comment les retrouver sans les mémoriser"
-    },
-    {
-     "t": "Les unités ne servent qu'à vérifier un calcul déjà posé, jamais à reconstruire une formule.",
-     "v": false,
-     "e": "FAUX : vérifier l'homogénéité n'est que leur premier usage. Elles savent faire bien plus, jusqu'à reconstruire une formule entière que l'on ne se rappelle plus.",
-     "sourceQuote": "Elles savent faire bien plus."
-    }
-   ]
-  },
-  {
-   "fiche": "physique-006-analyse-dimensionnelle.html",
-   "origine": "ecrite",
-   "arene": false,
-   "lot": 2,
-   "q": "Parmi les propositions suivantes relatives à la méthode en trois questions, laquelle (lesquelles) est (sont) exacte(s) ?",
-   "items": [
-    {
-     "t": "La première question porte sur l'unité dans laquelle doit s'exprimer la grandeur cherchée.",
-     "v": true,
-     "e": "VRAI. On commence toujours par fixer la cible : dans quelle unité doit s'exprimer ce que l'on cherche.",
-     "sourceQuote": "Dans quelle unité doit s'exprimer ce que je cherche ?"
-    },
-    {
-     "t": "La deuxième question consiste à choisir, parmi les formules du cours, celle qui semble la plus familière.",
-     "v": false,
-     "e": "FAUX : la deuxième question ne porte pas sur les formules mais sur les unités des données dont on dispose. On raisonne sur les unités, pas sur les souvenirs.",
-     "sourceQuote": "Quelles unités ont mes données disponibles ?"
-    },
-    {
-     "t": "La troisième question consiste à trouver la combinaison, par multiplication ou par division, qui reconstitue l'unité cible.",
-     "v": true,
-     "e": "VRAI. Une fois la cible et les données identifiées, il reste à chercher quelle combinaison, par produit ou par quotient, redonne l'unité visée.",
-     "sourceQuote": "Quelle combinaison (× ou /) reconstitue l'unité cible ?"
-    },
-    {
-     "t": "Les trois questions se posent dans l'ordre suivant : les unités des données d'abord, l'unité cible ensuite.",
-     "v": false,
-     "e": "FAUX : l'ordre est l'inverse. On identifie d'abord l'unité de la cible, puis celles des données, et enfin la combinaison qui relie les deux.",
-     "sourceQuote": "Trois questions, dans l'ordre : quelle unité pour ma cible ? → quelles unités pour mes données ?"
-    },
-    {
-     "t": "Seule une addition des données permet de reconstituer l'unité cible.",
-     "v": false,
-     "e": "FAUX : les unités se combinent par multiplication ou par division, jamais par addition. C'est le produit ou le quotient qui fait apparaître ou disparaître une unité.",
-     "sourceQuote": "quelle combinaison (× ou /) reconstitue l'unité cible ?"
-    }
-   ]
-  },
-  {
-   "fiche": "physique-006-analyse-dimensionnelle.html",
-   "origine": "ecrite",
-   "arene": false,
-   "lot": 3,
-   "q": "Parmi les propositions suivantes relatives aux formules reconstruites à partir des seules unités, laquelle (lesquelles) est (sont) exacte(s) ?",
-   "items": [
-    {
-     "t": "Avec n en mol et V en L, la combinaison qui donne des mol/L est C = n / V.",
-     "v": true,
-     "e": "VRAI. L'unité cible est le mol/L, c'est-à-dire des moles divisées par des litres : la division de n par V s'impose d'elle-même. Ainsi 0,5 mol dans 2 L donnent 0,25 mol/L.",
-     "sourceQuote": "C = n / V 0,5 mol dans 2 L → 0,25 mol/L"
-    },
-    {
-     "t": "Le nombre d'entités N s'obtient en divisant n par le nombre d'Avogadro.",
-     "v": false,
-     "e": "FAUX : c'est la multiplication qui convient. N est un nombre sans unité, et seul le produit mol × mol⁻¹ fait disparaître les moles ; la division, elle, laisserait des mol².",
-     "sourceQuote": "mol × mol −1 = sans unité ✓ — la multiplication s'impose toute seule"
-    },
-    {
-     "t": "1 mol de glucose correspond à environ 6 × 10²³ molécules.",
-     "v": true,
-     "e": "VRAI. En multipliant la quantité de matière par le nombre d'Avogadro, une mole donne bien de l'ordre de 6 × 10²³ molécules.",
-     "sourceQuote": "1 mol de glucose → 6 × 10 23 molécules"
-    },
-    {
-     "t": "N est une grandeur sans unité, ce que traduit le produit mol × mol⁻¹.",
-     "v": true,
-     "e": "VRAI. N est un simple dénombrement : des moles multipliées par des mol⁻¹ donnent un nombre pur, sans unité.",
-     "sourceQuote": "N sans unité n en mol 𝒩 en mol −1"
-    },
-    {
-     "t": "Une concentration exprimée en mol/L se lit comme des litres divisés par des moles.",
-     "v": false,
-     "e": "FAUX : mol/L se lit « des moles divisées par des litres ». L'inverse, des litres par mole, ne serait pas une concentration.",
-     "sourceQuote": "« mol / L » = des moles divisées par des litres"
-    }
-   ]
-  },
-  {
-   "fiche": "physique-006-analyse-dimensionnelle.html",
-   "origine": "ecrite",
-   "arene": false,
-   "lot": 4,
-   "q": "Parmi les propositions suivantes relatives à la reconstruction de la formule reliant n, m et M, laquelle (lesquelles) est (sont) exacte(s) ?",
-   "items": [
-    {
-     "t": "La seule grandeur qui contient déjà des « mol » dans son unité est la masse molaire M, en g/mol.",
-     "v": true,
-     "e": "VRAI. On part de grammes et on veut des moles : la seule donnée qui apporte déjà des « mol » est M. C'est donc elle qui doit servir à faire disparaître les grammes.",
-     "sourceQuote": "La seule grandeur qui contient déjà des « mol » dans son unité est M (g/mol)"
-    },
-    {
-     "t": "Diviser par des g/mol revient à multiplier par des mol/g.",
-     "v": true,
-     "e": "VRAI. Diviser par une fraction revient à multiplier par son inverse : [g] ÷ [g/mol] devient [g] × [mol/g].",
-     "sourceQuote": "or diviser par une fraction revient à multiplier par son inverse, donc [g] × [mol/g]"
-    },
-    {
-     "t": "Les « g » du numérateur et du dénominateur s'annulent, si bien qu'il ne reste que des mol.",
-     "v": true,
-     "e": "VRAI. C'est la vérification qui valide la formule : l'unité obtenue est bien le mol, celle de la grandeur cherchée. Donc n = m / M.",
-     "sourceQuote": "les « g » du numérateur et du dénominateur s'annulent, il reste mol"
-    },
-    {
-     "t": "9 g de NaCl, de masse molaire 58,5 g/mol, représentent environ 1,54 mol.",
-     "v": false,
-     "e": "FAUX : 9 divisé par 58,5 donne environ 0,154 mol, et non 1,54. L'ordre de grandeur se contrôle d'ailleurs de tête : 9 g, c'est nettement moins que 58,5 g, donc bien moins d'une mole.",
-     "sourceQuote": "9 g de NaCl (M = 58,5) → ≈ 0,154 mol"
-    },
-    {
-     "t": "La masse molaire M s'exprime en mol/g.",
-     "v": false,
-     "e": "FAUX : la masse molaire s'exprime en g/mol, c'est-à-dire une masse par mole. C'est justement cette écriture qui permet aux grammes de s'annuler dans m / M.",
-     "sourceQuote": "m en g M en g/mol"
-    }
-   ]
-  },
-  {
-   "fiche": "physique-006-analyse-dimensionnelle.html",
-   "origine": "ecrite",
-   "arene": false,
-   "lot": 5,
-   "q": "Parmi les propositions suivantes relatives à l'usage des unités pour valider ou éliminer une formule, laquelle (lesquelles) est (sont) exacte(s) ?",
-   "items": [
-    {
-     "t": "Si la combinaison proposée donne la bonne unité, c'est la bonne formule.",
-     "v": true,
-     "e": "VRAI. C'est la règle d'or : l'unité obtenue sert de preuve. Quand elle tombe juste, la combinaison testée est la formule cherchée.",
-     "sourceQuote": "si la combinaison que tu proposes donne la bonne unité, tu as la bonne formule"
-    },
-    {
-     "t": "Si l'unité obtenue est fausse, la formule l'est aussi, et cela sans avoir à calculer.",
-     "v": true,
-     "e": "VRAI. La réciproque est tout aussi vraie et encore plus utile : une unité incohérente condamne la formule, sans poser le moindre chiffre.",
-     "sourceQuote": "Si l'unité est fausse, ta formule l'est aussi — sans même avoir à calculer"
-    },
-    {
-     "t": "Une réponse de QCM dont l'unité ne tombe pas juste peut malgré tout être exacte.",
-     "v": false,
-     "e": "FAUX : une réponse dont l'unité ne tombe pas juste est fausse, sans exception. C'est ce qui permet d'éliminer des propositions très vite.",
-     "sourceQuote": "Une réponse de QCM dont l'unité ne tombe pas juste est FAUSSE"
-    },
-    {
-     "t": "L'analyse dimensionnelle est un outil marginal, rarement utile en QCM.",
-     "v": false,
-     "e": "FAUX : c'est au contraire le réflexe qui sauve le plus souvent en QCM, parce qu'il permet à la fois de retrouver une formule et d'écarter des propositions.",
-     "sourceQuote": "c'est sans doute le réflexe qui te sauvera le plus souvent en QCM"
-    },
-    {
-     "t": "Écarter une proposition sur son unité impose d'avoir mené le calcul numérique jusqu'au bout.",
-     "v": false,
-     "e": "FAUX : le tri se fait sans même avoir à calculer. C'est précisément ce qui rend la méthode rentable en temps limité.",
-     "sourceQuote": "Une réponse de QCM dont l'unité ne tombe pas juste est FAUSSE , sans même avoir à calculer."
-    }
-   ]
-  },
-  {
-   "fiche": "physique-006-analyse-dimensionnelle.html",
-   "origine": "ecrite",
-   "arene": true,
-   "lot": 6,
-   "q": "Parmi les propositions suivantes relatives à la reconstruction de la formule de la masse volumique, laquelle (lesquelles) est (sont) exacte(s) ?",
-   "items": [
-    {
-     "t": "La masse volumique ρ, que l'on appelle aussi densité au lycée, s'exprime en g/cm³.",
-     "v": true,
-     "e": "VRAI. C'est l'unité cible du problème, et c'est elle qui va imposer la formule.",
-     "sourceQuote": "La masse volumique ρ — la « densité » que tu as vue au lycée — s'exprime en g/cm 3"
-    },
-    {
-     "t": "À partir de m en g et de V en cm³, la seule combinaison qui marche est ρ = m / V.",
-     "v": true,
-     "e": "VRAI. « g / cm³ » se lit « des grammes divisés par des cm³ » : la division de la masse par le volume reconstitue exactement l'unité cible.",
-     "sourceQuote": "« g / cm 3 » = des grammes divisés par des cm 3"
-    },
-    {
-     "t": "Un morceau de fer de 79 g occupant 10 cm³ a une masse volumique de 790 g/cm³.",
-     "v": false,
-     "e": "FAUX : il faut diviser, pas multiplier. 79 / 10 = 7,9 g/cm³, ce qui correspond bien à la densité du fer.",
-     "sourceQuote": "ρ = 79 / 10 = 7,9 g/cm 3"
-    },
-    {
-     "t": "La combinaison V / m donnerait elle aussi une masse volumique.",
-     "v": false,
-     "e": "FAUX : V / m s'exprimerait en cm³/g, soit l'inverse d'une masse volumique. L'unité cible étant g/cm³, seule la combinaison m / V convient.",
-     "sourceQuote": "la seule combinaison qui marche est ρ = m / V"
-    },
-    {
-     "t": "Retrouver cette formule impose d'aller la rechercher dans le cahier de cours.",
-     "v": false,
-     "e": "FAUX : la formule se retrouve sans la chercher nulle part, uniquement à partir des unités de la cible et des données.",
-     "sourceQuote": "Tu viens de retrouver la formule sans la chercher dans ton cahier, juste avec les unités."
-    }
-   ]
-  },
-  {
-   "fiche": "physique-006-analyse-dimensionnelle.html",
-   "origine": "ecrite",
-   "arene": true,
-   "lot": 7,
-   "q": "Parmi les propositions suivantes relatives au sens d'une division et à la manipulation des unités, laquelle (lesquelles) est (sont) exacte(s) ?",
-   "items": [
-    {
-     "t": "Les unités se manipulent comme des nombres : elles se multiplient, se divisent et s'annulent.",
-     "v": true,
-     "e": "VRAI. C'est ce qui rend la méthode utilisable : on traite les unités comme des facteurs algébriques, et celles qui se retrouvent au numérateur et au dénominateur disparaissent.",
-     "sourceQuote": "Les unités se manipulent comme des nombres — elles se multiplient, se divisent et s'annulent"
-    },
-    {
-     "t": "Le rapport M / m donne des 1/mol, ce qui n'a aucun sens physique pour une quantité de matière.",
-     "v": true,
-     "e": "VRAI. En inversant la division, on obtient (g/mol) / g = 1/mol : une unité qui ne correspond à aucune grandeur cherchée ici. C'est ce qui permet d'écarter ce candidat sans calculer.",
-     "sourceQuote": "L'inverse (M / m) donnerait 1/mol, ce qui n'a aucun sens physique"
-    },
-    {
-     "t": "Le sens de la division est imposé par les unités.",
-     "v": true,
-     "e": "VRAI. Ce n'est pas la mémoire qui décide quelle grandeur va au numérateur : c'est l'unité cible qui fixe le sens de la division.",
-     "sourceQuote": "le sens de la division est imposé par les unités"
-    },
-    {
-     "t": "Il suffit de vérifier que les bonnes lettres figurent dans la formule proposée pour la valider.",
-     "v": false,
-     "e": "FAUX : voir les bonnes lettres ne suffit pas. m / M et M / m contiennent exactement les mêmes lettres et n'ont pourtant pas la même unité, donc pas le même sens.",
-     "sourceQuote": "Ne te contente pas de « voir » les bonnes lettres"
-    },
-    {
-     "t": "Le rapport V / n, formé des mêmes données que C = n / V, s'exprime lui aussi en mol/L.",
-     "v": false,
-     "e": "FAUX : V / n s'exprime en L/mol, l'inverse d'une concentration. Une concentration en mol/L se lit « des moles divisées par des litres », donc c'est bien n / V.",
-     "sourceQuote": "« mol / L » = des moles divisées par des litres"
-    }
-   ]
-  }
- ]
+  ]
 }

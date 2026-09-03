@@ -45,6 +45,8 @@ const srv = http.createServer((rq, rs) => {
     titres: typeof TITRES_FICHES!=='undefined' ? Object.keys(TITRES_FICHES).length : -1,
     banque: typeof ABANK!=='undefined' ? ABANK.length : -1,
     territoires: typeof territoires==='function' ? territoires().length : -1,
+    mondes: typeof mondes==='function' ? mondes().map(m=>m.terr.length).join('+') : 'absent',
+    mondeCourant: typeof mondeCourant==='function' ? mondeCourant().nom : 'absent',
     chn: typeof SEANCES!=='undefined' ? SEANCES.filter(s=>s.chn).length : -1,
     illu: typeof illuRoute==='function' ? illuRoute().length : -1,
     premiere: typeof seanceCourante==='function' && seanceCourante() ? seanceCourante().titre : null,
@@ -79,9 +81,14 @@ const srv = http.createServer((rq, rs) => {
   await ev(`go('home')`); await cap('09-home-apres-7');
   await ev(`try{ ouvrirCarte(); }catch(e){}`); await cap('10-carte-apres-7');
   /* la carte d'un élève à 60 séances : des territoires conquis, d'autres en cours, le reste à découvrir */
-  await ev(`(()=>{ try{ SEANCES.slice(7,60).forEach(s=>{ S.sdone[s.id]=Date.now(); }); saveS(); _terr=null; ouvrirCarte(); }catch(e){ console.error('60 : '+e.message); } })()`);
-  await page.waitForTimeout(500); await page.screenshot({ path: path.join(OUT, '10b-carte-apres-60.png'), fullPage: true }); console.log('  📸 10b-carte-apres-60 (page entière)');
-  await ev(`(()=>{ try{ SEANCES.slice(7,60).forEach(s=>{ delete S.sdone[s.id]; }); saveS(); _terr=null; }catch(e){} })()`);
+  await ev(`(()=>{ try{ SEANCES.slice(7,60).forEach(s=>{ S.sdone[s.id]=Date.now(); }); saveS(); _terr=null; _mondes=null; ouvrirCarte(); }catch(e){ console.error('60 : '+e.message); } })()`);
+  await page.waitForTimeout(500);
+  for (const [k, y] of [['a', 0], ['b', 740], ['c', 1480], ['d', 2220]]) {
+    await ev('window.scrollTo(0,' + y + ')'); await page.waitForTimeout(250);
+    await page.screenshot({ path: path.join(OUT, '10b' + k + '-mondes-60.png') });
+  }
+  console.log('  📸 10b-mondes-60 (4 tranches)'); await ev('window.scrollTo(0,0)');
+  await ev(`(()=>{ try{ SEANCES.slice(7,60).forEach(s=>{ delete S.sdone[s.id]; }); saveS(); _terr=null; _mondes=null; }catch(e){} })()`);
   await ev(`try{ go('arene'); if(typeof setLieu==='function') setLieu('salles'); }catch(e){}`); await cap('11-salles');
 
   /* le bilan de fin de séance, avec un jalon franchi (la 7e) */
