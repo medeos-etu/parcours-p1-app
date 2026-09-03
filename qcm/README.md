@@ -21,6 +21,28 @@ Chaque question y est rattachée à **une fiche** du Parcours, et porte sa prove
       ]
     }
 
+## La trame : celle du gabarit Medeos
+On suit `~/dev/medeos-site/data/qcm/_GABARIT-QCM-ANATOMIE.md`, sans rien y changer —
+la seule adaptation est que **la source n'est plus le chapitre de cours, mais la fiche**.
+
+1. **5 items A-E**, toujours.
+2. **Type concours** : chaque item se juge vrai ou faux indépendamment. Un QCM peut porter
+   de 1 à 5 items vrais.
+3. **Équilibre** : viser ~50/50 sur l'ensemble d'un lot. Jamais plus de 60 % de vrais.
+4. **`explanation`** : le corrigé rédigé pour l'élève. Commence par « VRAI. » ou « FAUX : »
+   puis la justification. Aucun renvoi au support, aucun numéro de ligne.
+5. 🔑 **`sourceQuote`** : la citation LITTÉRALE du passage de la fiche qui prouve la valeur
+   de l'item — obligatoire sur CHAQUE item, vrai comme faux. Back-office uniquement, jamais
+   montrée à l'élève. C'est elle qui rend la règle vérifiable : `outils/verifie-qcm.js`
+   contrôle que chaque citation se retrouve mot pour mot dans la fiche. Un item dont la
+   citation ne s'y trouve pas n'est pas répondable — il est rejeté.
+6. **Distracteurs** : bâtis sur les pièges réels de la fiche — inversions, confusions de
+   structures, chiffres modifiés, attributions croisées. Jamais un item faux hors sujet,
+   impossible à trancher.
+7. **Pas de spoiler** dans la formulation.
+8. **Français correct**, pas d'anglicismes. On dit « en P1 », pas « au concours ».
+9. **Couverture** : les questions d'une fiche balaient toute la fiche, pas un seul passage.
+
 ## Deux façons de servir une fiche
 1. **Reprise** — la question existe déjà et ses CINQ items se tranchent avec la fiche.
    On la reprend telle quelle. C'est le cas le moins cher et le plus sûr : la question
@@ -35,10 +57,15 @@ Chaque question y est rattachée à **une fiche** du Parcours, et porte sa prove
 Pas quatre sur cinq. Une question mal rangée est pire qu'une question manquante :
 l'élève se croit fautif alors qu'on ne lui a jamais donné la réponse.
 
-## L'objectif, par fiche
-- **2 lots (10 questions)** en accès gratuit — le minimum pour mettre en ligne.
-- **5 lots (25 questions)** avec le pack année complète.
-- **3 questions d'arène** en plus, jamais jouables dans les Salles.
+## L'objectif, par fiche : 35 QCM en 7 lots de 5
+| lots | QCM | pour qui |
+|---|---|---|
+| 1-2 | 10 | **accès gratuit** — l'essentiel de la fiche |
+| 3-5 | 15 | **pack année complète** — cas limites, pièges fins, applications |
+| 6-7 | 10 | **arène** — jamais jouables à l'entraînement, elles classent |
+
+Chaque question porte son numéro de `lot` (1 à 7). Les 35 questions d'une fiche ne se
+répètent pas entre elles : ni le même énoncé, ni le même fait testé deux fois.
 
 ## Le périmètre du moment
 Les **45 premiers jours de Parcours**, soit les 112 fiches des chapitres :
