@@ -6195,9 +6195,10 @@ function chiffresAvancee(){
 function prochainStageProche(){
   const d=(typeof dateRentree==='function')?dateRentree():null; if(!d) return null;
   const debutTerminale=new Date(d.getFullYear()-1,8,1);
-  const p=periodesEntre(new Date(), d).filter(x=>x.m>=debutTerminale)[0]; if(!p) return null;
+  /* le prochain stage à venir, OU celui qui est en cours (on regarde 12 jours en arrière) */
+  const p=periodesEntre(new Date(Date.now()-12*864e5), d).filter(x=>x.m>=debutTerminale)[0]; if(!p) return null;
   const jours=Math.round((p.m-new Date())/864e5);
-  return (jours>=0 && jours<=21) ? {nom:p.nom, quand:p.quand, emo:p.emo, jours:jours} : null;
+  return (jours>=-11 && jours<=21) ? {nom:p.nom, stage:p.stage||'Stage Medeos', quand:p.quand, emo:p.emo, jours:jours} : null;
 }
 /* sous la séance du jour : le territoire en cours, compact */
 function ligneConquete(){
@@ -6497,16 +6498,39 @@ function poserRentree(an){
   S.profil.rentreeDite = true;
   saveS(); renderCarte();
 }
-/* les périodes de vacances d'une année scolaire, nommées et jamais datées au jour près */
+/* LES VRAIS STAGES, AUX VRAIES DATES. Source : data/stages-vacances.ts et
+   lib/medi-pro-session.ts du site (calendrier officiel 2026-2027). Un stage commence le
+   lundi de la première semaine de vacances et dure douze jours. Pour une année scolaire
+   dont les dates ne sont pas encore publiées, on pose le repère habituel et on écrit
+   « vers ». Février et Pâques dépendent de la zone : le repère est la zone la plus
+   tôt, et la carte le dit. Quand le site change ses dates, c'est ICI qu'on les recopie. */
+const STAGES_DATES = {
+  2026: [
+    {id:'toussaint', stage:'Stage de la Toussaint', nom:'Vacances de la Toussaint', emo:'🍂', debut:'2026-10-19', fin:'2026-10-31', quand:'du 19 au 31 octobre 2026'},
+    {id:'noel',      stage:'Stage de Noël',         nom:'Vacances de Noël',         emo:'❄️', debut:'2026-12-21', fin:'2027-01-02', quand:'du 21 décembre 2026 au 2 janvier 2027'},
+    {id:'fevrier',   stage:'Stage de Février',      nom:'Vacances d\'hiver',        emo:'⛷️', debut:'2027-02-08', fin:'2027-03-06', quand:'entre le 8 février et le 6 mars 2027, selon ta zone'},
+    {id:'paques',    stage:'Stage de Pâques',       nom:'Vacances de printemps',    emo:'🌷', debut:'2027-04-05', fin:'2027-05-01', quand:'entre le 5 avril et le 1<sup>er</sup> mai 2027, selon ta zone'}
+  ]
+};
+const PRERENTREE_DATES = { 2027: {debut:'2027-08-14', fin:'2027-08-28', quand:'du 14 au 28 août 2027'} };
 function periodesEntre(debut, fin){
   const out = [];
-  for(let an = debut.getFullYear(); an <= fin.getFullYear(); an++){
-    out.push({m:new Date(an,9,25),  nom:'Vacances de la Toussaint',   quand:'fin octobre '+an,        emo:'🍂'});
-    out.push({m:new Date(an,11,22), nom:'Vacances de Noël',           quand:'fin décembre '+an,       emo:'❄️'});
-    out.push({m:new Date(an+1,1,14),nom:'Vacances d\'hiver',          quand:'février '+(an+1)+' · selon ta zone', emo:'⛷️'});
-    out.push({m:new Date(an+1,3,14),nom:'Vacances de printemps',      quand:'avril '+(an+1)+' · selon ta zone',   emo:'🌷'});
+  for(let an = debut.getFullYear()-1; an <= fin.getFullYear(); an++){
+    const reels = STAGES_DATES[an];
+    if(reels){ reels.forEach(s=>out.push({m:new Date(s.debut+'T00:00:00'), fin:new Date(s.fin+'T00:00:00'), nom:s.nom, stage:s.stage, emo:s.emo, quand:s.quand, exact:true})); }
+    else {
+      out.push({m:new Date(an,9,19),  nom:'Vacances de la Toussaint', stage:'Stage de la Toussaint', emo:'🍂', quand:'vers le 20 octobre '+an,  exact:false});
+      out.push({m:new Date(an,11,21), nom:'Vacances de Noël',         stage:'Stage de Noël',         emo:'❄️', quand:'vers le 20 décembre '+an, exact:false});
+      out.push({m:new Date(an+1,1,8), nom:'Vacances d\'hiver',        stage:'Stage de Février',      emo:'⛷️', quand:'février '+(an+1)+', selon ta zone', exact:false});
+      out.push({m:new Date(an+1,3,5), nom:'Vacances de printemps',    stage:'Stage de Pâques',       emo:'🌷', quand:'avril '+(an+1)+', selon ta zone',   exact:false});
+    }
   }
   return out.filter(p => p.m > debut && p.m < fin).sort((a,b)=>a.m-b.m);
+}
+/* la pré-rentrée de l'été qui précède la rentrée : les vraies dates si elles sont publiées */
+function prerentreeDe(anRentree){
+  const r = PRERENTREE_DATES[anRentree];
+  return r ? {m:new Date(r.debut+'T00:00:00'), quand:r.quand, exact:true} : {m:new Date(anRentree,7,14), quand:'mi-août '+anRentree, exact:false};
 }
 function renderCarte(){
   const b = document.getElementById('carte-corps'); if(!b) return;
@@ -6588,16 +6612,19 @@ function renderCarte(){
   const URL_STAGES='https://www.medeos-sante.fr/packs/stages-vacances', URL_MEDIPRO='https://www.medeos-sante.fr/packs/medi-pro';
   if(d){
     const debutTerminale = new Date(d.getFullYear()-1, 8, 1);       /* les stages existent en Terminale */
-    const STAGE_DE = {'Vacances de la Toussaint':'Stage de la Toussaint','Vacances de Noël':'Stage de Noël','Vacances d\'hiver':'Stage d\'hiver','Vacances de printemps':'Stage de printemps'};
+    const dans = n => n<=0 ? 'en ce moment' : n===1 ? 'demain' : 'dans '+n+' jours';
+    /* le camp est posé là où l'élève SERA à la date du stage, à une séance par jour :
+       c'est une projection, et le bas de la carte le dit */
     periodesEntre(new Date(), d).filter(p=>p.m>=debutTerminale).forEach(p=>{
       const dj=Math.max(0, Math.round((p.m-new Date())/864e5));
-      poser(faites+dj, camp(imgCamp('camp-stage','stage-vacances.png'), p.emo+' '+p.quand, STAGE_DE[p.nom]||'Stage Medeos',
+      poser(faites+dj, camp(imgCamp('camp-stage','stage-vacances.png'), p.emo+' '+p.quand+' · '+dans(dj), p.stage||'Stage Medeos',
         'Ta Terminale, ces vacances-là : douze jours guidés avec un tuteur qui répond, le programme repris là où tu en es sur la carte. Ceux qui les font arrivent à la rentrée avec un cran d\'avance — la route continue sans, mais elle va plus vite avec. Inclus dans l\'année complète, ou seul.',
         URL_STAGES+'#stages', 'Les stages des vacances'));
     });
-    const ete = new Date(d.getFullYear(), 6, 5);
-    if(ete > new Date()){
-      poser(faites+Math.max(0, Math.round((ete-new Date())/864e5)), camp('stage-medipro.png', '☀️ juillet-août '+d.getFullYear(), 'Stage de pré-rentrée',
+    const pr = prerentreeDe(d.getFullYear());
+    if(pr.m > new Date()){
+      const dj=Math.max(0, Math.round((pr.m-new Date())/864e5));
+      poser(faites+dj, camp('stage-medipro.png', '☀️ '+pr.quand+' · '+dans(dj), 'Stage de pré-rentrée',
         'La dernière ligne droite : les bases académiques et la méthode, un tuteur qui répond, et un suivi jusqu\'au concours. Inclus dans l\'année complète, ou seul.',
         URL_MEDIPRO, 'Le stage de pré-rentrée'));
     }
@@ -6634,7 +6661,8 @@ function renderCarte(){
   x += '</div>';
 
   x += '<div class="rt-sans">La carte se conquiert <b>sans les stages</b> : le Parcours te donne deux fiches par jour tout du long, et les Salles gardent tout ce que tu as lu. '+
-    'Les stages sont là pour ceux qui veulent aller plus vite pendant les vacances — pas pour débloquer la suite.</div>';
+    'Les stages sont là pour ceux qui veulent aller plus vite pendant les vacances — pas pour débloquer la suite. '+
+    'Chaque camp est posé là où tu seras à sa date, à une séance par jour.</div>';
   x += '<button class="se-alt" style="margin-top:10px" onclick="voirStages()">Voir ce que contiennent les stages</button>';
   b.innerHTML = x;
 }
@@ -8146,7 +8174,8 @@ function seanceFin(){
   { const suite=seanceCourante();
     if(suite && !s.rev) bilan+='<div class="fin-demain">📌 '+(seanceJourFaite()?'Demain':'Ensuite')+' : <b>'+suite.titre+'</b></div>';
     const st=(!s.rev && typeof prochainStageProche==='function')? prochainStageProche() : null;
-    if(st) bilan+='<a class="fin-stage" href="https://www.medeos-sante.fr/packs/stages-vacances#stages" target="_blank" rel="noopener">'+st.emo+' Dans '+st.jours+' jour'+(st.jours>1?'s':'')+', '+st.nom.toLowerCase()+' : un stage de 12 jours reprend là où tu en es, avec un tuteur. <em>Voir les stages →</em></a>'; }
+    if(st) bilan+='<a class="fin-stage" href="https://www.medeos-sante.fr/packs/stages-vacances#stages" target="_blank" rel="noopener">'+st.emo+' '+
+      (st.jours<=0 ? 'En ce moment' : st.jours===1 ? 'Demain' : 'Dans '+st.jours+' jours')+', le '+st.stage.replace(/^Stage /,'stage ')+' ('+st.quand+') : douze jours guidés qui reprennent là où tu en es, avec un tuteur. <em>Voir les stages →</em></a>'; }
   bilan+=axoScene('vers_entrainement');
   bilan+='<p class="fin-bascule">⚔️ On quitte le Parcours : direction <b>l\'Arène</b>, salle <b>'+salle+'</b>, pour tester ce que tu viens de voir.</p>';
   document.getElementById('libre-fin-s').innerHTML=bilan;
