@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kwashiorkor : la pression oncotique qui s'effondre — Fiche Medeos</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 15px; line-height: 1.6; color: #2c3e50; background: #f6f8fb; padding: 22px; max-width: 760px; margin: 0 auto; }
+    .page-container { position: relative; }
+    .page-container::before { display: none; }
+    .page-container > * { position: relative; z-index: 1; }
+    .prod-brand { margin: 0 4px 10px; }
+    .prod-brand img { height: 30px; width: auto; display: block; border-radius: 6px; }
+    .hook-header { background: #FAF6F0; border-radius: 14px; padding: 26px 30px 22px; box-shadow: 0 4px 18px rgba(76,42,133,0.08); border: 1px solid #efe7d8; }
+    .hook-header .brand-tag { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #6B46C1; font-weight: 600; opacity: 0.85; margin-bottom: 12px; }
+    .hook-header .course-title { font-size: 28px; line-height: 1.1; font-weight: 800; color: #4C2A85; letter-spacing: -0.7px; margin: 0 0 12px; }
+    .hook-header .punch { font-size: 18px; line-height: 1.3; font-weight: 800; color: #1A1A2E; letter-spacing: -0.3px; margin: 0; }
+    .hook-header .punch span.accent { color: #6B46C1; }
+    .hook-header .punch + .punch { margin-top: 5px; }
+    .intro { font-size: 15.5px; line-height: 1.7; color: #2c3e50; margin: 20px 2px; }
+    .intro strong { font-weight: 700; color: #4C2A85; }
+    em.hl { background: linear-gradient(180deg, transparent 60%, #FCD34D 60%); font-style: normal; padding: 0 2px; }
+    .schema-box { background: #fff; border: 2px solid #6B46C1; padding: 12px; text-align: center; border-radius: 12px; box-shadow: 0 4px 15px rgba(107, 70, 193, 0.15); position: relative; overflow: hidden; }
+    .schema-box::before { content: 'medeos-sante.fr'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: 'Inter', Arial, sans-serif; font-size: 14px; font-weight: 700; color: rgba(120,120,120,0.13); letter-spacing: 2px; text-transform: uppercase; pointer-events: none; user-select: none; z-index: 5; white-space: nowrap; max-width: 92%; overflow: hidden; }
+    .schema-box img { max-width: 100%; max-height: 300px; height: auto; border-radius: 8px; display: block; margin: 0 auto; cursor: zoom-in; }
+    .schema-box .schema-num { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 0.6px; text-transform: uppercase; color: #6B46C1; margin-bottom: 6px; }
+    .schema-box .caption { font-size: 12px; color: #6b6275; margin-top: 9px; font-weight: 500; }
+    .schema-box .caption strong { color: #6B46C1; }
+    .schema-box .file-target { display: none; margin-top: 10px; padding: 8px 12px; background: #e8f5e9; border: 1px solid #a5d6a7; border-radius: 6px; font-family: 'SFMono-Regular', Consolas, monospace; font-size: 11.5px; color: #1b5e20; text-align: left; line-height: 1.5; }
+    .schema-box .file-target strong { color: #2e7d32; }
+    .schema-box .generation-prompt { background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border: 2px dashed #ff9800; border-radius: 8px; padding: 13px; margin-top: 12px; text-align: left; font-size: 11.5px; color: #e65100; line-height: 1.55; white-space: pre-wrap; }
+    .schema-box .generation-prompt strong { color: #bf360c; display: block; margin-bottom: 8px; font-size: 12.5px; background: #ffcc80; padding: 7px 11px; border-radius: 4px; }
+    .schema-box .copy-prompt-btn { display: none; margin-top: 8px; padding: 6px 12px; background: #ff9800; color: #fff; border: none; border-radius: 4px; font-size: 12px; cursor: pointer; font-weight: 600; }
+    .schema-box .copy-prompt-btn:hover { background: #f57c00; }
+    .schema-box .generation-prompt { display: none; }
+    .schema-box.img-missing .generation-prompt { display: block; }
+    .schema-box.img-missing .copy-prompt-btn { display: inline-block; }
+    .schema-box.img-missing .file-target { display: block !important; }
+    .schema-2up { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; align-items: stretch; }
+    .schema-2up .schema-box { margin: 0; display: flex; flex-direction: column; }
+    .schema-2up .schema-box img { height: 230px; width: 100%; max-height: none; object-fit: contain; }
+    .schema-2up .schema-box .caption { margin-top: auto; }
+    @media (max-width: 720px) { .schema-2up { grid-template-columns: 1fr; } .schema-2up .schema-box img { height: auto; max-height: 300px; } }
+    .steps { background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%); border-left: 5px solid #6B46C1; border-radius: 0 12px 12px 0; padding: 18px 22px; margin: 20px 0; box-shadow: 0 2px 10px rgba(107,70,193,0.08); }
+    .steps .steps-title { font-size: 15px; font-weight: 800; color: #4C2A85; margin-bottom: 13px; }
+    .steps ol { list-style: none; margin: 0; padding: 0; }
+    .step { display: grid; grid-template-columns: 28px 1fr; gap: 12px; align-items: start; margin-bottom: 12px; }
+    .step:last-child { margin-bottom: 0; }
+    .step .n { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 999px; background: #6B46C1; color: #fff; font-size: 13px; font-weight: 800; }
+    .step .txt { font-size: 14.5px; line-height: 1.5; color: #2c3e50; padding-top: 2px; }
+    .step .txt b { color: #4C2A85; font-weight: 700; }
+    .step .txt .gl { color: #6b6275; font-weight: 400; }
+    .step .txt .lead { font-weight: 800; color: #1A1A2E; }
+    .pass-tip { background: #fdf6ec; border-left: 6px solid #B8895A; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; box-shadow: 0 3px 12px rgba(184,137,90,0.14); font-size: 14.5px; line-height: 1.55; }
+    .pass-tip::before { content: "Le réflexe P1"; display: block; font-weight: 700; font-size: 12px; color: #9a6a37; margin-bottom: 7px; letter-spacing: 0.8px; text-transform: uppercase; }
+    .pass-tip strong { color: #9a6a37; }
+
+        .mnemo-box { background:#F3EEFB; border-left:6px solid #6B46C1; padding:15px 20px; margin:20px 0;
+            border-radius:0 8px 8px 0; box-shadow:0 3px 12px rgba(107,70,193,.13); font-size:14.5px; line-height:1.6; }
+        .mnemo-box .lbl { display:block; font-weight:700; font-size:12px; color:#6B46C1; margin-bottom:7px;
+            letter-spacing:.8px; text-transform:uppercase; }
+        .mnemo-box b { color:#4C2A85; }
+
+    .recap { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
+    .recap .box { border-radius: 12px; padding: 15px 18px; font-size: 14px; line-height: 1.5; }
+    .recap .retenir { background: #F1ECFA; border: 1px solid #dccff2; }
+    .recap .piege { background: #FFFBEB; border: 1px solid #F6E4A8; }
+    .recap .box .lbl { display: block; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 7px; }
+    .recap .retenir .lbl { color: #6B46C1; }
+    .recap .piege .lbl { color: #9a6d00; }
+    .recap b { font-weight: 700; color: #1A1A2E; }
+    .qcm-cta { display: flex; align-items: center; gap: 16px; text-decoration: none; color: inherit; background: #fff; border: 1px solid #d6c6f0; border-radius: 14px; padding: 18px 22px; margin: 24px 0 6px; box-shadow: 0 9px 26px -16px rgba(107,70,193,.4); transition: transform .18s ease, box-shadow .18s ease; }
+    .qcm-cta:hover { transform: translateY(-2px); box-shadow: 0 16px 38px -16px rgba(107,70,193,.5); }
+    .qcm-cta:focus-visible { outline: 3px solid #6B46C1; outline-offset: 2px; }
+    .qcm-cta .qcm-body { flex: 1; }
+    .qcm-cta .qcm-k { font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #6B46C1; }
+    .qcm-cta .qcm-t { font-size: 18px; font-weight: 800; color: #1A1A2E; margin-top: 3px; letter-spacing: -0.3px; }
+    .qcm-cta .qcm-arrow { flex: none; width: 42px; height: 42px; border-radius: 11px; background: #6B46C1; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700; }
+    .chapter-footer { text-align: center; margin-top: 22px; padding-top: 16px; border-top: 1px solid #e6dfd1; color: #7a8088; font-size: 12px; }
+    .chapter-footer strong { color: #6b6275; }
+    .bio-hint { display: none; }
+    /* ===== IMPRESSION / PDF — format REEL 9:16 (1080×1920), agrandi pour remplir ===== */
+    @media print {
+        @page { size: 1080px 1920px; margin: 42px; }
+        body { background: #fff; padding: 0; max-width: 996px; font-size: 17px; }
+        .page-container::before { display: none; }
+        .prod-brand { margin: 0 0 12px; }
+        .prod-brand img { height: 42px; }
+        .hook-header { padding: 22px 30px; box-shadow: none; }
+        .hook-header .brand-tag { font-size: 12px; margin-bottom: 10px; }
+        .hook-header .course-title { font-size: 34px; margin-bottom: 10px; }
+        .hook-header .punch { font-size: 21px; }
+        .intro { font-size: 17px; line-height: 1.55; margin: 18px 2px; }
+        .schema-2up { margin: 18px 0; gap: 20px; }
+        .schema-box { padding: 12px; box-shadow: none; }
+        .schema-2up .schema-box img { height: 300px; }
+        .schema-box .schema-num { font-size: 12.5px; margin-bottom: 5px; }
+        .schema-box .caption { font-size: 14px; margin-top: 8px; }
+        .steps { padding: 20px 26px; margin: 18px 0; box-shadow: none; }
+        .steps .steps-title { font-size: 19px; margin-bottom: 13px; }
+        .step { margin-bottom: 11px; gap: 13px; }
+        .step .n { width: 30px; height: 30px; font-size: 14px; }
+        .step .txt { font-size: 16.5px; line-height: 1.5; padding-top: 2px; }
+        .pass-tip { padding: 16px 22px; margin: 18px 0; font-size: 16.5px; box-shadow: none; }
+        .recap { gap: 16px; margin: 18px 0; }
+        .recap .box { padding: 15px 20px; font-size: 15.5px; }
+        .recap .box .lbl { font-size: 12.5px; }
+        .qcm-cta { padding: 17px 24px; margin: 18px 0 6px; box-shadow: none; }
+        .qcm-cta .qcm-k { font-size: 12.5px; }
+        .qcm-cta .qcm-t { font-size: 20px; }
+        .qcm-cta .qcm-arrow { width: 44px; height: 44px; font-size: 20px; }
+        .bio-hint { display: block; text-align: center; margin: 12px 0 0; font-size: 17px; font-weight: 800; color: #6B46C1; }
+        .bio-hint strong { color: #4C2A85; }
+        .chapter-footer { margin-top: 14px; padding-top: 12px; font-size: 14px; }
+        .schema-2up, .schema-box, .steps, .recap, .pass-tip, .qcm-cta { page-break-inside: avoid; }
+    }
+    @media (max-width: 600px) {
+        body { padding: 14px; }
+        .hook-header { padding: 22px 18px 18px; }
+        .hook-header .course-title { font-size: 24px; }
+        .hook-header .punch { font-size: 16px; }
+        .recap { grid-template-columns: 1fr; }
+        .intro, .pass-tip, .step .txt, .recap .box { text-align: left; }
+        .schema-box::before { color: rgba(107,70,193,0.20); font-size: 11px; letter-spacing: 1px; max-width: 90%; }
+    }
+
+    /* === mobile-polish + zoom-bar ordi only === */
+    /* La barre de zoom (− / 100 % / +) est réservée à l'ordinateur : sur mobile,
+       le pinch-to-zoom natif suffit. On la masque sous la largeur tactile. */
+    @media (max-width: 768px) {
+        #medeos-zoom-bar { display: none !important; }
+    }
+    /* Agencement mobile soigné : le titre ne déborde jamais, le hook respire. */
+    @media (max-width: 600px) {
+        body { padding: 14px 13px 18px; }
+        .hook-header { padding: 20px 17px 16px; }
+        .hook-header .course-title {
+            font-size: clamp(20px, 6.4vw, 25px);
+            line-height: 1.12;
+            letter-spacing: -0.4px;
+            overflow-wrap: anywhere;
+            hyphens: auto;
+        }
+        .hook-header .punch { font-size: clamp(14.5px, 4.4vw, 17px); line-height: 1.3; }
+        .hook-header .brand-tag { font-size: 10.5px; letter-spacing: 1.2px; }
+        .intro { font-size: 15px; }
+        .schema-2up { gap: 14px; }
+        .steps { padding: 18px 16px; }
+        .steps .steps-title { font-size: 15px; }
+        .step .txt { font-size: 14.5px; }
+        .qcm-cta { padding: 15px 16px; gap: 12px; }
+        .qcm-cta .qcm-t { font-size: 16px; }
+        .qcm-cta .qcm-arrow { width: 38px; height: 38px; font-size: 18px; }
+        /* boutons de la lightbox plus gros au doigt */
+        #medeos-lightbox button[aria-label="Fermer"] { width: 46px; height: 46px; font-size: 26px; }
+    }
+</style>
+</head>
+<body>
+<div class="page-container">
+
+    <div class="prod-brand"><img src="../images/logo-medeos-violet.png" alt="Medeos"></div>
+
+    <header class="hook-header">
+        <div class="brand-tag">Ressource gratuite</div>
+        <h1 class="course-title">Kwashiorkor : la pression oncotique qui s'effondre</h1>
+        <p class="punch">Assez de calories. <span class="accent">Presque pas de protéines.</span></p>
+        <p class="punch">Et plus rien ne rappelle l'eau dans les vaisseaux.</p>
+    </header>
+
+    <p class="intro">Chez Robert, la force qui <strong>poussait</strong> l'eau hors du capillaire avait augmenté ; ses protéines, elles, n'avaient pas bougé. Deuxième mécanisme, exactement l'inverse : la PHC reste normale, et c'est <em class="hl">la force de rappel qui s'efface</em> — la <strong>pression oncotique</strong>, ces ≈ 25 mmHg qui retiennent l'eau dans le secteur vasculaire. C'est le patient annoncé dès l'ouverture du chapitre : l'enfant dénutri dont l'abdomen est ballonné alors que ses bras et ses jambes sont maigres.</p>
+
+    <div style="background:#fff; border:2px solid #6B46C1; border-radius:12px; padding:16px 20px; margin:20px 0; box-shadow:0 4px 15px rgba(107,70,193,0.14); page-break-inside:avoid;">
+        <div style="font-size:12px; font-weight:700; letter-spacing:.8px; text-transform:uppercase; color:#6B46C1; margin-bottom:9px;">📖 Histoire n°2 — Aminata, 4 ans</div>
+        <div style="font-size:15px; line-height:1.65; color:#2c3e50;">Aminata vit dans une région tropicale frappée par la famine. Pendant plusieurs mois, son alimentation se réduit à du manioc — <b style="color:#4C2A85;">beaucoup de calories, presque pas de protéines</b>. Quand l'ONG arrive dans son village, ils trouvent Aminata avec une silhouette caractéristique : <b style="color:#4C2A85;">très maigre des bras et des jambes</b>, mais avec un <b style="color:#4C2A85;">ventre énormément gonflé</b>. Son visage est bouffi.</div>
+    </div>
+
+    <p class="intro">Ce ventre gonflé porte un nom : l'<strong>ascite</strong>, l'accumulation de liquide dans la cavité abdominale, entre les organes. Et ce tableau complet porte lui aussi un nom : le <strong>kwashiorkor</strong> — terme issu d'une langue d'Afrique de l'Ouest (le ga) signifiant « maladie de l'enfant qu'on sèvre quand un nouveau bébé arrive ». C'est une <strong>malnutrition protéique sévère chez le jeune enfant</strong> en zone tropicale : l'enfant a assez de calories (féculents) mais pas assez de protéines pour synthétiser ses propres albumines. À ne pas confondre avec le <strong>marasme</strong> :</p>
+
+    <div style="overflow-x:auto; margin:20px 0; page-break-inside:avoid;">
+        <table style="width:100%; border-collapse:collapse; font-size:14.5px; background:#fff; border:1px solid #e3d9f5; border-radius:12px; overflow:hidden; box-shadow:0 3px 12px rgba(107,70,193,.08);">
+            <thead>
+                <tr style="background:#F1ECFA;">
+                    <th style="text-align:left; padding:11px 14px; font-size:11.5px; letter-spacing:.8px; text-transform:uppercase; color:#6B46C1; border-bottom:1px solid #e3d9f5;"></th>
+                    <th style="text-align:left; padding:11px 14px; font-size:11.5px; letter-spacing:.8px; text-transform:uppercase; color:#6B46C1; border-bottom:1px solid #e3d9f5;">Kwashiorkor</th>
+                    <th style="text-align:left; padding:11px 14px; font-size:11.5px; letter-spacing:.8px; text-transform:uppercase; color:#6B46C1; border-bottom:1px solid #e3d9f5;">Marasme</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding:11px 14px; border-bottom:1px solid #f0ebf9; color:#6b6275;">Ce qui manque</td>
+                    <td style="padding:11px 14px; border-bottom:1px solid #f0ebf9;">Les <b style="color:#4C2A85;">protéines</b> — les calories, elles, sont là</td>
+                    <td style="padding:11px 14px; border-bottom:1px solid #f0ebf9;">Les <b style="color:#4C2A85;">calories</b>, globalement</td>
+                </tr>
+                <tr>
+                    <td style="padding:11px 14px; border-bottom:1px solid #f0ebf9; color:#6b6275;">L'enfant</td>
+                    <td style="padding:11px 14px; border-bottom:1px solid #f0ebf9;">Membres maigres, visage bouffi, ventre ballonné</td>
+                    <td style="padding:11px 14px; border-bottom:1px solid #f0ebf9;">Émacié de partout</td>
+                </tr>
+                <tr>
+                    <td style="padding:11px 14px; color:#6b6275;">Œdèmes</td>
+                    <td style="padding:11px 14px;"><b style="color:#4C2A85;">Oui</b></td>
+                    <td style="padding:11px 14px;"><b style="color:#4C2A85;">Non</b></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p class="intro"><strong>Que se passe-t-il, physiquement ?</strong> La chaîne se déroule en quatre temps, et chaque maillon est chiffrable.</p>
+
+    <div class="steps">
+        <div class="steps-title">De l'assiette vide à l'eau qui s'échappe</div>
+        <ol>
+            <li class="step">
+                <span class="n">1</span>
+                <span class="txt"><span class="lead">Plus de matière première.</span> Sans apport protéique, le foie d'Aminata n'a plus de quoi fabriquer de l'<b>albumine</b> <span class="gl">(la principale protéine plasmatique)</span>.</span>
+            </li>
+            <li class="step">
+                <span class="n">2</span>
+                <span class="txt"><span class="lead">La protéinémie chute.</span> Elle passe de <b>70 g/L</b> <span class="gl">(normale)</span> à <b>30 g/L</b>.</span>
+            </li>
+            <li class="step">
+                <span class="n">3</span>
+                <span class="txt"><span class="lead">La pression oncotique s'effondre.</span> Conséquence directe sur Starling : sa <b>π<sub>o</sub> plasmatique</b> tombe de <b>25 mmHg</b> à environ <b>10 mmHg</b>.</span>
+            </li>
+            <li class="step">
+                <span class="n">4</span>
+                <span class="txt"><span class="lead">L'eau n'est plus rappelée.</span> Cette pression résiduelle n'est plus suffisante pour <b>rappeler l'eau dans les capillaires</b>. L'eau s'accumule <b>partout</b> : sous la peau <span class="gl">(visage bouffi)</span>, dans l'abdomen <span class="gl">(ascite, d'où le ventre ballonné)</span>.</span>
+            </li>
+        </ol>
+    </div>
+
+    <div style="overflow-x:auto; margin:20px 0; page-break-inside:avoid;">
+        <table style="width:100%; border-collapse:collapse; font-size:14.5px; background:#fff; border:1px solid #e3d9f5; border-radius:12px; overflow:hidden; box-shadow:0 3px 12px rgba(107,70,193,.08);">
+            <thead>
+                <tr style="background:#F1ECFA;">
+                    <th style="text-align:left; padding:11px 14px; font-size:11.5px; letter-spacing:.8px; text-transform:uppercase; color:#6B46C1; border-bottom:1px solid #e3d9f5;">Les chiffres</th>
+                    <th style="text-align:left; padding:11px 14px; font-size:11.5px; letter-spacing:.8px; text-transform:uppercase; color:#6B46C1; border-bottom:1px solid #e3d9f5;">Sujet sain</th>
+                    <th style="text-align:left; padding:11px 14px; font-size:11.5px; letter-spacing:.8px; text-transform:uppercase; color:#6B46C1; border-bottom:1px solid #e3d9f5;">Aminata</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding:11px 14px; border-bottom:1px solid #f0ebf9; color:#6b6275;">Protéinémie</td>
+                    <td style="padding:11px 14px; border-bottom:1px solid #f0ebf9;">70 g/L</td>
+                    <td style="padding:11px 14px; border-bottom:1px solid #f0ebf9;"><b style="color:#4C2A85;">30 g/L</b></td>
+                </tr>
+                <tr>
+                    <td style="padding:11px 14px; border-bottom:1px solid #f0ebf9; color:#6b6275;">Pression oncotique π<sub>o</sub></td>
+                    <td style="padding:11px 14px; border-bottom:1px solid #f0ebf9;">25 mmHg</td>
+                    <td style="padding:11px 14px; border-bottom:1px solid #f0ebf9;"><b style="color:#4C2A85;">≈ 10 mmHg</b></td>
+                </tr>
+                <tr>
+                    <td style="padding:11px 14px; color:#6b6275;">L'eau, au capillaire</td>
+                    <td style="padding:11px 14px;">Rappelée dans le vaisseau</td>
+                    <td style="padding:11px 14px;"><b style="color:#4C2A85;">Elle part dans les tissus</b></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div style="background:#fdf6ec; border-left:6px solid #B8895A; padding:15px 20px; margin:20px 0; border-radius:0 8px 8px 0; font-size:14.5px; line-height:1.55; page-break-inside:avoid;">
+        <span style="display:block; font-weight:700; font-size:12px; color:#9a6a37; margin-bottom:7px; letter-spacing:.8px; text-transform:uppercase;">💉 Traitement</span>
+        Réalimentation <b style="color:#9a6a37;">progressive et prudente</b> en protéines. ⚠️ Attention au <b style="color:#9a6a37;">« syndrome de renutrition »</b>, qui peut tuer si on relance trop vite le métabolisme. Récupération possible en quelques semaines si la cause est traitée à temps.
+    </div>
+
+    <div class="pass-tip">
+        <strong>Mécanisme n°2 : ↓ π<sub>o</sub>.</strong> Cause physiologique à retenir : <strong>protéinémie effondrée</strong> — soit la synthèse est insuffisante (kwashiorkor, cirrhose), soit il y a une perte (syndrome néphrotique). Devant un œdème, pose-toi la question dans cet ordre : la force qui <strong>pousse</strong> a-t-elle augmenté (Robert), ou la force qui <strong>rappelle</strong> a-t-elle disparu (Aminata) ?
+    </div>
+
+    <div class="recap">
+        <div class="box retenir">
+            <span class="lbl">À retenir</span>
+            Pas de protéines dans l'assiette → le foie ne fabrique plus d'<b>albumine</b> → protéinémie <b>70 → 30 g/L</b> → pression oncotique <b>25 → 10 mmHg</b> → l'eau n'est plus rappelée dans les capillaires et s'accumule sous la peau et dans l'abdomen.
+        </div>
+        <div class="box piege">
+            <span class="lbl">Le piège</span>
+            Confondre <b>kwashiorkor</b> et <b>marasme</b>. Le marasme est une carence <b>calorique globale</b> : l'enfant est émacié de partout, et il n'a <b>pas d'œdème</b>. Et le ventre gonflé d'Aminata n'est évidemment pas un signe de bonne nutrition : c'est de l'<b>ascite</b>.
+        </div>
+    </div>
+
+    <a class="qcm-cta" style="display:none" href="/ressources/qcm-decouverte/decouverte-physique-donnan" target="_top">
+        <span class="qcm-body">
+            <span class="qcm-k">Vérifie en 3 questions</span>
+            <span class="qcm-t">QCM — Œdèmes &amp; pression oncotique</span>
+        </span>
+        <span class="qcm-arrow" aria-hidden="true">→</span>
+    </a>
+    <div class="bio-hint">📲 Pour faire le QCM gratuit → <strong>lien en bio</strong></div>
+
+    <footer class="chapter-footer">
+        <p>Une fiche <strong>Medeos</strong> · pour anticiper la P1, sereinement. · medeos-sante.fr</p>
+    </footer>
+
+</div>
+
+<div id="medeos-lightbox" role="dialog" aria-label="Schéma agrandi" aria-modal="true" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(26,26,46,0.92);overflow:auto;-webkit-overflow-scrolling:touch;touch-action:pinch-zoom;cursor:zoom-out;">
+    <button type="button" aria-label="Fermer" onclick="closeLightbox()" style="position:fixed;top:14px;right:16px;z-index:10003;width:42px;height:42px;border-radius:50%;border:none;background:rgba(255,255,255,0.14);color:#fff;font-size:24px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);">&times;</button>
+    <div id="medeos-zoom-bar" style="position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:10003;display:flex;gap:8px;align-items:center;background:rgba(255,255,255,0.14);backdrop-filter:blur(4px);padding:7px 10px;border-radius:999px;">
+        <button type="button" aria-label="Dézoomer" onclick="lbZoom(-1,event)" style="width:38px;height:38px;border-radius:50%;border:none;background:rgba(255,255,255,0.9);color:#1A1A2E;font-size:22px;font-weight:700;line-height:1;cursor:pointer;">&minus;</button>
+        <button type="button" aria-label="Réinitialiser le zoom" onclick="lbReset(event)" style="height:38px;padding:0 14px;border-radius:999px;border:none;background:rgba(255,255,255,0.9);color:#1A1A2E;font-size:13px;font-weight:700;cursor:pointer;">100&nbsp;%</button>
+        <button type="button" aria-label="Zoomer" onclick="lbZoom(1,event)" style="width:38px;height:38px;border-radius:50%;border:none;background:rgba(255,255,255,0.9);color:#1A1A2E;font-size:22px;font-weight:700;line-height:1;cursor:pointer;">+</button>
+    </div>
+    <div id="medeos-lightbox-stage" onclick="lbStageClick(event)" style="min-height:100%;display:flex;align-items:center;justify-content:center;padding:64px 16px;">
+        <div style="position:relative;display:inline-flex;">
+            <img id="medeos-lightbox-img" src="" alt="Schéma agrandi" ondblclick="lbToggleZoom(event)" style="display:block;border-radius:10px;box-shadow:0 10px 40px rgba(0,0,0,0.5);transform-origin:center center;transition:transform .18s ease;max-width:none;cursor:zoom-in;">
+            <div aria-hidden="true" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;">
+                <span style="font-family:'Inter',Arial,sans-serif;font-size:clamp(11px,4vw,30px);font-weight:700;letter-spacing:clamp(1px,1vw,6px);text-transform:uppercase;color:rgba(120,120,120,0.16);white-space:nowrap;">medeos-sante.fr</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var lbScale = 1, lbBaseW = 0;
+    function openLightbox(src) {
+        var lb = document.getElementById('medeos-lightbox');
+        var img = document.getElementById('medeos-lightbox-img');
+        lbScale = 1;
+        img.onload = function () {
+            // Taille de base : on s'aligne sur la largeur dispo (max 96vw) ou la taille native si plus petite.
+            var availW = Math.min(window.innerWidth * 0.96, this.naturalWidth);
+            var availH = window.innerHeight * 0.84;
+            var ratio = Math.min(availW / this.naturalWidth, availH / this.naturalHeight, 1);
+            lbBaseW = Math.max(120, Math.round(this.naturalWidth * ratio));
+            this.style.width = lbBaseW + 'px';
+            this.style.height = 'auto';
+            lbApply();
+        };
+        img.src = src;
+        lb.style.display = 'block';
+        lb.scrollTop = 0; lb.scrollLeft = 0;
+        document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+        document.getElementById('medeos-lightbox').style.display = 'none';
+        document.body.style.overflow = '';
+    }
+    function lbApply() {
+        var img = document.getElementById('medeos-lightbox-img');
+        img.style.transform = 'scale(' + lbScale + ')';
+        img.style.cursor = lbScale > 1 ? 'zoom-out' : 'zoom-in';
+        var lbl = document.querySelector('#medeos-zoom-bar button[onclick^="lbReset"]');
+        if (lbl) lbl.innerHTML = Math.round(lbScale * 100) + '&nbsp;%';
+    }
+    function lbZoom(dir, e) {
+        if (e) { e.stopPropagation(); e.preventDefault(); }
+        lbScale = Math.min(4, Math.max(1, +(lbScale + dir * 0.5).toFixed(2)));
+        lbApply();
+    }
+    function lbReset(e) { if (e) { e.stopPropagation(); e.preventDefault(); } lbScale = 1; lbApply(); }
+    function lbToggleZoom(e) { if (e) { e.stopPropagation(); e.preventDefault(); } lbScale = lbScale > 1 ? 1 : 2; lbApply(); }
+    function lbStageClick(e) { if (e.target.id === 'medeos-lightbox-stage') closeLightbox(); } // clic dans le vide = fermer
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeLightbox();
+        else if (document.getElementById('medeos-lightbox').style.display === 'block') {
+            if (e.key === '+' || e.key === '=') lbZoom(1);
+            else if (e.key === '-') lbZoom(-1);
+            else if (e.key === '0') lbReset();
+        }
+    });
+    document.getElementById('medeos-lightbox').addEventListener('wheel', function (e) {
+        if (this.style.display !== 'block') return;
+        if (e.ctrlKey || Math.abs(e.deltaY) > 0) { /* molette = zoom */ }
+        e.preventDefault();
+        lbScale = Math.min(4, Math.max(1, +(lbScale - Math.sign(e.deltaY) * 0.25).toFixed(2)));
+        lbApply();
+    }, { passive: false });
+    function schemaMissing(img) { img.style.display = 'none'; var b = img.closest('.schema-box'); if (b) b.classList.add('img-missing'); }
+</script>
+</body>
+</html>
