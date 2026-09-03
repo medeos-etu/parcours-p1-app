@@ -2008,8 +2008,7 @@
 .s7.on i{background:linear-gradient(180deg,#FCD34D,#E29C5C)}
 .s7.auj i{border-color:var(--violet)}
 .s7.futur{opacity:.45}
-.se-conq.presque,.mp-next.presque{border-color:#E29C5C;box-shadow:0 0 0 4px rgba(252,211,77,.28)}
-.se-conq.presque .sc-sur{color:#8A5B24}
+.mp-next.presque{border-color:#E29C5C;box-shadow:0 0 0 4px rgba(252,211,77,.28)}
 .mp-t.presque .mp-c{border-color:#E29C5C;background:#FFFBEA}
 .se-liens{display:flex;gap:22px;justify-content:center;flex-wrap:wrap}
 .se-liens .se-alt{margin:10px 0 0}
@@ -2031,48 +2030,27 @@
 .mp-brume::before{content:"";position:absolute;left:0;right:0;top:-46px;height:60px;background:linear-gradient(180deg,rgba(250,246,240,0),var(--creme));pointer-events:none}
 .mp-brume i{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--line);margin:0 3px 8px}
 /* sous la séance du jour : le territoire en cours */
-.se-conq{display:flex;gap:10px;align-items:center;margin-top:10px;max-width:88%;cursor:pointer;
-  background:rgba(107,70,193,.05);border:1px solid rgba(107,70,193,.16);border-radius:13px;padding:8px 10px}
-.se-conq img{width:30px;height:30px;flex-shrink:0}
-/* — LA ROUTE DES MONDES — */
-.wd-hero{position:relative;border-radius:20px;padding:16px 16px 14px;margin-bottom:12px;color:#FAF6F0;overflow:hidden;
-  background:linear-gradient(150deg,#4C2A85,#2A2140 55%,#1A1530);box-shadow:0 10px 26px rgba(26,21,48,.22)}
-.wd-hero::after{content:"";position:absolute;right:-40px;top:-40px;width:170px;height:170px;border-radius:50%;
-  background:radial-gradient(circle,rgba(252,211,77,.20),transparent 70%);pointer-events:none}
-.wd-hero .rt-chg{position:absolute;right:12px;top:12px;z-index:2}
-.wd-hero-in{display:flex;gap:13px;align-items:center;position:relative;z-index:1;padding-right:70px}
-.wd-hero-em{width:62px;height:62px;border-radius:16px;flex-shrink:0;object-fit:cover;background:rgba(250,246,240,.10);
-  display:flex;align-items:center;justify-content:center;font-size:31px;border:1.5px solid rgba(252,211,77,.35)}
-.wd-k{display:block;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:800;opacity:.8}
-.wd-hero-in b{display:block;font-family:Fredoka,Inter,sans-serif;font-size:23px;font-weight:800;line-height:1.12;color:#FCD34D;margin-top:1px}
-.wd-sub{display:block;font-size:11.5px;opacity:.85;line-height:1.4;margin-top:3px}
-.wd-hero-bar{height:9px;border-radius:99px;background:rgba(250,246,240,.16);overflow:hidden;margin-top:13px;position:relative;z-index:1}
-.wd-hero-bar i{display:block;height:100%;border-radius:99px;min-width:5px;background:linear-gradient(90deg,#FCD34D,#E29C5C);transition:width .5s}
-.wd-hero-r{font-size:12px;margin-top:7px;opacity:.92;position:relative;z-index:1;line-height:1.4}
-/* les thématiques du monde en cours */
-.wd-them{margin:14px 0 6px}
-.wd-them-t,.wd-route-t{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:800;color:var(--muted);margin-bottom:8px}
-/* la route des mondes */
-.wd-route{position:relative;margin-top:16px;padding-left:0}
-.wd-m{display:flex;gap:12px;align-items:center;margin-bottom:10px;position:relative}
-.wd-med{position:relative;flex-shrink:0}
-.wd-em{width:52px;height:52px;border-radius:15px;object-fit:cover;display:flex;align-items:center;justify-content:center;
-  font-size:25px;background:var(--card);border:2px solid var(--line)}
-.wd-m.fini .wd-em{border-color:#E29C5C;background:linear-gradient(180deg,#FFF3C4,#FCD34D)}
-.wd-m.encours .wd-em{border-color:var(--violet);box-shadow:0 0 0 5px rgba(107,70,193,.14)}
-.wd-m.verrouille .wd-em{opacity:.5;filter:grayscale(1)}
-.wd-c{flex:1;min-width:0;background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:9px 12px}
-.wd-m.ici .wd-c{border-color:var(--violet);box-shadow:0 6px 16px rgba(107,70,193,.10)}
-.wd-m.fini .wd-c{background:#FFFBEA;border-color:#F3E1A6}
-.wd-m.verrouille .wd-c{background:transparent;border-style:dashed}
-.wd-sur{display:block;font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;font-weight:800;color:var(--muted)}
-.wd-m.ici .wd-sur{color:var(--violet)}
-.wd-m.fini .wd-sur{color:#8A6238}
-.wd-c b{display:block;font-size:15px;font-weight:900;line-height:1.2;color:var(--ink)}
-.wd-m.verrouille .wd-c b{color:#5A554A}
-.wd-n{display:block;font-size:11.5px;color:var(--muted);margin-top:2px}
-.wd-d{display:block;font-size:11px;color:var(--muted);margin-top:3px;line-height:1.4}
-/* la pastille du monde sous la séance du jour */
+.se-carte{display:block;width:100%;margin-top:12px;padding:11px 12px 12px;border-radius:16px;cursor:pointer;text-align:left;
+  font-family:inherit;background:var(--card);border:1.5px solid var(--line);box-shadow:0 4px 14px rgba(26,26,46,.06);
+  transition:transform .12s,box-shadow .12s}
+.se-carte:active{transform:translateY(1px);box-shadow:0 2px 8px rgba(26,26,46,.06)}
+.se-carte.presque{border-color:#E29C5C;box-shadow:0 0 0 4px rgba(252,211,77,.24)}
+.sc-head{display:flex;gap:10px;align-items:center}
+.sc-ttl{flex:1;min-width:0}
+.sc-ttl b{display:block;font-size:15px;font-weight:900;color:var(--ink);line-height:1.2}
+.sc-go{flex-shrink:0;width:26px;height:26px;border-radius:50%;background:rgba(107,70,193,.10);color:var(--violet);
+  display:flex;align-items:center;justify-content:center;font-size:19px;font-weight:900;line-height:1}
+.sc-dots{display:flex;gap:4px;align-items:center;margin:9px 0 2px;flex-wrap:wrap}
+.sc-dots i{width:13px;height:6px;border-radius:99px;background:var(--line2);display:block}
+.sc-dots i.ok{background:linear-gradient(90deg,#FCD34D,#E29C5C)}
+.sc-dots i.now{background:var(--violet)}
+.sc-dots em{font-style:normal;font-size:10.5px;font-weight:800;color:var(--muted);margin-left:4px}
+.sc-now{display:flex;gap:9px;align-items:center;margin-top:9px;padding-top:9px;border-top:1px solid var(--line2)}
+.sc-now>img{width:28px;height:28px;flex-shrink:0}
+.sc-nowtxt{flex:1;min-width:0}
+.sc-nowtxt b{display:block;font-size:12.5px;font-weight:800;color:#3A3730;line-height:1.3}
+.sc-nowtxt em{display:block;font-style:normal;font-size:11px;color:var(--muted);margin-top:3px}
+.sc-now .sc-bar{display:block;margin-top:5px}
 .sc-em{width:36px;height:36px;border-radius:11px;flex-shrink:0;object-fit:cover;display:flex;align-items:center;justify-content:center;
   font-size:18px;background:rgba(107,70,193,.10)}
 /* un monde terminé, dans le bilan de séance : la plus grosse marche du Parcours */
@@ -2084,10 +2062,7 @@
 /* les pastilles de mondes, sur l'écran « Ton chemin » */
 .mondes-pills span.fini{background:rgba(226,156,92,.18);color:#8A6238}
 .mondes-pills span.ici{background:var(--violet);color:#FAF6F0}
-.se-conq>div{flex:1;min-width:0}
 .sc-sur{display:block;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:800;color:var(--violet)}
-.se-conq b{display:block;font-size:13px;font-weight:900;color:var(--ink);line-height:1.2}
-.se-conq .sc-bar{margin-top:5px;height:6px}
 .sc-reste{display:block;font-size:11px;color:var(--muted);margin-top:3px}
   .se-guide .sg-b{font-size:12px;line-height:1.45;color:#3A3730;background:rgba(107,70,193,.07);
     border-radius:3px 13px 13px 13px;padding:8px 11px}
@@ -6650,6 +6625,9 @@ function seancesFaitesJour(){ return (S.sj && S.sj.day===arDay())? (S.sj.n||0) :
 function seanceJourFaite(){ return !S.stage && seancesFaitesJour()>=seancesMaxJour(); }
 function seanceCourante(){
   S.skip=S.skip||{};
+  /* la séance engagée aujourd'hui (première fiche ouverte) reste LA séance du jour tant
+     qu'elle n'est pas finie — même si elle n'est pas la première du fil */
+  if(S.engage && S.engage.day===arDay()){ const e=SEANCES.find(x=>x.id===S.engage.sid); if(e && !(e.fait&&e.fait())) return e; }
   return SEANCES.find(s=>s.act && !(s.fait&&s.fait()) && !S.skip[s.id]) || null;
 }
 function passerSeance(){
@@ -6724,8 +6702,11 @@ function vignetteTerritoire(t, cls){ return t.img ? '<img class="'+cls+'" src="'
    barre qui a déjà démarré retient mieux qu'une barre vide (progression dotée) — et
    ici ce n'est pas un artifice : la fiche a bien été lue. */
 function progTerritoire(t){
+  /* une fiche compte quand elle a été TRAVAILLÉE — lue, restituée, comparée dans une
+     séance (S.oublis n'existe qu'à ce moment-là) — pas quand elle a été ouverte une fois
+     depuis la Bibliothèque. Sinon un clic curieux validait une case sur la carte. */
   const arm=(typeof fichesArmees==='function')?fichesArmees():{};
-  const lues=t.fiches.filter(f=>arm[f] || (S.vues&&S.vues[f])).length, tot=Math.max(1,t.fiches.length);
+  const lues=t.fiches.filter(f=>arm[f] || (S.oublis&&S.oublis[f])).length, tot=Math.max(1,t.fiches.length);
   const pct=lues? Math.max(8, Math.round(100*lues/tot)) : 0;
   return {lues:lues, tot:tot, reste:tot-lues, pct:pct, presque: lues>0 && lues<tot && pct>=75};
 }
@@ -6837,15 +6818,28 @@ function pastilleMonde(m, cls){
   return m.img ? '<img class="'+cls+'" src="'+m.img+'" alt="" loading="lazy" onerror="this.replaceWith(document.createTextNode(\''+m.em+'\'))">'
                : '<span class="'+cls+' em">'+m.em+'</span>';
 }
-/* la ligne sous la séance du jour : le monde, la thématique, ce qu'il reste */
+/* LA PORTE VERS LES MONDES, sous la séance du jour.
+   C'était un lien souligné « Mes mondes » : personne n'ouvre un lien souligné. C'est
+   maintenant une vraie carte — le monde où l'on est, ses thématiques en points (une par
+   thématique, dorée quand elle est terminée), puis la thématique en cours et sa barre.
+   On voit d'un coup d'œil ce qu'on a pris et ce qu'il reste, et on a envie d'aller voir. */
 function ligneConquete(){
   const t=prochaineConquete(); if(!t) return '';
   const p=progTerritoire(t), m=mondeCourant(), em=etatMonde(m);
-  return '<div class="se-conq'+(p.presque?' presque':'')+'" onclick="ouvrirCarte()">'+
-    pastilleMonde(m,'sc-em')+
-    '<div><span class="sc-sur">'+m.nom+' · '+em.faits+'/'+em.tot+' thématiques</span><b>'+t.nom+'</b>'+
-    '<div class="sc-bar"><i style="width:'+p.pct+'%;background:'+COUL_MAT[t.mat]+'"></i></div>'+
-    '<span class="sc-reste">'+(p.reste<=2 ? 'Encore '+p.reste+' fiche'+(p.reste>1?'s':'')+' et la thématique est à toi.' : p.lues+' sur '+p.tot+' fiches lues')+'</span></div></div>';
+  /* un point par thématique : or si terminée, violet pour CELLE du jour, gris sinon —
+     « entamée » ne suffit pas, sinon les quatre matières s'allument dès le premier jour */
+  const points=m.terr.map(x=>{ const e=etatTerritoire(x);
+    return '<i class="'+(e.etat==='conquis'?'ok':x===t?'now':'')+'"></i>'; }).join('');
+  return '<button type="button" class="se-carte'+(p.presque?' presque':'')+'" onclick="ouvrirCarte()">'+
+    '<span class="sc-head">'+pastilleMonde(m,'sc-em')+
+      '<span class="sc-ttl"><span class="sc-sur">Ton monde</span><b>'+m.nom+'</b></span>'+
+      '<span class="sc-go">›</span></span>'+
+    '<span class="sc-dots">'+points+'<em>'+em.faits+'/'+em.tot+'</em></span>'+
+    '<span class="sc-now"><img src="img/icones/'+EMB_MAT[t.mat]+'.png" alt="">'+
+      '<span class="sc-nowtxt"><b>'+t.nom+'</b>'+
+      '<span class="sc-bar"><i style="width:'+p.pct+'%;background:'+COUL_MAT[t.mat]+'"></i></span>'+
+      '<em>'+(p.reste<=2 ? 'Encore '+p.reste+' fiche'+(p.reste>1?'s':'')+' et elle est à toi.' : p.lues+' sur '+p.tot+' fiches lues')+'</em></span></span>'+
+    '</button>';
 }
 /* une séance qui REFERME un chapitre : un territoire conquis, on le dit tout de suite */
 function chapitreReferme(s){
@@ -6997,8 +6991,7 @@ function renderSeance(){
       '<div class="se-ligne">'+ligneCourte(cur)+'</div>'+
       ligneConquete()+
       '<button class="gbtn" id="se-go">'+libelleGo(premiere)+'</button>'+
-      '<div class="se-liens"><button class="se-alt" onclick="ouvrirCarte()">🗺️ Mes mondes</button>'+
-      (seancesAlternatives().length? '<button class="se-alt" onclick="ouvrirChoixSeance()">Changer de matière</button>' : '')+'</div>'+illu(cur);
+      (seancesAlternatives().length? '<div class="se-liens"><button class="se-alt" onclick="ouvrirChoixSeance()">Changer de matière aujourd\'hui</button></div>' : '')+illu(cur);
     document.getElementById('se-go').onclick=cur.act;
     return;
   }
@@ -8694,6 +8687,11 @@ function seanceEtape(){
   const slug=s.fiches[fi];
   sauverSR();
   if(phase===0){                              /* LECTURE */
+    /* ouvrir la première fiche ENGAGE la journée sur cette séance : plus de changement
+       de matière ensuite, et si l'on abandonne, c'est elle qui revient. Sans ça, on
+       pouvait goûter l'anatomie, abandonner, et repartir en biologie — la séance
+       d'anatomie restait à moitié lue dans un coin. */
+    if(!s.rev){ S.engage={day:arDay(), sid:s.id}; saveS(); }
     openFiche(slug);
     const nb=document.getElementById('lect-suivant');
     if(nb){ nb.style.display='inline-block'; nb.textContent='J\'ai lu →';
@@ -9197,6 +9195,8 @@ function fermerLecteur(){
    des autres matières, trois au plus, et rien d'autre. Le fil n'est pas cassé : la
    séance sautée reste la première non faite, elle revient d'elle-même demain. */
 function seancesAlternatives(){
+  /* journée engagée : on ne change plus de matière */
+  if(S.engage && S.engage.day===arDay()){ const e=SEANCES.find(x=>x.id===S.engage.sid); if(e && !(e.fait&&e.fait())) return []; }
   const cur=seanceCourante();
   const faite=s=>!!(s.fait&&s.fait());
   const out=[];
@@ -9208,6 +9208,7 @@ function seancesAlternatives(){
   return out.slice(0,3);
 }
 function ouvrirChoixSeance(){
+  if(!seancesAlternatives().length) return;      /* journée engagée : rien à proposer */
   const box=document.getElementById('seances-liste'); box.innerHTML='';
   const EMB={Anatomie:'embleme-anatomie',Biologie:'embleme-biologie',Chimie:'embleme-chimie',Physique:'embleme-physique'};
   seancesAlternatives().forEach(s=>{
