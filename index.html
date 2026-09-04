@@ -8135,7 +8135,7 @@ function renderCarte(){
        et consolider. Pas de badge sur la carte, pas de prix : la carte reste courte. */
     const VAL_VAC = [['⚡','Douze jours pour accélérer, une demi-journée par jour'],
                      ['📚','Cours, QCM corrigés, concours blanc']];
-    const VAL_PRE = [['🧭','Les bases et la méthode de travail, une demi-journée par jour'],
+    const VAL_PRE = [['🧭','Les bases et la méthode de travail, six heures par jour'],
                      ['🤝','L\'équipe Medeos à tes côtés jusqu\'au concours'],
                      ['📅','Quinze jours, juste avant ta première année']];
     const camp=(quand,titre,pitch,url,lien,img,o)=>'<a class="cr-stage" href="'+url+'" target="_blank" rel="noopener">'+
@@ -8169,7 +8169,7 @@ function renderCarte(){
       poser(faites+dj, camp('☀️ '+pr.quand+' · '+dans(dj), 'Stage de pré-rentrée',
         'La dernière ligne droite avant ta première année : tu arrives le jour J en sachant travailler.',
         'https://www.medeos-sante.fr/packs/medi-pro', 'Découvrir la pré-rentrée', imgStage('prerentree'),
-        {hook: 'Quinze jours avant ta rentrée, tu entres dans un <b>parcours guidé</b> : une demi-journée par jour, <b>les bases et la méthode</b>, avec l\'équipe Medeos à tes côtés jusqu\'au concours.',
+        {hook: 'Quinze jours avant ta rentrée, tu entres dans un <b>parcours guidé</b> : six heures par jour, <b>les bases et la méthode</b>, avec l\'équipe Medeos à tes côtés jusqu\'au concours.',
          valeurs: VAL_PRE}));
     }
   }
