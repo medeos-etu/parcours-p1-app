@@ -8,6 +8,45 @@ Tu travailles en mode Agent, de façon autonome : tu génères une image à la f
 
 ---
 
+## 0. Le dossier de livraison — à vérifier AVANT de générer quoi que ce soit
+
+Les 31 images vont dans **un seul dossier, déjà existant, sur le Mac de Lucas** :
+
+```
+/Users/lucascrepin/dev/parcours-p1-app/img/parcours/territoires/
+```
+
+C'est le dossier qui contient **ce fichier de consignes** (`PROMPT-CHATGPT-IMAGES.md`). Pour être sûr que c'est le bon, il contient déjà, entre autres : `monde-01.webp` … `monde-22.webp`, `camp-stage.webp`, `rentree.webp`, `parcours-des-mondes.webp`, `PROMPT-CHATGPT.md`.
+
+**Étape 1 — vérifie qu'il existe et que c'est lui :**
+```
+ls /Users/lucascrepin/dev/parcours-p1-app/img/parcours/territoires/ | head -40
+```
+Tu dois voir les `monde-NN.webp`. Si oui, c'est là que tu écris, et nulle part ailleurs.
+
+**Étape 2 — si la commande échoue, cherche-le :**
+```
+find /Users/lucascrepin -type d -name territoires -path "*parcours-p1-app*" 2>/dev/null
+```
+Le bon chemin se termine par `parcours-p1-app/img/parcours/territoires`. Utilise celui-là.
+
+**Étape 3 — si tu n'as pas accès au disque du Mac** (la recherche ne rend rien, ou tu travailles dans un espace isolé) : ne bloque pas. Crée un dossier `medeos-images-parcours` là où tu peux écrire, mets-y les 31 fichiers avec leurs noms exacts, et **dis-le clairement à la fin** en donnant son emplacement (ou fournis une archive `.zip` à télécharger). Lucas les déposera lui-même.
+
+**Règles du dossier :** aucun sous-dossier ; ne renomme, ne remplace et ne supprime aucun fichier existant ; un fichier par image, au format PNG, avec exactement le nom indiqué.
+
+**Les 31 noms attendus, pour cocher à la fin :**
+```
+axo-reference.png
+badge-etudiant.png  badge-certifie.png  ban-medeos.png  ban-certifie.png
+av-monde-02.png  av-monde-04.png  av-monde-06.png  av-monde-08.png  av-monde-10.png  av-monde-12.png
+av-monde-14.png  av-monde-16.png  av-monde-18.png  av-monde-20.png  av-monde-22.png
+ban-monde-03.png  ban-monde-05.png  ban-monde-07.png  ban-monde-09.png  ban-monde-11.png
+ban-monde-13.png  ban-monde-15.png  ban-monde-17.png  ban-monde-19.png  ban-monde-21.png
+stage-toussaint.png  stage-noel.png  stage-fevrier.png  stage-paques.png  stage-prerentree.png
+```
+
+---
+
 ## 1. Ce que tu dois savoir avant de commencer
 
 ### La direction artistique — « Atlas Medeos »
@@ -293,7 +332,7 @@ Fond parfaitement transparent, sujet centré, 1024×1024.
 - Les stages (D) forment une famille avec les `monde-NN.png` : même dalle, même échelle.
 - Si une génération échoue trois fois, passe à la suivante et signale-la à la fin.
 
-**Livraison** : les 31 fichiers dans `/Users/lucascrepin/dev/parcours-p1-app/img/parcours/territoires/`, avec leurs noms exacts. Termine en me donnant la liste des fichiers écrits avec leurs dimensions, et celle des manqués s'il y en a.
+**Livraison** : les 31 fichiers dans le dossier de la section 0, avec leurs noms exacts. Termine en me donnant le chemin du dossier où tu as écrit, la liste des fichiers écrits avec leurs dimensions, et celle des manqués s'il y en a.
 
 Commence par `axo-reference.png`.
 
