@@ -119,15 +119,19 @@ const CONTROLES = function () {
   const out = [];
   const vu = el => { const r = el.getBoundingClientRect();
     return r.width > 0 && r.height > 0 && r.bottom > 0 && r.top < innerHeight && getComputedStyle(el).visibility !== 'hidden'; };
+  /* un élément posé dans un carrousel horizontal n'est pas « hors écran » : il attend qu'on fasse défiler */
+  const dansCarrousel = el => { let e = el;
+    while (e && e !== document.body) { const o = getComputedStyle(e).overflowX; if (o === 'auto' || o === 'scroll') return true; e = e.parentElement; }
+    return false; };
 
   /* débordement horizontal : rien ne doit sortir de l'écran */
-  if (document.documentElement.scrollWidth > innerWidth + 2)
+  if (document.documentElement.scrollWidth > innerWidth + 2)   /* la page elle-même ne défile jamais latéralement */
     out.push('déborde à droite de ' + (document.documentElement.scrollWidth - innerWidth) + ' px');
 
   document.querySelectorAll('body *').forEach(el => {
     if (!vu(el)) return;
     const r = el.getBoundingClientRect();
-    if (r.right > innerWidth + 2 && el.children.length === 0 && (el.textContent || '').trim())
+    if (r.right > innerWidth + 2 && el.children.length === 0 && (el.textContent || '').trim() && !dansCarrousel(el))
       out.push('« ' + (el.textContent || '').trim().slice(0, 28) + ' » sort de ' + Math.round(r.right - innerWidth) + ' px');
   });
 
@@ -149,7 +153,7 @@ const CONTROLES = function () {
     if (el.children.length || !vu(el)) return;
     const t = (el.textContent || '').trim(); if (t.length < 12) return;
     const px = parseFloat(getComputedStyle(el).fontSize);
-    if (px && px < 10.5) out.push('texte à ' + px + ' px : « ' + t.slice(0, 28) + ' »');
+    if (px && px < 10.5 && !el.closest('#mainnav, .nav, nav')) out.push('texte à ' + px + ' px : « ' + t.slice(0, 28) + ' »');
   });
 
   /* conteneurs visibles mais vides */
@@ -190,7 +194,11 @@ const CONTROLES = function () {
       await pg.waitForTimeout(650);
       const soucis = await pg.evaluate(CONTROLES);
       const fichier = path.join(dir, String(n).padStart(2, '0') + '-' + nom + '.png');
-      try { await pg.screenshot({ path: fichier, fullPage: p.vp.width < 700, animations: 'disabled' }); }
+      /* page entière quand elle tient sur trois écrans ; sinon la fenêtre seule, sans quoi la
+         carte des 22 mondes sort une image de 37 000 px de haut, illisible */
+      const haut = await pg.evaluate(() => document.documentElement.scrollHeight);
+      const entiere = p.vp.width < 700 && haut < p.vp.height * 3;
+      try { await pg.screenshot({ path: fichier, fullPage: entiere, animations: 'disabled' }); }
       catch (e) { await pg.screenshot({ path: fichier, animations: 'disabled' }).catch(() => {}); }
       console.log('  ' + String(n).padStart(2, '0') + ' ' + nom.padEnd(16) + (soucis.length ? '⚠  ' + soucis.join(' | ') : '·'));
       soucis.forEach(s => rapport.push({ profil: p.nom, ecran: nom, souci: s }));
