@@ -2262,9 +2262,8 @@
 .cr-tile.avenir:not(.cur){opacity:.6}
 .cr-grid.verrouille .cr-tile{opacity:.45;filter:saturate(.5)}
 /* la barre générale du monde, sous le carré */
-.cr-mprog{position:relative;height:12px;border-radius:99px;background:rgba(255,255,255,.12);margin:0 4px 34px;overflow:visible}
+.cr-mprog{position:relative;height:12px;border-radius:99px;background:rgba(255,255,255,.12);margin:0 4px 22px;overflow:hidden}
 .cr-mprog i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#FCD34D,#E29C5C);min-width:6px}
-.cr-mprog span{position:absolute;left:0;right:0;top:16px;text-align:center;font-size:11.5px;font-weight:800;color:rgba(250,246,240,.75)}
 /* ce qu'on a gagné en arrivant : photo de profil, bannière, gel */
 .cr-chips.n2{grid-template-columns:repeat(2,1fr)}
 .cr-chips.n3{grid-template-columns:repeat(3,1fr)}
@@ -8080,7 +8079,10 @@ function renderCarte(){
         '<span class="cr-tile-bar"><i style="width:'+p.pct+'%"></i></span>'+
         '<em>'+(et.etat==='conquis'?'Terminée ✓':p.lues+' / '+p.tot+' fiches')+'</em>'+
         '</div>'; }).join('')+'</div>';
-    if(e.etat!=='verrouille') x += '<div class="cr-mprog"><i style="width:'+Math.round(100*e.faits/Math.max(1,e.tot))+'%"></i><span>'+e.faits+' thématique'+(e.faits>1?'s':'')+' sur '+e.tot+(e.tot-e.faits===1?' — encore une':'')+'</span></div>';
+    if(e.etat!=='verrouille'){
+      const lues=m.terr.reduce((n,t)=>n+progTerritoire(t).lues,0), tot=Math.max(1,m.terr.reduce((n,t)=>n+t.fiches.length,0));
+      x += '<div class="cr-mprog"><i style="width:'+Math.max(lues?2:0,Math.round(100*lues/tot))+'%"></i></div>';
+    }
 
     /* le socle du monde, et ce qu'on a gagné en y arrivant */
     const debutM = cumDe(m.terr[0]) - m.terr[0].fiches.length;
@@ -8096,7 +8098,7 @@ function renderCarte(){
       '<span class="cr-rail"><b>'+debutM+'</b></span>'+
       socleHtml(m,badge)+
       '<div class="cr-nom">'+m.nom+'</div>'+
-      bandeauHtml('Monde '+m.num+' &nbsp;·&nbsp; '+debutM+' fiches', bandeau)+
+      bandeauHtml('Monde '+m.num, bandeau)+
       (rec.length ? '<div class="cr-deb">'+(e.etat==='verrouille'?'En arrivant ici, tu débloqueras :':'En arrivant ici, tu as débloqué :')+'</div><div class="cr-chips n'+rec.length+'">'+chips+'</div>'
                   : '<div class="cr-deb depart">Ton point de départ</div>')+
       '</div>';
