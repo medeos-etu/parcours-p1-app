@@ -2176,20 +2176,23 @@
 .cr-slab-t i u{display:block;height:100%;border-radius:99px}
 /* ── un monde : socle + diorama, nom, bandeau, coffre ── */
 .cr-monde{margin:18px 0 44px;text-align:center}
-.cr-socle{position:relative;width:220px;height:164px;margin:0 auto;border-radius:24px;
-  background:linear-gradient(180deg,#2A2740,#141226);box-shadow:0 12px 0 #0E0C1C,0 24px 36px rgba(0,0,0,.5);
-  display:flex;align-items:flex-end;justify-content:center}
-.cr-socle[style*="background-image"]{background:center/100% 100% no-repeat;box-shadow:none}
-.cr-socle.grand{width:250px;height:184px}
-.cr-dio{width:118%;max-width:none;position:absolute;bottom:16px;left:50%;transform:translateX(-50%);filter:drop-shadow(0 16px 18px rgba(0,0,0,.5));pointer-events:none}
+.cr-socle{position:relative;width:238px;margin:0 auto;display:flex;align-items:flex-end;justify-content:center}
+.cr-socle:not(.dio){height:164px;border-radius:24px;background:linear-gradient(180deg,#2A2740,#141226);box-shadow:0 12px 0 #0E0C1C,0 24px 36px rgba(0,0,0,.5)}
+.cr-socle.grand{width:266px}
+.cr-socle.grand:not(.dio){height:184px}
+.cr-dio{width:100%;max-width:none;display:block;filter:drop-shadow(0 18px 16px rgba(0,0,0,.45));pointer-events:none}
 .cr-em{font-size:78px;line-height:1;position:absolute;bottom:38px;left:50%;transform:translateX(-50%);filter:drop-shadow(0 12px 14px rgba(0,0,0,.5))}
 .cr-badge{position:absolute;left:-8px;top:-8px;font-style:normal;font-size:11px;font-weight:900;padding:5px 10px;border-radius:999px;
   background:rgba(250,246,240,.95);color:#4A3208;box-shadow:0 3px 10px rgba(0,0,0,.35);z-index:2}
 .cr-badge.ok{background:linear-gradient(180deg,#FCD34D,#E29C5C);font-size:13px;padding:3px 9px}
-.cr-badge.lock{background:rgba(20,18,38,.85);color:#FAF6F0;font-size:12px;padding:4px 8px;border:1px solid rgba(255,255,255,.2)}
+.cr-badge.lock{left:50%;top:50%;transform:translate(-50%,-50%);background:rgba(14,12,28,.78);color:#FAF6F0;font-size:30px;
+  width:64px;height:64px;padding:0;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  border:2px solid rgba(255,255,255,.28);box-shadow:0 6px 18px rgba(0,0,0,.5)}
 .cr-badge.ici{background:#6B46C1;color:#FAF6F0;text-transform:uppercase;letter-spacing:.08em;left:50%;transform:translateX(-50%);top:auto;bottom:-14px;box-shadow:0 0 0 4px rgba(107,70,193,.25),0 3px 10px rgba(0,0,0,.35)}
 .cr-marq{position:absolute;width:64px;height:64px;left:50%;transform:translateX(-50%);bottom:-26px;z-index:2;filter:drop-shadow(0 6px 8px rgba(0,0,0,.45))}
-.cr-monde.verrouille .cr-socle{filter:saturate(.5) brightness(.8)}
+.cr-monde.verrouille .cr-socle{filter:saturate(.35) brightness(.5)}
+.cr-monde.verrouille .cr-nom{color:rgba(250,246,240,.55);text-shadow:0 2px 0 #0E0C1C}
+.cr-monde.verrouille .cr-band:not(.img){filter:saturate(.4) brightness(.7)}
 .cr-nom{font-family:Fredoka,Inter,sans-serif;font-size:30px;font-weight:800;color:#FAF6F0;margin-top:26px;line-height:1.05;padding:0 10px;
   text-shadow:0 3px 0 #0E0C1C,0 6px 18px rgba(0,0,0,.5)}
 .cr-band{display:inline-flex;align-items:center;justify-content:center;margin-top:12px;min-width:220px;padding:10px 22px;border-radius:12px;font-size:14px;font-weight:900;color:#FAF6F0;
@@ -2244,7 +2247,8 @@
 .cr-deb.depart{color:rgba(250,246,240,.55);font-weight:700}
 /* le sommet */
 .cr-sommet{text-align:center;padding:6px 0 40px}
-.cr-sommet .cr-socle.grand:not([style*="background-image"]){background:linear-gradient(180deg,#5A3F1A,#2A1E0C);box-shadow:0 12px 0 #1A1208,0 24px 36px rgba(0,0,0,.5),0 0 70px rgba(252,211,77,.18)}
+.cr-sommet .cr-socle.grand:not(.dio){background:linear-gradient(180deg,#5A3F1A,#2A1E0C);box-shadow:0 12px 0 #1A1208,0 24px 36px rgba(0,0,0,.5),0 0 70px rgba(252,211,77,.18)}
+.cr-sommet .cr-socle.dio{filter:drop-shadow(0 0 42px rgba(252,211,77,.30))}
 .cr-sommet .cr-nom{font-size:24px;color:#FCD34D}
 .cr-sommet .cr-band:not(.img){background:linear-gradient(180deg,#B8895A,#7A5A2B);box-shadow:0 5px 0 #4A3618,0 8px 18px rgba(0,0,0,.4)}
 .cr-bagage{display:flex;gap:8px;justify-content:center;margin-top:14px;flex-wrap:wrap}
@@ -2266,11 +2270,11 @@
 .cr-stage{display:block;margin:0 0 34px;padding:16px 16px 18px;border-radius:22px;text-decoration:none;text-align:center;color:#3A2A10;
   background:linear-gradient(165deg,#FDF6EC,#EFD9AE);border:2.5px solid #E29C5C;box-shadow:0 8px 0 #8A5B24,0 20px 36px rgba(0,0,0,.5)}
 .cr-stage-k{display:block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:900;color:#8A5B24;margin-bottom:12px}
-.cr-socle.stage{background:linear-gradient(180deg,#7A5A2B,#3A2810);box-shadow:0 10px 0 #241804,0 18px 28px rgba(0,0,0,.42)}
-.cr-socle.stage[style*="background-image"]{background:center/100% 100% no-repeat;box-shadow:none}
+.cr-socle.stage:not(.dio){height:164px;background:linear-gradient(180deg,#7A5A2B,#3A2810);box-shadow:0 10px 0 #241804,0 18px 28px rgba(0,0,0,.42)}
+.cr-socle.stage.dio .cr-dio{filter:drop-shadow(0 16px 14px rgba(0,0,0,.45)) grayscale(.35) brightness(.62)}
 .cr-cadenas{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:64px;z-index:3;
   filter:drop-shadow(0 6px 10px rgba(0,0,0,.6));opacity:.96}
-.cr-socle.stage::after{content:"";position:absolute;inset:0;border-radius:24px;background:rgba(20,12,4,.42);z-index:2}
+.cr-socle.stage:not(.dio)::after{content:"";position:absolute;inset:0;border-radius:24px;background:rgba(20,12,4,.42);z-index:2}
 .cr-nom.stage{display:block;font-family:Fredoka,Inter,sans-serif;font-size:25px;font-weight:800;color:#4A3208;margin-top:20px;line-height:1.1;text-shadow:none}
 .cr-band.stage{display:inline-flex;background:linear-gradient(180deg,#B8895A,#7A5A2B);box-shadow:0 5px 0 #4A3618,0 8px 16px rgba(0,0,0,.3);color:#FFF7E6;font-size:12.5px;min-width:0;max-width:100%;padding:9px 16px;text-align:center}
 .cr-band.stage span{white-space:normal;line-height:1.35}
@@ -7244,7 +7248,7 @@ function prochainsTitres(n){
    outils/implante-parcours.js. On ne demande jamais une image absente : pas de 404 à
    chaque ouverture de la carte, et une image déposée est prise à la prochaine implantation. */
 /* ==VIGNETTES== */
-const VIGNETTES={};
+const VIGNETTES={"bandeau-monde":"bandeau-monde.webp","bandeau-rentree":"bandeau-rentree.webp","camp-stage":"camp-stage.webp","coffre-ouvert":"coffre-ouvert.webp","coffre":"coffre.webp","dalle-cristal":"dalle-cristal.webp","dalle-cuivre":"dalle-cuivre.webp","dalle-glace":"dalle-glace.webp","dalle-herbe":"dalle-herbe.webp","dalle-pierre":"dalle-pierre.webp","dalle-sable":"dalle-sable.webp","fond-route":"fond-route.webp","marqueur-ici":"marqueur-ici.webp","monde-01":"monde-01.webp","monde-02":"monde-02.webp","monde-03":"monde-03.webp","monde-04":"monde-04.webp","monde-05":"monde-05.webp","monde-06":"monde-06.webp","monde-07":"monde-07.webp","monde-08":"monde-08.webp","monde-09":"monde-09.webp","monde-10":"monde-10.webp","monde-11":"monde-11.webp","monde-12":"monde-12.webp","monde-13":"monde-13.webp","monde-14":"monde-14.webp","monde-15":"monde-15.webp","monde-16":"monde-16.webp","monde-17":"monde-17.webp","monde-18":"monde-18.webp","monde-19":"monde-19.webp","monde-20":"monde-20.webp","monde-21":"monde-21.webp","monde-22":"monde-22.webp","parcours-des-mondes":"parcours-des-mondes.webp","rail":"rail.webp","recompense-arene":"recompense-arene.webp","recompense-carte":"recompense-carte.webp","recompense-fiches":"recompense-fiches.webp","recompense-gel":"recompense-gel.webp","rentree":"rentree.webp","socle":"socle.webp"};
 /* ==/VIGNETTES== */
 let _terr=null;
 function territoires(){
@@ -7964,7 +7968,7 @@ function renderCarte(){
     const badgeImg=IMG('badge-etudiant');
     const camp=(quand,titre,pitch,url,lien)=>'<a class="cr-stage" href="'+url+'" target="_blank" rel="noopener">'+
       '<span class="cr-stage-k">Le monde des stages</span>'+
-      '<span class="cr-socle stage"'+(socle?' style="background-image:url(\''+socle+'\')"':'')+'>'+
+      '<span class="cr-socle stage'+(imgCamp?' dio':'')+'">'+
         (imgCamp?'<img class="cr-dio" src="'+imgCamp+'" alt="">':'<span class="cr-em">⛺</span>')+
         '<span class="cr-cadenas">🔒</span></span>'+
       '<span class="cr-nom stage">'+titre+'</span>'+
@@ -7992,7 +7996,7 @@ function renderCarte(){
     }
   }
 
-  const socleHtml=(m, badge)=>'<div class="cr-socle" style="--c:'+m.teinte+(socle?';background-image:url(\''+socle+'\')':'')+'">'+
+  const socleHtml=(m, badge)=>'<div class="cr-socle'+(m.img?' dio':'')+'" style="--c:'+m.teinte+'">'+
       (m.img?'<img class="cr-dio" src="'+m.img+'" alt="" loading="lazy">':'<span class="cr-em">'+m.em+'</span>')+badge+'</div>';
   const bandeauHtml=(txt, img)=>'<div class="cr-band'+(img?' img':'')+'"'+(img?' style="background-image:url(\''+img+'\')"':'')+'><span>'+txt+'</span></div>';
 
@@ -8002,7 +8006,7 @@ function renderCarte(){
   { const themFaits = kRentree+1, fichesBagage = T.slice(0, kRentree+1).reduce((n,t)=>n+t.fiches.length,0);
     const imgR = IMG('rentree');
     x += '<div class="cr-sommet" id="cr-sommet">'+
-      '<div class="cr-socle grand" style="'+(socle?'background-image:url(\''+socle+'\')':'')+'">'+(imgR?'<img class="cr-dio" src="'+imgR+'" alt="">':'<span class="cr-em">🎓</span>')+'</div>'+
+      '<div class="cr-socle grand'+(imgR?' dio':'')+'">'+(imgR?'<img class="cr-dio" src="'+imgR+'" alt="">':'<span class="cr-em">🎓</span>')+'</div>'+
       '<div class="cr-nom">Ta rentrée en première année de santé</div>'+
       bandeauHtml(d? '📅 1<sup>er</sup> septembre '+d.getFullYear()+' &nbsp;·&nbsp; dans '+j+' jours' : 'Dis-moi ta date de rentrée', bandeauR||bandeau)+
       '<div><button class="se-alt cr-chg" onclick="S.profil.rentreeDite=false;saveS();renderCarte()">'+(d?'changer la date':'la dire')+'</button></div>'+
