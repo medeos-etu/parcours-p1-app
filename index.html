@@ -7846,7 +7846,7 @@ function periodesEntre(debut, fin){
   const out = [];
   for(let an = debut.getFullYear()-1; an <= fin.getFullYear(); an++){
     const reels = STAGES_DATES[an];
-    if(reels){ reels.forEach(s=>out.push({m:new Date(s.debut+'T00:00:00'), fin:new Date(s.fin+'T00:00:00'), nom:s.nom, stage:s.stage, emo:s.emo, quand:s.quand, pitch:s.pitch, exact:true})); }
+    if(reels){ reels.forEach(s=>out.push({m:new Date(s.debut+'T00:00:00'), fin:new Date(s.fin+'T00:00:00'), id:s.id, nom:s.nom, stage:s.stage, emo:s.emo, quand:s.quand, pitch:s.pitch, exact:true})); }
     else {
       out.push({m:new Date(an,9,19),  nom:'Vacances de la Toussaint', stage:'Stage de la Toussaint', emo:'🍂', quand:'vers le 20 octobre '+an,  exact:false});
       out.push({m:new Date(an,11,21), nom:'Vacances de Noël',         stage:'Stage de Noël',         emo:'❄️', quand:'vers le 20 décembre '+an, exact:false});
@@ -7984,12 +7984,12 @@ function renderCarte(){
   if(d){
     const debutTerminale=new Date(d.getFullYear()-1,8,1);
     const dans=n=>n<=0?'en ce moment':n===1?'demain':'dans '+n+' jours';
-    const imgCamp=IMG('camp-stage');
+    const imgStage = id => IMG('stage-'+id) || IMG('camp-stage');
     const badgeImg=IMG('badge-etudiant');
-    const camp=(quand,titre,pitch,url,lien)=>'<a class="cr-stage" href="'+url+'" target="_blank" rel="noopener">'+
+    const camp=(quand,titre,pitch,url,lien,img)=>'<a class="cr-stage" href="'+url+'" target="_blank" rel="noopener">'+
       '<span class="cr-stage-k">Le monde des stages</span>'+
-      '<span class="cr-socle stage'+(imgCamp?' dio':'')+'">'+
-        (imgCamp?'<img class="cr-dio" src="'+imgCamp+'" alt="">':'<span class="cr-em">⛺</span>')+
+      '<span class="cr-socle stage'+(img?' dio':'')+'">'+
+        (img?'<img class="cr-dio" src="'+img+'" alt="">':'<span class="cr-em">⛺</span>')+
         '<span class="cr-cadenas">🔒</span></span>'+
       '<span class="cr-nom stage">'+titre+'</span>'+
       '<span class="cr-band stage"><span>'+quand+'</span></span>'+
@@ -8005,14 +8005,14 @@ function renderCarte(){
     periodesEntre(new Date(), d).filter(p=>p.m>=debutTerminale).forEach(p=>{
       const dj=Math.max(0, Math.round((p.m-new Date())/864e5));
       poser(faites+dj, camp(p.emo+' '+p.quand+' · '+dans(dj), p.stage||'Stage Medeos', p.pitch||'',
-        'https://www.medeos-sante.fr/packs/stages-vacances#stages', 'Voir ce stage'));
+        'https://www.medeos-sante.fr/packs/stages-vacances#stages', 'Voir ce stage', imgStage(p.id||'')));
     });
     const pr=prerentreeDe(d.getFullYear());
     if(pr.m>new Date()){
       const dj=Math.max(0, Math.round((pr.m-new Date())/864e5));
       poser(faites+dj, camp('☀️ '+pr.quand+' · '+dans(dj), 'Stage de pré-rentrée',
         'La dernière ligne droite : les bases académiques, la méthode de travail, et un suivi jusqu\'au concours.',
-        'https://www.medeos-sante.fr/packs/medi-pro', 'Voir le stage de pré-rentrée'));
+        'https://www.medeos-sante.fr/packs/medi-pro', 'Voir le stage de pré-rentrée', imgStage('prerentree')));
     }
   }
 
