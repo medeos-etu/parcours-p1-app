@@ -2383,6 +2383,9 @@
   .se-guide .sg-b{font-size:12px;line-height:1.45;color:#3A3730;background:rgba(107,70,193,.07);
     border-radius:3px 13px 13px 13px;padding:8px 11px}
   .guide-row{display:flex;gap:9px;align-items:center;margin:2px 0 10px}
+  /* dans l'Arène, la bulle d'Axo est centrée sous la barre, à sa largeur, et son texte est centré */
+  #arene .guide-row{width:100%;max-width:768px;margin-left:auto;margin-right:auto;justify-content:center}
+  #arene .guide-row .sg-b{text-align:center;flex:1}
   .guide-row img{height:46px;flex-shrink:0}
   /* Quand la mascotte guide vraiment, elle est plus grande — mais elle DÉBORDE
      de sa ligne au lieu de l'agrandir : rien autour d'elle ne bouge d'un pixel.
