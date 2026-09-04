@@ -9807,6 +9807,7 @@ function majStreak(){
   if(S.gelPose===auj) S.gels=(S.gels||0)+1;         /* posé sur aujourd'hui, mais il est venu : le gel n'a pas servi, on le rend */
   if(S.gelPose && S.gelPose<=auj) S.gelPose=null;   /* joué ou rendu : dans les deux cas, c'est fini */
   S.stDay=auj;
+  if(typeof rappelActivite==='function') rappelActivite(auj);   /* le site saura que la séance du jour est faite */
   S.streakMax=Math.max(S.streakMax||0,S.streak);
   if(S.streakMax>=14 && !S.gel14){ S.gel14=1; S.gels=(S.gels||0)+1; }   /* palier 14 j : un gel de série offert */
   saveS();
@@ -10323,13 +10324,29 @@ function voirStages(){
     if(r) r.scrollIntoView({behavior:'smooth',block:'start'}); },380);
 }
 /* ═══ L'email du lendemain : un service, pas une capture ═══ */
+/* ═══ LE RAPPEL DU SOIR, POUR DE VRAI. Le toggle ne suffit pas : le site doit savoir qui veut
+   le rappel (réglage) et qui a fait sa séance aujourd'hui (activité). L'envoi lui-même part
+   du site chaque soir (/api/app-rappel/tick). Ici on ne fait que déclarer, sans jamais
+   bloquer l'app si le réseau ou le site ne répond pas. ═══ */
+const RAPPEL_API='https://www.medeos-sante.fr/api/app-rappel';
+function rappelPost(corps){
+  try{ fetch(RAPPEL_API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(corps),keepalive:true}).catch(()=>{}); }catch(e){}
+}
+function rappelReglage(){
+  if(!accOk() || !S.ar.compte.mail) return;
+  rappelPost({action:'reglage', email:S.ar.compte.mail, pseudo:S.ar.compte.id, actif:S.mailOn!==false});
+}
+function rappelActivite(jour){
+  if(!accOk() || !S.ar.compte.mail || S.mailOn===false) return;
+  rappelPost({action:'activite', email:S.ar.compte.mail, jour:jour||arDay()});
+}
 function heroMail(){
   /* le compte a toujours un email désormais : plus de capture, un simple réglage — activé par défaut */
   const on = S.mailOn!==false;
   return '<div style="margin-top:13px;margin-right:88px;background:var(--card);border:1px solid var(--line);border-radius:13px;padding:11px 13px;display:flex;align-items:center;gap:10px">'+
     '<div style="flex:1;min-width:0"><p style="font-size:12px;font-weight:800">📬 Être prévenu par email</p>'+
     '<p style="font-size:11px;color:var(--muted);margin-top:1px">Le soir, en cas d\'oubli — pour ne pas laisser mourir ta série 🔥</p></div>'+
-    '<label class="iosw"><input type="checkbox" '+(on?'checked':'')+' onchange="S.mailOn=this.checked;saveS()"><span class="knob"></span></label>'+
+    '<label class="iosw"><input type="checkbox" '+(on?'checked':'')+' onchange="S.mailOn=this.checked;saveS();rappelReglage()"><span class="knob"></span></label>'+
     '</div>'+
     '<button class="stagelien" onclick="voirStages()">Avec le <b>Pack Année complète</b>, la limite de 2 fiches par jour disparaît : tu avances à ton rythme →</button>';
 }
@@ -11053,6 +11070,8 @@ function renderLB(){
 applyPrenom();
 initAr();
 renderState();
+/* le rappel du soir : on redit au site le réglage courant à chaque ouverture (idempotent) */
+try{ if(accOk()) rappelReglage(); }catch(e){}
 /* invitation d'un ami : ?ami=<identifiant> — on le garde, l'écran Social le proposera */
 try{ const am=new URLSearchParams(location.search).get('ami'); if(am){ S.amiInvite=am.trim().slice(0,40); saveS(); } }catch(e){}
 /* lien profond depuis le site : #biblio, #home, #arene, #social — sinon l'Arène */
