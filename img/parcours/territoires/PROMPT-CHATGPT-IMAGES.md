@@ -38,6 +38,15 @@ ban-monde-13.png  ban-monde-15.png  ban-monde-17.png  ban-monde-19.png  ban-mond
 
 ## 1. LE GABARIT — la règle qui passe avant tout le reste
 
+### LES DIMENSIONS — à respecter au pixel, contrôlées par code
+
+| Image | Dimensions exactes du fichier livré | Format | Si ton outil d'image ne propose pas ce format |
+|---|---|---|---|
+| Photo de profil (`av-monde-NN.png`) | **512 × 512** | carré | génère en 1024×1024, puis réduis à 512×512 par code |
+| Bannière (`ban-monde-NN.png`) | **1536 × 864** (large × haut) | **paysage 16:9** | génère au format paysage le plus proche (1536×1024 ou 1792×1024), puis **recadre par code au centre** en 16:9 et redimensionne à 1536×864 — jamais d'étirement |
+
+**Une bannière n'est jamais carrée, jamais en 3:1, jamais plus haute que large.** Elle fait presque deux fois plus de large que de haut (1536 ÷ 864 = 1,78). Avant d'enregistrer, vérifie par code : largeur 1536, hauteur 864, sinon recadre.
+
 L'application affiche déjà des photos de profil et des bannières, à beaucoup d'endroits (en-tête, profil, classement, vestiaire, carte). **Les tiennes doivent être indiscernables de celles qui existent** : même format, même cadrage, même taille du personnage. Une image cadrée autrement ressortira faux partout.
 
 ### Regarde d'abord les références, avant de générer quoi que ce soit
@@ -63,7 +72,7 @@ Ouvre-les. Garde `av-primant.png` sous les yeux pour chaque photo, `ban-or.jpg` 
 
 ### Le gabarit d'une BANNIÈRE
 
-- **1536×864, format 16:9, opaque.** C'est le format des bannières déjà en place.
+- **1536 pixels de large × 864 pixels de haut, format paysage 16:9, opaque.** C'est le format des bannières déjà en place (`ban-or.jpg` fait 1400×788, même proportion). Si l'outil ne génère qu'en 1536×1024 ou 1792×1024, génère ainsi puis recadre par code au centre en 1536×864.
 - Style **peint, doux, lumineux**, dans l'esprit de `ban-or.jpg` : un paysage, une scène, des couleurs chaudes.
 - L'app affiche la bannière derrière un pseudo, et souvent **en bande très étroite** (l'en-tête ne montre qu'une tranche horizontale au milieu). Donc : **les éléments importants dans la bande centrale, entre 35 % et 65 % de la hauteur**, et **la moitié gauche calme et peu contrastée** — un pseudo blanc s'y écrit.
 - **Aucun texte.** Axo peut y figurer, petit, sur le tiers droit (comme dans `arene-anatomie.jpg`), ou pas du tout.
@@ -160,52 +169,52 @@ Toutes suivent **exactement** le gabarit de `ban-or.jpg` : 1536×864, opaque, st
 
 **`ban-monde-03.png` — monde 3, La Colonne Vertébrale**
 ```
-Bannière Medeos 1536×864, format 16:9, opaque, style peint doux et lumineux comme ban-or.jpg. Un paysage de falaise claire à l'aube ; sur le tiers droit, dans la bande centrale de la hauteur, une haute tour de pierre faite de vertèbres empilées, dressée comme un phare, dans l'esprit de monde-03.webp. Ciel rose pâle dégradé. La moitié gauche reste calme et peu contrastée. Aucun texte.
+Bannière Medeos, image PAYSAGE de 1536 pixels de large sur 864 pixels de haut (format 16:9, presque deux fois plus large que haute), opaque, style peint doux et lumineux comme ban-or.jpg. Un paysage de falaise claire à l'aube ; sur le tiers droit, dans la bande centrale de la hauteur, une haute tour de pierre faite de vertèbres empilées, dressée comme un phare, dans l'esprit de monde-03.webp. Ciel rose pâle dégradé. La moitié gauche reste calme et peu contrastée. Aucun texte.
 ```
 
 **`ban-monde-05.png` — monde 5, Le Nuage d'Électrons**
 ```
-Bannière Medeos 1536×864, format 16:9, opaque, style peint doux et lumineux comme ban-or.jpg. Un ciel de nuages dorés et doux ; sur le tiers droit, dans la bande centrale, un petit soleil-noyau entouré de minuscules sphères en orbite sur des anneaux fins, dans l'esprit de monde-05.webp. Tons violet pâle et or. La moitié gauche reste calme et peu contrastée. Aucun texte.
+Bannière Medeos, image PAYSAGE de 1536 pixels de large sur 864 pixels de haut (format 16:9, presque deux fois plus large que haute), opaque, style peint doux et lumineux comme ban-or.jpg. Un ciel de nuages dorés et doux ; sur le tiers droit, dans la bande centrale, un petit soleil-noyau entouré de minuscules sphères en orbite sur des anneaux fins, dans l'esprit de monde-05.webp. Tons violet pâle et or. La moitié gauche reste calme et peu contrastée. Aucun texte.
 ```
 
 **`ban-monde-07.png` — monde 7, Le Cycle de la Vie**
 ```
-Bannière Medeos 1536×864, format 16:9, opaque, style peint doux et lumineux comme ban-or.jpg. Un jardin rond et fleuri au printemps ; sur le tiers droit, dans la bande centrale, une roue de moulin en bois miel qui tourne sur un ruisseau, dans l'esprit de monde-07.webp. Verts tendres et or. La moitié gauche reste calme et peu contrastée. Aucun texte.
+Bannière Medeos, image PAYSAGE de 1536 pixels de large sur 864 pixels de haut (format 16:9, presque deux fois plus large que haute), opaque, style peint doux et lumineux comme ban-or.jpg. Un jardin rond et fleuri au printemps ; sur le tiers droit, dans la bande centrale, une roue de moulin en bois miel qui tourne sur un ruisseau, dans l'esprit de monde-07.webp. Verts tendres et or. La moitié gauche reste calme et peu contrastée. Aucun texte.
 ```
 
 **`ban-monde-09.png` — monde 9, Le Cœur**
 ```
-Bannière Medeos 1536×864, format 16:9, opaque, style peint doux et lumineux comme ban-or.jpg. Un soir chaud, ciel orangé vers violet ; sur le tiers droit, dans la bande centrale, une citadelle de pierre rouge sombre à quatre salles, deux grands canaux qui y entrent et en sortent, dans l'esprit de monde-09.webp. La moitié gauche reste calme et peu contrastée. Aucun texte.
+Bannière Medeos, image PAYSAGE de 1536 pixels de large sur 864 pixels de haut (format 16:9, presque deux fois plus large que haute), opaque, style peint doux et lumineux comme ban-or.jpg. Un soir chaud, ciel orangé vers violet ; sur le tiers droit, dans la bande centrale, une citadelle de pierre rouge sombre à quatre salles, deux grands canaux qui y entrent et en sortent, dans l'esprit de monde-09.webp. La moitié gauche reste calme et peu contrastée. Aucun texte.
 ```
 
 **`ban-monde-11.png` — monde 11, Le Souffle**
 ```
-Bannière Medeos 1536×864, format 16:9, opaque, style peint doux et lumineux comme ban-or.jpg. Un plateau venteux au matin, nuages effilés ; sur le tiers droit, dans la bande centrale, deux grands moulins à voiles crème, dans l'esprit de monde-11.webp. Bleu très pâle et crème. La moitié gauche reste calme et peu contrastée. Aucun texte.
+Bannière Medeos, image PAYSAGE de 1536 pixels de large sur 864 pixels de haut (format 16:9, presque deux fois plus large que haute), opaque, style peint doux et lumineux comme ban-or.jpg. Un plateau venteux au matin, nuages effilés ; sur le tiers droit, dans la bande centrale, deux grands moulins à voiles crème, dans l'esprit de monde-11.webp. Bleu très pâle et crème. La moitié gauche reste calme et peu contrastée. Aucun texte.
 ```
 
 **`ban-monde-13.png` — monde 13, Les Filtres**
 ```
-Bannière Medeos 1536×864, format 16:9, opaque, style peint doux et lumineux comme ban-or.jpg. Une colline douce ; sur le tiers droit, dans la bande centrale, des bassins en terrasses qui descendent la pente, l'eau plus claire à chaque niveau, dans l'esprit de monde-13.webp. Turquoise et pierre claire. La moitié gauche reste calme et peu contrastée. Aucun texte.
+Bannière Medeos, image PAYSAGE de 1536 pixels de large sur 864 pixels de haut (format 16:9, presque deux fois plus large que haute), opaque, style peint doux et lumineux comme ban-or.jpg. Une colline douce ; sur le tiers droit, dans la bande centrale, des bassins en terrasses qui descendent la pente, l'eau plus claire à chaque niveau, dans l'esprit de monde-13.webp. Turquoise et pierre claire. La moitié gauche reste calme et peu contrastée. Aucun texte.
 ```
 
 **`ban-monde-15.png` — monde 15, La Forge**
 ```
-Bannière Medeos 1536×864, format 16:9, opaque, style peint doux et lumineux comme ban-or.jpg. La tombée du jour, ciel violet profond #4C2A85 ; sur le tiers droit, dans la bande centrale, une forge de pierre, cheminée fumante, lueur orangée à la porte, quelques étincelles dorées, dans l'esprit de monde-15.webp. La moitié gauche reste calme, sombre et peu contrastée. Aucun texte.
+Bannière Medeos, image PAYSAGE de 1536 pixels de large sur 864 pixels de haut (format 16:9, presque deux fois plus large que haute), opaque, style peint doux et lumineux comme ban-or.jpg. La tombée du jour, ciel violet profond #4C2A85 ; sur le tiers droit, dans la bande centrale, une forge de pierre, cheminée fumante, lueur orangée à la porte, quelques étincelles dorées, dans l'esprit de monde-15.webp. La moitié gauche reste calme, sombre et peu contrastée. Aucun texte.
 ```
 
 **`ban-monde-17.png` — monde 17, Le Réseau Nerveux**
 ```
-Bannière Medeos 1536×864, format 16:9, opaque, style peint doux et lumineux comme ban-or.jpg. Une vallée de nuit, ciel violet profond étoilé ; sur le tiers droit, dans la bande centrale, un réseau de fils dorés lumineux tendus entre des tours fines, dans l'esprit de monde-17.webp. La moitié gauche reste calme, sombre et peu contrastée. Aucun texte.
+Bannière Medeos, image PAYSAGE de 1536 pixels de large sur 864 pixels de haut (format 16:9, presque deux fois plus large que haute), opaque, style peint doux et lumineux comme ban-or.jpg. Une vallée de nuit, ciel violet profond étoilé ; sur le tiers droit, dans la bande centrale, un réseau de fils dorés lumineux tendus entre des tours fines, dans l'esprit de monde-17.webp. La moitié gauche reste calme, sombre et peu contrastée. Aucun texte.
 ```
 
 **`ban-monde-19.png` — monde 19, La Vision**
 ```
-Bannière Medeos 1536×864, format 16:9, opaque, style peint doux et lumineux comme ban-or.jpg. Un crépuscule sur une mer calme, violet et or ; sur le tiers droit, dans la bande centrale, un phare à grande lentille sur un promontoire, un faisceau doré qui balaie la mer, dans l'esprit de monde-19.webp. La moitié gauche reste calme et peu contrastée. Aucun texte.
+Bannière Medeos, image PAYSAGE de 1536 pixels de large sur 864 pixels de haut (format 16:9, presque deux fois plus large que haute), opaque, style peint doux et lumineux comme ban-or.jpg. Un crépuscule sur une mer calme, violet et or ; sur le tiers droit, dans la bande centrale, un phare à grande lentille sur un promontoire, un faisceau doré qui balaie la mer, dans l'esprit de monde-19.webp. La moitié gauche reste calme et peu contrastée. Aucun texte.
 ```
 
 **`ban-monde-21.png` — monde 21, La Thyroïde**
 ```
-Bannière Medeos 1536×864, format 16:9, opaque, style peint doux et lumineux comme ban-or.jpg. L'heure dorée, ciel chaud ; sur le tiers droit, dans la bande centrale, un jardin en forme de papillon — deux ailes de parterres fleuris dorés — au pied d'une tour claire, dans l'esprit de monde-21.webp. La moitié gauche reste calme et peu contrastée. Aucun texte.
+Bannière Medeos, image PAYSAGE de 1536 pixels de large sur 864 pixels de haut (format 16:9, presque deux fois plus large que haute), opaque, style peint doux et lumineux comme ban-or.jpg. L'heure dorée, ciel chaud ; sur le tiers droit, dans la bande centrale, un jardin en forme de papillon — deux ailes de parterres fleuris dorés — au pied d'une tour claire, dans l'esprit de monde-21.webp. La moitié gauche reste calme et peu contrastée. Aucun texte.
 ```
 
 ---
@@ -216,7 +225,7 @@ Bannière Medeos 1536×864, format 16:9, opaque, style peint doux et lumineux co
 - **Avant la première photo**, ouvre `av-primant.png`, `av-flamme.png`, `av-curieux.png` et note ce qu'elles ont en commun : c'est ça qu'on veut, onze fois de plus.
 - Après chaque image, contrôle **par du code** :
   - photo : exactement 512×512, opaque (pas de canal alpha, ou un canal entièrement opaque), aucun texte ; **les pixels violets des branchies (#6B46C1 et proches) s'étendent horizontalement jusqu'à moins de 6 % de chaque bord**, et **leur centre vertical se situe entre 35 % et 50 % de la hauteur** — si ce n'est pas le cas, le cadrage a dérivé : refais ;
-  - bannière : exactement 1536×864, opaque, aucun texte ; la moitié gauche moins contrastée que la droite (écart-type de luminance plus faible).
+  - bannière : **exactement 1536 de large × 864 de haut** — si la génération sort dans un autre format paysage, recadre au centre et redimensionne par code avant d'enregistrer ; opaque, aucun texte ; la moitié gauche moins contrastée que la droite (écart-type de luminance plus faible).
 - **Axo doit rester identique** d'une image à l'autre : compare chaque nouvelle photo à `av-primant.png`. Si les branchies changent de forme, si le visage change, refais.
 - Si une génération échoue trois fois, passe à la suivante et signale-la à la fin.
 
