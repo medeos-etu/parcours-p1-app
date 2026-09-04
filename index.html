@@ -704,7 +704,9 @@
   #arene h3{color:#8B8271}
 
   /* — la barre du haut : plaque sombre, or à droite — */
-  .lobbytop{display:flex;align-items:center;gap:var(--idb-gap)}
+  /* la barre de l'Arène ne dépasse jamais la largeur de celle du Parcours (écran plafonné à 840 px,
+     barre à 768 px) : sur ordinateur, l'écran de l'Arène est plus large et l'étirait jusqu'à 1336 px */
+  .lobbytop{display:flex;align-items:center;gap:var(--idb-gap);width:100%;max-width:768px;margin-left:auto;margin-right:auto}
   .lobbytop .pcard{flex:1;min-width:0;display:flex;align-items:center;gap:10px;
     background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.04));
     border:1px solid rgba(255,255,255,.14);border-radius:var(--idb-r);padding:var(--idb-pad);
