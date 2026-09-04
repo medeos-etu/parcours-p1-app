@@ -115,17 +115,27 @@ Des vues **du dessus, légèrement en plongée**, d'une dalle rectangulaire aux 
 
 **La livraison, à la toute fin.**
 
-⚠️ **Tu travailles dans ton propre ordinateur virtuel.** Tu n'as AUCUN accès au Mac de l'utilisateur : ne cherche jamais un chemin comme `/Users/...`, il n'existe pas chez toi. Tu livres par l'une des deux voies ci-dessous, et rien d'autre.
+Tu as accès au système de fichiers de ce Mac : c'est la voie normale.
 
-**1. Sur GitHub, de préférence** (tu as un navigateur ; l'utilisateur y est déjà connecté) :
-- Va sur `https://github.com/medeos-etu/parcours-p1-app/tree/main/img/parcours/territoires`
-- Bouton « Add file » → « Upload files », dépose les 43 PNG **dans ce dossier**, sans créer de sous-dossier.
-- Valide en **un seul commit** intitulé exactement : `Images du parcours des mondes (43 dioramas et décors)`, sur la branche `main`.
-- Si l'envoi de 43 fichiers d'un coup échoue, fais-le en plusieurs lots, mais toujours dans ce même dossier.
-- Ne modifie aucun autre fichier du dépôt. Si tu n'es pas connecté à GitHub, n'essaie pas de créer un compte : passe au point 2.
+**1. Enregistre les 43 PNG dans le dossier de l'application** :
+- Chemin exact : `/Users/lucascrepin/dev/parcours-p1-app/img/parcours/territoires/`
+- Les fichiers vont **directement dans ce dossier**, à côté de `CONSIGNES-IMAGES.md` et `PROMPT-CHATGPT.md`. Pas de sous-dossier, pas d'autre nom que ceux des tableaux.
 
-**2. Sinon, un ZIP** : un fichier **`parcours-des-mondes-images.zip`** contenant les 43 PNG **à la racine de l'archive** (pas de sous-dossier), avec un `manifeste.txt` (une ligne par fichier : dimensions réelles, « transparent : oui/non », « OK » ou la raison de l'échec). Donne-moi son lien de téléchargement.
+**2. Puis allège les images et branche-les dans l'application** :
+```
+cd /Users/lucascrepin/dev/parcours-p1-app/img/parcours/territoires
+sips -Z 800 monde-*.png rentree.png camp-stage.png socle.png fond-route.png parcours-des-mondes.png bandeau-*.png dalle-*.png rail.png
+sips -Z 256 recompense-*.png coffre*.png marqueur-ici.png
+cd /Users/lucascrepin/dev/parcours-p1-app
+node outils/implante-parcours.js
+node outils/verifie-app.js
+```
+`implante-parcours.js` doit afficher le nombre d'images trouvées, et `verifie-app.js` doit finir par `erreurs : 0`.
 
-**Ta réponse finale donne** : la liste des fichiers réussis, la liste des fichiers manqués s'il y en a, et la voie de livraison utilisée (lien du commit GitHub, ou lien du ZIP).
+**3. NE DÉPLOIE PAS, et ne fais aucun commit git.** Tu t'arrêtes là : c'est l'équipe qui relit les images et met en ligne. N'exécute jamais `vercel`, `git commit` ou `git push`.
+
+**4. Ne modifie aucun autre fichier** du dossier `parcours-p1-app` que ces images. Ni le code, ni les fiches, ni les QCM.
+
+**Ta réponse finale donne** : la liste des fichiers écrits avec leurs dimensions, la liste des fichiers manqués s'il y en a, et les deux dernières sorties de commandes (`implante-parcours.js` et `verifie-app.js`).
 
 Commence maintenant par `monde-01.png`, et ne t'arrête qu'à la livraison.
