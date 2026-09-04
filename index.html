@@ -2222,6 +2222,12 @@
 .cr-bagage b{display:block;font-family:Fredoka,Inter,sans-serif;font-size:24px;color:#FCD34D;line-height:1}
 .cr-bagage em{display:block;font-style:normal;font-size:10.5px;color:rgba(250,246,240,.75);margin-top:3px}
 .cr-audela{margin-top:12px;font-size:11.5px;color:rgba(250,246,240,.6);font-style:italic;line-height:1.45;padding:0 10px}
+.cr-plus{display:block;margin:12px auto 0;max-width:340px;padding:13px 15px;border-radius:16px;text-decoration:none;text-align:left;
+  background:rgba(255,255,255,.06);border:1px solid rgba(252,211,77,.32)}
+.cr-plus-k{display:block;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:#FCD34D}
+.cr-plus b{display:block;font-size:14px;font-weight:900;color:#FAF6F0;line-height:1.3;margin-top:3px}
+.cr-plus-l{display:block;font-size:11.5px;color:rgba(250,246,240,.72);line-height:1.5;margin-top:5px}
+.cr-plus em{display:block;font-style:normal;font-size:12px;font-weight:800;color:#FCD34D;margin-top:8px}
 /* le pied */
 .cr-depart{margin-top:6px;padding:14px;border-radius:14px;background:rgba(255,255,255,.06);border:1px dashed rgba(255,255,255,.18);color:#FAF6F0;font-size:13px}
 .cr-depart span{display:block;font-size:11.5px;color:rgba(250,246,240,.7);margin-top:3px;line-height:1.45}
@@ -5979,7 +5985,7 @@ function fermerFlamme(){ const p=document.getElementById('flamme-pop'); if(p) p.
 const AMPHI_SEUIL_JOURS=4;
 let lieuArene='salles';
 function joursParcours(){ return (typeof seancesFaites==='function')?seancesFaites().length:0; }
-function amphiOuvrable(){ return S.stage || joursParcours()>=AMPHI_SEUIL_JOURS; }
+function amphiOuvrable(){ return joursParcours()>=AMPHI_SEUIL_JOURS; }
 function setLieu(l){
   lieuArene=l;
   const ms=document.getElementById('ms-salles'), ma=document.getElementById('ms-amphi');
@@ -7899,7 +7905,8 @@ function renderCarte(){
   const tCur = prochaineConquete();
   const ec = etatMonde(mc);
 
-  const idxRentree = d ? Math.min(SEANCES.length-1, faites + j) : SEANCES.length-1;
+  const illim = (typeof accesIllimite==='function') && accesIllimite();
+  const idxRentree = (d && !illim) ? Math.min(SEANCES.length-1, faites + j) : SEANCES.length-1;
   const tRentree = territoireDe(SEANCES[idxRentree]);
   const kRentree = tRentree ? T.indexOf(tRentree) : T.length-1;
   const visible = t => T.indexOf(t) <= kRentree;
@@ -7969,7 +7976,16 @@ function renderCarte(){
         '<div><b>'+mondesVisibles.length+'</b><em>monde'+(mondesVisibles.length>1?'s':'')+'</em></div>'+
         '<div><b>'+themFaits+'</b><em>thématique'+(themFaits>1?'s':'')+'</em></div>'+
         '<div><b>'+fichesBagage+'</b><em>fiches vues</em></div></div>'+
-      (auDela? '<div class="cr-audela">À deux fiches par jour, la route s\'arrête ici. Plus vite, et '+auDela+' monde'+(auDela>1?'s':'')+' t\'attend'+(auDela>1?'ent':'')+' encore au-delà.</div>' : '')+
+      (illim
+        ? '<div class="cr-audela">Ta route va jusqu\'au bout : l\'année complète ne te limite à aucun rythme.</div>'
+        : auDela
+          ? '<div class="cr-audela">À deux fiches par jour, ta route s\'arrête ici : '+auDela+' monde'+(auDela>1?'s':'')+' reste'+(auDela>1?'nt':'')+' au-delà.</div>'+
+            '<a class="cr-plus" href="https://www.medeos-sante.fr/packs/stages-vacances#pack-annee" target="_blank" rel="noopener">'+
+              '<span class="cr-plus-k">Aller plus loin</span>'+
+              '<b>L\'année complète retire les limites de l\'app</b>'+
+              '<span class="cr-plus-l">Autant de séances par jour que tu veux · 5 QCM par fiche au lieu de 2 · ascensions illimitées au Grand Amphi</span>'+
+              '<em>Voir l\'année complète →</em></a>'
+          : '')+
       '</div>';
   }
 
@@ -7997,7 +8013,7 @@ function renderCarte(){
     x += '<div class="cr-monde '+e.etat+(ici?' ici':'')+'" id="monde-'+m.num+'">'+
       '<span class="cr-rail"><b>'+(cumDe(m.terr[0]) - m.terr[0].fiches.length)+'</b></span>'+blocMonde(m,e,ici)+'</div>';
   }
-  x += '<div class="cr-depart"><span class="cr-rail"><b>0</b></span><div>🚩 <b>Ta route commence ici</b><span>Deux fiches par jour. Chaque dalle est une thématique et rapporte quelque chose ; chaque monde ouvre un coffre.</span></div></div>';
+  x += '<div class="cr-depart"><span class="cr-rail"><b>0</b></span><div>🚩 <b>Ta route commence ici</b><span>Chaque dalle est une thématique et rapporte quelque chose ; chaque monde ouvre un coffre.</span></div></div>';
   x += '</div>';
 
   /* ── LE PANNEAU (ordinateur) : le monde en cours reste sous les yeux pendant qu'on lit la route ── */
@@ -8009,7 +8025,6 @@ function renderCarte(){
     '</div></aside>';
   x += '</div>';
 
-  x += '<div class="rt-sans cr-sans">Les mondes se terminent <b>sans les stages</b> : le Parcours te donne deux fiches par jour tout du long. Les stages sont là pour ceux qui veulent aller plus vite pendant les vacances — pas pour débloquer la suite.</div>';
   b.innerHTML = x;
 
   const el=document.getElementById('monde-'+mc.num);
