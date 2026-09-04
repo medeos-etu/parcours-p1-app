@@ -2008,6 +2008,11 @@
 .s7.on i{background:linear-gradient(180deg,#FCD34D,#E29C5C)}
 .s7.auj i{border-color:var(--violet)}
 .s7.futur{opacity:.45}
+.av-col{margin:4px 0 10px}
+.av-col>span{display:block;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:800;color:#8A6238;margin-bottom:6px}
+.av-col>div{display:flex;gap:7px;flex-wrap:wrap}
+.av-col i{display:block;width:44px;height:44px;border-radius:12px;border:2px solid #E29C5C;overflow:hidden;background:linear-gradient(180deg,#FFF3C4,#FCD34D)}
+.av-col-im{width:100%;height:100%;object-fit:cover;display:flex;align-items:center;justify-content:center;font-size:20px;background:transparent!important}
 .mp-next.presque{border-color:#E29C5C;box-shadow:0 0 0 4px rgba(252,211,77,.28)}
 .mp-t.presque .mp-c{border-color:#E29C5C;background:#FFFBEA}
 .se-liens{display:flex;gap:22px;justify-content:center;flex-wrap:wrap}
@@ -2117,6 +2122,107 @@
 .brume-m i{font-style:normal;font-size:28px;opacity:.75}
 .brume-m em{position:absolute;right:6px;bottom:4px;font-style:normal;font-size:12px;filter:none}
 .brume-plus{font-size:11px;color:var(--muted);margin-top:10px;font-style:italic}
+/* ═══ LA ROUTE DES MONDES — fond sombre à losanges, socles, dalles, échelle ═══ */
+#carte.cr-mode{background:#1B1830;color:#FAF6F0}
+#carte.cr-mode .lect-top{background:rgba(27,24,48,.92);color:#FAF6F0;position:sticky;top:0;z-index:5;backdrop-filter:blur(6px)}
+#carte.cr-mode .lect-top b{color:#FAF6F0}
+#carte.cr-mode .lect-top .x{color:#FAF6F0}
+.cr{position:relative;margin:0 -16px;padding:18px 14px 20px 52px;
+  background-color:#1E1B36;
+  background-image:linear-gradient(45deg,rgba(255,255,255,.035) 25%,transparent 25%,transparent 75%,rgba(255,255,255,.035) 75%),
+                   linear-gradient(-45deg,rgba(255,255,255,.035) 25%,transparent 25%,transparent 75%,rgba(255,255,255,.035) 75%);
+  background-size:46px 46px}
+/* l'échelle à gauche : un rail vertical, les fiches cumulées à chaque palier */
+.cr::before{content:"";position:absolute;left:24px;top:0;bottom:0;width:8px;border-radius:8px;background:rgba(107,70,193,.28);box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
+.cr-rail{position:absolute;left:-40px;top:50%;transform:translateY(-50%);width:34px;text-align:right}
+.cr-rail b{display:inline-block;font-size:10.5px;font-weight:900;color:rgba(250,246,240,.55);font-family:Fredoka,Inter,sans-serif}
+.cr-row,.cr-monde,.cr-depart,.cr-sommet{position:relative}
+/* une dalle = une thématique */
+.cr-row{margin:0 0 14px}
+.cr-slab{position:relative;height:96px;border-radius:14px;background:var(--c);
+  box-shadow:0 8px 0 rgba(0,0,0,.35),0 14px 24px rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.10);
+  display:flex;align-items:center;justify-content:space-between;padding:0 16px;overflow:visible}
+.cr-slab::before{content:"";position:absolute;inset:0;border-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,.14),rgba(255,255,255,0) 55%,rgba(0,0,0,.18))}
+.cr-path{position:absolute;left:50%;top:0;bottom:0;width:38px;margin-left:-19px;background:rgba(58,46,30,.42);box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)}
+.cr-row.fait .cr-slab{filter:none}
+.cr-row:not(.fait):not(.encours):not(.entame) .cr-slab{filter:saturate(.55) brightness(.72)}
+.cr-row.entame .cr-slab{filter:saturate(.8) brightness(.88)}
+.cr-row.encours .cr-slab{box-shadow:0 0 0 3px #FCD34D,0 8px 0 rgba(0,0,0,.35),0 14px 24px rgba(0,0,0,.35)}
+.cr-card{position:relative;z-index:1;width:54px;height:54px;border-radius:10px;background:#FAF6F0;border:3px solid #fff;
+  box-shadow:0 4px 0 rgba(0,0,0,.25),0 6px 12px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center}
+.cr-card img{width:34px;height:34px}
+.cr-card.avenir{filter:grayscale(.6);opacity:.85}
+.cr-card i{position:absolute;right:-9px;top:-9px;width:20px;height:20px;border-radius:50%;background:#2ECC71;color:#fff;font-size:12px;font-weight:900;
+  display:flex;align-items:center;justify-content:center;font-style:normal;border:2px solid #fff}
+.cr-deco{position:relative;z-index:1;font-size:26px;filter:drop-shadow(0 4px 4px rgba(0,0,0,.35));width:54px;text-align:center}
+.cr-deco.coffre{font-size:30px}
+.cr-deco.vide{width:54px}
+.cr-slab-t{position:absolute;left:0;right:0;bottom:-2px;transform:translateY(100%);padding:6px 4px 0;z-index:2}
+.cr-slab-t span{display:block;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:800;color:rgba(250,246,240,.5)}
+.cr-slab-t b{display:block;font-size:12.5px;font-weight:800;color:#FAF6F0;line-height:1.25}
+.cr-slab-t i{display:block;height:5px;border-radius:99px;background:rgba(255,255,255,.14);margin-top:4px;overflow:hidden}
+.cr-slab-t i u{display:block;height:100%;border-radius:99px}
+.cr-row{margin-bottom:50px}
+/* le monde : son diorama sur un socle, son nom, le bandeau, ce qu'il débloque */
+.cr-monde{margin:14px 0 30px;text-align:center}
+.cr-socle{position:relative;width:200px;height:150px;margin:0 auto;border-radius:22px;
+  background:linear-gradient(180deg,#2A2740,#141226);box-shadow:0 12px 0 #0E0C1C,0 22px 34px rgba(0,0,0,.5);
+  display:flex;align-items:flex-end;justify-content:center}
+.cr-socle.grand{width:230px;height:170px}
+.cr-socle img{width:112%;max-width:none;position:absolute;bottom:14px;left:50%;transform:translateX(-50%);filter:drop-shadow(0 14px 16px rgba(0,0,0,.5))}
+.cr-em{font-size:74px;line-height:1;position:absolute;bottom:34px;left:50%;transform:translateX(-50%);filter:drop-shadow(0 12px 14px rgba(0,0,0,.5))}
+.cr-badge{position:absolute;left:-8px;top:-8px;font-style:normal;font-size:11px;font-weight:900;padding:5px 10px;border-radius:999px;
+  background:rgba(250,246,240,.95);color:#4A3208;box-shadow:0 3px 10px rgba(0,0,0,.35);z-index:2}
+.cr-badge.ok{background:linear-gradient(180deg,#FCD34D,#E29C5C);font-size:13px;padding:3px 9px}
+.cr-badge.lock{background:rgba(20,18,38,.85);color:#FAF6F0;font-size:12px;padding:4px 8px;border:1px solid rgba(255,255,255,.2)}
+.cr-badge.ici{background:#6B46C1;color:#FAF6F0;text-transform:uppercase;letter-spacing:.08em;left:50%;transform:translateX(-50%);top:auto;bottom:-14px;box-shadow:0 0 0 4px rgba(107,70,193,.25),0 3px 10px rgba(0,0,0,.35)}
+.cr-monde.verrouille .cr-socle{filter:saturate(.5) brightness(.8)}
+.cr-nom{font-family:Fredoka,Inter,sans-serif;font-size:30px;font-weight:800;color:#FAF6F0;margin-top:22px;line-height:1.05;
+  text-shadow:0 3px 0 #0E0C1C,0 6px 18px rgba(0,0,0,.5)}
+.cr-band{display:inline-flex;gap:18px;align-items:center;margin-top:10px;padding:9px 18px;border-radius:12px;font-size:13.5px;font-weight:900;color:#FAF6F0;
+  background:linear-gradient(180deg,#6B46C1,#4C2A85);box-shadow:0 5px 0 #2A1850,0 8px 18px rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.18)}
+.cr-band span{white-space:nowrap}
+.cr-chg{color:rgba(250,246,240,.6)!important;margin-top:6px!important}
+.cr-prog{height:10px;border-radius:99px;background:rgba(255,255,255,.14);margin:14px 26px 0;overflow:hidden}
+.cr-prog i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#FCD34D,#E29C5C)}
+.cr-prog-t{font-size:12px;color:rgba(250,246,240,.8);margin-top:6px;font-weight:700}
+.cr-deb{font-size:14px;font-weight:900;color:#8FE3D5;margin-top:16px;text-shadow:0 2px 0 rgba(0,0,0,.4)}
+.cr-chips{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}
+.cr-chip{display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 4px 9px;border-radius:12px;
+  background:linear-gradient(180deg,#3D3760,#26223F);border:2px solid #5B4FA0;box-shadow:0 4px 0 #17142A}
+.cr-chip i{font-style:normal;font-size:24px;line-height:1}
+.cr-chip b{font-size:10.5px;font-weight:900;color:#FAF6F0;line-height:1.2;text-align:center}
+.cr-chip em{font-style:normal;font-size:9px;color:rgba(250,246,240,.6);text-align:center;line-height:1.2}
+.cr-chip.ok{border-color:#FCD34D;background:linear-gradient(180deg,#5A4A1E,#3A2E12)}
+.cr-chip.lock{opacity:.7}
+.cr-chip.lock i::after{content:" 🔒";font-size:11px}
+/* le sommet : la rentrée */
+.cr-sommet{text-align:center;padding:10px 0 34px}
+.cr-sommet .cr-socle.grand{background:linear-gradient(180deg,#5A3F1A,#2A1E0C);box-shadow:0 12px 0 #1A1208,0 22px 34px rgba(0,0,0,.5),0 0 60px rgba(252,211,77,.18)}
+.cr-sommet .cr-nom{font-size:24px;color:#FCD34D}
+.cr-sommet .cr-band{background:linear-gradient(180deg,#B8895A,#7A5A2B);box-shadow:0 5px 0 #4A3618,0 8px 18px rgba(0,0,0,.4)}
+.cr-bagage{display:flex;gap:8px;justify-content:center;margin-top:14px;flex-wrap:wrap;align-items:stretch}
+.cr-bagage>span{width:100%;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:rgba(250,246,240,.6)}
+.cr-bagage div{min-width:84px;padding:10px 8px;border-radius:12px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12)}
+.cr-bagage b{display:block;font-family:Fredoka,Inter,sans-serif;font-size:24px;color:#FCD34D;line-height:1}
+.cr-bagage em{display:block;font-style:normal;font-size:10.5px;color:rgba(250,246,240,.75);margin-top:3px}
+.cr-audela{margin-top:12px;font-size:11.5px;color:rgba(250,246,240,.6);font-style:italic;line-height:1.45}
+/* le pied */
+.cr-depart{margin-top:6px;padding:14px;border-radius:14px;background:rgba(255,255,255,.06);border:1px dashed rgba(255,255,255,.18);color:#FAF6F0;font-size:13px}
+.cr-depart b{display:inline}
+.cr-depart span{display:block;font-size:11.5px;color:rgba(250,246,240,.7);margin-top:3px}
+/* le camp de stage, sur la route */
+.cr-camp{display:flex;gap:11px;align-items:center;padding:11px 12px;border-radius:14px;text-decoration:none;color:#3A2A10;
+  background:linear-gradient(160deg,#FDF6EC,#F3E1C0);border:2px solid #E29C5C;box-shadow:0 6px 0 #8A5B24,0 12px 22px rgba(0,0,0,.4)}
+.cr-camp img{width:60px;height:60px;border-radius:12px;object-fit:cover;flex-shrink:0}
+.cr-camp-q{display:block;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:800;color:#8A5B24}
+.cr-camp b{display:block;font-size:14px;font-weight:900;color:#4A3208}
+.cr-camp p{font-size:11.5px;color:#5A4A2A;line-height:1.4;margin-top:3px}
+.cr-camp em{display:block;font-style:normal;font-size:11.5px;font-weight:800;color:#8A5B24;margin-top:4px}
+.cr-sans{margin-top:14px;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14);color:rgba(250,246,240,.8)}
+.cr-sans b{color:#FCD34D}
+#carte.cr-mode .se-alt{color:rgba(250,246,240,.7)}
+@media(min-width:600px){ .cr{margin:0 -32px;padding-left:64px} }
 .sc-em{width:36px;height:36px;border-radius:11px;flex-shrink:0;object-fit:cover;display:flex;align-items:center;justify-content:center;
   font-size:18px;background:rgba(107,70,193,.10)}
 /* un monde terminé, dans le bilan de séance : la plus grosse marche du Parcours */
@@ -2125,6 +2231,7 @@
 .fin-monde span{font-size:40px;line-height:1;animation:conqImg 1.6s ease-out}
 .fin-monde b{display:block;font-family:Fredoka,Inter,sans-serif;font-size:18px;font-weight:800;color:#FCD34D;margin-top:6px}
 .fin-monde em{display:block;font-style:normal;font-size:12.5px;opacity:.9;line-height:1.5;margin-top:4px;max-width:300px}
+.fin-monde-r{display:block;font-size:12px;margin-top:10px;padding:8px 12px;border-radius:10px;background:rgba(252,211,77,.16);color:#FCD34D;font-weight:800}
 /* les pastilles de mondes, sur l'écran « Ton chemin » */
 .mondes-pills span.fini{background:rgba(226,156,92,.18);color:#8A6238}
 .mondes-pills span.ici{background:var(--violet);color:#FAF6F0}
@@ -7165,7 +7272,15 @@ function chiffresAvancee(){
     '<div><b>'+or+'</b><span>territoire'+(or>1?'s':'')+' en or</span></div>'+
     '<div><b>'+fiches+'</b><span>fiche'+(fiches>1?'s':'')+' dans ta tête</span></div>'+
     '<div><b>'+serie+'</b><span>jour'+(serie>1?'s':'')+' de série</span></div></div>'+
-    '<div class="av-sem"><span>Ta semaine</span>'+semaine7()+'</div>';
+    '<div class="av-sem"><span>Ta semaine</span>'+semaine7()+'</div>'+collectionMondes();
+}
+/* la collection : une carte par monde terminé — l'illustration du monde, ou sa teinte */
+function collectionMondes(){
+  const M=(typeof mondes==='function')?mondes():[]; const col=S.collection||{};
+  const faits=M.filter(m=>col[m.num] || etatMonde(m).etat==='fini');
+  if(!faits.length) return '';
+  return '<div class="av-col"><span>Ta collection · '+faits.length+' monde'+(faits.length>1?'s':'')+'</span><div>'+
+    faits.map(m=>'<i title="'+m.nom+'">'+pastilleMonde(m,'av-col-im')+'</i>').join('')+'</div></div>';
 }
 /* LE STAGE, SEULEMENT QUAND IL EST PROCHE. On ne vend rien à quelqu'un qui vient de finir
    sa séance : on lui montre ce qui l'attend dans dix jours, s'il est en Terminale. */
@@ -7659,9 +7774,29 @@ function prerentreeDe(anRentree){
   const r = PRERENTREE_DATES[anRentree];
   return r ? {m:new Date(r.debut+'T00:00:00'), quand:r.quand, exact:true} : {m:new Date(anRentree,7,14), quand:'mi-août '+anRentree, exact:false};
 }
+/* ═══ LES RÉCOMPENSES DES MONDES — toutes réelles, aucune inventée.
+   Terminer un monde donne : un GEL DE SÉRIE (la mécanique existe : il sauve la flamme
+   deux jours d'absence), et la CARTE DU MONDE dans sa collection (l'illustration).
+   Chaque thématique terminée ouvre ses QCM d'arène au Grand Amphi (déjà vrai). ═══ */
+function recompensesMonde(m){
+  return [
+    {em:'🧊', nom:'1 gel de série',       sous:'protège ta flamme'},
+    {em:'🖼️', nom:'La carte du monde',    sous:'dans ta collection'},
+    {em:'🏛️', nom:m.terr.length*2+' QCM d\'arène', sous:'au Grand Amphi'},
+    {em:'📚', nom:m.terr.length+' thématiques', sous:'dans les Salles'}
+  ];
+}
+/* on crédite la récompense une seule fois par monde, au moment où il se termine */
+function crediterMonde(m){
+  S.collection=S.collection||{};
+  if(S.collection[m.num]) return false;
+  S.collection[m.num]=Date.now(); S.gels=(S.gels||0)+1; saveS(); return true;
+}
+
 function renderCarte(){
   const b = document.getElementById('carte-corps'); if(!b) return;
   const dit = (t,pose) => '<div class="se-guide" style="margin-bottom:10px"><img src="img/'+(pose||'axo-guide-carte')+'.png" alt=""><span class="sg-b">'+t+'</span></div>';
+  document.getElementById('carte').classList.toggle('cr-mode', !!(S.profil && S.profil.rentreeDite));
 
   /* ── on ne connaît pas encore sa rentrée : on la demande, et rien d'autre ── */
   if(!(S.profil && S.profil.rentreeDite)){
@@ -7669,105 +7804,137 @@ function renderCarte(){
     const choix = [an, an+1, an+2].map(y =>
       '<button onclick="poserRentree('+y+')">Septembre '+y+
       '<small>'+(y===an?'j\'entre en première année dans quelques semaines':(y===an+1?'je suis en Terminale cette année':'je suis en Première cette année'))+'</small></button>').join('');
-    b.innerHTML = dit('Dis-moi quand commence ta première année — je place tes stages sur le parcours des mondes.','axo-guide-carte')+
+    b.innerHTML = dit('Dis-moi quand commence ta première année — je place ta rentrée tout en haut du parcours.','axo-guide-carte')+
       '<div class="rt-illu-wrap">'+illuRoute()+'</div>'+
       '<div class="rt-ask"><h3>Quand commence ta première année de santé ?</h3>'+
-      '<p>C\'est la seule chose que je ne peux pas deviner. Avec cette date, je place tes stages et ta rentrée sur le parcours des mondes.</p>'+
+      '<p>C\'est la seule chose que je ne peux pas deviner. Avec cette date, je place tes stages sur la route et ta rentrée au sommet.</p>'+
       '<div class="rt-ans">'+choix+
       '<button onclick="poserRentree(null)">Je ne sais pas encore<small>on avance quand même — tu me le diras plus tard</small></button>'+
       '</div></div>';
     return;
   }
 
-  /* LE PARCOURS DES MONDES. Le monde en cours occupe l'écran : sa tuile, ses thématiques.
-     Les mondes passés se rangent en médailles d'or, compactes. Les mondes suivants ne se
-     décrivent pas — de petites vignettes sous la brume, sans nom : on sait qu'il y a une
-     suite, pas ce qu'elle contient. Les stages sont des camps posés là où l'élève sera. */
+  /* ═══ LE PARCOURS DES MONDES — la route des trophées, telle quelle.
+     En bas le monde 1 : son diorama sur un socle, son nom, le bandeau, ce qu'il débloque.
+     Au-dessus, la route : une dalle par thématique, avec sa carte (✓ quand c'est fait) et
+     sa récompense ; à gauche, l'échelle des fiches cumulées. Puis le monde 2, et ainsi de
+     suite jusqu'à la RENTRÉE, tout en haut. La route s'arrête là où l'élève SERA le jour
+     de sa rentrée à une séance par jour : on ne montre pas de monde qu'il ne pourra pas
+     atteindre. Les stages sont des camps posés sur la route, à leur date. ═══ */
   const d = dateRentree();
   const j = joursAvantRentree();
   const faites = seancesFaites().length;
-  const chg = '<button class="rt-chg" onclick="S.profil.rentreeDite=false;saveS();renderCarte()">changer</button>';
   const M = mondes();
   const mc = mondeCourant();
   const iMc = M.indexOf(mc);
-  const ec = etatMonde(mc);
-  const passes = M.filter((m,k)=>k<iMc);
-  const suivants = M.filter((m,k)=>k>iMc);
+  const T = territoires();
+  const tCur = prochaineConquete();
 
-  /* ── en tête ── */
-  let x = '<div class="ld-head">'+chg+'<span class="ld-k">Le parcours des mondes</span>'+
-    '<b>'+(passes.length? passes.length+' monde'+(passes.length>1?'s':'')+' derrière toi' : 'Ton premier monde t\'attend')+'</b>'+
-    '<span class="ld-s">'+(d ? j+' jours avant ta rentrée du 1<sup>er</sup> septembre '+d.getFullYear()+'.' : 'Rentrée pas encore dite — dis-la-moi quand tu le sauras.')+'</span></div>';
+  /* jusqu'où la route va : la thématique atteinte le jour de la rentrée (ou tout, sans date) */
+  const idxRentree = d ? Math.min(SEANCES.length-1, faites + j) : SEANCES.length-1;
+  const tRentree = territoireDe(SEANCES[idxRentree]);
+  const kRentree = tRentree ? T.indexOf(tRentree) : T.length-1;
+  const visible = t => T.indexOf(t) <= kRentree;
+  const mondesVisibles = M.filter(m => m.terr.some(visible));
+  const auDela = M.length - mondesVisibles.length;
 
-  /* ── les mondes passés : des médailles, pas des cartes ── */
-  if(passes.length){
-    x += '<div class="pm-row"><span class="pm-l">Terminés</span>'+passes.map(m=>'<span class="pm-med" title="'+m.nom+'">'+pastilleMonde(m,'pm-em')+'<i>✓</i></span>').join('')+'</div>';
-  }
+  /* les fiches cumulées : l'échelle à gauche, comme les trophées */
+  const cum = {}; let acc = 0;
+  T.forEach(t => { acc += t.fiches.length; cum[t.nom+'|'+t.mat] = acc; });
+  const cumDe = t => cum[t.nom+'|'+t.mat];
+  const fichesFaites = Object.keys((typeof fichesArmees==='function')?fichesArmees():{}).length;
 
-  /* ── le monde en cours, en grand ── */
-  const fond = mc.img ? 'background-image:url(\''+mc.img+'\')' : 'background:linear-gradient(135deg,'+mc.teinte+',#1A1530)';
-  x += '<div class="ld-m ici encours" id="monde-'+mc.num+'"><div class="ld-tile grand" style="'+fond+'">'+
-    (mc.img?'':'<span class="ld-em">'+mc.em+'</span>')+
-    '<div class="ld-tile-t"><span class="ld-num">Monde '+mc.num+' sur '+M.length+'</span><b>'+mc.nom+'</b>'+
-    '<span class="ld-n">'+(ec.faits? ec.faits+' thématique'+(ec.faits>1?'s':'')+' sur '+ec.tot+' terminée'+(ec.faits>1?'s':'') : ec.tot+' thématiques à terminer')+
-    (ec.tot-ec.faits===1?' — encore une et ce monde est à toi.':'')+'</span></div>'+
-    '<i class="ld-badge ici">Tu es ici</i>'+
-    '<div class="ld-bar"><i style="width:'+Math.round(100*ec.faits/Math.max(1,ec.tot))+'%"></i></div></div>';
-
-  /* les prochains jours : la preuve que les matières alternent */
-  { const dec0 = (typeof seanceJourFaite==='function' && seanceJourFaite()) ? 1 : 0;
-    const prochaines = SEANCES.filter(s=>!(s.fait&&s.fait()) && !(S.skip&&S.skip[s.id])).slice(0,4);
-    if(prochaines.length) x += '<div class="mp-jours">'+prochaines.map((s,i)=>{ const n=i+dec0;
-      return '<span style="--c:'+COUL_MAT[s.mat]+'"><img src="img/icones/'+EMB_MAT[s.mat]+'.png" alt=""><b>'+(n===0?'Aujourd\'hui':n===1?'Demain':'Dans '+n+' jours')+'</b><em>'+s.mat+'</em></span>'; }).join('')+'</div>'; }
-
-  /* ses thématiques */
-  x += '<div class="ld-them">';
-  mc.terr.forEach(t=>{
-    const et=etatTerritoire(t), p=progTerritoire(t);
-    const dec = et.etat==='avenir' ? aDecouvrir(t,2) : [];
-    x += '<div class="mp-t '+et.etat+(p.presque?' presque':'')+'" style="--c:'+COUL_MAT[t.mat]+'">'+
-      '<div class="mp-med"><img src="img/icones/'+EMB_MAT[t.mat]+'.png" alt="">'+(et.etat==='conquis'?'<i class="mp-ok">✓</i>':'')+'</div>'+
-      '<div class="mp-c">'+vignetteTerritoire(t,'mp-img')+'<div class="mp-txt"><span class="mp-sur">'+t.mat+' · '+p.tot+' fiches</span><b>'+t.nom+'</b>'+
-      (et.etat==='encours'
-        ? '<div class="sc-bar"><i style="width:'+p.pct+'%;background:var(--c)"></i></div><span class="mp-r">'+p.lues+' / '+p.tot+' fiches'+(p.presque?' — presque à toi':'')+'</span>'
-        : et.etat==='conquis' ? '<span class="mp-r">Terminée ✓</span>'
-        : (dec.length ? '<span class="mp-r">'+dec.join(' · ')+'</span>' : ''))+
-      '</div></div></div>';
-  });
-  x += '</div></div>';
-
-  /* ── le prochain camp : le stage le plus proche, un rendez-vous, jamais une surprise ── */
+  /* les camps : le stage posé au-dessus de la thématique où l'élève sera à sa date */
+  const camps = {};
   if(d){
     const debutTerminale=new Date(d.getFullYear()-1,8,1);
     const dans=n=>n<=0?'en ce moment':n===1?'demain':'dans '+n+' jours';
     const imgCamp=(nom,repli)=>(typeof VIGNETTES!=='undefined' && VIGNETTES[nom]) ? 'parcours/territoires/'+VIGNETTES[nom] : repli;
-    const camp=(img,quand,titre,texte,url,lien)=>'<a class="mp-camp" href="'+url+'" target="_blank" rel="noopener">'+
-      '<img src="img/'+img+'" alt=""><div><span class="mp-sur">'+quand+'</span><b>'+titre+'</b><p>'+texte+'</p><em>'+lien+' →</em></div></a>';
-    const p=periodesEntre(new Date(), d).filter(x=>x.m>=debutTerminale)[0];
+    const camp=(img,quand,titre,texte,url,lien)=>'<a class="cr-camp" href="'+url+'" target="_blank" rel="noopener">'+
+      '<img src="img/'+img+'" alt=""><div><span class="cr-camp-q">'+quand+'</span><b>'+titre+'</b><p>'+texte+'</p><em>'+lien+' →</em></div></a>';
+    const poser=(idx,html)=>{ const t=territoireDe(SEANCES[Math.min(SEANCES.length-1, Math.max(0, idx))]); if(!t) return; const k=T.indexOf(t); (camps[k]=camps[k]||[]).push(html); };
+    periodesEntre(new Date(), d).filter(p=>p.m>=debutTerminale).forEach(p=>{
+      const dj=Math.max(0, Math.round((p.m-new Date())/864e5));
+      poser(faites+dj, camp(imgCamp('camp-stage','stage-vacances.png'), p.emo+' '+p.quand+' · '+dans(dj), p.stage||'Stage Medeos',
+        (p.pitch? '<b>'+p.pitch+'</b> ' : '')+'Douze jours guidés, un tuteur qui répond, le programme repris là où tu en es. Inclus dans l\'année complète, ou seul.',
+        'https://www.medeos-sante.fr/packs/stages-vacances#stages', 'Les stages des vacances'));
+    });
     const pr=prerentreeDe(d.getFullYear());
-    if(p){ const dj=Math.max(0, Math.round((p.m-new Date())/864e5));
-      x += camp(imgCamp('camp-stage','stage-vacances.png'), p.emo+' '+p.quand+' · '+dans(dj), p.stage||'Stage Medeos',
-        (p.pitch? '<b>'+p.pitch+'</b> ' : '')+'Douze jours guidés pendant ces vacances, avec un tuteur qui répond : le programme repris là où tu en es. Inclus dans l\'année complète, ou seul.',
-        'https://www.medeos-sante.fr/packs/stages-vacances#stages', 'Les stages des vacances'); }
-    else if(pr.m>new Date()){ const dj=Math.max(0, Math.round((pr.m-new Date())/864e5));
-      x += camp('stage-medipro.png', '☀️ '+pr.quand+' · '+dans(dj), 'Stage de pré-rentrée',
+    if(pr.m>new Date()){
+      const dj=Math.max(0, Math.round((pr.m-new Date())/864e5));
+      poser(faites+dj, camp('stage-medipro.png', '☀️ '+pr.quand+' · '+dans(dj), 'Stage de pré-rentrée',
         'La dernière ligne droite : les bases académiques et la méthode, un tuteur qui répond, et un suivi jusqu\'au concours. Inclus dans l\'année complète, ou seul.',
-        'https://www.medeos-sante.fr/packs/medi-pro', 'Le stage de pré-rentrée'); }
+        'https://www.medeos-sante.fr/packs/medi-pro', 'Le stage de pré-rentrée'));
+    }
   }
 
-  /* ── sous la brume : les mondes suivants, sans un mot ── */
-  if(suivants.length){
-    x += '<div class="brume"><div class="brume-t">Les mondes suivants se dévoilent quand tu termines celui-ci.</div><div class="brume-grid">'+
-      suivants.slice(0,9).map(m=>'<span class="brume-m" style="'+(m.img?'background-image:url(\''+m.img+'\')':'background:linear-gradient(135deg,'+m.teinte+',#1A1530)')+'">'+(m.img?'':'<i>'+m.em+'</i>')+'<em>🔒</em></span>').join('')+
-      '</div>'+(suivants.length>9?'<div class="brume-plus">… et '+(suivants.length-9)+' autres, plus loin.</div>':'')+'</div>';
-  } else {
-    x += dit('Le dernier monde. Après lui, la carte entière est à toi.','axo-guide-bravo');
+  const imgDe = nom => (typeof VIGNETTES!=='undefined' && VIGNETTES[nom]) ? 'img/parcours/territoires/'+VIGNETTES[nom] : null;
+  let x = '<div class="cr">';
+
+  /* ── LE SOMMET : ta rentrée, avec tout ce bagage ── */
+  { const mondesFaits = mondesVisibles.length, themFaits = kRentree+1;
+    const fichesBagage = T.slice(0, kRentree+1).reduce((n,t)=>n+t.fiches.length,0);
+    const imgR = imgDe('rentree');
+    x += '<div class="cr-sommet" id="cr-sommet">'+
+      '<div class="cr-socle grand">'+(imgR?'<img src="'+imgR+'" alt="">':'<span class="cr-em">🎓</span>')+'</div>'+
+      '<div class="cr-nom">Ta rentrée en première année de santé</div>'+
+      '<div class="cr-band"><span>'+(d? '📅 1<sup>er</sup> septembre '+d.getFullYear()+' · dans '+j+' jours' : 'Dis-moi ta date de rentrée')+'</span></div>'+
+      '<div><button class="se-alt cr-chg" onclick="S.profil.rentreeDite=false;saveS();renderCarte()">'+(d?'changer la date':'la dire')+'</button></div>'+
+      '<div class="cr-bagage"><span>Avec tout ce bagage</span>'+
+        '<div><b>'+mondesFaits+'</b><em>monde'+(mondesFaits>1?'s':'')+'</em></div>'+
+        '<div><b>'+themFaits+'</b><em>thématique'+(themFaits>1?'s':'')+'</em></div>'+
+        '<div><b>'+fichesBagage+'</b><em>fiches vues</em></div></div>'+
+      (auDela? '<div class="cr-audela">À deux fiches par jour, la route s\'arrête ici. Plus vite, et '+auDela+' monde'+(auDela>1?'s':'')+' t\'attend'+(auDela>1?'ent':'')+' encore au-delà.</div>' : '')+
+      '</div>';
   }
 
-  x += '<div class="rt-sans">Les mondes se terminent <b>sans les stages</b> : le Parcours te donne deux fiches par jour tout du long, et les Salles gardent tout ce que tu as lu. '+
-    'Les stages sont là pour ceux qui veulent aller plus vite pendant les vacances — pas pour débloquer la suite.</div>';
-  x += '<button class="se-alt" style="margin-top:10px" onclick="voirStages()">Voir ce que contiennent les stages</button>';
+  /* ── LA ROUTE, du haut vers le bas : dernier monde visible → monde 1 ── */
+  for(let k=mondesVisibles.length-1; k>=0; k--){
+    const m=M[k], e=etatMonde(m), ici=(k===iMc), passe=(k<iMc);
+    const img=m.img;
+    const debutM = cumDe(m.terr[0]) - m.terr[0].fiches.length;
+
+    /* les dalles de ce monde, de la dernière thématique à la première */
+    for(let i=m.terr.length-1; i>=0; i--){
+      const t=m.terr[i]; if(!visible(t)) continue;
+      const et=etatTerritoire(t), p=progTerritoire(t), ki=T.indexOf(t);
+      (camps[ki]||[]).forEach(h=>{ x+='<div class="cr-row"><span class="cr-rail"></span>'+h+'</div>'; });
+      const gauche = i%2===0;
+      const carte = '<span class="cr-card '+et.etat+'" style="--c:'+COUL_MAT[t.mat]+'"><img src="img/icones/'+EMB_MAT[t.mat]+'.png" alt="">'+(et.etat==='conquis'?'<i>✓</i>':'')+'</span>';
+      const deco = (i===m.terr.length-1) ? '<span class="cr-deco coffre" title="Fin du monde : 1 gel de série">🧊</span>'
+                 : (i%2===1 ? '<span class="cr-deco">🏛️</span>' : '<span class="cr-deco vide"></span>');
+      x += '<div class="cr-row'+(et.etat==='conquis'?' fait':(t===tCur)?' encours':et.etat==='encours'?' entame':'')+'">'+
+        '<span class="cr-rail"><b>'+cumDe(t)+'</b></span>'+
+        '<div class="cr-slab" style="--c:'+m.teinte+'">'+
+          (gauche ? carte+'<span class="cr-path"></span>'+deco : deco+'<span class="cr-path"></span>'+carte)+
+          '<div class="cr-slab-t"><span>'+t.mat+' · '+t.fiches.length+' fiches</span><b>'+t.nom+'</b>'+
+          (et.etat==='encours'?'<i><u style="width:'+p.pct+'%;background:'+COUL_MAT[t.mat]+'"></u></i>':'')+'</div>'+
+        '</div></div>';
+    }
+
+    /* le diorama du monde, à l'entrée de sa route */
+    const chips = recompensesMonde(m).map(r=>'<span class="cr-chip'+(e.etat==='fini'?' ok':e.etat==='verrouille'?' lock':'')+'"><i>'+r.em+'</i><b>'+r.nom+'</b><em>'+r.sous+'</em></span>').join('');
+    x += '<div class="cr-monde '+e.etat+(ici?' ici':'')+'" id="monde-'+m.num+'">'+
+      '<span class="cr-rail"><b>'+debutM+'</b></span>'+
+      '<div class="cr-socle" style="--c:'+m.teinte+'">'+(img?'<img src="'+img+'" alt="" loading="lazy">':'<span class="cr-em">'+m.em+'</span>')+
+        (e.etat==='fini'?'<i class="cr-badge ok">✓</i>':e.etat==='verrouille'?'<i class="cr-badge lock">🔒</i>':'<i class="cr-badge ici">Tu es ici</i>')+'</div>'+
+      '<div class="cr-nom">'+m.nom+'</div>'+
+      '<div class="cr-band"><span>👑 Monde '+m.num+'</span><span>📄 '+debutM+' fiches</span></div>'+
+      (ici ? '<div class="cr-prog"><i style="width:'+Math.round(100*e.faits/Math.max(1,e.tot))+'%"></i></div><div class="cr-prog-t">'+e.faits+' thématique'+(e.faits>1?'s':'')+' sur '+e.tot+' terminée'+(e.faits>1?'s':'')+'</div>' : '')+
+      '<div class="cr-deb">'+(e.etat==='fini'?'Débloqué :':'Débloque :')+'</div><div class="cr-chips">'+chips+'</div>'+
+      '</div>';
+  }
+
+  /* ── LE PIED ── */
+  x += '<div class="cr-depart"><span class="cr-rail"><b>0</b></span><div>🚩 <b>Ta route commence ici</b><span>Deux fiches par jour. Chaque dalle est une thématique, chaque socle un monde.</span></div></div>';
+  x += '</div>';
+
+  x += '<div class="rt-sans cr-sans">Les mondes se terminent <b>sans les stages</b> : le Parcours te donne deux fiches par jour tout du long. Les stages sont là pour ceux qui veulent aller plus vite pendant les vacances — pas pour débloquer la suite.</div>';
   b.innerHTML = x;
+
+  /* on arrive sur SON monde, la route au-dessus de la tête */
+  const el=document.getElementById('monde-'+mc.num);
+  if(el) requestAnimationFrame(()=>{ try{ const r=el.getBoundingClientRect(); window.scrollTo({top: Math.max(0, window.scrollY + r.top - window.innerHeight*0.30), behavior:'auto'}); }catch(e){} });
 }
 
 function ouvrirCarte(){ renderCarte(); go('carte'); }
@@ -9273,7 +9440,9 @@ function seanceFin(){
     /* un MONDE terminé : l'étape la plus rare et la plus grosse, elle se fête en grand */
     if(ch && !s.rev && typeof mondes==='function'){
       const fini=mondes().find(m=>m.terr.some(t=>t.nom===ch) && etatMonde(m).etat==='fini');
-      if(fini) bilan+='<div class="fin-monde"><span>'+fini.em+'</span><b>Monde terminé : '+fini.nom+'</b><em>Ses '+fini.terr.length+' thématiques sont derrière toi. Le monde suivant s\'ouvre.</em></div>'; } }
+      if(fini){ const neuf=(typeof crediterMonde==='function')? crediterMonde(fini) : false;
+        bilan+='<div class="fin-monde"><span>'+fini.em+'</span><b>Monde terminé : '+fini.nom+'</b><em>Ses '+fini.terr.length+' thématiques sont derrière toi. Le monde suivant s\'ouvre.</em>'+
+          (neuf?'<span class="fin-monde-r">🧊 +1 gel de série · 🖼️ la carte du monde rejoint ta collection</span>':'')+'</div>'; } } }
   s.fiches.forEach(sl=>{
     const o=(S.oublis||{})[sl]||{};
     bilan+='<div class="fin-fiche"><b>📄 '+(TITRES_FICHES[sl]||sl)+'</b>'+

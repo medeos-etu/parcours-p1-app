@@ -89,50 +89,61 @@ texte ou un personnage, redemande « sans texte, sans personnage ».
 
 ---
 
-# Les illustrations des MONDES (prioritaires)
+# Les DIORAMAS des mondes (prioritaires) — le style « route des trophées »
 
-Le Parcours est découpé en **22 mondes** qu'on traverse l'un après l'autre, comme les arènes
-d'un jeu : on les voit tous, empilés, ceux qu'on a passés en or, celui où l'on est ouvert,
-ceux qui restent verrouillés. Chaque monde a sa grande tuile : c'est l'image la plus vue de
-l'app. Sans elle, une teinte et un emoji tiennent la place.
+Le parcours des mondes est une route qui monte, comme l'écran des arènes de Clash Royale.
+Chaque monde y apparaît en **diorama** : une petite maquette 3D isométrique posée sur un
+socle sombre. C'est l'image la plus vue de l'app. Sans elle, une teinte et un emoji tiennent
+la place.
 
-**Nom de fichier :** `monde-01.png` … `monde-22.png`. **Format paysage 3:2** (la tuile fait
-toute la largeur, 118 px de haut : garde le sujet au centre, le nom s'écrit en bas à gauche
-par-dessus un voile sombre — laisse le bas de l'image calme).
+**Ce qu'il faut demander à ChatGPT, mot pour mot, pour CHAQUE diorama :**
 
-**Style, à coller en tête de chaque demande :**
+> Diorama miniature en 3D isométrique, style jeu mobile premium (rendu type Clash Royale :
+> formes rondes, couleurs saturées mais douces, matières lisses, lumière chaude venant du
+> haut à gauche, petites ombres portées nettes). La scène tient sur une **dalle carrée aux
+> coins arrondis** vue de trois quarts, avec une épaisseur visible. **Fond entièrement
+> transparent** (PNG), aucun décor autour de la dalle, aucun texte, aucun personnage,
+> aucun chiffre. Palette Medeos en accent : violet #6B46C1, or #FCD34D, terracotta #E29C5C,
+> crème #FAF6F0. Format carré 1024 × 1024, la dalle centrée et occupant 80 % de l'image.
 
-> Illustration aquarelle douce et lumineuse, univers Medeos : collines crème (#FAF6F0),
-> ombres chaudes diluées (#E29C5C), touches d'or (#FCD34D), violet profond (#4C2A85) en
-> accent. UNE scène isolée au centre, vue en légère plongée, style « petit royaume de jeu
-> vidéo », propre, sans texte, sans personnage, sans chiffre, sans cadre. Format paysage 3:2,
-> bas de l'image dégagé.
+Puis la scène, une ligne par monde. **Nom de fichier exact** : `monde-01.png` … `monde-22.png`.
+Vérifie que le PNG est bien transparent (damier visible dans l'aperçu) : sans ça, un carré
+blanc apparaîtra sur le socle sombre.
 
-| Fichier | Monde | La scène |
+| Fichier | Monde | La scène sur la dalle |
 |---|---|---|
-| `monde-01.png` | Les Premiers Repères | Une boussole monumentale posée sur une plaine crème, quatre sentiers qui en partent vers les quatre horizons. |
-| `monde-02.png` | Les Briques du Vivant | Un mur en construction fait de briques translucides dorées, quelques-unes encore en lévitation. |
-| `monde-03.png` | La Colonne Vertébrale | Une tour élancée faite de vertèbres empilées, terracotta et blanc, légèrement courbe. |
-| `monde-04.png` | La Cité Cellulaire | Un village miniature sous un dôme vert translucide : des maisons de formes toutes différentes. |
-| `monde-05.png` | Le Nuage d'Électrons | Un observatoire miel dont le toit est un nuage de points dorés flous, trois anneaux autour. |
-| `monde-06.png` | Les Acides et les Bases | Deux bassins reliés, l'un clair l'autre profond, un pont de pierre au milieu, une grande bibliothèque à casiers en fond. |
-| `monde-07.png` | Le Cycle de la Vie | Une horloge de jardin circulaire, verte et or, au centre d'un rond-point de sentiers. |
-| `monde-08.png` | La Transmission | Deux tours reliées par une double hélice dorée qui se dédouble en montant. |
-| `monde-09.png` | Le Cœur | Un cœur monumental terracotta au centre d'un jardin, deux ruisseaux qui en partent et y reviennent. |
-| `monde-10.png` | Les Grands Flux | Un réseau de canaux et d'aqueducs qui rayonnent depuis une fontaine centrale, écluses dorées. |
-| `monde-11.png` | Le Souffle | Un arbre-pavillon qui se ramifie comme des bronches, feuillage crème, ondes dorées gravées au sol. |
-| `monde-12.png` | Le Feu Intérieur | Une forge chaleureuse avec une cheminée dorée, un long canal de pierre claire qui serpente devant. |
-| `monde-13.png` | Les Filtres | Deux fontaines en forme de haricot reliées à un bassin central, une balance de pierre en arrière-plan. |
-| `monde-14.png` | La Charpente | Une forteresse aux murs alvéolés comme de l'os spongieux, arches de cartilage translucide. |
-| `monde-15.png` | La Forge | Un atelier de pierre où l'on forge un os long doré, une piste de course circulaire à côté. |
-| `monde-16.png` | Le Mouvement | Un pont suspendu par des câbles-fibres tendus, en pleine traction, au-dessus d'un ravin. |
-| `monde-17.png` | Le Réseau Nerveux | Un arbre aux branches très ramifiées, petites lumières dorées aux extrémités, sentiers lumineux. |
+| `monde-01.png` | Les Premiers Repères | Une rose des vents dorée gravée dans la dalle, un petit portique en bois à chaque point cardinal, une lanterne. |
+| `monde-02.png` | Les Briques du Vivant | Un chantier : un mur de briques translucides dorées à moitié monté, une brouette, quelques briques qui flottent. |
+| `monde-03.png` | La Colonne Vertébrale | Une tour de vertèbres empilées, ivoire et terracotta, un petit escalier en spirale autour. |
+| `monde-04.png` | La Cité Cellulaire | Un village miniature sous un dôme de verre vert : quatre maisons de formes différentes, une place au centre. |
+| `monde-05.png` | Le Nuage d'Électrons | Un observatoire miel dont le toit est un nuage de billes dorées, trois anneaux qui tournent autour. |
+| `monde-06.png` | Les Acides et les Bases | Deux bassins, l'un rose l'autre bleu, un petit pont de pierre entre les deux, une balance dorée. |
+| `monde-07.png` | Le Cycle de la Vie | Une horloge de jardin circulaire au sol, verte et or, quatre petits jalons aux quarts. |
+| `monde-08.png` | La Transmission | Deux tours jumelles reliées par une double hélice dorée qui se dédouble en montant. |
+| `monde-09.png` | Le Cœur | Un cœur monumental terracotta au centre, deux canaux qui en partent et y reviennent, une roue à aubes. |
+| `monde-10.png` | Les Grands Flux | Un réseau d'aqueducs et d'écluses miniatures rayonnant depuis une fontaine centrale. |
+| `monde-11.png` | Le Souffle | Un arbre-pavillon crème qui se ramifie comme des bronches, une petite éolienne, des ondes gravées au sol. |
+| `monde-12.png` | Le Feu Intérieur | Une forge chaleureuse avec cheminée dorée fumante, un long canal de pierre claire qui serpente devant. |
+| `monde-13.png` | Les Filtres | Deux fontaines en forme de haricot reliées à un bassin central, un moulin à eau. |
+| `monde-14.png` | La Charpente | Une forteresse aux murs alvéolés comme l'os spongieux, arches de cartilage translucide. |
+| `monde-15.png` | La Forge | Un atelier de pierre avec une enclume dorée, un os long en train d'être forgé, une piste circulaire à côté. |
+| `monde-16.png` | Le Mouvement | Un pont suspendu par des câbles tendus comme des fibres, au-dessus d'un petit ravin. |
+| `monde-17.png` | Le Réseau Nerveux | Un arbre aux branches très ramifiées, petites lumières dorées aux extrémités, sentiers lumineux au sol. |
 | `monde-18.png` | Le Cerveau | Un observatoire au dôme plissé comme un cortex, lumière chaude à l'intérieur, carrefour de sentiers. |
-| `monde-19.png` | La Vision | Un phare dont la lentille est un œil, iris terracotta, reflet doré sur la plaine. |
-| `monde-20.png` | L'Ouïe | Une coquille en spirale sculptée en pierre crème, une distillerie miel à côté. |
-| `monde-21.png` | La Thyroïde | Une colonne courte coiffée d'un papillon de pierre terracotta, deux tours de laboratoire derrière. |
-| `monde-22.png` | Le Vivant en Molécules | Un jardin de molécules géantes : hélices, anneaux hexagonaux, chaînes ramifiées, au sommet d'une colline. |
+| `monde-19.png` | La Vision | Un phare dont la lentille est un œil, iris terracotta, faisceau doré. |
+| `monde-20.png` | L'Ouïe | Une coquille en spirale sculptée en pierre crème, une petite cloche suspendue. |
+| `monde-21.png` | La Thyroïde | Une colonne courte coiffée d'un papillon de pierre terracotta, deux tourelles de laboratoire. |
+| `monde-22.png` | Le Vivant en Molécules | Un jardin de molécules géantes : hélices, anneaux hexagonaux, chaînes ramifiées, au sommet d'une butte. |
 
-**Deux images de plus, utiles :**
-- `camp-stage.png` — un campement de tentes crème et or au bord du chemin, un feu doux, petit drapeau violet #6B46C1. Format carré. (Remplace l'image sombre actuelle des stages.)
-- `parcours-des-mondes.png` — **LA plus importante** : c'est l'illustration de la carte « Le parcours des mondes » sur l'accueil, vue à chaque ouverture de l'app. Bannière **horizontale 3:1** (par ex. 1536 × 512). Une route dorée qui serpente et monte à travers des collines crème, cinq ou six petits royaumes posés comme des îles le long de la route, chacun avec son monument, le premier au premier plan net et lumineux, les derniers avalés par une brume crème vers le haut à droite. Lumière du matin. **Le bas de l'image doit rester calme et clair** : le titre s'écrit en bas à gauche par-dessus. Sans texte, sans personnage.
+**Trois dioramas de plus, même consigne :**
+- `rentree.png` — **le sommet de la route** : un grand amphithéâtre de faculté de médecine en diorama, portes ouvertes, lumière dorée qui en sort, un drapeau. C'est la plus importante après le monde 1.
+- `camp-stage.png` — un campement : deux tentes crème et or, un feu de camp, un petit drapeau violet, une lanterne. (Il apparaît sur la route aux dates des stages.)
+- `parcours-des-mondes.png` — la seule image **non transparente**, bannière **3:1** (1536 × 512) pour la carte d'accès sur l'accueil : une route dorée qui monte à travers des collines crème, cinq petits royaumes le long de la route, le premier net au premier plan, les derniers dans une brume crème en haut à droite. **Bas de l'image calme** : un titre s'y écrit.
+
+**Ordre de génération conseillé** : `monde-01`, `rentree`, `parcours-des-mondes`, `camp-stage`, puis `monde-02` à `monde-04`. Neuf élèves sur dix ne verront jamais au-delà du monde 4 les premières semaines.
+
+Une fois déposées ici :
+```
+cd img/parcours/territoires && sips -Z 720 monde-*.png rentree.png camp-stage.png
+node ../../../outils/implante-parcours.js
+```
