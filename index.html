@@ -7695,13 +7695,9 @@ function renderSeance(){
     ? '<img class="se-illu" src="img/parcours/'+s.img+'" onerror="this.remove();" alt="">'
     : axo;
   const alt='<button class="se-alt" onclick="openPioche()">Réviser autre chose : fiches, métiers, QCM</button>';
-  /* la journée est faite mais le point de départ n'a jamais été fait : on ne laisse
-     JAMAIS l'élève sur un « reviens demain » sans lui montrer l'autre porte. */
-  const offreDeb=()=> (seanceJourFaite() && !profilComplet())
-    ? '<button class="se-btn2" onclick="go(\'sim1\')">🎁 Ouvrir '+(()=>{const s=seanceCourante();
-        return s? (s.fiches.length>1? 'mes '+s.fiches.length+' fiches suivantes':'ma fiche suivante') : 'la suite';})()+' maintenant'+
-      '<small>2 minutes de questions sur ton profil et ta fac — pas besoin d\'attendre demain.</small></button>'
-    : '';
+  /* UNE SÉANCE PAR JOUR, POINT. L'ancienne porte « ouvrir la suite maintenant contre deux
+     minutes de questions » brouillait la règle dès le premier jour : retirée (Lucas, 04/09). */
+  const offreDeb=()=> '';
   if(S.sr && !SR){
     const s = S.sr.rev || SEANCES.find(x=>x.id===S.sr.sid);
     if(s){
@@ -7781,7 +7777,7 @@ function renderSeance(){
   }
   /* C — séance faite. DEUX CHEMINS, jamais un mur : s'entraîner sur ce qu'on vient
      de voir, ou remplir son point de départ et ouvrir la suite tout de suite. */
-  const peutDebloquer = !profilComplet();
+  const peutDebloquer = false;   /* plus de déblocage anticipé : la règle reste lisible */
   const derniere = seancesFaites().slice(-1)[0] || null;
   const suite = seanceCourante();
   /* LE BOUT DU FIL. Deux situations très différentes, qu'on ne confond plus :
@@ -7829,14 +7825,12 @@ function renderSeance(){
       heroMail();
     return;
   }
-  b.innerHTML=dit(peutDebloquer? 'Séance bouclée. À toi de choisir la suite.' : 'Séance bouclée. Bien joué.','axo-encourage')+
+  b.innerHTML=dit('Séance bouclée. Bien joué.','axo-encourage')+
     '<div class="se-sur">Séance faite ✓</div>'+
     '<div class="se-titre">Tu as travaillé aujourd\'hui.</div>'+
     '<div class="se-ligne">'+nF(derniere)+', travaillée'+(derniere&&derniere.fiches.length>1?'s':'')+' à fond. '+
-      (peutDebloquer? 'Tu peux les tester maintenant, ou ouvrir tout de suite '+(suite&&suite.fiches.length>1?'les '+suite.fiches.length+' suivantes':'la suivante')+'.'
-                    : '<b>Reviens demain matin : '+nF(suite)+' '+(suite&&suite.fiches.length>1?'seront prêtes':'sera prête')+'.</b> En attendant, l\'Arène est à toi.')+'</div>'+
+      '<b>Reviens demain matin : '+nF(suite)+' '+(suite&&suite.fiches.length>1?'seront prêtes':'sera prête')+'.</b> En attendant, l\'Arène est à toi.</div>'+
     '<button class="gbtn" onclick="allerSalles()">M\'entraîner sur mes fiches du jour</button>'+
-    (peutDebloquer? '<p class="se-ou">— OU —</p>'+offreDeb() : '')+
     (seancesFaites().length?'<button class="se-alt" onclick="renderChemin();go(\'chemin\')">Revoir mes séances passées</button>':'')+
     heroMail()+axo;
 }
