@@ -115,14 +115,30 @@ Des vues **du dessus, légèrement en plongée**, d'une dalle rectangulaire aux 
 
 **La livraison, à la toute fin — dans cet ordre de préférence :**
 
-**1. Sur GitHub, directement dans l'application** (si tu as accès à GitHub dans ton navigateur) :
+**1. Directement dans le dossier de l'application, sur ce Mac** (si tu as accès au système de fichiers) :
+- Dossier de destination, chemin exact : `/Users/lucascrepin/dev/parcours-p1-app/img/parcours/territoires/`
+- Dépose-y les 43 PNG avec leurs noms exacts, **à côté** des fichiers `CONSIGNES-IMAGES.md` et `PROMPT-CHATGPT.md` déjà présents. Pas de sous-dossier, pas d'autre nom.
+- Puis exécute, dans un terminal, ces commandes dans cet ordre (elles allègent les images, les branchent dans l'application et la mettent en ligne) :
+```
+cd /Users/lucascrepin/dev/parcours-p1-app/img/parcours/territoires
+sips -Z 800 monde-*.png rentree.png camp-stage.png socle.png
+sips -Z 256 recompense-*.png coffre*.png marqueur-ici.png
+cd /Users/lucascrepin/dev/parcours-p1-app
+node outils/implante-parcours.js
+node outils/verifie-app.js
+vercel deploy --prod --yes
+```
+- Si `node outils/verifie-app.js` affiche autre chose que `erreurs : 0`, ne déploie pas : dis-le-moi avec la sortie.
+- Ne modifie aucun autre fichier du dossier `parcours-p1-app` que ces images.
+
+**2. Sinon, sur GitHub** (si tu as accès à GitHub dans ton navigateur mais pas au Mac) :
 - Dépôt : `https://github.com/medeos-etu/parcours-p1-app`, branche `main`.
 - Dossier de destination : `img/parcours/territoires/` — dépose les PNG **dans ce dossier, à côté des fichiers `CONSIGNES-IMAGES.md` et `PROMPT-CHATGPT.md`**, sans créer de sous-dossier.
 - Passe par « Add file → Upload files » sur la page du dossier, dépose les 43 PNG, et valide en **un seul commit** intitulé exactement : `Images du parcours des mondes (43 dioramas et décors)`.
 - Ne touche à aucun autre fichier du dépôt.
 
-**2. Sinon, un ZIP** : un fichier **`parcours-des-mondes-images.zip`** contenant les 43 PNG **à la racine** (pas de sous-dossier), avec un `manifeste.txt` (une ligne par fichier : dimensions réelles, « transparent : oui/non », « OK » ou la raison de l'échec), et son lien de téléchargement dans ta réponse.
+**3. Sinon, un ZIP** : un fichier **`parcours-des-mondes-images.zip`** contenant les 43 PNG **à la racine** (pas de sous-dossier), avec un `manifeste.txt` (une ligne par fichier : dimensions réelles, « transparent : oui/non », « OK » ou la raison de l'échec), et son lien de téléchargement dans ta réponse.
 
-**Dans les deux cas, ta réponse finale donne** : la liste des fichiers réussis, la liste des fichiers manqués s'il y en a, et le lien (commit GitHub ou ZIP).
+**Dans tous les cas, ta réponse finale donne** : la liste des fichiers réussis, la liste des fichiers manqués s'il y en a, et ce que tu as fait pour la livraison (fichiers déposés et déploiement lancé, commit GitHub, ou lien du ZIP).
 
 Commence maintenant par `monde-01.png`, et ne t'arrête qu'à la livraison.
