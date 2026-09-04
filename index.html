@@ -3443,6 +3443,7 @@ function go(id){
       else kT='biblio';
     } else if(id==='home' && accOk()) kT='home';
     else if(id==='arene' && accOk()) kT='arene';
+    else if(id==='social' && accOk()) kT='social';
     if(kT && !tutoFait(kT)) setTimeout(()=>{ const sc=document.getElementById(id); if(sc&&sc.classList.contains('on')) startTuto(kT); },450);
   }
 }
@@ -6410,7 +6411,7 @@ const TUTOS={
     {img:'axo-guide-pointe-bas', t:"Deux fiches par jour, dix minutes. C'est tout ce qu'on te demande. <b>La régularité fait le travail</b>, pas les grosses journées."},
     {img:'axo-guide-bienvenue', t:"Et ici, c'est la <b>Bibliothèque</b> : fiches, panoramas et métiers de la santé — tout est en accès libre."},
     {sel:'#rescards-free', img:'axo-guide-carte', t:"Chaque carte s'ouvre librement. Lis, referme, reviens — rien n'est chronométré, rien n'est noté."},
-    {sel:'#mainnav', img:'axo-guide-pointe-bas', t:"En bas, les trois mondes : la <b>Bibliothèque</b>, ton <b>Parcours</b> de révision et l'<b>Arène</b>."},
+    {sel:'#mainnav', img:'axo-guide-pointe-bas', t:"En bas, les quatre mondes : la <b>Bibliothèque</b>, ton <b>Parcours</b> de révision, l'<b>Arène</b> — et le <b>Social</b>, pour tes amis."},
     {img:'axo-guide-bravo', t:"Le Parcours et l'Arène s'ouvrent avec un compte gratuit — ta progression y est gardée pour de bon.",
      btn:"Découvrir le Parcours →", act:function(){ go('home'); }, skip:"Explorer la Bibliothèque d'abord"}
   ],
@@ -6427,6 +6428,12 @@ const TUTOS={
     {sel:'#vue-salles', img:'axo-guide-carte', t:"<b>Les Salles</b> : une par matière. Tu t'y entraînes sur les fiches que tu viens de travailler, <b>sans rien risquer</b> — ni chrono, ni trophée."},
     {sel:'#ms-amphi', img:'mascotte-arene-prete-au-combat', t:"<b>Le Grand Amphi</b>, c'est l'inverse : toutes les matières mélangées, du vrai jeu. Chaque case juste vaut <b>+2 🏆</b>, chaque erreur <b>−2</b>."},
     {img:'axo-guide-bravo', t:"L'Amphi s'ouvre après <b>4 jours de Parcours</b> — le temps de te constituer un bagage. D'ici là, les Salles sont à toi.", btn:"J'ai compris"}
+  ],
+  /* LE SOCIAL : ta carte, tes amis — trois étapes, la première fois qu'on y entre avec un compte */
+  social:[
+    {sel:'.so-carte.moi', img:'axo-guide-bienvenue', t:"Ici, c'est <b>ta carte</b> : ta photo, ta bannière, tes trophées, ton monde, ta série. C'est ce que tes amis voient de toi."},
+    {sel:'.so-add', img:'axo-guide-pointe-haut', t:"Pour ajouter un ami, il te faut <b>son identifiant</b> — celui qu'il a choisi en créant son compte. Tu l'écris ici, tu ajoutes."},
+    {img:'axo-guide-bravo', t:"Vous verrez chacun la carte de l'autre : <b>trophées, monde, série</b>. De quoi se tirer vers le haut, ensemble.", btn:"C'est parti !"}
   ],
   /* LA CARTE. Elle se construit au démarrage, parce qu'elle parle de la rentrée de CET élève :
      la date, le nombre de jours, son monde, le stage le plus proche. On finit tout en haut,
