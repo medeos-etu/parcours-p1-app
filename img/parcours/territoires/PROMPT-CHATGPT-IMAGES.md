@@ -1,6 +1,6 @@
-# PROMPT MAÎTRE — les 31 images du parcours Medeos · à coller dans ChatGPT en mode Agent
+# PROMPT MAÎTRE — les 26 images du parcours Medeos · à coller dans ChatGPT en mode Agent
 
-> Ce fichier remplace `PROMPT-CHATGPT-2.md` et `PROMPT-CHATGPT-3-PROFILS-BANNIERES.md`. Il contient **tout** : la mascotte de référence, les insignes des étudiants Medeos, les récompenses des 22 mondes, et les cinq stages. Chaque image a son prompt complet, prêt à l'emploi.
+> Ce fichier remplace `PROMPT-CHATGPT-2.md` et `PROMPT-CHATGPT-3-PROFILS-BANNIERES.md`. Il contient la mascotte de référence, les insignes des étudiants Medeos et les récompenses des 22 mondes. Les cinq stages ont leur propre fichier, `PROMPT-CHATGPT-STAGES.md`. Chaque image a son prompt complet, prêt à l'emploi.
 
 Tu as déjà produit les 43 dioramas et décors du « parcours des mondes » de l'application **Medeos**. Ils sont en place et le rendu est exactement celui attendu. **Reprends très exactement la même direction artistique.**
 
@@ -10,7 +10,7 @@ Tu travailles en mode Agent, de façon autonome : tu génères une image à la f
 
 ## 0. Le dossier de livraison — à vérifier AVANT de générer quoi que ce soit
 
-Les 31 images vont dans **un seul dossier, déjà existant, sur le Mac de Lucas** :
+Les 26 images vont dans **un seul dossier, déjà existant, sur le Mac de Lucas** :
 
 ```
 /Users/lucascrepin/dev/parcours-p1-app/img/parcours/territoires/
@@ -30,11 +30,11 @@ find /Users/lucascrepin -type d -name territoires -path "*parcours-p1-app*" 2>/d
 ```
 Le bon chemin se termine par `parcours-p1-app/img/parcours/territoires`. Utilise celui-là.
 
-**Étape 3 — si tu n'as pas accès au disque du Mac** (la recherche ne rend rien, ou tu travailles dans un espace isolé) : ne bloque pas. Crée un dossier `medeos-images-parcours` là où tu peux écrire, mets-y les 31 fichiers avec leurs noms exacts, et **dis-le clairement à la fin** en donnant son emplacement (ou fournis une archive `.zip` à télécharger). Lucas les déposera lui-même.
+**Étape 3 — si tu n'as pas accès au disque du Mac** (la recherche ne rend rien, ou tu travailles dans un espace isolé) : ne bloque pas. Crée un dossier `medeos-images-parcours` là où tu peux écrire, mets-y les 26 fichiers avec leurs noms exacts, et **dis-le clairement à la fin** en donnant son emplacement (ou fournis une archive `.zip` à télécharger). Lucas les déposera lui-même.
 
 **Règles du dossier :** aucun sous-dossier ; ne renomme, ne remplace et ne supprime aucun fichier existant ; un fichier par image, au format PNG, avec exactement le nom indiqué.
 
-**Les 31 noms attendus, pour cocher à la fin :**
+**Les 26 noms attendus, pour cocher à la fin :**
 ```
 axo-reference.png
 badge-etudiant.png  badge-certifie.png  ban-medeos.png  ban-certifie.png
@@ -42,7 +42,6 @@ av-monde-02.png  av-monde-04.png  av-monde-06.png  av-monde-08.png  av-monde-10.
 av-monde-14.png  av-monde-16.png  av-monde-18.png  av-monde-20.png  av-monde-22.png
 ban-monde-03.png  ban-monde-05.png  ban-monde-07.png  ban-monde-09.png  ban-monde-11.png
 ban-monde-13.png  ban-monde-15.png  ban-monde-17.png  ban-monde-19.png  ban-monde-21.png
-stage-toussaint.png  stage-noel.png  stage-fevrier.png  stage-paques.png  stage-prerentree.png
 ```
 
 ---
@@ -281,58 +280,22 @@ Sujet : une bannière large 3:1, paysage. Sur le tiers droit, un jardin en forme
 Image opaque, 1200×400.
 ```
 
-### D. Les cinq stages — un diorama par stage
+### D. Les cinq stages
 
-Aujourd'hui les cinq stages partagent la même image de campement (`camp-stage.png`). Il en faut un par stage, avec sa saison. Même format que les dioramas de mondes : regarde `camp-stage.png` et deux ou trois `monde-NN.png` avant de commencer, pour garder **la même dalle ronde, la même échelle et le même angle**. La mascotte n'y figure pas.
-
-**`stage-toussaint.png` — 1024×1024, transparent**
-```
-Style Atlas Medeos : rendu 3D isométrique de jeu mobile premium, formes rondes et pleines, matières mates, lumière chaude haut-gauche. Aucun texte.
-Sujet : un diorama posé sur une dalle ronde de pierre claire, comme camp-stage.png. Un campement d'automne : deux tentes crème et or sous un grand arbre aux feuilles rousses et dorées, des feuilles au sol, un feu de camp, une lanterne, un petit drapeau violet #6B46C1. Lumière chaude de fin d'après-midi.
-Fond parfaitement transparent, sujet centré, 1024×1024.
-```
-
-**`stage-noel.png` — 1024×1024, transparent**
-```
-Style Atlas Medeos : rendu 3D isométrique de jeu mobile premium, formes rondes et pleines, matières mates, lumière chaude haut-gauche. Aucun texte.
-Sujet : un diorama posé sur une dalle ronde de pierre claire, comme camp-stage.png. Un campement d'hiver : tentes crème saupoudrées de neige, un sapin décoré de petites lumières dorées, un feu de camp vif, une lanterne, un drapeau violet #6B46C1, sol enneigé.
-Fond parfaitement transparent, sujet centré, 1024×1024.
-```
-
-**`stage-fevrier.png` — 1024×1024, transparent**
-```
-Style Atlas Medeos : rendu 3D isométrique de jeu mobile premium, formes rondes et pleines, matières mates, lumière chaude haut-gauche. Aucun texte.
-Sujet : un diorama posé sur une dalle ronde de pierre claire, comme camp-stage.png. Un refuge de montagne : un chalet de bois miel #B8895A au toit enneigé, deux petits sapins, une luge appuyée contre le mur, un feu dehors, un drapeau violet #6B46C1.
-Fond parfaitement transparent, sujet centré, 1024×1024.
-```
-
-**`stage-paques.png` — 1024×1024, transparent**
-```
-Style Atlas Medeos : rendu 3D isométrique de jeu mobile premium, formes rondes et pleines, matières mates, lumière chaude haut-gauche. Aucun texte.
-Sujet : un diorama posé sur une dalle ronde de pierre claire, comme camp-stage.png. Un campement de printemps : tentes crème et or dans une prairie fleurie, un cerisier en fleurs roses, quelques fleurs dorées, un petit ruisseau, un drapeau violet #6B46C1.
-Fond parfaitement transparent, sujet centré, 1024×1024.
-```
-
-**`stage-prerentree.png` — 1024×1024, transparent**
-```
-Style Atlas Medeos : rendu 3D isométrique de jeu mobile premium, formes rondes et pleines, matières mates, lumière chaude haut-gauche. Aucun texte.
-Sujet : un diorama posé sur une dalle ronde de pierre claire, comme camp-stage.png, plus grand et plus solennel que les autres stages. Un camp d'été studieux : un pavillon-bibliothèque de pierre claire à colonnes, une longue table de travail dessous avec des livres empilés, deux lanternes, un drapeau violet #6B46C1, un olivier. C'est le dernier avant la rentrée : il doit paraître le plus abouti.
-Fond parfaitement transparent, sujet centré, 1024×1024.
-```
+Les cinq décors de stage (`stage-toussaint`, `stage-noel`, `stage-fevrier`, `stage-paques`, `stage-prerentree`) ont **leur propre fichier de consignes**, dans le même dossier : `PROMPT-CHATGPT-STAGES.md`. Ils ne font pas partie de cette commande-ci.
 
 ---
 
 ## 3. Comment travailler
 
-- Ordre : `axo-reference.png` → A (insignes) → B (photos) → C (bannières) → D (stages).
+- Ordre : `axo-reference.png` → A (insignes) → B (photos) → C (bannières).
 - Après chaque image, contrôle **par du code** : dimensions exactes ; pour les fichiers marqués « transparent », canal alpha présent avec au moins 25 % de pixels totalement transparents ; aucun texte visible ; nom exact.
 - **La mascotte reste identique** d'une image à l'autre : compare chaque nouvelle à `axo-reference.png`. Branchies violettes en trois panaches, visage, proportions. Si ça dérive, refais.
 - Les écussons (A et B) forment une famille : même diamètre, même épaisseur de bordure, même angle de lumière.
 - Les bannières (A et C) n'ont **aucun élément fort au centre-gauche**.
-- Les stages (D) forment une famille avec les `monde-NN.png` : même dalle, même échelle.
 - Si une génération échoue trois fois, passe à la suivante et signale-la à la fin.
 
-**Livraison** : les 31 fichiers dans le dossier de la section 0, avec leurs noms exacts. Termine en me donnant le chemin du dossier où tu as écrit, la liste des fichiers écrits avec leurs dimensions, et celle des manqués s'il y en a.
+**Livraison** : les 26 fichiers dans le dossier de la section 0, avec leurs noms exacts. Termine en me donnant le chemin du dossier où tu as écrit, la liste des fichiers écrits avec leurs dimensions, et celle des manqués s'il y en a.
 
 Commence par `axo-reference.png`.
 
