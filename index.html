@@ -2239,8 +2239,8 @@
 .cr-prog i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#FCD34D,#E29C5C)}
 .cr-prog-t{font-size:12px;color:rgba(250,246,240,.8);margin-top:6px;font-weight:700}
 .cr-deb{font-size:14px;font-weight:900;color:#8FE3D5;margin-top:18px;text-shadow:0 2px 0 rgba(0,0,0,.4)}
-.cr-chips{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}
-.cr-chip{display:flex;flex-direction:column;align-items:center;gap:4px;padding:10px 4px 9px;border-radius:12px;
+.cr-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:10px}
+.cr-chip{flex:0 1 140px;min-width:108px;display:flex;flex-direction:column;align-items:center;gap:4px;padding:10px 4px 9px;border-radius:12px;
   background:linear-gradient(180deg,#3D3760,#26223F);border:2px solid #5B4FA0;box-shadow:0 4px 0 #17142A}
 .cr-chip-i{width:34px;height:34px;object-fit:contain;filter:drop-shadow(0 4px 4px rgba(0,0,0,.35))}
 .cr-chip-i.em{font-style:normal;font-size:26px;line-height:34px}
@@ -2270,8 +2270,6 @@
 .cr-mprog{position:relative;height:12px;border-radius:99px;background:rgba(255,255,255,.12);margin:0 4px 22px;overflow:hidden}
 .cr-mprog i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#FCD34D,#E29C5C);min-width:6px}
 /* ce qu'on a gagné en arrivant : photo de profil, bannière, gel */
-.cr-chips.n2{grid-template-columns:repeat(2,1fr)}
-.cr-chips.n3{grid-template-columns:repeat(3,1fr)}
 .cr-chip-av{width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid #FCD34D;background:#2A2740;display:flex;align-items:center;justify-content:center}
 .cr-chip-av img{width:100%;height:100%;object-fit:cover}
 .cr-chip-av i{font-style:normal;font-size:22px}
@@ -6019,14 +6017,14 @@ function regleFlamme(){
   const n=S.streak||0, g=(S.gels||0), a14=(Math.max(S.streakMax||0,n)>=14), pose=(S.gelPose===_jourMoins(-1));
   return '<p class="fpt">Comment elle tient</p>'+
     '<div class="fpg"><span class="fpi">🔥</span><span class="fpx"><b>Chaque jour compte.</b> Un jour sans venir, et la série repart à 1. Ce que tu as appris, lui, ne bouge pas.</span></div>'+
-    '<div class="fpg'+(g>0||pose?' on':'')+'"><span class="fpi">🧊</span><span class="fpx"><b>Le gel de série</b> couvre une pause d\'un jour — à condition de l\'avoir posé la veille. Tu prévois de souffler demain : tu le poses maintenant, et ta série tient. Si tu viens quand même, tu le récupères.</span></div>'+
+    '<div class="fpg'+(g>0||pose?' on':'')+'"><span class="fpi">🧊</span><span class="fpx"><b>Le gel de série</b>, gagné à chaque monde terminé, couvre une pause d\'un jour — à condition de l\'avoir posé la veille. Tu prévois de souffler demain : tu le poses maintenant, et ta série tient. Si tu viens quand même, tu le récupères.</span></div>'+
     (pose ? '<button class="fp-gel on" onclick="retirerGel(event)">🧊 Gel posé sur demain ✓ &nbsp;·&nbsp; retirer</button>'
      : g>0 ? '<button class="fp-gel" onclick="poserGel(event)">🧊 Poser un gel sur demain</button>' : '')+
     '<p class="fpe2">'+(pose
       ? 'Demain, tu peux souffler : ta série reprendra après-demain.'+(g>0?' Il te reste <b>'+g+' gel'+(g>1?'s':'')+'</b>.':'')
       : g>0 ? '🧊 Tu as <b>'+g+' gel'+(g>1?'s':'')+' en réserve.</b>'
-      : (a14 ? 'Ton gel a déjà servi — le prochain t\'attend sur la route, tous les quatre mondes.'
-             : 'Tu n\'as pas encore de gel : il t\'attend au 14ᵉ jour, puis tous les quatre mondes sur la route.'))+'</p>';
+      : (a14 ? 'Ton gel a déjà servi — le prochain t\'attend au bout du monde en cours.'
+             : 'Tu n\'as pas encore de gel : chaque monde terminé en donne un, et le 14ᵉ jour de série aussi.'))+'</p>';
 }
 function toggleFlamme(ev){
   if(ev) ev.stopPropagation();
@@ -6365,8 +6363,8 @@ const TUTOS={
     s.push({el:elMonde, img:'axo-guide-pointe-haut',
       t:"La route se lit <b>de bas en haut</b>. Tu pars d'ici, le <b>monde "+num+"</b> : tu termines ses thématiques, le suivant s'ouvre. Chaque monde terminé t'offre quelque chose : sa photo de profil ou sa bannière, en alternance."});
     if(elStage()) s.push({el:elStage, img:'axo-guide-carte', t: p1
-      ? "Sur le chemin, <b>tes stages de vacances</b> : douze jours guidés avec un tuteur, posés aux dates de tes vacances — pour reprendre ce qui est passé trop vite."
-      : "Sur le chemin, <b>tes stages de vacances</b> : douze jours guidés avec un tuteur, posés là où tu seras à leur date. Les vacances, c'est là que tu as du temps — c'est là qu'on accélère."});
+      ? "Sur le chemin, tu vas croiser <b>tes stages de vacances</b> : douze jours guidés, avec un tuteur qui répond. Chacun est placé aux dates de tes vacances. C'est le moment de reprendre ce qui est passé trop vite."
+      : "Sur le chemin, tu vas croiser <b>tes stages de vacances</b> : douze jours guidés, avec un tuteur qui répond. Chacun est placé à l'endroit de la route où tu seras arrivé à cette date. Les vacances, c'est le moment où tu as du temps : c'est là qu'on accélère."});
     s.push({el:function(){ return document.getElementById('cr-sommet'); }, img:'axo-guide-bravo', t: p1
       ? "Le sommet, c'est <b>le bout de la route</b> : les "+M.length+" mondes terminés, toutes les bases reprises. On y monte ensemble, monde après monde."
       : "Le sommet, c'est <b>ta rentrée en première année</b> — avec tout le bagage que tu auras construit d'ici là. On y monte ensemble, monde après monde.",
@@ -7963,15 +7961,15 @@ const IMG_REC = nom => (typeof VIGNETTES!=='undefined' && VIGNETTES[nom]) ? 'img
 const TEXTURES = ['herbe','sable','pierre','glace','cuivre','cristal'];
 function textureMonde(m){ return IMG_REC('dalle-'+TEXTURES[(m.num-1)%TEXTURES.length]); }
 
-/* UNE SEULE CHOSE PAR MONDE, EN ALTERNANCE. Les mondes pairs font gagner la PHOTO DE PROFIL
-   de leur thème (l'écusson Axo), les impairs leur BANNIÈRE (le paysage) : une photo tous les
-   deux mondes, une bannière tous les deux mondes, et chaque monde donne quelque chose. Tous
-   les quatre mondes, un gel de série en plus — pas un à chaque monde, vingt gels tueraient la
-   flamme. Le monde 1 est le point de départ : on n'y a encore rien mérité. */
+/* UNE SEULE CHOSE PAR MONDE, EN ALTERNANCE — ET UN GEL. Les mondes pairs font gagner la PHOTO DE
+   PROFIL de leur thème (l'écusson Axo), les impairs leur BANNIÈRE (le paysage) : une photo tous
+   les deux mondes, une bannière tous les deux mondes. Et un gel de série à chaque monde, puisque
+   le gel ne joue plus que posé la veille d'une pause : il ne protège personne tout seul. Le
+   monde 1 est le point de départ : on n'y a encore rien mérité. */
 function estPalier(num){ return num>=2 && num%2===0; }
 function ecussonMonde(m){ return IMG_REC('av-monde-'+String(m.num).padStart(2,'0')) || m.img; }
 function bannereMonde(m){ return IMG_REC('ban-monde-'+String(m.num).padStart(2,'0')); }
-function donneGel(num){ return num>=4 && num%4===0; }
+function donneGel(num){ return num>=2; }
 function recompensesArrivee(m){
   if(m.num < 2) return [];
   const out = estPalier(m.num)
@@ -7981,7 +7979,7 @@ function recompensesArrivee(m){
   return out;
 }
 /* on crédite UNE fois par monde terminé : la photo ou la bannière viennent de S.collection,
-   le gel tombe tous les quatre mondes */
+   le gel tombe à chaque monde */
 function crediterMonde(m){
   S.collection=S.collection||{};
   if(S.collection[m.num]) return false;

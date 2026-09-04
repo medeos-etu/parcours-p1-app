@@ -81,7 +81,7 @@ const srv = http.createServer((rq, rs) => {
     dit(r.tuiles === 0, 'les bonus de tuile doivent avoir disparu');
     dit(/0 j$/.test(r.flamme), 'la flamme doit se voir à 0 (' + r.flamme + ')');
     Object.keys(r.rec).map(Number).sort((a, b) => a - b).forEach(n => {
-      const c = r.rec[n], gel = n >= 4 && n % 4 === 0;
+      const c = r.rec[n], gel = n >= 2;   /* un gel à chaque monde, à partir du 2 */
       const attendu = n === 1 ? [] : [n % 2 === 0 ? 'Photo de profil' : 'Bannière'].concat(gel ? ['1 gel de série'] : []);
       dit(JSON.stringify(c) === JSON.stringify(attendu), 'monde ' + n + ' : attendu ' + attendu.join('+') + ', vu ' + c.join('+'));
     });
