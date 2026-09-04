@@ -2220,10 +2220,10 @@
   background:linear-gradient(180deg,#6B46C1,#4C2A85);box-shadow:0 5px 0 #2A1850,0 8px 18px rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.18)}
 .cr-band.img{position:relative;display:block;width:340px;max-width:96%;aspect-ratio:640/160;
   background:transparent center/contain no-repeat;box-shadow:none;border:none;padding:0;min-width:0;margin-left:auto;margin-right:auto}
-.cr-band.img span{position:absolute;left:21.5%;right:20.4%;top:50%;transform:translateY(-50%);text-align:center;
+.cr-band.img span{position:absolute;left:21.5%;right:20.4%;top:45.3%;transform:translateY(-50%);text-align:center;
   font-size:12.5px;line-height:1.1;white-space:nowrap;text-shadow:0 1px 2px rgba(0,0,0,.45)}
-.cr-sommet .cr-band.img{width:360px}
-.cr-sommet .cr-band.img span{left:20%;right:18%;color:#4A3208;text-shadow:0 1px 0 rgba(255,255,255,.35);font-size:11.5px}
+.cr-sommet .cr-band.img{width:390px}
+.cr-sommet .cr-band.img span{left:20%;right:18%;top:49.1%;color:#4A3208;text-shadow:0 1px 0 rgba(255,255,255,.35);font-size:11px}
 .cr-band span{white-space:nowrap}
 .cr-chg{color:rgba(250,246,240,.6)!important;margin-top:6px!important}
 .cr-prog{height:10px;border-radius:99px;background:rgba(255,255,255,.14);margin:16px 30px 0;overflow:hidden}
@@ -7821,10 +7821,17 @@ function renderAccesMondes(){
    ⚠️ Les dates exactes des vacances dépendent de la zone scolaire : on ne les invente
    pas. On nomme les périodes, comme le site. */
 const RENTREE_JOUR = 1, RENTREE_MOIS = 8;      /* 1er septembre */
-function dateRentree(){
-  const an = S.profil && S.profil.rentreeAn;
-  return an ? new Date(an, RENTREE_MOIS, RENTREE_JOUR) : null;
+/* la prochaine rentrée à venir : celle de cette année si l'on n'y est pas encore, sinon celle d'après */
+function prochaineRentreeAn(){
+  const n = new Date(), an = n.getFullYear();
+  return (n < new Date(an, RENTREE_MOIS, RENTREE_JOUR)) ? an : an + 1;
 }
+function dateRentree(){
+  const an = (S.profil && S.profil.rentreeAn) || prochaineRentreeAn();
+  return new Date(an, RENTREE_MOIS, RENTREE_JOUR);
+}
+/* l'élève a-t-il DIT sa date, ou travaille-t-on sur l'hypothèse par défaut ? */
+function rentreeSupposee(){ return !(S.profil && S.profil.rentreeAn); }
 function joursAvantRentree(){
   const d = dateRentree(); if(!d) return null;
   return Math.max(0, Math.ceil((d - new Date()) / 864e5));
@@ -7942,16 +7949,15 @@ function renderCarte(){
 
   /* ── on ne connaît pas encore sa rentrée : on la demande, et rien d'autre ── */
   if(!pret){
-    const an = new Date().getFullYear();
-    const choix = [an, an+1, an+2].map(y =>
-      '<button onclick="poserRentree('+y+')">Septembre '+y+
-      '<small>'+(y===an?'j\'entre en première année dans quelques semaines':(y===an+1?'je suis en Terminale cette année':'je suis en Première cette année'))+'</small></button>').join('');
+    const an = prochaineRentreeAn();
+    const dits = ['j\'entre en première année à cette rentrée','je suis en Terminale cette année','je suis en Première cette année'];
+    const choix = [an, an+1, an+2].map((y,k) =>
+      '<button onclick="poserRentree('+y+')">Septembre '+y+'<small>'+dits[k]+'</small></button>').join('');
     b.innerHTML = dit('Dis-moi quand commence ta première année — je place ta rentrée tout en haut du parcours.','axo-guide-carte')+
-      '<div class="rt-illu-wrap">'+illuRoute()+'</div>'+
       '<div class="rt-ask"><h3>Quand commence ta première année de santé ?</h3>'+
       '<p>C\'est la seule chose que je ne peux pas deviner. Avec cette date, je place tes stages sur la route et ta rentrée au sommet.</p>'+
       '<div class="rt-ans">'+choix+
-      '<button onclick="poserRentree(null)">Je ne sais pas encore<small>on avance quand même — tu me le diras plus tard</small></button>'+
+      '<button onclick="poserRentree(null)">Je ne sais pas encore<small>on part sur septembre '+an+' — tu me corrigeras quand tu sauras</small></button>'+
       '</div></div>';
     return;
   }
@@ -8037,8 +8043,8 @@ function renderCarte(){
     x += '<div class="cr-sommet" id="cr-sommet">'+
       '<div class="cr-socle grand'+(imgR?' dio':'')+'">'+(imgR?'<img class="cr-dio" src="'+imgR+'" alt="">':'<span class="cr-em">🎓</span>')+'</div>'+
       '<div class="cr-nom">Ta rentrée en première année de santé</div>'+
-      bandeauHtml(d? '📅 1<sup>er</sup> septembre '+d.getFullYear()+' &nbsp;·&nbsp; dans '+j+' jours' : 'Dis-moi ta date de rentrée', bandeauR||bandeau)+
-      '<div><button class="se-alt cr-chg" onclick="S.profil.rentreeDite=false;saveS();renderCarte()">'+(d?'changer la date':'la dire')+'</button></div>'+
+      bandeauHtml('1<sup>er</sup> sept. '+d.getFullYear()+' &nbsp;·&nbsp; dans '+j+' j', bandeauR||bandeau)+
+      '<div><button class="se-alt cr-chg" onclick="S.profil.rentreeDite=false;saveS();renderCarte()">'+(rentreeSupposee()?'tu ne l\'as pas encore dite — la préciser':'changer la date')+'</button></div>'+
       '<div class="cr-bagage"><span>Avec tout ce bagage</span>'+
         '<div><b>'+mondesVisibles.length+'</b><em>monde'+(mondesVisibles.length>1?'s':'')+'</em></div>'+
         '<div><b>'+themFaits+'</b><em>thématique'+(themFaits>1?'s':'')+'</em></div>'+
@@ -8090,7 +8096,7 @@ function renderCarte(){
       '<span class="cr-rail"><b>'+debutM+'</b></span>'+
       socleHtml(m,badge)+
       '<div class="cr-nom">'+m.nom+'</div>'+
-      bandeauHtml('👑 Monde '+m.num+' &nbsp;·&nbsp; 📄 '+debutM+' fiches', bandeau)+
+      bandeauHtml('Monde '+m.num+' &nbsp;·&nbsp; '+debutM+' fiches', bandeau)+
       (rec.length ? '<div class="cr-deb">'+(e.etat==='verrouille'?'En arrivant ici, tu débloqueras :':'En arrivant ici, tu as débloqué :')+'</div><div class="cr-chips n'+rec.length+'">'+chips+'</div>'
                   : '<div class="cr-deb depart">Ton point de départ</div>')+
       '</div>';
