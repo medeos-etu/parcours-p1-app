@@ -2299,6 +2299,10 @@
 .cr-depart{margin-top:6px;padding:14px;border-radius:14px;background:rgba(255,255,255,.06);border:1px dashed rgba(255,255,255,.18);color:#FAF6F0;font-size:13px}
 .cr-depart span{display:block;font-size:11.5px;color:rgba(250,246,240,.7);margin-top:3px;line-height:1.45}
 /* le camp de stage */
+.cr-apres{margin:0 0 16px;padding:13px 14px;border-radius:16px;text-align:center;
+  background:rgba(255,255,255,.05);border:1px dashed rgba(226,156,92,.34)}
+.cr-apres>span{display:block;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:#FCD34D}
+.cr-apres>em{display:block;font-style:normal;font-size:12px;color:rgba(250,246,240,.75);line-height:1.5;margin-top:5px}
 .cr-stage{display:block;margin:0 0 34px;padding:16px 16px 18px;border-radius:22px;text-decoration:none;text-align:center;color:#3A2A10;
   background:linear-gradient(165deg,#FDF6EC,#EFD9AE);border:2.5px solid #E29C5C;box-shadow:0 8px 0 #8A5B24,0 20px 36px rgba(0,0,0,.5)}
 .cr-stage-k{display:block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:900;color:#8A5B24;margin-bottom:12px}
@@ -7845,10 +7849,13 @@ function joursAvantRentree(){
 }
 function poserRentree(an){
   S.profil = S.profil || {};
-  S.profil.rentreeAn = an || null;         /* null = « je ne sais pas encore » */
+  S.profil.dejaP1 = (an === 'deja');
+  S.profil.rentreeAn = (an && an !== 'deja') ? an : null;   /* null = « je ne sais pas encore » */
   S.profil.rentreeDite = true;
   saveS(); renderCarte();
 }
+/* l'élève a déjà fait sa rentrée : plus de compte à rebours, plus de stage, la route entière */
+function enP1(){ return !!(S.profil && S.profil.dejaP1); }
 /* LES VRAIS STAGES, AUX VRAIES DATES. Source : data/stages-vacances.ts et
    lib/medi-pro-session.ts du site (calendrier officiel 2026-2027). Un stage commence le
    lundi de la première semaine de vacances et dure douze jours. Pour une année scolaire
@@ -7957,9 +7964,10 @@ function renderCarte(){
   /* ── on ne connaît pas encore sa rentrée : on la demande, et rien d'autre ── */
   if(!pret){
     const an = prochaineRentreeAn();
-    const dits = ['j\'entre en première année à cette rentrée','je suis en Terminale cette année','je suis en Première cette année'];
-    const choix = [an, an+1, an+2].map((y,k) =>
-      '<button onclick="poserRentree('+y+')">Septembre '+y+'<small>'+dits[k]+'</small></button>').join('');
+    const dits = ['je suis en Terminale cette année','je suis en Première cette année','je suis en Seconde cette année'];
+    const choix = '<button onclick="poserRentree(\'deja\')">J\'y suis déjà<small>ma première année a commencé</small></button>'+
+      [an, an+1, an+2].map((y,k) =>
+        '<button onclick="poserRentree('+y+')">Septembre '+y+'<small>'+dits[k]+'</small></button>').join('');
     b.innerHTML = dit('Dis-moi quand commence ta première année — je place ta rentrée tout en haut du parcours.','axo-guide-carte')+
       '<div class="rt-ask"><h3>Quand commence ta première année de santé ?</h3>'+
       '<p>C\'est la seule chose que je ne peux pas deviner. Avec cette date, je place tes stages sur la route et ta rentrée au sommet.</p>'+
@@ -7985,7 +7993,7 @@ function renderCarte(){
   const tCur = prochaineConquete();
   const illim = (typeof accesIllimite==='function') && accesIllimite();
 
-  const idxRentree = (d && !illim) ? Math.min(SEANCES.length-1, faites + j) : SEANCES.length-1;
+  const idxRentree = (d && !illim && !enP1()) ? Math.min(SEANCES.length-1, faites + j) : SEANCES.length-1;
   const tRentree = territoireDe(SEANCES[idxRentree]);
   const kRentree = tRentree ? T.indexOf(tRentree) : T.length-1;
   const visible = t => T.indexOf(t) <= kRentree;
@@ -8001,8 +8009,8 @@ function renderCarte(){
   const icone=(r,cls)=> r.img ? '<img class="'+(cls||'')+'" src="'+r.img+'" alt="">' : '<i class="'+(cls||'')+' em">'+r.em+'</i>';
 
   /* ── les camps : le stage posé au-dessus de la thématique où l'élève sera à sa date ── */
-  const camps = {};
-  if(d){
+  const camps = {}, apres = [];
+  if(d && !enP1()){
     const debutTerminale=new Date(d.getFullYear()-1,8,1);
     const dans=n=>n<=0?'en ce moment':n===1?'demain':'dans '+n+' jours';
     const imgStage = id => IMG('stage-'+id) || IMG('camp-stage');
@@ -8022,7 +8030,12 @@ function renderCarte(){
         '<span class="cr-chip medeos"><span class="cr-chip-ban" style="background:linear-gradient(120deg,#4C2A85,#6B46C1 45%,#B8895A)"></span><b>Bannière</b><em>Étudiant Medeos</em></span>'+
       '</span>'+
       '<em class="cr-stage-cta">'+lien+' →</em></a>';
-    const poser=(idx,html)=>{ const t=territoireDe(SEANCES[Math.min(SEANCES.length-1, Math.max(0, idx))]); if(!t) return; const k=T.indexOf(t); (camps[k]=camps[k]||[]).push(html); };
+    const poser=(idx,html)=>{
+      if(idx >= SEANCES.length-1){ apres.push(html); return; }   /* au-delà de la route */
+      const t=territoireDe(SEANCES[Math.max(0, idx)]); if(!t) return;
+      const k=T.indexOf(t); if(k>kRentree){ apres.push(html); return; }
+      (camps[k]=camps[k]||[]).push(html);
+    };
     periodesEntre(new Date(), d).filter(p=>p.m>=debutTerminale).forEach(p=>{
       const dj=Math.max(0, Math.round((p.m-new Date())/864e5));
       poser(faites+dj, camp(p.emo+' '+p.quand+' · '+dans(dj), p.stage||'Stage Medeos', p.pitch||'',
@@ -8049,14 +8062,16 @@ function renderCarte(){
     const imgR = IMG('rentree');
     x += '<div class="cr-sommet" id="cr-sommet">'+
       '<div class="cr-socle grand'+(imgR?' dio':'')+'">'+(imgR?'<img class="cr-dio" src="'+imgR+'" alt="">':'<span class="cr-em">🎓</span>')+'</div>'+
-      '<div class="cr-nom">Ta rentrée en première année de santé</div>'+
-      bandeauHtml('1<sup>er</sup> sept. '+d.getFullYear()+' &nbsp;·&nbsp; dans '+j+' j', bandeauR||bandeau)+
-      '<div><button class="se-alt cr-chg" onclick="S.profil.rentreeDite=false;saveS();renderCarte()">'+(rentreeSupposee()?'tu ne l\'as pas encore dite — la préciser':'changer la date')+'</button></div>'+
-      '<div class="cr-bagage"><span>Avec tout ce bagage</span>'+
+      '<div class="cr-nom">'+(enP1()? 'Tu es en première année de santé' : 'Ta rentrée en première année de santé')+'</div>'+
+      bandeauHtml(enP1()? 'Ta rentrée est passée' : '1<sup>er</sup> sept. '+d.getFullYear()+' &nbsp;·&nbsp; dans '+j+' j', bandeauR||bandeau)+
+      '<div><button class="se-alt cr-chg" onclick="S.profil.rentreeDite=false;saveS();renderCarte()">'+(enP1()?'ce n\'est pas mon cas':(rentreeSupposee()?'tu ne l\'as pas encore dite — la préciser':'changer la date'))+'</button></div>'+
+      '<div class="cr-bagage"><span>'+(enP1()? 'Ce que la route contient' : 'Avec tout ce bagage')+'</span>'+
         '<div><b>'+mondesVisibles.length+'</b><em>monde'+(mondesVisibles.length>1?'s':'')+'</em></div>'+
         '<div><b>'+themFaits+'</b><em>thématique'+(themFaits>1?'s':'')+'</em></div>'+
         '<div><b>'+fichesBagage+'</b><em>fiches vues</em></div></div>'+
-      (illim
+      (enP1()
+        ? '<div class="cr-audela">Tu es déjà en première année : la route entière t\'est ouverte, sans limite de date. Elle te sert de révision, monde après monde.</div>'
+        : illim
         ? '<div class="cr-audela">Ta route va jusqu\'au bout, et tes stages jalonnent les vacances.</div>'
         : auDela
           ? '<div class="cr-audela">Pendant l\'année scolaire, deux fiches par jour, c\'est déjà bien. À ce rythme, ta route s\'arrête ici : '+auDela+' monde'+(auDela>1?'s':'')+' reste'+(auDela>1?'nt':'')+' au-delà.</div>'+
@@ -8067,6 +8082,13 @@ function renderCarte(){
               '<em>Voir l\'année complète →</em></a>'
           : '')+
       '</div>';
+  }
+
+  /* les stages qui tombent une fois la route finie : entre le sommet et le dernier monde */
+  if(apres.length){
+    apres.slice().reverse().forEach(h=>{ x += h; });
+    x += '<div class="cr-apres"><span>Après la route, avant ta rentrée</span>'+
+      '<em>Tu auras terminé les '+SEANCES.length+' séances. Ces '+apres.length+' stages-là tombent pendant ton année de Terminale : c\'est le moment de creuser, pas de découvrir.</em></div>';
   }
 
   /* ── LA ROUTE, du haut vers le bas : pour chaque monde, ses thématiques en carré puis son socle ── */
