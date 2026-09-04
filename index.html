@@ -5146,6 +5146,9 @@ const AVATARS=[
    expl:'Une ascension 10/10', cond:function(){ return !!(S.ar&&S.ar.parfait); }},
   {id:'marathonien', nom:'Le Marathonien',  em:'🏃', img:'img/profil/av-marathonien.png',
    expl:'30 ascensions',     cond:function(){ return ((S.ar&&S.ar.runsDone)||0)>=30; }},
+  /* la relecture récompensée : relire dix fiches déjà travaillées, depuis les cases du parcours */
+  {id:'curieux',     nom:'Le Curieux',      em:'🤓', img:'img/profil/av-curieux.png',
+   expl:'10 fiches relues',  cond:function(){ return Object.keys(S.relu||{}).length>=10; }},
   {id:'inarretable', nom:'L\'Inarrêtable',  em:'🚀', img:'img/profil/av-inarretable.png',
    expl:'Série de 60 jours', cond:function(){ return (S.streakMax||S.streak||0)>=60; }}
 ];
@@ -7363,7 +7366,7 @@ function prochainsTitres(n){
    outils/implante-parcours.js. On ne demande jamais une image absente : pas de 404 à
    chaque ouverture de la carte, et une image déposée est prise à la prochaine implantation. */
 /* ==VIGNETTES== */
-const VIGNETTES={"bandeau-monde":"bandeau-monde.webp","bandeau-rentree":"bandeau-rentree.webp","camp-stage":"camp-stage.webp","coffre-ouvert":"coffre-ouvert.webp","coffre":"coffre.webp","dalle-cristal":"dalle-cristal.webp","dalle-cuivre":"dalle-cuivre.webp","dalle-glace":"dalle-glace.webp","dalle-herbe":"dalle-herbe.webp","dalle-pierre":"dalle-pierre.webp","dalle-sable":"dalle-sable.webp","fond-route":"fond-route.webp","marqueur-ici":"marqueur-ici.webp","monde-01":"monde-01.webp","monde-02":"monde-02.webp","monde-03":"monde-03.webp","monde-04":"monde-04.webp","monde-05":"monde-05.webp","monde-06":"monde-06.webp","monde-07":"monde-07.webp","monde-08":"monde-08.webp","monde-09":"monde-09.webp","monde-10":"monde-10.webp","monde-11":"monde-11.webp","monde-12":"monde-12.webp","monde-13":"monde-13.webp","monde-14":"monde-14.webp","monde-15":"monde-15.webp","monde-16":"monde-16.webp","monde-17":"monde-17.webp","monde-18":"monde-18.webp","monde-19":"monde-19.webp","monde-20":"monde-20.webp","monde-21":"monde-21.webp","monde-22":"monde-22.webp","parcours-des-mondes":"parcours-des-mondes.webp","rail":"rail.webp","recompense-arene":"recompense-arene.webp","recompense-carte":"recompense-carte.webp","recompense-fiches":"recompense-fiches.webp","recompense-gel":"recompense-gel.webp","rentree":"rentree.webp","socle":"socle.webp","stage-fevrier":"stage-fevrier.webp","stage-noel":"stage-noel.webp","stage-paques":"stage-paques.webp","stage-prerentree":"stage-prerentree.webp","stage-toussaint":"stage-toussaint.webp"};
+const VIGNETTES={"av-monde-02":"av-monde-02.png","av-monde-04":"av-monde-04.png","av-monde-06":"av-monde-06.png","av-monde-08":"av-monde-08.png","av-monde-10":"av-monde-10.png","av-monde-12":"av-monde-12.png","av-monde-14":"av-monde-14.png","av-monde-16":"av-monde-16.png","badge-certifie":"badge-certifie.webp","badge-etudiant":"badge-etudiant.webp","ban-certifie":"ban-certifie.webp","ban-medeos":"ban-medeos.webp","bandeau-monde":"bandeau-monde.webp","bandeau-rentree":"bandeau-rentree.webp","camp-stage":"camp-stage.webp","coffre-ouvert":"coffre-ouvert.webp","coffre":"coffre.webp","dalle-cristal":"dalle-cristal.webp","dalle-cuivre":"dalle-cuivre.webp","dalle-glace":"dalle-glace.webp","dalle-herbe":"dalle-herbe.webp","dalle-pierre":"dalle-pierre.webp","dalle-sable":"dalle-sable.webp","fond-route":"fond-route.webp","marqueur-ici":"marqueur-ici.webp","monde-01":"monde-01.webp","monde-02":"monde-02.webp","monde-03":"monde-03.webp","monde-04":"monde-04.webp","monde-05":"monde-05.webp","monde-06":"monde-06.webp","monde-07":"monde-07.webp","monde-08":"monde-08.webp","monde-09":"monde-09.webp","monde-10":"monde-10.webp","monde-11":"monde-11.webp","monde-12":"monde-12.webp","monde-13":"monde-13.webp","monde-14":"monde-14.webp","monde-15":"monde-15.webp","monde-16":"monde-16.webp","monde-17":"monde-17.webp","monde-18":"monde-18.webp","monde-19":"monde-19.webp","monde-20":"monde-20.webp","monde-21":"monde-21.webp","monde-22":"monde-22.webp","parcours-des-mondes":"parcours-des-mondes.webp","rail":"rail.webp","recompense-arene":"recompense-arene.webp","recompense-carte":"recompense-carte.webp","recompense-fiches":"recompense-fiches.webp","recompense-gel":"recompense-gel.webp","rentree":"rentree.webp","socle":"socle.webp","stage-fevrier":"stage-fevrier.webp","stage-noel":"stage-noel.webp","stage-paques":"stage-paques.webp","stage-prerentree":"stage-prerentree.webp","stage-toussaint":"stage-toussaint.webp"};
 /* ==/VIGNETTES== */
 let _terr=null;
 function territoires(){
@@ -8006,12 +8009,13 @@ function crediterMonde(m){
 /* LE BADGE ÉTUDIANT MEDEOS — réservé aux élèves des stages. Ni contenu, ni avantage de
    jeu : une identité, visible au classement et dans les duels. C'est ce qui se montre. */
 if(typeof BANNIERES!=='undefined') BANNIERES.push({id:'medeos', nom:'Étudiant Medeos',
+  img:(typeof VIGNETTES!=='undefined' && VIGNETTES['ban-medeos']) ? 'img/parcours/territoires/'+VIGNETTES['ban-medeos'] : null,
   css:'linear-gradient(120deg,#4C2A85 0%,#6B46C1 45%,#B8895A 100%)', expl:'Élève des stages Medeos',
   cond:function(){ return !!S.stage; }});
-/* la photo de l'élève Medeos : le Curieux (Axo à lunettes, son livre), et un CADRE DORÉ que l'app
-   dessine autour partout où la photo apparaît — c'est le cadre qui dit « élève des stages », pas l'image */
+/* la photo de l'élève Medeos (Axo, étoile dorée sur la blouse — livrée par ChatGPT le 04/09) et un
+   CADRE DORÉ que l'app dessine autour partout où la photo apparaît */
 if(typeof AVATARS!=='undefined') AVATARS.push({id:'medeos', nom:'Étudiant Medeos', em:'🎓',
-  img:'img/profil/av-curieux.png', cadre:'or',
+  img:(typeof VIGNETTES!=='undefined' && VIGNETTES['badge-etudiant']) ? 'img/parcours/territoires/'+VIGNETTES['badge-etudiant'] : 'img/profil/av-curieux.png', cadre:'or',
   expl:'Élève des stages Medeos', cond:function(){ return !!S.stage; }});
 
 /* le vestiaire suit l'alternance : les mondes pairs y déposent leur photo de profil, les
@@ -10187,7 +10191,10 @@ function sortirSim(){
   if(typeof renderParcours==='function') renderParcours();
 }
 let CONSULT=false;
-function consulterFiche(slug){ CONSULT=true; openFiche(slug); }
+function consulterFiche(slug){
+  /* relire une fiche déjà travaillée compte pour « Le Curieux » : c'est la relecture qu'on récompense */
+  if(S.oublis && S.oublis[slug]){ S.relu=S.relu||{}; if(!S.relu[slug]){ S.relu[slug]=Date.now(); saveS(); } }
+  CONSULT=true; openFiche(slug); }
 function fermerLecteur(){
   if(CONSULT){ CONSULT=false; closeFiche(); return; }   /* simple consultation : on revient où on était */
   if(SR){ sauverSR(); }         /* en pleine séance : PAUSE, pas abandon — la carte « reprendre » attend sur l'accueil */

@@ -1,6 +1,6 @@
-# PROMPT MAÎTRE — les 24 photos de profil et bannières du parcours Medeos · à coller dans ChatGPT en mode Agent
+# PROMPT MAÎTRE — les 21 photos de profil et bannières du parcours Medeos · à coller dans ChatGPT en mode Agent
 
-> Ce fichier contient les photos de profil et les bannières des 22 mondes, et les insignes des étudiants Medeos. Les cinq décors de stage ont leur propre fichier, `PROMPT-CHATGPT-STAGES.md`, déjà livré.
+> Ce fichier contient les photos de profil et les bannières des 22 mondes. Les insignes des étudiants Medeos (`badge-etudiant`, `badge-certifie`, `ban-medeos`, `ban-certifie`) et les cinq décors de stage ont déjà été livrés et sont en place : ne les régénère pas.
 
 Tu travailles en mode Agent, de façon autonome : tu génères une image à la fois, tu vérifies chaque fichier par du code, tu ne poses aucune question. **Ne fais aucun commit git, ne déploie rien, ne modifie et ne supprime aucun fichier existant.**
 
@@ -8,7 +8,7 @@ Tu travailles en mode Agent, de façon autonome : tu génères une image à la f
 
 ## 0. Le dossier de livraison — à vérifier AVANT de générer quoi que ce soit
 
-Les 24 images vont dans **un seul dossier, déjà existant, sur le Mac de Lucas** :
+Les 21 images vont dans **un seul dossier, déjà existant, sur le Mac de Lucas** :
 
 ```
 /Users/lucascrepin/dev/parcours-p1-app/img/parcours/territoires/
@@ -24,11 +24,10 @@ ls /Users/lucascrepin/dev/parcours-p1-app/img/parcours/territoires/ | head -40
 ```
 find /Users/lucascrepin -type d -name territoires -path "*parcours-p1-app*" 2>/dev/null
 ```
-**Étape 3 — si tu n'as pas accès au disque du Mac** : ne bloque pas. Crée un dossier `medeos-images-parcours` là où tu peux écrire, mets-y les 24 fichiers avec leurs noms exacts, et dis-le clairement à la fin (ou fournis une archive `.zip`). Lucas les déposera lui-même.
+**Étape 3 — si tu n'as pas accès au disque du Mac** : ne bloque pas. Crée un dossier `medeos-images-parcours` là où tu peux écrire, mets-y les 21 fichiers avec leurs noms exacts, et dis-le clairement à la fin (ou fournis une archive `.zip`). Lucas les déposera lui-même.
 
-**Les 24 noms attendus, pour cocher à la fin :**
+**Les 21 noms attendus, pour cocher à la fin :**
 ```
-badge-certifie.png  ban-medeos.png  ban-certifie.png
 av-monde-02.png  av-monde-04.png  av-monde-06.png  av-monde-08.png  av-monde-10.png  av-monde-12.png
 av-monde-14.png  av-monde-16.png  av-monde-18.png  av-monde-20.png  av-monde-22.png
 ban-monde-03.png  ban-monde-05.png  ban-monde-07.png  ban-monde-09.png  ban-monde-11.png
@@ -84,28 +83,6 @@ Le parcours compte **22 mondes**. Chaque monde terminé fait gagner **une seule 
 ## 2. Les prompts, image par image
 
 Chaque bloc est un prompt complet. Tu le colles tel quel, tu génères, tu contrôles, tu enregistres sous le nom indiqué.
-
-### A. Les insignes des étudiants Medeos (année complète)
-
-> La photo de profil « Étudiant Medeos » existe déjà (`img/profil/av-curieux.png`, Axo à lunettes avec son livre) et l'app dessine elle-même un cadre doré autour : **ne la génère pas**. Il reste la photo « certifié », et les deux bannières.
-
-**`badge-certifie.png` — photo de profil, 512×512, opaque**
-```
-Photo de profil Medeos, même gabarit exactement que av-primant.png : image carrée 512×512, opaque, fond uni en dégradé radial du violet profond #4C2A85 (bords) vers l'or chaud #FCD34D (centre, discret). Axo (identique à av-primant.png : blanc crème, branchies violettes, grands yeux, joues orangées) en buste de face légèrement de trois quarts, qui remplit le cadre : sommet du crâne vers 15 %, yeux à mi-hauteur, menton vers 65 %, branchies qui touchent presque les bords, blouse blanche visible en bas. Il tient un petit diplôme roulé noué d'un ruban doré, et porte une toute petite couronne de laurier dorée posée sur le haut de la tête, entre les branchies. Expression radieuse. Lumière douce du haut à gauche.
-Aucun texte, aucun écusson, aucune bordure, aucun décor derrière.
-```
-
-**`ban-medeos.png` — bannière, 1536×864, opaque — LA plus belle du jeu**
-```
-Bannière Medeos 1536×864, format 16:9, opaque, style peint riche et lumineux, plus travaillé que ban-or.jpg : c'est la bannière des élèves des stages Medeos, elle doit être la plus stylée de toutes, celle qu'on veut afficher. Un ciel de nuit en dégradé profond du violet #4C2A85 (à gauche) vers un or chaud #FCD34D et miel #B8895A (à droite), traversé de fines volutes dorées et d'une pluie d'éclats et de particules d'or en suspension, un très léger motif de losanges dans le fond, un halo doré qui monte de la droite. Sur le tiers droit, dans la bande centrale de la hauteur, Axo en pied, petit (axolotl peluche blanc crème, branchies violettes, blouse blanche de médecin), debout sur une dalle de pierre claire cerclée d'or, qui lève le poing en signe de victoire, quelques éclats dorés autour de lui. La moitié gauche reste calme, sombre et peu contrastée : un pseudo blanc s'y écrira. Les éléments importants entre 35 % et 65 % de la hauteur. Rendu premium, matières satinées, lumière chaude.
-Aucun texte.
-```
-
-**`ban-certifie.png` — bannière, 1536×864, opaque**
-```
-Bannière Medeos 1536×864, format 16:9, opaque, style peint doux et lumineux comme ban-or.jpg. Le même dégradé violet profond #4C2A85 vers miel #B8895A que ban-medeos.png, plus riche : volutes de laurier dorées dans les angles, léger halo doré. Sur le tiers droit, dans la bande centrale, Axo en pied, petit, en blouse blanche, tenant son diplôme roulé. La moitié gauche reste calme et peu contrastée : un pseudo blanc s'y écrira. Les éléments importants entre 35 % et 65 % de la hauteur.
-Aucun texte.
-```
 
 ### B. Les onze photos de profil des mondes pairs — Axo costumé dans le thème
 
@@ -235,7 +212,7 @@ Bannière Medeos 1536×864, format 16:9, opaque, style peint doux et lumineux co
 
 ## 3. Comment travailler
 
-- Ordre : A (insignes) → B (photos) → C (bannières).
+- Ordre : B (photos) → C (bannières).
 - **Avant la première photo**, ouvre `av-primant.png`, `av-flamme.png`, `av-curieux.png` et note ce qu'elles ont en commun : c'est ça qu'on veut, onze fois de plus.
 - Après chaque image, contrôle **par du code** :
   - photo : exactement 512×512, opaque (pas de canal alpha, ou un canal entièrement opaque), aucun texte ; **les pixels violets des branchies (#6B46C1 et proches) s'étendent horizontalement jusqu'à moins de 6 % de chaque bord**, et **leur centre vertical se situe entre 35 % et 50 % de la hauteur** — si ce n'est pas le cas, le cadrage a dérivé : refais ;
@@ -243,6 +220,6 @@ Bannière Medeos 1536×864, format 16:9, opaque, style peint doux et lumineux co
 - **Axo doit rester identique** d'une image à l'autre : compare chaque nouvelle photo à `av-primant.png`. Si les branchies changent de forme, si le visage change, refais.
 - Si une génération échoue trois fois, passe à la suivante et signale-la à la fin.
 
-**Livraison** : les 24 fichiers dans le dossier de la section 0, avec leurs noms exacts. Termine en me donnant le chemin du dossier où tu as écrit, la liste des fichiers écrits avec leurs dimensions, et celle des manqués s'il y en a.
+**Livraison** : les 21 fichiers dans le dossier de la section 0, avec leurs noms exacts. Termine en me donnant le chemin du dossier où tu as écrit, la liste des fichiers écrits avec leurs dimensions, et celle des manqués s'il y en a.
 
-Commence par `badge-certifie.png`.
+Commence par `av-monde-02.png`.
