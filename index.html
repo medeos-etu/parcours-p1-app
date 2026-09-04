@@ -2287,6 +2287,7 @@
 .tu-bar i{display:block;height:100%;background:linear-gradient(90deg,#6B46C1,#E29C5C);border-radius:99px}
 .tu-p{font-size:12.5px;line-height:1.55;color:#3A3550;margin:0 0 12px}
 .tu-liste{display:flex;flex-direction:column;gap:6px}
+.tu-reste{text-align:center;font-size:11.5px;font-weight:700;color:var(--muted);padding:8px 0 2px}
 .tu-f{display:flex;align-items:center;gap:10px;width:100%;text-align:left;padding:10px 12px;border-radius:12px;border:1px solid var(--line2);background:#fff;font-family:inherit;font-size:12.5px;color:#1A1A2E}
 .tu-f.faite{cursor:pointer;border-color:rgba(107,70,193,.35)}
 .tu-f.faite:active{background:#F3EEFF}
@@ -7374,7 +7375,7 @@ function prochainsTitres(n){
    outils/implante-parcours.js. On ne demande jamais une image absente : pas de 404 à
    chaque ouverture de la carte, et une image déposée est prise à la prochaine implantation. */
 /* ==VIGNETTES== */
-const VIGNETTES={"av-monde-02":"av-monde-02.webp","av-monde-04":"av-monde-04.webp","av-monde-06":"av-monde-06.webp","av-monde-08":"av-monde-08.webp","av-monde-10":"av-monde-10.webp","av-monde-12":"av-monde-12.webp","av-monde-14":"av-monde-14.webp","av-monde-16":"av-monde-16.webp","av-monde-18":"av-monde-18.webp","av-monde-20":"av-monde-20.webp","av-monde-22":"av-monde-22.webp","badge-certifie":"badge-certifie.webp","badge-etudiant":"badge-etudiant.webp","ban-certifie":"ban-certifie.webp","ban-medeos":"ban-medeos.webp","bandeau-monde":"bandeau-monde.webp","bandeau-rentree":"bandeau-rentree.webp","camp-stage":"camp-stage.webp","coffre-ouvert":"coffre-ouvert.webp","coffre":"coffre.webp","dalle-cristal":"dalle-cristal.webp","dalle-cuivre":"dalle-cuivre.webp","dalle-glace":"dalle-glace.webp","dalle-herbe":"dalle-herbe.webp","dalle-pierre":"dalle-pierre.webp","dalle-sable":"dalle-sable.webp","fond-route":"fond-route.webp","marqueur-ici":"marqueur-ici.webp","monde-01":"monde-01.webp","monde-02":"monde-02.webp","monde-03":"monde-03.webp","monde-04":"monde-04.webp","monde-05":"monde-05.webp","monde-06":"monde-06.webp","monde-07":"monde-07.webp","monde-08":"monde-08.webp","monde-09":"monde-09.webp","monde-10":"monde-10.webp","monde-11":"monde-11.webp","monde-12":"monde-12.webp","monde-13":"monde-13.webp","monde-14":"monde-14.webp","monde-15":"monde-15.webp","monde-16":"monde-16.webp","monde-17":"monde-17.webp","monde-18":"monde-18.webp","monde-19":"monde-19.webp","monde-20":"monde-20.webp","monde-21":"monde-21.webp","monde-22":"monde-22.webp","parcours-des-mondes":"parcours-des-mondes.webp","rail":"rail.webp","recompense-arene":"recompense-arene.webp","recompense-carte":"recompense-carte.webp","recompense-fiches":"recompense-fiches.webp","recompense-gel":"recompense-gel.webp","rentree":"rentree.webp","socle":"socle.webp","stage-fevrier":"stage-fevrier.webp","stage-noel":"stage-noel.webp","stage-paques":"stage-paques.webp","stage-prerentree":"stage-prerentree.webp","stage-toussaint":"stage-toussaint.webp"};
+const VIGNETTES={"av-monde-02":"av-monde-02.webp","av-monde-04":"av-monde-04.webp","av-monde-06":"av-monde-06.webp","av-monde-08":"av-monde-08.webp","av-monde-10":"av-monde-10.webp","av-monde-12":"av-monde-12.webp","av-monde-14":"av-monde-14.webp","av-monde-16":"av-monde-16.webp","av-monde-18":"av-monde-18.webp","av-monde-20":"av-monde-20.webp","av-monde-22":"av-monde-22.webp","badge-certifie":"badge-certifie.webp","badge-etudiant":"badge-etudiant.webp","ban-certifie":"ban-certifie.webp","ban-medeos":"ban-medeos.webp","ban-monde-03":"ban-monde-03.webp","ban-monde-05":"ban-monde-05.webp","ban-monde-07":"ban-monde-07.webp","ban-monde-09":"ban-monde-09.webp","ban-monde-11":"ban-monde-11.webp","ban-monde-13":"ban-monde-13.webp","ban-monde-15":"ban-monde-15.webp","ban-monde-17":"ban-monde-17.webp","ban-monde-19":"ban-monde-19.webp","ban-monde-21":"ban-monde-21.webp","bandeau-monde":"bandeau-monde.webp","bandeau-rentree":"bandeau-rentree.webp","camp-stage":"camp-stage.webp","coffre-ouvert":"coffre-ouvert.webp","coffre":"coffre.webp","dalle-cristal":"dalle-cristal.webp","dalle-cuivre":"dalle-cuivre.webp","dalle-glace":"dalle-glace.webp","dalle-herbe":"dalle-herbe.webp","dalle-pierre":"dalle-pierre.webp","dalle-sable":"dalle-sable.webp","fond-route":"fond-route.webp","marqueur-ici":"marqueur-ici.webp","monde-01":"monde-01.webp","monde-02":"monde-02.webp","monde-03":"monde-03.webp","monde-04":"monde-04.webp","monde-05":"monde-05.webp","monde-06":"monde-06.webp","monde-07":"monde-07.webp","monde-08":"monde-08.webp","monde-09":"monde-09.webp","monde-10":"monde-10.webp","monde-11":"monde-11.webp","monde-12":"monde-12.webp","monde-13":"monde-13.webp","monde-14":"monde-14.webp","monde-15":"monde-15.webp","monde-16":"monde-16.webp","monde-17":"monde-17.webp","monde-18":"monde-18.webp","monde-19":"monde-19.webp","monde-20":"monde-20.webp","monde-21":"monde-21.webp","monde-22":"monde-22.webp","parcours-des-mondes":"parcours-des-mondes.webp","rail":"rail.webp","recompense-arene":"recompense-arene.webp","recompense-carte":"recompense-carte.webp","recompense-fiches":"recompense-fiches.webp","recompense-gel":"recompense-gel.webp","rentree":"rentree.webp","socle":"socle.webp","stage-fevrier":"stage-fevrier.webp","stage-noel":"stage-noel.webp","stage-paques":"stage-paques.webp","stage-prerentree":"stage-prerentree.webp","stage-toussaint":"stage-toussaint.webp"};
 /* ==/VIGNETTES== */
 let _terr=null;
 function territoires(){
@@ -8054,13 +8055,17 @@ function ouvrirTuile(k){
   const et=etatTerritoire(t), p=progTerritoire(t);
   const m=mondes().find(x=>x.terr.indexOf(t)>=0);
   document.getElementById('tuile-titre').innerHTML='<img class="tu-ico" src="img/icones/'+EMB_MAT[t.mat]+'.png" alt=""> '+t.nom;
-  let prochaine=false;
-  const lignes=t.fiches.map((f,i)=>{
+  /* On ne montre PAS neuf cadenas d'affilée : au premier jour, la fenêtre n'était qu'un mur de
+     « Fiche 2 … Fiche 10 » verrouillées. Les fiches faites, la prochaine, deux cadenas, puis un compte. */
+  let prochaine=false; const lignes=[]; let verrous=0;
+  t.fiches.forEach((f,i)=>{
     const titre=TITRES_FICHES[f]||f;
-    if(faite(f)) return '<button type="button" class="tu-f faite" onclick="consulterFiche(\''+f+'\')"><span class="tu-n">✓</span><span class="tu-t">'+titre+'</span><span class="tu-go">relire</span></button>';
-    if(!prochaine && et.etat!=='avenir'){ prochaine=true; return '<div class="tu-f suiv"><span class="tu-n">→</span><span class="tu-t">'+titre+'</span><span class="tu-go">prochaine</span></div>'; }
-    return '<div class="tu-f lock"><span class="tu-n">🔒</span><span class="tu-t">Fiche '+(i+1)+'</span></div>';
+    if(faite(f)){ lignes.push('<button type="button" class="tu-f faite" onclick="consulterFiche(\''+f+'\')"><span class="tu-n">✓</span><span class="tu-t">'+titre+'</span><span class="tu-go">relire</span></button>'); return; }
+    if(!prochaine && et.etat!=='avenir'){ prochaine=true; lignes.push('<div class="tu-f suiv"><span class="tu-n">→</span><span class="tu-t">'+titre+'</span><span class="tu-go">prochaine</span></div>'); return; }
+    verrous++;
+    if(verrous<=2) lignes.push('<div class="tu-f lock"><span class="tu-n">🔒</span><span class="tu-t">Fiche '+(i+1)+'</span></div>');
   });
+  if(verrous>2) lignes.push('<div class="tu-reste">+ '+(verrous-2)+' fiche'+(verrous-2>1?'s':'')+' à découvrir ensuite</div>');
   const entete = p.lues
     ? '<p class="tu-p"><b>'+p.lues+' fiche'+(p.lues>1?'s':'')+' sur '+p.tot+' travaillée'+(p.lues>1?'s':'')+'.</b> Relire une fiche déjà faite, c\'est ce qui la garde en mémoire — reviens ici régulièrement.</p>'
     : et.etat==='avenir'
