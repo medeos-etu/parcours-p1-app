@@ -2101,7 +2101,7 @@
 .sc-illu-t b{font-family:Fredoka,Inter,sans-serif;font-size:19px;font-weight:800;color:#1A1A2E;line-height:1.1;text-shadow:0 1px 0 rgba(255,255,255,.8),0 4px 14px rgba(255,255,255,.7)}
 .sc-illu.photo .sc-illu-t em{color:#FCD34D}
 .sc-illu.photo .sc-illu-t b{color:#FAF6F0;text-shadow:0 2px 10px rgba(0,0,0,.45)}
-.sc-body{display:block;padding:12px 16px 15px}
+.sc-body{display:block;padding:13px 16px 14px}
 /* — LE PARCOURS DES MONDES : médailles, grand monde, brume — */
 .pm-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:0 0 12px}
 .pm-l{font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:800;color:#8A6238;margin-right:2px}
@@ -2130,7 +2130,7 @@
   /* SUR ORDINATEUR, UN ÉCRAN ENTIER : le décor de nuit va d'un bord à l'autre au lieu
      d'une colonne posée sur le fond crème de l'app, et la route respire au centre. */
   #carte.cr-mode{max-width:none;padding-left:0;padding-right:0;padding-top:0}
-  #carte.cr-mode .lect-top{padding-left:24px;padding-right:24px;max-width:none}
+  #carte.cr-mode .cr-top{padding-left:24px;max-width:none}
   #carte.cr-mode .cr{margin:0;padding:26px 0 44px}
   #carte.cr-mode .cr-route{max-width:600px;padding:0 24px}
   #carte.cr-mode .cr-route::before{left:-34px}
@@ -2144,8 +2144,11 @@
   #carte.cr-mode .cr-tile b{font-size:13.5px}
   #carte.cr-mode .rt-sans{max-width:620px;margin-left:auto;margin-right:auto}
 }
-#carte.cr-mode .lect-top{background:rgba(27,24,48,.9);color:#FAF6F0;position:sticky;top:0;z-index:5;backdrop-filter:blur(8px)}
-#carte.cr-mode .lect-top b,#carte.cr-mode .lect-top .x{color:#FAF6F0}
+.cr-top{background:transparent!important;border:none;position:sticky;top:0;z-index:5;padding:10px 0 0 4px}
+.cr-top .x.rond{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;
+  background:rgba(250,246,240,.10);border:1.5px solid rgba(250,246,240,.22);color:#FAF6F0;backdrop-filter:blur(8px);
+  box-shadow:0 4px 14px rgba(0,0,0,.35);transition:transform .12s,background .12s}
+.cr-top .x.rond:active{transform:scale(.94);background:rgba(250,246,240,.18)}
 /* le fond : la tuile dessinée si elle existe, sinon des losanges en très léger relief */
 .cr{position:relative;margin:0 -16px;padding:22px 0 26px;
   background-color:#1E1B36;
@@ -2215,7 +2218,12 @@
   text-shadow:0 3px 0 #0E0C1C,0 6px 18px rgba(0,0,0,.5)}
 .cr-band{display:inline-flex;align-items:center;justify-content:center;margin-top:12px;min-width:220px;padding:10px 22px;border-radius:12px;font-size:14px;font-weight:900;color:#FAF6F0;
   background:linear-gradient(180deg,#6B46C1,#4C2A85);box-shadow:0 5px 0 #2A1850,0 8px 18px rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.18)}
-.cr-band.img{background:transparent center/100% 100% no-repeat;box-shadow:none;border:none;padding:14px 64px;min-width:0}
+.cr-band.img{position:relative;display:block;width:340px;max-width:96%;aspect-ratio:640/160;
+  background:transparent center/contain no-repeat;box-shadow:none;border:none;padding:0;min-width:0;margin-left:auto;margin-right:auto}
+.cr-band.img span{position:absolute;left:21.5%;right:20.4%;top:50%;transform:translateY(-50%);text-align:center;
+  font-size:12.5px;line-height:1.1;white-space:nowrap;text-shadow:0 1px 2px rgba(0,0,0,.45)}
+.cr-sommet .cr-band.img{width:360px}
+.cr-sommet .cr-band.img span{left:20%;right:18%;color:#4A3208;text-shadow:0 1px 0 rgba(255,255,255,.35);font-size:11.5px}
 .cr-band span{white-space:nowrap}
 .cr-chg{color:rgba(250,246,240,.6)!important;margin-top:6px!important}
 .cr-prog{height:10px;border-radius:99px;background:rgba(255,255,255,.14);margin:16px 30px 0;overflow:hidden}
@@ -2232,6 +2240,16 @@
 .cr-chip.ok{border-color:#FCD34D;background:linear-gradient(180deg,#5A4A1E,#3A2E12)}
 .cr-chip.lock{opacity:.7}
 /* — le carré des thématiques, entre deux mondes — */
+/* LA ROUTE — une bande continue derrière la colonne, qui passe entre les deux rangées de
+   thématiques et sous chaque socle. Dessinée plutôt qu'en images : elle se raccorde
+   toujours, à n'importe quelle hauteur de contenu. */
+.cr-route{position:relative}
+.cr-route::after{content:"";position:absolute;left:50%;top:0;bottom:0;width:118px;margin-left:-59px;z-index:0;pointer-events:none;
+  background:
+    repeating-linear-gradient(180deg, rgba(255,255,255,.05) 0 2px, transparent 2px 34px),
+    linear-gradient(90deg, rgba(184,137,90,.0), rgba(184,137,90,.30) 12%, rgba(226,156,92,.34) 50%, rgba(184,137,90,.30) 88%, rgba(184,137,90,.0));
+  box-shadow:0 0 34px rgba(226,156,92,.10)}
+.cr-route>*{position:relative;z-index:1}
 .cr-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 10px}
 /* le rail dessiné, à la place du trait */
 .cr-route.rail::before{background:var(--rail) center/100% auto repeat-y;width:22px;left:23px;border-radius:0;box-shadow:none}
@@ -2716,7 +2734,7 @@
        Les stages portent un cadenas, et la carte dit clairement que la route se
        marche sans eux. ═══ -->
   <section class="scr nonav" id="carte">
-    <div class="lect-top"><button class="x" onclick="go('home')" aria-label="Retour">←</button><b style="font-size:14px;font-weight:800">Tes mondes</b></div>
+    <div class="lect-top cr-top"><button class="x rond" onclick="go('home')" aria-label="Revenir au Parcours">←</button></div>
     <div id="carte-corps"></div>
   </section>
 
@@ -3307,6 +3325,10 @@ function go(id){
   }
   const i=UNIVERS.indexOf(id);
   const avant=document.querySelector('.scr.on');
+  /* on retient le dernier écran principal : un rechargement doit rendre sa place */
+  if(['biblio','home','arene','social','carte','chemin','profil'].includes(id)){
+    try{ localStorage.setItem('m4_ecran', id); }catch(e){}
+  }
   document.querySelectorAll('.scr').forEach(s=>s.classList.remove('on','uinl','uinr'));
   cible.classList.add('on');
   /* d'un univers à l'autre : l'ancien écran SORT d'un côté, le nouveau ENTRE de l'autre */
@@ -7527,10 +7549,6 @@ function ligneConquete(){
       '<span class="sc-ttl"><span class="sc-sur">Ton monde · '+m.num+' sur '+mondes().length+'</span><b>'+m.nom+'</b></span>'+
       '<span class="sc-go">›</span></span>'+
     '<span class="sc-dots">'+points+'<em>'+em.faits+'/'+em.tot+'</em></span>'+
-    '<span class="sc-now"><img src="img/icones/'+EMB_MAT[t.mat]+'.png" alt="">'+
-      '<span class="sc-nowtxt"><b>'+t.nom+'</b>'+
-      '<span class="sc-bar"><i style="width:'+p.pct+'%;background:'+COUL_MAT[t.mat]+'"></i></span>'+
-      '<em>'+(p.reste<=2 ? 'Encore '+p.reste+' fiche'+(p.reste>1?'s':'')+' et elle est à toi.' : p.lues+' sur '+p.tot+' fiches lues')+'</em></span></span>'+
     '</span></button>';
 }
 /* une séance qui REFERME un chapitre : un territoire conquis, on le dit tout de suite */
@@ -10713,7 +10731,13 @@ if('serviceWorker' in navigator && location.protocol==='https:'){ navigator.serv
 const HASH0=(location.hash||'').slice(1);
 /* premier passage (ni compte ni visite faite) : on arrive par la Bibliothèque — étape 1 du parcours d'accueil */
 const NOUVEAU=!(typeof accOk==='function'&&accOk()) && !(S.tuto&&S.tuto.biblio);
-go(['biblio','home','arene','social'].includes(HASH0) ? HASH0 : (NOUVEAU?'biblio':'arene'));
+/* l'ancre du site passe avant tout ; sinon on rend sa place à qui revient, et l'Arène
+   n'est le point de chute que d'un habitué qui n'a encore rien visité */
+let ECRAN0=null; try{ ECRAN0=localStorage.getItem('m4_ecran'); }catch(e){}
+if(!['biblio','home','arene','social','carte','chemin','profil'].includes(ECRAN0)) ECRAN0=null;
+go(['biblio','home','arene','social'].includes(HASH0) ? HASH0 : (NOUVEAU?'biblio':(ECRAN0||'arene')));
+if(ECRAN0==='carte' && typeof renderCarte==='function') renderCarte();
+if(ECRAN0==='chemin' && typeof renderChemin==='function') renderChemin();
 /* pas de fenêtre de compte imposée à qui vient lire la Bibliothèque librement */
 if(!accOk() && !S.acD && HASH0!=='biblio' && !NOUVEAU){ setTimeout(()=>{ if(!accOk() && !S.acD && !TU) focusAcc(); }, 1400); }
 calcSim();
