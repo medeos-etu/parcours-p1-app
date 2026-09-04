@@ -1680,6 +1680,9 @@
   /* la Route de la Flamme : ce qui est gagné, ce qui vient, ce qui reste */
   #fp-route{margin-top:9px;border-top:1px solid var(--line2);padding-top:8px}
   #fp-regle{margin-top:10px;border-top:1px solid var(--line2);padding-top:9px}
+  .fp-gel{display:block;width:100%;margin-top:9px;padding:10px 12px;border-radius:12px;border:1.5px solid var(--violet);
+    background:#F3EEFF;color:#4C2A85;font-weight:800;font-family:inherit;font-size:13px;cursor:pointer}
+  .fp-gel.on{background:#4C2A85;color:#fff;border-color:#4C2A85}
   .flampop .fpt{font-size:10px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;
     color:var(--muted);margin:0 0 6px}
   .fpg{display:flex;align-items:flex-start;gap:8px;font-size:11px;line-height:1.5;color:var(--muted);margin-top:7px}
@@ -2618,7 +2621,7 @@
         <div class="howrow"><span class="hi">🗺️</span><div><b>Une route, trois fils</b><span>Sur ton chemin s'enchaînent des étapes de cours (une fiche puis son QCM), des <b>découvertes de métiers</b> (médecin, kiné, dentaire, pharma, sage-femme, chirurgien) et des outils de méthode. Et à côté : l'Arène, sans fin.</span></div></div>
         <div class="howrow"><span class="hi">✨</span><div><b>Chaque étape validée rapporte des points</b><span>Les trois premiers mondes construisent ton total. Une étape ≈ 15 points — les points mesurent ton travail, personne ne peut te les enlever.</span></div></div>
         <div class="howrow"><span class="hi">🏛️</span><div><b>L'Arène : monte au classement</b><span>Tu affrontes nos QCM. Tu réponds juste, tu montes. Tu te trompes, tu perds des points. Le reste, tu le découvres en jouant — et quand tu bloques, on t'ouvre la fiche qu'il te manque.</span></div></div>
-        <div class="howrow"><span class="hi">🔥</span><div><b>Reviens chaque jour, ton assiduité monte</b><span>Un jour où tu travailles = +1. Si tu oublies un jour, ta série tient — un jour de bonus, un seul.</span></div></div>
+        <div class="howrow"><span class="hi">🔥</span><div><b>Reviens chaque jour, ton assiduité monte</b><span>Un jour où tu travailles = +1. Un jour sans venir, elle repart à 1 — sauf si tu as posé un gel la veille.</span></div></div>
       </div>
       <button class="btn" style="max-width:320px" onclick="finishOnboarding()">Voir ma carte</button>
     </div>
@@ -2795,7 +2798,7 @@
       <p style="font-weight:700;color:var(--ink)" id="s-score">2/2 QCM validés.</p>
       <p id="s-cadrage">Un très bon passage. Les notions vues aujourd'hui reviendront dans quelques jours pour vérifier qu'elles tiennent dans le temps.</p>
       <p style="font-size:12px;color:var(--muted)">Demain dans ton programme : l'étape 2 — « Tes anciennes bactéries domestiquées ».</p>
-      <div class="chip" id="session-streak">🔥 Assiduité : 1 jour · un jour de bonus si tu oublies</div>
+      <div class="chip" id="session-streak">🔥 Assiduité : 1 jour · chaque jour compte</div>
       <div class="card" style="width:100%;max-width:380px;text-align:left">
         <h3>Garde ta progression</h3>
         <p style="font-size:12.5px;line-height:1.55;color:#3A3730">Ta progression est enregistrée sur cet appareil uniquement. Laisse ton email pour garder ta progression. Jamais de spam.</p>
@@ -3442,7 +3445,7 @@ function renderState(){
   { const e=document.getElementById('p-points'); if(e) e.textContent='✨ '+S.points+(S.points>1?' points':' point'); }
   { const e=document.getElementById('p-qcm'); if(e) e.textContent=S.qcm+' QCM joué'+(S.qcm>1?'s':''); }
   { const e=document.getElementById('p-tro'); if(e && S.ar) e.innerHTML='<img class="ticn" src="img/icones/trophee-medeos.png" alt=""> '+fmtT(S.ar.T||0)+' trophées'; }
-  { const e=document.getElementById('session-streak'); if(e) e.textContent='🔥 Assiduité : '+S.streak+(S.streak>1?' jours':' jour')+' · un jour de bonus si tu oublies'; }
+  { const e=document.getElementById('session-streak'); if(e) e.textContent='🔥 Assiduité : '+S.streak+(S.streak>1?' jours':' jour')+' · chaque jour compte'; }
   renderArene();
 }
 
@@ -5996,6 +5999,35 @@ function openSheet(id){
 function closeSheet(id){ const m=document.getElementById(id); if(m) m.classList.remove('on'); }
 /* la bulle de la flamme : petit popover, se referme au clic ailleurs */
 const FLAMME_ROUTE=[[3,'la bannière « Braise »'],[7,'la photo « La Flamme »'],[14,'un gel de série'],[30,'la bannière « Brasier »'],[60,'la photo « L\'Inarrêtable »'],[100,'la bannière « Légende de feu »']];
+/* POSER UN GEL SUR DEMAIN. L'élève prévoit de souffler un jour : il pose son gel la veille,
+   et sa série tient. S'il vient quand même, majStreak le lui rend. Il peut le retirer tant
+   que demain n'est pas arrivé. */
+function poserGel(ev){
+  if(ev) ev.stopPropagation();
+  if(!(S.gels>0) || S.gelPose===_jourMoins(-1)) return;
+  S.gels--; S.gelPose=_jourMoins(-1); saveS();
+  const r=document.getElementById('fp-regle'); if(r) r.innerHTML=regleFlamme();
+}
+function retirerGel(ev){
+  if(ev) ev.stopPropagation();
+  if(S.gelPose!==_jourMoins(-1)) return;
+  S.gels=(S.gels||0)+1; S.gelPose=null; saveS();
+  const r=document.getElementById('fp-regle'); if(r) r.innerHTML=regleFlamme();
+}
+/* LA RÈGLE, EN CLAIR : un seul filet, et c'est l'élève qui le tend */
+function regleFlamme(){
+  const n=S.streak||0, g=(S.gels||0), a14=(Math.max(S.streakMax||0,n)>=14), pose=(S.gelPose===_jourMoins(-1));
+  return '<p class="fpt">Comment elle tient</p>'+
+    '<div class="fpg"><span class="fpi">🔥</span><span class="fpx"><b>Chaque jour compte.</b> Un jour sans venir, et la série repart à 1. Ce que tu as appris, lui, ne bouge pas.</span></div>'+
+    '<div class="fpg'+(g>0||pose?' on':'')+'"><span class="fpi">🧊</span><span class="fpx"><b>Le gel de série</b> couvre une pause d\'un jour — à condition de l\'avoir posé la veille. Tu prévois de souffler demain : tu le poses maintenant, et ta série tient. Si tu viens quand même, tu le récupères.</span></div>'+
+    (pose ? '<button class="fp-gel on" onclick="retirerGel(event)">🧊 Gel posé sur demain ✓ &nbsp;·&nbsp; retirer</button>'
+     : g>0 ? '<button class="fp-gel" onclick="poserGel(event)">🧊 Poser un gel sur demain</button>' : '')+
+    '<p class="fpe2">'+(pose
+      ? 'Demain, tu peux souffler : ta série reprendra après-demain.'+(g>0?' Il te reste <b>'+g+' gel'+(g>1?'s':'')+'</b>.':'')
+      : g>0 ? '🧊 Tu as <b>'+g+' gel'+(g>1?'s':'')+' en réserve.</b>'
+      : (a14 ? 'Ton gel a déjà servi — le prochain t\'attend sur la route, tous les quatre mondes.'
+             : 'Tu n\'as pas encore de gel : il t\'attend au 14ᵉ jour, puis tous les quatre mondes sur la route.'))+'</p>';
+}
 function toggleFlamme(ev){
   if(ev) ev.stopPropagation();
   const p=document.getElementById('flamme-pop'); if(!p) return;
@@ -6016,20 +6048,7 @@ function toggleFlamme(ev){
                  '<span class="fpq">'+e[1]+'</span>'+
                  '<span class="fpe">'+(eu?'✓':(suivant?'⏳':'🔒'))+'</span></div>';
         }).join(''); } }
-    /* LA RÈGLE, EN CLAIR : deux filets, et ce qu'il reste vraiment à l'élève */
-    { const fr2=document.getElementById('fp-regle');
-      if(fr2){
-        const g=(S.gels||0), a14=(Math.max(S.streakMax||0,n)>=14);
-        fr2.innerHTML=
-          '<p class="fpt">Comment elle tient</p>'+
-          '<div class="fpg"><span class="fpi">🃏</span><span class="fpx"><b>Un jour oublié est pardonné</b> — toujours, sans rien faire. Tu sautes un jour, tu reviens le lendemain : ta série continue de monter.</span></div>'+
-          '<div class="fpg'+(g>0?' on':'')+'"><span class="fpi">🧊</span><span class="fpx"><b>Le gel de série</b>, offert au 14ᵉ jour puis tous les quatre mondes sur la route, couvre un jour d\'absence de plus : tu peux en sauter deux d\'affilée sans rien perdre. Il se consomme dès qu\'il te sauve.</span></div>'+
-          '<div class="fpg"><span class="fpi">↩️</span><span class="fpx"><b>Sinon</b>, deux jours sans venir et la série repart à 1. Ce que tu as appris, lui, ne bouge pas.</span></div>'+
-          '<p class="fpe2">'+(g>0
-            ? '🧊 Tu as <b>'+g+' gel'+(g>1?'s':'')+' en réserve.</b>'
-            : (a14 ? 'Ton gel a déjà servi — le prochain t\'attend sur la route, tous les quatre mondes.'
-                   : 'Tu n\'as pas encore de gel : il t\'attend au 14ᵉ jour, puis tous les quatre mondes sur la route.'))+'</p>';
-      } }
+    { const fr2=document.getElementById('fp-regle'); if(fr2) fr2.innerHTML=regleFlamme(); }
     p.hidden=false;
     setTimeout(()=>document.addEventListener('click',fermerFlamme,{once:true}),0);
   } else p.hidden=true;
@@ -6320,7 +6339,7 @@ const TUTOS={
     {img:'axo-guide-bienvenue', t:"Voici ton <b>Parcours</b> : deux fiches par jour, un rythme tenable, une méthode qui fait tenir les notions. <b>Il t'accompagne jusqu'à ta rentrée</b> — et on le marche petit objectif par petit objectif."},
     {img:'axo-guide-carte', t:illuRoute()+"La route en une image : ta <b>séance</b>, les <b>Salles</b> pour t'entraîner, le <b>Grand Amphi</b> pour te mesurer, des <b>mondes</b> à terminer un par un — et les <b>stages</b> des vacances pour ceux qui veulent accélérer."},
     {sel:'#seance', img:'axo-guide-pointe-haut', t:"Ta <b>séance du jour</b> t'attend ici : tu lis, tu restitues de mémoire, tu compares. Dix minutes. Les QCM, eux, t'attendent dans les Salles juste après."},
-    {sel:'#pt-flame', img:'axo-guide-pointe-haut', t:"Chaque jour travaillé allonge ta série 🔥. Un oubli est pardonné — un seul."},
+    {sel:'#pt-flame', img:'axo-guide-pointe-haut', t:"Chaque jour travaillé allonge ta série 🔥. Un jour sans venir, elle repart à 1 — sauf si tu as posé un gel la veille."},
     {img:'axo-guide-bravo', t:"Et l'Arène ? <b>Elle s'ouvre dès que tu as fini ta première séance.</b> Tu y retrouves tes deux fiches du jour en questions, sans rien risquer. Bonne première séance !", btn:"C'est parti !"}
   ],
   arene:[
@@ -9655,7 +9674,9 @@ function seanceCredit(){
   saveS();
 }
 /* ═══ LA SÉRIE 🔥 — un jour travaillé (séance OU ascension) = +1.
-   Un jour d'oubli est couvert par le bonus ; deux jours sans venir, elle repart à 1. ═══ */
+   Aucun jour n'est excusé d'office : un jour sans venir, elle repart à 1. Une seule exception, et
+   c'est l'élève qui la décide : un GEL POSÉ LA VEILLE couvre une pause d'un jour. Posé
+   mais pas utilisé (il est venu quand même), le gel lui est rendu. ═══ */
 function _jourMoins(n){ const d=new Date(Date.now()-6*3600*1000); d.setDate(d.getDate()-n);
   return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); }
 function majStreak(){
@@ -9663,9 +9684,12 @@ function majStreak(){
   S.joursActifs=S.joursActifs||[];
   if(S.joursActifs.indexOf(auj)<0){ S.joursActifs.push(auj); if(S.joursActifs.length>90) S.joursActifs=S.joursActifs.slice(-90); }
   if(S.stDay===auj){ return; }                                  /* déjà compté aujourd'hui */
-  if(S.stDay===_jourMoins(1) || S.stDay===_jourMoins(2)) S.streak=(S.streak||0)+1;  /* consécutif, ou un oubli pardonné */
-  else if(S.stDay===_jourMoins(3) && (S.gels||0)>0){ S.gels--; S.streak=(S.streak||0)+1; }  /* le gel sauve 2 jours d'absence */
+  const hier=_jourMoins(1);
+  if(S.stDay===hier) S.streak=(S.streak||0)+1;                                       /* consécutif */
+  else if(S.stDay===_jourMoins(2) && S.gelPose===hier) S.streak=(S.streak||0)+1;    /* la pause d'un jour, posée la veille : le gel a joué */
   else S.streak=1;
+  if(S.gelPose===auj) S.gels=(S.gels||0)+1;         /* posé sur aujourd'hui, mais il est venu : le gel n'a pas servi, on le rend */
+  if(S.gelPose && S.gelPose<=auj) S.gelPose=null;   /* joué ou rendu : dans les deux cas, c'est fini */
   S.stDay=auj;
   S.streakMax=Math.max(S.streakMax||0,S.streak);
   if(S.streakMax>=14 && !S.gel14){ S.gel14=1; S.gels=(S.gels||0)+1; }   /* palier 14 j : un gel de série offert */
