@@ -287,12 +287,19 @@
   .axo{display:block}
   /* LA BARRE D'IDENTITÉ, UNE SEULE FOIS : partout où la photo et la bannière apparaissent ensemble
      (accueil, profil, Arène, aperçu du vestiaire, barre de compte), on lit ces variables. */
-  :root{--idb-pad:9px 12px;--idb-gap:10px;--idb-av:44px;--idb-r:14px;--idb-avr:28%;--idb-nom:15px;--idb-sub:11.5px}
-  .avatar{width:var(--idb-av);height:var(--idb-av);border-radius:var(--idb-avr);background:rgba(107,70,193,.09);border:1px solid var(--line);overflow:hidden;flex-shrink:0}
+  :root{--idb-pad:9px 12px;--idb-gap:10px;--idb-av:44px;--idb-r:14px;--idb-avr:28%;--idb-nom:15px;--idb-sub:11.5px;
+    --idb-avbg:linear-gradient(145deg,#6B46C1,#4C2A85)}
+  /* LA PHOTO DE PROFIL, UNE SEULE FOIS : même fond et même cadrage partout — sinon la même photo
+     change d'aspect entre le Parcours et l'Arène. Les deux images d'Axo au format portrait
+     (axo-canon, mascotte-arene) portent la classe .zoom et demandent leur propre zoom. */
+  .avatar,.pavatar,.idbar .pav,.lobbytop .pav2,.skprev .pav2,.rl-av,.lbrow .lbav,.cr-chip-av{background:var(--idb-avbg)}
+  .avatar img,.pavatar img,.idbar .pav img,.lobbytop .pav2 img,.skprev .pav2 img,.rl-av img,.lbrow .lbav img,.cr-chip-av img,.sktile img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;
+    transform:scale(1.22);transform-origin:50% 18%;border-radius:inherit;display:block}
+  .avatar img.zoom,.pavatar img.zoom,.idbar .pav img.zoom,.lobbytop .pav2 img.zoom,.skprev .pav2 img.zoom,.rl-av img.zoom,.lbrow .lbav img.zoom,.cr-chip-av img.zoom,.sktile img.zoom{object-position:50% 8%;transform:scale(1.5);transform-origin:50% 15%}
+  .avatar{width:var(--idb-av);height:var(--idb-av);border-radius:var(--idb-avr);overflow:hidden;flex-shrink:0}
   /* LE CADRAGE UNIQUE des photos de profil : même zoom et même ancrage partout (en-tête, profil,
      classement, vestiaire, puces de la carte). Les photos sont des bustes 512×512 au même gabarit ;
      si un endroit zoomait plus qu'un autre, la même photo semblait différente selon où l'on regardait. */
-  .avatar img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;transform:scale(1.22);transform-origin:50% 18%}
   /* LE CADRE DORÉ de l'élève des stages Medeos : posé par l'app sur le contenant, quel qu'il soit */
   .av-or{box-shadow:0 0 0 2px #FCD34D,0 0 0 3.5px #B8895A,0 0 12px rgba(252,211,77,.6)!important;border-color:#FCD34D!important}
   .avatar img.noz{transform:none;object-position:center}   /* portraits carrés (photos de profil dédiées) */
@@ -601,10 +608,9 @@
   /* ═══ CARTE D'IDENTITÉ (haut de l'Arène) ═══ */
   .idbar{display:flex;align-items:center;gap:11px;background:linear-gradient(180deg,#2B2340,#1F1B2E);
     border-radius:16px;padding:11px 13px;color:#fff;box-shadow:0 6px 16px rgba(20,14,40,.28)}
-  .idbar .pav{width:var(--idb-av);height:var(--idb-av);border-radius:var(--idb-avr);background:linear-gradient(180deg,#8B5CF6,#4C2A85);
+  .idbar .pav{width:var(--idb-av);height:var(--idb-av);border-radius:var(--idb-avr);
     display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:900;flex-shrink:0;
     box-shadow:inset 0 -2px 0 rgba(0,0,0,.24)}
-  .idbar .pav img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;transform:scale(1.22);transform-origin:50% 18%;border-radius:13px}
   .idbar .pinfo{flex:1;min-width:0}
   .idbar .pname{font-size:14.5px;font-weight:900;letter-spacing:-.01em;line-height:1.15}
   .idbar .psub{font-size:11px;color:rgba(250,246,240,.62);margin-top:1px}
@@ -713,8 +719,6 @@
     box-shadow:inset 0 1px 0 rgba(255,255,255,.16)}
   .lobbytop .pav2{width:var(--idb-av);height:var(--idb-av);border-radius:var(--idb-avr);flex-shrink:0;overflow:hidden;position:relative}
   .lobbytop .pav2 .pem{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:17px}
-  .lobbytop .pav2 img{position:relative;width:100%;height:100%;object-fit:cover;object-position:50% 12%;transform:scale(1.22);transform-origin:50% 18%}
-  .lobbytop .pav2 img.zoom{object-position:50% 8%;transform:scale(1.5)}
   .lobbytop .pacts{display:flex;gap:6px;flex-shrink:0}
   /* le compteur de trophées vit DANS la carte, comme la série dans le Parcours */
   .lobbytop .pcard .goldplate{margin-left:auto;font-size:13px;padding:6px 11px;border-radius:11px;
@@ -739,8 +743,6 @@
   .skprev{display:flex;align-items:center;gap:var(--idb-gap);border-radius:var(--idb-r);padding:var(--idb-pad);border:1px solid rgba(255,255,255,.14)}
   .skprev .pav2{width:var(--idb-av);height:var(--idb-av);border-radius:var(--idb-avr);position:relative;overflow:hidden;flex-shrink:0}
   .skprev .pem{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:20px}
-  .skprev img{position:relative;width:100%;height:100%;object-fit:cover;object-position:50% 12%;transform:scale(1.22);transform-origin:50% 18%}
-  .skprev img.zoom{object-position:50% 8%;transform:scale(1.5)}
   .skprev .pn{font-family:Fredoka,Inter,sans-serif;font-size:var(--idb-nom);font-weight:600;color:#fff}
   .skprev .pg{font-size:11px;color:rgba(250,246,240,.75);margin-top:2px}
   .skin-t{font-size:11.5px;font-weight:900;color:var(--ink);margin:14px 0 8px;text-transform:uppercase;letter-spacing:.06em}
@@ -748,8 +750,6 @@
   .sktile{position:relative;aspect-ratio:1;border-radius:var(--idb-avr);overflow:hidden;border:2px solid transparent;cursor:pointer;padding:0;
     background:linear-gradient(180deg,#8B5CF6,#4C2A85)}
   .sktile .skem{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:22px}
-  .sktile img{position:relative;width:100%;height:100%;display:block;object-fit:cover;object-position:50% 12%;transform:scale(1.22);transform-origin:50% 18%}
-  .sktile img.zoom{object-position:50% 8%;transform:scale(1.5)}
   .sktile.on,.skban.on{border-color:#E29C5C;box-shadow:0 0 0 2px rgba(226,156,92,.35)}
   .sktile.lock img,.sktile.lock .skem{filter:grayscale(1) brightness(.55)}
   .sklock{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;
@@ -772,7 +772,6 @@
   .rl-av{position:relative;width:26px;height:26px;border-radius:var(--idb-avr);overflow:hidden;flex-shrink:0;
     background:linear-gradient(180deg,#8B5CF6,#4C2A85);box-shadow:0 1px 4px rgba(31,27,46,.25)}
   .rl-av .rl-em{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:13px}
-  .rl-av img{position:relative;width:100%;height:100%;object-fit:cover;object-position:50% 12%;transform:scale(1.22);transform-origin:50% 18%}
   .rl-ban{width:44px;height:20px;border-radius:6px;flex-shrink:0;box-shadow:0 1px 4px rgba(31,27,46,.25)}
   .rl-t{font-size:10px;font-weight:800;color:var(--muted);line-height:1.3}
   .rstep.got .rl-t{color:#B87A33}
@@ -1379,7 +1378,6 @@
   .lbrow .lbp{width:16px;text-align:center;font-weight:900;font-size:12px;color:var(--tung);font-variant-numeric:tabular-nums}
   .lbrow .lbav{width:30px;height:30px;border-radius:28%;overflow:hidden;flex-shrink:0;
     background:linear-gradient(145deg,var(--violet),var(--violet-deep));display:flex;align-items:center;justify-content:center}
-  .lbrow .lbav img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;transform:scale(1.22);transform-origin:50% 18%}
   .lbrow .lbn{flex:1;min-width:0;font-size:12px;font-weight:800;line-height:1.25;
     overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .lbrow .lbn i{display:block;font-style:normal;font-size:10px;font-weight:700;color:var(--muted);margin-top:1px}
@@ -1714,8 +1712,7 @@
   .fpr.next .fpj,.fpr.next .fpq{color:#8A5B24;font-weight:800}
   .fpr.next .fpe{opacity:1}
   @keyframes fpin{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
-  .pavatar{width:var(--idb-av);height:var(--idb-av);border-radius:var(--idb-avr);overflow:hidden;flex-shrink:0;background:linear-gradient(145deg,var(--violet),var(--violet-deep))}
-  .pavatar img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;transform:scale(1.22);transform-origin:50% 18%}
+  .pavatar{width:var(--idb-av);height:var(--idb-av);border-radius:var(--idb-avr);overflow:hidden;flex-shrink:0}
   .ptxt{flex:1;min-width:0}
   .ptxt b{font-size:var(--idb-nom);font-weight:800;letter-spacing:-.01em;display:block;line-height:1.2}
   .ptxt span{font-size:var(--idb-sub)}
@@ -2303,8 +2300,7 @@
 .cr-mprog{position:relative;height:12px;border-radius:99px;background:rgba(255,255,255,.12);margin:0 4px 22px;overflow:hidden}
 .cr-mprog i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#FCD34D,#E29C5C);min-width:6px}
 /* ce qu'on a gagné en arrivant : photo de profil, bannière, gel */
-.cr-chip-av{width:44px;height:44px;border-radius:28%;overflow:hidden;border:2px solid #FCD34D;background:#2A2740;display:flex;align-items:center;justify-content:center}
-.cr-chip-av img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;transform:scale(1.22);transform-origin:50% 18%}
+.cr-chip-av{width:44px;height:44px;border-radius:28%;overflow:hidden;border:2px solid #FCD34D;display:flex;align-items:center;justify-content:center}
 .cr-chip-av i{font-style:normal;font-size:22px}
 .cr-chip-ban{width:52px;height:30px;border-radius:8px;border:2px solid #FCD34D}
 .cr-deb.depart{color:rgba(250,246,240,.55);font-weight:700}
