@@ -113,9 +113,16 @@ Des vues **du dessus, légèrement en plongée**, d'une dalle rectangulaire aux 
 
 **Garde l'unité de la série** : même dalle, même angle, même lumière d'un diorama à l'autre. Si tu constates une dérive de style après plusieurs images, relis la section 1 avant de continuer.
 
-**La livraison, à la toute fin :**
-- Un fichier **`parcours-des-mondes-images.zip`** contenant les 43 PNG **à la racine** (pas de sous-dossier).
-- À l'intérieur, un `manifeste.txt` : une ligne par fichier avec ses dimensions réelles, « transparent : oui/non », et « OK » ou la raison de l'échec.
-- Dans ta réponse : la liste des fichiers réussis, la liste des fichiers manqués s'il y en a, et le lien de téléchargement du ZIP.
+**La livraison, à la toute fin — dans cet ordre de préférence :**
 
-Commence maintenant par `monde-01.png`, et ne t'arrête qu'à la livraison du ZIP.
+**1. Sur GitHub, directement dans l'application** (si tu as accès à GitHub dans ton navigateur) :
+- Dépôt : `https://github.com/medeos-etu/parcours-p1-app`, branche `main`.
+- Dossier de destination : `img/parcours/territoires/` — dépose les PNG **dans ce dossier, à côté des fichiers `CONSIGNES-IMAGES.md` et `PROMPT-CHATGPT.md`**, sans créer de sous-dossier.
+- Passe par « Add file → Upload files » sur la page du dossier, dépose les 43 PNG, et valide en **un seul commit** intitulé exactement : `Images du parcours des mondes (43 dioramas et décors)`.
+- Ne touche à aucun autre fichier du dépôt.
+
+**2. Sinon, un ZIP** : un fichier **`parcours-des-mondes-images.zip`** contenant les 43 PNG **à la racine** (pas de sous-dossier), avec un `manifeste.txt` (une ligne par fichier : dimensions réelles, « transparent : oui/non », « OK » ou la raison de l'échec), et son lien de téléchargement dans ta réponse.
+
+**Dans les deux cas, ta réponse finale donne** : la liste des fichiers réussis, la liste des fichiers manqués s'il y en a, et le lien (commit GitHub ou ZIP).
+
+Commence maintenant par `monde-01.png`, et ne t'arrête qu'à la livraison.
