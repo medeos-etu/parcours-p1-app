@@ -1,4 +1,6 @@
-/* Contrôle des cinq choix de rentrée : la route, les stages, le sommet, les récompenses. */
+/* Contrôle des cinq choix de rentrée : la route, les stages, le sommet, les récompenses.
+   Récompenses attendues : rien au monde 1 ; photo de profil sur les pairs ; bannière sur
+   les impairs ; un gel en plus tous les quatre mondes. Une seule chose par monde. */
 const http = require('http'), fs = require('fs'), path = require('path');
 const { chromium } = require('playwright');
 const R = '/Users/lucascrepin/dev/parcours-p1-app';
@@ -36,7 +38,7 @@ const srv = http.createServer((rq, rs) => {
   for (const [nom, choix] of cas) {
     const r = await pg.evaluate(c => {
       localStorage.setItem('m4_prenom', 'T'); localStorage.setItem('m4_onboarded', '1');
-      S.sdone = {}; S.vues = {}; S.collection = {}; S.recomp = {};
+      S.sdone = {}; S.vues = {}; S.collection = {}; S.tuto = { biblio:1, home:1, arene:1, carte:1 };
       S.profil = { rentreeDite: false };
       poserRentree(c);
       const doc = document.getElementById('carte-corps');
@@ -45,46 +47,43 @@ const srv = http.createServer((rq, rs) => {
       const ordre = stages.map(a => (a.querySelector('.cr-nom.stage') || {}).textContent || '').reverse();
       const apres = [...doc.querySelectorAll('.cr-apres')].map(e => e.textContent.trim().slice(0, 60));
       const mondes_ = [...doc.querySelectorAll('.cr-monde')];
-      /* récompenses par monde */
       const rec = {};
       mondes_.forEach(el => {
         const n = +el.id.replace('monde-', '');
-        rec[n] = [...el.querySelectorAll('.cr-chip')].map(c =>
-          (c.querySelector('b') || {}).textContent + (c.classList.contains('futur') ? '·futur' : ''));
+        rec[n] = [...el.querySelectorAll('.cr-chip')].map(c => (c.querySelector('b') || {}).textContent);
       });
+      const bouton = (doc.querySelector('.cr-sommet .cr-chg') || {}).textContent || '';
+      const tuiles = doc.querySelectorAll('.cr-tile-rec').length;
+      const flamme = document.getElementById('pt-flame');
       return {
         sommetTitre: (doc.querySelector('.cr-sommet .cr-nom') || {}).textContent || '',
         sommetBand: (doc.querySelector('.cr-sommet .cr-band span') || {}).textContent || '',
-        audela: (doc.querySelector('.cr-sommet .cr-audela') || {}).textContent || '',
+        bouton, tuiles,
+        flamme: flamme ? (flamme.hidden ? 'cachée' : flamme.textContent.trim()) : 'absente',
         nbStages: stages.length, ordre, apres,
         nbMondes: mondes_.length, total: (typeof mondes === 'function' ? mondes().length : 0),
-        jours: (typeof joursAvantRentree === 'function' ? joursAvantRentree() : null),
         rec
       };
     }, choix);
     await pg.waitForTimeout(200);
 
     console.log('\n══ ' + nom + ' ══');
-    console.log('  sommet   : « ' + r.sommetTitre + ' »  |  bandeau : « ' + r.sommetBand + ' »');
-    console.log('  route    : ' + r.nbMondes + '/' + r.total + ' mondes · ' + r.nbStages + ' stage(s)');
+    console.log('  sommet   : « ' + r.sommetTitre + ' »  |  bandeau : « ' + r.sommetBand + ' »  |  bouton : « ' + r.bouton + ' »');
+    console.log('  route    : ' + r.nbMondes + '/' + r.total + ' mondes · ' + r.nbStages + ' stage(s) · flamme : ' + r.flamme + ' · bonus de tuile : ' + r.tuiles);
     console.log('  montée   : ' + (r.ordre.length ? r.ordre.join(' → ') : '—'));
     if (r.apres.length) console.log('  après    : ' + r.apres.join(' / '));
-    const p1 = r.rec[1] || [], p2 = r.rec[2] || [], p3 = r.rec[3] || [], p4 = r.rec[4] || [];
-    console.log('  monde 1  : ' + (p1.length ? p1.join(', ') : '— rien'));
-    console.log('  monde 2  : ' + p2.join(', '));
-    console.log('  monde 3  : ' + p3.join(', '));
-    console.log('  monde 4  : ' + p4.join(', '));
+    console.log('  mondes 1→5 : ' + [1,2,3,4,5].map(n => n + '=' + ((r.rec[n]||[]).join('+') || 'rien')).join('  '));
 
-    /* contrôles */
     const dit = (ok, m) => { if (!ok) erreurs.push(nom + ' : ' + m); };
-    dit(p1.length === 0, 'le monde 1 ne doit rien donner');
+    /* « je ne sais pas encore » garde son invitation à préciser ; tous les autres disent « changer la date » */
+    const boutonAttendu = choix === null ? 'tu ne l\'as pas encore dite — la préciser' : 'changer la date';
+    dit(r.bouton === boutonAttendu, 'le bouton du sommet doit dire « ' + boutonAttendu + ' », il dit « ' + r.bouton + ' »');
+    dit(r.tuiles === 0, 'les bonus de tuile doivent avoir disparu');
+    dit(/0 j$/.test(r.flamme), 'la flamme doit se voir à 0 (' + r.flamme + ')');
     Object.keys(r.rec).map(Number).sort((a, b) => a - b).forEach(n => {
-      const c = r.rec[n];
-      if (n === 1) return;
-      if (n % 2 === 0) dit(c.length === 3 && c[0] === 'Photo de profil' && c[1] === 'Bannière',
-        'monde pair ' + n + ' devrait donner écusson + bannière + gel, il donne : ' + c.join('|'));
-      else dit(c.length === 2 && c[0] === '1 gel de série' && /futur/.test(c[1] || ''),
-        'monde impair ' + n + ' devrait donner le gel + l\'annonce, il donne : ' + c.join('|'));
+      const c = r.rec[n], gel = n >= 4 && n % 4 === 0;
+      const attendu = n === 1 ? [] : [n % 2 === 0 ? 'Photo de profil' : 'Bannière'].concat(gel ? ['1 gel de série'] : []);
+      dit(JSON.stringify(c) === JSON.stringify(attendu), 'monde ' + n + ' : attendu ' + attendu.join('+') + ', vu ' + c.join('+'));
     });
     if (choix === 'deja') {
       dit(/bout de la route/i.test(r.sommetTitre), 'le sommet ne doit pas annoncer une rentrée');
@@ -97,9 +96,31 @@ const srv = http.createServer((rq, rs) => {
       const s = r.ordre.join(' ');
       const bon = ['Toussaint', 'Noël', 'Février', 'Pâques', 'pré-rentrée']
         .map(k => s.toLowerCase().indexOf(k.toLowerCase()));
-      dit(bon.every((v, i) => v >= 0 && (i === 0 || v > bon[i - 1])),
-        'ordre de montée incorrect : ' + s);
+      dit(bon.every((v, i) => v >= 0 && (i === 0 || v > bon[i - 1])), 'ordre de montée incorrect : ' + s);
     }
+  }
+
+  /* la visite de la carte : elle démarre à la première route, avec la date de l'élève */
+  {
+    const v = await pg.evaluate(() => {
+      /* la visite de la Bibliothèque s'est ouverte au chargement de la page de test : on la ferme d'abord */
+      try { tutoEnd(); } catch (e) {}
+      S.tuto = { biblio:1, home:1, arene:1 }; S.profil = { rentreeDite:false }; saveS();
+      go('carte'); poserRentree(2027);
+      return new Promise(res => setTimeout(() => {
+        const t = document.getElementById('tuto'), b = document.getElementById('tuto-bulle');
+        const ouverte = t && !t.hidden;
+        const texte = b ? b.textContent : '';
+        const n = document.querySelectorAll('#tuto-pips i').length;
+        try { tutoEnd(); } catch (e) {}
+        res({ ouverte, texte: texte.slice(0, 110), n, faite: !!(S.tuto && S.tuto.carte) });
+      }, 1200));
+    });
+    console.log('\n══ visite de la carte ══\n  ' + (v.ouverte ? 'ouverte' : 'FERMÉE') + ' · ' + v.n + ' étapes · « ' + v.texte + '… »');
+    if (!v.ouverte) erreurs.push('la visite de la carte ne démarre pas');
+    if (v.n < 3 || v.n > 4) erreurs.push('la visite de la carte doit compter 3 ou 4 étapes, vu ' + v.n);
+    if (!/2027/.test(v.texte)) erreurs.push('la visite doit dire la date de rentrée');
+    if (!v.faite) erreurs.push('la visite doit se marquer faite une fois fermée');
   }
 
   console.log('\nerreurs : ' + erreurs.length);

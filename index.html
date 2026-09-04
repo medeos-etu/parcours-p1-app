@@ -1707,6 +1707,7 @@
   .pflame{flex-shrink:0;font-family:inherit;font-size:12px;font-weight:900;color:#4A3208;cursor:pointer;
     background:linear-gradient(180deg,#FCD34D,#E29C5C);border:none;padding:6px 11px;border-radius:999px;
     box-shadow:0 2px 0 #B87A33, inset 0 1px 0 rgba(255,255,255,.45)}
+.pflame.zero{opacity:.62}
   .pflame:active{transform:translateY(1px);box-shadow:0 1px 0 #B87A33}
 
   /* le héros */
@@ -2245,11 +2246,6 @@
 .cr-chip.ok{border-color:#FCD34D;background:linear-gradient(180deg,#5A4A1E,#3A2E12)}
 .cr-chip.lock{opacity:.7}
 .cr-chip-ban{background-size:cover;background-position:center}
-.cr-chip.futur{opacity:.62}
-.cr-chip.futur b{color:#CFC6E8}
-.cr-chip-av.futur{filter:grayscale(.55) brightness(.85)}
-.cr-chip-av.futur::after{content:'🔒';position:absolute;right:-2px;bottom:-2px;font-size:11px}
-.cr-chip-av{position:relative}
 /* — le carré des thématiques, entre deux mondes — */
 .cr-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 10px}
 /* le rail dessiné, à la place du trait */
@@ -2262,11 +2258,6 @@
 .cr-tile-bar{display:block;height:7px;border-radius:99px;background:rgba(255,255,255,.12);overflow:hidden;margin-top:9px}
 .cr-tile-bar i{display:block;height:100%;border-radius:99px;background:var(--c);min-width:4px}
 .cr-tile em{display:block;font-style:normal;font-size:10.5px;color:rgba(250,246,240,.6);margin-top:5px;font-weight:700}
-.cr-tile-rec{position:absolute;right:8px;top:8px;width:26px;height:26px;display:flex;align-items:center;justify-content:center;
-  border-radius:8px;background:rgba(0,0,0,.28)}
-.cr-tile-rec-i{width:18px;height:18px;object-fit:contain}
-.cr-tile-rec-i.em{font-style:normal;font-size:14px;line-height:1}
-.cr-tile-rec.pris{opacity:.45}
 .cr-tile.conquis{border-color:#E29C5C;background:linear-gradient(180deg,#5A4A1E,#3A2E12)}
 .cr-tile.conquis em{color:#FCD34D}
 .cr-tile.cur{border-color:#FCD34D;box-shadow:0 0 0 3px rgba(252,211,77,.55),0 0 22px rgba(252,211,77,.3),0 6px 0 rgba(0,0,0,.35)}
@@ -2641,7 +2632,7 @@
           <span class="pavatar" id="pt-avatar"><img src="img/axo-canon.png" alt=""></span>
           <span class="ptxt"><b id="pt-hello">Ton entraînement</b><span>Ta préparation P1</span></span>
         </button>
-        <button class="pflame" id="pt-flame" hidden onclick="toggleFlamme(event)" aria-label="Ta série">🔥 1 j</button>
+        <button class="pflame" id="pt-flame" onclick="toggleFlamme(event)" aria-label="Ta série">🔥 0 j</button>
       </div>
       <div class="flampop" id="flamme-pop" hidden onclick="event.stopPropagation()">
         <b id="fp-titre">Ta série</b>
@@ -6032,12 +6023,12 @@ function toggleFlamme(ev){
         fr2.innerHTML=
           '<p class="fpt">Comment elle tient</p>'+
           '<div class="fpg"><span class="fpi">🃏</span><span class="fpx"><b>Un jour oublié est pardonné</b> — toujours, sans rien faire. Tu sautes un jour, tu reviens le lendemain : ta série continue de monter.</span></div>'+
-          '<div class="fpg'+(g>0?' on':'')+'"><span class="fpi">🧊</span><span class="fpx"><b>Le gel de série</b>, offert au 14ᵉ jour, couvre un jour d\'absence de plus : tu peux en sauter deux d\'affilée sans rien perdre. Il se consomme dès qu\'il te sauve.</span></div>'+
+          '<div class="fpg'+(g>0?' on':'')+'"><span class="fpi">🧊</span><span class="fpx"><b>Le gel de série</b>, offert au 14ᵉ jour puis tous les quatre mondes sur la route, couvre un jour d\'absence de plus : tu peux en sauter deux d\'affilée sans rien perdre. Il se consomme dès qu\'il te sauve.</span></div>'+
           '<div class="fpg"><span class="fpi">↩️</span><span class="fpx"><b>Sinon</b>, deux jours sans venir et la série repart à 1. Ce que tu as appris, lui, ne bouge pas.</span></div>'+
           '<p class="fpe2">'+(g>0
             ? '🧊 Tu as <b>'+g+' gel'+(g>1?'s':'')+' en réserve.</b>'
-            : (a14 ? 'Ton gel a déjà servi — il ne s\'en regagne pas pour l\'instant.'
-                   : 'Tu n\'as pas encore de gel : il t\'attend au 14ᵉ jour.'))+'</p>';
+            : (a14 ? 'Ton gel a déjà servi — le prochain t\'attend sur la route, tous les quatre mondes.'
+                   : 'Tu n\'as pas encore de gel : il t\'attend au 14ᵉ jour, puis tous les quatre mondes sur la route.'))+'</p>';
       } }
     p.hidden=false;
     setTimeout(()=>document.addEventListener('click',fermerFlamme,{once:true}),0);
@@ -6338,13 +6329,40 @@ const TUTOS={
     {sel:'#vue-salles', img:'axo-guide-carte', t:"<b>Les Salles</b> : une par matière. Tu t'y entraînes sur les fiches que tu viens de travailler, <b>sans rien risquer</b> — ni chrono, ni trophée."},
     {sel:'#ms-amphi', img:'mascotte-arene-prete-au-combat', t:"<b>Le Grand Amphi</b>, c'est l'inverse : toutes les matières mélangées, du vrai jeu. Chaque case juste vaut <b>+2 🏆</b>, chaque erreur <b>−2</b>."},
     {img:'axo-guide-bravo', t:"L'Amphi s'ouvre après <b>4 jours de Parcours</b> — le temps de te constituer un bagage. D'ici là, les Salles sont à toi.", btn:"J'ai compris"}
-  ]
+  ],
+  /* LA CARTE. Elle se construit au démarrage, parce qu'elle parle de la rentrée de CET élève :
+     la date, le nombre de jours, son monde, le stage le plus proche. On finit tout en haut,
+     sur la rentrée, puis on redescend là où il en est. */
+  carte:function(){
+    const p1=(typeof enP1==='function') && enP1();
+    const d=dateRentree(), j=joursAvantRentree(), M=mondes();
+    const mc=(typeof mondeCourant==='function')? mondeCourant() : null, num=mc? mc.num : 1;
+    const elMonde=function(){ const m=mondeCourant(); return m? document.getElementById('monde-'+m.num) : null; };
+    const elStage=function(){ const l=document.querySelectorAll('#carte-corps .cr-stage'); return l.length? l[l.length-1] : null; };
+    const s=[];
+    s.push({img:'axo-guide-bienvenue', t: p1
+      ? "Tu es déjà en première année. On a construit cette route pour <b>reprendre les bases dans l'ordre</b>, monde après monde, à ton rythme — elle te sert de révision."
+      : "Ta rentrée, c'est <b>vers le 1<sup>er</sup> septembre "+d.getFullYear()+"</b> — dans "+j+" jours. On a construit ton parcours pour t'y amener <b>jour après jour</b> : deux fiches par jour, et tu arrives en première année avec les bases déjà vues."});
+    s.push({el:elMonde, img:'axo-guide-pointe-haut',
+      t:"La route se lit <b>de bas en haut</b>. Tu pars d'ici, le <b>monde "+num+"</b> : tu termines ses thématiques, le suivant s'ouvre. Chaque monde terminé t'offre quelque chose : sa photo de profil ou sa bannière, en alternance."});
+    if(elStage()) s.push({el:elStage, img:'axo-guide-carte', t: p1
+      ? "Sur le chemin, <b>tes stages de vacances</b> : douze jours guidés avec un tuteur, posés aux dates de tes vacances — pour reprendre ce qui est passé trop vite."
+      : "Sur le chemin, <b>tes stages de vacances</b> : douze jours guidés avec un tuteur, posés là où tu seras à leur date. Les vacances, c'est là que tu as du temps — c'est là qu'on accélère."});
+    s.push({el:function(){ return document.getElementById('cr-sommet'); }, img:'axo-guide-bravo', t: p1
+      ? "Tout en haut, <b>le bout de la route</b> : les "+M.length+" mondes terminés. On y monte ensemble, monde après monde."
+      : "Tout en haut, <b>ta rentrée</b> — et ce que tu auras dans ton bagage ce jour-là. On y monte ensemble, monde après monde.",
+      btn:"C'est parti !", act:function(){ const e=elMonde(); if(e) try{ e.scrollIntoView({block:'center',behavior:'smooth'}); }catch(x){} }});
+    return s;
+  }
 };
 let TU=null;
 function tutoFait(k){ return !!(S.tuto && S.tuto[k]); }
 function startTuto(k){
   if(TU || tutoFait(k) || !TUTOS[k]) return;
-  TU={k:k,i:0};
+  /* une visite peut se construire au moment où elle démarre : celle de la carte parle de TA rentrée */
+  const s=(typeof TUTOS[k]==='function')? TUTOS[k]() : TUTOS[k];
+  if(!s || !s.length) return;
+  TU={k:k,i:0,s:s};
   document.getElementById('tuto').hidden=false;
   tutoShow();
   window.addEventListener('resize',tutoReplace);
@@ -6352,20 +6370,19 @@ function startTuto(k){
 function tutoReplace(){ if(TU) tutoShow(); }
 function tutoShow(){
   if(!TU) return;
-  const st=TUTOS[TU.k][TU.i];
+  const st=TU.s[TU.i];
   const hole=document.getElementById('tuto-hole'), box=document.getElementById('tuto-box');
   document.getElementById('tuto-bulle').innerHTML=st.t;
   const ax=document.getElementById('tuto-axo'); ax.style.display=''; ax.src='img/'+(st.img||'axo-mains')+'.png';
   document.getElementById('tuto-nextbtn').textContent=st.btn||'Suivant';
   document.getElementById('tuto-skipbtn').textContent=st.skip||'Passer la visite';
-  const n=TUTOS[TU.k].length;
+  const n=TU.s.length;
   document.getElementById('tuto-pips').innerHTML=Array.from({length:n},(x,i)=>'<i class="'+(i===TU.i?'on':'')+'"></i>').join('');
   /* le projecteur se pose sur l'élément présenté ; sans cible, plein voile */
   let r=null;
-  if(st.sel){ const el=document.querySelector(st.sel);
-    /* la flamme est masquée tant que la série est à zéro : on la révèle le temps de l'étape */
-    if(el && el.hidden && st.sel==='#pt-flame'){ el.hidden=false; if(!(S.streak>=1)) el.textContent='🔥 0 j'; TU.flammeTemp=true; }
-    if(el && !el.hidden){ try{ el.scrollIntoView({block:'center'}); }catch(e){} r=el.getBoundingClientRect(); } }
+  /* la cible : un sélecteur, ou une fonction qui rend l'élément (la carte change à chaque rendu) */
+  const el = st.el ? (typeof st.el==='function'? st.el() : st.el) : (st.sel ? document.querySelector(st.sel) : null);
+  if(el && !el.hidden){ try{ el.scrollIntoView({block:'center'}); }catch(e){} r=el.getBoundingClientRect(); }
   if(r && r.width>0){
     const p=8;
     hole.style.left=(r.left-p)+'px'; hole.style.top=(r.top-p)+'px';
@@ -6380,18 +6397,16 @@ function tutoShow(){
 }
 function tutoNext(){
   if(!TU) return;
-  const st=TUTOS[TU.k][TU.i];
-  if(TU.i>=TUTOS[TU.k].length-1){ const act=st.act; tutoEnd(); if(act) act(); return; }
+  const st=TU.s[TU.i];
+  if(TU.i>=TU.s.length-1){ const act=st.act; tutoEnd(); if(act) act(); return; }
   TU.i++; tutoShow();
 }
 function tutoEnd(){
   if(!TU) return;
-  const flTemp=TU.flammeTemp;
   S.tuto=S.tuto||{}; S.tuto[TU.k]=Date.now(); saveS();
   TU=null;
   document.getElementById('tuto').hidden=true;
   window.removeEventListener('resize',tutoReplace);
-  if(flTemp && typeof renderPtop==='function') renderPtop();   /* la flamme reprend son état réel */
 }
 
 /* ═══ LA VOIX DE LA MASCOTTE — 47 moments de vie, 4 variantes chacun, chaque réplique
@@ -7610,10 +7625,11 @@ function renderPtop(){
     const moi=document.querySelector('.ptop-moi');
     if(moi && typeof banniereOf==='function' && typeof banFond==='function') moi.style.cssText=banFond(banniereOf());
   }
+  /* la flamme se voit toujours — à 0 aussi, en retrait : on sait dès le départ qu'elle existe */
   const f=document.getElementById('pt-flame');
-  if(f){ if(S.streak>=1){ f.hidden=false;
-    const hF=14+Math.min(8,S.streak);   /* la flamme grandit avec la série (plafonnée) */
-    f.innerHTML='<img src="img/icones/flamme-medeos.png" alt="" style="height:'+hF+'px"> '+S.streak+' j'; } else f.hidden=true; }
+  if(f){ const n=S.streak||0, hF=14+Math.min(8,n);   /* elle grandit avec la série (plafonnée) */
+    f.hidden=false; f.classList.toggle('zero', n<1);
+    f.innerHTML='<img src="img/icones/flamme-medeos.png" alt="" style="height:'+hF+'px"> '+n+' j'; }
 }
 
 function renderSeance(){
@@ -7850,7 +7866,7 @@ function dateRentree(){
   return new Date(an, RENTREE_MOIS, RENTREE_JOUR);
 }
 /* l'élève a-t-il DIT sa date, ou travaille-t-on sur l'hypothèse par défaut ? */
-function rentreeSupposee(){ return !(S.profil && S.profil.rentreeAn); }
+function rentreeSupposee(){ return !enP1() && !(S.profil && S.profil.rentreeAn); }
 function joursAvantRentree(){
   const d = dateRentree(); if(!d) return null;
   return Math.max(0, Math.ceil((d - new Date()) / 864e5));
@@ -7928,49 +7944,31 @@ const IMG_REC = nom => (typeof VIGNETTES!=='undefined' && VIGNETTES[nom]) ? 'img
 const TEXTURES = ['herbe','sable','pierre','glace','cuivre','cristal'];
 function textureMonde(m){ return IMG_REC('dalle-'+TEXTURES[(m.num-1)%TEXTURES.length]); }
 
-/* UN PALIER SUR DEUX. Une photo de profil tous les deux mondes, une bannière tous les
-   deux mondes : si chaque monde donne la même chose, plus rien ne vaut rien. Les mondes
-   pairs portent l'écusson et la bannière de leur thème ; les impairs donnent le gel de
-   série et annoncent l'écusson suivant, pour qu'on sache ce qui vient. Le monde 1 est le
-   point de départ : on n'y a encore rien mérité. */
+/* UNE SEULE CHOSE PAR MONDE, EN ALTERNANCE. Les mondes pairs font gagner la PHOTO DE PROFIL
+   de leur thème (l'écusson Axo), les impairs leur BANNIÈRE (le paysage) : une photo tous les
+   deux mondes, une bannière tous les deux mondes, et chaque monde donne quelque chose. Tous
+   les quatre mondes, un gel de série en plus — pas un à chaque monde, vingt gels tueraient la
+   flamme. Le monde 1 est le point de départ : on n'y a encore rien mérité. */
 function estPalier(num){ return num>=2 && num%2===0; }
 function ecussonMonde(m){ return IMG_REC('av-monde-'+String(m.num).padStart(2,'0')) || m.img; }
 function bannereMonde(m){ return IMG_REC('ban-monde-'+String(m.num).padStart(2,'0')); }
+function donneGel(num){ return num>=4 && num%4===0; }
 function recompensesArrivee(m){
   if(m.num < 2) return [];
-  const out=[];
-  if(estPalier(m.num)){
-    out.push({k:'avatar', nom:'Photo de profil', sous:m.nom, img:ecussonMonde(m), em:m.em});
-    out.push({k:'ban', nom:'Bannière', sous:m.nom, img:bannereMonde(m), em:'🎗️', teinte:m.teinte});
-  }
-  out.push({k:'gel', nom:'1 gel de série', sous:'protège ta flamme', img:IMG_REC('recompense-gel'), em:'🧊'});
-  if(!estPalier(m.num)){
-    const suiv = mondes()[m.num];   /* le monde juste au-dessus */
-    if(suiv && estPalier(suiv.num))
-      out.push({k:'apres', nom:'Photo de profil', sous:'au monde suivant', img:ecussonMonde(suiv), em:suiv.em});
-  }
+  const out = estPalier(m.num)
+    ? [{k:'avatar', nom:'Photo de profil', sous:m.nom, img:ecussonMonde(m), em:m.em}]
+    : [{k:'ban',    nom:'Bannière',        sous:m.nom, img:bannereMonde(m), em:'🎗️', teinte:m.teinte}];
+  if(donneGel(m.num)) out.push({k:'gel', nom:'1 gel de série', sous:'protège ta flamme', img:IMG_REC('recompense-gel'), em:'🧊'});
   return out;
 }
-/* la récompense d'une thématique : petite, réelle, immédiate */
-function recompenseDalle(i, n){
-  if(i===n-1) return {type:'coffre', em:'🎁', img:IMG_REC('coffre'), nom:'Coffre du monde'};
-  if(i%2===1)  return {type:'bonus',  em:'🎟️', img:IMG_REC('recompense-fiches'), nom:'Séance bonus'};
-  return         {type:'points', em:'✨', img:null, nom:'+50 points'};
-}
-/* on crédite UNE fois par thématique */
-function crediterThematique(t){
-  const m=(typeof mondes==='function')? mondes().find(x=>x.terr.indexOf(t)>=0) : null; if(!m) return null;
-  S.recomp=S.recomp||{}; const cle=t.mat+'|'+t.nom; if(S.recomp[cle]) return null;
-  const r=recompenseDalle(m.terr.indexOf(t), m.terr.length);
-  if(r.type==='points') S.points=(S.points||0)+50;
-  else if(r.type==='bonus') S.bonusSeance=arDay();
-  S.recomp[cle]=Date.now(); saveS(); return r;
-}
-/* on crédite UNE fois par monde terminé : sa photo de profil, sa bannière, un gel */
+/* on crédite UNE fois par monde terminé : la photo ou la bannière viennent de S.collection,
+   le gel tombe tous les quatre mondes */
 function crediterMonde(m){
   S.collection=S.collection||{};
   if(S.collection[m.num]) return false;
-  S.collection[m.num]=Date.now(); S.gels=(S.gels||0)+1; saveS(); return true;
+  S.collection[m.num]=Date.now();
+  if(donneGel(m.num)) S.gels=(S.gels||0)+1;
+  saveS(); return true;
 }
 /* LE BADGE ÉTUDIANT MEDEOS — réservé aux élèves des stages. Ni contenu, ni avantage de
    jeu : une identité, visible au classement et dans les duels. C'est ce qui se montre. */
@@ -7981,20 +7979,21 @@ if(typeof AVATARS!=='undefined') AVATARS.push({id:'medeos', nom:'Étudiant Medeo
   img:(typeof VIGNETTES!=='undefined' && VIGNETTES['badge-etudiant']) ? 'img/parcours/territoires/'+VIGNETTES['badge-etudiant'] : 'img/profil/av-carabin.png',
   expl:'Élève des stages Medeos', cond:function(){ return !!S.stage; }});
 
-/* le vestiaire : gratuites, mais UN MONDE SUR DEUX seulement — ce qui se donne à chaque
-   pas ne se regarde plus. Les mondes pairs déposent leur écusson et leur bannière. */
+/* le vestiaire suit l'alternance : les mondes pairs y déposent leur photo de profil, les
+   impairs leur bannière — jamais les deux, ce qui se donne à chaque pas ne se regarde plus. */
 if(typeof MONDES_DEF!=='undefined'){
-  MONDES_DEF.forEach((d,k)=>{ const num=k+1; if(num<2 || num%2) return;
+  MONDES_DEF.forEach((d,k)=>{ const num=k+1; if(num<2) return;
     const nn='monde-'+String(num).padStart(2,'0');
     const V=(typeof VIGNETTES!=='undefined')?VIGNETTES:{};
     const dossier='img/parcours/territoires/';
-    const av = V['av-'+nn] ? dossier+V['av-'+nn] : (V[nn] ? dossier+V[nn] : null);
-    const ban= V['ban-'+nn]? dossier+V['ban-'+nn]: null;
     const gagne=function(){ return !!(S.collection && S.collection[num]); };
-    if(typeof BANNIERES!=='undefined') BANNIERES.push({id:'monde-'+num, nom:d.nom, img:ban,
-      css:'linear-gradient(120deg,'+TEINTES[k%TEINTES.length]+',#1A1530)', expl:'Monde '+num+' terminé', cond:gagne});
-    if(typeof AVATARS!=='undefined' && av)
-      AVATARS.push({id:'monde-'+num, nom:d.nom, em:d.em, img:av, expl:'Monde '+num+' terminé', cond:gagne});
+    if(estPalier(num)){
+      const av = V['av-'+nn] ? dossier+V['av-'+nn] : (V[nn] ? dossier+V[nn] : null);
+      if(typeof AVATARS!=='undefined' && av)
+        AVATARS.push({id:'monde-'+num, nom:d.nom, em:d.em, img:av, expl:'Monde '+num+' terminé', cond:gagne});
+    } else if(typeof BANNIERES!=='undefined')
+      BANNIERES.push({id:'monde-'+num, nom:d.nom, img:V['ban-'+nn]? dossier+V['ban-'+nn] : null,
+        css:'linear-gradient(120deg,'+TEINTES[k%TEINTES.length]+',#1A1530)', expl:'Monde '+num+' terminé', cond:gagne});
   });
 }
 
@@ -8113,7 +8112,7 @@ function renderCarte(){
       '<div class="cr-socle grand'+(imgR?' dio':'')+'">'+(imgR?'<img class="cr-dio" src="'+imgR+'" alt="">':'<span class="cr-em">🎓</span>')+'</div>'+
       '<div class="cr-nom">'+(enP1()? 'Le bout de la route' : 'Ta rentrée en première année de santé')+'</div>'+
       bandeauHtml(enP1()? 'Les '+M.length+' mondes, terminés' : '1<sup>er</sup> sept. '+d.getFullYear()+' &nbsp;·&nbsp; dans '+j+' j', bandeauR||bandeau)+
-      '<div><button class="se-alt cr-chg" onclick="S.profil.rentreeDite=false;saveS();renderCarte()">'+(enP1()?'ce n\'est pas mon cas':(rentreeSupposee()?'tu ne l\'as pas encore dite — la préciser':'changer la date'))+'</button></div>'+
+      '<div><button class="se-alt cr-chg" onclick="S.profil.rentreeDite=false;saveS();renderCarte()">'+(rentreeSupposee()?'tu ne l\'as pas encore dite — la préciser':'changer la date')+'</button></div>'+
       '<div class="cr-bagage"><span>'+(enP1()? 'Ce que la route contient' : 'Avec tout ce bagage')+'</span>'+
         '<div><b>'+mondesVisibles.length+'</b><em>monde'+(mondesVisibles.length>1?'s':'')+'</em></div>'+
         '<div><b>'+themFaits+'</b><em>thématique'+(themFaits>1?'s':'')+'</em></div>'+
@@ -8151,9 +8150,8 @@ function renderCarte(){
 
     /* le carré des thématiques : 2×2, ou 2×2 et une au milieu */
     x += '<div class="cr-grid n'+tv.length+(e.etat==='verrouille'?' verrouille':'')+'">'+tv.map(t=>{
-      const et=etatTerritoire(t), p=progTerritoire(t), r=recompenseDalle(m.terr.indexOf(t), m.terr.length);
+      const et=etatTerritoire(t), p=progTerritoire(t);
       return '<div class="cr-tile '+et.etat+(t===tCur?' cur':'')+'" style="--c:'+COUL_MAT[t.mat]+'">'+
-        '<span class="cr-tile-rec'+(et.etat==='conquis'?' pris':'')+'" title="'+r.nom+'">'+icone(r,'cr-tile-rec-i')+'</span>'+
         '<img class="cr-tile-em" src="img/icones/'+EMB_MAT[t.mat]+'.png" alt="">'+
         '<b>'+t.nom+'</b>'+
         '<span class="cr-tile-bar"><i style="width:'+p.pct+'%"></i></span>'+
@@ -8169,8 +8167,8 @@ function renderCarte(){
     const badge = e.etat==='fini' ? '<i class="cr-badge ok">✓</i>' : e.etat==='verrouille' ? '<i class="cr-badge lock">🔒</i>'
                 : (marqueur ? '<img class="cr-marq" src="'+marqueur+'" alt="Tu es ici">' : '<i class="cr-badge ici">Tu es ici</i>');
     const rec = recompensesArrivee(m);
-    const chips = rec.map(r=>'<span class="cr-chip'+(e.etat==='verrouille'?' lock':'')+(r.k==='apres'?' futur':'')+'">'+
-      (r.k==='avatar' || r.k==='apres' ? '<span class="cr-chip-av'+(r.k==='apres'?' futur':'')+'">'+(r.img?'<img src="'+r.img+'" alt="">':'<i>'+r.em+'</i>')+'</span>'
+    const chips = rec.map(r=>'<span class="cr-chip'+(e.etat==='verrouille'?' lock':'')+'">'+
+      (r.k==='avatar' ? '<span class="cr-chip-av">'+(r.img?'<img src="'+r.img+'" alt="">':'<i>'+r.em+'</i>')+'</span>'
        : r.k==='ban' ? '<span class="cr-chip-ban"'+(r.img?' style="background-image:url(\''+r.img+'\')"':' style="background:linear-gradient(120deg,'+r.teinte+',#1A1530)"')+'></span>'
        : icone(r,'cr-chip-i'))+
       '<b>'+r.nom+'</b><em>'+r.sous+'</em></span>').join('');
@@ -8182,12 +8180,15 @@ function renderCarte(){
                   : '<div class="cr-deb depart">Ton point de départ</div>')+
       '</div>';
   }
-  x += '<div class="cr-depart"><span class="cr-rail"><b>0</b></span><div>🚩 <b>Ta route commence ici</b><span>Chaque thématique terminée rapporte quelque chose, et un monde sur deux t\'offre sa photo de profil et sa bannière.</span></div></div>';
+  x += '<div class="cr-depart"><span class="cr-rail"><b>0</b></span><div>🚩 <b>Ta route commence ici</b><span>Un monde sur deux t\'offre sa photo de profil, l\'autre sa bannière.</span></div></div>';
   x += '</div></div>';
   b.innerHTML = x;
 
   const el=document.getElementById('monde-'+mc.num);
   if(el) requestAnimationFrame(()=>{ try{ const r=el.getBoundingClientRect(); window.scrollTo({top: Math.max(0, window.scrollY + r.top - window.innerHeight*0.30), behavior:'auto'}); }catch(e){} });
+  /* la première fois qu'on voit sa route, Axo la présente — avec SA date de rentrée */
+  if(typeof startTuto==='function' && !tutoFait('carte'))
+    setTimeout(()=>{ const sc=document.getElementById('carte'); if(sc && sc.classList.contains('on')) startTuto('carte'); }, 700);
 }
 
 function ouvrirCarte(){ renderCarte(); go('carte'); }
@@ -9688,10 +9689,7 @@ function seanceFin(){
      de suite, pas dans un écran de statistiques qu'on n'ouvre jamais */
   { const ch=(!s.rev && typeof chapitreReferme==='function')? chapitreReferme(s) : null;
     if(ch){
-      const tt=(typeof territoires==='function')? territoires().find(t=>t.mat===s.mat && t.nom===ch) : null;
-      const rec=(tt && typeof crediterThematique==='function')? crediterThematique(tt) : null;
-      bilan+='<div class="fin-jalon"><img src="img/icones/'+EMB_MAT[s.mat]+'.png" alt="" onerror="this.remove()"><div><b>🏴 Thématique terminée : '+ch+'</b><span>Tout le chapitre est derrière toi. Dans ton monde, elle passe en or.</span>'+
-        (rec? '<span class="fin-rec">'+rec.em+' <b>'+rec.nom+'</b> — '+rec.sous+'</span>' : '')+'</div></div>'; }
+      bilan+='<div class="fin-jalon"><img src="img/icones/'+EMB_MAT[s.mat]+'.png" alt="" onerror="this.remove()"><div><b>🏴 Thématique terminée : '+ch+'</b><span>Tout le chapitre est derrière toi. Dans ton monde, elle passe en or.</span></div></div>'; }
     const ouv=(!s.rev && typeof chapitreOuvert==='function')? chapitreOuvert(s) : null;
     if(ouv) bilan+='<div class="fin-chap">🗺️ Nouvelle thématique ouverte : <b>'+ouv+'</b>. La prochaine séance de '+s.mat+' y entre pour de bon.</div>';
     /* un MONDE terminé : l'étape la plus rare et la plus grosse, elle se fête en grand */
@@ -9699,9 +9697,9 @@ function seanceFin(){
       const fini=mondes().find(m=>m.terr.some(t=>t.nom===ch) && etatMonde(m).etat==='fini');
       if(fini){ const neuf=(typeof crediterMonde==='function')? crediterMonde(fini) : false;
         bilan+='<div class="fin-monde"><span>'+fini.em+'</span><b>Monde terminé : '+fini.nom+'</b><em>Ses '+fini.terr.length+' thématiques sont derrière toi. Le monde suivant s\'ouvre.</em>'+
-          (neuf?'<span class="fin-monde-r">'+((typeof estPalier==='function' && estPalier(fini.num))
-             ? '🧊 +1 gel de série · 🖼️ sa photo de profil · 🎗️ sa bannière — dans ton vestiaire'
-             : '🧊 +1 gel de série — la photo de profil et la bannière tombent au monde suivant')+'</span>':'')+'</div>'; } } }
+          (neuf?'<span class="fin-monde-r">'+(fini.num<2
+             ? '🎯 Premier monde terminé — la photo de profil du monde 2 t\'attend'
+             : (estPalier(fini.num) ? '🖼️ sa photo de profil' : '🎗️ sa bannière')+' — dans ton vestiaire'+(donneGel(fini.num)?' · 🧊 +1 gel de série':''))+'</span>':'')+'</div>'; } } }
   s.fiches.forEach(sl=>{
     const o=(S.oublis||{})[sl]||{};
     bilan+='<div class="fin-fiche"><b>📄 '+(TITRES_FICHES[sl]||sl)+'</b>'+
