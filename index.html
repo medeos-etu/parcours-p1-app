@@ -2240,16 +2240,6 @@
 .cr-chip.ok{border-color:#FCD34D;background:linear-gradient(180deg,#5A4A1E,#3A2E12)}
 .cr-chip.lock{opacity:.7}
 /* — le carré des thématiques, entre deux mondes — */
-/* LA ROUTE — une bande continue derrière la colonne, qui passe entre les deux rangées de
-   thématiques et sous chaque socle. Dessinée plutôt qu'en images : elle se raccorde
-   toujours, à n'importe quelle hauteur de contenu. */
-.cr-route{position:relative}
-.cr-route::after{content:"";position:absolute;left:50%;top:0;bottom:0;width:118px;margin-left:-59px;z-index:0;pointer-events:none;
-  background:
-    repeating-linear-gradient(180deg, rgba(255,255,255,.05) 0 2px, transparent 2px 34px),
-    linear-gradient(90deg, rgba(184,137,90,.0), rgba(184,137,90,.30) 12%, rgba(226,156,92,.34) 50%, rgba(184,137,90,.30) 88%, rgba(184,137,90,.0));
-  box-shadow:0 0 34px rgba(226,156,92,.10)}
-.cr-route>*{position:relative;z-index:1}
 .cr-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 10px}
 /* le rail dessiné, à la place du trait */
 .cr-route.rail::before{background:var(--rail) center/100% auto repeat-y;width:22px;left:23px;border-radius:0;box-shadow:none}
