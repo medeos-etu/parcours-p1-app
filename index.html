@@ -2061,9 +2061,6 @@
 .ld{position:relative;margin-top:14px;padding-left:0}
 /* le chemin qui relie les mondes */
 .ld-m{position:relative;margin-bottom:14px}
-.ld-m::after{content:"";position:absolute;left:50%;bottom:-14px;width:4px;height:14px;margin-left:-2px;
-  background:repeating-linear-gradient(180deg,rgba(107,70,193,.45) 0 4px,transparent 4px 8px)}
-.ld-m:last-child::after{display:none}
 /* la tuile d'un monde : une image (ou une teinte + emblème), le nom par-dessus */
 .ld-tile{position:relative;height:118px;border-radius:18px;overflow:hidden;background-size:cover;background-position:center;
   box-shadow:0 8px 22px rgba(26,26,46,.14);border:2px solid transparent}
@@ -2087,6 +2084,39 @@
 .ld-m.verrouille .ld-tile-t b{color:#FAF6F0}
 /* les thématiques du monde en cours, sous sa tuile */
 .ld-them{margin:10px 0 2px;padding:10px 10px 4px;border-radius:16px;background:rgba(107,70,193,.05);border:1px solid rgba(107,70,193,.14)}
+/* — LA PORTE ILLUSTRÉE, sur l'accueil — */
+.se-carte{padding:0;overflow:hidden}
+.sc-illu{display:block;position:relative;aspect-ratio:3/1;min-height:118px;background:#F6EEDF center/cover no-repeat;overflow:hidden}
+.sc-illu .im{position:absolute;inset:0;width:100%;height:100%;display:block}
+.sc-illu.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,21,48,0) 45%,rgba(26,21,48,.72))}
+.sc-illu-t{position:absolute;left:14px;bottom:10px;z-index:1;display:flex;flex-direction:column;gap:1px}
+.sc-illu-t em{font-style:normal;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--violet)}
+.sc-illu-t b{font-family:Fredoka,Inter,sans-serif;font-size:19px;font-weight:800;color:#1A1A2E;line-height:1.1;text-shadow:0 1px 0 rgba(255,255,255,.8),0 4px 14px rgba(255,255,255,.7)}
+.sc-illu.photo .sc-illu-t em{color:#FCD34D}
+.sc-illu.photo .sc-illu-t b{color:#FAF6F0;text-shadow:0 2px 10px rgba(0,0,0,.45)}
+.sc-body{display:block;padding:12px 16px 15px}
+/* — LE PARCOURS DES MONDES : médailles, grand monde, brume — */
+.pm-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:0 0 12px}
+.pm-l{font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:800;color:#8A6238;margin-right:2px}
+.pm-med{position:relative;width:40px;height:40px;border-radius:13px;flex-shrink:0;border:2px solid #E29C5C;overflow:visible;
+  background:linear-gradient(180deg,#FFF3C4,#FCD34D);display:flex;align-items:center;justify-content:center}
+.pm-em{width:100%;height:100%;border-radius:11px;object-fit:cover;display:flex;align-items:center;justify-content:center;font-size:19px;background:transparent!important}
+.pm-med i{position:absolute;right:-6px;bottom:-6px;width:17px;height:17px;border-radius:50%;background:#2E7D53;color:#fff;font-size:10px;font-weight:900;
+  display:flex;align-items:center;justify-content:center;font-style:normal;border:2px solid var(--creme)}
+.ld-tile.grand{height:170px}
+.ld-tile.grand .ld-tile-t b{font-size:26px}
+.ld-tile.grand .ld-em{font-size:60px;right:18px;top:16px}
+.ld-m.ici .ld-them{margin-top:12px}
+.ld-m .mp-jours{margin:12px 0 2px}
+.brume{position:relative;margin:16px 0 4px;padding:18px 12px 14px;border-radius:18px;text-align:center;
+  background:linear-gradient(180deg,rgba(250,246,240,0),rgba(233,226,214,.55) 30%,rgba(233,226,214,.75));border:1px dashed rgba(107,70,193,.22)}
+.brume-t{font-size:12px;color:var(--muted);font-weight:700;margin-bottom:12px;line-height:1.45}
+.brume-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.brume-m{position:relative;height:64px;border-radius:14px;background-size:cover;background-position:center;overflow:hidden;
+  filter:blur(1.6px) grayscale(.7) brightness(.85);opacity:.72;display:flex;align-items:center;justify-content:center}
+.brume-m i{font-style:normal;font-size:28px;opacity:.75}
+.brume-m em{position:absolute;right:6px;bottom:4px;font-style:normal;font-size:12px;filter:none}
+.brume-plus{font-size:11px;color:var(--muted);margin-top:10px;font-style:italic}
 .sc-em{width:36px;height:36px;border-radius:11px;flex-shrink:0;object-fit:cover;display:flex;align-items:center;justify-content:center;
   font-size:18px;background:rgba(107,70,193,.10)}
 /* un monde terminé, dans le bilan de séance : la plus grosse marche du Parcours */
@@ -7223,15 +7253,74 @@ function pastilleMonde(m, cls){
   return m.img ? '<img class="'+cls+'" src="'+m.img+'" alt="" loading="lazy">'
                : '<span class="'+cls+' em" style="background:'+m.teinte+'">'+m.em+'</span>';
 }
-/* LA PORTE VERS LES MONDES, sous la séance du jour : une vraie carte — le monde où l'on
-   est, ses thématiques en points (or = terminée, violet = celle du jour), la thématique
-   en cours et sa barre. On voit ce qu'on a pris et ce qu'il reste, et on a envie d'aller voir. */
+/* ═══ « LE PARCOURS DES MONDES » — l'illustration de la porte, dessinée.
+   Une route dorée qui monte à travers des collines crème, de petits mondes posés comme
+   des îles avec leur monument, le monde en cours qui brille, et la brume qui avale les
+   suivants. Tout en SVG : net sur tous les écrans, dans la palette, et remplacé sans une
+   ligne de code le jour où l'image parcours-des-mondes.png est déposée.
+   Le monde en cours est mis en avant : son numéro décide de la position de la lueur. ═══ */
+function illuMondes(){
+  const M=(typeof mondes==='function')?mondes():[];
+  const mc=(typeof mondeCourant==='function' && M.length)?mondeCourant():null;
+  const iCur=mc?M.indexOf(mc):0;
+  /* six îles le long de la route ; l'île « en cours » est la deuxième visible, les
+     précédentes sont derrière (dorées), les suivantes devant (dans la brume) */
+  const iles=[[70,166,34],[175,140,38],[290,150,40],[400,108,36],[490,86,30],[560,60,24]];
+  const V='#6B46C1', VD='#4C2A85', OR='#FCD34D', T='#E29C5C', CR='#FAF6F0', K='#1A1A2E';
+  const monument=(x,y,r,etat)=>{
+    const h=r*0.9, w=r*0.62;
+    if(etat==='fini') return '<g><ellipse cx="'+x+'" cy="'+(y-h*0.55)+'" rx="'+(w*0.55)+'" ry="'+(w*0.55)+'" fill="url(#gOr)"/><rect x="'+(x-w*0.5)+'" y="'+(y-h*0.55)+'" width="'+w+'" height="'+(h*0.55)+'" rx="3" fill="url(#gOr)"/><path d="M'+(x-w*0.5)+' '+(y-h*0.55)+' h'+w+'" stroke="#B87A33" stroke-width="1.2"/></g>';
+    if(etat==='ici') return '<g><ellipse cx="'+x+'" cy="'+(y+4)+'" rx="'+(r*1.35)+'" ry="'+(r*0.5)+'" fill="url(#gLueur)"/><ellipse cx="'+x+'" cy="'+(y-h*0.6)+'" rx="'+(w*0.6)+'" ry="'+(w*0.6)+'" fill="url(#gViolet)"/><rect x="'+(x-w*0.55)+'" y="'+(y-h*0.6)+'" width="'+(w*1.1)+'" height="'+(h*0.6)+'" rx="3" fill="url(#gViolet)"/><rect x="'+(x-w*0.12)+'" y="'+(y-h*0.6-w*0.6-13)+'" width="2" height="15" fill="'+VD+'"/><path d="M'+(x-w*0.12+2)+' '+(y-h*0.6-w*0.6-13)+' l11 4 l-11 4 z" fill="'+OR+'"/></g>';
+    return '<g opacity=".9"><ellipse cx="'+x+'" cy="'+(y-h*0.5)+'" rx="'+(w*0.5)+'" ry="'+(w*0.5)+'" fill="#D9CDB8"/><rect x="'+(x-w*0.45)+'" y="'+(y-h*0.5)+'" width="'+(w*0.9)+'" height="'+(h*0.5)+'" rx="3" fill="#D9CDB8"/></g>';
+  };
+  let g='';
+  iles.forEach(([x,y,r],k)=>{
+    const etat = k<1 ? 'fini' : k===1 ? 'ici' : 'avenir';
+    g += '<ellipse cx="'+x+'" cy="'+(y+6)+'" rx="'+(r*1.15)+'" ry="'+(r*0.42)+'" fill="rgba(26,26,46,.10)"/>'+
+         '<ellipse cx="'+x+'" cy="'+y+'" rx="'+r+'" ry="'+(r*0.38)+'" fill="url(#gIle)" stroke="#E2D3B8" stroke-width="1.2"/>'+
+         '<ellipse cx="'+x+'" cy="'+(y-2)+'" rx="'+(r*0.82)+'" ry="'+(r*0.26)+'" fill="#F6EEDF"/>'+monument(x,y,r,etat);
+    if(etat==='ici') g += '<text x="'+x+'" y="'+(y-r*0.9-26)+'" text-anchor="middle" font-size="9" font-weight="800" fill="'+V+'" font-family="Inter,system-ui,sans-serif" letter-spacing="1">TU ES ICI</text>';
+  });
+  return '<svg class="im" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Le parcours des mondes">'+
+    '<defs>'+
+      '<linearGradient id="gCiel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFBF3"/><stop offset="1" stop-color="#F1E7D6"/></linearGradient>'+
+      '<linearGradient id="gIle" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F7EFE1"/><stop offset="1" stop-color="#E9DCC5"/></linearGradient>'+
+      '<linearGradient id="gViolet" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8B5CF6"/><stop offset="1" stop-color="'+VD+'"/></linearGradient>'+
+      '<linearGradient id="gOr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE38A"/><stop offset="1" stop-color="'+T+'"/></linearGradient>'+
+      '<radialGradient id="gLueur"><stop offset="0" stop-color="'+OR+'" stop-opacity=".55"/><stop offset="1" stop-color="'+OR+'" stop-opacity="0"/></radialGradient>'+
+      '<linearGradient id="gBrume" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="'+CR+'" stop-opacity="0"/><stop offset=".55" stop-color="'+CR+'" stop-opacity=".82"/><stop offset="1" stop-color="'+CR+'" stop-opacity=".97"/></linearGradient>'+
+    '</defs>'+
+    '<rect width="600" height="200" fill="url(#gCiel)"/>'+
+    /* collines lointaines, en trois plans */
+    '<ellipse cx="120" cy="215" rx="260" ry="70" fill="#F0E6D4"/><ellipse cx="420" cy="205" rx="300" ry="62" fill="#EEE3CF"/><ellipse cx="560" cy="150" rx="180" ry="52" fill="#F3EADA"/><ellipse cx="300" cy="230" rx="330" ry="72" fill="#E9DDC7"/>'+
+    /* petits arbres dorés */
+    '<g fill="#E2C27A"><circle cx="30" cy="150" r="5"/><circle cx="130" cy="178" r="4"/><circle cx="245" cy="123" r="4"/><circle cx="350" cy="170" r="5"/><circle cx="455" cy="130" r="4"/></g>'+
+    '<g stroke="#B8895A" stroke-width="1.4"><path d="M30 155v9"/><path d="M130 182v8"/><path d="M245 127v8"/><path d="M350 175v8"/><path d="M455 134v7"/></g>'+
+    /* la route : une ombre, le ruban, les dalles */
+    '<path d="M70 166 C 120 166, 140 140, 175 140 S 250 150, 290 150 S 360 108, 400 108 S 470 86, 490 86 S 545 60, 560 60" fill="none" stroke="rgba(26,26,46,.10)" stroke-width="14" stroke-linecap="round" transform="translate(0,4)"/>'+
+    '<path d="M70 166 C 120 166, 140 140, 175 140 S 250 150, 290 150 S 360 108, 400 108 S 470 86, 490 86 S 545 60, 560 60" fill="none" stroke="'+T+'" stroke-width="11" stroke-linecap="round"/>'+
+    '<path d="M70 166 C 120 166, 140 140, 175 140 S 250 150, 290 150 S 360 108, 400 108 S 470 86, 490 86 S 545 60, 560 60" fill="none" stroke="'+OR+'" stroke-width="5" stroke-linecap="round" stroke-dasharray="7 6"/>'+
+    g+
+    /* la brume qui avale les mondes suivants */
+    '<rect x="300" y="0" width="300" height="200" fill="url(#gBrume)"/>'+
+    '</svg>';
+}
+/* LA PORTE VERS LES MONDES, sur l'accueil : une belle carte illustrée.
+   En haut, l'illustration « Le parcours des mondes » — celle de ChatGPT si elle a été
+   déposée (img/parcours/territoires/parcours-des-mondes.png, bannière 3:1, consignes
+   dans CONSIGNES-IMAGES), sinon celle qu'on dessine nous-mêmes (illuMondes). En dessous,
+   le monde où l'on est, ses thématiques en points, la thématique en cours et sa barre. */
 function ligneConquete(){
   const t=prochaineConquete(); if(!t) return '';
   const p=progTerritoire(t), m=mondeCourant(), em=etatMonde(m);
   const points=m.terr.map(x=>{ const e=etatTerritoire(x);
     return '<i class="'+(e.etat==='conquis'?'ok':x===t?'now':'')+'"></i>'; }).join('');
+  const banniere=(typeof VIGNETTES!=='undefined' && VIGNETTES['parcours-des-mondes']) ? 'img/parcours/territoires/'+VIGNETTES['parcours-des-mondes'] : null;
   return '<button type="button" class="se-carte'+(p.presque?' presque':'')+'" onclick="ouvrirCarte()">'+
+    '<span class="sc-illu'+(banniere?' photo':'')+'"'+(banniere?' style="background-image:url(\''+banniere+'\')"':'')+'>'+
+      (banniere?'':illuMondes())+
+      '<span class="sc-illu-t"><em>Ta carte</em><b>Le parcours des mondes</b></span></span>'+
+    '<span class="sc-body">'+
     '<span class="sc-head">'+pastilleMonde(m,'sc-em')+
       '<span class="sc-ttl"><span class="sc-sur">Ton monde · '+m.num+' sur '+mondes().length+'</span><b>'+m.nom+'</b></span>'+
       '<span class="sc-go">›</span></span>'+
@@ -7240,7 +7329,7 @@ function ligneConquete(){
       '<span class="sc-nowtxt"><b>'+t.nom+'</b>'+
       '<span class="sc-bar"><i style="width:'+p.pct+'%;background:'+COUL_MAT[t.mat]+'"></i></span>'+
       '<em>'+(p.reste<=2 ? 'Encore '+p.reste+' fiche'+(p.reste>1?'s':'')+' et elle est à toi.' : p.lues+' sur '+p.tot+' fiches lues')+'</em></span></span>'+
-    '</button>';
+    '</span></button>';
 }
 /* une séance qui REFERME un chapitre : un territoire conquis, on le dit tout de suite */
 function chapitreReferme(s){
@@ -7580,20 +7669,20 @@ function renderCarte(){
     const choix = [an, an+1, an+2].map(y =>
       '<button onclick="poserRentree('+y+')">Septembre '+y+
       '<small>'+(y===an?'j\'entre en première année dans quelques semaines':(y===an+1?'je suis en Terminale cette année':'je suis en Première cette année'))+'</small></button>').join('');
-    b.innerHTML = dit('Dis-moi quand commence ta première année — je place tes stages sur la route des mondes.','axo-guide-carte')+
+    b.innerHTML = dit('Dis-moi quand commence ta première année — je place tes stages sur le parcours des mondes.','axo-guide-carte')+
       '<div class="rt-illu-wrap">'+illuRoute()+'</div>'+
       '<div class="rt-ask"><h3>Quand commence ta première année de santé ?</h3>'+
-      '<p>C\'est la seule chose que je ne peux pas deviner. Avec cette date, je place tes stages et ta rentrée sur la route des mondes.</p>'+
+      '<p>C\'est la seule chose que je ne peux pas deviner. Avec cette date, je place tes stages et ta rentrée sur le parcours des mondes.</p>'+
       '<div class="rt-ans">'+choix+
       '<button onclick="poserRentree(null)">Je ne sais pas encore<small>on avance quand même — tu me le diras plus tard</small></button>'+
       '</div></div>';
     return;
   }
 
-  /* L'ÉCHELLE DES MONDES, COMME LES ARÈNES D'UN JEU. Tous les mondes, d'un coup :
-     ceux qu'on a passés (or), celui où l'on est (ouvert, avec ses thématiques), ceux qui
-     attendent (verrouillés, mais visibles — on sait ce qu'il y a après). Les stages sont
-     des camps posés entre deux mondes, là où l'élève sera à leur date. */
+  /* LE PARCOURS DES MONDES. Le monde en cours occupe l'écran : sa tuile, ses thématiques.
+     Les mondes passés se rangent en médailles d'or, compactes. Les mondes suivants ne se
+     décrivent pas — de petites vignettes sous la brume, sans nom : on sait qu'il y a une
+     suite, pas ce qu'elle contient. Les stages sont des camps posés là où l'élève sera. */
   const d = dateRentree();
   const j = joursAvantRentree();
   const faites = seancesFaites().length;
@@ -7601,12 +7690,29 @@ function renderCarte(){
   const M = mondes();
   const mc = mondeCourant();
   const iMc = M.indexOf(mc);
-  const finis = M.filter(m=>etatMonde(m).etat==='fini').length;
+  const ec = etatMonde(mc);
+  const passes = M.filter((m,k)=>k<iMc);
+  const suivants = M.filter((m,k)=>k>iMc);
 
-  /* ── en tête : où l'on est, en une ligne ── */
-  let x = '<div class="ld-head">'+chg+'<span class="ld-k">Tes mondes</span>'+
-    '<b>'+(finis? finis+' monde'+(finis>1?'s':'')+' terminé'+(finis>1?'s':'')+' sur '+M.length : M.length+' mondes à traverser')+'</b>'+
+  /* ── en tête ── */
+  let x = '<div class="ld-head">'+chg+'<span class="ld-k">Le parcours des mondes</span>'+
+    '<b>'+(passes.length? passes.length+' monde'+(passes.length>1?'s':'')+' derrière toi' : 'Ton premier monde t\'attend')+'</b>'+
     '<span class="ld-s">'+(d ? j+' jours avant ta rentrée du 1<sup>er</sup> septembre '+d.getFullYear()+'.' : 'Rentrée pas encore dite — dis-la-moi quand tu le sauras.')+'</span></div>';
+
+  /* ── les mondes passés : des médailles, pas des cartes ── */
+  if(passes.length){
+    x += '<div class="pm-row"><span class="pm-l">Terminés</span>'+passes.map(m=>'<span class="pm-med" title="'+m.nom+'">'+pastilleMonde(m,'pm-em')+'<i>✓</i></span>').join('')+'</div>';
+  }
+
+  /* ── le monde en cours, en grand ── */
+  const fond = mc.img ? 'background-image:url(\''+mc.img+'\')' : 'background:linear-gradient(135deg,'+mc.teinte+',#1A1530)';
+  x += '<div class="ld-m ici encours" id="monde-'+mc.num+'"><div class="ld-tile grand" style="'+fond+'">'+
+    (mc.img?'':'<span class="ld-em">'+mc.em+'</span>')+
+    '<div class="ld-tile-t"><span class="ld-num">Monde '+mc.num+' sur '+M.length+'</span><b>'+mc.nom+'</b>'+
+    '<span class="ld-n">'+(ec.faits? ec.faits+' thématique'+(ec.faits>1?'s':'')+' sur '+ec.tot+' terminée'+(ec.faits>1?'s':'') : ec.tot+' thématiques à terminer')+
+    (ec.tot-ec.faits===1?' — encore une et ce monde est à toi.':'')+'</span></div>'+
+    '<i class="ld-badge ici">Tu es ici</i>'+
+    '<div class="ld-bar"><i style="width:'+Math.round(100*ec.faits/Math.max(1,ec.tot))+'%"></i></div></div>';
 
   /* les prochains jours : la preuve que les matières alternent */
   { const dec0 = (typeof seanceJourFaite==='function' && seanceJourFaite()) ? 1 : 0;
@@ -7614,73 +7720,54 @@ function renderCarte(){
     if(prochaines.length) x += '<div class="mp-jours">'+prochaines.map((s,i)=>{ const n=i+dec0;
       return '<span style="--c:'+COUL_MAT[s.mat]+'"><img src="img/icones/'+EMB_MAT[s.mat]+'.png" alt=""><b>'+(n===0?'Aujourd\'hui':n===1?'Demain':'Dans '+n+' jours')+'</b><em>'+s.mat+'</em></span>'; }).join('')+'</div>'; }
 
-  /* ── les camps : les stages, entre deux mondes, là où l'élève sera à leur date ── */
-  const camps={};
-  const poser=(idx,html)=>{ const m=mondeAuJour(idx); const k=M.indexOf(m); (camps[k]=camps[k]||[]).push(html); };
-  const imgCamp=(nom,repli)=>(typeof VIGNETTES!=='undefined' && VIGNETTES[nom]) ? 'parcours/territoires/'+VIGNETTES[nom] : repli;
-  const camp=(img,quand,titre,texte,url,lien)=>'<a class="mp-camp" href="'+url+'" target="_blank" rel="noopener">'+
-    '<img src="img/'+img+'" alt=""><div><span class="mp-sur">'+quand+'</span><b>'+titre+'</b><p>'+texte+'</p><em>'+lien+' →</em></div></a>';
-  const URL_STAGES='https://www.medeos-sante.fr/packs/stages-vacances', URL_MEDIPRO='https://www.medeos-sante.fr/packs/medi-pro';
+  /* ses thématiques */
+  x += '<div class="ld-them">';
+  mc.terr.forEach(t=>{
+    const et=etatTerritoire(t), p=progTerritoire(t);
+    const dec = et.etat==='avenir' ? aDecouvrir(t,2) : [];
+    x += '<div class="mp-t '+et.etat+(p.presque?' presque':'')+'" style="--c:'+COUL_MAT[t.mat]+'">'+
+      '<div class="mp-med"><img src="img/icones/'+EMB_MAT[t.mat]+'.png" alt="">'+(et.etat==='conquis'?'<i class="mp-ok">✓</i>':'')+'</div>'+
+      '<div class="mp-c">'+vignetteTerritoire(t,'mp-img')+'<div class="mp-txt"><span class="mp-sur">'+t.mat+' · '+p.tot+' fiches</span><b>'+t.nom+'</b>'+
+      (et.etat==='encours'
+        ? '<div class="sc-bar"><i style="width:'+p.pct+'%;background:var(--c)"></i></div><span class="mp-r">'+p.lues+' / '+p.tot+' fiches'+(p.presque?' — presque à toi':'')+'</span>'
+        : et.etat==='conquis' ? '<span class="mp-r">Terminée ✓</span>'
+        : (dec.length ? '<span class="mp-r">'+dec.join(' · ')+'</span>' : ''))+
+      '</div></div></div>';
+  });
+  x += '</div></div>';
+
+  /* ── le prochain camp : le stage le plus proche, un rendez-vous, jamais une surprise ── */
   if(d){
     const debutTerminale=new Date(d.getFullYear()-1,8,1);
     const dans=n=>n<=0?'en ce moment':n===1?'demain':'dans '+n+' jours';
-    periodesEntre(new Date(), d).filter(p=>p.m>=debutTerminale).forEach(p=>{
-      const dj=Math.max(0, Math.round((p.m-new Date())/864e5));
-      poser(faites+dj, camp(imgCamp('camp-stage','stage-vacances.png'), p.emo+' '+p.quand+' · '+dans(dj), p.stage||'Stage Medeos',
-        (p.pitch? '<b>'+p.pitch+'</b> ' : '')+'Douze jours guidés pendant ces vacances, avec un tuteur qui répond : le programme repris là où tu en es. Inclus dans l\'année complète, ou seul.',
-        URL_STAGES+'#stages', 'Les stages des vacances'));
-    });
+    const imgCamp=(nom,repli)=>(typeof VIGNETTES!=='undefined' && VIGNETTES[nom]) ? 'parcours/territoires/'+VIGNETTES[nom] : repli;
+    const camp=(img,quand,titre,texte,url,lien)=>'<a class="mp-camp" href="'+url+'" target="_blank" rel="noopener">'+
+      '<img src="img/'+img+'" alt=""><div><span class="mp-sur">'+quand+'</span><b>'+titre+'</b><p>'+texte+'</p><em>'+lien+' →</em></div></a>';
+    const p=periodesEntre(new Date(), d).filter(x=>x.m>=debutTerminale)[0];
     const pr=prerentreeDe(d.getFullYear());
-    if(pr.m>new Date()){
-      const dj=Math.max(0, Math.round((pr.m-new Date())/864e5));
-      poser(faites+dj, camp('stage-medipro.png', '☀️ '+pr.quand+' · '+dans(dj), 'Stage de pré-rentrée',
+    if(p){ const dj=Math.max(0, Math.round((p.m-new Date())/864e5));
+      x += camp(imgCamp('camp-stage','stage-vacances.png'), p.emo+' '+p.quand+' · '+dans(dj), p.stage||'Stage Medeos',
+        (p.pitch? '<b>'+p.pitch+'</b> ' : '')+'Douze jours guidés pendant ces vacances, avec un tuteur qui répond : le programme repris là où tu en es. Inclus dans l\'année complète, ou seul.',
+        'https://www.medeos-sante.fr/packs/stages-vacances#stages', 'Les stages des vacances'); }
+    else if(pr.m>new Date()){ const dj=Math.max(0, Math.round((pr.m-new Date())/864e5));
+      x += camp('stage-medipro.png', '☀️ '+pr.quand+' · '+dans(dj), 'Stage de pré-rentrée',
         'La dernière ligne droite : les bases académiques et la méthode, un tuteur qui répond, et un suivi jusqu\'au concours. Inclus dans l\'année complète, ou seul.',
-        URL_MEDIPRO, 'Le stage de pré-rentrée'));
-    }
+        'https://www.medeos-sante.fr/packs/medi-pro', 'Le stage de pré-rentrée'); }
   }
 
-  /* ── l'échelle : TOUS les mondes, du premier au dernier ── */
-  x += '<div class="ld">';
-  M.forEach((m,k)=>{
-    const e=etatMonde(m), ici=(k===iMc);
-    const fond = m.img ? 'background-image:url(\''+m.img+'\')' : 'background:linear-gradient(135deg,'+m.teinte+',#1A1530)';
-    x += '<div class="ld-m '+e.etat+(ici?' ici':'')+'" id="monde-'+m.num+'">'+
-      '<div class="ld-tile" style="'+fond+'">'+
-        (m.img?'':'<span class="ld-em">'+m.em+'</span>')+
-        '<div class="ld-tile-t"><span class="ld-num">Monde '+m.num+'</span><b>'+m.nom+'</b>'+
-          '<span class="ld-n">'+(e.etat==='fini' ? 'Terminé ✓' : e.etat==='encours' ? e.faits+' thématique'+(e.faits>1?'s':'')+' sur '+e.tot+' terminée'+(e.faits>1?'s':'') : e.tot+' thématiques · '+m.contenu.slice(0,3).join(', '))+'</span></div>'+
-        (e.etat==='fini' ? '<i class="ld-badge ok">✓</i>' : e.etat==='verrouille' ? '<i class="ld-badge lock">🔒</i>' : '<i class="ld-badge ici">Tu es ici</i>')+
-        (e.etat==='encours' ? '<div class="ld-bar"><i style="width:'+Math.round(100*e.faits/Math.max(1,e.tot))+'%"></i></div>' : '')+
-      '</div>';
-    /* le monde en cours s'ouvre : ses thématiques, et rien d'autre sur l'échelle */
-    if(ici){
-      x += '<div class="ld-them">';
-      m.terr.forEach(t=>{
-        const et=etatTerritoire(t), p=progTerritoire(t);
-        const dec = et.etat==='avenir' ? aDecouvrir(t,2) : [];
-        x += '<div class="mp-t '+et.etat+(p.presque?' presque':'')+'" style="--c:'+COUL_MAT[t.mat]+'">'+
-          '<div class="mp-med"><img src="img/icones/'+EMB_MAT[t.mat]+'.png" alt="">'+(et.etat==='conquis'?'<i class="mp-ok">✓</i>':'')+'</div>'+
-          '<div class="mp-c">'+vignetteTerritoire(t,'mp-img')+'<div class="mp-txt"><span class="mp-sur">'+t.mat+' · '+p.tot+' fiches</span><b>'+t.nom+'</b>'+
-          (et.etat==='encours'
-            ? '<div class="sc-bar"><i style="width:'+p.pct+'%;background:var(--c)"></i></div><span class="mp-r">'+p.lues+' / '+p.tot+' fiches'+(p.presque?' — presque à toi':'')+'</span>'
-            : et.etat==='conquis' ? '<span class="mp-r">Terminée ✓</span>'
-            : (dec.length ? '<span class="mp-r">'+dec.join(' · ')+'</span>' : ''))+
-          '</div></div></div>';
-      });
-      x += '</div>';
-    }
-    x += '</div>';
-    (camps[k]||[]).forEach(h=>{ x+=h; });
-  });
-  x += '</div>';
+  /* ── sous la brume : les mondes suivants, sans un mot ── */
+  if(suivants.length){
+    x += '<div class="brume"><div class="brume-t">Les mondes suivants se dévoilent quand tu termines celui-ci.</div><div class="brume-grid">'+
+      suivants.slice(0,9).map(m=>'<span class="brume-m" style="'+(m.img?'background-image:url(\''+m.img+'\')':'background:linear-gradient(135deg,'+m.teinte+',#1A1530)')+'">'+(m.img?'':'<i>'+m.em+'</i>')+'<em>🔒</em></span>').join('')+
+      '</div>'+(suivants.length>9?'<div class="brume-plus">… et '+(suivants.length-9)+' autres, plus loin.</div>':'')+'</div>';
+  } else {
+    x += dit('Le dernier monde. Après lui, la carte entière est à toi.','axo-guide-bravo');
+  }
 
   x += '<div class="rt-sans">Les mondes se terminent <b>sans les stages</b> : le Parcours te donne deux fiches par jour tout du long, et les Salles gardent tout ce que tu as lu. '+
-    'Les stages sont là pour ceux qui veulent aller plus vite pendant les vacances — pas pour débloquer la suite. '+
-    'Chaque camp est posé là où tu seras à sa date, à une séance par jour.</div>';
+    'Les stages sont là pour ceux qui veulent aller plus vite pendant les vacances — pas pour débloquer la suite.</div>';
   x += '<button class="se-alt" style="margin-top:10px" onclick="voirStages()">Voir ce que contiennent les stages</button>';
   b.innerHTML = x;
-  /* on arrive sur SON monde, pas en haut de l'échelle */
-  if(iMc>0){ const el=document.getElementById('monde-'+mc.num); if(el) setTimeout(()=>{ try{ el.scrollIntoView({block:'center',behavior:'smooth'}); }catch(e){} }, 60); }
 }
 
 function ouvrirCarte(){ renderCarte(); go('carte'); }

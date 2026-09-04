@@ -135,4 +135,4 @@ par-dessus un voile sombre — laisse le bas de l'image calme).
 
 **Deux images de plus, utiles :**
 - `camp-stage.png` — un campement de tentes crème et or au bord du chemin, un feu doux, petit drapeau violet #6B46C1. Format carré. (Remplace l'image sombre actuelle des stages.)
-- `banniere-mondes.png` — bannière **horizontale 3:1** : la route qui serpente entre plusieurs petits royaumes, vue de loin, lumière du matin.
+- `parcours-des-mondes.png` — **LA plus importante** : c'est l'illustration de la carte « Le parcours des mondes » sur l'accueil, vue à chaque ouverture de l'app. Bannière **horizontale 3:1** (par ex. 1536 × 512). Une route dorée qui serpente et monte à travers des collines crème, cinq ou six petits royaumes posés comme des îles le long de la route, chacun avec son monument, le premier au premier plan net et lumineux, les derniers avalés par une brume crème vers le haut à droite. Lumière du matin. **Le bas de l'image doit rester calme et clair** : le titre s'écrit en bas à gauche par-dessus. Sans texte, sans personnage.
