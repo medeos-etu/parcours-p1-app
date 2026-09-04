@@ -7400,11 +7400,12 @@ function collectionMondes(){
 function prochainStageProche(){
   const p1=(typeof enP1==='function') && enP1();
   const d = p1 ? finAnneeP1() : ((typeof dateRentree==='function')?dateRentree():null); if(!d) return null;
-  const debut = p1 ? new Date(Date.now()-12*864e5) : new Date(d.getFullYear()-1,8,1);
-  /* le prochain stage à venir, OU celui qui est en cours (on regarde 12 jours en arrière) */
-  const p=periodesEntre(new Date(Date.now()-12*864e5), d).filter(x=>x.m>=debut)[0]; if(!p) return null;
+  const debut = p1 ? new Date(0) : new Date(d.getFullYear()-1,8,1);
+  /* le prochain stage à venir, OU celui qui est en cours : periodesEntre garde déjà
+     tout stage dont le dernier jour n'est pas passé. */
+  const p=periodesEntre(new Date(), d).filter(x=>x.m>=debut)[0]; if(!p) return null;
   const jours=Math.round((p.m-new Date())/864e5);
-  return (jours>=-11 && jours<=21) ? {nom:p.nom, stage:p.stage||'Stage Medeos', quand:p.quand, emo:p.emo, jours:jours} : null;
+  return (jours<=21) ? {nom:p.nom, stage:p.stage||'Stage Medeos', quand:p.quand, emo:p.emo, jours:jours} : null;
 }
 /* ═══ LES MONDES — l'échelle complète, comme les arènes d'un jeu.
    Vingt-deux petits mondes de quatre ou cinq thématiques (trois à quatre semaines
@@ -7897,13 +7898,17 @@ function periodesEntre(debut, fin){
     const reels = STAGES_DATES[an];
     if(reels){ reels.forEach(s=>out.push({m:new Date(s.debut+'T00:00:00'), fin:new Date(s.fin+'T00:00:00'), id:s.id, nom:s.nom, stage:s.stage, emo:s.emo, quand:s.quand, pitch:s.pitch, exact:true})); }
     else {
-      out.push({m:new Date(an,9,19),  nom:'Vacances de la Toussaint', stage:'Stage de la Toussaint', emo:'🍂', quand:'vers le 20 octobre '+an,  exact:false});
-      out.push({m:new Date(an,11,21), nom:'Vacances de Noël',         stage:'Stage de Noël',         emo:'❄️', quand:'vers le 20 décembre '+an, exact:false});
-      out.push({m:new Date(an+1,1,8), nom:'Vacances d\'hiver',        stage:'Stage de Février',      emo:'⛷️', quand:'février '+(an+1)+', selon ta zone', exact:false});
-      out.push({m:new Date(an+1,3,5), nom:'Vacances de printemps',    stage:'Stage de Pâques',       emo:'🌷', quand:'avril '+(an+1)+', selon ta zone',   exact:false});
+      out.push({m:new Date(an,9,19),  fin:new Date(an,9,31),   nom:'Vacances de la Toussaint', stage:'Stage de la Toussaint', emo:'🍂', quand:'vers le 20 octobre '+an,  exact:false});
+      out.push({m:new Date(an,11,21), fin:new Date(an+1,0,2),  nom:'Vacances de Noël',         stage:'Stage de Noël',         emo:'❄️', quand:'vers le 20 décembre '+an, exact:false});
+      out.push({m:new Date(an+1,1,8), fin:new Date(an+1,2,6),  nom:'Vacances d\'hiver',        stage:'Stage de Février',      emo:'⛷️', quand:'février '+(an+1)+', selon ta zone', exact:false});
+      out.push({m:new Date(an+1,3,5), fin:new Date(an+1,4,1),  nom:'Vacances de printemps',    stage:'Stage de Pâques',       emo:'🌷', quand:'avril '+(an+1)+', selon ta zone',   exact:false});
     }
   }
-  return out.filter(p => p.m > debut && p.m < fin).sort((a,b)=>a.m-b.m);
+  /* un stage EN COURS reste sur la route : on le garde jusqu'à la fin de son dernier
+     jour, pas jusqu'à la veille de son début — on peut encore le rejoindre pendant les
+     vacances. On compare au début de la journée, pas à l'heure qu'il est. */
+  const jour0 = new Date(debut.getFullYear(), debut.getMonth(), debut.getDate());
+  return out.filter(p => (p.fin||p.m) >= jour0 && p.m < fin).sort((a,b)=>a.m-b.m);
 }
 /* la pré-rentrée de l'été qui précède la rentrée : les vraies dates si elles sont publiées */
 function prerentreeDe(anRentree){
