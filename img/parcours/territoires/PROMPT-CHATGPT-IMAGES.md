@@ -1,4 +1,4 @@
-# PROMPT MAÎTRE — les 25 photos de profil et bannières du parcours Medeos · à coller dans ChatGPT en mode Agent
+# PROMPT MAÎTRE — les 24 photos de profil et bannières du parcours Medeos · à coller dans ChatGPT en mode Agent
 
 > Ce fichier contient les photos de profil et les bannières des 22 mondes, et les insignes des étudiants Medeos. Les cinq décors de stage ont leur propre fichier, `PROMPT-CHATGPT-STAGES.md`, déjà livré.
 
@@ -8,7 +8,7 @@ Tu travailles en mode Agent, de façon autonome : tu génères une image à la f
 
 ## 0. Le dossier de livraison — à vérifier AVANT de générer quoi que ce soit
 
-Les 25 images vont dans **un seul dossier, déjà existant, sur le Mac de Lucas** :
+Les 24 images vont dans **un seul dossier, déjà existant, sur le Mac de Lucas** :
 
 ```
 /Users/lucascrepin/dev/parcours-p1-app/img/parcours/territoires/
@@ -24,11 +24,11 @@ ls /Users/lucascrepin/dev/parcours-p1-app/img/parcours/territoires/ | head -40
 ```
 find /Users/lucascrepin -type d -name territoires -path "*parcours-p1-app*" 2>/dev/null
 ```
-**Étape 3 — si tu n'as pas accès au disque du Mac** : ne bloque pas. Crée un dossier `medeos-images-parcours` là où tu peux écrire, mets-y les 25 fichiers avec leurs noms exacts, et dis-le clairement à la fin (ou fournis une archive `.zip`). Lucas les déposera lui-même.
+**Étape 3 — si tu n'as pas accès au disque du Mac** : ne bloque pas. Crée un dossier `medeos-images-parcours` là où tu peux écrire, mets-y les 24 fichiers avec leurs noms exacts, et dis-le clairement à la fin (ou fournis une archive `.zip`). Lucas les déposera lui-même.
 
-**Les 25 noms attendus, pour cocher à la fin :**
+**Les 24 noms attendus, pour cocher à la fin :**
 ```
-badge-etudiant.png  badge-certifie.png  ban-medeos.png  ban-certifie.png
+badge-certifie.png  ban-medeos.png  ban-certifie.png
 av-monde-02.png  av-monde-04.png  av-monde-06.png  av-monde-08.png  av-monde-10.png  av-monde-12.png
 av-monde-14.png  av-monde-16.png  av-monde-18.png  av-monde-20.png  av-monde-22.png
 ban-monde-03.png  ban-monde-05.png  ban-monde-07.png  ban-monde-09.png  ban-monde-11.png
@@ -87,11 +87,7 @@ Chaque bloc est un prompt complet. Tu le colles tel quel, tu génères, tu contr
 
 ### A. Les insignes des étudiants Medeos (année complète)
 
-**`badge-etudiant.png` — photo de profil, 512×512, opaque**
-```
-Photo de profil Medeos, même gabarit exactement que av-primant.png : image carrée 512×512, opaque, fond uni violet profond #4C2A85 avec un léger dégradé radial vers #6B46C1 au centre. Axo (axolotl peluche 3D : corps blanc crème mat, trois panaches de branchies violettes #6B46C1 de chaque côté de la tête, grands yeux violet foncé brillants, joues orangées, petit sourire) en buste de face légèrement de trois quarts, qui remplit le cadre : sommet du crâne vers 15 % de la hauteur, yeux à mi-hauteur, menton vers 65 %, branchies qui touchent presque les bords, blouse blanche de médecin ouverte visible en bas. Une petite étoile dorée #FCD34D brodée sur la poche de la blouse. Expression fière et souriante. Lumière douce du haut à gauche.
-Aucun texte, aucun écusson, aucune bordure, aucun décor derrière.
-```
+> La photo de profil « Étudiant Medeos » existe déjà (`img/profil/av-curieux.png`, Axo à lunettes avec son livre) et l'app dessine elle-même un cadre doré autour : **ne la génère pas**. Il reste la photo « certifié », et les deux bannières.
 
 **`badge-certifie.png` — photo de profil, 512×512, opaque**
 ```
@@ -99,9 +95,9 @@ Photo de profil Medeos, même gabarit exactement que av-primant.png : image carr
 Aucun texte, aucun écusson, aucune bordure, aucun décor derrière.
 ```
 
-**`ban-medeos.png` — bannière, 1536×864, opaque**
+**`ban-medeos.png` — bannière, 1536×864, opaque — LA plus belle du jeu**
 ```
-Bannière Medeos 1536×864, format 16:9, opaque, style peint doux et lumineux comme ban-or.jpg. Un dégradé de ciel du violet profond #4C2A85 (à gauche) vers le miel #B8895A (à droite), quelques éclats dorés flottants, un motif de losanges très discret. Sur le tiers droit, dans la bande centrale de la hauteur, Axo en pied, petit (axolotl peluche blanc crème, branchies violettes, blouse blanche), qui salue de la main. La moitié gauche reste calme, sombre et peu contrastée : un pseudo blanc s'y écrira. Les éléments importants entre 35 % et 65 % de la hauteur.
+Bannière Medeos 1536×864, format 16:9, opaque, style peint riche et lumineux, plus travaillé que ban-or.jpg : c'est la bannière des élèves des stages Medeos, elle doit être la plus stylée de toutes, celle qu'on veut afficher. Un ciel de nuit en dégradé profond du violet #4C2A85 (à gauche) vers un or chaud #FCD34D et miel #B8895A (à droite), traversé de fines volutes dorées et d'une pluie d'éclats et de particules d'or en suspension, un très léger motif de losanges dans le fond, un halo doré qui monte de la droite. Sur le tiers droit, dans la bande centrale de la hauteur, Axo en pied, petit (axolotl peluche blanc crème, branchies violettes, blouse blanche de médecin), debout sur une dalle de pierre claire cerclée d'or, qui lève le poing en signe de victoire, quelques éclats dorés autour de lui. La moitié gauche reste calme, sombre et peu contrastée : un pseudo blanc s'y écrira. Les éléments importants entre 35 % et 65 % de la hauteur. Rendu premium, matières satinées, lumière chaude.
 Aucun texte.
 ```
 
@@ -247,6 +243,6 @@ Bannière Medeos 1536×864, format 16:9, opaque, style peint doux et lumineux co
 - **Axo doit rester identique** d'une image à l'autre : compare chaque nouvelle photo à `av-primant.png`. Si les branchies changent de forme, si le visage change, refais.
 - Si une génération échoue trois fois, passe à la suivante et signale-la à la fin.
 
-**Livraison** : les 25 fichiers dans le dossier de la section 0, avec leurs noms exacts. Termine en me donnant le chemin du dossier où tu as écrit, la liste des fichiers écrits avec leurs dimensions, et celle des manqués s'il y en a.
+**Livraison** : les 24 fichiers dans le dossier de la section 0, avec leurs noms exacts. Termine en me donnant le chemin du dossier où tu as écrit, la liste des fichiers écrits avec leurs dimensions, et celle des manqués s'il y en a.
 
-Commence par `badge-etudiant.png`.
+Commence par `badge-certifie.png`.

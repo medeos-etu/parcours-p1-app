@@ -287,6 +287,8 @@
      classement, vestiaire, puces de la carte). Les photos sont des bustes 512×512 au même gabarit ;
      si un endroit zoomait plus qu'un autre, la même photo semblait différente selon où l'on regardait. */
   .avatar img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;transform:scale(1.22);transform-origin:50% 18%}
+  /* LE CADRE DORÉ de l'élève des stages Medeos : posé par l'app sur le contenant, quel qu'il soit */
+  .av-or{box-shadow:0 0 0 2px #FCD34D,0 0 0 3.5px #B8895A,0 0 12px rgba(252,211,77,.6)!important;border-color:#FCD34D!important}
   .avatar img.noz{transform:none;object-position:center}   /* portraits carrés (photos de profil dédiées) */
   .bubble{position:relative;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;font-size:13px;line-height:1.55;color:var(--ink);max-width:340px;text-align:left}
   .bubble::after{content:"";position:absolute;bottom:-8px;left:50%;transform:translateX(-50%) rotate(45deg);width:14px;height:14px;background:var(--card);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -5144,8 +5146,6 @@ const AVATARS=[
    expl:'Une ascension 10/10', cond:function(){ return !!(S.ar&&S.ar.parfait); }},
   {id:'marathonien', nom:'Le Marathonien',  em:'🏃', img:'img/profil/av-marathonien.png',
    expl:'30 ascensions',     cond:function(){ return ((S.ar&&S.ar.runsDone)||0)>=30; }},
-  {id:'curieux',     nom:'Le Curieux',      em:'🤓', img:'img/profil/av-curieux.png',
-   expl:'20 fiches lues',    cond:function(){ return Object.keys(S.vues||{}).length>=20; }},
   {id:'inarretable', nom:'L\'Inarrêtable',  em:'🚀', img:'img/profil/av-inarretable.png',
    expl:'Série de 60 jours', cond:function(){ return (S.streakMax||S.streak||0)>=60; }}
 ];
@@ -5466,7 +5466,7 @@ function renderRoad(){
       const avs=AVATARS.filter(a=>a.seuil===s.t&&s.t>0), bans=BANNIERES.filter(b=>b.seuil===s.t&&s.t>0);
       if(avs.length||bans.length){
         butin='<div class="rloot">'+
-          avs.map(a=>'<span class="rl-av" title="'+a.nom+'"><span class="rl-em">'+a.em+'</span><img src="'+a.img+'" alt="" onerror="this.remove()"></span>').join('')+
+          avs.map(a=>'<span class="rl-av'+(a.cadre?' av-or':'')+'" title="'+a.nom+'"><span class="rl-em">'+a.em+'</span><img src="'+a.img+'" alt="" onerror="this.remove()"></span>').join('')+
           bans.map(b=>'<span class="rl-ban" title="Bannière · '+b.nom+'" style="background-image:'+(b.img?"url('"+b.img+"'),":'')+b.css+';background-size:cover;background-position:center"></span>').join('')+
           '<span class="rl-t">'+(got?'Photo et bannière débloquées':'+ photo et bannière de profil')+'</span></div>';
       }
@@ -5532,7 +5532,7 @@ function renderIdBar(){
   if(!S.ar) initAr();
   const gi=gradeIdx(S.ar.T);
   const av=avatarOf(), ban=banniereOf();
-  const pav='<div class="pav2"><span class="pem">'+av.em+'</span><img src="'+av.img+'"'+(av.fit==='zoom'?' class="zoom"':'')+' alt="" onerror="this.remove()"></div>';
+  const pav='<div class="pav2'+(av.cadre?' av-or':'')+'"><span class="pem">'+av.em+'</span><img src="'+av.img+'"'+(av.fit==='zoom'?' class="zoom"':'')+' alt="" onerror="this.remove()"></div>';
   /* deux actions sur la bannière : ✎ modifier (fenêtre) · 👤 voir le profil (page) */
   const acts='<span class="pacts">'+
     '<button class="pedit" onclick="event.stopPropagation();openSheet(\'sheet-skin\')" title="Modifier ma photo et ma bannière" aria-label="Modifier ma photo et ma bannière">✎</button>'+
@@ -5735,8 +5735,7 @@ function renderProfilForm(){
     '<p class="pf-intro">'+
       (dejaFait
         ? 'Ton point de départ est fait — il ne manque plus que de quoi te reconnaître : ton prénom et ton nom.'
-        : 'Il se remplit tout seul en répondant au point de départ : ta fac, ta classe, ton projet, et les vraies chances qui vont avec. Deux minutes, une seule fois.')+
-      (reste?' Et il t\'ouvre <b>une séance de Parcours de plus aujourd\'hui</b> 🎁':'')+'</p>'+
+        : 'Il te dit <b>tes vraies chances de réussite</b>, d\'après ta fac, ta classe et ton projet — en répondant au point de départ. Deux minutes, une seule fois.')+'</p>'+
     (dejaFait
       ? '<button class="gbtn" onclick="prepIdent(\'profil\');go(\'simid\')">👤 Compléter mon profil · 1 min</button>'
       : '<button class="gbtn" onclick="go(\'sim1\')">🧭 Faire le point · 2 min</button>');
@@ -5781,7 +5780,7 @@ function renderProfilHead(){
   h.style.backgroundImage=(ban.img?"url('"+ban.img+"'),":"")+ban.css;
   h.style.backgroundSize='cover'; h.style.backgroundPosition='center';
   const im=document.querySelector('#profil-av img');
-  if(im){ im.src=av.img; im.classList.toggle('noz',av.fit!=='zoom'); }
+  if(im){ im.src=av.img; im.classList.toggle('noz',av.fit!=='zoom'); im.parentElement.classList.toggle('av-or', !!av.cadre); }
   const pn=document.getElementById('profil-nom'); if(pn) pn.textContent=accOk()?S.ar.compte.id:'Ton profil';
   const lo=document.getElementById('btn-logout'); if(lo) lo.style.display=accOk()?'':'none';
 }
@@ -5791,11 +5790,11 @@ function renderSkin(){
   const av=avatarOf(), ban=banniereOf(), gi=gradeIdx(S.ar.T);
   const nom=accOk()?S.ar.compte.id:'Invité';
   pv.innerHTML='<div class="skprev" style="'+banFond(ban)+'">'+
-    '<div class="pav2"><span class="pem">'+av.em+'</span><img src="'+av.img+'"'+(av.fit==='zoom'?' class="zoom"':'')+' alt="" onerror="this.remove()"></div>'+
+    '<div class="pav2'+(av.cadre?' av-or':'')+'"><span class="pem">'+av.em+'</span><img src="'+av.img+'"'+(av.fit==='zoom'?' class="zoom"':'')+' alt="" onerror="this.remove()"></div>'+
     '<div style="min-width:0"><div class="pn">'+nom+'</div><div class="pg">'+GRADES[gi][2]+' '+GRADES[gi][1]+' · 🏆 '+fmtT(S.ar.T)+'</div></div></div>';
   document.getElementById('skin-avs').innerHTML=AVATARS.map(a=>{
     const ok=skinOk(a), on=avatarOf().id===a.id;
-    return '<button class="sktile'+(on?' on':'')+(ok?'':' lock')+'" onclick="choisirSkin(\'av\',\''+a.id+'\')" title="'+a.nom+' — '+skinCond(a)+'" aria-label="'+a.nom+' : '+skinCond(a)+'">'+
+    return '<button class="sktile'+(on?' on':'')+(ok?'':' lock')+(a.cadre?' av-or':'')+'" onclick="choisirSkin(\'av\',\''+a.id+'\')" title="'+a.nom+' — '+skinCond(a)+'" aria-label="'+a.nom+' : '+skinCond(a)+'">'+
       '<span class="skem">'+a.em+'</span>'+
       '<img src="'+a.img+'"'+(a.fit==='zoom'?' class="zoom"':'')+' alt="" onerror="this.remove()">'+
       (ok?'':'<span class="sklock">🔒<i>'+(a.expl||fmtT(a.seuil)+' 🏆')+'</i></span>')+
@@ -5820,7 +5819,7 @@ function ouvrirDeblocage(x,autres){
   const o=x.o, av=(x.t==='av');
   const vis=document.getElementById('deblo-vis');
   if(vis) vis.innerHTML = av
-    ? '<span class="sktile on" style="width:92px;height:92px"><span class="skem">'+o.em+'</span><img src="'+o.img+'"'+(o.fit==='zoom'?' class="zoom"':'')+' alt="" onerror="this.remove()"></span>'
+    ? '<span class="sktile on'+(o.cadre?' av-or':'')+'" style="width:92px;height:92px"><span class="skem">'+o.em+'</span><img src="'+o.img+'"'+(o.fit==='zoom'?' class="zoom"':'')+' alt="" onerror="this.remove()"></span>'
     : '<span class="skban on" style="width:100%;height:58px;'+("background-image:"+(o.img?"url('"+o.img+"'),":"")+o.css+";background-size:cover;background-position:center")+'"><span class="skbn">'+o.nom+'</span></span>';
   const t=document.getElementById('deblo-t'); if(t) t.textContent = av?'🎉 Nouvelle photo de profil !':'🎉 Nouvelle bannière !';
   const nm=document.getElementById('deblo-nom'); if(nm) nm.textContent='« '+o.nom+' »';
@@ -5886,7 +5885,7 @@ function renderSideAcc(){
     const g=gi(j.T), estMoi=(j.id===moi);
     lignes+='<div class="lbrow'+(estMoi?' moi':'')+'">'+
       '<span class="lbp">'+(i+1)+'</span>'+
-      '<span class="lbav"><img src="'+j.av+'" alt="" onerror="this.remove()"></span>'+
+      '<span class="lbav'+(j.cadre?' av-or':'')+'"><img src="'+j.av+'" alt="" onerror="this.remove()"></span>'+
       '<span class="lbn">'+j.id+'<i>'+g[2]+' '+g[1]+'</i></span>'+
       '<span class="lbt">'+fmtT(j.T)+'</span></div>';
   });
@@ -5914,7 +5913,7 @@ function classementJoueurs(){
     const nom = c.id || (estMoi ? (localStorage.getItem('m4_prenom')||null) : null);
     if(!nom) return;
     const av=(estMoi? avatarOf() : (AVATARS.find(a=>a.id===(c.skin&&c.skin.av))||AVATARS[0]));
-    out.push({id:nom, T:T, av:av.img});
+    out.push({id:nom, T:T, av:av.img, cadre:!!av.cadre});
   });
   out.sort((a,b)=>b.T-a.T);
   return out;
@@ -7676,6 +7675,7 @@ function renderPtop(){
     if(pa && typeof avatarOf==='function'){
       const av=avatarOf();
       pa.innerHTML='<img src="'+av.img+'"'+(av.fit==='zoom'?' class="zoom"':'')+' alt="" onerror="this.remove()">';
+      pa.classList.toggle('av-or', !!av.cadre);
     }
     const moi=document.querySelector('.ptop-moi');
     if(moi && typeof banniereOf==='function' && typeof banFond==='function') moi.style.cssText=banFond(banniereOf());
@@ -8008,8 +8008,10 @@ function crediterMonde(m){
 if(typeof BANNIERES!=='undefined') BANNIERES.push({id:'medeos', nom:'Étudiant Medeos',
   css:'linear-gradient(120deg,#4C2A85 0%,#6B46C1 45%,#B8895A 100%)', expl:'Élève des stages Medeos',
   cond:function(){ return !!S.stage; }});
-if(typeof AVATARS!=='undefined') AVATARS.push({id:'medeos', nom:'Étudiant Medeos', em:'🎫',
-  img:(typeof VIGNETTES!=='undefined' && VIGNETTES['badge-etudiant']) ? 'img/parcours/territoires/'+VIGNETTES['badge-etudiant'] : 'img/profil/av-carabin.png',
+/* la photo de l'élève Medeos : le Curieux (Axo à lunettes, son livre), et un CADRE DORÉ que l'app
+   dessine autour partout où la photo apparaît — c'est le cadre qui dit « élève des stages », pas l'image */
+if(typeof AVATARS!=='undefined') AVATARS.push({id:'medeos', nom:'Étudiant Medeos', em:'🎓',
+  img:'img/profil/av-curieux.png', cadre:'or',
   expl:'Élève des stages Medeos', cond:function(){ return !!S.stage; }});
 
 /* le vestiaire suit l'alternance : les mondes pairs y déposent leur photo de profil, les
@@ -10816,7 +10818,7 @@ function renderLB(){
       const g=GRADES[gradeIdx(j.T)];
       return '<div class="lbrow'+(j.id===moi?' moi':'')+'">'+
         '<span class="lbp">'+(i+1)+'</span>'+
-        '<span class="lbav"><img src="'+j.av+'" alt="" onerror="this.remove()"></span>'+
+        '<span class="lbav'+(j.cadre?' av-or':'')+'"><img src="'+j.av+'" alt="" onerror="this.remove()"></span>'+
         '<span class="lbn">'+j.id+'<i>'+g[2]+' '+g[1]+'</i></span>'+
         '<span class="lbt">'+fmtT(j.T)+'</span></div>';
     }).join('');
