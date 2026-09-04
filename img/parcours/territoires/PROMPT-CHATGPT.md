@@ -35,7 +35,8 @@ Tu es le directeur artistique et l'illustrateur d'une application mobile d'éduc
 | 1 | `monde-01.png` | 1024×1024, transparent | Diorama « Les Premiers Repères » : sur une dalle de pierre crème aux coins arrondis, une grande rose des vents dorée gravée au sol, un petit portique en bois violet à chaque point cardinal, une lanterne dorée allumée au centre. |
 | 2 | `rentree.png` | 1024×1024, transparent | Diorama « La rentrée » : un amphithéâtre de faculté de médecine en miniature, façade crème à colonnes, grandes portes ouvertes d'où sort une lumière dorée, un drapeau violet sur le toit, quelques marches devant. C'est le sommet de la route : il doit paraître désirable et solennel. |
 | 3 | `parcours-des-mondes.png` | 1536×512, **opaque** (fond peint) | Bannière paysage : une route dorée qui serpente et monte à travers des collines crème dans une nuit violette douce, cinq petits mondes-maquettes posés le long de la route comme des îlots lumineux, le premier net et lumineux au premier plan gauche, les suivants de plus en plus dans une brume crème vers le haut à droite. **Le tiers inférieur de l'image reste calme et peu contrasté** : un titre s'y écrira. |
-| 4 | `camp-stage.png` | 1024×1024, transparent | Diorama « Le camp » : deux tentes crème et or, un feu de camp aux flammes dorées, une lanterne, un petit drapeau violet planté devant, un tapis au sol. Chaleureux, accueillant. |
+| 4 | `camp-stage.png` | 1024×1024, transparent | Diorama « Le camp des stages » : un campement fortifié et accueillant, plus riche que les autres dioramas car c'est un monde à part entière — une grande tente-pavillon crème et or au centre, deux tentes plus petites autour, un feu de camp aux flammes dorées, une lanterne suspendue, un drapeau violet Medeos, un muret de pierre claire, un chemin qui y entre. Chaleureux, désirable, on doit avoir envie d'y entrer. |
+| 4bis | `badge-etudiant.png` | 512×512, transparent | Le badge « Étudiant Medeos », qui sert de photo de profil aux élèves des stages : un écusson rond bombé, bordure dorée épaisse et brillante, fond violet profond dégradé (`#4C2A85` vers `#6B46C1`), au centre un caducée stylisé doré très simple, une petite étoile en haut. Prestigieux, lisible tout petit, aucune lettre. |
 | 5 | `monde-02.png` | 1024×1024, transparent | Diorama « Les Briques du Vivant » : un chantier joyeux, un mur de briques translucides dorées à moitié monté, une brouette, un échafaudage en bois, deux briques qui flottent au-dessus, prêtes à se poser. |
 | 6 | `monde-03.png` | 1024×1024, transparent | Diorama « La Colonne Vertébrale » : une tour élancée faite de vertèbres empilées, ivoire et terracotta, un escalier en spirale qui l'enlace, un petit belvédère au sommet. |
 
@@ -100,7 +101,7 @@ Des vues **du dessus, légèrement en plongée**, d'une dalle rectangulaire aux 
 
 ## 3. Comment travailler — mode Agent, sans interruption
 
-**Tu enchaînes les 43 images sans t'arrêter et sans demander de validation.** Après chaque génération, tu contrôles le fichier **par du code** (Python), tu corriges, puis tu passes à la suivante.
+**Tu enchaînes les 44 images sans t'arrêter et sans demander de validation.** Après chaque génération, tu contrôles le fichier **par du code** (Python), tu corriges, puis tu passes à la suivante.
 
 **Le contrôle à faire sur chaque fichier, obligatoire :**
 1. Dimensions exactes (`1024×1024`, `1024×512`, `1024×256`, `128×1024`, `1536×512` ou `512×512` selon le tableau). Si elles diffèrent, redimensionne ou régénère.
@@ -117,7 +118,7 @@ Des vues **du dessus, légèrement en plongée**, d'une dalle rectangulaire aux 
 
 Tu as accès au système de fichiers de ce Mac : c'est la voie normale.
 
-**1. Enregistre les 43 PNG dans le dossier de l'application** :
+**1. Enregistre les 44 PNG dans le dossier de l'application** :
 - Chemin exact : `/Users/lucascrepin/dev/parcours-p1-app/img/parcours/territoires/`
 - Les fichiers vont **directement dans ce dossier**, à côté de `CONSIGNES-IMAGES.md` et `PROMPT-CHATGPT.md`. Pas de sous-dossier, pas d'autre nom que ceux des tableaux.
 
