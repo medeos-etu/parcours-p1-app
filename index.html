@@ -754,7 +754,9 @@
     font-size:13px;background:rgba(20,16,34,.45);color:#fff}
   .sklock i{font-style:normal;font-size:8.5px;font-weight:900;letter-spacing:.02em}
   .skinbans{display:flex;flex-direction:column;gap:8px}
-  .skban{position:relative;height:52px;border-radius:13px;overflow:hidden;border:2px solid transparent;cursor:pointer;padding:0;width:100%}
+  /* les tuiles de bannière montrent la bannière ENTIÈRE : même proportion qu'elle (3:1), sur deux colonnes */
+  .skinbans{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .skban{position:relative;aspect-ratio:3/1;height:auto;border-radius:13px;overflow:hidden;border:2px solid transparent;cursor:pointer;padding:0;width:100%}
   .skban .skbn{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-family:Fredoka,Inter,sans-serif;
     font-size:13px;font-weight:600;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.65)}
   .skban.lock{filter:grayscale(.65) brightness(.8)}
@@ -1874,6 +1876,7 @@
   @media (min-width:1024px){ .se-illu{width:88px;height:88px} }
 
   .pimg{width:56px;height:42px;object-fit:cover;border-radius:9px;flex-shrink:0;box-shadow:0 3px 8px rgba(26,26,46,.14)}
+  .pimg-metier{width:56px;height:56px;border-radius:28%;object-fit:cover;object-position:50% 12%;box-shadow:0 3px 8px rgba(26,26,46,.14)}
 
   /* ═══ LISEUSE PLEIN ÉCRAN — la fiche respire, comme dans les stages ═══ */
   #lecteur{position:fixed;inset:0;z-index:300;background:var(--creme);display:none;flex-direction:column;
@@ -5827,7 +5830,7 @@ function ouvrirDeblocage(x,autres){
   const vis=document.getElementById('deblo-vis');
   if(vis) vis.innerHTML = av
     ? '<span class="sktile on'+(o.cadre?' av-or':'')+'" style="width:92px;height:92px"><span class="skem">'+o.em+'</span><img src="'+o.img+'"'+(o.fit==='zoom'?' class="zoom"':'')+' alt="" onerror="this.remove()"></span>'
-    : '<span class="skban on" style="width:100%;height:58px;'+("background-image:"+(o.img?"url('"+o.img+"'),":"")+o.css+";background-size:cover;background-position:center")+'"><span class="skbn">'+o.nom+'</span></span>';
+    : '<span class="skban on" style="width:100%;aspect-ratio:3/1;height:auto;'+("background-image:"+(o.img?"url('"+o.img+"'),":"")+o.css+";background-size:cover;background-position:center")+'"><span class="skbn">'+o.nom+'</span></span>';
   const t=document.getElementById('deblo-t'); if(t) t.textContent = av?'🎉 Nouvelle photo de profil !':'🎉 Nouvelle bannière !';
   const nm=document.getElementById('deblo-nom'); if(nm) nm.textContent='« '+o.nom+' »';
   const pp=document.getElementById('deblo-p');
@@ -10248,7 +10251,8 @@ function ouvrirMetiers(){
   document.getElementById('pioche-titre').textContent='Quel métier veux-tu découvrir ?';
   METIERS.forEach(m=>{
     const b=document.createElement('button'); b.className='pioche-row';
-    b.innerHTML='<img class="pimg" style="width:40px;height:40px;object-fit:contain;box-shadow:none" src="images/metiers/fiche_metier_'+m[3]+'_univers.png" onerror="this.src=\'img/parcours/generique-metier.png\'" alt="">'+
+    /* la vignette du métier : Axo costumé (img/metiers/metier-<slug>.webp, livrée par ChatGPT) ; en attendant, l'ancienne illustration */
+    b.innerHTML='<img class="pimg pimg-metier" src="img/metiers/metier-'+m[3].replace(/_/g,'-')+'.webp" onerror="this.onerror=null;this.className=\'pimg\';this.style.cssText=\'width:40px;height:40px;object-fit:contain;box-shadow:none\';this.src=\'images/metiers/fiche_metier_'+m[3]+'_univers.png\'" alt="">'+
       '<div><b>'+m[1]+'</b><span>'+m[2]+' · 4 min</span></div>';
     b.onclick=()=>{ closeSheet('sheet-pioche'); consulterFiche(m[0]); };
     box.appendChild(b);
