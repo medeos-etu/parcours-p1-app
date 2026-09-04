@@ -2325,7 +2325,7 @@
   background:rgba(255,255,255,.05);border:1px dashed rgba(226,156,92,.34)}
 .cr-apres>span{display:block;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:#FCD34D}
 .cr-apres>em{display:block;font-style:normal;font-size:12px;color:rgba(250,246,240,.75);line-height:1.5;margin-top:5px}
-.cr-stage{display:block;margin:0 0 34px;padding:16px 16px 18px;border-radius:22px;text-decoration:none;text-align:center;color:#3A2A10;
+.cr-stage{display:block;margin:0 0 34px;padding:14px 14px 16px;border-radius:22px;text-decoration:none;text-align:center;color:#3A2A10;
   background:linear-gradient(180deg,#FFF9EE 0%,#F6E6C8 100%);border:2px solid #E2B34D;
   box-shadow:0 0 0 4px rgba(252,211,77,.25),0 18px 40px rgba(0,0,0,.45);animation:crStageGlow 3.8s ease-in-out infinite}
 @keyframes crStageGlow{0%,100%{box-shadow:0 0 0 4px rgba(252,211,77,.22),0 18px 40px rgba(0,0,0,.45)}50%{box-shadow:0 0 0 7px rgba(252,211,77,.42),0 18px 44px rgba(0,0,0,.5)}}
@@ -2336,22 +2336,23 @@
 .cr-cadenas{position:absolute;right:6px;top:6px;z-index:3;font-size:11px;font-weight:900;letter-spacing:.02em;
   padding:5px 9px;border-radius:999px;background:rgba(58,36,8,.82);color:#FFF3D6;box-shadow:0 2px 6px rgba(0,0,0,.3)}
 .cr-socle.stage:not(.dio)::after{content:"";position:absolute;inset:0;border-radius:24px;background:rgba(20,12,4,.42);z-index:2}
-.cr-nom.stage{display:block;font-family:Fredoka,Inter,sans-serif;font-size:27px;font-weight:800;color:#4A3208;margin-top:20px;line-height:1.1;text-shadow:none}
+.cr-stage .cr-socle{width:196px}
+.cr-nom.stage{display:block;font-family:Fredoka,Inter,sans-serif;font-size:23px;font-weight:800;color:#4A3208;margin-top:14px;line-height:1.1;text-shadow:none}
 .cr-band.stage{display:inline-flex;background:linear-gradient(180deg,#B8895A,#7A5A2B);box-shadow:0 5px 0 #4A3618,0 8px 16px rgba(0,0,0,.3);color:#FFF7E6;font-size:12.5px;min-width:0;max-width:100%;padding:9px 16px;text-align:center}
 .cr-band.stage span{white-space:normal;line-height:1.35}
 .cr-stage-p{display:block;font-size:12.5px;color:#6A583A;line-height:1.5;margin-top:8px;font-weight:600;max-width:340px;margin-left:auto;margin-right:auto}
-.cr-stage-h{display:block;font-size:14.5px;color:#3A2408;line-height:1.45;margin-top:14px;font-weight:800;max-width:340px;margin-left:auto;margin-right:auto}
+.cr-stage-h{display:block;font-size:13.5px;color:#3A2408;line-height:1.45;margin-top:12px;font-weight:800;max-width:340px;margin-left:auto;margin-right:auto}
 .cr-stage-h b{color:#C2662F}
 .cr-stage-g{display:grid;grid-template-columns:1fr;gap:7px;margin:12px auto 0;max-width:340px}
 .cr-stage-g i{display:flex;align-items:center;gap:10px;font-style:normal;font-size:13px;font-weight:800;color:#4A3208;line-height:1.3;text-align:left;
-  background:rgba(255,255,255,.6);border:1px solid rgba(184,137,90,.38);border-radius:12px;padding:9px 10px}
+  background:rgba(255,255,255,.6);border:1px solid rgba(184,137,90,.38);border-radius:12px;padding:8px 10px}
 .cr-stage-g i b{font-size:17px;line-height:1;flex:0 0 auto}
 .cr-stage .cr-deb{color:#8A5B24;margin-top:15px;font-size:13px;text-shadow:none}
 .cr-stage .cr-chips{max-width:340px;margin-left:auto;margin-right:auto}
 .cr-chip.medeos{background:linear-gradient(180deg,#FFF8EA,#F0DCB6);border-color:#E29C5C;box-shadow:0 4px 0 #8A5B24}
 .cr-chip.medeos b{color:#4A3208}
 .cr-chip.medeos em{color:#8A6238}
-.cr-stage-btn{display:inline-block;font-style:normal;margin-top:14px;padding:12px 24px;border-radius:999px;font-size:14.5px;font-weight:900;color:#3A2408;
+.cr-stage-btn{display:inline-block;font-style:normal;margin-top:12px;padding:11px 22px;border-radius:999px;font-size:14.5px;font-weight:900;color:#3A2408;
   background:linear-gradient(180deg,#FCD34D,#E29C5C);box-shadow:0 5px 0 #8A5B24,0 10px 18px rgba(0,0,0,.25)}
 .cr-sans{margin-top:14px;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14);color:rgba(250,246,240,.8)}
 .cr-sans b{color:#FCD34D}
@@ -8124,16 +8125,20 @@ function renderCarte(){
     const debutFenetre = p1 ? new Date() : new Date(d.getFullYear()-1,8,1);
     const dans=n=>n<=0?'en ce moment':n===1?'demain':'dans '+n+' jours';
     const imgStage = id => IMG('stage-'+id) || IMG('camp-stage');
-    const badgeImg=IMG('badge-etudiant') || 'img/axo-canon.png';   /* Axo en attendant le vrai badge */
     /* LA CARTE DE STAGE. Elle ne dit pas « optionnel », elle montre ce qu'on y gagne : le
        contraste de rythme en accroche (deux fiches par jour sur la route, douze jours pleins
        ici), quatre preuves concrètes tirées du site, le badge, un vrai bouton. Pas de prix
        ici : il est sur la page du stage. Le diorama reste en couleurs : un monde grisé, on
        ne veut pas y entrer. */
-    const VAL_VAC = [['📚','Les 4 matières : cours et QCM corrigés'],['🎯','Un concours blanc pour finir'],
-                     ['💬','Un tuteur qui répond à tes questions'],['📍','Reprend exactement là où tu en es']];
-    const VAL_PRE = [['📚','Les bases des 4 matières'],['🧭','La méthode de travail, pas que le cours'],
-                     ['🤝','Un suivi jusqu\'au concours'],['📅','Quinze jours, juste avant ta P1']];
+    /* Ce qu'on met en avant (Lucas, 04/09) : un PARCOURS GUIDÉ pour anticiper la P1, une
+       demi-journée par jour pendant les vacances, accompagné par l'équipe — pour accélérer
+       et consolider. Pas de badge sur la carte, pas de prix : la carte reste courte. */
+    const VAL_VAC = [['⚡','Douze jours pour accélérer, une demi-journée par jour'],
+                     ['📚','Les 4 matières : cours, QCM corrigés, concours blanc'],
+                     ['📍','Reprend exactement là où tu en es sur la route']];
+    const VAL_PRE = [['🧭','Les bases et la méthode de travail, une demi-journée par jour'],
+                     ['🤝','L\'équipe Medeos à tes côtés jusqu\'au concours'],
+                     ['📅','Quinze jours, juste avant ta première année']];
     const camp=(quand,titre,pitch,url,lien,img,o)=>'<a class="cr-stage" href="'+url+'" target="_blank" rel="noopener">'+
       '<span class="cr-stage-k">Un monde à part sur ta route</span>'+
       '<span class="cr-socle stage'+(img?' dio':'')+'">'+
@@ -8142,13 +8147,7 @@ function renderCarte(){
       '<span class="cr-nom stage">'+titre+'</span>'+
       '<span class="cr-band stage"><span>'+quand+'</span></span>'+
       '<span class="cr-stage-h">'+o.hook+'</span>'+
-      (pitch? '<span class="cr-stage-p">'+pitch+'</span>' : '')+
       '<span class="cr-stage-g">'+o.valeurs.map(v=>'<i><b>'+v[0]+'</b>'+v[1]+'</i>').join('')+'</span>'+
-      '<span class="cr-deb">Ce monde débloque :</span>'+
-      '<span class="cr-chips n2">'+
-        '<span class="cr-chip medeos"><span class="cr-chip-av">'+(badgeImg?'<img src="'+badgeImg+'" alt="">':'<i>🎫</i>')+'</span><b>Photo de profil</b><em>Étudiant Medeos</em></span>'+
-        '<span class="cr-chip medeos"><span class="cr-chip-ban" style="background:linear-gradient(120deg,#4C2A85,#6B46C1 45%,#B8895A)"></span><b>Bannière</b><em>Étudiant Medeos</em></span>'+
-      '</span>'+
       '<em class="cr-stage-btn">'+lien+' →</em></a>';
     const poser=(idx,html)=>{
       if(idx >= SEANCES.length-1){ apres.push(html); return; }   /* au-delà de la route */
@@ -8161,8 +8160,8 @@ function renderCarte(){
       const pitch = (p1 && p.id && PITCH_P1[p.id]) ? PITCH_P1[p.id] : (p.pitch||'');
       poser(faites+dj, camp(p.emo+' '+p.quand+' · '+dans(dj), p.stage||'Stage Medeos', pitch,
         'https://www.medeos-sante.fr/packs/stages-vacances#stages', 'Découvrir ce stage', imgStage(p.id||''),
-        {hook: p1 ? 'Sur la route, deux fiches par jour. Ici, <b>douze jours pleins</b> pour tout remettre d\'aplomb.'
-                  : 'Sur la route, deux fiches par jour. Ici, <b>douze jours pleins</b> pour prendre une vraie avance.',
+        {hook: p1 ? 'Pendant tes vacances, tu entres dans un <b>parcours guidé</b> : une demi-journée par jour, avec l\'équipe Medeos à tes côtés, pour <b>consolider</b> ce qui est passé trop vite et reprendre de l\'avance.'
+                  : 'Pendant tes vacances, tu entres dans un <b>parcours guidé pour anticiper ta P1</b> : une demi-journée par jour, avec l\'équipe Medeos à tes côtés. Tu <b>accélères</b>, et tu consolides ce que tu sais déjà.',
          valeurs: VAL_VAC}));
     });
     const pr=prerentreeDe(d.getFullYear());
@@ -8171,7 +8170,7 @@ function renderCarte(){
       poser(faites+dj, camp('☀️ '+pr.quand+' · '+dans(dj), 'Stage de pré-rentrée',
         'La dernière ligne droite avant ta première année : tu arrives le jour J en sachant travailler.',
         'https://www.medeos-sante.fr/packs/medi-pro', 'Découvrir la pré-rentrée', imgStage('prerentree'),
-        {hook: 'Quinze jours avant ta rentrée : <b>les bases, la méthode</b>, et quelqu\'un qui te suit jusqu\'au concours.',
+        {hook: 'Quinze jours avant ta rentrée, tu entres dans un <b>parcours guidé</b> : une demi-journée par jour, <b>les bases et la méthode</b>, avec l\'équipe Medeos à tes côtés jusqu\'au concours.',
          valeurs: VAL_PRE}));
     }
   }
