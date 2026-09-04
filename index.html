@@ -37,7 +37,7 @@
   @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
 
   .hdr{display:flex;align-items:center;gap:var(--idb-gap);padding-top:4px}
-  #profil-hdr{padding-top:9px}
+  #profil-hdr{padding-top:9px;border:1px solid rgba(255,255,255,.14)}
   #profil-hdr .who h2{font-size:var(--idb-nom)!important;font-family:Fredoka,Inter,sans-serif;font-weight:600;letter-spacing:.01em;line-height:1.15}
   #profil-hdr .who p{font-size:var(--idb-sub)}
   .mascotte{width:44px;height:44px;border-radius:50%;background:linear-gradient(145deg,var(--violet),var(--violet-deep));display:flex;align-items:center;justify-content:center;flex-shrink:0}
@@ -704,10 +704,10 @@
   #arene h3{color:#8B8271}
 
   /* — la barre du haut : plaque sombre, or à droite — */
-  .lobbytop{display:flex;align-items:center;gap:var(--idb-gap);padding:var(--idb-pad);border-radius:var(--idb-r)}
+  .lobbytop{display:flex;align-items:center;gap:var(--idb-gap)}
   .lobbytop .pcard{flex:1;min-width:0;display:flex;align-items:center;gap:10px;
     background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.04));
-    border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:8px 11px;
+    border:1px solid rgba(255,255,255,.14);border-radius:var(--idb-r);padding:var(--idb-pad);
     box-shadow:inset 0 1px 0 rgba(255,255,255,.16)}
   .lobbytop .pav2{width:var(--idb-av);height:var(--idb-av);border-radius:var(--idb-avr);flex-shrink:0;overflow:hidden;position:relative}
   .lobbytop .pav2 .pem{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:17px}
@@ -1710,7 +1710,7 @@
   .fpr.next .fpj,.fpr.next .fpq{color:#8A5B24;font-weight:800}
   .fpr.next .fpe{opacity:1}
   @keyframes fpin{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
-  .pavatar{width:34px;height:34px;border-radius:28%;overflow:hidden;flex-shrink:0;background:linear-gradient(145deg,var(--violet),var(--violet-deep))}
+  .pavatar{width:var(--idb-av);height:var(--idb-av);border-radius:var(--idb-avr);overflow:hidden;flex-shrink:0;background:linear-gradient(145deg,var(--violet),var(--violet-deep))}
   .pavatar img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;transform:scale(1.22);transform-origin:50% 18%}
   .ptxt{flex:1;min-width:0}
   .ptxt b{font-size:var(--idb-nom);font-weight:800;letter-spacing:-.01em;display:block;line-height:1.2}
