@@ -1,6 +1,6 @@
-# PROMPT MAÎTRE — à copier-coller intégralement dans ChatGPT (avec génération d'images)
+# PROMPT MAÎTRE — à coller intégralement dans ChatGPT en mode Agent
 
-Tu es le directeur artistique et l'illustrateur d'une application mobile d'éducation, **Medeos**, qui prépare des lycéens à leur première année d'études de santé. L'écran que tu illustres s'appelle **« Le parcours des mondes »** : une route verticale que l'élève gravit, monde après monde, jusqu'à sa rentrée — exactement comme l'écran des arènes de Clash Royale (le joueur part en bas, monte de palier en palier, chaque arène a sa maquette 3D posée sur un socle). Tu vas produire **toutes les images de cet écran**, une par une, dans l'ordre indiqué, en respectant strictement les noms de fichiers et les formats. Lis tout le document avant de commencer, puis exécute.
+Tu es le directeur artistique et l'illustrateur d'une application mobile d'éducation, **Medeos**, qui prépare des lycéens à leur première année d'études de santé. L'écran que tu illustres s'appelle **« Le parcours des mondes »** : une route verticale que l'élève gravit, monde après monde, jusqu'à sa rentrée — exactement comme l'écran des arènes de Clash Royale (le joueur part en bas, monte de palier en palier, chaque arène a sa maquette 3D posée sur un socle). Tu travailles en **mode Agent, de façon entièrement autonome** : tu vas produire **toutes les images de cet écran**, une par une, dans l'ordre indiqué, vérifier chaque fichier par du code, et me livrer à la fin **une seule archive ZIP** prête à être déposée dans l'application. Tu ne me poses aucune question en cours de route : tout ce dont tu as besoin est dans ce document. Lis-le en entier avant de commencer, puis exécute jusqu'au bout.
 
 ## 1. La direction artistique — « Atlas Medeos »
 
@@ -98,11 +98,24 @@ Des vues **du dessus, légèrement en plongée**, d'une dalle rectangulaire aux 
 | 42 | `bandeau-rentree.png` | 1024×256, transparent | La même plaque, version or et miel (`#B8895A` à `#FCD34D`), avec un chapeau de diplômé sculpté à gauche et une étoile à droite, centre vide. |
 | 43 | `rail.png` | 128×1024, transparent, raccordable verticalement | Le rail de progression vertical à gauche de la route : une fine colonne de pierre claire avec une rainure centrale, raccordable haut/bas. |
 
-## 3. Comment travailler
+## 3. Comment travailler — mode Agent, sans interruption
 
-- Génère les images **une par une, dans l'ordre**, et après chacune vérifie les sept règles avant de passer à la suivante. Si un texte, un personnage ou un fond opaque s'est glissé dans un rendu, refais-le sans me le demander.
-- Pour les dioramas, garde la **même dalle** (forme, épaisseur, angle) d'une image à l'autre : c'est elle qui donne l'unité à la route.
-- Livre chaque image comme un fichier téléchargeable nommé exactement comme dans les tableaux.
-- Quand tout est fait, donne-moi la liste des 43 fichiers produits.
+**Tu enchaînes les 43 images sans t'arrêter et sans demander de validation.** Après chaque génération, tu contrôles le fichier **par du code** (Python), tu corriges, puis tu passes à la suivante.
 
-Commence par `monde-01.png`.
+**Le contrôle à faire sur chaque fichier, obligatoire :**
+1. Dimensions exactes (`1024×1024`, `1024×512`, `1024×256`, `128×1024`, `1536×512` ou `512×512` selon le tableau). Si elles diffèrent, redimensionne ou régénère.
+2. Pour tout fichier marqué « transparent » : le PNG doit avoir un canal alpha, et **au moins 25 % des pixels doivent être totalement transparents** (les coins, autour du sujet). Si le fond est blanc, noir ou coloré, régénère en insistant sur « fond transparent, PNG avec alpha ». Ne détoure jamais à la main : régénère.
+3. Aucun texte visible : regarde l'image ; si tu vois une lettre ou un chiffre, régénère.
+4. Pour `fond-route.png` : vérifie que la tuile se raccorde (place-la deux fois côte à côte et deux fois l'une sous l'autre, il ne doit pas y avoir de couture visible). Sinon, régénère.
+5. Nom de fichier exactement conforme au tableau, en minuscules, extension `.png`.
+
+**Si une génération échoue trois fois de suite** sur une image, passe à la suivante et note-la dans le rapport final — ne bloque jamais la série.
+
+**Garde l'unité de la série** : même dalle, même angle, même lumière d'un diorama à l'autre. Si tu constates une dérive de style après plusieurs images, relis la section 1 avant de continuer.
+
+**La livraison, à la toute fin :**
+- Un fichier **`parcours-des-mondes-images.zip`** contenant les 43 PNG **à la racine** (pas de sous-dossier).
+- À l'intérieur, un `manifeste.txt` : une ligne par fichier avec ses dimensions réelles, « transparent : oui/non », et « OK » ou la raison de l'échec.
+- Dans ta réponse : la liste des fichiers réussis, la liste des fichiers manqués s'il y en a, et le lien de téléchargement du ZIP.
+
+Commence maintenant par `monde-01.png`, et ne t'arrête qu'à la livraison du ZIP.
