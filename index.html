@@ -6823,7 +6823,7 @@ async function activerCode(){
         le serveur reconnaît celui de chaque acheteur */
   let ok=false;
   try{
-    const r=await fetch('https://www.medeos-sante.fr/api/app-code',{method:'POST',
+    const r=await fetch('https://medeos-sante.fr/api/app-code',{method:'POST',
       headers:{'Content-Type':'application/json'},body:JSON.stringify({code:brut})});
     if(r.ok){ const j=await r.json(); ok=!!j.ok; }
   }catch(e){}
@@ -10328,7 +10328,7 @@ function voirStages(){
    le rappel (réglage) et qui a fait sa séance aujourd'hui (activité). L'envoi lui-même part
    du site chaque soir (/api/app-rappel/tick). Ici on ne fait que déclarer, sans jamais
    bloquer l'app si le réseau ou le site ne répond pas. ═══ */
-const RAPPEL_API='https://www.medeos-sante.fr/api/app-rappel';
+const RAPPEL_API='https://medeos-sante.fr/api/app-rappel';   /* sans www : le www redirige, et un POST redirigé passe mal le CORS */
 function rappelPost(corps){
   try{ fetch(RAPPEL_API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(corps),keepalive:true}).catch(()=>{}); }catch(e){}
 }
