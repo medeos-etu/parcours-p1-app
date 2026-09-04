@@ -2244,6 +2244,12 @@
 .cr-chip em{font-style:normal;font-size:9px;color:rgba(250,246,240,.6);text-align:center;line-height:1.2}
 .cr-chip.ok{border-color:#FCD34D;background:linear-gradient(180deg,#5A4A1E,#3A2E12)}
 .cr-chip.lock{opacity:.7}
+.cr-chip-ban{background-size:cover;background-position:center}
+.cr-chip.futur{opacity:.62}
+.cr-chip.futur b{color:#CFC6E8}
+.cr-chip-av.futur{filter:grayscale(.55) brightness(.85)}
+.cr-chip-av.futur::after{content:'🔒';position:absolute;right:-2px;bottom:-2px;font-size:11px}
+.cr-chip-av{position:relative}
 /* — le carré des thématiques, entre deux mondes — */
 .cr-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 10px}
 /* le rail dessiné, à la place du trait */
@@ -7392,10 +7398,11 @@ function collectionMondes(){
 /* LE STAGE, SEULEMENT QUAND IL EST PROCHE. On ne vend rien à quelqu'un qui vient de finir
    sa séance : on lui montre ce qui l'attend dans dix jours, s'il est en Terminale. */
 function prochainStageProche(){
-  const d=(typeof dateRentree==='function')?dateRentree():null; if(!d) return null;
-  const debutTerminale=new Date(d.getFullYear()-1,8,1);
+  const p1=(typeof enP1==='function') && enP1();
+  const d = p1 ? finAnneeP1() : ((typeof dateRentree==='function')?dateRentree():null); if(!d) return null;
+  const debut = p1 ? new Date(Date.now()-12*864e5) : new Date(d.getFullYear()-1,8,1);
   /* le prochain stage à venir, OU celui qui est en cours (on regarde 12 jours en arrière) */
-  const p=periodesEntre(new Date(Date.now()-12*864e5), d).filter(x=>x.m>=debutTerminale)[0]; if(!p) return null;
+  const p=periodesEntre(new Date(Date.now()-12*864e5), d).filter(x=>x.m>=debut)[0]; if(!p) return null;
   const jours=Math.round((p.m-new Date())/864e5);
   return (jours>=-11 && jours<=21) ? {nom:p.nom, stage:p.stage||'Stage Medeos', quand:p.quand, emo:p.emo, jours:jours} : null;
 }
@@ -7854,8 +7861,21 @@ function poserRentree(an){
   S.profil.rentreeDite = true;
   saveS(); renderCarte();
 }
-/* l'élève a déjà fait sa rentrée : plus de compte à rebours, plus de stage, la route entière */
+/* l'élève a déjà fait sa rentrée : plus de compte à rebours, plus de sommet « rentrée »,
+   la route entière — mais ses stages restent sur le chemin, à leurs vraies dates. */
 function enP1(){ return !!(S.profil && S.profil.dejaP1); }
+/* l'année scolaire qu'il est en train de vivre : celle ouverte au dernier 1er septembre */
+function anP1Courant(){ return prochaineRentreeAn() - 1; }
+/* la fin de cette année-là : au-delà, ses vacances ne le concernent plus */
+function finAnneeP1(){ return new Date(anP1Courant()+1, 5, 30); }
+/* Les mêmes stages, mais on ne raconte pas la même chose à qui est DÉJÀ dedans :
+   il ne prend pas de l'avance, il reprend ce qui est passé trop vite. */
+const PITCH_P1 = {
+  toussaint:'Les premières vacances de ta P1 : douze jours pour reprendre ce qui est passé trop vite depuis la rentrée.',
+  noel:'Le passage d\'un semestre à l\'autre : on consolide ce qui tient, on remet à plat ce qui coince.',
+  fevrier:'Le cap du milieu d\'année : les notions reprises une par une, avec un tuteur qui répond.',
+  paques:'La dernière ligne droite : douze jours pour verrouiller les bases avant les épreuves.'
+};
 /* LES VRAIS STAGES, AUX VRAIES DATES. Source : data/stages-vacances.ts et
    lib/medi-pro-session.ts du site (calendrier officiel 2026-2027). Un stage commence le
    lundi de la première semaine de vacances et dure douze jours. Pour une année scolaire
@@ -7903,14 +7923,27 @@ const IMG_REC = nom => (typeof VIGNETTES!=='undefined' && VIGNETTES[nom]) ? 'img
 const TEXTURES = ['herbe','sable','pierre','glace','cuivre','cristal'];
 function textureMonde(m){ return IMG_REC('dalle-'+TEXTURES[(m.num-1)%TEXTURES.length]); }
 
-/* ce qu'on a gagné en arrivant dans ce monde — donc en terminant le précédent */
+/* UN PALIER SUR DEUX. Une photo de profil tous les deux mondes, une bannière tous les
+   deux mondes : si chaque monde donne la même chose, plus rien ne vaut rien. Les mondes
+   pairs portent l'écusson et la bannière de leur thème ; les impairs donnent le gel de
+   série et annoncent l'écusson suivant, pour qu'on sache ce qui vient. Le monde 1 est le
+   point de départ : on n'y a encore rien mérité. */
+function estPalier(num){ return num>=2 && num%2===0; }
+function ecussonMonde(m){ return IMG_REC('av-monde-'+String(m.num).padStart(2,'0')) || m.img; }
+function bannereMonde(m){ return IMG_REC('ban-monde-'+String(m.num).padStart(2,'0')); }
 function recompensesArrivee(m){
-  const M=mondes(); const prec = m.num>=2 ? M[m.num-2] : null;
-  if(!prec) return [];
+  if(m.num < 2) return [];
   const out=[];
-  if(prec.img) out.push({k:'avatar', nom:'Photo de profil', sous:prec.nom, img:prec.img, em:prec.em});
-  out.push({k:'ban', nom:'Bannière', sous:prec.nom, img:null, em:'🎗️', teinte:prec.teinte});
+  if(estPalier(m.num)){
+    out.push({k:'avatar', nom:'Photo de profil', sous:m.nom, img:ecussonMonde(m), em:m.em});
+    out.push({k:'ban', nom:'Bannière', sous:m.nom, img:bannereMonde(m), em:'🎗️', teinte:m.teinte});
+  }
   out.push({k:'gel', nom:'1 gel de série', sous:'protège ta flamme', img:IMG_REC('recompense-gel'), em:'🧊'});
+  if(!estPalier(m.num)){
+    const suiv = mondes()[m.num];   /* le monde juste au-dessus */
+    if(suiv && estPalier(suiv.num))
+      out.push({k:'apres', nom:'Photo de profil', sous:'au monde suivant', img:ecussonMonde(suiv), em:suiv.em});
+  }
   return out;
 }
 /* la récompense d'une thématique : petite, réelle, immédiate */
@@ -7943,15 +7976,20 @@ if(typeof AVATARS!=='undefined') AVATARS.push({id:'medeos', nom:'Étudiant Medeo
   img:(typeof VIGNETTES!=='undefined' && VIGNETTES['badge-etudiant']) ? 'img/parcours/territoires/'+VIGNETTES['badge-etudiant'] : 'img/profil/av-carabin.png',
   expl:'Élève des stages Medeos', cond:function(){ return !!S.stage; }});
 
-/* les photos de profil et bannières de monde, dans le vestiaire : gratuites, une par monde */
+/* le vestiaire : gratuites, mais UN MONDE SUR DEUX seulement — ce qui se donne à chaque
+   pas ne se regarde plus. Les mondes pairs déposent leur écusson et leur bannière. */
 if(typeof MONDES_DEF!=='undefined'){
-  MONDES_DEF.forEach((d,k)=>{ const num=k+1, cle='monde-'+String(num).padStart(2,'0');
+  MONDES_DEF.forEach((d,k)=>{ const num=k+1; if(num<2 || num%2) return;
+    const nn='monde-'+String(num).padStart(2,'0');
+    const V=(typeof VIGNETTES!=='undefined')?VIGNETTES:{};
+    const dossier='img/parcours/territoires/';
+    const av = V['av-'+nn] ? dossier+V['av-'+nn] : (V[nn] ? dossier+V[nn] : null);
+    const ban= V['ban-'+nn]? dossier+V['ban-'+nn]: null;
     const gagne=function(){ return !!(S.collection && S.collection[num]); };
-    if(typeof BANNIERES!=='undefined') BANNIERES.push({id:'monde-'+num, nom:d.nom,
+    if(typeof BANNIERES!=='undefined') BANNIERES.push({id:'monde-'+num, nom:d.nom, img:ban,
       css:'linear-gradient(120deg,'+TEINTES[k%TEINTES.length]+',#1A1530)', expl:'Monde '+num+' terminé', cond:gagne});
-    if(typeof AVATARS!=='undefined' && typeof VIGNETTES!=='undefined' && VIGNETTES[cle])
-      AVATARS.push({id:'monde-'+num, nom:d.nom, em:d.em, img:'img/parcours/territoires/'+VIGNETTES[cle],
-        expl:'Monde '+num+' terminé', cond:gagne});
+    if(typeof AVATARS!=='undefined' && av)
+      AVATARS.push({id:'monde-'+num, nom:d.nom, em:d.em, img:av, expl:'Monde '+num+' terminé', cond:gagne});
   });
 }
 
@@ -8010,8 +8048,13 @@ function renderCarte(){
 
   /* ── les camps : le stage posé au-dessus de la thématique où l'élève sera à sa date ── */
   const camps = {}, apres = [];
-  if(d && !enP1()){
-    const debutTerminale=new Date(d.getFullYear()-1,8,1);
+  {
+    /* Deux fenêtres, une seule mécanique. Qui n'a pas encore fait sa rentrée voit les
+       vacances de son ANNÉE DE TERMINALE puis la pré-rentrée. Qui est déjà en première
+       année voit les vacances de l'année qu'il vit — la pré-rentrée est derrière lui. */
+    const p1 = enP1();
+    const finFenetre   = p1 ? finAnneeP1() : d;
+    const debutFenetre = p1 ? new Date() : new Date(d.getFullYear()-1,8,1);
     const dans=n=>n<=0?'en ce moment':n===1?'demain':'dans '+n+' jours';
     const imgStage = id => IMG('stage-'+id) || IMG('camp-stage');
     const badgeImg=IMG('badge-etudiant');
@@ -8036,13 +8079,14 @@ function renderCarte(){
       const k=T.indexOf(t); if(k>kRentree){ apres.push(html); return; }
       (camps[k]=camps[k]||[]).push(html);
     };
-    periodesEntre(new Date(), d).filter(p=>p.m>=debutTerminale).forEach(p=>{
+    periodesEntre(new Date(), finFenetre).filter(p=>p.m>=debutFenetre).forEach(p=>{
       const dj=Math.max(0, Math.round((p.m-new Date())/864e5));
-      poser(faites+dj, camp(p.emo+' '+p.quand+' · '+dans(dj), p.stage||'Stage Medeos', p.pitch||'',
+      const pitch = (p1 && p.id && PITCH_P1[p.id]) ? PITCH_P1[p.id] : (p.pitch||'');
+      poser(faites+dj, camp(p.emo+' '+p.quand+' · '+dans(dj), p.stage||'Stage Medeos', pitch,
         'https://www.medeos-sante.fr/packs/stages-vacances#stages', 'Voir ce stage', imgStage(p.id||'')));
     });
     const pr=prerentreeDe(d.getFullYear());
-    if(pr.m>new Date()){
+    if(!p1 && pr.m>new Date()){
       const dj=Math.max(0, Math.round((pr.m-new Date())/864e5));
       poser(faites+dj, camp('☀️ '+pr.quand+' · '+dans(dj), 'Stage de pré-rentrée',
         'La dernière ligne droite : les bases académiques, la méthode de travail, et un suivi jusqu\'au concours.',
@@ -8062,15 +8106,15 @@ function renderCarte(){
     const imgR = IMG('rentree');
     x += '<div class="cr-sommet" id="cr-sommet">'+
       '<div class="cr-socle grand'+(imgR?' dio':'')+'">'+(imgR?'<img class="cr-dio" src="'+imgR+'" alt="">':'<span class="cr-em">🎓</span>')+'</div>'+
-      '<div class="cr-nom">'+(enP1()? 'Tu es en première année de santé' : 'Ta rentrée en première année de santé')+'</div>'+
-      bandeauHtml(enP1()? 'Ta rentrée est passée' : '1<sup>er</sup> sept. '+d.getFullYear()+' &nbsp;·&nbsp; dans '+j+' j', bandeauR||bandeau)+
+      '<div class="cr-nom">'+(enP1()? 'Le bout de la route' : 'Ta rentrée en première année de santé')+'</div>'+
+      bandeauHtml(enP1()? 'Les '+M.length+' mondes, terminés' : '1<sup>er</sup> sept. '+d.getFullYear()+' &nbsp;·&nbsp; dans '+j+' j', bandeauR||bandeau)+
       '<div><button class="se-alt cr-chg" onclick="S.profil.rentreeDite=false;saveS();renderCarte()">'+(enP1()?'ce n\'est pas mon cas':(rentreeSupposee()?'tu ne l\'as pas encore dite — la préciser':'changer la date'))+'</button></div>'+
       '<div class="cr-bagage"><span>'+(enP1()? 'Ce que la route contient' : 'Avec tout ce bagage')+'</span>'+
         '<div><b>'+mondesVisibles.length+'</b><em>monde'+(mondesVisibles.length>1?'s':'')+'</em></div>'+
         '<div><b>'+themFaits+'</b><em>thématique'+(themFaits>1?'s':'')+'</em></div>'+
         '<div><b>'+fichesBagage+'</b><em>fiches vues</em></div></div>'+
       (enP1()
-        ? '<div class="cr-audela">Tu es déjà en première année : la route entière t\'est ouverte, sans limite de date. Elle te sert de révision, monde après monde.</div>'
+        ? '<div class="cr-audela">Tu es déjà en première année : la route entière t\'est ouverte, sans limite de date. Elle reprend les bases dans l\'ordre, monde après monde, et tes vacances sont sur le chemin.</div>'
         : illim
         ? '<div class="cr-audela">Ta route va jusqu\'au bout, et tes stages jalonnent les vacances.</div>'
         : auDela
@@ -8087,8 +8131,9 @@ function renderCarte(){
   /* les stages qui tombent une fois la route finie : entre le sommet et le dernier monde */
   if(apres.length){
     apres.slice().reverse().forEach(h=>{ x += h; });
-    x += '<div class="cr-apres"><span>Après la route, avant ta rentrée</span>'+
-      '<em>Tu auras terminé les '+SEANCES.length+' séances. Ces '+apres.length+' stages-là tombent pendant ton année de Terminale : c\'est le moment de creuser, pas de découvrir.</em></div>';
+    x += '<div class="cr-apres"><span>'+(enP1()? 'Une fois la route finie' : 'Après la route, avant ta rentrée')+'</span>'+
+      '<em>Tu auras terminé les '+SEANCES.length+' séances. Ces '+apres.length+' stage'+(apres.length>1?'s':'')+'-là tombe'+(apres.length>1?'nt':'')+
+      (enP1()? ' plus tard dans ton année : c\'est le moment de creuser, pas de découvrir.' : ' pendant ton année de Terminale : c\'est le moment de creuser, pas de découvrir.')+'</em></div>';
   }
 
   /* ── LA ROUTE, du haut vers le bas : pour chaque monde, ses thématiques en carré puis son socle ── */
@@ -8119,20 +8164,20 @@ function renderCarte(){
     const badge = e.etat==='fini' ? '<i class="cr-badge ok">✓</i>' : e.etat==='verrouille' ? '<i class="cr-badge lock">🔒</i>'
                 : (marqueur ? '<img class="cr-marq" src="'+marqueur+'" alt="Tu es ici">' : '<i class="cr-badge ici">Tu es ici</i>');
     const rec = recompensesArrivee(m);
-    const chips = rec.map(r=>'<span class="cr-chip'+(e.etat==='verrouille'?' lock':'')+'">'+
-      (r.k==='avatar' ? '<span class="cr-chip-av">'+(r.img?'<img src="'+r.img+'" alt="">':'<i>'+r.em+'</i>')+'</span>'
-       : r.k==='ban' ? '<span class="cr-chip-ban" style="background:linear-gradient(120deg,'+r.teinte+',#1A1530)"></span>'
+    const chips = rec.map(r=>'<span class="cr-chip'+(e.etat==='verrouille'?' lock':'')+(r.k==='apres'?' futur':'')+'">'+
+      (r.k==='avatar' || r.k==='apres' ? '<span class="cr-chip-av'+(r.k==='apres'?' futur':'')+'">'+(r.img?'<img src="'+r.img+'" alt="">':'<i>'+r.em+'</i>')+'</span>'
+       : r.k==='ban' ? '<span class="cr-chip-ban"'+(r.img?' style="background-image:url(\''+r.img+'\')"':' style="background:linear-gradient(120deg,'+r.teinte+',#1A1530)"')+'></span>'
        : icone(r,'cr-chip-i'))+
       '<b>'+r.nom+'</b><em>'+r.sous+'</em></span>').join('');
     x += '<div class="cr-monde '+e.etat+(ici?' ici':'')+'" id="monde-'+m.num+'">'+
       '<span class="cr-rail"><b>'+debutM+'</b></span>'+
       socleHtml(m,badge)+
       '<div class="cr-nom"><em>Monde '+m.num+'</em>'+m.nom+'</div>'+
-      (rec.length ? '<div class="cr-deb">'+(e.etat==='verrouille'?'En arrivant ici, tu débloqueras :':'En arrivant ici, tu as débloqué :')+'</div><div class="cr-chips n'+rec.length+'">'+chips+'</div>'
+      (rec.length ? '<div class="cr-deb">'+(e.etat==='fini'?'Tu as débloqué :':'En terminant ce monde, tu débloques :')+'</div><div class="cr-chips n'+rec.length+'">'+chips+'</div>'
                   : '<div class="cr-deb depart">Ton point de départ</div>')+
       '</div>';
   }
-  x += '<div class="cr-depart"><span class="cr-rail"><b>0</b></span><div>🚩 <b>Ta route commence ici</b><span>Chaque thématique terminée rapporte quelque chose ; chaque monde terminé t\'offre sa photo de profil et sa bannière.</span></div></div>';
+  x += '<div class="cr-depart"><span class="cr-rail"><b>0</b></span><div>🚩 <b>Ta route commence ici</b><span>Chaque thématique terminée rapporte quelque chose, et un monde sur deux t\'offre sa photo de profil et sa bannière.</span></div></div>';
   x += '</div></div>';
   b.innerHTML = x;
 
@@ -9649,7 +9694,9 @@ function seanceFin(){
       const fini=mondes().find(m=>m.terr.some(t=>t.nom===ch) && etatMonde(m).etat==='fini');
       if(fini){ const neuf=(typeof crediterMonde==='function')? crediterMonde(fini) : false;
         bilan+='<div class="fin-monde"><span>'+fini.em+'</span><b>Monde terminé : '+fini.nom+'</b><em>Ses '+fini.terr.length+' thématiques sont derrière toi. Le monde suivant s\'ouvre.</em>'+
-          (neuf?'<span class="fin-monde-r">🧊 +1 gel de série · 🖼️ sa photo de profil · 🎗️ sa bannière — dans ton vestiaire</span>':'')+'</div>'; } } }
+          (neuf?'<span class="fin-monde-r">'+((typeof estPalier==='function' && estPalier(fini.num))
+             ? '🧊 +1 gel de série · 🖼️ sa photo de profil · 🎗️ sa bannière — dans ton vestiaire'
+             : '🧊 +1 gel de série — la photo de profil et la bannière tombent au monde suivant')+'</span>':'')+'</div>'; } } }
   s.fiches.forEach(sl=>{
     const o=(S.oublis||{})[sl]||{};
     bilan+='<div class="fin-fiche"><b>📄 '+(TITRES_FICHES[sl]||sl)+'</b>'+
