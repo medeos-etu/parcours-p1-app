@@ -82,8 +82,16 @@ MATIERES.forEach(mat => {
     const n = j - i;
     if (n > MAX_FICHES) {
       const k = Math.ceil(n / MAX_FICHES);
-      /* « 1re partie », pas « 1/3 » : une fraction ne dit rien à un élève */
-      for (let q = i; q < j; q++) { const part = Math.floor((q - i) * k / n) + 1; f[q].chap = f[q].chap + ' — ' + (part === 1 ? '1re' : part + 'e') + ' partie'; }
+      /* LES FRONTIÈRES DE PARTIE TOMBENT SUR UN INDEX PAIR. Les séances sont des paires
+         prises aux index pairs de la matière : une frontière impaire couperait une séance
+         en deux, qui appartiendrait alors à deux parties — et à deux mondes.
+         « 1re partie », pas « 1/3 » : une fraction ne dit rien à un élève. */
+      const bornes = [];
+      for (let q = 1; q < k; q++) { let g = i + Math.round(q * n / k); if (g % 2) g++; if (g > i && g < j && bornes[bornes.length-1] !== g) bornes.push(g); }
+      for (let q = i; q < j; q++) {
+        let part = 1; bornes.forEach(bq => { if (q >= bq) part++; });
+        f[q].chap = f[q].chap + ' — ' + (part === 1 ? '1re' : part + 'e') + ' partie';
+      }
     }
     i = j;
   }
