@@ -3259,7 +3259,7 @@
           <div class="rc-meta">🛠️ Un aperçu de la méthode</div>
         </div>
       </div>
-      <div class="rescard" id="carte-agenda" onclick="window.open('https://medeos-sante.fr/ressources/agenda-p1?src=parcours-app','_blank')">
+      <div class="rescard" id="carte-agenda" onclick="ouvrirRessource('agenda-p1.html','Agenda de la P1')">
         <span class="pricechip">GRATUIT</span>
         <img src="img/cover-agenda.jpg" alt="">
         <div class="rc-body">
@@ -13178,8 +13178,11 @@ function ouvrirRessource(fichier, titre){
   if(!L || !fr) return;
   fr.onload=()=>{ try{
     const d2=fr.contentDocument, st=d2.createElement('style');
-    /* la page garde son contenu, pas la navigation du site : on est déjà dans l'app */
-    st.textContent='header,nav,footer,[class*="navbar"],[class*="Header"],[class*="footer"],a[href*="/ressources/acces"]{display:none !important} body{padding-top:0 !important}';
+    /* On ne cache RIEN de la page elle-même : son en-tête (<header class="hero">) est le début du
+       cours, son pied de page sa fin, sa barre de progression fait partie du dispositif. On ne
+       retire que les liens vers la porte email du site, qui n'a plus lieu d'être ici (05/09 : une
+       règle trop large avalait le début du guide et des panoramas). */
+    st.textContent='a[href*="/ressources/acces"]{display:none !important}';
     d2.head.appendChild(st);
   }catch(e){} };
   fr.src='biblio/'+fichier;
@@ -13261,7 +13264,7 @@ function ouvrirPanoramas(){
     ['physique','Physique','Les lois physiques qui font marcher le corps.','pano_cover_physique.png']];
   box.innerHTML='<div class="rescards">'+P.map(p=>
     '<div class="rescard" onclick="closeSheet(\'sheet-pioche\');ouvrirRessource(\'panorama-'+p[0]+'.html\',\'Panorama · '+p[0].charAt(0).toUpperCase()+p[0].slice(1)+'\')">'+
-      '<span class="pricechip">GRATUIT</span><img src="images/panorama/'+p[3]+'" onerror="this.src=\'img/cover-panorama.jpg\'" alt="">'+
+      '<span class="pricechip">GRATUIT</span><img src="img-fiches/panorama/'+p[3]+'" onerror="this.src=\'img/cover-panorama.jpg\'" alt="">'+
       '<div class="rc-body"><b>Panorama '+p[1]+'</b><p>'+p[2]+'</p><div class="rc-meta">📖 40 à 55 min</div></div>'+
     '</div>').join('')+'</div>';
   openSheet('sheet-pioche');
