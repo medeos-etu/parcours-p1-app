@@ -8493,21 +8493,26 @@ function renderSideAcc(){
    classement à chaque ouverture, sur n'importe quel appareil. Le hasard vient du jour et du
    pseudo, pas de Math.random. ═══ */
 const ELEVES_REPERES=[
-  /* base : les trophées qu'il avait déjà au 1er septembre 2026. L'échelle s'arrête à
-     l'Externe des hôpitaux et pas au Professeur (Lucas, 05/09 : « des trophées pas trop
-     élevés ») : un nouveau venu doit voir des gens à sa portée, pas un mur.
-     rythme : sa régularité (part de jours travaillés) · vitesse : son gain un bon jour.
+  /* ILS ONT COMMENCÉ EN MÊME TEMPS QUE L'APP (Lucas, 05/09 : « faut faire comme si c'est des
+     étudiants qui viennent de commencer il y a 4 jours »). Une première version leur donnait
+     des milliers de trophées, comme s'ils jouaient depuis des mois : impossible, l'app a
+     quatre jours.
+     Le barème réel de l'Amphi : 10 questions par ascension, 5 cases chacune, +2 par case
+     juste et −2 par erreur, 2 ascensions par jour. Un bon élève gagne donc 40 à 120 trophées
+     un jour où il joue. C'est ce que « vitesse » représente : son gain net un jour actif.
+     base : le petit report de ceux qui ont commencé un ou deux jours avant les autres.
+     rythme : sa régularité (part de jours où il vient).
      medeos : élève des stages — photo et bannière Medeos, cadre doré. */
-  {id:'nael',        rythme:.55, vitesse:46, base:  140},
-  {id:'adam.bio',    rythme:.60, vitesse:40, base:  360},
-  {id:'tom-anat',    rythme:.64, vitesse:44, base:  680},
-  {id:'yanis_p',     rythme:.71, vitesse:34, base: 1050},
-  {id:'hugo_med',    rythme:.78, vitesse:38, base: 1480},
-  {id:'maelle.s',    rythme:.83, vitesse:30, base: 1960},
-  {id:'lou.chimie',  rythme:.88, vitesse:26, base: 2480},
-  {id:'ines.b',      rythme:.85, vitesse:28, base: 3050, medeos:true},
-  {id:'clara.p1',    rythme:.92, vitesse:24, base: 3620, medeos:true},
-  {id:'sarah.k',     rythme:.95, vitesse:22, base: 4180, medeos:true}
+  {id:'nael',        rythme:.50, vitesse:28, base:  2},
+  {id:'adam.bio',    rythme:.58, vitesse:32, base:  5},
+  {id:'tom-anat',    rythme:.64, vitesse:36, base:  8},
+  {id:'yanis_p',     rythme:.70, vitesse:40, base: 14},
+  {id:'hugo_med',    rythme:.75, vitesse:46, base: 22},
+  {id:'maelle.s',    rythme:.80, vitesse:50, base: 30},
+  {id:'lou.chimie',  rythme:.85, vitesse:54, base: 38},
+  {id:'ines.b',      rythme:.88, vitesse:58, base: 46, medeos:true},
+  {id:'clara.p1',    rythme:.92, vitesse:62, base: 54, medeos:true},
+  {id:'sarah.k',     rythme:.95, vitesse:66, base: 64, medeos:true}
 ];
 const REPERE_EPOQUE = Date.UTC(2026, 8, 1);          /* 1er septembre 2026 : le jour zéro */
 /* un nombre entre 0 et 1, toujours le même pour un pseudo et un jour donnés */
