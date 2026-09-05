@@ -1167,6 +1167,7 @@
   .agj-day span{font-size:13px;font-weight:900;color:var(--violet)}
 
   /* — le résumé chiffré du panneau — */
+  .lbrep{margin-left:4px;font-size:9px;color:var(--tung);vertical-align:super;font-weight:900}
   .lbresume{text-align:center;padding:10px 0 4px}
   .lbr-tot{display:block;font-family:Fredoka,Inter,sans-serif;font-size:30px;font-weight:700;color:var(--violet);line-height:1.1}
   .lbr-sem{display:block;font-size:12px;font-weight:800;color:#3A3730;margin-top:3px}
@@ -8481,6 +8482,83 @@ function renderSideAcc(){
 }
 /* Les comptes qui ont vraiment joué sur cet appareil, du plus haut total au plus bas.
    Le jour où les scores passeront par le serveur, seule cette fonction changera. */
+
+/* ═══ LES ÉLÈVES REPÈRES — dix profils qui avancent chaque jour, pour que le classement de
+   l'Arène ne soit pas vide le premier soir (Lucas, 05/09).
+   Ce ne sont PAS de vrais camarades, et l'app ne le laisse pas croire : leur ligne porte un
+   ✦ et une note l'explique sous le classement. Le reste est vrai : ils progressent, ils
+   régressent les mauvais jours, et leur photo comme leur bannière se débloquent aux mêmes
+   seuils que ceux de l'élève.
+   Tout est CALCULÉ, jamais tiré au hasard à l'affichage : le même jour donne le même
+   classement à chaque ouverture, sur n'importe quel appareil. Le hasard vient du jour et du
+   pseudo, pas de Math.random. ═══ */
+const ELEVES_REPERES=[
+  /* base : les trophées qu'il avait déjà au 1er septembre 2026 — l'échelle est étalée sur
+     toute la route, du débutant au Praticien, pour qu'il y ait toujours quelqu'un juste
+     devant soi à rattraper, et quelqu'un derrière qu'on vient de dépasser.
+     rythme : sa régularité (part de jours travaillés) · vitesse : son gain un bon jour. */
+  {id:'nael',        rythme:.55, vitesse:82, base:  180},
+  {id:'adam.bio',    rythme:.60, vitesse:64, base:  430},
+  {id:'tom-anat',    rythme:.64, vitesse:70, base:  920},
+  {id:'yanis_p',     rythme:.71, vitesse:52, base: 1380},
+  {id:'hugo_med',    rythme:.78, vitesse:58, base: 2050},
+  {id:'maelle.s',    rythme:.83, vitesse:44, base: 2980},
+  {id:'lou.chimie',  rythme:.88, vitesse:37, base: 4150},
+  {id:'ines.b',      rythme:.85, vitesse:40, base: 5400},
+  {id:'clara.p1',    rythme:.92, vitesse:46, base: 6800},
+  {id:'sarah.k',     rythme:.95, vitesse:32, base: 8250}
+];
+const REPERE_EPOQUE = Date.UTC(2026, 8, 1);          /* 1er septembre 2026 : le jour zéro */
+/* un nombre entre 0 et 1, toujours le même pour un pseudo et un jour donnés */
+function _repereAlea(cle){
+  let n=2166136261;
+  for(let i=0;i<cle.length;i++){ n^=cle.charCodeAt(i); n=Math.imul(n,16777619); }
+  return ((n>>>0)%100000)/100000;
+}
+function _repereJour(){ return Math.floor((Date.now()-6*3600*1000-REPERE_EPOQUE)/86400000); }
+/* Le total d'un repère : sa marche jour après jour depuis l'époque.
+   Un jour travaillé fait monter, un jour sauté fait redescendre un peu — comme l'Arène le
+   fait vraiment. On plafonne à 10 000, le sommet de la route des trophées. */
+function trophaeesRepere(e){
+  const J=Math.max(0,_repereJour());
+  let T=e.base;
+  for(let j=0;j<J;j++){
+    /* PLUS ON MONTE, PLUS C'EST DUR — sans ça, tout le monde touchait le plafond de 10 000
+       en trois mois et le classement se figeait. Le gain fond à mesure qu'on approche du
+       sommet ; la perte d'un jour sauté, elle, ne faiblit pas. */
+    const reste=Math.max(0.06, 1 - T/11000);
+    const a=_repereAlea(e.id+'#'+j);
+    if(a < e.rythme){
+      const b=_repereAlea(e.id+'@'+j);
+      T += Math.round(e.vitesse*(0.55+b*0.95)*reste);
+    } else {
+      T -= Math.round(e.vitesse*0.45);                 /* un jour sans venir se paie */
+    }
+    if(T<0) T=0;
+    if(T>10000) T=10000;
+  }
+  return T;
+}
+/* photo et bannière suivent leurs trophées, aux mêmes seuils que pour l'élève */
+function skinRepere(e,T){
+  /* On choisit PARMI LES TROIS DERNIÈRES débloquées, pas dans toute la collection : ainsi la
+     photo et la bannière changent visiblement à chaque palier franchi, au lieu de rester
+     figées sur un choix tiré une fois pour toutes. */
+  const dispo=a=>typeof a.seuil==='number' && a.seuil<=T;
+  const av=AVATARS.filter(dispo), ba=BANNIERES.filter(dispo);
+  const haut=(liste,cle)=>{
+    if(!liste.length) return null;
+    const fin=liste.slice(-3);
+    return fin[Math.floor(_repereAlea(e.id+cle+fin.length)*fin.length)] || fin[fin.length-1];
+  };
+  return { av: haut(av,'!av') || AVATARS[0], ban: haut(ba,'!ban') || BANNIERES[0] };
+}
+function joueursReperes(){
+  return ELEVES_REPERES.map(e=>{
+    const T=trophaeesRepere(e), s=skinRepere(e,T);
+    return {id:e.id, T:T, av:s.av.img, cadre:!!s.av.cadre, ban:s.ban, repere:true};
+  });
+}
 function classementJoueurs(){
   const reg=(typeof accRegistre==='function')?accRegistre():{};
   const moi=S.ar.compte? S.ar.compte.id : null;
@@ -8497,6 +8575,8 @@ function classementJoueurs(){
     const av=(estMoi? avatarOf() : (AVATARS.find(a=>a.id===(c.skin&&c.skin.av))||AVATARS[0]));
     out.push({id:nom, T:T, av:av.img, cadre:!!av.cadre});
   });
+  /* les repères rejoignent les vrais comptes, puis tout le monde est trié ensemble */
+  if(typeof joueursReperes==='function') out.push(...joueursReperes());
   out.sort((a,b)=>b.T-a.T);
   return out;
 }
@@ -13574,15 +13654,13 @@ function renderLB(){
       return '<div class="lbrow'+(j.id===moi?' moi':'')+'">'+
         '<span class="lbp">'+(i+1)+'</span>'+
         '<span class="lbav'+(j.cadre?' av-or':'')+'"><img src="'+j.av+'" alt="" onerror="this.remove()"></span>'+
-        '<span class="lbn">'+j.id+'<i>'+g[2]+' '+g[1]+'</i></span>'+
+        '<span class="lbn">'+j.id+(j.repere?'<b class="lbrep" title="Élève repère, pas un camarade">✦</b>':'')+'<i>'+g[2]+' '+g[1]+'</i></span>'+
         '<span class="lbt">'+fmtT(j.T)+'</span></div>';
     }).join('');
     box.appendChild(d);
-    if(joueurs.length<2){
-      const lg=document.createElement('p'); lg.className='pg-note';
-      lg.textContent='Les autres élèves s\'ajouteront ici avec leurs trophées.';
-      box.appendChild(lg);
-    }
+    { const lg=document.createElement('p'); lg.className='pg-note';
+      lg.innerHTML='Les élèves marqués <b>✦</b> sont des <b>repères de progression</b> : ils avancent chaque jour, mais ce ne sont pas tes camarades. Les vrais élèves s\'ajouteront ici avec leurs trophées.';
+      box.appendChild(lg); }
   }
   /* un seul bloc : le total, et le rythme de la semaine en dessous */
   const res=document.createElement('div'); res.className='lbresume';
