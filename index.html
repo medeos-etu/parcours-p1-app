@@ -1167,6 +1167,8 @@
   .agj-day span{font-size:13px;font-weight:900;color:var(--violet)}
 
   /* — le résumé chiffré du panneau — */
+  .nav-integre{background:#FFF6D8;border:1.5px solid #FCD34D;border-radius:12px;padding:10px 12px;font-size:12px;line-height:1.5;color:#4A3208;margin:0 0 12px}
+  .nav-integre button{display:inline-block;margin-top:6px;background:#1A1A2E;color:#fff;border:none;border-radius:999px;padding:6px 12px;font-size:12px;font-weight:800}
   .lbrep{margin-left:4px;font-size:9px;color:var(--tung);vertical-align:super;font-weight:900}
   .lbresume{text-align:center;padding:10px 0 4px}
   .lbr-tot{display:block;font-family:Fredoka,Inter,sans-serif;font-size:30px;font-weight:700;color:var(--violet);line-height:1.1}
@@ -7843,8 +7845,27 @@ function seDeconnecter(){
   saveS();
   go('arene');   /* la porte de connexion se réaffiche d'elle-même */
 }
-function accApresEntree(){
+/* NAVIGATEUR INTÉGRÉ (Instagram, Facebook, TikTok, Snapchat) : ses données peuvent disparaître
+   d'un jour à l'autre, et le compte vit sur l'appareil. On prévient AVANT la création, avec le
+   lien à copier pour ouvrir l'app dans Safari ou Chrome. */
+function navigateurIntegre(){ return /Instagram|FBAN|FBAV|FB_IAB|TikTok|Snapchat|Line\//i.test(navigator.userAgent||''); }
+function bandeauNavigateur(){
+  if(!navigateurIntegre()) return;
+  const html='<div class="nav-integre">📱 Tu es dans le navigateur d\'Instagram. Pour <b>garder ton compte</b>, ouvre cette page dans Safari ou Chrome. '+
+    '<button type="button" onclick="try{navigator.clipboard.writeText(location.origin+\'/\');this.textContent=\'Lien copié ✓\'}catch(e){}">Copier le lien</button></div>';
+  ['gate','sheet-compte'].forEach(id=>{ const c=document.getElementById(id); if(!c || c.querySelector('.nav-integre')) return;
+    const cible = id==='sheet-compte' ? c.querySelector('.sheet-b') : c; if(!cible) return;
+    const d=document.createElement('div'); d.innerHTML=html; cible.insertBefore(d.firstChild, cible.firstChild); });
+}
+function accApresEntree(neuf){
   setTimeout(()=>closeSheet('sheet-compte'),650);
+  /* UN COMPTE NEUF DOIT POUVOIR REVENIR (Lucas, 05/09 : « un mail ou un moyen de se reconnecter
+     facilement les prochains jours »). Le rappel du soir est enclenché dès maintenant — pas au
+     prochain chargement — et un email de bienvenue part avec le lien de l'app. Une seule fois. */
+  if(neuf && accOk() && S.ar.compte.mail){
+    try{ rappelReglage(); }catch(e){}
+    if(!S.bienvenue){ S.bienvenue=Date.now(); rappelPost({action:'bienvenue', email:S.ar.compte.mail, pseudo:S.ar.compte.id, prenom:localStorage.getItem('m4_prenom')||''}); }
+  }
   /* l'identifiant du compte tient lieu de prénom : plus jamais de deuxième question */
   if(accOk() && !localStorage.getItem('m4_prenom')){
     localStorage.setItem('m4_prenom', S.ar.compte.id);
@@ -7875,7 +7896,7 @@ function creerCompte(){
   reg[id.toLowerCase()]={id:id, mp:mp, mail:mail, cree:Date.now()};
   localStorage.setItem('m4_comptes',JSON.stringify(reg));
   S.ar.compte={id:id, mail:mail, cree:reg[id.toLowerCase()].cree};
-  accApresEntree();
+  accApresEntree(true);
 }
 function seConnecter(){
   if(!S.ar) initAr();
@@ -13803,6 +13824,7 @@ if(SRC0==='accueil-panorama-p1') TUTO_DIFFERE='biblio';   /* le Panorama d'abord
    le formulaire déjà ouvert ; avec un compte, on entre dans le Parcours. */
 const PUB = HASH0==='inscription';
 go(['biblio','home','arene','social'].includes(HASH0) ? HASH0 : (PUB ? 'home' : (NOUVEAU?'biblio':(ECRAN0||(PARCOURS_A_VOIR?'home':'arene')))));
+try{ bandeauNavigateur(); }catch(e){}
 if(PUB && !(typeof accOk==='function' && accOk())){
   const t=document.getElementById('gate-titre'), p=t && t.nextElementSibling;
   if(t) t.textContent='Anticiper ta première année commence ici';
