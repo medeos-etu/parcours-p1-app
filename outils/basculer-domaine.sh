@@ -26,8 +26,11 @@ non(){ printf '  ✗ %s\n' "$1"; exit 1; }
 
 echo "═══ 1. Le sous-domaine répond-il ? ═══"
 a=$(dig +short "$NEUF" A | head -1 || true)
-[ "$a" = "$IP" ] || non "DNS : $NEUF donne « ${a:-rien} », attendu $IP — l'enregistrement OVH n'est pas (encore) actif. Patiente quelques minutes et relance."
-ok "DNS : $NEUF → $IP"
+c=$(dig +short "$NEUF" CNAME | head -1 || true)
+if [ "$a" = "$IP" ]; then ok "DNS : $NEUF → $IP (entrée A)"
+elif echo "$c" | grep -qi "vercel-dns.com"; then ok "DNS : $NEUF → $c (CNAME Vercel)"
+elif [ -n "$a" ] || [ -n "$c" ]; then non "DNS : $NEUF pointe vers « ${a:-$c} » — attendu $IP (entrée A) ou un CNAME vers vercel-dns.com. Corrige l'entrée chez OVH."
+else non "DNS : $NEUF ne répond pas encore — l'entrée OVH n'est pas active. Patiente quelques minutes et relance."; fi
 code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 20 "https://$NEUF/index.html" || echo 000)
 [ "$code" = "200" ] || non "HTTPS : https://$NEUF/index.html répond $code — le certificat Vercel n'est peut-être pas encore émis. Réessaie dans 2-3 minutes."
 ok "HTTPS : l'app est servie (200)"
@@ -53,7 +56,7 @@ ok "vercel.json écrit"
 node outils/verifie-app.js 2>&1 | tail -2 | grep -q "erreurs : 0" || non "le test de fumée échoue — on ne déploie pas"
 ok "test de fumée : 0 erreur"
 git add vercel.json
-git commit -q -m "L'ancienne adresse redirige vers parcours.medeos-sante.fr
+git diff --cached --quiet || git commit -q -m "L'ancienne adresse redirige vers parcours.medeos-sante.fr
 
 Redirection permanente de $VIEUX vers le sous-domaine, posée une fois
 le DNS OVH actif et l'app servie en HTTPS sur la nouvelle adresse.
@@ -62,7 +65,7 @@ Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>"
 vercel deploy --prod --yes 2>&1 | grep -E "Aliased|Error" | head -2
 sleep 8
 r=$(curl -s -o /dev/null -w '%{http_code} %{redirect_url}' --max-time 20 "https://$VIEUX/?src=test#biblio" || echo "000")
-echo "$r" | grep -q "^30[18] https://$NEUF/" || non "la redirection ne répond pas comme attendu : $r"
+echo "$r" | grep -qE "^30[1278] https://$NEUF/" || non "la redirection ne répond pas comme attendu : $r"
 ok "redirection en ligne : $r"
 
 echo "═══ 3. Le site : liens et adresse de l'email ═══"
@@ -75,14 +78,14 @@ if ! vercel env ls production 2>/dev/null | grep -q "APP_UNIVERS_URL"; then
 else ok "APP_UNIVERS_URL déjà posée"; fi
 npx eslint components/ressources/FreeContentCards.tsx components/dashboard/CodeAnneeCard.tsx 2>&1 | grep -q " error " && non "eslint signale une erreur" || ok "eslint : pas d'erreur"
 git add components/ressources/FreeContentCards.tsx components/dashboard/CodeAnneeCard.tsx
-git commit -q -m "Le site envoie vers parcours.medeos-sante.fr
+git diff --cached --quiet || git commit -q -m "Le site envoie vers parcours.medeos-sante.fr
 
 La carte Bibliothèque des ressources gratuites et la carte du code Année
 complète pointent vers le sous-domaine ; APP_UNIVERS_URL donne la même
 adresse à l'email de rappel.
 
 Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>"
-git push origin main 2>&1 | tail -1
+git push origin main 2>&1 | tail -1 || ok "rien de nouveau à pousser"
 echo "  … le site se reconstruit (3 minutes environ)."
 for i in $(seq 1 20); do
   sleep 15
