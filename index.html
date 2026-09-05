@@ -9014,6 +9014,10 @@ function setLieu(l){
   if(vs) vs.style.display = l==='salles'?'':'none';
   if(va) va.style.display = l==='amphi'?'':'none';
   document.body.classList.toggle('in-amphi', l==='amphi');
+  /* la première entrée dans l'Amphi lance sa visite (pas pendant une autre visite) */
+  if(l==='amphi' && typeof tutoFait==='function' && !tutoFait('amphi') && !(typeof TU!=='undefined' && TU)){
+    setTimeout(()=>{ const sc=document.getElementById('arene'); if(lieuArene==='amphi' && sc && sc.classList.contains('on')) startTuto('amphi'); },450);
+  }
   if(l==='salles') renderSalles(); else renderAmphi();
   if(typeof son==='function') son('pop');
 }
@@ -9289,27 +9293,44 @@ const TUTOS={
         on ouvre la carte, et sa visite — ta rentrée, ton monde, les stages, le sommet — enchaîne */
      act:function(){ try{ ouvrirCarte(); }catch(e){} }}
   ],
-  arene:[
-    {img:'axo-guide-bienvenue', t:"Bienvenue dans l'Arène ! Ici il y a <b>deux endroits</b>, et ils ne servent pas à la même chose. Je te montre."},
-    {sel:'.modeswitch', img:'axo-guide-pointe-haut', t:"Tu passes de l'un à l'autre avec ces deux boutons — c'est tout ce qu'il y a à retenir."},
-    {sel:'#vue-salles', img:'axo-guide-carte', t:"<b>Les Salles</b> : une par matière. Tu t'y entraînes sur les fiches que tu viens de travailler, <b>sans rien risquer</b> — ni chrono, ni trophée."},
-    {sel:'#ms-amphi', avant:function(){ try{ setLieu('amphi'); }catch(e){} }, img:'mascotte-arene-prete-au-combat', t:"<b>Le Grand Amphi</b>, c'est l'inverse : toutes les matières mélangées, du vrai jeu. Chaque case juste vaut <b>+2 🏆</b>, chaque erreur <b>−2</b>."},
-    {sel:'.goldplate', img:'axo-guide-pointe-haut', t:"Tes <b>trophées</b>, en haut à droite : <b>touche-les</b> pour ouvrir le classement — le podium, et la place où tu te trouves. Tu y entres dès ton premier trophée."},
-    {img:'axo-guide-bravo', t:"L'Amphi s'ouvre après <b>4 jours de Parcours</b> — le temps de te constituer un bagage. D'ici là, les Salles sont à toi.", avant:function(){ try{ setLieu('salles'); }catch(e){} }},
-    {sel:'#arene button[aria-label="Voir mon profil"]', tape:true, img:'axo-guide-pointe-haut', t:"Dernière chose : <b>ton profil</b>. <b>Touche ce bouton</b> pour l'ouvrir — tes chiffres, ta photo, ton code du Pack.", act:function(){ try{ go('profil'); }catch(e){} }}
-  ],
+  /* L'ARÈNE, juste après les deux fiches du jour (ordre voulu par Lucas, 05/09 : intro Parcours + carte →
+     deux fiches → intro Arène → QCM → intro Amphi en entrant dans l'Amphi → profil → social).
+     Elle profite des fiches qu'on vient de lire pour montrer OÙ sont les QCM d'entraînement, et
+     finit en ouvrant la salle du jour. Le Grand Amphi a sa propre visite, quand on y entre. */
+  arene:function(){
+    const m=(typeof matDuJour==='function')? matDuJour() : null;
+    const a=m? ARENES.find(x=>x.k===m) : null; const nom=a? a.nom : null;
+    return [
+      {img:'axo-guide-bienvenue', t:"Bienvenue dans l'Arène ! Tu viens de lire deux fiches : c'est ici que tu vas les <b>tester</b>. Il y a <b>deux endroits</b>, je te montre."},
+      {sel:'.modeswitch', img:'axo-guide-pointe-haut', t:"Tu passes de l'un à l'autre avec ces deux boutons : <b>les Salles</b> pour t'entraîner, <b>le Grand Amphi</b> pour jouer. Aujourd'hui, on reste dans les Salles."},
+      {el:function(){ return document.getElementById('salle-action')||document.getElementById('vue-salles'); },
+       avant:function(){ try{ setLieu('salles'); if(m && typeof montrerSalle==='function') montrerSalle(m); }catch(e){} }, img:'axo-guide-carte',
+       t:"<b>Les Salles</b> : une par matière, et tes QCM d'entraînement t'y attendent."+(nom
+         ? " Tes deux fiches d'aujourd'hui sont déjà en questions dans <b>"+nom+"</b>"
+         : " Les fiches que tu viens de lire y reviennent en questions")+" — <b>sans rien risquer</b> : ni chrono, ni trophée à perdre."},
+      {img:'axo-guide-bravo', t:"Tu reviendras ici chaque jour, après tes fiches. Le Grand Amphi, lui, s'ouvre après <b>4 jours de Parcours</b> — je te le présente quand tu y entres. Maintenant, à toi : <b>tes QCM du jour</b>.",
+       btn:"Faire mes QCM du jour →", act:function(){ try{ allerSalleDuJour(); }catch(e){} }}
+    ];
+  },
+  /* LE GRAND AMPHI : présenté quand on y entre pour la première fois (le bouton Amphi), ouvert ou non. */
+  amphi:function(){
+    const ouvert=(typeof amphiOuvrable==='function') && amphiOuvrable();
+    return [
+      {sel:'#ms-amphi', img:'mascotte-arene-prete-au-combat', t:"<b>Le Grand Amphi</b>, c'est l'inverse des Salles : toutes les matières mélangées, du vrai jeu. Chaque case juste vaut <b>+2 🏆</b>, chaque erreur <b>−2</b>."},
+      {sel:'.goldplate', img:'axo-guide-pointe-haut', t:"Tes <b>trophées</b>, en haut à droite : <b>touche-les</b> pour ouvrir le classement — le podium, et la place où tu te trouves. Tu y entres dès ton premier trophée."},
+      {img:'axo-guide-bravo', t: ouvert
+        ? "<b>Deux ascensions par jour</b> — trois avec le Pack Année complète. Chacune compte : joue-la quand tu te sens prêt."
+        : "L'Amphi s'ouvre après <b>4 jours de Parcours</b> — le temps de te constituer un bagage. D'ici là, les Salles sont à toi.", btn:"C'est compris"}
+    ];
+  },
   /* LE PROFIL : ce qu'on y trouve, et pourquoi y revenir. Quatre étapes, la première fois
      qu'on l'ouvre avec un compte (Lucas, 05/09 : « une petite introduction quand la personne
      ouvre son espace profil, ça serait bien »). On nomme chaque carte dans l'ordre de l'écran. */
-  profil:function(){ const ouverte=(typeof areneOuvrable==='function')&&areneOuvrable(); return [
-    {img:'axo-guide-bienvenue', t:"Ici, c'est <b>ton profil</b> : tout ce que tu construis y est rangé au même endroit. C'est la page où tu viens voir où tu en es, pas celle où tu travailles."},
-    {sel:'#p-streak', img:'axo-guide-pointe-haut', t:"<b>Tes chiffres</b> : ta série de jours, tes points, les QCM que tu as joués, tes trophées. Ils bougent tout seuls, à chaque séance."},
-    {sel:'#prog-profil', img:'axo-guide-carte', t:"Juste en dessous, <b>ta progression matière par matière</b>. Le diagramme s'élargit à mesure que tu avances — tu vois d'un coup d'œil ce qui est solide et ce qui reste à faire."},
+  profil:[
+    {sel:'#p-streak', img:'axo-guide-bienvenue', t:"<b>Ton profil</b> : tout ce que tu construis est rangé ici. Tes chiffres d'abord — série, points, QCM joués, trophées. Ils bougent tout seuls, à chaque séance."},
     {sel:'#profil-av', img:'axo-guide-pointe-haut', t:"<b>Ta photo et ta bannière</b> se changent ici. Tu en débloques une nouvelle à chaque monde terminé, et c'est ce que tes amis voient de toi."},
-    {sel:'#p-code', img:'axo-guide-carte', t:"Si tu as le <b>Pack Année complète</b>, ton code se saisit ici : il ouvre toutes les fiches, tous les QCM et l'Amphi sans limite."},
-    {img:'axo-guide-bravo', t:"Et tout en bas, <b>ton point de départ</b> : trois questions, une fois, pour situer ta fac et ton profil. Deux minutes, et tu sais d'où tu pars.",
-     btn: ouverte ? "Aller m'entraîner sur mes fiches →" : "C'est compris", act:function(){ if(ouverte) try{ allerSalles(); }catch(e){} }}
-  ]; },
+    {sel:'#p-code', img:'axo-guide-carte', t:"Si tu as le <b>Pack Année complète</b>, ton code se saisit ici. Et tout en bas, <b>ton point de départ</b> : trois questions, une fois, pour situer ta fac.", btn:"C'est compris"}
+  ],
   /* LE SOCIAL : ta carte, tes amis — trois étapes, la première fois qu'on y entre avec un compte */
   social:[
     {sel:'.so-carte.moi', img:'axo-guide-bienvenue', t:"Ici, c'est <b>ta carte</b> : ta photo, ta bannière, tes trophées, ton monde, ta série. C'est ce que tes amis voient de toi."},
@@ -9384,6 +9405,15 @@ function tutoShow(){
   box.style.top=''; box.style.bottom='';
   if(r && (r.top+r.height/2)>window.innerHeight/2) box.style.top='64px';
   else box.style.bottom='calc(96px + env(safe-area-inset-bottom))';
+  /* UNE CIBLE PLUS HAUTE QUE LA MOITIÉ DE L'ÉCRAN (l'étiquette d'un stage sur la carte) ne tient pas à
+     côté de la bulle : la bulle va en haut, et on fait défiler pour caler le HAUT de la cible — son
+     titre — juste sous la bulle (Lucas, 05/09 : « pas placé de façon optimale pour voir l'étiquette »). */
+  if(r && el && r.height>window.innerHeight*0.5){
+    box.style.top='64px'; box.style.bottom='';
+    const veut=box.getBoundingClientRect().bottom+12;
+    if(Math.abs(r.top-veut)>4){ try{ window.scrollBy(0, r.top-veut); }catch(e){} r=el.getBoundingClientRect();
+      const p=8; hole.style.left=(r.left-p)+'px'; hole.style.top=(r.top-p)+'px'; hole.style.width=(r.width+2*p)+'px'; hole.style.height=(r.height+2*p)+'px'; }
+  }
 }
 function tutoNext(ev){
   if(!TU) return;
@@ -12849,6 +12879,10 @@ function seanceFin(){
   /* on ENTRE dans la salle : c'est à l'élève de choisir ce qu'il y fait, pas à
      nous de lui lancer un QCM dans les mains */
   enc.onclick=()=>{ S.entrRetour=1; saveS();
+    /* LA PREMIÈRE FOIS, on entre dans l'Arène elle-même : sa visite démarre là, montre où sont les QCM
+       d'entraînement et finit en ouvrant la salle du jour (Lucas, 05/09 : « le bouton m'a envoyé pile sur
+       les QCM, j'ai dû faire retour pour avoir l'introduction »). Ensuite, droit dans la salle. */
+    if(typeof tutoFait==='function' && !tutoFait('arene')){ allerSalles(); return; }
     if(typeof ouvrirSalle==='function' && typeof salleStock==='function' && salleStock(s.mat)>0) ouvrirSalle(s.mat);
     else { go('arene'); if(typeof setLieu==='function') setLieu('salles'); } };
   { const cont=document.getElementById('libre-cont'); if(cont) cont.style.display='none'; }
@@ -13197,6 +13231,26 @@ function duelLive(){
   }, 15000);
 }
 
+/* la matière de la dernière séance faite : c'est là que sont les QCM « du jour » */
+function matDuJour(){ try{ const f=seancesFaites(); const s=f[f.length-1]; return s? (s.mat||null) : null; }catch(e){ return null; } }
+/* centrer le carrousel des salles sur une matière (bloc du milieu, comme reboucler) */
+function montrerSalle(mat){
+  const g=document.getElementById('salles-grille'); const i=ARENES.findIndex(a=>a.k===mat);
+  if(!g || i<0 || !g.children.length) return;
+  const c=g.children[ARENES.length+i]||g.children[i]; if(!c) return;
+  salleBoucle=true; const snap=g.style.scrollSnapType, beh=g.style.scrollBehavior;
+  g.style.scrollSnapType='none'; g.style.scrollBehavior='auto';
+  g.scrollLeft=c.offsetLeft-(g.clientWidth-c.clientWidth)/2;
+  if(S.ar) S.ar.salleVue=i;
+  if(typeof majActionSalle==='function') majActionSalle(i);
+  requestAnimationFrame(()=>{ g.style.scrollSnapType=snap||''; g.style.scrollBehavior=beh||''; salleBoucle=false; });
+}
+/* la fin de l'intro de l'Arène : droit dans la salle du jour (ou les Salles, si rien n'y est encore armé) */
+function allerSalleDuJour(){
+  S.entrRetour=1; saveS();
+  const m=matDuJour();
+  if(m && typeof salleStock==='function' && salleStock(m)>0) ouvrirSalle(m); else allerSalles();
+}
 function allerSalles(){
   go('arene');
   if(typeof setLieu==='function') setLieu('salles');
@@ -14138,7 +14192,7 @@ const CONNEXION = HASH0==='connexion';
 let LIEN0='', LIEN0_EMAIL='';
 try{ const q=new URLSearchParams(location.search); LIEN0=String(q.get('lien')||''); LIEN0_EMAIL=String(q.get('email')||'').trim().toLowerCase();
   if(!/^[a-f0-9]{64}$/.test(LIEN0)) LIEN0=''; }catch(e){}
-go(['biblio','home','arene','social'].includes(HASH0) ? HASH0 : ((PUB||CONNEXION) ? 'home' : (NOUVEAU?'biblio':(ECRAN0||(PARCOURS_A_VOIR?'home':'arene')))));
+go(['biblio','home','arene','social'].includes(HASH0) ? HASH0 : ((PUB||CONNEXION) ? 'home' : (NOUVEAU?'biblio':(ECRAN0||((PARCOURS_A_VOIR||!premiereSeanceFaite())?'home':'arene')))));
 if(LIEN0 && LIEN0_EMAIL){
   (async function(){
     try{ history.replaceState(null,'',location.pathname+location.hash); }catch(e){}
