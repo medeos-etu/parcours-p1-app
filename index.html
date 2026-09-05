@@ -886,6 +886,7 @@
   .axoscene.nu img{height:104px;margin-bottom:2px}
   .axoscene p{font-size:13px;font-weight:700;line-height:1.55;color:#1A1A2E;max-width:340px;margin:0 auto}
   body.in-arene .axoscene p, body.in-amphi .axoscene p{color:#FAF6F0}
+  /* la fin de journée sur photo sombre est traitée d'un seul endroit, plus bas (#libre-fin.sombre) */
 
   /* ═══ LES DEUX LIEUX ═══ */
   .mswrap{display:flex;justify-content:center;width:100%}
@@ -1244,7 +1245,14 @@
     background:linear-gradient(180deg,rgba(16,12,28,.42),rgba(16,12,28,.80));pointer-events:none}
   #libre-fin.sombre > *{position:relative;z-index:1}
   #libre-fin.sombre #libre-fin-t{color:#FFFDF9;text-shadow:0 2px 10px rgba(0,0,0,.55)}
+  .lf-sous{color:var(--muted)}                    /* fond clair : gris de la palette */
   #libre-fin.sombre #libre-fin-s{color:rgba(255,253,249,.92);text-shadow:0 1px 8px rgba(0,0,0,.5)}
+  /* Sur la photo sombre, TOUT doit repasser en clair — y compris la scène de la mascotte et
+     le bouton fantôme, qui restaient au gris de la palette et devenaient illisibles
+     (Lucas, 05/09 : « le texte est noir et le fond est sombre, on ne voit pas bien »). */
+  #libre-fin.sombre .axoscene p{color:#FFFDF9;text-shadow:0 1px 8px rgba(0,0,0,.55)}
+  #libre-fin.sombre .btn.ghost{color:#FFFDF9;border-color:rgba(255,253,249,.45);background:rgba(255,253,249,.10)}
+  #libre-fin.sombre .lf-sous, #libre-fin.sombre p, #libre-fin.sombre span, #libre-fin.sombre b{color:#FFFDF9}
   .tuto-hole{position:fixed;left:50vw;top:40vh;width:0;height:0;border-radius:18px;
     box-shadow:0 0 0 200vmax rgba(12,9,24,.82);pointer-events:none;
     transition:left .35s ease,top .35s ease,width .35s ease,height .35s ease}
@@ -2760,7 +2768,7 @@
     <div class="card" id="libre-fin" style="display:none;text-align:center">
       <img src="img/axo-encourage.png" alt="" id="libre-fin-axo" style="height:84px;margin:0 auto 6px;display:block">
       <p style="font-size:15px;font-weight:900" id="libre-fin-t"></p>
-      <p style="font-size:12px;color:var(--muted);margin-top:4px" id="libre-fin-s"></p>
+      <p style="font-size:12px;margin-top:4px" id="libre-fin-s" class="lf-sous"></p>
       <button class="btn" style="margin-top:11px" id="libre-encore">Encore 5 questions</button>
       <button class="btn ghost" style="margin-top:7px" id="libre-cont" onclick="go('home')">Retour au Parcours</button>
     </div>
@@ -3444,6 +3452,7 @@ function go(id){
     } else if(id==='home' && accOk()) kT='home';
     else if(id==='arene' && accOk()) kT='arene';
     else if(id==='social' && accOk()) kT='social';
+    else if(id==='profil' && accOk()) kT='profil';
     if(kT && !tutoFait(kT)) setTimeout(()=>{ const sc=document.getElementById(id); if(sc&&sc.classList.contains('on')) startTuto(kT); },450);
   }
 }
@@ -8960,6 +8969,17 @@ const TUTOS={
     {sel:'#ms-amphi', img:'mascotte-arene-prete-au-combat', t:"<b>Le Grand Amphi</b>, c'est l'inverse : toutes les matières mélangées, du vrai jeu. Chaque case juste vaut <b>+2 🏆</b>, chaque erreur <b>−2</b>."},
     {img:'axo-guide-bravo', t:"L'Amphi s'ouvre après <b>4 jours de Parcours</b> — le temps de te constituer un bagage. D'ici là, les Salles sont à toi.", btn:"J'ai compris"}
   ],
+  /* LE PROFIL : ce qu'on y trouve, et pourquoi y revenir. Quatre étapes, la première fois
+     qu'on l'ouvre avec un compte (Lucas, 05/09 : « une petite introduction quand la personne
+     ouvre son espace profil, ça serait bien »). On nomme chaque carte dans l'ordre de l'écran. */
+  profil:[
+    {img:'axo-guide-bienvenue', t:"Ici, c'est <b>ton profil</b> : tout ce que tu construis y est rangé au même endroit. C'est la page où tu viens voir où tu en es, pas celle où tu travailles."},
+    {sel:'#p-streak', img:'axo-guide-pointe-haut', t:"<b>Tes chiffres</b> : ta série de jours, tes points, les QCM que tu as joués, tes trophées. Ils bougent tout seuls, à chaque séance."},
+    {sel:'#prog-profil', img:'axo-guide-carte', t:"Juste en dessous, <b>ta progression matière par matière</b>. Le diagramme s'élargit à mesure que tu avances — tu vois d'un coup d'œil ce qui est solide et ce qui reste à faire."},
+    {sel:'#profil-av', img:'axo-guide-pointe-haut', t:"<b>Ta photo et ta bannière</b> se changent ici. Tu en débloques une nouvelle à chaque monde terminé, et c'est ce que tes amis voient de toi."},
+    {sel:'#p-code', img:'axo-guide-carte', t:"Si tu as le <b>Pack Année complète</b>, ton code se saisit ici : il ouvre toutes les fiches, tous les QCM et l'Amphi sans limite."},
+    {img:'axo-guide-bravo', t:"Et tout en bas, <b>ton point de départ</b> : trois questions, une fois, pour situer ta fac et ton profil. Deux minutes, et tu sais d'où tu pars.", btn:"C'est compris"}
+  ],
   /* LE SOCIAL : ta carte, tes amis — trois étapes, la première fois qu'on y entre avec un compte */
   social:[
     {sel:'.so-carte.moi', img:'axo-guide-bienvenue', t:"Ici, c'est <b>ta carte</b> : ta photo, ta bannière, tes trophées, ton monde, ta série. C'est ce que tes amis voient de toi."},
@@ -11118,9 +11138,20 @@ function libreFin(){
     enc2.onclick=()=>go('home');
     /* Un seul chemin de retour : le bouton principal dit déjà « Revenir à mon Parcours ».
        Le second bouton ne sert que les tout premiers jours, pour ouvrir la Bibliothèque. */
+    /* LA SUITE NATURELLE, C'EST L'ARÈNE — et il faut le DIRE ici, pas attendre que l'élève
+       la trouve tout seul (Lucas, 05/09 : « ça a expliqué seulement quand j'y suis allé »).
+       Les premiers jours, on l'y emmène en expliquant ce qu'il y trouvera. */
     { const c4=document.getElementById('libre-cont');
+      const nb=(typeof seancesFaites==='function'?seancesFaites().length:0);
+      const arene=(typeof areneOuvrable!=='function')||areneOuvrable();
       if(c4){
-        if((typeof seancesFaites==='function'?seancesFaites().length:0)<=2){
+        if(arene && nb<=3){
+          c4.style.display='block'; c4.textContent='⚔️ Aller dans l\'Arène';
+          c4.onclick=()=>go('arene');
+          fs2.innerHTML=LB.ok+' sur '+LB.qs.length+' — tu as lu, restitué, comparé, puis testé.'+
+            '<span style="display:block;margin-top:9px;font-size:12.5px;line-height:1.55">Et maintenant ? <b>L\'Arène</b> : tes fiches du jour y reviennent en questions, dans les <b>Salles</b>, sans chrono ni trophée à perdre. C\'est là qu\'on vérifie que ça tient.</span>'+
+            axoScene(mom);
+        } else if(nb<=2){
           c4.style.display='block'; c4.textContent='📚 Découvrir la Bibliothèque';
           c4.onclick=()=>go('biblio');
         } else { c4.style.display='none'; }
@@ -12525,7 +12556,9 @@ function renderAvancee(){
     '<p style="font-size:12.5px;font-weight:800;margin-top:3px">'+faites.length+' séance'+(faites.length>1?'s':'')+' franchie'+(faites.length>1?'s':'')+'</p>'+
     (faites.length?'<p style="font-size:11.5px;color:var(--muted);margin-top:4px">Dernière notion travaillée : « '+faites[faites.length-1].titre+' »</p>'
                   :'<p style="font-size:11.5px;color:var(--muted);margin-top:4px">Ta première séance t\'attend dans le Parcours.</p>')+
-    '<button class="btn ghost small" style="margin-top:9px" onclick="renderChemin();go(\'chemin\')">Revoir mes séances passées</button>';
+    /* Ce bouton menait à un vieil écran de liste, alors que partout ailleurs « revoir ses
+       séances » ouvre le PARCOURS DES MONDES au monde en cours, fiche ouverte (Lucas, 05/09). */
+    '<button class="btn ghost small" style="margin-top:9px" onclick="revoirPassees()">🗺️ '+(faites.length?'Revoir mon parcours des mondes':'Voir le parcours des mondes')+'</button>';
 }
 
 
@@ -12869,9 +12902,9 @@ function rappelActivite(jour){
   rappelPost({action:'activite', email:S.ar.compte.mail, jour:jour||arDay()});
 }
 function heroMail(){
-  /* le compte a toujours un email ; le rappel est un CHOIX (revue du 05/09 : activé d'office, l'email
-     partait vers le site sans que l'élève l'ait demandé) — désactivé tant qu'il ne l'a pas coché */
-  const on = S.mailOn===true;
+  /* activé d'office (Lucas, 05/09, après la revue : c'est son choix assumé) — l'élève le
+     décoche en un geste, et l'email lui-même porte un lien de désinscription en un clic */
+  const on = S.mailOn!==false;
   return '<div style="margin-top:13px;margin-right:88px;background:var(--card);border:1px solid var(--line);border-radius:13px;padding:11px 13px;display:flex;align-items:center;gap:10px">'+
     '<div style="flex:1;min-width:0"><p style="font-size:12px;font-weight:800">📬 Être prévenu par email</p>'+
     '<p style="font-size:11px;color:var(--muted);margin-top:1px">Le soir, si tu n\'as pas encore fait ta séance</p></div>'+
