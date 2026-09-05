@@ -28,7 +28,13 @@ la seule adaptation est que **la source n'est plus le chapitre de cours, mais la
 1. **5 items A-E**, toujours.
 2. **Type concours** : chaque item se juge vrai ou faux indépendamment. Un QCM peut porter
    de 1 à 5 items vrais.
-3. **Équilibre** : viser ~50/50 sur l'ensemble d'un lot. Jamais plus de 60 % de vrais.
+3. **Équilibre** : viser **3 propositions vraies sur 5 en moyenne** (Lucas, 05/09/2026).
+   Un QCM peut porter **de 1 à 5 items vrais** — cinq vrais est parfaitement légitime, c'est
+   ce qui se fait au concours. Il n'y a pas de plafond. Le seul cas interdit est **0 vrai** :
+   une question dont aucun item n'est exact n'apprend rien.
+   Sers-toi de tout l'éventail : un lot où tous les QCM ont 2 ou 3 vrais devient prévisible.
+   Et puisque les vrais dominent, les items faux doivent être **franchement faux**, bâtis sur
+   un vrai piège de la fiche — sinon répondre « vrai » partout suffirait.
 4. **`explanation`** : le corrigé rédigé pour l'élève. Commence par « VRAI. » ou « FAUX : »
    puis la justification. Aucun renvoi au support, aucun numéro de ligne.
 5. 🔑 **`sourceQuote`** : la citation LITTÉRALE du passage de la fiche qui prouve la valeur

@@ -50,6 +50,7 @@ const fichiers = (!cible || cible === '--tout')
   : [path.basename(cible)];
 
 let nQ = 0, nI = 0, ok = 0, ancreKO = 0, sansAncre = 0, ficheKO = 0, pas5 = 0, vraies = 0;
+const repartition = {}; let zeroVrai = 0;   /* de 1 à 5 vrais est légitime ; 0 vrai ne l'est pas */
 const rejets = [];
 /* un lot = un QCM de cinq items. Sept lots par fiche : 1-2 gratuit, 3-5 pack, 6-7 arène.
    On vérifie ici que chaque fiche servie a bien ses sept lots, une fois chacun. */
@@ -65,7 +66,9 @@ fichiers.forEach(nom => {
     const t = texteFiche(q.fiche);
     if (!t || !t[0]) { ficheKO++; rejets.push({ nom, k, cause: 'fiche introuvable : ' + q.fiche }); return; }
     if (!q.items || q.items.length !== 5) { pas5++; rejets.push({ nom, k, cause: (q.items || []).length + ' items au lieu de 5' }); return; }
-    vraies += q.items.filter(i => i.v || i.isCorrect).length;
+    { const nv = q.items.filter(i => i.v || i.isCorrect).length;
+      vraies += nv; repartition[nv] = (repartition[nv] || 0) + 1;
+      if (nv === 0) zeroVrai++; }
     let bon = true;
     q.items.forEach((it, n) => {
       nI++;
@@ -88,7 +91,13 @@ console.log('    items sans citation                                  : ' + sans
 console.log('    citations introuvables dans la fiche                 : ' + ancreKO);
 if (pas5) console.log('    questions hors format 5 items                        : ' + pas5);
 if (ficheKO) console.log('    fiches introuvables                                  : ' + ficheKO);
-if (nQ) console.log('    moyenne des propositions vraies                      : ' + (vraies / nQ).toFixed(2) + '  (cible 2,5 · le gabarit dit « jamais plus de 60 % »)');
+if (nQ) { const moy = vraies / nQ;
+  const eventail = [1,2,3,4,5].map(k => k + ':' + (repartition[k] || 0)).join(' · ');
+  console.log('    moyenne des propositions vraies                      : ' + moy.toFixed(2) +
+    '  (cible 3,0 · de 1 à 5 vrais par QCM, comme au concours)');
+  console.log('    répartition (vrais par QCM)                          : ' + eventail);
+  if (zeroVrai) console.log('    QCM sans aucun item vrai                             : ' + zeroVrai + '  ⚠ à corriger');
+}
 
 /* les sept lots, fiche par fiche */
 const fichesVues = Object.keys(lots), incompletes = [];
