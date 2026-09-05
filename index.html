@@ -13807,7 +13807,10 @@ if(PUB && !(typeof accOk==='function' && accOk())){
   const t=document.getElementById('gate-titre'), p=t && t.nextElementSibling;
   if(t) t.textContent='Anticiper ta première année commence ici';
   if(p && p.tagName==='P') p.innerHTML='Deux fiches par jour jusqu\'à la rentrée, des QCM corrigés, et Lucas avec l\'équipe Medeos à tes côtés. <b>Le compte est gratuit, deux minutes</b> — et je t\'explique tout, étape par étape.';
-  setTimeout(()=>{ try{ accMode='create'; focusAcc(); }catch(e){} }, 600);
+  /* Le formulaire ne s'ouvre PAS tout seul : capturé le 05/09, il recouvrait la porte et la
+     promesse de l'annonce disparaissait derrière un formulaire générique. La porte parle
+     d'abord ; le bouton « Créer mon compte gratuit » ouvre le formulaire d'un geste. */
+  accMode='create';
 }
 if(ECRAN0==='carte' && typeof renderCarte==='function') renderCarte();
 if(ECRAN0==='chemin' && typeof renderChemin==='function') renderChemin();
