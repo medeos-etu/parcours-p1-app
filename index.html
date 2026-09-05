@@ -3219,7 +3219,7 @@
       </div>
       
       
-      <div class="rescard" id="carte-guide" onclick="window.open('https://medeos-sante.fr/ressources/guide-methodologique?src=parcours-app','_blank')">
+      <div class="rescard" id="carte-guide" onclick="ouvrirRessource('guide-methodologique.html','Guide méthodologique')">
         <span class="pricechip">GRATUIT</span><img src="img/cover-methode-p1.png" onerror="this.src='img/cover-methode.jpg'" alt="">
         <div class="rc-body">
           <b>Guide méthodologique</b>
@@ -12983,6 +12983,27 @@ function consulterFiche(slug){
   /* relire une fiche déjà travaillée compte pour « Le Curieux » : c'est la relecture qu'on récompense */
   if(S.oublis && S.oublis[slug]){ S.relu=S.relu||{}; if(!S.relu[slug]){ S.relu[slug]=Date.now(); saveS(); } }
   CONSULT=true; openFiche(slug); }
+/* ═══ LES PAGES DE LA BIBLIOTHÈQUE S'OUVRENT DANS L'APP (Lucas, 05/09 : « comme si c'était
+   une autre page web », sans nouvel onglet vers le site). Le guide et les quatre panoramas
+   sont des pages complètes copiées dans biblio/ ; on les affiche dans la liseuse des fiches,
+   même origine, sans porte email. ═══ */
+function ouvrirRessource(fichier, titre){
+  const L=document.getElementById('lecteur'), fr=document.getElementById('fiche-frame');
+  if(!L || !fr) return;
+  fr.onload=()=>{ try{
+    const d2=fr.contentDocument, st=d2.createElement('style');
+    /* la page garde son contenu, pas la navigation du site : on est déjà dans l'app */
+    st.textContent='header,nav,footer,[class*="navbar"],[class*="Header"],[class*="footer"],a[href*="/ressources/acces"]{display:none !important} body{padding-top:0 !important}';
+    d2.head.appendChild(st);
+  }catch(e){} };
+  fr.src='biblio/'+fichier;
+  document.getElementById('lecteur-nom').textContent=titre||'';
+  { const nb=document.getElementById('lect-suivant'); if(nb) nb.style.display='none'; }
+  { const pan=document.getElementById('compare-pan'); if(pan) pan.style.display='none'; }
+  document.body.classList.add('lecture');
+  L.classList.add('entree');
+  requestAnimationFrame(()=>requestAnimationFrame(()=>L.classList.add('on')));
+}
 function fermerLecteur(){
   if(CONSULT){ CONSULT=false; closeFiche(); return; }   /* simple consultation : on revient où on était */
   if(SR){ sauverSR(); }         /* en pleine séance : PAUSE, pas abandon — la carte « reprendre » attend sur l'accueil */
@@ -13053,7 +13074,7 @@ function ouvrirPanoramas(){
     ['chimie','Chimie','De l\'atome aux molécules du vivant, le saut lycée → P1.','pano_cover_chimie.png'],
     ['physique','Physique','Les lois physiques qui font marcher le corps.','pano_cover_physique.png']];
   box.innerHTML='<div class="rescards">'+P.map(p=>
-    '<div class="rescard" onclick="window.open(\'https://medeos-sante.fr/ressources/panorama-p1/'+p[0]+'?src=parcours-app\',\'_blank\')">'+
+    '<div class="rescard" onclick="closeSheet(\'sheet-pioche\');ouvrirRessource(\'panorama-'+p[0]+'.html\',\'Panorama · '+p[0].charAt(0).toUpperCase()+p[0].slice(1)+'\')">'+
       '<span class="pricechip">GRATUIT</span><img src="images/panorama/'+p[3]+'" onerror="this.src=\'img/cover-panorama.jpg\'" alt="">'+
       '<div class="rc-body"><b>Panorama '+p[1]+'</b><p>'+p[2]+'</p><div class="rc-meta">📖 40 à 55 min</div></div>'+
     '</div>').join('')+'</div>';
@@ -13842,7 +13863,7 @@ if(SRC0==='accueil-panorama-p1'){
 }
 if(SRC0==='accueil-guide-methodologique'){
   /* il venait chercher le guide : la visite commence sur sa carte, et dit où il s'ouvre */
-  TUTOS.biblio.unshift({sel:'#carte-guide', img:'axo-guide-pointe-haut', t:"Le <b>guide méthodologique</b> que tu viens chercher est ici. Il s'ouvre sur le site Medeos, en accès libre."});
+  TUTOS.biblio.unshift({sel:'#carte-guide', img:'axo-guide-pointe-haut', t:"Le <b>guide méthodologique</b> que tu viens chercher est ici — touche la carte, il s'ouvre directement."});
   setTimeout(()=>{ const c=document.getElementById('carte-guide'); if(c) try{ c.scrollIntoView({block:'center'}); }catch(e){} }, 300);
 }
 if(CODE0){

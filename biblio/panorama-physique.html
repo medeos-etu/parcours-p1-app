@@ -1,0 +1,1875 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <!-- medeos-seo -->
+    <meta name="description" content="La découverte de la physique en première année de santé : eau et compartiments, osmose, pression oncotique, diffusion, ondes et Doppler. Comprendre les lois qui gouvernent le corps.">
+    <link rel="canonical" href="https://medeos-sante.fr/ressources/panorama-p1/physique.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Medeos">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Physique en P1 (PASS / LAS) — le panorama Medeos">
+    <meta property="og:description" content="La découverte de la physique en première année de santé : eau et compartiments, osmose, pression oncotique, diffusion, ondes et Doppler. Comprendre les lois qui gouvernent le corps.">
+    <meta property="og:url" content="https://medeos-sante.fr/ressources/panorama-p1/physique.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physique en P1 (PASS / LAS) — le panorama Medeos</title>
+    <style>
+        /* ========== RESET & BASE ========== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 10.5pt;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #f6f8fb;
+            padding: 30px;
+            max-width: 210mm;
+            margin: 0 auto;
+        }
+
+        /* ========== CONTENEUR PRINCIPAL ========== */
+        .page-container { position: relative; background: transparent; padding: 0; }
+
+        /* ========== FILIGRANE MEDEOS ========== */
+        .page-container::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: none;
+            background-repeat: repeat;
+            pointer-events: none;
+            user-select: none;
+            z-index: 0;
+        }
+        .page-container > * { position: relative; z-index: 1; }
+
+        /* ========== HOOK HEADER ========== */
+        .hook-header {
+            background: #FAF6F0;
+            border-radius: 14px;
+            padding: 60px 50px 50px 50px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 18px rgba(76, 42, 133, 0.08);
+            border: 1px solid #efe7d8;
+        }
+        .hook-header .brand-tag {
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #6B46C1;
+            font-weight: 600;
+            opacity: 0.85;
+            margin-bottom: 22px;
+        }
+        .hook-header .course-title {
+            font-size: 40px;
+            line-height: 1.05;
+            font-weight: 800;
+            color: #4C2A85;
+            letter-spacing: -1px;
+            margin: 0 0 6px 0;
+        }
+        .hook-header .course-subtitle {
+            font-size: 16px;
+            line-height: 1.4;
+            font-weight: 500;
+            color: #6b6275;
+            margin: 0 0 32px 0;
+        }
+        .hook-header .punch {
+            font-size: 28px;
+            line-height: 1.15;
+            font-weight: 800;
+            color: #1A1A2E;
+            letter-spacing: -0.8px;
+            margin: 0;
+        }
+        .hook-header .punch span.accent { color: #6B46C1; }
+        .hook-header .punch + .punch { margin-top: 11px; }
+        .hook-header .tilt {
+            font-size: 20px;
+            line-height: 1.45;
+            font-weight: 500;
+            color: #1F1F23;
+            margin-top: 34px;
+            max-width: 720px;
+        }
+        .hook-header .lucas-block {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #4C2A85;
+            margin-top: 30px;
+            padding: 22px 26px;
+            background: rgba(107, 70, 193, 0.06);
+            border-left: 4px solid #6B46C1;
+            border-radius: 0 10px 10px 0;
+            max-width: 720px;
+        }
+        .hook-header .lucas-block strong { color: #4C2A85; }
+        .hook-header .separator {
+            margin-top: 44px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #c9b8e6, transparent);
+        }
+
+        /* ========== ENCADRÉ INTRODUCTION ========== */
+        .intro-section {
+            background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+            border-left: 5px solid #6B46C1;
+            padding: 28px 32px;
+            margin: 40px 0;
+            border-radius: 0 12px 12px 0;
+            box-shadow: 0 2px 10px rgba(107, 70, 193, 0.1);
+        }
+        .intro-section p { margin-bottom: 14px; }
+        .intro-section .loop-meta {
+            background: #fff;
+            border: 2px dashed #6B46C1;
+            border-radius: 10px;
+            padding: 18px 22px;
+            margin: 18px 0;
+            font-weight: 500;
+            color: #4C2A85;
+        }
+
+        /* ========== TITRES ========== */
+        h2 {
+            font-size: 18pt;
+            font-weight: 800;
+            color: #1A1A2E;
+            margin: 55px 0 22px 0;
+            padding-bottom: 12px;
+            border-bottom: 3px solid #6B46C1;
+            scroll-margin-top: 20px;
+            letter-spacing: -0.3px;
+        }
+        h2 .h2-counter {
+            display: inline-block;
+            font-size: 11pt;
+            font-weight: 600;
+            color: #6B46C1;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-right: 14px;
+            opacity: 0.9;
+        }
+        h3 {
+            font-size: 13pt;
+            font-weight: 700;
+            color: #34495e;
+            margin: 32px 0 16px 0;
+            padding-left: 16px;
+            border-left: 4px solid #6B46C1;
+        }
+        h4 {
+            font-size: 11.5pt;
+            font-weight: 600;
+            color: #6B46C1;
+            margin: 24px 0 12px 0;
+        }
+
+        /* ========== PARAGRAPHES ========== */
+        p {
+            text-align: left;
+            margin-bottom: 15px;
+            line-height: 1.85;
+            color: #2c3e50;
+        }
+        p.punchline {
+            font-size: 13pt;
+            font-weight: 600;
+            color: #1A1A2E;
+            margin: 22px 0;
+            line-height: 1.5;
+        }
+        p.cliffhanger {
+            font-size: 12pt;
+            font-weight: 600;
+            color: #4C2A85;
+            margin: 35px 0 10px 0;
+            padding: 18px 22px;
+            background: linear-gradient(90deg, rgba(107,70,193,0.08), transparent);
+            border-radius: 8px;
+            line-height: 1.5;
+        }
+        strong { font-weight: 700; color: #4C2A85; }
+        em.hl {
+            background: linear-gradient(180deg, transparent 60%, #FCD34D 60%);
+            font-style: normal;
+            padding: 0 2px;
+        }
+
+        /* ========== LISTES ========== */
+        ul, ol { margin: 18px 0 18px 35px; line-height: 1.85; }
+        li { margin-bottom: 10px; color: #34495e; }
+        ul li {
+            list-style-type: none;
+            position: relative;
+            padding-left: 26px;
+        }
+        ul li:before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #6B46C1;
+            font-weight: bold;
+            font-size: 13pt;
+        }
+
+        /* ========== ENCADRÉS ========== */
+        .key-concept {
+            background: linear-gradient(135deg, #eceff1 0%, #cfd8dc 100%);
+            border-left: 6px solid #546e7a;
+            padding: 20px 26px;
+            margin: 26px 0;
+            border-radius: 8px;
+            box-shadow: 0 3px 12px rgba(84, 110, 122, 0.18);
+        }
+        .pass-tip {
+            background: linear-gradient(135deg, #fffbea 0%, #fff4cc 100%);
+            border-left: 6px solid #f9a825;
+            padding: 20px 26px;
+            margin: 26px 0;
+            border-radius: 8px;
+            box-shadow: 0 3px 12px rgba(249, 168, 37, 0.22);
+        }
+        .clinical-box {
+            background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+            border-left: 6px solid #e53935;
+            padding: 20px 26px;
+            margin: 26px 0;
+            border-radius: 8px;
+            box-shadow: 0 3px 12px rgba(229, 57, 53, 0.22);
+        }
+        .clinical-box::before {
+            content: "Vu en stage";
+            display: block;
+            font-weight: 700;
+            font-size: 10.5pt;
+            color: #c62828;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .stakes-box {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            border-left: 6px solid #E29C5C;
+            padding: 18px 24px;
+            margin: 24px 0;
+            border-radius: 8px;
+            box-shadow: 0 3px 12px rgba(226, 156, 92, 0.20);
+        }
+        .stakes-box::before {
+            content: "Ce que tu gagnes / ce que tu perds";
+            display: block;
+            font-weight: 700;
+            font-size: 10.5pt;
+            color: #B8650A;
+            margin-bottom: 10px;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+        }
+        .lucas-anecdote {
+            background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+            border-left: 6px solid #4C2A85;
+            padding: 24px 28px;
+            margin: 32px 0;
+            border-radius: 10px;
+            box-shadow: 0 3px 14px rgba(76, 42, 133, 0.18);
+            font-size: 11pt;
+            line-height: 1.75;
+        }
+        .lucas-anecdote::before {
+            content: "Vécu";
+            display: block;
+            font-weight: 700;
+            font-size: 10.5pt;
+            color: #4C2A85;
+            margin-bottom: 12px;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+        .lucas-anecdote em { color: #4C2A85; font-style: italic; }
+        .quick-q {
+            background: #1A1A2E;
+            color: #FAF6F0;
+            padding: 18px 24px;
+            margin: 24px 0;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 12pt;
+            line-height: 1.5;
+        }
+        .quick-q .ans {
+            display: block;
+            margin-top: 10px;
+            color: #FCD34D;
+            font-weight: 600;
+            font-size: 11pt;
+        }
+
+        /* ========== SCHÉMA BOX ========== */
+        .schema-box {
+            background: #ffffff;
+            border: 2px solid #6B46C1;
+            padding: 15px;
+            margin: 28px auto;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(107, 70, 193, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        .schema-box .image-placeholder {
+            background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+            border: 2px dashed #6B46C1;
+            border-radius: 8px;
+            padding: 50px 20px;
+            color: #4C2A85;
+            font-weight: 600;
+            font-size: 11pt;
+        }
+        .schema-box .caption {
+            font-size: 9pt;
+            color: #546e7a;
+            margin-top: 12px;
+            text-align: center;
+            font-weight: 500;
+        }
+        .schema-box .caption strong { color: #6B46C1; }
+
+        /* Prompt de génération — VISIBLE pour Lucas */
+        .schema-box .generation-prompt {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            border: 2px dashed #ff9800;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 14px;
+            text-align: left;
+            font-size: 9pt;
+            color: #e65100;
+            line-height: 1.6;
+            display: block;
+        }
+        .schema-box .generation-prompt strong {
+            color: #bf360c;
+            display: block;
+            margin-bottom: 10px;
+            font-size: 10pt;
+            background: #ffcc80;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .schema-box .copy-prompt-btn {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 6px 12px;
+            background: #ff9800;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 9pt;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .schema-box .copy-prompt-btn:hover { background: #f57c00; }
+
+        /* ========== ENCART CHIFFRE ISOLÉ ========== */
+        .quick-stat {
+            background: #FAF6F0;
+            border: 1px solid #efe7d8;
+            border-left: 5px solid #6B46C1;
+            border-radius: 10px;
+            padding: 32px 36px;
+            margin: 34px 0;
+            text-align: left;
+            box-shadow: 0 2px 12px rgba(107, 70, 193, 0.08);
+        }
+        .quick-stat .quick-stat-figure {
+            font-size: 36pt;
+            font-weight: 800;
+            color: #6B46C1;
+            letter-spacing: -1.5px;
+            line-height: 1;
+            margin-bottom: 14px;
+        }
+        .quick-stat .quick-stat-label {
+            font-size: 12pt;
+            color: #1F1F23;
+            line-height: 1.5;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        .quick-stat .quick-stat-context {
+            font-size: 10.5pt;
+            color: #6b6b78;
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        /* ========== COMPARAISONS CHOQUANTES ========== */
+        .stat-shock {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 28px 0;
+        }
+        .stat-shock .cell {
+            background: #fff;
+            border: 1px solid #ede9fe;
+            border-radius: 10px;
+            padding: 20px 22px;
+            box-shadow: 0 2px 8px rgba(107, 70, 193, 0.07);
+        }
+        .stat-shock .num {
+            font-size: 22pt;
+            font-weight: 800;
+            color: #6B46C1;
+            letter-spacing: -1px;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        .stat-shock .label {
+            font-size: 10.5pt;
+            color: #34495e;
+            line-height: 1.5;
+        }
+
+        /* ========== FORMULE ========== */
+        .formula {
+            background: #1A1A2E;
+            color: #FAF6F0;
+            border-radius: 10px;
+            padding: 22px 28px;
+            margin: 24px 0;
+            font-family: 'Cambria', 'Georgia', serif;
+            font-size: 14pt;
+            text-align: center;
+            box-shadow: 0 4px 14px rgba(26, 26, 46, 0.25);
+            letter-spacing: 0.5px;
+        }
+        .formula .formula-label {
+            display: block;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 9.5pt;
+            color: #FCD34D;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        /* ========== FOOTER ========== */
+        .chapter-footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 28px;
+            border-top: 1px solid #e0e0e0;
+            color: #78909c;
+            font-size: 9.5pt;
+        }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .page-container::before { display: none; }
+        }
+
+        /* ========== LECTURE MOBILE (téléphone) ========== */
+        @media (max-width: 600px) {
+            body { padding: 14px; font-size: 11pt; }
+            .hook-header { padding: 26px 18px 22px 18px; border-radius: 12px; }
+            .hook-header .course-title { font-size: 27px; }
+            .hook-header .course-subtitle { font-size: 14px; margin-bottom: 22px; }
+            .hook-header .punch { font-size: 19px; }
+            .hook-header .tilt { font-size: 15px; margin-top: 22px; }
+            h2 { font-size: 15pt; }
+            h2 .h2-counter { font-size: 9pt; margin-right: 8px; }
+            h3 { font-size: 12pt; }
+            .intro-section,
+            .key-concept, .pass-tip, .clinical-box, .stakes-box,
+            .lucas-anecdote, .quick-q, .quick-stat { padding-left: 16px; padding-right: 16px; }
+            .stat-shock,
+            .axes-schemas,
+            .os-3-colonnes,
+            .recap-pedagogique { grid-template-columns: 1fr !important; }
+            .quick-stat .quick-stat-figure { font-size: 26pt; }
+            .schema-box { max-width: 100% !important; }
+            .schema-box img { max-width: 100%; height: auto; }
+            ul, ol { margin-left: 22px; }
+            /* Texte justifié sur mobile */
+            p, li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+            p.punchline, p.cliffhanger, .quick-stat-figure, .stat-shock .num,
+            .caption, .mini-qcm-enonce, h1, h2, h3 { text-align: left; hyphens: none; }
+            /* Filigranes plus visibles sur mobile */
+            .page-container::before {
+                background-image: none;
+            }
+            .schema-box::before { color: rgba(107,70,193,0.07); font-size: 11px; letter-spacing: 1px; max-width: 90%; overflow: hidden; }
+            .schema-box::after { color: rgba(120,120,120,0.10); }
+        }
+
+        /* Filigrane medeos-sante.fr sur schémas — centré au vrai milieu */
+        .schema-box::before {
+            content: 'medeos-sante.fr';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Inter', Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: rgba(120,120,120,0.05);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            pointer-events: none;
+            user-select: none;
+            z-index: 5;
+            white-space: nowrap;
+            max-width: 92%;
+            overflow: hidden;
+        }
+        /* Petit filigrane discret en bas à droite des schémas */
+        .schema-box::after {
+            content: 'medeos-sante.fr';
+            position: absolute;
+            bottom: 8px; right: 12px;
+            font-family: 'Inter', Arial, sans-serif;
+            font-size: 9px;
+            font-weight: 600;
+            color: rgba(120,120,120,0.10);
+            letter-spacing: 0.5px;
+            pointer-events: none;
+            user-select: none;
+            z-index: 6;
+            white-space: nowrap;
+        }
+        /* Image réelle dans une schema-box + clic pour agrandir */
+        .schema-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto;
+            cursor: zoom-in;
+        }
+        /* Mention du fichier image à générer (visible tant que l'image manque) */
+        .schema-box .file-target {
+            display: block;
+            margin-top: 10px;
+            padding: 8px 12px;
+            background: #e8f5e9;
+            border: 1px solid #a5d6a7;
+            border-radius: 6px;
+            font-family: 'SFMono-Regular', Consolas, monospace;
+            font-size: 9.5pt;
+            color: #1b5e20;
+            text-align: left;
+            line-height: 1.5;
+        }
+        .schema-box .file-target strong { color: #2e7d32; }
+        /* Prompts/boutons masqués par défaut, affichés si l'image manque (.img-missing) */
+        .schema-box .generation-prompt,
+        .schema-box .copy-prompt-btn { display: none; }
+        .schema-box.img-missing .generation-prompt { display: block; }
+        .schema-box.img-missing .copy-prompt-btn { display: inline-block; }
+        /* États du mini-QCM après réponse */
+        .mini-qcm-choix.answered li { cursor: default; }
+        .mini-qcm-choix.answered li:hover { background: #faf8f4; border-left-color: transparent; }
+        .mini-qcm-choix.answered li.is-correct,
+        .mini-qcm-choix.answered li.is-correct:hover { background: #e4f3ea; border-left-color: #2e9d5f; font-weight: 600; }
+        .mini-qcm-choix.answered li.is-correct::after { content: " ✓"; color: #2e9d5f; font-weight: 700; }
+        .mini-qcm-choix.answered li.is-wrong,
+        .mini-qcm-choix.answered li.is-wrong:hover { background: #fbe9e7; border-left-color: #d9534f; }
+        .mini-qcm-choix.answered li.is-wrong::after { content: " ✗"; color: #d9534f; font-weight: 700; }
+
+        /* ========== RÉCAP PÉDAGOGIQUE (à retenir / anecdote) ========== */
+        .recap-pedagogique {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 16px;
+            margin: 36px 0 28px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e6dfd1;
+            box-shadow: 0 3px 12px rgba(76, 42, 133, 0.07);
+        }
+        .recap-pedagogique .recap-tronc,
+        .recap-pedagogique .recap-anecdote {
+            padding: 22px 24px;
+            font-size: 11pt;
+            line-height: 1.65;
+        }
+        .recap-pedagogique .recap-tronc {
+            background: #FAF6F0;
+            border-right: 1px dashed #d9cdb5;
+        }
+        .recap-pedagogique .recap-anecdote {
+            background: #f4f4f6;
+        }
+        .recap-pedagogique .recap-tronc > strong,
+        .recap-pedagogique .recap-anecdote > strong {
+            display: block;
+            font-size: 10pt;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            color: #4C2A85;
+        }
+        .recap-pedagogique .recap-anecdote > strong {
+            color: #6b6b78;
+        }
+        /* Emphase à l'intérieur des puces : gras en ligne, pas de titre-bloc */
+        .recap-pedagogique li strong {
+            font-weight: 700;
+            color: #4C2A85;
+        }
+        .recap-pedagogique .recap-anecdote li strong {
+            color: #6b6b78;
+        }
+        .recap-pedagogique ul {
+            margin: 0 0 0 22px;
+            padding: 0;
+        }
+        .recap-pedagogique li {
+            margin-bottom: 7px;
+            font-size: 10.5pt;
+            line-height: 1.55;
+            color: #2c3e50;
+        }
+        .recap-pedagogique .recap-anecdote li {
+            color: #4a4a55;
+        }
+        .recap-pedagogique ul li:before {
+            color: #6B46C1;
+            font-size: 12pt;
+        }
+        .recap-pedagogique .recap-anecdote ul li:before {
+            color: #B8895A;
+        }
+        @media (max-width: 720px) {
+            .recap-pedagogique { grid-template-columns: 1fr; }
+            .recap-pedagogique .recap-tronc { border-right: none; border-bottom: 1px dashed #d9cdb5; }
+        }
+
+        /* ========== ANCRAGE SENSORIEL ========== */
+        .ancrage-sensoriel {
+            background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+            border-left: 5px solid #E29C5C;
+            padding: 22px 26px;
+            margin: 28px 0;
+            border-radius: 0 10px 10px 0;
+            font-size: 11.5pt;
+            line-height: 1.7;
+            color: #1F1F23;
+            box-shadow: 0 2px 10px rgba(226, 156, 92, 0.15);
+        }
+        .ancrage-sensoriel::before {
+            content: "Touche, ressens";
+            display: block;
+            font-weight: 700;
+            font-size: 10pt;
+            color: #B8650A;
+            margin-bottom: 10px;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+        }
+        .ancrage-sensoriel strong { color: #B8650A; }
+
+        /* Mini-QCM final */
+        .mini-qcm {
+            background: linear-gradient(135deg, #FAF6F0 0%, #f5efe5 100%);
+            border-left: 4px solid #6B46C1;
+            border-radius: 12px;
+            padding: 32px 28px;
+            margin: 48px 0 32px;
+        }
+        .mini-qcm h2 {
+            color: #4C2A85;
+            font-size: 18pt;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        .mini-qcm-intro {
+            color: #6b6b80;
+            font-size: 10.5pt;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+        .mini-qcm-question {
+            background: white;
+            padding: 20px 24px;
+            border-radius: 10px;
+            margin-bottom: 16px;
+            box-shadow: 0 1px 4px rgba(76, 42, 133, 0.08);
+        }
+        .mini-qcm-num {
+            color: #6B46C1;
+            font-size: 9.5pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
+        }
+        .mini-qcm-enonce {
+            font-size: 11.5pt;
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-bottom: 14px;
+            line-height: 1.5;
+        }
+        .mini-qcm-choix {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 14px 0;
+        }
+        .mini-qcm-choix li {
+            padding: 8px 14px;
+            margin-bottom: 6px;
+            border-radius: 6px;
+            background: #faf8f4;
+            font-size: 10.5pt;
+            border-left: 3px solid transparent;
+            transition: background 0.2s;
+        }
+        .mini-qcm-choix li:hover {
+            background: #f4eef9;
+            border-left-color: #6B46C1;
+            cursor: pointer;
+        }
+        .mini-qcm-correction {
+            margin-top: 12px;
+            padding: 12px 16px;
+            background: #f4eef9;
+            border-radius: 6px;
+            font-size: 10pt;
+            line-height: 1.6;
+        }
+        .mini-qcm-correction summary {
+            cursor: pointer;
+            color: #6B46C1;
+            font-weight: 600;
+            font-size: 10pt;
+            user-select: none;
+            padding: 2px 0;
+        }
+        .mini-qcm-correction summary:hover {
+            color: #4C2A85;
+        }
+        .mini-qcm-correction[open] summary {
+            margin-bottom: 8px;
+            border-bottom: 1px solid #e5d7ef;
+            padding-bottom: 6px;
+        }
+        .mini-qcm-correction p {
+            margin: 6px 0;
+            color: #2d2d3d;
+        }
+        .mini-qcm-source {
+            color: #8585a3;
+            font-size: 9.5pt;
+            margin-top: 8px !important;
+        }
+        .mini-qcm-conclusion {
+            margin-top: 20px;
+            padding: 14px 20px;
+            background: rgba(107, 70, 193, 0.08);
+            border-radius: 8px;
+            color: #4C2A85;
+            font-size: 10.5pt;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* ============ LECTURE PROGRESSIVE (révélation par paliers) ============ */
+        .step-locked { display: none !important; }
+        .step-reveal { animation: stepIn .55s cubic-bezier(.16,.84,.44,1) both; }
+        @keyframes stepIn {
+            from { opacity: 0; transform: translateY(14px); }
+            to   { opacity: 1; transform: none; }
+        }
+        .continue-wrap {
+            display: flex; flex-direction: column; align-items: center;
+            gap: 10px; margin: 34px auto 14px; text-align: center;
+        }
+        .continue-hint { font-size: 13.5px; color: #6b6275; }
+        .btn-continue {
+            display: inline-flex; align-items: center; gap: 9px;
+            font-family: inherit; font-size: 16px; font-weight: 600;
+            color: #fff; cursor: pointer;
+            padding: 13px 26px; border: none; border-radius: 999px;
+            background: linear-gradient(150deg, #4C2A85, #6B46C1 75%);
+            box-shadow: 0 10px 26px rgba(76,42,133,.26);
+            transition: transform .18s ease, box-shadow .18s ease, opacity .3s ease;
+        }
+        .btn-continue:hover { transform: translateY(-1px); box-shadow: 0 14px 32px rgba(76,42,133,.34); }
+        .btn-continue:active { transform: translateY(0); }
+        .btn-continue .arrow { display: inline-block; transition: transform .2s ease; }
+        .btn-continue:hover .arrow { transform: translateY(2px); }
+        .continue-wrap.gone {
+            opacity: 0; pointer-events: none; max-height: 0; margin: 0;
+            overflow: hidden; transition: opacity .3s ease, max-height .4s ease, margin .4s ease;
+        }
+    
+        /* Phrases de conversion sous le bouton « Continuer » (04/08).
+           Bouton secondaire à contour : visible sans capter l'attention, le
+           « Continuer » reste l'action principale. Ce bloc vit HORS du holder,
+           qui disparaît au clic — la porte reste ouverte dans la page. */
+        .continue-cta { margin: 4px auto 30px; display: flex; flex-direction: column;
+                        align-items: center; gap: 9px; max-width: 620px; text-align: center; }
+        .continue-cta .cta-mot { font-size: 13.5px; line-height: 1.55; color: #6b6275; }
+        .continue-cta a { display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px;
+                          font-weight: 700; color: #6B46C1; text-decoration: none; padding: 9px 18px;
+                          border-radius: 999px; border: 1.5px solid rgba(107,70,193,.35);
+                          background: rgba(107,70,193,.05); transition: background .15s, border-color .15s; }
+        .continue-cta a:hover { background: rgba(107,70,193,.11); border-color: rgba(107,70,193,.65); }
+        .continue-cta a.sv { color: #1d4ed8; border-color: rgba(37,99,235,.35); background: rgba(37,99,235,.05); }
+        .continue-cta a.sv:hover { background: rgba(37,99,235,.11); border-color: rgba(37,99,235,.65); }
+
+        /* Les deux offres côte à côte : le lecteur choisit sa voie lui-même. */
+        .continue-cta .cta-duo { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+</style>
+<!-- medeos-jsonld -->
+    <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Physique en P1 (PASS / LAS) — le panorama Medeos", "description": "La découverte de la physique en première année de santé : eau et compartiments, osmose, pression oncotique, diffusion, ondes et Doppler.", "url": "https://medeos-sante.fr/ressources/panorama-p1/physique.html", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://medeos-sante.fr/ressources/panorama-p1/physique.html"}, "inLanguage": "fr-FR", "isAccessibleForFree": true, "author": {"@id": "https://medeos-sante.fr/#lucas"}, "publisher": {"@id": "https://medeos-sante.fr/#organisation"}, "about": {"@type": "Thing", "name": "Physique — première année d'études de santé"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://medeos-sante.fr"}, {"@type": "ListItem", "position": 2, "name": "Réussir sa première année de médecine", "item": "https://medeos-sante.fr/reussir-premiere-annee-medecine"}, {"@type": "ListItem", "position": 3, "name": "Physique", "item": "https://medeos-sante.fr/ressources/panorama-p1/physique.html"}]}]}</script>
+</head>
+<body>
+<div class="page-container">
+
+    <!-- ========================================================== -->
+    <!-- HOOK HEADER                                                 -->
+    <!-- ========================================================== -->
+    <header class="hook-header">
+        <div class="brand-tag">Panorama P1</div>
+
+        <h1 class="course-title">La physique en P1</h1>
+        <p class="course-subtitle">Ce qui t'attend, sans jargon.</p>
+
+        <p class="punch"><span class="accent">pH 7,40</span> — que ton corps tient coûte que coûte, sous peine de mort.</p>
+        <p class="punch"><span class="accent">60 %</span> de toi, c'est de l'eau.</p>
+        <p class="punch"><span class="accent">0,5 µm</span> — l'épaisseur qui te tient en vie à chaque respiration.</p>
+        <p class="punch"><span class="accent">5 équations.</span> Pas une de plus.</p>
+
+        <p class="tilt">Et toute une physique du vivant à apprivoiser en 9 mois, sans craquer.</p>
+
+        <div class="separator"></div>
+    </header>
+
+    <!-- ========================================================== -->
+    <!-- INTRODUCTION — boucle META + anecdote #1                    -->
+    <!-- ========================================================== -->
+    <section class="intro-section">
+        <p class="punchline">Avale ta salive. Une fois. Volontairement.</p>
+
+        <p>Ce demi-millilitre qui vient de descendre, c'est de l'eau. À <strong>0,9 % de sel</strong>, exactement. Comme ton sang. Comme tes larmes. Comme le sérum physiologique de la pharmacie. Cette concentration, ton corps la défend avec la rigueur d'un horloger suisse. Si elle dérape franchement, tes cellules gonflent ou se ratatinent. Si ton pH s'écarte un peu trop de 7,40, ton cœur et ton cerveau commencent à fonctionner de travers. Si la pression d'oxygène dans ton alvéole chute, tu perds connaissance en quelques minutes.</p>
+
+        <p>Ce qui suit, c'est ta découverte de la matière. <strong>Six idées</strong>, six raisons d'arrêter de voir la biophysique comme une suite d'équations à apprendre par cœur. À la fin, tu n'auras pas appris la P1. Tu auras appris à la <em class="hl">regarder</em>. Et c'est exactement ce qui fait la différence en physique.</p>
+    </section>
+
+    <!-- ========================================================== -->
+    <!-- SECTION 1 — L'EAU                                           -->
+    <!-- ========================================================== -->
+    <h2><span class="h2-counter">01</span> L'eau : la plus extraordinaire des banalités</h2>
+
+    <p class="punchline">15h47. Service de réanimation. L'infirmière branche une poche de sérum physiologique.</p>
+
+    <p>Sur l'étiquette, un seul nombre : <strong>0,9 %</strong>. Neuf grammes de sel par litre. Pourquoi neuf et pas dix ? Pourquoi pas cinq ? Parce qu'à <strong>9 g/L</strong> exactement, la pression osmotique de la poche est la même que celle de ton sang : <strong>300 mosmol/L</strong>. Si l'infirmière se trompe et branche de l'eau pure, les globules rouges éclatent en moins d'une minute. Si elle met du sel à 5 %, ils se ratatinent. Un nombre sur une étiquette — la frontière entre soigner et tuer.</p>
+
+    <p>Voilà ce que fait l'eau dans ton corps. Pas un remplissage. <strong>Un solvant qui négocie en permanence</strong>. Et c'est ça que tu vas apprendre maintenant — en quatre idées.</p>
+
+    <div class="stat-shock">
+        <div class="cell">
+            <div class="num">60 %</div>
+            <div class="label">de ton poids, c'est de l'eau. Soit ~42 litres chez l'adulte de 70 kg.</div>
+        </div>
+        <div class="cell">
+            <div class="num">2/3</div>
+            <div class="label">de cette eau est <strong>dans</strong> tes cellules. Le tiers restant circule autour des cellules et dans le sang.</div>
+        </div>
+    </div>
+
+    <h3>1. Ton eau n'est jamais immobile</h3>
+
+    <p>La chimie explique <em>pourquoi</em> l'eau dissout presque tout. La physique pose une autre question : <strong>où va-t-elle, et qu'est-ce qui la retient ?</strong> Car tes 42 litres ne forment pas un grand réservoir unique. Ils sont répartis, cloisonnés, et déplacés en permanence — d'une cellule à l'autre, du sang vers les tissus, des tissus vers le sang — sans que tu n'y penses jamais. <em class="hl">C'est ce mouvement silencieux qui te tient en vie.</em></p>
+
+    <h3>2. Les trois compartiments — et la frontière qui décide tout</h3>
+
+    <p>Suis une seule molécule d'eau. À l'intérieur d'une cellule, elle baigne dans le potassium. Elle franchit la membrane : la voilà entre les cellules, dans un bain de sel. Elle passe la paroi d'un capillaire : elle entre dans le sang. <strong>Trois mondes</strong>, trois compositions différentes — et pourtant cette molécule a circulé sans que rien ne se mélange. C'est ça, le découpage de ton eau en compartiments.</p>
+
+    <p>Et il obéit à une règle de proportions que tu garderas pour tout le reste de ta P1 : <strong>2/3 intracellulaire, 1/3 extracellulaire</strong>. Dans cet extracellulaire, <strong>3/4 baignent les tissus, entre les cellules — c'est l'interstitiel — et 1/4 circule dans le sang, c'est le plasma</strong>. Trois fractions à connaître par cœur — voici les trois mondes en détail :</p>
+
+    <ul>
+        <li>Le <strong>secteur intracellulaire</strong> — <strong>~28 litres</strong>. Riche en potassium (K⁺) et en phosphate.</li>
+        <li>Le <strong>secteur interstitiel</strong> — <strong>~11 litres</strong>. Riche en sodium (Na⁺) et en chlorure (Cl⁻), pauvre en protéines.</li>
+        <li>Le <strong>plasma</strong> — <strong>~3 litres</strong>. Même composition ionique que l'interstitiel, mais avec <strong>70 g/L de protéines</strong> en plus (albumine en tête).</li>
+    </ul>
+
+    <p>Si ces trois mondes gardent chacun leur identité, c'est que les membranes qui les séparent trient. Chacune est un videur : elle laisse passer certains, en refoule d'autres. On appelle ça la <strong>perméabilité sélective</strong>. La membrane d'une cellule laisse passer l'eau, bloque le sodium (la pompe Na⁺/K⁺ s'en charge activement). La paroi d'un capillaire laisse passer l'eau et le sel, mais retient les protéines. <em class="hl">Trois compartiments, trois portes — et tout l'équilibre du corps qui se joue sur qui passe et qui reste.</em></p>
+
+    <div class="stat-shock">
+        <div class="cell">
+            <div class="num">Passif</div>
+            <div class="label">Diffusion simple. Suit le gradient. <strong>Zéro ATP.</strong> Loi de Fick.</div>
+        </div>
+        <div class="cell">
+            <div class="num">Actif</div>
+            <div class="label">Pompes membranaires. Contre le gradient. <strong>Brûle de l'ATP.</strong> Na⁺/K⁺ en chef.</div>
+        </div>
+    </div>
+    <p>Toute la biophysique des échanges tient sur cette bascule.</p>
+
+    <div class="schema-box">
+        <img src="https://medeos-sante.fr/images/physique/pano_phys_compartiments_hydriques.png"
+             alt="Les trois compartiments de l'eau corporelle : intracellulaire, interstitiel, plasma"
+             style="max-width: 55%;"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
+        <div class="file-target" style="display:none;">📁 <strong>pano_phys_compartiments_hydriques.png</strong><br>à placer dans : <strong>/public/images/physique/</strong></div>
+        <p class="caption"><strong>Les trois compartiments de l'eau corporelle</strong> — séparés par la membrane cellulaire et la paroi du capillaire.</p>
+        <div class="generation-prompt">
+            <strong>Prompt ChatGPT-image :</strong>
+Format: A4 portrait (210×297mm), aspect ratio 1:1.414, high resolution 8K, render quality: ultra-detailed, suitable for medical textbook publication.
+
+Modern educational illustration of a small section of human tissue showing three water compartments. Center: a horizontal capillary vessel (cylindrical, light pink), labeled "plasma" with a few red blood cells inside. Around the capillary: an interstitial fluid space (pale blue, labeled "interstitiel"). Above and below: 3 to 4 tissue cells (warm cream color, with nucleus visible), labeled "intracellulaire". Show two clearly drawn barriers: capillary wall (thin line between plasma and interstitial) and cell membrane (between interstitial and intracellular). Color code: plasma red (#C2410C), interstitial pale blue, intracellular cream (#FAF6F0). Volume figures labeled (~3 L, ~11 L, ~28 L). Numbered legend 1-5 right. Clean white background, editorial scientific style, no cartoon.
+
+Style reference: scientific editorial illustration inspired by Nature journal, NEJM, or Visible Body anatomical atlas. Clean technical drawing with educational annotations.
+
+Typography: sans-serif font (Inter, Helvetica or similar) for all numbered labels and annotations. Label size approximately 14pt, semi-bold weight. Color of labels: dark anthracite (#1F1F23). Numbers in colored circles matching the element they describe.
+
+Composition: centered subject with generous margins (10% on all sides). Line weight: thin (1-2px) for fine details, medium (3-4px) for main structures. Shadows: soft, subtle (5-10% opacity). No harsh outlines.
+
+Negative prompts (avoid absolutely): no cartoon style, no anime style, no comic book aesthetics, no hand-drawn doodles, no DALL-E watermark, no Adobe Stock watermark, no Getty Images watermark, no text labels written in cursive, no childish illustration, no glowing effects, no neon colors outside specified palette, no fictional creatures, no anatomically inaccurate proportions, no overlapping labels.
+
+Final output: should look like a publication-quality figure from a peer-reviewed medical or scientific journal, ready for use in an educational textbook for first-year medical students.
+        </div>
+        <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+    </div>
+
+    <h3>3. L'osmose : le déplacement que tu ne sens jamais</h3>
+
+    <p>Pose une cellule dans un verre d'eau pure et regarde-la sous un microscope. En quelques secondes, elle gonfle. Personne ne pousse l'eau à l'intérieur, aucune pompe ne s'active — et pourtant l'eau entre, inexorablement. Pourquoi ? Parce que dans la cellule il y a du sel, et dehors presque pas. Et l'eau, livrée à elle-même, file toujours vers le côté le plus concentré pour le diluer. Elle ne cherche qu'une chose : <strong>égaliser les deux côtés</strong>. Ce passage spontané de l'eau à travers une membrane, c'est l'<strong>osmose</strong>.</p>
+
+    <p>Mais l'eau qui s'entasse dans la cellule pousse sur ses parois — comme un ballon qu'on remplit. Cette poussée, c'est la <strong>pression osmotique</strong>. Et tout se joue sur l'écart de concentration : plus le dedans est salé par rapport au dehors, plus l'eau se rue, plus la pression monte. <em class="hl">C'est elle, et elle seule, qui décide si une cellule gonfle jusqu'à éclater, reste stable, ou se ratatine.</em></p>
+
+    <div class="formula">
+        <span class="formula-label">Loi de van't Hoff</span>
+        π = c · R · T
+    </div>
+
+    <p>Trois lettres. <strong>c</strong>, la concentration en particules. <strong>R</strong>, une constante. <strong>T</strong>, la température absolue. Traduction : double le sel, tu doubles la pression. C'est linéaire, c'est brutal, et ça t'explique pourquoi un coup de salé d'un coup peut tuer une cellule en 30 secondes.</p>
+
+    <div class="clinical-box">
+        <p>Quand quelqu'un est <strong>déshydraté</strong>, son sang devient trop concentré. La pression osmotique grimpe. L'eau quitte les cellules pour aller dans le sang. Les cellules cérébrales se ratatinent. C'est pour ça qu'un coup de chaleur donne mal à la tête et confusion : le cerveau perd son eau. À l'inverse, boire 6 litres d'eau pure d'un coup peut tuer — c'est l'hyponatrémie de marathon : le sang devient trop dilué, les cellules cérébrales gonflent et compriment le crâne.</p>
+    </div>
+
+    <h3>4. Tonicité : isotonique, hypertonique, hypotonique</h3>
+
+    <p>Prends un globule rouge et regarde-le vivre dans trois verres différents.</p>
+
+    <p><strong>Verre 1, de l'eau pure.</strong> Dehors, presque pas de sel ; dedans, beaucoup. L'eau se rue à l'intérieur pour diluer, le globule gonfle, gonfle… et finit par éclater. On dit que l'eau pure est <strong>hypotonique</strong> — trop diluée par rapport à lui. (Quand un globule éclate ainsi, on parle d'<strong>hémolyse</strong>.)</p>
+
+    <p><strong>Verre 2, de l'eau ultra-salée.</strong> L'inverse : c'est dehors qu'il y a le plus de sel. L'eau quitte le globule pour aller diluer l'extérieur. Il se fripe comme un raisin sec. Cette solution trop concentrée est <strong>hypertonique</strong> (le globule ratatiné, c'est la <strong>plasmolyse</strong>).</p>
+
+    <p><strong>Verre 3, du sérum physiologique à 0,9 %.</strong> Là, dedans et dehors sont à égalité. Aucune raison pour l'eau de partir d'un côté plutôt que de l'autre. Le globule ne bouge pas, il reste lui-même. Cette solution à l'équilibre est <strong>isotonique</strong> — et c'est exactement pour ça qu'on peut en perfuser des litres sans faire éclater ni dessécher une seule cellule.</p>
+
+    <p>Jusqu'ici, tout est simple : on pourrait mesurer la concentration de chaque verre et prédire ce qui va arriver au globule. Sauf qu'il existe un <strong>quatrième verre</strong> qui brise cette belle logique.</p>
+
+    <p><strong>Verre 4, une solution de glucose iso-osmolaire au sang.</strong> Cette fois tu prépares une solution qui contient <strong>autant de particules que le sang</strong> — exactement la même quantité que dans le sérum physiologique du verre 3. Mêmes chiffres, donc le globule devrait rester tranquille, comme dans le verre 3. Et pourtant… il gonfle, comme s'il était dans l'eau pure. <em class="hl">Pourquoi ?</em></p>
+
+    <p>Rappelle-toi <em>pourquoi</em> l'eau bouge : elle migre vers le côté où il y a le plus de particules, pour les diluer. Au départ, le verre 3 et le verre 4 sont à égalité — autant de particules dehors que dedans. Tous les deux <em>devraient</em> donc laisser le globule tranquille. Et c'est vrai… au premier instant. La différence se joue dans la seconde qui suit.</p>
+
+    <p>Le <strong>glucose traverse la membrane</strong> et file à l'intérieur du globule. Et il a une bonne raison d'y aller : le glucose est le <strong>carburant de la cellule</strong>, celui qu'elle brûle pour vivre — alors elle s'est dotée d'une porte dédiée pour le faire entrer. Le sel, lui, n'a pas cette porte : il reste bloqué dehors. Du coup il reste de moins en moins de glucose dehors — l'égalité du départ se casse, il y a maintenant plus de particules dedans que dehors. Et l'eau, fidèle à sa règle, suit : elle entre dans le globule pour rejoindre le glucose qui vient d'y passer. <em class="hl">Le globule gonfle — non pas parce que le verre était déséquilibré au départ, mais parce que le glucose a fui à l'intérieur et déplacé l'équilibre.</em></p>
+
+    <p>Reviens à ce que tu viens de voir : sur l'appareil de mesure, le verre 4 affichait <em>la même chose que le sang</em> — autant de particules par litre. Mais le globule, lui, a gonflé. La mesure disait « pareil », la cellule disait « non ». Ces deux verdicts portent chacun un nom.</p>
+
+    <p>Ce que mesure l'appareil — <em>toutes</em> les particules d'une solution, glucose compris — c'est l'<strong>osmolarité</strong>. Ce que vit réellement le globule — qui ne dépend que des particules restées <em>dehors</em>, les seules à tirer son eau — c'est la <strong>tonicité</strong>. Le verre 4 avait la même osmolarité que le sang, mais une tonicité plus faible : iso-<strong>osmolaire</strong>, donc, et pourtant hypo-<strong>tonique</strong>. <em class="hl">Même liquide, deux verdicts opposés selon ce qu'on regarde — et c'est précisément là que les correcteurs adorent te piéger en QCM.</em></p>
+
+    <div class="quick-q">
+        Devine. Si tu trempes un concombre dans du sel, il devient mou et liquide. L'eau du concombre est partie où ?
+        <span class="ans">→ Vers l'extérieur, attirée par la solution hypertonique en sel. C'est l'osmose. Tu viens d'expliquer la salaison de la morue avec une équation de P1.</span>
+    </div>
+
+    <div class="stakes-box">
+        <p>Si tu comprends osmose + tonicité avant septembre, tu débloques d'un coup la déshydratation, l'œdème, le sérum physiologique, le glaucome, la dialyse rénale et la perfusion. Six chapitres en une idée. Si tu zappes, tu apprendras 30 cas cliniques séparément. Et tu oublieras tout en mai.</p>
+    </div>
+
+    <div class="recap-pedagogique">
+        <div class="recap-tronc">
+            <strong>À retenir pour la P1</strong>
+            <ul>
+                <li><strong>Règle 2/3 — 1/3 — 1/4</strong> : 2/3 de l'eau corporelle est intracellulaire, 1/3 extracellulaire, et dans l'extracellulaire, 1/4 est plasma.</li>
+                <li>Osmolarité du plasma : <strong>~300 mosmol/L</strong>. Tonicité = osmolarité <em>efficace</em> (particules qui ne traversent pas la membrane).</li>
+                <li>Loi de van't Hoff : <strong>π = c·R·T</strong>. La pression osmotique est proportionnelle à la concentration en particules dissoutes.</li>
+            </ul>
+        </div>
+        <div class="recap-anecdote">
+            <strong>Marquant à raconter</strong>
+            <ul>
+                <li>Sérum physiologique à 9 g/L de NaCl : la même salinité que la mer où la vie est née.</li>
+                <li>6 litres d'eau pure d'un coup = mort possible. Le « marathonien hyponatrémique ».</li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="cliffhanger">L'eau bouge à cause des sels. Mais elle bouge aussi à cause d'autre chose — des charges électriques piégées d'un côté d'une membrane. Et cette histoire-là, elle explique pourquoi tu n'as pas un poumon noyé tous les matins. ↓</p>
+
+    <!-- ========================================================== -->
+    <!-- SECTION 2 — DONNAN & PRESSION ONCOTIQUE                     -->
+    <!-- ========================================================== -->
+    <h2><span class="h2-counter">02</span> Donnan : pourquoi tes poumons ne se noient pas</h2>
+
+    <p class="punchline">Tes capillaires laissent fuir 20 litres d'eau par jour dans tes tissus. De quoi t'en faire un marais. Et pourtant ton corps garde son équilibre d'eau, jour après jour. Pourquoi ?</p>
+
+    <p>Vingt litres, c'est énorme : laissés sur place, ils transformeraient tes jambes en éponges gorgées et noieraient tes poumons en quelques heures. Or il n'en est rien. Tes tissus restent secs, tes poumons aérés, ton mollet à sa taille. Presque toute cette eau qui s'échappe est rappelée dans le sang, en silence, en permanence. Le responsable de ce miracle, c'est une physique mise au jour en <strong>1911</strong> par un Irlandais : Frederick Donnan. Et c'est sans doute la plus élégante mécanique de toute la biophysique.</p>
+
+    <div class="stat-shock">
+        <div class="cell">
+            <div class="num">25 mmHg</div>
+            <div class="label">de pression oncotique du plasma — la force qui rappelle l'eau dans tes vaisseaux.</div>
+        </div>
+        <div class="cell">
+            <div class="num">70 g/L</div>
+            <div class="label">de protéines dans le plasma, dont l'albumine. Ce sont elles qui tirent l'eau.</div>
+        </div>
+    </div>
+
+    <h3>1. La membrane qui bloque les gros</h3>
+
+    <p>La paroi de tes capillaires sanguins est une <strong>passoire à grosses mailles</strong>. Elle laisse passer l'eau, le sodium, le glucose, l'urée. Elle bloque les protéines — albumine, globulines — parce qu'elles sont trop grosses. Résultat : tu as ~70 g de protéines par litre dans le plasma, et quasi zéro dans le liquide qui baigne tes cellules.</p>
+
+    <p>Et c'est là que se joue le rappel des 20 litres. Ces protéines, coincées dans le sang, se comportent comme un aimant à eau : étant des particules dissoutes que l'interstitiel ne possède pas, elles <strong>attirent l'eau vers le plasma</strong> pour se diluer — exactement l'osmose qu'on vient de voir. Voilà ce qui ramène, en silence, l'eau qui s'échappait. Mais ce n'est que la moitié de l'histoire.</p>
+
+    <p>Car ces protéines portent aussi une <strong>charge électrique nette négative</strong> au pH du sang. C'est ce détail — anodin, presque invisible — qui va <em>amplifier</em> toute la mécanique. Voici comment.</p>
+
+    <h3>2. L'effet Donnan : quand une charge piégée déplace toutes les autres</h3>
+
+    <p>Voilà le tour de magie. D'un côté de la membrane (le plasma), tu as des protéines piégées, chargées négativement. De l'autre côté (l'interstitiel), tu n'en as pas. Or la nature impose une règle de fer à tout liquide du corps : dans un même milieu, il doit y avoir <strong>autant de charges positives que de charges négatives</strong> — sinon des charges identiques s'accumulent, se repoussent violemment, et le système ne tient pas. C'est ce qu'on appelle rester <strong>électriquement neutre</strong>.</p>
+
+    <p>Et c'est là que les protéines bousculent tout. Comme elles apportent un gros paquet de charges négatives du côté plasma, ce côté doit, pour rééquilibrer, retenir <em class="hl">plus d'ions positifs</em> (du sodium) — et donc repousser une partie des chlorures, qui sont négatifs. Bilan : un déséquilibre ionique qui se met en place tout seul, juste pour respecter cette neutralité.</p>
+
+    <p>Fais le compte des particules côté plasma. Tu as : les <strong>protéines</strong> elles-mêmes, plus tout le <strong>sodium supplémentaire</strong> qu'elles ont attiré pour se neutraliser. D'accord, il y a un peu moins de chlorure — mais cette baisse ne compense pas tout ce qui s'est accumulé. Au final, en additionnant tout, <strong>le plasma contient plus de particules dissoutes</strong> que l'interstitiel. Et tu connais la règle depuis le début : plus de particules d'un côté, plus l'eau y est attirée. <em class="hl">L'eau file donc vers le plasma.</em></p>
+
+    <p>Cette force qui rappelle l'eau vers le sang, due aux protéines, porte un nom : la <strong>pression oncotique</strong>. Elle vaut environ 25 mmHg. C'est elle, et elle seule, qui ramène en continu les 20 litres échappés — et qui empêche tes poumons de se noyer.</p>
+
+    <div class="schema-box">
+        <img src="https://medeos-sante.fr/images/physique/pano_phys_effet_donnan.png"
+             alt="L'effet Donnan : protéines négatives piégées dans le capillaire, équilibre des ions, eau rappelée"
+             style="max-width: 55%;"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
+        <div class="file-target" style="display:none;">📁 <strong>pano_phys_effet_donnan.png</strong><br>à placer dans : <strong>/public/images/physique/</strong></div>
+        <p class="caption"><strong>L'effet Donnan</strong> — des protéines piégées d'un côté attirent le sodium, repoussent le chlorure et rappellent l'eau : c'est la pression oncotique.</p>
+        <div class="generation-prompt">
+            <strong>Prompt ChatGPT-image :</strong>
+Format: A4 portrait (210×297mm), aspect ratio 1:1.414, high resolution 8K, render quality: ultra-detailed, suitable for medical textbook publication.
+
+Modern educational illustration of the Donnan equilibrium at a capillary wall. Vertical membrane in the center, labeled "paroi capillaire". Left side (plasma, light red background): large negatively-charged proteins drawn as oval shapes with "−" symbols, surrounded by abundant Na⁺ ions (purple dots) and fewer Cl⁻ ions (honey wood dots). Right side (interstitial fluid, pale blue background): no proteins, fewer Na⁺, more Cl⁻. Blue arrows pointing from right to left showing water being pulled toward the plasma side, labeled "π oncotique ≈ 25 mmHg". Numbered legend 1-5. Clean cream background (#FAF6F0). Editorial scientific style, no cartoon. Anatomically and physically accurate. No emoji.
+
+Style reference: scientific editorial illustration inspired by Nature journal, NEJM, or Visible Body anatomical atlas. Clean technical drawing with educational annotations.
+
+Typography: sans-serif font (Inter, Helvetica or similar) for all numbered labels and annotations. Label size approximately 14pt, semi-bold weight. Color of labels: dark anthracite (#1F1F23). Numbers in colored circles matching the element they describe.
+
+Composition: centered subject with generous margins (10% on all sides). Line weight: thin (1-2px) for fine details, medium (3-4px) for main structures. Shadows: soft, subtle (5-10% opacity). No harsh outlines.
+
+Negative prompts (avoid absolutely): no cartoon style, no anime style, no comic book aesthetics, no hand-drawn doodles, no DALL-E watermark, no Adobe Stock watermark, no Getty Images watermark, no text labels written in cursive, no childish illustration, no glowing effects, no neon colors outside specified palette, no fictional creatures, no anatomically inaccurate proportions, no overlapping labels.
+
+Final output: should look like a publication-quality figure from a peer-reviewed medical or scientific journal, ready for use in an educational textbook for first-year medical students.
+        </div>
+        <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+    </div>
+
+    <h3>3. Le filtre des capillaires — équilibre de Starling</h3>
+
+    <p>Maintenant, ajoute la pression du sang. Le cœur pousse, donc le sang dans le capillaire est sous pression. On l'appelle la <strong>pression hydrostatique</strong>. Elle vaut environ <strong>32 mmHg côté artériel</strong> et <strong>15 mmHg côté veineux</strong> (le sang ralentit en route). Cette pression veut <strong>sortir l'eau</strong> du vaisseau. La pression oncotique (~25 mmHg), elle, veut <strong>rappeler l'eau</strong>. Deux forces opposées qui s'affrontent à chaque centimètre de capillaire.</p>
+
+    <p>À l'entrée du capillaire (côté artériel), 32 contre 25 : la pression hydrostatique gagne, l'eau sort. À la sortie (côté veineux), 15 contre 25 : la pression oncotique gagne, l'eau rentre. C'est l'<strong>équilibre de Starling</strong>, décrit en 1896. Une danse à deux forces qui se rejoue 5 milliards de fois par jour dans tes capillaires.</p>
+
+    <div class="ancrage-sensoriel">
+        Pose deux doigts sur ton poignet, côté pouce. Sens ton pouls. Chaque battement, c'est <strong>une vague de pression hydrostatique</strong> qui passe — environ 80 mmHg de pression artérielle moyenne, qui se transmet jusqu'aux capillaires. Cette même pression, au niveau de ton poumon, pousse à chaque seconde une fine pluie d'eau hors des vaisseaux. Et la pression oncotique la rappelle aussi vite. Tu sens, sous ton index, une équation de Starling qui tourne.
+    </div>
+
+    <div class="quick-stat">
+        <div class="quick-stat-figure" style="font-size: 28pt;">~99 %</div>
+        <div class="quick-stat-label">de l'eau qui s'échappe dans tes tissus retourne aussitôt dans le sang.</div>
+        <div class="quick-stat-context">Le 1 % restant est collecté par les lymphatiques. Pas de fuite. Pas d'œdème.</div>
+    </div>
+
+    <div class="clinical-box">
+        <p>Quand un enfant est dénutri (kwashiorkor), il manque d'albumine dans le sang. La pression oncotique chute. L'eau quitte les vaisseaux et reste dans les tissus. <strong>Le ventre gonfle.</strong> Ce ventre que tu as vu sur les photos d'Afrique en cours d'histoire, c'est de la physique pure — une équation de Donnan qui ne tient plus.</p>
+    </div>
+
+    <div class="stakes-box">
+        <p>Comprendre Donnan + Starling, c'est avoir la clé des œdèmes (cheville qui gonfle, ascite, œdème pulmonaire), de la dialyse rénale, et de la perfusion en réanimation. <strong>Trois chapitres et trois urgences vitales</strong> qui reposent sur une idée à 1911.</p>
+    </div>
+
+    <div class="recap-pedagogique">
+        <div class="recap-tronc">
+            <strong>À retenir pour la P1</strong>
+            <ul>
+                <li><strong>Effet Donnan</strong> Les protéines du plasma, chargées (−) et coincées dans le vaisseau, retiennent du Na⁺ à côté d'elles. Au final, plus de particules côté plasma.</li>
+                <li><strong>Pression oncotique</strong> Environ 25 mmHg. C'est la force, due à ces protéines, qui rappelle l'eau vers le sang.</li>
+                <li><strong>Équilibre de Starling</strong> Deux forces s'affrontent dans le capillaire. La pression du sang (32 mmHg à l'entrée, 15 à la sortie) pousse l'eau dehors ; la pression oncotique (25 mmHg) la rappelle. L'eau sort à l'entrée, rentre à la sortie.</li>
+                <li><strong>Trop peu d'albumine</strong> L'hypoalbuminémie fait chuter l'oncotique : l'eau ne revient plus, les œdèmes apparaissent. Pas une maladie mystérieuse, de la mécanique.</li>
+            </ul>
+        </div>
+        <div class="recap-anecdote">
+            <strong>Marquant à raconter</strong>
+            <ul>
+                <li>20 litres de plasma filtrés par jour à travers tes capillaires. 99 % rappelés. 1 % collecté par les lymphatiques.</li>
+                <li>Frederick Donnan — un Irlandais de 1911 dont l'équation explique encore l'ascite en réanimation.</li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="cliffhanger">Tu as compris comment l'eau bouge. Mais une autre quantité est surveillée de près dans ton sang, en permanence : son acidité. Ton corps la maintient à 7,40 avec une précision d'horloger — et tu vas voir comment. ↓</p>
+
+    <!-- ========================================================== -->
+    <!-- SECTION 3 — pH ET TAMPONS                                   -->
+    <!-- ========================================================== -->
+    <h2><span class="h2-counter">03</span> Le pH du sang : 7,40, frontière entre vivre et mourir</h2>
+
+    <p class="punchline">Un soda à pH 2,5. Du jus de citron à pH 2. Ton sang, lui, reste calé sur 7,40 — et ne s'en écarte presque jamais.</p>
+
+    <p>Le pH, c'est juste un chiffre qui mesure l'acidité. À 7, neutre. En dessous, acide. Au-dessus, basique. Ton sang doit rester entre <strong>7,35 et 7,45</strong>. En dehors de ce couloir, les protéines de tes enzymes commencent à se déformer. À <strong>pH 6,8</strong>, ton cœur s'arrête. À <strong>pH 7,8</strong>, tes nerfs déclenchent des spasmes. Et chaque jour, rien qu'en transformant ce que tu manges en énergie, ton corps produit l'équivalent de <strong>15 000 mmol d'acide</strong> (surtout du CO₂). Comment ton sang ne se transforme-t-il pas en jus de fruit ?</p>
+
+    <div class="stat-shock">
+        <div class="cell">
+            <div class="num">7,35 – 7,45</div>
+            <div class="label">la plage normale du pH sanguin. Au-delà, c'est l'acidose ou l'alcalose — et le corps lutte pour y revenir.</div>
+        </div>
+        <div class="cell">
+            <div class="num">15 000</div>
+            <div class="label">mmol de CO₂ (un acide) produits chaque jour par ton métabolisme — et éliminés en continu par tes poumons.</div>
+        </div>
+    </div>
+
+    <h3>1. Une équation pour tout comprendre</h3>
+
+    <p>Une seule équation décrit comment ton sang gère ses acides. Elle s'appelle Henderson-Hasselbalch. La voici :</p>
+
+    <div class="formula">
+        <span class="formula-label">Henderson-Hasselbalch</span>
+        pH = pKa + log([A⁻] / [HA])
+    </div>
+
+    <p>Traduction simple. Le pH d'une solution dépend du rapport entre la forme « libérée » de l'acide (A⁻) et la forme « collée » à son proton (HA). Quand les deux formes sont à parts égales, le pH est égal au <strong>pKa</strong> de la molécule — autrement dit, le pKa, c'est le pH où l'acide est à moitié libéré, à moitié collé. Sa carte d'identité. <em class="hl">Une équation qui ouvre 4 chapitres entiers.</em></p>
+
+    <h3>2. Un tampon, c'est quoi concrètement ?</h3>
+
+    <p>Un <strong>tampon</strong>, c'est un mélange d'un acide faible et de sa base conjuguée, en quantités comparables. Quand tu ajoutes un acide fort, la base le capture. Quand tu ajoutes une base, l'acide libère un proton. Le pH bouge à peine. C'est un <strong>amortisseur chimique</strong>.</p>
+
+    <p>Démonstration spectaculaire. Tu prends 1 litre d'eau pure et tu ajoutes 1 millimole d'acide chlorhydrique. Le pH passe de <strong>7 à 3</strong>. Quatre unités de pH d'un coup. Tu prends maintenant 1 litre d'une solution tampon adaptée et tu ajoutes exactement la même quantité d'acide. Le pH passe de <strong>4,8 à 4,7</strong>. <em class="hl">0,1 unité. Soit 40 fois moins.</em> Voilà ce qu'un tampon fait.</p>
+
+    <div class="schema-box">
+        <img src="https://medeos-sante.fr/images/physique/pano_phys_effet_tampon.png"
+             alt="Effet tampon : eau pure dont le pH s'effondre vs solution tampon dont le pH reste stable"
+             style="max-width: 50%;"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
+        <div class="file-target" style="display:none;">📁 <strong>pano_phys_effet_tampon.png</strong><br>à placer dans : <strong>/public/images/physique/</strong></div>
+        <p class="caption"><strong>L'effet tampon</strong> — à gauche, l'eau pure : le pH s'effondre. À droite, un tampon : le pH reste quasi stable. Même quantité d'acide ajoutée.</p>
+        <div class="generation-prompt">
+            <strong>Prompt ChatGPT-image :</strong>
+Format: A4 portrait (210×297mm), aspect ratio 1:1.414, high resolution 8K, render quality: ultra-detailed, suitable for medical textbook publication.
+
+Modern educational scientific illustration showing two beakers side by side. Left beaker: labeled "Eau pure", pH meter showing 7.0 before and 3.0 after, with a red downward arrow showing huge pH drop after adding 1 mmol HCl. Right beaker: labeled "Tampon acétate", pH meter showing 4.8 before and 4.7 after, with a small green arrow showing tiny pH variation after adding the same 1 mmol HCl. Above each beaker, a small graph showing the pH curve over time. Color code: water in pale blue, buffer in pale purple (#6B46C1 tint), arrows red and green for contrast. Clean cream background (#FAF6F0). Numbered legend 1-4. Editorial scientific style, no cartoon, no emoji, chemically accurate.
+
+Style reference: scientific editorial illustration inspired by Nature journal, NEJM, or Visible Body anatomical atlas. Clean technical drawing with educational annotations.
+
+Typography: sans-serif font (Inter, Helvetica or similar) for all numbered labels and annotations. Label size approximately 14pt, semi-bold weight. Color of labels: dark anthracite (#1F1F23). Numbers in colored circles matching the element they describe.
+
+Composition: centered subject with generous margins (10% on all sides). Line weight: thin (1-2px) for fine details, medium (3-4px) for main structures. Shadows: soft, subtle (5-10% opacity). No harsh outlines.
+
+Negative prompts (avoid absolutely): no cartoon style, no anime style, no comic book aesthetics, no hand-drawn doodles, no DALL-E watermark, no Adobe Stock watermark, no Getty Images watermark, no text labels written in cursive, no childish illustration, no glowing effects, no neon colors outside specified palette, no fictional creatures, no anatomically inaccurate proportions, no overlapping labels.
+
+Final output: should look like a publication-quality figure from a peer-reviewed medical or scientific journal, ready for use in an educational textbook for first-year medical students.
+        </div>
+        <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+    </div>
+
+    <h3>3. Le tampon bicarbonate — l'amortisseur principal de ton sang</h3>
+
+    <p>Le héros de ton équilibre acide-base, tu le connais déjà : c'est le <strong>bicarbonate</strong> — le bicarbonate de soude de ta cuisine. Le couple qu'il forme avec l'acide carbonique (HCO₃⁻ / H₂CO₃) assure à lui seul <strong>~75 % du pouvoir tampon de ton sang</strong>. Mais dans ton corps, il fait quelque chose qu'aucune pincée de poudre dans un verre ne pourra jamais faire : il est branché en direct sur tes <strong>poumons</strong> et tes <strong>reins</strong>.</p>
+
+    <ul>
+        <li>Quand ton sang devient trop acide, tes poumons accélèrent et soufflent le CO₂ — et tout se rééquilibre en quelques minutes.</li>
+        <li>Quand ton sang devient trop basique, tes reins retiennent les protons et évacuent le bicarbonate — en quelques heures.</li>
+    </ul>
+
+    <p>C'est le seul tampon biologique qui peut s'ajuster en temps réel via deux organes. C'est ce qui explique pourquoi tu peux courir un 400 mètres (production massive d'acide lactique) sans tomber raide. Tes poumons accélèrent. Tu souffles le CO₂. Et ton pH tient.</p>
+
+    <p>Le bicarbonate n'est pas seul à la tâche — deux autres tampons l'épaulent, surtout là où il est moins présent. Le <strong>tampon phosphate</strong> (HPO₄²⁻ / H₂PO₄⁻) prend le relais à l'intérieur des cellules et dans les urines. Les <strong>tampons protéiques</strong>, eux, agissent directement sur les protéines du sang — l'hémoglobine dans tes globules rouges, l'albumine dans le plasma — qui captent les protons au passage. Mais aucun des deux n'a ce que le bicarbonate possède : une ligne directe vers tes poumons et tes reins.</p>
+
+    <p>Et maintenant, reviens à l'équation du début. Pour le couple bicarbonate, elle s'écrit&nbsp;: <strong>pH = pKa + log([HCO₃⁻] / [H₂CO₃])</strong>. Regarde bien les deux termes de la fraction. En haut, le <strong>bicarbonate (HCO₃⁻)</strong> — c'est exactement ce que tes <strong>reins</strong> ajustent en le retenant ou en l'évacuant. En bas, l'acide carbonique (H₂CO₃), qui n'est que du <strong>CO₂ dissous</strong> — c'est exactement ce que tes <strong>poumons</strong> règlent en respirant plus ou moins vite. Tes deux organes ne pilotent pas « le pH » dans l'abstrait : chacun tient une moitié de cette fraction.</p>
+
+    <p>Trop acide ? Les poumons soufflent du CO₂ → le bas de la fraction diminue → le rapport monte → le pH remonte. Trop basique ? Les reins lâchent du bicarbonate → le haut diminue → le rapport baisse → le pH redescend. La régulation de ton sang, ce n'est rien d'autre que deux organes qui ajustent en direct le numérateur et le dénominateur d'une seule équation.</p>
+
+    <p class="punchline">Ça. C'est le déclic. Pas une technique de mémo. <em class="hl">Un changement de regard.</em></p>
+
+    <p>Tu vois la différence ? Avant, Henderson-Hasselbalch c'était « une équation à apprendre ». Maintenant, c'est <strong>la loi qui dit à tes poumons quand accélérer et à tes reins quand retenir</strong> — les reins sur le haut, les poumons sur le bas. La même formule. Mais lue différemment.</p>
+
+    <div class="lucas-anecdote">
+        <em>Ce lien entre la fraction et les deux organes, je ne l'ai pas vraiment saisi en lisant — je l'ai saisi en le dessinant. Une feuille A4 vierge, un poumon griffonné à gauche, un rein à droite, le couple HCO₃⁻ / H₂CO₃ au milieu, et deux flèches. C'était moche, mes poumons ressemblaient à deux ballons mal gonflés. Mais le geste a fixé ce que trois relectures n'avaient pas réussi à graver : Henderson-Hasselbalch n'est pas une équation à réciter, c'est un thermostat. Quand un cours te résiste, ne le relis pas une cinquième fois — redessine-le de mémoire. Tu verras tout de suite ce que tu n'avais pas compris.</em>
+    </div>
+
+    <div class="stakes-box">
+        <p>Si tu rentres en P1 avec Henderson-Hasselbalch déjà digéré, le chapitre acido-basique te paraît évident — c'est celui où la promo se plante en masse au S1. Si tu zappes, tu confondras acidose et alcalose la première fois, et tu reprendras le retard pendant des semaines.</p>
+    </div>
+
+    <p>Et puisqu'on en parle — apprends ces quatre mots maintenant, tu les croiseras toutes les semaines : <strong>acidose métabolique</strong> (production excessive d'acide ou perte de bicarbonate — diabète, diarrhée), <strong>acidose respiratoire</strong> (le CO₂ s'accumule parce que tu ventiles mal — BPCO, sédatifs), <strong>alcalose métabolique</strong> (perte d'acide — vomissements répétés), <strong>alcalose respiratoire</strong> (tu souffles trop de CO₂ — crise d'angoisse, hyperventilation). Quatre tableaux. Une équation. Henderson-Hasselbalch te dit dans quelle direction part le pH selon ce qui bouge.</p>
+
+    <div class="recap-pedagogique">
+        <div class="recap-tronc">
+            <strong>À retenir pour la P1</strong>
+            <ul>
+                <li>pH sanguin = <strong>7,40 ± 0,05</strong>. Au-delà : pH &lt; 7,35 = acidose ; pH &gt; 7,45 = alcalose.</li>
+                <li>Équation de <strong>Henderson-Hasselbalch</strong> : pH = pKa + log([HCO₃⁻] / [H₂CO₃]). Ratio normal ≈ 20/1.</li>
+                <li>Trois tampons : <strong>bicarbonate</strong> (75 % du pouvoir tampon sanguin), <strong>phosphate</strong>, <strong>protéines</strong> (hémoglobine + albumine).</li>
+                <li>Quatre tableaux : acidose/alcalose <strong>métabolique</strong> (HCO₃⁻ change) <em>vs</em> <strong>respiratoire</strong> (CO₂ change).</li>
+            </ul>
+        </div>
+        <div class="recap-anecdote">
+            <strong>Marquant à raconter</strong>
+            <ul>
+                <li>15 000 mmol d'acide produits par jour. Tous neutralisés. Une centrale chimique silencieuse.</li>
+                <li>L'estomac à pH 2, le sang juste à côté à pH 7,4 — 5 unités d'écart, soit 100 000 fois moins d'acide. Une frontière de quelques millimètres.</li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="cliffhanger">Tu as vu l'eau, les charges, le pH. Maintenant — le truc qui fait passer l'oxygène de ton alvéole à ton sang. Une membrane de <strong>0,5 µm</strong>. Et une équation à trois lettres. ↓</p>
+
+    <!-- ========================================================== -->
+    <!-- SECTION 4 — FICK / DIFFUSION                                -->
+    <!-- ========================================================== -->
+    <h2><span class="h2-counter">04</span> La loi de Fick : comment l'oxygène traverse ton alvéole</h2>
+
+    <p class="punchline">À chaque respiration, l'oxygène traverse une membrane 500 fois plus fine qu'une feuille de papier. Sans pompe. Sans énergie. Tout seul.</p>
+
+    <p>Inspire. Maintenant. L'air vient de descendre dans tes bronches, puis dans tes alvéoles. Là, l'oxygène se trouve à <strong>0,5 micromètre</strong> du sang — l'épaisseur de la membrane alvéolo-capillaire. Et il passe. Sans aucune pompe, sans aucune énergie, sans le moindre effort. Comment ? Par <strong>diffusion</strong>. C'est la loi la plus simple et la plus puissante de toute la biophysique. Et elle tient en une équation.</p>
+
+    <div class="formula">
+        <span class="formula-label">Loi de Fick</span>
+        J = −D · (dC / dx)
+    </div>
+
+    <p>Traduction. Le flux d'une molécule (J) — la quantité qui traverse par seconde — dépend du gradient de concentration (dC/dx), c'est-à-dire de l'écart de concentration entre deux endroits proches. Le coefficient D, lui, dépend de la taille de la molécule et de la nature du milieu. Et la conclusion à retenir tient en une phrase&nbsp;: <strong>plus le gradient est élevé, plus le flux est élevé</strong>. Double l'écart de concentration, tu doubles la quantité qui passe. <em class="hl">Tout déplacement passif dans ton corps obéit à cette loi.</em></p>
+
+    <h3>1. Pourquoi un parfum traverse une pièce</h3>
+
+    <p>Tu ouvres un flacon de parfum dans un coin du salon. Au début, toutes les molécules sont là, concentrées. Cinq minutes plus tard, ça sent à l'autre bout de la pièce. Personne n'a soufflé. Aucun ventilateur. Juste l'<strong>agitation thermique</strong>. Les molécules bougent dans tous les sens, au hasard, mais comme il y en a plus d'un côté que de l'autre, en moyenne elles vont du concentré vers le dilué. Jusqu'à l'équilibre.</p>
+
+    <p>C'est exactement ce qui se passe dans tes alvéoles. Dans l'air alvéolaire, l'oxygène est concentré (PO₂ ≈ 100 mmHg). Dans le sang qui arrive, l'oxygène est dilué (PO₂ ≈ 40 mmHg). Différence : 60 mmHg. Donc l'oxygène diffuse de l'alvéole vers le sang. Sans pompe.</p>
+
+    <div class="schema-box">
+        <img src="https://medeos-sante.fr/images/physique/pano_phys_membrane_alveolo_capillaire.png"
+             alt="La membrane alvéolo-capillaire de 0,5 µm : diffusion de l'O2 et du CO2 par gradient"
+             style="max-width: 55%;"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
+        <div class="file-target" style="display:none;">📁 <strong>pano_phys_membrane_alveolo_capillaire.png</strong><br>à placer dans : <strong>/public/images/physique/</strong></div>
+        <p class="caption"><strong>La membrane alvéolo-capillaire</strong> — 0,5 µm d'épaisseur, deux gaz qui se croisent : l'O₂ entre, le CO₂ sort.</p>
+        <div class="generation-prompt">
+            <strong>Prompt ChatGPT-image :</strong>
+Format: A4 portrait (210×297mm), aspect ratio 1:1.414, high resolution 8K, render quality: ultra-detailed, suitable for medical textbook publication.
+
+Modern educational illustration of an alveolar-capillary membrane in cross-section. Left side: a single alveolus (pale pink, labeled "alvéole", PO₂ = 100 mmHg, PCO₂ = 40 mmHg). Right side: a capillary with a red blood cell inside (PO₂ = 40 mmHg, PCO₂ = 46 mmHg). Between them: the alveolar wall + interstitial space + capillary wall, drawn as a very thin barrier labeled "0,5 µm". Two arrows crossing the membrane: O₂ going from alveolus to blood (in red), CO₂ going from blood to alveolus (in deep blue #1E3A8A). Numbered legend 1-5. Clean cream background (#FAF6F0). Editorial scientific style, anatomically accurate, no cartoon. No emoji.
+
+Style reference: scientific editorial illustration inspired by Nature journal, NEJM, or Visible Body anatomical atlas. Clean technical drawing with educational annotations.
+
+Typography: sans-serif font (Inter, Helvetica or similar) for all numbered labels and annotations. Label size approximately 14pt, semi-bold weight. Color of labels: dark anthracite (#1F1F23). Numbers in colored circles matching the element they describe.
+
+Composition: centered subject with generous margins (10% on all sides). Line weight: thin (1-2px) for fine details, medium (3-4px) for main structures. Shadows: soft, subtle (5-10% opacity). No harsh outlines.
+
+Negative prompts (avoid absolutely): no cartoon style, no anime style, no comic book aesthetics, no hand-drawn doodles, no DALL-E watermark, no Adobe Stock watermark, no Getty Images watermark, no text labels written in cursive, no childish illustration, no glowing effects, no neon colors outside specified palette, no fictional creatures, no anatomically inaccurate proportions, no overlapping labels.
+
+Final output: should look like a publication-quality figure from a peer-reviewed medical or scientific journal, ready for use in an educational textbook for first-year medical students.
+        </div>
+        <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+    </div>
+
+    <h3>2. Pourquoi tes poumons cachent une surface géante</h3>
+
+    <p>Petite précision d'abord : la formule qu'on a vue donne le flux <em>par unité de surface</em>. La quantité totale d'oxygène qui passe réellement, elle, c'est ce flux <strong>multiplié par la surface d'échange</strong>. Autrement dit, le débit complet s'écrit <strong>débit = D · S · (dC/dx)</strong> — et cette fois la <strong>surface S</strong> est là, noir sur blanc.</p>
+
+    <p>Du coup, pour faire entrer plus d'oxygène, ton corps a trois leviers : le gradient, l'épaisseur de la membrane… et cette surface S. Sur le gradient, il ne peut pas grand-chose (il dépend de l'air ambiant). Alors il a tout misé sur la surface. Au bout de tes bronches, il y a <strong>600 millions d'alvéoles</strong>, microscopiques bulles de 0,2 mm. Surface totale dépliée : <strong>70 m²</strong>, soit celle d'une salle de classe. Voilà d'où sortent ces 70 m² — ce n'est pas un hasard anatomique, c'est la loi de Fick qui les réclame pour faire passer assez d'oxygène par seconde.</p>
+
+    <p>Et l'épaisseur ? Plus fine la membrane, plus rapide la diffusion. C'est pour ça que la membrane alvéolaire fait <strong>0,5 µm</strong> — l'optimum entre résistance mécanique et perméabilité. Si elle était deux fois plus épaisse, tu serais essoufflé au moindre escalier.</p>
+
+    <div class="clinical-box">
+        <p>Quand quelqu'un développe une <strong>fibrose pulmonaire</strong>, sa membrane alvéolaire s'épaissit. L'équation de Fick devient défavorable. Le flux d'oxygène chute. Le patient est essoufflé même au repos. Quand quelqu'un fait un <strong>œdème pulmonaire</strong>, du liquide s'accumule dans l'interstitium — la « distance » que doit franchir l'O₂ augmente d'un facteur dix. Même équation. Même conclusion : suffocation.</p>
+    </div>
+
+    <h3>3. La même équation pour tout — vraiment tout</h3>
+
+    <p>La loi de Fick ne décrit pas seulement l'oxygène dans les poumons. Elle décrit :</p>
+
+    <ul>
+        <li>L'<strong>absorption intestinale</strong> — comment le glucose passe de ton intestin à ton sang</li>
+        <li>Le <strong>passage transplacentaire</strong> — comment les nutriments vont de la mère au fœtus</li>
+        <li>La <strong>dialyse rénale</strong> — comment les déchets quittent le sang à travers la membrane du dialyseur</li>
+        <li>Le passage de <strong>chaque médicament</strong> à travers chaque membrane de ton corps</li>
+    </ul>
+
+    <p>Une équation, des dizaines de chapitres. Voilà pourquoi en P1, on l'apprend tôt. Et voilà pourquoi ceux qui la voient comme « une formule à apprendre » se ratent. Ceux qui la voient comme « la loi physique qui pilote tout transport passif » la retrouvent partout.</p>
+
+    <h3>4. L'autre loi qui régit ton sang : Poiseuille</h3>
+
+    <p>Fick décrit la diffusion à travers une membrane. Mais l'oxygène, pour arriver à l'alvéole, voyage d'abord dans tes vaisseaux. Et là, c'est une autre loi qui prend le relais : la <strong>loi de Poiseuille</strong>. Elle dit que le débit d'un liquide dans un tube est proportionnel au rayon du tube à la <strong>puissance 4</strong>.</p>
+
+    <div class="formula">
+        <span class="formula-label">Loi de Poiseuille</span>
+        Q = π · ΔP · r⁴ / (8 · η · L)
+    </div>
+
+    <p>Lis bien : <strong>r à la puissance 4</strong>. Diminue le rayon de moitié, et le débit chute d'un facteur 16. C'est pour ça que lorsqu'une artère se rétrécit de 50 % (sténose, athérosclérose), le flux s'effondre. Et c'est pour ça qu'on parle de <strong>résistance vasculaire</strong> — la difficulté qu'a le sang à passer dans un vaisseau. Ton corps règle ta tension artérielle en ouvrant et fermant le diamètre de tes artérioles. Un peu de vasoconstriction, énorme effet sur la pression. Poiseuille en action.</p>
+
+    <div class="ancrage-sensoriel">
+        Laisse tomber une goutte d'encre dans un verre d'eau immobile. Le petit nuage s'étale, s'étire, jusqu'à colorer tout le verre de façon uniforme. Tu n'as rien remué : la matière a migré toute seule de là où elle était concentrée (la goutte) vers là où il n'y en avait pas (l'eau claire), jusqu'à l'équilibre. C'est exactement <strong>la loi de Fick</strong> en direct sous tes yeux — la même qui fait passer l'oxygène de tes alvéoles vers ton sang. Maintenant souffle dans une paille trempée dans un verre d'eau. Plus la paille est fine, plus tu dois pousser pour avoir le même débit de bulles. <strong>Loi de Poiseuille.</strong> Deux gestes, deux lois.
+    </div>
+
+    <div class="quick-q">
+        Devine. Pourquoi l'haleine de quelqu'un qui jeûne sent l'acétone ?
+        <span class="ans">→ Parce que l'acétone est une petite molécule volatile produite par le foie en jeûne. Elle diffuse selon la loi de Fick depuis le sang vers l'air alvéolaire. Tu viens d'expliquer un signe clinique avec une équation.</span>
+    </div>
+
+    <div class="stakes-box">
+        <p>Si tu intègres la loi de Fick avant septembre, tu lis 6 chapitres avec une seule équation en tête. <strong>Diffusion, échanges alvéolaires, absorption intestinale, dialyse, pharmacocinétique, transferts placentaires.</strong> Si tu zappes, tu apprends chaque chapitre séparément, et tu satures.</p>
+    </div>
+
+    <div class="recap-pedagogique">
+        <div class="recap-tronc">
+            <strong>À retenir pour la P1</strong>
+            <ul>
+                <li><strong>Loi de Fick</strong> : J = −D · (dC/dx). Le flux suit le gradient de concentration, sans énergie.</li>
+                <li>Quatre leviers du flux : <strong>surface</strong>, <strong>gradient</strong>, <strong>coefficient de diffusion D</strong> (qui dépend de la taille de la molécule), et <strong>épaisseur de la membrane</strong>.</li>
+                <li><strong>Loi de Poiseuille</strong> : Q ∝ r⁴. Le rayon vasculaire pilote la résistance à la puissance 4 — vasoconstriction = chute massive du débit.</li>
+                <li>Membrane alvéolo-capillaire : <strong>0,5 µm</strong> d'épaisseur, <strong>70 m²</strong> de surface totale.</li>
+            </ul>
+        </div>
+        <div class="recap-anecdote">
+            <strong>Marquant à raconter</strong>
+            <ul>
+                <li>600 millions d'alvéoles dépliées = surface d'un studio parisien. Tout ça pour optimiser un Fick.</li>
+                <li>Diminuer un vaisseau de moitié = débit divisé par 16. La puissance 4 de Poiseuille en chiffre choc.</li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="cliffhanger">L'oxygène traverse une membrane par diffusion. Mais quand un médecin veut voir le sang couler à l'intérieur d'une artère, il n'ouvre pas le ventre. Il envoie un son. Et il écoute le son qui revient. ↓</p>
+
+    <!-- ========================================================== -->
+    <!-- SECTION 5 — DOPPLER ET ULTRASONS                            -->
+    <!-- ========================================================== -->
+    <h2><span class="h2-counter">05</span> Le Doppler : entendre la vitesse de ton sang</h2>
+
+    <p class="punchline">Une voiture de pompiers passe. La sirène devient plus aiguë, puis plus grave. C'est exactement la même physique qui mesure le sang dans ton artère.</p>
+
+    <p>La cardiologie moderne, l'obstétrique, l'écho vasculaire — tout repose sur un principe découvert en <strong>1842</strong> par un Autrichien qui regardait des trains : Christian Doppler. Quand une source sonore se rapproche, la fréquence monte. Quand elle s'éloigne, elle baisse. Et si tu envoies un son sur un objet en mouvement, le son qui revient a une fréquence légèrement décalée. Mesure ce décalage : tu connais la vitesse de l'objet. Sans le toucher.</p>
+
+    <div class="stat-shock">
+        <div class="cell">
+            <div class="num">1 – 15 MHz</div>
+            <div class="label">la fréquence des ultrasons médicaux. Inaudibles pour toi (limite humaine : 20 kHz).</div>
+        </div>
+        <div class="cell">
+            <div class="num">1540 m/s</div>
+            <div class="label">la vitesse du son dans tes tissus mous. Proche de l'eau.</div>
+        </div>
+    </div>
+
+    <h3>1. Une onde, c'est quoi ?</h3>
+
+    <p>Un son, c'est une <strong>onde mécanique de pression</strong> qui se déplace dans un milieu. Imagine une rangée de dominos qui se poussent en série. Ce qui voyage, c'est l'information de poussée, pas les dominos eux-mêmes. Pareil pour le son dans l'air, dans l'eau, dans tes tissus. Une onde a trois caractéristiques principales :</p>
+
+    <ul>
+        <li>Sa <strong>fréquence (f)</strong> — combien d'oscillations par seconde. Mesurée en hertz (Hz).</li>
+        <li>Sa <strong>célérité (c)</strong> — à quelle vitesse elle se propage. Elle dépend du milieu (1540 m/s dans tes tissus mous, 340 m/s dans l'air, 4000 m/s dans l'os).</li>
+        <li>Sa <strong>longueur d'onde (λ)</strong> — la distance entre deux pics consécutifs.</li>
+    </ul>
+
+    <p>Reliées par une équation simplissime :</p>
+
+    <div class="formula">
+        <span class="formula-label">Onde — relation fondamentale</span>
+        c = λ · f
+    </div>
+
+    <h3>2. L'effet Doppler en une équation</h3>
+
+    <p>Maintenant, l'astuce. Quand un faisceau ultrasonore frappe un globule rouge qui s'éloigne, l'écho revient avec une fréquence légèrement plus basse. Quand il frappe un globule qui se rapproche, l'écho revient plus haut. La différence de fréquence — le <strong>décalage Doppler</strong> — est proportionnelle à la vitesse du sang.</p>
+
+    <div class="formula">
+        <span class="formula-label">Effet Doppler médical</span>
+        Δf = 2 · f₀ · v · cos(θ) / c
+    </div>
+
+    <p>f₀ est la fréquence émise. v est la vitesse du sang. θ est l'angle entre le faisceau et le flux. c est la vitesse du son dans les tissus. L'appareil mesure Δf. Le calculateur en déduit v. Et l'écran affiche : <strong>« 120 cm/s »</strong>. La vitesse de ton sang. Sans aucune aiguille.</p>
+
+    <p>Et là, le piège que tout le monde rate au premier QCM. Si tu poses la sonde <strong>perpendiculaire au vaisseau</strong> (θ = 90°), cos(90°) = 0. Donc Δf = 0. Donc l'écran affiche : <strong>« 0 cm/s »</strong>. Le sang coule à toute vitesse, mais ta machine te dit qu'il est à l'arrêt. C'est pour ça que les échographistes inclinent toujours la sonde à 60° — pour avoir un cos(θ) exploitable. <strong>Sonde droite = mesure morte.</strong> Retiens ces trois mots, tu sauves un point en P1.</p>
+
+    <div class="schema-box">
+        <img src="https://medeos-sante.fr/images/physique/pano_phys_effet_doppler.png"
+             alt="L'effet Doppler vasculaire : sonde sur la carotide, onde émise et écho décalé en fréquence"
+             style="max-width: 55%;"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
+        <div class="file-target" style="display:none;">📁 <strong>pano_phys_effet_doppler.png</strong><br>à placer dans : <strong>/public/images/physique/</strong></div>
+        <p class="caption"><strong>L'effet Doppler vasculaire</strong> — une sonde envoie un son, les globules rouges renvoient un écho décalé. Mesurer ce décalage, c'est mesurer la vitesse du sang.</p>
+        <div class="generation-prompt">
+            <strong>Prompt ChatGPT-image :</strong>
+Format: A4 portrait (210×297mm), aspect ratio 1:1.414, high resolution 8K, render quality: ultra-detailed, suitable for medical textbook publication.
+
+Modern educational illustration of medical Doppler ultrasound. Show a cross-section of a carotid artery (horizontal cylinder, pink wall, red blood inside with small visible red blood cells flowing left to right). A handheld ultrasound probe placed on the skin surface above the vessel, tilted at angle θ to the flow direction. Two wave patterns shown: one going from probe to vessel labeled "f₀ émis" (wavelength shown), one returning from vessel to probe labeled "f₀ + Δf reçu" (slightly shorter wavelength). On the right: a screen displaying "v = 120 cm/s". Color code: artery in soft pink, blood in terracotta red (#C2410C), probe in dark gray, waves in purple (#6B46C1). Numbered legend 1-5. Clean cream background. Editorial scientific style, no cartoon, no emoji.
+
+Style reference: scientific editorial illustration inspired by Nature journal, NEJM, or Visible Body anatomical atlas. Clean technical drawing with educational annotations.
+
+Typography: sans-serif font (Inter, Helvetica or similar) for all numbered labels and annotations. Label size approximately 14pt, semi-bold weight. Color of labels: dark anthracite (#1F1F23). Numbers in colored circles matching the element they describe.
+
+Composition: centered subject with generous margins (10% on all sides). Line weight: thin (1-2px) for fine details, medium (3-4px) for main structures. Shadows: soft, subtle (5-10% opacity). No harsh outlines.
+
+Negative prompts (avoid absolutely): no cartoon style, no anime style, no comic book aesthetics, no hand-drawn doodles, no DALL-E watermark, no Adobe Stock watermark, no Getty Images watermark, no text labels written in cursive, no childish illustration, no glowing effects, no neon colors outside specified palette, no fictional creatures, no anatomically inaccurate proportions, no overlapping labels.
+
+Final output: should look like a publication-quality figure from a peer-reviewed medical or scientific journal, ready for use in an educational textbook for first-year medical students.
+        </div>
+        <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+    </div>
+
+    <h3>3. Pourquoi tu n'entends pas les ultrasons (et c'est tant mieux)</h3>
+
+    <p>Ton oreille capte des fréquences entre 20 Hz et 20 000 Hz. Au-dessus, c'est de l'ultrason. La sonde médicale émet à 5 MHz — soit 250 fois plus haut que le seuil. Ton corps ne l'entend pas, mais tes tissus le réfléchissent. Et chaque interface (peau-graisse, graisse-muscle, muscle-os, sang-paroi) renvoie un écho. C'est en cartographiant ces échos que l'échographe reconstruit une image en temps réel. <em class="hl">Pas de rayons X. Pas de radiation. Juste du son.</em></p>
+
+    <div class="clinical-box">
+        <p>En obstétrique, on utilise le Doppler pour mesurer la <strong>vitesse du sang dans l'artère ombilicale du fœtus</strong>. Si elle baisse trop, le bébé manque d'oxygène. La sage-femme décide en temps réel. En cardiologie, le Doppler mesure la vitesse du sang à travers chaque valve : une vitesse anormale signe une sténose ou une fuite. En neurologie, le Doppler transcrânien mesure le sang dans les artères du cerveau — outil de surveillance des AVC.</p>
+    </div>
+
+    <h3>4. Et l'écho normale, sans Doppler ?</h3>
+
+    <p>L'échographie classique, elle, repose sur une idée toute simple : <strong>l'écho</strong>. La sonde envoie une onde dans ton corps, et écoute ce qui revient. À chaque frontière entre deux tissus, une partie de l'onde rebondit — et plus les deux tissus sont différents, plus le rebond est fort. Un os renvoie presque tout : il apparaît blanc à l'écran. C'est en assemblant des milliers de ces échos que la machine dessine l'image.</p>
+
+    <p>Une frontière renvoie tellement l'onde qu'elle bloque tout : celle entre l'air et ta peau. C'est pour ça qu'on étale du <strong>gel</strong> avant un examen — il chasse le mince film d'air sous la sonde, sans quoi l'image serait noire.</p>
+
+    <p>Reste un dernier arbitrage, et tout échographiste vit avec. Plus une onde plonge profond, plus elle s'épuise en route. Du coup il faut choisir : une sonde aiguë voit <em>net</em> mais ne va pas loin (parfaite pour la thyroïde, juste sous la peau) ; une sonde plus grave plonge <em>profond</em> mais voit plus flou (il en faut une pour atteindre le fond de l'abdomen). Voir fin, ou voir loin — jamais les deux à la fois.</p>
+
+    <h3>5. Les autres ondes : du visible aux rayons X</h3>
+
+    <p>Le son est une onde mécanique — il lui faut un milieu. La lumière, elle, est une onde <strong>électromagnétique</strong> : elle voyage dans le vide. Même famille, énergies croissantes : <strong>radio</strong> (la voiture) → <strong>micro-ondes</strong> (la cuisine, l'IRM) → <strong>infrarouge</strong> (la thermographie) → <strong>visible</strong> (le fond d'œil) → <strong>ultraviolets</strong> (les coups de soleil, la stérilisation) → <strong>rayons X</strong> (la radio du genou) → <strong>rayons γ</strong> (la radiothérapie). Chaque tranche du spectre ouvre une porte d'imagerie ou de traitement.</p>
+
+
+    <div class="stakes-box">
+        <p>Si tu maîtrises l'onde, le Doppler, et l'impédance, tu débloques l'échographie médicale, l'écho cardiaque, l'écho fœtale et l'écho vasculaire — c'est <strong>l'examen le plus pratiqué de tout l'hôpital</strong>. Si tu zappes, tu vois ces 4 examens comme 4 chapitres séparés. Trois fois plus à apprendre.</p>
+    </div>
+
+    <div class="recap-pedagogique">
+        <div class="recap-tronc">
+            <strong>À retenir pour la P1</strong>
+            <ul>
+                <li><strong>Relation fondamentale</strong> : c = λ · f. Trois grandeurs reliées par une multiplication.</li>
+                <li><strong>Effet Doppler</strong> : Δf = 2 · f₀ · v · cos(θ) / c. Le décalage de fréquence donne la vitesse du mobile.</li>
+                <li><strong>Atténuation</strong> : compromis fréquence ↗ résolution ↗ pénétration ↘. Choix de la sonde adapté à la cible.</li>
+                <li>Spectre électromagnétique : <strong>radio → micro-ondes → IR → visible → UV → X → γ</strong>. Énergie croissante.</li>
+            </ul>
+        </div>
+        <div class="recap-anecdote">
+            <strong>Marquant à raconter</strong>
+            <ul>
+                <li>1842 — Christian Doppler regarde des trains et invente l'équation qui mesure aujourd'hui le sang d'un fœtus.</li>
+                <li>Ondes ultrasonores à 5 MHz = 250 fois plus aiguës que ton seuil d'audition.</li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="cliffhanger">Tu as vu cinq idées : l'eau, Donnan, le pH, Fick, le Doppler. Cinq équations. Cinq logiques. Mais il reste une question : que se passe-t-il quand le tampon bicarbonate craque ? C'est là que les vrais détectives entrent en scène. ↓</p>
+
+    <!-- ========================================================== -->
+    <!-- SECTION 6 — LE TAMPON BICARBONATE                           -->
+    <!-- ========================================================== -->
+    <h2><span class="h2-counter">06</span> Quand le tampon est dépassé : trou anionique et respiration de Kussmaul</h2>
+
+    <p class="punchline">Ton sang est tamponné. Très bien. Mais que se passe-t-il quand le tampon craque ?</p>
+
+    <p>Imagine. Un ado de 17 ans entre aux urgences. Il respire vite, profond, presque en gémissant. Son haleine sent la pomme pourrie. Le médecin sait, en 4 secondes, qu'il a une diabétique en acidocétose. Comment ? Parce que le tampon bicarbonate vient de craquer. Et ce craquement laisse une signature dans une soustraction à trois variables — le <strong>trou anionique</strong>.</p>
+
+    <h3>1. Le trou anionique — le détective des acidoses</h3>
+
+    <p>Un outil que tu croiseras très tôt en P1 : le <strong>trou anionique</strong> (ou « anion gap »). Idée simple. Dans ton plasma, la somme des charges positives doit égaler la somme des charges négatives. Tu mesures facilement Na⁺, Cl⁻, HCO₃⁻ — mais il reste toujours un « trou » de charges négatives non mesurées (protéines, phosphates, sulfates).</p>
+
+    <div class="formula">
+        <span class="formula-label">Trou anionique</span>
+        TA = [Na⁺] − ([Cl⁻] + [HCO₃⁻]) ≈ 12 mmol/L
+    </div>
+
+    <p>Si une acidose métabolique apparaît avec un trou anionique <strong>augmenté</strong>, c'est qu'un acide « caché » s'est accumulé : lactate (acidose lactique), corps cétoniques (acidocétose), urée (insuffisance rénale). Si le trou anionique reste <strong>normal</strong>, c'est juste une perte de bicarbonate (diarrhée). Une soustraction. Et tu sépares cinq diagnostics.</p>
+
+    <div class="clinical-box">
+        <p>Quand un diabétique fait une <strong>acidocétose</strong>, son corps produit massivement des corps cétoniques acides. Le tampon bicarbonate est dépassé. Le patient respire vite et profond — la fameuse <strong>respiration de Kussmaul</strong>. Son corps essaie de souffler l'acide par les poumons. Sans traitement, le pH chute sous 7, et le cœur s'arrête. Une simple équation à trois lignes décrit toute la séquence — depuis le glucose qui manque jusqu'au coma.</p>
+    </div>
+
+    <div class="quick-q">
+        Pourquoi un diabétique en acidocétose respire vite et profond (respiration de Kussmaul) ?
+        <span class="ans">→ Son sang devient acide à cause des corps cétoniques. Pour compenser, ses poumons hyperventilent pour souffler le CO₂ (un acide volatil). Moins de CO₂ = pH qui remonte. Le corps utilise ses poumons comme tampon d'urgence.</span>
+    </div>
+
+    <div class="stakes-box">
+        <p>Comprendre le tampon bicarbonate, c'est comprendre l'<strong>acidocétose, l'acidose lactique, l'acidose respiratoire, l'alcalose métabolique, et l'effort physique extrême</strong>. Cinq tableaux cliniques. Une équation. Le meilleur retour sur investissement de toute la biophysique.</p>
+    </div>
+
+    <div class="recap-pedagogique">
+        <div class="recap-tronc">
+            <strong>À retenir pour la P1</strong>
+            <ul>
+                <li><strong>Trou anionique</strong> ≈ 12 mmol/L. Augmenté → acide caché (lactate, cétones, urée). Normal → perte de HCO₃⁻ (diarrhée).</li>
+                <li>L'acidose métabolique provoque une <strong>hyperventilation compensatrice</strong> (Kussmaul) — c'est le corps qui souffle son acide par les poumons.</li>
+                <li>Cinq tableaux à distinguer : acidocétose, acidose lactique, acidose respiratoire, alcalose métabolique, et compensation à l'effort.</li>
+            </ul>
+        </div>
+        <div class="recap-anecdote">
+            <strong>Marquant à raconter</strong>
+            <ul>
+                <li>Une soustraction à trois variables (Na⁺ − Cl⁻ − HCO₃⁻), et tu sépares cinq diagnostics d'acidose.</li>
+                <li>La respiration de Kussmaul du diabétique en acidocétose : son corps souffle l'acide qu'il n'arrive plus à tamponner.</li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="cliffhanger">Tu as vu six pièces. Six équations. Six manières de regarder ton corps comme un système qui se régule sans que tu y penses. ↓</p>
+
+    <!-- ========================================================== -->
+    <!-- CONCLUSION + ANECDOTE #3 + CTA                              -->
+    <!-- ========================================================== -->
+    <h2><span class="h2-counter">07</span> Ce qu'il se passe maintenant</h2>
+
+    <p>Tu viens de faire le tour. Tu n'as pas appris la P1. Mais tu as changé de regard. Pour la première fois, peut-être, tu as vu ton corps comme une <strong>machine pilotée par cinq équations</strong> — pas comme une suite de symboles à apprendre par cœur.</p>
+
+    <p>Tu as une carte. Six idées, six logiques :</p>
+
+    <ul>
+        <li>L'<strong>eau</strong> — un dipôle qui dissout tout et arbitre la pression dans 3 compartiments</li>
+        <li><strong>Donnan + Starling</strong> — pourquoi tes tissus ne se noient pas malgré 20 L filtrés par jour</li>
+        <li>Le <strong>pH</strong> et Henderson-Hasselbalch — un thermostat qui tient ton sang à 7,40 ± 0,05</li>
+        <li>La loi de <strong>Fick</strong> — comment l'oxygène traverse 0,5 µm sans pompe, et la même loi pour les médicaments</li>
+        <li>Le <strong>Doppler</strong> — entendre la vitesse du sang sans toucher ni couper</li>
+        <li>Le <strong>bicarbonate</strong> — l'amortisseur qui te laisse courir, pleurer, parler sans devenir acide</li>
+    </ul>
+
+    <p>Voilà ce que tu as gagné en faisant ce tour. Ce qu'il te reste : descendre dans le détail. Refaire les schémas de mémoire le soir. Buter sur une équation pendant 40 minutes. Dessiner sur une feuille A4 jusqu'à ce que la formule devienne une machine. <strong>Ça, c'est le vrai travail.</strong> Pas glamour. Mais c'est lui qui transforme une équation en réflexe.</p>
+
+    <div class="lucas-anecdote">
+        <em>Tous ceux qui finissent dans le haut du classement ont commencé là où tu es : devant une matière qui fait peur, sans méthode encore. Ce qui les distingue, ce n'est pas l'intelligence — c'est le moment où ils arrêtent d'apprendre des équations pour commencer à voir des machines : des thermostats, des pompes, des filtres. Si tu lis cette page jusqu'ici, tu as déjà ce qu'il faut pour faire le même chemin.</em>
+    </div>
+
+    <p class="punchline">Voilà. Tu as fait le tour.</p>
+
+    <p>pH 7,40, maintenu avec une précision d'horloger. 60 % de toi qui est de l'eau, répartie en trois compartiments. 0,5 µm d'épaisseur entre l'air que tu respires et le sang qui te traverse. Et cinq équations qui pilotent ces trois miracles, à chaque seconde, sans rien te demander.</p>
+
+    <p>La biophysique en P1, c'est ça : apprendre à voir ce qui est déjà là. Pas mémoriser une liste de formules. Comprendre une logique — et la retrouver dans chaque équation, chaque schéma, chaque cas clinique. Cinq lois pour des dizaines de chapitres.</p>
+
+    <p>Si tu as commencé à regarder ton verre d'eau, ton souffle, ton pouls différemment en lisant ce panorama, tu as déjà fait le déclic le plus important. Le reste, ce sont des heures à mettre en face.</p>
+
+    <p class="punchline">Aucune place n'est garantie. Mais une chose est sûre : en septembre, tu ne seras pas celui qu'on jette dans la piscine sans savoir nager.</p>
+
+    <section class="mini-qcm" id="mini-qcm-final">
+        <h2>Mini-QCM — Teste-toi en 5 questions</h2>
+        <p class="mini-qcm-intro">5 questions sur ce que tu viens de lire. Réponds avant de cliquer. Pas de stress — c'est juste pour ancrer.</p>
+
+        <div class="mini-qcm-question">
+            <p class="mini-qcm-num">Question 1 / 5</p>
+            <p class="mini-qcm-enonce">Comment se répartit l'eau corporelle entre les trois compartiments ?</p>
+            <ul class="mini-qcm-choix">
+                <li data-correct>A. 2/3 intracellulaire, 1/3 extracellulaire, dont 1/4 plasma et 3/4 interstitiel</li>
+                <li>B. 1/2 intracellulaire, 1/2 extracellulaire, dont 1/2 plasma</li>
+                <li>C. 1/3 intracellulaire, 2/3 extracellulaire, dont 3/4 plasma et 1/4 interstitiel</li>
+                <li>D. 3/4 intracellulaire, 1/4 extracellulaire, à parts égales plasma et interstitiel</li>
+                <li>E. La répartition est égale (1/3 chacun) entre intracellulaire, interstitiel et plasma</li>
+            </ul>
+            <details class="mini-qcm-correction">
+                <summary>Voir la réponse</summary>
+                <p><strong>Réponse : A</strong> — La règle 2/3 — 1/3 — 1/4 : 2/3 de l'eau corporelle est intracellulaire (~28 L), 1/3 extracellulaire, et dans l'extracellulaire, 3/4 est interstitiel (~11 L) et 1/4 est plasma (~3 L).</p>
+                <p class="mini-qcm-source"><em>Où retrouver ça dans le cours : section 01, « Les trois compartiments — et la frontière qui décide tout »</em></p>
+            </details>
+        </div>
+
+        <div class="mini-qcm-question">
+            <p class="mini-qcm-num">Question 2 / 5</p>
+            <p class="mini-qcm-enonce">Pourquoi l'effet Donnan fait-il retenir plus de Na⁺ côté plasma qu'en interstitiel ?</p>
+            <ul class="mini-qcm-choix">
+                <li>A. Parce que les pompes Na⁺/K⁺ poussent activement le sodium dans le plasma</li>
+                <li>B. Parce que le plasma est plus chaud que l'interstitiel, ce qui attire les ions positifs</li>
+                <li data-correct>C. Parce que les protéines plasmatiques chargées négativement sont piégées d'un côté, et la neutralité électrique impose un surplus de cations pour compenser</li>
+                <li>D. Parce que la paroi capillaire bloque activement la sortie du sodium</li>
+                <li>E. Parce que le sodium est plus lourd que le chlorure et sédimente dans le plasma</li>
+            </ul>
+            <details class="mini-qcm-correction">
+                <summary>Voir la réponse</summary>
+                <p><strong>Réponse : C</strong> — Les protéines plasmatiques (albumine en tête) sont trop grosses pour franchir la paroi capillaire. Elles portent une charge nette négative au pH du sang. Pour maintenir la neutralité électrique, le côté plasma retient plus de Na⁺ et moins de Cl⁻. Aucune pompe, juste de la physique.</p>
+                <p class="mini-qcm-source"><em>Où retrouver ça dans le cours : section 02, « Donnan & pression oncotique »</em></p>
+            </details>
+        </div>
+
+        <div class="mini-qcm-question">
+            <p class="mini-qcm-num">Question 3 / 5</p>
+            <p class="mini-qcm-enonce">Quels sont les quatre leviers du flux de diffusion selon la loi de Fick ?</p>
+            <ul class="mini-qcm-choix">
+                <li>A. Pression, température, viscosité, volume</li>
+                <li>B. Débit, pression osmotique, taille des pores, pH</li>
+                <li>C. ATP disponible, nombre de pompes, gradient ionique, température</li>
+                <li data-correct>D. Surface, gradient de concentration, coefficient de diffusion D, épaisseur de la membrane</li>
+                <li>E. Masse molaire, charge de l'ion, potentiel de membrane, viscosité du sang</li>
+            </ul>
+            <details class="mini-qcm-correction">
+                <summary>Voir la réponse</summary>
+                <p><strong>Réponse : D</strong> — Le flux dépend de la surface de contact, du gradient de concentration, du coefficient D (lié à la taille de la molécule), et de l'épaisseur de la membrane. Aucune énergie : c'est une diffusion passive. C'est ce qui explique 70 m² de surface alvéolaire pour 0,5 µm d'épaisseur.</p>
+                <p class="mini-qcm-source"><em>Où retrouver ça dans le cours : section 04, « La loi de Fick » + récap « À retenir pour la P1 »</em></p>
+            </details>
+        </div>
+
+        <div class="mini-qcm-question">
+            <p class="mini-qcm-num">Question 4 / 5</p>
+            <p class="mini-qcm-enonce">Selon Henderson-Hasselbalch (pH = pKa + log [HCO₃⁻]/[H₂CO₃]), si la concentration en HCO₃⁻ augmente alors que la PCO₂ reste constante, dans quel sens part le pH ?</p>
+            <ul class="mini-qcm-choix">
+                <li>A. Le pH baisse (acidose)</li>
+                <li data-correct>B. Le pH monte (alcalose)</li>
+                <li>C. Le pH ne bouge pas, car le tampon compense exactement</li>
+                <li>D. Le pH oscille puis revient à 7,40 immédiatement</li>
+                <li>E. Le pH baisse d'abord, puis monte au-dessus de 8</li>
+            </ul>
+            <details class="mini-qcm-correction">
+                <summary>Voir la réponse</summary>
+                <p><strong>Réponse : B</strong> — HCO₃⁻ est au numérateur du rapport. S'il augmente avec un dénominateur constant (H₂CO₃ fixe puisque PCO₂ ne bouge pas), le log du rapport augmente, et donc le pH monte. C'est exactement le mécanisme d'une alcalose métabolique.</p>
+                <p class="mini-qcm-source"><em>Où retrouver ça dans le cours : section 03, « Le pH du sang » + récap « À retenir pour la P1 »</em></p>
+            </details>
+        </div>
+
+        <div class="mini-qcm-question">
+            <p class="mini-qcm-num">Question 5 / 5</p>
+            <p class="mini-qcm-enonce">Tu poses la sonde Doppler perpendiculairement au vaisseau (θ = 90°). Que mesure l'appareil, et pourquoi ?</p>
+            <ul class="mini-qcm-choix">
+                <li>A. La vitesse maximale du sang, car la sonde est alignée avec le flux</li>
+                <li>B. La vitesse moyenne du sang divisée par deux</li>
+                <li>C. Une vitesse négative, car les globules s'éloignent du capteur</li>
+                <li>D. La vitesse réelle du sang, l'angle n'a aucune influence</li>
+                <li data-correct>E. Une vitesse nulle</li>
+            </ul>
+            <details class="mini-qcm-correction">
+                <summary>Voir la réponse</summary>
+                <p><strong>Réponse : E</strong> — Dans Δf = 2 · f₀ · v · cos(θ) / c, si θ = 90° alors cos(θ) = 0, donc Δf = 0. L'écran affiche 0 cm/s alors que le sang circule à plein débit. C'est pour ça que les échographistes inclinent toujours la sonde à environ 60°.</p>
+                <p class="mini-qcm-source"><em>Où retrouver ça dans le cours : section 05, « L'effet Doppler en une équation »</em></p>
+            </details>
+        </div>
+
+        <div class="mini-qcm-conclusion">
+            <p>Tu as répondu juste à 4-5 questions ? Tu as compris les bases. Tu as répondu juste à 2-3 ? Relis les sections qui te manquent — c'est exactement à ça que sert un panorama.</p>
+        </div>
+    </section>
+
+    <!-- ========================================================== -->
+    <!-- PONT VERS L'OFFRE — doux, après toute la valeur (post-QCM) -->
+    <!-- ========================================================== -->
+    <div style="margin:40px 0 8px;padding:30px 26px;border-radius:18px;background:linear-gradient(150deg,#F1ECFA,#FAF6F0);border:1px solid #e2d6f5;">
+        <p style="font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#6B46C1;margin:0 0 12px;">Et la suite ?</p>
+        <p style="font-size:16px;line-height:1.7;color:#2c3e50;margin:0 0 14px;">Ce panorama, c'est la vue d'ensemble. Descendre dans le détail, chapitre par chapitre, avec des cours qui font comprendre, des QCM corrigés au format du concours et quelqu'un qui te répond quand tu bloques : c'est ce qu'on a construit dans <strong>Medi&nbsp;Pro</strong>. On ne te demande rien — si la curiosité te prend, jette juste un œil.</p>
+        <a href="https://medeos-sante.fr/packs/medi-pro" target="_top" onclick="try{window.parent.postMessage({medeosClick:'cta_medipro_iframe'},location.origin)}catch(e){}" style="display:inline-flex;align-items:center;gap:7px;color:#fff;font-weight:600;font-size:15px;text-decoration:none;padding:12px 24px;border-radius:999px;background:linear-gradient(150deg,#4C2A85,#6B46C1 75%);box-shadow:0 10px 26px rgba(76,42,133,.26);">Découvrir Medi&nbsp;Pro →</a>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- FOOTER                                                     -->
+    <!-- ========================================================== -->
+    <footer class="chapter-footer">
+        <p>Medeos · Panorama de Physique (biophysique) en P1</p>
+        <p>© Medeos — medeos-sante.fr</p>
+    </footer>
+
+</div>
+
+<!-- ============================================================= -->
+<!-- BARRE DE ZOOM FLOTTANTE (− / % / +)                           -->
+<!-- ============================================================= -->
+<style>
+    #medeos-zoombar {
+        position: fixed; bottom: 18px; right: 18px; z-index: 9999;
+        display: flex; align-items: center; gap: 2px;
+        background: rgba(255,255,255,0.96);
+        border: 1px solid #E8E1D5; border-radius: 999px;
+        padding: 4px; box-shadow: 0 4px 14px rgba(31,31,46,0.12);
+        backdrop-filter: blur(6px);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #medeos-zoombar button {
+        border: 0; background: transparent; cursor: pointer;
+        color: #5C5C70; font-weight: 700; line-height: 1;
+        border-radius: 999px; transition: background .15s, color .15s;
+    }
+    #medeos-zoombar .zb-step { width: 30px; height: 30px; font-size: 18px; display: flex; align-items: center; justify-content: center; }
+    #medeos-zoombar .zb-level { min-width: 48px; height: 30px; font-size: 13px; font-weight: 600; padding: 0 6px; font-variant-numeric: tabular-nums; }
+    #medeos-zoombar button:hover { background: #F4EFFB; color: #6B46C1; }
+    #medeos-zoombar button:disabled { opacity: .3; cursor: default; background: transparent; }
+    @media print { #medeos-zoombar { display: none !important; } }
+    @media (max-width: 767px) { #medeos-zoombar { display: none !important; } }
+</style>
+<div id="medeos-zoombar" aria-label="Zoom du cours">
+    <button type="button" class="zb-step" id="zb-out" title="Réduire" aria-label="Réduire">−</button>
+    <button type="button" class="zb-level" id="zb-level" title="Revenir à 100 %" aria-label="Réinitialiser le zoom">100%</button>
+    <button type="button" class="zb-step" id="zb-in" title="Agrandir" aria-label="Agrandir">+</button>
+</div>
+
+<!-- Lightbox : clic sur un schéma pour l'agrandir, filigrane medeos-sante.fr centré -->
+<style>
+    #medeos-lightbox-wrap { position: relative; display: inline-flex; max-width: 92%; max-height: 92%; }
+    #medeos-lightbox-img { max-width: 100%; max-height: 88vh; border-radius: 10px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); display: block; }
+    #medeos-lightbox-wm { position: absolute; inset: 0; pointer-events: none; user-select: none; border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+    #medeos-lightbox-wm::before {
+        content: 'medeos-sante.fr';
+        font-family: 'Inter', Arial, sans-serif; font-size: clamp(12px, 4.5vw, 38px); font-weight: 700;
+        letter-spacing: clamp(1px, 1vw, 8px); text-transform: uppercase; color: rgba(120,120,120,0.06); white-space: nowrap;
+    }
+</style>
+<div id="medeos-lightbox" onclick="closeLightbox()" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(26,26,46,0.88);align-items:center;justify-content:center;cursor:zoom-out;padding:30px;">
+    <div id="medeos-lightbox-wrap">
+        <img id="medeos-lightbox-img" src="" alt="">
+        <div id="medeos-lightbox-wm" aria-hidden="true"></div>
+    </div>
+</div>
+<script>
+    function openLightbox(src) {
+        var lb = document.getElementById('medeos-lightbox');
+        document.getElementById('medeos-lightbox-img').src = src;
+        lb.style.display = 'flex';
+    }
+    function closeLightbox() { document.getElementById('medeos-lightbox').style.display = 'none'; }
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLightbox(); });
+    function schemaMissing(img) {
+        img.style.display = 'none';
+        var box = img.closest('.schema-box');
+        if (box) box.classList.add('img-missing');
+        var target = img.nextElementSibling;
+        if (target && target.classList.contains('file-target')) target.style.display = 'block';
+    }
+</script>
+<script>
+    // Zoom : desktop 100 % + barre −/%/+. Mobile : 100 % (contenu optimisé), barre masquée.
+    (function () {
+        var ZMIN = 60, ZMAX = 160, STEP = 5, zoom = 100;
+        var out = document.getElementById('zb-out');
+        var inc = document.getElementById('zb-in');
+        var lvl = document.getElementById('zb-level');
+        function apply() {
+            document.body.style.zoom = (zoom / 100);
+            if (lvl) lvl.textContent = zoom + '%';
+            if (out) out.disabled = zoom <= ZMIN;
+            if (inc) inc.disabled = zoom >= ZMAX;
+        }
+        if (out) out.addEventListener('click', function () { zoom = Math.max(ZMIN, zoom - STEP); apply(); });
+        if (inc) inc.addEventListener('click', function () { zoom = Math.min(ZMAX, zoom + STEP); apply(); });
+        if (lvl) lvl.addEventListener('click', function () { zoom = 100; apply(); });
+        apply();
+    })();
+</script>
+<script>
+    // Mini-QCM interactif : clic sur un choix → bonne réponse en vert, mauvais en rouge, corrigé ouvert.
+    (function () {
+        var lists = document.querySelectorAll('.mini-qcm-choix');
+        lists.forEach(function (list) {
+            var items = list.querySelectorAll('li');
+            items.forEach(function (item) {
+                item.addEventListener('click', function () {
+                    if (list.classList.contains('answered')) return;
+                    list.classList.add('answered');
+                    items.forEach(function (li) { if (li.hasAttribute('data-correct')) li.classList.add('is-correct'); });
+                    if (!item.hasAttribute('data-correct')) item.classList.add('is-wrong');
+                    var question = list.closest('.mini-qcm-question');
+                    var details = question && question.querySelector('.mini-qcm-correction');
+                    if (details) details.open = true;
+                });
+            });
+        });
+    })();
+</script>
+<!-- ============ LECTURE PROGRESSIVE (révélation par paliers) ============ -->
+<script>
+(function(){
+    var container = document.querySelector('.page-container');
+    if(!container) return;
+    var allChildren = Array.prototype.slice.call(container.children);
+    var sectionStarts = [];
+    allChildren.forEach(function(el, i){
+        if(el.tagName === 'H2' && el.querySelector('.h2-counter')) sectionStarts.push(i);
+    });
+    if(sectionStarts.length < 4) return;
+    function secNum(i){
+        var c = allChildren[i].querySelector('.h2-counter');
+        return c ? parseInt(c.textContent, 10) : 0;
+    }
+    var breakAtSection = {2:true, 3:true, 4:true, 5:true, 6:true};
+    var steps = [];
+    var current = [];
+    var firstH2 = sectionStarts[0];
+    for(var k=0; k<firstH2; k++){ current.push(allChildren[k]); }
+    for(var s=0; s<sectionStarts.length; s++){
+        var startIdx = sectionStarts[s];
+        var endIdx = (s+1 < sectionStarts.length) ? sectionStarts[s+1] : allChildren.length;
+        var num = secNum(startIdx);
+        if(breakAtSection[num]){ steps.push(current); current = []; }
+        for(var n=startIdx; n<endIdx; n++){ current.push(allChildren[n]); }
+    }
+    if(current.length) steps.push(current);
+    if(steps.length < 2) return;
+    for(var p=1; p<steps.length; p++){
+        steps[p].forEach(function(node){ node.classList.add('step-locked'); });
+    }
+    var hints = ['On continue ?', 'On poursuit le tour.', 'Prochain arrêt.', 'On continue.', 'Dernière partie.'];
+
+    // Phrases de conversion sous « Continuer ». Les DEUX offres sont proposées à
+    // chaque fois (retour Lucas 04/08) : les Stages Vacances valent 388 € contre
+    // 147 € pour Medi Pro, ils ne peuvent pas apparaître une fois sur trois.
+    var RAPPELS_STAGES = {
+      3: 'Donnan, le pH sanguin : deux chapitres, et déjà beaucoup de calculs. La physique de première année est dense et très calculatoire, du même acabit. <b>Medi&nbsp;Pro</b> te les fait découvrir juste avant la rentrée, au calme&nbsp;; les <b>Stages Vacances</b> te laissent l\'année pour les digérer.',
+      5: 'Effet Doppler, loi de Fick, équilibres ioniques : ces chapitres surprennent presque tout le monde en septembre, parce que personne n\'arrive préparé dessus. C\'est la matière où l\'avance se voit le plus vite — que tu la prennes avec <b>Medi&nbsp;Pro</b> ou avec les <b>Stages Vacances</b>.'
+    };
+    function rappelStages(n){
+      var t = RAPPELS_STAGES[n];
+      if(!t) return '';
+      // Les DEUX offres à chaque fois : le lecteur se reconnaît lui-même.
+      return '<div class="continue-cta"><div class="cta-mot">' + t + '</div>' +
+             '<div class="cta-duo">' +
+             '<a href="https://medeos-sante.fr/packs/medi-pro" target="_top" data-cta="medipro">Medi&nbsp;Pro — stage d\'été →</a>' +
+             '<a href="https://medeos-sante.fr/packs/stages-vacances" target="_top" class="sv" data-cta="stages">Stages Vacances →</a>' +
+             '</div></div>';
+    }
+
+    function addContinueButton(stepIndex){
+        var nextIndex = stepIndex + 1;
+        if(nextIndex >= steps.length) return;
+        var currentNodes = steps[stepIndex];
+        var lastNode = currentNodes[currentNodes.length - 1];
+        var holder = document.createElement('div');
+        holder.className = 'continue-wrap';
+        var hint = hints[Math.min(nextIndex-1, hints.length-1)] || '';
+        holder.innerHTML = (hint ? ('<div class="continue-hint">'+hint+'</div>') : '') +
+            '<button type="button" class="btn-continue">Continuer <span class="arrow">↓</span></button>';
+        if(lastNode.nextSibling) lastNode.parentNode.insertBefore(holder, lastNode.nextSibling);
+        else lastNode.parentNode.appendChild(holder);
+
+        // Le bloc de conversion vit HORS du holder : celui-ci est détruit au clic,
+        // la porte vers les stages doit rester visible dans la page.
+        var htmlRappel = rappelStages(nextIndex);
+        if (htmlRappel) {
+            var blocRappel = document.createElement('div');
+            blocRappel.innerHTML = htmlRappel;
+            holder.parentNode.insertBefore(blocRappel, holder.nextSibling);
+            blocRappel.querySelectorAll('a').forEach(function(a){
+                a.addEventListener('click', function(){
+                    try { window.parent.postMessage({ medeosClick: a.dataset.cta === 'stages' ? 'cta_stages_vacances' : 'cta_medipro_iframe' }, location.origin); } catch(e) {}
+                });
+            });
+        }
+        holder.querySelector('.btn-continue').addEventListener('click', function(){
+            steps[nextIndex].forEach(function(node){
+                node.classList.remove('step-locked');
+                node.classList.add('step-reveal');
+            });
+            holder.classList.add('gone');
+            setTimeout(function(){ if(holder.parentNode) holder.parentNode.removeChild(holder); }, 420);
+            addContinueButton(nextIndex);
+        });
+    }
+    addContinueButton(0);
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,2215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <!-- medeos-seo -->
+    <meta name="description" content="La découverte de l'anatomie en première année de santé : os, cœur, poumons, cerveau, sens. Comprendre le corps comme une machine, pas une liste de mots latins.">
+    <link rel="canonical" href="https://medeos-sante.fr/ressources/panorama-p1/anatomie.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Medeos">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Anatomie en P1 (PASS / LAS) — le panorama Medeos">
+    <meta property="og:description" content="La découverte de l'anatomie en première année de santé : os, cœur, poumons, cerveau, sens. Comprendre le corps comme une machine, pas une liste de mots latins.">
+    <meta property="og:url" content="https://medeos-sante.fr/ressources/panorama-p1/anatomie.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anatomie en P1 (PASS / LAS) — le panorama Medeos</title>
+    <style>
+        /* ========== RESET & BASE ========== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 10.5pt;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #f6f8fb;
+            padding: 30px;
+            max-width: 210mm;
+            margin: 0 auto;
+        }
+
+        /* ========== CONTENEUR PRINCIPAL ========== */
+        .page-container { position: relative; background: transparent; padding: 0; }
+
+        /* ========== FILIGRANE MEDEOS ========== */
+        .page-container::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: none;
+            background-repeat: repeat;
+            pointer-events: none;
+            user-select: none;
+            z-index: 0;
+        }
+        .page-container > * { position: relative; z-index: 1; }
+
+        /* ========== HOOK HEADER (refondu) ========== */
+        .hook-header {
+            background: #FAF6F0;
+            border-radius: 14px;
+            padding: 60px 50px 50px 50px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 18px rgba(76, 42, 133, 0.08);
+            border: 1px solid #efe7d8;
+        }
+        .hook-header .brand-tag {
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #6B46C1;
+            font-weight: 600;
+            opacity: 0.85;
+            margin-bottom: 22px;
+        }
+        .hook-header .course-title {
+            font-size: 40px;
+            line-height: 1.05;
+            font-weight: 800;
+            color: #4C2A85;
+            letter-spacing: -1px;
+            margin: 0 0 6px 0;
+        }
+        .hook-header .course-subtitle {
+            font-size: 16px;
+            line-height: 1.4;
+            font-weight: 500;
+            color: #6b6275;
+            margin: 0 0 32px 0;
+        }
+        .hook-header .punch {
+            font-size: 34px;
+            line-height: 1.15;
+            font-weight: 800;
+            color: #1A1A2E;
+            letter-spacing: -0.8px;
+            margin: 0;
+        }
+        .hook-header .punch span.accent { color: #6B46C1; }
+        .hook-header .punch + .punch { margin-top: 11px; }
+        .hook-header .tilt {
+            font-size: 20px;
+            line-height: 1.45;
+            font-weight: 500;
+            color: #1F1F23;
+            margin-top: 34px;
+            max-width: 720px;
+        }
+        .hook-header .lucas-block {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #4C2A85;
+            margin-top: 30px;
+            padding: 22px 26px;
+            background: rgba(107, 70, 193, 0.06);
+            border-left: 4px solid #6B46C1;
+            border-radius: 0 10px 10px 0;
+            max-width: 720px;
+        }
+        .hook-header .lucas-block strong { color: #4C2A85; }
+        .hook-header .separator {
+            margin-top: 44px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #c9b8e6, transparent);
+        }
+
+        /* ========== ENCADRÉ INTRODUCTION ========== */
+        .intro-section {
+            background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+            border-left: 5px solid #6B46C1;
+            padding: 28px 32px;
+            margin: 40px 0;
+            border-radius: 0 12px 12px 0;
+            box-shadow: 0 2px 10px rgba(107, 70, 193, 0.1);
+        }
+        .intro-section p { margin-bottom: 14px; }
+        .intro-section .loop-meta {
+            background: #fff;
+            border: 2px dashed #6B46C1;
+            border-radius: 10px;
+            padding: 18px 22px;
+            margin: 18px 0;
+            font-weight: 500;
+            color: #4C2A85;
+        }
+
+        /* ========== TITRES ========== */
+        h2 {
+            font-size: 18pt;
+            font-weight: 800;
+            color: #1A1A2E;
+            margin: 55px 0 22px 0;
+            padding-bottom: 12px;
+            border-bottom: 3px solid #6B46C1;
+            scroll-margin-top: 20px;
+            letter-spacing: -0.3px;
+        }
+        h2 .h2-counter {
+            display: inline-block;
+            font-size: 11pt;
+            font-weight: 600;
+            color: #6B46C1;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-right: 14px;
+            opacity: 0.9;
+        }
+        h3 {
+            font-size: 13pt;
+            font-weight: 700;
+            color: #34495e;
+            margin: 32px 0 16px 0;
+            padding-left: 16px;
+            border-left: 4px solid #6B46C1;
+        }
+        h4 {
+            font-size: 11.5pt;
+            font-weight: 600;
+            color: #6B46C1;
+            margin: 24px 0 12px 0;
+        }
+
+        /* ========== PARAGRAPHES ========== */
+        p {
+            text-align: left;
+            margin-bottom: 15px;
+            line-height: 1.85;
+            color: #2c3e50;
+        }
+        p.punchline {
+            font-size: 13pt;
+            font-weight: 600;
+            color: #1A1A2E;
+            margin: 22px 0;
+            line-height: 1.5;
+        }
+        p.cliffhanger {
+            font-size: 12pt;
+            font-weight: 600;
+            color: #4C2A85;
+            margin: 35px 0 10px 0;
+            padding: 18px 22px;
+            background: linear-gradient(90deg, rgba(107,70,193,0.08), transparent);
+            border-radius: 8px;
+            line-height: 1.5;
+        }
+        strong { font-weight: 700; color: #4C2A85; }
+        em.hl {
+            background: linear-gradient(180deg, transparent 60%, #FCD34D 60%);
+            font-style: normal;
+            padding: 0 2px;
+        }
+
+        /* ========== LISTES ========== */
+        ul, ol { margin: 18px 0 18px 35px; line-height: 1.85; }
+        li { margin-bottom: 10px; color: #34495e; }
+        ul li {
+            list-style-type: none;
+            position: relative;
+            padding-left: 26px;
+        }
+        ul li:before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #6B46C1;
+            font-weight: bold;
+            font-size: 13pt;
+        }
+
+        /* ========== ENCADRÉS ========== */
+        .key-concept {
+            background: linear-gradient(135deg, #eceff1 0%, #cfd8dc 100%);
+            border-left: 6px solid #546e7a;
+            padding: 20px 26px;
+            margin: 26px 0;
+            border-radius: 8px;
+            box-shadow: 0 3px 12px rgba(84, 110, 122, 0.18);
+        }
+        .pass-tip {
+            background: linear-gradient(135deg, #fffbea 0%, #fff4cc 100%);
+            border-left: 6px solid #f9a825;
+            padding: 20px 26px;
+            margin: 26px 0;
+            border-radius: 8px;
+            box-shadow: 0 3px 12px rgba(249, 168, 37, 0.22);
+        }
+        .clinical-box {
+            background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+            border-left: 6px solid #e53935;
+            padding: 20px 26px;
+            margin: 26px 0;
+            border-radius: 8px;
+            box-shadow: 0 3px 12px rgba(229, 57, 53, 0.22);
+        }
+        .clinical-box::before {
+            content: "Vu en stage";
+            display: block;
+            font-weight: 700;
+            font-size: 10.5pt;
+            color: #c62828;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .stakes-box {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            border-left: 6px solid #E29C5C;
+            padding: 18px 24px;
+            margin: 24px 0;
+            border-radius: 8px;
+            box-shadow: 0 3px 12px rgba(226, 156, 92, 0.20);
+        }
+        .stakes-box::before {
+            content: "Ce que tu gagnes / ce que tu perds";
+            display: block;
+            font-weight: 700;
+            font-size: 10.5pt;
+            color: #B8650A;
+            margin-bottom: 10px;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+        }
+        .lucas-anecdote {
+            background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+            border-left: 6px solid #4C2A85;
+            padding: 24px 28px;
+            margin: 32px 0;
+            border-radius: 10px;
+            box-shadow: 0 3px 14px rgba(76, 42, 133, 0.18);
+            font-size: 11pt;
+            line-height: 1.75;
+        }
+        .lucas-anecdote::before {
+            content: "Vécu";
+            display: block;
+            font-weight: 700;
+            font-size: 10.5pt;
+            color: #4C2A85;
+            margin-bottom: 12px;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+        .lucas-anecdote em { color: #4C2A85; font-style: italic; }
+        .quick-q {
+            background: #1A1A2E;
+            color: #FAF6F0;
+            padding: 18px 24px;
+            margin: 24px 0;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 12pt;
+            line-height: 1.5;
+        }
+        .quick-q .ans {
+            display: block;
+            margin-top: 10px;
+            color: #FCD34D;
+            font-weight: 600;
+            font-size: 11pt;
+        }
+
+        /* ========== SCHÉMA BOX ========== */
+        .schema-box {
+            background: #ffffff;
+            border: 2px solid #6B46C1;
+            padding: 15px;
+            margin: 28px auto;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(107, 70, 193, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        .schema-box .image-placeholder {
+            background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+            border: 2px dashed #6B46C1;
+            border-radius: 8px;
+            padding: 50px 20px;
+            color: #4C2A85;
+            font-weight: 600;
+            font-size: 11pt;
+        }
+        .schema-box .caption {
+            font-size: 9pt;
+            color: #546e7a;
+            margin-top: 12px;
+            text-align: center;
+            font-weight: 500;
+        }
+        .schema-box .caption strong { color: #6B46C1; }
+
+        /* Prompt de génération — VISIBLE pour Lucas */
+        .schema-box .generation-prompt {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            border: 2px dashed #ff9800;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 14px;
+            text-align: left;
+            font-size: 9pt;
+            color: #e65100;
+            line-height: 1.6;
+            display: block;
+        }
+        .schema-box .generation-prompt strong {
+            color: #bf360c;
+            display: block;
+            margin-bottom: 10px;
+            font-size: 10pt;
+            background: #ffcc80;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .schema-box .copy-prompt-btn {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 6px 12px;
+            background: #ff9800;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 9pt;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .schema-box .copy-prompt-btn:hover { background: #f57c00; }
+
+        /* Image réelle dans une schema-box (réutilise le rendu des cours) */
+        .schema-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto;
+            cursor: zoom-in;
+        }
+        /* Petit filigrane discret EN BAS À DROITE — sur toutes les schema-box
+           (en plus du filigrane centré ::before). */
+        .schema-box::after {
+            content: 'medeos-sante.fr';
+            position: absolute;
+            bottom: 8px; right: 12px;
+            font-family: 'Inter', Arial, sans-serif;
+            font-size: 9px;
+            font-weight: 600;
+            color: rgba(120,120,120,0.10);
+            letter-spacing: 0.5px;
+            pointer-events: none;
+            user-select: none;
+            z-index: 6;
+            white-space: nowrap;
+        }
+        /* Grille des 3 axes — schema-box côte à côte, parfaitement alignées.
+           align-items: start = chaque box prend sa hauteur propre, pas d'étirement. */
+        .axes-schemas {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            align-items: start;
+            margin: 28px 0;
+        }
+        .axes-schemas .schema-box { margin: 0; }
+        .axes-schemas .schema-box .img-frame {
+            /* cadre à hauteur fixe → les 3 images (ratios différents) sont
+               parfaitement alignées, centrées, sans déformation. */
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .axes-schemas .schema-box .img-frame img {
+            max-height: 100%;
+            max-width: 100%;
+            width: auto;
+        }
+        @media (max-width: 640px) {
+            .axes-schemas { grid-template-columns: 1fr; }
+        }
+
+        /* ========== ENCART CHIFFRE ISOLÉ (pattern interrupt) ========== */
+        .quick-stat {
+            background: #FAF6F0;
+            border: 1px solid #efe7d8;
+            border-left: 5px solid #6B46C1;
+            border-radius: 10px;
+            padding: 32px 36px;
+            margin: 34px 0;
+            text-align: left;
+            box-shadow: 0 2px 12px rgba(107, 70, 193, 0.08);
+        }
+        .quick-stat .quick-stat-figure {
+            font-size: 36pt;
+            font-weight: 800;
+            color: #6B46C1;
+            letter-spacing: -1.5px;
+            line-height: 1;
+            margin-bottom: 14px;
+        }
+        .quick-stat .quick-stat-label {
+            font-size: 12pt;
+            color: #1F1F23;
+            line-height: 1.5;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        .quick-stat .quick-stat-context {
+            font-size: 10.5pt;
+            color: #6b6b78;
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        /* ========== COMPARAISONS CHOQUANTES ========== */
+        .stat-shock {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 28px 0;
+        }
+        .stat-shock .cell {
+            background: #fff;
+            border: 1px solid #ede9fe;
+            border-radius: 10px;
+            padding: 20px 22px;
+            box-shadow: 0 2px 8px rgba(107, 70, 193, 0.07);
+        }
+        .stat-shock .num {
+            font-size: 22pt;
+            font-weight: 800;
+            color: #6B46C1;
+            letter-spacing: -1px;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        .stat-shock .label {
+            font-size: 10.5pt;
+            color: #34495e;
+            line-height: 1.5;
+        }
+
+        /* ========== CTA FINAL ========== */
+        .cta-bascule {
+            background: linear-gradient(135deg, #4C2A85 0%, #6B46C1 100%);
+            color: #fff;
+            border-radius: 14px;
+            padding: 40px 38px;
+            margin: 50px 0 30px 0;
+            box-shadow: 0 8px 30px rgba(76, 42, 133, 0.3);
+        }
+        .cta-bascule h2 {
+            color: #fff;
+            border: none;
+            margin: 0 0 18px 0;
+            font-size: 22pt;
+            padding: 0;
+        }
+        .cta-bascule p {
+            color: #f5f3ff;
+            font-size: 11.5pt;
+            line-height: 1.7;
+            margin-bottom: 14px;
+        }
+        .cta-bascule .cta-button {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 16px 28px;
+            background: #FCD34D;
+            color: #1A1A2E;
+            font-weight: 800;
+            font-size: 13pt;
+            border-radius: 10px;
+            text-decoration: none;
+            box-shadow: 0 4px 14px rgba(252, 211, 77, 0.4);
+            transition: transform 0.2s;
+        }
+        .cta-bascule .cta-button:hover { transform: translateY(-2px); }
+
+        /* ========== FOOTER ========== */
+        .chapter-footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 28px;
+            border-top: 1px solid #e0e0e0;
+            color: #78909c;
+            font-size: 9.5pt;
+        }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .page-container::before { display: none; }
+        }
+
+        /* ========== LECTURE MOBILE (téléphone) ========== */
+        @media (max-width: 600px) {
+            body { padding: 14px; font-size: 11pt; }
+            .hook-header { padding: 26px 18px 22px 18px; border-radius: 12px; }
+            .hook-header .course-title { font-size: 27px; }
+            .hook-header .course-subtitle { font-size: 14px; margin-bottom: 22px; }
+            .hook-header .punch { font-size: 22px; }
+            .hook-header .tilt { font-size: 15px; margin-top: 22px; }
+            h2 { font-size: 15pt; }
+            h2 .h2-counter { font-size: 9pt; margin-right: 8px; }
+            h3 { font-size: 12pt; }
+            .intro-section,
+            .key-concept, .pass-tip, .clinical-box, .stakes-box,
+            .lucas-anecdote, .quick-q, .quick-stat { padding-left: 16px; padding-right: 16px; }
+            /* Toutes les grilles passent en 1 colonne sur téléphone */
+            .stat-shock,
+            .axes-schemas,
+            .os-3-colonnes,
+            .recap-pedagogique { grid-template-columns: 1fr !important; }
+            .quick-stat .quick-stat-figure { font-size: 26pt; }
+            /* Les schémas à largeur fixe (px) deviennent fluides */
+            .schema-box { max-width: 100% !important; }
+            /* Les images de schéma ne débordent jamais */
+            .schema-box img, .axes-schemas .schema-box .img-frame img,
+            .os-3-colonnes .os-schema .img-frame img { max-width: 100%; height: auto; }
+            ul, ol { margin-left: 22px; }
+            /* Texte justifié sur mobile (lignes alignées des 2 côtés, rendu propre) */
+            p, li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+            p.punchline, p.cliffhanger, .quick-stat-figure, .stat-shock .num,
+            .caption, .mini-qcm-enonce, h1, h2, h3 { text-align: left; hyphens: none; }
+            /* Filigranes plus visibles sur mobile (fond du cours + schémas) */
+            .page-container::before {
+                background-image: none;
+            }
+            .schema-box::before { color: rgba(107,70,193,0.07); font-size: 11px; letter-spacing: 1px; max-width: 90%; overflow: hidden; }
+            .schema-box::after { color: rgba(120,120,120,0.10); }
+        }
+
+        /* ========== RÉCAP PÉDAGOGIQUE (à retenir / anecdote) ========== */
+        .recap-pedagogique {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 16px;
+            margin: 36px 0 28px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e6dfd1;
+            box-shadow: 0 3px 12px rgba(76, 42, 133, 0.07);
+        }
+        .recap-pedagogique .recap-tronc,
+        .recap-pedagogique .recap-anecdote {
+            padding: 22px 24px;
+            font-size: 11pt;
+            line-height: 1.65;
+        }
+        .recap-pedagogique .recap-tronc {
+            background: #FAF6F0;
+            border-right: 1px dashed #d9cdb5;
+        }
+        .recap-pedagogique .recap-anecdote {
+            background: #f4f4f6;
+        }
+        .recap-pedagogique strong {
+            display: block;
+            font-size: 10pt;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            color: #4C2A85;
+        }
+        .recap-pedagogique .recap-anecdote strong {
+            color: #6b6b78;
+        }
+        .recap-pedagogique ul {
+            margin: 0 0 0 22px;
+            padding: 0;
+        }
+        .recap-pedagogique li {
+            margin-bottom: 7px;
+            font-size: 10.5pt;
+            line-height: 1.55;
+            color: #2c3e50;
+        }
+        .recap-pedagogique .recap-anecdote li {
+            color: #4a4a55;
+        }
+        .recap-pedagogique ul li:before {
+            color: #6B46C1;
+            font-size: 12pt;
+        }
+        .recap-pedagogique .recap-anecdote ul li:before {
+            color: #B8895A;
+        }
+        @media (max-width: 720px) {
+            .recap-pedagogique { grid-template-columns: 1fr; }
+            .recap-pedagogique .recap-tronc { border-right: none; border-bottom: 1px dashed #d9cdb5; }
+        }
+
+        /* Filigrane medeos-sante.fr sur schémas — UN SEUL, centré au vrai milieu. */
+        .schema-box::before {
+            content: 'medeos-sante.fr';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Inter', Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: rgba(120,120,120,0.05);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            pointer-events: none;
+            user-select: none;
+            z-index: 5;
+            white-space: nowrap;
+            max-width: 92%;
+            overflow: hidden;
+        }
+
+        /* ========== OS — 3 COLONNES MENTALES ========== */
+        .os-3-colonnes {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+            margin: 28px 0;
+        }
+        .os-3-colonnes .os-bloc {
+            background: #FAF6F0;
+            border: 1px solid #efe7d8;
+            border-left: 3px solid #6B46C1;
+            border-radius: 8px;
+            padding: 18px 18px 16px 18px;
+            box-shadow: 0 2px 8px rgba(107, 70, 193, 0.06);
+            display: flex;
+            flex-direction: column;
+        }
+        /* Schéma sous chaque bloc d'os — poussé en bas (margin-top:auto) pour que
+           les 3 images s'alignent même si le texte au-dessus a des hauteurs
+           différentes. Cadre à hauteur fixe = alignement parfait. */
+        .os-3-colonnes .os-schema {
+            margin-top: auto;
+            padding-top: 14px;
+        }
+        .os-3-colonnes .os-schema .img-frame {
+            height: 150px;
+            background: #ffffff;
+            border: 1px solid #ECE3FA;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+        .os-3-colonnes .os-schema .img-frame img {
+            max-height: 100%;
+            max-width: 100%;
+            width: auto;
+            cursor: zoom-in;
+        }
+        /* Filigrane centré dans le fond de ces mini-schémas */
+        .os-3-colonnes .os-schema .img-frame::after {
+            content: 'medeos-sante.fr';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Inter', Arial, sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            color: rgba(120,120,120,0.05);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            pointer-events: none;
+            user-select: none;
+            white-space: nowrap;
+        }
+        /* Petit filigrane discret EN BAS À DROITE des mini-schémas */
+        .os-3-colonnes .os-schema .img-frame::before {
+            content: 'medeos-sante.fr';
+            position: absolute;
+            bottom: 5px; right: 7px;
+            font-family: 'Inter', Arial, sans-serif;
+            font-size: 7.5px;
+            font-weight: 600;
+            color: rgba(120,120,120,0.10);
+            letter-spacing: 0.3px;
+            pointer-events: none;
+            user-select: none;
+            z-index: 6;
+            white-space: nowrap;
+        }
+        .os-3-colonnes .os-bloc-titre {
+            font-size: 11pt;
+            font-weight: 700;
+            color: #6B46C1;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .os-3-colonnes .os-bloc p {
+            font-size: 10pt;
+            line-height: 1.55;
+            color: #4a4a55;
+            margin: 0 0 12px 0;
+            font-style: italic;
+        }
+        .os-3-colonnes .os-bloc ul {
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .os-3-colonnes .os-bloc ul li {
+            list-style-type: none;
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 6px;
+            font-size: 10.5pt;
+            color: #2c3e50;
+        }
+        .os-3-colonnes .os-bloc ul li:before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #6B46C1;
+            font-weight: 700;
+            font-size: 10.5pt;
+        }
+        .os-3-colonnes .os-bloc ul li strong { color: #4C2A85; }
+        .os-3-cloture {
+            font-size: 11pt;
+            font-style: italic;
+            color: #4C2A85;
+            margin: 4px 0 22px 0;
+            text-align: left;
+        }
+        @media (max-width: 720px) {
+            .os-3-colonnes { grid-template-columns: 1fr; }
+        }
+
+        /* ========== MANIP PALPÉE (ancrage corporel) ========== */
+        .manip-palpee {
+            background: #FAF6F0;
+            border-left: 4px solid #6B46C1;
+            border-radius: 8px;
+            padding: 22px 24px;
+            margin: 28px 0;
+            box-shadow: 0 2px 10px rgba(107, 70, 193, 0.08);
+        }
+        .manip-palpee .manip-titre {
+            font-size: 13pt;
+            font-weight: 700;
+            color: #4C2A85;
+            margin-bottom: 14px;
+            line-height: 1.4;
+        }
+        .manip-palpee .manip-etapes {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .manip-palpee .manip-etape {
+            font-size: 11pt;
+            line-height: 1.7;
+            color: #2c3e50;
+        }
+        .manip-palpee .manip-num {
+            font-weight: 700;
+            color: #6B46C1;
+            margin-right: 8px;
+        }
+        .manip-palpee .manip-etape strong { color: #4C2A85; }
+        .manip-palpee .manip-claire {
+            font-size: 11pt;
+            font-style: italic;
+            color: #6b6b78;
+            margin: 14px 0 0 0;
+            border-top: 1px solid #e5e5e5;
+            padding-top: 12px;
+        }
+
+        /* ========== MINI-QCM FINAL ========== */
+        .mini-qcm {
+            background: linear-gradient(135deg, #FAF6F0 0%, #f5efe5 100%);
+            border-left: 4px solid #6B46C1;
+            border-radius: 12px;
+            padding: 32px 28px;
+            margin: 48px 0 32px;
+        }
+        .mini-qcm h2 {
+            color: #4C2A85;
+            font-size: 18pt;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        .mini-qcm-intro {
+            color: #6b6b80;
+            font-size: 10.5pt;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+        .mini-qcm-question {
+            background: white;
+            padding: 20px 24px;
+            border-radius: 10px;
+            margin-bottom: 16px;
+            box-shadow: 0 1px 4px rgba(76, 42, 133, 0.08);
+        }
+        .mini-qcm-num {
+            color: #6B46C1;
+            font-size: 9.5pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
+        }
+        .mini-qcm-enonce {
+            font-size: 11.5pt;
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-bottom: 14px;
+            line-height: 1.5;
+        }
+        .mini-qcm-choix {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 14px 0;
+        }
+        .mini-qcm-choix li {
+            padding: 8px 14px;
+            margin-bottom: 6px;
+            border-radius: 6px;
+            background: #faf8f4;
+            font-size: 10.5pt;
+            border-left: 3px solid transparent;
+            transition: background 0.2s;
+        }
+        .mini-qcm-choix li:hover {
+            background: #f4eef9;
+            border-left-color: #6B46C1;
+            cursor: pointer;
+        }
+        /* États après réponse : bonne réponse en vert, choix erroné en rouge.
+           Une fois répondu, on neutralise le hover et le curseur. */
+        .mini-qcm-choix.answered li { cursor: default; }
+        .mini-qcm-choix.answered li:hover { background: #faf8f4; border-left-color: transparent; }
+        .mini-qcm-choix.answered li.is-correct,
+        .mini-qcm-choix.answered li.is-correct:hover {
+            background: #e4f3ea;
+            border-left-color: #2e9d5f;
+            font-weight: 600;
+        }
+        .mini-qcm-choix.answered li.is-correct::after {
+            content: " ✓";
+            color: #2e9d5f;
+            font-weight: 700;
+        }
+        .mini-qcm-choix.answered li.is-wrong,
+        .mini-qcm-choix.answered li.is-wrong:hover {
+            background: #fbe9e7;
+            border-left-color: #d9534f;
+        }
+        .mini-qcm-choix.answered li.is-wrong::after {
+            content: " ✗";
+            color: #d9534f;
+            font-weight: 700;
+        }
+        .mini-qcm-correction {
+            margin-top: 12px;
+            padding: 12px 16px;
+            background: #f4eef9;
+            border-radius: 6px;
+            font-size: 10pt;
+            line-height: 1.6;
+        }
+        .mini-qcm-correction summary {
+            cursor: pointer;
+            color: #6B46C1;
+            font-weight: 600;
+            font-size: 10pt;
+            user-select: none;
+            padding: 2px 0;
+        }
+        .mini-qcm-correction summary:hover {
+            color: #4C2A85;
+        }
+        .mini-qcm-correction[open] summary {
+            margin-bottom: 8px;
+            border-bottom: 1px solid #e5d7ef;
+            padding-bottom: 6px;
+        }
+        .mini-qcm-correction p {
+            margin: 6px 0;
+            color: #2d2d3d;
+        }
+        .mini-qcm-source {
+            color: #8585a3;
+            font-size: 9.5pt;
+            margin-top: 8px !important;
+        }
+        .mini-qcm-conclusion {
+            margin-top: 20px;
+            padding: 14px 20px;
+            background: rgba(107, 70, 193, 0.08);
+            border-radius: 8px;
+            color: #4C2A85;
+            font-size: 10.5pt;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* ============ LECTURE PROGRESSIVE (révélation par paliers) ============ */
+        .step-locked { display: none !important; }
+        .step-reveal { animation: stepIn .55s cubic-bezier(.16,.84,.44,1) both; }
+        @keyframes stepIn {
+            from { opacity: 0; transform: translateY(14px); }
+            to   { opacity: 1; transform: none; }
+        }
+        .continue-wrap {
+            display: flex; flex-direction: column; align-items: center;
+            gap: 10px; margin: 34px auto 14px; text-align: center;
+        }
+        .continue-hint { font-size: 13.5px; color: #6b6275; }
+        .btn-continue {
+            display: inline-flex; align-items: center; gap: 9px;
+            font-family: inherit; font-size: 16px; font-weight: 600;
+            color: #fff; cursor: pointer;
+            padding: 13px 26px; border: none; border-radius: 999px;
+            background: linear-gradient(150deg, #4C2A85, #6B46C1 75%);
+            box-shadow: 0 10px 26px rgba(76,42,133,.26);
+            transition: transform .18s ease, box-shadow .18s ease, opacity .3s ease;
+        }
+        .btn-continue:hover { transform: translateY(-1px); box-shadow: 0 14px 32px rgba(76,42,133,.34); }
+        .btn-continue:active { transform: translateY(0); }
+        .btn-continue .arrow { display: inline-block; transition: transform .2s ease; }
+        .btn-continue:hover .arrow { transform: translateY(2px); }
+        .continue-wrap.gone {
+            opacity: 0; pointer-events: none; max-height: 0; margin: 0;
+            overflow: hidden; transition: opacity .3s ease, max-height .4s ease, margin .4s ease;
+        }
+    
+        /* Phrases de conversion sous le bouton « Continuer » (04/08).
+           Bouton secondaire à contour : visible sans capter l'attention, le
+           « Continuer » reste l'action principale. Ce bloc vit HORS du holder,
+           qui disparaît au clic — la porte reste ouverte dans la page. */
+        .continue-cta { margin: 4px auto 30px; display: flex; flex-direction: column;
+                        align-items: center; gap: 9px; max-width: 620px; text-align: center; }
+        .continue-cta .cta-mot { font-size: 13.5px; line-height: 1.55; color: #6b6275; }
+        .continue-cta a { display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px;
+                          font-weight: 700; color: #6B46C1; text-decoration: none; padding: 9px 18px;
+                          border-radius: 999px; border: 1.5px solid rgba(107,70,193,.35);
+                          background: rgba(107,70,193,.05); transition: background .15s, border-color .15s; }
+        .continue-cta a:hover { background: rgba(107,70,193,.11); border-color: rgba(107,70,193,.65); }
+        .continue-cta a.sv { color: #1d4ed8; border-color: rgba(37,99,235,.35); background: rgba(37,99,235,.05); }
+        .continue-cta a.sv:hover { background: rgba(37,99,235,.11); border-color: rgba(37,99,235,.65); }
+
+        /* Les deux offres côte à côte : le lecteur choisit sa voie lui-même. */
+        .continue-cta .cta-duo { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+</style>
+<!-- medeos-jsonld -->
+    <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Anatomie en P1 (PASS / LAS) — le panorama Medeos", "description": "La découverte de l'anatomie en première année de santé : os, cœur, poumons, cerveau, sens.", "url": "https://medeos-sante.fr/ressources/panorama-p1/anatomie.html", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://medeos-sante.fr/ressources/panorama-p1/anatomie.html"}, "inLanguage": "fr-FR", "isAccessibleForFree": true, "author": {"@id": "https://medeos-sante.fr/#lucas"}, "publisher": {"@id": "https://medeos-sante.fr/#organisation"}, "about": {"@type": "Thing", "name": "Anatomie — première année d'études de santé"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://medeos-sante.fr"}, {"@type": "ListItem", "position": 2, "name": "Réussir sa première année de médecine", "item": "https://medeos-sante.fr/reussir-premiere-annee-medecine"}, {"@type": "ListItem", "position": 3, "name": "Anatomie", "item": "https://medeos-sante.fr/ressources/panorama-p1/anatomie.html"}]}]}</script>
+</head>
+<body>
+<div class="page-container">
+
+    <!-- ========================================================== -->
+    <!-- HOOK HEADER (refondu — pas de chapter-header, pas de TOC) -->
+    <!-- ========================================================== -->
+    <header class="hook-header">
+        <div class="brand-tag">Panorama P1</div>
+
+        <h1 class="course-title">L'anatomie en P1</h1>
+        <p class="course-subtitle">Ce qui t'attend, sans jargon.</p>
+
+        <p class="punch"><span class="accent">86 milliards</span> de neurones.</p>
+        <p class="punch"><span class="accent">10 000 km</span> de vaisseaux.</p>
+        <p class="punch"><span class="accent">70 m²</span> de poumons pliés dans ta poitrine.</p>
+
+        <p class="tilt">Et tout un corps humain à apprivoiser en 9 mois, sans craquer.</p>
+
+        <div class="separator"></div>
+    </header>
+
+    <!-- ========================================================== -->
+    <!-- INTRODUCTION — boucle META + anecdote Lucas #1             -->
+    <!-- ========================================================== -->
+    <section class="intro-section">
+        <p class="punchline">Mets ta main droite sur ton sternum. Pose-la à plat. Reste 3 secondes.</p>
+
+        <p>Tu sens ce battement régulier ? Ton cœur vient de pulser. Environ <strong>70 millilitres de sang</strong> à chaque coup. Pendant que tu lis cette phrase, il a déjà battu trois fois. Pendant que tu finis ce paragraphe, ton diaphragme s'est contracté deux fois pour t'amener une demi-tasse d'oxygène. Pendant que tu cligneras des yeux à la ligne suivante, ton cerveau aura généré environ <strong>11 millions de signaux nerveux</strong>.</p>
+
+        <p>Ce qui suit, c'est ta découverte de la matière. <strong>Six pièces du corps</strong>, six raisons d'arrêter de voir l'anatomie comme une liste de mots latins à recopier. À la fin, tu n'auras pas appris la P1. Tu auras appris à la <em class="hl">regarder</em>. Et c'est exactement ce qui fait la différence en anatomie.</p>
+    </section>
+
+    <!-- ========================================================== -->
+    <!-- SECTION 1 — LE LANGAGE UNIVERSEL DU CORPS                  -->
+    <!-- ========================================================== -->
+    <h2><span class="h2-counter">01</span> Le langage que tous les soignants partagent</h2>
+
+    <p class="punchline">3h12 du matin. SAMU. L'interne de garde décroche.</p>
+
+    <p>Au bout du fil, l'urgentiste hurle dans le bruit d'une ambulance : « Polytraumatisé moto, plaie de la <em class="hl">face médiale du tiers proximal de la cuisse droite</em>, hémorragie active, on arrive dans 4 minutes ». L'interne raccroche. Il a 4 minutes. Il sait déjà quelle artère est en jeu — la fémorale, qui passe précisément là — où poser le garrot, et quel bloc préparer. Pas parce qu'il est génial. Parce que <strong>quelques mots</strong> viennent de lui transmettre une carte précise du corps d'un homme qu'il n'a jamais vu.</p>
+
+    <p>Voilà ce que fait ce langage. Pas une description. <strong>Un GPS</strong>. Et c'est ça que tu vas apprendre maintenant — en six mots.</p>
+
+    <div class="key-concept">
+        <p><strong>Les 6 mots du GPS corporel</strong></p>
+        <ul>
+            <li><strong>Supérieur / Inférieur</strong> — vers la tête / vers les pieds</li>
+            <li><strong>Antérieur / Postérieur</strong> — vers le ventre / vers le dos</li>
+            <li><strong>Médial / Latéral</strong> — vers le milieu / vers l'extérieur</li>
+        </ul>
+        <p>Le secret : tu ne dis JAMAIS « à gauche » ou « à droite » de toi. Tu dis toujours la gauche ou la droite <em>du patient</em>. Sinon, l'urgentiste à 3h du matin opère le mauvais rein.</p>
+    </div>
+
+    <div class="quick-q">
+        Devine. Ton sternum est antérieur ou postérieur à ta colonne vertébrale ?
+        <span class="ans">→ Antérieur. Il est devant. Tu viens de gagner un point que 70 % des bacheliers ratent au premier QCM.</span>
+    </div>
+
+    <div class="axes-schemas">
+        <!-- Antérieur / Postérieur -->
+        <div class="schema-box">
+            <div class="img-frame">
+                <img src="https://medeos-sante.fr/images/anatomie/ch1_anterieur_posterieur.png"
+                     alt="Terminologie antérieur et postérieur"
+                     onclick="openLightbox(this.src)" title="Cliquer pour agrandir">
+            </div>
+            <p class="caption"><strong>Antérieur / Postérieur</strong><br>vers le ventre / vers le dos</p>
+        </div>
+
+        <!-- Médial / Latéral -->
+        <div class="schema-box">
+            <div class="img-frame">
+                <img src="https://medeos-sante.fr/images/anatomie/ch1_terminologie_medial_lateral.png"
+                     alt="Terminologie médial et latéral"
+                     onclick="openLightbox(this.src)" title="Cliquer pour agrandir">
+            </div>
+            <p class="caption"><strong>Médial / Latéral</strong><br>vers le milieu / vers l'extérieur</p>
+        </div>
+
+        <!-- Proximal / Distal -->
+        <div class="schema-box">
+            <div class="img-frame">
+                <img src="https://medeos-sante.fr/images/anatomie/ch1_proximal_distal.png"
+                     alt="Terminologie proximal et distal"
+                     onclick="openLightbox(this.src)" title="Cliquer pour agrandir">
+            </div>
+            <p class="caption"><strong>Proximal / Distal</strong><br>près du tronc / loin du tronc</p>
+        </div>
+    </div>
+
+    <div class="stakes-box">
+        <p>Si tu maîtrises ces 6 mots avant septembre, tu lis tes cours 2x plus vite. Si tu ne les as pas, tu perds 30 secondes par schéma à te demander « bon, c'est où, ça ». Multiplié par 4000 schémas dans l'année. Fais le calcul.</p>
+    </div>
+
+    <h3>Le bonus que personne ne t'a dit</h3>
+
+    <p>Il y a une dernière notion qui change tout : les <strong>plans de coupe</strong>. Quand on regarde une IRM, on découpe le corps en tranches. Trois types de tranches :</p>
+
+    <ul>
+        <li>Le plan <strong>frontal</strong> — comme une vitrine vue de face, qui sépare le devant du derrière</li>
+        <li>Le plan <strong>sagittal</strong> — vu de côté, qui sépare la gauche de la droite</li>
+        <li>Le plan <strong>transversal</strong> — vu d'en haut, qui sépare le haut du bas (les fameuses « tranches de scanner »)</li>
+    </ul>
+
+    <div class="schema-box" style="max-width: 480px; margin: 28px auto;">
+        <img src="https://medeos-sante.fr/images/anatomie/ch1_plans_anatomiques.png"
+             alt="Les trois plans anatomiques - sagittal, frontal, transversal"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir">
+        <p class="caption"><strong>Les trois plans anatomiques</strong> — sagittal, frontal, transversal.</p>
+    </div>
+
+    <p>Quand un radiologue te dit « j'ai vu une masse en coupe sagittale L4-L5 », tu sais maintenant qu'il a tranché ta colonne lombaire dans ce plan entre la 4ᵉ et la 5ᵉ vertèbre. Tu viens d'apprendre à lire un compte-rendu de radiologie en 30 secondes.</p>
+
+    <div class="recap-pedagogique">
+        <div class="recap-tronc">
+            <strong>À retenir pour la P1</strong>
+            <ul>
+                <li>Les mots du GPS : antérieur/postérieur (ventre/dos), médial/latéral (milieu/extérieur), proximal/distal (près/loin du tronc). Toujours du point de vue du patient.</li>
+                <li>3 plans de coupe : frontal (sépare devant/derrière), sagittal (gauche/droite), transversal (haut/bas).</li>
+            </ul>
+        </div>
+        <div class="recap-anecdote">
+            <strong>Anecdotique mais marquant</strong>
+            <ul>
+                <li>Quelques mots et 4 minutes — c'est ce qui sépare un urgentiste qui sauve d'un urgentiste qui rate.</li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="cliffhanger">Maintenant que tu as les coordonnées, on va se balader dans le corps. Premier arrêt : le squelette. La charpente qui te tient droit en ce moment même — et dont les articulations glissent mieux qu'un patin de hockey. ↓</p>
+
+    <!-- ========================================================== -->
+    <!-- SECTION 2 — LE SQUELETTE : MACHINE DE GLISSE               -->
+    <!-- ========================================================== -->
+    <h2><span class="h2-counter">02</span> Le squelette : la machine à glisser</h2>
+
+    <p class="punchline">Ton genou glisse 6 fois mieux qu'un patin sur la glace. Voilà ce que ton squelette fait sans que tu y penses.</p>
+
+    <p>Tu marches. Ton talon touche le sol, ta cheville absorbe, ton genou plie, ta hanche pivote, ta colonne s'ajuste, ton bras balance, ton épaule tourne. Six articulations qui travaillent ensemble. Chacune avec un coefficient de frottement de <strong>0,003</strong>. Le verre sur le verre, c'est 0,9. Le patin sur la glace, c'est 0,02. Ton cartilage, c'est <em class="hl">six fois mieux que le patin</em>.</p>
+
+    <p>Et c'est pour ça que tu peux faire 10 000 pas par jour pendant 80 ans sans bruit, sans douleur, sans changer la pièce. Aucune machine industrielle ne fait ça.</p>
+
+    <div class="stat-shock">
+        <div class="cell">
+            <div class="num">206</div>
+            <div class="label">os à l'âge adulte. Tu en as 270 à la naissance — certains fusionnent en grandissant.</div>
+        </div>
+        <div class="cell">
+            <div class="num">360</div>
+            <div class="label">articulations dans ton corps. La moitié dans les mains et les pieds.</div>
+        </div>
+    </div>
+
+    <p>Ces 206 os se rangent en <strong>deux groupes</strong>. L'<strong>axial</strong> (80 os) : crâne, vertèbres, côtes, sternum — la tour centrale qui te tient debout et qui protège le cerveau, le cœur, les poumons. L'<strong>appendiculaire</strong> (126 os) : bras, jambes, ceintures (épaules, bassin) — tout ce qui pend autour. En P1, on commence par l'axial, parce que c'est lui qui ancre tout le reste.</p>
+
+    <div class="key-concept">
+        <p><strong>Les os majeurs à reconnaître au premier coup d'œil</strong></p>
+        <p>Tu n'auras pas à mémoriser les 206 en P1. Mais ces noms-là, tu les croiseras dans 80 % des QCM. On les range en <strong>trois familles</strong> — une par grande zone du corps.</p>
+    </div>
+
+    <div class="os-3-colonnes">
+        <div class="os-bloc">
+            <div class="os-bloc-titre">Membre supérieur</div>
+            <p>Touche ta clavicule, en haut de ta poitrine.</p>
+            <ul>
+                <li><strong>Clavicule</strong> — l'os qui dépasse sous la peau</li>
+                <li><strong>Scapula</strong> — l'omoplate, dans le dos</li>
+                <li><strong>Humérus</strong> — le bras, entre épaule et coude</li>
+                <li><strong>Radius / Ulna</strong> — l'avant-bras (latéral → médial)</li>
+            </ul>
+            <div class="os-schema">
+                <div class="img-frame">
+                    <img src="https://medeos-sante.fr/images/anatomie/ch6_vue_ensemble_MS.png"
+                         alt="Os du membre supérieur : clavicule, scapula, humérus, radius, ulna"
+                         onclick="openLightbox(this.src)" title="Cliquer pour agrandir">
+                </div>
+            </div>
+        </div>
+        <div class="os-bloc">
+            <div class="os-bloc-titre">Membre inférieur</div>
+            <p>Pose ta main sur ta hanche.</p>
+            <ul>
+                <li><strong>Os coxal</strong> — la hanche, l'os du bassin</li>
+                <li><strong>Fémur</strong> — la cuisse, le plus long du corps</li>
+                <li><strong>Tibia / Fibula</strong> — la jambe (médial → latéral)</li>
+            </ul>
+            <div class="os-schema">
+                <div class="img-frame">
+                    <img src="https://medeos-sante.fr/images/anatomie/ch7_vue_ensemble_MI.png"
+                         alt="Os du membre inférieur : os coxal, fémur, tibia, fibula"
+                         onclick="openLightbox(this.src)" title="Cliquer pour agrandir">
+                </div>
+            </div>
+        </div>
+        <div class="os-bloc">
+            <div class="os-bloc-titre">Squelette axial</div>
+            <p>Sens tes côtes en respirant fort.</p>
+            <ul>
+                <li><strong>Vertèbres</strong> — 24 mobiles + sacrum + coccyx</li>
+                <li><strong>Côtes</strong> — 12 paires</li>
+                <li><strong>Sternum</strong> — le plat au milieu de la poitrine</li>
+            </ul>
+            <div class="os-schema">
+                <div class="img-frame">
+                    <img src="https://medeos-sante.fr/images/anatomie/ch1_squelette_vue_ensemble.png?v=2"
+                         alt="Squelette axial : colonne vertébrale, côtes, sternum"
+                         onclick="openLightbox(this.src)" title="Cliquer pour agrandir">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p class="os-3-cloture">Dix os. Trois familles. Voilà le socle que tu retrouveras dans 80 % des QCM de squelette.</p>
+
+    <h3>1. Ce que ton squelette fait pendant que tu dors</h3>
+
+    <p>Le squelette n'est pas un cintre passif. C'est une <strong>usine vivante</strong>. À l'intérieur de tes os longs, la moelle osseuse fabrique en permanence : <strong>2,4 millions de globules rouges par seconde</strong>. Pendant que tu lis cette ligne, ton corps vient d'en produire dix millions. Sans bruit.</p>
+
+    <p>Et ce n'est pas tout. Tes os stockent 99 % de ton calcium. Quand ton sang en manque, tes os en libèrent. Quand ton sang en a trop, tes os en rangent. C'est ta banque de calcium personnelle, ouverte 24h/24.</p>
+
+    <div class="key-concept">
+        <p><strong>3 rôles du squelette à graver</strong></p>
+        <ul>
+            <li><strong>Tenir</strong> — structure, posture, point d'attache des muscles</li>
+            <li><strong>Protéger</strong> — crâne pour le cerveau, cage thoracique pour le cœur et les poumons, colonne pour la moelle</li>
+            <li><strong>Produire & stocker</strong> — globules rouges dans la moelle, calcium et phosphore dans les travées osseuses</li>
+        </ul>
+    </div>
+
+    <h3>2. L'articulation synoviale : le bijou d'ingénierie</h3>
+
+    <p>Toutes les articulations ne se valent pas. Il en existe <strong>3 grandes familles</strong>, classées par leur mobilité :</p>
+
+    <ul>
+        <li>Les <strong>synoviales</strong> — très mobiles. C'est la famille star : genou, hanche, épaule, coude, poignet. Présence de cartilage, de liquide, de ligaments. C'est ce qu'on dissèque dans la section suivante.</li>
+        <li>Les <strong>cartilagineuses</strong> — peu mobiles. Exemple : entre deux vertèbres, on glisse un disque de cartilage. Ça bouge un peu, mais juste assez pour amortir.</li>
+        <li>Les <strong>fibreuses</strong> — immobiles. Exemple : les sutures du crâne. À l'âge adulte, les os de la boîte crânienne sont soudés. Aucune mobilité, mais une solidité maximale.</li>
+    </ul>
+
+    <p>Maintenant, zoom sur la première famille. Tu fléchis ton genou, tu étends, 10 000 fois par jour. Comment ça tient ? Une articulation synoviale, c'est :</p>
+
+    <ul>
+        <li>Deux os qui se rencontrent, <strong>recouverts de cartilage</strong> — un revêtement blanc nacré, lisse comme du marbre poli</li>
+        <li>Une <strong>capsule</strong> étanche qui les enveloppe</li>
+        <li>À l'intérieur, du <strong>liquide synovial</strong> — un fluide visqueux qui lubrifie comme l'huile dans un moteur</li>
+        <li>Des <strong>ligaments</strong> qui tiennent, des <strong>tendons</strong> qui actionnent</li>
+    </ul>
+
+    <p>Le coefficient de frottement de ce système est <strong>0,003</strong>. Aucun ingénieur, en 2026, ne sait reproduire ça en synthétique. Les prothèses de hanche fonctionnent, mais elles s'usent en 15 ans. Ton genou naturel tient 80 ans.</p>
+
+    <div class="schema-box" style="max-width: 440px; margin: 28px auto;">
+        <img src="https://medeos-sante.fr/images/anatomie/ch2_structure_articulation_synoviale.png"
+             alt="Structure d'une articulation synoviale : cartilage, capsule, liquide synovial, ligaments"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir">
+        <p class="caption"><strong>L'articulation synoviale</strong> — cartilage, capsule, liquide synovial, ligaments. Le bijou d'ingénierie qui te porte 80 ans.</p>
+    </div>
+
+    <div class="clinical-box">
+        <p>Quand quelqu'un se fait une <strong>entorse</strong>, ce qui lâche, ce sont les ligaments. Quand quelqu'un développe une <strong>arthrose</strong>, c'est le cartilage qui s'use et le coefficient de friction qui passe de 0,003 à 0,1 — soit 33 fois plus. D'où la douleur. D'où le grincement. D'où la prothèse à 70 ans.</p>
+    </div>
+
+    <p>Les médecins voient ton genou comme un système de glisse. Pas comme deux os. La nuance change tout. Devant un compte-rendu d'IRM, on cherche d'abord l'épaisseur du cartilage, la position des ménisques, l'intégrité des ligaments croisés. Pas les os. Le mouvement.</p>
+
+    <div class="stakes-box">
+        <p>Comprends ce seul schéma — cartilage, liquide, ligaments — et tu comprends d'un coup toute la famille des articulations synoviales. Épaule, hanche, coude, poignet, genou : même logique pour toutes. C'est ça, voir une machine au lieu d'apprendre une liste de noms : un seul modèle compris t'évite des dizaines de fiches à apprendre par cœur.</p>
+    </div>
+
+    <h3>3. L'os vivant : un chantier qui ne ferme jamais</h3>
+
+    <p>Tes os ne sont pas morts comme des cailloux. Deux équipes y travaillent jour et nuit : les <strong>ostéoclastes</strong> grignotent l'os ancien, les <strong>ostéoblastes</strong> déposent l'os neuf. Bilan : tu renouvelles environ <strong>10 % de ton squelette par an</strong>.</p>
+
+    <div class="quick-stat">
+        <div class="quick-stat-figure" style="font-size: 26pt;">−1 à −2 % / mois</div>
+        <div class="quick-stat-label">C'est la masse osseuse qu'un astronaute perd en apesanteur, chaque mois.</div>
+        <div class="quick-stat-context">Au bout de 6 mois en orbite, il revient avec des os de centenaire.</div>
+    </div>
+
+    <p>Sans gravité, les démolisseurs continuent pendant que les maçons ralentissent : tes os ont besoin de poids pour se maintenir. Marcher, courir, sauter, c'est exactement ce qui dit aux maçons « continuez, on a besoin de vous ».</p>
+
+    <div class="quick-q">
+        Tu sais quel os de ton corps grandit le plus vite ?
+        <span class="ans">→ Le fémur. Pendant l'adolescence, il peut pousser de 1 cm par mois. C'est pour ça que les ados ont mal aux genoux le soir : leurs maçons travaillent en heures supplémentaires.</span>
+    </div>
+
+    <div class="recap-pedagogique">
+        <div class="recap-tronc">
+            <strong>À retenir pour la P1</strong>
+            <ul>
+                <li>206 os adultes répartis en axial (80) et appendiculaire (126).</li>
+                <li>3 familles d'articulations : synoviales (mobiles), cartilagineuses (peu mobiles), fibreuses (immobiles).</li>
+                <li>Articulation synoviale = cartilage + capsule + liquide synovial (souvent renforcée par des ligaments).</li>
+                <li>Os vivant : ostéoclastes détruisent, ostéoblastes construisent. ~10 % renouvelé chaque année.</li>
+            </ul>
+        </div>
+        <div class="recap-anecdote">
+            <strong>Anecdotique mais marquant</strong>
+            <ul>
+                <li>Coefficient de friction du cartilage : 0,003. Six fois mieux que le patin sur glace.</li>
+                <li>−1 à −2 % de masse osseuse par mois en apesanteur. 6 mois en orbite = os de centenaire.</li>
+                <li>2,4 millions de globules rouges fabriqués par seconde dans la moelle.</li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="cliffhanger">Le squelette te porte. Mais il ne servirait à rien si une autre machine n'envoyait pas du carburant à chacune de ses cellules. Et cette machine, elle bat en ce moment même au centre de ta poitrine. ↓</p>
+
+    <!-- ========================================================== -->
+    <!-- SECTION 3 — LE CŒUR : LA MACHINE IMPOSSIBLE                -->
+    <!-- ========================================================== -->
+    <h2><span class="h2-counter">03</span> Le cœur : la machine que personne n'arrive à copier</h2>
+
+    <p class="punchline">Imagine. Une pompe de la taille de ton poing. Elle bat 100 000 fois par jour. Sans s'arrêter. Toute ta vie. Sans entretien.</p>
+
+    <p>Toutes les machines réclament un entretien régulier : une voiture passe à la révision tous les 15 000 km, un moteur d'avion est démonté et contrôlé après quelques milliers d'heures de vol. Ton cœur, lui, bat <strong>3 milliards de fois</strong> sans une seule révision, sans une seule pièce changée. La raison est simple : une machine s'use et doit être réparée de l'extérieur, alors que lui est vivant — ses cellules se nourrissent et s'entretiennent toutes seules, en permanence. C'est pour ça qu'il continue de battre la nuit, pendant que tu dors, sans qu'aucune partie de toi ait à y penser.</p>
+
+    <p>Et tout ce qu'il déplace donne le vertige. Deux chiffres pour le mesurer :</p>
+
+    <div class="stat-shock">
+        <div class="cell">
+            <div class="num">~10 000 km</div>
+            <div class="label">de vaisseaux dans ton corps. De quoi faire <strong>le tour de la Lune</strong>. Pliés dans 60 kg de chair.</div>
+        </div>
+        <div class="cell">
+            <div class="num">5 L/min</div>
+            <div class="label">de sang pompé au repos. <strong>25 L/min</strong> quand tu cours. Sans préavis.</div>
+        </div>
+    </div>
+
+    <h3>1. Le cœur, c'est deux pompes côte à côte</h3>
+
+    <p>Tu crois que ton cœur c'est UNE pompe ? Non. Ce sont <strong>deux pompes</strong> collées l'une à l'autre. Et c'est la chose la plus importante à comprendre de toute la cardiologie.</p>
+
+    <ul>
+        <li>La <strong>pompe droite</strong> récupère le sang « vidé » (rouge sombre, pauvre en oxygène) qui revient de ton corps, et l'envoie aux poumons pour le recharger.</li>
+        <li>La <strong>pompe gauche</strong> récupère le sang « rechargé » (rouge vif, riche en oxygène) qui revient des poumons, et l'envoie dans tout le corps.</li>
+    </ul>
+
+    <div class="schema-box" style="max-width: 560px; margin: 28px auto;">
+        <img src="https://medeos-sante.fr/images/anatomie/ch13_double_pompe.png"
+             alt="Le cœur, une double pompe : circuit pulmonaire à droite, circuit du corps à gauche"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir">
+        <p class="caption"><strong>La double pompe</strong> — à droite le circuit vers les poumons, à gauche le circuit vers tout le corps.</p>
+    </div>
+
+    <p>Les deux pompes battent EN MÊME TEMPS. Synchronisées. Comme deux danseurs qui ne se touchent pas mais avancent au même rythme. Et chaque pompe a deux étages : une <strong>oreillette</strong> qui reçoit, un <strong>ventricule</strong> qui éjecte. Quatre cavités au total. Tu viens d'apprendre l'anatomie cardiaque en une phrase.</p>
+
+    <div class="schema-box" style="max-width: 560px; margin: 28px auto;">
+        <img src="https://medeos-sante.fr/images/anatomie/ch13_4_cavites.png"
+             alt="Les 4 cavités du cœur : 2 oreillettes en haut, 2 ventricules en bas"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir">
+        <p class="caption"><strong>Les 4 cavités</strong> — 2 oreillettes en haut (réception), 2 ventricules en bas (éjection).</p>
+    </div>
+
+    <p>Entre chaque étage et à la sortie de chaque pompe, il y a une porte. <strong>4 valves cardiaques</strong>. Elles s'ouvrent dans un seul sens. Si elles fuient ou si elles se bloquent, tout le système se grippe. Voilà leurs noms — c'est le genre de notion qui tombe au moins une fois en QCM :</p>
+
+    <ul>
+        <li>Valve <strong>tricuspide</strong> — entre oreillette droite et ventricule droit.</li>
+        <li>Valve <strong>pulmonaire</strong> — entre ventricule droit et artère pulmonaire (sortie vers les poumons).</li>
+        <li>Valve <strong>mitrale</strong> — entre oreillette gauche et ventricule gauche.</li>
+        <li>Valve <strong>aortique</strong> — entre ventricule gauche et aorte (sortie vers tout le corps).</li>
+    </ul>
+
+    <div class="pass-tip">
+        <p><strong>Mnémo « TriPuMiA »</strong> — les 4 valves dans l'ordre où le sang les traverse : <strong>Tri</strong>cuspide → <strong>Pu</strong>lmonaire → <strong>Mi</strong>trale → <strong>A</strong>ortique. Tu suis le trajet du sang (cœur droit puis cœur gauche) et tu retrouves les 4 portes dans le bon ordre, sans rien apprendre par cœur.</p>
+    </div>
+
+    <p>Et les gros tuyaux qui entrent et sortent ? Quatre aussi. Les <strong>veines caves</strong> (supérieure et inférieure) ramènent le sang du corps vers l'oreillette droite. L'<strong>artère pulmonaire</strong> sort du ventricule droit et file aux poumons. Les <strong>veines pulmonaires</strong> ramènent le sang oxygéné des poumons à l'oreillette gauche. Et l'<strong>aorte</strong> sort du ventricule gauche, traverse le thorax, puis l'abdomen, et distribue le sang à tout le reste du corps.</p>
+
+    <div class="schema-box" style="max-width: 480px; margin: 28px auto;">
+        <img src="https://medeos-sante.fr/images/anatomie/ch13_voyage_sang.png"
+             alt="Le voyage du sang à travers le cœur : cavités, valves et gros vaisseaux dans l'ordre"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir">
+        <p class="caption"><strong>Le voyage du sang</strong> — le trajet complet à travers les 4 cavités, les 4 valves et les gros vaisseaux, dans l'ordre.</p>
+    </div>
+
+    <p>Quatre cavités, quatre valves, quatre gros vaisseaux. Le cœur tient tout entier sur ce petit squelette de chiffres. Et une fois que tu l'as en tête, le schéma ci-dessus se lit tout seul : tu suis les flèches et tu comprends le trajet du sang d'un coup d'œil.</p>
+
+    <h3>2. La salle des machines</h3>
+
+    <p>Zoome encore. Chaque battement de ton cœur, ce n'est pas un coup de poing aveugle. C'est une <strong>cascade électrique</strong> millimétrée :</p>
+
+    <ol>
+        <li>Un signal naît en haut, dans l'oreillette droite.</li>
+        <li>Il se propage en quelques millisecondes à travers les deux oreillettes. Elles se contractent en premier. Le sang descend dans les ventricules.</li>
+        <li>Le signal est freiné une fraction de seconde à un carrefour (le nœud auriculo-ventriculaire) — comme un péage. C'est ce délai qui laisse le temps aux ventricules de se remplir.</li>
+        <li>Puis le signal explose dans les ventricules. Ils se contractent. Le sang est éjecté.</li>
+    </ol>
+
+    <p>Et tout ça se déroule en <strong>0,8 seconde</strong>. Le temps d'un battement. Si tu écoutes au stéthoscope, tu entends « toum-tac ». Toum = fermeture des valves entre oreillettes et ventricules. Tac = fermeture des valves entre ventricules et grosses artères. Deux sons. Une danse à quatre temps. Cent mille fois par jour.</p>
+
+    <div class="schema-box" style="max-width: 560px; margin: 28px auto;">
+        <img src="https://medeos-sante.fr/images/anatomie/ch13_conduction.png"
+             alt="Système de conduction du cœur : nœud sinusal, nœud AV, faisceau de His, fibres de Purkinje"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir">
+        <p class="caption"><strong>La cascade électrique</strong> — nœud sinusal → nœud AV → faisceau de His → Purkinje. Le cœur se commande tout seul.</p>
+    </div>
+
+    <h3>3. Le chef d'orchestre invisible</h3>
+
+    <p>Mais qui décide que ton cœur doit battre ? Pas ton cerveau. Ton cœur a <strong>son propre métronome</strong>. Un petit groupe de cellules logé dans l'oreillette droite, le <strong>nœud sinusal</strong>. Il envoie un signal électrique tout seul, environ 70 fois par minute, sans rien demander à personne.</p>
+
+    <p>Et c'est pour ça qu'un cœur greffé qui sort du donneur, posé dans le thorax du receveur, recommence à battre tout seul. Il n'attend pas qu'on le reconnecte au cerveau. Il a son propre chef.</p>
+
+    <div class="quick-q">
+        Tu sais combien ton cœur pèse ? Ferme les yeux, propose un chiffre.
+        <span class="ans">→ <span style="font-size: 8pt;">Entre 250 et 350 grammes.</span> Le poids d'une pomme moyenne. Tu portes une pomme qui pompe 7000 litres par jour.</span>
+    </div>
+
+    <h3>4. Le coup de génie de la pression</h3>
+
+    <p>Ton cœur n'envoie pas le sang de manière continue. Il l'<strong>éjecte par à-coups</strong>. Boum. Pause. Boum. Pause. Et c'est ce coup intermittent qui crée la <strong>pression artérielle</strong> — les deux chiffres que ton médecin mesure : 12/8, 13/7, 14/9.</p>
+
+    <ul>
+        <li>Le premier chiffre (12) = pression au moment de l'éjection. On l'appelle la <strong>systolique</strong>.</li>
+        <li>Le second (8) = pression au repos, entre deux battements. On l'appelle la <strong>diastolique</strong>.</li>
+    </ul>
+
+    <p>Ton sang ne coule pas comme l'eau d'un robinet. Il avance par vagues. Pulsations. Et c'est ce que tu sens quand tu prends ton pouls au poignet : la vague qui passe.</p>
+
+    <p class="punchline">Ça. C'est le déclic. Pas une technique de mémo. <em class="hl">Un changement de regard.</em></p>
+
+    <p>Concrètement, ça veut dire <strong>arrêter d'apprendre des mots et commencer à voir des machines</strong>. Le jour où tu ouvres un cours d'anatomie en te demandant « comment ça marche ? » plutôt que « qu'est-ce que je dois retenir ? », tout change. Tu ne recopies plus, tu comprends — et ce qui est compris ne s'oublie pas comme une liste.</p>
+
+    <div class="lucas-anecdote">
+        <em>L'exercice qui marche tient sur une feuille A4 vierge. Tu viens d'échouer un QCM blanc d'anatomie cardiaque ? Au lieu de relire le cours une cinquième fois, dessine le cœur de mémoire, sans regarder. Quatre cavités. Les flèches du sang. Le nœud sinusal. Ce sera moche, les ventricules ressembleront à des patates — peu importe. En dessinant, tu te trompes. Et en te trompant, tu vois exactement ce que tu ne savais pas. Une feuille, un stylo, et le courage de se tromper avant le concours : c'est souvent ce qui fait passer un QCM de 4 à 14.</em>
+    </div>
+
+    <div class="stakes-box">
+        <p>Le cœur, c'est le chapitre qu'on retrouve toujours en QCM — en cardio, en physio, en histologie. Si tu maîtrises ces deux pompes synchrones, tu sécurises l'intuition pour les trois matières. Si tu confonds systole et diastole, tu perds 3 points sur un QCM qui ne pardonne pas.</p>
+    </div>
+
+    <div class="recap-pedagogique">
+        <div class="recap-tronc">
+            <strong>À retenir pour la P1</strong>
+            <ul>
+                <li>Cœur = 2 pompes synchrones. Droite → poumons, gauche → corps.</li>
+                <li>4 cavités : 2 oreillettes (reçoivent) + 2 ventricules (éjectent).</li>
+                <li>4 valves dans l'ordre du sang : tricuspide → pulmonaire (cœur droit) → mitrale → aortique (cœur gauche). Mnémo « TriPuMiA ».</li>
+                <li>4 gros vaisseaux : veines caves + artère pulmonaire (droit), veines pulmonaires + aorte (gauche).</li>
+                <li>Nœud sinusal = chef d'orchestre autonome dans l'oreillette droite. Systolique vs diastolique.</li>
+            </ul>
+        </div>
+        <div class="recap-anecdote">
+            <strong>Anecdotique mais marquant</strong>
+            <ul>
+                <li>Cœur ≈ 300 g. Poids d'une pomme. Pompe 7 000 L/jour.</li>
+                <li>3 milliards de battements sur une vie. Aucune machine industrielle ne tient ça.</li>
+                <li>Un cœur greffé recommence à battre seul dès qu'il est en place : il n'attend pas le cerveau.</li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="cliffhanger">Mais le cœur ne servirait à rien sans une autre machine qui lui amène de l'oxygène à chaque seconde. Et celle-là, elle tient dans <strong>70 m² pliés</strong> dans ta poitrine. ↓</p>
+
+    <!-- ========================================================== -->
+    <!-- SECTION 4 — LE SOUFFLE : 70 m² DANS TA POITRINE            -->
+    <!-- ========================================================== -->
+    <h2><span class="h2-counter">04</span> Les poumons : 70 m² pliés dans ta poitrine</h2>
+
+    <p class="punchline">Déplie tes poumons. Étale-les sur le sol. Tu obtiens la surface d'une salle de classe.</p>
+
+    <p>70 m². C'est la surface d'échange totale de tes deux poumons. Pliée. Compressée. Logée dans la cage de ton thorax. Pourquoi 70 m² ? Parce que tes poumons ne sont pas des sacs vides — ce sont des arbres. Et au bout de chaque branche, il y a une grappe minuscule de bulles : les <strong>alvéoles</strong>. <em class="hl">300 millions</em> par poumon.</p>
+
+    <div class="stat-shock">
+        <div class="cell">
+            <div class="num">600 M</div>
+            <div class="label">d'alvéoles dans tes deux poumons. Chacune fait 0,2 mm. Ensemble : 70 m².</div>
+        </div>
+        <div class="cell">
+            <div class="num">23</div>
+            <div class="label">générations de branchements dans l'arbre bronchique. De la trachée à l'alvéole.</div>
+        </div>
+    </div>
+
+    <h3>1. L'arbre à l'envers</h3>
+
+    <p>Imagine un arbre. Tronc, branches, branchettes, brindilles, feuilles. Tes poumons, c'est la même chose — à l'envers. Le tronc, c'est ta <strong>trachée</strong>. Elle se divise en deux <strong>bronches</strong>. Chaque bronche se divise en bronchioles. Chaque bronchiole se divise encore. Et encore. <strong>23 fois</strong>. Au bout, les alvéoles.</p>
+
+    <p>Tu inspires : l'air descend l'arbre. Tu expires : il remonte. Et à chaque alvéole, l'oxygène traverse une membrane <strong>500 fois plus fine qu'une feuille de papier</strong> (0,5 micromètre) pour rejoindre ton sang. Sur 70 m². Toutes les 4 secondes.</p>
+
+    <p>Cette membrane a un nom : la <strong>membrane alvéolo-capillaire</strong>. C'est elle qui sépare l'air (côté alvéole) du sang (côté capillaire). 0,5 micromètre d'épaisseur, et c'est tout. L'O₂ la traverse vers le sang, le CO₂ la traverse en sens inverse. Si elle s'épaissit — par exemple en cas d'œdème pulmonaire ou de fibrose —, le passage devient laborieux. Le patient suffoque sans qu'on voie rien à l'œil nu. Toute la pneumologie repose sur l'état de cette membrane.</p>
+
+    <div class="schema-box" style="max-width: 460px; margin: 28px auto;">
+        <img src="https://medeos-sante.fr/images/anatomie/ch14_membrane_3_couches.png"
+             alt="La membrane alvéolo-capillaire : 3 couches de 0,5 µm où passent l'O₂ et le CO₂"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir">
+        <p class="caption"><strong>La membrane alvéolo-capillaire</strong> — 0,5 µm d'épaisseur. L'O₂ passe vers le sang, le CO₂ repart vers l'air.</p>
+    </div>
+
+    <div class="schema-box" style="max-width: 560px; margin: 28px auto;">
+        <img src="https://medeos-sante.fr/images/anatomie/ch14_arbre_respiratoire.png"
+             alt="L'arbre respiratoire : un tube qui se dédouble, zone de conduction puis zone d'échange"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir">
+        <p class="caption"><strong>L'arbre bronchique</strong> — trachée, bronches, bronchioles, alvéoles. 23 générations de divisions pour 70 m² de surface.</p>
+    </div>
+
+    <h3>2. Pourquoi tu respires sans y penser</h3>
+
+    <p>Tu n'as jamais décidé consciemment de respirer. Tu peux retenir ta respiration 30 secondes, oui — mais tu finiras par inspirer, que tu veuilles ou non. Pourquoi ? Parce que ton tronc cérébral a un <strong>centre respiratoire</strong> qui surveille en permanence non pas l'oxygène — mais le CO₂ dans ton sang. Contre-intuitif : ce qui te fait inspirer, ce n'est pas le manque d'air, c'est le trop-plein de gaz toxique. Trop de CO₂ : ton tronc cérébral déclenche l'inspiration. Automatique. Non négociable.</p>
+
+    <p>C'est pour ça qu'on ne peut pas se suicider en retenant son souffle. À un moment, le centre respiratoire prend la main, et tu inspires. Que ta volonté soit d'accord ou pas.</p>
+
+    <div class="clinical-box">
+        <p>Quand quelqu'un fait une <strong>crise d'asthme</strong>, ce sont les bronchioles (les petites brindilles de l'arbre) qui se contractent et se ferment. L'air rentre encore, mais il ne ressort plus bien. D'où le sifflement à l'expiration. Quand quelqu'un fait une <strong>pneumonie</strong>, ce sont les alvéoles qui se remplissent de liquide. La surface d'échange tombe de 70 m² à 30 m². D'où l'essoufflement.</p>
+    </div>
+
+    <h3>3. Le diaphragme : le muscle que tu ne sens jamais</h3>
+
+    <p>Tu sais quel muscle fait que tu inspires ? Pas tes côtes. Pas ton thorax. Ton <strong>diaphragme</strong> — une coupole musculaire en forme de parachute, posée sous tes poumons. Quand il se contracte, il s'abaisse. Quand il s'abaisse, il crée un vide dans ta cage thoracique. L'air rentre. Comme une seringue qu'on tire.</p>
+
+    <p>Il fait ça <strong>20 000 fois par jour</strong>. Sans crampe. Sans fatigue. Toute ta vie. Ton diaphragme est le muscle le plus endurant de ton corps. Et tu ne le sens jamais.</p>
+
+    <div class="schema-box" style="max-width: 460px; margin: 28px auto;">
+        <img src="https://medeos-sante.fr/images/anatomie/ch14_diaphragme_cycle.png"
+             alt="Le diaphragme : contracté il descend (inspiration), relâché il remonte (expiration)"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir">
+        <p class="caption"><strong>Le cycle du diaphragme</strong> — contracté, il s'abaisse et l'air entre (inspiration) ; relâché, il remonte et l'air sort (expiration).</p>
+    </div>
+
+    <p>Mais ce vide mécanique ne marche que parce qu'une enveloppe colle tes poumons à la cage thoracique : la <strong>plèvre</strong>. Elle est faite de deux feuillets superposés. Le feuillet <strong>viscéral</strong> tapisse le poumon. Le feuillet <strong>pariétal</strong> tapisse l'intérieur de la cage thoracique. Entre les deux, un mince film de liquide et une pression légèrement négative — l'<strong>espace pleural</strong>. C'est cette pression négative qui colle le poumon contre la cage. Quand la cage s'élargit, le poumon est tiré et il s'élargit avec.</p>
+
+    <div class="clinical-box">
+        <p>Quand un trauma perfore la plèvre — coup de couteau, côte cassée, accident moto —, l'air rentre dans l'espace pleural. La pression négative est cassée. Le poumon se rétracte comme un ballon dégonflé. C'est le <strong>pneumothorax</strong>. Le patient suffoque d'un côté pendant que l'autre poumon compense. Premier geste aux urgences : drain thoracique pour aspirer l'air et redonner du vide.</p>
+    </div>
+
+    <div class="stakes-box">
+        <p>Retiens l'ordre des choses : respirer, c'est <strong>d'abord un mouvement</strong> (le diaphragme crée un vide, l'air entre), <strong>et seulement ensuite un échange de gaz</strong> (l'O₂ et le CO₂ traversent la membrane). Le mouvement amène l'air ; l'échange se fait une fois l'air arrivé. Comprendre cet enchaînement, c'est la clé pour comprendre l'asthme, l'apnée du sommeil ou la respiration assistée.</p>
+    </div>
+
+    <h3>4. L'air qui entre n'est pas l'air qui sort</h3>
+
+    <p>Petit calcul que personne ne te fait à l'école. L'air que tu inspires contient <strong>21 % d'oxygène</strong> et environ <strong>0,04 % de CO₂</strong>. L'air que tu expires : <strong>16 % d'oxygène</strong> et <strong>4 % de CO₂</strong>. Tu vois ce qui s'est passé ? L'oxygène a juste un peu baissé (21 → 16) : ton corps n'en prélève qu'une petite part à chaque passage. Le CO₂, lui, a explosé (0,04 → 4) : ton corps en a fabriqué et l'a rejeté. C'est ça, respirer — prendre un peu d'oxygène, évacuer beaucoup de CO₂.</p>
+
+    <p>C'est pour ça que le bouche-à-bouche marche. L'air que tu envoies dans les poumons de quelqu'un d'autre contient encore 16 % d'oxygène — largement assez pour le maintenir en vie le temps des secours. Tu n'auras jamais à savoir ça pour un QCM. Mais c'est typiquement le genre de truc qui fait la différence entre quelqu'un qui sait pourquoi le bouche-à-bouche marche — et quelqu'un qui le fait sans comprendre.</p>
+
+    <div class="clinical-box">
+        <p>Quand un médecin écoute tes poumons avec un stéthoscope, il cherche trois bruits anormaux : les <strong>sibilants</strong> (sifflement, signe d'asthme — bronches qui se ferment), les <strong>crépitants</strong> (petits craquements, signe d'œdème — alvéoles qui se remplissent), et les <strong>ronchi</strong> (gros bruits, signe de mucus). Trois sons. Trois diagnostics possibles en 10 secondes.</p>
+    </div>
+
+    <div class="recap-pedagogique">
+        <div class="recap-tronc">
+            <strong>À retenir pour la P1</strong>
+            <ul>
+                <li>Arbre bronchique = trachée → bronches → bronchioles → alvéoles (23 générations).</li>
+                <li>Membrane alvéolo-capillaire 0,5 µm : c'est là que l'O₂ entre et le CO₂ sort.</li>
+                <li>Plèvre = 2 feuillets (viscéral + pariétal) + espace pleural en pression négative.</li>
+                <li>Inspiration = vide mécanique créé par la contraction du diaphragme.</li>
+                <li>Centre respiratoire dans le tronc cérébral surveille le CO₂ (pas l'O₂).</li>
+            </ul>
+        </div>
+        <div class="recap-anecdote">
+            <strong>Anecdotique mais marquant</strong>
+            <ul>
+                <li>70 m² de surface d'échange : la superficie d'une salle de classe.</li>
+                <li>600 millions d'alvéoles, 20 000 cycles respiratoires par jour.</li>
+                <li>L'air expiré contient encore 16 % d'O₂ — d'où l'efficacité du bouche-à-bouche.</li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="cliffhanger">Une pompe. Un arbre à oxygène. Et maintenant — le truc qui pilote tout ça sans qu'aucune ligne de code n'ait été écrite. ↓</p>
+
+    <!-- ========================================================== -->
+    <!-- SECTION 5 — LE CERVEAU : 1,4 kg, 86 MILLIARDS              -->
+    <!-- ========================================================== -->
+    <h2><span class="h2-counter">05</span> Le cerveau : 1,4 kg, une ampoule, 86 milliards d'étoiles</h2>
+
+    <p class="punchline">Ton cerveau consomme 20 watts. Comme une ampoule LED. Et il traite plus d'informations par seconde qu'aucun supercalculateur sur Terre.</p>
+
+    <p>Pose ta main sur ton front. Sous ta paume, il y a <strong>86 milliards de neurones</strong>. Pour donner un ordre de grandeur, c'est du même ordre que le nombre d'étoiles dans une galaxie. Toute une galaxie. Dans 1,4 kilo de chair posé entre tes deux oreilles.</p>
+
+    <div class="stat-shock">
+        <div class="cell">
+            <div class="num">86 milliards</div>
+            <div class="label">de neurones. Chacun connecté à 10 000 autres. Soit ~860 000 milliards de synapses.</div>
+        </div>
+        <div class="cell">
+            <div class="num">20 W</div>
+            <div class="label">de consommation. Une ampoule LED. Et pourtant 20 % de ton énergie totale au repos.</div>
+        </div>
+    </div>
+
+    <h3>1. Une maison à 4 étages</h3>
+
+    <p>Ton cerveau n'est pas un bloc uniforme. C'est une maison construite étage par étage, sur des millions d'années d'évolution — et chaque étage est toujours là, sous tes cheveux. Quatre grands niveaux, exactement comme sur le schéma ci-dessous.</p>
+
+    <p><strong>Au sous-sol</strong>, le plus vieux : le <strong>tronc cérébral</strong>. Il ne pense pas, il ne ressent rien — il te garde en vie. Respirer, faire battre ton cœur, tenir ta pression. Tu n'y penses jamais, et c'est tant mieux : c'est lui qui travaille la nuit pendant que tu dors. Touche-y, et tout s'éteint.</p>
+
+    <p><strong>Juste à côté, à l'arrière</strong>, le <strong>cervelet</strong>. C'est le chorégraphe. C'est lui qui fait que tu attrapes une balle sans y réfléchir, que tu tiens debout, que tu marches sans calculer chaque pas. Sans lui, tu saurais quoi faire — mais ton corps ne saurait plus comment.</p>
+
+    <p><strong>En plein centre</strong>, le carrefour : le <strong>diencéphale</strong>. C'est la plaque tournante par où tout passe — il abrite le thalamus (le grand standard qui trie les informations) et l'hypothalamus (le chef d'orchestre de tes besoins vitaux).</p>
+
+    <p><strong>Et tout en haut, le dernier arrivé</strong> : le <strong>cerveau</strong> proprement dit — les deux hémisphères, recouverts de ce manteau plissé qu'est le cortex. Pensée, langage, décision. C'est lui, là, qui lit cette phrase en ce moment même.</p>
+
+    <div class="schema-box" style="max-width: 560px; margin: 28px auto;">
+        <img src="https://medeos-sante.fr/images/anatomie/ch8_vue_ensemble_encephale.png"
+             alt="Les 4 grandes parties de l'encéphale : cerveau, diencéphale, cervelet, tronc cérébral"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir">
+        <p class="caption"><strong>Les 4 grandes parties de l'encéphale</strong> — cerveau (hémisphères), diencéphale, cervelet et tronc cérébral.</p>
+    </div>
+
+    <p>Et tout au fond de cette maison, blotti autour du diencéphale, vit un réseau discret mais tout-puissant : le <strong>système limbique</strong>, ton cerveau émotionnel. C'est lui qui décide, sans te demander ton avis, si tu as peur, si tu te souviens, si tu as faim. Trois habitants à connaître. L'<strong>amygdale</strong> : la sentinelle de la peur — c'est elle qui te fait sursauter avant même que tu aies compris qu'une porte a claqué. L'<strong>hippocampe</strong> : le secrétaire de la mémoire — c'est lui qui transforme ce que tu vis aujourd'hui en souvenir de demain (et c'est lui que tu vas faire travailler toute ton année). L'<strong>hypothalamus</strong> : le thermostat général — température, faim, soif, sommeil. Tu ne contrôles rien de tout ça. Le système limbique le fait pour toi, en silence.</p>
+
+    <h3>2. Le cortex : 4 lobes, 4 métiers</h3>
+
+    <p>Le cortex, ce manteau plissé qui recouvre le reste, se divise en <strong>4 lobes</strong>. Un par direction. Et chacun a sa spécialité — qui revient en QCM dans toutes les facs.</p>
+
+    <div class="manip-palpee">
+        <div class="manip-titre">Pose tes mains. Tu vas localiser tes 4 lobes en 8 secondes.</div>
+        <div class="manip-etapes">
+            <div class="manip-etape">
+                <span class="manip-num">1.</span> Pose ta main sur ton <strong>front</strong>. Tu touches ton <strong>lobe frontal</strong> — le PDG. Décision, mouvement volontaire, planification.
+            </div>
+            <div class="manip-etape">
+                <span class="manip-num">2.</span> Glisse sur le <strong>dessus de ton crâne</strong>. Tu touches ton <strong>lobe pariétal</strong> — le standard téléphonique des sensations (toucher, douleur, température).
+            </div>
+            <div class="manip-etape">
+                <span class="manip-num">3.</span> Pose ta main <strong>au-dessus de ton oreille</strong>. Tu touches ton <strong>lobe temporal</strong> — l'audition et une partie de la mémoire.
+            </div>
+            <div class="manip-etape">
+                <span class="manip-num">4.</span> Pose ta main sur <strong>ta nuque, juste au-dessus</strong>. Tu touches ton <strong>lobe occipital</strong> — la vision, intégralement.
+            </div>
+        </div>
+        <p class="manip-claire">4 lobes. 4 zones. 4 métiers. Encodage en 8 secondes, retenu à vie.</p>
+    </div>
+
+    <div class="schema-box" style="max-width: 560px; margin: 28px auto;">
+        <img src="https://medeos-sante.fr/images/anatomie/ch8_4_lobes_cerebraux.png"
+             alt="Les 4 lobes du cortex : frontal, pariétal, temporal, occipital"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir">
+        <p class="caption"><strong>Les 4 lobes du cortex</strong> — frontal (décision), pariétal (sensations), temporal (audition), occipital (vision).</p>
+    </div>
+
+    <h3>3. Le neurone : une fibre qui peut mesurer un mètre</h3>
+
+    <p>Un neurone, c'est <strong>une seule cellule</strong>. Et normalement, une cellule est microscopique : il en faudrait des dizaines pour faire la largeur d'un cheveu. Sauf le neurone. Certains possèdent un long prolongement, l'<strong>axone</strong>, qui part de ta moelle épinière et descend d'une traite jusqu'à ton gros orteil — <em class="hl">près d'un mètre</em>. Imagine : une cellule unique, invisible à l'œil nu en largeur, mais aussi longue que ta jambe. Quand tu décides de bouger ton pied, le signal file le long de cet axone à <strong>100 mètres par seconde</strong>, sans jamais sortir de la cellule. C'est ça, un neurone.</p>
+
+    <div class="schema-box" style="max-width: 420px; margin: 28px auto;">
+        <img src="https://medeos-sante.fr/images/biologie/ch15_fig2_neurone_multipolaire.png"
+             alt="Structure d'un neurone : dendrites, corps cellulaire, axone, gaine de myéline"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir">
+        <p class="caption"><strong>Le neurone</strong> — dendrites qui reçoivent, corps cellulaire, axone qui transmet le signal jusqu'au bout.</p>
+    </div>
+
+    <p>Et entre deux neurones, il y a un intervalle minuscule, la <strong>synapse</strong>. 20 nanomètres. Le signal électrique ne peut pas le franchir. Alors le neurone libère une molécule chimique qui traverse l'intervalle. Sérotonine, dopamine, glutamate — les trois neurotransmetteurs principaux. Ce sont eux qui passent d'une cellule à l'autre, des millions de fois par seconde dans ta tête, en ce moment même.</p>
+
+    <div class="schema-box" style="max-width: 420px; margin: 28px auto;">
+        <img src="https://medeos-sante.fr/images/biologie/ch15_fig13_synapse_chimique.png"
+             alt="La synapse chimique : bouton présynaptique, fente synaptique, neurotransmetteurs, récepteurs"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir">
+        <p class="caption"><strong>La synapse</strong> — le neurone libère un neurotransmetteur qui traverse l'intervalle pour passer le message à la cellule suivante.</p>
+    </div>
+
+    <div class="clinical-box">
+        <p>Quand quelqu'un fait un <strong>AVC</strong>, un vaisseau du cerveau se bouche ou se rompt. Les neurones en aval n'ont plus d'oxygène. Et un neurone privé d'oxygène meurt en <strong>4 minutes</strong>. À chaque minute perdue, <strong>2 millions de neurones disparaissent</strong>. C'est pour ça que les urgentistes courent.</p>
+    </div>
+
+    <div class="lucas-anecdote">
+        <em>Le système nerveux fait peur parce qu'on essaie de l'apprendre comme une liste : un nom, une fonction, on recopie, on récite. Et trois jours plus tard, tout est mélangé. Le vrai déclic, c'est de dessiner deux neurones côte à côte. Tu fais le premier : un rond (le corps), les petites branches qui reçoivent (les dendrites), le long fil qui part (l'axone). Au bout, tu colles le deuxième neurone — et entre les deux, tu laisses un petit espace : la synapse. Puis tu traces une flèche qui montre le signal partir du premier, sauter l'espace, arriver au second. Ce dessin-là, fait de mémoire, tu ne l'oublies plus : tu as compris comment l'information circule dans ta tête. En neuro, un schéma refait de mémoire vaut dix relectures.</em>
+    </div>
+
+    <div class="stakes-box">
+        <p>Le cerveau et le système nerveux représentent <strong>4 chapitres</strong> de la première année. Si tu as les 4 étages et le neurone qui mesure un mètre dans la tête, tu as déjà l'ossature. Le reste, ce sera du remplissage.</p>
+    </div>
+
+    <p>Et voilà le plus beau : apprendre, c'est exactement ça — <strong>créer de nouvelles connexions entre tes neurones</strong>. Chaque notion que tu comprends, chaque schéma que tu refais, renforce une synapse. C'est précisément le travail qui t'attend en première année : transformer des milliers de notions en un réseau solide qui tient. Ton cerveau a déjà tout le matériel. Il ne te reste qu'à le câbler.</p>
+
+    <div class="recap-pedagogique">
+        <div class="recap-tronc">
+            <strong>À retenir pour la P1</strong>
+            <ul>
+                <li>4 grands étages : tronc cérébral, cervelet, système limbique, cortex.</li>
+                <li>Système limbique = amygdale (peur), hippocampe (mémoire), hypothalamus (faim/soif/température).</li>
+                <li>4 lobes du cortex : frontal (décision), pariétal (sensations), temporal (audition/mémoire), occipital (vision).</li>
+                <li>Neurone = corps cellulaire + axone + synapse. Axone jusqu'à 1 mètre.</li>
+                <li>Neurotransmetteurs clés : sérotonine, dopamine, glutamate.</li>
+            </ul>
+        </div>
+        <div class="recap-anecdote">
+            <strong>Anecdotique mais marquant</strong>
+            <ul>
+                <li>86 milliards de neurones — du même ordre que les étoiles d'une galaxie.</li>
+                <li>Consommation : 20 W (une ampoule LED) pour 20 % de ton énergie totale.</li>
+                <li>2 millions de neurones perdus par minute d'AVC non traité.</li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="cliffhanger">Tu sais ce qu'il y a de fou ? Une partie de ton cerveau dépasse de ta boîte crânienne. Tu la portes au bout d'un nerf. Et elle voit le monde. ↓</p>
+
+    <!-- ========================================================== -->
+    <!-- SECTION 6 — LES SENS : LA RÉTINE EST UN MORCEAU DE CERVEAU -->
+    <!-- ========================================================== -->
+    <h2><span class="h2-counter">06</span> Les sens : ta rétine est un morceau de ton cerveau</h2>
+
+    <p class="punchline">Tes yeux ne sont pas des caméras posées sur ton visage. Ce sont deux morceaux de ton cerveau qui sortent par les orbites.</p>
+
+    <p>Ça paraît fou, et pourtant c'est de l'embryologie pure. Vers la 4ᵉ semaine de ta vie, alors que tu n'es qu'un amas de cellules, ton cerveau en formation pousse deux petites bulles vers l'avant du visage. Ces deux bulles ne reviendront jamais en arrière : elles deviennent tes yeux. Résultat, la <strong>rétine</strong> — le fond de ton œil — n'est pas « reliée » au cerveau : <em class="hl">elle EST du cerveau</em>, posée au bout d'un nerf. Voilà pourquoi un ophtalmologiste qui regarde au fond de ton œil est, littéralement, en train de regarder ton cerveau à l'œil nu — sans ouvrir le crâne. C'est le seul endroit du corps où c'est possible.</p>
+
+    <div class="stat-shock">
+        <div class="cell">
+            <div class="num">130 M</div>
+            <div class="label">de photorécepteurs par rétine. Bâtonnets (noir/blanc) + cônes (couleur).</div>
+        </div>
+        <div class="cell">
+            <div class="num">10 ms</div>
+            <div class="label">de retard entre ce que tes yeux voient et ce que ton cerveau interprète. Tu vis dans le passé.</div>
+        </div>
+    </div>
+
+    <h3>1. La chaîne du signal</h3>
+
+    <p>Suis le trajet, étape par étape. La lumière entre par ta pupille, traverse le cristallin (la lentille), et frappe la rétine au fond de l'œil. Là, des cellules photoréceptrices font une chose extraordinaire : elles transforment des photons en un signal électrique. Ce signal remonte par le <strong>nerf optique</strong>, croise au niveau du <strong>chiasma</strong> (où les fibres des deux yeux se mélangent), puis file jusqu'à l'arrière de ton crâne, dans le <strong>cortex visuel</strong> du lobe occipital.</p>
+
+    <p>Et c'est seulement là, tout au fond, que l'image apparaît. <em class="hl">Tu ne vois pas avec tes yeux — tu vois avec l'arrière de ta tête.</em> Tes yeux ne font que capter la lumière ; le film, lui, c'est ton cerveau qui le projette. La preuve : ferme les yeux et appuie très doucement sur le coin de ta paupière. Tu vois apparaître une petite tache de lumière, alors qu'il fait noir et qu'aucune lumière n'est entrée. Ce que tu as fait, c'est stimuler la rétine par une simple pression, au lieu de la lumière. Elle a quand même envoyé un signal au cerveau — et ton cerveau l'a interprété comme de la lumière. Preuve que la « lumière » que tu vois, c'est lui qui la fabrique.</p>
+
+    <div class="schema-box" style="max-width: 560px; margin: 28px auto;">
+        <img src="https://medeos-sante.fr/images/anatomie/pano_voie_visuelle.png"
+             alt="La voie visuelle : rétine → nerf optique → chiasma → cortex occipital"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir">
+        <p class="caption"><strong>La voie visuelle</strong> — de la rétine au lobe occipital, en passant par le chiasma optique. C'est le cerveau, au bout, qui invente l'image.</p>
+    </div>
+
+    <h3>2. La peau : 2 m², 200 000 capteurs</h3>
+
+    <p>On l'oublie tout le temps, mais ta peau est ton <strong>plus gros organe</strong> : <strong>2 m²</strong> étalés sur tout ton corps, <strong>4 kg</strong> sur la balance, et surtout <strong>200 000 capteurs</strong> qui sentent en permanence le chaud, le froid, la pression, la douleur, la texture. Chacun envoie son signal au cortex sensitif. Mais voici le détail qui change tout : toutes les zones de ta peau ne sont pas traitées également. Tes lèvres, tes mains et tes doigts, à eux seuls, occupent <strong>30 % du cortex sensitif</strong> — alors que ton dos, à surface équivalente, n'en occupe que 2 %. C'est pour ça que tu distingues deux pointes à 1 mm d'écart sur le bout du doigt, mais qu'il en faut 4 cm dans le dos pour les sentir comme deux. Ton cerveau ne consacre de la place qu'à ce qui compte.</p>
+
+    <div class="schema-box" style="max-width: 380px; margin: 28px auto;">
+        <img src="https://medeos-sante.fr/images/anatomie/ch8_homonculus_sensitif.png"
+             alt="Homonculus sensitif : le corps déformé selon la place de chaque zone dans le cortex"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir">
+        <p class="caption"><strong>L'homonculus sensitif</strong> — le corps redessiné selon sa place dans le cortex : mains et lèvres énormes, dos minuscule.</p>
+    </div>
+
+    <div class="stakes-box">
+        <p>Retiens l'idée commune à tous les sens : <strong>tes organes sensoriels ne sont que des capteurs — c'est ton cerveau qui crée la sensation.</strong> L'œil capte la lumière, mais c'est le cortex qui voit. L'oreille capte la vibration, mais c'est le cortex qui entend. Comprendre ça, c'est tenir d'un seul fil toute la partie « organes des sens » de l'année.</p>
+    </div>
+
+    <h3>3. L'ouïe : 16 000 cellules dans une coquille de 1 cm</h3>
+
+    <p>Tes oreilles ne captent pas le son. Elles transmettent une vibration mécanique de l'air à l'eau. Le pavillon canalise l'onde, le tympan vibre, trois petits osselets (marteau, enclume, étrier — les plus petits os de ton corps) transmettent la vibration à l'oreille interne. Là, dans une coquille en spirale appelée la <strong>cochlée</strong>, environ <strong>16 000 cellules ciliées</strong> traduisent la vibration en signal électrique. Et ce signal monte au lobe temporal — où ton cerveau invente le son.</p>
+
+    <div class="schema-box" style="max-width: 560px; margin: 28px auto;">
+        <img src="https://medeos-sante.fr/images/anatomie/ch11_oreille_dans_crane.png"
+             alt="L'oreille dans le crâne : oreille externe, moyenne et interne, du pavillon à la cochlée"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir">
+        <p class="caption"><strong>L'oreille, du pavillon à la cochlée</strong> — pavillon et conduit, tympan et osselets, puis l'oreille interne enfouie dans l'os du crâne.</p>
+    </div>
+
+    <p>Et voici ce qui rend ces 16 000 cellules ciliées si précieuses : <strong>elles ne se renouvellent jamais</strong>. Tu nais avec ton stock, et chacune qui meurt est perdue pour toujours — ton corps n'en refabriquera pas une seule. C'est exactement ce qui se passe quand tu sors d'un concert avec les oreilles qui sifflent : le son trop fort en a tué quelques-unes au passage. À petite dose tu ne sens rien, mais le compteur ne fait que descendre, concert après concert, année après année. Voilà pourquoi on entend moins bien en vieillissant — et pourquoi, le jour où un ORL diagnostique une <strong>surdité de perception</strong>, il n'y a pas de retour en arrière : les cellules sont parties définitivement. La bonne nouvelle, c'est que ce stock, tu peux le protéger dès maintenant. De simples bouchons en concert suffisent.</p>
+
+    <h3>4. Le goût : 80 % du goût n'est pas dans la langue</h3>
+
+    <p>Sur ta langue, des <strong>papilles gustatives</strong> détectent <strong>5 saveurs</strong> de base : sucré, salé, acide, amer, et <strong>umami</strong> (le « savoureux » découvert au Japon en 1908). C'est tout. Cinq capteurs élémentaires sur la langue.</p>
+
+    <p>Alors d'où vient la complexité d'une bonne pizza, d'un café fort, d'une fraise mûre ? <em class="hl">80 % de ce que tu appelles « goût » est en réalité de l'odorat.</em> Les molécules volatiles de l'aliment remontent par l'arrière de ta bouche jusqu'aux récepteurs olfactifs. Bouche-toi le nez et croque une pomme : tu sentiras juste sucré + acide, plus aucune saveur de pomme. C'est pour ça que tu perds le goût quand tu es enrhumé.</p>
+
+    <h3>5. L'odorat : le seul sens qui court-circuite ton cerveau</h3>
+
+    <p>Voici une perle anatomique que peu d'élèves connaissent. Tous tes sens — vue, ouïe, toucher, goût — passent d'abord par un filtre central du cerveau, le <strong>thalamus</strong>, avant d'arriver au cortex. Tous, sauf un. <em class="hl">L'odorat file en direct au système limbique.</em> Court-circuit. Pas de filtre. Pas de relais.</p>
+
+    <p>C'est exactement pour ça qu'une odeur ramène un souvenir d'enfance en une fraction de seconde, sans que tu y aies pensé une fois en vingt ans. Le parfum d'une grand-mère, l'odeur d'une crème solaire, l'air d'un vestiaire de sport. L'odorat tape directement sur l'amygdale (émotion) et l'hippocampe (mémoire). C'est le sens le plus archaïque — et le plus émotionnel — que tu possèdes.</p>
+
+    <h3>6. Le sens dont personne ne parle</h3>
+
+    <p>On t'a appris qu'il y avait <strong>5 sens</strong> : vue, ouïe, toucher, goût, odorat. Faux. Il y en a un sixième, peut-être le plus important : la <strong>proprioception</strong>. C'est le sens qui te dit où sont tes membres dans l'espace, sans que tu aies besoin de les regarder.</p>
+
+    <p>Ferme les yeux. Lève ton bras gauche au-dessus de ta tête. Tu sais qu'il est en haut. Tu n'as pas eu besoin de le voir. Ce sens-là est partout dans tes muscles, tes tendons, tes articulations. Des milliers de capteurs minuscules qui envoient en continu un signal au cervelet : « bras à 90 degrés, jambe pliée, tête inclinée à droite ». C'est pour ça que tu peux marcher dans le noir, taper sur un clavier sans regarder tes doigts, conduire sans regarder ta main qui change de vitesse.</p>
+
+    <p>Il existe des maladies qui détruisent ce sens. Le patient ferme les yeux, on plie son doigt, il ne sait pas s'il est plié ou tendu. Il marche en regardant ses pieds. Il devient prisonnier de son propre corps. Ce sens silencieux, dont personne ne parle, est peut-être le plus précieux de tous.</p>
+
+    <div class="recap-pedagogique">
+        <div class="recap-tronc">
+            <strong>À retenir pour la P1</strong>
+            <ul>
+                <li>Voie visuelle : œil → nerf optique → chiasma → cortex occipital. Rétine = tissu cérébral.</li>
+                <li>Ouïe : tympan → osselets → cochlée (16 000 cellules ciliées) → lobe temporal.</li>
+                <li>Goût : 5 saveurs (sucré, salé, acide, amer, umami). 80 % du « goût » vient de l'odorat.</li>
+                <li>Odorat : seul sens qui ne passe pas par le thalamus, file direct au système limbique.</li>
+                <li>Proprioception : 6ᵉ sens, capteurs musculo-tendineux, envoie au cervelet.</li>
+            </ul>
+        </div>
+        <div class="recap-anecdote">
+            <strong>Anecdotique mais marquant</strong>
+            <ul>
+                <li>Tes lèvres + mains + doigts = 30 % du cortex sensitif. Ton dos = 2 %.</li>
+                <li>10 ms de retard entre ce que tes yeux voient et ce que tu interprètes.</li>
+                <li>Cellules ciliées : aucune régénération. Une fois perdues, perdues à vie.</li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="cliffhanger">Tu as vu six pièces. Six machines. Six manières d'être vivant. Et tu commences déjà à regarder ton propre corps comme un soignant le regarderait. ↓</p>
+
+    <!-- ========================================================== -->
+    <!-- CONCLUSION BASCULE + ANECDOTE #3 + CTA                     -->
+    <!-- ========================================================== -->
+    <h2><span class="h2-counter">07</span> Ce qu'il se passe maintenant</h2>
+
+    <p>Tu viens de faire le tour. Tu n'as pas appris la P1. Mais tu as changé de regard. Pour la première fois, peut-être, tu as vu ton corps comme une <strong>machine que tu peux comprendre</strong> — pas comme une liste de mots latins à recopier.</p>
+
+    <p>Tu as une carte. Six pièces, six logiques :</p>
+
+    <ul>
+        <li>Le <strong>GPS</strong> — six mots pour te repérer partout</li>
+        <li>Le <strong>squelette</strong> — une machine à glisser, pas un cintre</li>
+        <li>Le <strong>cœur</strong> — deux pompes synchronisées avec leur propre chef</li>
+        <li>Les <strong>poumons</strong> — un arbre à 23 générations qui plie 70 m² dans ta poitrine</li>
+        <li>Le <strong>cerveau</strong> — une maison à 4 étages, 86 milliards d'habitants, 20 watts</li>
+        <li>Les <strong>sens</strong> — des prolongements de ton cortex, pas des caméras autonomes</li>
+    </ul>
+
+    <p>Voilà ce que tu as gagné en faisant ce tour. Ce qu'il te reste à faire : descendre dans le détail. Les schémas refaits de mémoire le soir. Les coupes qu'on relit jusqu'à les voir les yeux fermés. Les heures où on bute, où on doute, où on dessine sur une feuille A4 jusqu'à comprendre.</p>
+
+    <div class="lucas-anecdote">
+        <em>Tous ceux qui finissent dans le haut du classement ont commencé là où tu es : devant une matière qui fait peur, sans méthode encore. Ce qui les distingue, ce n'est pas l'intelligence — c'est le moment où ils arrêtent d'apprendre des mots pour commencer à voir des machines. Si tu lis cette page jusqu'ici, tu as déjà ce qu'il faut pour faire le même chemin.</em>
+    </div>
+
+    <p>Si tu as commencé à regarder ton propre poignet, ta cage thoracique, ton genou différemment, le plus dur est déjà fait. Le reste, ce ne sont que des heures à mettre en face.</p>
+
+    <p class="punchline">Aucune place n'est garantie. Mais une chose est sûre : en septembre, tu ne seras pas celui qu'on jette dans la piscine sans savoir nager.</p>
+
+    <!-- ========================================================== -->
+    <!-- MINI-QCM FINAL — 5 questions d'ancrage                     -->
+    <!-- ========================================================== -->
+    <section class="mini-qcm" id="mini-qcm-final">
+        <h2>Mini-QCM — Teste-toi en 5 questions</h2>
+        <p class="mini-qcm-intro">5 questions sur ce que tu viens de lire. Réponds avant de cliquer. Pas de stress — c'est juste pour ancrer.</p>
+
+        <div class="mini-qcm-question">
+            <p class="mini-qcm-num">Question 1 / 5</p>
+            <p class="mini-qcm-enonce">Ton sternum, par rapport à ta colonne vertébrale, est :</p>
+            <ul class="mini-qcm-choix">
+                <li>A. Postérieur</li>
+                <li data-correct>B. Antérieur</li>
+                <li>C. Médial</li>
+                <li>D. Latéral</li>
+            </ul>
+            <details class="mini-qcm-correction">
+                <summary>Voir la réponse</summary>
+                <p><strong>Réponse : B</strong> — Le sternum est devant la colonne, donc antérieur. Antérieur = vers le ventre, postérieur = vers le dos. C'est exactement le point que 70 % des bacheliers ratent au premier QCM.</p>
+                <p class="mini-qcm-source"><em>Où retrouver ça dans le cours : Section 02 — Les 6 mots du GPS corporel.</em></p>
+            </details>
+        </div>
+
+        <div class="mini-qcm-question">
+            <p class="mini-qcm-num">Question 2 / 5</p>
+            <p class="mini-qcm-enonce">Quelle valve cardiaque se trouve entre l'oreillette gauche et le ventricule gauche ?</p>
+            <ul class="mini-qcm-choix">
+                <li>A. La valve tricuspide</li>
+                <li>B. La valve pulmonaire</li>
+                <li data-correct>C. La valve mitrale</li>
+                <li>D. La valve aortique</li>
+            </ul>
+            <details class="mini-qcm-correction">
+                <summary>Voir la réponse</summary>
+                <p><strong>Réponse : C</strong> — La mitrale est à gauche, la tricuspide à droite. Avec le mnémo « TriPuMiA » (ordre du sang : Tricuspide → Pulmonaire → Mitrale → Aortique), tu vois que la tricuspide est dans le cœur droit et la mitrale dans le cœur gauche. Les deux autres (pulmonaire et aortique) sont à la sortie des ventricules, pas entre oreillette et ventricule.</p>
+                <p class="mini-qcm-source"><em>Où retrouver ça dans le cours : Section 03 — Le cœur, les 4 valves.</em></p>
+            </details>
+        </div>
+
+        <div class="mini-qcm-question">
+            <p class="mini-qcm-num">Question 3 / 5</p>
+            <p class="mini-qcm-enonce">La membrane alvéolo-capillaire mesure environ 0,5 micromètre. Pourquoi est-elle aussi fine ?</p>
+            <ul class="mini-qcm-choix">
+                <li>A. Pour laisser passer les globules rouges entiers vers l'alvéole</li>
+                <li data-correct>B. Pour permettre à l'O₂ et au CO₂ de diffuser rapidement entre l'air et le sang</li>
+                <li>C. Pour filtrer les poussières inhalées</li>
+                <li>D. Pour amplifier le son des bronches au stéthoscope</li>
+            </ul>
+            <details class="mini-qcm-correction">
+                <summary>Voir la réponse</summary>
+                <p><strong>Réponse : B</strong> — Cette membrane sépare l'air (côté alvéole) du sang (côté capillaire). L'O₂ la traverse vers le sang, le CO₂ en sens inverse. Si elle s'épaissit (œdème, fibrose), le passage devient laborieux et le patient suffoque.</p>
+                <p class="mini-qcm-source"><em>Où retrouver ça dans le cours : Section 04 — Les poumons, membrane alvéolo-capillaire.</em></p>
+            </details>
+        </div>
+
+        <div class="mini-qcm-question">
+            <p class="mini-qcm-num">Question 4 / 5</p>
+            <p class="mini-qcm-enonce">Le système limbique gère les émotions, la mémoire et les instincts. Lequel de ces trois habitants en fait partie ?</p>
+            <ul class="mini-qcm-choix">
+                <li>A. Le cervelet</li>
+                <li>B. Le tronc cérébral</li>
+                <li data-correct>C. L'hippocampe</li>
+                <li>D. Le cortex préfrontal</li>
+            </ul>
+            <details class="mini-qcm-correction">
+                <summary>Voir la réponse</summary>
+                <p><strong>Réponse : C</strong> — Le système limbique abrite trois habitants clés : l'amygdale (sentinelle de la peur), l'hippocampe (secrétaire de la mémoire) et l'hypothalamus (thermostat général). Le cervelet, le tronc cérébral et le cortex sont d'autres étages du cerveau.</p>
+                <p class="mini-qcm-source"><em>Où retrouver ça dans le cours : Section 05 — Le cerveau, maison à 4 étages.</em></p>
+            </details>
+        </div>
+
+        <div class="mini-qcm-question">
+            <p class="mini-qcm-num">Question 5 / 5</p>
+            <p class="mini-qcm-enonce">Pourquoi l'odorat est-il unique parmi les 5 sens ?</p>
+            <ul class="mini-qcm-choix">
+                <li>A. Parce qu'il utilise les mêmes récepteurs que le goût</li>
+                <li data-correct>B. Parce qu'il ne passe pas par le thalamus et file direct au système limbique</li>
+                <li>C. Parce qu'il fonctionne uniquement pendant le sommeil</li>
+                <li>D. Parce qu'il est le seul sens contrôlé par le cervelet</li>
+            </ul>
+            <details class="mini-qcm-correction">
+                <summary>Voir la réponse</summary>
+                <p><strong>Réponse : B</strong> — Tous les autres sens (vue, ouïe, toucher, goût) passent d'abord par le thalamus avant d'arriver au cortex. L'odorat, lui, court-circuite ce filtre et tape directement sur l'amygdale et l'hippocampe. C'est exactement pour ça qu'une odeur ramène un souvenir d'enfance en une fraction de seconde.</p>
+                <p class="mini-qcm-source"><em>Où retrouver ça dans le cours : Section 06 — Les sens, l'odorat court-circuite le cerveau.</em></p>
+            </details>
+        </div>
+
+        <div class="mini-qcm-conclusion">
+            <p>Tu as répondu juste à 4-5 questions ? Tu as compris les bases. Tu as répondu juste à 2-3 ? Relis les sections qui te manquent — c'est exactement à ça que sert un panorama.</p>
+        </div>
+    </section>
+
+    <!-- ========================================================== -->
+    <!-- PONT VERS L'OFFRE — doux, après toute la valeur (post-QCM) -->
+    <!-- ========================================================== -->
+    <div style="margin:40px 0 8px;padding:30px 26px;border-radius:18px;background:linear-gradient(150deg,#F1ECFA,#FAF6F0);border:1px solid #e2d6f5;">
+        <p style="font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#6B46C1;margin:0 0 12px;">Et la suite ?</p>
+        <p style="font-size:16px;line-height:1.7;color:#2c3e50;margin:0 0 14px;">Ce panorama, c'est la vue d'ensemble — la carte du corps. Descendre dans le détail, chapitre par chapitre, avec des cours qui font comprendre, des QCM corrigés au format du concours et quelqu'un qui te répond quand tu bloques : c'est ce qu'on a construit dans <strong>Medi&nbsp;Pro</strong>. On ne te demande rien — si la curiosité te prend, jette juste un œil.</p>
+        <a href="https://medeos-sante.fr/packs/medi-pro" target="_top" onclick="try{window.parent.postMessage({medeosClick:'cta_medipro_iframe'},location.origin)}catch(e){}" style="display:inline-flex;align-items:center;gap:7px;color:#fff;font-weight:600;font-size:15px;text-decoration:none;padding:12px 24px;border-radius:999px;background:linear-gradient(150deg,#4C2A85,#6B46C1 75%);box-shadow:0 10px 26px rgba(76,42,133,.26);">Découvrir Medi&nbsp;Pro →</a>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- FOOTER                                                     -->
+    <!-- ========================================================== -->
+    <footer class="chapter-footer">
+        <p>Medeos · Panorama d'anatomie en P1</p>
+        <p>© Medeos — medeos-sante.fr</p>
+    </footer>
+
+</div>
+
+<!-- ============================================================= -->
+<!-- BARRE DE ZOOM FLOTTANTE (autonome — − / % / +)                -->
+<!-- Applique la propriété CSS `zoom` sur le contenu : texte ET     -->
+<!-- schémas s'agrandissent ensemble, quelles que soient les unités.-->
+<!-- ============================================================= -->
+<style>
+    #medeos-zoombar {
+        position: fixed; bottom: 18px; right: 18px; z-index: 9999;
+        display: flex; align-items: center; gap: 2px;
+        background: rgba(255,255,255,0.96);
+        border: 1px solid #E8E1D5; border-radius: 999px;
+        padding: 4px; box-shadow: 0 4px 14px rgba(31,31,46,0.12);
+        backdrop-filter: blur(6px);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #medeos-zoombar button {
+        border: 0; background: transparent; cursor: pointer;
+        color: #5C5C70; font-weight: 700; line-height: 1;
+        border-radius: 999px; transition: background .15s, color .15s;
+    }
+    #medeos-zoombar .zb-step {
+        width: 30px; height: 30px; font-size: 18px;
+        display: flex; align-items: center; justify-content: center;
+    }
+    #medeos-zoombar .zb-level {
+        min-width: 48px; height: 30px; font-size: 13px; font-weight: 600;
+        padding: 0 6px; font-variant-numeric: tabular-nums;
+    }
+    #medeos-zoombar button:hover { background: #F4EFFB; color: #6B46C1; }
+    #medeos-zoombar button:disabled { opacity: .3; cursor: default; background: transparent; }
+    @media print { #medeos-zoombar { display: none !important; } }
+    /* Mobile : pas de barre de zoom (le cours démarre d'office à 50 %, comme les
+       cours de la formation). Le pincement reste dispo pour réajuster. */
+    @media (max-width: 767px) { #medeos-zoombar { display: none !important; } }
+</style>
+<div id="medeos-zoombar" aria-label="Zoom du cours">
+    <button type="button" class="zb-step" id="zb-out" title="Réduire" aria-label="Réduire">−</button>
+    <button type="button" class="zb-level" id="zb-level" title="Revenir à 100 %" aria-label="Réinitialiser le zoom">100%</button>
+    <button type="button" class="zb-step" id="zb-in" title="Agrandir" aria-label="Agrandir">+</button>
+</div>
+<!-- Lightbox (clic sur un schéma pour l'agrandir) — même comportement que les cours.
+     Le filigrane medeos-sante.fr reste posé PAR-DESSUS l'image agrandie (anti-fuite). -->
+<style>
+    #medeos-lightbox-wrap {
+        position: relative;
+        display: inline-flex;
+        max-width: 92%;
+        max-height: 92%;
+    }
+    #medeos-lightbox-img {
+        max-width: 100%;
+        max-height: 88vh;
+        border-radius: 10px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        display: block;
+    }
+    /* Filigrane UNIQUE centré au milieu de l'image agrandie — même rendu que sur
+       les schémas (un seul "medeos-sante.fr" dans le fond). */
+    #medeos-lightbox-wm {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        user-select: none;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #medeos-lightbox-wm::before {
+        content: 'medeos-sante.fr';
+        font-family: 'Inter', Arial, sans-serif;
+        font-size: clamp(12px, 4.5vw, 38px);
+        font-weight: 700;
+        letter-spacing: clamp(1px, 1vw, 8px);
+        text-transform: uppercase;
+        color: rgba(120,120,120,0.06);
+        white-space: nowrap;
+    }
+</style>
+<div id="medeos-lightbox" onclick="closeLightbox()" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(26,26,46,0.88);align-items:center;justify-content:center;cursor:zoom-out;padding:30px;">
+    <div id="medeos-lightbox-wrap">
+        <img id="medeos-lightbox-img" src="" alt="">
+        <div id="medeos-lightbox-wm" aria-hidden="true"></div>
+    </div>
+</div>
+<script>
+    function openLightbox(src) {
+        var lb = document.getElementById('medeos-lightbox');
+        document.getElementById('medeos-lightbox-img').src = src;
+        lb.style.display = 'flex';
+    }
+    function closeLightbox() {
+        document.getElementById('medeos-lightbox').style.display = 'none';
+    }
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLightbox(); });
+</script>
+<script>
+    (function () {
+        // Mobile : le contenu est déjà optimisé en CSS (padding réduit, viewport
+        // natif) → on lit à 100 %, texte pleine largeur et lisible. La barre de
+        // zoom est masquée sur mobile (le pincement reste possible). Desktop : 100 %
+        // + barre de zoom −/%/+.
+        var isMobile = window.innerWidth < 768;
+        var ZMIN = 60, ZMAX = 160, STEP = 5, zoom = 100;
+        var out = document.getElementById('zb-out');
+        var inc = document.getElementById('zb-in');
+        var lvl = document.getElementById('zb-level');
+        function apply() {
+            document.body.style.zoom = (zoom / 100);
+            if (lvl) lvl.textContent = zoom + '%';
+            if (out) out.disabled = zoom <= ZMIN;
+            if (inc) inc.disabled = zoom >= ZMAX;
+        }
+        if (out) out.addEventListener('click', function () { zoom = Math.max(ZMIN, zoom - STEP); apply(); });
+        if (inc) inc.addEventListener('click', function () { zoom = Math.min(ZMAX, zoom + STEP); apply(); });
+        if (lvl) lvl.addEventListener('click', function () { zoom = 100; apply(); });
+        apply();
+    })();
+</script>
+<script>
+    // Mini-QCM interactif : cliquer sur un choix révèle la bonne réponse (vert),
+    // marque le mauvais choix (rouge) et ouvre automatiquement le corrigé.
+    (function () {
+        var lists = document.querySelectorAll('.mini-qcm-choix');
+        lists.forEach(function (list) {
+            var items = list.querySelectorAll('li');
+            items.forEach(function (item) {
+                item.addEventListener('click', function () {
+                    if (list.classList.contains('answered')) return; // déjà répondu
+                    list.classList.add('answered');
+                    // colorie : la bonne réponse en vert, le choix cliqué en rouge s'il est faux
+                    items.forEach(function (li) {
+                        if (li.hasAttribute('data-correct')) li.classList.add('is-correct');
+                    });
+                    if (!item.hasAttribute('data-correct')) item.classList.add('is-wrong');
+                    // ouvre automatiquement le corrigé (<details>) de la question
+                    var question = list.closest('.mini-qcm-question');
+                    var details = question && question.querySelector('.mini-qcm-correction');
+                    if (details) details.open = true;
+                });
+            });
+        });
+    })();
+</script>
+
+<!-- ============ LECTURE PROGRESSIVE (révélation par paliers) ============ -->
+<script>
+(function(){
+    var container = document.querySelector('.page-container');
+    if(!container) return;
+
+    // Les frontières de section sont les <h2> numérotés (.h2-counter à l'intérieur).
+    var allChildren = Array.prototype.slice.call(container.children);
+    var sectionStarts = []; // indices des <h2 numérotés> dans allChildren
+    allChildren.forEach(function(el, i){
+        if(el.tagName === 'H2' && el.querySelector('.h2-counter')) sectionStarts.push(i);
+    });
+    if(sectionStarts.length < 4) return; // structure inattendue → on ne touche pas
+
+    // Numéro de section (01..07) lu dans le compteur.
+    function secNum(i){
+        var c = allChildren[i].querySelector('.h2-counter');
+        return c ? parseInt(c.textContent, 10) : 0;
+    }
+
+    // Regroupement en PALIERS (une partie du corps à la fois = lecture aérée) :
+    //   Palier 1 (visible) : hero + intro + section 01 (le GPS)
+    //   Palier 2 : section 02 (squelette)
+    //   Palier 3 : section 03 (cœur)
+    //   Palier 4 : section 04 (poumons)
+    //   Palier 5 : section 05 (cerveau)
+    //   Palier 6 : sections 06 + 07 (sens + clôture + mini-QCM + footer)
+    // On définit les sections qui DÉMARRENT un nouveau palier.
+    var breakAtSection = {2:true, 3:true, 4:true, 5:true, 6:true};
+
+    // Construire la liste des nœuds de chaque palier.
+    // Tout ce qui précède le 1er <h2 numéroté> (hero, intro) va dans le palier 1.
+    var steps = [];
+    var current = [];
+    var firstH2 = sectionStarts[0];
+    for(var k=0; k<firstH2; k++){ current.push(allChildren[k]); }
+
+    for(var s=0; s<sectionStarts.length; s++){
+        var startIdx = sectionStarts[s];
+        var endIdx = (s+1 < sectionStarts.length) ? sectionStarts[s+1] : allChildren.length;
+        var num = secNum(startIdx);
+        if(breakAtSection[num]){
+            steps.push(current);
+            current = [];
+        }
+        for(var n=startIdx; n<endIdx; n++){ current.push(allChildren[n]); }
+    }
+    if(current.length) steps.push(current);
+
+    if(steps.length < 2) return;
+
+    // Masquer tous les paliers sauf le premier.
+    for(var p=1; p<steps.length; p++){
+        steps[p].forEach(function(node){ node.classList.add('step-locked'); });
+    }
+
+    var hints = [
+        'On descend dans le corps ?',
+        'On continue le tour.',
+        'Prochain arrêt.',
+        'On poursuit.',
+        'Dernière partie.'
+    ];
+
+
+    // Phrases de conversion sous « Continuer ». Les DEUX offres sont proposées à
+    // chaque fois (retour Lucas 04/08) : les Stages Vacances valent 388 € contre
+    // 147 € pour Medi Pro, ils ne peuvent pas apparaître une fois sur trois.
+    var RAPPELS_STAGES = {
+      3: 'Le langage anatomique, le squelette, le cœur : trois sujets, et en première année chacun d\'eux occupe un chapitre entier, avec ses schémas à restituer. <b>Medi&nbsp;Pro</b> te les fait travailler juste avant la rentrée&nbsp;; les <b>Stages Vacances</b> les répartissent sur quatre sessions de douze jours pendant l\'année.',
+      5: 'Cœur, poumons, cerveau : tu viens de survoler en quelques minutes ce qui occupe plusieurs semaines de cours. La différence entre survoler et savoir, c\'est le nombre de fois où tu repasses dessus — c\'est tout l\'objet de <b>Medi&nbsp;Pro</b> et des <b>Stages Vacances</b>.'
+    };
+    function rappelStages(n){
+      var t = RAPPELS_STAGES[n];
+      if(!t) return '';
+      // Les DEUX offres à chaque fois : le lecteur se reconnaît lui-même.
+      return '<div class="continue-cta"><div class="cta-mot">' + t + '</div>' +
+             '<div class="cta-duo">' +
+             '<a href="https://medeos-sante.fr/packs/medi-pro" target="_top" data-cta="medipro">Medi&nbsp;Pro — stage d\'été →</a>' +
+             '<a href="https://medeos-sante.fr/packs/stages-vacances" target="_top" class="sv" data-cta="stages">Stages Vacances →</a>' +
+             '</div></div>';
+    }
+
+    function addContinueButton(stepIndex){
+        var nextIndex = stepIndex + 1;
+        if(nextIndex >= steps.length) return;
+        var currentNodes = steps[stepIndex];
+        var lastNode = currentNodes[currentNodes.length - 1];
+
+        var holder = document.createElement('div');
+        holder.className = 'continue-wrap';
+        var hint = hints[Math.min(nextIndex-1, hints.length-1)] || '';
+        holder.innerHTML =
+            (hint ? ('<div class="continue-hint">'+hint+'</div>') : '') +
+            '<button type="button" class="btn-continue">Continuer <span class="arrow">↓</span></button>';
+
+        // Insérer le bouton juste APRÈS le dernier nœud du palier courant.
+        if(lastNode.nextSibling) lastNode.parentNode.insertBefore(holder, lastNode.nextSibling);
+        else lastNode.parentNode.appendChild(holder);
+
+        // Le bloc de conversion vit HORS du holder : celui-ci est détruit au clic,
+        // la porte vers les stages doit rester visible dans la page.
+        var htmlRappel = rappelStages(nextIndex);
+        if (htmlRappel) {
+            var blocRappel = document.createElement('div');
+            blocRappel.innerHTML = htmlRappel;
+            holder.parentNode.insertBefore(blocRappel, holder.nextSibling);
+            blocRappel.querySelectorAll('a').forEach(function(a){
+                a.addEventListener('click', function(){
+                    try { window.parent.postMessage({ medeosClick: a.dataset.cta === 'stages' ? 'cta_stages_vacances' : 'cta_medipro_iframe' }, location.origin); } catch(e) {}
+                });
+            });
+        }
+
+        holder.querySelector('.btn-continue').addEventListener('click', function(){
+            steps[nextIndex].forEach(function(node){
+                node.classList.remove('step-locked');
+                node.classList.add('step-reveal');
+            });
+            holder.classList.add('gone');
+            setTimeout(function(){ if(holder.parentNode) holder.parentNode.removeChild(holder); }, 420);
+            // Pas de scroll automatique : la suite apparaît, la personne descend à son rythme.
+            addContinueButton(nextIndex);
+        });
+    }
+
+    addContinueButton(0);
+})();
+</script>
+
+</body>
+</html>

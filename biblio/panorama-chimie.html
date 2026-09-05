@@ -1,0 +1,2014 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <!-- medeos-seo -->
+    <meta name="description" content="La découverte de la chimie en première année de santé : l'atome, le tableau périodique, l'eau, les liaisons, les réactions et le carbone. Comprendre comment les atomes se lient.">
+    <link rel="canonical" href="https://medeos-sante.fr/ressources/panorama-p1/chimie.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Medeos">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Chimie en P1 (PASS / LAS) — le panorama Medeos">
+    <meta property="og:description" content="La découverte de la chimie en première année de santé : l'atome, le tableau périodique, l'eau, les liaisons, les réactions et le carbone. Comprendre comment les atomes se lient.">
+    <meta property="og:url" content="https://medeos-sante.fr/ressources/panorama-p1/chimie.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chimie en P1 (PASS / LAS) — le panorama Medeos</title>
+    <style>
+        /* ========== RESET & BASE ========== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 10.5pt;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #f6f8fb;
+            padding: 30px;
+            max-width: 210mm;
+            margin: 0 auto;
+        }
+
+        /* ========== CONTENEUR PRINCIPAL ========== */
+        .page-container { position: relative; background: transparent; padding: 0; }
+
+        /* ========== FILIGRANE MEDEOS ========== */
+        .page-container::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: none;
+            background-repeat: repeat;
+            pointer-events: none;
+            user-select: none;
+            z-index: 0;
+        }
+        .page-container > * { position: relative; z-index: 1; }
+
+        /* ========== HOOK HEADER ========== */
+        .hook-header {
+            background: #FAF6F0;
+            border-radius: 14px;
+            padding: 60px 50px 50px 50px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 18px rgba(76, 42, 133, 0.08);
+            border: 1px solid #efe7d8;
+        }
+        .hook-header .brand-tag {
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #6B46C1;
+            font-weight: 600;
+            opacity: 0.85;
+            margin-bottom: 22px;
+        }
+        .hook-header .course-title {
+            font-size: 40px;
+            line-height: 1.05;
+            font-weight: 800;
+            color: #4C2A85;
+            letter-spacing: -1px;
+            margin: 0 0 6px 0;
+        }
+        .hook-header .course-subtitle {
+            font-size: 16px;
+            line-height: 1.4;
+            font-weight: 500;
+            color: #6b6275;
+            margin: 0 0 32px 0;
+        }
+        .hook-header .punch {
+            font-size: 34px;
+            line-height: 1.15;
+            font-weight: 800;
+            color: #1A1A2E;
+            letter-spacing: -0.8px;
+            margin: 0;
+        }
+        .hook-header .punch span.accent { color: #6B46C1; }
+        .hook-header .punch + .punch { margin-top: 11px; }
+        .hook-header .tilt {
+            font-size: 20px;
+            line-height: 1.45;
+            font-weight: 500;
+            color: #1F1F23;
+            margin-top: 34px;
+            max-width: 720px;
+        }
+        .hook-header .lucas-block {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #4C2A85;
+            margin-top: 30px;
+            padding: 22px 26px;
+            background: rgba(107, 70, 193, 0.06);
+            border-left: 4px solid #6B46C1;
+            border-radius: 0 10px 10px 0;
+            max-width: 720px;
+        }
+        .hook-header .lucas-block strong { color: #4C2A85; }
+        .hook-header .separator {
+            margin-top: 44px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #c9b8e6, transparent);
+        }
+
+        /* ========== ENCADRÉ INTRODUCTION ========== */
+        .intro-section {
+            background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+            border-left: 5px solid #6B46C1;
+            padding: 28px 32px;
+            margin: 40px 0;
+            border-radius: 0 12px 12px 0;
+            box-shadow: 0 2px 10px rgba(107, 70, 193, 0.1);
+        }
+        .intro-section p { margin-bottom: 14px; }
+        .intro-section .loop-meta {
+            background: #fff;
+            border: 2px dashed #6B46C1;
+            border-radius: 10px;
+            padding: 18px 22px;
+            margin: 18px 0;
+            font-weight: 500;
+            color: #4C2A85;
+        }
+
+        /* ========== TITRES ========== */
+        h2 {
+            font-size: 18pt;
+            font-weight: 800;
+            color: #1A1A2E;
+            margin: 55px 0 22px 0;
+            padding-bottom: 12px;
+            border-bottom: 3px solid #6B46C1;
+            scroll-margin-top: 20px;
+            letter-spacing: -0.3px;
+        }
+        h2 .h2-counter {
+            display: inline-block;
+            font-size: 11pt;
+            font-weight: 600;
+            color: #6B46C1;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-right: 14px;
+            opacity: 0.9;
+        }
+        h3 {
+            font-size: 13pt;
+            font-weight: 700;
+            color: #34495e;
+            margin: 32px 0 16px 0;
+            padding-left: 16px;
+            border-left: 4px solid #6B46C1;
+        }
+        h4 {
+            font-size: 11.5pt;
+            font-weight: 600;
+            color: #6B46C1;
+            margin: 24px 0 12px 0;
+        }
+
+        /* ========== PARAGRAPHES ========== */
+        p {
+            text-align: left;
+            margin-bottom: 15px;
+            line-height: 1.85;
+            color: #2c3e50;
+        }
+        p.punchline {
+            font-size: 13pt;
+            font-weight: 600;
+            color: #1A1A2E;
+            margin: 22px 0;
+            line-height: 1.5;
+        }
+        p.cliffhanger {
+            font-size: 12pt;
+            font-weight: 600;
+            color: #4C2A85;
+            margin: 35px 0 10px 0;
+            padding: 18px 22px;
+            background: linear-gradient(90deg, rgba(107,70,193,0.08), transparent);
+            border-radius: 8px;
+            line-height: 1.5;
+        }
+        strong { font-weight: 700; color: #4C2A85; }
+        em.hl {
+            background: linear-gradient(180deg, transparent 60%, #FCD34D 60%);
+            font-style: normal;
+            padding: 0 2px;
+        }
+
+        /* ========== LISTES ========== */
+        ul, ol { margin: 18px 0 18px 35px; line-height: 1.85; }
+        li { margin-bottom: 10px; color: #34495e; }
+        ul li {
+            list-style-type: none;
+            position: relative;
+            padding-left: 26px;
+        }
+        ul li:before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #6B46C1;
+            font-weight: bold;
+            font-size: 13pt;
+        }
+
+        /* ========== ENCADRÉS ========== */
+        .key-concept {
+            background: linear-gradient(135deg, #eceff1 0%, #cfd8dc 100%);
+            border-left: 6px solid #546e7a;
+            padding: 20px 26px;
+            margin: 26px 0;
+            border-radius: 8px;
+            box-shadow: 0 3px 12px rgba(84, 110, 122, 0.18);
+        }
+        .pass-tip {
+            background: linear-gradient(135deg, #fffbea 0%, #fff4cc 100%);
+            border-left: 6px solid #f9a825;
+            padding: 20px 26px;
+            margin: 26px 0;
+            border-radius: 8px;
+            box-shadow: 0 3px 12px rgba(249, 168, 37, 0.22);
+        }
+        .clinical-box {
+            background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+            border-left: 6px solid #e53935;
+            padding: 20px 26px;
+            margin: 26px 0;
+            border-radius: 8px;
+            box-shadow: 0 3px 12px rgba(229, 57, 53, 0.22);
+        }
+        .clinical-box::before {
+            content: "Vu en stage";
+            display: block;
+            font-weight: 700;
+            font-size: 10.5pt;
+            color: #c62828;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .stakes-box {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            border-left: 6px solid #E29C5C;
+            padding: 18px 24px;
+            margin: 24px 0;
+            border-radius: 8px;
+            box-shadow: 0 3px 12px rgba(226, 156, 92, 0.20);
+        }
+        .stakes-box::before {
+            content: "Ce que tu gagnes / ce que tu perds";
+            display: block;
+            font-weight: 700;
+            font-size: 10.5pt;
+            color: #B8650A;
+            margin-bottom: 10px;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+        }
+        .lucas-anecdote {
+            background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+            border-left: 6px solid #4C2A85;
+            padding: 24px 28px;
+            margin: 32px 0;
+            border-radius: 10px;
+            box-shadow: 0 3px 14px rgba(76, 42, 133, 0.18);
+            font-size: 11pt;
+            line-height: 1.75;
+        }
+        .lucas-anecdote::before {
+            content: "Vécu";
+            display: block;
+            font-weight: 700;
+            font-size: 10.5pt;
+            color: #4C2A85;
+            margin-bottom: 12px;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+        .lucas-anecdote em { color: #4C2A85; font-style: italic; }
+        .quick-q {
+            background: #1A1A2E;
+            color: #FAF6F0;
+            padding: 18px 24px;
+            margin: 24px 0;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 12pt;
+            line-height: 1.5;
+        }
+        .quick-q .ans {
+            display: block;
+            margin-top: 10px;
+            color: #FCD34D;
+            font-weight: 600;
+            font-size: 11pt;
+        }
+
+        /* ========== SCHÉMA BOX ========== */
+        .schema-box {
+            background: #ffffff;
+            border: 2px solid #6B46C1;
+            padding: 15px;
+            margin: 28px auto;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(107, 70, 193, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        .schema-box .image-placeholder {
+            background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+            border: 2px dashed #6B46C1;
+            border-radius: 8px;
+            padding: 50px 20px;
+            color: #4C2A85;
+            font-weight: 600;
+            font-size: 11pt;
+        }
+        .schema-box .caption {
+            font-size: 9pt;
+            color: #546e7a;
+            margin-top: 12px;
+            text-align: center;
+            font-weight: 500;
+        }
+        .schema-box .caption strong { color: #6B46C1; }
+
+        /* Prompt de génération — VISIBLE */
+        .schema-box .generation-prompt {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            border: 2px dashed #ff9800;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 14px;
+            text-align: left;
+            font-size: 9pt;
+            color: #e65100;
+            line-height: 1.6;
+            display: block;
+        }
+        .schema-box .generation-prompt strong {
+            color: #bf360c;
+            display: block;
+            margin-bottom: 10px;
+            font-size: 10pt;
+            background: #ffcc80;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .schema-box .copy-prompt-btn {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 6px 12px;
+            background: #ff9800;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 9pt;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .schema-box .copy-prompt-btn:hover { background: #f57c00; }
+
+        /* ========== ENCART CHIFFRE ISOLÉ ========== */
+        .quick-stat {
+            background: #FAF6F0;
+            border: 1px solid #efe7d8;
+            border-left: 5px solid #6B46C1;
+            border-radius: 10px;
+            padding: 32px 36px;
+            margin: 34px 0;
+            text-align: left;
+            box-shadow: 0 2px 12px rgba(107, 70, 193, 0.08);
+        }
+        .quick-stat .quick-stat-figure {
+            font-size: 36pt;
+            font-weight: 800;
+            color: #6B46C1;
+            letter-spacing: -1.5px;
+            line-height: 1;
+            margin-bottom: 14px;
+        }
+        .quick-stat .quick-stat-label {
+            font-size: 12pt;
+            color: #1F1F23;
+            line-height: 1.5;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        .quick-stat .quick-stat-context {
+            font-size: 10.5pt;
+            color: #6b6b78;
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        /* ========== COMPARAISONS CHOQUANTES ========== */
+        .stat-shock {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 28px 0;
+        }
+        .stat-shock .cell {
+            background: #fff;
+            border: 1px solid #ede9fe;
+            border-radius: 10px;
+            padding: 20px 22px;
+            box-shadow: 0 2px 8px rgba(107, 70, 193, 0.07);
+        }
+        .stat-shock .num {
+            font-size: 22pt;
+            font-weight: 800;
+            color: #6B46C1;
+            letter-spacing: -1px;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        .stat-shock .label {
+            font-size: 10.5pt;
+            color: #34495e;
+            line-height: 1.5;
+        }
+
+        /* ========== FORMULES ========== */
+        .formula {
+            background: #1A1A2E;
+            color: #FAF6F0;
+            padding: 18px 24px;
+            margin: 22px auto;
+            border-radius: 10px;
+            font-family: 'Cambria', 'Georgia', serif;
+            font-size: 13pt;
+            text-align: center;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 14px rgba(26, 26, 46, 0.18);
+        }
+        .formula .accent { color: #FCD34D; }
+
+        /* ========== CTA FINAL ========== */
+        .cta-bascule {
+            background: linear-gradient(135deg, #4C2A85 0%, #6B46C1 100%);
+            color: #fff;
+            border-radius: 14px;
+            padding: 40px 38px;
+            margin: 50px 0 30px 0;
+            box-shadow: 0 8px 30px rgba(76, 42, 133, 0.3);
+        }
+        .cta-bascule h2 {
+            color: #fff;
+            border: none;
+            margin: 0 0 18px 0;
+            font-size: 22pt;
+            padding: 0;
+        }
+        .cta-bascule p {
+            color: #f5f3ff;
+            font-size: 11.5pt;
+            line-height: 1.7;
+            margin-bottom: 14px;
+        }
+        .cta-bascule .cta-button {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 16px 28px;
+            background: #FCD34D;
+            color: #1A1A2E;
+            font-weight: 800;
+            font-size: 13pt;
+            border-radius: 10px;
+            text-decoration: none;
+            box-shadow: 0 4px 14px rgba(252, 211, 77, 0.4);
+            transition: transform 0.2s;
+        }
+        .cta-bascule .cta-button:hover { transform: translateY(-2px); }
+
+        /* ========== FOOTER ========== */
+        .chapter-footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 28px;
+            border-top: 1px solid #e0e0e0;
+            color: #78909c;
+            font-size: 9.5pt;
+        }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .page-container::before { display: none; }
+        }
+
+        /* ========== LECTURE MOBILE (téléphone) ========== */
+        @media (max-width: 600px) {
+            body { padding: 14px; font-size: 11pt; }
+            .hook-header { padding: 26px 18px 22px 18px; border-radius: 12px; }
+            .hook-header .course-title { font-size: 27px; }
+            .hook-header .course-subtitle { font-size: 14px; margin-bottom: 22px; }
+            .hook-header .punch { font-size: 22px; }
+            .hook-header .tilt { font-size: 15px; margin-top: 22px; }
+            h2 { font-size: 15pt; }
+            h2 .h2-counter { font-size: 9pt; margin-right: 8px; }
+            h3 { font-size: 12pt; }
+            .intro-section,
+            .key-concept, .pass-tip, .clinical-box, .stakes-box,
+            .lucas-anecdote, .quick-q, .quick-stat { padding-left: 16px; padding-right: 16px; }
+            .stat-shock,
+            .axes-schemas,
+            .os-3-colonnes,
+            .recap-pedagogique { grid-template-columns: 1fr !important; }
+            .quick-stat .quick-stat-figure { font-size: 26pt; }
+            .schema-box { max-width: 100% !important; }
+            .schema-box img { max-width: 100%; height: auto; }
+            ul, ol { margin-left: 22px; }
+            /* Texte justifié sur mobile (lignes alignées des 2 côtés, rendu propre) */
+            p, li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+            p.punchline, p.cliffhanger, .quick-stat-figure, .stat-shock .num,
+            .caption, .mini-qcm-enonce, h1, h2, h3 { text-align: left; hyphens: none; }
+            .page-container::before {
+                background-image: none;
+            }
+            .schema-box::before { color: rgba(107,70,193,0.07); font-size: 11px; letter-spacing: 1px; max-width: 90%; overflow: hidden; }
+            .schema-box::after { color: rgba(120,120,120,0.10); }
+        }
+
+        /* Filigrane medeos-sante.fr sur schémas — centré au vrai milieu */
+        .schema-box::before {
+            content: 'medeos-sante.fr';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Inter', Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: rgba(120,120,120,0.05);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            pointer-events: none;
+            user-select: none;
+            z-index: 5;
+            white-space: nowrap;
+            max-width: 92%;
+            overflow: hidden;
+        }
+        /* Petit filigrane discret en bas à droite des schémas */
+        .schema-box::after {
+            content: 'medeos-sante.fr';
+            position: absolute;
+            bottom: 8px; right: 12px;
+            font-family: 'Inter', Arial, sans-serif;
+            font-size: 9px;
+            font-weight: 600;
+            color: rgba(120,120,120,0.10);
+            letter-spacing: 0.5px;
+            pointer-events: none;
+            user-select: none;
+            z-index: 6;
+            white-space: nowrap;
+        }
+        /* Image réelle dans une schema-box + clic pour agrandir */
+        .schema-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto;
+            cursor: zoom-in;
+        }
+        /* Mention du fichier image à générer (visible tant que l'image manque) */
+        .schema-box .file-target {
+            display: block;
+            margin-top: 10px;
+            padding: 8px 12px;
+            background: #e8f5e9;
+            border: 1px solid #a5d6a7;
+            border-radius: 6px;
+            font-family: 'SFMono-Regular', Consolas, monospace;
+            font-size: 9.5pt;
+            color: #1b5e20;
+            text-align: left;
+            line-height: 1.5;
+        }
+        .schema-box .file-target strong { color: #2e7d32; }
+        /* Prompts/boutons masqués par défaut, affichés si l'image manque (.img-missing) */
+        .schema-box .generation-prompt,
+        .schema-box .copy-prompt-btn { display: none; }
+        .schema-box.img-missing .generation-prompt { display: block; }
+        .schema-box.img-missing .copy-prompt-btn { display: inline-block; }
+        /* États du mini-QCM après réponse */
+        .mini-qcm-choix.answered li { cursor: default; }
+        .mini-qcm-choix.answered li:hover { background: #faf8f4; border-left-color: transparent; }
+        .mini-qcm-choix.answered li.is-correct,
+        .mini-qcm-choix.answered li.is-correct:hover { background: #e4f3ea; border-left-color: #2e9d5f; font-weight: 600; }
+        .mini-qcm-choix.answered li.is-correct::after { content: " ✓"; color: #2e9d5f; font-weight: 700; }
+        .mini-qcm-choix.answered li.is-wrong,
+        .mini-qcm-choix.answered li.is-wrong:hover { background: #fbe9e7; border-left-color: #d9534f; }
+        .mini-qcm-choix.answered li.is-wrong::after { content: " ✗"; color: #d9534f; font-weight: 700; }
+
+        /* ========== RÉCAP PÉDAGOGIQUE (à retenir / anecdote) ========== */
+        .recap-pedagogique {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 16px;
+            margin: 36px 0 28px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e6dfd1;
+            box-shadow: 0 3px 12px rgba(76, 42, 133, 0.07);
+        }
+        .recap-pedagogique .recap-tronc,
+        .recap-pedagogique .recap-anecdote {
+            padding: 22px 24px;
+            font-size: 11pt;
+            line-height: 1.65;
+        }
+        .recap-pedagogique .recap-tronc {
+            background: #FAF6F0;
+            border-right: 1px dashed #d9cdb5;
+        }
+        .recap-pedagogique .recap-anecdote {
+            background: #f4f4f6;
+        }
+        /* Titre du bloc UNIQUEMENT (strong direct enfant), pas les gras des puces */
+        .recap-pedagogique .recap-tronc > strong,
+        .recap-pedagogique .recap-anecdote > strong {
+            display: block;
+            font-size: 10pt;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            color: #4C2A85;
+        }
+        .recap-pedagogique .recap-anecdote > strong {
+            color: #6b6b78;
+        }
+        /* Gras à l'intérieur des puces : inline, normal, pas en bloc majuscule */
+        .recap-pedagogique li strong {
+            display: inline;
+            text-transform: none;
+            letter-spacing: normal;
+            font-size: inherit;
+            color: #4C2A85;
+        }
+        .recap-pedagogique ul {
+            margin: 0 0 0 22px;
+            padding: 0;
+        }
+        .recap-pedagogique li {
+            margin-bottom: 7px;
+            font-size: 10.5pt;
+            line-height: 1.55;
+            color: #2c3e50;
+        }
+        .recap-pedagogique .recap-anecdote li {
+            color: #4a4a55;
+        }
+        .recap-pedagogique ul li:before {
+            color: #6B46C1;
+            font-size: 12pt;
+        }
+        .recap-pedagogique .recap-anecdote ul li:before {
+            color: #B8895A;
+        }
+        @media (max-width: 720px) {
+            .recap-pedagogique { grid-template-columns: 1fr; }
+            .recap-pedagogique .recap-tronc { border-right: none; border-bottom: 1px dashed #d9cdb5; }
+        }
+
+        /* ========== MANIP PALPÉE (ancrage corporel/sensoriel) ========== */
+        .manip-palpee {
+            background: #FAF6F0;
+            border-left: 4px solid #6B46C1;
+            border-radius: 8px;
+            padding: 22px 24px;
+            margin: 28px 0;
+            box-shadow: 0 2px 10px rgba(107, 70, 193, 0.08);
+        }
+        .manip-palpee .manip-titre {
+            font-size: 13pt;
+            font-weight: 700;
+            color: #4C2A85;
+            margin-bottom: 14px;
+            line-height: 1.4;
+        }
+        .manip-palpee .manip-etapes {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .manip-palpee .manip-etape {
+            font-size: 11pt;
+            line-height: 1.7;
+            color: #2c3e50;
+        }
+        .manip-palpee .manip-num {
+            font-weight: 700;
+            color: #6B46C1;
+            margin-right: 8px;
+        }
+        .manip-palpee .manip-etape strong { color: #4C2A85; }
+        .manip-palpee .manip-claire {
+            font-size: 11pt;
+            font-style: italic;
+            color: #6b6b78;
+            margin: 14px 0 0 0;
+            border-top: 1px solid #e5e5e5;
+            padding-top: 12px;
+        }
+
+        /* ========== MINI-QCM FINAL ========== */
+        .mini-qcm {
+            background: linear-gradient(135deg, #FAF6F0 0%, #f5efe5 100%);
+            border-left: 4px solid #6B46C1;
+            border-radius: 12px;
+            padding: 32px 28px;
+            margin: 48px 0 32px;
+        }
+        .mini-qcm h2 {
+            color: #4C2A85;
+            font-size: 18pt;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        .mini-qcm-intro {
+            color: #6b6b80;
+            font-size: 10.5pt;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+        .mini-qcm-question {
+            background: white;
+            padding: 20px 24px;
+            border-radius: 10px;
+            margin-bottom: 16px;
+            box-shadow: 0 1px 4px rgba(76, 42, 133, 0.08);
+        }
+        .mini-qcm-num {
+            color: #6B46C1;
+            font-size: 9.5pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
+        }
+        .mini-qcm-enonce {
+            font-size: 11.5pt;
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-bottom: 14px;
+            line-height: 1.5;
+        }
+        .mini-qcm-choix {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 14px 0;
+        }
+        .mini-qcm-choix li {
+            padding: 8px 14px;
+            margin-bottom: 6px;
+            border-radius: 6px;
+            background: #faf8f4;
+            font-size: 10.5pt;
+            border-left: 3px solid transparent;
+            transition: background 0.2s;
+        }
+        .mini-qcm-choix li:hover {
+            background: #f4eef9;
+            border-left-color: #6B46C1;
+            cursor: pointer;
+        }
+        .mini-qcm-correction {
+            margin-top: 12px;
+            padding: 12px 16px;
+            background: #f4eef9;
+            border-radius: 6px;
+            font-size: 10pt;
+            line-height: 1.6;
+        }
+        .mini-qcm-correction summary {
+            cursor: pointer;
+            color: #6B46C1;
+            font-weight: 600;
+            font-size: 10pt;
+            user-select: none;
+            padding: 2px 0;
+        }
+        .mini-qcm-correction summary:hover {
+            color: #4C2A85;
+        }
+        .mini-qcm-correction[open] summary {
+            margin-bottom: 8px;
+            border-bottom: 1px solid #e5d7ef;
+            padding-bottom: 6px;
+        }
+        .mini-qcm-correction p {
+            margin: 6px 0;
+            color: #2d2d3d;
+        }
+        .mini-qcm-source {
+            color: #8585a3;
+            font-size: 9.5pt;
+            margin-top: 8px !important;
+        }
+        .mini-qcm-conclusion {
+            margin-top: 20px;
+            padding: 14px 20px;
+            background: rgba(107, 70, 193, 0.08);
+            border-radius: 8px;
+            color: #4C2A85;
+            font-size: 10.5pt;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* ============ LECTURE PROGRESSIVE (révélation par paliers) ============ */
+        .step-locked { display: none !important; }
+        .step-reveal { animation: stepIn .55s cubic-bezier(.16,.84,.44,1) both; }
+        @keyframes stepIn {
+            from { opacity: 0; transform: translateY(14px); }
+            to   { opacity: 1; transform: none; }
+        }
+        .continue-wrap {
+            display: flex; flex-direction: column; align-items: center;
+            gap: 10px; margin: 34px auto 14px; text-align: center;
+        }
+        .continue-hint { font-size: 13.5px; color: #6b6275; }
+        .btn-continue {
+            display: inline-flex; align-items: center; gap: 9px;
+            font-family: inherit; font-size: 16px; font-weight: 600;
+            color: #fff; cursor: pointer;
+            padding: 13px 26px; border: none; border-radius: 999px;
+            background: linear-gradient(150deg, #4C2A85, #6B46C1 75%);
+            box-shadow: 0 10px 26px rgba(76,42,133,.26);
+            transition: transform .18s ease, box-shadow .18s ease, opacity .3s ease;
+        }
+        .btn-continue:hover { transform: translateY(-1px); box-shadow: 0 14px 32px rgba(76,42,133,.34); }
+        .btn-continue:active { transform: translateY(0); }
+        .btn-continue .arrow { display: inline-block; transition: transform .2s ease; }
+        .btn-continue:hover .arrow { transform: translateY(2px); }
+        .continue-wrap.gone {
+            opacity: 0; pointer-events: none; max-height: 0; margin: 0;
+            overflow: hidden; transition: opacity .3s ease, max-height .4s ease, margin .4s ease;
+        }
+    
+        /* Phrases de conversion sous le bouton « Continuer » (04/08).
+           Bouton secondaire à contour : visible sans capter l'attention, le
+           « Continuer » reste l'action principale. Ce bloc vit HORS du holder,
+           qui disparaît au clic — la porte reste ouverte dans la page. */
+        .continue-cta { margin: 4px auto 30px; display: flex; flex-direction: column;
+                        align-items: center; gap: 9px; max-width: 620px; text-align: center; }
+        .continue-cta .cta-mot { font-size: 13.5px; line-height: 1.55; color: #6b6275; }
+        .continue-cta a { display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px;
+                          font-weight: 700; color: #6B46C1; text-decoration: none; padding: 9px 18px;
+                          border-radius: 999px; border: 1.5px solid rgba(107,70,193,.35);
+                          background: rgba(107,70,193,.05); transition: background .15s, border-color .15s; }
+        .continue-cta a:hover { background: rgba(107,70,193,.11); border-color: rgba(107,70,193,.65); }
+        .continue-cta a.sv { color: #1d4ed8; border-color: rgba(37,99,235,.35); background: rgba(37,99,235,.05); }
+        .continue-cta a.sv:hover { background: rgba(37,99,235,.11); border-color: rgba(37,99,235,.65); }
+
+        /* Les deux offres côte à côte : le lecteur choisit sa voie lui-même. */
+        .continue-cta .cta-duo { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+</style>
+<!-- medeos-jsonld -->
+    <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Chimie en P1 (PASS / LAS) — le panorama Medeos", "description": "La découverte de la chimie en première année de santé : l'atome, le tableau périodique, l'eau, les liaisons, les réactions et le carbone.", "url": "https://medeos-sante.fr/ressources/panorama-p1/chimie.html", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://medeos-sante.fr/ressources/panorama-p1/chimie.html"}, "inLanguage": "fr-FR", "isAccessibleForFree": true, "author": {"@id": "https://medeos-sante.fr/#lucas"}, "publisher": {"@id": "https://medeos-sante.fr/#organisation"}, "about": {"@type": "Thing", "name": "Chimie — première année d'études de santé"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://medeos-sante.fr"}, {"@type": "ListItem", "position": 2, "name": "Réussir sa première année de médecine", "item": "https://medeos-sante.fr/reussir-premiere-annee-medecine"}, {"@type": "ListItem", "position": 3, "name": "Chimie", "item": "https://medeos-sante.fr/ressources/panorama-p1/chimie.html"}]}]}</script>
+</head>
+<body>
+<div class="page-container">
+
+    <!-- ========================================================== -->
+    <!-- HOOK HEADER                                                -->
+    <!-- ========================================================== -->
+    <header class="hook-header">
+        <div class="brand-tag">Panorama P1</div>
+
+        <h1 class="course-title">La chimie en P1</h1>
+        <p class="course-subtitle">Ce qui t'attend, sans jargon.</p>
+
+        <p class="punch"><span class="accent">118 éléments</span> composent tout l'univers connu.</p>
+        <p class="punch"><span class="accent">99,9999 %</span> de toi est du vide.</p>
+        <p class="punch"><span class="accent">10²² molécules</span> d'eau dans une seule goutte.</p>
+
+        <p class="tilt">Et toute une matière à apprivoiser en 9 mois, sans craquer.</p>
+
+        <div class="separator"></div>
+    </header>
+
+    <!-- ========================================================== -->
+    <!-- INTRODUCTION — boucle META + anecdote #1                   -->
+    <!-- ========================================================== -->
+    <section class="intro-section">
+        <p class="punchline">Lève les yeux deux secondes et regarde ta main.</p>
+
+        <p>Cette main est faite d'environ <strong>5 × 10²⁵ atomes</strong> — cinquante mille milliards de milliards. Chacun de ces atomes existait déjà avant la formation de la Terre. Le carbone de ton index a été forgé dans une étoile qui a explosé il y a des milliards d'années. L'oxygène que tu respires en ce moment est probablement passé, un jour, dans les poumons d'un dinosaure. Et à chaque seconde, dans ton corps, d'innombrables réactions chimiques sont en train de te maintenir en vie.</p>
+
+        <p>Ce qui suit, c'est ta découverte de la matière. <strong>Six pièces du puzzle chimique</strong>, six raisons d'arrêter de voir la chimie comme une montagne de formules à apprendre par cœur. À la fin, tu n'auras pas appris la P1. Tu auras appris à la <em class="hl">regarder</em>. Et c'est exactement ce qui fait la différence en chimie.</p>
+    </section>
+
+    <!-- ========================================================== -->
+    <!-- SECTION 1 — L'ATOME : 99,9999 % DE VIDE                    -->
+    <!-- ========================================================== -->
+    <h2><span class="h2-counter">01</span> L'atome : tu es presque entièrement du vide</h2>
+
+    <p class="punchline">Si on agrandissait un atome à la taille de la cathédrale Notre-Dame, son noyau serait un grain de riz posé au centre. Tout le reste, c'est du vide.</p>
+
+    <p>Tu lis cette phrase assis sur une chaise. Tu trouves la chaise solide. Tu te trompes. Cette chaise est faite à <strong>99,9999 %</strong> de rien. Toi aussi. Si on enlevait tout le vide à l'intérieur des atomes de ton corps, tu pèserais toujours 65 kg — mais tu serais réduit à un grain minuscule, invisible à l'œil nu. La matière n'existe presque pas. Et pourtant, tu ne traverses pas le sol. Pourquoi ?</p>
+
+    <p>Parce que ce qui te retient debout, ce n'est pas la matière. Ce sont des <strong>forces électriques</strong> entre les électrons. Quand tes fesses touchent ta chaise, les électrons de tes atomes repoussent les électrons de la chaise. Une force invisible. Pas un contact. <em class="hl">Tu n'as jamais rien touché de ta vie.</em></p>
+
+    <div class="stat-shock">
+        <div class="cell">
+            <div class="num">10⁻¹⁰ m</div>
+            <div class="label">taille d'un atome. Un dix-milliardième de mètre.</div>
+        </div>
+        <div class="cell">
+            <div class="num">10⁻¹⁵ m</div>
+            <div class="label">taille du noyau. <strong>100 000 fois plus petit</strong> que l'atome.</div>
+        </div>
+    </div>
+
+    <div class="manip-palpee">
+        <div class="manip-titre">Inspire à fond, garde l'air deux secondes, expire.</div>
+        <div class="manip-etapes">
+            <div class="manip-etape"><span class="manip-num">1.</span>Tu viens d'avaler environ <strong>10²² molécules d'air</strong>. Dix mille milliards de milliards. <strong>Plus de molécules dans cette seule respiration que d'étoiles dans toute la Voie Lactée</strong>.</div>
+            <div class="manip-etape"><span class="manip-num">2.</span>L'oxygène que tu viens d'avaler va rejoindre ton sang et circuler jusqu'à tes 37 000 milliards de cellules — un tour complet du corps en moins d'une minute.</div>
+        </div>
+        <p class="manip-claire">L'invisible que tu vas étudier en P1, tu l'as dans la poitrine. Pas dans un manuel.</p>
+    </div>
+
+    <h3>1. Trois briques, trois rôles</h3>
+
+    <p>Tout atome, qu'il soit dans une étoile, dans un comprimé de paracétamol ou dans ton ADN, est fait de trois choses :</p>
+
+    <ul>
+        <li>Le <strong>proton</strong> — chargé positif, dans le noyau. C'est lui qui définit qui tu es chimiquement : 1 proton = hydrogène, 6 protons = carbone, 8 protons = oxygène. Le nombre de protons s'appelle le <strong>numéro atomique</strong>, noté <strong>Z</strong>.</li>
+        <li>Le <strong>neutron</strong> — neutre, dans le noyau aussi. Il sert de lest. Sans lui, le noyau exploserait sous la répulsion des protons entre eux. Protons + neutrons donnent le <strong>nombre de masse</strong>, noté <strong>A</strong>.</li>
+        <li>L'<strong>électron</strong> — chargé négatif, autour du noyau. C'est lui qui fait toute la chimie. Toujours.</li>
+    </ul>
+
+    <p>Deux nombres. <strong>Z</strong> dit qui est l'atome. <strong>A</strong> dit combien il pèse. Et voilà l'astuce que personne ne t'explique au lycée : deux atomes peuvent avoir le même Z mais un A différent. On les appelle des <strong>isotopes</strong>. Le carbone 12 (¹²C) et le carbone 14 (¹⁴C) sont tous les deux du carbone — même Z = 6 — mais le ¹⁴C a deux neutrons de plus. C'est lui qui permet de dater des vestiges jusqu'à environ 50 000 ans en arrière.</p>
+
+    <div class="key-concept">
+        <p><strong>La règle qui change tout</strong></p>
+        <p>Le noyau définit l'<em>identité</em> de l'atome (qui il est). Les électrons définissent son <em>comportement</em> (ce qu'il fait). Quand un atome rencontre un autre atome, ce sont leurs électrons qui se parlent. Le noyau reste à l'arrière. Toujours.</p>
+    </div>
+
+    <p>Comprends ça, et tu viens d'absorber l'idée centrale de toute la chimie. Tout ce que tu vas apprendre — liaisons, réactions, géométrie, acidité, métabolisme — n'est qu'un long commentaire sur ce que font les électrons. Pas les noyaux. Les électrons.</p>
+
+    <div class="schema-box" style="max-width: 350px; margin: 28px auto;">
+        <img src="https://medeos-sante.fr/images/chimie/pano_chim_atome.png"
+             alt="L'atome : noyau central (protons + neutrons) et nuage d'électrons, 99,9999 % de vide"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
+        <div class="file-target" style="display:none;">📁 <strong>pano_chim_atome.png</strong><br>à placer dans : <strong>/public/images/chimie/</strong></div>
+        <p class="caption"><strong>L'atome</strong> — le noyau au centre (protons + neutrons), les électrons en nuage diffus. 99,9999 % de vide.</p>
+        <div class="generation-prompt">
+            <strong>Prompt ChatGPT-image :</strong>
+Format: A4 portrait (210×297mm), aspect ratio 1:1.414, high resolution 8K, render quality: ultra-detailed, suitable for medical textbook publication.
+
+Modern educational illustration of a single atom shown at two scales side by side. Left panel: realistic quantum cloud representation of a carbon atom — small dense central nucleus rendered as a tight cluster of 6 purple protons (#6B46C1) and 6 honey-wood neutrons (#B8895A), surrounded by a diffuse blue-violet electron cloud showing probability density (not Bohr orbits). Right panel: a scale comparison illustration — a tiny red dot labeled "noyau (10⁻¹⁵ m)" centered inside a large faint circle labeled "atome (10⁻¹⁰ m)", with a subtle "100 000× plus petit" annotation. Numbered legend 1-3 below: protons, neutrons, electrons. Clean cream background (#FAF6F0). Editorial scientific style. No cartoon, no orbiting planet-like electrons, scientifically accurate.
+
+Style reference: scientific editorial illustration inspired by Nature journal, NEJM, or Visible Body anatomical atlas. Clean technical drawing with educational annotations.
+
+Typography: sans-serif font (Inter, Helvetica or similar) for all numbered labels and annotations. Label size approximately 14pt, semi-bold weight. Color of labels: dark anthracite (#1F1F23). Numbers in colored circles matching the element they describe.
+
+Composition: centered subject with generous margins (10% on all sides). Line weight: thin (1-2px) for fine details, medium (3-4px) for main structures. Shadows: soft, subtle (5-10% opacity). No harsh outlines.
+
+Negative prompts (avoid absolutely): no cartoon style, no anime style, no comic book aesthetics, no hand-drawn doodles, no DALL-E watermark, no Adobe Stock watermark, no Getty Images watermark, no text labels written in cursive, no childish illustration, no glowing effects, no neon colors outside specified palette, no fictional creatures, no anatomically inaccurate proportions, no overlapping labels.
+
+Final output: should look like a publication-quality figure from a peer-reviewed medical or scientific journal, ready for use in an educational textbook for first-year medical students.
+        </div>
+        <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+    </div>
+
+    <div class="quick-q">
+        Devine. Combien d'atomes y a-t-il dans une seule cellule de ton corps ?
+        <span class="ans">→ Environ 100 000 milliards (10¹⁴). Une seule. Et tu en as 37 000 milliards de cellules. Pose ton stylo et respire.</span>
+    </div>
+
+    <h3>2. Les électrons ne tournent pas — ils s'organisent</h3>
+
+    <p>Au lycée, on t'a dessiné des électrons qui tournent autour du noyau comme des planètes autour du soleil. C'est joli. C'est faux. Un électron ne tourne pas. Il <strong>occupe une zone de probabilité</strong> autour du noyau, qu'on appelle une <strong>orbitale</strong>. Une orbitale, c'est un nuage qui dit : « l'électron est quelque part là-dedans, 95 % du temps ».</p>
+
+    <p>Et les électrons s'organisent en couches, comme les étages d'un immeuble. On les nomme par des lettres : la 1ʳᵉ couche, c'est la couche <strong>K</strong> — 2 électrons maximum. La 2ᵉ, c'est la couche <strong>L</strong> — 8 maximum. La 3ᵉ, c'est la couche <strong>M</strong> — 18 maximum. Et ainsi de suite. Cette organisation, c'est la <strong>configuration électronique</strong>. C'est elle qui décide si un atome va être réactif ou pas, métallique ou pas, vital pour la vie ou pas.</p>
+
+    <p>Et pour décrire encore plus précisément où se trouve chaque électron, on utilise quatre identifiants appelés <strong>nombres quantiques</strong>. Tu n'as pas besoin de les maîtriser maintenant — mais retiens ces deux : <strong>n</strong> qui dit dans quelle couche (1, 2, 3…), et <strong>l</strong> qui dit dans quelle sous-couche (s, p, d, f). C'est pour ça que tes profs écriront « 1s² 2s² 2p⁶ » : ce sont les électrons rangés couche par couche, sous-couche par sous-couche. Une étiquette d'adresse postale, rien de plus.</p>
+
+    <div class="quick-stat">
+        <div class="quick-stat-figure">8</div>
+        <div class="quick-stat-label">électrons sur la couche externe — la configuration ultra-stable.</div>
+        <div class="quick-stat-context">C'est ce que tous les atomes cherchent à atteindre. La règle de l'octet — qui explique presque toute la chimie en une phrase.</div>
+    </div>
+
+    <p>Pourquoi 8 ? Parce qu'une couche externe pleine — 8 électrons pour la plupart des atomes — est un état <strong>stable</strong> : l'atome n'a plus rien à gagner ni à perdre, il est tranquille. Les <strong>gaz nobles</strong> (néon, argon) naissent déjà avec cette couche pleine : ils ne réagissent avec personne, ils sont chimiquement <em>satisfaits</em>. Tous les autres atomes, eux, ont une couche externe incomplète — il leur manque, ou il leur reste en trop, quelques électrons. <em class="hl">C'est ce déséquilibre qui crée toute la chimie</em> : pour se compléter, les atomes vont s'échanger ou se partager des électrons.</p>
+
+    <div class="stakes-box">
+        <p>Si tu retiens cette section, tu auras compris pourquoi le sodium (Na) explose dans l'eau, pourquoi le chlore (Cl) tue, pourquoi le carbone est partout dans le vivant, pourquoi l'or ne rouille jamais. Quatre questions. Une seule réponse : <strong>la chasse aux 8 électrons</strong>.</p>
+    </div>
+
+    <div class="recap-pedagogique">
+        <div class="recap-tronc">
+            <strong>À retenir pour la P1</strong>
+            <ul>
+                <li><strong>Z</strong> = nombre de protons (identité) ; <strong>A</strong> = protons + neutrons (masse). Les <strong>isotopes</strong> ont même Z, A différent.</li>
+                <li>3 couches à nommer : <strong>K (2 ē max), L (8 ē max), M (18 ē max)</strong>. Une orbitale = zone de probabilité, pas une trajectoire.</li>
+                <li><strong>Règle de l'octet</strong> : tout atome cherche à atteindre 8 électrons sur sa couche externe. C'est le moteur de presque toute la chimie.</li>
+                <li>Le noyau = identité, les électrons = comportement. Toujours.</li>
+            </ul>
+        </div>
+        <div class="recap-anecdote">
+            <strong>Marquant à raconter</strong>
+            <ul>
+                <li>Si on enlevait le vide des atomes de ton corps, tes 65 kg tiendraient dans une cuillère à café.</li>
+                <li>Tu n'as jamais rien touché de ta vie : ce sont des forces électriques qui te retiennent sur ta chaise.</li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="cliffhanger">Maintenant que tu sais comment un atome est fait, on va voir ce qui se passe quand tu en mets 118 différents sur un même tableau. Et pourquoi ce tableau est la plus belle carte de l'univers. ↓</p>
+
+    <!-- ========================================================== -->
+    <!-- SECTION 2 — LE TABLEAU PÉRIODIQUE                          -->
+    <!-- ========================================================== -->
+    <h2><span class="h2-counter">02</span> Le tableau périodique : la plus belle carte de l'univers</h2>
+
+    <p class="punchline">118 cases. Tout ce que tu vois, tout ce que tu touches, tout ce que tu manges. 118 cases pour décrire un univers.</p>
+
+    <p>Prends une seconde pour réaliser. La pierre du Mont-Blanc, l'eau de l'océan, l'or d'un mariage, le sang dans tes veines, l'air que tu respires, le carbone de ton stylo, la silice de ton écran de téléphone : <strong>tout</strong> est fait à partir de seulement 118 éléments. Et sur ces 118, à peine <strong>92 existent naturellement</strong> sur Terre. Les 26 autres sont fabriqués artificiellement dans des accélérateurs de particules — et la plupart durent moins d'une seconde avant de se désintégrer.</p>
+
+    <p>Mais ce qui est vraiment fou, c'est que ce tableau n'est pas une liste. C'est <em class="hl">une carte</em>. Une carte qui révèle des familles, des comportements, des prédictions. Le tableau périodique fait à la chimie ce que la table de Mendeleïev faisait au XIXᵉ : il permet de prédire ce qu'on n'a pas encore vu.</p>
+
+    <div class="stat-shock">
+        <div class="cell">
+            <div class="num">118</div>
+            <div class="label">éléments connus. 92 naturels. 26 synthétiques. Et c'est tout.</div>
+        </div>
+        <div class="cell">
+            <div class="num">4</div>
+            <div class="label">éléments font 99 % de ton corps : O, C, H, N. Quatre lettres.</div>
+        </div>
+    </div>
+
+    <h3>1. La logique cachée du tableau</h3>
+
+    <p>Le tableau est organisé en <strong>lignes</strong> (les <strong>périodes</strong>) et en <strong>colonnes</strong> (les <strong>groupes</strong> ou familles). Ce qui paraît bête à apprendre au lycée devient lumineux dès qu'on comprend la logique :</p>
+
+    <ul>
+        <li>Chaque <strong>période</strong> (ligne) correspond à une nouvelle couche d'électrons qui se remplit. Période 1 = couche K. Période 2 = couche L. Plus tu descends, plus l'atome est gros.</li>
+        <li>Chaque <strong>groupe</strong> (colonne) rassemble les atomes qui ont le <strong>même nombre d'électrons sur leur couche externe</strong>. Et qui se comportent donc presque pareil chimiquement.</li>
+    </ul>
+
+    <p>Et il y a une découpe encore plus profonde : le tableau se range en <strong>blocs</strong>, selon la sous-couche que les électrons sont en train de remplir. Le <strong>bloc s</strong> à gauche (colonnes 1 et 2 — alcalins et alcalino-terreux). Le <strong>bloc p</strong> à droite (colonnes 13 à 18 — où vivent C, N, O, F…). Le <strong>bloc d</strong> au milieu (les métaux de transition — fer, cuivre, zinc). Le <strong>bloc f</strong> en bas (les terres rares, exotiques). Une fois que tu vois cette grille, le tableau cesse d'être une grille de mots-mémo et devient une carte qu'on lit comme un plan de métro.</p>
+
+    <p>C'est ça, le secret. Le sodium et le potassium sont dans la même colonne (la 1ʳᵉ) : ils ont tous les deux 1 électron sur leur couche externe. Résultat : ils réagissent de la même manière. Tous les deux explosent au contact de l'eau. Tous les deux sont vitaux pour ton système nerveux. Pas par hasard. Par <strong>famille</strong>.</p>
+
+    <div class="schema-box">
+        <img src="https://medeos-sante.fr/images/chimie/pano_chim_tableau_periodique.png"
+             alt="Le tableau périodique des éléments avec ses familles colorées"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
+        <div class="file-target" style="display:none;">📁 <strong>pano_chim_tableau_periodique.png</strong><br>à placer dans : <strong>/public/images/chimie/</strong></div>
+        <p class="caption"><strong>Le tableau périodique</strong> — les familles colorées révèlent la logique : ce sont les électrons externes qui dictent le comportement.</p>
+        <div class="generation-prompt">
+            <strong>Prompt ChatGPT-image :</strong>
+Format: A4 portrait (210×297mm), aspect ratio 1:1.414, high resolution 8K, render quality: ultra-detailed, suitable for medical textbook publication.
+
+Modern educational illustration of the periodic table of elements, clean and editorial. 118 cells arranged in standard layout. Color code by family group: alkali metals (group 1) in deep purple (#6B46C1), alkaline earth metals (group 2) in honey wood (#B8895A), transition metals in cool grey, halogens (group 17) in terracotta orange (#E29C5C), noble gases (group 18) in pale yellow (#FCD34D), nonmetals (C, N, O, S, P) in deep blue (#1E3A8A). Each cell shows the element symbol large + atomic number small. Highlight a vertical band on group 1 and group 17 with a subtle glow to emphasize "same external electrons = same behavior". Annotation arrows on the right: "période = couche qui se remplit" pointing to a row, "groupe = mêmes électrons externes" pointing to a column. Numbered legend 1-4 at bottom. Cream background (#FAF6F0). Editorial scientific style, no cartoon.
+
+Style reference: scientific editorial illustration inspired by Nature journal, NEJM, or Visible Body anatomical atlas. Clean technical drawing with educational annotations.
+
+Typography: sans-serif font (Inter, Helvetica or similar) for all numbered labels and annotations. Label size approximately 14pt, semi-bold weight. Color of labels: dark anthracite (#1F1F23). Numbers in colored circles matching the element they describe.
+
+Composition: centered subject with generous margins (10% on all sides). Line weight: thin (1-2px) for fine details, medium (3-4px) for main structures. Shadows: soft, subtle (5-10% opacity). No harsh outlines.
+
+Negative prompts (avoid absolutely): no cartoon style, no anime style, no comic book aesthetics, no hand-drawn doodles, no DALL-E watermark, no Adobe Stock watermark, no Getty Images watermark, no text labels written in cursive, no childish illustration, no glowing effects, no neon colors outside specified palette, no fictional creatures, no anatomically inaccurate proportions, no overlapping labels.
+
+Final output: should look like a publication-quality figure from a peer-reviewed medical or scientific journal, ready for use in an educational textbook for first-year medical students.
+        </div>
+        <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+    </div>
+
+    <h3>2. Les quatre familles à connaître par cœur</h3>
+
+    <p>Sur les 118 éléments, en P1, tu vas surtout côtoyer quatre familles. Les voici, et leur logique :</p>
+
+    <ul>
+        <li>Les <strong>alcalins</strong> (colonne 1 : Li, Na, K…) — 1 électron externe en trop. Ils veulent le donner. Hyper-réactifs. Ils explosent dans l'eau.</li>
+        <li>Les <strong>halogènes</strong> (colonne 17 : F, Cl, Br, I…) — 1 électron manquant pour atteindre 8. Ils veulent le prendre. Hyper-réactifs aussi. Le chlore tue, le fluor brûle.</li>
+        <li>Les <strong>gaz nobles</strong> (colonne 18 : He, Ne, Ar, Kr…) — 8 électrons pile poil sur leur couche externe. Satisfaits. Ils ne réagissent avec personne.</li>
+        <li>Le bloc <strong>C, H, O, N</strong> — les quatre éléments qui font la vie. Tu les retrouveras dans 99 % des molécules biologiques.</li>
+    </ul>
+
+    <div class="key-concept">
+        <p><strong>L'intuition à graver</strong></p>
+        <p>Un alcalin + un halogène = un couple chimique parfait. L'un donne, l'autre prend. Sodium + chlore → chlorure de sodium (NaCl). Le sel de table. Tu manges chaque jour le produit du mariage le plus violent du tableau périodique.</p>
+    </div>
+
+    <div class="quick-q">
+        Pourquoi l'or ne rouille-t-il jamais ? Indice : regarde sa position.
+        <span class="ans">→ L'or (Au), c'est un métal de transition situé au cœur du tableau, dans la même colonne que le cuivre et l'argent — la famille des « métaux nobles ». Il a une configuration électronique très stable : il ne veut ni donner ni prendre d'électron, donc il ne s'oxyde pas (il ne « rouille » pas). C'est pour ça qu'une bague trouvée dans une tombe étrusque brille encore après 2 500 ans.</span>
+    </div>
+
+    <h3>3. Trois propriétés qui se lisent sur la carte</h3>
+
+    <p>Si tu sais lire le tableau, tu peux prédire trois choses sans rien apprendre par cœur :</p>
+
+    <ul>
+        <li>La <strong>taille</strong> de l'atome — plus tu vas vers le bas et la gauche, plus l'atome est gros.</li>
+        <li>L'<strong>électronégativité</strong> (échelle de <strong>Pauling</strong>, de 0,7 à 4,0) — la tendance à attirer les électrons. Maximale en haut à droite : fluor (4,0), oxygène (3,4), azote (3,0). Minimale en bas à gauche : césium (0,7), francium.</li>
+        <li>L'<strong>énergie d'ionisation</strong> — l'effort qu'il faut pour arracher un électron. Inversement liée à la taille : plus l'atome est petit et compact, plus c'est dur.</li>
+    </ul>
+
+    <p>Trois propriétés, trois directions sur la carte. C'est tout. Une fois que tu as ça, tu peux deviner le comportement de la moitié du tableau sans jamais l'avoir vu en cours.</p>
+
+    <p>Et retiens ce chiffre de Pauling. <strong>Quand l'écart d'électronégativité entre deux atomes dépasse 1,7, la liaison qu'ils forment est ionique</strong> (un atome arrache complètement l'électron à l'autre). En dessous, elle reste covalente (ils partagent). Na (0,9) et Cl (3,2) : écart 2,3 → ionique, c'est NaCl. C et H (2,5 et 2,2) : écart 0,3 → covalente pure, c'est le squelette de toutes tes molécules. Un seul chiffre te dit le type de liaison.</p>
+
+    <div class="schema-box" style="max-width: 420px; margin: 28px auto;">
+        <img src="https://medeos-sante.fr/images/chimie/pano_chim_tendances_tableau.png"
+             alt="Les 3 tendances du tableau : taille, électronégativité, énergie d'ionisation"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
+        <div class="file-target" style="display:none;">📁 <strong>pano_chim_tendances_tableau.png</strong><br>à placer dans : <strong>/public/images/chimie/</strong></div>
+        <p class="caption"><strong>Les 3 tendances du tableau</strong> — taille, électronégativité, ionisation : trois flèches à comprendre une seule fois pour toute l'année.</p>
+        <div class="generation-prompt">
+            <strong>Prompt ChatGPT-image :</strong>
+Format: A4 portrait (210×297mm), aspect ratio 1:1.414, high resolution 8K, render quality: ultra-detailed, suitable for medical textbook publication.
+
+Modern educational illustration of the periodic table with three property gradient arrows overlaid. Show a simplified periodic table outline (only main groups and periods, no individual element symbols needed for clarity). Overlay three large directional arrows: (1) "Taille atomique" arrow in honey wood (#B8895A) pointing from top-right down to bottom-left (atom size increases going down and left), (2) "Électronégativité" arrow in deep blue (#1E3A8A) pointing from bottom-left up to top-right (electronegativity peaks at F, O), (3) "Énergie d'ionisation" arrow in purple (#6B46C1) parallel to electronegativity, also pointing top-right. Each arrow labeled with its name and a short caption explaining the direction. Highlight fluorine (F) and cesium (Cs) cells in contrast colors to mark the extremes. Clean cream background (#FAF6F0). Numbered legend 1-3. Editorial scientific style, no cartoon.
+
+Style reference: scientific editorial illustration inspired by Nature journal, NEJM, or Visible Body anatomical atlas. Clean technical drawing with educational annotations.
+
+Typography: sans-serif font (Inter, Helvetica or similar) for all numbered labels and annotations. Label size approximately 14pt, semi-bold weight. Color of labels: dark anthracite (#1F1F23). Numbers in colored circles matching the element they describe.
+
+Composition: centered subject with generous margins (10% on all sides). Line weight: thin (1-2px) for fine details, medium (3-4px) for main structures. Shadows: soft, subtle (5-10% opacity). No harsh outlines.
+
+Negative prompts (avoid absolutely): no cartoon style, no anime style, no comic book aesthetics, no hand-drawn doodles, no DALL-E watermark, no Adobe Stock watermark, no Getty Images watermark, no text labels written in cursive, no childish illustration, no glowing effects, no neon colors outside specified palette, no fictional creatures, no anatomically inaccurate proportions, no overlapping labels.
+
+Final output: should look like a publication-quality figure from a peer-reviewed medical or scientific journal, ready for use in an educational textbook for first-year medical students.
+        </div>
+        <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+    </div>
+
+    <div class="stakes-box">
+        <p>Le tableau périodique revient sans cesse en chimie. Si tu vois sa logique, tu n'as plus besoin de l'apprendre par cœur. Si tu la rates, tu passeras des soirées à réciter des cases dans le désordre.</p>
+    </div>
+
+    <div class="recap-pedagogique">
+        <div class="recap-tronc">
+            <strong>À retenir pour la P1</strong>
+            <ul>
+                <li><strong>Périodes</strong> (lignes) = couches qui se remplissent. <strong>Groupes</strong> (colonnes) = mêmes électrons externes = même comportement.</li>
+                <li>4 blocs : <strong>s, p, d, f</strong>. Les éléments du vivant (C, H, O, N) sont tous dans les blocs s et p de la 2ᵉ période.</li>
+                <li>3 grandes tendances : taille (↘ vers haut-droite), <strong>électronégativité</strong> (↗ vers F en haut à droite), énergie d'ionisation (↗ pareil).</li>
+                <li>Échelle de <strong>Pauling</strong> : écart > 1,7 = liaison ionique ; écart < 1,7 = covalente.</li>
+            </ul>
+        </div>
+        <div class="recap-anecdote">
+            <strong>Marquant à raconter</strong>
+            <ul>
+                <li>4 lettres — O, C, H, N — font 99 % de ton corps. Le reste du tableau, c'est de la décoration.</li>
+                <li>Une bague étrusque brille encore après 2 500 ans : l'or est satisfait, il n'a aucune envie d'échanger un électron.</li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="cliffhanger">Une carte. 118 cases. Et un solvant qui les fait toutes danser ensemble. On l'avale tous les jours. Et c'est probablement la molécule la plus bizarre de l'univers. ↓</p>
+
+    <!-- ========================================================== -->
+    <!-- SECTION 3 — L'EAU : LA MOLÉCULE IMPOSSIBLE                 -->
+    <!-- ========================================================== -->
+    <h2><span class="h2-counter">03</span> L'eau : la molécule qui n'aurait pas dû exister</h2>
+
+    <p class="punchline">L'eau devrait bouillir à −80°C. Elle bout à +100°C. Voilà 180°C d'anomalie. Sans cette anomalie, tu n'existerais pas.</p>
+
+    <p>Prends un verre d'eau. Regarde-le. Tu vois quelque chose de banal — un liquide transparent que tu bois sans y penser. En réalité, tu tiens dans la main la molécule la plus paradoxale que la chimie connaisse. Sa cousine la plus proche, le sulfure d'hydrogène (H₂S), bout à −60°C. Tout suggère que l'eau aurait dû être un gaz à la température de la pièce. Elle est liquide. Et c'est parce qu'elle est liquide, et seulement parce qu'elle est liquide, que la vie existe sur Terre.</p>
+
+    <div class="stat-shock">
+        <div class="cell">
+            <div class="num">60 %</div>
+            <div class="label">de ton corps est fait d'eau. Et ça monte encore : ton cerveau en contient 73 %, ton sang 83 %.</div>
+        </div>
+        <div class="cell">
+            <div class="num">10²²</div>
+            <div class="label">molécules d'eau dans une seule goutte. Soit mille fois le nombre de grains de sable de toutes les plages de la Terre réunies.</div>
+        </div>
+    </div>
+
+    <div class="manip-palpee">
+        <div class="manip-titre">Tu connais la buée sur le miroir après une douche chaude.</div>
+        <div class="manip-etapes">
+            <div class="manip-etape"><span class="manip-num">1.</span>Dans l'air chaud, les molécules d'eau filent à toute vitesse, chacune de son côté : c'est de la <strong>vapeur invisible</strong>. En touchant le miroir froid, elles <strong>ralentissent brutalement</strong>.</div>
+            <div class="manip-etape"><span class="manip-num">2.</span>Et là, quelque chose peut enfin agir : chaque molécule d'eau est comme un <strong>petit aimant</strong>. Tant qu'elles allaient trop vite, elles ne pouvaient pas se retenir. Une fois ralenties par le froid, ces aimants s'accrochent les uns aux autres — et l'eau se rassemble en gouttelettes. C'est ça, la buée.</div>
+        </div>
+        <p class="manip-claire">La chimie n'est pas que dans un manuel. Elle est sur ton miroir, dans ton verre, dans chaque goutte de pluie.</p>
+    </div>
+
+    <h3>1. La molécule à deux visages</h3>
+
+    <p>Regarde-la de plus près. Une molécule d'eau, ce n'est presque rien : <strong>un atome d'oxygène avec deux petits hydrogènes accrochés</strong>, un peu comme une tête de Mickey. Trois atomes, et pourtant elle n'est pas droite — ses deux « oreilles » forment un <strong>coude de 104,5°</strong>. Ce coude n'est pas un hasard. Entre l'oxygène et les hydrogènes, il se joue un bras de fer : l'oxygène est bien plus <em>électronégatif</em> (rappelle-toi, en haut à droite du tableau), alors il tire les électrons à lui. Du coup, son côté devient légèrement négatif (<strong>δ⁻</strong>), pendant que les deux hydrogènes, délaissés, deviennent légèrement positifs (<strong>δ⁺</strong>). La molécule a un côté « + » et un côté « − » : elle est <strong>polaire</strong>.</p>
+
+    <p>Attention à un piège classique : avoir des liaisons polaires ne suffit pas à rendre une molécule polaire — <strong>tout dépend de sa forme</strong>. Prends le CO₂ : il est parfaitement <em>droit</em> (linéaire). Ses deux liaisons tirent fort, mais dans des sens exactement opposés — elles s'annulent, comme deux équipes de tir à la corde à égalité. Résultat : le CO₂ ne penche d'aucun côté, il est apolaire. L'eau, elle, est <em>coudée</em> : ses deux tractions ne se font pas face, elles ne s'annulent pas. Résultat : l'eau penche, elle est polaire. <strong>C'est la géométrie qui décide, pas la liste des atomes.</strong></p>
+
+    <p>Et c'est de là que vient toute la magie de l'eau. Chaque molécule étant un petit aimant (un côté +, un côté −), elles ne s'ignorent pas : le pôle positif de l'une attrape le pôle négatif de sa voisine. Elles se prennent par la main, par millions. Ces poignées de main portent un nom — les <strong>liaisons hydrogène</strong> — et c'est elles qui font tenir l'eau ensemble. Dans chaque poignée, il y en a toujours une qui <em>tend</em> la main (elle prête son H δ⁺ : on l'appelle le <strong>donneur</strong>) et une qui la <em>saisit</em> (elle offre une place sur son O δ⁻ : l'<strong>accepteur</strong>). Un donneur, un accepteur, à chaque fois.</p>
+
+    <div class="schema-box" style="max-width: 380px; margin: 28px auto;">
+        <img src="https://medeos-sante.fr/images/chimie/pano_chim_eau_liaisons_h.png"
+             alt="La molécule d'eau : géométrie coudée, dipôle, liaisons hydrogène entre molécules voisines"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
+        <div class="file-target" style="display:none;">📁 <strong>pano_chim_eau_liaisons_h.png</strong><br>à placer dans : <strong>/public/images/chimie/</strong></div>
+        <p class="caption"><strong>La molécule d'eau et ses liaisons hydrogène</strong> — géométrie coudée, polarité, et réseau de molécules qui se tiennent la main.</p>
+        <div class="generation-prompt">
+            <strong>Prompt ChatGPT-image :</strong>
+Format: A4 portrait (210×297mm), aspect ratio 1:1.414, high resolution 8K, render quality: ultra-detailed, suitable for medical textbook publication.
+
+Modern educational illustration of water molecules and hydrogen bonding. Center: one large water molecule (H₂O) shown with bent geometry (~104.5°), oxygen rendered as a deep blue sphere (#1E3A8A) with delta-negative symbol, two hydrogen atoms as small honey-wood spheres (#B8895A) with delta-positive symbols. Show a faint pink-to-blue dipole arrow indicating polarity. Around it: four neighboring water molecules connected to the central one by dashed yellow lines (#FCD34D) representing hydrogen bonds, each labeled. Show the 3D tetrahedral arrangement subtly. Numbered legend 1-4 on the right: O delta-, H delta+, dipole moment, hydrogen bond. Clean cream background (#FAF6F0). Editorial scientific style, no cartoon, realistic molecular geometry. Mixed space-filling and ball-and-stick rendering.
+
+Style reference: scientific editorial illustration inspired by Nature journal, NEJM, or Visible Body anatomical atlas. Clean technical drawing with educational annotations.
+
+Typography: sans-serif font (Inter, Helvetica or similar) for all numbered labels and annotations. Label size approximately 14pt, semi-bold weight. Color of labels: dark anthracite (#1F1F23). Numbers in colored circles matching the element they describe.
+
+Composition: centered subject with generous margins (10% on all sides). Line weight: thin (1-2px) for fine details, medium (3-4px) for main structures. Shadows: soft, subtle (5-10% opacity). No harsh outlines.
+
+Negative prompts (avoid absolutely): no cartoon style, no anime style, no comic book aesthetics, no hand-drawn doodles, no DALL-E watermark, no Adobe Stock watermark, no Getty Images watermark, no text labels written in cursive, no childish illustration, no glowing effects, no neon colors outside specified palette, no fictional creatures, no anatomically inaccurate proportions, no overlapping labels.
+
+Final output: should look like a publication-quality figure from a peer-reviewed medical or scientific journal, ready for use in an educational textbook for first-year medical students.
+        </div>
+        <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+    </div>
+
+    <p>Chaque molécule d'eau tient ainsi la main à <strong>plusieurs voisines à la fois</strong>. Ces poignées sont faibles individuellement — environ 20 fois moins fortes qu'une liaison covalente classique. Mais elles sont partout. Et leur somme fait que l'eau, pour s'évaporer, doit casser des milliards de poignées de main. C'est ça qui rend l'eau liquide. C'est ça qui retient les océans.</p>
+
+    <p class="punchline">Ça. C'est le déclic. Pas une technique de mémo. <em class="hl">Un changement de regard.</em></p>
+
+    <p>Le jour où tu ouvres un cours de chimie en te demandant « qu'est-ce que ça fait, concrètement ? » plutôt que « qu'est-ce que je dois retenir ? », tout change. Avant, l'eau c'était « H₂O ». Après, c'est <strong>une molécule polaire qui se tient la main avec ses voisines, et dont la somme des liaisons faibles bat l'agitation thermique jusqu'à 100°C</strong>. La même chose — mais comprise, pas récitée.</p>
+
+    <div class="lucas-anecdote">
+        <em>L'exercice qui marche tient sur une feuille A4 vierge. Tu viens d'échouer un QCM blanc sur les liaisons et la polarité ? Au lieu de relire le cours une sixième fois, dessine une molécule d'eau. Puis dix. Puis trace les liaisons hydrogène entre elles, en pointillés. Ce sera moche, les molécules ressembleront à des têtards — peu importe. En dessinant, tu vois enfin ce que le cours essayait de dire : l'eau n'est pas un liquide, c'est un réseau. Une feuille, un stylo : parfois, un schéma fait à la main fait comprendre en cinq minutes ce que trois relectures n'avaient pas réussi à fixer.</em>
+    </div>
+
+    <h3>2. Pourquoi l'eau dissout (presque) tout</h3>
+
+    <p>Mets une pincée de sel dans de l'eau. Tu remues. Le sel disparaît. Tu crois qu'il s'est volatilisé ? Non. Les molécules d'eau polaires viennent <strong>entourer chaque ion du sel</strong>. Les côtés négatifs de l'eau s'accrochent au sodium positif. Les côtés positifs s'accrochent au chlore négatif. Chaque ion est emballé dans une coquille de molécules d'eau. C'est ce qu'on appelle la <strong>solvatation</strong>.</p>
+
+    <p>Et c'est exactement pour ça que ton sang peut transporter des sels, des sucres, des acides aminés, des hormones, des médicaments, des déchets — tous dissous, tous emballés dans leur petit nuage d'eau personnel. Sans cette propriété, ton sang serait un caillou. Et tu serais mort en 30 secondes.</p>
+
+    <div class="clinical-box">
+        <p>Quand quelqu'un est en <strong>déshydratation sévère</strong>, ce n'est pas juste « il manque d'eau ». C'est que ses reins n'arrivent plus à équilibrer la concentration en sels (sodium, potassium, chlore) dans son sang. Les cellules se vident ou se gonflent. Les neurones cessent de fonctionner correctement. Confusion, coma, mort. En 48 à 72 heures. Tu meurs de chimie déréglée, pas de soif.</p>
+    </div>
+
+    <div class="schema-box" style="max-width: 400px; margin: 28px auto;">
+        <img src="https://medeos-sante.fr/images/chimie/pano_chim_solvatation_sel.png"
+             alt="La solvatation du sel : les ions Na⁺ et Cl⁻ entourés chacun par une coquille de molécules d'eau"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
+        <div class="file-target" style="display:none;">📁 <strong>pano_chim_solvatation_sel.png</strong><br>à placer dans : <strong>/public/images/chimie/</strong></div>
+        <p class="caption"><strong>La solvatation du sel</strong> — chaque ion est emballé dans une coquille de molécules d'eau orientées : le côté δ⁻ vers le sodium, le côté δ⁺ vers le chlore.</p>
+        <div class="generation-prompt">
+            <strong>Prompt ChatGPT-image :</strong>
+Format: A4 portrait (210×297mm), aspect ratio 1:1.414, high resolution 8K, render quality: ultra-detailed, suitable for medical textbook publication.
+
+Modern educational illustration of ionic solvation (dissolution of table salt NaCl in water). Center-left: a sodium ion (Na⁺) rendered as a purple sphere (#6B46C1) labeled with a plus sign. Center-right: a chloride ion (Cl⁻) rendered as a green sphere labeled with a minus sign. Around each ion, show a hydration shell: 5 to 6 water molecules arranged in a ring, each water molecule drawn with bent geometry (~104.5°) — oxygen as a deep blue sphere (#1E3A8A, delta-negative), two hydrogens as small honey-wood spheres (#B8895A, delta-positive). Critical orientation rule: around the Na⁺ ion the oxygen (delta-negative) ends point INWARD toward the positive ion; around the Cl⁻ ion the hydrogen (delta-positive) ends point INWARD toward the negative ion. Faint dashed lines show the electrostatic attraction between each oriented water molecule and its ion. Optionally, in the top corner, show a tiny intact NaCl cubic crystal lattice partially dissolving, with ions peeling off into solution. Clean cream background (#FAF6F0). Numbered legend 1-4: Na⁺ ion, Cl⁻ ion, water molecule (dipole), hydration shell. Editorial scientific style, no cartoon, realistic molecular geometry, mixed ball-and-stick rendering.
+
+Style reference: scientific editorial illustration inspired by Nature journal, NEJM, or Visible Body anatomical atlas. Clean technical drawing with educational annotations.
+
+Typography: sans-serif font (Inter, Helvetica or similar) for all numbered labels and annotations. Label size approximately 14pt, semi-bold weight. Color of labels: dark anthracite (#1F1F23). Numbers in colored circles matching the element they describe.
+
+Composition: centered subject with generous margins (10% on all sides). Line weight: thin (1-2px) for fine details, medium (3-4px) for main structures. Shadows: soft, subtle (5-10% opacity). No harsh outlines.
+
+Negative prompts (avoid absolutely): no cartoon style, no anime style, no comic book aesthetics, no hand-drawn doodles, no DALL-E watermark, no Adobe Stock watermark, no Getty Images watermark, no text labels written in cursive, no childish illustration, no glowing effects, no neon colors outside specified palette, no fictional creatures, no anatomically inaccurate proportions, no overlapping labels.
+
+Final output: should look like a publication-quality figure from a peer-reviewed medical or scientific journal, ready for use in an educational textbook for first-year medical students.
+        </div>
+        <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+    </div>
+
+    <h3>3. Le truc qui fait flotter les glaçons</h3>
+
+    <p>Verse un glaçon dans ton verre. Il flotte. Évident, non ? Sauf que c'est <strong>chimiquement aberrant</strong>. Presque tous les solides sont plus denses que leur liquide — la cire, le métal, le plastique. La glace, non. La glace est <strong>9 % moins dense</strong> que l'eau liquide. Pourquoi ?</p>
+
+    <p>Parce que quand l'eau gèle, les liaisons hydrogène imposent une géométrie ouverte, hexagonale, avec du vide entre les molécules. La glace est un cristal aéré. Le liquide est plus tassé. Résultat : ton glaçon flotte.</p>
+
+    <p>Et grâce à ça, les lacs ne gèlent qu'en surface en hiver. Les poissons survivent dessous. La vie aquatique a pu se développer. Si la glace coulait — comme elle « devrait » le faire — les océans entiers auraient gelé du fond vers le haut, et la vie n'aurait jamais émergé. <strong>Ton glaçon qui flotte dans ton verre, c'est toute la condition de ton existence tenant dans un cube de 2 cm.</strong></p>
+
+    <div class="stakes-box">
+        <p>L'eau et ses propriétés sont la base de <strong>tout le métabolisme</strong> que tu verras en biochimie. Si tu maîtrises la polarité, la solvatation et les liaisons hydrogène, tu auras gagné 6 chapitres d'avance. Si tu zappes, tu coinceras dès qu'on parlera de membranes, de protéines, ou de réactions du métabolisme.</p>
+    </div>
+
+    <p>Une dernière chose pour comprendre pourquoi H₂O est coudée et CO₂ linéaire. En P1, on utilise une règle de géométrie qu'on appelle la <strong>VSEPR</strong> (méthode de répulsion des paires d'électrons). L'idée tient en une phrase : les paires d'électrons autour d'un atome central se repoussent, et se placent le plus loin possible les unes des autres. 2 paires → géométrie <strong>linéaire</strong> (180°, comme CO₂). 3 paires → <strong>triangulaire plane</strong> (120°). 4 paires → <strong>tétraédrique</strong> (109,5°, comme le méthane CH₄). Et pour l'eau : 2 liaisons + 2 paires libres = pseudo-tétraèdre, mais comme les paires libres écrasent un peu les liaisons, l'angle se rabaisse de 109,5° à 104,5°. Tout est mécanique. Aucune liste à apprendre.</p>
+
+    <div class="schema-box" style="max-width: 420px; margin: 28px auto;">
+        <img src="https://medeos-sante.fr/images/chimie/pano_chim_vsepr_geometries.png"
+             alt="Les géométries VSEPR : linéaire 180°, triangulaire plane 120°, tétraédrique 109,5° et coudée 104,5° pour l'eau"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
+        <div class="file-target" style="display:none;">📁 <strong>pano_chim_vsepr_geometries.png</strong><br>à placer dans : <strong>/public/images/chimie/</strong></div>
+        <p class="caption"><strong>Les géométries VSEPR</strong> — les paires d'électrons se repoussent et se placent le plus loin possible : 2 paires → linéaire, 3 → triangulaire plane, 4 → tétraédrique. L'eau, avec 2 paires libres, se rabaisse à 104,5°.</p>
+        <div class="generation-prompt">
+            <strong>Prompt ChatGPT-image :</strong>
+Format: A4 portrait (210×297mm), aspect ratio 1:1.414, high resolution 8K, render quality: ultra-detailed, suitable for medical textbook publication.
+
+Modern educational illustration comparing four VSEPR molecular geometries, arranged as a clear 2x2 grid of separate panels. Each panel shows a central atom (deep blue sphere #1E3A8A) with bonded atoms (honey-wood spheres #B8895A) and the bond angle written clearly. Panel 1 — "Linéaire": central atom with two bonded atoms exactly opposite, angle labeled "180°", example "CO₂". Panel 2 — "Triangulaire plane": central atom with three bonded atoms in a flat triangle, angle labeled "120°". Panel 3 — "Tétraédrique": central atom with four bonded atoms in 3D tetrahedral arrangement, angle labeled "109,5°", example "CH₄". Panel 4 — "Coudée (eau)": central oxygen with two bonded hydrogens AND two lone electron pairs shown as faint purple lobes (#6B46C1) pushing the bonds together, angle labeled "104,5°", example "H₂O". In panel 4, add a small annotation arrow showing the lone pairs compressing the H-O-H angle from 109,5° down to 104,5°. Clean cream background (#FAF6F0). Numbered legend 1-4 matching the four panels. Editorial scientific style, no cartoon, realistic molecular geometry, ball-and-stick rendering.
+
+Style reference: scientific editorial illustration inspired by Nature journal, NEJM, or Visible Body anatomical atlas. Clean technical drawing with educational annotations.
+
+Typography: sans-serif font (Inter, Helvetica or similar) for all numbered labels and annotations. Label size approximately 14pt, semi-bold weight. Color of labels: dark anthracite (#1F1F23). Numbers in colored circles matching the element they describe.
+
+Composition: centered subject with generous margins (10% on all sides). Line weight: thin (1-2px) for fine details, medium (3-4px) for main structures. Shadows: soft, subtle (5-10% opacity). No harsh outlines.
+
+Negative prompts (avoid absolutely): no cartoon style, no anime style, no comic book aesthetics, no hand-drawn doodles, no DALL-E watermark, no Adobe Stock watermark, no Getty Images watermark, no text labels written in cursive, no childish illustration, no glowing effects, no neon colors outside specified palette, no fictional creatures, no anatomically inaccurate proportions, no overlapping labels.
+
+Final output: should look like a publication-quality figure from a peer-reviewed medical or scientific journal, ready for use in an educational textbook for first-year medical students.
+        </div>
+        <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+    </div>
+
+    <div class="recap-pedagogique">
+        <div class="recap-tronc">
+            <strong>À retenir pour la P1</strong>
+            <ul>
+                <li>H₂O : géométrie <strong>coudée à 104,5°</strong>, dipôle O δ⁻ ↔ H δ⁺. CO₂ : linéaire et apolaire. La géométrie commande la polarité.</li>
+                <li><strong>Liaison hydrogène</strong> : un donneur (H lié à N, O ou F) + un accepteur (paire libre sur N, O ou F). Chaque molécule d'eau s'accroche à plusieurs voisines.</li>
+                <li><strong>VSEPR</strong> : 2 paires → linéaire, 3 → triangulaire plane, 4 → tétraédrique (109,5°).</li>
+            </ul>
+        </div>
+        <div class="recap-anecdote">
+            <strong>Marquant à raconter</strong>
+            <ul>
+                <li>L'eau aurait dû bouillir à −80°C. Elle bout à +100°C : 180°C d'anomalie offerts par les liaisons hydrogène.</li>
+                <li>Tu meurs de chimie déréglée, pas de soif : 48 à 72 h sans eau, et tes neurones cessent de tirer.</li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="cliffhanger">Le diamant et la mine de ton crayon sont faits du même atome. L'un raye le verre, l'autre glisse sur le papier et écrit. La différence ? Une seule chose : comment les atomes se tiennent. ↓</p>
+
+    <!-- ========================================================== -->
+    <!-- SECTION 4 — LES LIAISONS : LE LANGAGE DES MOLÉCULES        -->
+    <!-- ========================================================== -->
+    <h2><span class="h2-counter">04</span> Les liaisons : pourquoi le diamant est éternel et l'huile fuit l'eau</h2>
+
+    <p class="punchline">Une feuille de papier déchirée n'a pas brisé une seule liaison covalente. Tu n'as cassé que des liaisons faibles. Voilà la nuance qui change tout.</p>
+
+    <p>Tout en chimie, absolument tout, repose sur une seule question : <em class="hl">comment les atomes se tiennent-ils ?</em> Le diamant et le <strong>graphite</strong> — la matière grise dont est faite la mine de ton crayon — sont tous les deux du carbone pur, exactement les mêmes atomes. Pourtant, l'un est le matériau le plus dur connu, l'autre s'effrite et laisse une trace dès que tu écris. La différence ne vient pas des atomes. Elle vient de la <strong>manière dont ils sont liés</strong>.</p>
+
+    <p>Il existe deux familles de liaisons. Et tu dois les distinguer comme tu distingues deux personnes dans ta vie : tes proches (les liaisons fortes) et tes connaissances (les liaisons faibles). Les deux comptent. Mais elles ne jouent pas le même rôle.</p>
+
+    <h3>1. Les liaisons fortes : ce qui fait la molécule</h3>
+
+    <p>Quand deux atomes se mettent en couple sérieux, ils <strong>partagent leurs électrons</strong>. C'est la <strong>liaison covalente</strong>. Le mariage chimique. Chaque atome donne un électron, et les deux électrons forment un nuage commun qui les colle ensemble. C'est ce qui fait toutes les molécules : H₂O, CO₂, l'ADN, l'aspirine, l'insuline.</p>
+
+    <div class="formula">
+        H — H &nbsp;&nbsp;|&nbsp;&nbsp; O = O &nbsp;&nbsp;|&nbsp;&nbsp; N ≡ N
+    </div>
+
+    <p>Une liaison covalente, c'est entre <strong>100 et 1000 kilojoules par mole</strong>. Très solide. Pour la casser, il faut une vraie réaction chimique — combustion, hydrolyse, enzyme. Tu ne casses pas une liaison covalente à la main. Tu ne la casses pas en chauffant un peu. Tu la casses avec une énergie comparable à la lumière ultraviolette ou à un acide fort.</p>
+
+    <p>Et il y a un cousin plus extrême : la <strong>liaison ionique</strong>. Là, un atome ne partage plus — il <em>donne</em> un électron à l'autre. Le sodium donne, le chlore prend. Résultat : Na⁺ et Cl⁻ qui s'attirent comme deux aimants opposés. C'est ça, le sel. Une attraction électrique pure.</p>
+
+    <div class="schema-box">
+        <img src="https://medeos-sante.fr/images/chimie/pano_chim_trois_liaisons.png"
+             alt="Les 3 liaisons : covalente (H–H), ionique (Na+ Cl−), hydrogène (H2O…H2O)"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
+        <div class="file-target" style="display:none;">📁 <strong>pano_chim_trois_liaisons.png</strong><br>à placer dans : <strong>/public/images/chimie/</strong></div>
+        <p class="caption"><strong>Les trois grandes liaisons</strong> — la covalente (partage), l'ionique (transfert), la liaison hydrogène (attraction faible).</p>
+        <div class="generation-prompt">
+            <strong>Prompt ChatGPT-image :</strong>
+Format: A4 portrait (210×297mm), aspect ratio 1:1.414, high resolution 8K, render quality: ultra-detailed, suitable for medical textbook publication.
+
+Modern educational illustration showing three types of chemical bonds side by side as three labeled panels. Panel 1 — Covalent bond: two hydrogen atoms (small honey-wood spheres) sharing a paired electron cloud between them, labeled "Covalente : partage d'électrons". Panel 2 — Ionic bond: a sodium atom (purple sphere) with a + sign and an arrow showing one electron transferring to a chlorine atom (terracotta sphere) that becomes Cl⁻, labeled "Ionique : transfert d'électron". Panel 3 — Hydrogen bond: two water molecules with a dashed yellow line (#FCD34D) between an O of one molecule and an H of the other, labeled "Liaison H : attraction faible". Below each panel: a strength scale in kJ/mol (covalent: 100-1000, ionic: 400-800, hydrogen bond: 5-40). Clean cream background (#FAF6F0). Numbered legend 1-3. Editorial scientific style, real molecular shapes, no cartoon.
+
+Style reference: scientific editorial illustration inspired by Nature journal, NEJM, or Visible Body anatomical atlas. Clean technical drawing with educational annotations.
+
+Typography: sans-serif font (Inter, Helvetica or similar) for all numbered labels and annotations. Label size approximately 14pt, semi-bold weight. Color of labels: dark anthracite (#1F1F23). Numbers in colored circles matching the element they describe.
+
+Composition: centered subject with generous margins (10% on all sides). Line weight: thin (1-2px) for fine details, medium (3-4px) for main structures. Shadows: soft, subtle (5-10% opacity). No harsh outlines.
+
+Negative prompts (avoid absolutely): no cartoon style, no anime style, no comic book aesthetics, no hand-drawn doodles, no DALL-E watermark, no Adobe Stock watermark, no Getty Images watermark, no text labels written in cursive, no childish illustration, no glowing effects, no neon colors outside specified palette, no fictional creatures, no anatomically inaccurate proportions, no overlapping labels.
+
+Final output: should look like a publication-quality figure from a peer-reviewed medical or scientific journal, ready for use in an educational textbook for first-year medical students.
+        </div>
+        <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+    </div>
+
+    <h3>2. Les liaisons faibles : ce qui fait la vie</h3>
+
+    <p>Et puis il y a la deuxième famille. Les liaisons faibles. Liaisons hydrogène, forces de Van der Waals, interactions hydrophobes. Chacune est <strong>10 à 100 fois plus faible</strong> qu'une covalente. Tu les casses en respirant fort. Et pourtant.</p>
+
+    <p>Et pourtant ce sont elles qui tiennent ton ADN replié dans tes cellules. Elles qui font que tes protéines prennent la forme exacte qui leur permet de fonctionner. Elles qui rassemblent l'eau en gouttes rondes au lieu de la laisser s'étaler. Elles qui font que tes membranes cellulaires existent. Elles qui font qu'un gecko peut marcher au plafond, juste avec des millions de ces minuscules forces sous ses pattes.</p>
+
+    <div class="quick-stat">
+        <div class="quick-stat-figure" style="font-size: 26pt; letter-spacing: -0.5px;">5 à 40 kJ/mol</div>
+        <div class="quick-stat-label">force d'une liaison hydrogène. Une fraction d'une covalente.</div>
+        <div class="quick-stat-context">Faible individuellement. Mais multipliée par des milliards dans une cellule, elle devient l'architecture invisible du vivant.</div>
+    </div>
+
+    <p>L'ADN est un double brin tenu par des <strong>millions de liaisons hydrogène</strong>. Quand une cellule veut le lire pour fabriquer une protéine, des enzymes décollent simplement les deux brins. Pas besoin de casser les liaisons covalentes — il suffit d'écarter les liaisons faibles. Si l'ADN avait été tenu par des covalentes, aucune cellule n'aurait pu le lire. La vie aurait été impossible.</p>
+
+    <p>Voilà l'idée. <strong>Les liaisons fortes construisent les molécules. Les liaisons faibles construisent les structures.</strong> Une molécule, c'est de la covalente. Une protéine pliée, un ADN double brin, une membrane, une cellule — c'est des liaisons faibles. Les deux ensemble, c'est la chimie du vivant.</p>
+
+    <div class="key-concept">
+        <p><strong>Le principe « qui se ressemble s'assemble »</strong></p>
+        <p>Les molécules polaires (eau, sucres, sels) s'attirent entre elles via leurs liaisons faibles. Les molécules apolaires (huiles, graisses) s'attirent entre elles. Mais polaire et apolaire s'ignorent : c'est parce que l'huile est apolaire qu'elle ne se mélange pas à l'eau et reste en gouttes séparées. Cette règle, à elle seule, explique pourquoi tes membranes cellulaires existent. Pourquoi le savon nettoie. Pourquoi certaines molécules traversent les barrières et d'autres pas.</p>
+    </div>
+
+    <div class="quick-q">
+        Pourquoi une marée noire reste en nappe au lieu de se mélanger à la mer ?
+        <span class="ans">→ Parce que les molécules d'hydrocarbures sont apolaires : elles ne peuvent pas former de liaisons hydrogène avec l'eau. Les molécules d'eau, qui préfèrent rester accrochées entre elles, ne laissent aucune place au pétrole — qui reste donc à part, en couche distincte. Ce n'est pas qu'il déteste l'eau : c'est juste que l'eau ne veut que de l'eau.</span>
+    </div>
+
+    <div class="stakes-box">
+        <p>Les liaisons (fortes et faibles) sont la base de la chimie générale ET de toute la biochimie. Si tu vois clairement la différence entre covalente et liaison faible, tu auras une vraie longueur d'avance. Si tu confonds, tu rameras à chaque chapitre.</p>
+    </div>
+
+    <div class="recap-pedagogique">
+        <div class="recap-tronc">
+            <strong>À retenir pour la P1</strong>
+            <ul>
+                <li>2 liaisons fortes : <strong>covalente</strong> (partage), <strong>ionique</strong> (transfert). 100 à 1000 kJ/mol.</li>
+                <li>3 liaisons faibles : liaison <strong>hydrogène</strong>, <strong>Van der Waals</strong>, interactions <strong>hydrophobes</strong>. 5 à 40 kJ/mol.</li>
+                <li>Règle « qui se ressemble s'assemble » : polaire + polaire = miscible ; polaire + apolaire = repoussé.</li>
+            </ul>
+        </div>
+        <div class="recap-anecdote">
+            <strong>Marquant à raconter</strong>
+            <ul>
+                <li>Tu déchires une feuille de papier sans casser une seule liaison covalente — tu n'as cassé que des liaisons faibles entre fibres.</li>
+                <li>L'ADN est tenu par des millions de liaisons hydrogène : c'est ça qui permet aux enzymes de l'ouvrir comme une fermeture éclair.</li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="cliffhanger">Tu sais ce qui tient les atomes. Mais comment savoir ce que les molécules vont <em>faire</em> ensemble ? La réponse tient en une équation. Et elle explique pourquoi la vie est un combat permanent. ↓</p>
+
+    <!-- ========================================================== -->
+    <!-- SECTION 5 — LES RÉACTIONS : ÉQUILIBRES ET MOUVEMENT        -->
+    <!-- ========================================================== -->
+    <h2><span class="h2-counter">05</span> Les réactions chimiques : la rivière qui ne s'arrête jamais</h2>
+
+    <p class="punchline">En ce moment, dans chacune de tes cellules, des milliers de réactions se déclenchent — ou refusent de partir. Aucune n'est laissée au hasard : une seule règle décide laquelle se fait et laquelle attend. Voilà ce qu'est une réaction chimique pilotée.</p>
+
+    <p>Une réaction chimique, ce n'est pas magique. C'est <strong>des atomes qui changent de partenaire</strong>. Des liaisons qui se cassent. Des liaisons qui se forment. Et entre les deux, un échange d'énergie. C'est tout.</p>
+
+    <p>Mais il y a une question piège, celle que peu de profs prennent le temps d'expliquer : <em class="hl">pourquoi une réaction se produit-elle ?</em> Pourquoi le sodium et le chlore réagissent-ils sans qu'on les force ? Pourquoi l'eau et l'huile ne réagissent-ils jamais, même si on attend mille ans ? La réponse est simple, et tu vas la retenir pour toujours.</p>
+
+    <div class="formula">
+        ΔG = ΔH − <span class="accent">T</span> · ΔS
+    </div>
+
+    <p>Cette formule, c'est l'équation maîtresse de la chimie. Elle te dit si une réaction va se produire spontanément. Trois lettres à retenir :</p>
+
+    <ul>
+        <li><strong>ΔH</strong> — la chaleur. Une réaction qui chauffe (combustion d'essence) → ΔH négatif. Une réaction qui refroidit (dissolution d'un coldpack) → ΔH positif. Libérer de la chaleur pousse la réaction à se faire toute seule.</li>
+        <li><strong>ΔS</strong> — le désordre. De la glace qui fond → ΔS positif (les molécules s'éparpillent). Une protéine qui se plie → ΔS négatif (de l'ordre apparaît).</li>
+        <li><strong>T</strong> — la température, toujours en <strong>kelvins</strong> (0 °C = 273 K). Plus il fait chaud, plus le terme du désordre (T · ΔS) pèse lourd dans le résultat.</li>
+        <li><strong>ΔG</strong> — le verdict final. ΔG &lt; 0 → la réaction se fait toute seule. ΔG &gt; 0 → il faut la forcer (apport d'énergie).</li>
+    </ul>
+
+    <h3>1. L'univers va vers le désordre</h3>
+
+    <p>La chimie obéit à une loi fondamentale, presque philosophique : <strong>l'univers évolue spontanément vers plus de désordre</strong>. Une goutte d'encre dans un verre d'eau se disperse — toujours. Elle ne se rassemble jamais en goutte spontanément. Un parfum vaporisé dans une pièce se diffuse — toujours. Il ne retourne jamais dans le flacon. Le désordre, ça s'appelle l'<strong>entropie</strong>. Et l'entropie augmente toujours. C'est exactement ce que dit la formule du dessus : quand le désordre grimpe (ΔS positif), le terme <strong>− T · ΔS</strong> tire ΔG vers le bas — et plus ΔG descend, plus la réaction tend à se faire toute seule. Le désordre qui augmente, c'est le moteur de la spontanéité.</p>
+
+    <p>C'est la 2ᵉ loi de la thermodynamique. Une loi tellement fondamentale qu'elle dépasse la chimie : elle régit l'univers entier. Le café tiède finit toujours froid. Une chambre rangée finit toujours en bazar. Un corps mort finit toujours par se décomposer. Pas de retour en arrière spontané.</p>
+
+    <div class="quick-q">
+        Pourquoi un glaçon fond tout seul dans ton verre, mais l'eau ne regèle jamais spontanément à température ambiante ?
+        <span class="ans">→ Parce que fondre fait grimper le désordre : dans le glaçon, les molécules sont rangées en cristal ; dans l'eau liquide, elles partent dans tous les sens. Ce gain de désordre (ΔS positif) tire ΔG vers le bas → la fonte se fait toute seule. Pour refaire de la glace, il faudrait <em>remettre de l'ordre</em> — l'univers ne le fait jamais gratuitement : c'est à ton congélateur de payer l'énergie pour ça.</span>
+    </div>
+
+    <div class="quick-stat">
+        <div class="quick-stat-figure" style="font-size: 26pt; letter-spacing: -0.5px;">+ 273</div>
+        <div class="quick-stat-label">conversion °C → Kelvin pour les calculs thermodynamiques.</div>
+        <div class="quick-stat-context">À retenir : 0°C = 273 K, 25°C = 298 K. Si tu oublies le 273, tu te plantes systématiquement sur les exercices.</div>
+    </div>
+
+    <h3>2. Pourquoi tu es en vie : un mystère thermodynamique</h3>
+
+    <p>Si l'univers va vers le désordre, pose-toi la question : comment expliquer la vie ? Toi, par exemple. Tu es une structure incroyablement <em>ordonnée</em>. 37 000 milliards de cellules organisées au micromètre près. Des protéines pliées avec une précision atomique. De l'ADN qui se réplique avec moins d'une erreur tous les milliards de bases.</p>
+
+    <p>Comment c'est possible, si l'univers va vers le désordre ?</p>
+
+    <p>La réponse : <strong>la vie est un combat permanent contre l'entropie</strong>. Pour rester ordonnée, ta cellule doit dépenser de l'énergie en permanence. Cette énergie vient de la nourriture (chimie). Quand tu arrêtes de manger, tu meurs en quelques semaines. Quand ton cœur arrête de pomper, ton corps commence à se décomposer en quelques minutes. La vie, c'est de l'énergie injectée chaque seconde dans un système qui voudrait sinon glisser vers le chaos.</p>
+
+    <div class="schema-box" style="max-width: 420px; margin: 28px auto;">
+        <img src="https://medeos-sante.fr/images/chimie/pano_chim_profil_energetique.png"
+             alt="Profil énergétique d'une réaction : réactifs, état de transition, produits, ΔG"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
+        <div class="file-target" style="display:none;">📁 <strong>pano_chim_profil_energetique.png</strong><br>à placer dans : <strong>/public/images/chimie/</strong></div>
+        <p class="caption"><strong>Le profil énergétique d'une réaction</strong> — une barrière à franchir (énergie d'activation), puis une vallée d'arrivée. Si ΔG &lt; 0, la réaction est spontanée.</p>
+        <div class="generation-prompt">
+            <strong>Prompt ChatGPT-image :</strong>
+Format: A4 portrait (210×297mm), aspect ratio 1:1.414, high resolution 8K, render quality: ultra-detailed, suitable for medical textbook publication.
+
+Modern educational illustration of a reaction energy diagram. X-axis: "Avancement de la réaction" (reaction progress). Y-axis: "Énergie libre G". Show a smooth curve starting at a plateau labeled "Réactifs" on the left, rising to a hump labeled "État de transition" with annotation "Énergie d'activation Ea" (red arrow #C2410C from reactants up to peak), then descending to a lower plateau labeled "Produits" on the right. Annotate "ΔG = ΔH − TΔS" near the descent, with a vertical purple arrow showing ΔG. Below: small inset showing how an enzyme/catalyst lowers the activation barrier (dashed grey curve under the original curve). Clean cream background (#FAF6F0). Numbered legend 1-4. Editorial scientific style, no cartoon. Medeos palette: purple (#6B46C1), terracotta (#C2410C), honey wood (#B8895A).
+
+Style reference: scientific editorial illustration inspired by Nature journal, NEJM, or Visible Body anatomical atlas. Clean technical drawing with educational annotations.
+
+Typography: sans-serif font (Inter, Helvetica or similar) for all numbered labels and annotations. Label size approximately 14pt, semi-bold weight. Color of labels: dark anthracite (#1F1F23). Numbers in colored circles matching the element they describe.
+
+Composition: centered subject with generous margins (10% on all sides). Line weight: thin (1-2px) for fine details, medium (3-4px) for main structures. Shadows: soft, subtle (5-10% opacity). No harsh outlines.
+
+Negative prompts (avoid absolutely): no cartoon style, no anime style, no comic book aesthetics, no hand-drawn doodles, no DALL-E watermark, no Adobe Stock watermark, no Getty Images watermark, no text labels written in cursive, no childish illustration, no glowing effects, no neon colors outside specified palette, no fictional creatures, no anatomically inaccurate proportions, no overlapping labels.
+
+Final output: should look like a publication-quality figure from a peer-reviewed medical or scientific journal, ready for use in an educational textbook for first-year medical students.
+        </div>
+        <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+    </div>
+
+    <div class="stakes-box">
+        <p>Les notions de réaction, d'équilibre et de ΔG sont au cœur de la chimie en P1. Maîtrise-les, et beaucoup de questions deviennent du remplissage. Loupe-les, et tu cours sans direction.</p>
+    </div>
+
+    <div class="clinical-box">
+        <p>Un patient arrive en <strong>hypothermie sévère</strong> après être resté trop longtemps dans l'eau froide. Sa température est tombée à 30°C. Et là, ce chapitre prend vie : à froid, toutes ses réactions chimiques tournent au ralenti. Cœur lent, conscience qui s'effondre, muscles qui ne répondent plus. Le corps, c'est des milliers de réactions calées sur un équilibre précis. Et ce qui a fait basculer cet équilibre, c'est exactement ce fameux <strong>T</strong> de la formule : en chutant, il déplace le ΔG de réactions vitales, change leur spontanéité, et menace de tout dérégler d'un coup. On le réchauffe doucement, le T remonte, et l'équilibre se rétablit. Le jour où tu comprends que « ranimer quelqu'un », c'est parfois juste <em>relancer sa chimie</em>, la thermodynamique arrête d'être une formule abstraite.</p>
+    </div>
+
+    <div class="recap-pedagogique">
+        <div class="recap-tronc">
+            <strong>À retenir pour la P1</strong>
+            <ul>
+                <li><strong>ΔG = ΔH − T·ΔS</strong>. ΔG < 0 = réaction spontanée. C'est l'équation maîtresse.</li>
+                <li><strong>2ᵉ principe</strong> : l'entropie (désordre) de l'univers augmente toujours. La vie y résiste en dépensant de l'énergie.</li>
+                <li>Conversion T : <strong>K = °C + 273</strong>. À utiliser dans toutes les formules de thermodynamique.</li>
+            </ul>
+        </div>
+        <div class="recap-anecdote">
+            <strong>Marquant à raconter</strong>
+            <ul>
+                <li>Une goutte d'encre dans l'eau se disperse toujours, jamais ne se rassemble : l'univers ne sait avancer que vers le désordre.</li>
+                <li>Être vivant, c'est lutter à chaque seconde contre cette pente — en dépensant de l'énergie pour rester ordonné. La mort, c'est le moment où on arrête de payer.</li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="cliffhanger">Une dernière pièce. Celle dont personne ne parle vraiment, mais sans laquelle rien n'a de sens. Pas la matière. Pas même la chimie. Le truc qui rend la vie possible — et qui rend la chimie de P1 fascinante au lieu d'épuisante. ↓</p>
+
+    <!-- ========================================================== -->
+    <!-- SECTION 6 — LE CARBONE & LE TRUC QUE PERSONNE NE DIT       -->
+    <!-- ========================================================== -->
+    <h2><span class="h2-counter">06</span> Le carbone : l'atome aux 4 bras qui a inventé la vie</h2>
+
+    <p class="punchline">Sur 118 éléments, un seul a permis l'apparition du vivant. Pas l'oxygène. Pas l'azote. Un atome ordinaire avec une particularité géométrique.</p>
+
+    <p>Prends une seconde pour réfléchir. Pourquoi la chimie biologique, sur Terre et probablement ailleurs, repose-t-elle massivement sur le carbone ? Pourquoi ton ADN, tes protéines, tes sucres, tes lipides, ton cerveau, tout — sont faits de carbone ? Pourquoi pas le silicium, qui est juste en dessous dans le tableau et qui a la même structure électronique externe ?</p>
+
+    <p>La réponse tient en deux mots : <strong>4 bras</strong>.</p>
+
+    <h3>1. Pourquoi le carbone fait tout</h3>
+
+    <p>Le carbone a <strong>4 électrons sur sa couche externe</strong>. Ni 1 (donneur égoïste), ni 7 (preneur agressif). Quatre. Le compte parfait pour partager. Et il peut former <strong>quatre liaisons covalentes</strong> simultanément — avec d'autres carbones, avec de l'hydrogène, avec de l'oxygène, avec de l'azote, avec du soufre.</p>
+
+    <p>Cette propriété, qui paraît anodine, change tout. Avec 4 bras, le carbone peut construire des <em class="hl">chaînes infinies</em>. Des chaînes droites, ramifiées, en anneau, en doubles anneaux, en grappes 3D. Imagine un Lego dont les pièces auraient 4 connecteurs au lieu de 2. Tu pourrais construire n'importe quoi.</p>
+
+    <div class="stat-shock">
+        <div class="cell">
+            <div class="num">+ d'1 milliard</div>
+            <div class="label">de molécules différentes connues sont bâties autour du carbone — et il s'en ajoute des milliers chaque mois.</div>
+        </div>
+        <div class="cell">
+            <div class="num">~ 20 %</div>
+            <div class="label">de la masse de ton corps est du carbone. C'est toi. Et ton chien. Et ta salade.</div>
+        </div>
+    </div>
+
+    <p>L'ADN ? Une chaîne de carbones. Les protéines ? Des chaînes de carbones reliés par des azotes. Le sucre ? Des anneaux de carbones. Les graisses ? Des chaînes de carbones. La caféine, le paracétamol, l'aspirine, la morphine, la sérotonine, l'adrénaline, l'œstrogène, la testostérone — toutes faites de chaînes ou d'anneaux de carbone. Apprends la <strong>chimie organique</strong>, et tu lis l'alphabet du vivant.</p>
+
+    <p>Et il y a une finesse géométrique qui change tout : selon le nombre de partenaires que prend le carbone, ses 4 électrons externes se réorganisent en orbitales <strong>hybrides</strong>. Quatre voisins → hybridation <strong>sp³</strong>, géométrie tétraédrique à 109,5° (méthane, alcanes, ton ADN). Trois voisins → hybridation <strong>sp²</strong>, géométrie plane à 120° (alcènes, benzène, hormones). Deux voisins → hybridation <strong>sp</strong>, géométrie linéaire à 180° (alcynes, dioxyde de carbone). Trois mots, trois géométries — et tu peux deviner la forme de n'importe quelle molécule organique sans la mémoriser.</p>
+
+    <p>Et une dernière subtilité qui pèse dans les QCM : l'<strong>isomérie</strong>. Deux molécules peuvent avoir <em>exactement la même formule brute</em> (mêmes atomes, en mêmes quantités) mais une structure différente — donc des propriétés totalement différentes. L'éthanol (l'alcool de la bière) et l'éther diméthylique (un gaz) ont tous les deux la formule C₂H₆O. Mais l'un te saoule, l'autre t'endort. Une seule liaison déplacée, et la molécule change de personnalité. C'est pour ça qu'en P1 on te demandera toujours de dessiner la structure, pas juste de noter la formule.</p>
+
+    <div class="schema-box">
+        <img src="https://medeos-sante.fr/images/chimie/pano_chim_carbone_squelettes.png"
+             alt="Le carbone tétraédrique et 4 squelettes carbonés : chaîne, ramification, anneau, grappe"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir" onerror="schemaMissing(this)">
+        <div class="file-target" style="display:none;">📁 <strong>pano_chim_carbone_squelettes.png</strong><br>à placer dans : <strong>/public/images/chimie/</strong></div>
+        <p class="caption"><strong>La géométrie du carbone et ses architectures</strong> — tétraèdre régulier, 4 liaisons à 109,5°, chaînes infinies possibles.</p>
+        <div class="generation-prompt">
+            <strong>Prompt ChatGPT-image :</strong>
+Format: A4 portrait (210×297mm), aspect ratio 1:1.414, high resolution 8K, render quality: ultra-detailed, suitable for medical textbook publication.
+
+Modern educational illustration showing the chemistry of carbon in two panels. Left panel: a single tetrahedral carbon atom (CH₄ methane) with bond angle 109.5° annotated, central carbon as a dark sphere with 4 white hydrogen spheres at the tetrahedron vertices, clean 3D ball-and-stick rendering. Right panel: four small carbon skeletons side by side showing architectural diversity — (a) linear chain (e.g., butane), (b) branched chain (isobutane), (c) closed ring (cyclohexane chair conformation), (d) aromatic ring (benzene with delocalized electrons shown as a dashed inner circle). Color code: carbon in deep grey/purple (#4C2A85), hydrogen in honey wood (#B8895A). Numbered legend 1-5. Clean cream background (#FAF6F0). Editorial scientific style, real molecular geometry, no cartoon.
+
+Style reference: scientific editorial illustration inspired by Nature journal, NEJM, or Visible Body anatomical atlas. Clean technical drawing with educational annotations.
+
+Typography: sans-serif font (Inter, Helvetica or similar) for all numbered labels and annotations. Label size approximately 14pt, semi-bold weight. Color of labels: dark anthracite (#1F1F23). Numbers in colored circles matching the element they describe.
+
+Composition: centered subject with generous margins (10% on all sides). Line weight: thin (1-2px) for fine details, medium (3-4px) for main structures. Shadows: soft, subtle (5-10% opacity). No harsh outlines.
+
+Negative prompts (avoid absolutely): no cartoon style, no anime style, no comic book aesthetics, no hand-drawn doodles, no DALL-E watermark, no Adobe Stock watermark, no Getty Images watermark, no text labels written in cursive, no childish illustration, no glowing effects, no neon colors outside specified palette, no fictional creatures, no anatomically inaccurate proportions, no overlapping labels.
+
+Final output: should look like a publication-quality figure from a peer-reviewed medical or scientific journal, ready for use in an educational textbook for first-year medical students.
+        </div>
+        <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+    </div>
+
+    <h3>2. Le truc que personne ne te dit</h3>
+
+    <p>Voilà le truc. Le vrai. Celui que tes profs ne te diront pas en cours magistral parce qu'ils n'ont pas le temps. Mais qui change ta manière de bosser pour toujours.</p>
+
+    <p>La chimie de P1, c'est <strong>quatre couches empilées</strong>, et chacune commente la précédente :</p>
+
+    <ol>
+        <li>L'<strong>atome</strong> et sa configuration électronique — qui décide qui peut se lier à qui.</li>
+        <li>Les <strong>liaisons</strong> (covalentes et faibles) — qui construisent les molécules et leurs structures.</li>
+        <li>La <strong>thermodynamique</strong> (ΔG, équilibre, spontanéité) — qui décide si les réactions se font ou pas.</li>
+        <li>La <strong>chimie organique</strong> (le carbone et ses dérivés) — qui applique tout ce qui précède au vivant.</li>
+    </ol>
+
+    <p>Si tu apprends la P1 en gardant ces quatre couches séparées dans ta tête, tu vas exploser. Tu vas mémoriser des milliers d'informations déconnectées. Tu vas oublier en trois semaines. Et tu vas te demander pourquoi tes camarades semblent y arriver et pas toi.</p>
+
+    <p>Si tu apprends la P1 en voyant que chaque couche <strong>découle de la précédente</strong> — que la chimie organique est juste l'application des liaisons covalentes du carbone, que la thermodynamique est juste la manière dont l'entropie pousse les liaisons à se réorganiser, que les liaisons elles-mêmes sont juste des électrons qui cherchent leurs 8 places — alors tu n'as plus rien à mémoriser. Tu déduis.</p>
+
+    <div class="lucas-anecdote">
+        <em>Prends les alcools, en chimie organique. En cours, on peut passer 30 minutes à expliquer pourquoi un alcool primaire réagit différemment d'un alcool tertiaire — et toute la salle recopie sans comprendre pourquoi. Dessine les deux alcools, en plaçant les atomes en 3D. Et soudain ça saute aux yeux : sur l'alcool tertiaire, le carbone porteur du OH est entouré de trois autres carbones — plus de place pour un groupe de plus. Sur le primaire, il reste deux hydrogènes — donc de la place. Les 30 minutes de cours tiennent dans un seul schéma : l'encombrement stérique. C'est la règle générale en chimie : une réactivité se comprend mieux dessinée en 3D qu'apprise par cœur.</em>
+    </div>
+
+    <div class="key-concept">
+        <p><strong>La règle d'or de la chimie en P1</strong></p>
+        <p>Tout ce qu'on te demandera de retenir vient d'une <em>logique</em>, pas d'une <em>liste</em>. Cherche toujours le pourquoi. Si tu trouves le pourquoi, tu n'oublies plus jamais. Si tu te contentes du quoi, tu oublies tout en 3 semaines.</p>
+    </div>
+
+    <h3>3. La chimie est partout, en ce moment même</h3>
+
+    <p>Pendant que tu lis ces lignes :</p>
+
+    <ul>
+        <li>Dans ton estomac, l'acide chlorhydrique (HCl) découpe les protéines de ton dernier repas en acides aminés.</li>
+        <li>Dans ton foie, des centaines d'enzymes recombinent ces acides aminés en nouvelles protéines pour toi.</li>
+        <li>Dans tes neurones, du glucose entre par chimie pour produire de l'ATP — la molécule énergie de toutes tes cellules.</li>
+        <li>Dans tes poumons, l'hémoglobine de tes globules rouges fixe l'oxygène par une liaison réversible avec son fer (Fe²⁺).</li>
+        <li>Dans tes os, des ions calcium et phosphate se réarrangent en permanence pour maintenir ta structure.</li>
+    </ul>
+
+    <p>Tu es littéralement une <strong>usine chimique</strong>. Une usine qui ne s'arrête jamais. Une usine qui obéit aux mêmes lois que la rouille d'un clou ou la fermentation du vin. Mais une usine d'une précision et d'une élégance que la chimie humaine n'arrive toujours pas à copier.</p>
+
+    <div class="recap-pedagogique">
+        <div class="recap-tronc">
+            <strong>À retenir pour la P1</strong>
+            <ul>
+                <li>Le carbone a <strong>4 électrons externes</strong> → 4 liaisons covalentes possibles → chaînes infinies.</li>
+                <li>3 hybridations à connaître : <strong>sp³</strong> (tétraèdre 109,5°), <strong>sp²</strong> (plan 120°), <strong>sp</strong> (linéaire 180°).</li>
+                <li><strong>Isomères</strong> = même formule brute, structure différente → propriétés différentes. Toujours dessiner la structure.</li>
+                <li>La chimie de P1 = 4 couches empilées : atome → liaisons → thermodynamique → chimie organique. Chacune découle de la précédente.</li>
+            </ul>
+        </div>
+        <div class="recap-anecdote">
+            <strong>Marquant à raconter</strong>
+            <ul>
+                <li>Diamant et graphite : mêmes atomes, géométries différentes — l'un coupe le verre, l'autre s'effrite sous l'ongle.</li>
+                <li>Éthanol (la bière) et éther diméthylique (un gaz) ont la même formule C₂H₆O. Une liaison déplacée, deux personnalités opposées.</li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="cliffhanger">Tu as vu six pièces. Six couches. Six manières de penser la matière. Et tu commences déjà à regarder ton verre d'eau, ta chaise, ton propre corps comme un chimiste les regarderait. ↓</p>
+
+    <!-- ========================================================== -->
+    <!-- CONCLUSION                                                 -->
+    <!-- ========================================================== -->
+    <h2><span class="h2-counter">07</span> Ce qu'il se passe maintenant</h2>
+
+    <p>Tu viens de faire le tour. Tu n'as pas appris la P1. Mais tu as changé de regard. Pour la première fois, peut-être, tu as vu la chimie comme une <strong>logique que tu peux comprendre</strong> — pas comme une montagne de formules à recopier.</p>
+
+    <p>Tu as une carte. Six pièces, six logiques :</p>
+
+    <ul>
+        <li>L'<strong>atome</strong> — un noyau minuscule et un nuage d'électrons qui dicte tout</li>
+        <li>Le <strong>tableau périodique</strong> — 118 cases, mais quatre familles qui suffisent à comprendre le vivant</li>
+        <li>L'<strong>eau</strong> — une molécule polaire qui se tient la main avec ses voisines et a inventé la vie</li>
+        <li>Les <strong>liaisons</strong> — fortes pour les molécules, faibles pour les structures</li>
+        <li>La <strong>thermodynamique</strong> — l'univers va vers le désordre, et la vie y résiste à chaque seconde</li>
+        <li>Le <strong>carbone</strong> — quatre bras, des chaînes infinies, l'alphabet du vivant</li>
+    </ul>
+
+    <p>Voilà ce que tu as gagné en faisant ce tour. Ce qu'il te reste à faire : descendre dans le détail. Les configurations électroniques refaites de mémoire le soir. Les mécanismes de réaction qu'on dessine jusqu'à les voir les yeux fermés. Les heures où on bute, où on doute, où on dessine sur une feuille A4 jusqu'à comprendre.</p>
+
+    <div class="lucas-anecdote">
+        <em>Tous ceux qui finissent dans le haut du classement ont commencé là où tu es : devant une matière qui fait peur, sans méthode encore. Ce qui les distingue, ce n'est pas l'intelligence — c'est le moment où ils arrêtent d'apprendre des formules pour commencer à voir des molécules qui se parlent. Si tu lis cette page jusqu'ici, tu as déjà ce qu'il faut pour faire le même chemin.</em>
+    </div>
+
+    <p>118 éléments pour décrire tout l'univers connu. 99,9999 % de toi qui est du vide que tu n'as jamais traversé. 10²² molécules d'eau dans une seule goutte, en train de se tenir la main grâce à des liaisons hydrogène, en ce moment même, dans le verre posé à côté de toi.</p>
+
+    <p>La chimie en P1, c'est ça : apprendre à voir ce qui est déjà là. Pas mémoriser des formules en désordre. Comprendre une logique — et la retrouver à chaque atome, à chaque réaction, à chaque molécule du vivant.</p>
+
+    <p>Si tu as commencé à regarder ton verre d'eau, ta peau, ton souffle différemment, le plus dur est déjà fait. Le reste, ce ne sont que des heures à mettre en face.</p>
+
+    <p class="punchline">Aucune place n'est garantie. Mais une chose est sûre : en septembre, tu ne seras pas celui qu'on jette dans la piscine sans savoir nager.</p>
+
+    <!-- ========================================================== -->
+    <!-- MINI-QCM FINAL — 5 questions d'ancrage                     -->
+    <!-- ========================================================== -->
+    <section class="mini-qcm" id="mini-qcm-final">
+        <h2>Mini-QCM — Teste-toi en 5 questions</h2>
+        <p class="mini-qcm-intro">5 questions sur ce que tu viens de lire. Réponds avant de cliquer. Pas de stress — c'est juste pour ancrer.</p>
+
+        <div class="mini-qcm-question">
+            <p class="mini-qcm-num">Question 1 / 5</p>
+            <p class="mini-qcm-enonce">Que dit la règle de l'octet, et pourquoi est-elle si centrale en chimie ?</p>
+            <ul class="mini-qcm-choix">
+                <li data-correct>A. Tout atome cherche à atteindre 8 électrons sur sa couche externe — c'est le moteur de presque toute la chimie.</li>
+                <li>B. Tout atome cherche à avoir 4 électrons sur sa couche externe pour devenir stable.</li>
+                <li>C. Tout atome cherche à perdre tous ses électrons pour devenir un ion positif.</li>
+                <li>D. Tout atome cherche à doubler son nombre de protons pour stabiliser son noyau.</li>
+                <li>E. Tout atome cherche à avoir autant d'électrons que de neutrons.</li>
+            </ul>
+            <details class="mini-qcm-correction">
+                <summary>Voir la réponse</summary>
+                <p><strong>Réponse : A</strong> — Tout atome cherche à atteindre 8 électrons sur sa couche externe. C'est cette règle qui explique pourquoi les atomes donnent, prennent ou partagent des électrons — donc presque toutes les liaisons et réactions chimiques.</p>
+                <p class="mini-qcm-source"><em>Où retrouver ça dans le cours : section 01, « L'atome », encadré récap.</em></p>
+            </details>
+        </div>
+
+        <div class="mini-qcm-question">
+            <p class="mini-qcm-num">Question 2 / 5</p>
+            <p class="mini-qcm-enonce">Dans le tableau périodique, dans quel sens varie l'électronégativité ?</p>
+            <ul class="mini-qcm-choix">
+                <li>A. Elle diminue vers le haut et vers la droite (maximale en bas à gauche, autour du césium).</li>
+                <li>B. Elle est maximale au centre du tableau, sur les métaux de transition.</li>
+                <li>C. Elle est constante sur toute une période et change seulement d'un groupe à l'autre.</li>
+                <li data-correct>D. Elle augmente vers le haut et vers la droite (maximale autour du fluor et de l'oxygène).</li>
+                <li>E. Elle augmente uniquement avec la masse atomique, sans rapport avec la position.</li>
+            </ul>
+            <details class="mini-qcm-correction">
+                <summary>Voir la réponse</summary>
+                <p><strong>Réponse : D</strong> — L'électronégativité (échelle de Pauling) augmente vers le haut et vers la droite. Elle est maximale sur le fluor (4,0), l'oxygène (3,4) et l'azote (3,0), minimale en bas à gauche (césium, francium).</p>
+                <p class="mini-qcm-source"><em>Où retrouver ça dans le cours : section 02, « Le tableau périodique », paragraphe sur les 3 tendances.</em></p>
+            </details>
+        </div>
+
+        <div class="mini-qcm-question">
+            <p class="mini-qcm-num">Question 3 / 5</p>
+            <p class="mini-qcm-enonce">Quelle est la différence essentielle entre une liaison covalente et une liaison hydrogène ?</p>
+            <ul class="mini-qcm-choix">
+                <li>A. Une liaison covalente transfère un électron d'un atome à l'autre, une liaison hydrogène les partage à parts égales.</li>
+                <li data-correct>B. Une liaison covalente partage des électrons entre deux atomes (forte, 100 à 1000 kJ/mol), une liaison hydrogène est une attraction faible entre un H polaire et une paire libre voisine (10 à 100 fois plus faible).</li>
+                <li>C. Une liaison covalente n'existe que dans les métaux, une liaison hydrogène n'existe que dans l'eau.</li>
+                <li>D. Une liaison covalente est plus faible qu'une liaison hydrogène — c'est ce qui rend l'ADN lisible.</li>
+                <li>E. Ce sont deux noms pour la même liaison, selon qu'on est en chimie organique ou minérale.</li>
+            </ul>
+            <details class="mini-qcm-correction">
+                <summary>Voir la réponse</summary>
+                <p><strong>Réponse : B</strong> — La liaison covalente est une liaison forte par partage d'électrons (100 à 1000 kJ/mol). La liaison hydrogène est une liaison faible (10 à 100 fois plus faible), une attraction entre un H δ⁺ (donneur, lié à N, O ou F) et une paire libre voisine (accepteur).</p>
+                <p class="mini-qcm-source"><em>Où retrouver ça dans le cours : section 04, « Liaisons fortes et faibles », encadré récap.</em></p>
+            </details>
+        </div>
+
+        <div class="mini-qcm-question">
+            <p class="mini-qcm-num">Question 4 / 5</p>
+            <p class="mini-qcm-enonce">Pourquoi H₂O est-elle une molécule polaire alors que CO₂ ne l'est pas, alors que les deux contiennent des liaisons polaires ?</p>
+            <ul class="mini-qcm-choix">
+                <li>A. Parce que H₂O contient de l'hydrogène et que l'hydrogène est polaire par nature.</li>
+                <li>B. Parce que CO₂ contient deux atomes d'oxygène qui annulent toute polarité, ce qui n'arrive jamais avec un seul oxygène.</li>
+                <li data-correct>C. Parce que H₂O est coudée (104,5°) : ses deux dipôles ne s'annulent pas. CO₂ est linéaire (180°) : ses deux dipôles tirent en sens opposés et s'annulent. C'est la géométrie qui décide.</li>
+                <li>D. Parce que CO₂ est un gaz et que les molécules gazeuses sont toujours apolaires.</li>
+                <li>E. Parce que H₂O est plus lourde que CO₂, et la masse détermine la polarité.</li>
+            </ul>
+            <details class="mini-qcm-correction">
+                <summary>Voir la réponse</summary>
+                <p><strong>Réponse : C</strong> — La géométrie commande la polarité globale. H₂O coudée à 104,5° : les deux dipôles O–H ne s'annulent pas, la molécule est polaire. CO₂ linéaire à 180° : les deux dipôles C=O s'annulent, la molécule est apolaire. Géométrie d'abord, comportement ensuite.</p>
+                <p class="mini-qcm-source"><em>Où retrouver ça dans le cours : section 03, « L'eau », paragraphe sur la polarité moléculaire et la règle VSEPR.</em></p>
+            </details>
+        </div>
+
+        <div class="mini-qcm-question">
+            <p class="mini-qcm-num">Question 5 / 5</p>
+            <p class="mini-qcm-enonce">Dans la formule ΔG = ΔH − T·ΔS, à quelle condition une réaction se produit-elle spontanément (toute seule, sans qu'on la force) ?</p>
+            <ul class="mini-qcm-choix">
+                <li>A. Quand ΔG &gt; 0 : il faut que l'énergie soit positive pour que la réaction démarre.</li>
+                <li>B. Quand ΔS &lt; 0 : une réaction n'est spontanée que si le désordre diminue.</li>
+                <li>C. Quand ΔH = 0 : une réaction ne se fait que si elle ne dégage aucune chaleur.</li>
+                <li>D. Quand T = 0 : il faut refroidir au zéro absolu pour qu'une réaction parte seule.</li>
+                <li data-correct>E. Quand ΔG &lt; 0 : c'est le verdict d'une réaction spontanée.</li>
+            </ul>
+            <details class="mini-qcm-correction">
+                <summary>Voir la réponse</summary>
+                <p><strong>Réponse : E</strong> — Une réaction est spontanée quand <strong>ΔG &lt; 0</strong>. Deux choses y poussent : libérer de la chaleur (ΔH négatif) et augmenter le désordre (ΔS positif, qui via −T·ΔS tire ΔG vers le bas). Si ΔG &gt; 0, la réaction ne part pas seule : il faut lui apporter de l'énergie.</p>
+                <p class="mini-qcm-source"><em>Où retrouver ça dans le cours : section 05, « Réactions chimiques », paragraphe sur ΔG = ΔH − T·ΔS et la spontanéité.</em></p>
+            </details>
+        </div>
+
+        <div class="mini-qcm-conclusion">
+            <p>Tu as répondu juste à 4-5 questions ? Tu as compris les bases. Tu as répondu juste à 2-3 ? Relis les sections qui te manquent — c'est exactement à ça que sert un panorama.</p>
+        </div>
+    </section>
+
+    <!-- ========================================================== -->
+    <!-- PONT VERS L'OFFRE — doux, après toute la valeur (post-QCM) -->
+    <!-- ========================================================== -->
+    <div style="margin:40px 0 8px;padding:30px 26px;border-radius:18px;background:linear-gradient(150deg,#F1ECFA,#FAF6F0);border:1px solid #e2d6f5;">
+        <p style="font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#6B46C1;margin:0 0 12px;">Et la suite ?</p>
+        <p style="font-size:16px;line-height:1.7;color:#2c3e50;margin:0 0 14px;">Ce panorama, c'est la vue d'ensemble. Descendre dans le détail, chapitre par chapitre, avec des cours qui font comprendre, des QCM corrigés au format du concours et quelqu'un qui te répond quand tu bloques : c'est ce qu'on a construit dans <strong>Medi&nbsp;Pro</strong>. On ne te demande rien — si la curiosité te prend, jette juste un œil.</p>
+        <a href="https://medeos-sante.fr/packs/medi-pro" target="_top" onclick="try{window.parent.postMessage({medeosClick:'cta_medipro_iframe'},location.origin)}catch(e){}" style="display:inline-flex;align-items:center;gap:7px;color:#fff;font-weight:600;font-size:15px;text-decoration:none;padding:12px 24px;border-radius:999px;background:linear-gradient(150deg,#4C2A85,#6B46C1 75%);box-shadow:0 10px 26px rgba(76,42,133,.26);">Découvrir Medi&nbsp;Pro →</a>
+    </div>
+
+
+    <!-- ========================================================== -->
+    <!-- FOOTER                                                     -->
+    <!-- ========================================================== -->
+    <footer class="chapter-footer">
+        <p>Medeos · Panorama de Chimie en P1</p>
+        <p>© Medeos — medeos-sante.fr</p>
+    </footer>
+
+</div>
+
+<!-- ============================================================= -->
+<!-- BARRE DE ZOOM FLOTTANTE (− / % / +)                           -->
+<!-- ============================================================= -->
+<style>
+    #medeos-zoombar {
+        position: fixed; bottom: 18px; right: 18px; z-index: 9999;
+        display: flex; align-items: center; gap: 2px;
+        background: rgba(255,255,255,0.96);
+        border: 1px solid #E8E1D5; border-radius: 999px;
+        padding: 4px; box-shadow: 0 4px 14px rgba(31,31,46,0.12);
+        backdrop-filter: blur(6px);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #medeos-zoombar button {
+        border: 0; background: transparent; cursor: pointer;
+        color: #5C5C70; font-weight: 700; line-height: 1;
+        border-radius: 999px; transition: background .15s, color .15s;
+    }
+    #medeos-zoombar .zb-step { width: 30px; height: 30px; font-size: 18px; display: flex; align-items: center; justify-content: center; }
+    #medeos-zoombar .zb-level { min-width: 48px; height: 30px; font-size: 13px; font-weight: 600; padding: 0 6px; font-variant-numeric: tabular-nums; }
+    #medeos-zoombar button:hover { background: #F4EFFB; color: #6B46C1; }
+    #medeos-zoombar button:disabled { opacity: .3; cursor: default; background: transparent; }
+    @media print { #medeos-zoombar { display: none !important; } }
+    @media (max-width: 767px) { #medeos-zoombar { display: none !important; } }
+</style>
+<div id="medeos-zoombar" aria-label="Zoom du cours">
+    <button type="button" class="zb-step" id="zb-out" title="Réduire" aria-label="Réduire">−</button>
+    <button type="button" class="zb-level" id="zb-level" title="Revenir à 100 %" aria-label="Réinitialiser le zoom">100%</button>
+    <button type="button" class="zb-step" id="zb-in" title="Agrandir" aria-label="Agrandir">+</button>
+</div>
+
+<!-- Lightbox : clic sur un schéma pour l'agrandir, filigrane medeos-sante.fr centré -->
+<style>
+    #medeos-lightbox-wrap { position: relative; display: inline-flex; max-width: 92%; max-height: 92%; }
+    #medeos-lightbox-img { max-width: 100%; max-height: 88vh; border-radius: 10px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); display: block; }
+    #medeos-lightbox-wm { position: absolute; inset: 0; pointer-events: none; user-select: none; border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+    #medeos-lightbox-wm::before {
+        content: 'medeos-sante.fr';
+        font-family: 'Inter', Arial, sans-serif; font-size: clamp(12px, 4.5vw, 38px); font-weight: 700;
+        letter-spacing: clamp(1px, 1vw, 8px); text-transform: uppercase; color: rgba(120,120,120,0.06); white-space: nowrap;
+    }
+</style>
+<div id="medeos-lightbox" onclick="closeLightbox()" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(26,26,46,0.88);align-items:center;justify-content:center;cursor:zoom-out;padding:30px;">
+    <div id="medeos-lightbox-wrap">
+        <img id="medeos-lightbox-img" src="" alt="">
+        <div id="medeos-lightbox-wm" aria-hidden="true"></div>
+    </div>
+</div>
+<script>
+    function openLightbox(src) {
+        var lb = document.getElementById('medeos-lightbox');
+        document.getElementById('medeos-lightbox-img').src = src;
+        lb.style.display = 'flex';
+    }
+    function closeLightbox() { document.getElementById('medeos-lightbox').style.display = 'none'; }
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLightbox(); });
+    // Image de schéma absente → mode "à générer" : nom de fichier + prompt visibles.
+    function schemaMissing(img) {
+        img.style.display = 'none';
+        var box = img.closest('.schema-box');
+        if (box) box.classList.add('img-missing');
+        var target = img.nextElementSibling;
+        if (target && target.classList.contains('file-target')) target.style.display = 'block';
+    }
+</script>
+<script>
+    // Zoom : desktop 100 % + barre −/%/+. Mobile : 100 % (contenu déjà optimisé), barre masquée.
+    (function () {
+        var isMobile = window.innerWidth < 768;
+        var ZMIN = 60, ZMAX = 160, STEP = 5, zoom = 100;
+        var out = document.getElementById('zb-out');
+        var inc = document.getElementById('zb-in');
+        var lvl = document.getElementById('zb-level');
+        function apply() {
+            document.body.style.zoom = (zoom / 100);
+            if (lvl) lvl.textContent = zoom + '%';
+            if (out) out.disabled = zoom <= ZMIN;
+            if (inc) inc.disabled = zoom >= ZMAX;
+        }
+        if (out) out.addEventListener('click', function () { zoom = Math.max(ZMIN, zoom - STEP); apply(); });
+        if (inc) inc.addEventListener('click', function () { zoom = Math.min(ZMAX, zoom + STEP); apply(); });
+        if (lvl) lvl.addEventListener('click', function () { zoom = 100; apply(); });
+        apply();
+    })();
+</script>
+<script>
+    // Mini-QCM interactif : clic sur un choix → bonne réponse en vert, mauvais en rouge, corrigé ouvert.
+    (function () {
+        var lists = document.querySelectorAll('.mini-qcm-choix');
+        lists.forEach(function (list) {
+            var items = list.querySelectorAll('li');
+            items.forEach(function (item) {
+                item.addEventListener('click', function () {
+                    if (list.classList.contains('answered')) return;
+                    list.classList.add('answered');
+                    items.forEach(function (li) { if (li.hasAttribute('data-correct')) li.classList.add('is-correct'); });
+                    if (!item.hasAttribute('data-correct')) item.classList.add('is-wrong');
+                    var question = list.closest('.mini-qcm-question');
+                    var details = question && question.querySelector('.mini-qcm-correction');
+                    if (details) details.open = true;
+                });
+            });
+        });
+    })();
+</script>
+
+<!-- ============ LECTURE PROGRESSIVE (révélation par paliers) ============ -->
+<script>
+(function(){
+    var container = document.querySelector('.page-container');
+    if(!container) return;
+    var allChildren = Array.prototype.slice.call(container.children);
+    var sectionStarts = [];
+    allChildren.forEach(function(el, i){
+        if(el.tagName === 'H2' && el.querySelector('.h2-counter')) sectionStarts.push(i);
+    });
+    if(sectionStarts.length < 4) return;
+    function secNum(i){
+        var c = allChildren[i].querySelector('.h2-counter');
+        return c ? parseInt(c.textContent, 10) : 0;
+    }
+    var breakAtSection = {2:true, 3:true, 4:true, 5:true, 6:true};
+    var steps = [];
+    var current = [];
+    var firstH2 = sectionStarts[0];
+    for(var k=0; k<firstH2; k++){ current.push(allChildren[k]); }
+    for(var s=0; s<sectionStarts.length; s++){
+        var startIdx = sectionStarts[s];
+        var endIdx = (s+1 < sectionStarts.length) ? sectionStarts[s+1] : allChildren.length;
+        var num = secNum(startIdx);
+        if(breakAtSection[num]){ steps.push(current); current = []; }
+        for(var n=startIdx; n<endIdx; n++){ current.push(allChildren[n]); }
+    }
+    if(current.length) steps.push(current);
+    if(steps.length < 2) return;
+    for(var p=1; p<steps.length; p++){
+        steps[p].forEach(function(node){ node.classList.add('step-locked'); });
+    }
+    var hints = ['On continue ?', 'On poursuit le tour.', 'Prochain arrêt.', 'On continue.', 'Dernière partie.'];
+
+    // Phrases de conversion sous « Continuer ». Les DEUX offres sont proposées à
+    // chaque fois (retour Lucas 04/08) : les Stages Vacances valent 388 € contre
+    // 147 € pour Medi Pro, ils ne peuvent pas apparaître une fois sur trois.
+    var RAPPELS_STAGES = {
+      3: 'L\'atome, le tableau périodique, l\'eau : tu viens de parcourir les toutes premières notions du programme de chimie. Ils tombent dès les premières semaines de cours. <b>Medi&nbsp;Pro</b> te les fait travailler juste avant la rentrée&nbsp;; les <b>Stages Vacances</b> les étalent sur l\'année.',
+      5: 'Les équilibres et les réactions, c\'est là que la chimie de première année devient calculatoire — et c\'est là que beaucoup décrochent. Les avoir déjà manipulés une fois avant septembre fait la différence&nbsp;: avec <b>Medi&nbsp;Pro</b>, ou avec les <b>Stages Vacances</b> si tu es en Terminale.'
+    };
+    function rappelStages(n){
+      var t = RAPPELS_STAGES[n];
+      if(!t) return '';
+      // Les DEUX offres à chaque fois : le lecteur se reconnaît lui-même.
+      return '<div class="continue-cta"><div class="cta-mot">' + t + '</div>' +
+             '<div class="cta-duo">' +
+             '<a href="https://medeos-sante.fr/packs/medi-pro" target="_top" data-cta="medipro">Medi&nbsp;Pro — stage d\'été →</a>' +
+             '<a href="https://medeos-sante.fr/packs/stages-vacances" target="_top" class="sv" data-cta="stages">Stages Vacances →</a>' +
+             '</div></div>';
+    }
+
+    function addContinueButton(stepIndex){
+        var nextIndex = stepIndex + 1;
+        if(nextIndex >= steps.length) return;
+        var currentNodes = steps[stepIndex];
+        var lastNode = currentNodes[currentNodes.length - 1];
+        var holder = document.createElement('div');
+        holder.className = 'continue-wrap';
+        var hint = hints[Math.min(nextIndex-1, hints.length-1)] || '';
+        holder.innerHTML = (hint ? ('<div class="continue-hint">'+hint+'</div>') : '') +
+            '<button type="button" class="btn-continue">Continuer <span class="arrow">↓</span></button>';
+        if(lastNode.nextSibling) lastNode.parentNode.insertBefore(holder, lastNode.nextSibling);
+        else lastNode.parentNode.appendChild(holder);
+
+        // Le bloc de conversion vit HORS du holder : celui-ci est détruit au clic,
+        // la porte vers les stages doit rester visible dans la page.
+        var htmlRappel = rappelStages(nextIndex);
+        if (htmlRappel) {
+            var blocRappel = document.createElement('div');
+            blocRappel.innerHTML = htmlRappel;
+            holder.parentNode.insertBefore(blocRappel, holder.nextSibling);
+            blocRappel.querySelectorAll('a').forEach(function(a){
+                a.addEventListener('click', function(){
+                    try { window.parent.postMessage({ medeosClick: a.dataset.cta === 'stages' ? 'cta_stages_vacances' : 'cta_medipro_iframe' }, location.origin); } catch(e) {}
+                });
+            });
+        }
+        holder.querySelector('.btn-continue').addEventListener('click', function(){
+            steps[nextIndex].forEach(function(node){
+                node.classList.remove('step-locked');
+                node.classList.add('step-reveal');
+            });
+            holder.classList.add('gone');
+            setTimeout(function(){ if(holder.parentNode) holder.parentNode.removeChild(holder); }, 420);
+            addContinueButton(nextIndex);
+        });
+    }
+    addContinueButton(0);
+})();
+</script>
+
+</body>
+</html>

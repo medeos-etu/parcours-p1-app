@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Anticiper ta P1 — Le guide méthode · Medeos</title>
+<!-- Servi en iframe : tout lien interne doit naviguer dans la page parente (shell /ressources), pas dans l'iframe. -->
+<base target="_top" />
+<style>
+  :root{
+    --violet:#6B46C1; --violet-deep:#4C2A85; --violet-soft:#EDE6FA;
+    --cream:#FBFAF7; --ink:#0F0F14; --ink-soft:#3a3a44; --muted:#6b6b78;
+    --honey:#B8895A; --orange:#E29C5C; --line:rgba(15,15,20,.08);
+    --shadow:0 1px 2px rgba(15,15,20,.04),0 8px 30px rgba(15,15,20,.06);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink); background:var(--cream); line-height:1.7;
+    font-size:10.5pt; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:720px;margin:0 auto;padding:0 20px}
+  @media(min-width:640px){ .wrap{padding:0 28px} }
+
+  /* ---------- progress bar ---------- */
+  #bar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--violet),var(--orange));z-index:60;transition:width .12s ease-out}
+
+  /* ---------- hero ---------- */
+  .hero{padding:64px 0 36px;text-align:left}
+  .kicker{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:600;color:var(--violet);letter-spacing:.01em;margin-bottom:22px}
+  .kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--violet);display:inline-block}
+  h1{font-size:34px;line-height:1.12;letter-spacing:-.02em;font-weight:800;margin-bottom:18px}
+  @media(min-width:640px){ h1{font-size:46px} .hero{padding:88px 0 44px} }
+  .lede{font-size:19px;color:var(--ink-soft);max-width:60ch}
+  @media(min-width:640px){ .lede{font-size:21px} }
+  .meta-row{display:flex;flex-wrap:wrap;gap:18px;margin-top:30px;font-size:14px;color:var(--muted);align-items:center}
+  .meta-row span{display:inline-flex;align-items:center;gap:7px}
+  .meta-row svg{width:15px;height:15px;opacity:.7}
+
+  /* ---------- sections ---------- */
+  section{padding:18px 0}
+  .step{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--violet);margin-bottom:10px}
+  h2{font-size:26px;line-height:1.2;letter-spacing:-.015em;font-weight:800;margin:42px 0 14px}
+  @media(min-width:640px){ h2{font-size:31px;margin-top:56px} }
+  h3{font-size:20px;line-height:1.3;font-weight:700;margin:30px 0 10px}
+  p{margin:0 0 18px;color:var(--ink-soft);line-height:1.85}
+  p strong,li strong{color:var(--ink);font-weight:700}
+  em{font-style:italic}
+  a{color:var(--violet);text-decoration:none;border-bottom:1px solid rgba(107,70,193,.3)}
+
+  .hr{height:1px;background:var(--line);border:0;margin:46px 0}
+
+  /* ---------- highlight inline ---------- */
+  mark{background:linear-gradient(transparent 58%, rgba(226,156,92,.4) 58%);color:inherit;padding:0 1px}
+
+  /* ---------- scene d'ouverture de section (punchline narrative) ---------- */
+  .scene{font-size:20px;line-height:1.45;font-weight:700;color:var(--ink);margin:24px 0 18px}
+  @media(min-width:640px){ .scene{font-size:22px} }
+  .scene .accent{color:var(--violet)}
+
+  /* ---------- encadré « Vécu » (voix mentor, 1ère personne) ---------- */
+  .vecu{position:relative;margin:30px 0;padding:24px 24px 22px;border-radius:18px;
+    background:linear-gradient(135deg,#f3eefc,#ece3fb);border:1px solid rgba(107,70,193,.18);box-shadow:var(--shadow)}
+  .vecu::before{content:"Vécu";position:absolute;top:-10px;left:20px;background:var(--violet);color:#fff;
+    font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:4px 11px;border-radius:999px}
+  .vecu p{color:#46405a;font-style:italic;margin-bottom:12px}
+  .vecu p:last-child{margin-bottom:0}
+  .vecu strong{color:var(--violet-deep);font-style:normal}
+  .vecu .lesson{font-style:normal;font-weight:700;color:var(--violet-deep);font-size:15.5px;
+    margin-top:14px;padding-top:14px;border-top:1px solid rgba(107,70,193,.15)}
+
+  /* ---------- cliffhanger de transition ---------- */
+  .cliff{margin:28px 0 8px;padding:18px 22px;border-radius:14px;
+    background:linear-gradient(100deg, rgba(107,70,193,.08), transparent);
+    font-size:17px;font-weight:600;color:var(--violet-deep);line-height:1.5}
+  .cliff::after{content:" ↓";color:var(--violet);font-weight:800}
+
+  /* ---------- stakes : ce que tu gagnes / ce que tu perds ---------- */
+  .stakes{margin:28px 0;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
+  .stakes .lbl{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+    padding:12px 22px;background:rgba(226,156,92,.14);color:#9a5a22}
+  .stakes .body{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line)}
+  @media(min-width:560px){ .stakes .body{grid-template-columns:1fr 1fr} }
+  .stakes .cell{background:#fff;padding:18px 22px;font-size:15.5px;color:var(--ink-soft)}
+  .stakes .cell .h{display:block;font-weight:800;margin-bottom:6px;font-size:14px}
+  .stakes .win .h{color:#2f8f4e}
+  .stakes .lose .h{color:#c0492f}
+
+  /* ---------- big stat ---------- */
+  .stat{margin:30px 0;padding:26px 24px;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
+  .stat .num{font-size:46px;font-weight:800;letter-spacing:-.03em;color:var(--violet);line-height:1}
+  @media(min-width:640px){ .stat .num{font-size:56px} }
+  .stat .cap{margin-top:10px;font-size:15.5px;color:var(--ink-soft)}
+  .stat .src{margin-top:10px;font-size:12.5px;color:var(--muted)}
+
+  /* ---------- callout ---------- */
+  .note{margin:28px 0;padding:20px 22px;border-radius:16px;background:var(--violet-soft);border:1px solid rgba(107,70,193,.12)}
+  .note .lbl{font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--violet-deep);margin-bottom:7px}
+  .note p:last-child{margin-bottom:0}
+
+  /* ---------- "aha" surprise ---------- */
+  .aha{margin:30px 0;padding:24px;border-radius:18px;background:linear-gradient(135deg,#1F1F23,#2c2540);color:#fff;box-shadow:var(--shadow)}
+  .aha .lbl{font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--orange);margin-bottom:9px}
+  .aha p{color:#e6e2ef;margin-bottom:0;font-size:18.5px;line-height:1.5}
+  .aha strong{color:#fff}
+
+  /* ---------- exercise / quick win ---------- */
+  .exo{margin:34px 0;padding:0;border-radius:20px;background:#fff;border:1.5px solid rgba(107,70,193,.25);box-shadow:var(--shadow);overflow:hidden}
+  .exo-head{padding:18px 24px;background:linear-gradient(135deg,var(--violet),var(--violet-deep));color:#fff}
+  .exo-head .tag{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.85}
+  .exo-head .t{font-size:20px;font-weight:800;margin-top:4px}
+  .exo-body{padding:22px 24px}
+  .exo-body ol{margin:0 0 4px 0;padding-left:22px}
+  .exo-body ol li{margin-bottom:12px;color:var(--ink-soft)}
+  .exo textarea{width:100%;min-height:140px;margin-top:8px;padding:14px 15px;border:1px solid var(--line);border-radius:12px;font-family:inherit;font-size:16px;line-height:1.6;color:var(--ink);background:var(--cream);resize:vertical}
+  .exo textarea:focus{outline:none;border-color:var(--violet);box-shadow:0 0 0 3px rgba(107,70,193,.12)}
+  .exo .timer{display:inline-flex;align-items:center;gap:10px;margin-top:14px;flex-wrap:wrap}
+  .exo .btn-timer{appearance:none;border:none;cursor:pointer;font-family:inherit;font-weight:700;font-size:15px;color:#fff;background:var(--violet);padding:11px 18px;border-radius:11px;transition:transform .1s,background .2s}
+  .exo .btn-timer:hover{background:var(--violet-deep)}
+  .exo .btn-timer:active{transform:scale(.97)}
+  .exo .clock{font-variant-numeric:tabular-nums;font-weight:800;font-size:22px;color:var(--violet-deep);min-width:64px}
+  .exo .done{margin-top:16px;padding:14px 16px;border-radius:12px;background:#ECF;display:none;background:rgba(107,70,193,.07);font-size:15.5px;color:var(--ink-soft)}
+  .exo .done.show{display:block}
+  .exo .done strong{color:var(--violet-deep)}
+
+  /* ---------- if-then plan ---------- */
+  .plan{margin:30px 0;padding:24px;border-radius:18px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow)}
+  .plan .row{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px;font-size:18px;margin-bottom:16px;color:var(--ink)}
+  .plan .kw{font-weight:800;color:var(--violet)}
+  .plan input{flex:1;min-width:180px;border:none;border-bottom:2px solid rgba(107,70,193,.3);background:transparent;font-family:inherit;font-size:17px;padding:4px 2px;color:var(--ink)}
+  .plan input:focus{outline:none;border-bottom-color:var(--violet)}
+
+  /* ---------- list ---------- */
+  ul.clean{list-style:none;margin:18px 0;padding:0}
+  ul.clean li{position:relative;padding-left:28px;margin-bottom:14px;color:var(--ink-soft)}
+  ul.clean li::before{content:"";position:absolute;left:4px;top:10px;width:7px;height:7px;border-radius:50%;background:var(--violet)}
+
+  /* ---------- CTA ---------- */
+  .cta{margin:54px 0 20px;padding:34px 28px;border-radius:24px;background:linear-gradient(150deg,var(--violet-deep),var(--violet) 70%);color:#fff;box-shadow:0 20px 50px rgba(76,42,133,.3)}
+  .cta h2{color:#fff;margin:0 0 14px;font-size:27px}
+  .cta p{color:rgba(255,255,255,.9);margin-bottom:14px}
+  .cta ul.clean li{color:rgba(255,255,255,.92)}
+  .cta ul.clean li::before{background:var(--orange)}
+  .cta .btn{display:inline-flex;align-items:center;gap:9px;margin-top:14px;background:#fff;color:var(--violet-deep);font-weight:800;font-size:16.5px;padding:15px 26px;border-radius:14px;transition:transform .12s,box-shadow .2s;border:none}
+  .cta .btn:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(0,0,0,.18)}
+  .cta .small{font-size:13.5px;color:rgba(255,255,255,.7);margin-top:16px;margin-bottom:0}
+
+  /* ---------- footer ---------- */
+  footer{padding:40px 0 70px;text-align:center;color:var(--muted);font-size:13.5px}
+  footer .sig{font-weight:700;color:var(--ink-soft)}
+  .src-list{margin:24px 0 0;padding:20px 22px;border-radius:14px;background:#fff;border:1px solid var(--line)}
+  .src-list .lbl{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+  .src-list ul{list-style:none;margin:0;padding:0}
+  .src-list li{font-size:12.5px;color:var(--muted);margin-bottom:7px;line-height:1.5}
+
+  /* ============================================================
+     HERO « PANORAMA FIDÈLE » + INTRO HONNÊTE
+     Reprend la signature des panorama des 4 matières :
+     carte crème arrondie + filigrane MEDEOS + titre violet profond
+     + punch lines à accent violet + séparateur dégradé.
+     Mobile-first, enrichi en @media(min-width:640px).
+     ============================================================ */
+
+  /* Filigrane de fond retiré sur le guide (texte) : aucune valeur anti-fuite,
+     et alourdissait la lecture. La protection est conservée là où elle sert
+     vraiment — sur les schémas (contenu réellement « copiable »). */
+  body{ position:relative; }
+  .wrap{ position:relative; z-index:1; }
+
+  /* ---------- Carte crème du hero ---------- */
+  .hero{
+    position:relative;
+    background:#FAF6F0;
+    border:1px solid #efe7d8;
+    border-radius:14px;
+    box-shadow:0 4px 18px rgba(76,42,133,.08);
+    padding:38px 24px 32px;
+    margin:26px 0 8px;
+    text-align:left;
+  }
+  @media(min-width:640px){
+    .hero{ padding:60px 50px 46px; margin:40px 0 12px; }
+  }
+
+  /* ---------- Kicker / brand-tag ---------- */
+  .hero .kicker{
+    display:block;
+    font-size:11px; font-weight:600;
+    letter-spacing:1.5px; text-transform:uppercase;
+    color:var(--violet); opacity:.85;
+    margin:0 0 20px;
+  }
+  @media(min-width:640px){ .hero .kicker{ margin-bottom:22px; } }
+
+  /* ---------- Titre ---------- */
+  .hero h1{
+    font-size:29px; line-height:1.1;
+    font-weight:800; color:var(--violet-deep);
+    letter-spacing:-.5px;
+    margin:0 0 14px;
+    max-width:20ch;
+  }
+  @media(min-width:640px){
+    .hero h1{ font-size:40px; line-height:1.06; letter-spacing:-1px; margin-bottom:16px; }
+  }
+
+  /* ---------- Sous-titre — amorce calme ---------- */
+  .hero .subtitle{
+    font-size:15.5px; line-height:1.5; font-weight:500;
+    color:#6b6275; margin:0 0 26px; max-width:52ch;
+  }
+  @media(min-width:640px){
+    .hero .subtitle{ font-size:17px; margin-bottom:30px; }
+  }
+
+  /* ---------- Punch lines (pièce maîtresse, accent violet) ---------- */
+  .hero .punch{
+    font-size:23px; line-height:1.2;
+    font-weight:800; color:#1A1A2E;
+    letter-spacing:-.5px; margin:0;
+  }
+  .hero .punch + .punch{ margin-top:9px; }
+  .hero .punch .accent{ color:var(--violet); }
+  .hero .punch em{ font-style:italic; color:var(--violet-deep); }
+  @media(min-width:640px){
+    .hero .punch{ font-size:31px; line-height:1.18; letter-spacing:-.8px; }
+    .hero .punch + .punch{ margin-top:11px; }
+  }
+
+  /* ---------- Séparateur dégradé (intérieur de la carte) ---------- */
+  .hero .separator{
+    height:1px; margin-top:30px;
+    background:linear-gradient(90deg, transparent, #c9b8e6, transparent);
+  }
+  @media(min-width:640px){ .hero .separator{ margin-top:40px; } }
+
+  /* ---------- Méta-row : pied de carte raffiné ---------- */
+  .hero .meta-row{
+    display:flex; flex-wrap:wrap; gap:12px 20px;
+    margin-top:22px;
+    font-size:13px; color:var(--muted); align-items:center;
+  }
+  .hero .meta-row span{ display:inline-flex; align-items:center; gap:7px; }
+  .hero .meta-row svg{ width:15px; height:15px; opacity:.65; }
+  .hero .meta-row .mr-sep{
+    width:1px; height:13px; background:var(--line);
+    display:inline-block; margin:0 -4px;
+  }
+  @media(min-width:640px){
+    .hero .meta-row{ font-size:14px; margin-top:26px; gap:16px 24px; }
+    .hero .meta-row .mr-sep{ height:14px; }
+  }
+  @media(max-width:639px){ .hero .meta-row .mr-sep{ display:none; } }
+
+  /* ---------- INTRO HONNÊTE : prose + aside sobre ---------- */
+  .intro-honnete{ padding:18px 0; }
+  .intro-honnete > p:last-of-type{ margin-bottom:0; }
+
+  /* Note « Honnêteté d'abord » → aside calme, filet violet fin, AUCUN fond.
+     Scopé à .intro-honnete .note : les .note du corps restent remplis. */
+  .intro-honnete .note{
+    margin:30px 0 0;
+    padding:4px 0 4px 20px;
+    background:none; border:0; border-radius:0;
+    border-left:2px solid rgba(107,70,193,.45);
+    font-size:15px; line-height:1.65; color:var(--muted);
+    max-width:62ch;
+  }
+  .intro-honnete .note .lbl{
+    display:block;
+    font-size:11px; font-weight:700;
+    letter-spacing:.12em; text-transform:uppercase;
+    color:var(--violet-deep); opacity:.9;
+    margin:0 0 8px;
+  }
+  .intro-honnete .note p:last-child{ margin-bottom:0; }
+  @media(min-width:640px){
+    .intro-honnete{ padding:6px 0 4px; }
+    .intro-honnete .note{ padding-left:24px; font-size:16px; margin-top:34px; }
+  }
+
+  /* ---------- Override ≤390px ---------- */
+  @media(max-width:390px){
+    .hero{ padding:34px 20px 30px; }
+    .hero h1{ font-size:27px; }
+    .hero .punch{ font-size:21px; }
+  }
+
+  /* ============ LECTURE PROGRESSIVE (révélation par étapes) ============ */
+  /* Une étape non encore atteinte est masquée pour ne pas confronter au mur de texte. */
+  .step-locked{ display:none; }
+  /* Apparition douce quand une étape se dévoile. */
+  .step-reveal{ animation:stepIn .55s cubic-bezier(.16,.84,.44,1) both; }
+  @keyframes stepIn{
+    from{ opacity:0; transform:translateY(14px); }
+    to{ opacity:1; transform:none; }
+  }
+  /* Le bouton « Continuer » qui clôt chaque étape révélée. */
+  .continue-wrap{
+    display:flex; flex-direction:column; align-items:center;
+    gap:10px; margin:30px 0 8px; text-align:center;
+  }
+  .continue-hint{
+    font-size:13.5px; color:var(--muted);
+    letter-spacing:.01em;
+  }
+  .btn-continue{
+    display:inline-flex; align-items:center; gap:9px;
+    font-family:inherit; font-size:16px; font-weight:600;
+    color:#fff; cursor:pointer;
+    padding:13px 26px; border:none; border-radius:999px;
+    background:linear-gradient(150deg,var(--violet-deep),var(--violet) 75%);
+    box-shadow:0 10px 26px rgba(76,42,133,.26);
+    transition:transform .18s ease, box-shadow .18s ease, opacity .3s ease;
+  }
+  .btn-continue:hover{
+    transform:translateY(-1px);
+    box-shadow:0 14px 32px rgba(76,42,133,.34);
+  }
+  .btn-continue:active{ transform:translateY(0); }
+  .btn-continue .arrow{
+    display:inline-block; transition:transform .2s ease;
+  }
+  .btn-continue:hover .arrow{ transform:translateY(2px); }
+  /* État « en cours de disparition » après le clic. */
+  .continue-wrap.gone{
+    opacity:0; pointer-events:none; max-height:0; margin:0;
+    overflow:hidden; transition:opacity .3s ease, max-height .4s ease, margin .4s ease;
+  }
+
+  /* Phrases de conversion sous « Continuer » (04/08) — bouton secondaire à
+     contour, hors du holder détruit au clic. */
+  .continue-cta{ margin:4px auto 30px; display:flex; flex-direction:column; align-items:center;
+                 gap:9px; max-width:620px; text-align:center; }
+  .continue-cta .cta-mot{ font-size:13.5px; line-height:1.55; color:#6b6275; }
+  .continue-cta a{ display:inline-flex; align-items:center; gap:6px; font-size:13.5px; font-weight:700;
+                   color:#6B46C1; text-decoration:none; padding:9px 18px; border-radius:999px;
+                   border:1.5px solid rgba(107,70,193,.35); background:rgba(107,70,193,.05);
+                   transition:background .15s, border-color .15s; }
+  .continue-cta a:hover{ background:rgba(107,70,193,.11); border-color:rgba(107,70,193,.65); }
+  .continue-cta a.sv{ color:#1d4ed8; border-color:rgba(37,99,235,.35); background:rgba(37,99,235,.05); }
+
+  /* Les deux offres côte à côte : le lecteur choisit sa voie lui-même. */
+  .continue-cta .cta-duo { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<div class="wrap">
+
+  <!-- ============ HERO (carte crème panorama) ============ -->
+  <header class="hero">
+    <span class="kicker">Guide méthode</span>
+    <h1>Anticiper ta première année de santé — et savoir exactement comment t'y prendre.</h1>
+    <p class="subtitle">La P1 ne récompense pas ceux qui sont «&nbsp;intelligents&nbsp;». Elle récompense ceux qui ont une méthode.</p>
+
+    <p class="punch">Bonne nouvelle&nbsp;: <span class="accent">la méthode, ça s'apprend</span> — et le meilleur moment pour l'installer, c'est <em>maintenant</em>, avant que ça commence.</p>
+  </header>
+
+  <!-- ============ INTRO HONNÊTE ============ -->
+  <section class="intro-honnete">
+    <p>En ce moment, il y a probablement trois choses dans ta tête en même temps.</p>
+    <p><strong>Une ambition</strong>&nbsp;: devenir médecin, kiné, dentiste, sage-femme, pharmacien. Un métier que tu vises depuis un moment, peut-être depuis longtemps.</p>
+    <p><strong>Une peur</strong>&nbsp;: celle d'arriver en première année et de se faire submerger. Tu as entendu la phrase qui circule&nbsp;: <em>«&nbsp;la première année de santé, c'est violent.&nbsp;»</em> Et c'est vrai.</p>
+    <p><strong>Et une confusion</strong>&nbsp;: un compte te dit de travailler 14 heures par jour, un autre de dormir 9 heures, un troisième de rester «&nbsp;zen et performant&nbsp;». Tu ne sais plus quoi croire.</p>
+    <p>Cette page ne va pas ajouter une voix de plus à la confusion. Elle va faire le contraire&nbsp;: te donner de la clarté.</p>
+
+    <div class="note">
+      <span class="lbl">Le deal de cette page</span>
+      <p>À la fin, tu n'auras pas reçu une dose de motivation qui retombe en deux jours. Tu auras une <strong>méthode</strong> — et la <strong>preuve, sur toi-même, qu'elle marche</strong>. Pas de phrases creuses. Pas de raccourci magique. Et on ne jouera jamais sur ta peur.</p>
+    </div>
+  </section>
+
+  <p class="cliff">Et la première chose à comprendre, c'est pourquoi des élèves brillants au lycée s'effondrent en première année — pendant que d'autres, plus discrets, finissent en tête.</p>
+
+  <!-- ============ SECTION 01 — LE RENVERSEMENT ============ -->
+  <section>
+    <div class="step">01 — Le bon élève qui tombe</div>
+    <h2>Ce n'est pas l'intelligence. C'est le jeu qui change.</h2>
+
+    <p class="scene">Le lycée et la première année de santé ne récompensent pas la même chose. <span class="accent">Et personne ne te prévient.</span></p>
+    <p>Au lycée, ce qui paie, c'est la <strong>rapidité</strong>&nbsp;: tu comprends vite en cours, tu fais tes exercices la veille, tu as de bonnes notes. En première année, on ne te demande plus de comprendre vite. On te demande de <strong>retenir une montagne de cours, longtemps, sous pression, sans qu'on t'explique comment.</strong> C'est un tout autre exercice — et il ne dépend presque pas de ton intelligence de départ.</p>
+
+    <div class="stat">
+      <div class="num">25×</div>
+      <div class="cap">Ta <strong>méthode de travail</strong> pèse environ 25 fois plus lourd que ta croyance d'être «&nbsp;intelligent par nature&nbsp;» dans la réussite académique. La croyance prédit ~1&nbsp;% du résultat&nbsp;; la méthode, ~25&nbsp;%.</div>
+      <div class="src">Sisk et al., 2018 — méta-analyse de 273 études, 365 000 élèves.</div>
+    </div>
+
+    <div class="aha">
+      <span class="lbl">Le renversement</span>
+      <p>Ceux qui finissent en haut du classement ne sont pas des génies génétiques. <mark>Ils sont méthodologiques.</mark> Et la méthode, contrairement au talent, <strong>ça s'apprend</strong>. C'est toute la différence — et c'est la meilleure nouvelle de cette page.</p>
+    </div>
+
+    <p>Donc si tu as peur de ne pas être «&nbsp;assez intelligent&nbsp;» pour médecine&nbsp;: tu te trompes de question. La vraie question, c'est&nbsp;: <em>est-ce que tu vas apprendre à travailler de la bonne façon&nbsp;?</em> Et ça, tu peux commencer dès cette page.</p>
+
+    <p class="cliff">Cette idée, ce n'est pas qu'une statistique. Quelqu'un l'a vécue dans sa chair.</p>
+  </section>
+
+  <hr class="hr"/>
+
+  <!-- ============ SECTION 02 — LE FIL ROUGE INCARNÉ ============ -->
+  <section>
+    <div class="step">02 — Une histoire vraie</div>
+    <h2>Du milieu de tableau au haut du classement.</h2>
+
+    <p>Au lycée, Lucas n'avait rien d'un élève d'élite&nbsp;: un lycéen ordinaire, autour de 14 de moyenne. Rien d'un profil de génie. Et pourtant, son histoire en première année de santé est exactement celle de ce renversement. La voici, sans l'enjoliver.</p>
+
+    <div class="vecu">
+      <p>«&nbsp;En cours, je n'étais pas efficace&nbsp;: je suivais sans vraiment retenir. Alors je rattrapais le soir. Je révisais en relisant, encore et encore, en surlignant. Et je tirais sur la corde — je rognais sur mon sommeil pour caser plus d'heures, persuadé que c'était ça, bien travailler.&nbsp;»</p>
+      <p>«&nbsp;Résultat&nbsp;: malgré toutes ces heures, je me retrouvais en <strong>milieu de classement</strong>. Pas par manque de travail — j'en faisais énormément. Par manque de <strong>temps utile</strong>&nbsp;: je passais des heures à relire des choses que j'oubliais aussitôt. J'avais l'impression de ramer, et le classement me le confirmait.&nbsp;»</p>
+      <p class="lesson">Travailler plus ne suffisait pas. Le problème, ce n'était pas la quantité d'heures — c'était la façon de les utiliser.</p>
+    </div>
+
+    <p>Puis il y a eu un creux. Un vrai. Pas un détail qu'on cache dans une histoire de réussite&nbsp;: le moment où tout a failli s'écrouler.</p>
+
+    <div class="vecu">
+      <p>«&nbsp;Au bout de quelques semaines, j'étais épuisé et toujours au même point. Je m'enfonçais&nbsp;: plus je ramais sans résultat, plus j'avais peur, et plus je travaillais comme un bourrin pour compenser. J'étais à deux doigts de tout lâcher.&nbsp;»</p>
+      <p>«&nbsp;Le déclic n'a pas été de serrer les dents et de travailler encore plus&nbsp;: ça n'aurait fait qu'empirer les choses. Le déclic, ça a été d'<strong>arrêter de courir pour changer de stratégie</strong>. En plein concours, j'ai pris quelques heures — pas pour réviser, mais pour apprendre à <em>bien</em> réviser&nbsp;: comment mémoriser pour de vrai, comment organiser mes révisions, comment ne plus perdre mon temps. Ces quelques heures «&nbsp;perdues&nbsp;» ont été les plus rentables de toute mon année.&nbsp;»</p>
+      <p class="lesson">Prendre du recul pour changer de méthode, ce n'est pas perdre du temps. C'est le seul moyen d'arrêter d'en perdre.</p>
+    </div>
+
+    <p>À partir de là, il a appliqué ce qu'il venait d'apprendre&nbsp;: une vraie méthode, des révisions organisées, moins d'heures mais mieux utilisées. Et le classement a suivi. Le résultat, à la fin de l'année&nbsp;?</p>
+
+    <div class="stat">
+      <div class="num" style="font-size:38px">6ᵉ</div>
+      <div class="cap">Parti du milieu de tableau, il a fini <strong>6ᵉ de sa promotion</strong>. Avec <em>moins</em> d'heures de travail qu'au départ — mais structurées.</div>
+    </div>
+
+    <div class="aha">
+      <span class="lbl">La morale, et elle est précieuse</span>
+      <p><strong>Moins d'heures, meilleur résultat.</strong> Parce que c'était méthodique, pas frénétique. <mark>Ce n'est pas que tu n'es pas fait pour ça. C'est mécanique.</mark> Change la méthode, et le résultat change.</p>
+    </div>
+
+    <p>Mais il y a une chose qu'aucune méthode n'a pu rattraper, et c'est le seul vrai regret qui reste.</p>
+
+    <div class="vecu">
+      <p>«&nbsp;Le tout premier mois, je l'ai passé à <strong>découvrir les bases en même temps qu'il fallait déjà les retenir</strong>. Les notions de fond — celles qui demandent juste du temps pour qu'elles s'installent dans la tête — je les attaquais à froid, sous pression, alors que le rythme était déjà lancé. Je courais après le train dès le départ.&nbsp;»</p>
+      <p>«&nbsp;Avec le recul, ce qui m'aurait le plus aidé, ce n'est pas d'avoir travaillé plus dur en septembre. C'est d'avoir pris un peu d'avance <em>avant</em> — quelques heures pendant les vacances, juste pour apprivoiser tranquillement les notions de base. Pas pour tout savoir. Juste pour ne plus les découvrir en panique. Ça, ça aurait tout changé.&nbsp;»</p>
+      <p class="lesson">Les bases ne sont pas difficiles. Elles sont juste <strong>lentes à s'installer</strong>. Et le seul moment où tu as ce temps, sans pression, c'est <strong>avant</strong> — avant que ça commence.</p>
+    </div>
+
+    <p>On ne te raconte pas ça pour impressionner. On te le raconte parce que <strong>tu peux faire le même chemin</strong> — et même mieux, parce que toi, tu peux commencer <em>avant</em> que ça démarre&nbsp;: arriver en première année avec les bases déjà apprivoisées <em>et</em> une méthode en main, c'est exactement l'avance que personne n'a prise à ta place. Mais d'abord, voyons concrètement ce que «&nbsp;avoir une méthode&nbsp;» veut dire.</p>
+
+    <p class="cliff">Prends deux étudiantes, exactement au même point de départ, avec exactement le même temps. Regarde ce qui les sépare.</p>
+  </section>
+
+  <hr class="hr"/>
+
+  <!-- ============ SECTION 03 — SARAH & CAMILLE ============ -->
+  <section>
+    <div class="step">03 — Même temps, résultats opposés</div>
+    <h2>Sarah et Camille.</h2>
+
+    <p>Même cours à réviser. Même durée totale&nbsp;: 220 minutes chacune. Même intelligence. Voici ce qu'elles font.</p>
+
+    <p><strong>Sarah</strong> avale tout d'un coup&nbsp;: le même soir, elle lit son cours, puis le relit, puis le relit encore. Quatre fois, de la même façon, à fond, surligneur en main. Au bout de la troisième lecture, elle est épuisée — et elle a l'impression de bien connaître son cours, parce qu'elle <em>reconnaît</em> chaque phrase.</p>
+
+    <p><strong>Camille</strong> utilise exactement les mêmes 220 minutes. Mais elle les <strong>éparpille sur plusieurs jours</strong>&nbsp;: une première lecture profonde pour comprendre, puis — les jours suivants, au lieu de relire — elle <strong>ferme le cours et essaie de se rappeler</strong> avant de vérifier. Trois fois, à quelques jours d'intervalle. Elle se trompe, elle corrige, elle recommence.</p>
+
+    <p class="scene">Même temps. Même cours. <span class="accent">Camille obtient des scores nettement supérieurs.</span></p>
+
+    <div class="aha">
+      <span class="lbl">Le piège dans lequel tombe Sarah</span>
+      <p>Relire <em>donne l'impression</em> d'apprendre&nbsp;: c'est agréable, fluide, rassurant. On confond cette aisance avec de la maîtrise. <mark>Mais reconnaître une phrase n'est pas savoir la restituer.</mark> Sarah a confondu l'effort avec l'efficacité — et en entassant tout d'un coup, elle a oublié l'essentiel avant même son contrôle. Camille, elle, a fait <em>travailler</em> sa mémoire, et l'a laissée respirer entre deux passages.</p>
+    </div>
+
+    <p>Ce que Camille fait sans le nommer, ce sont des <strong>leviers</strong> — des façons précises d'utiliser son cerveau qui changent tout, à temps égal. La bonne nouvelle&nbsp;: ils ont des noms, ils sont prouvés, et on te les donne maintenant. En entier.</p>
+
+    <p class="cliff">Voici les six leviers. Aucun n'est compliqué. Et tu peux les tester sur un cours du lycée dès ce soir.</p>
+  </section>
+
+  <hr class="hr"/>
+
+  <!-- ============ SECTION 04 — LES 6 LEVIERS ============ -->
+  <section>
+    <div class="step">04 — Les 6 leviers de la méthode</div>
+    <h2>Six façons de travailler moins bête.</h2>
+    <p>Les voici, les six, chacun expliqué assez pour que tu puisses t'en servir dès ce soir. Lis-les tranquillement&nbsp;: à la fin, on t'en fera essayer un, là, sur cette page.</p>
+
+    <!-- LEVIER 1 : TESTING ACTIF (+ quick win) -->
+    <h3>Levier 1 — Teste-toi au lieu de relire</h3>
+    <p>C'est le levier de Camille, et c'est le plus rentable de tous. Au lieu de relire passivement, tu fermes le cours et tu <strong>essaies de te rappeler</strong>. Cet effort de récupération — un peu inconfortable — est exactement ce qui grave l'information dans la mémoire durable.</p>
+
+    <div class="stat">
+      <div class="num">+50&nbsp;%</div>
+      <div class="cap">Se tester améliore la mémorisation à long terme d'environ <strong>50&nbsp;%</strong> par rapport à la relecture. C'est l'une des deux seules techniques classées «&nbsp;très efficaces&nbsp;» par la science de l'apprentissage.</div>
+      <div class="src">Rowland, 2014 (méta-analyse, 159 études)&nbsp;; classement Dunlosky et al., 2013.</div>
+    </div>
+
+    <div class="aha">
+      <span class="lbl">L'expérience qui a choqué les chercheurs</span>
+      <p>Karpicke &amp; Roediger (2008)&nbsp;: les étudiants qui <strong>continuent à se tester</strong> retiennent environ <strong>80&nbsp;%</strong> une semaine plus tard. Ceux qui arrêtent dès qu'ils «&nbsp;pensent maîtriser&nbsp;»&nbsp;? <strong>33 à 36&nbsp;%.</strong> Même temps d'étude. Plus du double d'écart.</p>
+    </div>
+
+    <p>Et un QCM raté&nbsp;? Ce n'est pas une perte&nbsp;: c'est une <strong>mine</strong>. Il te montre précisément où tu ne sais pas encore — donc où creuser. La seule règle&nbsp;: être honnête avec toi-même. Soit tu as su, soit non. Pas de «&nbsp;j'avais presque&nbsp;»&nbsp;: c'est ce «&nbsp;presque&nbsp;» qui te plante deux mois plus tard.</p>
+
+    <p>Concrètement, te tester peut être aussi simple que fermer le cours et tout réécrire de mémoire sur une feuille blanche. On y reviendra — d'ailleurs, tu vas l'essayer toi-même un peu plus bas.</p>
+
+    <p class="cliff">Te tester, c'est puissant. Mais <em>quand</em> le faire&nbsp;? La réponse va à l'encontre de ton intuition.</p>
+
+    <!-- LEVIER 2 : RÉPÉTITION ESPACÉE -->
+    <h3>Levier 2 — Espace tes révisions au lieu de tout entasser</h3>
+    <p>Ton cerveau oublie, et il le fait vite&nbsp;: environ <strong>70&nbsp;% d'un cours s'efface en 24 heures</strong> si tu n'y reviens jamais. Ce n'est pas un défaut — c'est le fonctionnement par défaut de tous les cerveaux humains. La parade est mécanique elle aussi&nbsp;: revenir sur le cours à des intervalles bien choisis, juste avant que l'oubli ne fasse son travail. À chaque retour, la trace se solidifie et l'oubli ralentit.</p>
+
+    <div class="stat">
+      <div class="num">20 → 80&nbsp;%</div>
+      <div class="cap">Sans révision, il te reste ~20&nbsp;% d'un cours à un mois. Avec une chaîne de révisions espacées&nbsp;: <strong>plus de 80&nbsp;%</strong>. Même cours, même cerveau — c'est l'<em>espacement</em> qui fait la différence.</div>
+      <div class="src">Ebbinghaus, 1885 (courbe de l'oubli)&nbsp;; Cepeda et al., 2006 (méta-analyse, 184 études).</div>
+    </div>
+
+    <p>Le contre-pied qui surprend tout le monde&nbsp;: <mark>5 lectures espacées dans le temps battent 5 lectures faites le même jour — par un facteur 2 à 3,</mark> à temps de travail <em>identique</em>. Bachoter la veille, c'est le pire usage possible de ton temps.</p>
+
+    <div class="note">
+      <span class="lbl">Un exemple concret</span>
+      <p>Disons que tu vois un cours une 1ʳᵉ fois (jour J). Tu pourrais le revoir à <strong>J+1</strong>, puis <strong>J+6</strong>, puis <strong>J+14</strong>, puis <strong>J+30</strong>&nbsp;: des retours de plus en plus espacés, parce qu'à chaque fois tu oublies moins vite. Ce ne sont pas des dates sacrées — l'idée à retenir, c'est <em>revenir plusieurs fois, en espaçant</em>. Et à chaque retour, tu ne relis pas&nbsp;: tu te <em>testes</em> (Levier 1). Les deux leviers travaillent ensemble.</p>
+    </div>
+
+    <div class="vecu">
+      <p>«&nbsp;Tous les soirs, autour de 21h, je préparais le lendemain&nbsp;: quels cours j'allais revoir, en priorité les plus difficiles et ceux que j'avais vus le moins récemment. Je notais pour chacun la date de sa dernière lecture. Ça m'a pris cinq minutes par soir — et ça a tout changé&nbsp;: je ne révisais plus au hasard, je révisais ce qui était sur le point de s'effacer.&nbsp;»</p>
+      <p class="lesson">Cinq minutes le soir pour ne plus jamais réviser au feeling. C'est ça, piloter sa mémoire.</p>
+    </div>
+
+    <p>Et rassure-toi&nbsp;: une 1ʳᵉ lecture <em>imparfaite</em> suivie d'une révision à J+1 bat largement une lecture «&nbsp;parfaite&nbsp;» qu'on ne revoit jamais. Tu n'as pas besoin de tout maîtriser du premier coup. Tu as besoin de <strong>revenir</strong>.</p>
+
+    <p class="cliff">Tester, espacer… encore faut-il avoir un cerveau disponible. Et là, deux choses te le volent en silence.</p>
+
+    <!-- LEVIER 3 : 55/5 -->
+    <h3>Levier 3 — Travaille par cycles, pas en marathon</h3>
+    <p>Ta concentration n'est pas un réservoir infini. Elle fonctionne par <strong>cycles</strong>&nbsp;: la fenêtre de concentration vraiment soutenue dure entre <strong>45 et 90 minutes</strong>, puis une pause devient nécessaire. Au-delà, ta vitesse et ta précision chutent — tu continues à lire, mais tu n'encodes presque plus rien. Le bloc de 4 heures d'affilée, c'est de l'épuisement déguisé en sérieux.</p>
+    <p>D'où la méthode <strong>55/5</strong>&nbsp;: 55 minutes de travail concentré, 5 minutes de vraie pause. Simple à caler (1 cycle = 1 heure pile), assez long pour avancer, assez court pour ne pas s'effondrer.</p>
+
+    <div class="aha">
+      <span class="lbl">Le coût caché de ton téléphone</span>
+      <p>La <strong>simple présence</strong> de ton smartphone — posé sur la table, écran éteint — réduit tes ressources cognitives de <strong>10 à 20&nbsp;%</strong>. Et un «&nbsp;juste 30 secondes&nbsp;» pour répondre casse le fil mental que tu mets ensuite de longues secondes à reconstruire. Pendant tes 55 minutes&nbsp;: téléphone hors de portée, hors de vue.</p>
+    </div>
+    <p class="src" style="color:var(--muted);font-size:13px;margin-top:-6px">Cycles ultradiens&nbsp;: Lavie, 2001. Présence du smartphone&nbsp;: Ward et al., 2017.</p>
+
+    <ul class="clean">
+      <li><strong>Un minuteur visible</strong> (montre, horloge — pas le téléphone).</li>
+      <li><strong>Une seule tâche</strong> sur le cycle&nbsp;: un cours, un objectif.</li>
+      <li><strong>Une pause active</strong>&nbsp;: lève-toi, bouge, bois de l'eau, regarde au loin. <em>Pas</em> de scroll&nbsp;: c'est l'inverse d'une pause pour ton cerveau.</li>
+      <li>Après <strong>4 à 5 cycles</strong>, une vraie pause de 20-30 minutes.</li>
+    </ul>
+
+    <div class="vecu">
+      <p>«&nbsp;Pendant mes révisions, je ne restais pas assis&nbsp;: je marchais. Je tournais en rond dans la pièce en lisant <strong>au rythme de mes pas, comme un métronome</strong>. Trois bénéfices d'un coup&nbsp;: je bougeais (mon sport de la journée), le mouvement m'aidait à mémoriser, et ce rythme régulier me gardait concentré. Un vrai changement pour moi.&nbsp;»</p>
+      <p class="lesson">Ta méthode n'a pas à ressembler à celle des autres. Elle doit te garder actif et concentré — trouve ton métronome.</p>
+    </div>
+
+    <p class="cliff">Voilà les trois leviers de fond. Les trois suivants sont plus rapides — mais ils font la différence entre comprendre et juste empiler.</p>
+
+    <!-- LEVIER 4 : COMPRENDRE AVANT MÉMORISER -->
+    <h3>Levier 4 — Cherche le «&nbsp;pourquoi&nbsp;», pas seulement le «&nbsp;quoi&nbsp;»</h3>
+    <p>Face à un cours, on a le réflexe de vouloir tout mémoriser par cœur. Mais ce qui est <em>compris</em> ne s'oublie pas comme une liste. Quand tu sais <strong>pourquoi</strong> une chose fonctionne, tu peux la reconstruire même si tu en as oublié le détail. Quand tu n'as appris que le <strong>quoi</strong>, le moindre trou de mémoire te laisse sans rien.</p>
+    <p>Le geste concret&nbsp;: devant chaque notion, pose-toi la question «&nbsp;<em>pourquoi c'est comme ça&nbsp;?</em>&nbsp;» avant de chercher à la retenir. Cherche le mécanisme, l'image, le lien avec ce que tu sais déjà. Une notion reliée à dix autres a dix chemins d'accès dans ta mémoire&nbsp;; une notion isolée n'en a qu'un seul, fragile.</p>
+
+    <div class="note">
+      <span class="lbl">À voir aussi</span>
+      <p>Tu veux ressentir ce que ça fait, ce «&nbsp;changement de regard&nbsp;»&nbsp;? Nos <strong>panoramas des quatre matières</strong> sont construits exactement là-dessus&nbsp;: ils ne te font pas réciter l'anatomie, la biologie, la chimie ou la physique — ils te les font <em>comprendre</em>. Ils t'attendent dans ton espace ressources&nbsp;: c'est le meilleur exemple de ce levier en action.</p>
+    </div>
+
+    <div class="stakes">
+      <div class="lbl">Ce que tu gagnes / ce que tu perds</div>
+      <div class="body">
+        <div class="cell win"><span class="h">Si tu cherches le pourquoi</span>Tu retiens plus longtemps, tu résistes aux questions pièges, et tu réponds même à ce que tu n'as pas appris par cœur.</div>
+        <div class="cell lose"><span class="h">Si tu te contentes du quoi</span>Tu oublies en quelques semaines, et la moindre formulation inhabituelle te bloque le jour du contrôle.</div>
+      </div>
+    </div>
+
+    <!-- LEVIER 5 : EXPLIQUER POUR VÉRIFIER (FEYNMAN) -->
+    <h3>Levier 5 — Explique à voix haute, comme à un ami</h3>
+    <p>Voici un test de vérité imparable&nbsp;: prends une notion et <strong>explique-la à voix haute</strong>, simplement, comme si tu l'enseignais à un copain qui n'y connaît rien. Sans regarder ton cours.</p>
+    <p>Si tu y arrives sans bloquer, tu la maîtrises. Si tu butes, si tu cherches tes mots, si tu te réfugies derrière du jargon&nbsp;: tu viens de localiser exactement ce que tu ne sais pas encore. Tu rouvres le cours sur ce point précis, tu relis, et tu recommences l'explication. C'est rapide, et c'est redoutablement efficace pour transformer un «&nbsp;je crois que je sais&nbsp;» en «&nbsp;je sais&nbsp;».</p>
+
+    <div class="aha">
+      <span class="lbl">Pourquoi ça marche</span>
+      <p>Expliquer simplement t'oblige à <strong>reconstruire</strong> l'idée avec tes propres mots, pas à la réciter. Et reconstruire, c'est apprendre. Le jargon, lui, permet de réciter sans comprendre&nbsp;: c'est le meilleur cache-misère, et l'examen le démasque toujours.</p>
+    </div>
+
+    <!-- LEVIER 6 : DESSINER DE MÉMOIRE -->
+    <h3>Levier 6 — Schématise toute la logique du cours, de mémoire</h3>
+    <p>Derrière chaque cours, il y a une logique&nbsp;: un fil qui relie les notions, une cascade de causes et d'effets, une structure d'ensemble. Le réflexe perdant, c'est de recopier joliment ses notes. Le réflexe gagnant, c'est de <strong>reconstruire cette logique de mémoire</strong>, sur une feuille vierge&nbsp;: un schéma à toi, avec tes flèches et tes liens, même quand le cours n'en proposait aucun. Tu transformes une liste à apprendre en une carte que tu as fabriquée toi-même.</p>
+
+    <div class="vecu">
+      <p>«&nbsp;L'exercice qui m'a le plus fait progresser tient sur une feuille A4 blanche. Tu reprends tout un cours et tu le re-schématises de tête&nbsp;: les idées, les liens, l'enchaînement. Ce sera moche, ce sera incomplet — peu importe. En te trompant, tu vois <strong>exactement</strong> ce que tu ne savais pas. Une feuille, un stylo, et le courage de se tromper avant le concours&nbsp;: c'est souvent ce qui fait passer un QCM de 4 à 14.&nbsp;»</p>
+      <p class="lesson">Se tromper sur ton brouillon aujourd'hui, c'est ne pas se tromper le jour J. Le brouillon est ton meilleur ami.</p>
+    </div>
+
+    <p>Tu remarques le fil&nbsp;? Ces six leviers disent tous la même chose, sous des formes différentes&nbsp;: <strong>arrête d'absorber passivement, mets ton cerveau au travail.</strong> Tester, espacer, comprendre le pourquoi, expliquer, dessiner de mémoire — c'est toujours le même principe. C'est lui qui sépare Sarah de Camille.</p>
+
+    <p>Et maintenant qu'on a tout posé, on ne va pas juste te <em>dire</em> que ça marche — on va te le faire <em>vivre</em>. Voici la forme la plus simple du testing actif (Levier 1), appliquée à ce que tu viens de lire&nbsp;: la <strong>page blanche</strong>.</p>
+
+    <!-- QUICK WIN -->
+    <div class="exo">
+      <div class="exo-head">
+        <div class="tag">À faire maintenant · 3 minutes</div>
+        <div class="t">Le test de la page blanche</div>
+      </div>
+      <div class="exo-body">
+        <ol>
+          <li><strong>Sans remonter</strong>, écris ci-dessous tous les leviers dont tu te souviens, et ce que tu en as retenu&nbsp;: les idées, les chiffres, les images qui t'ont marqué. En vrac, en bullet points, peu importe.</li>
+          <li>Lance le minuteur de 3 minutes et vide ta tête sur la page.</li>
+          <li>Ensuite seulement, remonte vérifier. Ce que tu as oublié&nbsp;= exactement ce que tu devras retravailler. Ce que tu as retrouvé&nbsp;= déjà en train de se graver.</li>
+        </ol>
+        <textarea placeholder="Les leviers et ce que j'en retiens…&#10;- &#10;- &#10;- "></textarea>
+        <div class="timer">
+          <button class="btn-timer" id="startTimer" type="button">▶ Lancer 3:00</button>
+          <span class="clock" id="clock">3:00</span>
+        </div>
+        <div class="done" id="doneMsg">
+          <strong>Voilà. Tu viens de faire du testing actif.</strong> Ce petit effort un peu inconfortable que tu as ressenti&nbsp;? C'est lui qui grave. Tu n'as pas «&nbsp;relu&nbsp;» passivement le guide&nbsp;: tu l'as <em>récupéré</em> de mémoire — la chose la plus efficace que tu puisses faire pour retenir. Et tu viens de le prouver sur toi-même.
+        </div>
+      </div>
+    </div>
+
+    <p>Trois minutes, et tu as mieux ancré ce guide que si tu l'avais relu deux fois. C'est exactement ce geste que tu pourras refaire sur <strong>n'importe quel cours, dès aujourd'hui au lycée</strong>.</p>
+
+    <p class="cliff">Tu as les six leviers, et tu viens d'en faire l'expérience. Reste le pas le plus difficile&nbsp;: passer de «&nbsp;je sais&nbsp;» à «&nbsp;je fais&nbsp;».</p>
+  </section>
+
+  <hr class="hr"/>
+
+  <!-- ============ SECTION 05 — DU SAVOIR À L'ACTE ============ -->
+  <section>
+    <div class="step">05 — Du «&nbsp;je sais&nbsp;» au «&nbsp;je fais&nbsp;»</div>
+    <h2>Une bonne intention ne suffit pas. Un plan, oui.</h2>
+    <p>Tu connais ça&nbsp;: on lit quelque chose d'utile, on se dit «&nbsp;super, je vais le faire&nbsp;»… et la vie reprend. Ce n'est pas un manque de volonté. C'est que <strong>«&nbsp;j'ai l'intention&nbsp;» et «&nbsp;je le fais&nbsp;» sont deux choses différentes</strong> dans le cerveau. En moyenne, on ne transforme une bonne intention en acte qu'environ <strong>une fois sur deux</strong>.</p>
+    <p>Le correctif est étonnamment simple. Au lieu d'une intention vague («&nbsp;je vais m'entraîner&nbsp;»), tu écris un plan précis&nbsp;: <strong>«&nbsp;si [telle situation], alors [telle action]&nbsp;».</strong> Ce simple geste augmente nettement les chances que tu passes vraiment à l'acte, parce que tu as déjà décidé à l'avance.</p>
+    <p class="src" style="color:var(--muted);font-size:13px;margin-top:-6px">Écart intention-action&nbsp;: Sheeran, 2002. Plans «&nbsp;si-alors&nbsp;»&nbsp;: Gollwitzer &amp; Sheeran, 2006.</p>
+
+    <p>Alors fais-le, maintenant. Pas demain. Écris ton premier plan&nbsp;:</p>
+
+    <div class="plan">
+      <div class="row"><span class="kw">SI</span><input type="text" placeholder="ex : demain en révisant mon cours de SVT…" aria-label="situation"/></div>
+      <div class="row"><span class="kw">ALORS</span><input type="text" placeholder="ex : je ferai 3 min de page blanche avant de relire." aria-label="action"/></div>
+      <p style="margin:6px 0 0;font-size:14.5px;color:var(--muted)">Écris-le pour de vrai. C'est ton premier pas — sur un cours du lycée, avant même la première année.</p>
+    </div>
+
+    <div class="note">
+      <span class="lbl">C'est ça, anticiper</span>
+      <p>Tu viens de comprendre le renversement. Tu as appliqué un levier sur toi-même. Tu as un plan écrit. <strong>Tu n'as pas attendu la rentrée pour t'y mettre</strong> — et c'est exactement ça, ton avantage. Pendant que d'autres découvriront ces méthodes en septembre, dans la panique, tu les auras déjà rodées sur tes cours de Terminale.</p>
+    </div>
+
+    <p class="cliff">Tu t'es construit un premier réflexe aujourd'hui. Voilà ce qui se passe maintenant.</p>
+  </section>
+
+  <hr class="hr"/>
+
+  <!-- ============ SECTION 06 — CLÔTURE DOUCE ============ -->
+  <section>
+    <div class="step">06 — Ce qui se passe maintenant</div>
+    <h2>Tu n'as pas appris la première année. Tu as changé de regard.</h2>
+
+    <p>Reprends le chemin parcouru sur cette page&nbsp;:</p>
+    <ul class="clean">
+      <li>Tu sais que la première année récompense la <strong>méthode</strong>, pas l'intelligence de départ.</li>
+      <li>Tu as vu qu'on peut partir du milieu de tableau et remonter — à condition de changer le <em>comment</em>.</li>
+      <li>Tu as six leviers concrets, et tu en as déjà testé un sur toi-même.</li>
+      <li>Tu repars avec un plan écrit, applicable dès cette semaine.</li>
+    </ul>
+
+    <p>Ce n'est pas rien. La plupart des futurs étudiants n'auront jamais vu ça avant de plonger. Mais soyons honnêtes sur ce qui reste.</p>
+
+    <p>Une méthode, ce n'est pas six idées sur une page. C'est six idées <strong>tenues, jour après jour</strong>, sur des dizaines de chapitres&nbsp;: les schémas refaits de mémoire le soir, le planning de révision recalculé chaque semaine, les heures où on bute, où on doute, où on reprend une feuille blanche jusqu'à comprendre. Ça, ce n'est pas glamour. Mais c'est ce qui transforme une bonne intention en réflexe.</p>
+
+    <div class="vecu">
+      <p>«&nbsp;Tous ceux qui finissent dans le haut du classement ont commencé là où tu es&nbsp;: devant une matière qui fait peur, sans méthode encore. Ce qui les distingue, ce n'est pas l'intelligence — c'est le moment où ils ont arrêté d'apprendre des mots pour commencer à comprendre des mécanismes. Si tu as lu cette page jusqu'ici, tu as déjà ce qu'il faut pour faire le même chemin.&nbsp;»</p>
+    </div>
+
+    <p>Ces six leviers, ils sont à toi — et ils te servent dès ce soir. Mais les tenir jour après jour, sur des dizaines de chapitres, avec un planning de révision, des QCM corrigés au format du concours et quelqu'un qui te répond quand tu bloques — c'est ce qu'on a construit dans <strong>Medi&nbsp;Pro</strong>. On ne te demande rien&nbsp;: si la curiosité te prend, jette juste un œil.</p>
+
+    <p style="margin:18px 0 4px">
+      <a href="https://medeos-sante.fr/packs/medi-pro" target="_top" onclick="try{window.parent.postMessage({medeosClick:'cta_medipro_iframe'},location.origin)}catch(e){}" style="display:inline-flex;align-items:center;gap:6px;color:var(--violet-deep);font-weight:600;font-size:14.5px;border-bottom:1px solid rgba(107,70,193,.3);padding-bottom:1px">Découvrir Medi&nbsp;Pro →</a>
+    </p>
+
+    <p style="margin-top:26px"><strong>Une chose est sûre, quoi que tu choisisses&nbsp;:</strong> en septembre, tu ne seras pas celui qu'on jette dans la piscine sans savoir nager. Tu sauras déjà comment avancer.</p>
+  </section>
+
+  <!-- ============ FOOTER + SOURCES ============ -->
+  <footer>
+    <p class="sig">Medeos — anticiper la première année, sereinement.</p>
+
+    <div class="src-list" style="text-align:left">
+      <div class="lbl">Les sources, parce qu'on ne te raconte pas d'histoires</div>
+      <ul>
+        <li>Sisk, V. F., et al. (2018). <em>Psychological Science</em>, 29(4) — méthode &gt; croyance en l'intelligence.</li>
+        <li>Ebbinghaus, H. (1885)&nbsp;; Murre, J. &amp; Dros, J. (2015), <em>PLOS ONE</em> — courbe de l'oubli.</li>
+        <li>Cepeda, N. J., et al. (2006). <em>Psychological Bulletin</em>, 132(3) — répétition espacée (184 études).</li>
+        <li>Karpicke, J. &amp; Roediger, H. (2008). <em>Science</em>, 319 — testing actif (80&nbsp;% vs 33-36&nbsp;%).</li>
+        <li>Rowland, C. (2014). <em>Psychological Bulletin</em>, 140(6) — testing, méta-analyse 159 études.</li>
+        <li>Dunlosky, J., et al. (2013). <em>Psychological Science in the Public Interest</em>, 14(1) — techniques d'étude.</li>
+        <li>Lavie, P. (2001). <em>Annual Review of Psychology</em>, 52 — cycles ultradiens (45-90 min).</li>
+        <li>Ward, A. F., et al. (2017). <em>Journal of the Assoc. for Consumer Research</em>, 2(2) — présence du smartphone.</li>
+        <li>Sheeran, P. (2002)&nbsp;; Gollwitzer, P. &amp; Sheeran, P. (2006) — intention-action &amp; plans «&nbsp;si-alors&nbsp;».</li>
+      </ul>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  // progress bar
+  var bar=document.getElementById('bar');
+  function onScroll(){
+    var h=document.documentElement;
+    var sc=h.scrollTop||document.body.scrollTop;
+    var max=(h.scrollHeight-h.clientHeight)||1;
+    bar.style.width=(sc/max*100)+'%';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  // quick-win timer (3:00 countdown)
+  var btn=document.getElementById('startTimer');
+  var clock=document.getElementById('clock');
+  var done=document.getElementById('doneMsg');
+  var left=180, id=null;
+  function fmt(s){var m=Math.floor(s/60);var r=s%60;return m+':'+(r<10?'0':'')+r;}
+  if(btn){
+    btn.addEventListener('click',function(){
+      if(id){return;}
+      btn.textContent='⏳ En cours…';
+      id=setInterval(function(){
+        left--; clock.textContent=fmt(left);
+        if(left<=0){
+          clearInterval(id);id=null;
+          clock.textContent='Terminé';
+          btn.textContent='✓ Fait';
+          done.classList.add('show');
+          done.scrollIntoView({behavior:'smooth',block:'center'});
+        }
+      },1000);
+    });
+  }
+
+  /* ============ LECTURE PROGRESSIVE ============ */
+  /* On regroupe le contenu en « étapes » : chaque <section> (avec le <hr> qui la
+     précède) devient une étape révélée une à une via un bouton « Continuer ».
+     La 1re section reste visible au chargement ; les suivantes sont masquées. */
+  (function(){
+    var wrap=document.querySelector('.wrap');
+    if(!wrap) return;
+    var sections=Array.prototype.slice.call(wrap.querySelectorAll(':scope > section'));
+    if(sections.length<2) return;
+
+    // On regroupe les sections en PALIERS (moins de boutons = lecture plus fluide).
+    // Un palier est défini par la 1re section qu'il contient ; les autres lui sont rattachées.
+    // Découpage choisi pour préserver le fil narratif :
+    //   Palier 1 (visible) : intro + « le jeu change » + l'histoire (le « pourquoi »)
+    //   Palier 2           : Sarah & Camille + les 6 leviers (le « comment » concret)
+    //   Palier 3           : le plan si-alors + la clôture + CTA Medi Pro
+    // Les coupures sont détectées sur le texte du <h2> de chaque section.
+    function startsNewBreak(sec){
+      var h=sec.querySelector('h2');
+      var t=h?h.textContent.toLowerCase():'';
+      return /moins b[êe]te/.test(t)          // début palier 2 : « Six façons de travailler moins bête » (les 6 leviers)
+          || /une bonne intention/.test(t);   // début palier 3 : « Une bonne intention ne suffit pas »
+    }
+
+    // Construire les paliers en accumulant les sections (+ leur <hr>) jusqu'à une coupure.
+    var steps=[];               // chaque entrée = { nodes:[...], revealed:bool }
+    var currentNodes=[];
+    sections.forEach(function(sec, i){
+      var prev=sec.previousElementSibling;
+      var hr=(prev && prev.tagName==='HR')?prev:null;
+      if(i>0 && startsNewBreak(sec)){
+        // clôt le palier en cours, en démarre un nouveau (le <hr> appartient au nouveau)
+        steps.push({nodes:currentNodes, revealed:(steps.length===0)});
+        currentNodes=[];
+      }
+      if(hr) currentNodes.push(hr);
+      currentNodes.push(sec);
+    });
+    if(currentNodes.length) steps.push({nodes:currentNodes, revealed:(steps.length===0)});
+
+    if(steps.length<2) return;
+
+    // Rattacher tout ce qui suit la DERNIÈRE section (footer, sources, etc.) au
+    // dernier palier — sinon le footer reste visible et remonte sous le 1er bouton.
+    var lastSection = sections[sections.length-1];
+    var tail = lastSection.nextElementSibling;
+    while(tail){
+      steps[steps.length-1].nodes.push(tail);
+      tail = tail.nextElementSibling;
+    }
+
+    // Masquer tous les paliers sauf le premier.
+    steps.forEach(function(st, i){
+      if(i===0) return;
+      st.nodes.forEach(function(n){ n.classList.add('step-locked'); });
+    });
+
+    // Libellés d'invitation, par palier à venir.
+    var hints=[
+      'Maintenant, la méthode concrète.',
+      'Dernière étape.'
+    ];
+
+
+    // Phrases de conversion sous « Continuer ». Les DEUX offres sont proposées à
+    // chaque fois (retour Lucas 04/08) : les Stages Vacances valent 388 € contre
+    // 147 € pour Medi Pro, ils ne peuvent pas apparaître une fois sur trois.
+    var RAPPELS_STAGES = {
+      2: "Tu as les six leviers. Ce qui manque, c\'est un programme sur lequel les appliquer et quelqu\'un qui te dise quoi reprendre et quand : c\'est exactement ce que fait <b>Medi&nbsp;Pro</b> juste avant la rentrée." 
+    };
+    function rappelStages(n){
+      var t = RAPPELS_STAGES[n];
+      if(!t) return '';
+      // Les DEUX offres à chaque fois : le lecteur se reconnaît lui-même.
+      return '<div class="continue-cta"><div class="cta-mot">' + t + '</div>' +
+             '<div class="cta-duo">' +
+             '<a href="https://medeos-sante.fr/packs/medi-pro" target="_top" data-cta="medipro">Découvrir Medi&nbsp;Pro →</a>' +
+             '</div></div>';
+    }
+
+    function addContinueButton(stepIndex){
+      // stepIndex = l'étape ACTUELLEMENT visible la plus basse ; le bouton révèle stepIndex+1.
+      var current=steps[stepIndex];
+      var lastNode=current.nodes[current.nodes.length-1]; // la <section>
+      var nextIndex=stepIndex+1;
+      if(nextIndex>=steps.length) return; // plus rien après
+
+      var holder=document.createElement('div');
+      holder.className='continue-wrap';
+      var hint=hints[Math.min(nextIndex-1, hints.length-1)] || '';
+      holder.innerHTML=
+        (hint?('<div class="continue-hint">'+hint+'</div>'):'')+
+        '<button type="button" class="btn-continue">Continuer <span class="arrow">↓</span></button>';
+
+      // On place le bouton À L'INTÉRIEUR de la section courante, tout en bas,
+      // pour qu'il suive le fil (après la phrase « cliff »).
+      lastNode.appendChild(holder);
+
+      // Hors du holder (détruit au clic) : la porte reste dans la page.
+      var htmlRappel = rappelStages(nextIndex);
+      if (htmlRappel) {
+        var blocRappel = document.createElement('div');
+        blocRappel.innerHTML = htmlRappel;
+        lastNode.appendChild(blocRappel);
+        blocRappel.querySelectorAll('a').forEach(function(a){
+          a.addEventListener('click', function(){
+            try { window.parent.postMessage({ medeosClick: a.dataset.cta === 'stages' ? 'cta_stages_vacances' : 'cta_medipro_iframe' }, location.origin); } catch(e) {}
+          });
+        });
+      }
+
+      holder.querySelector('.btn-continue').addEventListener('click',function(){
+        // Révéler l'étape suivante
+        var nxt=steps[nextIndex];
+        nxt.revealed=true;
+        nxt.nodes.forEach(function(n){
+          n.classList.remove('step-locked');
+          n.classList.add('step-reveal');
+        });
+        // Faire disparaître ce bouton
+        holder.classList.add('gone');
+        setTimeout(function(){ if(holder.parentNode) holder.parentNode.removeChild(holder); },420);
+        // Pas de scroll automatique : la nouvelle section apparaît en dessous,
+        // la personne continue de descendre à son propre rythme.
+        // Préparer le bouton de l'étape suivante
+        addContinueButton(nextIndex);
+        // recalculer la barre de progression
+        if(typeof onScroll==='function') onScroll();
+      });
+    }
+
+    // Démarrer : bouton à la fin de l'étape 0 (visible).
+    addContinueButton(0);
+  })();
+})();
+</script>
+
+<!-- ============================================================= -->
+<!-- BARRE DE ZOOM FLOTTANTE (− / % / +) — identique aux panorama  -->
+<!-- ============================================================= -->
+<style>
+    #medeos-zoombar {
+        position: fixed; bottom: 18px; right: 18px; z-index: 9999;
+        display: flex; align-items: center; gap: 2px;
+        background: rgba(255,255,255,0.96);
+        border: 1px solid #E8E1D5; border-radius: 999px;
+        padding: 4px; box-shadow: 0 4px 14px rgba(31,31,46,0.12);
+        backdrop-filter: blur(6px);
+        font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #medeos-zoombar button {
+        border: 0; background: transparent; cursor: pointer;
+        color: #5C5C70; font-weight: 700; line-height: 1;
+        border-radius: 999px; transition: background .15s, color .15s;
+    }
+    #medeos-zoombar .zb-step { width: 30px; height: 30px; font-size: 18px; display: flex; align-items: center; justify-content: center; }
+    #medeos-zoombar .zb-level { min-width: 48px; height: 30px; font-size: 13px; font-weight: 600; padding: 0 6px; font-variant-numeric: tabular-nums; }
+    #medeos-zoombar button:hover { background: #F4EFFB; color: #6B46C1; }
+    #medeos-zoombar button:disabled { opacity: .3; cursor: default; background: transparent; }
+    @media print { #medeos-zoombar { display: none !important; } }
+    @media (max-width: 767px) { #medeos-zoombar { display: none !important; } }
+</style>
+<div id="medeos-zoombar" aria-label="Zoom du guide">
+    <button type="button" class="zb-step" id="zb-out" title="Réduire" aria-label="Réduire">−</button>
+    <button type="button" class="zb-level" id="zb-level" title="Revenir à 100 %" aria-label="Réinitialiser le zoom">100%</button>
+    <button type="button" class="zb-step" id="zb-in" title="Agrandir" aria-label="Agrandir">+</button>
+</div>
+<script>
+    // Zoom : desktop 100 % + barre −/%/+. Mobile : barre masquée.
+    (function () {
+        var ZMIN = 60, ZMAX = 160, STEP = 5, zoom = 100;
+        var out = document.getElementById('zb-out');
+        var inc = document.getElementById('zb-in');
+        var lvl = document.getElementById('zb-level');
+        function apply() {
+            document.body.style.zoom = (zoom / 100);
+            if (lvl) lvl.textContent = zoom + '%';
+            if (out) out.disabled = zoom <= ZMIN;
+            if (inc) inc.disabled = zoom >= ZMAX;
+        }
+        if (out) out.addEventListener('click', function () { zoom = Math.max(ZMIN, zoom - STEP); apply(); });
+        if (inc) inc.addEventListener('click', function () { zoom = Math.min(ZMAX, zoom + STEP); apply(); });
+        if (lvl) lvl.addEventListener('click', function () { zoom = 100; apply(); });
+        apply();
+    })();
+</script>
+</body>
+</html>

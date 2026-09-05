@@ -1,0 +1,1943 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <!-- medeos-seo -->
+    <meta name="description" content="La découverte de la biologie cellulaire en première année de santé : cellule, membrane, ADN, mitochondries, cycle cellulaire, communication. Voir la cellule comme une cité, pas une liste d'organites.">
+    <link rel="canonical" href="https://medeos-sante.fr/ressources/panorama-p1/biologie.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Medeos">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Biologie cellulaire en P1 (PASS / LAS) — le panorama Medeos">
+    <meta property="og:description" content="La découverte de la biologie cellulaire en première année de santé : cellule, membrane, ADN, mitochondries, cycle cellulaire, communication. Voir la cellule comme une cité, pas une liste d'organites.">
+    <meta property="og:url" content="https://medeos-sante.fr/ressources/panorama-p1/biologie.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biologie cellulaire en P1 (PASS / LAS) — le panorama Medeos</title>
+    <style>
+        /* ========== RESET & BASE ========== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 10.5pt;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #f6f8fb;
+            padding: 30px;
+            max-width: 210mm;
+            margin: 0 auto;
+        }
+
+        /* ========== CONTENEUR PRINCIPAL ========== */
+        .page-container { position: relative; background: transparent; padding: 0; }
+
+        /* ========== FILIGRANE MEDEOS ========== */
+        .page-container::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: none;
+            background-repeat: repeat;
+            pointer-events: none;
+            user-select: none;
+            z-index: 0;
+        }
+        .page-container > * { position: relative; z-index: 1; }
+
+        /* ========== HOOK HEADER ========== */
+        .hook-header {
+            background: #FAF6F0;
+            border-radius: 14px;
+            padding: 60px 50px 50px 50px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 18px rgba(76, 42, 133, 0.08);
+            border: 1px solid #efe7d8;
+        }
+        .hook-header .brand-tag {
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #6B46C1;
+            font-weight: 600;
+            opacity: 0.85;
+            margin-bottom: 22px;
+        }
+        .hook-header .course-title {
+            font-size: 40px;
+            line-height: 1.05;
+            font-weight: 800;
+            color: #4C2A85;
+            letter-spacing: -1px;
+            margin: 0 0 6px 0;
+        }
+        .hook-header .course-subtitle {
+            font-size: 16px;
+            line-height: 1.4;
+            font-weight: 500;
+            color: #6b6275;
+            margin: 0 0 32px 0;
+        }
+        .hook-header .punch {
+            font-size: 34px;
+            line-height: 1.15;
+            font-weight: 800;
+            color: #1A1A2E;
+            letter-spacing: -0.8px;
+            margin: 0;
+        }
+        .hook-header .punch span.accent { color: #6B46C1; }
+        .hook-header .punch + .punch { margin-top: 11px; }
+        .hook-header .tilt {
+            font-size: 20px;
+            line-height: 1.45;
+            font-weight: 500;
+            color: #1F1F23;
+            margin-top: 34px;
+            max-width: 720px;
+        }
+        .hook-header .lucas-block {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #4C2A85;
+            margin-top: 30px;
+            padding: 22px 26px;
+            background: rgba(107, 70, 193, 0.06);
+            border-left: 4px solid #6B46C1;
+            border-radius: 0 10px 10px 0;
+            max-width: 720px;
+        }
+        .hook-header .lucas-block strong { color: #4C2A85; }
+        .hook-header .separator {
+            margin-top: 44px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #c9b8e6, transparent);
+        }
+
+        /* ========== ENCADRÉ INTRODUCTION ========== */
+        .intro-section {
+            background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+            border-left: 5px solid #6B46C1;
+            padding: 28px 32px;
+            margin: 40px 0;
+            border-radius: 0 12px 12px 0;
+            box-shadow: 0 2px 10px rgba(107, 70, 193, 0.1);
+        }
+        .intro-section p { margin-bottom: 14px; }
+        .intro-section .loop-meta {
+            background: #fff;
+            border: 2px dashed #6B46C1;
+            border-radius: 10px;
+            padding: 18px 22px;
+            margin: 18px 0;
+            font-weight: 500;
+            color: #4C2A85;
+        }
+
+        /* ========== TITRES ========== */
+        h2 {
+            font-size: 18pt;
+            font-weight: 800;
+            color: #1A1A2E;
+            margin: 55px 0 22px 0;
+            padding-bottom: 12px;
+            border-bottom: 3px solid #6B46C1;
+            scroll-margin-top: 20px;
+            letter-spacing: -0.3px;
+        }
+        h2 .h2-counter {
+            display: inline-block;
+            font-size: 11pt;
+            font-weight: 600;
+            color: #6B46C1;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-right: 14px;
+            opacity: 0.9;
+        }
+        h3 {
+            font-size: 13pt;
+            font-weight: 700;
+            color: #34495e;
+            margin: 32px 0 16px 0;
+            padding-left: 16px;
+            border-left: 4px solid #6B46C1;
+        }
+        h4 {
+            font-size: 11.5pt;
+            font-weight: 600;
+            color: #6B46C1;
+            margin: 24px 0 12px 0;
+        }
+
+        /* ========== PARAGRAPHES ========== */
+        p {
+            text-align: left;
+            margin-bottom: 15px;
+            line-height: 1.85;
+            color: #2c3e50;
+        }
+        p.punchline {
+            font-size: 13pt;
+            font-weight: 600;
+            color: #1A1A2E;
+            margin: 22px 0;
+            line-height: 1.5;
+        }
+        p.cliffhanger {
+            font-size: 12pt;
+            font-weight: 600;
+            color: #4C2A85;
+            margin: 35px 0 10px 0;
+            padding: 18px 22px;
+            background: linear-gradient(90deg, rgba(107,70,193,0.08), transparent);
+            border-radius: 8px;
+            line-height: 1.5;
+        }
+        strong { font-weight: 700; color: #4C2A85; }
+        em.hl {
+            background: linear-gradient(180deg, transparent 60%, #FCD34D 60%);
+            font-style: normal;
+            padding: 0 2px;
+        }
+
+        /* ========== LISTES ========== */
+        ul, ol { margin: 18px 0 18px 35px; line-height: 1.85; }
+        li { margin-bottom: 10px; color: #34495e; }
+        ul li {
+            list-style-type: none;
+            position: relative;
+            padding-left: 26px;
+        }
+        ul li:before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #6B46C1;
+            font-weight: bold;
+            font-size: 13pt;
+        }
+
+        /* ========== ENCADRÉS ========== */
+        .key-concept {
+            background: linear-gradient(135deg, #eceff1 0%, #cfd8dc 100%);
+            border-left: 6px solid #546e7a;
+            padding: 20px 26px;
+            margin: 26px 0;
+            border-radius: 8px;
+            box-shadow: 0 3px 12px rgba(84, 110, 122, 0.18);
+        }
+        .pass-tip {
+            background: linear-gradient(135deg, #fffbea 0%, #fff4cc 100%);
+            border-left: 6px solid #f9a825;
+            padding: 20px 26px;
+            margin: 26px 0;
+            border-radius: 8px;
+            box-shadow: 0 3px 12px rgba(249, 168, 37, 0.22);
+        }
+        .clinical-box {
+            background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+            border-left: 6px solid #e53935;
+            padding: 20px 26px;
+            margin: 26px 0;
+            border-radius: 8px;
+            box-shadow: 0 3px 12px rgba(229, 57, 53, 0.22);
+        }
+        .clinical-box::before {
+            content: "Vu en stage";
+            display: block;
+            font-weight: 700;
+            font-size: 10.5pt;
+            color: #c62828;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .stakes-box {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            border-left: 6px solid #E29C5C;
+            padding: 18px 24px;
+            margin: 24px 0;
+            border-radius: 8px;
+            box-shadow: 0 3px 12px rgba(226, 156, 92, 0.20);
+        }
+        .stakes-box::before {
+            content: "Ce que tu gagnes / ce que tu perds";
+            display: block;
+            font-weight: 700;
+            font-size: 10.5pt;
+            color: #B8650A;
+            margin-bottom: 10px;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+        }
+        .lucas-anecdote {
+            background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+            border-left: 6px solid #4C2A85;
+            padding: 24px 28px;
+            margin: 32px 0;
+            border-radius: 10px;
+            box-shadow: 0 3px 14px rgba(76, 42, 133, 0.18);
+            font-size: 11pt;
+            line-height: 1.75;
+        }
+        .lucas-anecdote::before {
+            content: "Vécu";
+            display: block;
+            font-weight: 700;
+            font-size: 10.5pt;
+            color: #4C2A85;
+            margin-bottom: 12px;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+        .lucas-anecdote em { color: #4C2A85; font-style: italic; }
+        .quick-q {
+            background: linear-gradient(135deg, #4C2A85 0%, #3a2068 100%);
+            color: #F3EEFB;
+            padding: 20px 26px;
+            margin: 24px 0;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 12pt;
+            line-height: 1.55;
+            box-shadow: 0 3px 12px rgba(76, 42, 133, 0.22);
+        }
+        .quick-q .ans {
+            display: block;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid rgba(255, 255, 255, 0.18);
+            color: #EFE7FB;
+            font-weight: 500;
+            font-size: 11pt;
+            line-height: 1.6;
+        }
+        .quick-q .ans strong { color: #FCD34D; }
+
+        /* ========== SCHÉMA BOX ========== */
+        .schema-box {
+            background: #ffffff;
+            border: 2px solid #6B46C1;
+            padding: 15px;
+            margin: 28px auto;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(107, 70, 193, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        /* Mention du fichier image à générer/placer (visible pour Lucas) */
+        .schema-box .file-target {
+            display: block;
+            margin-top: 10px;
+            padding: 8px 12px;
+            background: #e8f5e9;
+            border: 1px solid #a5d6a7;
+            border-radius: 6px;
+            font-family: 'SFMono-Regular', Consolas, monospace;
+            font-size: 9.5pt;
+            color: #1b5e20;
+            text-align: left;
+            line-height: 1.5;
+        }
+        .schema-box .file-target strong { color: #2e7d32; }
+        .schema-box .image-placeholder {
+            background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+            border: 2px dashed #6B46C1;
+            border-radius: 8px;
+            padding: 50px 20px;
+            color: #4C2A85;
+            font-weight: 600;
+            font-size: 11pt;
+        }
+        .schema-box .caption {
+            font-size: 9pt;
+            color: #546e7a;
+            margin-top: 12px;
+            text-align: center;
+            font-weight: 500;
+        }
+        .schema-box .caption strong { color: #6B46C1; }
+
+        /* Prompt de génération — VISIBLE pour Lucas */
+        .schema-box .generation-prompt {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            border: 2px dashed #ff9800;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 14px;
+            text-align: left;
+            font-size: 9pt;
+            color: #e65100;
+            line-height: 1.6;
+            display: block;
+        }
+        .schema-box .generation-prompt strong {
+            color: #bf360c;
+            display: block;
+            margin-bottom: 10px;
+            font-size: 10pt;
+            background: #ffcc80;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .schema-box .copy-prompt-btn {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 6px 12px;
+            background: #ff9800;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 9pt;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .schema-box .copy-prompt-btn:hover { background: #f57c00; }
+        /* Prompts/boutons de génération masqués par défaut (image présente).
+           Ré-affichés UNIQUEMENT quand l'image manque (box en .img-missing) →
+           Lucas voit alors le prompt pour générer le schéma facilement. */
+        .schema-box .generation-prompt,
+        .schema-box .copy-prompt-btn { display: none; }
+        .schema-box.img-missing .generation-prompt { display: block; }
+        .schema-box.img-missing .copy-prompt-btn { display: inline-block; }
+
+        /* ========== ENCART CHIFFRE ISOLÉ ========== */
+        .quick-stat {
+            background: #FAF6F0;
+            border: 1px solid #efe7d8;
+            border-left: 5px solid #6B46C1;
+            border-radius: 10px;
+            padding: 32px 36px;
+            margin: 34px 0;
+            text-align: left;
+            box-shadow: 0 2px 12px rgba(107, 70, 193, 0.08);
+        }
+        .quick-stat .quick-stat-figure {
+            font-size: 36pt;
+            font-weight: 800;
+            color: #6B46C1;
+            letter-spacing: -1.5px;
+            line-height: 1;
+            margin-bottom: 14px;
+        }
+        .quick-stat .quick-stat-label {
+            font-size: 12pt;
+            color: #1F1F23;
+            line-height: 1.5;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        .quick-stat .quick-stat-context {
+            font-size: 10.5pt;
+            color: #6b6b78;
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        /* ========== COMPARAISONS CHOQUANTES ========== */
+        .stat-shock {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 28px 0;
+        }
+        .stat-shock .cell {
+            background: #fff;
+            border: 1px solid #ede9fe;
+            border-radius: 10px;
+            padding: 20px 22px;
+            box-shadow: 0 2px 8px rgba(107, 70, 193, 0.07);
+        }
+        .stat-shock .num {
+            font-size: 22pt;
+            font-weight: 800;
+            color: #6B46C1;
+            letter-spacing: -1px;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        .stat-shock .label {
+            font-size: 10.5pt;
+            color: #34495e;
+            line-height: 1.5;
+        }
+
+        /* ========== RÉCAP PÉDAGOGIQUE (à retenir / anecdote) ========== */
+        .recap-pedagogique {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 16px;
+            margin: 36px 0 28px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e6dfd1;
+            box-shadow: 0 3px 12px rgba(76, 42, 133, 0.07);
+        }
+        .recap-pedagogique .recap-tronc,
+        .recap-pedagogique .recap-anecdote {
+            padding: 22px 24px;
+            font-size: 11pt;
+            line-height: 1.65;
+        }
+        .recap-pedagogique .recap-tronc {
+            background: #FAF6F0;
+            border-right: 1px dashed #d9cdb5;
+        }
+        .recap-pedagogique .recap-anecdote {
+            background: #f4f4f6;
+        }
+        .recap-pedagogique strong {
+            display: block;
+            font-size: 10pt;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            color: #4C2A85;
+        }
+        .recap-pedagogique .recap-anecdote strong {
+            color: #6b6b78;
+        }
+        .recap-pedagogique ul {
+            margin: 0 0 0 22px;
+            padding: 0;
+        }
+        .recap-pedagogique li {
+            margin-bottom: 7px;
+            font-size: 10.5pt;
+            line-height: 1.55;
+            color: #2c3e50;
+        }
+        .recap-pedagogique .recap-anecdote li {
+            color: #4a4a55;
+        }
+        .recap-pedagogique ul li:before {
+            color: #6B46C1;
+            font-size: 12pt;
+        }
+        .recap-pedagogique .recap-anecdote ul li:before {
+            color: #B8895A;
+        }
+        @media (max-width: 720px) {
+            .recap-pedagogique { grid-template-columns: 1fr; }
+            .recap-pedagogique .recap-tronc { border-right: none; border-bottom: 1px dashed #d9cdb5; }
+        }
+
+        /* ========== ANCRAGE SENSORIEL ========== */
+        .anchor-sensory {
+            background: #fdfaf3;
+            border: 1px solid #efe7d8;
+            border-left: 4px solid #B8895A;
+            padding: 20px 26px;
+            margin: 30px 0;
+            border-radius: 0 10px 10px 0;
+            font-size: 11pt;
+            line-height: 1.7;
+            color: #2c3e50;
+        }
+        .anchor-sensory::before {
+            content: "Pose ton corps";
+            display: block;
+            font-weight: 700;
+            font-size: 10pt;
+            color: #B8650A;
+            margin-bottom: 10px;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+        .anchor-sensory em { color: #4C2A85; font-style: italic; }
+
+        /* ========== FOOTER ========== */
+        .chapter-footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 28px;
+            border-top: 1px solid #e0e0e0;
+            color: #78909c;
+            font-size: 9.5pt;
+        }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .page-container::before { display: none; }
+        }
+
+        /* ========== LECTURE MOBILE (téléphone) ========== */
+        @media (max-width: 600px) {
+            body { padding: 14px; font-size: 11pt; }
+            .hook-header { padding: 26px 18px 22px 18px; border-radius: 12px; }
+            .hook-header .course-title { font-size: 27px; }
+            .hook-header .course-subtitle { font-size: 14px; margin-bottom: 22px; }
+            .hook-header .punch { font-size: 22px; }
+            .hook-header .tilt { font-size: 15px; margin-top: 22px; }
+            h2 { font-size: 15pt; }
+            h2 .h2-counter { font-size: 9pt; margin-right: 8px; }
+            h3 { font-size: 12pt; }
+            .intro-section,
+            .key-concept, .pass-tip, .clinical-box, .stakes-box,
+            .lucas-anecdote, .quick-q, .quick-stat { padding-left: 16px; padding-right: 16px; }
+            /* Toutes les grilles passent en 1 colonne sur téléphone */
+            .stat-shock,
+            .axes-schemas,
+            .os-3-colonnes,
+            .recap-pedagogique { grid-template-columns: 1fr !important; }
+            .quick-stat .quick-stat-figure { font-size: 26pt; }
+            /* Les schémas à largeur fixe (px) deviennent fluides */
+            .schema-box { max-width: 100% !important; }
+            .schema-box img, .axes-schemas .schema-box .img-frame img,
+            .os-3-colonnes .os-schema .img-frame img { max-width: 100%; height: auto; }
+            ul, ol { margin-left: 22px; }
+            /* Texte justifié sur mobile (lignes alignées des 2 côtés, rendu propre) */
+            p, li { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+            p.punchline, p.cliffhanger, .quick-stat-figure, .stat-shock .num,
+            .caption, .mini-qcm-enonce, h1, h2, h3 { text-align: left; hyphens: none; }
+            /* Filigranes plus visibles sur mobile (fond du cours + schémas) */
+            .page-container::before {
+                background-image: none;
+            }
+            .schema-box::before { color: rgba(107,70,193,0.07); font-size: 11px; letter-spacing: 1px; max-width: 90%; overflow: hidden; }
+            .schema-box::after { color: rgba(120,120,120,0.10); }
+        }
+
+        /* Filigrane medeos-sante.fr sur schémas — UN SEUL, centré au vrai milieu. */
+        .schema-box::before {
+            content: 'medeos-sante.fr';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Inter', Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: rgba(120,120,120,0.05);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            pointer-events: none;
+            user-select: none;
+            z-index: 5;
+            white-space: nowrap;
+            max-width: 92%;
+            overflow: hidden;
+        }
+        /* Image réelle dans une schema-box */
+        .schema-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto;
+            cursor: zoom-in;
+        }
+        /* Petit filigrane discret EN BAS À DROITE des schémas */
+        .schema-box::after {
+            content: 'medeos-sante.fr';
+            position: absolute;
+            bottom: 8px; right: 12px;
+            font-family: 'Inter', Arial, sans-serif;
+            font-size: 9px;
+            font-weight: 600;
+            color: rgba(120,120,120,0.10);
+            letter-spacing: 0.5px;
+            pointer-events: none;
+            user-select: none;
+            z-index: 6;
+            white-space: nowrap;
+        }
+        /* États du mini-QCM après réponse : bonne réponse en vert, choix erroné en rouge. */
+        .mini-qcm-choix.answered li { cursor: default; }
+        .mini-qcm-choix.answered li:hover { background: #faf8f4; border-left-color: transparent; }
+        .mini-qcm-choix.answered li.is-correct,
+        .mini-qcm-choix.answered li.is-correct:hover {
+            background: #e4f3ea; border-left-color: #2e9d5f; font-weight: 600;
+        }
+        .mini-qcm-choix.answered li.is-correct::after { content: " ✓"; color: #2e9d5f; font-weight: 700; }
+        .mini-qcm-choix.answered li.is-wrong,
+        .mini-qcm-choix.answered li.is-wrong:hover {
+            background: #fbe9e7; border-left-color: #d9534f;
+        }
+        .mini-qcm-choix.answered li.is-wrong::after { content: " ✗"; color: #d9534f; font-weight: 700; }
+
+        /* ========== MINI-QCM FINAL ========== */
+        .mini-qcm {
+            background: linear-gradient(135deg, #FAF6F0 0%, #f5efe5 100%);
+            border-left: 4px solid #6B46C1;
+            border-radius: 12px;
+            padding: 32px 28px;
+            margin: 48px 0 32px;
+        }
+        .mini-qcm h2 {
+            color: #4C2A85;
+            font-size: 18pt;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        .mini-qcm-intro {
+            color: #6b6b80;
+            font-size: 10.5pt;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+        .mini-qcm-question {
+            background: white;
+            padding: 20px 24px;
+            border-radius: 10px;
+            margin-bottom: 16px;
+            box-shadow: 0 1px 4px rgba(76, 42, 133, 0.08);
+        }
+        .mini-qcm-num {
+            color: #6B46C1;
+            font-size: 9.5pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
+        }
+        .mini-qcm-enonce {
+            font-size: 11.5pt;
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-bottom: 14px;
+            line-height: 1.5;
+        }
+        .mini-qcm-choix {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 14px 0;
+        }
+        .mini-qcm-choix li {
+            padding: 8px 14px;
+            margin-bottom: 6px;
+            border-radius: 6px;
+            background: #faf8f4;
+            font-size: 10.5pt;
+            border-left: 3px solid transparent;
+            transition: background 0.2s;
+        }
+        .mini-qcm-choix li:hover {
+            background: #f4eef9;
+            border-left-color: #6B46C1;
+            cursor: pointer;
+        }
+        .mini-qcm-correction {
+            margin-top: 12px;
+            padding: 12px 16px;
+            background: #f4eef9;
+            border-radius: 6px;
+            font-size: 10pt;
+            line-height: 1.6;
+        }
+        .mini-qcm-correction summary {
+            cursor: pointer;
+            color: #6B46C1;
+            font-weight: 600;
+            font-size: 10pt;
+            user-select: none;
+            padding: 2px 0;
+        }
+        .mini-qcm-correction summary:hover {
+            color: #4C2A85;
+        }
+        .mini-qcm-correction[open] summary {
+            margin-bottom: 8px;
+            border-bottom: 1px solid #e5d7ef;
+            padding-bottom: 6px;
+        }
+        .mini-qcm-correction p {
+            margin: 6px 0;
+            color: #2d2d3d;
+        }
+        .mini-qcm-source {
+            color: #8585a3;
+            font-size: 9.5pt;
+            margin-top: 8px !important;
+        }
+        .mini-qcm-conclusion {
+            margin-top: 20px;
+            padding: 14px 20px;
+            background: rgba(107, 70, 193, 0.08);
+            border-radius: 8px;
+            color: #4C2A85;
+            font-size: 10.5pt;
+            line-height: 1.6;
+            text-align: center;
+        }
+        /* ============ LECTURE PROGRESSIVE (révélation par paliers) ============ */
+        .step-locked { display: none !important; }
+        .step-reveal { animation: stepIn .55s cubic-bezier(.16,.84,.44,1) both; }
+        @keyframes stepIn {
+            from { opacity: 0; transform: translateY(14px); }
+            to   { opacity: 1; transform: none; }
+        }
+        .continue-wrap {
+            display: flex; flex-direction: column; align-items: center;
+            gap: 10px; margin: 34px auto 14px; text-align: center;
+        }
+        .continue-hint { font-size: 13.5px; color: #6b6275; }
+        .btn-continue {
+            display: inline-flex; align-items: center; gap: 9px;
+            font-family: inherit; font-size: 16px; font-weight: 600;
+            color: #fff; cursor: pointer;
+            padding: 13px 26px; border: none; border-radius: 999px;
+            background: linear-gradient(150deg, #4C2A85, #6B46C1 75%);
+            box-shadow: 0 10px 26px rgba(76,42,133,.26);
+            transition: transform .18s ease, box-shadow .18s ease, opacity .3s ease;
+        }
+        .btn-continue:hover { transform: translateY(-1px); box-shadow: 0 14px 32px rgba(76,42,133,.34); }
+        .btn-continue:active { transform: translateY(0); }
+        .btn-continue .arrow { display: inline-block; transition: transform .2s ease; }
+        .btn-continue:hover .arrow { transform: translateY(2px); }
+        .continue-wrap.gone {
+            opacity: 0; pointer-events: none; max-height: 0; margin: 0;
+            overflow: hidden; transition: opacity .3s ease, max-height .4s ease, margin .4s ease;
+        }
+    
+        /* Phrases de conversion sous le bouton « Continuer » (04/08).
+           Bouton secondaire à contour : visible sans capter l'attention, le
+           « Continuer » reste l'action principale. Ce bloc vit HORS du holder,
+           qui disparaît au clic — la porte reste ouverte dans la page. */
+        .continue-cta { margin: 4px auto 30px; display: flex; flex-direction: column;
+                        align-items: center; gap: 9px; max-width: 620px; text-align: center; }
+        .continue-cta .cta-mot { font-size: 13.5px; line-height: 1.55; color: #6b6275; }
+        .continue-cta a { display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px;
+                          font-weight: 700; color: #6B46C1; text-decoration: none; padding: 9px 18px;
+                          border-radius: 999px; border: 1.5px solid rgba(107,70,193,.35);
+                          background: rgba(107,70,193,.05); transition: background .15s, border-color .15s; }
+        .continue-cta a:hover { background: rgba(107,70,193,.11); border-color: rgba(107,70,193,.65); }
+        .continue-cta a.sv { color: #1d4ed8; border-color: rgba(37,99,235,.35); background: rgba(37,99,235,.05); }
+        .continue-cta a.sv:hover { background: rgba(37,99,235,.11); border-color: rgba(37,99,235,.65); }
+
+        /* Les deux offres côte à côte : le lecteur choisit sa voie lui-même. */
+        .continue-cta .cta-duo { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+</style>
+<!-- medeos-jsonld -->
+    <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Biologie cellulaire en P1 (PASS / LAS) — le panorama Medeos", "description": "La découverte de la biologie cellulaire en première année de santé : cellule, membrane, ADN, mitochondries, cycle cellulaire, communication.", "url": "https://medeos-sante.fr/ressources/panorama-p1/biologie.html", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://medeos-sante.fr/ressources/panorama-p1/biologie.html"}, "inLanguage": "fr-FR", "isAccessibleForFree": true, "author": {"@id": "https://medeos-sante.fr/#lucas"}, "publisher": {"@id": "https://medeos-sante.fr/#organisation"}, "about": {"@type": "Thing", "name": "Biologie cellulaire — première année d'études de santé"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://medeos-sante.fr"}, {"@type": "ListItem", "position": 2, "name": "Réussir sa première année de médecine", "item": "https://medeos-sante.fr/reussir-premiere-annee-medecine"}, {"@type": "ListItem", "position": 3, "name": "Biologie cellulaire", "item": "https://medeos-sante.fr/ressources/panorama-p1/biologie.html"}]}]}</script>
+</head>
+<body>
+<div class="page-container">
+
+    <!-- ========================================================== -->
+    <!-- HOOK HEADER                                                -->
+    <!-- ========================================================== -->
+    <header class="hook-header">
+        <div class="brand-tag">Panorama P1</div>
+
+        <h1 class="course-title">La biologie cellulaire en P1</h1>
+        <p class="course-subtitle">Ce qui t'attend, sans jargon.</p>
+
+        <p class="punch"><span class="accent">37 000 milliards</span> de cellules.</p>
+        <p class="punch"><span class="accent">2 mètres</span> d'ADN pliés dans chacune.</p>
+        <p class="punch"><span class="accent">100 000 réactions</span> chimiques par seconde, partout en toi.</p>
+
+        <p class="tilt">Et toute une cité microscopique à comprendre en 9 mois, sans craquer.</p>
+
+        <div class="separator"></div>
+    </header>
+
+    <!-- ========================================================== -->
+    <!-- INTRODUCTION — boucle META + anecdote narrateur #1         -->
+    <!-- ========================================================== -->
+    <section class="intro-section">
+        <p class="punchline">Lève les yeux deux secondes et regarde le bout de ton doigt.</p>
+
+        <p>Sur le seul millimètre carré de peau que tu fixes, il y a <strong>plusieurs dizaines de milliers de cellules vivantes</strong>. Chacune contient deux mètres d'ADN enroulé, vingt-trois chromosomes paternels, vingt-trois chromosomes maternels, des milliers de protéines en train de bouger, et une membrane qui décide à chaque seconde qui rentre et qui sort. Pendant que tu lis cette phrase, <strong>des dizaines de millions de tes cellules viennent de se diviser</strong> (ton corps en remplace environ 20 millions chaque seconde). Et dans le même temps, ta moelle osseuse a fabriqué près de <strong>2,4 millions de globules rouges par seconde</strong> — uniquement pour ton sang.</p>
+
+        <p>Ce qui suit, c'est ta découverte de la matière. <strong>Six pièces de la cellule</strong>, six raisons d'arrêter de voir la biologie cellulaire comme une liste d'organites à recracher. À la fin, tu n'auras pas appris la P1. Tu auras appris à la <em class="hl">regarder</em>. Et c'est exactement ce qui fait la différence en biologie.</p>
+    </section>
+
+    <!-- ========================================================== -->
+    <!-- SECTION 1 — LA CELLULE : UNE MICRO-CITÉ                    -->
+    <!-- ========================================================== -->
+    <h2><span class="h2-counter">01</span> La cellule : une cité de 37 000 milliards d'habitants</h2>
+
+    <p class="punchline">Imagine une ville. 100 000 ouvriers qui travaillent en même temps. Une centrale électrique. Une poste. Une usine. Un mur d'enceinte intelligent. Tout ça dans 10 millièmes de millimètre.</p>
+
+    <p>C'est ta cellule. Pas une boule de jelly. Pas un sac de pièces détachées. <em class="hl">Une ville</em>. Et il y en a <strong>37 000 milliards</strong> dans ton corps, qui tournent en silence pendant que tu lis cette phrase. Chacune avec sa centrale, sa poste, ses ouvriers, son mur. Et toutes coordonnées, comme une fédération de 37 000 milliards de villes qui se parlent en permanence.</p>
+
+    <div class="anchor-sensory">
+        Pose ta main à plat sur ton avant-bras. La peau que tu sens sous tes doigts, c'est <strong>des centaines de millions de cellules vivantes</strong>. Maintenant pose ta langue contre ton palais : les cellules que tu touches là, elles ont <strong>quelques jours d'existence</strong>. Dans une semaine, elles seront mortes et remplacées. <em>Ton corps n'est pas un objet. C'est un flux.</em>
+    </div>
+
+    <div class="stat-shock">
+        <div class="cell">
+            <div class="num">37 000 Md</div>
+            <div class="label">de cellules dans ton corps. Mises bout à bout, elles feraient <strong>près de 9 fois le tour de la Terre</strong>.</div>
+        </div>
+        <div class="cell">
+            <div class="num">10 µm</div>
+            <div class="label">de diamètre moyen. Il en faut <strong>environ 7 côte à côte</strong> pour faire la largeur d'un cheveu. Invisibles à l'œil nu.</div>
+        </div>
+    </div>
+
+    <h3>1. Les 6 quartiers que tu dois reconnaître au premier coup d'œil</h3>
+
+    <p>Quand un prof projette une cellule au microscope, le débutant voit du brouillard. L'étudiant qui a compris voit <strong>six quartiers</strong>. Toujours les mêmes. Dans toutes les cellules eucaryotes de ton corps.</p>
+
+    <div class="key-concept">
+        <p><strong>Les 6 quartiers de la cellule eucaryote</strong></p>
+        <ul>
+            <li><strong>Le mur d'enceinte</strong> — la membrane plasmique, qui décide qui rentre et qui sort.</li>
+            <li><strong>La mairie</strong> — le noyau, qui contient les plans (l'ADN) et donne les ordres.</li>
+            <li><strong>L'usine</strong> — le réticulum endoplasmique, qui assemble les protéines.</li>
+            <li><strong>La poste</strong> — l'appareil de Golgi, qui emballe, étiquette et expédie.</li>
+            <li><strong>La centrale</strong> — les mitochondries, qui produisent l'énergie.</li>
+            <li><strong>La déchèterie</strong> — les lysosomes, qui recyclent les vieux composants.</li>
+        </ul>
+        <p>Tu retiens ces six mots. Tu peux lire n'importe quel schéma de cellule dans n'importe quel cours de P1. Tu viens de gagner deux chapitres.</p>
+    </div>
+
+    <div class="quick-q">
+        Devine. Combien de mitochondries y a-t-il dans une cellule de ton cœur ?
+        <span class="ans">→ Entre <strong>5000 et 8000</strong> par cellule. Soit environ <strong>40 % du volume</strong> de chaque cellule cardiaque. Ton cœur, c'est littéralement un mur de centrales électriques qui bat.</span>
+    </div>
+
+    <p>Et il y a une chose folle. Cette ville-là, tu ne l'as pas construite. Elle s'est construite toute seule, à partir d'<strong>une seule cellule</strong> — la cellule-œuf, fusion d'un spermatozoïde et d'un ovocyte — qui s'est divisée, puis encore, puis encore. Au bout de neuf mois, 37 000 milliards. Sans plan central. Sans architecte. Juste de l'ADN qui lit ses propres instructions.</p>
+
+    <div class="schema-box" style="max-width: 290px; margin: 28px auto;">
+        <img src="https://medeos-sante.fr/images/biologie/pano_bio_cellule_eucaryote.png"
+             alt="La cellule eucaryote : membrane, noyau, réticulum endoplasmique, Golgi, mitochondries, lysosomes"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir">
+        <p class="caption"><strong>La cellule eucaryote</strong> — 6 quartiers, 6 fonctions. La carte mentale de toute la biologie cellulaire.</p>
+    </div>
+
+    <div class="stakes-box">
+        <p>Si tu maîtrises ces 6 quartiers avant septembre, tu lis n'importe quel schéma de cellule en 10 secondes. Si tu ne les as pas, tu perds 2 minutes par schéma à te demander « bon, c'est quoi ce truc en spaghetti ». Multiplié par 800 schémas dans l'année. Fais le calcul.</p>
+    </div>
+
+    <h3>2. Procaryote vs eucaryote : la fracture qui change tout</h3>
+
+    <p>Avant que tu existes, il y a 3,5 milliards d'années, le seul truc vivant sur Terre c'était des <strong>bactéries</strong>. Des cellules sans noyau. Sans organites. Une bulle de cytoplasme et un brin d'ADN qui flotte dedans. On appelle ça des <strong>procaryotes</strong>. « Pro » = avant, « caryote » = noyau.</p>
+
+    <p>Et puis un jour, il y a 2 milliards d'années, une bactérie a avalé une autre bactérie. Au lieu de la digérer, elle l'a gardée. Et la bactérie avalée est devenue la <em class="hl">mitochondrie</em>. Cette fusion a donné naissance aux cellules <strong>eucaryotes</strong> — celles avec un vrai noyau. Toutes tes cellules. Toutes celles des plantes, des animaux, des champignons. Tu n'es pas une fusion de tes parents. <em class="hl">Tu es une fusion de deux bactéries</em>, vieille de 2 milliards d'années.</p>
+
+    <p>Trois mots à retenir pour ne plus jamais confondre les deux mondes. Chez la bactérie (procaryote), l'ADN flotte dans une zone qu'on appelle le <strong>nucléoïde</strong> — pas de membrane autour. Chez toi (eucaryote), l'ADN est enfermé dans une vraie boîte avec une <strong>enveloppe nucléaire</strong>. Et les usines à protéines (les <strong>ribosomes</strong>) n'ont pas la même taille : <em>70S</em> chez la bactérie, <em>80S</em> chez toi. Cette différence de un chiffre, c'est ce qui permet à un antibiotique de tuer la bactérie sans tuer tes cellules. Une lettre change, une vie tient.</p>
+
+    <div class="schema-box" style="max-width: 560px; margin: 28px auto;">
+        <img src="https://medeos-sante.fr/images/biologie/pano_bio_procaryote_eucaryote.png"
+             alt="Cellule procaryote vs eucaryote : nucléoïde sans membrane vs noyau enveloppé"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir"
+             onerror="schemaMissing(this)">
+        <div class="file-target" style="display:none;">📁 <strong>pano_bio_procaryote_eucaryote.png</strong><br>à placer dans : <strong>/public/images/biologie/</strong><br><span style="color:#555;font-weight:400;">Schéma comparatif : à gauche une cellule procaryote (bactérie, ADN libre dans le nucléoïde, ribosomes 70S, pas d'organites) ; à droite une cellule eucaryote (noyau enveloppé, ribosomes 80S, organites). Côte à côte, même échelle relative, palette Medeos.</span></div>
+        <p class="caption"><strong>Procaryote vs eucaryote</strong> — à gauche, l'ADN libre dans le nucléoïde ; à droite, l'ADN enfermé dans un vrai noyau.</p>
+        <div class="generation-prompt">
+            <strong>Prompt ChatGPT-image :</strong>
+Modern educational biology illustration, clean medical-textbook style, side-by-side comparison of two cells on a single landscape canvas. One central idea: a PROCARYOTE cell (left) versus an EUCARYOTE cell (right).
+
+LAYOUT: Two cells of clearly different sizes, side by side on the same baseline so the size gap is obvious. A thin vertical divider in the middle. A header label above each cell: "PROCARYOTE (bactérie)" left, "EUCARYOTE (cellule humaine)" right.
+
+LEFT — PROCARYOTE (small, simple, 4 to 6 times smaller than the right cell): 1) cell wall + plasma membrane, 2) free-floating circular DNA loosely coiled in an undefined region labeled "nucléoïde" with NO membrane around it, 3) small ribosomes scattered, labeled "ribosomes 70S", optional single flagellum. No nucleus, no organelles — keep it deliberately bare.
+
+RIGHT — EUCARYOTE (large, complex): 5) true nucleus enclosed by a nuclear envelope (double membrane with pores), DNA inside labeled "noyau (ADN enfermé)", 6) larger ribosomes labeled "ribosomes 80S", 7) a few organelles: one mitochondrion (oval with cristae), rough endoplasmic reticulum (folded sheets), Golgi apparatus (stacked discs), 8) plasma membrane.
+
+COLOR CODE (Medeos palette): membranes in deep purple (#6B46C1), DNA in indigo (#4C2A85), ribosomes in luminous yellow (#FCD34D), mitochondria and ER in honey wood / terracotta (#B8895A, #C2410C), background clean cream (#FAF6F0).
+
+Numbered legend 1 to 8 along the bottom, numbers in small colored circles. Labels in French. Sans-serif font (Inter/Helvetica), ~14pt semi-bold, dark anthracite (#1F1F23). No overlapping labels.
+
+Style: scientific editorial illustration, publication quality, thin clean lines, soft subtle shadows, realistic organic shapes. The size contrast between the two cells MUST be immediately visible.
+
+Avoid: cartoon/anime style, doodles, glowing or neon effects, watermarks, emoji, clutter, cursive text, both cells drawn the same size, overlapping labels.
+
+Aspect ratio: landscape, roughly 3:2.
+        </div>
+        <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+    </div>
+
+    <div class="quick-stat">
+        <div class="quick-stat-figure">×1000</div>
+        <div class="quick-stat-label">Volume d'une cellule eucaryote par rapport à une cellule bactérienne.</div>
+        <div class="quick-stat-context">Une bactérie = 1 à 2 micromètres. Une cellule humaine = 10 à 30. Mille fois plus de volume, mille fois plus d'organites, mille fois plus de complexité.</div>
+    </div>
+
+    <div class="recap-pedagogique">
+        <div class="recap-tronc">
+            <strong>À retenir pour la P1</strong>
+            <ul>
+                <li>6 quartiers à reconnaître : membrane plasmique, noyau, réticulum endoplasmique, appareil de Golgi, mitochondries, lysosomes. Le socle de tous les schémas de cellule.</li>
+                <li>Procaryote vs eucaryote : pas de noyau (nucléoïde) vs noyau enveloppé. Ribosomes 70S vs 80S.</li>
+                <li>Endosymbiose : la mitochondrie vient d'une bactérie avalée il y a 2 milliards d'années. Preuve = double membrane + ADN propre.</li>
+                <li>Taille moyenne d'une cellule humaine : 10 à 30 µm. 1000 fois le volume d'une bactérie.</li>
+            </ul>
+        </div>
+        <div class="recap-anecdote">
+            <strong>Anecdotique mais marquant</strong>
+            <ul>
+                <li>37 000 milliards de cellules alignées = 4 fois le tour de la Terre.</li>
+                <li>5000 à 8000 mitochondries dans une cellule cardiaque — 40 % de son volume.</li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="cliffhanger">Tu as la carte de la cité. Maintenant on entre dans le mur d'enceinte. Et là, tu vas comprendre ce qui fait fonctionner ton corps tout entier. ↓</p>
+
+    <!-- ========================================================== -->
+    <!-- SECTION 2 — LA MEMBRANE : LE MUR INTELLIGENT               -->
+    <!-- ========================================================== -->
+    <h2><span class="h2-counter">02</span> La membrane plasmique : le mur qui décide qui rentre</h2>
+
+    <p class="punchline">Imagine une frontière. 7 nanomètres d'épaisseur. Et qui décide, molécule par molécule, qui passe et qui reste dehors. Tu en as une autour de chacune de tes 37 000 milliards de cellules.</p>
+
+    <p>La membrane plasmique, c'est le mur d'enceinte de la cellule. Mais ce n'est pas un mur en béton. C'est un <strong>mur fluide</strong>. Composé de molécules qui ont <em class="hl">une tête qui aime l'eau</em> et <em class="hl">une queue qui la déteste</em>. Ces molécules, on les appelle des <strong>phospholipides</strong>. Et elles s'organisent toutes seules en une double couche : les têtes vers l'extérieur (où il y a de l'eau), les queues collées à l'intérieur (à l'abri de l'eau). C'est ça, une <strong>bicouche lipidique</strong>.</p>
+
+    <div class="stat-shock">
+        <div class="cell">
+            <div class="num">7 nm</div>
+            <div class="label">d'épaisseur. <strong>10 000 fois plus fin qu'un cheveu</strong>. Et pourtant infranchissable pour la plupart des molécules.</div>
+        </div>
+        <div class="cell">
+            <div class="num">50 %</div>
+            <div class="label">de la membrane = protéines. Des portes, des serrures, des capteurs, des pompes. Le mur est aussi un standard téléphonique.</div>
+        </div>
+    </div>
+
+    <h3>1. La mosaïque fluide</h3>
+
+    <p>Le modèle qu'on t'apprendra s'appelle la <strong>mosaïque fluide de Singer et Nicolson</strong>. Trois mots qui résument tout :</p>
+
+    <ul>
+        <li><strong>Mosaïque</strong> — la membrane est faite d'éléments différents : phospholipides, cholestérol, protéines, sucres. Comme une mosaïque, pas un mur uniforme.</li>
+        <li><strong>Fluide</strong> — les molécules bougent dans le plan de la membrane, comme des bateaux qui dérivent à la surface d'un lac. Une protéine peut se déplacer de plusieurs micromètres en quelques secondes.</li>
+        <li><strong>Asymétrique</strong> — la face externe et la face interne n'ont pas la même composition. Ce sont deux faces très différentes du même mur.</li>
+    </ul>
+
+    <p>Cette fluidité change tout. Elle permet aux protéines de se regrouper quand il faut, de se séparer quand il faut. Elle permet à la cellule de changer de forme, de se diviser, de migrer. Une cellule rigide ne survivrait pas dix secondes.</p>
+
+    <div class="schema-box" style="max-width: 360px; margin: 28px auto;">
+        <img src="https://medeos-sante.fr/images/biologie/pano_bio_membrane_mosaique.png"
+             alt="La membrane plasmique : bicouche de phospholipides, cholestérol, protéines, sucres"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir"
+             onerror="schemaMissing(this)">
+        <div class="file-target" style="display:none;">📁 <strong>pano_bio_membrane_mosaique.png</strong><br>à placer dans : <strong>/public/images/biologie/</strong></div>
+        <p class="caption"><strong>La mosaïque fluide</strong> — bicouche de phospholipides, cholestérol intercalé, protéines transmembranaires, sucres en surface.</p>
+        <div class="generation-prompt">
+            <strong>Prompt ChatGPT-image :</strong>
+Format: A4 portrait (210×297mm), aspect ratio 1:1.414, high resolution 8K, render quality: ultra-detailed, suitable for medical textbook publication.
+
+Modern educational illustration of the plasma membrane in cross-section, fluid mosaic model. Show a horizontal bilayer of phospholipids with clearly visible polar heads (small spheres) facing outward and hydrophobic fatty acid tails facing inward. Add cholesterol molecules intercalated between the tails. Embed several integral transmembrane proteins (some spanning the whole membrane, some channel-like). Add glycoproteins with sugar chains (oligosaccharides) on the extracellular face. Color code: phospholipid heads in deep purple (#6B46C1), tails in soft beige, cholesterol in honey wood (#B8895A), proteins in luminous yellow (#FCD34D), sugar chains in cream. Numbered legend 1-5 below the figure. Clean cream background (#FAF6F0). Editorial scientific illustration style, anatomically accurate, no cartoon.
+
+Style reference: scientific editorial illustration inspired by Nature journal, NEJM, or Visible Body anatomical atlas. Clean technical drawing with educational annotations.
+
+Typography: sans-serif font (Inter, Helvetica or similar) for all numbered labels and annotations. Label size approximately 14pt, semi-bold weight. Color of labels: dark anthracite (#1F1F23). Numbers in colored circles matching the element they describe.
+
+Composition: centered subject with generous margins (10% on all sides). Line weight: thin (1-2px) for fine details, medium (3-4px) for main structures. Shadows: soft, subtle (5-10% opacity). No harsh outlines.
+
+Negative prompts (avoid absolutely): no cartoon style, no anime style, no comic book aesthetics, no hand-drawn doodles, no DALL-E watermark, no Adobe Stock watermark, no Getty Images watermark, no text labels written in cursive, no childish illustration, no glowing effects, no neon colors outside specified palette, no fictional creatures, no anatomically inaccurate proportions, no overlapping labels.
+
+Final output: should look like a publication-quality figure from a peer-reviewed medical or scientific journal, ready for use in an educational textbook for first-year medical students.
+        </div>
+        <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+    </div>
+
+    <h3>2. Le tri à l'entrée</h3>
+
+    <p>Maintenant, le truc le plus important de toute la cellule. Le mur ne laisse pas tout entrer. Il <strong>trie</strong>. Et la manière dont il trie suit une règle simple :</p>
+
+    <ul>
+        <li><strong>Petites molécules grasses</strong> (oxygène, gaz carbonique, alcool) → traversent toutes seules. <em>Diffusion simple</em>. Gratuit, sans porte.</li>
+        <li><strong>Molécules chargées</strong> (sodium, potassium, calcium) → ne peuvent pas traverser la bicouche. Il leur faut une <strong>porte protéique</strong> dédiée.</li>
+        <li><strong>Grosses molécules</strong> (glucose, acides aminés) → portes protéiques aussi. Mais à sens unique, sélectives.</li>
+    </ul>
+
+    <p>Et il y a un cas particulier qui rend la cellule vivante : quand il faut faire entrer une molécule là où il y en a déjà beaucoup. Comme remonter un seau d'eau le long d'une cascade. La cellule doit <strong>dépenser de l'énergie</strong>. On parle alors de <strong>transport actif</strong>. La pompe sodium-potassium en est l'exemple roi : elle pompe 3 sodiums vers l'extérieur et 2 potassiums vers l'intérieur, contre les deux gradients, en consommant <strong>1 molécule d'ATP</strong>. Et elle fait ça en permanence, dans toutes tes cellules. Elle consomme à elle seule environ <strong>30 % de l'énergie de ton corps au repos</strong>.</p>
+
+    <div class="quick-q">
+        Tu sais combien d'ATP ton corps consomme par jour ?
+        <span class="ans">→ Environ <strong>50 à 70 kg</strong>. Tu pèses 60 kg et tu brûles ton propre poids en énergie chaque jour. Tu ne meurs pas parce que la même molécule est recyclée environ <strong>1000 fois par jour</strong>.</span>
+    </div>
+
+    <p>Et il y a une 4ᵉ porte qu'il faut nommer dès maintenant, parce qu'on en parlera partout en P1. Quand une grosse particule doit entrer — un débris, une bactérie, un nutriment trop gros pour passer par une porte protéique — la cellule fabrique une <strong>vésicule</strong> en repliant un bout de sa membrane vers l'intérieur. C'est l'<strong>endocytose</strong>. Deux variantes : la <em>phagocytose</em> (« la cellule mange » — un macrophage qui avale une bactérie), et la <em>pinocytose</em> (« la cellule boit » — une vésicule remplie de liquide). Dans l'autre sens, l'<strong>exocytose</strong> : une vésicule fusionne avec la membrane et libère son contenu dehors. C'est comme ça que tes neurones libèrent leurs neuromédiateurs.</p>
+
+    <div class="schema-box" style="max-width: 560px; margin: 28px auto;">
+        <img src="https://medeos-sante.fr/images/biologie/pano_bio_endocytose_exocytose.png"
+             alt="Endocytose (phagocytose, pinocytose) et exocytose : transport par vésicules à travers la membrane"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir"
+             onerror="schemaMissing(this)">
+        <div class="file-target" style="display:none;">📁 <strong>pano_bio_endocytose_exocytose.png</strong><br>à placer dans : <strong>/public/images/biologie/</strong></div>
+        <p class="caption"><strong>Endocytose et exocytose</strong> — la cellule avale (phagocytose, pinocytose) ou rejette (exocytose) en pliant sa membrane en vésicules.</p>
+        <div class="generation-prompt">
+            <strong>Prompt ChatGPT-image :</strong>
+Modern educational biology illustration, clean medical-textbook style, single landscape figure showing vesicular transport across the plasma membrane. One central idea: the membrane folds to bring big particles IN (endocytosis) or OUT (exocytosis).
+
+Show a curved section of plasma membrane (a phospholipid bilayer) across the middle, with the outside of the cell at the top and the inside (cytoplasm) at the bottom. Along this membrane, illustrate three processes left to right with directional arrows:
+1. PHAGOCYTOSE — the membrane wraps around a large particle (draw a small bacterium) and engulfs it into a vesicle moving inward. Label "phagocytose (la cellule mange)".
+2. PINOCYTOSE — the membrane forms a small invagination capturing droplets of extracellular liquid into a tiny vesicle moving inward. Label "pinocytose (la cellule boit)".
+3. EXOCYTOSE — an internal vesicle fuses with the membrane and releases its content to the outside. Label "exocytose (la cellule libère)".
+
+COLOR CODE (Medeos palette): membrane / phospholipid bilayer in deep purple (#6B46C1), vesicles in honey wood (#B8895A), engulfed bacterium and released content in terracotta (#C2410C), released molecules / neurotransmitters as small luminous yellow dots (#FCD34D), background clean cream (#FAF6F0). Thin directional arrows showing the direction of each movement (inward for endocytosis, outward for exocytosis).
+
+Numbered legend 1 to 3 below. Labels in French. Sans-serif font (Inter/Helvetica), ~14pt semi-bold, dark anthracite (#1F1F23). No overlapping labels.
+
+Style: scientific editorial illustration, publication quality, thin clean lines, soft subtle shadows, realistic organic shapes, generous margins.
+
+Avoid: cartoon/anime style, doodles, glowing or neon effects, watermarks, emoji, clutter, cursive text, overlapping labels, anatomically inaccurate proportions.
+
+Aspect ratio: landscape, roughly 3:2.
+        </div>
+        <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+    </div>
+
+    <h3>3. Le standard téléphonique</h3>
+
+    <p>Et puis il y a l'autre fonction du mur, celle qu'on oublie : <strong>recevoir des messages</strong>. La membrane est couverte de <strong>récepteurs</strong>. Des protéines en forme d'antenne qui dépassent vers l'extérieur. Chaque récepteur reconnaît UNE molécule précise : une hormone, un neuromédiateur, un signal de croissance. Quand la molécule se pose sur le récepteur, ça déclenche une cascade à l'intérieur de la cellule. Le mur a parlé.</p>
+
+    <p>Il y a un dernier élément à nommer, sur la face externe de la membrane : le <strong>glycocalyx</strong>. C'est un manteau de sucres accrochés aux protéines et aux lipides de la membrane. Une signature chimique unique à chaque cellule. C'est ce qui permet à ton système immunitaire de distinguer tes cellules à toi des cellules étrangères. C'est aussi ce qui définit ton <strong>groupe sanguin</strong> : A, B, AB, O — quatre versions de sucres collés à la surface de tes globules rouges. Une transfusion qui se passe mal, c'est un glycocalyx qui ne colle pas.</p>
+
+    <p>C'est comme ça que ton insuline fait entrer le sucre. Que l'adrénaline fait battre ton cœur plus fort. Que ton cerveau parle à tes 37 000 milliards de cellules en même temps. <em class="hl">Tu n'as pas un système de communication. Tu es un système de communication.</em></p>
+
+    <div class="clinical-box">
+        <p>Quand quelqu'un développe un <strong>diabète de type 2</strong>, les récepteurs à l'insuline de ses cellules deviennent sourds. L'insuline parle, les cellules n'écoutent plus. Le sucre reste dans le sang. Tout ça parce qu'un récepteur protéique, sur le mur d'enceinte, ne répond plus. Une protéine en panne et c'est la maladie de 537 millions d'adultes dans le monde.</p>
+    </div>
+
+    <p>Voilà le déclic. Avant : « la membrane est faite de phospholipides ». Après : <strong>la membrane est un mur intelligent, fluide, asymétrique, qui trie, pompe et reçoit des messages en permanence</strong>. La même phrase de cours. Mais lue différemment.</p>
+
+    <p class="punchline">Ça. C'est le déclic. Pas une technique de mémo. <em class="hl">Un changement de regard.</em></p>
+
+    <p>Le jour où tu ouvres un cours de biologie en te demandant « qu'est-ce que ça fait, là, maintenant, dans mon corps ? » plutôt que « qu'est-ce que je dois retenir ? », tout change. Tu ne recopies plus, tu comprends — et ce qui est compris ne s'oublie pas comme une liste.</p>
+
+    <div class="lucas-anecdote">
+        <em>L'exercice qui marche tient sur une feuille A4 vierge. Tu viens d'échouer un QCM blanc sur la membrane ? Au lieu de relire le cours une cinquième fois, dessine-la de mémoire, sans regarder. Les têtes polaires. Les queues. Les protéines transmembranaires. La pompe sodium-potassium avec ses flèches. Ce sera moche, les phospholipides ressembleront à des sucettes ratées — peu importe. En dessinant, tu te trompes. Et en te trompant, tu vois exactement ce que tu ne savais pas. Une feuille, un stylo, et le courage de se tromper avant le concours : c'est souvent ce qui fait passer un QCM de 5 à 15.</em>
+    </div>
+
+    <div class="recap-pedagogique">
+        <div class="recap-tronc">
+            <strong>À retenir pour la P1</strong>
+            <ul>
+                <li>Mosaïque fluide de Singer-Nicolson : bicouche de phospholipides (têtes hydrophiles dehors, queues hydrophobes dedans) + cholestérol + protéines + glycocalyx.</li>
+                <li>3 modes de passage : diffusion simple (petits gras), transport facilité (canaux), transport actif (pompes avec ATP).</li>
+                <li>Pompe Na⁺/K⁺ ATPase : 3 Na⁺ dehors, 2 K⁺ dedans, 1 ATP consommé. À elle seule = 30 % de l'énergie au repos.</li>
+                <li>Endocytose (phagocytose, pinocytose) vs exocytose : transport par vésicules pour grosses molécules.</li>
+                <li>Récepteurs membranaires = standard téléphonique. Diabète type 2 = récepteurs à l'insuline devenus sourds.</li>
+            </ul>
+        </div>
+        <div class="recap-anecdote">
+            <strong>Anecdotique mais marquant</strong>
+            <ul>
+                <li>7 nm d'épaisseur. 10 000 fois plus fin qu'un cheveu.</li>
+                <li>50-70 kg d'ATP brûlés et recyclés par jour — ton propre poids en énergie.</li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="cliffhanger">Mais le mur ne sert à rien si à l'intérieur, il n'y a pas le plan de toute la cité. Et ce plan, il tient sur <strong>2 mètres d'ADN</strong> pliés dans un sac de 5 micromètres. ↓</p>
+
+    <!-- ========================================================== -->
+    <!-- SECTION 3 — L'ADN : LE CODE SOURCE                         -->
+    <!-- ========================================================== -->
+    <h2><span class="h2-counter">03</span> L'ADN : le code source à 3 milliards de paires recopié en 6 heures</h2>
+
+    <p class="punchline">Si tu tapais les lettres de ton ADN à 60 mots par minute, 8 heures par jour, sans pause, il te faudrait <strong>50 ans</strong> pour finir. Ta cellule, elle, en copie une copie complète <em class="hl">en 6 heures</em>. Sans faute. Ou presque.</p>
+
+    <p>Ton ADN est écrit avec un alphabet de quatre lettres seulement : A, T, G, C. On les appelle des <em>bases</em>, et elles vont toujours par deux — chaque « barreau » de l'ADN est une <strong>paire de bases</strong> (on verra juste après pourquoi). Au total, ton ADN compte <strong>3 milliards de paires de bases</strong>. Ces lettres sont organisées en mots (les codons, 3 lettres) et en phrases (les gènes, quelques milliers de lettres). Tu as environ <strong>20 000 gènes</strong>. Et tout ça tient dans un sac de 5 micromètres de diamètre — le <strong>noyau</strong>.</p>
+
+    <p>Trois mots à nommer dès maintenant pour ne plus jamais paniquer devant un schéma de noyau. L'<strong>enveloppe nucléaire</strong> — pas une seule mais <em>deux membranes</em> superposées, percées de milliers de petits trous (les <em>pores nucléaires</em>) qui filtrent en permanence ce qui entre et sort du noyau. À l'intérieur, l'ADN est associé à des protéines : on appelle ce mélange la <strong>chromatine</strong>. Et au cœur du noyau, une zone plus dense, sombre au microscope : le <strong>nucléole</strong>. C'est l'usine qui fabrique les ribosomes — les machines qui assembleront plus tard les protéines, dans le cytoplasme. Le noyau a sa propre usine, dans son propre quartier.</p>
+
+    <div class="stat-shock">
+        <div class="cell">
+            <div class="num">2 mètres</div>
+            <div class="label">d'ADN dans chaque noyau. Mis bout à bout, l'ADN de toutes tes cellules ferait <strong>2 fois l'aller-retour Terre-Soleil</strong>.</div>
+        </div>
+        <div class="cell">
+            <div class="num">3 Md</div>
+            <div class="label">de paires de bases (l'alphabet A, T, G, C). Lues par la cellule à <strong>50 lettres par seconde</strong>, par milliers de machines en parallèle.</div>
+        </div>
+    </div>
+
+    <h3>1. L'ADN, la double hélice</h3>
+
+    <p>L'ADN n'est pas une bande dépliée. C'est une <strong>double hélice</strong> — deux brins enroulés l'un autour de l'autre comme un escalier en colimaçon. Les marches de l'escalier sont les paires de bases : A toujours en face de T, G toujours en face de C. Cette règle simple, qu'on appelle <em>complémentarité</em>, est la clé de tout. Parce que si tu connais un brin, tu peux deviner l'autre. <em class="hl">C'est ce qui permet la copie</em>.</p>
+
+    <p>Et cette double hélice n'est pas posée en vrac dans le noyau. Elle est enroulée autour de petites pelotes de protéines (les <strong>histones</strong>), elles-mêmes enroulées en spirale, elles-mêmes pliées en boucles, elles-mêmes condensées en chromosomes au moment de la division. <strong>Quatre niveaux d'emboîtement</strong> suffisent à plier 2 mètres d'ADN dans 5 micromètres : double hélice (2 nm) → nucléosome (autour des histones, 11 nm) → fibre de chromatine (30 nm) → chromosome condensé (1400 nm). Comme un casque audio enroulé 4 fois dans ta poche.</p>
+
+    <div class="schema-box">
+        <img src="https://medeos-sante.fr/images/biologie/pano_bio_compaction_adn.png"
+             alt="Les niveaux de compaction de l'ADN : double hélice, nucléosome, fibre, chromosome"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir"
+             onerror="schemaMissing(this)">
+        <div class="file-target" style="display:none;">📁 <strong>pano_bio_compaction_adn.png</strong><br>à placer dans : <strong>/public/images/biologie/</strong></div>
+        <p class="caption"><strong>La compaction de l'ADN</strong> — de la double hélice nue au chromosome condensé. Comment plier 2 mètres dans 5 micromètres.</p>
+        <div class="generation-prompt">
+            <strong>Prompt ChatGPT-image :</strong>
+Format: A4 portrait (210×297mm), aspect ratio 1:1.414, high resolution 8K, render quality: ultra-detailed, suitable for medical textbook publication.
+
+Modern educational illustration showing the hierarchical packaging of DNA in a eukaryotic cell, from left to right in 5 stages: 1) DNA double helix (twisted ladder, two strands with base pairs), 2) DNA wrapped around histone octamers forming nucleosomes (beads on a string), 3) chromatin fiber (30 nm coiled solenoid), 4) looped domains attached to a protein scaffold, 5) condensed metaphase chromosome with characteristic X shape. Each stage labeled with its size scale (2 nm, 11 nm, 30 nm, 300 nm, 1400 nm). Color code: DNA in deep purple (#6B46C1), histones in honey wood (#B8895A), scaffold proteins in soft terracotta (#C2410C). Numbered legend 1-5 below. Clean cream background (#FAF6F0). Editorial scientific style, anatomically accurate, no cartoon, no emoji.
+
+Style reference: scientific editorial illustration inspired by Nature journal, NEJM, or Visible Body anatomical atlas. Clean technical drawing with educational annotations.
+
+Typography: sans-serif font (Inter, Helvetica or similar) for all numbered labels and annotations. Label size approximately 14pt, semi-bold weight. Color of labels: dark anthracite (#1F1F23). Numbers in colored circles matching the element they describe.
+
+Composition: centered subject with generous margins (10% on all sides). Line weight: thin (1-2px) for fine details, medium (3-4px) for main structures. Shadows: soft, subtle (5-10% opacity). No harsh outlines.
+
+Negative prompts (avoid absolutely): no cartoon style, no anime style, no comic book aesthetics, no hand-drawn doodles, no DALL-E watermark, no Adobe Stock watermark, no Getty Images watermark, no text labels written in cursive, no childish illustration, no glowing effects, no neon colors outside specified palette, no fictional creatures, no anatomically inaccurate proportions, no overlapping labels.
+
+Final output: should look like a publication-quality figure from a peer-reviewed medical or scientific journal, ready for use in an educational textbook for first-year medical students.
+        </div>
+        <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+    </div>
+
+    <h3>2. De l'ADN à la protéine : la chaîne de production</h3>
+
+    <p>Maintenant, le truc le plus important de toute la P1 de biologie. L'ADN ne fait rien tout seul. Il a juste les <strong>plans</strong>. Pour transformer ces plans en quelque chose qui fait vivre la cellule — une protéine — il faut deux étapes :</p>
+
+    <ol>
+        <li><strong>Transcription</strong> — dans le noyau, un brin d'ADN est lu et recopié en ARN messager. C'est une photocopie du plan, qui peut sortir du noyau.</li>
+        <li><strong>Traduction</strong> — dans le cytoplasme, l'ARN messager est lu par des ribosomes qui assemblent les acides aminés un par un, dans l'ordre dicté par les codons. Au bout, une protéine pliée, prête à fonctionner.</li>
+    </ol>
+
+    <p>Cette chaîne, c'est le <strong>dogme central de la biologie</strong>. ADN → ARN → protéine. Sept syllabes. Et derrière ces sept syllabes, <strong>100 000 réactions chimiques par seconde</strong> dans chacune de tes cellules. Tout ce que tu manges, tout ce que tu penses, tout ce que tu ressens — tout passe par cette chaîne.</p>
+
+    <p>Beaucoup de protéines suivent ensuite une chaîne de montage à deux ateliers. Le premier, c'est l'<strong>usine</strong> : le <strong>réticulum endoplasmique</strong>. Il en existe deux quartiers. Le réticulum <em>rugueux</em> est hérissé de ribosomes accrochés à sa surface — et c'est justement pour ça que c'est l'usine : ces ribosomes fabriquent la protéine directement dans le réticulum, qui la plie au fur et à mesure. Le réticulum <em>lisse</em>, lui, n'a pas de ribosomes : il fabrique les graisses et nettoie les toxiques — c'est notamment lui qui s'occupe de l'alcool dans les cellules de ton foie.</p>
+
+    <p>Le second atelier, c'est la <strong>poste</strong> : l'<strong>appareil de Golgi</strong>, une pile de petits sacs plats empilés comme des assiettes. La protéine y entre brute d'un côté, traverse la pile en se faisant peaufiner, et ressort de l'autre côté avec une étiquette d'adresse — exactement comme un colis qui passe au tri avant d'être expédié à la bonne destination.</p>
+
+    <p>Et il y a deux poubelles qu'on ne doit pas confondre. Le <strong>lysosome</strong> = sac d'enzymes digestives à pH acide (≈ 5) qui détruit les vieux organites et les bactéries avalées. Le <strong>peroxysome</strong> = sac plus petit, qui détoxifie les molécules dangereuses et produit (puis neutralise) de l'eau oxygénée H₂O₂. Lysosome = poubelle. Peroxysome = unité de détoxication. Deux noms, deux fonctions, jamais à confondre.</p>
+
+    <div class="schema-box">
+        <img src="https://medeos-sante.fr/images/biologie/pano_bio_dogme_central.png"
+             alt="Le dogme central : ADN transcrit en ARN messager, traduit en protéine par le ribosome"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir"
+             onerror="schemaMissing(this)">
+        <div class="file-target" style="display:none;">📁 <strong>pano_bio_dogme_central.png</strong><br>à placer dans : <strong>/public/images/biologie/</strong></div>
+        <p class="caption"><strong>Le dogme central</strong> — de l'ADN dans le noyau au ribosome dans le cytoplasme, en passant par l'ARN messager.</p>
+        <div class="generation-prompt">
+            <strong>Prompt ChatGPT-image :</strong>
+Modern educational molecular-biology illustration, clean scientific-textbook style, single figure read STRICTLY left to right in three connected stages showing the central dogma: DNA → messenger RNA → protein. Accuracy is critical — this is a technical figure for first-year medical students.
+
+OVERALL LAYOUT: a horizontal cell split into two compartments by a nuclear envelope — the NUCLEUS on the left (enclosed area), the CYTOPLASM on the right. A clear arrow flow runs left → right across the whole figure. Three stages, numbered 1, 2, 3.
+
+STAGE 1 — TRANSCRIPTION (inside the nucleus, left): a DNA double helix (two complementary strands) partially unwound into a transcription bubble; an enzyme labeled "ARN polymérase" sitting on the open DNA, reading ONE template strand; a single-stranded messenger RNA being synthesized and peeling off the DNA (clearly SINGLE-stranded, different color from DNA). Label: "1. Transcription — l'ADN est recopié en ARN messager".
+
+STAGE 2 — EXPORT (crossing the nuclear envelope, middle): the single-stranded mRNA travelling out of the nucleus through a nuclear pore into the cytoplasm. Label: "2. L'ARN messager sort du noyau".
+
+STAGE 3 — TRANSLATION (in the cytoplasm, right): the mRNA threaded through a ribosome drawn as TWO subunits (large upper + small lower) clamped on the mRNA; a few transfer RNAs (tRNA, small L/clover shapes) bringing amino acids; a growing chain of amino acids (small beads) emerging from the ribosome and folding into a compact 3D protein at the far right. Label: "3. Traduction — le ribosome lit l'ARN et assemble la protéine".
+
+STRICT BIOLOGICAL RULES (must hold): DNA is double-stranded, mRNA is single-stranded (visually distinct); transcription ONLY inside the nucleus, translation ONLY in the cytoplasm (never swapped); the ribosome has two subunits and sits on the mRNA, not on the DNA; the whole process flows one-way, left to right.
+
+COLOR CODE (Medeos palette, strict): DNA double helix deep purple (#6B46C1); mRNA strand honey wood / warm tan (#B8895A); ribosome (both subunits) soft terracotta (#C2410C); amino acids and finished protein luminous yellow (#FCD34D); nuclear envelope and outlines thin dark anthracite lines; background clean cream (#FAF6F0).
+
+Numbered legend 1–3 (matching the three stages) in a clean row at the bottom, numbers in small colored circles. All labels in French, sans-serif font (Inter or Helvetica), ~14pt semi-bold, dark anthracite (#1F1F23). No overlapping or duplicated labels.
+
+Style: scientific editorial illustration, publication quality, calm restrained palette, thin clean line work, soft subtle shadows, realistic molecular shapes (not cartoon, not glossy 3D), generous margins.
+
+Avoid absolutely: cartoon or anime style, hand-drawn doodles, glowing or neon effects, watermarks, emoji, decorative clutter, cursive text, single-stranded DNA, double-stranded mRNA, ribosome drawn as a single blob, transcription shown outside the nucleus, translation shown inside the nucleus, arrows pointing the wrong way, overlapping labels.
+
+Aspect ratio: landscape, roughly 3:2.
+        </div>
+        <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+    </div>
+
+    <div class="stakes-box">
+        <p>Si tu graves le dogme central avant septembre, tu comprends d'un coup : le diabète, la mucoviscidose, la drépanocytose, la plupart des cancers, la résistance aux antibiotiques, la trisomie 21. <strong>Toutes</strong> sont des histoires d'ADN, d'ARN ou de protéines mal copiés, mal lus, mal pliés. Une logique. Mille maladies.</p>
+    </div>
+
+    <h3>3. La copie qui doit se faire avant que la cellule se divise</h3>
+
+    <p>Avant qu'une cellule puisse se diviser en deux, elle doit copier son ADN. Tous ses 2 mètres d'ADN. Sans faute. En 6 à 8 heures. La machine qui fait ça s'appelle l'<strong>ADN polymérase</strong>. Elle déroule la double hélice, lit chaque brin, et synthétise un brin complémentaire en face. Résultat : à la fin, tu as <strong>deux double-hélices</strong> identiques, chacune avec un brin ancien et un brin neuf. C'est ce qu'on appelle la <em>réplication semi-conservative</em>.</p>
+
+    <p>Et la précision est dingue. L'ADN polymérase fait environ <strong>1 erreur sur 10 millions</strong> de lettres copiées. Et un système de relecture vient ensuite corriger 99 % de ces erreurs. Au final, il reste environ <strong>1 erreur sur 1 milliard</strong> de paires copiées. Soit 3 erreurs par cellule, par copie. Ces 3 erreurs sont la matière première de l'évolution. Et parfois, la matière première du cancer.</p>
+
+    <div class="recap-pedagogique">
+        <div class="recap-tronc">
+            <strong>À retenir pour la P1</strong>
+            <ul>
+                <li>Noyau = enveloppe (2 membranes + pores) + chromatine + nucléole (fabrique des ribosomes).</li>
+                <li>Dogme central : ADN → ARN messager (transcription dans le noyau) → protéine (traduction par le ribosome dans le cytoplasme).</li>
+                <li>Chaîne d'assemblage des protéines : RE rugueux (synthèse) → RE lisse (lipides) → Golgi (cis → médian → trans, étiquetage et expédition).</li>
+                <li>Lysosome ≠ peroxysome. Lysosome = digestion à pH acide. Peroxysome = détox + H₂O₂.</li>
+                <li>Réplication semi-conservative par l'ADN polymérase : 1 brin ancien + 1 brin neuf dans chaque nouvelle hélice.</li>
+            </ul>
+        </div>
+        <div class="recap-anecdote">
+            <strong>Anecdotique mais marquant</strong>
+            <ul>
+                <li>3 erreurs par cellule à chaque copie — matière première de l'évolution. Et parfois du cancer.</li>
+                <li>2 m d'ADN dans chaque noyau, 6 niveaux de pliage pour rentrer dans 5 µm.</li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="cliffhanger">La cellule a son code. Elle sait le copier. Mais où trouve-t-elle l'énergie pour faire tout ça ? Cette énergie vient d'une centrale. Et cette centrale n'est pas humaine. ↓</p>
+
+    <!-- ========================================================== -->
+    <!-- SECTION 4 — LES MITOCHONDRIES                              -->
+    <!-- ========================================================== -->
+    <h2><span class="h2-counter">04</span> Les mitochondries : tes anciennes bactéries esclaves</h2>
+
+    <p class="punchline">Toutes tes cellules contiennent des bactéries. Pas des envahisseuses. Des bactéries que tu as héritées de ta mère. Et qui ont leur propre ADN, séparé du tien. Elles sont en toi depuis 2 milliards d'années.</p>
+
+    <p>La <strong>mitochondrie</strong>, c'est la centrale électrique de la cellule. Elle fabrique l'ATP — la monnaie d'échange énergétique du vivant. Et elle est partout : <strong>200 mitochondries</strong> dans une cellule moyenne, <strong>5000 à 8000</strong> dans une cellule musculaire ou cardiaque. Toutes en train de produire de l'ATP, en permanence, à partir du sucre et de l'oxygène que tu absorbes.</p>
+
+    <div class="stat-shock">
+        <div class="cell">
+            <div class="num">2 Md</div>
+            <div class="label">d'années depuis l'endosymbiose. Une bactérie avalée par une autre, qui n'a jamais été digérée. C'est ton ancêtre.</div>
+        </div>
+        <div class="cell">
+            <div class="num">37</div>
+            <div class="label">gènes dans l'ADN mitochondrial. Tu en as hérité <strong>100 % de ta mère</strong>. Aucun de ton père.</div>
+        </div>
+    </div>
+
+    <h3>1. L'endosymbiose : la fusion qui a tout changé</h3>
+
+    <p>Recule de 2 milliards d'années. Sur Terre, il n'y a que des bactéries. Deux d'entre elles vivent côte à côte. L'une est grosse et consomme du sucre. L'autre est petite et sait utiliser l'oxygène — qui est devenu un poison pour tout le monde depuis que les cyanobactéries en remplissent l'atmosphère. Un jour, la grosse avale la petite. Mais au lieu de la digérer, elle la garde. La petite continue à respirer l'oxygène. La grosse lui donne du sucre. Les deux y gagnent. <em class="hl">Elles fusionnent</em>.</p>
+
+    <p>Cette fusion s'appelle l'<strong>endosymbiose</strong>. Et c'est l'événement le plus important de toute l'histoire de la vie. Sans elle, pas d'animaux, pas de plantes, pas toi. Et la preuve qu'elle a eu lieu, elle est encore là, aujourd'hui, dans chacune de tes cellules : la mitochondrie a <strong>deux membranes</strong> (la membrane de l'avaleur et la membrane de l'avalée), son <strong>propre ADN</strong> circulaire (comme une bactérie), ses <strong>propres ribosomes</strong>, et elle se divise toute seule, comme une bactérie. Ce n'est pas une métaphore. C'est une bactérie. Domestiquée. Mais toujours bactérie.</p>
+
+    <div class="schema-box" style="max-width: 350px; margin: 28px auto;">
+        <img src="https://medeos-sante.fr/images/biologie/pano_bio_mitochondrie.png"
+             alt="La mitochondrie en coupe : double membrane, crêtes, matrice, ADN circulaire"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir"
+             onerror="schemaMissing(this)">
+        <div class="file-target" style="display:none;">📁 <strong>pano_bio_mitochondrie.png</strong><br>à placer dans : <strong>/public/images/biologie/</strong></div>
+        <p class="caption"><strong>La mitochondrie</strong> — double membrane, crêtes, matrice avec ADN circulaire. Une bactérie domestiquée depuis 2 milliards d'années.</p>
+        <div class="generation-prompt">
+            <strong>Prompt ChatGPT-image :</strong>
+Format: A4 portrait (210×297mm), aspect ratio 1:1.414, high resolution 8K, render quality: ultra-detailed, suitable for medical textbook publication.
+
+Modern educational illustration of a mitochondrion in longitudinal cross-section, anatomically realistic. Show clearly: outer membrane (smooth, continuous), intermembrane space, inner membrane folded into multiple cristae projecting into the interior, mitochondrial matrix filling the central space, circular mitochondrial DNA (small loop) inside the matrix, ribosomes as small dots, ATP synthase complexes embedded in the cristae shown as small mushroom-like protrusions. Color code: outer membrane in deep purple (#6B46C1), inner membrane and cristae in soft terracotta (#C2410C), matrix in honey wood tint (#B8895A), DNA loop in luminous yellow (#FCD34D), ATP synthases as small yellow heads. Numbered legend 1-6. Clean cream background (#FAF6F0). Editorial scientific illustration style, no cartoon.
+
+Style reference: scientific editorial illustration inspired by Nature journal, NEJM, or Visible Body anatomical atlas. Clean technical drawing with educational annotations.
+
+Typography: sans-serif font (Inter, Helvetica or similar) for all numbered labels and annotations. Label size approximately 14pt, semi-bold weight. Color of labels: dark anthracite (#1F1F23). Numbers in colored circles matching the element they describe.
+
+Composition: centered subject with generous margins (10% on all sides). Line weight: thin (1-2px) for fine details, medium (3-4px) for main structures. Shadows: soft, subtle (5-10% opacity). No harsh outlines.
+
+Negative prompts (avoid absolutely): no cartoon style, no anime style, no comic book aesthetics, no hand-drawn doodles, no DALL-E watermark, no Adobe Stock watermark, no Getty Images watermark, no text labels written in cursive, no childish illustration, no glowing effects, no neon colors outside specified palette, no fictional creatures, no anatomically inaccurate proportions, no overlapping labels.
+
+Final output: should look like a publication-quality figure from a peer-reviewed medical or scientific journal, ready for use in an educational textbook for first-year medical students.
+        </div>
+        <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+    </div>
+
+    <h3>2. La centrale en marche</h3>
+
+    <p>Comment une mitochondrie fabrique de l'énergie ? Elle prend du glucose (le sucre que tu manges) et de l'oxygène (que tu respires), et elle les fait réagir ensemble. Ce procédé porte un nom que tu entendras 500 fois en P1 : la <strong>respiration cellulaire</strong>. Le résultat : <strong>CO₂ + eau + énergie</strong>. Le CO₂ part dans le sang, file aux poumons, et tu l'expires. L'eau alimente ton corps. L'énergie est stockée dans une molécule appelée <strong>ATP</strong>.</p>
+
+    <p>Et il faut nommer la géographie interne, parce qu'elle revient à chaque cours de bioénergétique. La membrane externe est lisse. La membrane interne est <em>repliée</em> en accordéon : ce sont les <strong>crêtes mitochondriales</strong>. Pourquoi des crêtes ? Pour <em>augmenter la surface</em>. Plus de surface = plus de machines à ATP. À l'intérieur de tout ça, un liquide épais : la <strong>matrice mitochondriale</strong>, où flotte l'ADN circulaire et où tournent les premières réactions (cycle de Krebs). Et plantées dans les crêtes, des milliers de petites turbines moléculaires : les <strong>ATP synthases</strong>. De vraies turbines, qui tournent à 100 tours par seconde quand la cellule travaille, et qui fabriquent l'ATP en faisant passer des protons à travers elles. Une centrale hydroélectrique miniature, dans chacune de tes mitochondries.</p>
+
+    <p>Une molécule de glucose entrant dans la chaîne complète produit environ <strong>30 ATP</strong>. Sans mitochondrie, tu produirais 2 ATP par glucose. <em class="hl">15 fois moins</em>. Pas de mitochondrie, pas de cerveau qui consomme 20 % de ton énergie. Pas de muscle. Pas de toi.</p>
+
+    <div class="quick-stat">
+        <div class="quick-stat-figure">10⁸</div>
+        <div class="quick-stat-label">molécules d'ATP produites par seconde et par cellule.</div>
+        <div class="quick-stat-context" style="font-size: 10pt;">Cent millions. Par seconde. Par cellule. Multiplié par 37 000 milliards de cellules. Et tu trouves ça « normal ».</div>
+    </div>
+
+    <h3>3. La transmission maternelle</h3>
+
+    <p>Une chose étrange : tu hérites de tout l'ADN nucléaire de tes deux parents (50 % maman, 50 % papa). Mais l'ADN mitochondrial, lui, vient <strong>uniquement de ta mère</strong>. Pourquoi ? Parce que les mitochondries du spermatozoïde sont concentrées dans le flagelle qui sert à nager. Au moment de la fécondation, seule la tête du spermatozoïde rentre dans l'ovocyte. Le flagelle, et donc les mitochondries paternelles, restent dehors.</p>
+
+    <p>Conséquence : ton ADN mitochondrial vient de ta mère, qui le tient de la sienne, qui le tient de la sienne. <em class="hl">Une lignée femelle ininterrompue depuis 200 000 ans</em>. C'est pour ça que les généticiens peuvent retracer ton ascendance maternelle jusqu'à une femme qui vivait en Afrique de l'Est il y a 200 000 ans — l'<strong>Ève mitochondriale</strong>. Tu portes en toi un morceau d'elle. Dans toutes tes cellules. En ce moment même.</p>
+
+    <div class="clinical-box">
+        <p>Quand quelqu'un a une <strong>maladie mitochondriale</strong>, ce sont les centrales qui sont en panne. Et ça touche en priorité les organes qui consomment le plus d'énergie : cerveau, cœur, muscles. Ces maladies se transmettent uniquement par la mère. Un homme atteint ne transmettra rien à ses enfants. Une femme atteinte transmettra à 100 % des siens.</p>
+    </div>
+
+    <div class="recap-pedagogique">
+        <div class="recap-tronc">
+            <strong>À retenir pour la P1</strong>
+            <ul>
+                <li>Endosymbiose : la mitochondrie est une ancienne bactérie. Preuves = double membrane, ADN circulaire propre, ribosomes propres, division autonome.</li>
+                <li>Géographie : 2 membranes, crêtes (membrane interne repliée), matrice (au centre), ATP synthases plantées dans les crêtes.</li>
+                <li>Bilan énergétique : 1 glucose + O₂ → ≈ 30 ATP avec mitochondrie, seulement 2 ATP sans.</li>
+                <li>ADN mitochondrial = 37 gènes, transmission 100 % maternelle (le flagelle paternel reste dehors lors de la fécondation).</li>
+            </ul>
+        </div>
+        <div class="recap-anecdote">
+            <strong>Anecdotique mais marquant</strong>
+            <ul>
+                <li>10⁸ ATP par seconde et par cellule. Cent millions.</li>
+                <li>Lignée mitochondriale = 200 000 ans ininterrompus de mère en fille jusqu'à toi.</li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="cliffhanger">Une centrale. Un code. Un mur. Mais comment tout ça se reproduit-il sans qu'à un moment ça ne dérape ? Et qu'est-ce qui se passe quand ça dérape ? ↓</p>
+
+    <!-- ========================================================== -->
+    <!-- SECTION 5 — CYCLE CELLULAIRE & CANCER                       -->
+    <!-- ========================================================== -->
+    <h2><span class="h2-counter">05</span> Le cycle cellulaire : la voiture qui n'a plus de freins</h2>
+
+    <p class="punchline">Toutes tes cellules savent quand se diviser, quand s'arrêter, et quand mourir. Le cancer, c'est UNE cellule qui a oublié les trois.</p>
+
+    <p>Pendant que tu lis cette phrase, environ <strong>4 millions de tes cellules se divisent</strong>. Et environ 4 millions d'autres meurent. C'est l'équilibre vital. Ton corps fabrique exactement ce qu'il perd. Ni plus, ni moins. Et cet équilibre, ce sont les <strong>freins du cycle cellulaire</strong> qui le tiennent.</p>
+
+    <div class="stat-shock">
+        <div class="cell">
+            <div class="num">24 h</div>
+            <div class="label">durée moyenne d'un cycle cellulaire complet : G1 (10h), S (8h, copie ADN), G2 (4h), M (2h, division).</div>
+        </div>
+        <div class="cell">
+            <div class="num">10⁹</div>
+            <div class="label">cellules par jour qui meurent dans ton corps. Apoptose. Suicide programmé. Et c'est bon pour ta santé.</div>
+        </div>
+    </div>
+
+    <h3>1. Les quatre saisons de la cellule</h3>
+
+    <p>Le cycle cellulaire, c'est quatre phases qui s'enchaînent toujours dans le même ordre :</p>
+
+    <ul>
+        <li><strong>G1</strong> — phase de croissance. La cellule grossit, fabrique des protéines, accumule les ressources. Elle décide si elle se divise ou pas.</li>
+        <li><strong>S</strong> — phase de synthèse. La cellule copie son ADN. Les 3 milliards de paires de bases sont dupliquées. Maintenant elle en a 6 milliards.</li>
+        <li><strong>G2</strong> — phase de préparation. La cellule vérifie sa copie, prépare le matériel de division.</li>
+        <li><strong>M</strong> — phase de mitose. La cellule sépare ses chromosomes en deux groupes égaux, puis se coupe en deux. Au bout : deux cellules filles identiques.</li>
+    </ul>
+
+    <p>Entre chaque phase, il y a des <strong>points de contrôle</strong>. Trois principaux : G1/S, G2/M, et au milieu de M. À chaque point de contrôle, la cellule se demande : « est-ce que tout est OK pour continuer ? ». Si l'ADN est endommagé, si la copie est incomplète, si les chromosomes sont mal alignés, la cellule s'arrête. Ou elle se suicide.</p>
+
+    <p>La phase M elle-même se découpe en quatre étapes qu'il faut nommer dans l'ordre, parce qu'elles tomberont en QCM. <strong>Prophase</strong> : la chromatine se condense en chromosomes visibles, l'enveloppe nucléaire se casse, le <em>fuseau mitotique</em> se met en place. <strong>Métaphase</strong> : les chromosomes s'alignent sur la plaque équatoriale, au milieu de la cellule. <strong>Anaphase</strong> : les chromatides sœurs se séparent et migrent vers les deux pôles, tirées par le fuseau. <strong>Télophase</strong> : deux enveloppes nucléaires se reforment autour des deux lots de chromosomes. Puis la cellule se coupe en deux (cytocinèse). Quatre étapes, toujours dans le même ordre. Une fois ces quatre mots ancrés, n'importe quelle micrographie de division te parle.</p>
+
+    <p>Et derrière cette chorégraphie, un acteur discret mais central : le <strong>cytosquelette</strong>. C'est la charpente de la cellule. Trois types de fibres à connaître. Les <em>microfilaments d'actine</em> — fins, dynamiques, responsables des mouvements et de la cytocinèse. Les <em>microtubules</em> — épais, faits de tubuline, qui forment justement le fuseau mitotique. Les <em>filaments intermédiaires</em> — solides, qui donnent sa résistance mécanique à la cellule. Sans cytosquelette, ta cellule serait une bulle informe. Avec lui, elle change de forme, se divise, migre.</p>
+
+    <div class="schema-box">
+        <img src="https://medeos-sante.fr/images/biologie/pano_bio_cycle_cellulaire.png"
+             alt="Le cycle cellulaire : G1, S, G2, M et les 3 points de contrôle"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir"
+             onerror="schemaMissing(this)">
+        <div class="file-target" style="display:none;">📁 <strong>pano_bio_cycle_cellulaire.png</strong><br>à placer dans : <strong>/public/images/biologie/</strong></div>
+        <p class="caption"><strong>Le cycle cellulaire</strong> — G1, S, G2, M et les 3 points de contrôle qui empêchent une cellule défectueuse de se diviser.</p>
+        <div class="generation-prompt">
+            <strong>Prompt ChatGPT-image :</strong>
+Format: A4 portrait (210×297mm), aspect ratio 1:1.414, high resolution 8K, render quality: ultra-detailed, suitable for medical textbook publication.
+
+Modern educational illustration of the eukaryotic cell cycle as a circular diagram. Four colored arcs labeled clockwise: G1 (longest arc, in honey wood #B8895A), S (in deep purple #6B46C1, with small DNA double helix icon), G2 (in soft terracotta #C2410C), M (shorter arc, in luminous yellow #FCD34D, with a mitotic chromosome icon). Three checkpoint markers placed on the circle: G1/S checkpoint, G2/M checkpoint, and metaphase-anaphase checkpoint, each labeled with a small lock or gate icon. Center of the circle: a labeled cell silhouette. Numbered legend 1-7. Clean cream background (#FAF6F0). Editorial scientific style, anatomically accurate, no cartoon, no emoji.
+
+Style reference: scientific editorial illustration inspired by Nature journal, NEJM, or Visible Body anatomical atlas. Clean technical drawing with educational annotations.
+
+Typography: sans-serif font (Inter, Helvetica or similar) for all numbered labels and annotations. Label size approximately 14pt, semi-bold weight. Color of labels: dark anthracite (#1F1F23). Numbers in colored circles matching the element they describe.
+
+Composition: centered subject with generous margins (10% on all sides). Line weight: thin (1-2px) for fine details, medium (3-4px) for main structures. Shadows: soft, subtle (5-10% opacity). No harsh outlines.
+
+Negative prompts (avoid absolutely): no cartoon style, no anime style, no comic book aesthetics, no hand-drawn doodles, no DALL-E watermark, no Adobe Stock watermark, no Getty Images watermark, no text labels written in cursive, no childish illustration, no glowing effects, no neon colors outside specified palette, no fictional creatures, no anatomically inaccurate proportions, no overlapping labels.
+
+Final output: should look like a publication-quality figure from a peer-reviewed medical or scientific journal, ready for use in an educational textbook for first-year medical students.
+        </div>
+        <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+    </div>
+
+    <h3>2. Le suicide qui te garde en vie</h3>
+
+    <p>Maintenant écoute ça. Tes cellules savent se <strong>suicider</strong>. Quand quelque chose ne va pas — ADN trop abîmé, infection virale, signal de stress — la cellule déclenche un programme interne qui la démonte proprement, sans inflammation, sans laisser de traces. On appelle ça l'<strong>apoptose</strong>. Le suicide cellulaire programmé.</p>
+
+    <p>Et c'est <strong>vital</strong>. Quand tu étais un fœtus, tes doigts étaient palmés. Entre tes doigts, il y avait une membrane. Cette membrane a disparu parce que les cellules qui la formaient se sont suicidées toutes seules, au bon moment. C'est l'apoptose qui sculpte tes mains. C'est aussi elle qui élimine chaque jour <strong>1 milliard</strong> de tes cellules vieillies, abîmées, ou potentiellement dangereuses. Si l'apoptose ne marchait plus, tu serais malade en trois jours.</p>
+
+    <p>À ne pas confondre avec la <strong>nécrose</strong>. La nécrose, c'est l'autre mort cellulaire — la mort sale. Quand la cellule éclate sous l'effet d'un traumatisme (brûlure, coup, infarctus), elle déverse son contenu autour d'elle. Inflammation. Douleur. Dégâts collatéraux. L'apoptose, c'est la cellule qui s'éteint proprement, en kit, sans déranger ses voisines. La nécrose, c'est la cellule qui explose et qui empoisonne le voisinage. Deux morts, deux conséquences cliniques très différentes. Tu liras ce contraste toute ta P1.</p>
+
+    <h3>3. Le cancer : la voiture sans frein</h3>
+
+    <p>Maintenant le truc qui rend la médecine intéressante. Le <strong>cancer</strong>, c'est une cellule qui a accumulé des mutations sur les gènes qui contrôlent son cycle. Trois types de gènes sont en cause :</p>
+
+    <ul>
+        <li>Les <strong>oncogènes</strong> — l'accélérateur. Quand ils sont activés en permanence, la cellule se divise sans s'arrêter.</li>
+        <li>Les <strong>gènes suppresseurs de tumeurs</strong> — les freins. Quand ils sont cassés (le plus célèbre s'appelle <em>p53</em>), plus rien n'arrête la cellule.</li>
+        <li>Les <strong>gènes de réparation de l'ADN</strong> — les mécaniciens. Quand ils sont cassés, les mutations s'accumulent à une vitesse folle.</li>
+    </ul>
+
+    <p>Une voiture avec un accélérateur bloqué, plus de freins, et plus de mécanicien. <em class="hl">Voilà le cancer</em>. Une cellule qui se divise quand il ne faut pas, qui ne s'arrête pas quand on lui dit stop, et qui ne se suicide pas quand elle devrait. En général, il faut <strong>5 à 7 mutations</strong> sur ces gènes pour qu'une cellule normale devienne cancéreuse. C'est pour ça que le cancer est rare chez les enfants et fréquent à 60 ans : il faut le temps que les mutations s'accumulent.</p>
+
+    <div class="clinical-box">
+        <p>Quand un oncologue parle de <strong>chimiothérapie</strong>, il vise les cellules en train de se diviser. Le médicament casse l'ADN au moment de la réplication. Une cellule cancéreuse qui se divise vite est touchée en premier. Mais les cellules de tes cheveux, de ta moelle osseuse et de ton tube digestif, qui se divisent aussi vite, sont touchées aussi. D'où la chute des cheveux, l'anémie et les nausées. Tu comprends maintenant pourquoi ces effets secondaires existent.</p>
+    </div>
+
+    <div class="lucas-anecdote">
+        <em>Prends le gène p53, qu'on surnomme « le gardien du génome ». En cours, on peut passer vingt minutes sur la cascade qui mène à l'apoptose, et toute la salle recopie sans comprendre pourquoi ce gène est si important. Dessine une voiture. Un accélérateur (les oncogènes), un frein (p53 et les suppresseurs de tumeurs), et un mécanicien qui répare la mécanique (les gènes de réparation). Et soudain ça saute aux yeux : si tu casses le frein, la voiture ne s'arrête plus. Vingt minutes de cours tiennent dans un seul schéma. C'est la règle générale en biologie : une cascade se comprend mieux dessinée qu'apprise par cœur.</em>
+    </div>
+
+
+    <div class="recap-pedagogique">
+        <div class="recap-tronc">
+            <strong>À retenir pour la P1</strong>
+            <ul>
+                <li>4 phases du cycle : G1 (croissance) → S (réplication ADN) → G2 (vérification) → M (mitose). Trois points de contrôle : G1/S, G2/M, métaphase.</li>
+                <li>4 étapes de la mitose dans l'ordre : prophase → métaphase → anaphase → télophase.</li>
+                <li>Cytosquelette : microfilaments d'actine (mouvement), microtubules (fuseau mitotique), filaments intermédiaires (résistance).</li>
+                <li>Apoptose (mort propre, programmée) ≠ nécrose (mort sale, traumatique + inflammation).</li>
+                <li>Cancer = accélérateur (oncogènes) bloqué + freins (gènes suppresseurs, p53) cassés + mécanicien (gènes de réparation) absent.</li>
+            </ul>
+        </div>
+        <div class="recap-anecdote">
+            <strong>Anecdotique mais marquant</strong>
+            <ul>
+                <li>10⁹ cellules suicidées par jour pour que tu restes en bonne santé.</li>
+                <li>5 à 7 mutations nécessaires pour transformer une cellule normale en cellule cancéreuse.</li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="cliffhanger">Tu sais comment la cellule se divise en deux copies identiques. Mais comment se reproduit-elle pour faire un être humain unique ? La réponse, c'est <strong>2 puissance 23</strong>. ↓</p>
+
+    <!-- ========================================================== -->
+    <!-- SECTION 6 — COMMUNICATION : LE LANGAGE                      -->
+    <!-- ========================================================== -->
+    <h2><span class="h2-counter">06</span> Communication cellulaire : le langage que personne ne t'a expliqué</h2>
+
+    <p class="punchline">Tes 37 000 milliards de cellules ne se parlent pas par mots. Elles se parlent par molécules.</p>
+
+    <p>C'est la grande question qu'on oublie de poser : comment 37 000 milliards de cellules séparées arrivent-elles à fonctionner comme un seul corps, le tien ? Parce qu'elles communiquent en permanence. Une cellule libère une molécule, une autre la capte sur l'un de ses récepteurs (ceux qu'on a vus sur la membrane), et le message passe. C'est ça, la <em class="hl">signalisation cellulaire</em> — et c'est elle qui fait de toi un être unique, et pas un simple tas de cellules indépendantes.</p>
+
+    <div class="stat-shock">
+        <div class="cell">
+            <div class="num">4 façons</div>
+            <div class="label">pour une cellule d'envoyer un message : à elle-même, à ses voisines, par le sang, ou par les nerfs. On les détaille juste en dessous.</div>
+        </div>
+        <div class="cell">
+            <div class="num">100+</div>
+            <div class="label">molécules-messages différentes circulent dans ton corps : les hormones, par exemple, en font partie.</div>
+        </div>
+    </div>
+
+    <h3>1. Les quatre canaux</h3>
+
+    <p>Tes cellules ont quatre manières de se parler. Quatre canaux qu'il faut connaître par cœur, parce que tous tes cours de physiologie en parleront :</p>
+
+    <ul>
+        <li><strong>Autocrine</strong> — la cellule s'envoie un message à elle-même. « Continue de te diviser. »</li>
+        <li><strong>Paracrine</strong> — la cellule parle à ses voisines immédiates. Le message ne va pas loin, quelques cellules autour. Très utilisé dans l'inflammation, la cicatrisation, le développement.</li>
+        <li><strong>Endocrine</strong> — la cellule libère une <em>hormone</em> dans le sang. Le message voyage dans tout le corps et trouve sa cible parfois à plusieurs mètres. C'est l'insuline, le cortisol, l'adrénaline, la testostérone.</li>
+        <li><strong>Synaptique</strong> — la cellule (un neurone) envoie un signal électrique le long de son axone, puis libère un neuromédiateur dans la synapse. Le message arrive en quelques millisecondes. Sérotonine, dopamine, glutamate.</li>
+    </ul>
+
+    <div class="schema-box" style="max-width: 470px; margin: 28px auto;">
+        <img src="https://medeos-sante.fr/images/biologie/pano_bio_communication_cellulaire.png"
+             alt="Les 4 modes de signalisation : autocrine, paracrine, endocrine, synaptique"
+             onclick="openLightbox(this.src)" title="Cliquer pour agrandir"
+             onerror="schemaMissing(this)">
+        <div class="file-target" style="display:none;">📁 <strong>pano_bio_communication_cellulaire.png</strong><br>à placer dans : <strong>/public/images/biologie/</strong></div>
+        <p class="caption"><strong>Les 4 canaux de la communication cellulaire</strong> — du message à soi-même au message électrique synaptique.</p>
+        <div class="generation-prompt">
+            <strong>Prompt ChatGPT-image :</strong>
+Format: A4 portrait (210×297mm), aspect ratio 1:1.414, high resolution 8K, render quality: ultra-detailed, suitable for medical textbook publication.
+
+Modern educational illustration showing the four modes of cell signaling, arranged in four quadrants. Top left: autocrine signaling (a cell releasing a signal that binds back to its own receptors). Top right: paracrine signaling (a cell releasing signals that diffuse to neighboring cells with receptors). Bottom left: endocrine signaling (an endocrine cell releasing a hormone into a blood vessel, traveling to a distant target cell). Bottom right: synaptic signaling (a presynaptic neuron releasing neurotransmitter into a synaptic cleft, binding to a postsynaptic neuron). Each panel labeled 1-4. Color code: signaling molecules in luminous yellow (#FCD34D), receptors in deep purple (#6B46C1), cells in soft terracotta and honey wood, blood vessel in dark red (#C2410C), neurons in indigo (#4C2A85). Clean cream background (#FAF6F0). Editorial scientific style, no cartoon.
+
+Style reference: scientific editorial illustration inspired by Nature journal, NEJM, or Visible Body anatomical atlas. Clean technical drawing with educational annotations.
+
+Typography: sans-serif font (Inter, Helvetica or similar) for all numbered labels and annotations. Label size approximately 14pt, semi-bold weight. Color of labels: dark anthracite (#1F1F23). Numbers in colored circles matching the element they describe.
+
+Composition: centered subject with generous margins (10% on all sides). Line weight: thin (1-2px) for fine details, medium (3-4px) for main structures. Shadows: soft, subtle (5-10% opacity). No harsh outlines.
+
+Negative prompts (avoid absolutely): no cartoon style, no anime style, no comic book aesthetics, no hand-drawn doodles, no DALL-E watermark, no Adobe Stock watermark, no Getty Images watermark, no text labels written in cursive, no childish illustration, no glowing effects, no neon colors outside specified palette, no fictional creatures, no anatomically inaccurate proportions, no overlapping labels.
+
+Final output: should look like a publication-quality figure from a peer-reviewed medical or scientific journal, ready for use in an educational textbook for first-year medical students.
+        </div>
+        <button class="copy-prompt-btn" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText.replace('Prompt ChatGPT-image :', '').trim()); this.textContent='✓ Copié !'; setTimeout(()=>this.textContent='Copier le prompt', 1500);">Copier le prompt</button>
+    </div>
+
+    <h3>2. Comment un message devient une action</h3>
+
+    <p>Quand une molécule-signal arrive sur le récepteur de la cellule cible, le mur d'enceinte vient de recevoir un message. Mais le message ne va pas tout seul jusqu'à l'ADN. Il déclenche une <strong>cascade</strong> à l'intérieur de la cellule. Un domino chimique. Le récepteur active une protéine, qui active une enzyme, qui active une autre enzyme, qui modifie 100 autres protéines, qui finissent par changer ce que la cellule fait.</p>
+
+    <p>À chaque étape de la cascade, le signal est <strong>amplifié</strong>. Une seule molécule d'adrénaline qui se pose sur ton cœur peut activer, en cascade, <strong>10 millions de molécules</strong> à l'intérieur de la cellule cardiaque. C'est pour ça qu'une petite décharge d'adrénaline change instantanément ton rythme cardiaque, ton souffle et ta sueur. Une molécule. Dix millions de réponses.</p>
+
+    <p>Cette cascade peut <strong>amplifier 10 000 fois</strong> le signal initial dans le foie. Une molécule d'adrénaline = 10 000 molécules de glucose libérées dans le sang en 30 secondes. C'est pour ça que la peur te donne instantanément de l'énergie pour fuir.</p>
+
+    <div class="quick-q">
+        Tu sais combien de temps met l'adrénaline à passer de tes glandes surrénales à ton cœur ?
+        <span class="ans">→ Environ <strong>15 secondes</strong>. Quand tu as peur, le temps que le signal parte du cerveau, descende aux surrénales, libère l'adrénaline dans le sang, et atteigne ton cœur, il s'est passé 15 secondes. C'est pour ça que la peur monte par vagues.</span>
+    </div>
+
+    <h3>3. La méiose : pourquoi tu es unique au monde</h3>
+
+    <p>Maintenant, le sommet du langage cellulaire : la manière dont une cellule de toi est devenue toi. Quand une cellule humaine ordinaire se divise (mitose), elle copie son ADN à l'identique. Mais quand ton corps fabrique des spermatozoïdes ou des ovocytes, il utilise un autre type de division : la <strong>méiose</strong>.</p>
+
+    <p>La méiose fait deux choses uniques. <strong>Elle réduit de moitié le nombre de chromosomes</strong> (23 au lieu de 46) — sinon, ton enfant aurait 92 chromosomes. Et elle <strong>mélange l'ADN paternel et maternel</strong> avant de le distribuer. Chaque spermatozoïde de ton père portait une combinaison unique des 23 chromosomes de sa mère et de son père. Pareil pour chaque ovocyte de ta mère.</p>
+
+    <p>Deux vocabulaires à figer une fois pour toutes. Tes cellules ordinaires (peau, foie, neurones) ont 46 chromosomes = 23 paires : on les dit <strong>diploïdes</strong> (notées <em>2n</em>). Tes gamètes (spermatozoïdes ou ovocytes) ont 23 chromosomes : on les dit <strong>haploïdes</strong> (notées <em>n</em>). La méiose, c'est la machine à passer de 2n à n. Et elle s'y prend en <strong>deux divisions consécutives</strong>, pas une. La <em>méiose I</em> sépare les paires de chromosomes homologues (un de papa, un de maman) — c'est là que se produisent le brassage et le crossing-over. La <em>méiose II</em>, qui ressemble à une mitose classique, sépare les chromatides sœurs. Résultat : 1 cellule mère 2n → 4 cellules filles n. Toujours 2 divisions. Toujours dans cet ordre.</p>
+
+    <p>Combien de combinaisons possibles ? À chacune de tes 23 paires de chromosomes, c'est pile ou face — soit celui de papa, soit celui de maman, indépendamment. 23 tirages à pile ou face, ça fait <strong>2²³ combinaisons</strong>, soit environ <strong>8,4 millions</strong>. Et en plus, pendant la méiose, les chromosomes s'échangent des morceaux entre eux. Ça s'appelle le <strong>crossing-over</strong>. Le brassage est encore augmenté. Au final, la probabilité que tes parents aient produit deux fois exactement le même enfant est <strong>quasi nulle</strong>.</p>
+
+    <p>Voilà pourquoi tu es unique au monde. Pas une métaphore. Pas un slogan de pub. Une réalité chimique. Sur les 8 milliards d'humains vivants aujourd'hui et les <strong>117 milliards</strong> d'humains qui ont vécu depuis l'origine, il n'y en a jamais eu deux qui aient la même combinaison d'ADN. Sauf les vrais jumeaux. Et encore : leur épigénétique diverge dès les premières années.</p>
+
+    <div class="anchor-sensory">
+        Pose la pulpe de ton pouce contre la pulpe de ton index. Frotte légèrement. Tu sens les crêtes ? Les empreintes digitales que tu touches en ce moment, c'est l'<em>unique</em> trace anatomique d'une seule combinaison chromosomique sur les 8,4 millions possibles à la méiose. Si ta mère avait ovulé une seconde plus tôt ou plus tard, ces crêtes seraient différentes. Tu serais un autre. <em>Tu touches ta probabilité d'exister.</em>
+    </div>
+
+    <div class="quick-stat">
+        <div class="quick-stat-figure">8,4 M</div>
+        <div class="quick-stat-label">de combinaisons possibles à chaque méiose, avant même le crossing-over.</div>
+        <div class="quick-stat-context">Et ta naissance est la combinaison d'UN spermatozoïde parmi des centaines de millions, qui rencontre UN ovocyte parmi des centaines libérés dans une vie. Tes chances d'exister étaient infimes. Tu existes quand même.</div>
+    </div>
+
+
+    <div class="recap-pedagogique">
+        <div class="recap-tronc">
+            <strong>À retenir pour la P1</strong>
+            <ul>
+                <li>4 canaux de signalisation : autocrine (à soi), paracrine (voisines), endocrine (hormones dans le sang), synaptique (neurones).</li>
+                <li>Cascade intracellulaire = amplification : 1 molécule signal peut activer 10⁷ molécules dedans.</li>
+                <li>Diploïde (2n = 46 chromosomes, cellules somatiques) ≠ haploïde (n = 23, gamètes).</li>
+                <li>Méiose = 2 divisions consécutives. Méiose I sépare les paires d'homologues (brassage + crossing-over). Méiose II sépare les chromatides sœurs.</li>
+                <li>Mitose = copies identiques (cellules ordinaires). Méiose = mélangeur génétique (gamètes uniquement).</li>
+            </ul>
+        </div>
+        <div class="recap-anecdote">
+            <strong>Anecdotique mais marquant</strong>
+            <ul>
+                <li>2²³ = 8,4 millions de combinaisons possibles. Et c'est sans compter le crossing-over.</li>
+                <li>15 secondes pour qu'une décharge d'adrénaline atteigne ton cœur — la peur monte par vagues.</li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="cliffhanger">Tu as vu six pièces. Tu commences à voir ton propre corps comme un soignant le verrait. Mais il reste une question. Pourquoi raconter tout ça à un lycéen qui veut juste réussir son année ? ↓</p>
+
+    <!-- ========================================================== -->
+    <!-- CONCLUSION + ANECDOTE #3 + CTA                              -->
+    <!-- ========================================================== -->
+    <h2><span class="h2-counter">07</span> Ce qu'il se passe maintenant</h2>
+
+    <p>Tu viens de faire le tour. Tu n'as pas appris la P1. Mais tu as changé de regard. Pour la première fois, peut-être, tu as vu tes cellules comme des <strong>machines que tu peux comprendre</strong> — pas comme une liste d'organites à recracher.</p>
+
+    <p>Tu as une carte. Six pièces, six logiques :</p>
+
+    <ul>
+        <li>La <strong>cellule</strong> — une cité de 6 quartiers, pas une boule de jelly</li>
+        <li>La <strong>membrane</strong> — un mur fluide, intelligent, qui trie et reçoit des messages</li>
+        <li>L'<strong>ADN</strong> — 2 mètres pliés dans 5 micromètres, dogme central ADN → ARN → protéine</li>
+        <li>Les <strong>mitochondries</strong> — d'anciennes bactéries devenues tes centrales, héritées de ta mère</li>
+        <li>Le <strong>cycle cellulaire</strong> — accélérateur, freins, mécanicien. Le cancer, c'est ces trois en panne</li>
+        <li>La <strong>communication</strong> — 4 canaux, des cascades qui amplifient un signal au million</li>
+    </ul>
+
+    <p>Voilà ce que tu as gagné en faisant ce tour. Ce qu'il te reste à faire : descendre dans le détail. Les schémas refaits de mémoire le soir. Les cascades qu'on relit jusqu'à les voir les yeux fermés. Les heures où on bute, où on doute, où on dessine sur une feuille A4 jusqu'à comprendre.</p>
+
+    <div class="lucas-anecdote">
+        <em>Tous ceux qui finissent dans le haut du classement ont commencé là où tu es : devant une matière qui fait peur, sans méthode encore. Ce qui les distingue, ce n'est pas l'intelligence — c'est le moment où ils arrêtent d'apprendre des mots pour commencer à voir des machines. Si tu lis cette page jusqu'ici, tu as déjà ce qu'il faut pour faire le même chemin.</em>
+    </div>
+
+    <p>Si tu as commencé à regarder le bout de ton doigt, ta peau, ton souffle différemment, le plus dur est déjà fait. Le reste, ce ne sont que des heures à mettre en face.</p>
+
+    <p class="punchline">Aucune place n'est garantie. Mais une chose est sûre : en septembre, tu ne seras pas celui qu'on jette dans la piscine sans savoir nager.</p>
+
+    <!-- ========================================================== -->
+    <!-- MINI-QCM FINAL — 5 questions d'ancrage                      -->
+    <!-- ========================================================== -->
+    <section class="mini-qcm" id="mini-qcm-final">
+        <h2>Mini-QCM — Teste-toi en 5 questions</h2>
+        <p class="mini-qcm-intro">5 questions sur ce que tu viens de lire. Réponds avant de cliquer. Pas de stress — c'est juste pour ancrer.</p>
+
+        <div class="mini-qcm-question">
+            <p class="mini-qcm-num">Question 1 / 5</p>
+            <p class="mini-qcm-enonce">Quelle est la différence centrale entre une cellule procaryote et une cellule eucaryote ?</p>
+            <ul class="mini-qcm-choix">
+                <li>A. La cellule procaryote possède des mitochondries, l'eucaryote non.</li>
+                <li data-correct>B. La cellule eucaryote possède un vrai noyau enveloppé, la procaryote non.</li>
+                <li>C. La cellule procaryote est toujours plus grande que l'eucaryote.</li>
+                <li>D. Seule la cellule eucaryote possède de l'ADN.</li>
+                <li>E. La cellule procaryote a des ribosomes 80S, l'eucaryote des 70S.</li>
+            </ul>
+            <details class="mini-qcm-correction">
+                <summary>Voir la réponse</summary>
+                <p><strong>Réponse : B</strong> — Chez la bactérie (procaryote), l'ADN flotte dans une zone appelée nucléoïde, sans membrane autour. Chez toi (eucaryote), l'ADN est enfermé dans un vrai noyau entouré d'une enveloppe nucléaire. C'est exactement ce que veut dire le mot : « pro » = avant, « caryote » = noyau.</p>
+                <p class="mini-qcm-source"><em>Où retrouver ça dans le cours : section 1 « La cellule », sous-partie 2 « Procaryote vs eucaryote : la fracture qui change tout »</em></p>
+            </details>
+        </div>
+
+        <div class="mini-qcm-question">
+            <p class="mini-qcm-num">Question 2 / 5</p>
+            <p class="mini-qcm-enonce">Le modèle de la « mosaïque fluide » de Singer et Nicolson décrit la membrane plasmique comme :</p>
+            <ul class="mini-qcm-choix">
+                <li>A. Un mur rigide et uniforme de phospholipides.</li>
+                <li>B. Une simple couche de protéines collées entre elles.</li>
+                <li data-correct>C. Une mosaïque d'éléments différents (phospholipides, cholestérol, protéines, sucres) dans une bicouche fluide.</li>
+                <li>D. Une membrane sans cholestérol, traversée librement par toutes les molécules.</li>
+                <li>E. Une triple couche de sucres totalement imperméable.</li>
+            </ul>
+            <details class="mini-qcm-correction">
+                <summary>Voir la réponse</summary>
+                <p><strong>Réponse : C</strong> — La mosaïque fluide, c'est trois mots qui résument tout : mosaïque (éléments différents — phospholipides, cholestérol, protéines, sucres), fluide (les phospholipides bougent latéralement), bicouche (deux couches têtes-vers-l'extérieur, queues-vers-l'intérieur).</p>
+                <p class="mini-qcm-source"><em>Où retrouver ça dans le cours : section 2 « La membrane plasmique », sous-partie 1 « La mosaïque fluide »</em></p>
+            </details>
+        </div>
+
+        <div class="mini-qcm-question">
+            <p class="mini-qcm-num">Question 3 / 5</p>
+            <p class="mini-qcm-enonce">À chaque cycle, la pompe Na⁺/K⁺ ATPase fait sortir et entrer combien d'ions, et consomme combien d'ATP ?</p>
+            <ul class="mini-qcm-choix">
+                <li>A. 2 Na⁺ sortent, 3 K⁺ entrent, 1 ATP consommé.</li>
+                <li data-correct>B. 3 Na⁺ sortent, 2 K⁺ entrent, 1 ATP consommé.</li>
+                <li>C. 3 Na⁺ entrent, 2 K⁺ sortent, 2 ATP consommés.</li>
+                <li>D. 1 Na⁺ sort, 1 K⁺ entre, 0 ATP consommé.</li>
+                <li>E. 2 Na⁺ sortent, 2 K⁺ entrent, sans aucune dépense d'énergie.</li>
+            </ul>
+            <details class="mini-qcm-correction">
+                <summary>Voir la réponse</summary>
+                <p><strong>Réponse : B</strong> — La pompe sodium-potassium pompe 3 sodiums vers l'extérieur et 2 potassiums vers l'intérieur, contre les deux gradients, en consommant 1 molécule d'ATP. Elle tourne en permanence dans toutes tes cellules et consomme à elle seule environ 30 % de l'énergie de ton corps au repos.</p>
+                <p class="mini-qcm-source"><em>Où retrouver ça dans le cours : section 2 « La membrane plasmique », sous-partie 2 « Trois modes de passage »</em></p>
+            </details>
+        </div>
+
+        <div class="mini-qcm-question">
+            <p class="mini-qcm-num">Question 4 / 5</p>
+            <p class="mini-qcm-enonce">Quel est l'ordre correct des quatre étapes de la mitose ?</p>
+            <ul class="mini-qcm-choix">
+                <li>A. Métaphase → Prophase → Télophase → Anaphase</li>
+                <li>B. Prophase → Anaphase → Métaphase → Télophase</li>
+                <li data-correct>C. Prophase → Métaphase → Anaphase → Télophase</li>
+                <li>D. Télophase → Anaphase → Métaphase → Prophase</li>
+                <li>E. Métaphase → Anaphase → Prophase → Télophase</li>
+            </ul>
+            <details class="mini-qcm-correction">
+                <summary>Voir la réponse</summary>
+                <p><strong>Réponse : C</strong> — Prophase (la chromatine se condense, le fuseau se met en place), Métaphase (les chromosomes s'alignent sur la plaque équatoriale), Anaphase (les chromatides sœurs se séparent vers les pôles), Télophase (deux enveloppes nucléaires se reforment). Toujours dans cet ordre. Un moyen mnémo : P-M-A-T.</p>
+                <p class="mini-qcm-source"><em>Où retrouver ça dans le cours : section 5 « Le cycle cellulaire », sous-partie sur la phase M</em></p>
+            </details>
+        </div>
+
+        <div class="mini-qcm-question">
+            <p class="mini-qcm-num">Question 5 / 5</p>
+            <p class="mini-qcm-enonce">D'où vient la mitochondrie, et qu'est-ce qui le prouve ?</p>
+            <ul class="mini-qcm-choix">
+                <li>A. C'est un repli de la membrane plasmique ; la preuve est qu'elle n'a qu'une seule membrane.</li>
+                <li>B. Elle est fabriquée par le noyau ; la preuve est qu'elle n'a pas d'ADN.</li>
+                <li data-correct>C. C'est une ancienne bactérie avalée il y a 2 milliards d'années (endosymbiose) ; la preuve est qu'elle a sa propre double membrane et son propre ADN.</li>
+                <li>D. C'est un virus intégré à la cellule ; la preuve est qu'elle ne se divise jamais.</li>
+                <li>E. C'est un organite hérité du père ; la preuve est qu'elle vient du spermatozoïde.</li>
+            </ul>
+            <details class="mini-qcm-correction">
+                <summary>Voir la réponse</summary>
+                <p><strong>Réponse : C</strong> — La mitochondrie est une ancienne bactérie, avalée par une autre cellule il y a 2 milliards d'années et jamais digérée : c'est l'endosymbiose. Les preuves sont encore visibles aujourd'hui : elle possède sa propre double membrane, son propre ADN circulaire, ses propres ribosomes, et elle se divise toute seule comme une bactérie. Bonus : son ADN se transmet à 100 % par la mère (le flagelle paternel reste dehors lors de la fécondation).</p>
+                <p class="mini-qcm-source"><em>Où retrouver ça dans le cours : section 4 « Les mitochondries », sous-partie 1 « L'endosymbiose : la fusion qui a tout changé »</em></p>
+            </details>
+        </div>
+
+        <div class="mini-qcm-conclusion">
+            <p>Tu as répondu juste à 4-5 questions ? Tu as compris les bases. Tu as répondu juste à 2-3 ? Relis les sections qui te manquent — c'est exactement à ça que sert un panorama.</p>
+        </div>
+    </section>
+
+    <!-- ========================================================== -->
+    <!-- PONT VERS L'OFFRE — doux, après toute la valeur (post-QCM) -->
+    <!-- ========================================================== -->
+    <div style="margin:40px 0 8px;padding:30px 26px;border-radius:18px;background:linear-gradient(150deg,#F1ECFA,#FAF6F0);border:1px solid #e2d6f5;">
+        <p style="font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#6B46C1;margin:0 0 12px;">Et la suite ?</p>
+        <p style="font-size:16px;line-height:1.7;color:#2c3e50;margin:0 0 14px;">Ce panorama, c'est la vue d'ensemble. Descendre dans le détail, chapitre par chapitre, avec des cours qui font comprendre, des QCM corrigés au format du concours et quelqu'un qui te répond quand tu bloques : c'est ce qu'on a construit dans <strong>Medi&nbsp;Pro</strong>. On ne te demande rien — si la curiosité te prend, jette juste un œil.</p>
+        <a href="https://medeos-sante.fr/packs/medi-pro" target="_top" onclick="try{window.parent.postMessage({medeosClick:'cta_medipro_iframe'},location.origin)}catch(e){}" style="display:inline-flex;align-items:center;gap:7px;color:#fff;font-weight:600;font-size:15px;text-decoration:none;padding:12px 24px;border-radius:999px;background:linear-gradient(150deg,#4C2A85,#6B46C1 75%);box-shadow:0 10px 26px rgba(76,42,133,.26);">Découvrir Medi&nbsp;Pro →</a>
+    </div>
+
+
+    <!-- ========================================================== -->
+    <!-- FOOTER                                                     -->
+    <!-- ========================================================== -->
+    <footer class="chapter-footer">
+        <p>Medeos · Panorama de biologie cellulaire en P1</p>
+        <p>© Medeos — medeos-sante.fr</p>
+    </footer>
+
+</div>
+
+<!-- ============================================================= -->
+<!-- BARRE DE ZOOM FLOTTANTE (− / % / +)                           -->
+<!-- ============================================================= -->
+<style>
+    #medeos-zoombar {
+        position: fixed; bottom: 18px; right: 18px; z-index: 9999;
+        display: flex; align-items: center; gap: 2px;
+        background: rgba(255,255,255,0.96);
+        border: 1px solid #E8E1D5; border-radius: 999px;
+        padding: 4px; box-shadow: 0 4px 14px rgba(31,31,46,0.12);
+        backdrop-filter: blur(6px);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #medeos-zoombar button {
+        border: 0; background: transparent; cursor: pointer;
+        color: #5C5C70; font-weight: 700; line-height: 1;
+        border-radius: 999px; transition: background .15s, color .15s;
+    }
+    #medeos-zoombar .zb-step {
+        width: 30px; height: 30px; font-size: 18px;
+        display: flex; align-items: center; justify-content: center;
+    }
+    #medeos-zoombar .zb-level {
+        min-width: 48px; height: 30px; font-size: 13px; font-weight: 600;
+        padding: 0 6px; font-variant-numeric: tabular-nums;
+    }
+    #medeos-zoombar button:hover { background: #F4EFFB; color: #6B46C1; }
+    #medeos-zoombar button:disabled { opacity: .3; cursor: default; background: transparent; }
+    @media print { #medeos-zoombar { display: none !important; } }
+    @media (max-width: 767px) { #medeos-zoombar { display: none !important; } }
+</style>
+<div id="medeos-zoombar" aria-label="Zoom du cours">
+    <button type="button" class="zb-step" id="zb-out" title="Réduire" aria-label="Réduire">−</button>
+    <button type="button" class="zb-level" id="zb-level" title="Revenir à 100 %" aria-label="Réinitialiser le zoom">100%</button>
+    <button type="button" class="zb-step" id="zb-in" title="Agrandir" aria-label="Agrandir">+</button>
+</div>
+
+<!-- Lightbox : clic sur un schéma pour l'agrandir, filigrane medeos-sante.fr centré -->
+<style>
+    #medeos-lightbox-wrap { position: relative; display: inline-flex; max-width: 92%; max-height: 92%; }
+    #medeos-lightbox-img { max-width: 100%; max-height: 88vh; border-radius: 10px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); display: block; }
+    #medeos-lightbox-wm {
+        position: absolute; inset: 0; pointer-events: none; user-select: none; border-radius: 10px;
+        display: flex; align-items: center; justify-content: center;
+    }
+    #medeos-lightbox-wm::before {
+        content: 'medeos-sante.fr';
+        font-family: 'Inter', Arial, sans-serif; font-size: clamp(12px, 4.5vw, 38px); font-weight: 700;
+        letter-spacing: clamp(1px, 1vw, 8px); text-transform: uppercase; color: rgba(120,120,120,0.06); white-space: nowrap;
+    }
+</style>
+<div id="medeos-lightbox" onclick="closeLightbox()" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(26,26,46,0.88);align-items:center;justify-content:center;cursor:zoom-out;padding:30px;">
+    <div id="medeos-lightbox-wrap">
+        <img id="medeos-lightbox-img" src="" alt="">
+        <div id="medeos-lightbox-wm" aria-hidden="true"></div>
+    </div>
+</div>
+<script>
+    function openLightbox(src) {
+        var lb = document.getElementById('medeos-lightbox');
+        document.getElementById('medeos-lightbox-img').src = src;
+        lb.style.display = 'flex';
+    }
+    function closeLightbox() { document.getElementById('medeos-lightbox').style.display = 'none'; }
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLightbox(); });
+    // Image de schéma absente → on bascule la box en mode "à générer" : on cache
+    // l'image, on affiche le nom du fichier ET le prompt + bouton Copier.
+    function schemaMissing(img) {
+        img.style.display = 'none';
+        var box = img.closest('.schema-box');
+        if (box) box.classList.add('img-missing');
+        var target = img.nextElementSibling;
+        if (target && target.classList.contains('file-target')) target.style.display = 'block';
+    }
+</script>
+<script>
+    // Zoom : mobile lu à 100 % (contenu optimisé en CSS, barre masquée, pincement
+    // possible) ; desktop 100 % + barre −/%/+. Pas de 5 %.
+    (function () {
+        var isMobile = window.innerWidth < 768;
+        var ZMIN = 60, ZMAX = 160, STEP = 5, zoom = 100;
+        var out = document.getElementById('zb-out');
+        var inc = document.getElementById('zb-in');
+        var lvl = document.getElementById('zb-level');
+        function apply() {
+            document.body.style.zoom = (zoom / 100);
+            if (lvl) lvl.textContent = zoom + '%';
+            if (out) out.disabled = zoom <= ZMIN;
+            if (inc) inc.disabled = zoom >= ZMAX;
+        }
+        if (out) out.addEventListener('click', function () { zoom = Math.max(ZMIN, zoom - STEP); apply(); });
+        if (inc) inc.addEventListener('click', function () { zoom = Math.min(ZMAX, zoom + STEP); apply(); });
+        if (lvl) lvl.addEventListener('click', function () { zoom = 100; apply(); });
+        apply();
+    })();
+</script>
+<script>
+    // Mini-QCM interactif : cliquer sur un choix révèle la bonne réponse (vert),
+    // marque le mauvais choix (rouge) et ouvre automatiquement le corrigé.
+    (function () {
+        var lists = document.querySelectorAll('.mini-qcm-choix');
+        lists.forEach(function (list) {
+            var items = list.querySelectorAll('li');
+            items.forEach(function (item) {
+                item.addEventListener('click', function () {
+                    if (list.classList.contains('answered')) return;
+                    list.classList.add('answered');
+                    items.forEach(function (li) {
+                        if (li.hasAttribute('data-correct')) li.classList.add('is-correct');
+                    });
+                    if (!item.hasAttribute('data-correct')) item.classList.add('is-wrong');
+                    var question = list.closest('.mini-qcm-question');
+                    var details = question && question.querySelector('.mini-qcm-correction');
+                    if (details) details.open = true;
+                });
+            });
+        });
+    })();
+</script>
+<!-- ============ LECTURE PROGRESSIVE (révélation par paliers) ============ -->
+<script>
+(function(){
+    var container = document.querySelector('.page-container');
+    if(!container) return;
+    var allChildren = Array.prototype.slice.call(container.children);
+    var sectionStarts = [];
+    allChildren.forEach(function(el, i){
+        if(el.tagName === 'H2' && el.querySelector('.h2-counter')) sectionStarts.push(i);
+    });
+    if(sectionStarts.length < 4) return;
+    function secNum(i){
+        var c = allChildren[i].querySelector('.h2-counter');
+        return c ? parseInt(c.textContent, 10) : 0;
+    }
+    // 6 paliers : 01 | 02 | 03 | 04 | 05 | 06+07
+    var breakAtSection = {2:true, 3:true, 4:true, 5:true, 6:true};
+    var steps = [];
+    var current = [];
+    var firstH2 = sectionStarts[0];
+    for(var k=0; k<firstH2; k++){ current.push(allChildren[k]); }
+    for(var s=0; s<sectionStarts.length; s++){
+        var startIdx = sectionStarts[s];
+        var endIdx = (s+1 < sectionStarts.length) ? sectionStarts[s+1] : allChildren.length;
+        var num = secNum(startIdx);
+        if(breakAtSection[num]){ steps.push(current); current = []; }
+        for(var n=startIdx; n<endIdx; n++){ current.push(allChildren[n]); }
+    }
+    if(current.length) steps.push(current);
+    if(steps.length < 2) return;
+    for(var p=1; p<steps.length; p++){
+        steps[p].forEach(function(node){ node.classList.add('step-locked'); });
+    }
+    var hints = ['On continue ?', 'On poursuit le tour.', 'Prochain arrêt.', 'On continue.', 'Dernière partie.'];
+
+    // Phrases de conversion sous « Continuer ». Les DEUX offres sont proposées à
+    // chaque fois (retour Lucas 04/08) : les Stages Vacances valent 388 € contre
+    // 147 € pour Medi Pro, ils ne peuvent pas apparaître une fois sur trois.
+    var RAPPELS_STAGES = {
+      3: 'La cellule, la membrane, l\'ADN : trois chapitres du programme, effleurés en quelques minutes. En première année, ils s\'enchaînent vite, avec un niveau de détail bien supérieur. <b>Medi&nbsp;Pro</b> te les fait voir juste avant la rentrée&nbsp;; les <b>Stages Vacances</b>, dès la Toussaint.',
+      5: 'Le cycle cellulaire est l\'un des chapitres les plus tombés de la première année, et l\'un des plus piégeux en QCM. Le voir une première fois sans pression change tout&nbsp;: c\'est ce que permettent <b>Medi&nbsp;Pro</b> l\'été prochain, ou les <b>Stages Vacances</b> dès cette année.'
+    };
+    function rappelStages(n){
+      var t = RAPPELS_STAGES[n];
+      if(!t) return '';
+      // Les DEUX offres à chaque fois : le lecteur se reconnaît lui-même.
+      return '<div class="continue-cta"><div class="cta-mot">' + t + '</div>' +
+             '<div class="cta-duo">' +
+             '<a href="https://medeos-sante.fr/packs/medi-pro" target="_top" data-cta="medipro">Medi&nbsp;Pro — stage d\'été →</a>' +
+             '<a href="https://medeos-sante.fr/packs/stages-vacances" target="_top" class="sv" data-cta="stages">Stages Vacances →</a>' +
+             '</div></div>';
+    }
+
+    function addContinueButton(stepIndex){
+        var nextIndex = stepIndex + 1;
+        if(nextIndex >= steps.length) return;
+        var currentNodes = steps[stepIndex];
+        var lastNode = currentNodes[currentNodes.length - 1];
+        var holder = document.createElement('div');
+        holder.className = 'continue-wrap';
+        var hint = hints[Math.min(nextIndex-1, hints.length-1)] || '';
+        holder.innerHTML = (hint ? ('<div class="continue-hint">'+hint+'</div>') : '') +
+            '<button type="button" class="btn-continue">Continuer <span class="arrow">↓</span></button>';
+        if(lastNode.nextSibling) lastNode.parentNode.insertBefore(holder, lastNode.nextSibling);
+        else lastNode.parentNode.appendChild(holder);
+
+        // Le bloc de conversion vit HORS du holder : celui-ci est détruit au clic,
+        // la porte vers les stages doit rester visible dans la page.
+        var htmlRappel = rappelStages(nextIndex);
+        if (htmlRappel) {
+            var blocRappel = document.createElement('div');
+            blocRappel.innerHTML = htmlRappel;
+            holder.parentNode.insertBefore(blocRappel, holder.nextSibling);
+            blocRappel.querySelectorAll('a').forEach(function(a){
+                a.addEventListener('click', function(){
+                    try { window.parent.postMessage({ medeosClick: a.dataset.cta === 'stages' ? 'cta_stages_vacances' : 'cta_medipro_iframe' }, location.origin); } catch(e) {}
+                });
+            });
+        }
+        holder.querySelector('.btn-continue').addEventListener('click', function(){
+            steps[nextIndex].forEach(function(node){
+                node.classList.remove('step-locked');
+                node.classList.add('step-reveal');
+            });
+            holder.classList.add('gone');
+            setTimeout(function(){ if(holder.parentNode) holder.parentNode.removeChild(holder); }, 420);
+            addContinueButton(nextIndex);
+        });
+    }
+    addContinueButton(0);
+})();
+</script>
+
+</body>
+</html>
