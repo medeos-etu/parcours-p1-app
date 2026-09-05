@@ -3418,7 +3418,7 @@
 </nav>
 
 <!-- ═══ VISITE GUIDÉE : voile sombre + projecteur + mascotte — une fois par monde ═══ -->
-<div id="tuto" hidden onclick="tutoNext()">
+<div id="tuto" hidden onclick="tutoNext(event)">
   <div class="tuto-hole" id="tuto-hole"></div>
   <div class="tuto-box" id="tuto-box">
     <img class="tuto-axo" id="tuto-axo" src="img/axo-mains.png" alt="" onerror="this.style.display='none'">
@@ -3507,7 +3507,7 @@ function go(id){
       if(accOk()){ if(!tutoFait('biblio')){ S.tuto=S.tuto||{}; S.tuto.biblio=Date.now(); saveS(); } }
       else kT='biblio';
     } else if(id==='home' && accOk()) kT='home';
-    else if(id==='arene' && accOk()) kT='arene';
+    else if(id==='arene' && accOk() && (typeof areneOuvrable!=='function' || areneOuvrable())) kT='arene';   /* fermée, elle parle d'elle-même ; on la présente quand elle s'ouvre */
     else if(id==='social' && accOk()) kT='social';
     else if(id==='profil' && accOk()) kT='profil';
     if(kT && !tutoFait(kT) && TUTO_DIFFERE!==kT) setTimeout(()=>{ const sc=document.getElementById(id); if(sc&&sc.classList.contains('on')) startTuto(kT); },450);
@@ -9162,19 +9162,21 @@ const TUTOS={
     {sel:'#vue-salles', img:'axo-guide-carte', t:"<b>Les Salles</b> : une par matière. Tu t'y entraînes sur les fiches que tu viens de travailler, <b>sans rien risquer</b> — ni chrono, ni trophée."},
     {sel:'#ms-amphi', avant:function(){ try{ setLieu('amphi'); }catch(e){} }, img:'mascotte-arene-prete-au-combat', t:"<b>Le Grand Amphi</b>, c'est l'inverse : toutes les matières mélangées, du vrai jeu. Chaque case juste vaut <b>+2 🏆</b>, chaque erreur <b>−2</b>."},
     {sel:'.goldplate', img:'axo-guide-pointe-haut', t:"Tes <b>trophées</b>, en haut à droite : <b>touche-les</b> pour ouvrir le classement — le podium, et la place où tu te trouves. Tu y entres dès ton premier trophée."},
-    {img:'axo-guide-bravo', t:"L'Amphi s'ouvre après <b>4 jours de Parcours</b> — le temps de te constituer un bagage. D'ici là, les Salles sont à toi.", btn:"J'ai compris", act:function(){ try{ setLieu('salles'); }catch(e){} }}
+    {img:'axo-guide-bravo', t:"L'Amphi s'ouvre après <b>4 jours de Parcours</b> — le temps de te constituer un bagage. D'ici là, les Salles sont à toi.", avant:function(){ try{ setLieu('salles'); }catch(e){} }},
+    {sel:'#arene button[aria-label="Voir mon profil"]', tape:true, img:'axo-guide-pointe-haut', t:"Dernière chose : <b>ton profil</b>. <b>Touche ce bouton</b> pour l'ouvrir — tes chiffres, ta photo, ton code du Pack.", act:function(){ try{ go('profil'); }catch(e){} }}
   ],
   /* LE PROFIL : ce qu'on y trouve, et pourquoi y revenir. Quatre étapes, la première fois
      qu'on l'ouvre avec un compte (Lucas, 05/09 : « une petite introduction quand la personne
      ouvre son espace profil, ça serait bien »). On nomme chaque carte dans l'ordre de l'écran. */
-  profil:[
+  profil:function(){ const ouverte=(typeof areneOuvrable==='function')&&areneOuvrable(); return [
     {img:'axo-guide-bienvenue', t:"Ici, c'est <b>ton profil</b> : tout ce que tu construis y est rangé au même endroit. C'est la page où tu viens voir où tu en es, pas celle où tu travailles."},
     {sel:'#p-streak', img:'axo-guide-pointe-haut', t:"<b>Tes chiffres</b> : ta série de jours, tes points, les QCM que tu as joués, tes trophées. Ils bougent tout seuls, à chaque séance."},
     {sel:'#prog-profil', img:'axo-guide-carte', t:"Juste en dessous, <b>ta progression matière par matière</b>. Le diagramme s'élargit à mesure que tu avances — tu vois d'un coup d'œil ce qui est solide et ce qui reste à faire."},
     {sel:'#profil-av', img:'axo-guide-pointe-haut', t:"<b>Ta photo et ta bannière</b> se changent ici. Tu en débloques une nouvelle à chaque monde terminé, et c'est ce que tes amis voient de toi."},
     {sel:'#p-code', img:'axo-guide-carte', t:"Si tu as le <b>Pack Année complète</b>, ton code se saisit ici : il ouvre toutes les fiches, tous les QCM et l'Amphi sans limite."},
-    {img:'axo-guide-bravo', t:"Et tout en bas, <b>ton point de départ</b> : trois questions, une fois, pour situer ta fac et ton profil. Deux minutes, et tu sais d'où tu pars.", btn:"C'est compris"}
-  ],
+    {img:'axo-guide-bravo', t:"Et tout en bas, <b>ton point de départ</b> : trois questions, une fois, pour situer ta fac et ton profil. Deux minutes, et tu sais d'où tu pars.",
+     btn: ouverte ? "Aller m'entraîner sur mes fiches →" : "C'est compris", act:function(){ if(ouverte) try{ allerSalles(); }catch(e){} }}
+  ]; },
   /* LE SOCIAL : ta carte, tes amis — trois étapes, la première fois qu'on y entre avec un compte */
   social:[
     {sel:'.so-carte.moi', img:'axo-guide-bienvenue', t:"Ici, c'est <b>ta carte</b> : ta photo, ta bannière, tes trophées, ton monde, ta série. C'est ce que tes amis voient de toi."},
@@ -9229,6 +9231,7 @@ function tutoShow(){
   document.getElementById('tuto-bulle').innerHTML=st.t;
   const ax=document.getElementById('tuto-axo'); ax.style.display=''; ax.src='img/'+(st.img||'axo-mains')+'.png';
   document.getElementById('tuto-nextbtn').textContent=st.btn||'Suivant';
+  document.getElementById('tuto-nextbtn').style.display = st.tape ? 'none' : '';
   document.getElementById('tuto-skipbtn').textContent=st.skip||'Passer la visite';
   const n=TU.s.length;
   document.getElementById('tuto-pips').innerHTML=Array.from({length:n},(x,i)=>'<i class="'+(i===TU.i?'on':'')+'"></i>').join('');
@@ -9249,9 +9252,19 @@ function tutoShow(){
   if(r && (r.top+r.height/2)>window.innerHeight/2) box.style.top='64px';
   else box.style.bottom='calc(96px + env(safe-area-inset-bottom))';
 }
-function tutoNext(){
+function tutoNext(ev){
   if(!TU) return;
   const st=TU.s[TU.i];
+  /* UNE ÉTAPE « À TOUCHER » (Lucas, 05/09 : « en lui forçant à cliquer dessus pour l'ouvrir ») :
+     ni Suivant, ni tap n'importe où — seul un geste SUR la cible fait avancer, et il fait ce que
+     la cible aurait fait. Le bouton « Passer la visite » reste. */
+  if(st && st.tape){
+    if(!ev) return;
+    const hole=document.getElementById('tuto-hole'); const r=hole? hole.getBoundingClientRect() : null;
+    const x=ev.clientX, y=ev.clientY;
+    if(!r || x<r.left || x>r.right || y<r.top || y>r.bottom) return;
+    const act=st.act; tutoEnd(); if(act) act(); return;
+  }
   if(TU.i>=TU.s.length-1){ const act=st.act; tutoEnd(); if(act) act(); return; }
   TU.i++; tutoShow();
 }
@@ -13934,6 +13947,7 @@ if(!['biblio','home','arene','social','carte','chemin','profil'].includes(ECRAN0
 /* un compte qui n'a pas encore vu la visite du Parcours atterrit sur le Parcours, pas sur
    l'Arène : c'est là que la méthode lui est racontée (progressif, Lucas 05/09) */
 try{ if(typeof verifierSerie==='function') verifierSerie(); }catch(e){}   /* une série rompue s'affiche à 0 dès l'ouverture */
+try{ if(S.tuto && S.tuto.arene && !(S.sdone && Object.keys(S.sdone).length)){ delete S.tuto.arene; saveS(); } }catch(e){}   /* présentée fermée : à représenter ouverte */
 const PARCOURS_A_VOIR = (typeof accOk==='function'&&accOk()) && !(S.tuto&&S.tuto.home);
 /* ═══ D'OÙ VIENT LA PERSONNE ? Le lien doit tenir sa promesse (Lucas, 05/09 : « hyper limpide
    et logique, quelle que soit la voie d'accès »). src dit par quelle carte du site elle est
