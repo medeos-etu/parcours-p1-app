@@ -1523,7 +1523,7 @@
   .sc-btns{display:flex;gap:8px;margin-top:11px;flex-wrap:wrap}
   /* sur téléphone la carte est étroite : les deux boutons s'empilent au lieu de
      casser « En savoir plus » sur trois lignes */
-  @media (max-width:719px){ .sc-btns{flex-direction:column;gap:7px} }
+  @media (max-width:719px){ .sc-btns{flex-direction:row;gap:7px} .shopcard2 .sc-btns{margin-top:6px} .shopcard2 .sc-buy,.shopcard2 .sc-more{font-size:12px;padding:8px 6px} }
   .sc-buy{flex:1;border:none;cursor:pointer;font-family:inherit;font-weight:900;font-size:13px;
     padding:12px;border-radius:12px;background:linear-gradient(180deg,#FCD34D,#E29C5C);color:#4A3208;
     box-shadow:0 3px 0 #B87A33, inset 0 1px 0 rgba(255,255,255,.5)}
@@ -1595,10 +1595,17 @@
   /* cartes-affiches des stages (les visuels de la home du site) */
   .shopcard2{border-radius:18px;overflow:hidden;background:linear-gradient(160deg,#232037,#191627);
     box-shadow:0 10px 26px rgba(26,26,46,.30);display:flex;flex-direction:row;align-items:center;gap:2px}
-  .shopcard2 img{width:124px;height:auto;flex-shrink:0;display:block;border-radius:12px;
+  .packcard{border-radius:18px;padding:14px 15px;margin:0 0 10px;color:#fff;background:linear-gradient(135deg,#4C2A85,#6B46C1 60%,#8B5CF6);
+    box-shadow:0 8px 24px rgba(76,42,133,.28);display:flex;flex-direction:column;gap:6px}
+  .packcard .sc-tag{background:rgba(255,255,255,.16);color:#FCD34D}
+  .packcard b{font-size:15px;line-height:1.3;font-weight:900}
+  .packcard p{font-size:11px;line-height:1.5;color:rgba(250,246,240,.85);margin:0}
+  .packcard .sc-buy{margin-top:4px;flex:none}
+  .packcard.actif{background:linear-gradient(135deg,#1F1F23,#2C2A3A);box-shadow:none}
+  .shopcard2 img{width:96px;height:auto;flex-shrink:0;display:block;border-radius:12px;
     margin:12px 0 12px 12px;box-shadow:0 6px 16px rgba(0,0,0,.35)}   /* l'affiche ENTIÈRE, jamais rognée */
-  .shopcard2 .sc2-body{padding:13px 14px 13px 12px;color:#fff;display:flex;flex-direction:column;gap:8px;flex:1;min-width:0}
-  .shopcard2 p{font-size:11px;color:rgba(250,246,240,.78);line-height:1.5;flex:1}
+  .shopcard2 .sc2-body{padding:10px 12px 10px 10px;color:#fff;display:flex;flex-direction:column;gap:6px;flex:1;min-width:0}
+  .shopcard2 p{font-size:10.5px;color:rgba(250,246,240,.78);line-height:1.45;flex:1}
   .shop{display:grid;grid-template-columns:1fr;gap:11px}
   @media (min-width:1024px){ .shop{grid-template-columns:1fr 1fr;gap:14px} .shopcard2 img{width:138px}
     .shopcard2 p{font-size:11.5px} }
@@ -3262,13 +3269,26 @@
 
 
     <div class="rayon-premium">
-    <h2 id="rayon-stages">⚡ Aller plus loin avec Medeos, pendant les vacances</h2>
+    <h2 id="rayon-stages">⚡ Aller plus loin avec Medeos</h2>
+    <!-- LE PACK D'ABORD (Lucas, 05/09 : « le Pack Année complète est encore plus important que les
+         cartes stages ») — et ce qu'il change tout de suite : plus de limite de fiches. -->
+    <div class="packcard" id="packcard">
+      <span class="sc-tag">Pack Année complète</span>
+      <b>Plus de limite de deux fiches par jour : tu avances à ton rythme.</b>
+      <p>Les 4 stages de vacances + la pré-rentrée offerte · tous les QCM · 3 ascensions par jour.</p>
+      <button class="sc-buy" onclick="window.open('https://medeos-sante.fr/packs/stages-vacances#pack-annee','_blank')">Découvrir le Pack Année complète</button>
+    </div>
+    <div class="packcard actif" id="packcard-actif" style="display:none">
+      <span class="sc-tag">Pack Année complète</span>
+      <b>⚔️ Ton Pack est actif.</b>
+      <p>Toutes les fiches, tous les QCM, 3 ascensions par jour. Bon entraînement.</p>
+    </div>
     <div class="shop">
       <div class="shopcard2">
         <img src="img/stage-vacances.png" alt="Stages Vacances" loading="lazy">
         <div class="sc2-body">
           <span class="sc-tag">Stages des vacances scolaires</span>
-          <p>Quatre stages guidés pendant tes vacances de Terminale, qui te transmettent les bases de la première année de santé. Un parcours qui reprend là où tu t'es arrêté, à ton rythme.</p>
+          <p>Quatre stages guidés pendant tes vacances de Terminale : les bases de la première année, une demi-journée par jour, avec l'équipe Medeos.</p>
           <div class="sc-btns">
             <button class="sc-more" onclick="window.open('https://medeos-sante.fr/packs/stages-vacances','_blank')">En savoir plus</button>
             <button class="sc-buy" onclick="window.open('https://medeos-sante.fr/packs/stages-vacances#stages','_blank')">Dates et tarif</button>
@@ -3279,7 +3299,7 @@
         <img src="img/stage-medipro.png" alt="Medi Pro" loading="lazy">
         <div class="sc2-body">
           <span class="sc-tag">Stage de pré-rentrée</span>
-          <p>Un stage intensif juste avant la rentrée, qui te transmet les bases académiques et une méthode avancée. Tes questions trouvent une réponse à tout moment, et ton tuteur t'accompagne.</p>
+          <p>Un stage intensif juste avant la rentrée : les bases et une méthode avancée, avec un tuteur qui répond.</p>
           <div class="sc-btns">
             <button class="sc-more" onclick="window.open('https://medeos-sante.fr/packs/medi-pro','_blank')">En savoir plus</button>
             <button class="sc-buy" onclick="window.open('https://medeos-sante.fr/packs/medi-pro#packs','_blank')">Dates et tarif</button>
@@ -3287,7 +3307,6 @@
         </div>
       </div>
     </div>
-    <button class="stagelien" style="margin-top:12px" onclick="window.open('https://medeos-sante.fr/packs/stages-vacances#pack-annee','_blank')">Le pack année complète — <b>Medi Pro + les 4 stages, avec toute l'app en illimité</b> →</button>
     </div>
   </section>
 
@@ -9565,7 +9584,7 @@ async function activerCode(codeDirect){
   if(!ok){ if(msg) msg.textContent='Code non reconnu — vérifie les tirets et les caractères.'; return; }
   uses.push(brut); localStorage.setItem('m4_codes_uses',JSON.stringify(uses));
   S.stage=true; S.codeAnnee=Date.now(); delete S.codeAttente; saveS();
-  renderCodeZone(); renderAcces(); renderState();
+  renderCodeZone(); renderAcces(); renderState(); if(typeof majPackCarte==='function') majPackCarte();
   if(typeof renderCurArena==='function') renderCurArena();
   if(codeDirect){
     const d=document.createElement('div'); d.className='axotoast';
@@ -13145,7 +13164,12 @@ function ouvrirPanoramas(){
     '</div>').join('')+'</div>';
   openSheet('sheet-pioche');
 }
+function majPackCarte(){
+  const a=document.getElementById('packcard'), b=document.getElementById('packcard-actif');
+  if(a) a.style.display=S.stage?'none':''; if(b) b.style.display=S.stage?'':'none';
+}
 function voirStages(){
+  majPackCarte();
   go('biblio');
   setTimeout(()=>{ const r=document.getElementById('rayon-stages');
     if(r) r.scrollIntoView({behavior:'smooth',block:'start'}); },380);
@@ -13915,6 +13939,7 @@ if(SRC0==='accueil-panorama-p1') TUTO_DIFFERE='biblio';   /* le Panorama d'abord
 const PUB = HASH0==='inscription';
 go(['biblio','home','arene','social'].includes(HASH0) ? HASH0 : (PUB ? 'home' : (NOUVEAU?'biblio':(ECRAN0||(PARCOURS_A_VOIR?'home':'arene')))));
 try{ bandeauNavigateur(); }catch(e){}
+try{ majPackCarte(); }catch(e){}
 if(PUB && !(typeof accOk==='function' && accOk())){
   const t=document.getElementById('gate-titre'), p=t && t.nextElementSibling;
   if(t) t.textContent='Anticiper ta première année commence ici';
