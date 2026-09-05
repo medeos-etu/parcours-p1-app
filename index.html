@@ -2265,7 +2265,10 @@
 .cr-socle:not(.dio){height:164px;border-radius:24px;background:linear-gradient(180deg,#2A2740,#141226);box-shadow:0 12px 0 #0E0C1C,0 24px 36px rgba(0,0,0,.5)}
 .cr-socle.grand{width:266px}
 .cr-socle.grand:not(.dio){height:184px}
-.cr-dio{width:100%;max-width:none;display:block;filter:drop-shadow(0 18px 16px rgba(0,0,0,.45));pointer-events:none}
+.cr-dio{width:100%;max-width:none;display:block;aspect-ratio:1/1;filter:drop-shadow(0 18px 16px rgba(0,0,0,.45));pointer-events:none}
+/* La proportion est RÉSERVÉE avant même que l'image arrive. Sans elle, chaque diorama qui
+   se charge allongeait la route et repoussait le monde visé : la carte s'ouvrait à près de
+   3 000 px de l'endroit où l'élève en est (mesuré le 05/09). */
 .cr-em{font-size:78px;line-height:1;position:absolute;bottom:38px;left:50%;transform:translateX(-50%);filter:drop-shadow(0 12px 14px rgba(0,0,0,.5))}
 .cr-badge{position:absolute;left:-8px;top:-8px;font-style:normal;font-size:11px;font-weight:900;padding:5px 10px;border-radius:999px;
   background:rgba(250,246,240,.95);color:#4A3208;box-shadow:0 3px 10px rgba(0,0,0,.35);z-index:2}
@@ -9007,7 +9010,8 @@ const TUTOS={
     s.push({el:function(){ return document.getElementById('cr-sommet'); }, img:'axo-guide-bravo', t: p1
       ? "Le sommet, c'est <b>le bout de la route</b> : les "+M.length+" mondes terminés, toutes les bases reprises. On y monte ensemble, monde après monde."
       : "Le sommet, c'est <b>ta rentrée en première année</b> — avec tout le bagage que tu auras construit d'ici là. On y monte ensemble, monde après monde.",
-      btn:"C'est parti !", act:function(){ const e=elMonde(); if(e) try{ e.scrollIntoView({block:'center',behavior:'smooth'}); }catch(x){} }});
+      btn:"C'est parti !", act:function(){ const m=(typeof mondeCourant==='function')&&mondeCourant();
+        if(m && typeof centrerSurMonde==='function') centrerSurMonde(m.num, true); }});
     return s;
   }
 };
@@ -10668,6 +10672,43 @@ function ouvrirTuile(k){
   openSheet('sheet-tuile');
 }
 
+/* ═══ SE RETROUVER EN FACE DE LÀ OÙ L'ON EST (Lucas, 05/09).
+   Un seul scrollTo ne suffit pas : les dioramas arrivent après, la route s'allonge, et le
+   monde visé s'en va. On recale donc à chaque étape du chargement — image par image — et on
+   s'arrête dès que la position ne bouge plus deux fois de suite. Le voyage est instantané
+   tant que l'élève n'a rien touché ; s'il fait défiler lui-même, on le laisse tranquille. */
+let _cmStop=null;
+function centrerSurMonde(num, lisse){
+  if(_cmStop){ _cmStop(); _cmStop=null; }
+  const cible=()=>document.getElementById('monde-'+num);
+  const vise=()=>{ const e=cible(); if(!e) return null;
+    const r=e.getBoundingClientRect();
+    return Math.max(0, window.scrollY + r.top - (window.innerHeight - r.height)/2); };
+  let stable=0, dernier=-1, arrete=false, touche=false;
+  const aTouche=()=>{ touche=true; };
+  ['wheel','touchstart','keydown'].forEach(t=>window.addEventListener(t, aTouche, {passive:true, once:true}));
+  const fin=()=>{ arrete=true;
+    ['wheel','touchstart','keydown'].forEach(t=>window.removeEventListener(t, aTouche));
+    document.querySelectorAll('#carte-corps img').forEach(i=>i.removeEventListener('load', relance)); };
+  function pas(){
+    if(arrete || touche) return fin();
+    const y=vise();
+    if(y===null) return fin();
+    if(Math.abs(y-window.scrollY)>2) window.scrollTo({top:y, behavior: lisse?'smooth':'auto'});
+    stable = (Math.abs(y-dernier)<2) ? stable+1 : 0;
+    dernier=y;
+    if(stable>=3) return fin();          /* trois passages identiques : la page ne bouge plus */
+    requestAnimationFrame(pas);
+  }
+  function relance(){ stable=0; }
+  /* chaque image qui finit de charger peut décaler la route : on rouvre la surveillance */
+  setTimeout(()=>document.querySelectorAll('#carte-corps img').forEach(i=>{
+    if(!i.complete) i.addEventListener('load', relance, {once:true}); }), 0);
+  requestAnimationFrame(pas);
+  /* filet de sécurité : au bout de 4 s, on arrête quoi qu'il arrive */
+  setTimeout(fin, 4000);
+  _cmStop=fin;
+}
 function renderCarte(){
   const b = document.getElementById('carte-corps'); if(!b) return;
   const dit = (t,pose) => '<div class="se-guide" style="margin-bottom:10px"><img src="img/'+(pose||'axo-guide-carte')+'.png" alt=""><span class="sg-b">'+t+'</span></div>';
@@ -10867,8 +10908,7 @@ function renderCarte(){
   x += '</div></div>';
   b.innerHTML = x;
 
-  const el=document.getElementById('monde-'+mc.num);
-  if(el) requestAnimationFrame(()=>{ try{ const r=el.getBoundingClientRect(); window.scrollTo({top: Math.max(0, window.scrollY + r.top - window.innerHeight*0.30), behavior:'auto'}); }catch(e){} });
+  centrerSurMonde(mc.num);
   /* la première fois qu'on voit sa route, Axo la présente — avec SA date de rentrée */
   if(typeof startTuto==='function' && !tutoFait('carte'))
     setTimeout(()=>{ const sc=document.getElementById('carte'); if(sc && sc.classList.contains('on')) startTuto('carte'); }, 700);
