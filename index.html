@@ -8625,6 +8625,7 @@ function classementJoueurs(){
     const estMoi = moi && c.id===moi;
     const T = estMoi ? (S.ar.T||0) : (typeof c.T==='number'? c.T : null);
     if(T===null) return;                 /* jamais de total supposé */
+    if(T<=0) return;                     /* zéro trophée = pas encore au classement (Lucas, 05/09) */
     /* une entrée de registre sans identifiant lisible n'entre pas au classement :
        mieux vaut une ligne de moins qu'une ligne qui affiche « undefined ». */
     const nom = c.id || (estMoi ? (localStorage.getItem('m4_prenom')||null) : null);
@@ -8633,7 +8634,7 @@ function classementJoueurs(){
     out.push({id:nom, T:T, av:av.img, cadre:!!av.cadre});
   });
   /* les repères rejoignent les vrais comptes, puis tout le monde est trié ensemble */
-  if(typeof joueursReperes==='function') out.push(...joueursReperes());
+  if(typeof joueursReperes==='function') out.push(...joueursReperes().filter(j=>j.T>0));
   out.sort((a,b)=>b.T-a.T);
   return out;
 }
