@@ -13798,7 +13798,17 @@ try{ const q=new URLSearchParams(location.search);
   if(!/^MEDEOS-[A-Z0-9]{4}-[A-Z0-9]{4}$/.test(CODE0)) CODE0='';
 }catch(e){}
 if(SRC0==='accueil-panorama-p1') TUTO_DIFFERE='biblio';   /* le Panorama d'abord, la visite après */
-go(['biblio','home','arene','social'].includes(HASH0) ? HASH0 : (NOUVEAU?'biblio':(ECRAN0||(PARCOURS_A_VOIR?'home':'arene'))));
+/* #inscription : la porte de la PUB (Lucas, 05/09 : « un lien d'accès directement pour s'inscrire
+   au Parcours »). Sans compte, on tombe sur la porte du Parcours avec le message de l'annonce et
+   le formulaire déjà ouvert ; avec un compte, on entre dans le Parcours. */
+const PUB = HASH0==='inscription';
+go(['biblio','home','arene','social'].includes(HASH0) ? HASH0 : (PUB ? 'home' : (NOUVEAU?'biblio':(ECRAN0||(PARCOURS_A_VOIR?'home':'arene')))));
+if(PUB && !(typeof accOk==='function' && accOk())){
+  const t=document.getElementById('gate-titre'), p=t && t.nextElementSibling;
+  if(t) t.textContent='Anticiper ta première année commence ici';
+  if(p && p.tagName==='P') p.innerHTML='Deux fiches par jour jusqu\'à la rentrée, des QCM corrigés, et Lucas avec l\'équipe Medeos à tes côtés. <b>Le compte est gratuit, deux minutes</b> — et je t\'explique tout, étape par étape.';
+  setTimeout(()=>{ try{ accMode='create'; focusAcc(); }catch(e){} }, 600);
+}
 if(ECRAN0==='carte' && typeof renderCarte==='function') renderCarte();
 if(ECRAN0==='chemin' && typeof renderChemin==='function') renderChemin();
 if(SRC0==='accueil-panorama-p1'){
