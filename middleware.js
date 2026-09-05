@@ -11,9 +11,11 @@ export const config = { matcher: ['/fiches/:path*'] };
 
 export default function middleware(req) {
   const h = req.headers;
-  const dest = h.get('sec-fetch-dest') || '';
+  /* La seule chose qui compte : la demande vient-elle de l'app elle-même (même origine) ?
+     Adresse tapée → « none » ; lien depuis ailleurs → « cross-site » ; curl → rien. Tous fermés.
+     (La première version exigeait aussi dest=iframe et bloquait l'app en vrai : testé le 05/09.) */
   const site = h.get('sec-fetch-site') || '';
-  const ok = dest === 'iframe' && site === 'same-origin';
+  const ok = site === 'same-origin';
   if (ok) return;   /* rien à faire : Vercel sert le fichier */
   return new Response(
     '<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex">' +
