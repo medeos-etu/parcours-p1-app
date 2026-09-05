@@ -14059,8 +14059,22 @@ const PUB = HASH0==='inscription';
    connexion tout de suite ; avec, on entre. (Lucas, 05/09 : « se reconnecter en appuyant sur
    se connecter, c'est plus simple ».) */
 const CONNEXION = HASH0==='connexion';
+/* ?lien=…&email=… : le lien de connexion automatique des emails. On le présente au serveur ; s'il
+   est bon, on entre sans rien retaper. Il s'efface au premier usage : on le retire aussi de
+   l'adresse, pour qu'un rechargement ne le rejoue pas. */
+let LIEN0='', LIEN0_EMAIL='';
+try{ const q=new URLSearchParams(location.search); LIEN0=String(q.get('lien')||''); LIEN0_EMAIL=String(q.get('email')||'').trim().toLowerCase();
+  if(!/^[a-f0-9]{64}$/.test(LIEN0)) LIEN0=''; }catch(e){}
 go(['biblio','home','arene','social'].includes(HASH0) ? HASH0 : ((PUB||CONNEXION) ? 'home' : (NOUVEAU?'biblio':(ECRAN0||(PARCOURS_A_VOIR?'home':'arene')))));
-if(CONNEXION && !(typeof accOk==='function' && accOk())) setTimeout(()=>{ try{ accMode='login'; focusAcc(); }catch(e){} }, 600);
+if(LIEN0 && LIEN0_EMAIL){
+  (async function(){
+    try{ history.replaceState(null,'',location.pathname+location.hash); }catch(e){}
+    let d; try{ d=await apiCompte('lien',{email:LIEN0_EMAIL, lien:LIEN0}); }catch(e){ d={_status:0}; }
+    if(d && d.ok && d.jeton){ entrerAvecCompte(d, LIEN0_EMAIL); return; }
+    /* lien expiré ou déjà utilisé : le formulaire, avec un mot d'explication */
+    try{ accMode='login'; focusAcc(); setTimeout(()=>{ const e=document.getElementById('acc-lerr'); if(e) e.textContent='Ce lien a déjà servi ou a expiré — entre ton email et ton mot de passe.'; const i=document.getElementById('acc-lid'); if(i) i.value=LIEN0_EMAIL; },350); }catch(e){}
+  })();
+} else if(CONNEXION && !(typeof accOk==='function' && accOk())) setTimeout(()=>{ try{ accMode='login'; focusAcc(); }catch(e){} }, 600);
 try{ bandeauNavigateur(); }catch(e){}
 try{ majPackCarte(); }catch(e){}
 /* ═══ RÉCUPÉRER UN COMPTE CRÉÉ SUR L'ANCIENNE ADRESSE. Le stockage du navigateur est propre à
