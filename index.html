@@ -294,8 +294,8 @@
      (axo-canon, mascotte-arene) portent la classe .zoom et demandent leur propre zoom. */
   .avatar,.pavatar,.idbar .pav,.lobbytop .pav2,.skprev .pav2,.rl-av,.lbrow .lbav,.cr-chip-av{background:var(--idb-avbg)}
   .avatar img,.pavatar img,.idbar .pav img,.lobbytop .pav2 img,.skprev .pav2 img,.rl-av img,.lbrow .lbav img,.cr-chip-av img,.sktile img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;
-    transform:scale(1.22);transform-origin:50% 18%;border-radius:inherit;display:block}
-  .avatar img.zoom,.pavatar img.zoom,.idbar .pav img.zoom,.lobbytop .pav2 img.zoom,.skprev .pav2 img.zoom,.rl-av img.zoom,.lbrow .lbav img.zoom,.cr-chip-av img.zoom,.sktile img.zoom{object-position:50% 8%;transform:scale(1.5);transform-origin:50% 15%}
+    transform:scale(1.08);transform-origin:50% 18%;border-radius:inherit;display:block}   /* 1.22 → 1.08 : « trop zoomé » (Lucas, 05/09) */
+  .avatar img.zoom,.pavatar img.zoom,.idbar .pav img.zoom,.lobbytop .pav2 img.zoom,.skprev .pav2 img.zoom,.rl-av img.zoom,.lbrow .lbav img.zoom,.cr-chip-av img.zoom,.sktile img.zoom{object-position:50% 8%;transform:scale(1.28);transform-origin:50% 15%}
   .avatar{width:var(--idb-av);height:var(--idb-av);border-radius:var(--idb-avr);overflow:hidden;flex-shrink:0}
   /* LE CADRAGE UNIQUE des photos de profil : même zoom et même ancrage partout (en-tête, profil,
      classement, vestiaire, puces de la carte). Les photos sont des bustes 512×512 au même gabarit ;
@@ -649,8 +649,8 @@
   .so-carte.attente{background:linear-gradient(120deg,#3A3550,#1A1530)}
   .so-haut{display:flex;align-items:center;gap:var(--idb-gap)}
   .so-av{width:var(--idb-av);height:var(--idb-av);border-radius:var(--idb-avr);overflow:hidden;flex-shrink:0;background:var(--idb-avbg);display:flex;align-items:center;justify-content:center}
-  .so-av img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;transform:scale(1.22);transform-origin:50% 18%;display:block}
-  .so-av img.zoom{object-position:50% 8%;transform:scale(1.5);transform-origin:50% 15%}
+  .so-av img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;transform:scale(1.08);transform-origin:50% 18%;display:block}
+  .so-av img.zoom{object-position:50% 8%;transform:scale(1.28);transform-origin:50% 15%}
   .so-av i{font-style:normal;font-size:20px;opacity:.7}
   .so-nom{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
   .so-nom b{font-family:Fredoka,Inter,sans-serif;font-size:var(--idb-nom);font-weight:600;letter-spacing:.01em;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -9111,6 +9111,7 @@ const TUTOS={
     {sel:'.modeswitch', img:'axo-guide-pointe-haut', t:"Tu passes de l'un à l'autre avec ces deux boutons — c'est tout ce qu'il y a à retenir."},
     {sel:'#vue-salles', img:'axo-guide-carte', t:"<b>Les Salles</b> : une par matière. Tu t'y entraînes sur les fiches que tu viens de travailler, <b>sans rien risquer</b> — ni chrono, ni trophée."},
     {sel:'#ms-amphi', img:'mascotte-arene-prete-au-combat', t:"<b>Le Grand Amphi</b>, c'est l'inverse : toutes les matières mélangées, du vrai jeu. Chaque case juste vaut <b>+2 🏆</b>, chaque erreur <b>−2</b>."},
+    {sel:'.goldplate', img:'axo-guide-pointe-haut', t:"Tes <b>trophées</b>, en haut à droite : <b>touche-les</b> pour ouvrir le classement — le podium, et la place où tu te trouves. Tu y entres dès ton premier trophée."},
     {img:'axo-guide-bravo', t:"L'Amphi s'ouvre après <b>4 jours de Parcours</b> — le temps de te constituer un bagage. D'ici là, les Salles sont à toi.", btn:"J'ai compris"}
   ],
   /* LE PROFIL : ce qu'on y trouve, et pourquoi y revenir. Quatre étapes, la première fois
