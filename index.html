@@ -2949,7 +2949,7 @@
         </div>
         <div class="card" id="ar-stagecard" style="display:none;border:1px solid var(--tung)">
             <p style="font-size:12.5px;font-weight:800">Tes ascensions du jour sont faites. 👏</p>
-            <p style="font-size:11.5px;color:var(--muted);line-height:1.55;margin-top:3px">Avec l'année complète Medeos, les ascensions sont illimitées.</p>
+            <p style="font-size:11.5px;color:var(--muted);line-height:1.55;margin-top:3px">Avec le Pack Année complète, tu passes à 3 ascensions par jour.</p>
             <button class="btn ghost small" style="margin-top:9px" onclick="voirStages()">Voir les stages</button>
           <button class="blien" style="display:block;margin:8px auto 0;font-size:10.5px" onclick="go('profil')">Déjà l'année complète ? J'ai un code</button>
         </div>
@@ -3181,7 +3181,7 @@
 
       <div class="card" id="arend-stagecard" style="display:none;width:100%;max-width:400px;text-align:left;border:1px solid var(--tung)">
         <p style="font-size:12.5px;font-weight:800">Tes ascensions du jour sont faites. 👏</p>
-        <p style="font-size:11.5px;color:var(--muted);line-height:1.55;margin-top:3px">Avec l'année complète Medeos, les ascensions sont illimitées.</p>
+        <p style="font-size:11.5px;color:var(--muted);line-height:1.55;margin-top:3px">Avec le Pack Année complète, tu passes à 3 ascensions par jour.</p>
         <button class="btn ghost small" style="margin-top:9px" onclick="voirStages()">Voir les stages</button>
           <button class="blien" style="display:block;margin:8px auto 0;font-size:10.5px" onclick="go('profil')">Déjà l'année complète ? J'ai un code</button>
       </div>
@@ -3342,7 +3342,7 @@
     <div class="card" id="prog-profil"></div>
     <div class="card" id="p-profil"></div>
     <div class="card" id="p-code">
-      <h3>⚔️ Accès illimité</h3>
+      <h3>⚔️ Ton code Pack Année complète</h3>
       <div id="code-zone"></div>
     </div>
     <div class="card">
@@ -7685,6 +7685,12 @@ const GRADES=[[0,'Aspirant','🩺'],[400,'Primant','📗'],[1000,'Carabin','⭐'
               [8600,'Praticien hospitalier','🎓'],[10000,'Professeur','👑']];
 const POT=40, POT_CAL=20, CAL_M=30, CAL_N=20;
 const RUN_LEN=10, RUN_PER_DAY=2, TIME_Q=45, T0=0, R0=1000;   /* trophées à 0, niveau interne à 1000 */
+/* L'ÉLÈVE MEDEOS A TROIS ASCENSIONS, PAS L'INFINI (Lucas, 05/09 : « sinon c'est trop cheat,
+   ils vont connaître les questions par cœur »). Une banque se retient : sans plafond, on
+   finit par réviser ses réponses au lieu de réviser le cours. Trois par jour, c'est un vrai
+   avantage — la moitié en plus — sans vider l'intérêt de l'épreuve. */
+const RUN_PER_DAY_MEDEOS=3;
+function runsParJour(){ return (typeof S!=='undefined' && S && S.stage) ? RUN_PER_DAY_MEDEOS : RUN_PER_DAY; }
 const LOSS_BAND=[0.70,0.70,0.70,0.85,0.85,0.85,1,1,1];
 const STREAK_STEP=2, STREAK_CAP=16, STREAK_CAP_HI=8;
 const GUARANTEE=6, RUN_FLOOR=-60, GOLD=100;
@@ -8194,9 +8200,9 @@ function renderProgression(){
       : toutLeCorpus ? 'Chaque séance élargit ton diagramme. Le bord, c\'est la matière entière — d\'ici ta rentrée, tu as le temps de la parcourir en entier.'
       : jR!=null ? 'Chaque séance élargit ton diagramme. Le bord, c\'est ce que tu peux traverser d\'ici ta rentrée, à deux fiches par jour.'
       : 'Chaque séance élargit ton diagramme. Le bord, c\'est ce qu\'un élève régulier traverse en quelques mois — dis-moi ta date de rentrée et je l\'ajuste à ta route.')+'</p>'+
-    (S.stage ? '<p style="margin-top:10px;border-top:1px solid var(--line);padding-top:10px;font-size:11px;color:var(--muted);line-height:1.55">⚔️ <b>Ton Pack Année complète est actif</b> : toutes les fiches, tous les QCM, l\'Amphi sans limite.</p>'
+    (S.stage ? '<p style="margin-top:10px;border-top:1px solid var(--line);padding-top:10px;font-size:11px;color:var(--muted);line-height:1.55">⚔️ <b>Ton Pack Année complète est actif</b> : toutes les fiches, tous les QCM, et 3 ascensions par jour.</p>'
     : '<div style="margin-top:10px;border-top:1px solid var(--line);padding-top:10px;display:flex;align-items:center;gap:10px;flex-wrap:wrap">'+
-    '<p style="flex:1;min-width:200px;font-size:11px;color:var(--muted);line-height:1.55">🚀 <b>Pour accélérer :</b> le <b>Pack Année complète</b>, ce sont les quatre stages de vacances, la pré-rentrée offerte, et l\'app sans limite — toutes les fiches, tous les QCM, l\'Amphi.</p>'+
+    '<p style="flex:1;min-width:200px;font-size:11px;color:var(--muted);line-height:1.55">🚀 <b>Pour accélérer :</b> le <b>Pack Année complète</b>, ce sont les quatre stages de vacances, la pré-rentrée offerte, et l\'app sans limite de fiches, tous les QCM, et 3 ascensions par jour au lieu de 2.</p>'+
     '<button class="btn small" style="flex-shrink:0" onclick="window.open(\'https://medeos-sante.fr/packs/stages-vacances#pack-annee\',\'_blank\')">En savoir plus</button></div>');
   cibles.forEach(e=>e.innerHTML=inner);
 }
@@ -8505,11 +8511,11 @@ const ELEVES_REPERES=[
      medeos : élève des stages — photo et bannière Medeos, cadre doré. */
   {id:'nael',        rythme:.50, vitesse:28, base:  2},
   {id:'adam.bio',    rythme:.58, vitesse:32, base:  5},
-  {id:'tom-anat',    rythme:.64, vitesse:36, base:  8},
+  {id:'tom-anat',    rythme:.64, vitesse:36, base:  8, exploit:'curieux'},
   {id:'yanis_p',     rythme:.70, vitesse:40, base: 14},
-  {id:'hugo_med',    rythme:.75, vitesse:46, base: 22},
-  {id:'maelle.s',    rythme:.80, vitesse:50, base: 30},
-  {id:'lou.chimie',  rythme:.85, vitesse:54, base: 38},
+  {id:'hugo_med',    rythme:.75, vitesse:46, base: 22, exploit:'sansfaute'},
+  {id:'maelle.s',    rythme:.80, vitesse:50, base: 30, exploit:'curieux'},
+  {id:'lou.chimie',  rythme:.85, vitesse:54, base: 38, exploit:'sansfaute'},
   {id:'ines.b',      rythme:.88, vitesse:58, base: 46, medeos:true},
   {id:'clara.p1',    rythme:.92, vitesse:62, base: 54, medeos:true},
   {id:'sarah.k',     rythme:.95, vitesse:66, base: 64, medeos:true}
@@ -8553,6 +8559,17 @@ function skinRepere(e,T){
   if(e.medeos){
     const am=AVATARS.find(a=>a.id==='medeos'), bm=BANNIERES.find(b=>b.id==='medeos');
     if(am && bm) return {av:am, ban:bm};
+  }
+  /* UN EXPLIT PLAUSIBLE EN QUELQUES JOURS. À 30 trophées, seules deux photos sont ouvertes
+     par les seuils : sans cela, la moitié de la cohorte porterait la même. « Le Sans-faute »
+     (une ascension parfaite) et « Le Curieux » (dix fiches relues) s'obtiennent en quelques
+     jours ; la Flamme (7 jours de série) ou l'Inarrêtable (60 jours), non — on ne les
+     attribue jamais. */
+  if(e.exploit){
+    const a=AVATARS.find(x=>x.id===e.exploit);
+    if(a){ const ba0=BANNIERES.filter(b=>typeof b.seuil==='number' && b.seuil<=T);
+      const f0=ba0.slice(-3);
+      return {av:a, ban: f0[Math.floor(_repereAlea(e.id+'!ban'+f0.length)*f0.length)] || ba0[ba0.length-1] || BANNIERES[0]}; }
   }
   /* Sinon : PARMI LES TROIS DERNIÈRES débloquées, jamais au-dessus de son niveau — ainsi la
      photo et la bannière changent visiblement à chaque palier, sans jamais devancer les
@@ -8628,9 +8645,9 @@ function renderCurArena(){
   /* le bouton d'action reflète l'arène regardée */
   const lim=document.getElementById('ar-limite');
   if(lim){
-    if(S.stage) lim.innerHTML='<span class="inf">∞ Ascensions illimitées — année complète Medeos</span>';
-    else lim.innerHTML='<span class="pips2">'+Array.from({length:RUN_PER_DAY},(x,i)=>'<span class="pip2'+(i<S.ar.runs?' on':'')+'"></span>').join('')+'</span>'+
-      '<span>Il te reste '+S.ar.runs+' ascension'+(S.ar.runs>1?'s':'')+' aujourd\'hui · recharge chaque matin à 6 h</span>';
+    if(false) lim.innerHTML='';
+    else lim.innerHTML='<span class="pips2">'+Array.from({length:runsParJour()},(x,i)=>'<span class="pip2'+(i<S.ar.runs?' on':'')+'"></span>').join('')+'</span>'+
+      '<span>Il te reste '+S.ar.runs+' ascension'+(S.ar.runs>1?'s':'')+' aujourd\'hui'+(S.stage?' (3 par jour, élève Medeos)':'')+' · recharge chaque matin à 6 h</span>';
   }
   const bt=document.getElementById('ar-start-t'), bs=document.getElementById('ar-start-s'), bb=document.getElementById('ar-start');
   if(bt&&bs&&bb){
@@ -8638,7 +8655,7 @@ function renderCurArena(){
     else { bb.onclick=startRun; }
     if(areneArmee(a.k) && !dispo){ bt.textContent='BIENTÔT'; bs.textContent='cette arène ouvre plus tard'; bb.disabled=true; }
     else if(!areneArmee(a.k)){ }
-    else if(!S.stage && S.ar.runs<=0){ bt.textContent='REVIENS DEMAIN'; bs.textContent='tes '+RUN_PER_DAY+' ascensions du jour sont faites'; bb.disabled=true; }
+    else if(S.ar.runs<=0){ bt.textContent='REVIENS DEMAIN'; bs.textContent='tes '+runsParJour()+' ascensions du jour sont faites'; bb.disabled=true; }
     else {
       /* la taille réelle de la prochaine ascension, et l'état du stock */
       const arm=(typeof fichesArmees==='function')?fichesArmees():{};
@@ -8654,7 +8671,7 @@ function renderCurArena(){
     }
     /* pont sobre vers les stages : uniquement quand les ascensions du jour sont épuisées */
     const sc=document.getElementById('ar-stagecard');
-    if(sc) sc.style.display=(!S.stage && S.ar.runs<=0 && amphiOuvrable())?'block':'none';
+    if(sc) sc.style.display=(!S.stage && S.ar.runs<=0 && amphiOuvrable())?'block':'none';   /* la carte du Pack ne s'affiche qu'à qui ne l'a pas */
   }
   /* dans le Grand Amphi, c'est LUI qui commande le bouton et le compteur */
   if(typeof lieuArene!=='undefined' && lieuArene==='amphi') majActionAmphi();
@@ -8676,9 +8693,9 @@ function majActionAmphi(){
   }
   if(lim) lim.style.display='';
   bb.className='bigaction';
-  if(!S.stage && S.ar.runs<=0){
+  if(S.ar.runs<=0){
     bt.textContent='REVIENS DEMAIN';
-    bs.textContent='tes '+RUN_PER_DAY+' ascensions du jour sont faites';
+    bs.textContent='tes '+runsParJour()+' ascensions du jour sont faites';
     bb.disabled=true; bb.onclick=null;
   } else {
     bt.innerHTML='<img src="img/icones/nav-arene.png" alt=""> ENTRER DANS LE GRAND AMPHI';
@@ -9499,7 +9516,7 @@ function renderCodeZone(){
   const z=document.getElementById('code-zone'); if(!z) return;
   if(S.stage){
     z.innerHTML='<p style="font-size:12.5px;font-weight:800;color:var(--violet)">⚔️ Année complète active</p>'+
-      '<p style="font-size:11.5px;color:var(--muted);line-height:1.5;margin-top:3px">Séances et ascensions illimitées. Bon entraînement.</p>';
+      '<p style="font-size:11.5px;color:var(--muted);line-height:1.5;margin-top:3px">Toutes les fiches, tous les QCM, 3 ascensions par jour. Bon entraînement.</p>';
     return;
   }
   z.innerHTML='<p style="font-size:11.5px;color:var(--muted);line-height:1.5">Élève de l\'année complète ? Ton code d\'accès se trouve dans ton espace stage Medeos.</p>'+
@@ -9513,7 +9530,7 @@ function renderAcces(){
   if(!a) return;
   if(S.stage){
     a.textContent='Pack Année complète — sans limite de fiches par jour ⚔️';
-    s.textContent='Ascensions illimitées, tout le Parcours et la Bibliothèque. Bon entraînement.';
+    s.textContent='Tout le Parcours, tous les QCM, 3 ascensions par jour. Bon entraînement.';
     if(b) b.textContent='Démo : repasser en accès découverte';
   } else {
     a.textContent='Accès découverte — 2 ascensions par jour';
@@ -13043,7 +13060,7 @@ function heroMail(){
     '<p style="font-size:11px;color:var(--muted);margin-top:1px">Le soir, si tu n\'as pas encore fait ta séance</p></div>'+
     '<label class="iosw"><input type="checkbox" '+(on?'checked':'')+' onchange="S.mailOn=this.checked;saveS();rappelReglage()"><span class="knob"></span></label>'+
     '</div>'+
-    '<button class="stagelien" onclick="voirStages()">Le <b>Pack Année complète</b> : les quatre stages de vacances, la pré-rentrée offerte, et l\'app sans limite →</button>';
+    '<button class="stagelien" onclick="voirStages()">Le <b>Pack Année complète</b> : les quatre stages de vacances, la pré-rentrée offerte, tous les QCM et 3 ascensions par jour →</button>';
 }
 /* ---- état ---- */
 /* Le « jour » Medeos bascule à 6 h du matin, HEURE LOCALE : on recule l'horloge de 6 h
@@ -13055,14 +13072,16 @@ function arWeek(){ const d=new Date(Date.now()-6*3600*1000); const j=(d.getDay()
   d.setDate(d.getDate()-j);
   return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); }
 function initAr(){
-  if(!S.ar) S.ar={R:R0,T:T0,gold:T0,n:0,runs:RUN_PER_DAY,day:arDay(),seen:{},errs:{},notions:{},
+  if(!S.ar) S.ar={R:R0,T:T0,gold:T0,n:0,runs:runsParJour(),day:arDay(),seen:{},errs:{},notions:{},
                    qd:{},runsDone:0,last:null,wk:arWeek(),wdt:0,boost:0,played:0,mats:{},arene:'Anatomie'};
   if(!S.ar.mats) S.ar.mats={};
   if(!S.ar.arene) S.ar.arene='Anatomie';
   if(!S.ar.skin) S.ar.skin={av:'axo',ban:'violet'};
   if(!S.ar.debut) S.ar.debut=Date.now();
   if(S.ar.Tmax===undefined) S.ar.Tmax=S.ar.T||0;
-  if(S.ar.day!==arDay()){ S.ar.day=arDay(); S.ar.runs=RUN_PER_DAY; }  /* aucune pénalité d'absence */
+  if(S.ar.day!==arDay()){ S.ar.day=arDay(); S.ar.runs=runsParJour(); }  /* aucune pénalité d'absence */
+  /* le jour où le code Medeos est saisi, la troisième ascension arrive tout de suite */
+  if(S.ar.runs>runsParJour()) S.ar.runs=runsParJour();
   if(S.ar.wk!==arWeek()){
     S.ar.wdtRec=Math.max(S.ar.wdtRec||0, S.ar.wdt||0);   /* le record de semaine, lui, ne repart jamais */
     S.ar.wdtPrev=S.ar.wdt||0;
@@ -13145,7 +13164,7 @@ let cdTimer=null;
 function preRun(){
   initAr();
   if(!areneOuvrable()){ renderArene(); go('arene'); return; }   /* l'Arène n'est pas encore ouverte */
-  if(S.ar.runs<=0 && !S.stage){ renderArene(); go('arene'); return; }
+  if(S.ar.runs<=0){ renderArene(); go('arene'); return; }
   const e=document.getElementById('cd-num');
   let n=3; if(e) e.textContent=n;
   openSheet('sheet-launch');
@@ -13161,12 +13180,11 @@ function preRun(){
 function annulerLancement(){ clearInterval(cdTimer); cdTimer=null; closeSheet('sheet-launch'); }
 function doStartRun(){
   initAr();
-  if(S.stage){ S.ar.runs=Math.max(S.ar.runs,1); }
 
   if(S.ar.runs<=0){ renderArene(); go('arene'); return; }
   const qsTirees=pickQuestions();
   if(!qsTirees.length){ renderArene(); go('arene'); return; }   /* arène pas encore armée : rien n'est consommé */
-  if(!S.stage) S.ar.runs--;
+  S.ar.runs--;
   S.ar.runsDone++; S.ar.played=Date.now(); saveS();
   run={qs:qsTirees,i:0,ok:0,som:0,serie:0,bonus:0,lignes:[],errs:[],
        T0:S.ar.T,g0:gradeIdx(S.ar.T),answered:false,sel:new Set(),t0:0,
@@ -13340,7 +13358,7 @@ function quitRun(){
   if(!run.lignes.length){
     /* rien n'a encore été répondu : l'ascension n'est PAS décomptée (ni le joker retour) */
     stopChrono();
-    if(!S.stage) S.ar.runs=Math.min(RUN_PER_DAY,(S.ar.runs||0)+1);
+    S.ar.runs=Math.min(runsParJour(),(S.ar.runs||0)+1);
     S.ar.runsDone=Math.max(0,(S.ar.runsDone||0)-1);
     if(run.boost) S.ar.boost=(S.ar.boost||0)+1;
     saveS();
@@ -13462,8 +13480,8 @@ function closeRun(anticipee){
     document.getElementById('arend-trainbtn').style.display='none';
   }
   pips('arend-pips',S.ar.runs);
-  document.getElementById('arend-runs').textContent=S.stage? 'Ascensions illimitées — année complète' : S.ar.runs+' sur '+RUN_PER_DAY+' restantes';
-  document.getElementById('arend-again').style.display=(S.stage||S.ar.runs>0)?'block':'none';
+  document.getElementById('arend-runs').textContent=S.ar.runs+' sur '+runsParJour()+' restantes'+(S.stage?' · élève Medeos':'');
+  document.getElementById('arend-again').style.display=(S.ar.runs>0)?'block':'none';
   { const sc=document.getElementById('arend-stagecard'); if(sc) sc.style.display=(!S.stage && S.ar.runs<=0)?'block':'none'; }
   run=null; renderState();
   if(monte){
@@ -13473,12 +13491,12 @@ function closeRun(anticipee){
     go('argrade');
   } else go('arend');
 }
-function rechargeDemo(){ initAr(); S.ar.runs=RUN_PER_DAY; saveS(); renderArene(); }
+function rechargeDemo(){ initAr(); S.ar.runs=runsParJour(); saveS(); renderArene(); }
 
 /* ---- rendu de l'écran Arène ---- */
 function pips(id,n){
   const p=document.getElementById(id); p.innerHTML='';
-  for(let i=0;i<RUN_PER_DAY;i++){ const s=document.createElement('span'); s.className='pip'+(i<n?'':' off'); s.textContent='⚔️'; p.appendChild(s); }
+  for(let i=0;i<runsParJour();i++){ const s=document.createElement('span'); s.className='pip'+(i<n?'':' off'); s.textContent='⚔️'; p.appendChild(s); }
 }
 function fillGradeProgress(idG,idN,idB,idT){
   const T=S.ar.T, gi=gradeIdx(T), suiv=GRADES[gi+1];
@@ -13534,15 +13552,15 @@ function renderArene(){
     const lab=r>=.85?'très solide':(r>=.65?'solide':(r>=.4?'en construction':'à consolider'));
     const s=document.createElement('span'); s.textContent=m+' : '+lab; niv.appendChild(s); });
   pips('ar-pips',S.ar.runs);
-  document.getElementById('ar-runs').textContent=S.ar.runs+' sur '+RUN_PER_DAY+' restantes';
+  document.getElementById('ar-runs').textContent=S.ar.runs+' sur '+runsParJour()+' restantes'+(S.stage?' · élève Medeos':'');
   const st=document.getElementById('ar-start');
-  st.disabled=(!S.stage && S.ar.runs<=0 && (typeof areneArmee!=='function' || areneArmee(arCourante())));
+  st.disabled=(S.ar.runs<=0 && (typeof areneArmee!=='function' || areneArmee(arCourante())));
   /* ne jamais écraser la structure deux-lignes du bouton or : on écrit dans ses spans */
   { const stt=document.getElementById('ar-start-t'), sts=document.getElementById('ar-start-s');
     /* quota épuisé : renderCurArena a déjà écrit « REVIENS DEMAIN » — ne pas le remplacer
        par « Commencer une ascension » sur un bouton désactivé */
     const armee=(typeof areneArmee!=='function') || areneArmee(arCourante());
-    if(stt&&sts && armee && (S.stage || S.ar.runs>0)){
+    if(stt&&sts && armee && S.ar.runs>0){
       if(S.ar.runsDone){ stt.textContent='Commencer une ascension'; }
       else { stt.textContent='Commencer ma première ascension'; sts.textContent='pendant la calibration, impossible de perdre'; }
     } }

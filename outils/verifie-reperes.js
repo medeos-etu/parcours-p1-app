@@ -61,12 +61,20 @@ const srv=http.createServer((rq,rs)=>{let p=decodeURIComponent(rq.url.split('?')
           if(s.ban.id!=='medeos') pb.push('J'+J+' '+e.id+' : élève Medeos sans la bannière Medeos');
         } else {
           const sa=seuilDe(s.av), sb=seuilDe(s.ban);
-          if(sa===null) pb.push('J'+J+' '+e.id+' : photo sans seuil ('+s.av.id+')');
+          /* une photo sans seuil est légitime UNIQUEMENT si c'est l'exploit déclaré du repère */
+          if(sa===null){
+            if(s.av.id!==e.exploit) pb.push('J'+J+' '+e.id+' : photo sans seuil ('+s.av.id+')');
+          }
           else if(sa>T) pb.push('J'+J+' '+e.id+' : photo « '+s.av.id+' » (seuil '+sa+') au-dessus de ses '+T+' 🏆');
           if(sb===null) pb.push('J'+J+' '+e.id+' : bannière sans seuil ('+s.ban.id+')');
           else if(sb>T) pb.push('J'+J+' '+e.id+' : bannière « '+s.ban.id+' » (seuil '+sb+') au-dessus de ses '+T+' 🏆');
-          /* une peau conditionnelle (série, sans-faute…) n'a pas de sens pour un repère */
-          if(typeof s.av.cond==='function') pb.push('J'+J+' '+e.id+' : photo conditionnelle « '+s.av.id+' »');
+          /* une peau conditionnelle n'est admise que si c'est l'exploit déclaré du repère,
+             et seulement parmi ceux qu'on peut obtenir en quelques jours */
+          const OK_EXPLOIT=['sansfaute','curieux'];
+          if(typeof s.av.cond==='function'){
+            if(s.av.id!==e.exploit) pb.push('J'+J+' '+e.id+' : photo conditionnelle « '+s.av.id+' » non déclarée');
+            else if(OK_EXPLOIT.indexOf(e.exploit)<0) pb.push('J'+J+' '+e.id+' : exploit « '+e.exploit+' » impossible en quelques jours');
+          }
           if(typeof s.ban.cond==='function') pb.push('J'+J+' '+e.id+' : bannière conditionnelle « '+s.ban.id+' »');
         }
         tot.push(T);
