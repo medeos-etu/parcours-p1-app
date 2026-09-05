@@ -2921,7 +2921,7 @@
       <div class="chip" id="session-streak">🔥 Assiduité : 1 jour · chaque jour compte</div>
       <div class="card" style="width:100%;max-width:380px;text-align:left">
         <h3>Garde ta progression</h3>
-        <p style="font-size:12.5px;line-height:1.55;color:#3A3730">Ta progression est enregistrée sur cet appareil uniquement. Laisse ton email pour garder ta progression. Jamais de spam.</p>
+        <p style="font-size:12.5px;line-height:1.55;color:#3A3730">Ta progression est enregistrée sur ton compte : tu la retrouves sur n'importe quel appareil avec ton email et ton mot de passe.</p>
         <input type="email" class="field" placeholder="ton@email.fr" style="margin:8px 0" />
         <button class="btn" onclick="go('home')">Garder ma progression</button>
         <button class="btn ghost" onclick="go('home')">Continuer sans compte — tu pourras le faire plus tard</button>
@@ -7948,7 +7948,7 @@ function seDeconnecter(){
 function navigateurIntegre(){ return /Instagram|FBAN|FBAV|FB_IAB|TikTok|Snapchat|Line\//i.test(navigator.userAgent||''); }
 function bandeauNavigateur(){
   if(!navigateurIntegre()) return;
-  const html='<div class="nav-integre">📱 Tu es dans le navigateur d\'Instagram. Pour <b>garder ton compte</b>, ouvre cette page dans Safari ou Chrome. '+
+  const html='<div class="nav-integre">📱 Tu es dans le navigateur d\'Instagram. Pour <b>rester connecté</b> les prochains jours, ouvre cette page dans Safari ou Chrome. '+
     '<button type="button" onclick="try{navigator.clipboard.writeText(location.origin+\'/\');this.textContent=\'Lien copié ✓\'}catch(e){}">Copier le lien</button></div>';
   ['gate','sheet-compte'].forEach(id=>{ const c=document.getElementById(id); if(!c || c.querySelector('.nav-integre')) return;
     const cible = id==='sheet-compte' ? c.querySelector('.sheet-b') : c; if(!cible) return;
@@ -8151,7 +8151,7 @@ function renderCompte(){
       '<p class="accerr" id="acc-err"></p>'+
       '<button class="btn" type="submit">Créer mon compte et sauvegarder</button>'+
     '</form>'+
-    '<p style="font-size:11px;color:var(--muted);text-align:center;margin-top:8px">Ton compte et ta progression restent sur cet appareil.</p>';
+    '<p style="font-size:11px;color:var(--muted);text-align:center;margin-top:8px">Ton compte et ta progression sont enregistrés : tu les retrouves sur n\'importe quel appareil avec ton email et ton mot de passe.</p>';
 }
 
 
@@ -14055,7 +14055,12 @@ if(SRC0==='accueil-panorama-p1') TUTO_DIFFERE='biblio';   /* le Panorama d'abord
    au Parcours »). Sans compte, on tombe sur la porte du Parcours avec le message de l'annonce et
    le formulaire déjà ouvert ; avec un compte, on entre dans le Parcours. */
 const PUB = HASH0==='inscription';
-go(['biblio','home','arene','social'].includes(HASH0) ? HASH0 : (PUB ? 'home' : (NOUVEAU?'biblio':(ECRAN0||(PARCOURS_A_VOIR?'home':'arene')))));
+/* #connexion : le bouton « Me connecter » des emails. Sans session ici, on ouvre le formulaire de
+   connexion tout de suite ; avec, on entre. (Lucas, 05/09 : « se reconnecter en appuyant sur
+   se connecter, c'est plus simple ».) */
+const CONNEXION = HASH0==='connexion';
+go(['biblio','home','arene','social'].includes(HASH0) ? HASH0 : ((PUB||CONNEXION) ? 'home' : (NOUVEAU?'biblio':(ECRAN0||(PARCOURS_A_VOIR?'home':'arene')))));
+if(CONNEXION && !(typeof accOk==='function' && accOk())) setTimeout(()=>{ try{ accMode='login'; focusAcc(); }catch(e){} }, 600);
 try{ bandeauNavigateur(); }catch(e){}
 try{ majPackCarte(); }catch(e){}
 /* ═══ RÉCUPÉRER UN COMPTE CRÉÉ SUR L'ANCIENNE ADRESSE. Le stockage du navigateur est propre à
