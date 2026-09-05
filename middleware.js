@@ -15,7 +15,11 @@ export default function middleware(req) {
      Adresse tapée → « none » ; lien depuis ailleurs → « cross-site » ; curl → rien. Tous fermés.
      (La première version exigeait aussi dest=iframe et bloquait l'app en vrai : testé le 05/09.) */
   const site = h.get('sec-fetch-site') || '';
-  const ok = site === 'same-origin';
+  /* repli pour les navigateurs d'avant 2023 (Safari < 16.4) qui n'envoient pas Sec-Fetch-* :
+     on accepte si la page appelante est l'app elle-même */
+  const ref = h.get('referer') || '';
+  const hote = h.get('host') || '';
+  const ok = site === 'same-origin' || (site === '' && hote && ref.startsWith('https://' + hote + '/'));
   if (ok) return;   /* rien à faire : Vercel sert le fichier */
   return new Response(
     '<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex">' +
