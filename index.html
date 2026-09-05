@@ -2648,7 +2648,7 @@
       <p style="max-width:400px">Dernière chose : ton prénom, pour t'appeler par ton nom dans l'app.</p>
       <div style="width:100%;max-width:380px;display:grid;gap:12px;text-align:left">
         <label class="id-lab">Ton prénom
-          <input class="field" id="id-prenom" placeholder="Ex. Lucas" autocomplete="given-name" oninput="majIdent()"></label>
+          <input class="field" id="id-prenom" placeholder="Ex. Léa" autocomplete="given-name" oninput="majIdent()"></label>
         <label class="id-lab">Ton nom
           <input class="field" id="id-nom" placeholder="Ex. Crepin" autocomplete="family-name" oninput="majIdent()"></label>
         <div class="id-lab" style="display:none;border:1.5px solid var(--line);border-radius:14px;padding:11px 12px">
@@ -3349,7 +3349,7 @@
     </div>
     <div class="card">
       <h3>Une question sur une notion ?</h3>
-      <p style="font-size:12px;color:#3A3730;line-height:1.5">Écris-nous sur Instagram : <a href="https://instagram.com/medeos.sante" target="_blank" rel="noopener" style="color:var(--violet);font-weight:800">@medeos.sante</a> — on répond en message privé. Ou par email : <a href="mailto:contact@medeos-sante.fr" style="color:var(--violet);font-weight:800">contact@medeos-sante.fr</a>. C'est Lucas et l'équipe qui répondent.</p>
+      <p style="font-size:12px;color:#3A3730;line-height:1.5">Écris-nous sur Instagram : <a href="https://instagram.com/medeos.sante" target="_blank" rel="noopener" style="color:var(--violet);font-weight:800">@medeos.sante</a> — on répond en message privé. Ou par email : <a href="mailto:contact@medeos-sante.fr" style="color:var(--violet);font-weight:800">contact@medeos-sante.fr</a>. C'est l'équipe Medeos qui répond.</p>
     </div>
     <div class="card" id="p-simcard"></div>
 
@@ -9089,7 +9089,7 @@ const TUTOS={
     {img:'axo-guide-bienvenue', t:"Salut, moi c'est Axo. Tu es dans la <b>Bibliothèque Medeos</b> : le panorama de chaque matière de première année, les métiers de la santé, la méthode et l'agenda. <b>Tout est en accès libre</b>, sans compte — sers-toi."},
     {sel:'#rescards-free', img:'axo-guide-carte', t:"Chaque carte s'ouvre librement. Lis, referme, reviens — rien n'est chronométré, rien n'est noté."},
     {img:'axo-guide-pointe-bas', t:"Entrer en première année de santé, c'est souvent entrer <b>à l'aveugle</b> — comme sauter dans une piscine sans savoir nager. Ici, tu peux <b>apprendre à nager avant de sauter</b> : un peu chaque jour, jusqu'à ta rentrée."},
-    {img:'axo-guide-bravo', t:"C'est le rôle du <b>Parcours</b> : ta route jour après jour jusqu'à la rentrée, construite par <b>Lucas</b> — kiné, passé par cette première année — et l'équipe Medeos. Le compte est gratuit, deux minutes, et je t'explique tout étape par étape, pas tout d'un coup.",
+    {img:'axo-guide-bravo', t:"C'est le rôle du <b>Parcours</b> : ta route jour après jour jusqu'à la rentrée, construite par <b>l'équipe Medeos</b>. Le compte est gratuit, deux minutes, et je t'explique tout étape par étape, pas tout d'un coup.",
      btn:"Créer mon compte gratuit →", act:function(){ go('home'); }, skip:"Explorer la Bibliothèque d'abord"}
   ],
   home:[
@@ -9102,7 +9102,7 @@ const TUTOS={
        morceau a désormais SA visite, au moment où l'élève y met les pieds : les Salles et le
        Grand Amphi à l'entrée dans l'Arène, les mondes et les stages à l'ouverture de la carte. */
     {sel:'#pt-flame', img:'axo-guide-pointe-haut', t:"Chaque jour travaillé allonge ta série 🔥. Un jour sans venir, elle repart à 1 — sauf si tu as posé un gel la veille."},
-    {img:'axo-guide-bravo', t:"Et l'Arène ? <b>Elle s'ouvre dès que tu as fini ta première séance.</b> Tu y retrouves tes deux fiches du jour en questions, sans rien risquer. Derrière tout ça, il y a <b>Lucas et l'équipe Medeos</b> : préparé, et pas seul. Bonne première séance !", btn:"C'est parti !"}
+    {img:'axo-guide-bravo', t:"Et l'Arène ? <b>Elle s'ouvre dès que tu as fini ta première séance.</b> Tu y retrouves tes deux fiches du jour en questions, sans rien risquer. Derrière tout ça, il y a <b>l'équipe Medeos</b> : préparé, et pas seul. Bonne première séance !", btn:"C'est parti !"}
   ],
   arene:[
     {img:'axo-guide-bienvenue', t:"Bienvenue dans l'Arène ! Ici il y a <b>deux endroits</b>, et ils ne servent pas à la même chose. Je te montre."},
@@ -13828,7 +13828,7 @@ try{ bandeauNavigateur(); }catch(e){}
 if(PUB && !(typeof accOk==='function' && accOk())){
   const t=document.getElementById('gate-titre'), p=t && t.nextElementSibling;
   if(t) t.textContent='Anticiper ta première année commence ici';
-  if(p && p.tagName==='P') p.innerHTML='Deux fiches par jour jusqu\'à la rentrée, des QCM corrigés, et Lucas avec l\'équipe Medeos à tes côtés. <b>Le compte est gratuit, deux minutes</b> — et je t\'explique tout, étape par étape.';
+  if(p && p.tagName==='P') p.innerHTML='Deux fiches par jour jusqu\'à la rentrée, des QCM corrigés, et l\'équipe Medeos à tes côtés. <b>Le compte est gratuit, deux minutes</b> — et je t\'explique tout, étape par étape.';
   /* Le formulaire ne s'ouvre PAS tout seul : capturé le 05/09, il recouvrait la porte et la
      promesse de l'annonce disparaissait derrière un formulaire générique. La porte parle
      d'abord ; le bouton « Créer mon compte gratuit » ouvre le formulaire d'un geste. */
@@ -13842,7 +13842,7 @@ if(SRC0==='accueil-panorama-p1'){
 }
 if(SRC0==='accueil-guide-methodologique'){
   /* il venait chercher le guide : la visite commence sur sa carte, et dit où il s'ouvre */
-  TUTOS.biblio.unshift({sel:'#carte-guide', img:'axo-guide-pointe-haut', t:"Le <b>guide méthodologique</b> que tu viens chercher est ici. Il s'ouvre sur le site Medeos — on te demandera juste ton email pour te l'envoyer."});
+  TUTOS.biblio.unshift({sel:'#carte-guide', img:'axo-guide-pointe-haut', t:"Le <b>guide méthodologique</b> que tu viens chercher est ici. Il s'ouvre sur le site Medeos, en accès libre."});
   setTimeout(()=>{ const c=document.getElementById('carte-guide'); if(c) try{ c.scrollIntoView({block:'center'}); }catch(e){} }, 300);
 }
 if(CODE0){
