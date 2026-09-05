@@ -13182,7 +13182,10 @@ function heroMail(){
     '<p style="font-size:11px;color:var(--muted);margin-top:1px">Le soir, si tu n\'as pas encore fait ta séance</p></div>'+
     '<label class="iosw"><input type="checkbox" '+(on?'checked':'')+' onchange="S.mailOn=this.checked;saveS();rappelReglage()"><span class="knob"></span></label>'+
     '</div>'+
-    '<button class="stagelien" onclick="voirStages()">Le <b>Pack Année complète</b> : les quatre stages de vacances, la pré-rentrée offerte, tous les QCM et 3 ascensions par jour →</button>';
+    /* À CE MOMENT PRÉCIS — la séance finie, l'envie d'en faire une troisième — la seule chose qui
+       compte, c'est la limite de deux fiches par jour (Lucas, 05/09). Le reste du Pack se lit sur
+       le profil. Et on ne le propose pas à qui l'a déjà. */
+    (S.stage ? '' : '<button class="stagelien" onclick="voirStages()">Envie de continuer ? Avec le <b>Pack Année complète</b>, <b>plus de limite de deux fiches par jour</b> : tu avances à ton rythme →</button>');
 }
 /* ---- état ---- */
 /* Le « jour » Medeos bascule à 6 h du matin, HEURE LOCALE : on recule l'horloge de 6 h
