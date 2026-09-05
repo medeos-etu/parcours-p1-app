@@ -92,10 +92,17 @@ console.log('    citations introuvables dans la fiche                 : ' + ancr
 if (pas5) console.log('    questions hors format 5 items                        : ' + pas5);
 if (ficheKO) console.log('    fiches introuvables                                  : ' + ficheKO);
 if (nQ) { const moy = vraies / nQ;
-  const eventail = [1,2,3,4,5].map(k => k + ':' + (repartition[k] || 0)).join(' · ');
-  console.log('    moyenne des propositions vraies                      : ' + moy.toFixed(2) +
-    '  (cible 3,0 · de 1 à 5 vrais par QCM, comme au concours)');
-  console.log('    répartition (vrais par QCM)                          : ' + eventail);
+  /* L'ÉVENTAIL EST LA VRAIE MESURE, pas la moyenne : 3 vrais partout donne aussi 3,00 de
+     moyenne, et se devine sans rien savoir. On veut ~20 % de QCM pour chacune des cinq
+     valeurs. On mesure l'écart à cette répartition idéale. */
+  const parts = [1,2,3,4,5].map(k => (repartition[k] || 0) / nQ);
+  const ecart = parts.reduce((s, p) => s + Math.abs(p - 0.2), 0) / 2;   /* 0 = parfait, 1 = tout sur une valeur */
+  const eventail = [1,2,3,4,5].map(k => k + ':' + (repartition[k] || 0) +
+    ' (' + Math.round(100 * (repartition[k] || 0) / nQ) + '%)').join(' · ');
+  console.log('    moyenne des propositions vraies                      : ' + moy.toFixed(2) + '  (elle découle de l\'éventail, ce n\'est pas la cible)');
+  console.log('    éventail des vrais par QCM                           : ' + eventail);
+  console.log('    écart à un éventail équilibré                        : ' + Math.round(100 * ecart) + ' %' +
+    (ecart > 0.35 ? '  ⚠ trop concentré — varie de 1 à 5' : ecart > 0.2 ? '  ⚠ à ouvrir un peu' : '  ✓'));
   if (zeroVrai) console.log('    QCM sans aucun item vrai                             : ' + zeroVrai + '  ⚠ à corriger');
 }
 

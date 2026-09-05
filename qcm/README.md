@@ -28,13 +28,17 @@ la seule adaptation est que **la source n'est plus le chapitre de cours, mais la
 1. **5 items A-E**, toujours.
 2. **Type concours** : chaque item se juge vrai ou faux indépendamment. Un QCM peut porter
    de 1 à 5 items vrais.
-3. **Équilibre** : viser **3 propositions vraies sur 5 en moyenne** (Lucas, 05/09/2026).
-   Un QCM peut porter **de 1 à 5 items vrais** — cinq vrais est parfaitement légitime, c'est
-   ce qui se fait au concours. Il n'y a pas de plafond. Le seul cas interdit est **0 vrai** :
-   une question dont aucun item n'est exact n'apprend rien.
-   Sers-toi de tout l'éventail : un lot où tous les QCM ont 2 ou 3 vrais devient prévisible.
-   Et puisque les vrais dominent, les items faux doivent être **franchement faux**, bâtis sur
-   un vrai piège de la fiche — sinon répondre « vrai » partout suffirait.
+3. **Équilibre : un ÉVENTAIL, pas une valeur** (Lucas, 05/09/2026).
+   Le nombre d'items vrais doit se répartir **à peu près également entre 1, 2, 3, 4 et 5** —
+   environ un cinquième des QCM pour chaque valeur. Ce n'est pas une moyenne à atteindre :
+   c'est du hasard, comme au concours. La moyenne de 3,0 en découle toute seule.
+   ❌ Ce qu'il ne faut pas faire : mettre 3 vrais partout, ou n'utiliser que 2 et 3. Un lot
+   prévisible se devine sans rien savoir.
+   ✅ Ce qu'il faut faire : varier d'un QCM à l'autre. Cinq vrais est parfaitement légitime,
+   un seul vrai aussi. **Le seul cas interdit est 0 vrai** : une question dont aucun item
+   n'est exact n'apprend rien.
+   Et puisque les vrais sont nombreux, les items faux doivent être **franchement faux**,
+   bâtis sur un vrai piège de la fiche — sinon répondre « vrai » partout suffirait.
 4. **`explanation`** : le corrigé rédigé pour l'élève. Commence par « VRAI. » ou « FAUX : »
    puis la justification. Aucun renvoi au support, aucun numéro de ligne.
 5. 🔑 **`sourceQuote`** : la citation LITTÉRALE du passage de la fiche qui prouve la valeur
