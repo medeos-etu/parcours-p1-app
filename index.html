@@ -8493,20 +8493,21 @@ function renderSideAcc(){
    classement à chaque ouverture, sur n'importe quel appareil. Le hasard vient du jour et du
    pseudo, pas de Math.random. ═══ */
 const ELEVES_REPERES=[
-  /* base : les trophées qu'il avait déjà au 1er septembre 2026 — l'échelle est étalée sur
-     toute la route, du débutant au Praticien, pour qu'il y ait toujours quelqu'un juste
-     devant soi à rattraper, et quelqu'un derrière qu'on vient de dépasser.
-     rythme : sa régularité (part de jours travaillés) · vitesse : son gain un bon jour. */
-  {id:'nael',        rythme:.55, vitesse:82, base:  180},
-  {id:'adam.bio',    rythme:.60, vitesse:64, base:  430},
-  {id:'tom-anat',    rythme:.64, vitesse:70, base:  920},
-  {id:'yanis_p',     rythme:.71, vitesse:52, base: 1380},
-  {id:'hugo_med',    rythme:.78, vitesse:58, base: 2050},
-  {id:'maelle.s',    rythme:.83, vitesse:44, base: 2980},
-  {id:'lou.chimie',  rythme:.88, vitesse:37, base: 4150},
-  {id:'ines.b',      rythme:.85, vitesse:40, base: 5400},
-  {id:'clara.p1',    rythme:.92, vitesse:46, base: 6800},
-  {id:'sarah.k',     rythme:.95, vitesse:32, base: 8250}
+  /* base : les trophées qu'il avait déjà au 1er septembre 2026. L'échelle s'arrête à
+     l'Externe des hôpitaux et pas au Professeur (Lucas, 05/09 : « des trophées pas trop
+     élevés ») : un nouveau venu doit voir des gens à sa portée, pas un mur.
+     rythme : sa régularité (part de jours travaillés) · vitesse : son gain un bon jour.
+     medeos : élève des stages — photo et bannière Medeos, cadre doré. */
+  {id:'nael',        rythme:.55, vitesse:46, base:  140},
+  {id:'adam.bio',    rythme:.60, vitesse:40, base:  360},
+  {id:'tom-anat',    rythme:.64, vitesse:44, base:  680},
+  {id:'yanis_p',     rythme:.71, vitesse:34, base: 1050},
+  {id:'hugo_med',    rythme:.78, vitesse:38, base: 1480},
+  {id:'maelle.s',    rythme:.83, vitesse:30, base: 1960},
+  {id:'lou.chimie',  rythme:.88, vitesse:26, base: 2480},
+  {id:'ines.b',      rythme:.85, vitesse:28, base: 3050, medeos:true},
+  {id:'clara.p1',    rythme:.92, vitesse:24, base: 3620, medeos:true},
+  {id:'sarah.k',     rythme:.95, vitesse:22, base: 4180, medeos:true}
 ];
 const REPERE_EPOQUE = Date.UTC(2026, 8, 1);          /* 1er septembre 2026 : le jour zéro */
 /* un nombre entre 0 et 1, toujours le même pour un pseudo et un jour donnés */
@@ -8541,9 +8542,16 @@ function trophaeesRepere(e){
 }
 /* photo et bannière suivent leurs trophées, aux mêmes seuils que pour l'élève */
 function skinRepere(e,T){
-  /* On choisit PARMI LES TROIS DERNIÈRES débloquées, pas dans toute la collection : ainsi la
-     photo et la bannière changent visiblement à chaque palier franchi, au lieu de rester
-     figées sur un choix tiré une fois pour toutes. */
+  /* Les élèves des stages portent la peau Medeos — photo à l'étoile dorée, bannière Medeos,
+     cadre doré autour. Elle ne dépend pas des trophées mais du stage suivi, comme pour un
+     vrai élève : c'est une identité, pas une récompense de jeu. */
+  if(e.medeos){
+    const am=AVATARS.find(a=>a.id==='medeos'), bm=BANNIERES.find(b=>b.id==='medeos');
+    if(am && bm) return {av:am, ban:bm};
+  }
+  /* Sinon : PARMI LES TROIS DERNIÈRES débloquées, jamais au-dessus de son niveau — ainsi la
+     photo et la bannière changent visiblement à chaque palier, sans jamais devancer les
+     trophées (Lucas, 05/09 : « pas de photos et bannières incohérentes avec leur niveau »). */
   const dispo=a=>typeof a.seuil==='number' && a.seuil<=T;
   const av=AVATARS.filter(dispo), ba=BANNIERES.filter(dispo);
   const haut=(liste,cle)=>{
@@ -8556,7 +8564,7 @@ function skinRepere(e,T){
 function joueursReperes(){
   return ELEVES_REPERES.map(e=>{
     const T=trophaeesRepere(e), s=skinRepere(e,T);
-    return {id:e.id, T:T, av:s.av.img, cadre:!!s.av.cadre, ban:s.ban, repere:true};
+    return {id:e.id, T:T, av:s.av.img, cadre:!!s.av.cadre, ban:s.ban, medeos:!!e.medeos, repere:true};
   });
 }
 function classementJoueurs(){
