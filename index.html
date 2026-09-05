@@ -2710,7 +2710,7 @@
         <div class="howrow"><span class="hi">🗺️</span><div><b>Une route, trois fils</b><span>Sur ton chemin s'enchaînent des étapes de cours (une fiche puis son QCM), des <b>découvertes de métiers</b> (médecin, kiné, dentaire, pharma, sage-femme, chirurgien) et des outils de méthode. Et à côté : l'Arène, sans fin.</span></div></div>
         <div class="howrow"><span class="hi">✨</span><div><b>Chaque étape validée rapporte des points</b><span>Les trois premiers mondes construisent ton total. Une étape ≈ 15 points — les points mesurent ton travail, personne ne peut te les enlever.</span></div></div>
         <div class="howrow"><span class="hi">🏛️</span><div><b>L'Arène : monte au classement</b><span>Tu affrontes nos QCM. Tu réponds juste, tu montes. Tu te trompes, tu perds des points. Le reste, tu le découvres en jouant — et quand tu bloques, on t'ouvre la fiche qu'il te manque.</span></div></div>
-        <div class="howrow"><span class="hi">🔥</span><div><b>Reviens chaque jour, ton assiduité monte</b><span>Un jour où tu travailles = +1. Un jour sans venir, elle repart à 1 — sauf si tu as posé un gel la veille.</span></div></div>
+        <div class="howrow"><span class="hi">🔥</span><div><b>Reviens chaque jour, ton assiduité monte</b><span>Un jour où tu travailles = +1. Un jour sans venir, elle repart à 0 — sauf si tu as posé un gel la veille.</span></div></div>
       </div>
       <button class="btn" style="max-width:320px" onclick="finishOnboarding()">Voir ma carte</button>
     </div>
@@ -3532,6 +3532,7 @@ function majRegistreT(){
   }catch(e){}
 }
 function renderState(){
+  if(typeof verifierSerie==='function') verifierSerie();
   renderParcours();
   /* écran Étapes : les badges se comptent en ACQUIS (jamais « sur 12 ») */
   let badges=0;
@@ -8774,7 +8775,7 @@ function retirerGel(ev){
 function regleFlamme(){
   const n=S.streak||0, g=(S.gels||0), a14=(Math.max(S.streakMax||0,n)>=14), pose=(S.gelPose===_jourMoins(-1));
   return '<p class="fpt">Comment elle tient</p>'+
-    '<div class="fpg"><span class="fpi">🔥</span><span class="fpx"><b>Chaque jour compte.</b> Un jour sans venir, et la série repart à 1. Ce que tu as appris, lui, ne bouge pas.</span></div>'+
+    '<div class="fpg"><span class="fpi">🔥</span><span class="fpx"><b>Chaque jour compte.</b> Un jour sans venir, et la série repart à 0. Ce que tu as appris, lui, ne bouge pas.</span></div>'+
     '<div class="fpg'+(g>0||pose?' on':'')+'"><span class="fpi">🧊</span><span class="fpx"><b>Le gel de série</b>, gagné à chaque monde terminé, couvre une pause d\'un jour — à condition de l\'avoir posé la veille. Tu prévois de souffler demain : tu le poses maintenant, et ta série tient. Si tu viens quand même, tu le récupères.</span></div>'+
     (pose ? '<button class="fp-gel on" onclick="retirerGel(event)">🧊 Gel posé sur demain ✓ &nbsp;·&nbsp; retirer</button>'
      : g>0 ? '<button class="fp-gel" onclick="poserGel(event)">🧊 Poser un gel sur demain</button>' : '')+
@@ -9101,8 +9102,8 @@ const TUTOS={
     /* La route en image n'est plus racontée ici (Lucas, 05/09 : « c'est tôt »). Chaque
        morceau a désormais SA visite, au moment où l'élève y met les pieds : les Salles et le
        Grand Amphi à l'entrée dans l'Arène, les mondes et les stages à l'ouverture de la carte. */
-    {sel:'#pt-flame', img:'axo-guide-pointe-haut', t:"Chaque jour travaillé allonge ta série 🔥. Un jour sans venir, elle repart à 1 — sauf si tu as posé un gel la veille."},
-    {img:'axo-guide-bravo', t:"Et l'Arène ? <b>Elle s'ouvre dès que tu as fini ta première séance.</b> Tu y retrouves tes deux fiches du jour en questions, sans rien risquer. Derrière tout ça, il y a <b>l'équipe Medeos</b> : préparé, et pas seul. Bonne première séance !", btn:"C'est parti !"}
+    {sel:'#pt-flame', img:'axo-guide-pointe-haut', t:"Chaque jour travaillé allonge ta série 🔥. Un jour sans venir, elle repart à 0 — sauf si tu as posé un gel la veille."},
+    {img:'axo-guide-bravo', t:"Et l'Arène ? <b>Elle s'ouvre dès que tu as fini ta première séance.</b> Tu y retrouves tes deux fiches du jour en questions, sans rien risquer. Et tu n'avances pas seul : derrière l'app, il y a <b>l'équipe Medeos</b>, qui te répond si tu bloques. Bonne première séance !", btn:"C'est parti !"}
   ],
   arene:[
     {img:'axo-guide-bienvenue', t:"Bienvenue dans l'Arène ! Ici il y a <b>deux endroits</b>, et ils ne servent pas à la même chose. Je te montre."},
@@ -10418,6 +10419,7 @@ function illuRoute(){
 }
 
 function renderPtop(){
+  if(typeof verifierSerie==='function') verifierSerie();
   const hello=document.getElementById('pt-hello'); if(!hello) return;
   const pn=localStorage.getItem('m4_prenom');
   hello.textContent = pn ? 'Salut '+pn : 'Ton entraînement';
@@ -12544,11 +12546,24 @@ function seanceCredit(){
   saveS();
 }
 /* ═══ LA SÉRIE 🔥 — un jour travaillé (séance OU ascension) = +1.
-   Aucun jour n'est excusé d'office : un jour sans venir, elle repart à 1. Une seule exception, et
+   Aucun jour n'est excusé d'office : un jour sans venir, elle repart à 0. Une seule exception, et
    c'est l'élève qui la décide : un GEL POSÉ LA VEILLE couvre une pause d'un jour. Posé
    mais pas utilisé (il est venu quand même), le gel lui est rendu. ═══ */
 function _jourMoins(n){ const d=new Date(Date.now()-6*3600*1000); d.setDate(d.getDate()-n);
   return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); }
+/* LA SÉRIE ROMPUE VAUT 0 (Lucas, 05/09 : « si la personne ne vient pas, elle repart à 0, pas
+   à 1 »). Jusqu'ici l'app gardait l'ancien chiffre à l'écran tant que l'élève n'avait pas
+   retravaillé — une flamme éteinte qui affichait encore « 12 j ». La chaîne est vivante si la
+   dernière séance date d'aujourd'hui, d'hier, ou d'avant-hier avec un gel posé hier. Sinon,
+   c'est 0, partout, tout de suite ; la prochaine séance repartira de 1. */
+function serieVivante(){
+  const auj=arDay(), hier=_jourMoins(1);
+  return S.stDay===auj || S.stDay===hier || (S.stDay===_jourMoins(2) && S.gelPose===hier);
+}
+function verifierSerie(){
+  if((S.streak||0)>0 && !serieVivante()){ S.streak=0; saveS(); return true; }
+  return false;
+}
 function majStreak(){
   const auj=arDay();
   S.joursActifs=S.joursActifs||[];
@@ -13829,6 +13844,7 @@ let ECRAN0=null; try{ ECRAN0=localStorage.getItem('m4_ecran'); }catch(e){}
 if(!['biblio','home','arene','social','carte','chemin','profil'].includes(ECRAN0)) ECRAN0=null;
 /* un compte qui n'a pas encore vu la visite du Parcours atterrit sur le Parcours, pas sur
    l'Arène : c'est là que la méthode lui est racontée (progressif, Lucas 05/09) */
+try{ if(typeof verifierSerie==='function') verifierSerie(); }catch(e){}   /* une série rompue s'affiche à 0 dès l'ouverture */
 const PARCOURS_A_VOIR = (typeof accOk==='function'&&accOk()) && !(S.tuto&&S.tuto.home);
 /* ═══ D'OÙ VIENT LA PERSONNE ? Le lien doit tenir sa promesse (Lucas, 05/09 : « hyper limpide
    et logique, quelle que soit la voie d'accès »). src dit par quelle carte du site elle est
