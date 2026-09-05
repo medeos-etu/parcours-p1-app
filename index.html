@@ -2590,9 +2590,9 @@
         <button class="opt" data-c="-0.746" onclick="selSim(this,'pc')">Non</button>
         <button class="opt" data-c="-0.21" onclick="selSim(this,'pc')">Pas encore décidé</button>
       </div>
-      <p style="font-size:10.5px;color:var(--muted);margin-top:6px;line-height:1.5"><b>Pourquoi ça compte :</b> la P1 est remplie de chimie et de biophysique. Dans les enquêtes étudiantes, ceux qui gardent la spé réussissent presque deux fois plus souvent — terrain connu. Pas prise ? Ça se rattrape très bien : c'est exactement ce qu'une bonne préparation comble.</p>
+      <p style="font-size:10.5px;color:var(--muted);margin-top:6px;line-height:1.5"><b>Pourquoi ça compte :</b> la P1 est remplie de chimie et de biophysique. Dans les enquêtes étudiantes, ceux qui gardent la spé sont admis presque deux fois plus souvent — terrain connu. Pas prise ? Ça se rattrape très bien : c'est exactement ce qu'une bonne préparation comble.</p>
     </div>
-    <div class="encart"><b>Bon à savoir :</b> plus tu arrives préparé, plus tu réussis — les études le montrent. Et ce niveau de départ, il se construit maintenant.</div>
+    <div class="encart"><b>Bon à savoir :</b> arriver préparé améliore les chances — c'est ce que mesurent les études sur la pré-rentrée. Et ce niveau de départ, il se construit maintenant.</div>
     <button class="btn" onclick="noterSim4();go('sim5');calcSim()">Continuer</button>
   </section>
 
@@ -2631,13 +2631,13 @@
     <div class="center" style="justify-content:flex-start">
       <img class="axo" src="img/axo-fiche.png" alt="" style="height:104px">
       <h2 id="id-titre">Ton point de départ est prêt.</h2>
-      <p style="max-width:400px">Dernière chose : dis-nous qui tu es, pour qu'on l'enregistre à ton nom et qu'on puisse t'accompagner.</p>
+      <p style="max-width:400px">Dernière chose : ton prénom, pour t'appeler par ton nom dans l'app.</p>
       <div style="width:100%;max-width:380px;display:grid;gap:12px;text-align:left">
         <label class="id-lab">Ton prénom
           <input class="field" id="id-prenom" placeholder="Ex. Lucas" autocomplete="given-name" oninput="majIdent()"></label>
         <label class="id-lab">Ton nom
           <input class="field" id="id-nom" placeholder="Ex. Crepin" autocomplete="family-name" oninput="majIdent()"></label>
-        <div class="id-lab" style="border:1.5px solid var(--line);border-radius:14px;padding:11px 12px">
+        <div class="id-lab" style="display:none;border:1.5px solid var(--line);border-radius:14px;padding:11px 12px">
           <label style="display:flex;gap:9px;align-items:flex-start;cursor:pointer;font-weight:700">
             <input type="checkbox" id="id-telok" onchange="majTelZone()" style="margin-top:2px;width:18px;height:18px;flex-shrink:0;accent-color:var(--violet)">
             <span>Je veux bien recevoir un message de Medeos <span style="font-weight:600;color:var(--muted)">(facultatif)</span></span>
@@ -2671,7 +2671,7 @@
         <p style="font-size:16px;font-weight:800;margin-top:6px">Taux publié : <span style="color:#55524B" id="finTemoin">≈ 12 sur 100</span></p>
         <p style="font-size:16px;font-weight:800">Chez ceux qui arrivent préparés : <span style="color:var(--violet)" id="finval">≈ 47 sur 100</span></p>
       </div>
-      <p style="max-width:380px"><b style="color:var(--ink)">Ce ne sont pas les plus doués qui réussissent la P1 : ce sont les mieux préparés.</b> La fac se choisit une fois, ton profil est déjà largement construit — la préparation est le seul levier entièrement entre tes mains.</p>
+      <p style="max-width:380px"><b style="color:var(--ink)">En P1, la préparation compte au moins autant que le niveau de départ.</b> La fac se choisit une fois, ton profil est déjà largement construit — la préparation est le seul levier entièrement entre tes mains.</p>
       <div class="card" style="width:100%;max-width:380px;text-align:left">
         <p style="font-size:12.5px;font-weight:800">Tes deux vrais choix, dès maintenant :</p>
         <p style="font-size:12px;line-height:1.55;margin-top:6px">① <b>Garde la physique-chimie</b> si tu le peux — tu arriveras en terrain connu.</p>
@@ -3218,7 +3218,7 @@
         <img src="img/cover-agenda.jpg" alt="">
         <div class="rc-body">
           <b>Agenda P1</b>
-          <p>Un exemple concret de semaine de P1, heure par heure : à quoi ressemble vraiment l'organisation d'une année réussie.</p>
+          <p>Un exemple concret de semaine de P1, heure par heure : à quoi ressemble vraiment l'organisation d'une année bien organisée.</p>
           <div class="rc-meta">📅 Ton plan de route</div>
         </div>
       </div>
@@ -3226,7 +3226,7 @@
 
 
     <div class="rayon-premium">
-    <h2 id="rayon-stages">⚡ Réviser sans limite en rejoignant Medeos sur l'année complète</h2>
+    <h2 id="rayon-stages">⚡ Aller plus loin avec Medeos, pendant les vacances</h2>
     <div class="shop">
       <div class="shopcard2">
         <img src="img/stage-vacances.png" alt="Stages Vacances" loading="lazy">
@@ -3234,8 +3234,8 @@
           <span class="sc-tag">Stages des vacances scolaires</span>
           <p>Quatre stages guidés pendant tes vacances de Terminale, qui te transmettent les bases de la première année de santé. Un parcours qui reprend là où tu t'es arrêté, à ton rythme.</p>
           <div class="sc-btns">
-            <button class="sc-buy" onclick="window.open('https://www.medeos-sante.fr/packs/stages-vacances#stages','_blank')">Acheter</button>
-            <button class="sc-more" onclick="window.open('https://www.medeos-sante.fr/packs/stages-vacances','_blank')">En savoir plus</button>
+            <button class="sc-more" onclick="window.open('https://medeos-sante.fr/packs/stages-vacances','_blank')">En savoir plus</button>
+            <button class="sc-buy" onclick="window.open('https://medeos-sante.fr/packs/stages-vacances#stages','_blank')">Dates et tarif</button>
           </div>
         </div>
       </div>
@@ -3245,8 +3245,8 @@
           <span class="sc-tag">Stage de pré-rentrée</span>
           <p>Un stage intensif juste avant la rentrée, qui te transmet les bases académiques et une méthode avancée. Tes questions trouvent une réponse à tout moment, et ton tuteur t'accompagne.</p>
           <div class="sc-btns">
-            <button class="sc-buy" onclick="window.open('https://www.medeos-sante.fr/packs/medi-pro#packs','_blank')">Acheter</button>
-            <button class="sc-more" onclick="window.open('https://www.medeos-sante.fr/packs/medi-pro','_blank')">En savoir plus</button>
+            <button class="sc-more" onclick="window.open('https://medeos-sante.fr/packs/medi-pro','_blank')">En savoir plus</button>
+            <button class="sc-buy" onclick="window.open('https://medeos-sante.fr/packs/medi-pro#packs','_blank')">Dates et tarif</button>
           </div>
         </div>
       </div>
@@ -3335,14 +3335,13 @@
     </div>
     <div class="card">
       <h3>Une question sur une notion ?</h3>
-      <p style="font-size:12px;color:#3A3730;line-height:1.5">Écris-nous sur Instagram : <b>@medeos.sante</b> — on répond en DM. Si tu veux, laisse ton @ pour qu'on te reconnaisse quand tu nous écris.</p>
-      <input class="field" placeholder="@tonpseudo (facultatif)" style="margin-top:8px" />
+      <p style="font-size:12px;color:#3A3730;line-height:1.5">Écris-nous sur Instagram : <a href="https://instagram.com/medeos.sante" target="_blank" rel="noopener" style="color:var(--violet);font-weight:800">@medeos.sante</a> — on répond en message privé. Ou par email : <a href="mailto:contact@medeos-sante.fr" style="color:var(--violet);font-weight:800">contact@medeos-sante.fr</a>. C'est Lucas et l'équipe qui répondent.</p>
     </div>
     <div class="card" id="p-simcard"></div>
 
     <div class="card" id="p-avancee"></div>
     <button class="btn ghost" id="btn-logout" onclick="seDeconnecter()">Se déconnecter</button>
-    <p style="font-size:10.5px;color:var(--muted);text-align:center;line-height:1.5"><u>Espace parents</u> · <u>Confidentialité</u></p>
+    <p style="font-size:10.5px;color:var(--muted);text-align:center;line-height:1.5"><a href="https://medeos-sante.fr/packs/stages-vacances" target="_blank" rel="noopener" style="color:inherit">Espace parents</a> · <a href="https://medeos-sante.fr/legal/confidentialite" target="_blank" rel="noopener" style="color:inherit">Confidentialité</a></p>
   </section>
 
 
@@ -3403,6 +3402,7 @@ function go(id){
   }
   document.querySelectorAll('.scr').forEach(s=>s.classList.remove('on','uinl','uinr'));
   cible.classList.add('on');
+  if(id==='profil' && typeof renderState==='function') renderState();   /* « Tes chiffres » à jour (05/09) */
   /* d'un univers à l'autre : l'ancien écran SORT d'un côté, le nouveau ENTRE de l'autre */
   if(i>=0 && avant && avant!==cible && UNIVERS.indexOf(avant.id)>=0 && i!==univIdx){
     const versDroite = i>univIdx;
@@ -3487,7 +3487,8 @@ function finishOnboarding(){ localStorage.setItem('m4_onboarded','1'); go('home'
 function resetApp(){ localStorage.clear(); location.reload(); }
 
 /* ---- État du joueur (départ à zéro, tout se gagne) ---- */
-let S = JSON.parse(localStorage.getItem('m4_state')||'{"points":0,"streak":0,"qcm":0,"nodeDone":false,"simSeen":false,"libSeen":false,"sansFaute":false}');
+let S; try{ S = JSON.parse(localStorage.getItem('m4_state')||'null'); }catch(e){ S=null; }
+if(!S || typeof S!=='object') S={"points":0,"streak":0,"qcm":0,"nodeDone":false,"simSeen":false,"libSeen":false,"sansFaute":false};
 function saveS(){
   localStorage.setItem('m4_state',JSON.stringify(S));
   majRegistreT();
@@ -3725,7 +3726,7 @@ function majIdent(){
   /* Le téléphone ne conditionne RIEN : seuls le prénom et le nom sont demandés.
      S'il a coché la case, on attend quand même un numéro plausible avant de valider. */
   const numOk = !veut || te.replace(/\D/g,'').length>=6;
-  if(cta) cta.disabled = !(pr.length>1 && no.length>1 && numOk);
+  if(cta) cta.disabled = !(pr.length>1);
 }
 function simNum(id,def){ const el=document.getElementById(id); const m=el&&el.textContent.match(/\d+/); return m?parseInt(m[0]):def; }
 function finSim(){ calcSim();
@@ -7862,7 +7863,7 @@ function seConnecter(){
   /* la connexion se fait par EMAIL ; seul un vieux compte de démo créé sans email
      est encore accepté par son identifiant, sinon il serait irrécupérable */
   const c=Object.values(reg).find(x=>(x.mail||'').toLowerCase()===q) || (reg[q]&&!reg[q].mail?reg[q]:null);
-  if(!c){ err.textContent='Aucun compte avec cet email sur cet appareil. (Démo locale — en version complète, ton compte Medeos te reconnecte partout.)'; return; }
+  if(!c){ err.textContent='Aucun compte avec cet email sur cet appareil. Ton compte vit sur l\'appareil où tu l\'as créé.'; return; }
   if(c.mp===null){ err.textContent='Ce compte date d\'avant la mise à jour et n\'a pas de mot de passe enregistré — passe par « Mot de passe oublié ? » pour en définir un.'; return; }
   if(c.mp!==mp){ err.textContent='Mot de passe incorrect. Tu peux le réinitialiser avec « Mot de passe oublié ? ».'; return; }
   S.ar.compte={id:c.id, mail:c.mail||null, cree:c.cree};
@@ -7882,7 +7883,9 @@ function resetDemande(){
   /* réponse volontairement neutre : on ne révèle jamais si un compte existe.
      Recherche par EMAIL ; l'identifiant n'est accepté que pour un vieux compte sans email. */
   resetCible=Object.keys(reg).find(k=>(reg[k].mail||'').toLowerCase()===q)||(reg[q]&&!reg[q].mail?q:null);
-  resetEnvoye=true; renderCompte();
+  /* le compte vit sur cet appareil : pas de faux email, on passe droit au nouveau mot de passe (05/09) */
+  if(!resetCible){ err.textContent='Aucun compte avec cet email sur cet appareil.'; return; }
+  accMode='reset2'; renderCompte();
 }
 function resetOuvrirEmail(){
   if(!resetCible){ const err=document.getElementById('acc-rerr');
@@ -7928,11 +7931,11 @@ function renderCompte(){
             '<button class="btn" onclick="resetOuvrirEmail()">📬 Ouvrir l\'email reçu (démo)</button>'+
           '</div>'+
           '<p style="font-size:11px;color:var(--muted);margin-top:8px;text-align:center">Démo locale : ce bouton remplace ta boîte mail. En version complète, le lien arrive par email.</p>'
-        : '<p>Entre ton email : on t\'envoie un lien pour choisir un nouveau mot de passe.</p>'+
+        : '<p>Entre l\'email de ton compte : il est enregistré sur cet appareil, tu choisiras un nouveau mot de passe juste après.</p>'+
           '<form class="accform" method="post" action="#" onsubmit="event.preventDefault();resetDemande()">'+
             '<input id="acc-rid" name="email" type="email" placeholder="Ton email" autocomplete="username" inputmode="email" autocapitalize="none" spellcheck="false" />'+
             '<p class="accerr" id="acc-rerr"></p>'+
-            '<button class="btn" type="submit">Envoyer le lien</button>'+
+            '<button class="btn" type="submit">Continuer</button>'+
           '</form>')+
       '<button class="se-alt" onclick="accMode=\'login\';resetEnvoye=false;renderCompte()">← Retour à la connexion</button>';
     return;
@@ -7977,7 +7980,8 @@ function renderCompte(){
       '<input id="acc-mp" name="password" type="password" placeholder="Ton mot de passe" autocomplete="new-password" />'+
       '<p class="accerr" id="acc-err"></p>'+
       '<button class="btn" type="submit">Créer mon compte et sauvegarder</button>'+
-    '</form>';
+    '</form>'+
+    '<p style="font-size:11px;color:var(--muted);text-align:center;margin-top:8px">Ton compte et ta progression restent sur cet appareil.</p>';
 }
 
 
@@ -7986,17 +7990,17 @@ function renderCompte(){
 const ROAD=[  /* chaque palier dit CLAIREMENT ce qu'on gagne — zéro jargon */
   {t:0,     n:'Aspirant',              em:'🩺', r:'Les quatre arènes sont à toi'},
   {t:100,   n:'Première garde',        em:'🎖️', r:'Ton premier blason'},
-  {t:200,   n:'Salle d\'étude',        em:'📚', r:'Tes statistiques d\'ascension se débloquent'},
+  {t:200,   n:'Salle d\'étude',        em:'📚', r:'Un blason de plus'},
   {t:400,   n:'Primant',               em:'📗', r:'Nouveau grade — tu ne redescendras plus sous 400 🏆'},
   {t:700,   n:'Salle de garde',        em:'☕', r:'Un blason de plus pour ta collection'},
-  {t:1000,  n:'Carabin',               em:'⭐', r:'Nouveau grade — l\'épreuve « Colle » s\'ouvre : 20 questions, chrono, classée'},
-  {t:1400,  n:'Tour de salle',         em:'📋', r:'Tes statistiques notion par notion'},
-  {t:1900,  n:'Externe',               em:'🏥', r:'Nouveau grade — ta fiche d\'erreurs personnelle, générée pour toi'},
+  {t:1000,  n:'Carabin',               em:'⭐', r:'Nouveau grade — tu ne redescendras plus sous 1 000 🏆'},
+  {t:1400,  n:'Tour de salle',         em:'📋', r:'Un blason de plus pour ta collection'},
+  {t:1900,  n:'Externe',               em:'🏥', r:'Nouveau grade — et un blason'},
   {t:2500,  n:'Staff du matin',        em:'💬', r:'Un blason de plus'},
-  {t:3100,  n:'Externe des hôpitaux',  em:'🚑', r:'Nouveau grade — l\'épreuve « Garde de nuit » s\'ouvre'},
-  {t:4600,  n:'Interne',               em:'🎖️', r:'Nouveau grade — pose une question à un tuteur Medeos, réponse prioritaire'},
-  {t:6400,  n:'Chef de clinique',      em:'🏛️', r:'Nouveau grade — le concours blanc chronométré s\'ouvre'},
-  {t:8600,  n:'Praticien hospitalier', em:'🎓', r:'Nouveau grade — un tuteur t\'écrit un bilan sur mesure de ton niveau'},
+  {t:3100,  n:'Externe des hôpitaux',  em:'🚑', r:'Nouveau grade — tu ne redescendras plus sous 3 100 🏆'},
+  {t:4600,  n:'Interne',               em:'🎖️', r:'Nouveau grade — et un blason'},
+  {t:6400,  n:'Chef de clinique',      em:'🏛️', r:'Nouveau grade — tu ne redescendras plus sous 6 400 🏆'},
+  {t:8600,  n:'Praticien hospitalier', em:'🎓', r:'Nouveau grade — et un blason'},
   {t:10000, n:'Professeur',            em:'👑', r:'Le sommet de la route'}
 ];
 
@@ -8177,9 +8181,10 @@ function renderProgression(){
       : toutLeCorpus ? 'Chaque séance élargit ton diagramme. Le bord, c\'est la matière entière — d\'ici ta rentrée, tu as le temps de la parcourir en entier.'
       : jR!=null ? 'Chaque séance élargit ton diagramme. Le bord, c\'est ce que tu peux traverser d\'ici ta rentrée, à deux fiches par jour.'
       : 'Chaque séance élargit ton diagramme. Le bord, c\'est ce qu\'un élève régulier traverse en quelques mois — dis-moi ta date de rentrée et je l\'ajuste à ta route.')+'</p>'+
-    '<div style="margin-top:10px;border-top:1px solid var(--line);padding-top:10px;display:flex;align-items:center;gap:10px;flex-wrap:wrap">'+
-    '<p style="flex:1;min-width:200px;font-size:11px;color:var(--muted);line-height:1.55">🚀 <b>Pour accélérer :</b> le <b>Pack Année complète</b>, ce sont les stages guidés pendant les vacances, et le Parcours sans la limite de 2 fiches par jour, avec tous les QCM.</p>'+
-    '<button class="btn small" style="flex-shrink:0" onclick="window.open(\'https://www.medeos-sante.fr/packs/stages-vacances#stages\',\'_blank\')">En savoir plus</button></div>';
+    (S.stage ? '<p style="margin-top:10px;border-top:1px solid var(--line);padding-top:10px;font-size:11px;color:var(--muted);line-height:1.55">⚔️ <b>Ton Pack Année complète est actif</b> : toutes les fiches, tous les QCM, l\'Amphi sans limite.</p>'
+    : '<div style="margin-top:10px;border-top:1px solid var(--line);padding-top:10px;display:flex;align-items:center;gap:10px;flex-wrap:wrap">'+
+    '<p style="flex:1;min-width:200px;font-size:11px;color:var(--muted);line-height:1.55">🚀 <b>Pour accélérer :</b> le <b>Pack Année complète</b>, ce sont les quatre stages de vacances, la pré-rentrée offerte, et l\'app sans limite — toutes les fiches, tous les QCM, l\'Amphi.</p>'+
+    '<button class="btn small" style="flex-shrink:0" onclick="window.open(\'https://medeos-sante.fr/packs/stages-vacances#pack-annee\',\'_blank\')">En savoir plus</button></div>');
   cibles.forEach(e=>e.innerHTML=inner);
 }
 /* une fiche recommandée ne s'ouvre que si le PARCOURS l'a réellement servie :
@@ -8300,7 +8305,7 @@ function renderProfilForm(){
     '<p class="pf-intro">'+
       (dejaFait
         ? 'Ton point de départ est fait — il ne manque plus que de quoi te reconnaître : ton prénom et ton nom.'
-        : 'Réponds à trois questions — ta fac, ta classe, ton projet — et tu sauras où tu en es : <b>tes vraies chances de réussite en première année</b>, avec les chiffres de ta fac. Deux minutes, une seule fois.')+'</p>'+
+        : 'Réponds à trois questions — ta fac, ta classe, ton projet — et tu sauras où tu en es : <b>le taux d\'admission publié par ta fac, et ce que la préparation y change</b>. Deux minutes, une seule fois.')+'</p>'+
     (dejaFait
       ? '<button class="gbtn" onclick="prepIdent(\'profil\');go(\'simid\')">👤 Compléter mon profil · 1 min</button>'
       : '<button class="gbtn" onclick="go(\'sim1\')">🧭 Faire le point · 2 min</button>');
@@ -8935,11 +8940,11 @@ const TUTOS={
     {img:'axo-guide-pointe-bas', t:"Et on ne te demande pas de sacrifier ta Terminale. <b>Deux fiches par jour, une vingtaine de minutes.</b> Pas plus. Ce n'est pas la quantité qui fait la différence, c'est de revenir chaque jour — et tout ici est construit pour que tu aies envie de revenir."},
     {img:'axo-guide-carte', t:"Chaque fiche, tu la lis, tu la <b>restitues de mémoire</b>, tu compares. Puis des <b>QCM corrigés</b>, du même type qu'en première année, te disent où tu en es vraiment. C'est ça qui fait tenir les notions — pas la relecture."},
     {img:'axo-guide-bienvenue', t:"Derrière l'app, il y a <b>Lucas</b> — kiné, passé par cette première année — et l'équipe Medeos. Ils l'ont construite pour que tu l'abordes autrement qu'eux : <b>préparé, et pas seul</b>."},
-    {img:'axo-guide-pointe-bas', t:"Là où tu es, c'est la <b>Bibliothèque</b> : des fiches, un panorama de chaque matière, et les métiers de la santé pour savoir vers quoi tu vas. <b>Tout est en accès libre</b> — sans compte, sans limite."},
+    {img:'axo-guide-pointe-bas', t:"Là où tu es, c'est la <b>Bibliothèque</b> : le panorama de chaque matière, les métiers de la santé pour savoir vers quoi tu vas, la méthode et l'agenda d'une année. <b>Tout est en accès libre</b>, sans compte."},
     {sel:'#rescards-free', img:'axo-guide-carte', t:"Chaque carte s'ouvre librement. Lis, referme, reviens — rien n'est chronométré, rien n'est noté."},
-    {sel:'#mainnav', img:'axo-guide-pointe-bas', t:"En bas, les quatre mondes : la <b>Bibliothèque</b>, ton <b>Parcours</b> de révision, l'<b>Arène</b> — et le <b>Social</b>, pour tes amis."},
-    {img:'axo-guide-bravo', t:"Le <b>Parcours</b> — ta route, jour après jour, jusqu'à ta rentrée — et l'<b>Arène</b> s'ouvrent avec un compte gratuit : ta progression y est gardée pour de bon. Tu veux voir à quoi ressemble ta route ?",
-     btn:"Découvrir le Parcours →", act:function(){ go('home'); }, skip:"Explorer la Bibliothèque d'abord"}
+    {sel:'#mainnav', img:'axo-guide-pointe-bas', t:"En bas, les quatre espaces : la <b>Bibliothèque</b>, ton <b>Parcours</b> de révision, l'<b>Arène</b> — et le <b>Social</b>, pour tes amis."},
+    {img:'axo-guide-bravo', t:"Le <b>Parcours</b> — ta route, jour après jour, jusqu'à ta rentrée — et l'<b>Arène</b> s'ouvrent avec un compte gratuit : ta progression y est enregistrée. Tu veux voir à quoi ressemble ta route ?",
+     btn:"Créer mon compte gratuit →", act:function(){ go('home'); }, skip:"Explorer la Bibliothèque d'abord"}
   ],
   home:[
     {img:'axo-guide-bienvenue', t:"Voici ton <b>Parcours</b> : deux fiches par jour, un rythme tenable, une méthode qui fait tenir les notions. <b>Il t'accompagne jusqu'à ta rentrée</b> — et on le marche petit objectif par petit objectif."},
@@ -10002,7 +10007,7 @@ function libelleGo(premiere){
   return premiere?'Commencer':'Continuer';
 }
 /* la ligne de contexte, courte : la matière, le volume, la durée — le reste est sur la carte */
-function ligneCourte(s){ const k=(s.fiches||[]).length; return s.mat+' · '+k+' fiche'+(k>1?'s':'')+' · ~'+(5*k)+' min'; }
+function ligneCourte(s){ const k=(s.fiches||[]).length; return s.mat+' · '+k+' fiche'+(k>1?'s':'')+' · ~'+(10*k)+' min'; }
 /* NOUVEAU DÉPART : un lundi ou un premier du mois, après au moins deux jours sans venir,
    on ne parle pas de la série perdue — on parle de repartir. C'est le moment où l'on
    revient le plus volontiers, autant l'accueillir. */
@@ -10724,7 +10729,7 @@ function renderCarte(){
       '<span class="cr-stage-k">Un monde à part sur ta route</span>'+
       '<span class="cr-socle stage'+(img?' dio':'')+'">'+
         (img?'<img class="cr-dio" src="'+img+'" alt="">':'<span class="cr-em">⛺</span>')+
-        '<span class="cr-cadenas">🔒 Stage Medeos</span></span>'+
+        '<span class="cr-cadenas">⛺ Stage Medeos · en option</span></span>'+
       '<span class="cr-nom stage">'+titre+'</span>'+
       '<span class="cr-band stage"><span>'+quand+'</span></span>'+
       '<span class="cr-stage-h">'+o.hook+'</span>'+
@@ -12316,7 +12321,7 @@ function seanceCredit(){
   else { S.sjour=arDay();                     /* seule une séance du FIL consomme le jour */
     S.sj=(S.sj&&S.sj.day===arDay())?{day:arDay(),n:(S.sj.n||0)+1}:{day:arDay(),n:1}; }
   delete S.sr;                                 /* la séance finie n'est plus « en cours » */
-  S.points=(S.points||0)+20; S.qcm=(S.qcm||0)+2;
+  S.points=(S.points||0)+20;   /* les QCM se comptent dans les Salles, pas ici (05/09) */
   majStreak();
   SR.credited=true;
   saveS();
@@ -12535,20 +12540,8 @@ function comparePlier(){
 /* ═══ SOCIAL — mes amis par identifiant : trophées, avancée dans le Parcours, duels ═══ */
 function renderSocial(){
   const box=document.getElementById('s-amis'); if(!box) return;
-  /* les duels asynchrones rendus : l'ami « a joué » (démo ~40 s — en prod, son vrai temps) */
-  S.duelsAttente=S.duelsAttente||{};
-  Object.keys(S.duelsAttente).forEach(ami=>{
-    const w=S.duelsAttente[ami];
-    if(Date.now()-w.ts>40000){
-      let n=0; for(const c of ami) n=(n*31+c.charCodeAt(0))%97;
-      const sonTemps=45+(n%50)+(w.t%13);
-      const gagne=w.t<=sonTemps;
-      S.duels=S.duels||{}; S.duels[ami]=S.duels[ami]||{v:0,d:0};
-      if(gagne) S.duels[ami].v++; else S.duels[ami].d++;
-      S.resultatDuel={ami:ami, moi:w.t, lui:sonTemps, gagne:gagne};
-      delete S.duelsAttente[ami]; saveS();
-    }
-  });
+  /* aucun résultat inventé : les duels attendront un vrai serveur (revue du 05/09) */
+  S.duelsAttente={}; delete S.resultatDuel;
   S.amis=S.amis||[];
   if(S.resultatDuel){
     const r=S.resultatDuel;
@@ -12580,11 +12573,10 @@ function renderSocial(){
       '<div style="display:flex;align-items:center;gap:9px">'+
       '<span class="lbav-n" style="width:30px;height:30px;font-size:13px">'+a.id.slice(0,1).toUpperCase()+'</span>'+
       '<div style="flex:1;min-width:0"><b style="font-size:13.5px;font-weight:800">'+a.id+'</b>'+
-      '<span style="display:block;font-size:11px;color:var(--muted)">'+(a.nouveau?'✓ a accepté ton invitation · ':'')+'🏆 '+fmtT(a.v)+' · '+a.seances+' séance'+(a.seances>1?'s':'')+' du Parcours franchie'+(a.seances>1?'s':'')+'</span></div>'+
+      '<span style="display:block;font-size:11px;color:var(--muted)">'+(a.nouveau?'✓ a accepté ton invitation · ':'')+'🏆 '+fmtT(a.v)+(a.streak?' · 🔥 '+a.streak+' j':'')+'</span></div>'+
       '<div style="text-align:right">'+
       ((t.v||t.d)?'<span style="display:block;font-size:10.5px;font-weight:800;color:var(--muted)">duels : toi '+t.v+' — '+t.d+'</span>':'')+
-      ((S.duelsAttente&&S.duelsAttente[a.id])?'<span style="display:block;font-size:10px;color:var(--tung);font-weight:800">⏳ duel envoyé — il joue</span>':'')+
-      '<button class="btn small" style="margin-top:3px" onclick="ouvrirDuelChoix(\''+a.id+'\')">⚔️ Défier</button></div>'+
+      '</div>'+
       '</div></div>';
   });
   box.innerHTML=html;
@@ -12594,18 +12586,16 @@ function ajouterAmi(){
   if(id.length<3){ e.value=''; e.placeholder='Identifiant trop court'; return; }
   S.amis=S.amis||[];
   if(S.amis.some(a=>a.id.toLowerCase()===id.toLowerCase())){ e.value=''; e.placeholder='Déjà dans tes amis'; return; }
-  let n=0; for(const c of id) n=(n*31+c.charCodeAt(0))%9973;
-  S.amis.push({id:id, v:150+(n%1400), seances:1+(n%5), statut:'attente', ts:Date.now()});
+  if(!/^[a-zA-Z0-9._-]{3,40}$/.test(id)){ e.value=''; e.placeholder='Lettres, chiffres, point, tiret'; return; }
+  const moi=(S.ar&&S.ar.compte&&S.ar.compte.id||'').toLowerCase();
+  if(id.toLowerCase()===moi){ e.value=''; e.placeholder='C\'est toi !'; return; }
+  /* pas de compte inventé : seuls les comptes créés sur cet appareil existent (revue du 05/09) */
+  const reg=accRegistre(), c=reg[id.toLowerCase()];
+  if(!c){ e.value=''; e.placeholder='Aucun compte avec cet identifiant sur cet appareil'; return; }
+  S.amis.push({id:c.id, v:c.T||0, streak:(typeof c.streak==='number'?c.streak:0), statut:'ami', ts:Date.now()});
   e.value=''; saveS(); renderSocial();
 }
-function majAmis(){   /* démo : l'ami « accepte » après ~25 s — en prod, sa vraie réponse */
-  let bouge=false;
-  (S.amis||[]).forEach(a=>{
-    if(a.statut==='attente' && Date.now()-a.ts>25000){ a.statut='ami'; a.nouveau=true; bouge=true; }
-  });
-  if(bouge) saveS();
-  return bouge;
-}
+function majAmis(){ return false; }   /* plus de fausse acceptation : un ami ajouté est un compte réel de l'appareil */
 
 /* ═══ LE DUEL — 5 QCM · toutes les coches justes = suivant direct · coche fausse = +5 s ═══ */
 let DU=null, DU_timer=null, DU_dernier=null;
@@ -12879,14 +12869,15 @@ function rappelActivite(jour){
   rappelPost({action:'activite', email:S.ar.compte.mail, jour:jour||arDay()});
 }
 function heroMail(){
-  /* le compte a toujours un email désormais : plus de capture, un simple réglage — activé par défaut */
-  const on = S.mailOn!==false;
+  /* le compte a toujours un email ; le rappel est un CHOIX (revue du 05/09 : activé d'office, l'email
+     partait vers le site sans que l'élève l'ait demandé) — désactivé tant qu'il ne l'a pas coché */
+  const on = S.mailOn===true;
   return '<div style="margin-top:13px;margin-right:88px;background:var(--card);border:1px solid var(--line);border-radius:13px;padding:11px 13px;display:flex;align-items:center;gap:10px">'+
     '<div style="flex:1;min-width:0"><p style="font-size:12px;font-weight:800">📬 Être prévenu par email</p>'+
-    '<p style="font-size:11px;color:var(--muted);margin-top:1px">Le soir, en cas d\'oubli — pour ne pas laisser mourir ta série 🔥</p></div>'+
+    '<p style="font-size:11px;color:var(--muted);margin-top:1px">Le soir, si tu n\'as pas encore fait ta séance</p></div>'+
     '<label class="iosw"><input type="checkbox" '+(on?'checked':'')+' onchange="S.mailOn=this.checked;saveS();rappelReglage()"><span class="knob"></span></label>'+
     '</div>'+
-    '<button class="stagelien" onclick="voirStages()">Avec le <b>Pack Année complète</b>, la limite de 2 fiches par jour disparaît : tu avances à ton rythme →</button>';
+    '<button class="stagelien" onclick="voirStages()">Le <b>Pack Année complète</b> : les quatre stages de vacances, la pré-rentrée offerte, et l\'app sans limite →</button>';
 }
 /* ---- état ---- */
 /* Le « jour » Medeos bascule à 6 h du matin, HEURE LOCALE : on recule l'horloge de 6 h
@@ -13462,7 +13453,7 @@ function renderSocial(){
     return;
   }
   const moi=joueurDepuis(null,true), reg=accRegistre(), amis=amisListe();
-  const invite=S.amiInvite && S.amiInvite.toLowerCase()!==moi.id.toLowerCase() && !amis.some(a=>a.id.toLowerCase()===S.amiInvite.toLowerCase()) ? S.amiInvite : null;
+  const invite=S.amiInvite && /^[a-zA-Z0-9._-]{3,40}$/.test(S.amiInvite) && S.amiInvite.toLowerCase()!==moi.id.toLowerCase() && !amis.some(a=>a.id.toLowerCase()===S.amiInvite.toLowerCase()) ? S.amiInvite : null;
   let x='';
   /* ma carte, telle que mes amis la voient */
   x+='<div class="card so-bloc"><h3>Ta carte</h3><p class="so-sous">Ce que tes amis voient de toi.</p>'+carteJoueurHtml(moi,{moi:true})+'</div>';
@@ -13586,7 +13577,7 @@ renderState();
 /* le rappel du soir : on redit au site le réglage courant à chaque ouverture (idempotent) */
 try{ if(accOk()) rappelReglage(); }catch(e){}
 /* invitation d'un ami : ?ami=<identifiant> — on le garde, l'écran Social le proposera */
-try{ const am=new URLSearchParams(location.search).get('ami'); if(am){ S.amiInvite=am.trim().slice(0,40); saveS(); } }catch(e){}
+try{ const am=(new URLSearchParams(location.search).get('ami')||'').trim(); if(/^[a-zA-Z0-9._-]{3,40}$/.test(am)){ S.amiInvite=am; saveS(); } else if(S.amiInvite && !/^[a-zA-Z0-9._-]{3,40}$/.test(S.amiInvite)){ S.amiInvite=null; saveS(); } }catch(e){}
 /* lien profond depuis le site : #biblio, #home, #arene, #social — sinon l'Arène */
 /* PWA : le service worker rend l'app installable (réseau d'abord, jamais de vieille version) */
 if('serviceWorker' in navigator && location.protocol==='https:'){ navigator.serviceWorker.register('sw.js').catch(()=>{}); }
