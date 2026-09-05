@@ -1381,7 +1381,8 @@
   .sheet-h b{font-family:Fredoka,Inter,sans-serif;font-size:16.5px;font-weight:600;flex:1;letter-spacing:.01em}
   .sheet-h button{border:none;background:var(--line2);color:var(--muted);width:32px;height:32px;border-radius:10px;
     font-size:16px;cursor:pointer;font-family:inherit;flex-shrink:0}
-  .sheet-b{overflow-y:auto;padding:12px 16px 22px;-webkit-overflow-scrolling:touch}
+  .sheet-b{overflow-y:auto;padding:12px 16px 22px;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+  .sheet input,.sheet button,.sheet textarea,.sheet select{touch-action:manipulation}
   @media (min-width:1024px){
     .modal{align-items:center;padding-bottom:calc(84px + env(safe-area-inset-bottom))}
     .sheet{border-radius:22px;max-height:74vh}
@@ -1943,6 +1944,10 @@
   .lect-fermer{border:none;background:var(--line2);color:var(--ink);font-family:inherit;font-size:12.5px;
     font-weight:800;padding:8px 14px;border-radius:11px;cursor:pointer}
   .lect-nom{font-size:12px;font-weight:800;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  /* la barre de lecture des ressources (guide, panoramas, agenda) : elle avance avec le défilement du cadre */
+  .lect-prog{display:none;height:3px;background:var(--line);flex-shrink:0}
+  #lecteur.ressource .lect-prog{display:block}
+  .lect-prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,#6B46C1,#E29C5C);transition:width .12s ease-out}
   #fiche-frame{flex:1;border:none;width:100%;background:#fff}
 
   /* la limite d'ascensions, lisible d'un coup d'œil */
@@ -2811,6 +2816,7 @@
       <span class="lect-nom" id="lecteur-nom"></span>
       <button class="gbtn" id="lect-suivant" style="display:none;width:auto;margin-left:auto;padding:10px 16px;font-size:13px"></button>
     </div>
+    <div class="lect-prog" aria-hidden="true"><i id="lect-prog-i"></i></div>
     <iframe id="fiche-frame" title="Fiche de révision"></iframe>
     <div id="compare-pan" style="display:none">
       <button id="compare-toggle" onclick="comparePlier()">▾ Ce que tu avais écrit</button>
@@ -8081,21 +8087,35 @@ function resetOuvrirEmail(){
     if(err) err.textContent='(Démo) Aucun email n\'est parti : aucun compte ne correspond sur cet appareil.'; return; }
   accMode='reset2'; renderCompte();
 }
-async function resetMdp(){
-  if(!S.ar) initAr();
-  const mp=(document.getElementById('acc-rmp').value||'');
+let resetCode='';
+/* étape 2 : le code seul — vérifié sans être consommé, pour ne demander le mot de passe qu'à coup sûr */
+async function resetCodeOk(){
   const code=((document.getElementById('acc-rcode')||{}).value||'').replace(/\D/g,'');
   const err=document.getElementById('acc-rerr2');
   if(!resetCible){ accMode='reset'; renderCompte(); return; }
   if(code.length!==6){ err.textContent='Entre les 6 chiffres du code reçu par email.'; return; }
-  if(mp.length<6){ err.textContent='Ton nouveau mot de passe doit faire au moins 6 caractères.'; return; }
   err.textContent='Vérification…';
+  let d; try{ d=await apiCompte('reset',{action:'verifier', email:resetCible, code:code}); }catch(e){ d={_status:0}; }
+  if(!d.ok){ err.textContent = d.erreur==='code' ? 'Code faux ou expiré — redemande-en un.' : d._status===0 ? 'Pas de connexion : réessaie dans un instant.' : 'Impossible pour l\'instant.'; return; }
+  resetCode=code; accMode='reset3'; renderCompte();
+}
+/* étape 3 : le nouveau mot de passe, deux fois */
+async function resetMdp(){
+  if(!S.ar) initAr();
+  const mp=(document.getElementById('acc-rmp').value||''), mp2=((document.getElementById('acc-rmp2')||{}).value||'');
+  const code=resetCode;
+  const err=document.getElementById('acc-rerr2');
+  if(!resetCible || !code){ accMode='reset'; renderCompte(); return; }
+  if(mp.length<6){ err.textContent='Ton nouveau mot de passe doit faire au moins 6 caractères.'; return; }
+  if(mp!==mp2){ err.textContent='Les deux mots de passe ne sont pas identiques.'; return; }
+  err.textContent='Enregistrement…';
   let d; try{ d=await apiCompte('reset',{action:'valider', email:resetCible, code:code, mdp:mp}); }catch(e){ d={_status:0}; }
   if(!d.ok){ err.textContent = d.erreur==='code' ? 'Code faux ou expiré — redemande-en un.' : d._status===0 ? 'Pas de connexion : réessaie dans un instant.' : 'Impossible pour l\'instant.'; return; }
-  const mail=resetCible; resetCible=null; resetEnvoye=false; accMode=null;
+  const mail=resetCible; resetCible=null; resetCode=''; resetEnvoye=false; accMode=null;
   entrerAvecCompte(d, mail);
 }
 function renderCompte(){
+  blurAvantRendu();
   const box=document.getElementById('ar-acc'); if(!box) return;
   if(!S.ar) initAr();
   accInit();
@@ -8132,12 +8152,25 @@ function renderCompte(){
   }
   if(accMode==='reset2'){
     box.innerHTML =
-      '<h4>🔑 Nouveau mot de passe</h4>'+
-      '<p>Un code à 6 chiffres vient de partir à <b>'+(resetCible||'')+'</b>. Entre-le, et choisis ton nouveau mot de passe.</p>'+
-      '<form class="accform" method="post" action="#" onsubmit="event.preventDefault();resetMdp()">'+
+      '<h4>🔑 Le code reçu</h4>'+
+      '<p>Un code à 6 chiffres vient de partir à <b>'+(resetCible||'')+'</b>. Entre-le pour continuer.</p>'+
+      '<form class="accform" method="post" action="#" onsubmit="event.preventDefault();resetCodeOk()">'+
         '<input style="display:none" name="email" type="email" autocomplete="username" value="'+(resetCible||'')+'" readonly />'+
         '<input id="acc-rcode" name="code" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="Le code reçu (6 chiffres)" />'+
+        '<p class="accerr" id="acc-rerr2"></p>'+
+        '<button class="btn" type="submit">Continuer</button>'+
+      '</form>'+
+      '<button class="se-alt" onclick="accMode=\'login\';resetEnvoye=false;renderCompte()">← Retour à la connexion</button>';
+    return;
+  }
+  if(accMode==='reset3'){
+    box.innerHTML =
+      '<h4>🔑 Nouveau mot de passe</h4>'+
+      '<p>Code accepté. Choisis ton nouveau mot de passe, et écris-le une seconde fois pour le confirmer.</p>'+
+      '<form class="accform" method="post" action="#" onsubmit="event.preventDefault();resetMdp()">'+
+        '<input style="display:none" name="email" type="email" autocomplete="username" value="'+(resetCible||'')+'" readonly />'+
         '<input id="acc-rmp" name="password" type="password" placeholder="Ton nouveau mot de passe" autocomplete="new-password" />'+
+        '<input id="acc-rmp2" name="password2" type="password" placeholder="Le même, une seconde fois" autocomplete="new-password" />'+
         '<p class="accerr" id="acc-rerr2"></p>'+
         '<button class="btn" type="submit">Définir et me connecter</button>'+
       '</form>'+
@@ -8622,8 +8655,11 @@ function choisirSkin(type,id){
     if(reg[k]){ reg[k].skin=S.ar.skin; localStorage.setItem('m4_comptes',JSON.stringify(reg)); } }
   renderSkin(); renderIdBar();
 }
-function focusAcc(){ openSheet('sheet-compte'); renderCompte();
-  setTimeout(()=>{ const e=document.getElementById('acc-lid')||document.getElementById('acc-id'); if(e) e.focus(); },350); }
+function blurAvantRendu(){ try{ const a=document.activeElement; if(a && a!==document.body && a.blur) a.blur(); }catch(e){} }
+function focusAcc(){ openSheet('sheet-compte'); renderCompte(); }
+/* Pas de focus programmé à l'ouverture : sur iPhone, un focus hors geste fait défiler la page SOUS le panneau
+   fixe, et le tactile vise à côté tant qu'on n'a pas fait défiler (Lucas, 05/09 : « je slide le fond et ça
+   remarche »). La personne touche le champ elle-même — c'est de toute façon la seule façon d'ouvrir le clavier. */
 function renderSideAcc(){
   const b=document.getElementById('ar-sideacc'); if(!b) return;
   if(!S.ar) initAr();
@@ -12589,10 +12625,21 @@ function openFiche(slug,titre){
   L.classList.add('entree');
   requestAnimationFrame(()=>requestAnimationFrame(()=>L.classList.add('on')));
 }
+/* La barre de lecture : elle suit le défilement DU CADRE (le document de la ressource, même origine).
+   Les panoramas n'ont pas de barre à eux, le guide en a une : ici une seule, au même endroit pour tous.
+   La hauteur du document peut changer en cours de lecture (les panoramas dévoilent la suite par étapes) :
+   on recalcule à chaque défilement, jamais une fois pour toutes. */
+function brancherProgLecture(fr){
+  const w=fr.contentWindow, d=fr.contentDocument, i=document.getElementById('lect-prog-i');
+  if(!w || !d || !i) return;
+  const maj=()=>{ try{ const h=d.documentElement; const sc=h.scrollTop||(d.body&&d.body.scrollTop)||w.scrollY||0;
+    const max=(h.scrollHeight-h.clientHeight)||1; i.style.width=Math.max(0,Math.min(100,sc/max*100))+'%'; }catch(e){} };
+  w.addEventListener('scroll', maj, {passive:true}); w.addEventListener('resize', maj); maj();
+}
 function closeFiche(){
   document.body.classList.remove('lecture');
   const L=document.getElementById('lecteur');
-  L.classList.remove('on');
+  L.classList.remove('on'); L.classList.remove('ressource');
   setTimeout(()=>{ L.classList.remove('entree'); document.getElementById('fiche-frame').src='about:blank'; },340);
 }
 
@@ -13202,9 +13249,12 @@ function ouvrirRessource(fichier, titre){
        cours, son pied de page sa fin, sa barre de progression fait partie du dispositif. On ne
        retire que les liens vers la porte email du site, qui n'a plus lieu d'être ici (05/09 : une
        règle trop large avalait le début du guide et des panoramas). */
-    st.textContent='a[href*="/ressources/acces"]{display:none !important}';
+    st.textContent='a[href*="/ressources/acces"]{display:none !important} #bar{display:none !important}';
     d2.head.appendChild(st);
+    brancherProgLecture(fr);
   }catch(e){} };
+  L.classList.add('ressource');
+  { const i=document.getElementById('lect-prog-i'); if(i) i.style.width='0%'; }
   fr.src='biblio/'+fichier;
   document.getElementById('lecteur-nom').textContent=titre||'';
   { const nb=document.getElementById('lect-suivant'); if(nb) nb.style.display='none'; }
