@@ -3445,9 +3445,29 @@ const UNIVERS=['biblio','home','arene','social'];   /* l'ordre gauche → droite
 const UNIV_NOM={biblio:'Bibliothèque', home:'Parcours', arene:'Arène', social:'Social', etapes:'Étapes', profil:'Profil'};
 let univIdx=2;
 let gateVers='home';   /* l'onglet visé quand la porte s'affiche */
+/* AVANT LA PREMIÈRE SÉANCE, L'ARÈNE ET LE SOCIAL ATTENDENT (Lucas, 05/09 : « le mieux c'est de
+   finir le premier jour de Parcours, puis me guider dans l'Arène — un message me disant de faire
+   d'abord ça »). On reste sur le Parcours, et on le dit une fois par écran demandé. */
+function premiereSeanceFaite(){ return !!(S.sdone && Object.keys(S.sdone).length); }
+let _attenteDit={};
+function attendreLaSeance(id){
+  if(!(typeof accOk==='function' && accOk())) return false;
+  if(id!=='arene' && id!=='social') return false;
+  if(premiereSeanceFaite()) return false;
+  if(!_attenteDit[id]){ _attenteDit[id]=1;
+    const d=document.createElement('div'); d.className='axotoast';
+    d.innerHTML='<img src="img/axo-guide-pointe-bas.png" alt="" onerror="this.remove()"><span>'+(id==='arene'
+      ? 'L\'<b>Arène</b> s\'ouvre juste après ta <b>première séance</b> — deux fiches. Fais-la d\'abord, et je te la fais visiter.'
+      : 'Le <b>Social</b> vient après ta <b>première séance</b> — deux fiches. Fais-la d\'abord, on y va juste après.')+'</span>';
+    document.body.appendChild(d); setTimeout(()=>{ d.classList.add('out'); setTimeout(()=>d.remove(),400); },5200);
+    setTimeout(()=>{ delete _attenteDit[id]; }, 6000);
+  }
+  return true;
+}
 function go(id){
   /* Parcours & Arène : réservés aux comptes connectés — la Bibliothèque reste libre (Lucas, 24/08) */
   if((id==='home'||id==='arene') && typeof S!=='undefined' && !accOk()){ gateVers=id; id='gate'; }
+  if(typeof S!=='undefined' && attendreLaSeance(id)) id='home';
   const cible=document.getElementById(id); if(!cible) return;
   /* UNE VISITE NE SURVIT PAS À UN CHANGEMENT D'ÉCRAN. Sinon la bulle « Bienvenue dans
      l'Arène » reste posée sur le Parcours (capturé le 05/09). On la ferme sans la marquer
