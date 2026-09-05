@@ -11505,6 +11505,10 @@ function libreValide(){
   btn.onclick=()=>{ LB.i++; if(LB.i<LB.qs.length) libreShow(); else libreFin(); };
 }
 function libreFin(){
+  /* on retient les fiches dont des questions viennent d'être jouées : la journée n'est « complète »
+     que lorsque chaque fiche du jour a été testée (Lucas, 06/09 : « j'ai fait les QCM que pour 1 fiche
+     sur les deux et il me met journée complète ») */
+  if(LB && LB.entrainement && LB.qs){ S.entrF=S.entrF||{}; LB.qs.forEach(q=>{ if(q.f) S.entrF[q.f]=Date.now(); }); saveS(); }
   if(LB.seance){
     const slug=LB.slugRef||LB.qs[0].f;
     S.oublis=S.oublis||{}; S.oublis[slug]=S.oublis[slug]||{};
@@ -11539,6 +11543,29 @@ function libreFin(){
   document.getElementById('libre-card').style.display='none';
   const f=document.getElementById('libre-fin'); f.style.display='block';
   { const il=f.querySelector(':scope > img'); if(il) il.style.display=''; }   /* rendue après un bilan de séance */
+  if(LB.entrainement && S.entrRetour && fichesDuJourRestantes().length){
+    /* UNE FICHE DU JOUR N'A PAS ENCORE ÉTÉ TESTÉE : on la propose, la journée n'est pas complète */
+    const rest=fichesDuJourRestantes(); const sl=rest[0]; const titre=TITRES_FICHES[sl]||'ta deuxième fiche';
+    const q0=ABANK.find(q=>q.f===sl); const matF=(q0&&q0.mat)||LB.mat;
+    document.getElementById('libre-card').style.display='none';
+    const f2=document.getElementById('libre-fin'); f2.style.display='block';
+    f2.style.backgroundImage=''; f2.classList.remove('sombre');
+    document.getElementById('libre-fin-t').textContent='Encore une fiche à tester';
+    { const a3=document.getElementById('libre-fin-axo'); if(a3) a3.style.display='none'; }
+    const fs2=document.getElementById('libre-fin-s');
+    fs2.style.whiteSpace='normal'; fs2.style.textAlign='center';
+    const part=LB.qs.length?LB.ok/LB.qs.length:0;
+    fs2.innerHTML=LB.ok+' sur '+LB.qs.length+'.'+
+      '<span style="display:block;margin-top:9px;font-size:12.5px;line-height:1.55">Tu as lu <b>deux fiches</b> aujourd\'hui : il te reste les questions de <b>'+titre+'</b>.</span>'+
+      axoScene(part>=0.8?'entrainement_bon_score':(part>=0.5?'entrainement_score_moyen':'entrainement_faible'));
+    const enc2=document.getElementById('libre-encore'); enc2.style.display='block';
+    enc2.textContent='Faire les QCM de « '+titre+' » →';
+    enc2.onclick=()=>startEntrainement(matF, sl);
+    const c4=document.getElementById('libre-cont');
+    if(c4){ c4.style.display='block'; c4.textContent='Plus tard — revenir à mon Parcours'; c4.onclick=()=>{ delete S.entrRetour; saveS(); go('home'); }; }
+    S.qcm=(S.qcm||0)+LB.qs.length; saveS();
+    return;
+  }
   if(LB.entrainement && S.entrRetour){
     /* retour au Parcours : la boucle du jour est bouclée */
     delete S.entrRetour; saveS();
@@ -13232,6 +13259,14 @@ function duelLive(){
   }, 15000);
 }
 
+/* les fiches de la dernière séance faite dont les questions n'ont pas encore été jouées depuis cette séance */
+function fichesDuJourRestantes(){
+  try{
+    const f=seancesFaites(); const s=f[f.length-1]; if(!s) return [];
+    const depuis=(S.sdone&&S.sdone[s.id])||0;
+    return (s.fiches||[]).filter(sl=>qsDeFiche(sl).length>0 && !(S.entrF && S.entrF[sl] && S.entrF[sl]>=depuis));
+  }catch(e){ return []; }
+}
 /* la matière de la dernière séance faite : c'est là que sont les QCM « du jour » */
 function matDuJour(){ try{ const f=seancesFaites(); const s=f[f.length-1]; return s? (s.mat||null) : null; }catch(e){ return null; } }
 /* centrer le carrousel des salles sur une matière (bloc du milieu, comme reboucler) */
