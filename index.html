@@ -9315,22 +9315,26 @@ const TUTOS={
   /* LE GRAND AMPHI : présenté quand on y entre pour la première fois (le bouton Amphi), ouvert ou non. */
   amphi:function(){
     const ouvert=(typeof amphiOuvrable==='function') && amphiOuvrable();
+    const suite=!tutoFait('profil');   /* enchaîner sur le profil, s'il reste à découvrir */
     return [
       {sel:'#ms-amphi', img:'mascotte-arene-prete-au-combat', t:"<b>Le Grand Amphi</b>, c'est l'inverse des Salles : toutes les matières mélangées, du vrai jeu. Chaque case juste vaut <b>+2 🏆</b>, chaque erreur <b>−2</b>."},
       {sel:'.goldplate', img:'axo-guide-pointe-haut', t:"Tes <b>trophées</b>, en haut à droite : <b>touche-les</b> pour ouvrir le classement — le podium, et la place où tu te trouves. Tu y entres dès ton premier trophée."},
-      {img:'axo-guide-bravo', t: ouvert
+      {img:'axo-guide-bravo', t: (ouvert
         ? "<b>Deux ascensions par jour</b> — trois avec le Pack Année complète. Chacune compte : joue-la quand tu te sens prêt."
-        : "L'Amphi s'ouvre après <b>4 jours de Parcours</b> — le temps de te constituer un bagage. D'ici là, les Salles sont à toi.", btn:"C'est compris"}
+        : "L'Amphi s'ouvre après <b>4 jours de Parcours</b> — le temps de te constituer un bagage. D'ici là, les Salles sont à toi.")
+        +(suite ? " On passe à <b>ton profil</b> ?" : ""),
+       btn: suite ? "Voir mon profil →" : "C'est compris", act:function(){ if(suite) try{ go('profil'); }catch(e){} }}
     ];
   },
   /* LE PROFIL : ce qu'on y trouve, et pourquoi y revenir. Quatre étapes, la première fois
      qu'on l'ouvre avec un compte (Lucas, 05/09 : « une petite introduction quand la personne
      ouvre son espace profil, ça serait bien »). On nomme chaque carte dans l'ordre de l'écran. */
-  profil:[
+  profil:function(){ const suite=!tutoFait('social'); return [
     {sel:'#p-streak', img:'axo-guide-bienvenue', t:"<b>Ton profil</b> : tout ce que tu construis est rangé ici. Tes chiffres d'abord — série, points, QCM joués, trophées. Ils bougent tout seuls, à chaque séance."},
     {sel:'#profil-av', img:'axo-guide-pointe-haut', t:"<b>Ta photo et ta bannière</b> se changent ici. Tu en débloques une nouvelle à chaque monde terminé, et c'est ce que tes amis voient de toi."},
-    {sel:'#p-code', img:'axo-guide-carte', t:"Si tu as le <b>Pack Année complète</b>, ton code se saisit ici. Et tout en bas, <b>ton point de départ</b> : trois questions, une fois, pour situer ta fac.", btn:"C'est compris"}
-  ],
+    {sel:'#p-code', img:'axo-guide-carte', t:"Si tu as le <b>Pack Année complète</b>, ton code se saisit ici. Et tout en bas, <b>ton point de départ</b> : trois questions, une fois, pour situer ta fac."+(suite? " Dernier endroit : <b>le Social</b>." : ""),
+     btn: suite ? "Et le Social →" : "C'est compris", act:function(){ if(suite) try{ go('social'); }catch(e){} }}
+  ]; },
   /* LE SOCIAL : ta carte, tes amis — trois étapes, la première fois qu'on y entre avec un compte */
   social:[
     {sel:'.so-carte.moi', img:'axo-guide-bienvenue', t:"Ici, c'est <b>ta carte</b> : ta photo, ta bannière, tes trophées, ton monde, ta série. C'est ce que tes amis voient de toi."},
@@ -11553,28 +11557,25 @@ function libreFin(){
     const mom = part>=0.8?'entrainement_bon_score':(part>=0.5?'entrainement_score_moyen':'entrainement_faible');
     fs2.innerHTML=LB.ok+' sur '+LB.qs.length+' — tu as lu, restitué, comparé, puis testé.'+axoScene(mom);
     const enc2=document.getElementById('libre-encore'); enc2.style.display='block';
-    enc2.textContent='Revenir à mon Parcours';
-    enc2.onclick=()=>go('home');
-    /* Un seul chemin de retour : le bouton principal dit déjà « Revenir à mon Parcours ».
-       Le second bouton ne sert que les tout premiers jours, pour ouvrir la Bibliothèque. */
-    /* LA SUITE NATURELLE, C'EST L'ARÈNE — et il faut le DIRE ici, pas attendre que l'élève
-       la trouve tout seul (Lucas, 05/09 : « ça a expliqué seulement quand j'y suis allé »).
-       Les premiers jours, on l'y emmène en expliquant ce qu'il y trouvera. */
-    { const c4=document.getElementById('libre-cont');
+    const c4=document.getElementById('libre-cont');
+    if(typeof tutoFait==='function' && !tutoFait('amphi')){
+      /* LA PREMIÈRE FOIS : les QCM d'entraînement sont faits, c'est NOUS qui enchaînons le reste de la
+         visite — le Grand Amphi, puis le profil, puis le Social (Lucas, 05/09 : « la visite de tout doit
+         être provoquée par nous après avoir fait les QCM d'entraînement »). */
+      fs2.innerHTML+='<span style="display:block;margin-top:9px;font-size:12.5px;line-height:1.55">Il te reste <b>trois endroits</b> à découvrir : le <b>Grand Amphi</b>, ton <b>profil</b> et le <b>Social</b>. Deux minutes, et tu connais tout l\'Univers.</span>';
+      enc2.textContent='Découvrir le Grand Amphi →';
+      enc2.onclick=()=>suiteVisite();
+      if(c4){ c4.style.display='block'; c4.textContent='Plus tard — revenir à mon Parcours'; c4.onclick=()=>go('home'); }
+    } else {
+      enc2.textContent='Revenir à mon Parcours';
+      enc2.onclick=()=>go('home');
+      /* les tout premiers jours, le second bouton ouvre la Bibliothèque */
       const nb=(typeof seancesFaites==='function'?seancesFaites().length:0);
-      const arene=(typeof areneOuvrable!=='function')||areneOuvrable();
       if(c4){
-        if(arene && nb<=3){
-          c4.style.display='block'; c4.textContent='⚔️ Aller dans l\'Arène';
-          c4.onclick=()=>go('arene');
-          fs2.innerHTML=LB.ok+' sur '+LB.qs.length+' — tu as lu, restitué, comparé, puis testé.'+
-            '<span style="display:block;margin-top:9px;font-size:12.5px;line-height:1.55">Et maintenant ? <b>L\'Arène</b> : tes fiches du jour y reviennent en questions, dans les <b>Salles</b>, sans chrono ni trophée à perdre. C\'est là qu\'on vérifie que ça tient.</span>'+
-            axoScene(mom);
-        } else if(nb<=2){
-          c4.style.display='block'; c4.textContent='📚 Découvrir la Bibliothèque';
-          c4.onclick=()=>go('biblio');
-        } else { c4.style.display='none'; }
-      } }
+        if(nb<=2){ c4.style.display='block'; c4.textContent='📚 Découvrir la Bibliothèque'; c4.onclick=()=>go('biblio'); }
+        else c4.style.display='none';
+      }
+    }
     S.qcm=(S.qcm||0)+LB.qs.length; saveS();
     if(typeof son==='function') son('coffre');
     return;
@@ -13250,6 +13251,11 @@ function allerSalleDuJour(){
   S.entrRetour=1; saveS();
   const m=matDuJour();
   if(m && typeof salleStock==='function' && salleStock(m)>0) ouvrirSalle(m); else allerSalles();
+}
+/* la suite de la visite, après les QCM d'entraînement : l'Amphi (sa visite démarre en y entrant), qui enchaîne profil puis Social */
+function suiteVisite(){
+  go('arene');
+  if(typeof setLieu==='function') setLieu('amphi');
 }
 function allerSalles(){
   go('arene');
