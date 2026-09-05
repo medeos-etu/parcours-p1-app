@@ -3400,6 +3400,10 @@ function go(id){
   /* Parcours & Arène : réservés aux comptes connectés — la Bibliothèque reste libre (Lucas, 24/08) */
   if((id==='home'||id==='arene') && typeof S!=='undefined' && !accOk()){ gateVers=id; id='gate'; }
   const cible=document.getElementById(id); if(!cible) return;
+  /* UNE VISITE NE SURVIT PAS À UN CHANGEMENT D'ÉCRAN. Sinon la bulle « Bienvenue dans
+     l'Arène » reste posée sur le Parcours (capturé le 05/09). On la ferme sans la marquer
+     comme vue : elle reprendra la prochaine fois qu'on entre sur son écran. */
+  if(typeof TU!=='undefined' && TU && TU.k!==id && typeof tutoEnd==='function') tutoEnd(true);
   if(id==='gate'){
     const gt=document.getElementById('gate-tease');
     if(gt) gt.className='gate-tease '+(gateVers==='arene'?'t-arene':'t-home');
@@ -9051,29 +9055,29 @@ function renderPick(){
    étape 3 : l'Arène se découvre. Jamais revu une fois fait (S.tuto). ═══ */
 const TUTOS={
   biblio:[
-    /* LE POURQUOI AVANT LE COMMENT — et le PROBLÈME avant le pourquoi. La première version
-       décrivait l'app sans nommer ce que vit la personne qui arrive : elle va entrer en
-       première année sans savoir à quoi ça ressemble. On part de là (la piscine), on donne la
-       promesse (anticiper), la méthode (une vingtaine de minutes par jour, restituer, QCM), l'humain
-       (Lucas et l'équipe), et seulement ensuite les lieux. Lucas, 05/09 : « être sûr que la
-       personne comprenne à 100 % l'intérêt de l'app, avec les bons mots pour l'accrocher ». */
-    {img:'axo-guide-bienvenue', t:"Salut, moi c'est Axo. Entrer en première année de santé, c'est souvent entrer <b>à l'aveugle</b> : un programme énorme, un rythme que tu n'as jamais connu, et personne pour te dire par où commencer. Comme être jeté dans une piscine sans avoir appris à nager."},
-    {img:'axo-guide-carte', t:"Ici, on fait l'inverse : <b>tu apprends à nager avant de sauter</b>. Dès maintenant, tu découvres les bases des quatre matières qui pèsent le plus en première année — anatomie, biologie, chimie, physique. Le jour où le cours tombera à la fac, tu ne découvriras pas : <b>tu reconnaîtras</b>."},
-    {img:'axo-guide-pointe-bas', t:"Et on ne te demande pas de sacrifier ta Terminale. <b>Deux fiches par jour, une vingtaine de minutes.</b> Pas plus. Ce n'est pas la quantité qui fait la différence, c'est de revenir chaque jour — et tout ici est construit pour que tu aies envie de revenir."},
-    {img:'axo-guide-carte', t:"Chaque fiche, tu la lis, tu la <b>restitues de mémoire</b>, tu compares. Puis des <b>QCM corrigés</b>, du même type qu'en première année, te disent où tu en es vraiment. C'est ça qui fait tenir les notions — pas la relecture."},
-    {img:'axo-guide-bienvenue', t:"Derrière l'app, il y a <b>Lucas</b> — kiné, passé par cette première année — et l'équipe Medeos. Ils l'ont construite pour que tu l'abordes autrement qu'eux : <b>préparé, et pas seul</b>."},
-    {img:'axo-guide-pointe-bas', t:"Là où tu es, c'est la <b>Bibliothèque</b> : le panorama de chaque matière, les métiers de la santé pour savoir vers quoi tu vas, la méthode et l'agenda d'une année. <b>Tout est en accès libre</b>, sans compte."},
+    /* PROGRESSIF (Lucas, 05/09) : celui qui arrive à la Bibliothèque vient souvent chercher un
+       contenu gratuit — le guide, le panorama. Lui dérouler la méthode entière (deux fiches par
+       jour, restituer, QCM) avant qu'il ait rien demandé, c'est trop d'un coup. Ici, quatre
+       bulles : où il est et ce qui est libre, comment ça s'ouvre, le problème qu'on résout, et
+       l'envie d'aller voir le Parcours. La méthode, elle, se raconte dans la visite du Parcours,
+       une fois le compte créé — à quelqu'un qui a dit oui. */
+    {img:'axo-guide-bienvenue', t:"Salut, moi c'est Axo. Tu es dans la <b>Bibliothèque Medeos</b> : le panorama de chaque matière de première année, les métiers de la santé, la méthode et l'agenda. <b>Tout est en accès libre</b>, sans compte — sers-toi."},
     {sel:'#rescards-free', img:'axo-guide-carte', t:"Chaque carte s'ouvre librement. Lis, referme, reviens — rien n'est chronométré, rien n'est noté."},
-    {sel:'#mainnav', img:'axo-guide-pointe-bas', t:"En bas, les quatre espaces : la <b>Bibliothèque</b>, ton <b>Parcours</b> de révision, l'<b>Arène</b> — et le <b>Social</b>, pour tes amis."},
-    {img:'axo-guide-bravo', t:"Le <b>Parcours</b> — ta route, jour après jour, jusqu'à ta rentrée — et l'<b>Arène</b> s'ouvrent avec un compte gratuit : ta progression y est enregistrée. Tu veux voir à quoi ressemble ta route ?",
+    {img:'axo-guide-pointe-bas', t:"Entrer en première année de santé, c'est souvent entrer <b>à l'aveugle</b> — comme sauter dans une piscine sans savoir nager. Ici, tu peux <b>apprendre à nager avant de sauter</b> : un peu chaque jour, jusqu'à ta rentrée."},
+    {img:'axo-guide-bravo', t:"C'est le rôle du <b>Parcours</b> : ta route jour après jour jusqu'à la rentrée, construite par <b>Lucas</b> — kiné, passé par cette première année — et l'équipe Medeos. Le compte est gratuit, deux minutes, et je t'explique tout étape par étape, pas tout d'un coup.",
      btn:"Créer mon compte gratuit →", act:function(){ go('home'); }, skip:"Explorer la Bibliothèque d'abord"}
   ],
   home:[
-    {img:'axo-guide-bienvenue', t:"Voici ton <b>Parcours</b> : deux fiches par jour, un rythme tenable, une méthode qui fait tenir les notions. <b>Il t'accompagne jusqu'à ta rentrée</b> — et on le marche petit objectif par petit objectif."},
-    {img:'axo-guide-carte', t:illuRoute()+"La route en une image : ta <b>séance</b>, les <b>Salles</b> pour t'entraîner, le <b>Grand Amphi</b> pour te mesurer, des <b>mondes</b> à terminer un par un — et les <b>stages</b> des vacances pour ceux qui veulent accélérer."},
-    {sel:'#seance', img:'axo-guide-pointe-haut', t:"Ta <b>séance du jour</b> t'attend ici : tu lis, tu restitues de mémoire, tu compares. Un quart d'heure environ. Les QCM, eux, t'attendent dans les Salles juste après."},
+    /* LA MÉTHODE SE RACONTE ICI, à quelqu'un qui vient de créer son compte : la promesse,
+       l'effort réel, la technique, la série, l'Arène — et l'humain pour finir. Cinq bulles. */
+    {img:'axo-guide-bienvenue', t:"Bienvenue dans ton <b>Parcours</b>. L'idée est simple : les bases des quatre matières qui pèsent le plus en première année — anatomie, biologie, chimie, physique — vues <b>avant</b> la rentrée. Le jour où le cours tombera à la fac, tu ne découvriras pas : <b>tu reconnaîtras</b>."},
+    {img:'axo-guide-pointe-bas', t:"On ne te demande pas de sacrifier ta Terminale. <b>Deux fiches par jour, une vingtaine de minutes.</b> Pas plus. Ce n'est pas la quantité qui fait la différence, c'est de revenir chaque jour — et tout ici est construit pour que tu aies envie de revenir."},
+    {sel:'#seance', img:'axo-guide-pointe-haut', t:"Ta <b>séance du jour</b> t'attend ici. Chaque fiche, tu la <b>lis</b>, tu la <b>restitues de mémoire</b>, tu <b>compares</b>. Un quart d'heure environ. C'est ça qui fait tenir les notions — pas la relecture."},
+    /* La route en image n'est plus racontée ici (Lucas, 05/09 : « c'est tôt »). Chaque
+       morceau a désormais SA visite, au moment où l'élève y met les pieds : les Salles et le
+       Grand Amphi à l'entrée dans l'Arène, les mondes et les stages à l'ouverture de la carte. */
     {sel:'#pt-flame', img:'axo-guide-pointe-haut', t:"Chaque jour travaillé allonge ta série 🔥. Un jour sans venir, elle repart à 1 — sauf si tu as posé un gel la veille."},
-    {img:'axo-guide-bravo', t:"Et l'Arène ? <b>Elle s'ouvre dès que tu as fini ta première séance.</b> Tu y retrouves tes deux fiches du jour en questions, sans rien risquer. Bonne première séance !", btn:"C'est parti !"}
+    {img:'axo-guide-bravo', t:"Et l'Arène ? <b>Elle s'ouvre dès que tu as fini ta première séance.</b> Tu y retrouves tes deux fiches du jour en questions, sans rien risquer. Derrière tout ça, il y a <b>Lucas et l'équipe Medeos</b> : préparé, et pas seul. Bonne première séance !", btn:"C'est parti !"}
   ],
   arene:[
     {img:'axo-guide-bienvenue', t:"Bienvenue dans l'Arène ! Ici il y a <b>deux endroits</b>, et ils ne servent pas à la même chose. Je te montre."},
@@ -9171,9 +9175,9 @@ function tutoNext(){
   if(TU.i>=TU.s.length-1){ const act=st.act; tutoEnd(); if(act) act(); return; }
   TU.i++; tutoShow();
 }
-function tutoEnd(){
+function tutoEnd(sansMarquer){
   if(!TU) return;
-  S.tuto=S.tuto||{}; S.tuto[TU.k]=Date.now(); saveS();
+  if(!sansMarquer){ S.tuto=S.tuto||{}; S.tuto[TU.k]=Date.now(); saveS(); }
   TU=null;
   document.getElementById('tuto').hidden=true;
   window.removeEventListener('resize',tutoReplace);
@@ -13770,7 +13774,10 @@ const NOUVEAU=!(typeof accOk==='function'&&accOk()) && !(S.tuto&&S.tuto.biblio);
    n'est le point de chute que d'un habitué qui n'a encore rien visité */
 let ECRAN0=null; try{ ECRAN0=localStorage.getItem('m4_ecran'); }catch(e){}
 if(!['biblio','home','arene','social','carte','chemin','profil'].includes(ECRAN0)) ECRAN0=null;
-go(['biblio','home','arene','social'].includes(HASH0) ? HASH0 : (NOUVEAU?'biblio':(ECRAN0||'arene')));
+/* un compte qui n'a pas encore vu la visite du Parcours atterrit sur le Parcours, pas sur
+   l'Arène : c'est là que la méthode lui est racontée (progressif, Lucas 05/09) */
+const PARCOURS_A_VOIR = (typeof accOk==='function'&&accOk()) && !(S.tuto&&S.tuto.home);
+go(['biblio','home','arene','social'].includes(HASH0) ? HASH0 : (NOUVEAU?'biblio':(ECRAN0||(PARCOURS_A_VOIR?'home':'arene'))));
 if(ECRAN0==='carte' && typeof renderCarte==='function') renderCarte();
 if(ECRAN0==='chemin' && typeof renderChemin==='function') renderChemin();
 /* pas de fenêtre de compte imposée à qui vient lire la Bibliothèque librement */
