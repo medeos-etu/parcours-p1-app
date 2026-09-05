@@ -1,8 +1,13 @@
 {
   "redirects": [
     {
-      "source": "/(.*)",
-      "has": [{ "type": "host", "value": "parcours-p1-preview.vercel.app" }],
+      "source": "/((?!migration\\.html$).*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "parcours-p1-preview.vercel.app"
+        }
+      ],
       "destination": "https://parcours.medeos-sante.fr/$1",
       "permanent": true
     }

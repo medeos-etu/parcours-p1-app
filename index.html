@@ -9151,7 +9151,7 @@ const TUTOS={
        morceau a désormais SA visite, au moment où l'élève y met les pieds : les Salles et le
        Grand Amphi à l'entrée dans l'Arène, les mondes et les stages à l'ouverture de la carte. */
     {sel:'#pt-flame', img:'axo-guide-pointe-haut', t:"Chaque jour travaillé allonge ta série 🔥. Un jour sans venir, elle repart à 0 — sauf si tu as posé un gel la veille."},
-    {img:'axo-guide-bravo', t:"Et l'Arène ? <b>Elle s'ouvre dès que tu as fini ta première séance.</b> Tu y retrouves tes deux fiches du jour en questions, sans rien risquer. Et derrière l'app, il y a <b>l'équipe Medeos</b> : si tu as une question, écris-nous sur Instagram, <b>@medeos.sante</b>. Bonne première séance !", btn:"C'est parti !"}
+    {sel:'#mainnav button[data-t="arene"]', img:'axo-guide-bravo', t:"Et l'Arène, juste là ? <b>Elle s'ouvre dès que tu as fini ta première séance.</b> Tu y retrouves tes deux fiches du jour en questions, sans rien risquer. Et derrière l'app, il y a <b>l'équipe Medeos</b> : si tu as une question, écris-nous sur Instagram, <b>@medeos.sante</b>. Bonne première séance !", btn:"C'est parti !"}
   ],
   arene:[
     {img:'axo-guide-bienvenue', t:"Bienvenue dans l'Arène ! Ici il y a <b>deux endroits</b>, et ils ne servent pas à la même chose. Je te montre."},
@@ -11148,7 +11148,9 @@ function areneArmee(mat){
   return ABANK.filter(q=>q.mat===mat && arm[q.f] && !q.ar).length>=2;
 }
 function areneOuvrable(){
-  if(S.stage) return true;
+  /* Pack ou pas, l'Arène attend la première séance — deux fiches lues, restituées, comparées.
+     Avant, le Pack l'ouvrait d'emblée : on se retrouvait à jouer sans rien avoir travaillé
+     (Lucas, 05/09 : « la bloquer tant que les gens n'ont pas fait les deux premières fiches »). */
   return ARENES.some(a=>areneArmee(a.k));
 }
 /* ═══ UNE SALLE = LA BIBLIOTHÈQUE DE SES QCM. Le Parcours les débloque fiche après fiche ;
@@ -13946,6 +13948,37 @@ const PUB = HASH0==='inscription';
 go(['biblio','home','arene','social'].includes(HASH0) ? HASH0 : (PUB ? 'home' : (NOUVEAU?'biblio':(ECRAN0||(PARCOURS_A_VOIR?'home':'arene')))));
 try{ bandeauNavigateur(); }catch(e){}
 try{ majPackCarte(); }catch(e){}
+/* ═══ RÉCUPÉRER UN COMPTE CRÉÉ SUR L'ANCIENNE ADRESSE. Le stockage du navigateur est propre à
+   chaque adresse : un compte créé sur parcours-p1-preview.vercel.app n'existe pas ici. Si l'on
+   n'a aucun compte et qu'on ne l'a jamais tenté, on ouvre l'ancienne adresse dans un cadre
+   invisible et on lui demande ce qu'elle garde. Une seule fois, et seulement depuis elle. ═══ */
+(function(){
+  try{
+    if(location.hostname!=='parcours.medeos-sante.fr') return;
+    if((typeof accOk==='function' && accOk()) || localStorage.getItem('m4_migre')) return;
+    var ANCIEN='https://parcours-p1-preview.vercel.app';
+    var fini=false;
+    function terminer(){ if(fini) return; fini=true; try{ localStorage.setItem('m4_migre','1'); }catch(e){} try{ fr.remove(); }catch(e){} }
+    window.addEventListener('message', function(ev){
+      if(ev.origin!==ANCIEN || !ev.data || !ev.data.medeosMigration) return;
+      var d=ev.data.donnees||{}, importe=false;
+      try{
+        var reg=JSON.parse(d.m4_comptes||'{}');
+        if(reg && Object.keys(reg).length){
+          ['m4_state','m4_comptes','m4_prenom','m4_onboarded','m4_ecran','m4_codes_uses'].forEach(function(k){
+            if(d[k]!==undefined && localStorage.getItem(k)===null) localStorage.setItem(k, d[k]); });
+          importe=true;
+        }
+      }catch(e){}
+      terminer();
+      if(importe) location.reload();        /* le compte est là : on repart avec */
+    });
+    var fr=document.createElement('iframe'); fr.src=ANCIEN+'/migration.html'; fr.style.display='none'; fr.setAttribute('aria-hidden','true');
+    fr.onload=function(){ try{ fr.contentWindow.postMessage({medeosDemande:1}, ANCIEN); }catch(e){} };
+    document.body.appendChild(fr);
+    setTimeout(terminer, 5000);            /* rien reçu : on n'insiste pas */
+  }catch(e){}
+})();
 if(PUB && !(typeof accOk==='function' && accOk())){
   const t=document.getElementById('gate-titre'), p=t && t.nextElementSibling;
   if(t) t.textContent='Anticiper ta première année commence ici';

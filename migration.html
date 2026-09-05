@@ -1,0 +1,25 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>Migration</title>
+<script>
+/* ═══ LE PONT ENTRE L'ANCIENNE ADRESSE ET LA NOUVELLE.
+   Un compte de l'app vit dans le stockage du navigateur, et ce stockage est propre à chaque
+   adresse : ce qui a été créé sur parcours-p1-preview.vercel.app est invisible depuis
+   parcours.medeos-sante.fr. C'est exactement ce que Lucas a vécu le 05/09 : « j'avais créé un
+   compte, ça me dit qu'il n'existe pas ».
+   Cette page est servie sur l'ANCIENNE adresse (le vercel.json l'exclut de la redirection).
+   La nouvelle l'ouvre dans un cadre invisible ; elle lui remet ce qu'elle garde, et seulement
+   à elle — jamais à un autre site. Elle ne fait rien d'autre. ═══ */
+(function(){
+  var DEST='https://parcours.medeos-sante.fr';
+  var ICI='parcours-p1-preview.vercel.app';
+  if(location.hostname!==ICI) return;                      /* ailleurs, cette page est muette */
+  var cles=['m4_state','m4_comptes','m4_prenom','m4_onboarded','m4_ecran','m4_codes_uses'];
+  var paquet={};
+  try{ cles.forEach(function(k){ var v=localStorage.getItem(k); if(v!==null) paquet[k]=v; }); }catch(e){}
+  function envoyer(){ try{ window.parent.postMessage({medeosMigration:1, donnees:paquet}, DEST); }catch(e){} }
+  window.addEventListener('message', function(ev){ if(ev.origin===DEST && ev.data && ev.data.medeosDemande) envoyer(); });
+  envoyer();
+})();
+</script>
