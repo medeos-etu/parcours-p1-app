@@ -1595,13 +1595,16 @@
   /* cartes-affiches des stages (les visuels de la home du site) */
   .shopcard2{border-radius:18px;overflow:hidden;background:linear-gradient(160deg,#232037,#191627);
     box-shadow:0 10px 26px rgba(26,26,46,.30);display:flex;flex-direction:row;align-items:center;gap:2px}
-  .packcard{border-radius:18px;padding:14px 15px;margin:0 0 10px;color:#fff;background:linear-gradient(135deg,#4C2A85,#6B46C1 60%,#8B5CF6);
-    box-shadow:0 8px 24px rgba(76,42,133,.28);display:flex;flex-direction:column;gap:6px}
-  .packcard .sc-tag{background:rgba(255,255,255,.16);color:#FCD34D}
-  .packcard b{font-size:15px;line-height:1.3;font-weight:900}
-  .packcard p{font-size:11px;line-height:1.5;color:rgba(250,246,240,.85);margin:0}
-  .packcard .sc-buy{margin-top:4px;flex:none}
-  .packcard.actif{background:linear-gradient(135deg,#1F1F23,#2C2A3A);box-shadow:none}
+  /* la carte du Pack : plate, propre, centrée — les deux visuels en petit, un message, un bouton */
+  .packcard{border-radius:18px;padding:16px 16px 14px;margin:0 0 10px;color:#fff;background:#1F1F23;border:1px solid rgba(255,255,255,.10);
+    display:flex;flex-direction:column;align-items:center;text-align:center;gap:7px}
+  .pk-visuels{display:flex;align-items:center;gap:12px;margin-bottom:4px}
+  .pk-visuels img{width:62px;height:auto;display:block;border-radius:10px;box-shadow:0 6px 16px rgba(0,0,0,.35)}
+  .pk-visuels span{font-size:20px;font-weight:900;color:#FCD34D;line-height:1}
+  .pk-sur{font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:#FCD34D}
+  .packcard b{font-size:16px;line-height:1.3;font-weight:900}
+  .packcard p{font-size:11px;line-height:1.5;color:rgba(250,246,240,.7);margin:0;max-width:320px}
+  .packcard .sc-buy{margin-top:6px;flex:none;width:100%;max-width:320px}
   .shopcard2 img{width:96px;height:auto;flex-shrink:0;display:block;border-radius:12px;
     margin:12px 0 12px 12px;box-shadow:0 6px 16px rgba(0,0,0,.35)}   /* l'affiche ENTIÈRE, jamais rognée */
   .shopcard2 .sc2-body{padding:10px 12px 10px 10px;color:#fff;display:flex;flex-direction:column;gap:6px;flex:1;min-width:0}
@@ -3272,15 +3275,18 @@
     <h2 id="rayon-stages">⚡ Aller plus loin avec Medeos</h2>
     <!-- LE PACK D'ABORD (Lucas, 05/09 : « le Pack Année complète est encore plus important que les
          cartes stages ») — et ce qu'il change tout de suite : plus de limite de fiches. -->
+    <!-- Épurée (Lucas, 05/09) : les deux visuels en petit, côte à côte, un message, un bouton. Fond plat. -->
     <div class="packcard" id="packcard">
-      <span class="sc-tag">Pack Année complète</span>
-      <b>Plus de limite de deux fiches par jour : tu avances à ton rythme.</b>
+      <div class="pk-visuels"><img src="img/stage-vacances.png" alt="Stages Vacances" loading="lazy"><span>+</span><img src="img/stage-medipro.png" alt="Medi Pro" loading="lazy"></div>
+      <span class="pk-sur">Pack Année complète</span>
+      <b>Plus de limite de deux fiches par jour.</b>
       <p>Les 4 stages de vacances + la pré-rentrée offerte · tous les QCM · 3 ascensions par jour.</p>
       <button class="sc-buy" onclick="window.open('https://medeos-sante.fr/packs/stages-vacances#pack-annee','_blank')">Découvrir le Pack Année complète</button>
     </div>
-    <div class="packcard actif" id="packcard-actif" style="display:none">
-      <span class="sc-tag">Pack Année complète</span>
-      <b>⚔️ Ton Pack est actif.</b>
+    <div class="packcard" id="packcard-actif" style="display:none">
+      <div class="pk-visuels"><img src="img/stage-vacances.png" alt="" loading="lazy"><span>+</span><img src="img/stage-medipro.png" alt="" loading="lazy"></div>
+      <span class="pk-sur">Pack Année complète</span>
+      <b>Ton Pack est actif.</b>
       <p>Toutes les fiches, tous les QCM, 3 ascensions par jour. Bon entraînement.</p>
     </div>
     <div class="shop">
@@ -3288,7 +3294,7 @@
         <img src="img/stage-vacances.png" alt="Stages Vacances" loading="lazy">
         <div class="sc2-body">
           <span class="sc-tag">Stages des vacances scolaires</span>
-          <p>Quatre stages guidés pendant tes vacances de Terminale : les bases de la première année, une demi-journée par jour, avec l'équipe Medeos.</p>
+          <p>Quatre stages guidés pendant tes vacances de Terminale, qui te transmettent les bases de la première année de santé. Un parcours qui reprend là où tu t'es arrêté, à ton rythme, et tes questions de cours trouvent une réponse à tout moment.</p>
           <div class="sc-btns">
             <button class="sc-more" onclick="window.open('https://medeos-sante.fr/packs/stages-vacances','_blank')">En savoir plus</button>
             <button class="sc-buy" onclick="window.open('https://medeos-sante.fr/packs/stages-vacances#stages','_blank')">Dates et tarif</button>
@@ -3299,7 +3305,7 @@
         <img src="img/stage-medipro.png" alt="Medi Pro" loading="lazy">
         <div class="sc2-body">
           <span class="sc-tag">Stage de pré-rentrée</span>
-          <p>Un stage intensif juste avant la rentrée : les bases et une méthode avancée, avec un tuteur qui répond.</p>
+          <p>Un stage intensif juste avant la rentrée, qui te transmet les bases académiques et une méthode avancée pour aborder ta première année de santé. Tes questions de cours trouvent une réponse à tout moment, et ton tuteur t'accompagne sur la méthode.</p>
           <div class="sc-btns">
             <button class="sc-more" onclick="window.open('https://medeos-sante.fr/packs/medi-pro','_blank')">En savoir plus</button>
             <button class="sc-buy" onclick="window.open('https://medeos-sante.fr/packs/medi-pro#packs','_blank')">Dates et tarif</button>
