@@ -3251,7 +3251,7 @@
         </div>
       </div>
     </div>
-    <button class="stagelien" style="margin-top:12px" onclick="window.open('https://www.medeos-sante.fr/packs/stages-vacances#pack-annee','_blank')">Le pack année complète — <b>Medi Pro + les 4 stages, avec toute l'app en illimité</b> →</button>
+    <button class="stagelien" style="margin-top:12px" onclick="window.open('https://medeos-sante.fr/packs/stages-vacances#pack-annee','_blank')">Le pack année complète — <b>Medi Pro + les 4 stages, avec toute l'app en illimité</b> →</button>
     </div>
   </section>
 
@@ -10745,7 +10745,7 @@ function renderCarte(){
       const dj=Math.max(0, Math.round((p.m-new Date())/864e5));
       const pitch = (p1 && p.id && PITCH_P1[p.id]) ? PITCH_P1[p.id] : (p.pitch||'');
       poser(faites+dj, camp(p.emo+' '+p.quand+' · '+dans(dj), p.stage||'Stage Medeos', pitch,
-        'https://www.medeos-sante.fr/packs/stages-vacances#stages', 'Découvrir ce stage', imgStage(p.id||''),
+        'https://medeos-sante.fr/packs/stages-vacances#stages', 'Découvrir ce stage', imgStage(p.id||''),
         {hook: p1 ? 'Pendant tes vacances, tu entres dans un <b>parcours guidé</b> : une demi-journée par jour, avec l\'équipe Medeos à tes côtés, pour <b>consolider</b> ce qui est passé trop vite et reprendre de l\'avance.'
                   : 'Pendant tes vacances, tu entres dans un <b>parcours guidé pour anticiper ta P1</b> : une demi-journée par jour, avec l\'équipe Medeos à tes côtés. Tu <b>accélères</b>, et tu consolides ce que tu sais déjà.',
          valeurs: VAL_VAC}));
@@ -10755,7 +10755,7 @@ function renderCarte(){
       const dj=Math.max(0, Math.round((pr.m-new Date())/864e5));
       poser(faites+dj, camp('☀️ '+pr.quand+' · '+dans(dj), 'Stage de pré-rentrée',
         'La dernière ligne droite avant ta première année : tu arrives le jour J en sachant travailler.',
-        'https://www.medeos-sante.fr/packs/medi-pro', 'Découvrir la pré-rentrée', imgStage('prerentree'),
+        'https://medeos-sante.fr/packs/medi-pro', 'Découvrir la pré-rentrée', imgStage('prerentree'),
         {hook: 'Quinze jours avant ta rentrée, tu entres dans un <b>parcours guidé</b> : six heures par jour, <b>les bases et la méthode</b>, avec l\'équipe Medeos à tes côtés jusqu\'au concours.',
          valeurs: VAL_PRE}));
     }
@@ -10786,7 +10786,7 @@ function renderCarte(){
         ? '<div class="cr-audela">Ta route va jusqu\'au bout, et tes stages jalonnent les vacances.</div>'
         : auDela
           ? '<div class="cr-audela">Pendant l\'année scolaire, deux fiches par jour, c\'est déjà bien. À ce rythme, ta route s\'arrête ici : '+auDela+' monde'+(auDela>1?'s':'')+' reste'+(auDela>1?'nt':'')+' au-delà.</div>'+
-            '<a class="cr-plus" href="https://www.medeos-sante.fr/packs/stages-vacances#pack-annee" target="_blank" rel="noopener">'+
+            '<a class="cr-plus" href="https://medeos-sante.fr/packs/stages-vacances#pack-annee" target="_blank" rel="noopener">'+
               '<span class="cr-plus-k">Les vacances changent tout</span>'+
               '<b>C\'est là que tu as du temps</b>'+
               '<span class="cr-plus-l">Quatre stages de douze jours, guidés, avec un tuteur qui répond — et le stage de pré-rentrée juste avant ta P1. Chacun reprend le programme là où tu en es.</span>'+
@@ -12390,7 +12390,7 @@ function seanceFin(){
   { const suite=seanceCourante();
     if(suite && !s.rev) bilan+='<div class="fin-demain">📌 '+(seanceJourFaite()?'Demain':'Ensuite')+' : <b>'+suite.titre+'</b></div>';
     const st=(!s.rev && typeof prochainStageProche==='function')? prochainStageProche() : null;
-    if(st) bilan+='<a class="fin-stage" href="https://www.medeos-sante.fr/packs/stages-vacances#stages" target="_blank" rel="noopener">'+st.emo+' '+
+    if(st) bilan+='<a class="fin-stage" href="https://medeos-sante.fr/packs/stages-vacances#stages" target="_blank" rel="noopener">'+st.emo+' '+
       (st.jours<=0 ? 'En ce moment' : st.jours===1 ? 'Demain' : 'Dans '+st.jours+' jours')+', le '+st.stage.replace(/^Stage /,'stage ')+' ('+st.quand+') : douze jours guidés qui reprennent là où tu en es, avec un tuteur. <em>Voir les stages →</em></a>'; }
   bilan+=axoScene('vers_entrainement');
   bilan+='<p class="fin-bascule">⚔️ On quitte le Parcours : direction <b>l\'Arène</b>, salle <b>'+salle+'</b>, pour tester ce que tu viens de voir.</p>';

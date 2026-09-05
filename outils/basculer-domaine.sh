@@ -31,10 +31,17 @@ if [ "$a" = "$IP" ]; then ok "DNS : $NEUF → $IP (entrée A)"
 elif echo "$c" | grep -qi "vercel-dns.com"; then ok "DNS : $NEUF → $c (CNAME Vercel)"
 elif [ -n "$a" ] || [ -n "$c" ]; then non "DNS : $NEUF pointe vers « ${a:-$c} » — attendu $IP (entrée A) ou un CNAME vers vercel-dns.com. Corrige l'entrée chez OVH."
 else non "DNS : $NEUF ne répond pas encore — l'entrée OVH n'est pas active. Patiente quelques minutes et relance."; fi
-code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 20 "https://$NEUF/index.html" || echo 000)
+code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 20 "https://$NEUF/index.html" 2>/dev/null); code=${code:-000}
 [ "$code" = "200" ] || non "HTTPS : https://$NEUF/index.html répond $code — le certificat Vercel n'est peut-être pas encore émis. Réessaie dans 2-3 minutes."
 ok "HTTPS : l'app est servie (200)"
-curl -s --max-time 20 "https://$NEUF/index.html" | grep -q "Univers Medeos\|parcours-des-mondes" || non "la page servie ne ressemble pas à l'app"
+# ON TÉLÉCHARGE D'ABORD, ON FILTRE ENSUITE. Avec « set -o pipefail », un « curl | grep -q »
+# échoue quand il RÉUSSIT : grep s'arrête au premier motif trouvé, curl reçoit une rupture de
+# tuyau, et pipefail propage son erreur. Piège vécu le 05/09 — le domaine était bon depuis le
+# début. La page fait 3,3 Mo : le délai doit être large.
+page=$(mktemp)
+curl -s --max-time 60 "https://$NEUF/index.html" -o "$page" || non "la page n'a pas pu être téléchargée depuis $NEUF"
+grep -q 'Univers Medeos' "$page" || grep -q 'parcours-des-mondes' "$page" || non "la page servie ne ressemble pas à l'app"
+rm -f "$page"
 ok "c'est bien l'app"
 [ "${1:-}" = "verifier" ] && { echo; echo "Vérification seule : tout est prêt pour la bascule."; exit 0; }
 
