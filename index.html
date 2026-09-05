@@ -9138,7 +9138,7 @@ const TUTOS={
     {img:'axo-guide-bienvenue', t:"Salut, moi c'est Axo. Tu es dans la <b>Bibliothèque Medeos</b> : le panorama de chaque matière de première année, les métiers de la santé, la méthode et l'agenda. <b>Tout est en accès libre</b>, sans compte — sers-toi."},
     {sel:'#rescards-free', img:'axo-guide-carte', t:"Chaque carte s'ouvre librement. Lis, referme, reviens — rien n'est chronométré, rien n'est noté."},
     {img:'axo-guide-pointe-bas', t:"Entrer en première année de santé, c'est souvent entrer <b>à l'aveugle</b> — comme sauter dans une piscine sans savoir nager. Ici, tu peux <b>apprendre à nager avant de sauter</b> : un peu chaque jour, jusqu'à ta rentrée."},
-    {img:'axo-guide-bravo', t:"C'est le rôle du <b>Parcours</b> : ta route jour après jour jusqu'à la rentrée, construite par <b>l'équipe Medeos</b>. Le compte est gratuit, deux minutes, et je t'explique tout étape par étape, pas tout d'un coup.",
+    {img:'axo-guide-bravo', t:"C'est le rôle du <b>Parcours</b> : ta route jour après jour jusqu'à la rentrée, construite par <b>l'équipe Medeos</b>. <b>Il est gratuit</b> — deux fiches par jour, jusqu'à ta rentrée, sans rien payer. Il te faut juste un compte, deux minutes, et je t'explique tout étape par étape.",
      btn:"Créer mon compte gratuit →", act:function(){ go('home'); }, skip:"Explorer la Bibliothèque d'abord"}
   ],
   home:[
@@ -13949,7 +13949,7 @@ try{ majPackCarte(); }catch(e){}
 if(PUB && !(typeof accOk==='function' && accOk())){
   const t=document.getElementById('gate-titre'), p=t && t.nextElementSibling;
   if(t) t.textContent='Anticiper ta première année commence ici';
-  if(p && p.tagName==='P') p.innerHTML='Deux fiches par jour jusqu\'à la rentrée, des QCM corrigés, et l\'équipe Medeos à tes côtés. <b>Le compte est gratuit, deux minutes</b> — et je t\'explique tout, étape par étape.';
+  if(p && p.tagName==='P') p.innerHTML='Deux fiches par jour jusqu\'à ta rentrée, des QCM corrigés, et l\'équipe Medeos à tes côtés. <b>Le Parcours est gratuit</b>, pas seulement le compte : tu avances jusqu\'à la rentrée sans rien payer. Deux minutes pour commencer, et je t\'explique tout, étape par étape.';
   /* Le formulaire ne s'ouvre PAS tout seul : capturé le 05/09, il recouvrait la porte et la
      promesse de l'annonce disparaissait derrière un formulaire générique. La porte parle
      d'abord ; le bouton « Créer mon compte gratuit » ouvre le formulaire d'un geste. */
