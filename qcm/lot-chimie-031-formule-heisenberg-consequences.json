@@ -1,0 +1,2190 @@
+{
+  "matiere": "chimie",
+  "chapitre": 2,
+  "questions": [
+    {
+      "fiche": "chimie-031-formule-heisenberg-consequences.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la formule du principe d'incertitude et à la signification de ses symboles, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le principe d'incertitude de Heisenberg date de 1927.",
+          "v": true,
+          "e": "VRAI. C'est en 1927 que Heisenberg pose son principe d'incertitude et met des symboles sur le marchandage entre position et vitesse.",
+          "sourceQuote": "Principe d'incertitude de Heisenberg (1927)"
+        },
+        {
+          "t": "Δx désigne la taille de la zone floue où l'électron peut être, exprimée en mètres.",
+          "v": true,
+          "e": "VRAI. Δx n'est pas une position, c'est une largeur : celle de la zone dans laquelle l'électron peut se trouver, et elle se mesure en mètres.",
+          "sourceQuote": "La taille de la « zone floue » où l'électron peut être (en mètres)"
+        },
+        {
+          "t": "Δv désigne l'imprécision sur la vitesse de l'électron.",
+          "v": true,
+          "e": "VRAI. Comme Δx pour la position, Δv est une imprécision, pas une vitesse : c'est la marge d'erreur sur la vitesse de l'électron, en m/s.",
+          "sourceQuote": "L'imprécision sur la vitesse de l'électron (en m/s)"
+        },
+        {
+          "t": "Dans cette écriture, m désigne la masse du noyau uniquement.",
+          "v": false,
+          "e": "FAUX : m est la masse de la particule dont on parle — l'électron, un atome entier, peu importe — exprimée en kilogrammes. Rien n'impose que ce soit un noyau.",
+          "sourceQuote": "La masse de la particule (électron, atome, etc.), en kg"
+        },
+        {
+          "t": "Le signe ≥ autorise le produit Δx × Δv à descendre en dessous de h/(2πm) si la mesure est très soignée.",
+          "v": false,
+          "e": "FAUX : le sens du symbole est justement l'inverse. Le produit Δx × Δv ne peut jamais être plus petit que h/(2πm), aussi bonne soit la mesure.",
+          "sourceQuote": "le produit Δx × Δv ne peut JAMAIS être plus petit que h/(2πm)"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-031-formule-heisenberg-consequences.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à ce que la formule impose entre la position et la vitesse, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Si Δx est petit, alors Δv doit être grand.",
+          "v": true,
+          "e": "VRAI. Bien connaître la position, c'est accepter de mal connaître la vitesse : le produit des deux ne peut pas descendre, donc l'un se paye par l'autre.",
+          "sourceQuote": "Δx est petit (on sait bien où il est) → Δv doit être grand"
+        },
+        {
+          "t": "Si Δv est petit, alors Δx peut rester petit lui aussi.",
+          "v": false,
+          "e": "FAUX : si Δv est petit, c'est Δx qui doit être grand. Les deux imprécisions ne peuvent pas être petites en même temps.",
+          "sourceQuote": "Δv est petit (on sait bien sa vitesse) → Δx doit être grand"
+        },
+        {
+          "t": "On ne peut jamais connaître les deux en même temps avec précision.",
+          "v": true,
+          "e": "VRAI. C'est le cœur du principe : position précise et vitesse précise sont incompatibles, quelle que soit la finesse de la mesure.",
+          "sourceQuote": "jamais connaître les deux en même temps avec précision"
+        },
+        {
+          "t": "En réduisant Δx, on peut maintenir Δv constant à condition d'améliorer la mesure.",
+          "v": false,
+          "e": "FAUX : la compensation est automatique et obligatoire. Réduire Δx fait augmenter Δv, sans aucune échappatoire du côté de l'appareil.",
+          "sourceQuote": "alors Δv DOIT augmenter automatiquement (vitesse moins précise)"
+        },
+        {
+          "t": "Pour l'électron, cette imprécision traduit un simple défaut des appareils de mesure.",
+          "v": false,
+          "e": "FAUX : ce n'est pas un défaut d'appareil, c'est une limite de la nature elle-même. Aucun instrument, aussi parfait soit-il, ne la fera disparaître.",
+          "sourceQuote": "l'imprécision n'est pas un défaut d'appareil"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-031-formule-heisenberg-consequences.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la conséquence de cette formule pour l'électron, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Placer l'électron dans une zone de 10⁻¹⁰ m, soit la taille d'un atome, rend Δx minuscule.",
+          "v": true,
+          "e": "VRAI. Enfermer l'électron dans un volume de l'ordre de l'atome, c'est fixer une zone très petite : Δx devient minuscule.",
+          "sourceQuote": "Tu le places dans une zone de 10⁻¹⁰ m (la taille d'un atome) : Δx est donc minuscule"
+        },
+        {
+          "t": "Une fois l'électron ainsi localisé, sa vitesse devient connue avec une grande précision.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. Δx minuscule impose un Δv énorme, donc il devient impossible de connaître la vitesse précisément.",
+          "sourceQuote": "La compensation est obligatoire : impossible de connaître sa vitesse précisément"
+        },
+        {
+          "t": "On peut malgré tout dessiner une trajectoire précise pour l'électron.",
+          "v": false,
+          "e": "FAUX : aucune trajectoire ne peut être tracée. Une ligne précise supposerait de connaître position et vitesse en même temps, ce que la formule interdit.",
+          "sourceQuote": "Tu ne peux JAMAIS dessiner une « trajectoire » (une ligne précise) pour l'électron"
+        },
+        {
+          "t": "Dessiner une trajectoire supposerait de connaître à la fois où l'électron est et où il va.",
+          "v": true,
+          "e": "VRAI. Une trajectoire, c'est une position ET une direction à chaque instant : exactement le couple que le principe d'incertitude rend inaccessible.",
+          "sourceQuote": "il faudrait connaître à la fois où il est et où il va"
+        },
+        {
+          "t": "On abandonne alors l'idée d'orbite pour passer aux orbitales, qui sont des zones de probabilité.",
+          "v": true,
+          "e": "VRAI. L'orbite était une trajectoire définie ; comme elle n'a plus de sens, on change d'objet et on raisonne désormais sur des zones de probabilité.",
+          "sourceQuote": "On abandonne l'idée d'orbite (trajectoire définie) et on passe aux orbitales (zones de probabilité)"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-031-formule-heisenberg-consequences.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la seconde écriture du principe d'incertitude, celle qui fait intervenir la quantité de mouvement, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La quantité de mouvement p est le produit de la masse par la vitesse.",
+          "v": true,
+          "e": "VRAI. p = m × v : c'est une grandeur qui combine en un seul nombre la masse et la vitesse de la particule.",
+          "sourceQuote": "p = quantité de mouvement = m × v — une grandeur physique qui combine masse et vitesse"
+        },
+        {
+          "t": "Cette seconde écriture est une autre loi que la première.",
+          "v": false,
+          "e": "FAUX : il ne s'agit pas d'une seconde loi, mais de la même loi écrite autrement. On la rencontre sous les deux habillages.",
+          "sourceQuote": "Ce n'est pas une autre loi, c'est la même, habillée autrement"
+        },
+        {
+          "t": "Un camion lent peut avoir la même quantité de mouvement qu'une balle rapide.",
+          "v": true,
+          "e": "VRAI. Puisque p combine masse et vitesse, une masse énorme animée d'une petite vitesse peut égaler une petite masse très rapide.",
+          "sourceQuote": "un camion lent (masse énorme) peut avoir la même quantité de mouvement qu'une balle rapide (masse petite)"
+        },
+        {
+          "t": "Dans cette variante, la masse figure encore au dénominateur du membre de droite.",
+          "v": false,
+          "e": "FAUX : la masse a été absorbée dans p = m × v, elle disparaît donc de cette écriture. C'est précisément ce qui distingue les deux formes.",
+          "sourceQuote": "Avec Δp, elle a déjà été absorbée dans p = m × v, donc elle disparaît"
+        },
+        {
+          "t": "La quantité de mouvement est une grandeur qui ne dépend que de la vitesse.",
+          "v": false,
+          "e": "FAUX : elle dépend aussi de la masse, puisqu'elle combine les deux. Une même vitesse ne donne pas la même quantité de mouvement selon la masse.",
+          "sourceQuote": "une grandeur physique qui combine masse et vitesse"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-031-formule-heisenberg-consequences.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au passage d'une écriture du principe d'incertitude à l'autre, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "On passe de la première écriture à la seconde en multipliant les deux côtés par m.",
+          "v": true,
+          "e": "VRAI. En multipliant les deux membres par m, le m placé au dénominateur à droite disparaît et le m rejoint Δv à gauche.",
+          "sourceQuote": "Multiplie les deux côtés par m. Le m du dénominateur disparaît"
+        },
+        {
+          "t": "L'incertitude sur p vaut m fois l'incertitude sur v.",
+          "v": true,
+          "e": "VRAI. Comme p = m × v, l'incertitude sur p vaut m fois celle sur v : c'est ce qui permet de reconnaître Δp dans le produit obtenu.",
+          "sourceQuote": "l'incertitude sur p, c'est m fois l'incertitude sur v"
+        },
+        {
+          "t": "Les deux formules sont équivalentes et l'on peut rencontrer l'une ou l'autre selon les enseignants.",
+          "v": true,
+          "e": "VRAI. Ce sont deux habillages de la même loi : selon les cours et les exercices, on croise l'une ou l'autre indifféremment.",
+          "sourceQuote": "Les deux formules sont équivalentes et tu peux voir l'une ou l'autre selon les profs"
+        },
+        {
+          "t": "En multipliant par m, le m du dénominateur se trouve doublé.",
+          "v": false,
+          "e": "FAUX : il ne se double pas, il disparaît. C'est justement ce qui permet d'obtenir une formule où la masse n'apparaît plus.",
+          "sourceQuote": "Le m du dénominateur disparaît"
+        },
+        {
+          "t": "Pour passer d'une écriture à l'autre, il faut retenir que Δp = Δv / m.",
+          "v": false,
+          "e": "FAUX : la relation à retenir est Δp = m × Δv, une multiplication et non une division. Avec une division, le passage ne tombe pas juste.",
+          "sourceQuote": "Retiens juste que Δp = m × Δv et tu pourras passer de l'une à l'autre"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-031-formule-heisenberg-consequences.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la place de la masse dans les deux écritures du principe d'incertitude, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans l'écriture qui utilise Δv, la masse figure au dénominateur.",
+          "v": true,
+          "e": "VRAI. Tant qu'on raisonne sur la vitesse, la masse reste visible dans la formule, placée au dénominateur du membre de droite.",
+          "sourceQuote": "Avec Δv, la masse est au dénominateur"
+        },
+        {
+          "t": "Dans l'écriture qui utilise Δp, la masse a déjà été absorbée et disparaît donc de la formule.",
+          "v": true,
+          "e": "VRAI. La quantité de mouvement contient déjà la masse ; l'écrire une seconde fois dans la formule reviendrait à la compter deux fois.",
+          "sourceQuote": "Avec Δp, elle a déjà été absorbée dans p = m × v, donc elle disparaît"
+        },
+        {
+          "t": "Ajouter un m dans la seconde écriture est sans conséquence, les deux formes restant équivalentes.",
+          "v": false,
+          "e": "FAUX : un m ajouté dans la seconde, ou oublié dans la première, suffit à rendre la formule fausse. C'est le piège classique de ce passage.",
+          "sourceQuote": "Un m ajouté dans la seconde, ou oublié dans la première, et la formule est fausse"
+        },
+        {
+          "t": "Pour une particule très légère, le produit Δx × Δv peut descendre en dessous de h/(2πm).",
+          "v": false,
+          "e": "FAUX : quelle que soit la particule, le produit ne descend jamais en dessous de cette valeur. C'est ce que signifie l'inégalité.",
+          "sourceQuote": "le produit ne peut jamais descendre en dessous de h/(2πm)"
+        },
+        {
+          "t": "Dans l'écriture avec Δv, la masse de la particule n'intervient pas.",
+          "v": false,
+          "e": "FAUX : elle intervient bel et bien, au dénominateur. C'est dans l'écriture avec Δp qu'elle n'apparaît plus.",
+          "sourceQuote": "la masse est au dénominateur"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-031-formule-heisenberg-consequences.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives au bilan des deux principes fondateurs et à ce qui les suit, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "De Broglie établit que l'électron a un comportement ondulatoire, ce qui interdit de le voir comme une bille sur un rail.",
+          "v": true,
+          "e": "VRAI. Le caractère ondulatoire de l'électron ruine l'image mécanique de la petite bille lancée sur un rail bien défini.",
+          "sourceQuote": "l'électron a un comportement ondulatoire (De Broglie) → on ne peut plus le voir comme une bille sur un rail"
+        },
+        {
+          "t": "Heisenberg établit qu'on ne peut plus connaître la trajectoire, ce qui prive la notion d'orbite de son sens.",
+          "v": true,
+          "e": "VRAI. Une orbite est une trajectoire ; sans trajectoire accessible, le mot lui-même perd son objet.",
+          "sourceQuote": "on ne peut plus connaître sa trajectoire (Heisenberg) → la notion d'orbite n'a plus de sens"
+        },
+        {
+          "t": "C'est l'orbitale, zone de probabilité, qui est remplacée par l'orbite.",
+          "v": false,
+          "e": "FAUX : le remplacement se fait dans l'autre sens. C'est l'orbite, la trajectoire, qui cède la place à l'orbitale, la zone de probabilité.",
+          "sourceQuote": "On remplace l'orbite (trajectoire) par l'orbitale (zone de probabilité)"
+        },
+        {
+          "t": "C'est Schrödinger qui formalise ce changement juste après.",
+          "v": true,
+          "e": "VRAI. Une fois l'orbite abandonnée, il faut une écriture mathématique pour l'orbitale : c'est le travail que reprend Schrödinger.",
+          "sourceQuote": "C'est ce que Schrödinger va formaliser juste après"
+        },
+        {
+          "t": "Ces deux conclusions laissent intacte l'idée d'une trajectoire définie pour l'électron.",
+          "v": false,
+          "e": "FAUX : elles la suppriment. La conséquence directe est qu'il n'y a plus de trajectoire, donc plus d'orbite, mais des orbitales.",
+          "sourceQuote": "pas de trajectoire pour l'électron, donc plus d'orbite — on passe aux orbitales"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-032-equation-schrodinger.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à l'équation de Schrödinger et à la raison de son écriture, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Schrödinger écrit cette équation en 1926.",
+          "v": true,
+          "e": "VRAI. C'est en 1926 que Schrödinger propose l'équation qui décrit l'onde associée à l'électron.",
+          "sourceQuote": "Schrödinger l'écrit en 1926"
+        },
+        {
+          "t": "Elle joue pour l'électron le rôle que F = ma joue en physique classique.",
+          "v": true,
+          "e": "VRAI. C'est l'équation fondamentale du domaine : là où F = ma gouverne le mouvement classique, celle-ci gouverne le comportement de l'onde-électron.",
+          "sourceQuote": "Schrödinger écrit une équation — comme F = ma en physique classique"
+        },
+        {
+          "t": "Elle permet de calculer le comportement ondulatoire de l'électron.",
+          "v": true,
+          "e": "VRAI. Puisque l'électron se comporte comme une onde, il fallait une équation capable de décrire cette onde : c'est exactement son rôle.",
+          "sourceQuote": "qui permet de calculer le comportement ondulatoire de l'électron"
+        },
+        {
+          "t": "Elle a été écrite pour calculer la trajectoire précise de l'électron.",
+          "v": false,
+          "e": "FAUX : la trajectoire est justement ce qu'on ne peut pas connaître. L'équation vient répondre à la question de la description mathématique, pas à celle du trajet.",
+          "sourceQuote": "on ne peut pas connaître sa trajectoire — comment, alors, le décrire mathématiquement ?"
+        },
+        {
+          "t": "Sous sa forme simplifiée, l'équation fait intervenir quatre symboles.",
+          "v": false,
+          "e": "FAUX : la forme simplifiée n'en compte que trois, et chacun a un rôle bien précis.",
+          "sourceQuote": "Trois symboles seulement — et chacun a un rôle très précis"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-032-equation-schrodinger.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux trois symboles qui composent cette équation, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "ψ est la fonction d'onde, une fonction mathématique qui dépend des coordonnées dans l'espace.",
+          "v": true,
+          "e": "VRAI. ψ dépend de x, y et z : elle prend une valeur en chaque point de l'espace autour du noyau.",
+          "sourceQuote": "Une fonction mathématique ψ(x,y,z) qui dépend des coordonnées dans l'espace"
+        },
+        {
+          "t": "E est l'énergie de l'électron, un nombre exprimé en Joules.",
+          "v": true,
+          "e": "VRAI. Contrairement à ψ qui est une fonction, E est un simple nombre, exprimé en Joules.",
+          "sourceQuote": "L'énergie de l'électron. C'est un nombre (en Joules)"
+        },
+        {
+          "t": "Ĥ est la fonction d'onde de l'électron.",
+          "v": false,
+          "e": "FAUX : Ĥ est l'opérateur hamiltonien, à retenir comme l'énergie totale du système. La fonction d'onde, c'est ψ.",
+          "sourceQuote": "L'opérateur hamiltonien. En première année, retiens juste que Ĥ = l'énergie totale du système"
+        },
+        {
+          "t": "ψ représente l'énergie totale du système.",
+          "v": false,
+          "e": "FAUX : l'énergie totale du système, c'est Ĥ. ψ, elle, décrit l'onde-électron autour du noyau.",
+          "sourceQuote": "Elle décrit « l'onde-électron » autour du noyau"
+        },
+        {
+          "t": "En première année, il faut savoir calculer Ĥψ.",
+          "v": false,
+          "e": "FAUX : ce calcul n'est pas demandé à ce stade. Il suffit de savoir ce que représente chacun des trois symboles.",
+          "sourceQuote": "Tu n'as pas besoin de savoir calculer Ĥψ"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-032-equation-schrodinger.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la façon dont on se sert de cette équation, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "On écrit l'équation pour un atome donné : chaque atome a la sienne.",
+          "v": true,
+          "e": "VRAI. Hydrogène, hélium, lithium : à chaque atome son équation, écrite pour lui.",
+          "sourceQuote": "chaque atome a son équation"
+        },
+        {
+          "t": "La résolution demande des mathématiques très compliquées, qui ne sont pas du ressort de l'étudiant.",
+          "v": true,
+          "e": "VRAI. La résolution elle-même relève de calculs très lourds : elle n'est pas au programme de l'étudiant en première année.",
+          "sourceQuote": "Avec des maths très compliquées (rassure-toi, ce n'est pas ton travail)"
+        },
+        {
+          "t": "La résolution fournit les valeurs de E possibles, c'est-à-dire les niveaux d'énergie quantifiés.",
+          "v": true,
+          "e": "VRAI. Les solutions ne donnent pas n'importe quelle énergie : elles sélectionnent des valeurs précises, les niveaux quantifiés.",
+          "sourceQuote": "On obtient les valeurs de E possibles"
+        },
+        {
+          "t": "Les fonctions ψ obtenues n'ont rien à voir avec les orbitales atomiques.",
+          "v": false,
+          "e": "FAUX : ce sont précisément les orbitales atomiques. Elles apparaissent ici comme un résultat du calcul, et non plus comme un objet supposé.",
+          "sourceQuote": "les orbitales atomiques. C'est là qu'elles apparaissent, calculées et non plus supposées"
+        },
+        {
+          "t": "L'équation s'écrit de façon universelle, la même pour tous les atomes.",
+          "v": false,
+          "e": "FAUX : on l'écrit atome par atome. L'hydrogène, l'hélium et le lithium n'ont pas la même équation.",
+          "sourceQuote": "Ĥψ = Eψ, pour H, He, Li… — chaque atome a son équation"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-032-equation-schrodinger.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la comparaison entre Schrödinger et Bohr sur l'atome d'hydrogène, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Bohr avait déjà trouvé des niveaux d'énergie quantifiés pour l'atome d'hydrogène, mais sans vraie justification.",
+          "v": true,
+          "e": "VRAI. Bohr avait les bons niveaux, mais posés comme des postulats, des règles admises sans démonstration.",
+          "sourceQuote": "pour l'atome d'hydrogène, mais sans vraie justification (juste des postulats, des règles)"
+        },
+        {
+          "t": "Schrödinger contredit Bohr et aboutit à des niveaux d'énergie différents.",
+          "v": false,
+          "e": "FAUX : il ne le contredit pas, il retrouve exactement les mêmes niveaux. Ce qui change n'est pas la valeur, c'est le statut.",
+          "sourceQuote": "il retrouve exactement les mêmes"
+        },
+        {
+          "t": "Chez Schrödinger, ces niveaux d'énergie deviennent un résultat démontré et non plus un postulat.",
+          "v": true,
+          "e": "VRAI. Le même résultat change de nature : admis chez Bohr, il est démontré chez Schrödinger.",
+          "sourceQuote": "chez Bohr, un postulat sans explication ; chez Schrödinger, un résultat démontré"
+        },
+        {
+          "t": "Bohr décrivait déjà les fonctions ψ, que Schrödinger n'a fait que confirmer.",
+          "v": false,
+          "e": "FAUX : Bohr ne pouvait pas décrire les ψ. C'est un apport supplémentaire de Schrödinger, en plus des niveaux d'énergie.",
+          "sourceQuote": "Schrödinger donne en plus les ψ, que Bohr ne pouvait pas décrire"
+        },
+        {
+          "t": "La théorie de Schrödinger est moins complète que celle de Bohr.",
+          "v": false,
+          "e": "FAUX : elle est au contraire beaucoup plus complète, puisqu'elle donne les mêmes niveaux d'énergie, démontrés, et en plus les fonctions ψ.",
+          "sourceQuote": "C'est une théorie beaucoup plus complète"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-032-equation-schrodinger.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à ce qu'il faut comprendre de cette équation en première année, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "En P1, il n'est pas demandé de résoudre cette équation.",
+          "v": true,
+          "e": "VRAI. Les mathématiques nécessaires sont trop lourdes : ce qui est attendu, c'est de comprendre ce que l'équation apporte.",
+          "sourceQuote": "tu n'as PAS à résoudre cette équation — les maths sont trop complexes"
+        },
+        {
+          "t": "ψ peut se voir comme la carte d'identité quantique de l'électron.",
+          "v": true,
+          "e": "VRAI. C'est l'image à retenir : ψ, la fonction d'onde, est ce qui identifie l'électron du point de vue quantique.",
+          "sourceQuote": "ψ est la « carte d'identité quantique » de l'électron"
+        },
+        {
+          "t": "On peut se représenter ψ comme une carte en trois dimensions donnant l'amplitude de l'onde en chaque endroit.",
+          "v": true,
+          "e": "VRAI. ψ associe une amplitude à chaque point de l'espace : d'où l'image d'une carte en trois dimensions.",
+          "sourceQuote": "comme une « carte 3D » qui dit « l'onde a telle amplitude à tel endroit »"
+        },
+        {
+          "t": "Ĥ se comporte comme un calculateur d'énergie : on lui donne E et il rend ψ.",
+          "v": false,
+          "e": "FAUX : l'échange se fait dans l'autre sens. On lui fournit ψ, et il rend E.",
+          "sourceQuote": "c'est un « calculateur d'énergie » : tu lui donnes ψ, il te donne E"
+        },
+        {
+          "t": "Résoudre l'équation donne les niveaux d'énergie, mais pas les orbitales atomiques.",
+          "v": false,
+          "e": "FAUX : la résolution donne les deux à la fois, les niveaux d'énergie E et les orbitales atomiques.",
+          "sourceQuote": "résoudre l'équation donne les niveaux d'énergie E (comme chez Bohr) ET les orbitales atomiques"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-032-equation-schrodinger.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à ce que rapporte exactement la résolution de l'équation pour un atome, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Écrire puis résoudre l'équation apporte deux résultats à la fois.",
+          "v": true,
+          "e": "VRAI. Un seul travail, deux récoltes : les énergies possibles d'un côté, les fonctions d'onde de l'autre.",
+          "sourceQuote": "puis la résoudre donne deux choses d'un coup"
+        },
+        {
+          "t": "Ces deux résultats sont les valeurs de E possibles et les fonctions ψ correspondantes.",
+          "v": true,
+          "e": "VRAI. Les niveaux quantifiés d'un côté, et pour chacun d'eux la fonction d'onde associée.",
+          "sourceQuote": "les valeurs de E possibles (E₁, E₂, E₃…, les niveaux quantifiés) et les fonctions ψ correspondantes"
+        },
+        {
+          "t": "Les fonctions ψ obtenues sont autre chose que les orbitales atomiques.",
+          "v": false,
+          "e": "FAUX : ce sont exactement les orbitales atomiques. Les deux mots désignent ici le même objet.",
+          "sourceQuote": "c'est-à-dire les orbitales atomiques"
+        },
+        {
+          "t": "La résolution ne fournit que l'énergie, les orbitales devant être posées séparément.",
+          "v": false,
+          "e": "FAUX : les orbitales ne sont pas ajoutées à la main, elles sortent du même calcul que les énergies.",
+          "sourceQuote": "Et les fonctions ψ correspondantes"
+        },
+        {
+          "t": "Chaque solution de l'équation livre d'un coup toutes les valeurs de E.",
+          "v": false,
+          "e": "FAUX : chaque solution donne une valeur de E. C'est l'ensemble des solutions qui constitue la série des niveaux.",
+          "sourceQuote": "Chaque solution de l'équation donne une valeur de E possible"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-032-equation-schrodinger.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à ce que cette équation change par rapport à l'idée d'orbite, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Avant cette équation, l'orbite avait été remplacée par l'orbitale sans qu'on sache encore la calculer.",
+          "v": true,
+          "e": "VRAI. Le remplacement était acquis, mais il manquait l'outil de calcul : c'est ce manque que l'équation vient combler.",
+          "sourceQuote": "on remplace l'orbite (trajectoire) par l'orbitale (zone de probabilité). Sauf qu'on n'a pas encore dit comment on la calcule"
+        },
+        {
+          "t": "C'est parce que l'électron est une onde qu'il faut une équation pour le décrire.",
+          "v": true,
+          "e": "VRAI. Décrire une onde exige une équation d'onde : c'est la raison même de l'écriture de Schrödinger.",
+          "sourceQuote": "Il faut donc une équation pour décrire cette onde"
+        },
+        {
+          "t": "Dans cette équation, les orbitales atomiques restent des objets supposés et non calculés.",
+          "v": false,
+          "e": "FAUX : c'est le renversement principal. Les orbitales apparaissent comme un résultat du calcul, elles ne sont plus supposées.",
+          "sourceQuote": "C'est là qu'elles apparaissent, calculées et non plus supposées"
+        },
+        {
+          "t": "L'opérateur hamiltonien représente l'énergie totale du système.",
+          "v": true,
+          "e": "VRAI. C'est tout ce qu'il faut en retenir à ce stade : Ĥ porte l'énergie totale du système étudié.",
+          "sourceQuote": "retiens juste que Ĥ = l'énergie totale du système"
+        },
+        {
+          "t": "Une fois l'équation posée, la trajectoire de l'électron redevient calculable.",
+          "v": false,
+          "e": "FAUX : la trajectoire n'existe plus. L'équation décrit une onde et des zones de probabilité, jamais un trajet.",
+          "sourceQuote": "L'électron est une onde, et sa trajectoire n'existe plus"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-033-fonction-onde-psi-carre.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives au statut de la fonction d'onde ψ, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "ψ n'a pas de signification physique directe.",
+          "v": true,
+          "e": "VRAI. Prise seule, ψ ne se lit pas comme une grandeur mesurable : c'est un objet mathématique intermédiaire.",
+          "sourceQuote": "ψ n'a pas de signification physique directe"
+        },
+        {
+          "t": "ψ est une fonction mathématique qui décrit l'onde-électron autour du noyau.",
+          "v": true,
+          "e": "VRAI. Son rôle s'arrête là : décrire l'onde associée à l'électron autour du noyau, et rien de plus.",
+          "sourceQuote": "C'est une fonction mathématique ψ(x,y,z) : elle décrit « l'onde-électron » autour du noyau, et rien de plus"
+        },
+        {
+          "t": "Là où ψ est grand, on peut affirmer que l'électron se trouve souvent.",
+          "v": false,
+          "e": "FAUX : ce raisonnement est justement interdit. Une grande valeur de ψ ne se traduit pas directement en présence fréquente de l'électron.",
+          "sourceQuote": "On ne peut donc pas dire « ψ est grand ici, donc l'électron y est souvent »"
+        },
+        {
+          "t": "ψ représente directement la probabilité de présence de l'électron.",
+          "v": false,
+          "e": "FAUX : c'est l'erreur classique posée sur cette notion. ψ ne représente pas la probabilité de présence.",
+          "sourceQuote": "« ψ représente la probabilité de présence de l'électron. » → FAUX !"
+        },
+        {
+          "t": "C'est |ψ|², et non ψ, qui indique où l'électron a des chances d'être.",
+          "v": true,
+          "e": "VRAI. Le passage au carré du module change tout : c'est cette grandeur, et elle seule, qui parle de chances de présence.",
+          "sourceQuote": "C'est |ψ|² qui dit où l'électron a des chances d'être"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-033-fonction-onde-psi-carre.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la grandeur |ψ|², laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "|ψ|² est la densité de probabilité de présence.",
+          "v": true,
+          "e": "VRAI. C'est la couleur de la carte en chaque point : une densité, pas encore une probabilité.",
+          "sourceQuote": "la densité de probabilité de présence (la « couleur » de la carte en ce point)"
+        },
+        {
+          "t": "|ψ|² dit, point par point, où l'électron a beaucoup de chances d'être et où il en a peu.",
+          "v": true,
+          "e": "VRAI. C'est une lecture locale : en chaque point de l'espace, elle donne le degré de chance de trouver l'électron.",
+          "sourceQuote": "C'est elle qui dit, point par point, où l'électron a beaucoup de chances d'être et où il en a peu"
+        },
+        {
+          "t": "|ψ|² est directement une probabilité, sans qu'il soit besoin de la multiplier par quoi que ce soit.",
+          "v": false,
+          "e": "FAUX : seule, c'est une densité. Pour obtenir une probabilité, il faut encore la multiplier par un volume.",
+          "sourceQuote": "|ψ|² seule est une densité : pour obtenir une probabilité, il faut la multiplier par un volume"
+        },
+        {
+          "t": "C'est ψ, et non |ψ|², qui joue le rôle de la carte du radar météo.",
+          "v": false,
+          "e": "FAUX : la carte du radar, c'est |ψ|². ψ ne se lit pas comme une carte de chances.",
+          "sourceQuote": "C'est elle, la carte du radar météo"
+        },
+        {
+          "t": "|ψ|² est une fonction dépourvue de signification physique.",
+          "v": false,
+          "e": "FAUX : c'est au contraire la grandeur qui a un sens, celle qu'on peut interpréter comme densité de probabilité.",
+          "sourceQuote": "C'est |ψ|² qui a un sens : la densité de probabilité"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-033-fonction-onde-psi-carre.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la relation qui donne la probabilité de présence, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "dP est la probabilité de trouver l'électron dans un petit volume dV.",
+          "v": true,
+          "e": "VRAI. dP est bien une probabilité, et elle est rapportée à un petit volume donné.",
+          "sourceQuote": "la probabilité de trouver l'électron dans un petit volume dV"
+        },
+        {
+          "t": "dV est un petit élément de volume pris autour du point de coordonnées x, y et z.",
+          "v": true,
+          "e": "VRAI. C'est la petite boîte de l'espace dans laquelle on cherche l'électron, centrée sur le point considéré.",
+          "sourceQuote": "un petit élément de volume autour du point (x, y, z)"
+        },
+        {
+          "t": "Pour obtenir une probabilité, il faut multiplier la densité par un volume.",
+          "v": true,
+          "e": "VRAI. C'est le passage obligé de la densité à la probabilité : une densité multipliée par un volume donne une probabilité.",
+          "sourceQuote": "pour obtenir une probabilité, il faut la multiplier par un volume"
+        },
+        {
+          "t": "La probabilité s'obtient en divisant |ψ|² par le volume dV.",
+          "v": false,
+          "e": "FAUX : il s'agit d'une multiplication par le volume, pas d'une division.",
+          "sourceQuote": "dP = |ψ|²dV : il faut multiplier par le volume"
+        },
+        {
+          "t": "dP désigne la densité de probabilité de présence.",
+          "v": false,
+          "e": "FAUX : la densité, c'est |ψ|². dP est la probabilité elle-même, une fois la densité multipliée par le volume.",
+          "sourceQuote": "la grandeur qui a un sens physique, c'est |ψ|² : la densité de probabilité de présence"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-033-fonction-onde-psi-carre.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la somme des probabilités sur tout l'espace, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "En additionnant les probabilités de toutes les petites zones dV de l'espace, on obtient 1.",
+          "v": true,
+          "e": "VRAI. L'addition de toutes les petites contributions de l'espace donne exactement 1.",
+          "sourceQuote": "si on additionne les probabilités de toutes les petites zones dV de l'espace, on tombe sur 1"
+        },
+        {
+          "t": "Ce total vaut 1 parce que l'électron se trouve nécessairement quelque part.",
+          "v": true,
+          "e": "VRAI. C'est l'interprétation du résultat : l'électron existe et il est forcément en un point de l'espace, donc la somme des chances est totale.",
+          "sourceQuote": "parce que l'électron est quelque part"
+        },
+        {
+          "t": "Cette somme ne vaut 1 que pour les orbitales de type s.",
+          "v": false,
+          "e": "FAUX : la somme vaut 1 sur tout l'espace, sans exception ni condition sur le type d'orbitale.",
+          "sourceQuote": "Sur tout l'espace, la somme fait 1"
+        },
+        {
+          "t": "Le total obtenu sur tout l'espace vaut 0,5, soit une chance sur deux.",
+          "v": false,
+          "e": "FAUX : le total vaut 1, c'est-à-dire 100 %, et non une chance sur deux.",
+          "sourceQuote": "on tombe sur 1 (soit 100 %)"
+        },
+        {
+          "t": "C'est ψ, et non |ψ|², que l'on additionne sur tout l'espace pour obtenir 1.",
+          "v": false,
+          "e": "FAUX : c'est bien |ψ|² que l'on somme sur tout l'espace. ψ seule ne se prête pas à ce comptage.",
+          "sourceQuote": "On intègre sur tout l'espace : ∫|ψ|²dV = 1"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-033-fonction-onde-psi-carre.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à l'analogie du radar météo, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le radar météo ne dit pas où sera exactement la goutte de pluie.",
+          "v": true,
+          "e": "VRAI. Il ne désigne aucun point précis : il travaille sur des chances, pas sur des certitudes.",
+          "sourceQuote": "Il ne dit pas « la goutte de pluie sera exactement là »"
+        },
+        {
+          "t": "Il fournit une carte de probabilité : zones rouges pour une forte probabilité de pluie, zones bleues pour une faible probabilité.",
+          "v": true,
+          "e": "VRAI. La couleur code la chance : rouge pour les zones très probables, bleu pour les zones peu probables.",
+          "sourceQuote": "zones rouges = forte probabilité de pluie, zones bleues = faible probabilité"
+        },
+        {
+          "t": "La fonction ψ fait le même travail pour l'électron.",
+          "v": true,
+          "e": "VRAI. C'est tout le sens de l'analogie : au lieu d'un point exact, on dispose d'une carte de chances de présence.",
+          "sourceQuote": "La fonction ψ fait pareil pour l'électron"
+        },
+        {
+          "t": "Dans cette analogie, les zones bleues correspondent aux endroits les plus probables.",
+          "v": false,
+          "e": "FAUX : le bleu marque au contraire la faible probabilité. Ce sont les zones rouges qui sont les plus probables.",
+          "sourceQuote": "zones bleues = faible probabilité"
+        },
+        {
+          "t": "Le radar météo annonce avec certitude l'endroit exact de chaque goutte.",
+          "v": false,
+          "e": "FAUX : il ne donne pas de certitude, seulement une carte de probabilité. C'est exactement pour cela que l'image convient à l'électron.",
+          "sourceQuote": "mais il donne une carte de probabilité"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-033-fonction-onde-psi-carre.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives aux trois objets ψ, |ψ|² et dP et à leurs statuts respectifs, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Ces trois objets ont trois statuts différents.",
+          "v": true,
+          "e": "VRAI. Une fonction sans sens physique direct, une densité, une probabilité : trois natures qu'il ne faut pas confondre.",
+          "sourceQuote": "Trois objets, trois statuts différents"
+        },
+        {
+          "t": "dP est la probabilité, obtenue une fois la densité multipliée par le volume.",
+          "v": true,
+          "e": "VRAI. C'est le troisième statut : la probabilité proprement dite, une fois le volume pris en compte.",
+          "sourceQuote": "dP = |ψ|²dV (la probabilité, une fois multipliée par le volume)"
+        },
+        {
+          "t": "ψ est la densité de probabilité de présence.",
+          "v": false,
+          "e": "FAUX : ψ n'a aucune signification physique directe. La densité de probabilité, c'est |ψ|².",
+          "sourceQuote": "ψ (aucune signification physique directe)"
+        },
+        {
+          "t": "Ces trois objets sont interchangeables dans un énoncé.",
+          "v": false,
+          "e": "FAUX : les échanger est précisément le piège tendu d'une ligne à l'autre. Chacun a son statut propre.",
+          "sourceQuote": "un QCM peut les échanger d'une ligne à l'autre"
+        },
+        {
+          "t": "|ψ|² est la probabilité de présence elle-même.",
+          "v": false,
+          "e": "FAUX : |ψ|² est une densité de probabilité. La probabilité elle-même suppose la multiplication par un volume.",
+          "sourceQuote": "|ψ|² (la densité de probabilité de présence)"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-033-fonction-onde-psi-carre.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à l'erreur classique posée sur ψ et à la suite du raisonnement, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Affirmer que ψ représente la probabilité de présence de l'électron est une erreur.",
+          "v": true,
+          "e": "VRAI. La grandeur qui représente la densité de probabilité de présence est |ψ|², jamais ψ.",
+          "sourceQuote": "C'est |ψ|² qui représente la densité de probabilité de présence"
+        },
+        {
+          "t": "La probabilité elle-même exige une multiplication par le volume.",
+          "v": true,
+          "e": "VRAI. Sans le volume, on reste sur une densité ; c'est le produit par dV qui donne la probabilité.",
+          "sourceQuote": "Et la probabilité elle-même, c'est dP = |ψ|²dV : il faut multiplier par le volume"
+        },
+        {
+          "t": "La résolution de l'équation donne les fonctions ψ, mais la grandeur qui a un sens physique est |ψ|².",
+          "v": true,
+          "e": "VRAI. Le calcul produit des ψ ; l'interprétation physique, elle, passe toujours par le carré du module.",
+          "sourceQuote": "Résoudre l'équation donne les fonctions ψ, mais la grandeur qui a un sens physique"
+        },
+        {
+          "t": "Une fois la carte de probabilité définie, il en résulte un objet que l'on ne peut ni nommer ni dessiner.",
+          "v": false,
+          "e": "FAUX : au contraire, l'étape suivante consiste précisément à en faire un objet qu'on peut nommer et dessiner.",
+          "sourceQuote": "Il reste à en faire un objet qu'on peut nommer et dessiner"
+        },
+        {
+          "t": "Cet objet nommé et dessiné porte le nom de niveau d'énergie.",
+          "v": false,
+          "e": "FAUX : il s'appelle une orbitale atomique. Le niveau d'énergie est une valeur de E, ce n'est pas une région dessinable.",
+          "sourceQuote": "c'est ce qu'on appelle une orbitale atomique"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-034-orbitale-atomique-formes-spdf.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la définition d'une orbitale atomique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une orbitale atomique est la région de l'espace où la probabilité de trouver l'électron est d'au moins 95 %.",
+          "v": true,
+          "e": "VRAI. On découpe dans la carte de densité la région où l'électron se trouve presque à coup sûr, et c'est ce découpage qu'on appelle orbitale.",
+          "sourceQuote": "Une OA = la région de l'espace où la probabilité de trouver l'électron est ≥ 95 %"
+        },
+        {
+          "t": "Une orbitale est une région, et non une trajectoire.",
+          "v": true,
+          "e": "VRAI. C'est la distinction majeure du chapitre : on a renoncé aux trajectoires, on raisonne désormais sur des régions.",
+          "sourceQuote": "Pas une trajectoire : une région"
+        },
+        {
+          "t": "Chaque orbitale atomique est décrite par une fonction ψ.",
+          "v": true,
+          "e": "VRAI. Derrière chaque orbitale il y a une fonction d'onde : c'est elle qui, mise au carré, donne la carte de densité découpée.",
+          "sourceQuote": "chaque OA est décrite par une fonction ψ"
+        },
+        {
+          "t": "Une orbitale atomique est la ligne que suit l'électron autour du noyau.",
+          "v": false,
+          "e": "FAUX : ce serait une trajectoire, notion abandonnée. Une orbitale est une région de l'espace, et c'est justement ce qui la rend dessinable.",
+          "sourceQuote": "Pas une trajectoire : une région. C'est la première chose qu'on peut vraiment dessiner"
+        },
+        {
+          "t": "Une orbitale est la région où la probabilité de trouver l'électron atteint 100 %.",
+          "v": false,
+          "e": "FAUX : le seuil retenu est de 95 %, pas de 100 %. Une certitude complète demanderait tout l'espace.",
+          "sourceQuote": "la région de l'espace où la probabilité de trouver l'électron est ≥ 95 %"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-034-orbitale-atomique-formes-spdf.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la façon dont s'écrit le nom d'une orbitale atomique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le nom d'une orbitale atomique s'écrit toujours avec un chiffre suivi d'une lettre.",
+          "v": true,
+          "e": "VRAI. 1s, 2s, 2p, 3d, 4f : la structure du nom ne change jamais, un chiffre puis une lettre.",
+          "sourceQuote": "Une OA s'écrit toujours de la même façon : un chiffre + une lettre"
+        },
+        {
+          "t": "Le chiffre et la lettre portent la même information.",
+          "v": false,
+          "e": "FAUX : chacune des deux parties dit quelque chose de différent, l'une la couche, l'autre la forme.",
+          "sourceQuote": "Chacune des deux parties porte une information différente"
+        },
+        {
+          "t": "Le chiffre donne le numéro de la couche.",
+          "v": true,
+          "e": "VRAI. Le chiffre, c'est n : il désigne la couche sur laquelle se trouve l'orbitale.",
+          "sourceQuote": "C'est le numéro de la couche"
+        },
+        {
+          "t": "C'est le chiffre qui détermine la forme de l'orbitale.",
+          "v": false,
+          "e": "FAUX : la forme est fixée par la lettre. Le chiffre, lui, ne dit rien de la forme.",
+          "sourceQuote": "C'est elle qui détermine la forme de l'orbitale"
+        },
+        {
+          "t": "La lettre donne la taille de l'orbitale.",
+          "v": false,
+          "e": "FAUX : la lettre donne la forme et ne dit rien de la taille. La taille se lit sur le chiffre.",
+          "sourceQuote": "La lettre donne la forme — elle ne dit rien de la taille"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-034-orbitale-atomique-formes-spdf.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives aux quatre types d'orbitales et à leurs formes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une orbitale de type s, pour laquelle l vaut 0, est sphérique.",
+          "v": true,
+          "e": "VRAI. C'est la forme la plus simple : une seule boule centrée sur le noyau.",
+          "sourceQuote": "s = une seule boule (l = 0)"
+        },
+        {
+          "t": "Une orbitale de type p présente deux lobes, en forme d'haltère.",
+          "v": true,
+          "e": "VRAI. Deux lobes opposés de part et d'autre du noyau : c'est l'image de l'haltère.",
+          "sourceQuote": "p = deux lobes en haltère (l = 1)"
+        },
+        {
+          "t": "Une orbitale de type d présente quatre lobes, en trèfle.",
+          "v": true,
+          "e": "VRAI. Le nombre de lobes augmente avec la lettre : quatre lobes pour d, d'où l'image du trèfle.",
+          "sourceQuote": "d = quatre lobes en trèfle (l = 2)"
+        },
+        {
+          "t": "Une orbitale de type f possède deux lobes.",
+          "v": false,
+          "e": "FAUX : deux lobes, c'est le type p. Le type f a une forme complexe, à huit lobes.",
+          "sourceQuote": "f = la forme complexe à huit lobes (l = 3)"
+        },
+        {
+          "t": "La valeur de l associée aux orbitales d est 3.",
+          "v": false,
+          "e": "FAUX : d correspond à l = 2. La valeur 3 est celle des orbitales f.",
+          "sourceQuote": "s = 0, p = 1, d = 2, f = 3"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-034-orbitale-atomique-formes-spdf.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la lecture d'un nom d'orbitale déjà écrit, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans l'orbitale 3d, la lettre d correspond à l = 2 et donc à une forme à quatre lobes.",
+          "v": true,
+          "e": "VRAI. La lettre d se traduit toujours par l = 2, et l = 2 donne la forme à quatre lobes.",
+          "sourceQuote": "Ici, d → l = 2 → forme à 4 lobes"
+        },
+        {
+          "t": "Dans 4f, le chiffre indique la couche n°4 : une grande orbitale, loin du noyau.",
+          "v": true,
+          "e": "VRAI. Un chiffre élevé signifie une couche haute, donc une orbitale étendue et un électron éloigné du noyau.",
+          "sourceQuote": "le chiffre d'abord → n = 4, couche n°4, une grande orbitale, loin du noyau"
+        },
+        {
+          "t": "Dans 4f, la lettre f correspond à l = 2.",
+          "v": false,
+          "e": "FAUX : la lettre f correspond à l = 3, et donc à la forme complexe à huit lobes.",
+          "sourceQuote": "la lettre ensuite → f, donc l = 3, donc la forme complexe à 8 lobes"
+        },
+        {
+          "t": "L'orbitale 2p se trouve sur la couche n°2 et présente une forme sphérique.",
+          "v": false,
+          "e": "FAUX : la couche est bien la n°2, mais la forme d'une orbitale p est en haltère, à deux lobes. La sphère, c'est le type s.",
+          "sourceQuote": "2p : couche n°2, forme en haltère"
+        },
+        {
+          "t": "Le chiffre et la lettre doivent être lus ensemble, comme une information unique.",
+          "v": false,
+          "e": "FAUX : ce sont deux informations indépendantes, à lire l'une après l'autre et à ne jamais mélanger.",
+          "sourceQuote": "Deux informations indépendantes, jamais mélangées"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-034-orbitale-atomique-formes-spdf.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à la taille d'une orbitale et à ce qui la fixe, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Plus n est grand, plus l'orbitale est grande et plus l'électron est loin du noyau.",
+          "v": true,
+          "e": "VRAI. Le chiffre commande l'extension : monter en n, c'est agrandir l'orbitale et éloigner l'électron.",
+          "sourceQuote": "Plus n est grand, plus l'OA est grande et plus l'électron est loin du noyau"
+        },
+        {
+          "t": "La lettre est le seul élément qui fixe la forme de l'orbitale.",
+          "v": true,
+          "e": "VRAI. Rien d'autre n'intervient dans la forme : ni le chiffre, ni la taille, seulement la lettre.",
+          "sourceQuote": "La lettre, donc l, est le seul élément qui fixe la forme"
+        },
+        {
+          "t": "Le dessin des quatre types d'orbitales montre uniquement la forme, la taille dépendant du chiffre.",
+          "v": true,
+          "e": "VRAI. Le schéma compare des formes entre elles ; il ne dit rien de la taille, qui se lit sur le chiffre.",
+          "sourceQuote": "Ce que le dessin montre, c'est uniquement la forme : la taille, elle, dépend du chiffre"
+        },
+        {
+          "t": "Il existe une dizaine de formes d'orbitales à connaître.",
+          "v": false,
+          "e": "FAUX : il n'y en a que quatre, celles associées aux lettres s, p, d et f.",
+          "sourceQuote": "Il n'y en a que quatre à connaître"
+        },
+        {
+          "t": "Le chiffre d'une orbitale renseigne aussi sur sa forme.",
+          "v": false,
+          "e": "FAUX : le chiffre donne la couche et la taille, et rien d'autre. La forme relève uniquement de la lettre.",
+          "sourceQuote": "Le chiffre (n) donne la couche et la taille — il ne dit rien de la forme"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-034-orbitale-atomique-formes-spdf.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la comparaison de deux orbitales entre elles, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "2p et 3p ont exactement la même forme, mais pas la même taille.",
+          "v": true,
+          "e": "VRAI. Même lettre, donc même forme à deux lobes ; chiffre différent, donc taille différente.",
+          "sourceQuote": "2p et 3p ont exactement la même forme (2 lobes) mais pas la même taille"
+        },
+        {
+          "t": "3s et 3d sont sur la même couche, mais n'ont rien à voir en forme.",
+          "v": true,
+          "e": "VRAI. Le chiffre commun place les deux sur la couche 3 ; les lettres, elles, imposent une sphère d'un côté et quatre lobes de l'autre.",
+          "sourceQuote": "3s et 3d sont sur la même couche et n'ont rien à voir en forme"
+        },
+        {
+          "t": "2p et 3p diffèrent par leur forme.",
+          "v": false,
+          "e": "FAUX : elles ont la même forme, à deux lobes. Ce qui les distingue, c'est la taille.",
+          "sourceQuote": "2p et 3p ont exactement la même forme (2 lobes)"
+        },
+        {
+          "t": "3s et 3d appartiennent à deux couches différentes.",
+          "v": false,
+          "e": "FAUX : le chiffre est le même, elles sont donc sur la même couche. C'est leur forme qui diffère.",
+          "sourceQuote": "3s et 3d sont sur la même couche"
+        },
+        {
+          "t": "La lettre d'une orbitale renseigne sur sa taille.",
+          "v": false,
+          "e": "FAUX : la lettre ne dit rien de la taille. C'est le chiffre qui la commande.",
+          "sourceQuote": "elle ne dit rien de la taille"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-034-orbitale-atomique-formes-spdf.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à l'origine des lettres s, p, d, f et à la progression des formes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Ces quatre lettres proviennent de la spectroscopie historique.",
+          "v": true,
+          "e": "VRAI. Elles n'ont pas été choisies pour décrire la forme : elles viennent du vocabulaire de la spectroscopie ancienne.",
+          "sourceQuote": "Les lettres viennent de la spectroscopie historique"
+        },
+        {
+          "t": "En allant de s à f, le nombre de lobes augmente.",
+          "v": true,
+          "e": "VRAI. Une boule, puis deux lobes, puis quatre, puis huit : la progression suit l'ordre des lettres.",
+          "sourceQuote": "la lettre change, et le nombre de lobes augmente"
+        },
+        {
+          "t": "À l = 3 correspond une forme à huit lobes.",
+          "v": true,
+          "e": "VRAI. l = 3, c'est le type f, et sa forme complexe compte huit lobes.",
+          "sourceQuote": "l=2 → 4 lobes, l=3 → 8 lobes"
+        },
+        {
+          "t": "À l = 1 correspond une sphère.",
+          "v": false,
+          "e": "FAUX : la sphère correspond à l = 0. Avec l = 1, on obtient deux lobes.",
+          "sourceQuote": "l=0 → sphère, l=1 → 2 lobes"
+        },
+        {
+          "t": "Une orbitale s'obtient en découpant dans la carte de densité la région où l'électron ne se trouve presque jamais.",
+          "v": false,
+          "e": "FAUX : on découpe au contraire la région où l'électron se trouve presque à coup sûr, celle des 95 %.",
+          "sourceQuote": "on découpe dans cette carte la région où l'électron se trouve presque à coup sûr"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-035-surfaces-nodales.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la définition d'une surface nodale, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une surface nodale est une surface où la probabilité de trouver l'électron est nulle.",
+          "v": true,
+          "e": "VRAI. Sur une telle surface, l'électron n'a aucune chance de se trouver : la probabilité y vaut zéro.",
+          "sourceQuote": "une surface où la probabilité de trouver l'électron est nulle"
+        },
+        {
+          "t": "Sur une surface nodale, ψ vaut 0.",
+          "v": true,
+          "e": "VRAI. C'est l'écriture mathématique de la définition : la fonction d'onde s'y annule.",
+          "sourceQuote": "la probabilité de trouver l'électron est nulle (ψ = 0)"
+        },
+        {
+          "t": "Les surfaces nodales se situent à l'intérieur du contour de l'orbitale.",
+          "v": true,
+          "e": "VRAI. L'intérieur de l'orbitale n'est pas uniforme : on y trouve des surfaces où l'électron n'a aucune chance d'être.",
+          "sourceQuote": "à l'intérieur de ce contour, tout n'est pas uniforme : il existe des surfaces sur lesquelles l'électron n'a aucune chance de se trouver"
+        },
+        {
+          "t": "Une surface nodale désigne le contour extérieur de l'orbitale.",
+          "v": false,
+          "e": "FAUX : le contour extérieur, c'est la forme de l'orbitale. Les surfaces nodales sont des surfaces internes, de probabilité nulle.",
+          "sourceQuote": "il existe des surfaces sur lesquelles l'électron n'a aucune chance de se trouver"
+        },
+        {
+          "t": "L'électron traverse régulièrement les surfaces nodales.",
+          "v": false,
+          "e": "FAUX : ce sont des frontières invisibles que l'électron ne traverse jamais.",
+          "sourceQuote": "que l'électron ne traverse jamais"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-035-surfaces-nodales.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux formules de comptage des surfaces nodales, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le nombre total de surfaces nodales vaut n − 1.",
+          "v": true,
+          "e": "VRAI. Le total se lit directement sur le chiffre de l'orbitale, en lui retirant une unité.",
+          "sourceQuote": "Total = n − 1 · planes = l · sphériques = n − l − 1"
+        },
+        {
+          "t": "Le nombre de surfaces nodales planes est égal à n − l − 1.",
+          "v": false,
+          "e": "FAUX : les planes valent l. C'est le nombre de surfaces sphériques qui vaut n − l − 1.",
+          "sourceQuote": "Planes = l et Sphériques = n − l − 1"
+        },
+        {
+          "t": "Les planes sont des plans et les sphériques sont des couches.",
+          "v": true,
+          "e": "VRAI. Les deux familles n'ont pas la même géométrie : d'un côté des plans, de l'autre des couches sphériques.",
+          "sourceQuote": "Les planes sont des plans, les sphériques sont des couches"
+        },
+        {
+          "t": "Additionnées, les planes et les sphériques donnent toujours n.",
+          "v": false,
+          "e": "FAUX : leur somme redonne le total, c'est-à-dire n − 1, et non n.",
+          "sourceQuote": "additionnées, elles redonnent toujours n − 1"
+        },
+        {
+          "t": "Le total dépend à la fois de n et de la lettre de l'orbitale.",
+          "v": false,
+          "e": "FAUX : le total ne dépend que de n. La lettre n'intervient que dans la répartition entre planes et sphériques.",
+          "sourceQuote": "Le total ne fait jamais intervenir la lettre : il ne dépend que de n"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-035-surfaces-nodales.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives aux orbitales 1s et 2s, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'orbitale 1s ne possède aucune surface nodale.",
+          "v": true,
+          "e": "VRAI. Avec n = 1, le total vaut 1 − 1 = 0 : il n'y a aucune surface nodale dans une 1s.",
+          "sourceQuote": "Total = n − 1 = 1 − 1 = 0 surface nodale"
+        },
+        {
+          "t": "Dans une 1s, ψ ne s'annule nulle part.",
+          "v": true,
+          "e": "VRAI. Aucune frontière invisible à l'intérieur de cette orbitale : la fonction d'onde ne s'y annule en aucun point.",
+          "sourceQuote": "dans une 1s, ψ ne s'annule nulle part — aucune frontière invisible à l'intérieur de l'orbitale"
+        },
+        {
+          "t": "L'orbitale 2s possède une seule surface nodale au total.",
+          "v": true,
+          "e": "VRAI. Avec n = 2, le total vaut 2 − 1 = 1.",
+          "sourceQuote": "OA 2s (n = 2, l = 0) — Total = 2 − 1 = 1 surface nodale"
+        },
+        {
+          "t": "Cette surface nodale de la 2s est un plan nodal.",
+          "v": false,
+          "e": "FAUX : le nombre de plans vaut l, donc 0 pour une orbitale s. La surface nodale de la 2s est sphérique.",
+          "sourceQuote": "Planes = l = 0 → 0 plan nodal"
+        },
+        {
+          "t": "La 2s possède deux surfaces nodales sphériques.",
+          "v": false,
+          "e": "FAUX : elle n'en possède qu'une seule, car n − l − 1 = 2 − 0 − 1 = 1.",
+          "sourceQuote": "Sphériques = n − l − 1 = 2 − 0 − 1 = 1 surface nodale sphérique"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-035-surfaces-nodales.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux orbitales 2p et 3d, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La 2p possède un plan nodal et aucune surface nodale sphérique.",
+          "v": true,
+          "e": "VRAI. Les planes valent l, donc 1 ; les sphériques valent n − l − 1 = 2 − 1 − 1 = 0.",
+          "sourceQuote": "Planes = l = 1 → 1 plan nodal. Sphériques = 2 − 1 − 1 = 0 surface nodale sphérique"
+        },
+        {
+          "t": "La 2p et la 2s ont le même nombre total de surfaces nodales, mais pas du même type.",
+          "v": true,
+          "e": "VRAI. Total de 1 dans les deux cas, puisque n vaut 2 ; mais l'une l'a sous forme sphérique, l'autre sous forme de plan.",
+          "sourceQuote": "Même total que la 2s, mais pas du même type"
+        },
+        {
+          "t": "La 3d possède trois surfaces nodales au total.",
+          "v": false,
+          "e": "FAUX : avec n = 3, le total vaut 3 − 1 = 2, et non 3.",
+          "sourceQuote": "OA 3d (n = 3, l = 2) — Total = 3 − 1 = 2 surfaces nodales"
+        },
+        {
+          "t": "La 3d possède deux surfaces nodales sphériques.",
+          "v": false,
+          "e": "FAUX : elle n'en possède aucune de sphérique, car n − l − 1 = 3 − 2 − 1 = 0. Ses deux surfaces nodales sont des plans.",
+          "sourceQuote": "Sphériques = 3 − 2 − 1 = 0 surface nodale sphérique"
+        },
+        {
+          "t": "La 2p ne possède aucun plan nodal.",
+          "v": false,
+          "e": "FAUX : elle en possède exactement un, puisque le nombre de plans est égal à l, qui vaut 1 pour une orbitale p.",
+          "sourceQuote": "Planes = l = 1 → 1 plan nodal"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-035-surfaces-nodales.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux orbitales 4s, 3p, 4d et 4f, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La 4s possède 3 surfaces nodales, toutes sphériques.",
+          "v": true,
+          "e": "VRAI. Total 4 − 1 = 3 ; comme l vaut 0, aucun plan, donc les trois sont sphériques.",
+          "sourceQuote": "4s 4 0 3 0 3"
+        },
+        {
+          "t": "La 3p possède 2 surfaces nodales au total : une plane et une sphérique.",
+          "v": true,
+          "e": "VRAI. Total 3 − 1 = 2 ; planes = l = 1 ; sphériques = 3 − 1 − 1 = 1.",
+          "sourceQuote": "3p 3 1 2 1 1"
+        },
+        {
+          "t": "La 4d possède 3 surfaces nodales au total, dont 2 planes.",
+          "v": true,
+          "e": "VRAI. Total 4 − 1 = 3 ; planes = l = 2 ; il reste donc une surface sphérique.",
+          "sourceQuote": "4d 4 2 3 2 1"
+        },
+        {
+          "t": "La 4f possède une surface nodale sphérique.",
+          "v": false,
+          "e": "FAUX : elle n'en a aucune de sphérique, car 4 − 3 − 1 = 0. Ses trois surfaces nodales sont toutes des plans.",
+          "sourceQuote": "4f 4 3 3 3 0"
+        },
+        {
+          "t": "Le total de la 4f est plus grand que celui de la 4s.",
+          "v": false,
+          "e": "FAUX : les deux ont le même chiffre, donc le même total de 3. Seule la répartition change.",
+          "sourceQuote": "4s et 4f ont le même nombre total de surfaces nodales (3)"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-035-surfaces-nodales.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la répartition des surfaces nodales entre planes et sphériques, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le total ne dépend que de n, jamais de la lettre.",
+          "v": true,
+          "e": "VRAI. Changer la lettre ne change pas le total : cela ne modifie que la répartition entre plans et couches sphériques.",
+          "sourceQuote": "Le total ne dépend que de n, jamais de la lettre"
+        },
+        {
+          "t": "4s et 4f ont le même total, mais 0 plane et 3 sphériques pour l'une, 3 planes et 0 sphérique pour l'autre.",
+          "v": true,
+          "e": "VRAI. Même chiffre donc même total de 3, mais des répartitions exactement opposées.",
+          "sourceQuote": "0 plane + 3 sphériques pour l'une, 3 planes + 0 sphérique pour l'autre"
+        },
+        {
+          "t": "La 1s possède une surface nodale sphérique.",
+          "v": false,
+          "e": "FAUX : la 1s n'en possède aucune, ni plane ni sphérique.",
+          "sourceQuote": "Et la 1s n'en a aucune"
+        },
+        {
+          "t": "Deux orbitales de même total ont forcément la même répartition entre planes et sphériques.",
+          "v": false,
+          "e": "FAUX : un même total peut se répartir de façons très différentes, comme le montrent la 4s et la 4f.",
+          "sourceQuote": "ont le même nombre total de surfaces nodales (3), mais réparties différemment"
+        },
+        {
+          "t": "Changer la lettre en gardant le même chiffre modifie le nombre total de surfaces nodales.",
+          "v": false,
+          "e": "FAUX : le total reste n − 1 quelle que soit la sous-couche. Seule la répartition bouge.",
+          "sourceQuote": "le total est toujours n−1, quelle que soit la sous-couche"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-035-surfaces-nodales.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la méthode de comptage à appliquer devant une orbitale, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La première chose à faire est d'écrire n et l, sans chercher à imaginer le dessin.",
+          "v": true,
+          "e": "VRAI. Le comptage est un calcul, pas une reconstitution mentale du schéma : on part des deux nombres.",
+          "sourceQuote": "ne cherche pas à imaginer le dessin : écris n et l"
+        },
+        {
+          "t": "Les trois formules se déroulent dans l'ordre : total, planes, sphériques.",
+          "v": true,
+          "e": "VRAI. En suivant toujours le même ordre, on évite d'intervertir les deux familles de surfaces.",
+          "sourceQuote": "déroule les trois formules dans l'ordre — total, planes, sphériques"
+        },
+        {
+          "t": "Le contrôle de sortie consiste à vérifier que les planes plus les sphériques retombent sur le total.",
+          "v": true,
+          "e": "VRAI. C'est la vérification qui protège d'une erreur de calcul : la somme des deux doit rendre exactement le total.",
+          "sourceQuote": "les planes plus les sphériques doivent retomber exactement sur le total"
+        },
+        {
+          "t": "Si le compte ne tombe pas juste, c'est le n qui a été mal lu.",
+          "v": false,
+          "e": "FAUX : dans ce cas, c'est le l qui a été mal lu. Le n, lui, se lit directement sur le chiffre.",
+          "sourceQuote": "Si ça ne tombe pas juste, c'est le l qui a été mal lu"
+        },
+        {
+          "t": "Les surfaces nodales sphériques sont des plans.",
+          "v": false,
+          "e": "FAUX : les plans forment l'autre famille. Les sphériques sont des couches.",
+          "sourceQuote": "Les planes sont des plans, les sphériques sont des couches"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-036-quatre-nombres-quantiques-vue-ensemble.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives au nombre de nombres quantiques nécessaires pour décrire un électron, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Il faut quatre nombres quantiques pour décrire complètement un électron.",
+          "v": true,
+          "e": "VRAI. Trois d'entre eux situent l'orbitale, le quatrième caractérise l'électron lui-même.",
+          "sourceQuote": "il faut 4 nombres quantiques pour décrire complètement un électron"
+        },
+        {
+          "t": "L'ensemble se compare à une adresse postale complète : pays, ville, rue, numéro de porte.",
+          "v": true,
+          "e": "VRAI. C'est l'image directrice : on part du plus large pour arriver au plus précis, comme une adresse.",
+          "sourceQuote": "Une adresse complète : pays → ville → rue → numéro de porte"
+        },
+        {
+          "t": "Ces quatre nombres se rangent du plus large au plus fin.",
+          "v": true,
+          "e": "VRAI. L'ordre n'est pas arbitraire : chaque nombre affine ce que le précédent a laissé indéterminé.",
+          "sourceQuote": "ils se rangent du plus large au plus fin"
+        },
+        {
+          "t": "Un seul nombre suffit à situer un électron.",
+          "v": false,
+          "e": "FAUX : un seul chiffre ne suffit pas. Il en faut quatre pour situer complètement un électron.",
+          "sourceQuote": "Un seul chiffre ne suffit pas à situer un électron"
+        },
+        {
+          "t": "Les quatre nombres répondent tous à la même question.",
+          "v": false,
+          "e": "FAUX : chacun répond à une question différente, ce qui explique qu'il faille les quatre.",
+          "sourceQuote": "Chacun de ces quatre nombres répond à une question différente"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-036-quatre-nombres-quantiques-vue-ensemble.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à ce que détermine chacun des quatre nombres quantiques, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le nombre principal n fixe la couche et la taille de l'orbitale.",
+          "v": true,
+          "e": "VRAI. C'est son domaine : la couche sur laquelle se trouve l'électron, et l'extension de l'orbitale.",
+          "sourceQuote": "Couche / taille de l'OA"
+        },
+        {
+          "t": "Le nombre azimutal l fixe l'orientation de l'orbitale.",
+          "v": false,
+          "e": "FAUX : l fixe la sous-couche et la forme. L'orientation relève du nombre quantique magnétique.",
+          "sourceQuote": "Sous-couche / forme de l'OA"
+        },
+        {
+          "t": "Le nombre quantique magnétique fixe l'orientation de l'orbitale.",
+          "v": true,
+          "e": "VRAI. La forme étant déjà fixée par l, il reste à dire comment elle est posée dans l'espace : c'est son rôle.",
+          "sourceQuote": "détermine son orientation"
+        },
+        {
+          "t": "Le spin décrit la forme de l'orbitale.",
+          "v": false,
+          "e": "FAUX : le spin décrit la rotation propre de l'électron, pas la forme de l'orbitale, qui relève de l.",
+          "sourceQuote": "Rotation propre de l'électron"
+        },
+        {
+          "t": "Le nombre azimutal porte aussi le nom de nombre principal.",
+          "v": false,
+          "e": "FAUX : son second nom est nombre secondaire. Le nombre principal, c'est n.",
+          "sourceQuote": "le nombre quantique azimutal (ou secondaire)"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-036-quatre-nombres-quantiques-vue-ensemble.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives aux deux premiers niveaux de l'adresse d'un électron, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "n constitue le niveau le plus large de l'adresse.",
+          "v": true,
+          "e": "VRAI. Il donne la couche électronique et la taille de l'orbitale : c'est le premier tri, le plus grossier.",
+          "sourceQuote": "C'est le niveau le plus large de l'adresse"
+        },
+        {
+          "t": "Plus n est grand, plus l'orbitale est grande et plus l'électron est loin du noyau.",
+          "v": true,
+          "e": "VRAI. Monter en n, c'est agrandir l'orbitale et éloigner l'électron du noyau.",
+          "sourceQuote": "Plus n est grand, plus l'OA est grande et plus l'électron est loin du noyau"
+        },
+        {
+          "t": "À l'intérieur d'une couche, l désigne la sous-couche et détermine la forme de l'orbitale.",
+          "v": true,
+          "e": "VRAI. Une fois la couche connue, l affine : il choisit la sous-couche, donc la forme, celle des types s, p, d et f.",
+          "sourceQuote": "il désigne la sous-couche et détermine la forme de l'orbitale"
+        },
+        {
+          "t": "Les valeurs de l sont libres et ne dépendent pas de n.",
+          "v": false,
+          "e": "FAUX : les valeurs de l dépendent de n. C'est ce qui limite les sous-couches disponibles sur une couche donnée.",
+          "sourceQuote": "Ses valeurs dépendent de n"
+        },
+        {
+          "t": "N'importe quelle sous-couche peut se trouver sur n'importe quelle couche.",
+          "v": false,
+          "e": "FAUX : les sous-couches possibles sont commandées par la couche. Toutes ne sont pas disponibles à tous les étages.",
+          "sourceQuote": "on ne peut pas mettre n'importe quelle sous-couche sur n'importe quelle couche"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-036-quatre-nombres-quantiques-vue-ensemble.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives au nombre quantique magnétique et au spin, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une fois la forme fixée, le nombre magnétique indique comment elle est posée dans l'espace.",
+          "v": true,
+          "e": "VRAI. Il ne change ni la couche ni la forme : il dit dans quelle direction cette forme est tournée.",
+          "sourceQuote": "La forme étant fixée, il reste à savoir comment elle est posée dans l'espace"
+        },
+        {
+          "t": "Pour les orbitales p, cette orientation se fait selon l'axe x, y ou z.",
+          "v": true,
+          "e": "VRAI. Une même forme en haltère peut être couchée selon l'un ou l'autre des trois axes de l'espace.",
+          "sourceQuote": "son orientation (axe x, y ou z pour les p par exemple)"
+        },
+        {
+          "t": "Le nombre magnétique suffit à lui seul à désigner une orbitale précise.",
+          "v": false,
+          "e": "FAUX : il achève la désignation, mais avec n et l. Seul, il ne dit ni la couche ni la forme.",
+          "sourceQuote": "Avec n et l, il achève de désigner une orbitale précise"
+        },
+        {
+          "t": "Le spin décrit l'orbitale, et non l'électron.",
+          "v": false,
+          "e": "FAUX : les trois premiers nombres décrivent l'orbitale ; le quatrième, le spin, décrit l'électron lui-même.",
+          "sourceQuote": "Le quatrième décrit l'électron lui-même"
+        },
+        {
+          "t": "Le spin se compare au mouvement d'une bille qui roule le long d'un rail.",
+          "v": false,
+          "e": "FAUX : l'image retenue est celle d'une toupie qui tourne sur elle-même, c'est-à-dire d'une rotation propre.",
+          "sourceQuote": "sa rotation propre sur lui-même, comme une toupie qui tourne"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-036-quatre-nombres-quantiques-vue-ensemble.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à l'analogie de l'immeuble, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "n correspond à l'étage de l'immeuble.",
+          "v": true,
+          "e": "VRAI. C'est le repère le plus large : on commence par savoir à quel étage on cherche.",
+          "sourceQuote": "n = l'étage de l'immeuble"
+        },
+        {
+          "t": "l correspond à l'appartement situé à cet étage.",
+          "v": true,
+          "e": "VRAI. Une fois l'étage connu, il faut choisir l'appartement : c'est le rôle de l, qui désigne la sous-couche.",
+          "sourceQuote": "l = l'appartement à cet étage"
+        },
+        {
+          "t": "Le nombre magnétique correspond à la pièce dans l'appartement.",
+          "v": true,
+          "e": "VRAI. Troisième niveau de précision : dans l'appartement, la pièce, c'est-à-dire l'orbitale précise.",
+          "sourceQuote": "la pièce dans l'appartement"
+        },
+        {
+          "t": "Le spin correspond à l'immeuble tout entier.",
+          "v": false,
+          "e": "FAUX : le spin correspond à la personne, pas au bâtiment. L'immeuble n'est le repère d'aucun des quatre nombres.",
+          "sourceQuote": "spin = la personne (max 2 par pièce)"
+        },
+        {
+          "t": "Chaque pièce peut accueillir au maximum quatre personnes.",
+          "v": false,
+          "e": "FAUX : deux au maximum par pièce, ce qui correspond aux deux électrons possibles par orbitale.",
+          "sourceQuote": "la personne (max 2 par pièce)"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-036-quatre-nombres-quantiques-vue-ensemble.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives au statut particulier du spin, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le spin est une propriété intrinsèque de l'électron.",
+          "v": true,
+          "e": "VRAI. Il appartient à l'électron lui-même, indépendamment de l'endroit où on le place.",
+          "sourceQuote": "Le spin est une propriété intrinsèque de l'électron"
+        },
+        {
+          "t": "Le spin ne dépend ni de n, ni de l, ni du nombre quantique magnétique.",
+          "v": true,
+          "e": "VRAI. Aucun des trois nombres décrivant l'orbitale ne le commande : c'est ce qui en fait une propriété à part.",
+          "sourceQuote": "il ne dépend ni de n, ni de l, ni de m"
+        },
+        {
+          "t": "Les trois premiers nombres décrivent l'électron lui-même.",
+          "v": false,
+          "e": "FAUX : ils décrivent l'orbitale. C'est le quatrième qui appartient à l'électron.",
+          "sourceQuote": "Les trois premiers nombres décrivent l'orbitale ; le quatrième appartient à l'électron lui-même"
+        },
+        {
+          "t": "Le spin varie selon la couche sur laquelle se trouve l'électron.",
+          "v": false,
+          "e": "FAUX : étant intrinsèque, il ne dépend pas de n, donc pas de la couche occupée.",
+          "sourceQuote": "propriété intrinsèque de l'électron : il ne dépend ni de n"
+        },
+        {
+          "t": "Le quatrième nombre quantique décrit l'orbitale.",
+          "v": false,
+          "e": "FAUX : la description de l'orbitale est achevée dès le troisième nombre. Le quatrième porte sur la rotation propre de l'électron.",
+          "sourceQuote": "Le quatrième décrit l'électron lui-même : il caractérise sa rotation propre"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-036-quatre-nombres-quantiques-vue-ensemble.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives aux valeurs possibles des nombres quantiques et au réflexe de lecture, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "n prend les valeurs 1, 2, 3, 4… et doit être un entier strictement positif.",
+          "v": true,
+          "e": "VRAI. Le nombre principal est un entier supérieur à zéro : il n'y a ni couche nulle ni couche intermédiaire.",
+          "sourceQuote": "n = 1, 2, 3, 4… (entier > 0)"
+        },
+        {
+          "t": "l prend les valeurs 0, 1, 2… jusqu'à n − 1.",
+          "v": true,
+          "e": "VRAI. Ses valeurs s'arrêtent une marche avant n : c'est ce qui limite les sous-couches d'une couche donnée.",
+          "sourceQuote": "l = 0, 1, 2… jusqu'à (n − 1)"
+        },
+        {
+          "t": "Le spin vaut +1/2 ou −1/2.",
+          "v": true,
+          "e": "VRAI. Deux valeurs seulement, souvent notées par une flèche vers le haut et une flèche vers le bas.",
+          "sourceQuote": "Rotation propre de l'électron s = +1/2 (↑) ou −1/2 (↓)"
+        },
+        {
+          "t": "Devant une suite de nombres, le premier réflexe est de chercher à tout calculer d'un coup.",
+          "v": false,
+          "e": "FAUX : le réflexe attendu est d'identifier d'abord de quel niveau d'adresse parle chaque nombre.",
+          "sourceQuote": "ne cherche pas à tout calculer d'un coup : demande-toi d'abord de quel niveau d'adresse chacun parle"
+        },
+        {
+          "t": "Une proposition qui mélange l'orbitale et l'électron ne peut pas être repérée par ce réflexe.",
+          "v": false,
+          "e": "FAUX : c'est précisément ce que ce réflexe permet de voir, en distinguant les trois premiers niveaux du quatrième.",
+          "sourceQuote": "Ce réflexe suffit souvent à repérer qu'une proposition mélange deux étages de la description"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-037-nombre-quantique-principal-n.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives aux valeurs que peut prendre le nombre quantique principal, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "n prend les valeurs entières de 1 à 7.",
+          "v": true,
+          "e": "VRAI. Sept valeurs suffisent à couvrir les couches rencontrées, de la première à la septième.",
+          "sourceQuote": "n = 1, 2, 3, 4, 5, 6, 7 — un entier strictement positif"
+        },
+        {
+          "t": "n est un entier strictement positif.",
+          "v": true,
+          "e": "VRAI. Ni zéro, ni valeur négative : le nombre principal est toujours un entier supérieur à zéro.",
+          "sourceQuote": "n = 1 à 7, entier strictement positif"
+        },
+        {
+          "t": "n peut valoir zéro.",
+          "v": false,
+          "e": "FAUX : zéro est exclu. La première couche porte le numéro 1.",
+          "sourceQuote": "Jamais zéro, et jamais une valeur intermédiaire"
+        },
+        {
+          "t": "Une valeur comme n = 1,5 n'existe pas.",
+          "v": true,
+          "e": "VRAI. Il n'y a pas de demi-couche : c'est précisément ce que la quantification interdit.",
+          "sourceQuote": "n = 1,5 n'existe pas : c'est exactement ce que la quantification interdit"
+        },
+        {
+          "t": "Les valeurs intermédiaires de n sont autorisées par la quantification.",
+          "v": false,
+          "e": "FAUX : la quantification les interdit. Seules les valeurs entières sont admises.",
+          "sourceQuote": "c'est exactement ce que la quantification interdit"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-037-nombre-quantique-principal-n.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à ce que détermine le nombre quantique principal, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "n détermine la couche électronique et, principalement, l'énergie.",
+          "v": true,
+          "e": "VRAI. Ce sont ses deux effets, avec une nuance sur l'énergie : n en est le premier responsable, mais pas le seul.",
+          "sourceQuote": "La couche électronique et l'énergie — principalement"
+        },
+        {
+          "t": "n est le seul responsable de l'énergie, quel que soit l'atome.",
+          "v": false,
+          "e": "FAUX : dans un atome à plusieurs électrons, d'autres facteurs entrent en jeu. D'où le mot « principalement ».",
+          "sourceQuote": "il n'est pas le seul à compter dans un atome à plusieurs électrons"
+        },
+        {
+          "t": "Plus n est grand, plus l'orbitale est petite.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. Un n plus grand donne une orbitale plus grande, et un électron plus éloigné du noyau.",
+          "sourceQuote": "Plus n est grand → l'OA est plus grande, et l'électron est plus loin du noyau"
+        },
+        {
+          "t": "Une orbitale 3s est plus étendue qu'une 2s, elle-même plus étendue qu'une 1s.",
+          "v": true,
+          "e": "VRAI. À lettre identique, seul le chiffre change : l'extension augmente avec lui.",
+          "sourceQuote": "Une orbitale 3s est donc plus étendue qu'une 2s, elle-même plus étendue qu'une 1s"
+        },
+        {
+          "t": "n renseigne également sur la forme de l'orbitale.",
+          "v": false,
+          "e": "FAUX : la forme relève du deuxième nombre quantique. n donne l'étage, pas la forme.",
+          "sourceQuote": "Il ne dit encore rien de la forme de l'orbitale"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-037-nombre-quantique-principal-n.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la capacité d'une couche électronique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Chaque couche n contient n² orbitales atomiques.",
+          "v": true,
+          "e": "VRAI. Le carré du numéro de couche donne directement le nombre d'orbitales qu'elle contient.",
+          "sourceQuote": "Chaque couche n contient n² orbitales atomiques"
+        },
+        {
+          "t": "Chaque couche peut accueillir 2n² électrons au maximum.",
+          "v": true,
+          "e": "VRAI. Le facteur 2 vient du fait que chaque orbitale peut recevoir deux électrons.",
+          "sourceQuote": "peut accueillir 2n² électrons au maximum"
+        },
+        {
+          "t": "Ces deux capacités se lisent directement à partir de n, sans autre information.",
+          "v": true,
+          "e": "VRAI. Le chiffre de la couche suffit : aucune donnée supplémentaire n'est nécessaire pour les obtenir.",
+          "sourceQuote": "Ces deux nombres se lisent directement à partir de n, sans rien connaître d'autre"
+        },
+        {
+          "t": "Il faut connaître la lettre de l'orbitale pour calculer ces deux capacités.",
+          "v": false,
+          "e": "FAUX : les deux formules ne dépendent que de n. La lettre n'y intervient pas.",
+          "sourceQuote": "Deux formules suffisent, et elles ne dépendent que de n"
+        },
+        {
+          "t": "Chaque couche contient 2n² orbitales et accueille n² électrons.",
+          "v": false,
+          "e": "FAUX : les deux comptages sont intervertis. n² compte les orbitales, 2n² compte les électrons.",
+          "sourceQuote": "n² compte des orbitales, 2n² compte des électrons"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-037-nombre-quantique-principal-n.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la notation historique des couches électroniques, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La couche n = 2 porte le nom de couche L.",
+          "v": true,
+          "e": "VRAI. La suite des lettres commence à K pour n = 1, puis L pour n = 2.",
+          "sourceQuote": "n = 1 → K, n = 2 → L, n = 3 → M, n = 4 → N"
+        },
+        {
+          "t": "La couche M correspond à n = 4.",
+          "v": false,
+          "e": "FAUX : M correspond à n = 3. C'est N qui correspond à n = 4.",
+          "sourceQuote": "traduis tout de suite en n : L → n = 2, M → n = 3"
+        },
+        {
+          "t": "Ces lettres proviennent de la spectroscopie des rayons X.",
+          "v": true,
+          "e": "VRAI. Elles ne décrivent rien de la couche elle-même : c'est un héritage de la spectroscopie des rayons X.",
+          "sourceQuote": "Ces lettres proviennent de la spectroscopie des rayons X"
+        },
+        {
+          "t": "Dire « couche n = 2 » ou « couche L » revient à désigner deux choses différentes.",
+          "v": false,
+          "e": "FAUX : les deux notations sont équivalentes, elles désignent exactement la même couche.",
+          "sourceQuote": "Les deux notations sont équivalentes : on dit « couche n = 2 » ou « couche L », c'est pareil !"
+        },
+        {
+          "t": "Les couches O, P et Q, correspondant à n = 5, 6 et 7, sont d'un emploi fréquent.",
+          "v": false,
+          "e": "FAUX : ces trois lettres existent, mais elles sont rarement utilisées.",
+          "sourceQuote": "puis O, P, Q… (rarement utilisées)"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-037-nombre-quantique-principal-n.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux endroits où le nombre quantique principal a déjà été rencontré, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "n est le n du modèle de Bohr, celui de la relation Eₙ = −13,6/n².",
+          "v": true,
+          "e": "VRAI. C'est le même nombre depuis le début : celui qui numérote les niveaux d'énergie du modèle de Bohr.",
+          "sourceQuote": "c'est le n du modèle de Bohr au chapitre 1 (Eₙ = −13,6/n²)"
+        },
+        {
+          "t": "n est le chiffre que l'on écrit devant la lettre d'une orbitale.",
+          "v": true,
+          "e": "VRAI. Dans 2p ou 3d, le chiffre placé devant la lettre, c'est n.",
+          "sourceQuote": "c'est le chiffre que tu écris devant la lettre d'une orbitale"
+        },
+        {
+          "t": "n donne le nombre total de surfaces nodales d'une orbitale, égal à n − 1.",
+          "v": true,
+          "e": "VRAI. Le total des surfaces nodales ne dépend que de lui, et vaut n − 1.",
+          "sourceQuote": "c'est encore lui qui donne le nombre total de surfaces nodales (n − 1)"
+        },
+        {
+          "t": "Ce que n dit de la capacité d'une couche avait déjà été établi au chapitre 1.",
+          "v": false,
+          "e": "FAUX : c'est justement ce qui manquait. La capacité d'une couche est l'apport nouveau attaché à ce nombre.",
+          "sourceQuote": "Ce qui manquait, c'est ce qu'il te dit sur la capacité d'une couche"
+        },
+        {
+          "t": "Dans l'analogie de l'immeuble, monter d'un étage revient à changer de sous-couche.",
+          "v": false,
+          "e": "FAUX : monter d'un étage, c'est changer de couche. La sous-couche relève du deuxième nombre quantique.",
+          "sourceQuote": "Monter d'un étage, c'est changer de couche"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-037-nombre-quantique-principal-n.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la couche n = 3, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La couche n = 3 contient 9 orbitales.",
+          "v": true,
+          "e": "VRAI. n² vaut 3 × 3 = 9 : c'est le nombre d'orbitales de cette couche.",
+          "sourceQuote": "Pour n = 3 : 9 orbitales et 18 électrons maximum"
+        },
+        {
+          "t": "Elle peut accueillir 18 électrons au maximum.",
+          "v": true,
+          "e": "VRAI. 2n² vaut 2 × 9 = 18 : neuf orbitales, deux électrons chacune.",
+          "sourceQuote": "9 orbitales et 18 électrons maximum — jamais l'inverse"
+        },
+        {
+          "t": "Elle contient 18 orbitales et accueille 9 électrons.",
+          "v": false,
+          "e": "FAUX : les deux nombres sont intervertis. Le plus grand des deux compte toujours des électrons.",
+          "sourceQuote": "n² compte des orbitales, 2n² compte des électrons"
+        },
+        {
+          "t": "n² et 2n² comptent la même chose.",
+          "v": false,
+          "e": "FAUX : les deux formules se ressemblent, mais l'une compte des orbitales et l'autre des électrons.",
+          "sourceQuote": "n² et 2n² se ressemblent, mais ne comptent pas la même chose"
+        },
+        {
+          "t": "La couche n = 3 porte la lettre N.",
+          "v": false,
+          "e": "FAUX : n = 3 correspond à la couche M. La lettre N désigne la couche n = 4.",
+          "sourceQuote": "n = 3 couche M"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-037-nombre-quantique-principal-n.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la portée exacte du nombre quantique principal, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "n est le premier responsable de l'énergie de l'électron.",
+          "v": true,
+          "e": "VRAI. C'est lui qui commande l'énergie en premier lieu, ce que traduit le mot « principalement ».",
+          "sourceQuote": "n est le premier responsable de l'énergie de l'électron"
+        },
+        {
+          "t": "Dans un atome à plusieurs électrons, n n'est pas le seul à compter pour l'énergie.",
+          "v": true,
+          "e": "VRAI. Dès qu'il y a plusieurs électrons, d'autres facteurs interviennent : n cesse d'être le seul déterminant.",
+          "sourceQuote": "on verra plus loin qu'il n'est pas le seul à compter dans un atome à plusieurs électrons"
+        },
+        {
+          "t": "Une fois n identifié, on connaît la taille de l'orbitale, l'éloignement au noyau et les deux capacités.",
+          "v": true,
+          "e": "VRAI. Tout se déduit de ce seul nombre, dès qu'on l'a extrait de l'énoncé.",
+          "sourceQuote": "tu as la taille de l'orbitale, l'éloignement au noyau, et les deux capacités"
+        },
+        {
+          "t": "Un énoncé qui passe d'une notation à l'autre d'une ligne à l'autre en devient plus simple à traiter.",
+          "v": false,
+          "e": "FAUX : c'est au contraire ce va-et-vient entre lettre et chiffre qui rend souvent la question difficile.",
+          "sourceQuote": "peut passer d'une notation à l'autre d'une ligne à l'autre, et c'est souvent tout ce qui rend la question difficile"
+        },
+        {
+          "t": "n renseigne déjà sur la forme de l'orbitale, ce qui rend le deuxième nombre quantique inutile.",
+          "v": false,
+          "e": "FAUX : n donne l'étage et rien de plus. La forme reste entièrement à la charge du deuxième nombre quantique.",
+          "sourceQuote": "n te donne donc l'étage. Il ne dit encore rien de la forme de l'orbitale"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-038-nombre-quantique-azimutal-l.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives au deuxième nombre quantique et à son rôle, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le deuxième nombre quantique s'appelle azimutal, ou secondaire.",
+          "v": true,
+          "e": "VRAI. Les deux noms désignent le même nombre : on rencontre l'un ou l'autre selon les cours.",
+          "sourceQuote": "le nombre quantique azimutal — ou secondaire"
+        },
+        {
+          "t": "Son rôle est de déterminer la forme de l'orbitale.",
+          "v": true,
+          "e": "VRAI. C'est lui qui décide si l'orbitale est une sphère, un haltère, un trèfle ou une figure à huit lobes.",
+          "sourceQuote": "déterminer la forme de l'orbitale (s, p, d, f)"
+        },
+        {
+          "t": "Dans « 2p », le chiffre correspond à l et la lettre à n.",
+          "v": false,
+          "e": "FAUX : l'attribution est inversée. Le chiffre, c'est n ; la lettre, c'est l.",
+          "sourceQuote": "le chiffre c'est n, la lettre c'est l"
+        },
+        {
+          "t": "La correspondance entre la lettre et la valeur de l doit être connue dans les deux sens.",
+          "v": true,
+          "e": "VRAI. D'une lettre on doit retrouver le l, et d'un l la lettre : les questions passent d'un sens à l'autre.",
+          "sourceQuote": "Correspondance à connaître par cœur dans les deux sens"
+        },
+        {
+          "t": "l donne l'étage, c'est-à-dire la couche.",
+          "v": false,
+          "e": "FAUX : l'étage est donné par n. l donne la forme de l'orbitale.",
+          "sourceQuote": "n donnait l'étage. l donne la forme de l'orbitale"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-038-nombre-quantique-azimutal-l.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la correspondance entre la valeur de l et la forme de l'orbitale, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "l = 0 correspond à une orbitale de type s, de forme sphérique.",
+          "v": true,
+          "e": "VRAI. La valeur la plus basse de l donne la forme la plus simple : une boule.",
+          "sourceQuote": "l = 0 orbitale de type s sphère (boule)"
+        },
+        {
+          "t": "l = 1 correspond à une orbitale de type d.",
+          "v": false,
+          "e": "FAUX : l = 1 correspond au type p, en haltère à deux lobes. Le type d correspond à l = 2.",
+          "sourceQuote": "l = 1 orbitale de type p 2 lobes (haltère)"
+        },
+        {
+          "t": "l = 2 correspond à une orbitale de type d, à quatre lobes.",
+          "v": true,
+          "e": "VRAI. Quatre lobes en trèfle : c'est la forme associée à la valeur 2.",
+          "sourceQuote": "l = 2 orbitale de type d 4 lobes (trèfle)"
+        },
+        {
+          "t": "l = 3 correspond à une orbitale de type f, de forme sphérique.",
+          "v": false,
+          "e": "FAUX : le type f est bien associé à l = 3, mais sa forme est complexe, à huit lobes. La sphère correspond à l = 0.",
+          "sourceQuote": "l = 3 orbitale de type f forme complexe (8 lobes)"
+        },
+        {
+          "t": "La correspondance à retenir est 0 → p, 1 → s, 2 → d, 3 → f.",
+          "v": false,
+          "e": "FAUX : les deux premières sont interverties. La correspondance est 0 → s, 1 → p, 2 → d, 3 → f.",
+          "sourceQuote": "0 → s, 1 → p, 2 → d, 3 → f"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-038-nombre-quantique-azimutal-l.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives aux valeurs possibles de l, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "l prend les valeurs 0, 1, 2… jusqu'à n − 1.",
+          "v": true,
+          "e": "VRAI. La série commence toujours à 0 et s'arrête une marche avant le chiffre de la couche.",
+          "sourceQuote": "l = 0, 1, 2, … jusqu'à (n − 1)"
+        },
+        {
+          "t": "Les valeurs de l dépendent de n.",
+          "v": true,
+          "e": "VRAI. C'est la règle qui fait toute la difficulté de ce nombre : la couche commande les sous-couches disponibles.",
+          "sourceQuote": "Règle importante : l dépend de n !"
+        },
+        {
+          "t": "Contrairement à n, l ne se choisit pas librement.",
+          "v": true,
+          "e": "VRAI. n s'écrit sans contrainte, l est borné par lui : sa liberté s'arrête à n − 1.",
+          "sourceQuote": "Contrairement à n, l ne se choisit pas librement"
+        },
+        {
+          "t": "Pour un n donné, toutes les valeurs de l sont permises.",
+          "v": false,
+          "e": "FAUX : seules les valeurs allant de 0 à n − 1 sont permises pour ce n.",
+          "sourceQuote": "On ne peut pas avoir n'importe quelle valeur de l pour un n donné"
+        },
+        {
+          "t": "Les valeurs de l s'arrêtent exactement à n.",
+          "v": false,
+          "e": "FAUX : elles s'arrêtent une marche avant n, donc à n − 1.",
+          "sourceQuote": "ses valeurs s'arrêtent une marche avant n"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-038-nombre-quantique-azimutal-l.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux sous-couches disponibles sur chaque couche, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Sur la couche n = 1, seule la sous-couche 1s existe.",
+          "v": true,
+          "e": "VRAI. Avec n = 1, l ne peut valoir que 0 : il n'y a donc qu'une seule sous-couche possible.",
+          "sourceQuote": "n = 1 l = 0 seulement 1s uniquement"
+        },
+        {
+          "t": "Sur la couche n = 2, on trouve 2s, 2p et 2d.",
+          "v": false,
+          "e": "FAUX : l vaut 0 ou 1 pour n = 2, donc seulement 2s et 2p. La sous-couche 2d n'existe pas.",
+          "sourceQuote": "n = 2 l = 0 ou 1 2s et 2p"
+        },
+        {
+          "t": "Sur la couche n = 3, on trouve 3s, 3p et 3d.",
+          "v": true,
+          "e": "VRAI. l peut valoir 0, 1 ou 2 : trois sous-couches, jusqu'au type d.",
+          "sourceQuote": "n = 3 l = 0, 1 ou 2 3s, 3p et 3d"
+        },
+        {
+          "t": "Sur la couche n = 4, il n'existe que trois sous-couches.",
+          "v": false,
+          "e": "FAUX : il y en a quatre, de 4s à 4f, puisque l peut aller de 0 à 3.",
+          "sourceQuote": "n = 4 l = 0, 1, 2 ou 3 4s, 4p, 4d et 4f"
+        },
+        {
+          "t": "Sur la couche n, il existe n + 1 sous-couches possibles.",
+          "v": false,
+          "e": "FAUX : il y en a exactement n, autant que de valeurs de l différentes.",
+          "sourceQuote": "Sur la couche n, il y a n sous-couches possibles"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-038-nombre-quantique-azimutal-l.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux orbitales qui n'existent pas, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'orbitale 1p n'existe pas, car elle demanderait l = 1 alors que le maximum autorisé vaut 0.",
+          "v": true,
+          "e": "VRAI. Avec n = 1, le maximum est n − 1 = 0 : la lettre p réclame un l trop grand.",
+          "sourceQuote": "Une orbitale « 1p » demanderait l = 1, alors que le maximum autorisé vaut n − 1 = 0 — elle n'existe pas"
+        },
+        {
+          "t": "L'orbitale 2d n'existe pas : il faudrait l = 2, alors que le maximum est 1.",
+          "v": true,
+          "e": "VRAI. Même raisonnement d'un cran plus haut : sur la couche 2, l s'arrête à 1.",
+          "sourceQuote": "Même raisonnement pour « 2d » (il faudrait l = 2, le maximum est 1)"
+        },
+        {
+          "t": "L'orbitale 3f n'existe pas : il faudrait l = 3, alors que le maximum est 2.",
+          "v": true,
+          "e": "VRAI. Sur la couche 3, l ne dépasse pas 2 : la lettre f est donc impossible à cet étage.",
+          "sourceQuote": "pour « 3f » (il faudrait l = 3, le maximum est 2)"
+        },
+        {
+          "t": "L'orbitale 3d n'existe pas, pour la même raison que 2d.",
+          "v": false,
+          "e": "FAUX : sur la couche 3, l peut valoir 2, donc 3d existe bel et bien.",
+          "sourceQuote": "n = 3 l = 0, 1 ou 2 3s, 3p et 3d"
+        },
+        {
+          "t": "Pour n = 1, l peut valoir 0 ou 1.",
+          "v": false,
+          "e": "FAUX : pour n = 1, l ne peut valoir que 0, et la seule sous-couche est 1s.",
+          "sourceQuote": "Pour n = 1, l ne peut valoir que 0 : il n'existe qu'une seule sous-couche, 1s"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-038-nombre-quantique-azimutal-l.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la limite supérieure de l et à ses conséquences, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "l ne monte pas jusqu'à n : il s'arrête à n − 1.",
+          "v": true,
+          "e": "VRAI. C'est la borne à ne jamais oublier : la dernière valeur permise est toujours n − 1.",
+          "sourceQuote": "l ne monte pas jusqu'à n : il s'arrête à n − 1"
+        },
+        {
+          "t": "Pour n = 2, l peut valoir 0, 1 ou 2.",
+          "v": false,
+          "e": "FAUX : pour n = 2, l vaut 0 ou 1, jamais 2.",
+          "sourceQuote": "Pour n = 2, l vaut 0 ou 1, jamais 2"
+        },
+        {
+          "t": "Une proposition qui parle d'une orbitale « 2d », « 1p » ou « 3f » est fausse pour cette seule raison.",
+          "v": true,
+          "e": "VRAI. La sous-couche n'existe pas : la proposition tombe sans qu'il soit besoin d'examiner la suite.",
+          "sourceQuote": "est fausse pour cette seule raison, avant même de regarder le reste"
+        },
+        {
+          "t": "Le nombre de types d'orbitales possibles sur la couche n vaut n − 1.",
+          "v": false,
+          "e": "FAUX : il vaut n, puisque l prend n valeurs différentes, de 0 à n − 1.",
+          "sourceQuote": "pour la couche n, il y a n types d'orbitales possibles (n valeurs de l différentes)"
+        },
+        {
+          "t": "Avant de déclarer une orbitale impossible, il faut examiner le reste de la proposition.",
+          "v": false,
+          "e": "FAUX : dès que la sous-couche n'existe pas, la proposition est fausse et il est inutile d'aller plus loin.",
+          "sourceQuote": "la sous-couche n'existe pas et la proposition est fausse — inutile d'aller plus loin"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-038-nombre-quantique-azimutal-l.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives au test à appliquer devant un nom d'orbitale, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "On lit d'abord le chiffre, qui donne n.",
+          "v": true,
+          "e": "VRAI. Le test se fait dans un ordre fixe, et il commence par le chiffre.",
+          "sourceQuote": "fais le test dans cet ordre : lis le chiffre (c'est n)"
+        },
+        {
+          "t": "On lit ensuite la lettre, qui donne l selon la correspondance s = 0, p = 1, d = 2, f = 3.",
+          "v": true,
+          "e": "VRAI. La lettre se traduit immédiatement en valeur de l, sans réflexion supplémentaire.",
+          "sourceQuote": "lis la lettre (elle donne l : s = 0, p = 1, d = 2, f = 3)"
+        },
+        {
+          "t": "On vérifie enfin que l est inférieur ou égal à n − 1.",
+          "v": true,
+          "e": "VRAI. C'est la troisième et dernière étape : sans ce contrôle, on accepte des orbitales qui n'existent pas.",
+          "sourceQuote": "puis vérifie que l ≤ n − 1"
+        },
+        {
+          "t": "Si la lettre réclame un l trop grand pour son chiffre, la proposition reste valable.",
+          "v": false,
+          "e": "FAUX : dans ce cas, la sous-couche n'existe pas et la proposition est fausse.",
+          "sourceQuote": "Si la lettre réclame un l trop grand pour son chiffre, la sous-couche n'existe pas"
+        },
+        {
+          "t": "Le nombre d'orbitales contenues dans chaque sous-couche est donné par le deuxième nombre quantique.",
+          "v": false,
+          "e": "FAUX : le deuxième nombre dit quelles sous-couches existent. Compter les orbitales à l'intérieur de chacune revient au troisième.",
+          "sourceQuote": "Reste à savoir combien d'orbitales se cachent dans chacune d'elles : c'est le travail du troisième nombre quantique"
+        }
+      ]
+    }
+  ]
+}

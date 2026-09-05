@@ -1,0 +1,1371 @@
+{
+  "matiere": "physique",
+  "chapitre": 2,
+  "questions": [
+    {
+      "fiche": "physique-040-pka-definition-et-lecture.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la définition du pKa et au passage du Ka au pKa, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le pKa s'obtient en prenant l'opposé du logarithme du Ka.",
+          "v": true,
+          "e": "VRAI. C'est exactement le geste déjà utilisé sur [H⁺] pour fabriquer le pH : on prend l'opposé du logarithme de la grandeur mesurée.",
+          "sourceQuote": "on fait exactement ce qu'on avait déjà fait sur [H⁺] pour fabriquer le pH : on prend l'opposé du logarithme"
+        },
+        {
+          "t": "La relation se lit dans les deux sens : d'un pKa donné on peut remonter au Ka.",
+          "v": true,
+          "e": "VRAI. D'un Ka on descend au pKa, et d'un pKa on remonte au Ka : la conversion fonctionne dans les deux directions.",
+          "sourceQuote": "La double flèche se lit dans les deux sens : d'un Ka on descend au pKa, d'un pKa on remonte au Ka."
+        },
+        {
+          "t": "On passe au pKa parce que les Ka sont des nombres très grands, souvent supérieurs à 10⁵.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. Les Ka sont très PETITS, de l'ordre de 10⁻⁵, et c'est justement leur petitesse qui rend leur manipulation pénible.",
+          "sourceQuote": "les Ka sont souvent très petits, de l'ordre de 10⁻⁵"
+        },
+        {
+          "t": "Une molécule dont le Ka vaut 10⁻⁵ mol/L a un pKa égal à 5.",
+          "v": true,
+          "e": "VRAI. On prend l'opposé du logarithme : −log(10⁻⁵) = −(−5) = 5. L'exposant change simplement de signe.",
+          "sourceQuote": "On prend −log : pKa = −log(10⁻⁵) = −(−5) = 5"
+        },
+        {
+          "t": "Le passage du Ka au pKa conserve l'ordre : un Ka petit donne un pKa petit.",
+          "v": false,
+          "e": "FAUX : le passage RETOURNE l'échelle. Un Ka petit donne un pKa grand, et un Ka grand un pKa petit.",
+          "sourceQuote": "le passage Ka → pKa retourne l'échelle : Ka petit (acide qui se dissocie peu) → pKa grand ; Ka grand → pKa petit"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-040-pka-definition-et-lecture.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux trois zones dans lesquelles se range un pKa, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un pKa strictement négatif signe un acide fort, totalement ionisé dans l'eau.",
+          "v": true,
+          "e": "VRAI. En dessous de zéro, l'acide est fort : sa dissociation dans l'eau est totale, à 100 %.",
+          "sourceQuote": "Acide FORT — totalement ionisé dans l'eau, dissociation à 100 %."
+        },
+        {
+          "t": "L'acide acétique, de pKa 4,8, appartient à la zone des acides forts.",
+          "v": false,
+          "e": "FAUX : 4,8 tombe entre 0 et 14, la zone des acides FAIBLES — dissociation partielle et équilibre dynamique. L'acide acétique y figure d'ailleurs comme exemple.",
+          "sourceQuote": "Acide FAIBLE — dissociation partielle, équilibre dynamique. acide acétique 4,8"
+        },
+        {
+          "t": "Au-dessus de 14, l'acide ne se dissocie quasiment pas et sa base conjuguée devient une base forte.",
+          "v": true,
+          "e": "VRAI. C'est la troisième zone : l'acide est négligeable, et sa base conjuguée, elle, est totalement protonée dans l'eau — donc forte.",
+          "sourceQuote": "il ne se dissocie quasiment pas dans l'eau. Elle devient une base forte (totalement protonée dans l'eau)."
+        },
+        {
+          "t": "La base conjuguée d'un acide fort joue un rôle basique important dans l'eau.",
+          "v": false,
+          "e": "FAUX : elle n'a aucun rôle basique. On la qualifie d'« indifférente », de « spectatrice » : elle ne participe à rien.",
+          "sourceQuote": "Aucun rôle basique : « indifférente », « spectatrice »."
+        },
+        {
+          "t": "Un acide de pKa égal à 2 est un acide fort au sens strict.",
+          "v": false,
+          "e": "FAUX : à pKa = 2 on est entre 0 et 14, donc dans les acides faibles. C'est un acide « relativement fort dans la catégorie des faibles », rien de plus.",
+          "sourceQuote": "Un acide à pKa = 2 (l'acide chloreux, par exemple) reste un acide faible sur le plan strict"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-040-pka-definition-et-lecture.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au calcul du pKa de l'acide acétique et aux situations où ce calcul est demandé, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le Ka de l'acide acétique mesuré en laboratoire vaut 1,8 × 10⁻⁵ mol/L.",
+          "v": true,
+          "e": "VRAI. C'est la valeur mesurée en labo pour CH₃COOH, celle dont on part pour obtenir son pKa.",
+          "sourceQuote": "En labo, on mesure Ka = 1,8 × 10⁻⁵ mol/L"
+        },
+        {
+          "t": "Pour prendre le −log de 1,8 × 10⁻⁵, on coupe le nombre en deux morceaux.",
+          "v": true,
+          "e": "VRAI. On sépare le facteur et la puissance de dix : log(1,8) d'un côté, log(10⁻⁵) de l'autre, puis on additionne avant de changer le signe.",
+          "sourceQuote": "On prend −log en coupant le nombre en deux morceaux"
+        },
+        {
+          "t": "Le calcul aboutit à un pKa de 5,26 pour l'acide acétique.",
+          "v": false,
+          "e": "FAUX : le calcul donne 4,74, arrondi à 4,8. C'est la valeur qu'on retrouve partout pour l'acide acétique.",
+          "sourceQuote": "pKa = −[log(1,8) + log(10⁻⁵)] = −[0,26 + (−5)] = −[−4,74] = 4,74 ≈ 4,8"
+        },
+        {
+          "t": "En P1, le pKa doit être calculé dans la grande majorité des exercices.",
+          "v": false,
+          "e": "FAUX : dans 95 % des cas le pKa est fourni par l'énoncé. Le calcul est l'exception, pas la règle.",
+          "sourceQuote": "Dans 95 % des cas en P1, le pKa est une donnée fournie dans l'énoncé"
+        },
+        {
+          "t": "Si l'énoncé donne les concentrations à l'équilibre, on calcule d'abord le Ka, puis son −log.",
+          "v": true,
+          "e": "VRAI. C'est le second cas, plus rare : on remonte au Ka par sa formule, et on en prend ensuite l'opposé du logarithme.",
+          "sourceQuote": "celui où on te donne les concentrations à l'équilibre : tu calcules d'abord Ka avec sa formule, puis son −log"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-040-pka-definition-et-lecture.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la comparaison de deux pKa au sein d'une même catégorie et à l'analogie du grip, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Entre deux acides faibles, celui qui a le plus petit pKa est celui qui se dissocie le plus.",
+          "v": true,
+          "e": "VRAI. C'est toute la lecture à l'intérieur d'une catégorie : plus le pKa descend, plus l'acide lâche son H⁺.",
+          "sourceQuote": "plus le pKa est petit, plus l'acide se dissocie"
+        },
+        {
+          "t": "Un pKa de 9,2 traduit un Ka relativement grand et une dissociation importante.",
+          "v": false,
+          "e": "FAUX : un pKa de 9,2, celui de NH₄⁺, correspond à un Ka petit — donc à un acide qui se dissocie peu.",
+          "sourceQuote": "pKa = 9,2 NH₄⁺ Ka petit → se dissocie peu"
+        },
+        {
+          "t": "Un pKa de 15 correspond à un acide négligeable, qui ne se dissocie quasiment pas.",
+          "v": true,
+          "e": "VRAI. Le Ka correspondant est minuscule : l'acide garde son H⁺ et son rôle acide devient négligeable.",
+          "sourceQuote": "Ka minuscule → ne se dissocie quasiment pas → acide négligeable"
+        },
+        {
+          "t": "Dans l'analogie de la force de grip, un grand pKa correspond à une main qui laisse échapper la balle.",
+          "v": false,
+          "e": "FAUX : un GRAND pKa, c'est un grip FORT — la balle, c'est-à-dire le H⁺, est bien tenue. C'est le petit pKa qui laisse la balle s'échapper.",
+          "sourceQuote": "Grip fort (grand pKa) → la balle est bien tenue → l'acide garde son H⁺."
+        },
+        {
+          "t": "Un pKa de 4,8 signe un acide fort, puisque l'acide acétique se dissocie plutôt bien.",
+          "v": false,
+          "e": "FAUX : se dissocier « plutôt bien » ne fait pas un acide fort. L'acide acétique reste un acide faible, simplement mieux dissocié que d'autres faibles.",
+          "sourceQuote": "Ka modérément grand → se dissocie « plutôt bien » (mais reste un acide faible)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-040-pka-definition-et-lecture.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à la façon de caractériser la force d'une base en première année, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "En première année, on ne définit pas de pKb : on passe par le pKa de l'acide conjugué.",
+          "v": true,
+          "e": "VRAI. La force d'une base se lit à travers le pKa de son acide conjugué, sans jamais introduire de pKb.",
+          "sourceQuote": "On ne définit pas un « pKb » en première année. À la place, on utilise le pKa de l'acide conjugué"
+        },
+        {
+          "t": "Pour l'ammoniac NH₃, on utilise le pKa de son acide conjugué NH₄⁺, égal à 9,2.",
+          "v": true,
+          "e": "VRAI. NH₃ est une base : on la caractérise par le pKa de NH₄⁺, son acide conjugué, qui vaut 9,2.",
+          "sourceQuote": "pour l'ammoniac NH₃ (une base), on donne le pKa de NH₄⁺, son acide conjugué : 9,2"
+        },
+        {
+          "t": "Plus le pKa de l'acide conjugué est petit, plus la base correspondante est forte.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. Plus ce pKa est GRAND, plus la base est forte.",
+          "sourceQuote": "Plus ce pKa est grand, plus la base est forte"
+        },
+        {
+          "t": "Si la base est forte, c'est que son acide conjugué reprend facilement le H⁺.",
+          "v": false,
+          "e": "FAUX : une base forte a un acide conjugué faible, qui ne reprend justement PAS facilement le H⁺ — c'est ce qui permet à la base de garder son proton capté.",
+          "sourceQuote": "car ça veut dire que l'acide conjugué est faible, qu'il ne reprend pas facilement le H⁺, donc que la base garde bien son proton capté"
+        },
+        {
+          "t": "Le pKa d'une molécule évolue au fil des dilutions successives de la solution.",
+          "v": false,
+          "e": "FAUX : le pKa est une propriété fixe de la molécule. Diluer change le pH, pas le pKa.",
+          "sourceQuote": "Le pKa est une propriété fixe d'une molécule : il ne change pas"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-040-pka-definition-et-lecture.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à l'équivalence entre une valeur de pKa et la valeur de Ka correspondante, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Lire « pKa = 4,8 » dans un tableau revient à dire que le Ka vaut environ 1,8 × 10⁻⁵.",
+          "v": true,
+          "e": "VRAI. Les deux écritures portent la même information sur la même molécule ; seule la seconde est lisible d'un coup d'œil.",
+          "sourceQuote": "À chaque fois que tu lis « pKa = 4,8 » dans un tableau, ça veut dire en réalité « Ka ≈ 1,8 × 10⁻⁵ »"
+        },
+        {
+          "t": "Le passage du Ka au pKa reprend l'astuce déjà utilisée pour définir le pH à partir de [H⁺].",
+          "v": true,
+          "e": "VRAI. Dans les deux cas, on remplace un nombre minuscule par un nombre lisible en prenant l'opposé du logarithme.",
+          "sourceQuote": "C'est exactement la même astuce que pH = −log[H⁺] : on remplace un nombre minuscule par un nombre lisible."
+        },
+        {
+          "t": "Le mnémo présente le pKa comme l'exposant du Ka, avec le signe changé.",
+          "v": true,
+          "e": "VRAI. C'est le raccourci à garder : un Ka en 10⁻⁵ donne un pKa de 5, l'exposant simplement retourné.",
+          "sourceQuote": "Le pKa, c'est juste « l'exposant de Ka, avec le signe changé »."
+        },
+        {
+          "t": "Au sens strict, un acide est dit fort dès que son pKa est inférieur à 14.",
+          "v": false,
+          "e": "FAUX : la frontière stricte de l'acide fort est pKa < 0. En dessous de 14 mais au-dessus de 0, on est encore dans les acides faibles.",
+          "sourceQuote": "La frontière « acide fort » au sens strict, c'est pKa < 0."
+        },
+        {
+          "t": "Les tableaux conservent les Ka plutôt que les pKa, parce qu'ils sont plus commodes à manipuler.",
+          "v": false,
+          "e": "FAUX : manipuler un nombre en 10⁻⁵ dans des calculs est lourd, c'est précisément pour cela qu'on préfère le pKa.",
+          "sourceQuote": "Manipuler « 10⁻⁵ » dans des calculs, c'est lourd."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-040-pka-definition-et-lecture.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la distinction entre pH et pKa dans la formulation d'un énoncé, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Ce qu'il faut savoir faire à tous les coups avec un pKa, c'est le lire.",
+          "v": true,
+          "e": "VRAI. Le calcul reste marginal ; la compétence attendue en permanence est la lecture de la valeur et de ce qu'elle implique.",
+          "sourceQuote": "Ce que tu dois savoir faire à tous les coups, en revanche, c'est le lire."
+        },
+        {
+          "t": "Une question portant sur le pH d'une solution de NH₄⁺ appelle un calcul.",
+          "v": true,
+          "e": "VRAI. Le pH décrit l'état d'une solution : il se calcule. C'est la formulation de l'énoncé qui indique laquelle des deux grandeurs est visée.",
+          "sourceQuote": "« quel est le pH d'une solution de NH₄⁺ ? » → c'est un calcul"
+        },
+        {
+          "t": "Les deux seuls cas où l'on fait calculer un pKa sont celui où le pH est donné et celui où la dilution est précisée.",
+          "v": false,
+          "e": "FAUX : les deux cas sont celui où l'énoncé donne le Ka, et, plus rare, celui où il donne les concentrations à l'équilibre. Ni le pH ni la dilution n'y interviennent.",
+          "sourceQuote": "Les deux seuls cas où on te le fait calculer sont celui du dessus — on te donne le Ka"
+        },
+        {
+          "t": "Un acide de la zone 0 < pKa < 14 se dissocie totalement, mais lentement.",
+          "v": false,
+          "e": "FAUX : dans cette zone la dissociation est PARTIELLE, et il s'installe un équilibre dynamique. Il n'est pas question de vitesse mais de proportion.",
+          "sourceQuote": "Acide FAIBLE — dissociation partielle, équilibre dynamique."
+        },
+        {
+          "t": "L'acide chlorhydrique HCl a un pKa voisin de +7.",
+          "v": false,
+          "e": "FAUX : le pKa de HCl vaut environ −7, une valeur nettement négative — c'est bien ce qui en fait un acide fort.",
+          "sourceQuote": "HCl (pKa ≈ −7), H₂SO₄ (pKa ≈ −3)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-041-acide-fort-base-conjuguee-faible.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la règle d'or liant la force d'un acide à celle de sa base conjuguée, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Si un acide est fort, sa base conjuguée est obligatoirement faible.",
+          "v": true,
+          "e": "VRAI. C'est la règle d'or du couple : la force de l'acide impose la faiblesse de sa base conjuguée, sans discussion possible.",
+          "sourceQuote": "chaque fois qu'un acide est fort, sa base conjuguée est obligatoirement faible"
+        },
+        {
+          "t": "Si une base est forte, son acide conjugué est obligatoirement faible.",
+          "v": true,
+          "e": "VRAI. La règle se lit aussi dans ce sens : une base forte a toujours un acide conjugué faible.",
+          "sourceQuote": "chaque fois qu'une base est forte, son acide conjugué est obligatoirement faible"
+        },
+        {
+          "t": "Cette règle ne souffre aucune exception.",
+          "v": true,
+          "e": "VRAI. Elle s'applique à tous les couples, sans cas particulier à mémoriser.",
+          "sourceQuote": "Il reste une conséquence à en tirer, et elle ne souffre aucune exception."
+        },
+        {
+          "t": "Un couple peut associer un acide fort et une base conjuguée forte si la solution est assez concentrée.",
+          "v": false,
+          "e": "FAUX : cette association n'existe jamais, quelle que soit la concentration. Il ne peut pas y avoir un acide fort ET une base conjuguée forte dans le même couple.",
+          "sourceQuote": "Tu ne peux donc JAMAIS avoir un acide fort ET une base conjuguée forte dans le même couple"
+        },
+        {
+          "t": "Un acide fort est un acide qui tient beaucoup à garder son H⁺.",
+          "v": false,
+          "e": "FAUX : c'est exactement le contraire. Être un acide fort, c'est n'avoir aucune envie de garder son H⁺ — il le cède d'emblée.",
+          "sourceQuote": "être un acide « fort », c'est n'avoir aucune envie de garder son H⁺"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-041-acide-fort-base-conjuguee-faible.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à l'analogie de la balance et à l'explication de la règle, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'image retenue est celle d'une vieille balance à deux plateaux.",
+          "v": true,
+          "e": "VRAI. C'est la balance qu'on trouvait chez le pharmacien : deux plateaux dont les mouvements sont liés.",
+          "sourceQuote": "C'est comme une vieille balance à deux plateaux (le genre qu'on trouvait chez le pharmacien)"
+        },
+        {
+          "t": "Sur cette balance, quand un plateau monte, l'autre descend obligatoirement.",
+          "v": true,
+          "e": "VRAI. C'est tout le sens de l'image : les deux plateaux sont solidaires, on ne peut pas les faire monter ensemble.",
+          "sourceQuote": "Quand un plateau monte, l'autre descend obligatoirement."
+        },
+        {
+          "t": "Les deux plateaux portent l'acide AH d'un côté et l'eau de l'autre.",
+          "v": false,
+          "e": "FAUX : les deux plateaux portent les deux formes du couple — l'acide AH d'un côté, sa base conjuguée A⁻ de l'autre. L'eau n'y figure pas.",
+          "sourceQuote": "d'un côté l'acide AH, de l'autre la base conjuguée A⁻"
+        },
+        {
+          "t": "Une fois que l'acide fort a cédé son H⁺, sa forme déprotonée cherche activement à le reprendre.",
+          "v": false,
+          "e": "FAUX : la forme déprotonée n'a aucune envie de reprendre le H⁺. C'est justement pour cela que la base conjuguée d'un acide fort ne fait rien.",
+          "sourceQuote": "une fois qu'il l'a cédé, sa forme déprotonée (A⁻) n'a aucune envie de le reprendre non plus"
+        },
+        {
+          "t": "La base conjuguée d'un acide fort est décrite comme réactive et déterminante.",
+          "v": false,
+          "e": "FAUX : elle est au contraire inerte, « spectatrice ». Elle assiste à la réaction sans y participer.",
+          "sourceQuote": "la base conjuguée est inerte, « spectatrice »"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-041-acide-fort-base-conjuguee-faible.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives aux deux lectures de l'affinité d'un couple pour le H⁺, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Côté AH, la question posée est de savoir à quel point la molécule veut garder son H⁺.",
+          "v": true,
+          "e": "VRAI. C'est la première des deux lectures : on interroge la volonté de AH de conserver son proton.",
+          "sourceQuote": "Côté AH. À quel point AH veut-il garder son H⁺ ?"
+        },
+        {
+          "t": "Côté A⁻, si la forme déprotonée cherche un H⁺, c'est une base forte.",
+          "v": true,
+          "e": "VRAI. Seconde lecture : une base qui recherche activement le proton est une base forte ; celle qui ne le cherche pas est faible.",
+          "sourceQuote": "S'il le cherche : base forte. S'il ne le cherche pas : base faible."
+        },
+        {
+          "t": "Les deux questions — côté AH et côté A⁻ — mesurent la même chose.",
+          "v": true,
+          "e": "VRAI. Il n'y a qu'une seule affinité pour le H⁺ dans le couple ; on la regarde simplement depuis deux points de vue.",
+          "sourceQuote": "Ces deux questions mesurent la même chose."
+        },
+        {
+          "t": "Une affinité faible du couple pour le H⁺ donne un acide faible et une base forte.",
+          "v": false,
+          "e": "FAUX : une affinité faible donne un acide FORT — il lâche d'office — et une base FAIBLE, qui ne va pas rechercher le proton.",
+          "sourceQuote": "Si le couple a une affinité faible pour le H⁺ → AH le lâche d'office (acide fort) ET A⁻ ne va pas le rechercher (base faible)"
+        },
+        {
+          "t": "Si AH ne tient pas à son H⁺, c'est un acide faible.",
+          "v": false,
+          "e": "FAUX : ne pas tenir à son H⁺ définit un acide FORT. C'est celui qui y tient qui est un acide faible.",
+          "sourceQuote": "S'il y tient : acide faible. S'il n'y tient pas : acide fort."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-041-acide-fort-base-conjuguee-faible.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux quatre couples donnés en exemple, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'ion Cl⁻, base conjuguée de HCl, est une base ultra-faible totalement inerte dans l'eau.",
+          "v": true,
+          "e": "VRAI. HCl est un acide fort, donc son Cl⁻ ne récupère rien : il reste totalement inerte en solution.",
+          "sourceQuote": "Cl⁻ — base ultra-faible, totalement inerte dans l'eau"
+        },
+        {
+          "t": "L'ion Na⁺, conjugué de la base forte NaOH, est un acide de force moyenne.",
+          "v": false,
+          "e": "FAUX : Na⁺ est un acide ULTRA-FAIBLE, lui aussi totalement inerte. C'est la règle d'or appliquée du côté des bases.",
+          "sourceQuote": "Na⁺ — acide ultra-faible, totalement inerte"
+        },
+        {
+          "t": "CH₃COO⁻ est une base faible mais réelle, capable de reprendre un H⁺.",
+          "v": true,
+          "e": "VRAI. Comme CH₃COOH est un acide faible, sa base conjuguée reste active : elle peut effectivement capter un proton.",
+          "sourceQuote": "CH₃COO⁻ — base faible mais réelle, qui peut reprendre un H⁺"
+        },
+        {
+          "t": "NH₃ est la base conjuguée de NH₄⁺, un acide fort de pKa 9,2.",
+          "v": false,
+          "e": "FAUX : NH₄⁺ est bien l'acide conjugué de NH₃ et son pKa vaut 9,2, mais c'est un acide FAIBLE, pas un acide fort.",
+          "sourceQuote": "NH₄⁺ acide faible, pKa 9,2"
+        },
+        {
+          "t": "C'est l'inertie de Cl⁻ qui rend le tampon acétate possible.",
+          "v": false,
+          "e": "FAUX : le tampon acétate repose sur CH₃COO⁻, une base faible mais réelle. Cl⁻, inerte, ne tamponne rien du tout.",
+          "sourceQuote": "c'est ce qui rend le tampon acétate possible"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-041-acide-fort-base-conjuguee-faible.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à l'écriture chiffrée de la balance du couple, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La somme du pKa et du pKb d'un couple est bloquée à 14 : si le pKa descend, le pKb monte.",
+          "v": true,
+          "e": "VRAI. C'est la balance traduite en chiffres : la somme étant fixée, les deux valeurs varient en sens inverse l'une de l'autre.",
+          "sourceQuote": "la somme étant bloquée à 14, un pKa qui descend force le pKb à monter"
+        },
+        {
+          "t": "Cette relation est énoncée à 25 °C, pour un couple acide / base conjugués.",
+          "v": true,
+          "e": "VRAI. Ce sont les conditions dans lesquelles la somme vaut 14 : une température de 25 °C et deux formes effectivement conjuguées.",
+          "sourceQuote": "à 25 °C, pour un couple acide / base conjugués"
+        },
+        {
+          "t": "En P1, on calcule couramment avec le pKb plutôt qu'avec le pKa de l'acide conjugué.",
+          "v": false,
+          "e": "FAUX : en P1 on ne calcule pas avec le pKb. On passe toujours par le pKa de l'acide conjugué.",
+          "sourceQuote": "En P1 on ne calcule pas avec le pKb — on passe toujours par le pKa de l'acide conjugué"
+        },
+        {
+          "t": "Le pKb mesure une grandeur différente de celle que mesure le pKa.",
+          "v": false,
+          "e": "FAUX : c'est la même mesure, simplement lue depuis le côté base du couple. Il n'y a qu'une affinité pour le H⁺, et deux façons de l'exprimer.",
+          "sourceQuote": "Le pKb est la même mesure, lue côté base"
+        },
+        {
+          "t": "La coexistence d'un acide fort et d'une base conjuguée forte est rare, mais chimiquement possible.",
+          "v": false,
+          "e": "FAUX : elle est chimiquement impossible. Elle reviendrait à dire que la même affinité pour le H⁺ est à la fois nulle et énorme.",
+          "sourceQuote": "ça reviendrait à dire que la même affinité est à la fois nulle et énorme. Chimiquement impossible."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-041-acide-fort-base-conjuguee-faible.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la capacité d'un couple à jouer le rôle de tampon, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Seuls les couples dont l'acide et la base conjuguée sont tous les deux faibles peuvent tamponner.",
+          "v": true,
+          "e": "VRAI. Il faut un acide faible et une base conjuguée faible mais active : c'est la seule configuration qui permet d'amortir les variations de pH.",
+          "sourceQuote": "Seuls les couples « tous les deux faibles » — acide faible + base conjuguée faible mais active — peuvent jouer ce rôle de tampon"
+        },
+        {
+          "t": "Un tampon est décrit comme un amortisseur de pH.",
+          "v": true,
+          "e": "VRAI. C'est sa fonction : encaisser les ajouts d'acide ou de base sans laisser le pH s'envoler.",
+          "sourceQuote": "c'est-à-dire d'amortisseur de pH"
+        },
+        {
+          "t": "Les tampons physiologiques — bicarbonate, phosphate, hémoglobine — sont tous des acides faibles.",
+          "v": true,
+          "e": "VRAI. C'est la conséquence directe de la règle : pour tamponner, il faut être un acide faible, et les trois tampons de l'organisme le sont.",
+          "sourceQuote": "les solutions tampons physiologiques — bicarbonate, phosphate, hémoglobine — sont toutes des acides faibles"
+        },
+        {
+          "t": "Le couple HCl/Cl⁻ est un bon tampon parce que HCl libère beaucoup de H⁺.",
+          "v": false,
+          "e": "FAUX : un couple « acide fort + base inerte » comme HCl/Cl⁻ ne tamponne rien. Libérer beaucoup de H⁺ n'est pas tamponner.",
+          "sourceQuote": "Les couples « acide fort + base inerte » comme HCl/Cl⁻ ne tamponnent rien"
+        },
+        {
+          "t": "La base conjuguée d'un acide fort est trop réactive pour laisser la solution tamponner.",
+          "v": false,
+          "e": "FAUX : elle est trop MOLLE, pas trop réactive. Elle ne neutralise rien du tout, et c'est pour cela que le couple ne tamponne pas.",
+          "sourceQuote": "la base conjuguée est trop molle pour neutraliser quoi que ce soit"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-041-acide-fort-base-conjuguee-faible.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives au piège du couple fort / fort et à la lecture d'un couple, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Affirmer « HCl est un acide fort, donc Cl⁻ est une base forte » est faux.",
+          "v": true,
+          "e": "VRAI. C'est le piège classique : la force de HCl entraîne au contraire l'extrême faiblesse de Cl⁻, base totalement inerte dans l'eau.",
+          "sourceQuote": "Un QCM qui affirme « HCl est un acide fort, donc Cl⁻ est une base forte » est FAUX"
+        },
+        {
+          "t": "Le même raisonnement s'applique de l'autre côté, pour NaOH et Na⁺.",
+          "v": true,
+          "e": "VRAI. NaOH est une base forte, donc Na⁺ est un acide ultra-faible : le piège fonctionne symétriquement.",
+          "sourceQuote": "Le même raisonnement vaut de l'autre côté pour NaOH et Na⁺."
+        },
+        {
+          "t": "Le couple fort / fort existe, à condition que les deux formes soient très diluées.",
+          "v": false,
+          "e": "FAUX : le couple fort / fort n'existe pas, quelle que soit la dilution. La règle ne dépend pas de la concentration.",
+          "sourceQuote": "Le couple fort / fort n'existe pas."
+        },
+        {
+          "t": "Dans un couple AH / A⁻, il existe deux affinités indépendantes pour le H⁺.",
+          "v": false,
+          "e": "FAUX : il n'y en a qu'UNE, partagée par les deux formes. C'est précisément pour cela que la force de l'une commande la faiblesse de l'autre.",
+          "sourceQuote": "Une seule affinité pour le H⁺, partagée par les deux formes du couple"
+        },
+        {
+          "t": "L'affinité d'un couple pour le H⁺ doit se lire d'un seul côté à la fois, jamais des deux ensemble.",
+          "v": false,
+          "e": "FAUX : il faut regarder les deux plateaux ensemble, jamais l'un sans l'autre. C'est ce regard croisé qui donne la réponse.",
+          "sourceQuote": "regarde les deux plateaux ensemble, jamais l'un sans l'autre"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-042-loi-ostwald-construction.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives au coefficient de dissociation α, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le coefficient de dissociation α est la fraction des molécules dissociées à l'équilibre.",
+          "v": true,
+          "e": "VRAI. C'est sa définition : sur l'ensemble des molécules mises en solution, α représente la part qui s'est effectivement cassée.",
+          "sourceQuote": "Le coefficient de dissociation α, c'est la fraction des molécules dissociées à l'équilibre"
+        },
+        {
+          "t": "α est un nombre compris entre 0 et 1.",
+          "v": true,
+          "e": "VRAI. Puisqu'il s'agit d'une fraction, α ne peut pas sortir de l'intervalle entre 0 (rien de dissocié) et 1 (tout dissocié).",
+          "sourceQuote": "un nombre entre 0 et 1"
+        },
+        {
+          "t": "Pour un acide fort comme HCl, α vaut 1.",
+          "v": true,
+          "e": "VRAI. Un acide fort se dissocie totalement : la fraction dissociée atteint la valeur maximale, α = 1.",
+          "sourceQuote": "Pour un acide fort comme HCl, α = 1 : tout est dissocié."
+        },
+        {
+          "t": "Pour l'acide acétique, α est typiquement compris entre 10 et 50 %.",
+          "v": false,
+          "e": "FAUX : pour un acide faible comme l'acide acétique, α est petit — de l'ordre de 1 à 5 %, et non de plusieurs dizaines de pour cent.",
+          "sourceQuote": "Pour un acide faible comme l'acide acétique, α est petit, typiquement 1 à 5 %."
+        },
+        {
+          "t": "Comme le Ka, le coefficient α est une propriété fixe de la molécule.",
+          "v": false,
+          "e": "FAUX : c'est toute la nouveauté. Le Ka est fixe, α ne l'est pas — il dépend aussi de la solution qu'on a préparée.",
+          "sourceQuote": "contrairement au Ka, α n'est pas une propriété fixe"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-042-loi-ostwald-construction.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à ce qui impose la valeur de α et à l'origine de la loi d'Ostwald, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "α dépend notamment de la concentration initiale C₀, c'est-à-dire de la quantité mise dans le bécher.",
+          "v": true,
+          "e": "VRAI. C'est le second facteur qui impose α, à côté du pKa de la molécule : la quantité d'acide effectivement introduite.",
+          "sourceQuote": "ET la concentration initiale C₀ (combien on en a mis dans le bécher)"
+        },
+        {
+          "t": "La loi d'Ostwald relie trois grandeurs : Ka, C₀ et α.",
+          "v": true,
+          "e": "VRAI. C'est la formule qui met en relation la constante d'acidité, la concentration initiale et le coefficient de dissociation.",
+          "sourceQuote": "est la formule qui relie ces 3 grandeurs : Ka, C₀ et α"
+        },
+        {
+          "t": "Ostwald était un chimiste français, prix Nobel en 1990.",
+          "v": false,
+          "e": "FAUX : Ostwald était un chimiste allemand, prix Nobel en 1909.",
+          "sourceQuote": "(chimiste allemand, prix Nobel 1909)"
+        },
+        {
+          "t": "Le Ka décrit la solution plutôt que la molécule.",
+          "v": false,
+          "e": "FAUX : le Ka est une propriété intrinsèque de la MOLÉCULE, pas de la solution. C'est justement ce qui l'oppose à α.",
+          "sourceQuote": "une propriété intrinsèque de la molécule, pas de la solution"
+        },
+        {
+          "t": "La loi d'Ostwald doit être apprise par cœur, car elle ne peut pas se retrouver.",
+          "v": false,
+          "e": "FAUX : elle se construit à partir du tableau d'avancement. Elle ne se retient pas, elle se retrouve.",
+          "sourceQuote": "On va la construire — elle ne se retient pas, elle se retrouve."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-042-loi-ostwald-construction.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au tableau d'avancement écrit en fonction de α, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "À l'équilibre, il reste C₀(1−α) d'acide sous forme AH intacte.",
+          "v": true,
+          "e": "VRAI. Ce qui ne s'est pas cassé reste sous forme AH : c'est le complément de la fraction dissociée.",
+          "sourceQuote": "tout le reste, C₀(1−α), est encore sous forme AH intacte"
+        },
+        {
+          "t": "À l'équilibre, A⁻ et H⁺ apparaissent en quantités égales.",
+          "v": true,
+          "e": "VRAI. Chaque molécule qui se casse libère un A⁻ et un H⁺ : les deux partent ensemble, donc en quantités identiques.",
+          "sourceQuote": "ça fait C₀α de A⁻ et autant de H⁺, puisqu'ils partent ensemble"
+        },
+        {
+          "t": "Le tableau d'avancement est dressé pour la réaction AH ⇌ A⁻ + H⁺.",
+          "v": true,
+          "e": "VRAI. C'est la réaction de dissociation d'un acide faible dans l'eau, celle sur laquelle on construit toute la formule.",
+          "sourceQuote": "On part de la réaction de dissociation d'un acide faible AH dans l'eau, AH ⇌ A⁻ + H⁺, et on dresse le tableau d'avancement"
+        },
+        {
+          "t": "Sur les C₀ molécules de départ, c'est la fraction (1 − α) qui s'est cassée à l'équilibre.",
+          "v": false,
+          "e": "FAUX : c'est la fraction α qui s'est cassée. (1 − α) est au contraire la part restée intacte.",
+          "sourceQuote": "sur les C₀ molécules de départ, une fraction α s'est cassée"
+        },
+        {
+          "t": "Le Ka se lit sur la ligne t = 0 du tableau d'avancement.",
+          "v": false,
+          "e": "FAUX : le Ka se lit toujours à l'ÉQUILIBRE. Ce sont donc les expressions de la seconde ligne qu'on reporte dans la formule.",
+          "sourceQuote": "celles de la ligne « équilibre », puisque le Ka se lit toujours à l'équilibre"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-042-loi-ostwald-construction.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux trois étapes qui mènent du tableau à la formule d'Ostwald, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "On obtient la formule en remplaçant chaque concentration par son expression en α.",
+          "v": true,
+          "e": "VRAI. C'est la première étape : on reprend l'expression du Ka et on y injecte les expressions de la ligne d'équilibre.",
+          "sourceQuote": "remplace chaque concentration par son expression en α"
+        },
+        {
+          "t": "Au numérateur, le produit (C₀α) × (C₀α) donne C₀α².",
+          "v": false,
+          "e": "FAUX : multiplier (C₀α) par lui-même élève les DEUX facteurs au carré, ce qui donne C₀²α². Le C₀ est lui aussi au carré.",
+          "sourceQuote": "On simplifie. Au numérateur, (C₀α) × (C₀α) = C₀²α²."
+        },
+        {
+          "t": "Un C₀ s'élimine entre le numérateur et le dénominateur, et il n'en reste qu'un seul en haut.",
+          "v": true,
+          "e": "VRAI. Le C₀ du dénominateur annule l'un des deux du numérateur : il n'en subsiste qu'un, au numérateur.",
+          "sourceQuote": "Un C₀ s'élimine au numérateur et au dénominateur (il n'en reste qu'un seul en haut)"
+        },
+        {
+          "t": "La loi d'Ostwald s'écrit Ka = C₀ × α² / (1 + α).",
+          "v": false,
+          "e": "FAUX : le dénominateur est (1 − α), et non (1 + α) — c'est ce qui reste d'acide intact, donc un terme soustractif.",
+          "sourceQuote": "Il reste la loi d'Ostwald. Ka = C₀ × α² / (1 − α)"
+        },
+        {
+          "t": "Une fois la formule obtenue, α reste une grandeur non calculable, faute de données.",
+          "v": false,
+          "e": "FAUX : c'est justement l'apport de la formule. Le α laissé en suspens au chapitre 1 devient enfin calculable.",
+          "sourceQuote": "le α du chapitre 1 devient enfin calculable"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-042-loi-ostwald-construction.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à la version allégée de la loi d'Ostwald et à son utilisation, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Quand α est très petit devant 1, le dénominateur (1 − α) est assimilé à 1.",
+          "v": true,
+          "e": "VRAI. Retrancher une quantité négligeable à 1 ne change quasiment rien : le dénominateur disparaît et la formule se réduit.",
+          "sourceQuote": "alors (1 − α) ≈ 1 au dénominateur, et la formule se réduit à Ka ≈ C₀ × α²"
+        },
+        {
+          "t": "Dès qu'un énoncé donne deux des trois grandeurs Ka, C₀ et α, la troisième se calcule.",
+          "v": true,
+          "e": "VRAI. Trois lettres reliées par une formule : deux données suffisent toujours à obtenir la troisième.",
+          "sourceQuote": "dès qu'un énoncé te donne deux des trois grandeurs — Ka, C₀, α — la troisième se calcule"
+        },
+        {
+          "t": "La version allégée s'applique quand α est proche de 1.",
+          "v": false,
+          "e": "FAUX : elle suppose au contraire un acide très faiblement dissocié, c'est-à-dire α très petit devant 1.",
+          "sourceQuote": "Si l'acide est très faiblement dissocié — c'est-à-dire α ≪ 1, ce qui est le cas typique"
+        },
+        {
+          "t": "C'est la version complète, avec (1 − α) au dénominateur, qu'on manipule en pratique.",
+          "v": false,
+          "e": "FAUX : en pratique on travaille avec la version allégée, celle qui se passe du dénominateur.",
+          "sourceQuote": "C'est cette version-là qu'on manipule en pratique."
+        },
+        {
+          "t": "La loi d'Ostwald est un outil marginal, rarement rencontré aux QCM de P1.",
+          "v": false,
+          "e": "FAUX : c'est au contraire l'un des outils les plus rentables de la chimie en solution, et un grand classique des QCM.",
+          "sourceQuote": "C'est l'un des outils les plus rentables de toute la chimie en solution, et un grand classique des QCM de P1."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-042-loi-ostwald-construction.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à ce qui distingue le Ka du coefficient α, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le Ka ne dépend que de la molécule et de la température.",
+          "v": true,
+          "e": "VRAI. Rien d'autre ne le fait bouger : ni la concentration, ni le volume de la solution.",
+          "sourceQuote": "Le Ka ne dépend que de la molécule (et de la température)"
+        },
+        {
+          "t": "Deux béchers du même acide à deux concentrations différentes n'ont pas le même α.",
+          "v": true,
+          "e": "VRAI. C'est la conséquence directe de la formule : à Ka constant, changer C₀ change nécessairement α.",
+          "sourceQuote": "Deux béchers du même acide à deux concentrations n'ont pas le même α."
+        },
+        {
+          "t": "Le piège consiste à traiter α comme une constante de la molécule, au même titre que le Ka.",
+          "v": true,
+          "e": "VRAI. C'est l'erreur à éviter : le Ka est une constante, α n'en est pas une.",
+          "sourceQuote": "Traiter α comme une constante de la molécule, au même titre que le Ka."
+        },
+        {
+          "t": "α ne dépend que de la molécule, exactement comme le Ka.",
+          "v": false,
+          "e": "FAUX : α est relié aussi à la concentration initiale C₀ par la formule. Il dépend donc de la solution préparée, pas seulement de la molécule.",
+          "sourceQuote": "α, lui, est relié aussi à C₀ par la formule"
+        },
+        {
+          "t": "Le Ka est une propriété de la solution, tandis que α est une propriété de la molécule.",
+          "v": false,
+          "e": "FAUX : les deux rôles sont inversés. Le Ka est la propriété de la molécule ; α, lui, varie avec la solution.",
+          "sourceQuote": "Le Ka est une propriété de la molécule."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-042-loi-ostwald-construction.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la question à laquelle répond la loi d'Ostwald et à l'expression de la constante d'acidité, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La valeur de α dépend aussi de ce qu'on a mis dans le bécher.",
+          "v": true,
+          "e": "VRAI. C'est ce qui sépare α du Ka : la préparation de la solution intervient dans sa valeur.",
+          "sourceQuote": "α, non : il dépend aussi de ce que tu as mis dans le bécher."
+        },
+        {
+          "t": "La question de l'origine de la valeur de α était restée en suspens depuis le chapitre 1.",
+          "v": true,
+          "e": "VRAI. Le coefficient avait été défini au chapitre 1, mais sa valeur n'y était pas expliquée : c'est la loi d'Ostwald qui la fournit.",
+          "sourceQuote": "Reste une question laissée en suspens depuis le chapitre 1 : le fameux coefficient α — d'où sort sa valeur, concrètement ?"
+        },
+        {
+          "t": "La loi d'Ostwald ne permet de calculer que le Ka, jamais α ni C₀.",
+          "v": false,
+          "e": "FAUX : trois lettres, donc trois usages. Chacune des trois grandeurs peut être l'inconnue à calculer.",
+          "sourceQuote": "Trois lettres, donc trois usages"
+        },
+        {
+          "t": "La constante d'acidité s'écrit comme le rapport de [AH] au produit [A⁻] × [H⁺].",
+          "v": false,
+          "e": "FAUX : le rapport est inversé. Ce sont les produits de la dissociation qui sont au numérateur, et l'acide intact au dénominateur.",
+          "sourceQuote": "la constante qui le décrit — Ka = [A⁻] × [H⁺] / [AH]"
+        },
+        {
+          "t": "Le tableau d'avancement employé ici repose sur une méthode différente de celle du chapitre 1.",
+          "v": false,
+          "e": "FAUX : c'est la même méthode qu'au chapitre 1. La seule nouveauté est d'écrire les quantités en fonction de la fraction dissociée α.",
+          "sourceQuote": "tableau d'avancement (la même méthode qu'au ch.1) en utilisant α comme fraction dissociée"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-043-dilution-augmente-alpha.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à l'effet d'une dilution ou d'une concentration sur un acide faible, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Diluer une solution d'acide faible fait augmenter α.",
+          "v": true,
+          "e": "VRAI. Quand la concentration initiale baisse, la fraction dissociée monte : l'acide se dissocie davantage.",
+          "sourceQuote": "Si on dilue la solution (C₀ diminue) → α augmente (l'acide se dissocie davantage)"
+        },
+        {
+          "t": "Concentrer la solution fait au contraire diminuer α.",
+          "v": true,
+          "e": "VRAI. C'est l'autre sens de lecture : plus la solution est concentrée, plus la proportion de molécules dissociées est faible.",
+          "sourceQuote": "Si on concentre la solution (C₀ augmente) → α diminue (l'acide se dissocie moins)"
+        },
+        {
+          "t": "Le Ka d'un acide faible est fixé par la molécule et ne dépend que de la température.",
+          "v": true,
+          "e": "VRAI. C'est l'hypothèse de départ du raisonnement : la constante ne bouge pas quand on dilue.",
+          "sourceQuote": "Ka fixé par la molécule, ne dépend que de la température"
+        },
+        {
+          "t": "En diluant, le Ka diminue en même temps que C₀.",
+          "v": false,
+          "e": "FAUX : le Ka ne bouge pas. C'est justement parce qu'il reste constant que α doit se réajuster.",
+          "sourceQuote": "Parce que Ka, lui, ne bouge pas."
+        },
+        {
+          "t": "Si C₀ diminue, α doit diminuer lui aussi pour garder le produit constant.",
+          "v": false,
+          "e": "FAUX : α doit AUGMENTER pour compenser la baisse de C₀ et maintenir le produit constant.",
+          "sourceQuote": "si C₀ diminue, α doit augmenter pour compenser et garder le produit constant"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-043-dilution-augmente-alpha.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à l'analogie de la foule dans un stade, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un stade bondé correspond à une forte concentration C₀ et à un α petit.",
+          "v": true,
+          "e": "VRAI. Serrés les uns contre les autres, les spectateurs ne se déplacent presque pas : c'est l'image d'une solution concentrée peu dissociée.",
+          "sourceQuote": "Quand le stade est bondé (forte concentration C₀), les gens sont coincés, immobiles — peu se déplacent (α petit)."
+        },
+        {
+          "t": "Un stade presque vide illustre une solution concentrée où α est petit.",
+          "v": false,
+          "e": "FAUX : un stade presque vide correspond à une FAIBLE concentration, et à un α GRAND — chacun s'y déplace librement.",
+          "sourceQuote": "Quand le stade est presque vide (faible C₀), chacun se balade librement — la proportion de gens en mouvement est plus grande (α grand)."
+        },
+        {
+          "t": "Les molécules d'acide faible se dissocient plus facilement quand elles ont plus d'espace.",
+          "v": true,
+          "e": "VRAI. C'est la traduction chimique de l'image : en solution diluée, les molécules ne sont plus gênées par leurs voisines.",
+          "sourceQuote": "les molécules d'acide faible se dissocient plus facilement quand elles ont plus d'espace (= solution diluée)"
+        },
+        {
+          "t": "Dans cette image, ce qui change avec la densité, c'est la règle physique qui gouverne le système.",
+          "v": false,
+          "e": "FAUX : la règle physique reste la même — c'est le Ka. Ce qui change avec la densité, c'est la PROPORTION de gens en mouvement.",
+          "sourceQuote": "est régie par la même règle physique (Ka), mais la proportion change selon la densité"
+        },
+        {
+          "t": "En solution diluée, les molécules d'acide faible sont davantage gênées par leurs voisines.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. En diluant, elles cessent d'être gênées par leurs voisines, et c'est ce qui facilite la dissociation.",
+          "sourceQuote": "parce qu'elles ne sont plus gênées par leurs voisines"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-043-dilution-augmente-alpha.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à l'expression de α sous forme de racine et à son domaine de validité, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "On isole α à partir de la loi d'Ostwald simplifiée, valable parce que α est petit pour un acide faible.",
+          "v": true,
+          "e": "VRAI. On part de la version allégée, puis on isole le coefficient de dissociation pour en obtenir une expression directe.",
+          "sourceQuote": "On part de la loi d'Ostwald simplifiée (Ka ≈ C₀·α², puisque α est petit pour un acide faible) et on isole α"
+        },
+        {
+          "t": "Cette expression n'est valable que tant que α reste petit devant 1.",
+          "v": true,
+          "e": "VRAI. C'est la condition héritée de la simplification : dès que α grandit, l'expression ne donne plus qu'un ordre de grandeur.",
+          "sourceQuote": "valable tant que α reste petit devant 1"
+        },
+        {
+          "t": "Dans cette formule, Ka et C₀ s'expriment tous deux en mol/L.",
+          "v": true,
+          "e": "VRAI. Les deux grandeurs sont en mol/L, ce qui rend leur rapport sans dimension — cohérent avec un α qui est une simple fraction.",
+          "sourceQuote": "Ka en mol/L, C₀ en mol/L"
+        },
+        {
+          "t": "α s'obtient en élevant au carré le rapport Ka / C₀.",
+          "v": false,
+          "e": "FAUX : on prend la RACINE carrée de ce rapport, et non son carré. C'est l'opération inverse.",
+          "sourceQuote": "Le coefficient de dissociation, en une racine"
+        },
+        {
+          "t": "La dilution multiplie α proportionnellement au facteur de dilution.",
+          "v": false,
+          "e": "FAUX : elle agit par la racine carrée du facteur. Diviser C₀ par 10 000 multiplie α par 100, et non par 10 000.",
+          "sourceQuote": "La dilution agit sur α par sa racine carrée : diviser C₀ par 10 000 ne multiplie pas α par 10 000, mais par √10 000 = 100."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-043-dilution-augmente-alpha.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives au calcul mené sur les deux solutions d'acide acétique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans cet exemple, l'acide acétique a un Ka de 1,8 × 10⁻⁵ mol/L et un pKa de 4,8.",
+          "v": true,
+          "e": "VRAI. Ce sont les données de départ de l'exercice, identiques pour les deux solutions comparées.",
+          "sourceQuote": "L'acide acétique (CH₃COOH) a une constante Ka = 1,8 × 10⁻⁵ mol/L (pKa = 4,8)."
+        },
+        {
+          "t": "À 1 mol/L, l'acide acétique est dissocié à environ 0,42 %, et à 10⁻⁴ mol/L à 42 %.",
+          "v": true,
+          "e": "VRAI. Ce sont les deux résultats du calcul : une dissociation minime en solution concentrée, considérable en solution très diluée.",
+          "sourceQuote": "Acide acétique : 0,42 % de dissociation à 1 mol/L, 42 % à 10⁻⁴ mol/L."
+        },
+        {
+          "t": "En solution A concentrée, la majeure partie de l'acide se retrouve sous forme dissociée.",
+          "v": false,
+          "e": "FAUX : quasiment tout l'acide y reste sous forme AH non dissociée. Sur une mole, seules quelques millimoles se sont cassées.",
+          "sourceQuote": "Quasiment tout l'acide reste sous forme AH non dissociée."
+        },
+        {
+          "t": "En solution B, diluée à 10⁻⁴ mol/L, l'acide est dissocié à 4,2 %.",
+          "v": false,
+          "e": "FAUX : il y est dissocié à 42 %, soit cent fois plus qu'en solution A. Le chiffre 4,2 concerne un autre ordre de grandeur.",
+          "sourceQuote": "Maintenant 42 % de l'acide est dissocié — c'est 100 fois plus qu'en solution A."
+        },
+        {
+          "t": "Entre les deux solutions, la molécule change : le Ka de B n'est plus celui de A.",
+          "v": false,
+          "e": "FAUX : c'est le même acide acétique, avec le même Ka et le même pKa. Seule la concentration a changé.",
+          "sourceQuote": "la molécule, elle, n'a pas changé : même acide acétique, même Ka, même pKa 4,8"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-043-dilution-augmente-alpha.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux limites de la formule simplifiée et aux conséquences pratiques d'une dilution, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "À 42 % de dissociation, on est en dilution extrême et la formule simplifiée ne donne qu'un ordre de grandeur.",
+          "v": true,
+          "e": "VRAI. À ce niveau, α n'est plus petit devant 1 : l'approximation de départ n'est plus vraiment tenue, le résultat reste indicatif.",
+          "sourceQuote": "à 42 %, on est en dilution extrême — α n'est plus « petit devant 1 », et la formule simplifiée n'y donne qu'un ordre de grandeur"
+        },
+        {
+          "t": "En diluant un sirop d'acide faible, il existe un effet supplémentaire sur le pH parce que α augmente.",
+          "v": true,
+          "e": "VRAI. À la dilution mécanique s'ajoute la dissociation accrue de l'acide, qui libère davantage de H⁺ en proportion.",
+          "sourceQuote": "il y a un effet supplémentaire, car α augmente"
+        },
+        {
+          "t": "Diluer un acide faible ne fait que rapprocher mécaniquement son pH de 7.",
+          "v": false,
+          "e": "FAUX : la dilution mécanique n'explique pas tout, précisément parce que la dissociation augmente en même temps.",
+          "sourceQuote": "son pH ne va pas simplement « se rapprocher de 7 » par dilution mécanique"
+        },
+        {
+          "t": "Cette subtilité sur la dilution ne tombe jamais aux QCM.",
+          "v": false,
+          "e": "FAUX : elle tombe régulièrement. C'est même l'un des angles d'attaque les plus fréquents sur ce chapitre.",
+          "sourceQuote": "Cette subtilité tombe régulièrement aux QCM."
+        },
+        {
+          "t": "Devant un QCM qui dilue un acide faible, le α de départ reste valable.",
+          "v": false,
+          "e": "FAUX : le α de départ n'est plus valable dès que la concentration change. Il faut le recalculer avec la nouvelle valeur de C₀.",
+          "sourceQuote": "le réflexe est double : le α de départ n'est plus valable, et le nouveau se recalcule avec α ≈ √(Ka / C₀)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-043-dilution-augmente-alpha.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à ce que recouvre exactement l'expression « acide faible », laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un acide faible peut être dissocié à 42 % sans cesser d'être un acide faible.",
+          "v": true,
+          "e": "VRAI. L'acide acétique très dilué est dans ce cas : même molécule, même Ka, et pourtant une dissociation considérable.",
+          "sourceQuote": "À 10⁻⁴ mol/L, l'acide acétique est dissocié à 42 % — et c'est pourtant exactement le même acide faible, avec le même Ka."
+        },
+        {
+          "t": "La force apparente d'un acide dépend aussi de la concentration.",
+          "v": true,
+          "e": "VRAI. La nature de l'acide fixe le Ka, mais ce qu'on observe dans le bécher dépend en plus de la concentration choisie.",
+          "sourceQuote": "La force apparente dépend aussi de la concentration."
+        },
+        {
+          "t": "Plus on dilue un acide faible, plus il est « fort » en proportion.",
+          "v": true,
+          "e": "VRAI. C'est le résumé de tout le raisonnement : la proportion de molécules dissociées augmente à mesure qu'on dilue.",
+          "sourceQuote": "plus on dilue un acide faible, plus il est « fort » en proportion"
+        },
+        {
+          "t": "L'expression « acide faible » implique que la dissociation reste toujours faible, quelle que soit la concentration.",
+          "v": false,
+          "e": "FAUX : c'est exactement le piège. « Faible » qualifie la molécule, pas le pourcentage de dissociation observé.",
+          "sourceQuote": "Croire que « faible » veut dire « toujours peu dissocié »."
+        },
+        {
+          "t": "Ce résultat, contre-intuitif, contredit la formule de la loi d'Ostwald.",
+          "v": false,
+          "e": "FAUX : il surprend, mais il est directement écrit dans la formule. C'est elle qui le prédit.",
+          "sourceQuote": "Contre-intuitif — et pourtant c'est écrit dans la formule."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-043-dilution-augmente-alpha.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives au protocole de comparaison des deux solutions et au cadre de départ de ce raisonnement, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les deux solutions comparées contiennent le même acide, la seconde étant diluée 10 000 fois.",
+          "v": true,
+          "e": "VRAI. C'est ce qui rend la comparaison probante : une seule variable change, la concentration.",
+          "sourceQuote": "On prépare deux solutions du même acide : la solution A concentrée, la solution B diluée 10 000 fois."
+        },
+        {
+          "t": "Dans la solution A, sur 1 mol d'acide, seules 4,2 millimoles se sont dissociées.",
+          "v": true,
+          "e": "VRAI. C'est la traduction concrète des 0,42 % : une part infime de l'acide s'est effectivement cassée.",
+          "sourceQuote": "Sur 1 mol, seulement 4,2 millimoles se sont dissociées en A⁻ + H⁺."
+        },
+        {
+          "t": "Le cas de la dilution est celui qui tombe le plus rarement en QCM.",
+          "v": false,
+          "e": "FAUX : c'est au contraire le sens qui tombe le plus souvent. C'est pour cette raison qu'il est traité en premier.",
+          "sourceQuote": "dans le sens qui tombe le plus souvent en QCM : celui de la dilution"
+        },
+        {
+          "t": "La version allégée Ka ≈ C₀ × α² n'est valable que si α est grand.",
+          "v": false,
+          "e": "FAUX : elle suppose au contraire un α petit. C'est cette petitesse qui autorise à négliger le dénominateur.",
+          "sourceQuote": "sa version allégée Ka ≈ C₀ × α² quand α est petit"
+        },
+        {
+          "t": "Pour un acide faible donné, le Ka dépend de la concentration initiale de la solution.",
+          "v": false,
+          "e": "FAUX : le Ka est fixé par la molécule. C'est α qui se déplace quand C₀ change, jamais le Ka.",
+          "sourceQuote": "Ka est fixé par la molécule. C₀ diminue → α augmente ; C₀ augmente → α diminue."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-044-diagramme-de-predominance.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la règle qui fait du pKa une frontière, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le pKa sépare le territoire de la forme acide de celui de la forme basique.",
+          "v": true,
+          "e": "VRAI. À gauche du pKa, aux pH bas, règne la forme acide ; à droite, aux pH élevés, la forme basique.",
+          "sourceQuote": "Il sépare le « territoire » de la forme acide (à gauche, pH bas) de celui de la forme basique (à droite, pH élevé)"
+        },
+        {
+          "t": "Pour un couple AH/A⁻ donné, la forme qui domine dépend du pH par rapport au pKa.",
+          "v": true,
+          "e": "VRAI. Ce n'est pas le pH seul, ni le pKa seul, mais bien leur comparaison qui décide de la forme majoritaire.",
+          "sourceQuote": "pour un couple AH/A⁻ donné, la forme qui domine dans la solution dépend du pH par rapport au pKa"
+        },
+        {
+          "t": "Le pKa fonctionne comme un interrupteur : en le traversant, la molécule change de forme majoritaire.",
+          "v": true,
+          "e": "VRAI. Le basculement se joue au franchissement de cette valeur : d'un côté AH domine, de l'autre A⁻.",
+          "sourceQuote": "C'est un interrupteur : en traversant le pKa, la molécule change de forme majoritaire."
+        },
+        {
+          "t": "C'est la concentration, et non le pH, qui décide de la forme majoritaire dans ce diagramme.",
+          "v": false,
+          "e": "FAUX : on a changé de levier. Après la concentration, étudiée avec la loi d'Ostwald, c'est ici le pH du milieu qui commande.",
+          "sourceQuote": "On change de levier — cette fois, c'est le pH du milieu qui commande."
+        },
+        {
+          "t": "La forme basique occupe le territoire des pH bas, à gauche du pKa.",
+          "v": false,
+          "e": "FAUX : à gauche, c'est AH qui domine. La forme basique A⁻ occupe la droite du diagramme, du côté des pH élevés.",
+          "sourceQuote": "À gauche AH domine, à droite A⁻ domine."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-044-diagramme-de-predominance.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux trois cas à automatiser, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Quand le pH est inférieur à pKa − 1, la forme acide AH domine à plus de 90 %.",
+          "v": true,
+          "e": "VRAI. C'est le premier cas : dès qu'on descend d'une unité sous le pKa, la forme acide écrase largement l'autre.",
+          "sourceQuote": "pH < pKa − 1 → la forme acide AH domine (à plus de 90 %)"
+        },
+        {
+          "t": "Quand pH = pKa, les concentrations des deux formes sont égales.",
+          "v": true,
+          "e": "VRAI. C'est l'équilibre exact entre AH et A⁻, et c'est aussi le point où la capacité tampon est maximale.",
+          "sourceQuote": "pH = pKa → [AH] = [A⁻] (équilibre exact, zone tampon maximale"
+        },
+        {
+          "t": "Quand le pH dépasse pKa + 1, c'est encore la forme acide AH qui domine.",
+          "v": false,
+          "e": "FAUX : au-delà de pKa + 1, c'est la forme basique A⁻ qui domine, elle aussi à plus de 90 %.",
+          "sourceQuote": "pH > pKa + 1 → la forme basique A⁻ domine (à plus de 90 %)"
+        },
+        {
+          "t": "Au point pH = pKa, la solution est celle qui résiste le moins bien aux variations de pH.",
+          "v": false,
+          "e": "FAUX : c'est au contraire là que la solution résiste le MIEUX. L'égalité des deux formes est la condition d'un tampon efficace.",
+          "sourceQuote": "c'est là que la solution résiste le mieux aux variations de pH"
+        },
+        {
+          "t": "Dans un milieu très acide, la molécule a toutes les raisons de larguer son H⁺.",
+          "v": false,
+          "e": "FAUX : un milieu très acide est déjà plein de H⁺ — la molécule n'a aucune raison de céder le sien. Elle le garde, et AH domine.",
+          "sourceQuote": "dans un milieu très acide (plein de H⁺), la molécule n'a aucune raison de larguer le sien"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-044-diagramme-de-predominance.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la lecture du graphe de prédominance, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Sur ce graphe, les deux courbes se croisent au pKa.",
+          "v": true,
+          "e": "VRAI. Le point de croisement des deux courbes correspond exactement à la valeur du pKa du couple.",
+          "sourceQuote": "Deux courbes qui se croisent au pKa."
+        },
+        {
+          "t": "Le point de croisement est le seul endroit où les deux formes sont à 50/50.",
+          "v": true,
+          "e": "VRAI. Ailleurs, l'une des deux formes l'emporte ; c'est uniquement à pH = pKa qu'elles sont à parts égales.",
+          "sourceQuote": "Le point de croisement est le seul endroit où les deux formes sont à 50/50 : c'est pH = pKa."
+        },
+        {
+          "t": "La bande jaune centrale correspond à la plage pKa ± 1, où les deux formes coexistent.",
+          "v": true,
+          "e": "VRAI. Dans cette bande d'une unité de part et d'autre du pKa, aucune des deux formes n'écrase l'autre.",
+          "sourceQuote": "la jaune au centre est la plage pKa ± 1 où les deux formes coexistent"
+        },
+        {
+          "t": "La bande rose, à gauche, correspond au troisième cas.",
+          "v": false,
+          "e": "FAUX : la rose, à gauche, est le cas 1. C'est la bande bleue, à droite, qui correspond au cas 3.",
+          "sourceQuote": "la rose à gauche est le cas 1, la bleue à droite le cas 3"
+        },
+        {
+          "t": "Le cas 2 correspond à toute la plage jaune, et non à un point précis.",
+          "v": false,
+          "e": "FAUX : le cas 2 est le point exact de cette plage, celui où pH = pKa. La bande jaune, plus large, est la zone où les deux formes coexistent.",
+          "sourceQuote": "le cas 2 en est le point exact"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-044-diagramme-de-predominance.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux conséquences du diagramme en pharmacologie, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un médicament de pKa 7,4 se trouve à parts égales sous les deux formes dans le sang à pH 7,4.",
+          "v": true,
+          "e": "VRAI. Puisque le pH du milieu égale son pKa, la molécule est à 50 % sous forme acide et 50 % sous forme basique.",
+          "sourceQuote": "Un médicament avec un pKa de 7,4 sera à 50 % sous forme acide et 50 % sous forme basique dans le sang à pH 7,4."
+        },
+        {
+          "t": "Dans un couple AH/A⁻, la forme neutre est AH, tandis que A⁻ porte une charge.",
+          "v": true,
+          "e": "VRAI. C'est le départ du proton qui laisse une charge sur A⁻ ; AH, lui, reste électriquement neutre.",
+          "sourceQuote": "dans un couple AH/A⁻, la forme neutre, c'est AH ; A⁻, elle, porte une charge"
+        },
+        {
+          "t": "Ce sont les formes chargées qui traversent le plus facilement les membranes en transport passif.",
+          "v": false,
+          "e": "FAUX : seules les formes NEUTRES franchissent facilement les membranes par transport passif. La charge, elle, freine le passage.",
+          "sourceQuote": "seules les formes neutres traversent facilement les membranes (transport passif)"
+        },
+        {
+          "t": "Le diagramme de prédominance n'a pas d'intérêt pratique en pharmacologie.",
+          "v": false,
+          "e": "FAUX : il y est fondamental, puisqu'il commande la répartition des formes d'un médicament et donc son absorption.",
+          "sourceQuote": "Le diagramme de prédominance est fondamental en pharmacologie."
+        },
+        {
+          "t": "Modifier le pH d'un milieu ne change pas la proportion des formes acide et basique.",
+          "v": false,
+          "e": "FAUX : changer le pH déplace la répartition entre les deux formes, et modifie du même coup l'élimination du médicament.",
+          "sourceQuote": "si tu modifies le pH, tu modifies la proportion d'acide/base — et donc l'élimination du médicament"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-044-diagramme-de-predominance.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à l'exemple de l'acide lactique au pH sanguin, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'acide lactique, de pKa 3,9, est très majoritairement sous forme de lactate au pH sanguin.",
+          "v": true,
+          "e": "VRAI. Le pH sanguin dépasse largement pKa + 1 : la forme basique, le lactate, l'emporte de très loin.",
+          "sourceQuote": "Comme pH > pKa + 1, la forme basique — le lactate — domine très largement."
+        },
+        {
+          "t": "Pour 3000 molécules de lactate, il ne reste qu'une molécule d'acide lactique non dissocié.",
+          "v": true,
+          "e": "VRAI. C'est la traduction concrète du rapport calculé : la forme acide est devenue tout à fait marginale.",
+          "sourceQuote": "Pour 3000 molécules de lactate, il y a 1 molécule d'acide lactique non dissocié."
+        },
+        {
+          "t": "L'écart entre le pH sanguin et le pKa de l'acide lactique vaut 4,5.",
+          "v": false,
+          "e": "FAUX : l'écart vaut 3,5, puisque 7,4 − 3,9 = 3,5. C'est cet écart qui donne ensuite le rapport entre les deux formes.",
+          "sourceQuote": "pH − pKa = 7,4 − 3,9 = 3,5"
+        },
+        {
+          "t": "Les biologistes mesurent au laboratoire l'acide lactique plutôt que le lactate.",
+          "v": false,
+          "e": "FAUX : ils mesurent le lactate, qui est la forme largement majoritaire au pH physiologique. « Acide lactique » n'est que le nom courant.",
+          "sourceQuote": "les biologistes mesurent toujours « le lactate » au laboratoire — c'est la forme largement majoritaire à pH physiologique"
+        },
+        {
+          "t": "L'écart entre pH et pKa se traduit de façon linéaire sur le rapport des deux formes.",
+          "v": false,
+          "e": "FAUX : il se lit en puissance de 10. Un écart de 3,5 ne donne pas un rapport de 3,5 mais de 10 puissance 3,5, soit environ 3000.",
+          "sourceQuote": "l'écart entre pH et pKa se lit directement en puissance de 10 sur le rapport des deux formes"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-044-diagramme-de-predominance.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives au sens de lecture du diagramme et à l'erreur d'inversion, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un énoncé affirmant « pH < pKa → A⁻ prédomine » est faux.",
+          "v": true,
+          "e": "VRAI. En dessous du pKa, c'est AH qui l'emporte. Cette formulation inverse le diagramme.",
+          "sourceQuote": "Un QCM qui écrit « pH < pKa → A⁻ prédomine » est FAUX"
+        },
+        {
+          "t": "Un pH bas signifie beaucoup de H⁺ dans le milieu, donc la molécule garde le sien.",
+          "v": true,
+          "e": "VRAI. C'est le raisonnement qui évite l'inversion : entourée de protons, la molécule n'a aucune raison de céder le sien.",
+          "sourceQuote": "Un pH bas veut dire beaucoup de H⁺ dans le milieu — donc la molécule garde le sien"
+        },
+        {
+          "t": "Le mnémo s'énonce : pH petit → H⁺ en excès → AH garde son H⁺.",
+          "v": true,
+          "e": "VRAI. Trois maillons enchaînés, qui redonnent le sens du diagramme sans avoir à le mémoriser.",
+          "sourceQuote": "pH petit → H⁺ en excès → AH garde son H⁺"
+        },
+        {
+          "t": "Le diagramme peut être lu indifféremment dans un sens ou dans l'autre.",
+          "v": false,
+          "e": "FAUX : il ne faut jamais l'inverser. Les deux territoires ne sont pas interchangeables.",
+          "sourceQuote": "Ne jamais inverser le diagramme."
+        },
+        {
+          "t": "À pH bas, c'est la base A⁻ qui domine, puisqu'elle capte les H⁺ abondants.",
+          "v": false,
+          "e": "FAUX : à pH bas, c'est la forme acide AH qui domine, pas la base. C'est précisément l'inversion à éviter.",
+          "sourceQuote": "c'est la forme acide AH qui domine, pas la base"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-044-diagramme-de-predominance.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à l'usage clinique du diagramme et au seul pKa qu'il vaut la peine de retenir, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans les intoxications à l'aspirine, on alcalinise les urines pour accélérer l'élimination.",
+          "v": true,
+          "e": "VRAI. En remontant le pH, on favorise la forme basique, qui reste dans les urines au lieu d'être reprise par les tubules.",
+          "sourceQuote": "on alcalinise les urines pour favoriser la forme basique (chargée, non absorbée par les tubules rénaux) et accélérer l'élimination"
+        },
+        {
+          "t": "Le seul pKa qu'il vaudrait la peine de retenir est celui du bicarbonate, 6,1.",
+          "v": true,
+          "e": "VRAI. C'est celui qui revient partout en physiologie acido-basique ; les autres seront donnés par l'énoncé.",
+          "sourceQuote": "Si tu devais en retenir un seul, ce serait celui du bicarbonate : 6,1"
+        },
+        {
+          "t": "Les pKa doivent être appris par cœur, car les énoncés ne les fournissent pas.",
+          "v": false,
+          "e": "FAUX : ils seront toujours donnés dans l'énoncé. L'effort de mémorisation n'est pas là.",
+          "sourceQuote": "Pas besoin d'apprendre les pKa par cœur : ils te seront toujours donnés dans l'énoncé."
+        },
+        {
+          "t": "La forme basique du médicament est réabsorbée par les tubules rénaux, ce qui ralentit son élimination.",
+          "v": false,
+          "e": "FAUX : chargée, la forme basique n'est justement PAS absorbée par les tubules — c'est ce qui accélère son élimination.",
+          "sourceQuote": "(chargée, non absorbée par les tubules rénaux)"
+        },
+        {
+          "t": "Le diagramme de prédominance est l'un des graphes les moins utiles à maîtriser en P1.",
+          "v": false,
+          "e": "FAUX : c'est au contraire l'un des plus utiles, puisqu'il répond à la question clé de l'acido-basicité.",
+          "sourceQuote": "l'un des graphes les plus utiles à maîtriser"
+        }
+      ]
+    }
+  ]
+}

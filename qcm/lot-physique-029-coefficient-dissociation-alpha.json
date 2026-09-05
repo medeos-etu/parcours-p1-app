@@ -1,0 +1,1644 @@
+{
+  "matiere": "physique",
+  "chapitre": 1,
+  "questions": [
+    {
+      "fiche": "physique-029-coefficient-dissociation-alpha.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la définition du coefficient de dissociation α, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "α désigne la fraction des molécules AB qui se sont dissociées à l'équilibre.",
+          "v": true,
+          "e": "VRAI. C'est exactement la définition : sur la quantité de départ, α est la part des molécules qui ont effectivement été cassées en ions une fois l'équilibre atteint.",
+          "sourceQuote": "la fraction des molécules AB qui se sont dissociées à l'équilibre"
+        },
+        {
+          "t": "Cette fraction est rapportée à la quantité initiale de soluté C₀.",
+          "v": true,
+          "e": "VRAI. On compare toujours ce qui est dissocié à ce qu'on avait mis au départ : la référence de α, c'est C₀.",
+          "sourceQuote": "par rapport à la quantité initiale C₀"
+        },
+        {
+          "t": "α peut prendre des valeurs supérieures à 1 lorsque la dissociation est très poussée.",
+          "v": false,
+          "e": "FAUX : α est une fraction, donc encadrée entre 0 et 1, ce qui correspond à 0 % et 100 % de dissociation. Il ne peut pas dépasser 1.",
+          "sourceQuote": "une fraction, entre 0 et 1 — soit entre 0 % et 100 % de dissociation"
+        },
+        {
+          "t": "Les acides faibles et les bases faibles sont concernés par une dissociation seulement partielle.",
+          "v": true,
+          "e": "VRAI. Ce sont les solutés typiques de la dissociation partielle : ils ne se cassent pas entièrement dans l'eau, contrairement aux électrolytes forts.",
+          "sourceQuote": "certains solutés ne se dissocient que partiellement dans l'eau : les acides faibles et les bases faibles"
+        },
+        {
+          "t": "Même en cas de dissociation partielle, n reste un nombre entier rond.",
+          "v": false,
+          "e": "FAUX : dès que la dissociation n'est que partielle, n cesse d'être un entier rond et devient une valeur intermédiaire, comprise entre 1 et 2 pour un électrolyte binaire.",
+          "sourceQuote": "n n'est plus un nombre entier rond mais une valeur intermédiaire entre 1"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-029-coefficient-dissociation-alpha.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la notion d'électrolyte binaire et aux valeurs que prend α selon le soluté, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un électrolyte binaire est un soluté qui ne libère que deux ions, un positif et un négatif.",
+          "v": true,
+          "e": "VRAI. Deux ions seulement, de charges opposées : c'est toute la définition. NaCl et l'acide acétique en sont des exemples.",
+          "sourceQuote": "c'est un soluté qui ne libère que deux ions : un positif, un négatif"
+        },
+        {
+          "t": "CaCl₂ est un électrolyte binaire.",
+          "v": false,
+          "e": "FAUX : CaCl₂ libère trois particules, il n'entre donc pas dans la définition de l'électrolyte binaire. C'est important, car les formules de cette fiche ne valent que dans le cas binaire.",
+          "sourceQuote": "CaCl₂, qui libère trois particules, n'en est pas un"
+        },
+        {
+          "t": "Le glucose et l'urée correspondent à α = 0 : aucune de leurs molécules ne se dissocie dans l'eau.",
+          "v": true,
+          "e": "VRAI. Ce sont des non électrolytes : mis dans l'eau, ils restent intacts, donc la fraction dissociée est nulle.",
+          "sourceQuote": "α = 0 aucune molécule dissociée le glucose, l'urée : ils restent intacts dans l'eau"
+        },
+        {
+          "t": "Un α égal à 1 traduit une dissociation totale, comme pour NaCl ou HCl.",
+          "v": true,
+          "e": "VRAI. α = 1, c'est 100 % de dissociation : toutes les molécules ont été cassées en ions, ce qui est le cas des électrolytes forts.",
+          "sourceQuote": "α = 1 (= 100 %) dissociation totale le NaCl, HCl : toutes les molécules sont cassées en ions"
+        },
+        {
+          "t": "Pour l'acide acétique CH₃COOH à 0,1 mol/L, α vaut environ 0,5.",
+          "v": false,
+          "e": "FAUX : α y vaut environ 0,013, soit 1,3 % de dissociation seulement. C'est un acide faible : la quasi-totalité de ses molécules reste intacte.",
+          "sourceQuote": "comme l'acide acétique CH₃COOH : α ≈ 0,013 = 1,3 % à 0,1 mol/L"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-029-coefficient-dissociation-alpha.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au contenu du bécher à l'équilibre et à l'osmolarité qui en découle, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "En partant de C₀ mol/L de AB, il reste à l'équilibre C₀(1−α) sous forme intacte.",
+          "v": true,
+          "e": "VRAI. Si une fraction α s'est dissociée, la fraction complémentaire (1−α) est restée entière : cela fait bien C₀(1−α) de AB intact.",
+          "sourceQuote": "à l'équilibre il te reste C₀(1−α) sous forme intacte AB"
+        },
+        {
+          "t": "À l'équilibre, la solution contient C₀α de A⁺ mais deux fois plus de B⁻.",
+          "v": false,
+          "e": "FAUX : chaque molécule dissociée libère un A⁺ et un B⁻, donc on obtient C₀α de chacun des deux ions, en quantités égales.",
+          "sourceQuote": "et tu as C₀α de A⁺ + C₀α de B⁻ en solution"
+        },
+        {
+          "t": "L'osmolarité se calcule en ne comptant que les particules issues de la dissociation, les molécules restées intactes étant exclues.",
+          "v": false,
+          "e": "FAUX : l'osmolarité compte toutes les particules présentes dans le bécher, les molécules restées intactes comme les ions libérés. Exclure les intactes reviendrait à sous-estimer le résultat.",
+          "sourceQuote": "en additionnant toutes les particules présentes — les intactes et les dissociées"
+        },
+        {
+          "t": "Pour un électrolyte binaire en dissociation partielle, l'osmolarité vaut (1 + α) × C₀.",
+          "v": true,
+          "e": "VRAI. En additionnant les molécules intactes et les deux ions issus des molécules cassées, on retombe sur (1 + α) fois la concentration initiale.",
+          "sourceQuote": "et l'osmolarité : ω = (1+α)·C₀ = i·C₀, avec i = 1 + α"
+        },
+        {
+          "t": "Dans cette formule, α est un coefficient qui peut dépasser 1 quand la dissociation est forte.",
+          "v": false,
+          "e": "FAUX : le coefficient de dissociation reste compris entre 0 et 1. Sa valeur maximale, 1, correspond déjà à une dissociation totale.",
+          "sourceQuote": "α = coefficient de dissociation (entre 0 et 1)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-029-coefficient-dissociation-alpha.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives au coefficient d'ionisation i et à la façon dont on l'obtient, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le coefficient d'ionisation i indique combien de particules sont réellement présentes en solution par molécule de soluté de départ.",
+          "v": true,
+          "e": "VRAI. C'est sa signification concrète : il traduit, pour une molécule mise au départ, le nombre de particules qu'on retrouve effectivement dans le bécher.",
+          "sourceQuote": "combien de particules tu as réellement en solution par molécule de soluté de départ"
+        },
+        {
+          "t": "Pour un électrolyte binaire AB, i = 1 − α.",
+          "v": false,
+          "e": "FAUX : la relation est i = 1 + α, avec un signe plus. C'est ce qui permet d'écrire directement l'osmolarité sous la forme ω = i × C₀.",
+          "sourceQuote": "Pour un électrolyte binaire AB : i = 1 + α, donc ω = i × C₀"
+        },
+        {
+          "t": "Une molécule AB restée intacte compte pour 2 particules, et une molécule dissociée pour 1.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. Une molécule intacte reste une seule particule ; une molécule dissociée en donne deux, A⁺ et B⁻.",
+          "sourceQuote": "Si elle ne se dissocie pas, elle reste à 1 particule. Si elle se dissocie totalement, elle devient 2 particules"
+        },
+        {
+          "t": "La relation i = 1 + α s'obtient par une moyenne pondérée entre les molécules intactes et les molécules dissociées.",
+          "v": true,
+          "e": "VRAI. On pondère : la fraction (1−α) compte pour 1 particule, la fraction α compte pour 2, et la somme se simplifie en 1 + α.",
+          "sourceQuote": "On pondère. i = (1−α)·1 + α·2 = 1 − α + 2α = 1 + α"
+        },
+        {
+          "t": "Contrairement au « n » utilisé jusque-là, i peut prendre n'importe quelle valeur entre 1 et 2.",
+          "v": true,
+          "e": "VRAI. C'est tout l'intérêt de i : il n'est pas contraint à des valeurs entières et suit le pourcentage réel de dissociation.",
+          "sourceQuote": "Le « i » est plus subtil : il peut prendre n'importe quelle valeur entre 1 et 2"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-029-coefficient-dissociation-alpha.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux trois solutés pris à 100 mmol/L pour illustrer α, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le glucose à 100 mmol/L conduit à une osmolarité de 100 mOsm/L.",
+          "v": true,
+          "e": "VRAI. C'est un non électrolyte : α vaut 0, donc l'osmolarité est égale à la concentration initiale, sans multiplication.",
+          "sourceQuote": "Non électrolyte, α = 0 → ω = (1+0) × 100 = 100 mOsm/L"
+        },
+        {
+          "t": "NaCl à 100 mmol/L conduit à 200 mOsm/L, soit 100 mmol/L de Na⁺ et 100 mmol/L de Cl⁻.",
+          "v": true,
+          "e": "VRAI. Chaque molécule se casse en deux ions, ce qui double le nombre de particules : on passe de 100 à 200.",
+          "sourceQuote": "La solution contient 100 mmol/L de Na⁺ + 100 mmol/L de Cl⁻ = 200 mmol/L de particules"
+        },
+        {
+          "t": "L'acide acétique à 100 mmol/L conduit à environ 200 mOsm/L.",
+          "v": false,
+          "e": "FAUX : avec α ≈ 0,013, l'osmolarité vaut environ 101,3 mOsm/L. Annoncer 200 reviendrait à le traiter comme un électrolyte fort.",
+          "sourceQuote": "Acide faible, α ≈ 0,013 (1,3 %) → ω = (1 + 0,013) × 100 ≈ 101,3 mOsm/L"
+        },
+        {
+          "t": "Dans la solution d'acide acétique, la quasi-totalité des molécules est dissociée.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. Presque toutes les molécules restent sous forme non dissociée, ce qui explique une osmolarité très proche de la concentration de départ.",
+          "sourceQuote": "Quasiment toutes les molécules restent sous forme non dissociée"
+        },
+        {
+          "t": "Pour NaCl, on retient α = 0,5 parce qu'il n'est dissocié qu'à moitié.",
+          "v": false,
+          "e": "FAUX : NaCl est un électrolyte fort, sa dissociation est totale, donc α = 1. La valeur 0,5 correspondrait à un acide faible dissocié à moitié.",
+          "sourceQuote": "Électrolyte fort, dissociation totale, α = 1"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-029-coefficient-dissociation-alpha.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la comparaison entre i et n et aux limites de validité de la relation i = 1 + α, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Aux extrêmes, α = 0 ou α = 1, i et n conduisent au même résultat.",
+          "v": true,
+          "e": "VRAI. Dans ces deux cas seulement, l'ancienne formule ω = n·C₀ reste parfaitement valable : les deux coefficients coïncident.",
+          "sourceQuote": "Aux extrêmes (α = 0 ou α = 1), i et n donnent le même résultat"
+        },
+        {
+          "t": "La relation i = 1 + α reste applicable à CaCl₂ et à AlCl₃.",
+          "v": false,
+          "e": "FAUX : cette relation est réservée aux électrolytes binaires. Devant CaCl₂ ou AlCl₃, on repasse par le tableau d'avancement.",
+          "sourceQuote": "i = 1 + α ne vaut que pour un électrolyte binaire"
+        },
+        {
+          "t": "Devant CaCl₂ ou AlCl₃, on revient au tableau d'avancement et à ω = n·C₀.",
+          "v": true,
+          "e": "VRAI. Ces solutés libèrent plus de deux particules : la relation binaire ne s'applique plus, et on recompte les espèces une par une.",
+          "sourceQuote": "Devant CaCl₂ ou AlCl₃, tu reviens au tableau d'avancement et à ω = n·C₀"
+        },
+        {
+          "t": "Pour un acide faible dissocié à moitié, c'est-à-dire α = 0,5, le coefficient i vaut 0,5.",
+          "v": false,
+          "e": "FAUX : i vaut 1,5. Le coefficient d'ionisation ne descend jamais sous 1, puisqu'une molécule non dissociée compte déjà pour une particule.",
+          "sourceQuote": "Acide faible « moitié dissocié » 0,5 1,5 non défini"
+        },
+        {
+          "t": "Pour l'acide acétique à 0,1 mol/L, le « n » du cas total vaut 2.",
+          "v": false,
+          "e": "FAUX : pour ce soluté, n n'est pas défini, précisément parce que sa dissociation n'est pas totale. Seul i, qui vaut ici 1,013, a un sens.",
+          "sourceQuote": "Acide acétique à 0,1 mol/L 0,013 1,013 non défini"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-029-coefficient-dissociation-alpha.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives au piège du « n entier » et à la portée générale de la formule ω = i·C₀, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Écrire ω = 2 × C₀ pour l'acide acétique à 100 mmol/L revient à annoncer 200 mOsm/L au lieu d'environ 101,3.",
+          "v": true,
+          "e": "VRAI. C'est presque le double : vouloir un coefficient entier à tout prix fausse complètement le résultat sur un acide faible.",
+          "sourceQuote": "et tu annonces 200 mOsm/L au lieu de ≈ 101,3 — presque le double"
+        },
+        {
+          "t": "C'est la formule ω = n·C₀ qui constitue la version générale valable dans 100 % des cas.",
+          "v": false,
+          "e": "FAUX : la version générale est ω = i·C₀. La formule avec n suppose une dissociation totale et ne vaut donc qu'aux extrêmes.",
+          "sourceQuote": "La formule ω = i·C₀ est la version générale qui marche dans 100 % des cas"
+        },
+        {
+          "t": "Le « n » utilisé au début du chapitre pouvait prendre des valeurs décimales.",
+          "v": false,
+          "e": "FAUX : n valait toujours un entier, 1, 2, 3…, et supposait implicitement que tout le soluté était dissocié. C'est justement ce qui le rendait simpliste.",
+          "sourceQuote": "il valait toujours un entier (1, 2, 3…) et supposait implicitement une dissociation totale"
+        },
+        {
+          "t": "Tant que α n'est ni 0 ni 1, seul i = 1 + α donne la véritable osmolarité.",
+          "v": true,
+          "e": "VRAI. Entre les deux extrêmes, le coefficient entier n ne décrit plus la réalité du bécher : il faut passer par i.",
+          "sourceQuote": "Tant que α n'est ni 0 ni 1, seul i = 1 + α donne la vraie osmolarité"
+        },
+        {
+          "t": "La formule ω = (1+α)·C₀ ne s'applique qu'aux électrolytes faibles.",
+          "v": false,
+          "e": "FAUX : elle vaut pour tout électrolyte binaire, fort comme faible. Sur un électrolyte fort, α vaut simplement 1 et on retrouve ω = 2·C₀.",
+          "sourceQuote": "marche pour TOUT électrolyte binaire — fort ou faible"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-030-mmol-meq-mosm.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à ce que comptent respectivement la mmol/L, la mEq/L et la mOsm/L, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La mmol/L compte les molécules : c'est la concentration molaire.",
+          "v": true,
+          "e": "VRAI. Cette unité dénombre les molécules, ou les ions pris individuellement, présentes dans un litre : c'est la concentration molaire C.",
+          "sourceQuote": "la mmol/L compte les molécules (concentration molaire)"
+        },
+        {
+          "t": "La mEq/L compte les charges, selon Céq = |Z| × C.",
+          "v": true,
+          "e": "VRAI. L'équivalent est l'unité de la charge : on multiplie la concentration par la valeur absolue de la charge portée par l'ion.",
+          "sourceQuote": "la mEq/L compte les charges (concentration équivalente Céq = |Z| × C)"
+        },
+        {
+          "t": "La mOsm/L compte les particules dissoutes, quelle que soit leur charge.",
+          "v": true,
+          "e": "VRAI. L'osmolarité ne regarde pas les charges : elle additionne toutes les espèces issues de la dissociation, chacune comptant pour une particule.",
+          "sourceQuote": "le nombre de particules dissoutes, peu importe leur charge"
+        },
+        {
+          "t": "La mOsm/L s'obtient en multipliant la mmol/L par |Z|.",
+          "v": false,
+          "e": "FAUX : c'est la mEq/L qui vaut |Z| × mmol/L. L'osmolarité, elle, s'obtient en additionnant toutes les espèces libérées par la dissociation.",
+          "sourceQuote": "mEq/L le nombre de charges = |Z| × mmol/L"
+        },
+        {
+          "t": "Ces trois unités donnent nécessairement le même chiffre sur une même solution.",
+          "v": false,
+          "e": "FAUX : elles se lisent bien sur la même solution, mais elles ne comptent pas la même chose, donc elles ne donnent pas le même chiffre. C'est précisément pour cela qu'on les confond.",
+          "sourceQuote": "Sur un même bécher, elles ne donnent pas le même chiffre"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-030-mmol-meq-mosm.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à une solution de CaCl₂ à 0,1 mol/L lue successivement avec les trois unités, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Cette solution correspond à 100 mmol/L de CaCl₂ initial.",
+          "v": true,
+          "e": "VRAI. 0,1 mol/L et 100 mmol/L sont la même valeur écrite autrement : un simple changement d'unité, sans calcul.",
+          "sourceQuote": "Prends une solution de CaCl₂ à 0,1 mol/L, donc 100 mmol/L"
+        },
+        {
+          "t": "Son osmolarité vaut 300 mOsm/L.",
+          "v": true,
+          "e": "VRAI. Chaque CaCl₂ libère trois espèces dissoutes : un Ca²⁺ et deux Cl⁻. Trois fois 100 mmol/L donnent 300 mOsm/L.",
+          "sourceQuote": "3 espèces dissoutes pour chaque CaCl₂ initial → 3 × 100 mmol/L = 300 mOsm/L, soit 3 C₀"
+        },
+        {
+          "t": "Sa concentration équivalente, au sens clinique, vaut 300 mEq/L.",
+          "v": false,
+          "e": "FAUX : au sens clinique, la concentration équivalente est la valeur commune d'un côté, soit 200 mEq/L. Le chiffre 300 est celui des particules, donc de l'osmolarité.",
+          "sourceQuote": "qu'on appelle « la Céq de la solution » : 200 mEq/L, soit 2 C₀"
+        },
+        {
+          "t": "L'équation de dissolution s'écrit CaCl₂ → Ca²⁺ + 2 Cl⁻.",
+          "v": true,
+          "e": "VRAI. Un ion calcium doublement chargé et deux ions chlorure : c'est de cette équation que découlent les trois lectures de la solution.",
+          "sourceQuote": "L'équation de dissolution est CaCl₂ → Ca²⁺ + 2 Cl⁻"
+        },
+        {
+          "t": "Les 100 mmol/L annoncés correspondent au nombre de particules effectivement présentes après dissociation.",
+          "v": false,
+          "e": "FAUX : les 100 mmol/L, c'est ce qui a été pesé et dissous, avant toute dissociation. Les particules réellement présentes après dissociation donnent, elles, 300 mOsm/L.",
+          "sourceQuote": "C'est ce que tu as pesé et dissous : 0,1 mol/L, la même chose écrite autrement"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-030-mmol-meq-mosm.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au détail du calcul des 200 mEq/L de cette solution de CaCl₂, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les Ca²⁺ apportent 0,2 Eq/L de charges, obtenus par |Z| × C = 2 × 0,1 mol/L.",
+          "v": true,
+          "e": "VRAI. Le calcium porte deux charges, donc sa contribution en équivalents vaut le double de sa concentration molaire.",
+          "sourceQuote": "les Ca²⁺ apportent 0,2 Eq/L de charges (|Z| × C = 2 × 0,1 mol/L)"
+        },
+        {
+          "t": "Les Cl⁻ n'apportent, eux, que 0,1 Eq/L.",
+          "v": false,
+          "e": "FAUX : les chlorures apportent eux aussi 0,2 Eq/L. Ils ne portent qu'une charge chacun, mais ils sont deux fois plus nombreux : 1 × 0,2 mol/L.",
+          "sourceQuote": "les Cl⁻ aussi (1 × 0,2 mol/L)"
+        },
+        {
+          "t": "Le passage de 0,2 Eq/L à 200 mEq/L se fait en divisant par 1000.",
+          "v": false,
+          "e": "FAUX : on multiplie par 1000, exactement comme on passe des mol/L aux mmol/L. Diviser donnerait 0,0002 mEq/L, ce qui n'a aucun sens ici.",
+          "sourceQuote": "et 0,2 Eq/L, c'est 200 mEq/L (× 1000, exactement comme mol/L → mmol/L)"
+        },
+        {
+          "t": "Le côté positif et le côté négatif ne sont pas égaux, ce qui traduit une rupture de l'électroneutralité.",
+          "v": false,
+          "e": "FAUX : les deux côtés sont rigoureusement égaux, et c'est bien la marque de l'électroneutralité de la solution.",
+          "sourceQuote": "Côté + et côté − sont égaux — l'électroneutralité est vérifiée"
+        },
+        {
+          "t": "Les 200 mEq/L correspondent à 2 C₀.",
+          "v": true,
+          "e": "VRAI. La concentration initiale étant de 100 mmol/L, les 200 mEq/L en représentent bien le double.",
+          "sourceQuote": "200 mEq/L, soit 2 C₀"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-030-mmol-meq-mosm.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la différence entre osmolarité et concentration équivalente sur cette même solution, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'osmolarité compte le nombre de particules sans tenir compte de leur charge.",
+          "v": true,
+          "e": "VRAI. Un ion doublement chargé et un ion simplement chargé comptent chacun pour une seule particule : l'osmolarité ignore la charge.",
+          "sourceQuote": "compte le nombre de particules, sans regarder leur charge"
+        },
+        {
+          "t": "Pour CaCl₂, l'osmolarité vaut 2 C₀.",
+          "v": false,
+          "e": "FAUX : elle vaut 3 C₀, puisque chaque CaCl₂ donne trois particules, un Ca²⁺ et deux Cl⁻. Le chiffre 2 est celui des charges d'un côté.",
+          "sourceQuote": "sans regarder leur charge : 1 Ca²⁺ + 2 Cl⁻ = 3 C₀"
+        },
+        {
+          "t": "La concentration équivalente Céq = Σ|Z| × C compte, elle, le nombre de charges.",
+          "v": true,
+          "e": "VRAI. Chaque espèce y est pondérée par la valeur absolue de sa charge : c'est ce qui distingue cette grandeur de l'osmolarité.",
+          "sourceQuote": "La concentration équivalente Céq = Σ|Z| × C compte le nombre de charges"
+        },
+        {
+          "t": "En additionnant les deux côtés, on obtient 4 C₀ de charges.",
+          "v": true,
+          "e": "VRAI. Le calcium apporte 2 C₀ de charges positives et les deux chlorures 2 C₀ de charges négatives : la somme des deux côtés fait 4 C₀.",
+          "sourceQuote": "2 C₀ de chaque côté, ce qui fait 4 C₀ si on additionne les deux côtés"
+        },
+        {
+          "t": "Sur une même solution, osmolarité et concentration équivalente aboutissent au même chiffre.",
+          "v": false,
+          "e": "FAUX : ce sont deux grandeurs distinctes, qui ne comptent pas la même chose et ne donnent jamais le même chiffre.",
+          "sourceQuote": "Deux grandeurs, deux chiffres — jamais le même"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-030-mmol-meq-mosm.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au calcul inverse, celui qui part d'une concentration équivalente donnée, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Si un énoncé annonce Céq = 50 mEq/L pour une solution de CaCl₂ en sommant toutes les charges, alors C₀ vaut 12,5 mmol/L.",
+          "v": true,
+          "e": "VRAI. La somme des deux côtés vaut 4 C₀ : il faut donc diviser la valeur donnée par 4, ce qui donne 12,5 mmol/L.",
+          "sourceQuote": "alors C₀ = Céq / 4 = 12,5 mmol/L"
+        },
+        {
+          "t": "Dans cette situation, C₀ s'obtient en divisant la concentration équivalente par 3.",
+          "v": false,
+          "e": "FAUX : diviser par 3 revient à utiliser le nombre de particules, donc à traiter une donnée en charges comme si c'était une osmolarité.",
+          "sourceQuote": "et non Céq / 3, qui serait le calcul si tu confondais avec ω"
+        },
+        {
+          "t": "Diviser par 3 reviendrait à confondre la concentration équivalente avec l'osmolarité.",
+          "v": true,
+          "e": "VRAI. Le 3 est le nombre de particules, c'est-à-dire le facteur de l'osmolarité ; il n'a rien à faire dans un calcul portant sur des charges.",
+          "sourceQuote": "qui serait le calcul si tu confondais avec ω"
+        },
+        {
+          "t": "Se tromper d'unité dans ce genre de question est un piège rare en concours blanc.",
+          "v": false,
+          "e": "FAUX : c'est au contraire un piège très classique, au point qu'il vaut presque systématiquement un point en concours blanc.",
+          "sourceQuote": "Ce piège est tellement classique en concours blanc qu'il vaut un point quasi-systématiquement"
+        },
+        {
+          "t": "Le facteur 4 vient de ce que CaCl₂ libère 4 particules en solution.",
+          "v": false,
+          "e": "FAUX : CaCl₂ libère trois particules. Le 4 vient des charges additionnées des deux côtés, 2 C₀ de charges positives et 2 C₀ de charges négatives.",
+          "sourceQuote": "2 C₀ de charges + et 2 C₀ de charges − font 4 C₀"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-030-mmol-meq-mosm.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives aux deux façons de lire la concentration équivalente d'une solution, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Lorsque l'énoncé additionne les deux côtés, il obtient 4 C₀ : 2 C₀ de charges positives et 2 C₀ de charges négatives.",
+          "v": true,
+          "e": "VRAI. C'est l'une des deux lectures possibles de la même solution : celle qui somme les charges des deux signes.",
+          "sourceQuote": "2 C₀ de charges + et 2 C₀ de charges − font 4 C₀"
+        },
+        {
+          "t": "En convention clinique, « la Céq d'une solution » désigne la somme des deux côtés.",
+          "v": false,
+          "e": "FAUX : en convention clinique, on retient au contraire la valeur commune d'un seul côté, soit 2 C₀ pour cette solution.",
+          "sourceQuote": "« la Céq d'une solution » désigne au contraire la valeur commune d'un seul côté"
+        },
+        {
+          "t": "Selon ce que l'énoncé additionne, on divise par 2 ou par 4.",
+          "v": true,
+          "e": "VRAI. C'est la lecture de l'énoncé, et non une règle fixe, qui décide du diviseur à employer.",
+          "sourceQuote": "Regarde donc ce que l'énoncé additionne pour savoir si tu divises par 2 ou par 4"
+        },
+        {
+          "t": "Diviser par 3 reste acceptable quand l'énoncé ne précise pas ce qu'il additionne.",
+          "v": false,
+          "e": "FAUX : diviser par 3 est faux dans les deux conventions. Le 3 relève des particules, jamais des charges.",
+          "sourceQuote": "Ce qui est faux dans les deux cas : diviser par 3"
+        },
+        {
+          "t": "En convention clinique, la concentration équivalente de ce bécher vaut 200 mEq/L.",
+          "v": true,
+          "e": "VRAI. C'est la valeur commune aux deux côtés, celle que l'on retient en clinique : 200 mEq/L, soit 2 C₀.",
+          "sourceQuote": "la valeur commune d'un seul côté — 2 C₀, soit les 200 mEq/L de notre bécher"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-030-mmol-meq-mosm.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives au réflexe à adopter devant une unité et au piège de conversion associé, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le réflexe consiste à choisir la formule d'abord, puis à regarder l'unité de l'énoncé.",
+          "v": false,
+          "e": "FAUX : l'ordre est exactement inverse. On identifie d'abord ce que compte l'unité de l'énoncé — molécules, charges ou particules — et seulement ensuite on choisit la formule.",
+          "sourceQuote": "tu commences par l'unité de l'énoncé — molécules, charges ou particules — et seulement ensuite tu choisis la formule"
+        },
+        {
+          "t": "mEq/L, mOsm/L et mmol/L désignent trois grandeurs différentes.",
+          "v": true,
+          "e": "VRAI. Équivalent, osmolarité et molarité ne mesurent pas la même chose : trois unités, trois compteurs distincts.",
+          "sourceQuote": "mEq/L = équivalent, mOsm/L = osmolarité, mmol/L = molaire — ce sont trois grandeurs différentes"
+        },
+        {
+          "t": "Pour CaCl₂, le chiffre 3 correspond au nombre de particules, tandis que 2 et 4 relèvent des charges.",
+          "v": true,
+          "e": "VRAI. C'est la clé du tri : le 3 appartient à l'osmolarité, le 2 et le 4 à la concentration équivalente selon la convention retenue.",
+          "sourceQuote": "Pour CaCl₂, 3 est le nombre de particules (ω) ; 2 et 4 sont des charges"
+        },
+        {
+          "t": "Un énoncé donné en mEq/L se ramène à C₀ en divisant par 3.",
+          "v": false,
+          "e": "FAUX : une donnée en équivalents ne se ramène jamais à la concentration initiale en passant par 3, puisque 3 est le facteur des particules.",
+          "sourceQuote": "Un énoncé donné en mEq/L ne se ramène jamais à C₀ en passant par 3"
+        },
+        {
+          "t": "Le bécher de CaCl₂ à 100 mmol/L affiche 100 mmol/L de soluté, 300 mEq/L de charges par côté et 200 mOsm/L de particules.",
+          "v": false,
+          "e": "FAUX : les deux derniers chiffres sont intervertis. C'est 200 mEq/L de charges par côté et 300 mOsm/L de particules.",
+          "sourceQuote": "100 mmol/L de soluté, 200 mEq/L de charges (par côté), 300 mOsm/L de particules"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-031-molalite-osmolalite.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives aux concentrations rapportées à un litre de solution et au défaut qu'on leur reproche, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'osmolarité compte des osmoles par litre de solution.",
+          "v": true,
+          "e": "VRAI. C'est le dénominateur qui la définit : un litre de solution, comme pour la concentration molaire ou la concentration pondérale.",
+          "sourceQuote": "une osmolarité ω : des osmoles par litre de solution"
+        },
+        {
+          "t": "La concentration pondérale, la concentration molaire et la concentration équivalente ont toutes un volume au dénominateur.",
+          "v": true,
+          "e": "VRAI. Toutes ces grandeurs rapportent une quantité à un volume de solution, et c'est justement là que se niche le défaut commun.",
+          "sourceQuote": "Toutes ces grandeurs ont un volume au dénominateur"
+        },
+        {
+          "t": "Une concentration « par litre » dépend du volume, lequel varie avec la température.",
+          "v": true,
+          "e": "VRAI. Le volume se dilate quand la température monte : la concentration mesurée n'est donc pas rigoureusement la même selon la température.",
+          "sourceQuote": "dépend du volume V, qui lui-même varie avec la température"
+        },
+        {
+          "t": "Une concentration mesurée à 20 °C est rigoureusement identique à 37 °C.",
+          "v": false,
+          "e": "FAUX : elle n'est pas exactement la même, à cause de la dilatation thermique. L'écart est faible sur les liquides biologiques, mais il existe.",
+          "sourceQuote": "une concentration mesurée à 20 °C n'est pas exactement la même à 37 °C"
+        },
+        {
+          "t": "Les grandeurs « par kilo » ont été introduites pour accentuer ce problème de dilatation.",
+          "v": false,
+          "e": "FAUX : elles existent au contraire pour s'en débarrasser. Une masse ne se dilate pas, donc le problème disparaît de lui-même.",
+          "sourceQuote": "Les grandeurs « par kilo » existent précisément pour s'en débarrasser"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-031-molalite-osmolalite.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la concentration molale, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La concentration molale porte aussi le nom de molalité.",
+          "v": true,
+          "e": "VRAI. Molalité et concentration molale désignent la même grandeur, celle qui rapporte les moles à une masse de solvant.",
+          "sourceQuote": "C'est elle qu'on appelle la molalité"
+        },
+        {
+          "t": "Elle compte des moles par kilogramme de solvant, et non par litre de solution.",
+          "v": true,
+          "e": "VRAI. C'est ce déplacement du dénominateur qui la distingue de la concentration molaire.",
+          "sourceQuote": "Elle compte des moles par kilogramme de solvant, et non par litre de solution"
+        },
+        {
+          "t": "Elle s'écrit C' = n / m(solvant) et s'exprime en mol/kg.",
+          "v": true,
+          "e": "VRAI. Le nombre de moles est divisé par la masse de solvant exprimée en kilogrammes : l'unité est donc le mol/kg.",
+          "sourceQuote": "C' = n / msolvant, en mol/kg"
+        },
+        {
+          "t": "Au dénominateur, on divise par une masse, et cette masse est celle de la solution entière.",
+          "v": false,
+          "e": "FAUX : la masse retenue est celle du solvant seul, pas celle de la solution complète. C'est la deuxième chose qui change au dénominateur.",
+          "sourceQuote": "on divise par une masse et non par un volume, et cette masse est celle du solvant seul"
+        },
+        {
+          "t": "La molalité s'exprime en mol/L.",
+          "v": false,
+          "e": "FAUX : le mol/L est l'unité de la concentration molaire. La molalité, elle, s'exprime en mol/kg.",
+          "sourceQuote": "concentration molale C' = n/m solvant en mol/kg"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-031-molalite-osmolalite.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à l'osmolalité et à ce qui la sépare de l'osmolarité, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'osmolarité compte les osmoles par litre de solution et s'exprime en Osm/L.",
+          "v": true,
+          "e": "VRAI. C'est la grandeur travaillée depuis le début du chapitre : des particules rapportées à un volume de solution.",
+          "sourceQuote": "L'osmolarité compte les osmoles par litre de solution (Osm/L)"
+        },
+        {
+          "t": "L'osmolalité compte les osmoles par litre de solvant et s'exprime en Osm/L.",
+          "v": false,
+          "e": "FAUX : l'osmolalité rapporte les osmoles à un kilogramme de solvant, et son unité est l'Osm/kg. Ni le litre ni la solution n'interviennent.",
+          "sourceQuote": "l'osmolalité les compte par kg de solvant (Osm/kg)"
+        },
+        {
+          "t": "L'osmolalité se déduit de l'osmolarité par le même déplacement que celui qui mène de la molarité à la molalité.",
+          "v": true,
+          "e": "VRAI. C'est le même changement de dénominateur, appliqué un étage plus haut : on passe du volume de solution à la masse de solvant.",
+          "sourceQuote": "Même déplacement, un étage plus haut"
+        },
+        {
+          "t": "L'osmolalité compte des moles, exactement comme la concentration molale.",
+          "v": false,
+          "e": "FAUX : l'osmolalité compte des particules, pas des moles de soluté. C'est la ligne « des particules » du tableau, pas la ligne « des moles ».",
+          "sourceQuote": "Des particules osmolarité ω en Osm/L osmolalité en Osm/kg"
+        },
+        {
+          "t": "Osmolarité et osmolalité se distinguent par leur numérateur.",
+          "v": false,
+          "e": "FAUX : elles comptent la même chose au numérateur, des osmoles. C'est le dénominateur qui change, et une seule lettre les sépare à l'écrit.",
+          "sourceQuote": "une seule lettre les sépare, et c'est le dénominateur"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-031-molalite-osmolalite.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la dépendance de ces grandeurs vis-à-vis de la température, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La concentration molale est indépendante de la température.",
+          "v": true,
+          "e": "VRAI. Elle repose sur une masse, et une masse ne change pas avec la température, contrairement à un volume.",
+          "sourceQuote": "C' est indépendante de la température — la masse ne dépend pas de T, contrairement au volume"
+        },
+        {
+          "t": "Une grandeur qui porte une masse au dénominateur dépend de la température.",
+          "v": false,
+          "e": "FAUX : c'est justement l'inverse. Une masse au dénominateur met la grandeur à l'abri de la dilatation thermique.",
+          "sourceQuote": "une masse en bas → elle n'en dépend pas"
+        },
+        {
+          "t": "Une grandeur qui porte un volume au dénominateur dépend de la température.",
+          "v": true,
+          "e": "VRAI. Le volume se dilate quand la température monte, donc la grandeur qui le porte au dénominateur en dépend.",
+          "sourceQuote": "un volume en bas → la grandeur dépend de T"
+        },
+        {
+          "t": "Le tri entre les deux familles se fait au dénominateur, sans calcul.",
+          "v": true,
+          "e": "VRAI. Il suffit de regarder ce qui figure en bas de la fraction : un volume ou une masse, et la réponse tombe immédiatement.",
+          "sourceQuote": "Le tri se fait au dénominateur, sans calcul"
+        },
+        {
+          "t": "Dans le tableau, la colonne « par kg de solvant » est marquée « Oui » pour la dépendance à la température.",
+          "v": false,
+          "e": "FAUX : elle est marquée « Non », parce qu'une masse ne se dilate pas. C'est la colonne « par litre de solution » qui porte le « Oui ».",
+          "sourceQuote": "Non — une masse ne se dilate pas"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-031-molalite-osmolalite.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au comportement de ces grandeurs sur les liquides biologiques, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Pour une solution aqueuse très diluée, la concentration molale est voisine de la concentration molaire.",
+          "v": true,
+          "e": "VRAI. Sur une solution aqueuse très diluée, les deux valeurs se confondent presque, ce qui rend le changement de dénominateur indolore.",
+          "sourceQuote": "Pour une solution aqueuse très diluée, C' (mol/kg) ≈ C (mol/L)"
+        },
+        {
+          "t": "La raison de cette équivalence tient à ce qu'un kilogramme d'eau occupe à peu près un litre.",
+          "v": true,
+          "e": "VRAI. Comme 1 kg d'eau représente environ 1 L d'eau, diviser par la masse de solvant ou par le volume de solution revient presque au même.",
+          "sourceQuote": "parce que 1 kg d'eau ≈ 1 L d'eau"
+        },
+        {
+          "t": "Sur les solutions aqueuses diluées, osmolarité et osmolalité donnent des valeurs franchement différentes.",
+          "v": false,
+          "e": "FAUX : elles donnent des valeurs quasi identiques, ce qui couvre la quasi-totalité des liquides biologiques.",
+          "sourceQuote": "les deux valeurs sont quasi identiques"
+        },
+        {
+          "t": "En clinique, on distingue soigneusement les deux et on ne les emploie jamais l'une pour l'autre.",
+          "v": false,
+          "e": "FAUX : en clinique, on les utilise indifféremment, précisément parce que l'écart est négligeable sur les liquides de l'organisme.",
+          "sourceQuote": "En clinique, on les utilise indifféremment"
+        },
+        {
+          "t": "Sur 1000 molécules du plasma, 500 sont de l'eau.",
+          "v": false,
+          "e": "FAUX : il y en a 995. C'est ce qui explique que le solvant représente presque toute la solution, et donc que l'approximation tienne.",
+          "sourceQuote": "sur 1000 molécules du plasma, 995 sont de l'eau"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-031-molalite-osmolalite.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives au tableau qui croise ce que l'on compte et le dénominateur choisi, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Compter des moles par litre de solution donne la concentration molaire C = n/V, en mol/L.",
+          "v": true,
+          "e": "VRAI. C'est la case du haut à gauche du tableau : des moles rapportées à un volume de solution.",
+          "sourceQuote": "Des moles concentration molaire C = n/V en mol/L"
+        },
+        {
+          "t": "Compter des particules par kilogramme de solvant donne l'osmolalité, en Osm/kg.",
+          "v": true,
+          "e": "VRAI. Des particules au numérateur, une masse de solvant au dénominateur : c'est bien l'osmolalité.",
+          "sourceQuote": "osmolalité en Osm/kg"
+        },
+        {
+          "t": "En solution aqueuse diluée, les deux colonnes du tableau donnent quasiment le même chiffre.",
+          "v": true,
+          "e": "VRAI. C'est la dernière ligne du tableau : sur une solution aqueuse diluée, le choix du dénominateur ne change presque rien au résultat.",
+          "sourceQuote": "Les deux colonnes donnent quasiment le même chiffre"
+        },
+        {
+          "t": "L'osmolarité s'exprime en Osm/kg.",
+          "v": false,
+          "e": "FAUX : l'osmolarité s'exprime en Osm/L, puisqu'elle rapporte les particules à un litre de solution. L'Osm/kg est l'unité de l'osmolalité.",
+          "sourceQuote": "osmolarité ω en Osm/L"
+        },
+        {
+          "t": "La concentration molaire se calcule en divisant le nombre de moles par la masse de solvant.",
+          "v": false,
+          "e": "FAUX : la concentration molaire divise par un volume, C = n/V. C'est la concentration molale qui divise par la masse de solvant.",
+          "sourceQuote": "concentration molaire C = n/V en mol/L"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-031-molalite-osmolalite.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives aux limites de l'approximation entre grandeurs « par litre » et grandeurs « par kilo », laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "« Quasi identiques » signifie « identiques par définition ».",
+          "v": false,
+          "e": "FAUX : les deux formulations ne disent pas la même chose. La proximité des valeurs est un constat sur un cas particulier, pas une définition.",
+          "sourceQuote": "« Quasi identiques » n'est pas « identiques par définition »"
+        },
+        {
+          "t": "L'approximation entre concentration molale et concentration molaire tient parce que la solution est aqueuse et très diluée.",
+          "v": true,
+          "e": "VRAI. Ce sont ces deux conditions qui la rendent valable : le solvant est de l'eau, et il représente presque toute la solution.",
+          "sourceQuote": "L'approximation C' ≈ C tient parce que la solution est aqueuse et très diluée"
+        },
+        {
+          "t": "Il s'agit d'une égalité générale, valable quelle que soit la solution.",
+          "v": false,
+          "e": "FAUX : c'est une hypothèse liée aux conditions de la solution, pas une égalité générale. Hors de ces conditions, l'approximation tombe.",
+          "sourceQuote": "c'est une hypothèse, pas une égalité générale"
+        },
+        {
+          "t": "Sur la plage 20-37 °C, la variation liée à la dilatation est d'environ 0,5 % pour les solutions aqueuses biologiques.",
+          "v": true,
+          "e": "VRAI. C'est l'ordre de grandeur à retenir : négligeable en pratique, mais non nul.",
+          "sourceQuote": "La variation est négligeable pour les solutions aqueuses biologiques (~ 0,5 % sur la plage 20-37 °C)"
+        },
+        {
+          "t": "Cette variation étant négligeable en biologie, elle ne tombe jamais en QCM.",
+          "v": false,
+          "e": "FAUX : le piège tombe parfois en QCM théorique, justement parce qu'on l'a rangé un peu vite au rayon des détails négligeables.",
+          "sourceQuote": "mais le piège tombe parfois en QCM théorique"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-032-osmolarite-plasmatique-300-mosm.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la valeur de l'osmolarité du plasma et à sa régulation, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'osmolarité du plasma sanguin est strictement régulée par les reins.",
+          "v": true,
+          "e": "VRAI. Ce sont les reins qui maintiennent cette valeur dans une fourchette très étroite, jour après jour.",
+          "sourceQuote": "L'osmolarité du plasma sanguin est strictement régulée par les reins"
+        },
+        {
+          "t": "La valeur à retenir est d'environ 300 mOsm/L.",
+          "v": true,
+          "e": "VRAI. C'est le repère à mémoriser, la fourchette précise allant de 285 à 310 mOsm/L.",
+          "sourceQuote": "ω plasma ≈ 285 à 310 mOsm/L (≈ 300 mOsm/L à retenir)"
+        },
+        {
+          "t": "La fourchette physiologique s'étend de 250 à 350 mOsm/L.",
+          "v": false,
+          "e": "FAUX : la fourchette physiologique va de 285 à 310 mOsm/L. Les valeurs 250 et 350 sont des seuils de gravité, bien plus éloignés.",
+          "sourceQuote": "285 à 310 mOsm/L la fourchette physiologique — tout va bien"
+        },
+        {
+          "t": "Cette valeur constitue le chiffre de référence de toute la physiologie des compartiments.",
+          "v": true,
+          "e": "VRAI. C'est à elle que l'on rapporte ensuite l'osmolarité de toutes les autres solutions rencontrées.",
+          "sourceQuote": "le chiffre de référence de toute la physiologie des compartiments"
+        },
+        {
+          "t": "Cette fourchette est large, ce qui autorise de grandes variations d'osmolarité sans conséquence.",
+          "v": false,
+          "e": "FAUX : la fourchette est au contraire très étroite, et c'est bien pour cela qu'elle est surveillée de près.",
+          "sourceQuote": "dans une fourchette très étroite"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-032-osmolarite-plasmatique-300-mosm.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la composition de l'osmolarité plasmatique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le sodium et ses anions associés pèsent à eux seuls environ 280 mOsm/L.",
+          "v": true,
+          "e": "VRAI. À eux seuls, ils fournissent la quasi-totalité des 300 mOsm/L du plasma.",
+          "sourceQuote": "qui pèsent à eux seuls ≈ 280 mOsm/L"
+        },
+        {
+          "t": "Les anions associés au sodium qui sont cités sont Cl⁻ et HCO₃⁻.",
+          "v": true,
+          "e": "VRAI. Le chlorure et le bicarbonate accompagnent le sodium et forment avec lui l'essentiel de l'osmolarité plasmatique.",
+          "sourceQuote": "sodium et de ses anions associés — Na⁺, Cl⁻, HCO₃⁻"
+        },
+        {
+          "t": "Le glucose et l'urée apportent chacun environ 100 mOsm/L.",
+          "v": false,
+          "e": "FAUX : ils n'ajoutent que quelques mOsm/L chacun. Leur contribution est marginale devant celle du sodium et de ses anions.",
+          "sourceQuote": "Le glucose et l'urée n'ajoutent que quelques mOsm/L chacun"
+        },
+        {
+          "t": "L'osmolarité plasmatique se répartit à parts égales entre de nombreux solutés.",
+          "v": false,
+          "e": "FAUX : elle vient presque entièrement d'un seul ion et de sa suite. Il n'y a pas de répartition équilibrée entre solutés.",
+          "sourceQuote": "Presque entièrement d'un seul ion et de sa suite"
+        },
+        {
+          "t": "Le total de ces contributions avoisine 350 mOsm/L.",
+          "v": false,
+          "e": "FAUX : le total avoisine 300 mOsm/L. La valeur 350 est un seuil de gravité, pas un total physiologique.",
+          "sourceQuote": "Total ≈ 300 mOsm/L"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-032-osmolarite-plasmatique-300-mosm.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au comportement des cellules cérébrales selon la valeur de l'osmolarité, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Sous 250 mOsm/L, les cellules cérébrales gonflent, ce qui correspond à l'œdème cérébral.",
+          "v": true,
+          "e": "VRAI. C'est la borne basse : en dessous, les cellules du cerveau se remplissent et gonflent.",
+          "sourceQuote": "sous 250 mOsm/L elles gonflent → œdème cérébral"
+        },
+        {
+          "t": "Au-delà de 350 mOsm/L, les cellules cérébrales se rétractent.",
+          "v": true,
+          "e": "VRAI. C'est la borne haute : au-dessus, le phénomène s'inverse et les cellules se rétractent.",
+          "sourceQuote": "au-delà de 350 mOsm/L elles se rétractent"
+        },
+        {
+          "t": "Entre 285 et 310 mOsm/L, les cellules cérébrales commencent déjà à gonfler.",
+          "v": false,
+          "e": "FAUX : cet intervalle est la fourchette physiologique, celle où tout va bien. Le gonflement ne survient qu'en dessous de 250 mOsm/L.",
+          "sourceQuote": "la fourchette physiologique — tout va bien"
+        },
+        {
+          "t": "Sous 250 mOsm/L, les cellules cérébrales se rétractent.",
+          "v": false,
+          "e": "FAUX : sous 250 mOsm/L elles gonflent. La rétraction, c'est l'autre extrémité, au-delà de 350 mOsm/L.",
+          "sourceQuote": "sous 250 mOsm/L elles gonflent → œdème cérébral"
+        },
+        {
+          "t": "Ce sont les cellules cérébrales qui font les frais de ces déséquilibres.",
+          "v": true,
+          "e": "VRAI. Ce sont elles qui souffrent en premier quand l'osmolarité quitte sa fourchette, ce qui rend ces écarts potentiellement graves.",
+          "sourceQuote": "Ce sont les cellules cérébrales qui en font les frais"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-032-osmolarite-plasmatique-300-mosm.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux situations d'hyperosmolarité et d'hyposmolarité et à leur suivi, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une hyperosmolarité sévère peut être létale.",
+          "v": true,
+          "e": "VRAI. Comme l'hyposmolarité, elle peut entraîner la mort : ce ne sont pas de simples anomalies de laboratoire.",
+          "sourceQuote": "Une hyperosmolarité sévère — coma du diabète, déshydratation — ou une hyposmolarité — intoxication à l'eau — peut être létale"
+        },
+        {
+          "t": "Le coma du diabète et la déshydratation sont cités comme causes d'hyposmolarité.",
+          "v": false,
+          "e": "FAUX : ce sont des causes d'hyperosmolarité. L'hyposmolarité est illustrée, elle, par l'intoxication à l'eau.",
+          "sourceQuote": "hyperosmolarité sévère — coma du diabète, déshydratation"
+        },
+        {
+          "t": "L'intoxication à l'eau est donnée en exemple d'hyperosmolarité.",
+          "v": false,
+          "e": "FAUX : l'intoxication à l'eau est l'exemple d'hyposmolarité, c'est-à-dire d'une osmolarité trop basse.",
+          "sourceQuote": "ou une hyposmolarité — intoxication à l'eau"
+        },
+        {
+          "t": "Cette valeur est mesurée systématiquement en réanimation.",
+          "v": true,
+          "e": "VRAI. Sa gravité potentielle explique qu'on la contrôle en routine chez les patients de réanimation.",
+          "sourceQuote": "mesurée systématiquement en réanimation"
+        },
+        {
+          "t": "À l'hôpital, les perfusions sont ajustées de façon approximative, l'osmolarité n'ayant pas d'incidence pratique.",
+          "v": false,
+          "e": "FAUX : les perfusions sont au contraire ajustées de façon millimétrique, précisément à cause de cette valeur.",
+          "sourceQuote": "les perfusions sont ajustées de façon millimétrique à l'hôpital"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-032-osmolarite-plasmatique-300-mosm.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au geste à faire dès qu'un énoncé fournit l'osmolarité d'une solution, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le geste suivant consiste à comparer la valeur obtenue à 300 mOsm/L.",
+          "v": true,
+          "e": "VRAI. C'est toujours le même réflexe : rapporter le résultat à la valeur du plasma pour lui donner un sens.",
+          "sourceQuote": "ton geste suivant est toujours le même : compare-la à 300 mOsm/L"
+        },
+        {
+          "t": "Un mélange calculé à 550 mOsm/L est hyperosmolaire par rapport au plasma.",
+          "v": true,
+          "e": "VRAI. 550 est très au-dessus des 300 mOsm/L du plasma : la solution est donc hyperosmolaire.",
+          "sourceQuote": "Un mélange calculé à 550 mOsm/L est ainsi hyperosmolaire par rapport au plasma"
+        },
+        {
+          "t": "C'est le calcul, et non la comparaison, qui donne le sens du résultat.",
+          "v": false,
+          "e": "FAUX : le calcul donne un nombre, mais c'est la comparaison au plasma qui lui donne sa signification.",
+          "sourceQuote": "c'est cette comparaison, pas le calcul, qui donne le sens du résultat"
+        },
+        {
+          "t": "Le mécanisme par lequel un déséquilibre d'osmolarité fait entrer ou sortir l'eau des cellules est déjà détaillé à ce stade.",
+          "v": false,
+          "e": "FAUX : ce mécanisme est annoncé pour plus tard. Pour l'instant, seuls comptent le chiffre, sa composition et ses bornes.",
+          "sourceQuote": "comment un déséquilibre d'osmolarité fait entrer ou sortir l'eau des cellules — viendra plus tard"
+        },
+        {
+          "t": "À ce stade, ce qu'il faut retenir est le chiffre, sa composition et ses bornes.",
+          "v": true,
+          "e": "VRAI. Trois éléments seulement : la valeur de référence, ce qui la compose, et les seuils au-delà desquels la situation devient grave.",
+          "sourceQuote": "ici, retiens le chiffre, sa composition et ses bornes"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-032-osmolarite-plasmatique-300-mosm.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la distinction entre fourchette physiologique et seuils de gravité, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La fourchette physiologique est 285-310 mOsm/L, tandis que les seuils de gravité sont 250 et 350 mOsm/L.",
+          "v": true,
+          "e": "VRAI. Ce sont deux jeux de bornes différents, qu'il ne faut pas mélanger : l'un délimite le normal, l'autre le dangereux.",
+          "sourceQuote": "Ne confonds pas la fourchette physiologique (285-310) avec les seuils de gravité (250 et 350)"
+        },
+        {
+          "t": "Une valeur à 312 mOsm/L sort de la fourchette physiologique.",
+          "v": true,
+          "e": "VRAI. La borne haute de la fourchette est 310 : à 312, on en est donc sorti, même de peu.",
+          "sourceQuote": "Une valeur à 312 mOsm/L sort de la fourchette sans approcher le seuil des 350"
+        },
+        {
+          "t": "Une valeur à 312 mOsm/L approche déjà du seuil de gravité de 350 mOsm/L.",
+          "v": false,
+          "e": "FAUX : 312 reste très loin de 350. Sortir de la fourchette n'est pas la même chose que s'approcher d'un seuil de gravité.",
+          "sourceQuote": "sort de la fourchette sans approcher le seuil des 350"
+        },
+        {
+          "t": "C'est au-delà de 350 et sous 250 mOsm/L que les cellules cérébrales souffrent.",
+          "v": true,
+          "e": "VRAI. Ce sont les deux vraies bornes de danger, celles où le cerveau est mis en difficulté.",
+          "sourceQuote": "c'est au-delà de 350 et sous 250 que les cellules cérébrales souffrent"
+        },
+        {
+          "t": "Sortir de la fourchette physiologique revient à franchir un seuil de gravité.",
+          "v": false,
+          "e": "FAUX : les deux notions sont distinctes. On peut quitter la fourchette normale sans être près d'un seuil de gravité.",
+          "sourceQuote": "Ne confonds pas la fourchette physiologique (285-310) avec les seuils de gravité (250 et 350)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-032-osmolarite-plasmatique-300-mosm.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives aux repères chiffrés de l'osmolarité plasmatique et à leur provenance, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'osmolarité du plasma vaut environ 300 mOsm/L, dans une fourchette de 285 à 310.",
+          "v": true,
+          "e": "VRAI. Un chiffre rond à retenir, encadré par deux bornes serrées : c'est le résumé de la fiche.",
+          "sourceQuote": "ω plasma ≈ 300 mOsm/L (fourchette 285-310)"
+        },
+        {
+          "t": "Cette régulation est assurée par les reins.",
+          "v": true,
+          "e": "VRAI. Ce sont eux qui maintiennent strictement l'osmolarité plasmatique dans sa fourchette.",
+          "sourceQuote": "(fourchette 285-310), strictement régulée par les reins"
+        },
+        {
+          "t": "Le sodium et ses anions associés n'apportent qu'environ 30 mOsm/L de cette valeur.",
+          "v": false,
+          "e": "FAUX : ils en apportent environ 280 mOsm/L, soit la quasi-totalité. Ce sont le glucose et l'urée qui ne pèsent que quelques mOsm/L.",
+          "sourceQuote": "Elle vient à ≈ 280 mOsm/L du sodium et de ses anions associés"
+        },
+        {
+          "t": "L'osmolarité du plasma varie librement selon l'alimentation, sans régulation particulière.",
+          "v": false,
+          "e": "FAUX : elle est strictement régulée par les reins, ce qui la maintient dans une fourchette très étroite.",
+          "sourceQuote": "strictement régulée par les reins"
+        },
+        {
+          "t": "Sur un liquide biologique, rapporter la mesure à un litre de solution ou à un kilo de solvant conduit à des chiffres nettement différents.",
+          "v": false,
+          "e": "FAUX : sur un liquide biologique, les deux façons de compter donnent quasiment le même chiffre. C'est ce qui permet de parler tranquillement de l'osmolarité du plasma.",
+          "sourceQuote": "par litre de solution ou par kilo de solvant, sur un liquide biologique, c'est quasiment le même chiffre"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-033-decodage-serum-physiologique.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la donnée de départ du sérum physiologique et à la première étape du calcul, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "NaCl 0,9 % signifie 0,9 g de NaCl pour 100 mL de solution.",
+          "v": true,
+          "e": "VRAI. Un pourcentage sur une poche se lit toujours ainsi : tant de grammes de soluté pour 100 mL de solution.",
+          "sourceQuote": "soit 0,9 g de NaCl pour 100 mL de solution"
+        },
+        {
+          "t": "Cela correspond à 9 g pour 1 litre.",
+          "v": true,
+          "e": "VRAI. Passer de 100 mL à 1 L revient à multiplier par 10 : 0,9 g devient 9 g, soit une concentration pondérale de 9 g/L.",
+          "sourceQuote": "NaCl 0,9 % = 0,9 g de NaCl pour 100 mL = 9 g pour 1 L"
+        },
+        {
+          "t": "La valeur 9 g/L est une concentration molaire.",
+          "v": false,
+          "e": "FAUX : 9 g/L est une concentration pondérale, exprimée en grammes. C'est celle que l'on lit sur l'étiquette de la poche, avant toute conversion.",
+          "sourceQuote": "C'est la concentration pondérale — celle que tu lis sur l'étiquette de la poche"
+        },
+        {
+          "t": "La seule constante à connaître pour mener ce calcul est la masse molaire du NaCl, égale à 58,5 g/mol.",
+          "v": true,
+          "e": "VRAI. Tout le reste se déduit : cette masse molaire est la seule donnée extérieure nécessaire.",
+          "sourceQuote": "seule constante à connaître : M(NaCl) = 58,5 g/mol"
+        },
+        {
+          "t": "La masse molaire du NaCl à utiliser est de 85,5 g/mol.",
+          "v": false,
+          "e": "FAUX : elle vaut 58,5 g/mol. Avec 85,5, la concentration molaire trouvée serait bien plus faible et la conclusion serait fausse.",
+          "sourceQuote": "M(NaCl) = 58,5 g/mol"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-033-decodage-serum-physiologique.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives au passage de la concentration pondérale à la concentration molaire du sérum physiologique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La conversion consiste à diviser la concentration pondérale par la masse molaire.",
+          "v": true,
+          "e": "VRAI. On divise 9 g/L par 58,5 g/mol, ce qui donne environ 0,154 mol/L.",
+          "sourceQuote": "C = Cp / M = 9 / 58,5 ≈ 0,154 mol/L"
+        },
+        {
+          "t": "Le résultat vaut environ 0,154 mol/L, soit 154 mmol/L.",
+          "v": true,
+          "e": "VRAI. C'est la deuxième valeur de la chaîne, celle qui exprime la solution en moles et non plus en grammes.",
+          "sourceQuote": "≈ 0,154 mol/L (≈ 154 mmol/L)"
+        },
+        {
+          "t": "On obtiendrait la concentration molaire en multipliant la concentration pondérale par la masse molaire.",
+          "v": false,
+          "e": "FAUX : la masse molaire se place au dénominateur. Multiplier au lieu de diviser conduirait à un résultat de plusieurs centaines de mol/L, absurde.",
+          "sourceQuote": "C = Cp / M = 9 / 58,5 ≈ 0,154 mol/L"
+        },
+        {
+          "t": "La concentration molaire du sérum physiologique n'a aucun rapport avec la natrémie normale.",
+          "v": false,
+          "e": "FAUX : les 154 mmol/L sont au contraire très proches de la natrémie normale, qui est de 140 mmol/L. C'est ce qui rend ce chiffre facile à retenir.",
+          "sourceQuote": "très proche de la natrémie normale 140 mmol/L"
+        },
+        {
+          "t": "La valeur de 154 mmol/L correspond déjà à l'osmolarité de la solution.",
+          "v": false,
+          "e": "FAUX : 154 mmol/L n'est pas 154 mOsm/L. Il reste à multiplier par le nombre de particules libérées par chaque molécule.",
+          "sourceQuote": "154 mmol/L n'est pas 154 mOsm/L"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-033-decodage-serum-physiologique.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au calcul de l'osmolarité du sérum physiologique et à sa comparaison au plasma, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "NaCl se dissocie en 2 ions, ce qui donne n = 2.",
+          "v": true,
+          "e": "VRAI. Un ion sodium et un ion chlorure : chaque molécule dissoute donne deux particules en solution.",
+          "sourceQuote": "NaCl se dissocie en 2 ions (Na⁺ + Cl⁻), donc n = 2"
+        },
+        {
+          "t": "L'osmolarité obtenue est d'environ 0,308 Osm/L, soit 308 mOsm/L.",
+          "v": true,
+          "e": "VRAI. On multiplie la concentration molaire par 2 : 2 × 0,154 donne bien environ 0,308 Osm/L.",
+          "sourceQuote": "ω = n × C = 2 × 0,154 ≈ 0,308 Osm/L = 308 mOsm/L"
+        },
+        {
+          "t": "Comparé aux 300 mOsm/L du plasma, le sérum physiologique se révèle hypertonique.",
+          "v": false,
+          "e": "FAUX : à 308 mOsm/L face à 300, il est isotonique au plasma, c'est-à-dire de même osmolarité à peu de chose près.",
+          "sourceQuote": "le sérum physiologique est isotonique au plasma (≈ même osmolarité)"
+        },
+        {
+          "t": "Le pourcentage de 0,9 % a été choisi précisément pour que la solution soit isotonique.",
+          "v": true,
+          "e": "VRAI. Ce n'est pas la commodité du chiffre qui a guidé le choix, mais l'équilibre osmotique avec le plasma.",
+          "sourceQuote": "on choisit 0,9 % précisément pour que la solution soit isotonique"
+        },
+        {
+          "t": "Ce pourcentage de 0,9 % a été retenu de façon arbitraire, sans rapport avec un calcul.",
+          "v": false,
+          "e": "FAUX : il résulte d'un calcul d'équilibre osmotique. C'est justement pour cela qu'on ne tombe pas sur un chiffre rond.",
+          "sourceQuote": "le choix de 0,9 % n'est pas arbitraire — c'est le résultat d'un calcul d'équilibre osmotique"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-033-decodage-serum-physiologique.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux concentrations voisines de NaCl et à leur effet face au plasma, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le NaCl à 0,5 % donne environ 170 mOsm/L et se révèle hypotonique.",
+          "v": true,
+          "e": "VRAI. Bien en dessous des 300 mOsm/L du plasma : cette solution est hypotonique, avec le risque qui l'accompagne.",
+          "sourceQuote": "NaCl 0,5 % ~ 170 mOsm/L Hypotonique → risque d'hémolyse"
+        },
+        {
+          "t": "Une solution hypotonique met la cellule à l'abri de toute hémolyse.",
+          "v": false,
+          "e": "FAUX : c'est précisément une solution hypotonique qui fait courir un risque d'hémolyse.",
+          "sourceQuote": "Hypotonique → risque d'hémolyse"
+        },
+        {
+          "t": "Le NaCl à 1 % donne environ 170 mOsm/L et se révèle hypotonique.",
+          "v": false,
+          "e": "FAUX : à 1 %, on obtient environ 340 mOsm/L, ce qui rend la solution légèrement hyperosmolaire, et non hypotonique.",
+          "sourceQuote": "NaCl 1 % ~ 340 mOsm/L Légèrement hyperosmolaire"
+        },
+        {
+          "t": "Les mots « hypotonique » et « hémolyse » sont entièrement expliqués dans cette fiche.",
+          "v": false,
+          "e": "FAUX : ces deux termes sont annoncés pour plus tard dans le programme. À ce stade, seule compte la chaîne de calcul qui mène à 308.",
+          "sourceQuote": "Deux mots du tableau ne sont pas encore expliqués, hypotonique et hémolyse"
+        },
+        {
+          "t": "Le NaCl à 0,9 % donne 308 mOsm/L, donc une solution isotonique face à un plasma voisin de 300.",
+          "v": true,
+          "e": "VRAI. C'est la ligne centrale du tableau, celle qui justifie le choix de ce pourcentage.",
+          "sourceQuote": "NaCl 0,9 % 308 mOsm/L Isotonique ✓ (plasma ≈ 300)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-033-decodage-serum-physiologique.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux trois chiffres à retenir pour le sérum physiologique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les trois chiffres sont 9 g/L, 154 mmol/L et 308 mOsm/L.",
+          "v": true,
+          "e": "VRAI. Ces trois valeurs décrivent la même solution dans trois unités différentes, et se déduisent l'une de l'autre.",
+          "sourceQuote": "9 g/L = 154 mmol/L = 308 mOsm/L"
+        },
+        {
+          "t": "La valeur de 9 g/L est la concentration molaire, celle qu'on lit sur l'étiquette de la poche.",
+          "v": false,
+          "e": "FAUX : 9 g/L est la concentration pondérale. La concentration molaire, elle, vaut 154 mmol/L.",
+          "sourceQuote": "9 g/L : la concentration pondérale (l'étiquette de la poche)"
+        },
+        {
+          "t": "La valeur de 308 mOsm/L est la concentration molaire de la solution.",
+          "v": false,
+          "e": "FAUX : 308 mOsm/L est l'osmolarité, celle qui rend la solution isotonique au plasma. La concentration molaire est de 154 mmol/L.",
+          "sourceQuote": "308 mOsm/L : l'osmolarité (isotonique au plasma)"
+        },
+        {
+          "t": "La valeur de 154 mmol/L est la concentration molaire.",
+          "v": true,
+          "e": "VRAI. C'est le chiffre du milieu de la chaîne, obtenu en divisant la concentration pondérale par la masse molaire.",
+          "sourceQuote": "154 mmol/L : la concentration molaire"
+        },
+        {
+          "t": "Ces trois valeurs sont présentées comme utiles seulement pour la P1, puis oubliables.",
+          "v": false,
+          "e": "FAUX : elles sont au contraire présentées comme des repères qui serviront toute la carrière médicale, à mémoriser une fois pour toutes.",
+          "sourceQuote": "Ces 3 valeurs te suivront toute ta carrière médicale"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-033-decodage-serum-physiologique.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la chaîne de calcul à dérouler devant un pourcentage inscrit sur une poche, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le pourcentage donne d'abord une valeur en g/L.",
+          "v": true,
+          "e": "VRAI. C'est la première marche de la chaîne : traduire le pourcentage de l'étiquette en grammes par litre.",
+          "sourceQuote": "le % te donne des g/L, la division par M te donne des mol/L"
+        },
+        {
+          "t": "La multiplication par n donne une valeur en mOsm/L.",
+          "v": true,
+          "e": "VRAI. C'est l'étape qui transforme des moles de soluté en particules dissoutes, donc en osmolarité.",
+          "sourceQuote": "la multiplication par n te donne des mOsm/L"
+        },
+        {
+          "t": "L'ordre des étapes est indifférent : on peut échanger la division par la masse molaire et la multiplication par n.",
+          "v": false,
+          "e": "FAUX : la chaîne se déroule toujours dans le même ordre. Aucune étape ne se saute et aucune ne s'échange avec une autre.",
+          "sourceQuote": "Aucune étape ne se saute, aucune ne s'échange"
+        },
+        {
+          "t": "La dernière étape consiste à comparer le résultat aux 300 mOsm/L du plasma.",
+          "v": true,
+          "e": "VRAI. C'est cette comparaison finale qui donne son sens au nombre obtenu.",
+          "sourceQuote": "et tu compares aux 300 mOsm/L du plasma"
+        },
+        {
+          "t": "Le raisonnement complet tient en six étapes.",
+          "v": false,
+          "e": "FAUX : il en compte quatre, pas une de plus : la donnée, la conversion en molaire, l'osmolarité, puis la comparaison.",
+          "sourceQuote": "quatre étapes, pas une de plus"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-033-decodage-serum-physiologique.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives au piège du facteur n dans le décodage d'une poche, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Oublier le facteur n = 2 revient à confondre 154 mmol/L et 154 mOsm/L.",
+          "v": true,
+          "e": "VRAI. Sans cette multiplication, on prend la concentration molaire pour une osmolarité, et le résultat est faux d'un facteur 2.",
+          "sourceQuote": "Oublier le facteur n = 2. 154 mmol/L n'est pas 154 mOsm/L"
+        },
+        {
+          "t": "Chaque molécule de NaCl donne 2 particules en solution.",
+          "v": true,
+          "e": "VRAI. Un ion sodium et un ion chlorure : c'est ce doublement qui fait passer de 154 mmol/L à 308 mOsm/L.",
+          "sourceQuote": "NaCl se dissocie en Na⁺ + Cl⁻, donc chaque molécule donne 2 particules"
+        },
+        {
+          "t": "Sans cette multiplication, on annonce une solution hypertonique alors qu'elle est isotonique.",
+          "v": false,
+          "e": "FAUX : en oubliant le facteur 2, on annonce une valeur trop basse, donc une solution hypotonique, alors qu'elle est en réalité isotonique.",
+          "sourceQuote": "tu annonces une solution hypotonique alors qu'elle est isotonique"
+        },
+        {
+          "t": "Le réflexe consiste à lire l'unité seulement une fois le calcul posé.",
+          "v": false,
+          "e": "FAUX : l'unité se lit avant de calculer. C'est elle qui dit quelle grandeur on manipule et donc quelle opération est légitime.",
+          "sourceQuote": "lis toujours l'unité avant de calculer"
+        },
+        {
+          "t": "Le résumé de la démarche tient dans la chaîne 9 g/L, puis 154 mmol/L, puis 308 mOsm/L, puis isotonique.",
+          "v": true,
+          "e": "VRAI. Quatre maillons dans cet ordre : l'étiquette, les moles, les particules, puis la comparaison au plasma.",
+          "sourceQuote": "9 g/L → 154 mmol/L → 308 mOsm/L → isotonique"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-034-pourquoi-le-ph-est-logarithmique.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la difficulté d'écrire la concentration en ions H⁺, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "En notation décimale, la concentration en H⁺ du sang s'écrit 0,000 000 04 mol/L.",
+          "v": true,
+          "e": "VRAI. Huit décimales pour un seul chiffre significatif : c'est cette écriture impraticable que le logarithme vient remplacer.",
+          "sourceQuote": "La concentration en H⁺ de ton sang s'écrit 0,000 000 04 mol/L"
+        },
+        {
+          "t": "Le logarithme la remplace par un nombre lisible, 7,4.",
+          "v": true,
+          "e": "VRAI. Toute la valeur du procédé est là : un nombre à deux chiffres remplace une suite de zéros.",
+          "sourceQuote": "Le logarithme la remplace par un nombre lisible : 7,4"
+        },
+        {
+          "t": "Le premier problème posé par cette concentration est de la calculer.",
+          "v": false,
+          "e": "FAUX : le premier problème n'est pas le calcul mais l'écriture. C'est pour l'écrire commodément qu'on introduit le logarithme.",
+          "sourceQuote": "le premier problème n'est pas de la calculer, c'est de l'écrire"
+        },
+        {
+          "t": "Écrire ces nombres en notation décimale reviendrait à jongler avec des valeurs à 7-10 décimales.",
+          "v": true,
+          "e": "VRAI. C'est ce qui rend la notation décimale impossible à manier en pratique pour ces concentrations.",
+          "sourceQuote": "tu jonglerais en permanence avec des nombres minuscules à 7-10 décimales"
+        },
+        {
+          "t": "La concentration en H⁺ du sang artériel vaut environ 40 millimoles par litre.",
+          "v": false,
+          "e": "FAUX : elle vaut environ 40 nanomoles par litre, soit un million de fois moins. L'ordre de grandeur est essentiel ici.",
+          "sourceQuote": "soit environ 40 nanomoles par litre"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-034-pourquoi-le-ph-est-logarithmique.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la concentration en ions H⁺ dans les différents milieux de l'organisme, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans l'estomac, la concentration en H⁺ atteint 10⁻² mol/L.",
+          "v": true,
+          "e": "VRAI. C'est le milieu le plus acide cité : la concentration y est de très loin la plus élevée.",
+          "sourceQuote": "Dans l'estomac, elle grimpe à 10⁻² mol/L"
+        },
+        {
+          "t": "C'est environ 100 fois plus que dans le sang artériel.",
+          "v": false,
+          "e": "FAUX : c'est 100 000 fois plus. L'écart entre l'estomac et le sang se compte en centaines de milliers, pas en centaines.",
+          "sourceQuote": "elle grimpe à 10⁻² mol/L — 100 000 fois plus"
+        },
+        {
+          "t": "Dans la bile, la concentration en H⁺ descend à 10⁻⁸ mol/L.",
+          "v": true,
+          "e": "VRAI. C'est le milieu le moins acide des trois cités, avec une concentration encore plus basse que celle du sang.",
+          "sourceQuote": "Dans la bile, elle descend à 10⁻⁸ mol/L"
+        },
+        {
+          "t": "En écriture décimale, la valeur de la bile est 0,01.",
+          "v": false,
+          "e": "FAUX : 0,01 est la valeur de l'estomac. Celle de la bile s'écrit 0,000 000 01, avec sept zéros après la virgule.",
+          "sourceQuote": "Bile 10⁻⁸ mol/L 0,000 000 01"
+        },
+        {
+          "t": "La concentration en ions H⁺ est plus élevée dans la bile que dans l'estomac.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. Elle grimpe dans l'estomac et descend dans la bile, avec six ordres de grandeur d'écart entre les deux.",
+          "sourceQuote": "Dans l'estomac, elle grimpe à 10⁻² mol/L — 100 000 fois plus. Dans la bile, elle descend à 10⁻⁸ mol/L"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-034-pourquoi-le-ph-est-logarithmique.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à l'origine historique de la notation « p », laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'idée revient à un chimiste danois, en 1909.",
+          "v": true,
+          "e": "VRAI. C'est Søren Sørensen qui, cette année-là, propose de remplacer la concentration par une écriture logarithmique.",
+          "sourceQuote": "Le chimiste danois Søren Sørensen a eu une idée géniale en 1909"
+        },
+        {
+          "t": "Il travaillait dans les laboratoires de la brasserie Carlsberg, à Copenhague.",
+          "v": true,
+          "e": "VRAI. Il y étudiait l'effet de l'acidité sur la fermentation de la bière : c'est de ce travail industriel qu'est née la notation.",
+          "sourceQuote": "dans les laboratoires de la brasserie Carlsberg à Copenhague"
+        },
+        {
+          "t": "Son idée consiste à prendre le logarithme de la concentration en H⁺ sans en changer le signe.",
+          "v": false,
+          "e": "FAUX : l'idée est de prendre l'opposé du logarithme, c'est-à-dire de lui ajouter un signe moins, pour obtenir des nombres positifs.",
+          "sourceQuote": "prendre l'opposé du logarithme de [H⁺]"
+        },
+        {
+          "t": "Le « p » de cette notation vient du latin potentia, qui signifie puissance.",
+          "v": true,
+          "e": "VRAI. C'est ce petit « p » forgé à cette occasion que l'on retrouve aujourd'hui dans toute une famille de grandeurs.",
+          "sourceQuote": "(du latin potentia, puissance)"
+        },
+        {
+          "t": "Cette notation « p » n'a jamais été reprise ailleurs que pour le pH.",
+          "v": false,
+          "e": "FAUX : elle est devenue universelle et se retrouve dans pKa, pOH ou pKe, construits sur le même principe.",
+          "sourceQuote": "est devenu universel : pKa, pOH, pKe"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-034-pourquoi-le-ph-est-logarithmique.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la définition du logarithme décimal et aux valeurs qu'il prend, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le logarithme d'un nombre est la puissance de 10 qu'il faut pour l'atteindre.",
+          "v": true,
+          "e": "VRAI. C'est toute la définition : on cherche l'exposant à donner à 10 pour retomber sur le nombre de départ.",
+          "sourceQuote": "d'un nombre, c'est la puissance de 10 qu'il faut pour l'atteindre"
+        },
+        {
+          "t": "En physique-chimie, « log » désigne par convention le logarithme décimal, le « 10 » étant sous-entendu.",
+          "v": true,
+          "e": "VRAI. On écrit log et non log₁₀ : la base 10 est implicite dans cette discipline.",
+          "sourceQuote": "par convention, en physique-chimie, le « 10 » est sous-entendu"
+        },
+        {
+          "t": "Le logarithme de 1 000 vaut 3.",
+          "v": true,
+          "e": "VRAI. Il faut élever 10 à la puissance 3 pour obtenir 1 000 : le logarithme compte bien les zéros.",
+          "sourceQuote": "1 000 3 car 10³ = 1 000"
+        },
+        {
+          "t": "Le logarithme de 0,1 vaut 1.",
+          "v": false,
+          "e": "FAUX : il vaut −1, puisque 0,1 s'écrit 10⁻¹. Pour un nombre inférieur à 1, le logarithme est négatif.",
+          "sourceQuote": "0,1 −1 car 10⁻¹ = 0,1"
+        },
+        {
+          "t": "Le logarithme de 10⁻⁷ vaut 7.",
+          "v": false,
+          "e": "FAUX : il vaut −7. L'exposant est repris tel quel, signe compris, et il est ici négatif.",
+          "sourceQuote": "10⁻⁷ −7 l'exposant, repris tel quel"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-034-pourquoi-le-ph-est-logarithmique.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au moyen mnémotechnique du logarithme et à son interpolation, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Sur une puissance de 10, le logarithme revient à « compter les zéros ».",
+          "v": true,
+          "e": "VRAI. C'est l'image à garder : sur 1 000, on compte trois zéros, et le logarithme vaut 3.",
+          "sourceQuote": "le log « compte les zéros » d'une puissance de 10"
+        },
+        {
+          "t": "Le logarithme ne sait donner de valeur que pour les puissances de 10 exactes.",
+          "v": false,
+          "e": "FAUX : il interpole aussi pour les autres nombres, et donne alors des valeurs décimales intermédiaires.",
+          "sourceQuote": "Et il interpole pour les autres nombres"
+        },
+        {
+          "t": "Le logarithme de 2 vaut environ 0,3.",
+          "v": true,
+          "e": "VRAI. C'est l'une des deux valeurs interpolées à connaître, avec celle de 5.",
+          "sourceQuote": "il interpole pour les autres nombres : log(2) ≈ 0,3, log(5) ≈ 0,7"
+        },
+        {
+          "t": "Le logarithme de 5 vaut environ 0,3.",
+          "v": false,
+          "e": "FAUX : le logarithme de 5 vaut environ 0,7. C'est celui de 2 qui vaut environ 0,3.",
+          "sourceQuote": "log(2) ≈ 0,3, log(5) ≈ 0,7"
+        },
+        {
+          "t": "Le logarithme de 100 vaut 10.",
+          "v": false,
+          "e": "FAUX : il vaut 2, car 100 s'écrit 10². Confondre le nombre et son exposant est l'erreur typique sur cette notion.",
+          "sourceQuote": "100 2 car 10² = 100"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-034-pourquoi-le-ph-est-logarithmique.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives au signe « − » placé devant le logarithme, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le logarithme de 10⁻⁷ vaut −7, une valeur négative et peu lisible.",
+          "v": true,
+          "e": "VRAI. C'est ce résultat négatif, peu commode à manier, qui motive l'ajout du signe moins devant.",
+          "sourceQuote": "log(10⁻⁷) = −7 → c'est négatif et peu lisible"
+        },
+        {
+          "t": "Le signe « − » sert à obtenir des valeurs négatives, plus faciles à comparer.",
+          "v": false,
+          "e": "FAUX : il sert précisément à l'inverse, à retomber sur des nombres positifs simples.",
+          "sourceQuote": "On ajoute le signe « − » pour retomber sur des nombres positifs simples"
+        },
+        {
+          "t": "Sur la valeur exacte du sang, 10⁻⁷·⁴ mol/L, le logarithme vaut −7,4 et l'on écrit donc 7,4.",
+          "v": true,
+          "e": "VRAI. Le logarithme donne bien −7,4 ; on en prend l'opposé, et il ne reste que la valeur positive 7,4.",
+          "sourceQuote": "le log vaut −7,4 : on écrit donc 7,4 plutôt que −7,4"
+        },
+        {
+          "t": "Ce signe modifie la chimie de la solution.",
+          "v": false,
+          "e": "FAUX : il ne change rien à la chimie. Il rend seulement le résultat agréable à lire.",
+          "sourceQuote": "le signe ne change rien à la chimie, il rend juste le résultat agréable à lire"
+        },
+        {
+          "t": "Ce choix de signe est purement cosmétique.",
+          "v": true,
+          "e": "VRAI. C'est une commodité d'écriture, rien de plus : la grandeur physique décrite reste exactement la même.",
+          "sourceQuote": "C'est purement cosmétique"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-034-pourquoi-le-ph-est-logarithmique.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la distinction entre le logarithme décimal et le logarithme népérien, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "En physique-chimie, « log » désigne toujours le logarithme décimal, de base 10.",
+          "v": true,
+          "e": "VRAI. C'est celui qui compte les zéros, et c'est lui qu'on utilise pour le pH.",
+          "sourceQuote": "« log » désigne toujours le logarithme décimal (base 10), celui qui compte les zéros"
+        },
+        {
+          "t": "Le ln est le logarithme népérien, de base e voisine de 2,72.",
+          "v": true,
+          "e": "VRAI. Sa base n'est pas 10 mais le nombre e, ce qui suffit à en faire un outil différent.",
+          "sourceQuote": "Le ln est le logarithme népérien (base e ≈ 2,72)"
+        },
+        {
+          "t": "Le logarithme népérien se rencontre surtout en physique-chimie des solutions.",
+          "v": false,
+          "e": "FAUX : c'est surtout en thermodynamique qu'on le rencontre. En physique-chimie des solutions, le logarithme employé est le décimal.",
+          "sourceQuote": "qu'on rencontre surtout en thermodynamique"
+        },
+        {
+          "t": "Pour une même valeur, log et ln donnent le même nombre.",
+          "v": false,
+          "e": "FAUX : les deux ne donnent pas le même nombre. Un facteur d'environ 2,3 les sépare.",
+          "sourceQuote": "Les deux ne donnent pas le même nombre : ln(x) ≈ 2,3 × log(x)"
+        },
+        {
+          "t": "Utiliser l'un pour l'autre décale tous les résultats d'un facteur 10.",
+          "v": false,
+          "e": "FAUX : le décalage est d'un facteur 2,3, pas 10. C'est ce coefficient qui relie le logarithme népérien au logarithme décimal.",
+          "sourceQuote": "Utiliser l'un pour l'autre décale tous tes résultats d'un facteur 2,3"
+        }
+      ]
+    }
+  ]
+}

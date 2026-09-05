@@ -34,9 +34,12 @@ la seule adaptation est que **la source n'est plus le chapitre de cours, mais la
    c'est du hasard, comme au concours. La moyenne de 3,0 en découle toute seule.
    ❌ Ce qu'il ne faut pas faire : mettre 3 vrais partout, ou n'utiliser que 2 et 3. Un lot
    prévisible se devine sans rien savoir.
-   ✅ Ce qu'il faut faire : varier d'un QCM à l'autre. Cinq vrais est parfaitement légitime,
-   un seul vrai aussi. **Le seul cas interdit est 0 vrai** : une question dont aucun item
-   n'est exact n'apprend rien.
+   ✅ Ce qu'il faut faire : varier d'un QCM à l'autre, **au hasard**. Cinq vrais est
+   parfaitement légitime, un seul vrai aussi. **Le seul cas interdit est 0 vrai** : une
+   question dont aucun item n'est exact n'apprend rien.
+   ❌ Et pas de cycle non plus : écrire 1, 2, 3, 4, 5, 1, 2, 3, 4, 5… donne bien 20 % partout,
+   mais un élève le devine au bout de deux questions. Le contrôleur détecte ces suites
+   régulières et les signale. Le nombre de vrais doit être **imprévisible d'un QCM au suivant**.
    Et puisque les vrais sont nombreux, les items faux doivent être **franchement faux**,
    bâtis sur un vrai piège de la fiche — sinon répondre « vrai » partout suffirait.
 4. **`explanation`** : le corrigé rédigé pour l'élève. Commence par « VRAI. » ou « FAUX : »

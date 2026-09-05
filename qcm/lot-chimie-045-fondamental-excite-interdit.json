@@ -1,0 +1,1644 @@
+{
+  "matiere": "chimie",
+  "chapitre": 2,
+  "questions": [
+    {
+      "fiche": "chimie-045-fondamental-excite-interdit.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives au rôle respectif des trois règles de remplissage lorsqu'il faut juger une configuration, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Klechkowski est la règle qui donne l'ordre de remplissage.",
+          "v": true,
+          "e": "VRAI. Chacune des trois règles a son domaine : Klechkowski donne l'ordre dans lequel les sous-couches se remplissent.",
+          "sourceQuote": "Klechkowski (l'ordre), Pauli (la capacité), Hund (la répartition)"
+        },
+        {
+          "t": "Hund est la règle qui fixe la capacité de chaque orbitale.",
+          "v": false,
+          "e": "FAUX : Hund concerne la répartition des électrons. C'est Pauli qui fixe la capacité.",
+          "sourceQuote": "Klechkowski (l'ordre), Pauli (la capacité), Hund (la répartition)"
+        },
+        {
+          "t": "En P1, on demande rarement de réciter les règles : on donne une configuration déjà écrite qu'il faut trancher.",
+          "v": true,
+          "e": "VRAI. L'exercice type ne consiste pas à énoncer les règles mais à les utiliser comme critères de tri sur une configuration fournie.",
+          "sourceQuote": "on te demande rarement de les réciter : on te donne une configuration électronique déjà écrite, et il faut trancher"
+        },
+        {
+          "t": "Les trois règles jouent exactement le même rôle et se situent donc au même niveau.",
+          "v": false,
+          "e": "FAUX : elles ne sont pas au même niveau. L'une d'elles décide de l'existence même de la configuration, les deux autres ne font que classer.",
+          "sourceQuote": "et elles ne sont pas au même niveau"
+        },
+        {
+          "t": "Pauli est le juge suprême : s'il dit non, c'est interdit, point final.",
+          "v": true,
+          "e": "VRAI. Une violation de Pauli clôt le débat : la configuration n'existe pas, inutile de regarder autre chose.",
+          "sourceQuote": "Pauli est le juge suprême. S'il dit non, c'est interdit, point final."
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-045-fondamental-excite-interdit.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux formes de violation qui rendent une configuration interdite, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Deux électrons possédant les mêmes quatre nombres quantiques rendent la configuration interdite.",
+          "v": true,
+          "e": "VRAI. C'est la première des trois formes de violation, et c'est exactement ce que le principe de Pauli refuse.",
+          "sourceQuote": "Deux électrons avec les mêmes 4 nombres quantiques"
+        },
+        {
+          "t": "Deux électrons placés dans la même orbitale atomique avec le même spin constituent une violation.",
+          "v": true,
+          "e": "VRAI. Même case et même flèche : c'est la même interdiction que la précédente, vue en cases quantiques.",
+          "sourceQuote": "Deux électrons dans la même OA avec le même spin"
+        },
+        {
+          "t": "Une orbitale atomique peut accueillir jusqu'à trois électrons si leurs spins diffèrent.",
+          "v": false,
+          "e": "FAUX : une case ne contient jamais trois flèches. Au-delà de deux électrons dans une même orbitale, la configuration est interdite.",
+          "sourceQuote": "Une case ne contient jamais trois flèches."
+        },
+        {
+          "t": "Une orbitale atomique correspond à une case dans la représentation en cases quantiques.",
+          "v": true,
+          "e": "VRAI. Une orbitale atomique se dessine comme une case, et les électrons y sont figurés par des flèches.",
+          "sourceQuote": "une OA (orbitale atomique) = une case"
+        },
+        {
+          "t": "Une configuration est physiquement impossible dès qu'elle viole la règle de Hund.",
+          "v": false,
+          "e": "FAUX : l'impossibilité physique est réservée à la violation du principe de Pauli. Une entorse à Hund donne un autre statut.",
+          "sourceQuote": "Une configuration est physiquement impossible si elle viole le principe de Pauli"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-045-fondamental-excite-interdit.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à l'exemple du carbone et à ce qui le condamne, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'exemple retenu porte sur le carbone, de numéro atomique Z = 6.",
+          "v": true,
+          "e": "VRAI. Le carbone, avec ses 6 électrons, sert d'exemple pour montrer une configuration interdite.",
+          "sourceQuote": "Exemple — Carbone, Z = 6"
+        },
+        {
+          "t": "Pour ce carbone, la formule 1s² 2s² 2p² est parfaitement correcte.",
+          "v": true,
+          "e": "VRAI. La formule elle-même ne pose aucun problème : elle correspond bien aux 6 électrons du carbone.",
+          "sourceQuote": "la formule 1s² 2s² 2p², elle, est parfaitement correcte pour le carbone"
+        },
+        {
+          "t": "La répartition 2p : [↑↑][ ][ ] est interdite parce que deux électrons de même spin occupent la même orbitale atomique.",
+          "v": true,
+          "e": "VRAI. Les deux flèches identiques dans une même case sont précisément ce que Pauli refuse.",
+          "sourceQuote": "INTERDIT ! Deux électrons avec même spin dans la même OA."
+        },
+        {
+          "t": "C'est la formule elle-même, et non le détail des cases, qui condamne cet exemple.",
+          "v": false,
+          "e": "FAUX : c'est le détail des cases qui coince. La formule, prise seule, est irréprochable.",
+          "sourceQuote": "C'est le détail des cases qui coince"
+        },
+        {
+          "t": "Écrire 2p : [↑][↑][ ] laisserait cette configuration tout aussi interdite.",
+          "v": false,
+          "e": "FAUX : en séparant les deux électrons dans deux cases différentes, la même formule redevient correcte.",
+          "sourceQuote": "la même formule redevient correcte si on écrit [↑][↑][ ] au lieu de [↑↑][ ][ ]"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-045-fondamental-excite-interdit.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la comparaison entre état fondamental et état excité, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'état fondamental correspond à l'énergie minimale et à la configuration la plus stable.",
+          "v": true,
+          "e": "VRAI. C'est la définition même du fondamental : le minimum d'énergie, donc l'état le plus stable.",
+          "sourceQuote": "Énergie minimale, configuration la plus stable"
+        },
+        {
+          "t": "Dans l'état excité, un électron a été promu vers un niveau supérieur.",
+          "v": true,
+          "e": "VRAI. L'excitation consiste à faire monter un électron vers un niveau plus haut que celui qu'il occuperait au repos.",
+          "sourceQuote": "Un électron a été promu vers un niveau supérieur"
+        },
+        {
+          "t": "L'état excité se caractérise par une violation du principe de Pauli.",
+          "v": false,
+          "e": "FAUX : dans l'état excité, Pauli est respecté ; c'est Klechkowski ou Hund qui est violé.",
+          "sourceQuote": "Pauli ✓, mais Klechkowski ou Hund violé"
+        },
+        {
+          "t": "L'état fondamental ne respecte que Klechkowski et Hund, Pauli n'y intervenant pas.",
+          "v": false,
+          "e": "FAUX : le fondamental respecte les trois règles à la fois, Pauli compris.",
+          "sourceQuote": "Toutes : Pauli + Klechkowski + Hund"
+        },
+        {
+          "t": "1s² 2s¹ 2p³ est donné comme exemple de configuration fondamentale du carbone.",
+          "v": false,
+          "e": "FAUX : cette écriture, où un électron a sauté de 2s vers 2p, illustre au contraire l'état excité.",
+          "sourceQuote": "1s² 2s¹ 2p³ (e⁻ saute de 2s → 2p)"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-045-fondamental-excite-interdit.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à l'ordre des vérifications à mener devant une configuration proposée, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La toute première vérification à mener porte sur Pauli.",
+          "v": true,
+          "e": "VRAI. On commence toujours par la question la plus radicale : Pauli est-il respecté ou non ?",
+          "sourceQuote": "Vérifie Pauli. Pauli violé ? → INTERDIT"
+        },
+        {
+          "t": "Si Pauli est violé, il est inutile d'aller plus loin dans l'analyse.",
+          "v": true,
+          "e": "VRAI. Le verdict tombe immédiatement : on s'arrête là et on passe à la proposition suivante.",
+          "sourceQuote": "stop, pas la peine d'aller plus loin"
+        },
+        {
+          "t": "Lorsque les trois règles sont respectées, la configuration est excitée.",
+          "v": false,
+          "e": "FAUX : les trois règles respectées, c'est le fondamental. L'excité suppose au contraire une entorse.",
+          "sourceQuote": "Les 3 règles respectées ? → FONDAMENTAL"
+        },
+        {
+          "t": "Il est conseillé de vérifier les trois règles simultanément pour gagner du temps.",
+          "v": false,
+          "e": "FAUX : on procède au contraire une question à la fois, dans un ordre précis. C'est ce qui rend l'analyse rapide et sûre.",
+          "sourceQuote": "ne cherche pas à tout vérifier d'un coup : une question à la fois, dans cet ordre"
+        },
+        {
+          "t": "La deuxième étape consiste à vérifier de nouveau Pauli, cette fois en cases quantiques.",
+          "v": false,
+          "e": "FAUX : la deuxième étape porte sur Klechkowski et Hund. Pauli a déjà été tranché à l'étape précédente.",
+          "sourceQuote": "Vérifie Klechkowski + Hund."
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-045-fondamental-excite-interdit.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives au statut d'une configuration qui viole Hund ou Klechkowski, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une configuration qui viole la règle de Hund est excitée, et non interdite.",
+          "v": true,
+          "e": "VRAI. Hund et Klechkowski ne peuvent pas rendre une configuration impossible : ils la rendent seulement moins stable.",
+          "sourceQuote": "Une configuration qui viole Hund ou Klechkowski n'est pas interdite : elle est excitée."
+        },
+        {
+          "t": "Une configuration excitée existe bel et bien, elle est simplement moins stable.",
+          "v": true,
+          "e": "VRAI. L'excité n'a rien d'impossible : il existe, à une énergie supérieure au minimum.",
+          "sourceQuote": "Elle existe, elle est juste moins stable."
+        },
+        {
+          "t": "Le mot « impossible » est réservé aux violations du principe de Pauli.",
+          "v": true,
+          "e": "VRAI. Seul Pauli peut déclarer une configuration impossible ; les deux autres règles ne font que trancher entre fondamental et excité.",
+          "sourceQuote": "Le mot « impossible » est réservé à Pauli."
+        },
+        {
+          "t": "Une configuration n'a que deux issues possibles : fondamentale ou excitée.",
+          "v": false,
+          "e": "FAUX : il y a trois issues, pas deux. Une configuration peut aussi être purement et simplement interdite.",
+          "sourceQuote": "Trois issues, et non deux : une configuration peut aussi être interdite."
+        },
+        {
+          "t": "Une violation de Klechkowski rend la configuration physiquement impossible.",
+          "v": false,
+          "e": "FAUX : Klechkowski violé alors que Pauli est respecté donne une configuration excitée, qui existe.",
+          "sourceQuote": "Pauli respecté mais Klechkowski ou Hund violé → excité."
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-045-fondamental-excite-interdit.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à l'existence des configurations et à l'énergie qui les sépare, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Fondamental et excité désignent tous deux des configurations qui existent ; ce qui les sépare est une différence d'énergie.",
+          "v": true,
+          "e": "VRAI. Les deux états sont physiquement réalisables ; seule leur énergie diffère.",
+          "sourceQuote": "Dans les deux cas, la configuration existe : ce qui les sépare est une différence d'énergie."
+        },
+        {
+          "t": "L'état fondamental correspond au minimum d'énergie, l'état excité se situe au-dessus.",
+          "v": true,
+          "e": "VRAI. Le fondamental est le plancher énergétique ; tout état excité est plus haut que lui.",
+          "sourceQuote": "Le fondamental est le minimum, l'excité est au-dessus."
+        },
+        {
+          "t": "Klechkowski et Hund sont, avec Pauli, capables de déclarer une configuration interdite.",
+          "v": false,
+          "e": "FAUX : Pauli seul peut prononcer l'interdiction. Les deux autres règles n'ont pas ce pouvoir.",
+          "sourceQuote": "Pauli seul peut dire « interdit »"
+        },
+        {
+          "t": "Klechkowski et Hund servent à distinguer l'état interdit de l'état excité.",
+          "v": false,
+          "e": "FAUX : ces deux règles tranchent entre fondamental et excité. L'interdit relève d'une autre question, posée avant.",
+          "sourceQuote": "Klechkowski et Hund tranchent juste entre fondamental et excité"
+        },
+        {
+          "t": "Une configuration interdite existe malgré tout, mais avec une énergie très élevée.",
+          "v": false,
+          "e": "FAUX : tant que Pauli n'est pas respecté, la configuration n'existe pas du tout. Il ne s'agit pas d'un problème d'énergie.",
+          "sourceQuote": "Tant que Pauli n'est pas respecté, la configuration n'existe pas — inutile d'aller plus loin."
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-046-ecrire-une-configuration-electronique.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives au point de départ de l'écriture d'une configuration et au décompte des électrons, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "On part du seul Z pour écrire la configuration électronique fondamentale de l'atome.",
+          "v": true,
+          "e": "VRAI. Le numéro atomique suffit : tout le reste se déduit de lui et de l'ordre de remplissage.",
+          "sourceQuote": "On part du seul Z, et on écrit la configuration électronique fondamentale de l'atome."
+        },
+        {
+          "t": "Un atome de numéro atomique Z possède Z protons, donc Z électrons.",
+          "v": true,
+          "e": "VRAI. L'atome étant neutre, il a autant d'électrons que de protons : c'est ce qui fixe le nombre d'électrons à placer.",
+          "sourceQuote": "L'atome a Z protons → donc Z électrons."
+        },
+        {
+          "t": "L'azote, de Z = 7, compte 7 électrons à placer.",
+          "v": true,
+          "e": "VRAI. Sept protons, donc sept électrons : c'est le compte de départ pour l'azote.",
+          "sourceQuote": "L'azote a Z = 7 → il a 7 protons → donc 7 électrons à placer."
+        },
+        {
+          "t": "Le travail demandé ici consiste à juger une configuration déjà écrite.",
+          "v": false,
+          "e": "FAUX : c'est le geste inverse. On ne juge pas une configuration donnée, on l'écrit soi-même à partir de Z.",
+          "sourceQuote": "Ici, on fait l'inverse."
+        },
+        {
+          "t": "Le nombre d'électrons à placer se lit sur le nombre de neutrons de l'atome.",
+          "v": false,
+          "e": "FAUX : c'est le nombre de protons, donc Z, qui donne le nombre d'électrons. Les neutrons n'interviennent pas.",
+          "sourceQuote": "Compte les électrons à placer. L'atome a Z protons"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-046-ecrire-une-configuration-electronique.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à l'ordre de remplissage et à la capacité des sous-couches, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'ordre de remplissage donné commence par 1s → 2s → 2p → 3s → 3p → 4s → 3d → 4p → 5s.",
+          "v": true,
+          "e": "VRAI. C'est la liste à dérouler dans l'ordre, sans jamais sauter d'étape.",
+          "sourceQuote": "1s → 2s → 2p → 3s → 3p → 4s → 3d → 4p → 5s…"
+        },
+        {
+          "t": "Une sous-couche s contient au maximum 2 électrons, une p 6 et une d 10.",
+          "v": true,
+          "e": "VRAI. Ce sont les trois capacités à connaître par cœur, puisqu'elles rythment tout le décompte.",
+          "sourceQuote": "s → 2 e⁻, p → 6 e⁻ (3 OA — orbitales atomiques — × 2 e⁻), d → 10 e⁻."
+        },
+        {
+          "t": "Une sous-couche p compte 6 orbitales atomiques, une par électron.",
+          "v": false,
+          "e": "FAUX : une sous-couche p compte 3 orbitales, et chacune loge 2 électrons — d'où les 6 électrons au total.",
+          "sourceQuote": "(3 OA — orbitales atomiques — × 2 e⁻)"
+        },
+        {
+          "t": "On passe à la sous-couche suivante dès que la précédente a reçu un électron.",
+          "v": false,
+          "e": "FAUX : chaque sous-couche est remplie jusqu'à sa capacité avant qu'on passe à la suivante.",
+          "sourceQuote": "Chaque sous-couche prend tout ce qu'elle peut contenir avant qu'on passe à la suivante"
+        },
+        {
+          "t": "L'ordre de remplissage place 3d avant 4s.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse, 4s se remplit avant 3d. C'est le piège classique de cet ordre.",
+          "sourceQuote": "Klechkowski dit 4s AVANT 3d !"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-046-ecrire-une-configuration-electronique.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives aux exposants et au déroulé du cas de l'azote, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le chiffre en exposant indique le nombre d'électrons de la sous-couche.",
+          "v": true,
+          "e": "VRAI. L'exposant n'est pas un numéro d'ordre : il compte les électrons logés dans la sous-couche.",
+          "sourceQuote": "Le chiffre en exposant indique le nombre d'électrons dans cette sous-couche."
+        },
+        {
+          "t": "L'écriture 2p³ signifie 3 électrons dans la sous-couche 2p.",
+          "v": true,
+          "e": "VRAI. Le 3 en exposant dénombre les électrons ; le 2p désigne la sous-couche qui les accueille.",
+          "sourceQuote": "Exemple : 2p³ = 3 électrons dans la sous-couche 2p."
+        },
+        {
+          "t": "Pour l'azote, une fois 1s et 2s remplies, il reste 3 électrons à placer.",
+          "v": true,
+          "e": "VRAI. Sept électrons au départ, deux en 1s et deux en 2s : il en reste bien trois.",
+          "sourceQuote": "2s 2 e⁻ 2 électrons 3 électrons"
+        },
+        {
+          "t": "Pour l'azote, la somme des exposants vaut 8.",
+          "v": false,
+          "e": "FAUX : la somme vaut 7, ce qui correspond exactement au numéro atomique de l'azote.",
+          "sourceQuote": "Vérification : 2 + 2 + 3 = 7 électrons (OK)."
+        },
+        {
+          "t": "La sous-couche 2p de l'azote se retrouve saturée, avec 6 électrons.",
+          "v": false,
+          "e": "FAUX : elle ne reçoit que les 3 électrons restants, alors qu'elle pourrait en contenir 6. Elle n'est donc pas pleine.",
+          "sourceQuote": "2p 6 e⁻ (3 OA × 2 e⁻) les 3 électrons restants 0"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-046-ecrire-une-configuration-electronique.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux configurations du soufre et du fer, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le fer (Z = 26) a pour configuration 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁶.",
+          "v": true,
+          "e": "VRAI. La somme des exposants retombe bien sur 26, et l'ordre place 4s avant 3d.",
+          "sourceQuote": "Fer Fe 26 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁶ 2+2+6+2+6+2+6 = 26"
+        },
+        {
+          "t": "Une fois 3p⁶ atteinte, 18 électrons sont placés et il en reste 8 pour le fer.",
+          "v": true,
+          "e": "VRAI. Dix-huit électrons casés, huit encore en attente : c'est le moment précis où le piège se referme.",
+          "sourceQuote": "tu as placé 18 électrons ; il t'en reste 8"
+        },
+        {
+          "t": "Les 8 électrons restants du fer se placent intégralement dans la sous-couche 3d.",
+          "v": false,
+          "e": "FAUX : deux d'entre eux vont d'abord en 4s, et seuls les six derniers rejoignent la 3d.",
+          "sourceQuote": "On remplit donc 4s² (2 électrons), puis 3d⁶ (les 6 derniers)"
+        },
+        {
+          "t": "Le soufre demande une méthode différente de celle employée pour l'azote.",
+          "v": false,
+          "e": "FAUX : le soufre se traite exactement pareil, en poursuivant simplement la liste plus loin.",
+          "sourceQuote": "Le soufre se traite exactement pareil, en continuant simplement la liste plus loin."
+        },
+        {
+          "t": "La configuration du fer s'écrit 1s² 2s² 2p⁶ 3s² 3p⁶ 3d⁸.",
+          "v": false,
+          "e": "FAUX : cette écriture saute la sous-couche 4s. Elle est justement la réponse que donne un remplissage mal ordonné.",
+          "sourceQuote": "jamais 1s² 2s² 2p⁶ 3s² 3p⁶ 3d⁸."
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-046-ecrire-une-configuration-electronique.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à la vérification finale par la somme des exposants, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La somme des exposants doit retomber sur Z, c'est-à-dire sur le nombre d'électrons.",
+          "v": true,
+          "e": "VRAI. C'est le contrôle systématique de fin d'exercice : il attrape la plupart des erreurs d'écriture.",
+          "sourceQuote": "vérifie toujours que la somme des exposants = Z (nombre d'électrons)"
+        },
+        {
+          "t": "Un total différent de Z signale qu'il manque un électron ou qu'il y en a un de trop.",
+          "v": true,
+          "e": "VRAI. Le déséquilibre est le signe d'une erreur de décompte, jamais d'une subtilité d'écriture.",
+          "sourceQuote": "la somme des exposants doit retomber sur Z, sinon il manque un électron ou il y en a un de trop"
+        },
+        {
+          "t": "Les trois gestes sont : compter les électrons, remplir dans l'ordre de Klechkowski, écrire les exposants.",
+          "v": true,
+          "e": "VRAI. Toujours les mêmes trois gestes, dans cet ordre, quel que soit l'atome demandé.",
+          "sourceQuote": "Z = le nombre d'électrons à placer · on remplit dans l'ordre de Klechkowski, chaque sous-couche jusqu'à sa capacité (s → 2, p → 6, d → 10) · on écrit les exposants"
+        },
+        {
+          "t": "Les capacités rappelées sont s → 2, p → 8 et d → 10.",
+          "v": false,
+          "e": "FAUX : une sous-couche p accueille 6 électrons, et non 8. Les deux autres valeurs sont exactes.",
+          "sourceQuote": "chaque sous-couche jusqu'à sa capacité (s → 2, p → 6, d → 10)"
+        },
+        {
+          "t": "Cette vérification n'a de sens que pour les atomes de Z inférieur à 20.",
+          "v": false,
+          "e": "FAUX : le contrôle vaut pour tout atome, sans limite de numéro atomique. Il se fait toujours.",
+          "sourceQuote": "Astuce : vérifie toujours que la somme des exposants = Z"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-046-ecrire-une-configuration-electronique.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives au piège du couple 4s / 3d et à ses suites dans le chapitre, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Après 3p⁶, on remplit 4s d'abord, puis seulement 3d.",
+          "v": true,
+          "e": "VRAI. La 4s est servie avant la 3d, même si la couche 3 paraît encore incomplète.",
+          "sourceQuote": "Klechkowski dit 4s AVANT 3d. Après 3p⁶, on ne passe pas à 3d : on remplit 4s d'abord, puis seulement 3d."
+        },
+        {
+          "t": "Le réflexe naturel après 3p⁶ serait d'enchaîner sur 3d, puisque la couche 3 semble à peine entamée.",
+          "v": true,
+          "e": "VRAI. C'est bien le raisonnement spontané, et c'est exactement là que se joue l'erreur.",
+          "sourceQuote": "Le réflexe naturel serait d'enchaîner sur 3d, puisque la couche 3 semble à peine entamée."
+        },
+        {
+          "t": "Ce réflexe est le bon, et il donne la configuration correcte du fer.",
+          "v": false,
+          "e": "FAUX : ce réflexe est faux. Il conduit à sauter la 4s et à écrire une configuration erronée.",
+          "sourceQuote": "C'est faux : Klechkowski dit 4s AVANT 3d !"
+        },
+        {
+          "t": "Le couple 4s / 3d ne réapparaîtra plus dans la suite du chapitre.",
+          "v": false,
+          "e": "FAUX : ce couple revient deux fois — d'abord avec les exceptions, ensuite avec l'ionisation.",
+          "sourceQuote": "il va revenir deux fois dans la suite du chapitre — d'abord avec les exceptions à Klechkowski, puis avec l'ionisation"
+        },
+        {
+          "t": "Lors de l'ionisation, l'ordre du couple 4s / 3d reste identique à celui du remplissage.",
+          "v": false,
+          "e": "FAUX : à l'ionisation, l'ordre s'inverse. C'est justement ce qui rend ce couple si piégeux.",
+          "sourceQuote": "puis avec l'ionisation, où l'ordre s'inverse."
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-046-ecrire-une-configuration-electronique.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la portée de ce geste d'écriture et à la façon de le mener, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Z donne le nombre d'électrons, et Klechkowski donne l'ordre dans lequel on les place.",
+          "v": true,
+          "e": "VRAI. Deux informations suffisent : combien d'électrons, et dans quel ordre les loger.",
+          "sourceQuote": "Z donne le nombre d'électrons. Klechkowski donne l'ordre."
+        },
+        {
+          "t": "Écrire une configuration à partir de Z est présenté comme le geste central du chapitre.",
+          "v": true,
+          "e": "VRAI. C'est le geste qu'on répète des dizaines de fois jusqu'à ce qu'il devienne automatique.",
+          "sourceQuote": "C'est le geste central du chapitre"
+        },
+        {
+          "t": "Ce geste conduit à écrire la configuration excitée de l'atome.",
+          "v": false,
+          "e": "FAUX : la configuration obtenue est la configuration fondamentale, celle de plus basse énergie.",
+          "sourceQuote": "on écrit la configuration électronique fondamentale de l'atome"
+        },
+        {
+          "t": "Pour le fer, il faut retenir 4s² et 3d⁶ mais les écrire dans l'ordre 3d⁶ 4s².",
+          "v": false,
+          "e": "FAUX : l'écriture respecte l'ordre de remplissage, donc 4s² puis 3d⁶.",
+          "sourceQuote": "et c'est dans cet ordre qu'on l'écrit"
+        },
+        {
+          "t": "La méthode consiste à écrire toute la liste des sous-couches, puis à décompter les électrons à la fin.",
+          "v": false,
+          "e": "FAUX : le décompte se fait au fur et à mesure du remplissage, sous-couche après sous-couche.",
+          "sourceQuote": "Tu décomptes au fur et à mesure ce qu'il te reste."
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-047-exploiter-configuration-compter-ml.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la configuration du krypton et au rôle qu'elle joue dans l'exercice avancé, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La configuration électronique du krypton (Z = 36) est 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁶.",
+          "v": true,
+          "e": "VRAI. On la déroule comme n'importe quelle autre, en suivant l'ordre de remplissage jusqu'au bout.",
+          "sourceQuote": "Question 1 — la configuration de Kr (Z = 36) 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁶"
+        },
+        {
+          "t": "La somme des exposants de cette configuration vaut 36, c'est-à-dire Z.",
+          "v": true,
+          "e": "VRAI. Le contrôle habituel fonctionne ici comme partout ailleurs : le total doit retomber sur Z.",
+          "sourceQuote": "La somme des exposants vaut bien 36 = Z."
+        },
+        {
+          "t": "L'écriture de la configuration est le point de départ de l'exercice, pas son aboutissement.",
+          "v": true,
+          "e": "VRAI. Une fois la configuration posée, la véritable question commence.",
+          "sourceQuote": "c'est le point de départ, pas l'arrivée"
+        },
+        {
+          "t": "Dans cet exercice, la configuration constitue la réponse attendue.",
+          "v": false,
+          "e": "FAUX : elle n'est pas la réponse mais la donnée. On la fait écrire pour pouvoir poser une question dessus.",
+          "sourceQuote": "la configuration n'y est pas la réponse, c'est la donnée"
+        },
+        {
+          "t": "La seconde question demande combien d'électrons possèdent mₗ = +1.",
+          "v": false,
+          "e": "FAUX : la valeur visée est mₗ = −1. Le raisonnement serait le même, mais l'énoncé porte bien sur −1.",
+          "sourceQuote": "dis combien d'électrons ont mₗ = −1"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-047-exploiter-configuration-compter-ml.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la signification du nombre quantique mₗ et à ses valeurs permises, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "mₗ est le nombre quantique qui donne l'orientation de l'orbitale.",
+          "v": true,
+          "e": "VRAI. Il ne dit rien de la taille ni de la forme : il indique dans quelle direction l'orbitale est tournée.",
+          "sourceQuote": "mₗ est celui qui donne l'orientation de l'orbitale"
+        },
+        {
+          "t": "Les valeurs de mₗ vont de −l jusqu'à +l, en passant par 0.",
+          "v": true,
+          "e": "VRAI. C'est de cette seule phrase que découle tout le dénombrement demandé.",
+          "sourceQuote": "ses valeurs vont de −l jusqu'à +l (en passant par 0)"
+        },
+        {
+          "t": "mₗ est le nombre quantique qui donne l'énergie de la sous-couche.",
+          "v": false,
+          "e": "FAUX : mₗ traduit l'orientation de l'orbitale, pas son énergie.",
+          "sourceQuote": "les nombres quantiques : mₗ est celui qui donne l'orientation"
+        },
+        {
+          "t": "La valeur mₗ = −1 est possible dans toutes les sous-couches, y compris les sous-couches s.",
+          "v": false,
+          "e": "FAUX : elle n'est possible que si l vaut au moins 1, ce qui exclut d'emblée les sous-couches s.",
+          "sourceQuote": "la valeur −1 n'est possible que si l ≥ 1"
+        },
+        {
+          "t": "Une sous-couche s correspond à l = 1.",
+          "v": false,
+          "e": "FAUX : une sous-couche s a l = 0, et donc une seule valeur possible de mₗ, qui vaut 0.",
+          "sourceQuote": "Une sous-couche s a l = 0 : sa seule valeur possible est mₗ = 0"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-047-exploiter-configuration-compter-ml.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au nombre d'orbitales d'une sous-couche et à leur remplissage, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une sous-couche compte (2l + 1) orbitales.",
+          "v": true,
+          "e": "VRAI. C'est la formule qui donne d'un coup le nombre d'orientations disponibles.",
+          "sourceQuote": "Une sous-couche compte (2l + 1) orbitales"
+        },
+        {
+          "t": "Une sous-couche p compte 3 orbitales, une sous-couche d 5 et une sous-couche f 7.",
+          "v": true,
+          "e": "VRAI. Ce sont les trois résultats de la formule (2l + 1) pour l = 1, 2 et 3.",
+          "sourceQuote": "(3 pour une p, 5 pour une d, 7 pour une f)"
+        },
+        {
+          "t": "Une seule des orbitales d'une sous-couche porte la valeur mₗ = −1.",
+          "v": true,
+          "e": "VRAI. Chaque valeur de mₗ n'apparaît qu'une fois dans une sous-couche donnée : c'est ce qui plafonne le décompte.",
+          "sourceQuote": "une seule d'entre elles porte mₗ = −1"
+        },
+        {
+          "t": "La sous-couche 2p possède 2 orbitales, correspondant aux valeurs de mₗ −1 et +1.",
+          "v": false,
+          "e": "FAUX : elle en possède 3, pour les valeurs −1, 0 et +1. La valeur 0 est bien une orientation à part entière.",
+          "sourceQuote": "(2l + 1) = 3 orbitales, donc trois valeurs de mₗ : −1, 0 et +1"
+        },
+        {
+          "t": "Dans une sous-couche pleine, l'orbitale portant mₗ = −1 contient 4 électrons.",
+          "v": false,
+          "e": "FAUX : elle en contient 2, de spins opposés. C'est le maximum qu'autorise le principe de Pauli.",
+          "sourceQuote": "elle contient 2 électrons, de spins opposés — le maximum autorisé par Pauli"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-047-exploiter-configuration-compter-ml.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives au décompte final obtenu pour le krypton, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans le krypton, les sous-couches concernées sont 2p, 3p, 3d et 4p, toutes pleines.",
+          "v": true,
+          "e": "VRAI. Ce sont les quatre sous-couches de la configuration pour lesquelles l vaut au moins 1.",
+          "sourceQuote": "Dans Kr, les sous-couches à l ≥ 1 sont 2p, 3p, 3d et 4p — toutes pleines."
+        },
+        {
+          "t": "Le krypton compte 8 électrons ayant mₗ = −1.",
+          "v": true,
+          "e": "VRAI. Quatre sous-couches concernées, deux électrons chacune : le total fait 8.",
+          "sourceQuote": "2 + 2 + 2 + 2 = 8 électrons avec mₗ = −1"
+        },
+        {
+          "t": "La sous-couche 4s² apporte 2 électrons à ce décompte.",
+          "v": false,
+          "e": "FAUX : une sous-couche s n'apporte rien du tout, puisque sa seule valeur de mₗ est 0.",
+          "sourceQuote": "les sous-couches s n'apportent rien du tout : avec l = 0, leur unique valeur est mₗ = 0"
+        },
+        {
+          "t": "La sous-couche 3d¹⁰ apporte 10 électrons à ce décompte.",
+          "v": false,
+          "e": "FAUX : elle en apporte 2, comme n'importe quelle autre sous-couche pleine concernée. Ses dix électrons se répartissent sur plusieurs orbitales.",
+          "sourceQuote": "Une sous-couche pleine apporte 2 électrons, pas plus — même 3d¹⁰."
+        },
+        {
+          "t": "Le total obtenu est de 2 électrons, car la valeur mₗ = −1 n'apparaît qu'une seule fois.",
+          "v": false,
+          "e": "FAUX : cette valeur réapparaît dans chacune des quatre sous-couches concernées, ce qui porte le total à 8.",
+          "sourceQuote": "le total tombe sur 8 et pas sur 2 : la valeur mₗ = −1 revient dans chacune des quatre sous-couches concernées"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-047-exploiter-configuration-compter-ml.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à la marche à suivre pour dénombrer rapidement ce type de question, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La méthode consiste à écarter les sous-couches s, puis à compter 2 électrons par sous-couche pleine restante.",
+          "v": true,
+          "e": "VRAI. Un tri d'abord, une addition ensuite : c'est tout ce que demande la question.",
+          "sourceQuote": "écarte toutes les sous-couches s (l = 0, donc mₗ = 0 uniquement), garde celles qui restent, et compte 2 électrons par sous-couche pleine"
+        },
+        {
+          "t": "Il ne faut jamais compter les électrons un par un.",
+          "v": true,
+          "e": "VRAI. Passer les électrons en revue individuellement fait perdre un temps considérable pour un résultat identique.",
+          "sourceQuote": "ne compte jamais les électrons un par un"
+        },
+        {
+          "t": "Cette méthode remplace trente-six vérifications par trois lignes de raisonnement.",
+          "v": true,
+          "e": "VRAI. C'est tout l'intérêt du raisonnement par sous-couches plutôt que par électrons.",
+          "sourceQuote": "Trois lignes de raisonnement au lieu de trente-six."
+        },
+        {
+          "t": "Il faut commencer par écarter les sous-couches p, dont mₗ vaut toujours 0.",
+          "v": false,
+          "e": "FAUX : les sous-couches p font partie de celles qu'on garde, puisque leur l vaut 1.",
+          "sourceQuote": "la valeur −1 n'est possible que si l ≥ 1 — c'est-à-dire dans les sous-couches p, d et f"
+        },
+        {
+          "t": "Une sous-couche s peut porter mₗ = −1 lorsqu'elle est pleine.",
+          "v": false,
+          "e": "FAUX : pleine ou non, une sous-couche s n'apporte aucun électron à ce décompte.",
+          "sourceQuote": "Elle ne peut donc apporter aucun électron ici."
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-047-exploiter-configuration-compter-ml.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives au cas particulier d'une sous-couche 3d¹⁰ et à la capacité d'une orbitale, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les 10 électrons de la sous-couche 3d se répartissent sur 5 orbitales.",
+          "v": true,
+          "e": "VRAI. Cinq orbitales pour une sous-couche d, deux électrons chacune : le compte y est.",
+          "sourceQuote": "Ses 10 électrons se répartissent sur 5 orbitales, et une seule d'entre elles porte mₗ = −1."
+        },
+        {
+          "t": "Une orbitale ne peut contenir que deux électrons.",
+          "v": true,
+          "e": "VRAI. C'est le plafond absolu, et c'est lui qui explique que le décompte ne dépasse jamais 2 par sous-couche.",
+          "sourceQuote": "une orbitale ne peut contenir que deux électrons"
+        },
+        {
+          "t": "Une sous-couche 3d¹⁰ apporte plus d'électrons qu'une sous-couche 2p⁶, parce qu'elle en contient davantage.",
+          "v": false,
+          "e": "FAUX : toute sous-couche pleine concernée apporte exactement 2 électrons, quel que soit son nombre total d'électrons.",
+          "sourceQuote": "Pour une sous-couche ayant l ≥ 1 et remplie, cette orbitale est pleine elle aussi"
+        },
+        {
+          "t": "L'orbitale portant mₗ = −1 peut loger plus de 2 électrons si leurs spins sont opposés.",
+          "v": false,
+          "e": "FAUX : deux électrons de spins opposés, c'est déjà le maximum autorisé. Ni plus, ni moins.",
+          "sourceQuote": "le maximum autorisé par Pauli. Ni plus, ni moins."
+        },
+        {
+          "t": "Les quatre nombres quantiques ne servent qu'à décrire un électron sur le papier.",
+          "v": false,
+          "e": "FAUX : ils servent aussi à compter, comme le montre précisément ce dénombrement.",
+          "sourceQuote": "ne servaient donc pas seulement à décrire un électron sur le papier — ils servent à compter"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-047-exploiter-configuration-compter-ml.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la sous-couche 2p prise comme modèle et à la lecture du tableau de décompte, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La sous-couche 2p correspond à l = 1 et possède trois valeurs de mₗ : −1, 0 et +1.",
+          "v": true,
+          "e": "VRAI. Trois orbitales, donc trois orientations possibles, réparties selon les axes.",
+          "sourceQuote": "La sous-couche 2p (l = 1) — (2l + 1) = 3 orbitales, donc trois valeurs de mₗ : −1, 0 et +1"
+        },
+        {
+          "t": "Une sous-couche 2p pleine apporte 2 électrons au décompte.",
+          "v": true,
+          "e": "VRAI. Une seule de ses trois orbitales porte la valeur cherchée, et elle est pleine : elle fournit 2 électrons.",
+          "sourceQuote": "ce sont les 2 électrons que 2p apporte au décompte"
+        },
+        {
+          "t": "Écrire la configuration ne représente que la première moitié du travail.",
+          "v": true,
+          "e": "VRAI. La seconde moitié consiste à savoir interroger la configuration qu'on vient d'écrire.",
+          "sourceQuote": "Écrire la configuration, c'est la première moitié du travail."
+        },
+        {
+          "t": "Hund est la règle qui donne la capacité, et Pauli celle qui donne la répartition.",
+          "v": false,
+          "e": "FAUX : les deux rôles sont intervertis. Pauli fixe la capacité, Hund la répartition.",
+          "sourceQuote": "Klechkowski donne l'ordre, Pauli la capacité, Hund la répartition"
+        },
+        {
+          "t": "Dans le tableau du décompte, les lignes grisées sont celles des sous-couches d.",
+          "v": false,
+          "e": "FAUX : les lignes grisées sont celles des sous-couches s, écartées dès la première ligne du raisonnement.",
+          "sourceQuote": "Les sous-couches grisées sont les sous-couches s : elles sortent du décompte dès la première ligne du raisonnement."
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-048-coeur-valence-notation-abregee.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives aux électrons de cœur et à la raison d'être de ce tri, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les électrons de cœur sont tous les électrons des couches internes.",
+          "v": true,
+          "e": "VRAI. Tout ce qui est enfoui sous la couche externe appartient au cœur.",
+          "sourceQuote": "Ce sont tous les électrons des couches internes."
+        },
+        {
+          "t": "Les électrons de cœur ont exactement la même configuration que le gaz noble précédent.",
+          "v": true,
+          "e": "VRAI. C'est cette coïncidence qui rend l'écriture abrégée possible : le cœur se replie derrière un symbole de gaz noble.",
+          "sourceQuote": "ils ont exactement la même configuration que le gaz noble précédent"
+        },
+        {
+          "t": "Chez le fer, le cœur est constitué des 8 premiers électrons.",
+          "v": false,
+          "e": "FAUX : le cœur du fer compte 18 électrons. Le chiffre 8 correspond à ses électrons de valence.",
+          "sourceQuote": "Chez le fer, ce sont les 18 premiers électrons — 1s² 2s² 2p⁶ 3s² 3p⁶, c'est-à-dire la configuration de l'argon."
+        },
+        {
+          "t": "Le cœur du fer correspond à la configuration du néon.",
+          "v": false,
+          "e": "FAUX : il correspond à la configuration de l'argon, le gaz noble qui précède le fer.",
+          "sourceQuote": "c'est-à-dire la configuration de l'argon"
+        },
+        {
+          "t": "Ce tri est introduit parce qu'une configuration écrite en entier reste toujours plus lisible.",
+          "v": false,
+          "e": "FAUX : au-delà d'une vingtaine d'électrons, la ligne complète devient longue et l'essentiel s'y perd. C'est justement le problème que le tri résout.",
+          "sourceQuote": "dès qu'on dépasse une vingtaine d'électrons, la ligne devient longue et l'essentiel s'y noie"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-048-coeur-valence-notation-abregee.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux électrons de valence et à leur importance, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les électrons de valence sont ceux de la couche la plus externe.",
+          "v": true,
+          "e": "VRAI. La valence, c'est la dernière couche : celle qui est exposée vers l'extérieur.",
+          "sourceQuote": "Ce sont les électrons de la couche la plus externe"
+        },
+        {
+          "t": "Chez le fer, la valence s'écrit 4s² 3d⁶ et représente 8 électrons.",
+          "v": true,
+          "e": "VRAI. Deux électrons en 4s et six en 3d : la valence du fer compte bien 8 électrons.",
+          "sourceQuote": "4s² 3d⁶, soit 2 + 6 = 8 électrons"
+        },
+        {
+          "t": "Les électrons de valence déterminent les propriétés chimiques.",
+          "v": true,
+          "e": "VRAI. C'est la vraie raison du tri : la chimie d'un élément se joue sur sa couche externe.",
+          "sourceQuote": "les électrons de valence déterminent les propriétés chimiques"
+        },
+        {
+          "t": "Les électrons de valence sont ceux des couches internes, cachés sous le gaz noble.",
+          "v": false,
+          "e": "FAUX : ce sont les électrons de cœur qui occupent les couches internes. La valence est en surface.",
+          "sourceQuote": "Les électrons de valence. Ce sont les électrons de la couche la plus externe"
+        },
+        {
+          "t": "Ce sont les électrons de cœur qui déterminent les propriétés chimiques de l'atome.",
+          "v": false,
+          "e": "FAUX : les propriétés chimiques dépendent des électrons de valence, pas du cœur replié dans les crochets.",
+          "sourceQuote": "ce n'est pas seulement pour gagner de la place : les électrons de valence déterminent les propriétés chimiques"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-048-coeur-valence-notation-abregee.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à l'écriture abrégée du fer et à ce qu'elle conserve, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le fer s'écrit [Ar] 4s² 3d⁶ en notation abrégée.",
+          "v": true,
+          "e": "VRAI. Le cœur est replié derrière [Ar] et seule la valence reste détaillée.",
+          "sourceQuote": "Fe (Z = 26) = [Ar] 4s² 3d⁶"
+        },
+        {
+          "t": "[Ar] est un raccourci pour 1s² 2s² 2p⁶ 3s² 3p⁶.",
+          "v": true,
+          "e": "VRAI. Ces cinq sous-couches, soit 18 électrons, sont exactement ce que le crochet remplace.",
+          "sourceQuote": "[Ar] = raccourci pour « 1s² 2s² 2p⁶ 3s² 3p⁶ » (les 18 premiers électrons = cœur)"
+        },
+        {
+          "t": "Dans la notation abrégée, on détaille le cœur et on replie la valence.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. On replie le cœur derrière le symbole du gaz noble et on ne détaille plus que la valence.",
+          "sourceQuote": "on remplace le bloc de cœur par le symbole du gaz noble entre crochets, et on ne détaille plus que la valence"
+        },
+        {
+          "t": "L'écriture [Ar] 4s² 3d⁶ décrit un atome différent de 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁶.",
+          "v": false,
+          "e": "FAUX : les deux écritures décrivent exactement le même atome. Seule leur longueur diffère.",
+          "sourceQuote": "la ligne complète 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁶ et l'écriture [Ar] 4s² 3d⁶ décrivent exactement le même atome"
+        },
+        {
+          "t": "Le passage à la notation abrégée fait perdre une partie de l'information sur l'atome.",
+          "v": false,
+          "e": "FAUX : rien n'est perdu dans le raccourci. L'information est repliée, pas supprimée.",
+          "sourceQuote": "Rien n'est perdu dans le raccourci"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-048-coeur-valence-notation-abregee.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives au décompte des électrons cachés derrière chaque bloc de l'écriture abrégée, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "[Ar] représente les couches internes repliées, soit 18 électrons de cœur.",
+          "v": true,
+          "e": "VRAI. Dix-huit électrons tiennent derrière ces quatre caractères.",
+          "sourceQuote": "[Ar] les couches internes, repliées : 1s² 2s² 2p⁶ 3s² 3p⁶ 18 (cœur)"
+        },
+        {
+          "t": "4s² 3d⁶ correspond à ce qui vient après le gaz noble, écrit en clair, soit 8 électrons de valence.",
+          "v": true,
+          "e": "VRAI. Cette partie n'est pas repliée : elle est écrite telle quelle, et elle porte les 8 électrons de valence.",
+          "sourceQuote": "4s² 3d⁶ ce qui vient après le gaz noble, écrit en clair 8 (valence)"
+        },
+        {
+          "t": "L'ensemble [Ar] 4s² 3d⁶ totalise 26 électrons, soit Z.",
+          "v": true,
+          "e": "VRAI. Dix-huit plus huit : le compte retombe bien sur le numéro atomique du fer.",
+          "sourceQuote": "[Ar] 4s² 3d⁶ l'atome de fer en entier 26 = Z"
+        },
+        {
+          "t": "Le fer compte 18 électrons de valence et 8 électrons de cœur.",
+          "v": false,
+          "e": "FAUX : les deux nombres sont intervertis. Le fer a 18 électrons de cœur et 8 de valence.",
+          "sourceQuote": "(les 18 premiers électrons = cœur) · 4s² 3d⁶ = les 8 électrons de valence"
+        },
+        {
+          "t": "Le crochet [Kr] vaut 18 électrons, tout comme [Ar].",
+          "v": false,
+          "e": "FAUX : [Kr] en vaut 36. Chaque crochet vaut le numéro atomique du gaz noble qu'il désigne.",
+          "sourceQuote": "[Ar] vaut 18 électrons, [Kr] en vaut 36"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-048-coeur-valence-notation-abregee.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au contrôle à effectuer devant une configuration écrite en abrégé, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Devant une configuration abrégée, il faut commencer par déplier le crochet.",
+          "v": true,
+          "e": "VRAI. Tant que le crochet n'est pas converti en nombre d'électrons, aucune vérification n'est possible.",
+          "sourceQuote": "commence par déplier le crochet"
+        },
+        {
+          "t": "Pour le fer, la vérification s'écrit 18 + 2 + 6 = 26.",
+          "v": true,
+          "e": "VRAI. Le crochet déplié, puis les exposants ajoutés : le total tombe sur Z.",
+          "sourceQuote": "Pour le fer : 18 + 2 + 6 = 26 ✓"
+        },
+        {
+          "t": "Une fois le crochet déplié, il n'est plus nécessaire d'additionner les exposants qui suivent.",
+          "v": false,
+          "e": "FAUX : c'est précisément l'étape suivante. On additionne les exposants et on vérifie que le compte tombe sur Z.",
+          "sourceQuote": "Additionne ensuite les exposants qui suivent et vérifie que le compte tombe sur Z"
+        },
+        {
+          "t": "Ce contrôle demande plusieurs minutes par proposition.",
+          "v": false,
+          "e": "FAUX : il prend deux secondes, et c'est bien pour cela qu'il vaut la peine d'être fait systématiquement.",
+          "sourceQuote": "Ce petit contrôle repère en deux secondes les écritures qui ne bouclent pas."
+        },
+        {
+          "t": "Un total qui ne retombe pas sur Z traduit un simple raccourci d'écriture, pas une erreur.",
+          "v": false,
+          "e": "FAUX : un total qui ne boucle pas signale toujours une erreur. Le raccourci, lui, conserve tous les électrons.",
+          "sourceQuote": "Un total qui ne retombe pas sur Z signale une erreur, jamais un simple raccourci d'écriture."
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-048-coeur-valence-notation-abregee.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la nature des crochets et au choix du gaz noble, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "[Ar], [Kr] et [Xe] sont des raccourcis d'écriture, et non les éléments eux-mêmes.",
+          "v": true,
+          "e": "VRAI. Écrire [Ar] ne signifie pas qu'un atome d'argon se trouve dans le fer : c'est une abréviation.",
+          "sourceQuote": "[Ar], [Kr], [Xe]… sont des raccourcis d'écriture, pas les éléments eux-mêmes !"
+        },
+        {
+          "t": "Le gaz noble utilisé est celui qui vient juste avant l'élément dans le tableau périodique.",
+          "v": true,
+          "e": "VRAI. On prend toujours le gaz noble immédiatement précédent, jamais un plus lointain.",
+          "sourceQuote": "On utilise le gaz noble qui vient juste avant dans le tableau périodique."
+        },
+        {
+          "t": "Le crochet ne fait pas disparaître les électrons : [Ar] en cache 18, ils sont toujours là.",
+          "v": true,
+          "e": "VRAI. Les électrons de cœur existent toujours, ils sont simplement écrits sous une forme compacte.",
+          "sourceQuote": "Le crochet ne fait pas disparaître les électrons : [Ar] en cache 18, ils sont toujours là."
+        },
+        {
+          "t": "Quand on compte les électrons d'une écriture abrégée, on peut laisser de côté ceux du crochet.",
+          "v": false,
+          "e": "FAUX : il faut au contraire les remettre dans le compte, sans quoi le total ne peut pas retomber sur Z.",
+          "sourceQuote": "Quand tu comptes, remets-les : 18 + 8 = 26 = Z"
+        },
+        {
+          "t": "Le gaz noble choisi pour le crochet est celui qui suit l'élément dans le tableau périodique.",
+          "v": false,
+          "e": "FAUX : c'est celui qui précède. Prendre le suivant donnerait plus d'électrons que n'en compte l'atome.",
+          "sourceQuote": "sont des raccourcis d'écriture, pas les éléments eux-mêmes ! On utilise le gaz noble qui vient juste avant dans le tableau périodique."
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-048-coeur-valence-notation-abregee.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la place de l'écriture abrégée par rapport à l'écriture complète, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Réécrire les 26 électrons du fer à chaque fois est jugé long, d'où l'écriture [Ar] 4s² 3d⁶.",
+          "v": true,
+          "e": "VRAI. C'est le motif pratique de l'abréviation : éviter de recopier une ligne interminable à chaque exercice.",
+          "sourceQuote": "Réécrire les 26 électrons du fer à chaque fois, c'est long."
+        },
+        {
+          "t": "Le fer compte 18 électrons de cœur et 8 de valence.",
+          "v": true,
+          "e": "VRAI. C'est la répartition à retenir, et elle se lit directement sur l'écriture abrégée.",
+          "sourceQuote": "Fe (Z = 26) = [Ar] 4s² 3d⁶ — 18 de cœur, 8 de valence."
+        },
+        {
+          "t": "L'écriture abrégée a été introduite uniquement pour gagner de la place.",
+          "v": false,
+          "e": "FAUX : le gain de place n'est pas la seule raison. Le tri met en avant la partie de l'atome qui gouverne sa chimie.",
+          "sourceQuote": "Si le cours sépare ainsi le cœur de la valence, ce n'est pas seulement pour gagner de la place"
+        },
+        {
+          "t": "Jusqu'à cette étape, les configurations avaient été écrites en abrégé, avec les crochets.",
+          "v": false,
+          "e": "FAUX : elles avaient été écrites en entier, de 1s jusqu'à la dernière sous-couche. L'abréviation n'arrive qu'ensuite.",
+          "sourceQuote": "Jusqu'ici, tu as écrit les configurations en entier, de 1s jusqu'à la dernière sous-couche"
+        },
+        {
+          "t": "Écrire les configurations en entier est présenté comme une mauvaise méthode, à abandonner.",
+          "v": false,
+          "e": "FAUX : c'est la bonne méthode, et il faut savoir la dérouler. L'abréviation ne la remplace pas, elle la raccourcit.",
+          "sourceQuote": "C'est la bonne méthode, et il faut savoir la dérouler."
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-049-exceptions-klechkowski-d5-d10.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la cause des exceptions à l'ordre de remplissage, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une sous-couche d demi-remplie (d⁵) ou totalement remplie (d¹⁰) est particulièrement stable.",
+          "v": true,
+          "e": "VRAI. Ces deux configurations de la sous-couche d sont les plus favorables énergétiquement.",
+          "sourceQuote": "d⁵ (demi-remplie) et d¹⁰ (pleine) = particulièrement stables"
+        },
+        {
+          "t": "Quand un atome peut atteindre l'une de ces formes en déplaçant un seul électron, c'est ce qui se produit.",
+          "v": true,
+          "e": "VRAI. La condition est stricte : un seul électron déplacé. Au-delà, l'atome garde la configuration prévue.",
+          "sourceQuote": "Quand un atome peut atteindre l'une de ces deux formes en déplaçant un seul électron, c'est ce qui se passe"
+        },
+        {
+          "t": "Cette stabilité l'emporte sur l'ordre de remplissage habituel.",
+          "v": true,
+          "e": "VRAI. C'est exactement ce qui fait de ces atomes des exceptions : la stabilité prime sur la règle d'ordre.",
+          "sourceQuote": "cette stabilité l'emporte sur l'ordre de Klechkowski"
+        },
+        {
+          "t": "Ces exceptions sont trop nombreuses pour être apprises par cœur.",
+          "v": false,
+          "e": "FAUX : elles tiennent en cinq atomes, toujours les mêmes. La liste s'apprend en quelques secondes.",
+          "sourceQuote": "les exceptions classiques à connaître tiennent en cinq atomes, toujours les mêmes"
+        },
+        {
+          "t": "C'est la sous-couche s demi-remplie qui explique ces exceptions.",
+          "v": false,
+          "e": "FAUX : la stabilité recherchée concerne la sous-couche d, demi-remplie ou pleine. La sous-couche s est celle qui cède un électron.",
+          "sourceQuote": "Une sous-couche d demi-remplie ou totalement remplie est particulièrement stable."
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-049-exceptions-klechkowski-d5-d10.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la famille de la sous-couche d demi-remplie, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le chrome (Z = 24) a pour configuration réelle [Ar] 4s¹ 3d⁵.",
+          "v": true,
+          "e": "VRAI. Un électron du 4s est passé dans la 3d pour la porter à cinq électrons.",
+          "sourceQuote": "Chrome Cr 24 [Ar] 4s² 3d⁴ [Ar] 4s¹ 3d⁵"
+        },
+        {
+          "t": "Le molybdène (Z = 42) suit la même exception que le chrome.",
+          "v": true,
+          "e": "VRAI. Sa configuration réelle est [Kr] 5s¹ 4d⁵ : le mécanisme est identique, un étage plus haut.",
+          "sourceQuote": "Molybdène Mo 42 [Kr] 5s² 4d⁴ [Kr] 5s¹ 4d⁵"
+        },
+        {
+          "t": "Cette première famille compte trois atomes.",
+          "v": false,
+          "e": "FAUX : elle n'en compte que deux, le chrome et le molybdène. Le chiffre trois vaut pour l'autre famille.",
+          "sourceQuote": "Deux atomes seulement : le chrome et le molybdène."
+        },
+        {
+          "t": "Dans cette famille, un électron quitte la sous-couche d pour rejoindre ns.",
+          "v": false,
+          "e": "FAUX : le déplacement se fait dans l'autre sens. C'est ns qui cède un électron à la sous-couche d.",
+          "sourceQuote": "Un électron quitte ns pour compléter la sous-couche d à 5 (demi-remplie = très stable)."
+        },
+        {
+          "t": "Pour le chrome, [Ar] 4s² 3d⁴ est la configuration réelle.",
+          "v": false,
+          "e": "FAUX : c'est la configuration attendue, celle que donne un remplissage appliqué sans connaître l'exception. La vraie est [Ar] 4s¹ 3d⁵.",
+          "sourceQuote": "[Ar] 4s² 3d⁴ (chrome) et [Ar] 4s² 3d⁹ (cuivre) sont les configurations attendues, pas les vraies."
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-049-exceptions-klechkowski-d5-d10.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la famille de la sous-couche d totalement remplie, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Cette famille compte trois atomes : le cuivre, l'argent et l'or.",
+          "v": true,
+          "e": "VRAI. Trois métaux, et le même mécanisme pour les trois.",
+          "sourceQuote": "Trois atomes cette fois : le cuivre, l'argent et l'or."
+        },
+        {
+          "t": "Le cuivre (Z = 29) a pour configuration réelle [Ar] 4s¹ 3d¹⁰.",
+          "v": true,
+          "e": "VRAI. Un électron quitte la 4s pour compléter la 3d à dix électrons.",
+          "sourceQuote": "Cuivre Cu 29 [Ar] 4s² 3d⁹ [Ar] 4s¹ 3d¹⁰"
+        },
+        {
+          "t": "Chez l'or (Z = 79), la sous-couche 4f¹⁴ ne bouge pas.",
+          "v": true,
+          "e": "VRAI. Elle est identique dans les deux colonnes : le déplacement ne la concerne pas.",
+          "sourceQuote": "le 4f¹⁴ ne bouge pas. C'est le 6s qui cède un électron au 5d"
+        },
+        {
+          "t": "Chez l'or, c'est la sous-couche 4f qui cède un électron à la 5d.",
+          "v": false,
+          "e": "FAUX : c'est la 6s qui cède l'électron, exactement comme la 4s le fait chez le cuivre.",
+          "sourceQuote": "C'est le 6s qui cède un électron au 5d, exactement comme le 4s le fait chez le cuivre."
+        },
+        {
+          "t": "L'argent porte le numéro atomique Z = 79.",
+          "v": false,
+          "e": "FAUX : l'argent a Z = 47. Le numéro 79 est celui de l'or.",
+          "sourceQuote": "Argent Ag 47 [Kr] 5s² 4d⁹ [Kr] 5s¹ 4d¹⁰"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-049-exceptions-klechkowski-d5-d10.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives au mécanisme en trois temps commun aux deux familles, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La première étape consiste à écrire la configuration attendue, celle que donne l'ordre de remplissage habituel.",
+          "v": true,
+          "e": "VRAI. On applique d'abord la règle sans réfléchir ; la correction ne vient qu'ensuite.",
+          "sourceQuote": "Tu écris d'abord la configuration attendue. Celle que donne Klechkowski, sans réfléchir."
+        },
+        {
+          "t": "Un électron quitte ns pour aller dans (n−1)d : on passe de ns² à ns¹.",
+          "v": true,
+          "e": "VRAI. C'est le geste unique du mécanisme, identique dans les deux familles.",
+          "sourceQuote": "Un électron quitte ns pour aller dans (n−1)d. On passe de ns² à ns¹."
+        },
+        {
+          "t": "Chez le chrome, le 3d passe de 2 électrons à 1 et le 4s en gagne un.",
+          "v": false,
+          "e": "FAUX : les rôles sont inversés. C'est le 4s qui passe de 2 à 1, et le 3d qui gagne un électron.",
+          "sourceQuote": "Chez le chrome, le 4s passe de 2 électrons à 1, et le 3d en gagne un."
+        },
+        {
+          "t": "À l'issue du déplacement, la sous-couche d atteint 4 ou 9 électrons.",
+          "v": false,
+          "e": "FAUX : elle atteint 5 ou 10 électrons. Les valeurs 4 et 9 sont celles d'avant le déplacement.",
+          "sourceQuote": "La sous-couche d atteint 5 ou 10 électrons."
+        },
+        {
+          "t": "L'atome perd un électron au cours de cette opération.",
+          "v": false,
+          "e": "FAUX : il n'en perd aucun, il en déplace un. Le nombre total d'électrons ne change pas.",
+          "sourceQuote": "Il ne perd aucun électron, il en déplace un."
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-049-exceptions-klechkowski-d5-d10.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à la neutralité de ces atomes et aux repères de mémorisation, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La somme des exposants doit retomber sur Z, y compris pour ces atomes.",
+          "v": true,
+          "e": "VRAI. Le contrôle habituel reste valable : une exception ne dispense pas de vérifier le compte.",
+          "sourceQuote": "Comme d'habitude, la somme des exposants doit retomber sur Z."
+        },
+        {
+          "t": "Pour le chrome, le compte donne 18 + 1 + 5 = 24, soit Z.",
+          "v": true,
+          "e": "VRAI. Dix-huit électrons dans le crochet, un en 4s et cinq en 3d : le total tombe juste.",
+          "sourceQuote": "pour le chrome, [Ar] vaut 18 électrons, plus 1 (4s¹), plus 5 (3d⁵) = 24 = Z"
+        },
+        {
+          "t": "Le repère de mémorisation associe le couple Cr-Mo à la sous-couche d demi-remplie.",
+          "v": true,
+          "e": "VRAI. CRoMo pour d⁵, avec la forme ns¹ (n-1)d⁵ à la clé.",
+          "sourceQuote": "d⁵ (demi-remplie) : Cr-Mo (CRoMo = comme le métal chromé-molybdène) → ns¹ (n-1)d⁵"
+        },
+        {
+          "t": "Le repère des métaux précieux désigne le couple Cr-Mo.",
+          "v": false,
+          "e": "FAUX : les métaux précieux sont Cu, Ag et Au, associés à la sous-couche d pleine. Cr et Mo forment l'autre groupe.",
+          "sourceQuote": "d¹⁰ (pleine) : Cu-Ag-Au (Cuivre, Argent, Or = métaux précieux) → ns¹ (n-1)d¹⁰"
+        },
+        {
+          "t": "Ces atomes deviennent des ions au cours du déplacement d'électron.",
+          "v": false,
+          "e": "FAUX : l'atome reste neutre. Aucun électron ne quitte l'atome, il change simplement de sous-couche.",
+          "sourceQuote": "Un point qui évite beaucoup de confusion : l'atome reste neutre."
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-049-exceptions-klechkowski-d5-d10.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la façon de reconnaître un atome exceptionnel en situation d'épreuve, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les numéros atomiques à reconnaître sont 24, 29, 42, 47 et 79.",
+          "v": true,
+          "e": "VRAI. Ces cinq nombres suffisent : dès que l'un d'eux apparaît, l'exception s'applique.",
+          "sourceQuote": "Z = 24, 29, 42, 47 ou 79"
+        },
+        {
+          "t": "Pour tous les autres atomes du chapitre, l'ordre de remplissage s'applique tel quel.",
+          "v": true,
+          "e": "VRAI. En dehors de ces cinq cas, aucune correction n'est à faire.",
+          "sourceQuote": "Pour tous les autres atomes du chapitre, Klechkowski s'applique tel quel."
+        },
+        {
+          "t": "Il faut savoir deviner par le raisonnement quels atomes font exception.",
+          "v": false,
+          "e": "FAUX : rien à deviner. La liste s'apprend, elle tient en cinq noms.",
+          "sourceQuote": "Tu n'as pas à deviner quels atomes font exception : apprends la liste, elle tient en cinq noms."
+        },
+        {
+          "t": "Une fois l'exception reconnue, on déplace un électron de (n−1)d vers ns.",
+          "v": false,
+          "e": "FAUX : le sens est inverse. L'électron va de ns vers (n−1)d.",
+          "sourceQuote": "puis tu déplaces un électron de ns vers (n−1)d"
+        },
+        {
+          "t": "Le réflexe conseillé est d'écrire la configuration avant même de regarder le Z ou le symbole.",
+          "v": false,
+          "e": "FAUX : on identifie d'abord le Z ou le symbole. C'est cette reconnaissance qui déclenche ou non la correction.",
+          "sourceQuote": "Le réflexe, c'est de reconnaître le Z ou le symbole avant d'écrire quoi que ce soit."
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-049-exceptions-klechkowski-d5-d10.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la distinction entre configuration attendue et configuration réelle, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "En P1, les configurations attendues sont proposées exprès comme distracteurs.",
+          "v": true,
+          "e": "VRAI. Ce sont exactement les réponses que produit un remplissage appliqué sans connaître les exceptions.",
+          "sourceQuote": "En QCM, elles sont là exprès : ce sont exactement les réponses que donne un remplissage appliqué sans connaître les exceptions."
+        },
+        {
+          "t": "Les cinq exceptions sont Cr (24), Mo (42), Cu (29), Ag (47) et Au (79).",
+          "v": true,
+          "e": "VRAI. Deux pour la sous-couche d demi-remplie, trois pour la sous-couche d pleine.",
+          "sourceQuote": "d⁵ : Cr (Z = 24) et Mo (Z = 42) · d¹⁰ : Cu (Z = 29), Ag (Z = 47) et Au (Z = 79)."
+        },
+        {
+          "t": "Dans les deux familles, le mécanisme est identique : un électron quitte ns pour (n−1)d.",
+          "v": true,
+          "e": "VRAI. Une seule mécanique pour cinq atomes : ce qui change, c'est seulement la cible atteinte, 5 ou 10 électrons.",
+          "sourceQuote": "Dans les deux cas, un électron quitte ns pour aller dans (n−1)d : on passe de ns² à ns¹."
+        },
+        {
+          "t": "Ces cinq atomes suivent finalement l'ordre de remplissage prévu.",
+          "v": false,
+          "e": "FAUX : ce sont précisément les éléments qui ne le suivent pas. C'est ce qui en fait des exceptions.",
+          "sourceQuote": "certains éléments ne suivent pas l'ordre de remplissage prévu par Klechkowski"
+        },
+        {
+          "t": "Il faut retenir deux familles et six atomes au total.",
+          "v": false,
+          "e": "FAUX : deux familles, mais cinq atomes seulement. Deux dans la première, trois dans la seconde.",
+          "sourceQuote": "Deux familles, cinq atomes."
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-050-ordre-ionisation-4s-avant-3d.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à l'ionisation et au double comportement du couple 4s / 3d, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'ionisation correspond à la perte réelle d'électrons par l'atome.",
+          "v": true,
+          "e": "VRAI. Cette fois l'atome perd vraiment des électrons, il ne se contente pas de les déplacer.",
+          "sourceQuote": "Ici, l'atome en perd vraiment : c'est l'ionisation."
+        },
+        {
+          "t": "La sous-couche 4s se remplit avant la 3d et se vide également avant elle.",
+          "v": true,
+          "e": "VRAI. Les deux colonnes disent la même chose : la 4s passe la première dans les deux sens.",
+          "sourceQuote": "4s et 3d 4s se remplit AVANT 3d 4s se vide AVANT 3d"
+        },
+        {
+          "t": "Au moment de l'ionisation, l'ordre du couple 4s / 3d s'inverse par rapport au remplissage.",
+          "v": false,
+          "e": "FAUX : il ne s'inverse pas. La 4s passe encore avant la 3d, comme au remplissage.",
+          "sourceQuote": "Au départ des électrons… 4s passe encore avant 3d."
+        },
+        {
+          "t": "La sous-couche 4s est servie en dernier et débarrassée en premier.",
+          "v": false,
+          "e": "FAUX : elle est servie en premier et débarrassée en premier. C'est là tout le paradoxe apparent.",
+          "sourceQuote": "le 4s est servi en premier, et débarrassé en premier"
+        },
+        {
+          "t": "L'ionisation retire en priorité les électrons de la sous-couche 3d.",
+          "v": false,
+          "e": "FAUX : ce sont les électrons 4s qui partent d'abord, parce qu'ils sont les moins bien retenus.",
+          "sourceQuote": "on prend d'abord les moins bien attachés : les 4s partent en premier"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-050-ordre-ionisation-4s-avant-3d.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à l'explication physique de cet ordre de départ, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une fois remplis, les électrons 3d sont plus proches du noyau que les 4s.",
+          "v": true,
+          "e": "VRAI. Malgré leur remplissage tardif, les 3d se retrouvent plus près du noyau que les 4s.",
+          "sourceQuote": "Une fois remplis, les électrons 3d sont plus proches du noyau que les 4s"
+        },
+        {
+          "t": "Étant plus proches du noyau, les électrons 3d sont mieux retenus.",
+          "v": true,
+          "e": "VRAI. La proximité du noyau se traduit par une attraction plus forte, donc une meilleure rétention.",
+          "sourceQuote": "plus proches du noyau que les 4s → ils sont mieux retenus"
+        },
+        {
+          "t": "Quand on arrache des électrons, on prend d'abord les moins bien attachés.",
+          "v": true,
+          "e": "VRAI. C'est le principe qui décide de l'ordre de départ : le maillon faible cède en premier.",
+          "sourceQuote": "Quand on arrache des électrons, on prend d'abord les moins bien attachés"
+        },
+        {
+          "t": "Les électrons ns occupent une couche interne et les (n−1)d la couche externe.",
+          "v": false,
+          "e": "FAUX : les rôles sont intervertis. Les ns sont sur la couche externe, les (n−1)d sur une couche interne.",
+          "sourceQuote": "Les ns sont sur la couche externe, les (n−1)d sur une couche interne"
+        },
+        {
+          "t": "Les électrons (n−1)d partent avant les électrons ns.",
+          "v": false,
+          "e": "FAUX : ce sont les ns qui partent en premier, même s'ils se sont remplis avant.",
+          "sourceQuote": "Les électrons ns partent AVANT les (n−1)d"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-050-ordre-ionisation-4s-avant-3d.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la marche à suivre pour écrire la configuration d'un ion, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La première étape consiste à écrire la configuration de l'atome neutre.",
+          "v": true,
+          "e": "VRAI. On part toujours de l'atome neutre : c'est de lui qu'on retire ensuite les électrons.",
+          "sourceQuote": "Écris la configuration de l'atome neutre. Avec Klechkowski, comme d'habitude."
+        },
+        {
+          "t": "On retire d'abord les électrons ns, et seulement eux tant qu'il en reste.",
+          "v": true,
+          "e": "VRAI. La couche externe se vide entièrement avant qu'on touche à la sous-couche d.",
+          "sourceQuote": "Enlève les électrons ns en premier. Ici les 4s, et seulement eux tant qu'il en reste."
+        },
+        {
+          "t": "Dès la première étape de retrait, on prélève aussi un électron 3d pour équilibrer.",
+          "v": false,
+          "e": "FAUX : on ne touche pas à la 3d tant que la 4s n'est pas vide.",
+          "sourceQuote": "On ne touche pas au 3d."
+        },
+        {
+          "t": "La sous-couche 3d cède des électrons dès que la 4s est encore à moitié pleine.",
+          "v": false,
+          "e": "FAUX : la 3d n'intervient qu'une fois la 4s complètement vidée.",
+          "sourceQuote": "Le 4s est vide, donc c'est au tour du 3d de céder des électrons."
+        },
+        {
+          "t": "La configuration de l'atome neutre s'écrit sans se soucier de l'ordre de remplissage habituel.",
+          "v": false,
+          "e": "FAUX : elle s'écrit avec l'ordre de remplissage habituel, comme n'importe quelle autre configuration.",
+          "sourceQuote": "Avec Klechkowski, comme d'habitude. Fer (Z = 26) → [Ar] 4s² 3d⁶."
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-050-ordre-ionisation-4s-avant-3d.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux configurations des deux ions du fer, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le fer neutre s'écrit [Ar] 4s² 3d⁶.",
+          "v": true,
+          "e": "VRAI. C'est la configuration de départ, obtenue par l'ordre de remplissage habituel.",
+          "sourceQuote": "Fe neutre [Ar] 4s² 3d⁶ Rien. Remplissage : 4s s'est rempli AVANT 3d (Klechkowski)."
+        },
+        {
+          "t": "Fe²⁺ s'écrit [Ar] 3d⁶ : ce sont les deux électrons 4s qui sont partis.",
+          "v": true,
+          "e": "VRAI. La 4s se vide complètement, et la 3d reste intacte avec ses six électrons.",
+          "sourceQuote": "Fe²⁺ (perd 2 e⁻) [Ar] 3d⁶ Les 2 électrons de 4s partent en premier (pas de 3d !)"
+        },
+        {
+          "t": "Fe³⁺ s'écrit [Ar] 3d⁵ : les deux électrons 4s et un électron 3d sont partis.",
+          "v": true,
+          "e": "VRAI. La 4s étant vide, le troisième électron ne peut venir que de la 3d.",
+          "sourceQuote": "Fe³⁺ (perd 3 e⁻) [Ar] 3d⁵ Les 2 électrons 4s + 1 électron 3d sont partis"
+        },
+        {
+          "t": "Dans Fe²⁺, la sous-couche 3d a perdu un électron.",
+          "v": false,
+          "e": "FAUX : elle n'a pas bougé d'un électron. Seule la 4s a disparu de l'écriture.",
+          "sourceQuote": "le 4s a complètement disparu de l'écriture, et le 3d⁶ n'a pas bougé d'un électron"
+        },
+        {
+          "t": "Fe²⁺ correspond à la configuration [Ar] 4s² 3d⁴.",
+          "v": false,
+          "e": "FAUX : cette écriture vide la 3d en conservant la 4s, exactement l'inverse de ce qui se produit. Fe²⁺ est [Ar] 3d⁶.",
+          "sourceQuote": "Fe²⁺ n'est PAS [Ar] 4s² 3d⁴ mais bien [Ar] 3d⁶ !"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-050-ordre-ionisation-4s-avant-3d.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au repère de mémorisation et à la proposition fausse classique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le repère retenu est que les derniers arrivés sont les premiers à partir.",
+          "v": true,
+          "e": "VRAI. Cette formule résume l'ordre d'ionisation : la sous-couche remplie en dernier se vide en premier.",
+          "sourceQuote": "(les derniers arrivés sont les premiers à partir !)"
+        },
+        {
+          "t": "La proposition fausse classique consiste à vider la 3d en gardant la 4s.",
+          "v": true,
+          "e": "VRAI. C'est le distracteur type : retirer les électrons dans l'ordre inverse du remplissage.",
+          "sourceQuote": "La proposition fausse consiste à retirer les électrons dans l'ordre inverse du remplissage, en vidant le 3d et en gardant le 4s."
+        },
+        {
+          "t": "Ce piège est présenté comme rare en P1.",
+          "v": false,
+          "e": "FAUX : il est au contraire très fréquent, ce qui justifie de le travailler à part.",
+          "sourceQuote": "C'est un piège très fréquent"
+        },
+        {
+          "t": "Le repère de mémorisation énonce que la 3d se vide avant la 4s.",
+          "v": false,
+          "e": "FAUX : il énonce l'inverse, la 4s se vide avant la 3d.",
+          "sourceQuote": "Ionisation : 4s se vide AVANT 3d"
+        },
+        {
+          "t": "Retirer les électrons dans l'ordre inverse du remplissage donne la bonne configuration de l'ion.",
+          "v": false,
+          "e": "FAUX : c'est exactement le contraire de ce qui se passe. Cette démarche produit une configuration erronée.",
+          "sourceQuote": "C'est exactement le contraire de ce qui se passe."
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-050-ordre-ionisation-4s-avant-3d.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives aux deux lignes à ne jamais mélanger devant un ion, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Au remplissage, la sous-couche 4s se remplit avant la 3d.",
+          "v": true,
+          "e": "VRAI. C'est la première des deux lignes, celle de l'ordre de remplissage.",
+          "sourceQuote": "Remplissage (Klechkowski) : 4s se remplit AVANT 3d."
+        },
+        {
+          "t": "Devant un ion, on part de l'atome neutre puis on retire les électrons.",
+          "v": true,
+          "e": "VRAI. L'ordre des questions à se poser est fixé : d'abord le neutre, ensuite le retrait.",
+          "sourceQuote": "pose-toi toujours la question dans cet ordre : d'abord l'atome neutre, ensuite les électrons qu'on retire"
+        },
+        {
+          "t": "Les électrons se retirent par la couche externe.",
+          "v": true,
+          "e": "VRAI. C'est le critère qui décide : on arrache d'abord ce qui est le plus à l'extérieur.",
+          "sourceQuote": "et on les retire par la couche externe"
+        },
+        {
+          "t": "Devant un ion, il faut commencer par retirer les électrons avant d'écrire l'atome neutre.",
+          "v": false,
+          "e": "FAUX : l'atome neutre s'écrit d'abord. Sans lui, on ne sait pas de quoi on retire les électrons.",
+          "sourceQuote": "d'abord l'atome neutre, ensuite les électrons qu'on retire"
+        },
+        {
+          "t": "Le paradoxe évoqué est que la 4s est servie en dernier mais débarrassée en premier.",
+          "v": false,
+          "e": "FAUX : elle est servie en premier ET débarrassée en premier. C'est cette double priorité qui surprend.",
+          "sourceQuote": "le paradoxe du remplissage / ionisation : le 4s est servi en premier, et débarrassé en premier"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-050-ordre-ionisation-4s-avant-3d.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la règle générale d'ionisation et au bilan de cette notion, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les électrons ns partent avant les (n−1)d, même si ns s'est rempli en premier.",
+          "v": true,
+          "e": "VRAI. C'est la formulation générale, valable au-delà du seul couple 4s / 3d.",
+          "sourceQuote": "Les électrons ns partent avant les (n−1)d, même si ns s'est rempli en premier."
+        },
+        {
+          "t": "La suite d'écritures à retenir pour le fer est [Ar] 4s² 3d⁶ → [Ar] 3d⁶ → [Ar] 3d⁵.",
+          "v": true,
+          "e": "VRAI. L'atome neutre, puis l'ion à deux charges, puis l'ion à trois charges : c'est le modèle à refaire de mémoire.",
+          "sourceQuote": "Fe [Ar] 4s² 3d⁶ → Fe²⁺ [Ar] 3d⁶ → Fe³⁺ [Ar] 3d⁵."
+        },
+        {
+          "t": "La raison avancée est que les 4s, une fois remplis, sont plus proches du noyau que les 3d.",
+          "v": false,
+          "e": "FAUX : ce sont les 3d qui se retrouvent plus proches du noyau, donc mieux retenus. Les 4s partent justement parce qu'ils le sont moins.",
+          "sourceQuote": "une fois remplis, les 3d sont plus proches du noyau, donc mieux retenus"
+        },
+        {
+          "t": "Le fer est un exemple marginal, qui ne donne aucun ion courant.",
+          "v": false,
+          "e": "FAUX : il donne au contraire deux ions très courants, ce qui en fait l'exemple de référence.",
+          "sourceQuote": "parce qu'il donne deux ions très courants"
+        },
+        {
+          "t": "Après cette étape, l'essentiel de la mécanique de la configuration électronique reste à découvrir.",
+          "v": false,
+          "e": "FAUX : la mécanique est désormais complète — orbitales, nombres quantiques, règles de remplissage, exceptions et sens inverse. Reste l'entraînement.",
+          "sourceQuote": "Avec ça, tu tiens toute la mécanique de la configuration électronique"
+        }
+      ]
+    }
+  ]
+}

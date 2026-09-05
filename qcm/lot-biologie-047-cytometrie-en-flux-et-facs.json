@@ -1,0 +1,1375 @@
+{
+  "matiere": "biologie",
+  "chapitre": 4,
+  "questions": [
+    {
+      "fiche": "biologie-047-cytometrie-en-flux-et-facs.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives au principe général de la cytométrie en flux, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les cellules analysées sont mises en suspension, c'est-à-dire flottant dans un liquide et non collées à un support.",
+          "v": true,
+          "e": "VRAI. La mise en suspension est une condition de la technique : les cellules doivent pouvoir circuler librement dans un liquide, et non adhérer à un support.",
+          "sourceQuote": "flottant dans un liquide, pas collées à un support"
+        },
+        {
+          "t": "Elles passent une par une devant un faisceau laser.",
+          "v": true,
+          "e": "VRAI. C'est tout l'intérêt du dispositif : les cellules défilent en file indienne, et chacune est lue individuellement au moment où elle croise le laser.",
+          "sourceQuote": "elles passent une par une devant un faisceau laser"
+        },
+        {
+          "t": "Le terme se décompose en cyto, la mesure, et métrie, la cellule.",
+          "v": false,
+          "e": "FAUX : c'est exactement l'inverse. Cyto désigne la cellule et métrie la mesure — la cytométrie, c'est donc la mesure des cellules.",
+          "sourceQuote": "cyto = cellule, métrie = mesure"
+        },
+        {
+          "t": "Pour chaque cellule, l'appareil relève deux informations.",
+          "v": false,
+          "e": "FAUX : ce sont trois informations qui sont relevées au passage de chaque cellule, et non deux.",
+          "sourceQuote": "Pour chaque cellule, l'appareil relève trois choses."
+        },
+        {
+          "t": "Le marquage exploité est celui de l'immunofluorescence : une molécule fluorescente accrochée à un anticorps.",
+          "v": true,
+          "e": "VRAI. On ne change pas de marquage : c'est le même anticorps porteur d'un fluorochrome, simplement lu cellule par cellule et à très grande vitesse.",
+          "sourceQuote": "une molécule fluorescente accrochée à cet anticorps"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-047-cytometrie-en-flux-et-facs.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux paramètres FSC et SSC mesurés par le cytomètre, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le FSC, ou Forward Scatter, correspond à la diffraction de la lumière vers l'avant.",
+          "v": true,
+          "e": "VRAI. Forward veut dire vers l'avant : le FSC est la lumière recueillie dans le prolongement du faisceau, derrière la cellule.",
+          "sourceQuote": "Forward Scatter, la diffraction vers l'avant"
+        },
+        {
+          "t": "Le FSC reflète la taille de la cellule.",
+          "v": true,
+          "e": "VRAI. Plus la cellule est grosse, plus elle dévie de lumière vers l'avant : le FSC est donc le paramètre de la taille.",
+          "sourceQuote": "Elle reflète la taille de la cellule."
+        },
+        {
+          "t": "Le SSC correspond à la lumière recueillie sur le côté, à 90° du laser.",
+          "v": true,
+          "e": "VRAI. Side veut dire côté : le détecteur du SSC est placé perpendiculairement au faisceau, à 90°.",
+          "sourceQuote": "la lumière recueillie sur le côté, à 90° du laser"
+        },
+        {
+          "t": "Le SSC reflète la taille de la cellule.",
+          "v": false,
+          "e": "FAUX : le SSC reflète la granulosité, c'est-à-dire la complexité interne de la cellule. La taille, c'est le FSC.",
+          "sourceQuote": "le SSC, c'est la granulosité, c'est-à-dire la complexité interne"
+        },
+        {
+          "t": "La lumière du FSC est recueillie sur le côté, à 90° du faisceau.",
+          "v": false,
+          "e": "FAUX : la lumière du FSC est recueillie droit derrière la cellule, dans l'axe du laser. C'est le SSC qui se lit à 90°.",
+          "sourceQuote": "la lumière recueillie droit derrière la cellule, dans l'axe du laser"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-047-cytometrie-en-flux-et-facs.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la fluorescence mesurée et à la vitesse d'analyse en cytométrie en flux, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La fluorescence mesurée provient des fluorochromes fixés sur les anticorps.",
+          "v": true,
+          "e": "VRAI. Le troisième paramètre lu au passage de la cellule est l'émission des fluorochromes portés par les anticorps qui se sont fixés sur elle.",
+          "sourceQuote": "l'émission des fluorochromes fixés sur les anticorps"
+        },
+        {
+          "t": "Cette fluorescence renseigne sur les marqueurs portés par la cellule analysée.",
+          "v": true,
+          "e": "VRAI. Comme chaque anticorps reconnaît une protéine précise, la fluorescence dit quels marqueurs porte cette cellule-là, et pas une autre.",
+          "sourceQuote": "donc les marqueurs que porte cette cellule précise"
+        },
+        {
+          "t": "La vitesse d'analyse est de 1 000 à 5 000 cellules par seconde.",
+          "v": false,
+          "e": "FAUX : la vitesse annoncée est de 10 000 à 50 000 cellules par seconde, soit dix fois plus. C'est ce chiffre qu'il faut retenir.",
+          "sourceQuote": "Vitesse d'analyse : 10 000 à 50 000 cellules par seconde."
+        },
+        {
+          "t": "Cette vitesse permet de caractériser une population entière, et non quelques cellules observées au microscope.",
+          "v": true,
+          "e": "VRAI. C'est là le saut par rapport au microscope : on ne décrit plus quelques cellules choisies, on décrit toute une population.",
+          "sourceQuote": "on ne décrit pas quelques cellules observées au microscope, on caractérise une population entière"
+        },
+        {
+          "t": "Sur le résultat obtenu, chaque point correspond à un groupe de cellules de même marquage.",
+          "v": false,
+          "e": "FAUX : chaque point représente une seule cellule. Ce sont les nuages de points, eux, qui regroupent les cellules marquées d'un côté et les non marquées de l'autre.",
+          "sourceQuote": "chaque point est une cellule, et deux nuages se détachent"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-047-cytometrie-en-flux-et-facs.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives au FACS, à son nom et à l'attribution des charges électriques, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "FACS signifie Fluorescence-Activated Cell Sorting, soit le tri de cellules activé par fluorescence.",
+          "v": true,
+          "e": "VRAI. Le mot clé du sigle est le tri : c'est ce qui sépare le FACS de la simple cytométrie en flux.",
+          "sourceQuote": "Fluorescence-Activated Cell Sorting, le tri de cellules activé par fluorescence"
+        },
+        {
+          "t": "Dans un FACS, le tri remplace l'étape d'analyse par le laser.",
+          "v": false,
+          "e": "FAUX : le tri ne remplace rien, il s'ajoute. Les cellules sont d'abord analysées par le laser, et le tri intervient seulement après cette lecture.",
+          "sourceQuote": "Le tri ne remplace pas l'analyse : il vient après elle."
+        },
+        {
+          "t": "Les cellules reçoivent une charge électrique positive ou négative selon leur fluorescence.",
+          "v": true,
+          "e": "VRAI. C'est le lien entre la lecture et le tri : la fluorescence mesurée commande l'attribution d'une charge, plus ou moins.",
+          "sourceQuote": "Selon leur fluorescence, les cellules reçoivent une charge électrique"
+        },
+        {
+          "t": "C'est la taille de la cellule, mesurée par le FSC, qui décide du signe de la charge.",
+          "v": false,
+          "e": "FAUX : c'est la fluorescence lue juste avant qui décide du signe de la charge, et non la taille.",
+          "sourceQuote": "C'est la fluorescence lue juste avant qui décide du signe."
+        },
+        {
+          "t": "Les cellules sont d'abord analysées par le laser, exactement comme au premier temps.",
+          "v": true,
+          "e": "VRAI. Le FACS reprend intégralement l'étape d'analyse de la cytométrie en flux, puis lui ajoute la séparation physique.",
+          "sourceQuote": "Les cellules sont d'abord analysées par le laser, exactement comme au premier temps."
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-047-cytometrie-en-flux-et-facs.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à la déviation des cellules et aux populations recueillies en fin de FACS, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les plaques de déflexion sont deux plaques chargées, une positive et une négative, entre lesquelles passent les cellules.",
+          "v": true,
+          "e": "VRAI. Chaque cellule chargée est attirée par la plaque de signe opposé, ce qui l'écarte de la trajectoire droite.",
+          "sourceQuote": "deux plaques chargées, une + et une −, entre lesquelles les cellules passent"
+        },
+        {
+          "t": "Les cellules qui n'ont reçu aucune charge sont elles aussi déviées vers un tube latéral.",
+          "v": false,
+          "e": "FAUX : sans charge, aucune attraction possible. Ces cellules poursuivent tout droit et tombent au centre.",
+          "sourceQuote": "celles qui n'ont reçu aucune charge tombent tout droit"
+        },
+        {
+          "t": "On récupère au fond des tubes des populations cellulaires pures et viables.",
+          "v": true,
+          "e": "VRAI. C'est le résultat final du FACS : des populations séparées, homogènes et encore vivantes.",
+          "sourceQuote": "on obtient des populations cellulaires pures et viables"
+        },
+        {
+          "t": "Le mot « pures » signifie ici que les cellules sont encore vivantes.",
+          "v": false,
+          "e": "FAUX : les deux adjectifs ne disent pas la même chose. Pures signifie utilisables telles quelles ; c'est viables qui signifie encore vivantes.",
+          "sourceQuote": "pures, donc utilisables telles quelles ; viables, donc encore vivantes"
+        },
+        {
+          "t": "Le tri du FACS conduit toutes les cellules dans un tube unique.",
+          "v": false,
+          "e": "FAUX : les cellules sont orientées vers différents tubes de collecte, c'est précisément ce qui réalise la séparation.",
+          "sourceQuote": "l'orientent vers différents tubes de collecte"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-047-cytometrie-en-flux-et-facs.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la frontière entre analyser et trier, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "En cytométrie en flux seule, aucune cellule n'est séparée des autres : tout reste dans le même tube.",
+          "v": true,
+          "e": "VRAI. La cytométrie fournit une description, pas une séparation : l'échantillon ressort intact, dans un seul et même tube.",
+          "sourceQuote": "Aucune cellule n'a été séparée des autres : tout est resté dans le même tube."
+        },
+        {
+          "t": "Le mnémo retient que la cytométrie sépare physiquement les cellules et que le FACS se contente de les compter.",
+          "v": false,
+          "e": "FAUX : les deux rôles sont intervertis. La cytométrie compte et caractérise ; c'est le FACS qui sépare physiquement les cellules.",
+          "sourceQuote": "Cytométrie = analyse (on compte et caractérise). FACS = tri (on sépare physiquement les cellules)."
+        },
+        {
+          "t": "Un énoncé demandant d'isoler ou de récupérer une population oriente vers la cytométrie en flux.",
+          "v": false,
+          "e": "FAUX : isoler, séparer ou récupérer une population sont des verbes de tri, donc de FACS.",
+          "sourceQuote": "« Isoler », « séparer », « récupérer une population » → FACS"
+        },
+        {
+          "t": "Un énoncé employant les verbes caractériser, quantifier ou analyser oriente vers la cytométrie en flux.",
+          "v": true,
+          "e": "VRAI. Le bon réflexe n'est pas de chercher le nom de l'appareil mais le verbe employé : ces trois-là désignent l'analyse.",
+          "sourceQuote": "« Caractériser », « quantifier », « analyser » → cytométrie en flux"
+        },
+        {
+          "t": "Sur le schéma du FACS, la zone de charge précède la zone d'analyse.",
+          "v": false,
+          "e": "FAUX : l'ordre est inverse. La cellule est d'abord lue par le laser dans la zone d'analyse, et c'est cette lecture qui détermine ensuite la charge qu'elle recevra.",
+          "sourceQuote": "Zone d'analyse : le laser lit chaque cellule. Zone de charge : selon sa fluorescence, elle reçoit une charge"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-047-cytometrie-en-flux-et-facs.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives aux pièges classiques posés sur la cytométrie en flux, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Inverser le FSC et le SSC est présenté comme l'erreur la plus fréquente du chapitre.",
+          "v": true,
+          "e": "VRAI. C'est le piège annoncé : FSC pour la taille, SSC pour la granulosité, et surtout pas l'inverse.",
+          "sourceQuote": "inverser les deux est l'erreur la plus fréquente du chapitre"
+        },
+        {
+          "t": "Un énoncé affirmant que le SSC reflète la taille de la cellule est exact.",
+          "v": false,
+          "e": "FAUX : un tel énoncé est faux. Le SSC reflète la granulosité ; attribuer la taille au SSC, c'est commettre l'inversion classique.",
+          "sourceQuote": "Un QCM qui écrit « le SSC reflète la taille de la cellule » est FAUX"
+        },
+        {
+          "t": "La granulosité correspond à la complexité interne de la cellule, c'est-à-dire tout ce qu'elle contient et qui dévie la lumière.",
+          "v": true,
+          "e": "VRAI. Plus une cellule contient de structures internes, plus elle disperse la lumière sur le côté, et plus son SSC est élevé.",
+          "sourceQuote": "tout ce qu'elle contient et qui dévie la lumière"
+        },
+        {
+          "t": "L'immunofluorescence, technique dont dérive ce marquage, servait à mesurer la vitesse de division des cellules.",
+          "v": false,
+          "e": "FAUX : l'immunofluorescence servait à voir où se trouve une protéine dans la cellule, c'est-à-dire à la localiser, pas à chronométrer une division.",
+          "sourceQuote": "servait à voir où se trouve une protéine dans la cellule"
+        },
+        {
+          "t": "Sur le résultat de cytométrie, les deux nuages qui se détachent distinguent les grandes cellules des petites.",
+          "v": false,
+          "e": "FAUX : les deux nuages séparent les cellules marquées des cellules non marquées, ce qui relève de la fluorescence et non de la taille.",
+          "sourceQuote": "les cellules marquées, les non marquées"
+        }
+      ]
+    },
+
+    {
+      "fiche": "biologie-048-transfection.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à l'objectif de la transfection et à l'obstacle qu'elle doit franchir, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'objectif est de faire entrer de l'ADN dans une cellule pour qu'elle produise une nouvelle protéine.",
+          "v": true,
+          "e": "VRAI. Tout part de là : on apporte un gène pour que la machinerie de la cellule fabrique la protéine correspondante.",
+          "sourceQuote": "faire entrer de l'ADN dans une cellule pour qu'elle produise une nouvelle protéine"
+        },
+        {
+          "t": "On utilise pour cela un plasmide, décrit comme un petit cercle d'ADN.",
+          "v": true,
+          "e": "VRAI. Le plasmide est le support : une petite molécule d'ADN circulaire dans laquelle on a placé le gène d'intérêt.",
+          "sourceQuote": "un plasmide (un petit cercle d'ADN)"
+        },
+        {
+          "t": "Le principal obstacle est que la membrane cellulaire bloque l'ADN.",
+          "v": true,
+          "e": "VRAI. Sans franchissement de la membrane, l'ADN reste dehors : c'est cette barrière que toutes les méthodes cherchent à contourner.",
+          "sourceQuote": "la membrane cellulaire bloque l'ADN"
+        },
+        {
+          "t": "La transfection désigne l'ensemble des méthodes qui font entrer l'ADN à l'aide d'un virus.",
+          "v": false,
+          "e": "FAUX : la transfection regroupe au contraire les méthodes qui franchissent la membrane sans utiliser de virus.",
+          "sourceQuote": "quatre solutions pour franchir cette membrane, sans utiliser de virus. C'est ce qu'on appelle la transfection"
+        },
+        {
+          "t": "Le plasmide utilisé ne contient jamais le gène que l'on souhaite introduire.",
+          "v": false,
+          "e": "FAUX : c'est précisément l'inverse. Le plasmide est choisi parce qu'il contient le gène que l'on veut faire entrer.",
+          "sourceQuote": "qui contient le gène qu'on veut introduire"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-048-transfection.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la lipofection et à l'électroporation, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "En lipofection, l'ADN est emballé dans des bulles de graisse appelées liposomes.",
+          "v": true,
+          "e": "VRAI. Le liposome est une petite vésicule lipidique : comme la membrane est elle-même faite de lipides, les deux peuvent se confondre.",
+          "sourceQuote": "des bulles de graisse (des liposomes)"
+        },
+        {
+          "t": "Ces bulles fusionnent avec la membrane de la cellule et libèrent l'ADN à l'intérieur.",
+          "v": true,
+          "e": "VRAI. La bulle se fond dans la membrane, ce qui dépose son contenu directement dans la cellule sans jamais l'ouvrir.",
+          "sourceQuote": "La bulle se fond dans la membrane et libère l'ADN à l'intérieur."
+        },
+        {
+          "t": "L'électroporation repose sur un choc électrique qui crée des trous temporaires dans la membrane.",
+          "v": true,
+          "e": "VRAI. Le choc ouvre brièvement des pores dans la membrane, et l'ADN profite de ce passage.",
+          "sourceQuote": "un choc électrique qui crée des petits trous temporaires dans la membrane"
+        },
+        {
+          "t": "Après le passage de l'ADN, les trous ouverts par l'électroporation restent définitivement ouverts.",
+          "v": false,
+          "e": "FAUX : ces trous sont temporaires. La membrane se referme derrière l'ADN, ce qui laisse la cellule intacte.",
+          "sourceQuote": "et la membrane se referme derrière"
+        },
+        {
+          "t": "Dans le mot électroporation, poration renvoie à l'électricité et électro aux pores.",
+          "v": false,
+          "e": "FAUX : les deux moitiés sont interverties. Électro désigne l'électricité et poration les pores ouverts dans la membrane.",
+          "sourceQuote": "électro, l'électricité, et poration, les pores"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-048-transfection.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la microinjection et à la méthode du calcium, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La microinjection dépose l'ADN directement dans le noyau, à l'aide d'une très fine aiguille.",
+          "v": true,
+          "e": "VRAI. Aucune ruse ici : on traverse la membrane avec une aiguille et l'on dépose l'ADN au but.",
+          "sourceQuote": "On injecte l'ADN directement dans le noyau, avec une toute petite aiguille."
+        },
+        {
+          "t": "La microinjection est la seule des quatre méthodes à déposer l'ADN jusque dans le noyau.",
+          "v": true,
+          "e": "VRAI. C'est sa signature : les autres méthodes libèrent l'ADN dans la cellule, elle seule va jusqu'au noyau.",
+          "sourceQuote": "C'est la seule des quatre où l'ADN est déposé jusque dans le noyau"
+        },
+        {
+          "t": "Les trois autres méthodes déposent également l'ADN dans le noyau.",
+          "v": false,
+          "e": "FAUX : les trois autres lâchent l'ADN dans la cellule, sans atteindre le noyau.",
+          "sourceQuote": "les trois autres le lâchent dans la cellule"
+        },
+        {
+          "t": "Avec la méthode du calcium, l'ADN se lie au calcium et forme des petits paquets qui entrent dans la cellule.",
+          "v": true,
+          "e": "VRAI. C'est l'association ADN-calcium elle-même qui forme des agrégats capables de franchir la membrane.",
+          "sourceQuote": "L'ADN se lie au calcium et forme des petits paquets qui entrent dans la cellule."
+        },
+        {
+          "t": "La méthode du calcium nécessite un choc électrique préalable.",
+          "v": false,
+          "e": "FAUX : ni choc électrique ni aiguille. C'est le paquet ADN-calcium qui fait tout le travail.",
+          "sourceQuote": "Pas de choc, pas d'aiguille : c'est le paquet ADN-calcium qui fait tout le travail."
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-048-transfection.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la façon de reconnaître une méthode de transfection dans un énoncé, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La lipofection est la méthode de transfection la plus utilisée.",
+          "v": true,
+          "e": "VRAI. C'est le détail qu'on oublie facilement : parmi les quatre, c'est la lipofection qui domine en pratique.",
+          "sourceQuote": "C'est la méthode la plus utilisée."
+        },
+        {
+          "t": "Devant un énoncé, la question à se poser est de savoir comment l'ADN franchit la membrane.",
+          "v": true,
+          "e": "VRAI. Une seule question suffit à trier les quatre méthodes : par quel moyen l'ADN passe-t-il la membrane ?",
+          "sourceQuote": "comment l'ADN franchit-il la membrane ?"
+        },
+        {
+          "t": "Un ADN emballé avant d'entrer oriente vers l'électroporation.",
+          "v": false,
+          "e": "FAUX : l'emballage renvoie à la lipofection, où l'ADN voyage dans un liposome. L'électroporation, elle, ouvre des trous.",
+          "sourceQuote": "Emballé → lipofection."
+        },
+        {
+          "t": "Un ADN passant par un trou ouvert au choc électrique oriente vers l'électroporation.",
+          "v": true,
+          "e": "VRAI. Le choc électrique est la signature de l'électroporation, et d'aucune des trois autres méthodes.",
+          "sourceQuote": "Par un trou ouvert au choc électrique → électroporation."
+        },
+        {
+          "t": "Chaque méthode se reconnaît d'abord au type de cellule utilisé.",
+          "v": false,
+          "e": "FAUX : ce qui identifie une méthode, c'est sa façon de faire passer l'ADN à travers la membrane, et rien d'autre.",
+          "sourceQuote": "Chaque méthode se reconnaît à sa façon de passer, pas à autre chose."
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-048-transfection.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à la lecture du schéma des quatre méthodes de transfection, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La lipofection y est représentée par une bulle qui fusionne avec la membrane et libère l'ADN dedans.",
+          "v": true,
+          "e": "VRAI. La bulle ne perce rien : elle se fond dans la membrane et son contenu se retrouve à l'intérieur de la cellule.",
+          "sourceQuote": "la bulle jaune fusionne avec la membrane et libère l'ADN dedans"
+        },
+        {
+          "t": "Ce sont des éclairs qui y figurent l'ouverture des trous par l'électroporation.",
+          "v": true,
+          "e": "VRAI. Les éclairs rappellent le choc électrique, et l'ADN s'engouffre dans les trous ainsi ouverts.",
+          "sourceQuote": "les éclairs ouvrent des trous, l'ADN s'y engouffre"
+        },
+        {
+          "t": "L'aiguille de la microinjection s'y arrête au niveau du cytoplasme, sans atteindre le noyau.",
+          "v": false,
+          "e": "FAUX : l'aiguille traverse tout et va déposer l'ADN dans le noyau lui-même — c'est la seule des quatre à aller jusque-là.",
+          "sourceQuote": "l'aiguille traverse tout et dépose l'ADN dans le noyau"
+        },
+        {
+          "t": "La méthode du calcium y est notée « chlorure de calcium ».",
+          "v": false,
+          "e": "FAUX : sur le schéma, la mention exacte est « phosphate de calcium », et non chlorure de calcium.",
+          "sourceQuote": "noté « phosphate de calcium » sur le schéma"
+        },
+        {
+          "t": "Les paquets de la méthode calcium y repoussent la membrane vers l'extérieur.",
+          "v": false,
+          "e": "FAUX : ces paquets sont au contraire avalés par la membrane, qui les fait entrer dans la cellule.",
+          "sourceQuote": "les paquets orange sont avalés par la membrane"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-048-transfection.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives aux confusions à éviter entre les quatre méthodes de transfection, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'électroporation ouvre des trous temporaires dans la membrane, tandis que la microinjection traverse à l'aiguille jusqu'au noyau.",
+          "v": true,
+          "e": "VRAI. C'est la distinction annoncée comme piège : l'une ouvre un passage dans la membrane, l'autre la perce et va jusqu'au noyau.",
+          "sourceQuote": "l'une ouvre des trous temporaires dans la membrane par un choc électrique, l'autre traverse à l'aiguille jusqu'au noyau"
+        },
+        {
+          "t": "C'est la microinjection qui repose sur un choc électrique.",
+          "v": false,
+          "e": "FAUX : le choc électrique appartient à l'électroporation. La microinjection n'utilise qu'une aiguille.",
+          "sourceQuote": "L'électroporation. On donne un choc électrique"
+        },
+        {
+          "t": "Si l'on demande quelle méthode est la plus utilisée, la réponse est la microinjection.",
+          "v": false,
+          "e": "FAUX : la méthode la plus utilisée est la lipofection. La microinjection reste une technique lourde, réservée à des cas précis.",
+          "sourceQuote": "si on te demande la méthode la plus utilisée, la réponse est lipofection"
+        },
+        {
+          "t": "Les quatre méthodes de transfection se passent toutes de virus.",
+          "v": true,
+          "e": "VRAI. C'est ce qui les définit comme transfection : elles franchissent la membrane sans recourir à un virus.",
+          "sourceQuote": "quatre méthodes sans virus la franchissent"
+        },
+        {
+          "t": "Dans la lipofection, l'ADN entre par des pores ouverts dans la membrane.",
+          "v": false,
+          "e": "FAUX : en lipofection, l'ADN est emballé dans un liposome qui fusionne avec la membrane. Ce sont l'électroporation et elle seule qui passe par des pores.",
+          "sourceQuote": "emballé dans un liposome qui fusionne avec la membrane"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-048-transfection.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives aux finalités poursuivies et au vocabulaire employé autour de la transfection, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Faire entrer de l'ADN dans une cellule permet notamment d'étudier le rôle d'un gène.",
+          "v": true,
+          "e": "VRAI. C'est la première des trois finalités annoncées : introduire un gène pour observer ce qu'il fait.",
+          "sourceQuote": "étudier le rôle d'un gène"
+        },
+        {
+          "t": "Cette démarche permet aussi de créer des modèles de maladie.",
+          "v": true,
+          "e": "VRAI. En introduisant un gène altéré, on reproduit en laboratoire une situation pathologique que l'on veut étudier.",
+          "sourceQuote": "créer des modèles de maladie"
+        },
+        {
+          "t": "Elle ne permet en revanche jamais de corriger un défaut génétique.",
+          "v": false,
+          "e": "FAUX : corriger un défaut génétique fait justement partie des objectifs annoncés, aux côtés de l'étude d'un gène et de la création de modèles.",
+          "sourceQuote": "corriger un défaut génétique"
+        },
+        {
+          "t": "Les cellules obtenues après un tri par FACS sont pures mais mortes, ce qui interdit d'y faire entrer de l'ADN ensuite.",
+          "v": false,
+          "e": "FAUX : les populations issues du tri sont pures et viables, donc bien vivantes. C'est précisément ce qui permet de travailler dessus ensuite.",
+          "sourceQuote": "des populations cellulaires pures et viables — des cellules triées, et surtout vivantes"
+        },
+        {
+          "t": "Le nom donné à l'ensemble de ces quatre méthodes est la transduction.",
+          "v": false,
+          "e": "FAUX : le nom de cet ensemble est la transfection. Le terme transduction est réservé à l'entrée du gène par un virus.",
+          "sourceQuote": "C'est ce qu'on appelle la transfection."
+        }
+      ]
+    },
+
+    {
+      "fiche": "biologie-049-vecteurs-viraux.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives au principe général des vecteurs viraux, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "On retire les gènes dangereux du virus et on met à la place le gène thérapeutique.",
+          "v": true,
+          "e": "VRAI. On garde du virus ce qui nous intéresse, son savoir-faire pour entrer, et l'on remplace le reste par le gène à livrer.",
+          "sourceQuote": "on retire les gènes dangereux du virus et on met à la place le gène thérapeutique"
+        },
+        {
+          "t": "Le virus ainsi modifié conserve son pouvoir de rendre malade.",
+          "v": false,
+          "e": "FAUX : privé de ses gènes dangereux, le virus ne peut plus rendre malade. Il ne sait plus faire qu'une chose, livrer le gène qu'on lui a confié.",
+          "sourceQuote": "Le virus ne peut plus rendre malade"
+        },
+        {
+          "t": "Quand le gène entre par cette voie, on parle de transduction virale.",
+          "v": true,
+          "e": "VRAI. Le changement de mot marque le changement de voie : ce n'est plus une transfection mais une transduction virale.",
+          "sourceQuote": "on ne parle plus de transfection mais de transduction virale"
+        },
+        {
+          "t": "Les virus utilisés de la sorte sont comparés à des « taxis moléculaires ».",
+          "v": true,
+          "e": "VRAI. L'image dit l'essentiel : le virus n'est plus un agresseur, il est le véhicule qui transporte notre gène jusqu'à la cellule.",
+          "sourceQuote": "on les utilise comme « taxis moléculaires » pour transporter nos gènes"
+        },
+        {
+          "t": "On se tourne vers les virus parce qu'ils sont particulièrement lents à pénétrer dans les cellules.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse qui motive leur emploi. Les virus sont naturellement conçus pour injecter leur ADN dans les cellules : entrer est justement leur spécialité.",
+          "sourceQuote": "Les virus sont naturellement conçus pour injecter leur ADN dans les cellules."
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-049-vecteurs-viraux.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à l'adénovirus, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Avec l'adénovirus, le gène injecté ne se mélange pas avec l'ADN de la cellule.",
+          "v": true,
+          "e": "VRAI. Le gène reste à part, dans le cytoplasme ou le noyau, sans jamais rejoindre le patrimoine génétique de la cellule.",
+          "sourceQuote": "mais ne se mélange pas avec l'ADN de la cellule"
+        },
+        {
+          "t": "L'effet obtenu dure quelques semaines seulement.",
+          "v": true,
+          "e": "VRAI. C'est la conséquence directe de l'absence d'intégration : le gène finit par être perdu, et l'effet s'éteint en quelques semaines.",
+          "sourceQuote": "un effet qui dure quelques semaines seulement"
+        },
+        {
+          "t": "Le gène apporté par l'adénovirus est transmis à toutes les cellules filles lors des divisions.",
+          "v": false,
+          "e": "FAUX : n'étant pas intégré, le gène disparaît quand la cellule se divise ou meurt. Il n'est pas transmis aux cellules filles.",
+          "sourceQuote": "Quand la cellule se divise ou meurt, le gène disparaît"
+        },
+        {
+          "t": "L'adénovirus est utilisé pour les vaccins, comme celui contre la COVID-19 d'AstraZeneca.",
+          "v": true,
+          "e": "VRAI. Un vaccin n'a pas besoin d'un effet permanent : quelques semaines suffisent à éduquer le système immunitaire.",
+          "sourceQuote": "Utile pour les vaccins (COVID-19 AstraZeneca)"
+        },
+        {
+          "t": "Pour un vaccin, la disparition de l'effet constitue un inconvénient rédhibitoire.",
+          "v": false,
+          "e": "FAUX : pour un vaccin, la disparition de l'effet n'est pas gênante. Une fois que le système immunitaire a appris à reconnaître le virus, l'effet peut s'éteindre.",
+          "sourceQuote": "on veut juste apprendre au système immunitaire à reconnaître le virus : ensuite, l'effet peut disparaître"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-049-vecteurs-viraux.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au lentivirus, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le lentivirus insère le gène directement dans l'ADN de la cellule.",
+          "v": true,
+          "e": "VRAI. C'est ce qu'on appelle l'intégration dans le génome, et c'est la propriété qui distingue ce vecteur des deux autres.",
+          "sourceQuote": "Le gène s'insère directement dans l'ADN de la cellule"
+        },
+        {
+          "t": "Après division, seule la moitié des cellules filles conserve le gène apporté par le lentivirus.",
+          "v": false,
+          "e": "FAUX : comme le gène fait désormais partie du génome, il est recopié à chaque division. Toutes les cellules filles le gardent.",
+          "sourceQuote": "toutes les cellules filles gardent ce nouveau gène"
+        },
+        {
+          "t": "La modification obtenue est temporaire.",
+          "v": false,
+          "e": "FAUX : la modification est définitive. C'est justement l'intégration au génome qui la rend permanente.",
+          "sourceQuote": "modification définitive"
+        },
+        {
+          "t": "Le lentivirus sert à produire des CAR-T cells, en modifiant les lymphocytes T du patient.",
+          "v": true,
+          "e": "VRAI. Les lymphocytes T sont modifiés pour reconnaître et attaquer les cellules cancéreuses, et cette modification dure toute leur vie.",
+          "sourceQuote": "on modifie les lymphocytes T du patient pour qu'ils reconnaissent et attaquent les cellules cancéreuses"
+        },
+        {
+          "t": "Le lentivirus est, des trois vecteurs, celui qui ne s'intègre pas au génome.",
+          "v": false,
+          "e": "FAUX : c'est exactement l'inverse. Le lentivirus est le seul des trois à s'intégrer dans l'ADN de la cellule.",
+          "sourceQuote": "Seul le lentivirus s'intègre dans l'ADN de la cellule."
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-049-vecteurs-viraux.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à l'AAV, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "AAV désigne le virus adéno-associé.",
+          "v": true,
+          "e": "VRAI. Le nom complet est virus adéno-associé, à ne pas confondre avec l'adénovirus, qui est un vecteur distinct.",
+          "sourceQuote": "Virus adéno-associé"
+        },
+        {
+          "t": "C'est un petit virus naturellement inoffensif pour l'homme, qui ne cause aucune maladie.",
+          "v": true,
+          "e": "VRAI. C'est ce qui en fait le plus sûr des trois vecteurs : à l'état naturel, il ne provoque aucune maladie chez l'homme.",
+          "sourceQuote": "un petit virus naturellement inoffensif pour l'homme, il ne cause aucune maladie"
+        },
+        {
+          "t": "Avec l'AAV, le gène reste actif plusieurs années.",
+          "v": true,
+          "e": "VRAI. C'est la durée intermédiaire à retenir : plus longue que les quelques semaines de l'adénovirus, mais sans être définitive.",
+          "sourceQuote": "Le gène reste actif très longtemps (plusieurs années)"
+        },
+        {
+          "t": "Cette longue durée s'explique par l'intégration du gène dans l'ADN de la cellule.",
+          "v": false,
+          "e": "FAUX : l'AAV n'intègre pas le gène dans l'ADN. Sa durée d'action tient malgré cette absence d'intégration, et c'est ce qui surprend.",
+          "sourceQuote": "et pourtant sans s'intégrer dans l'ADN"
+        },
+        {
+          "t": "L'AAV est utilisé pour traiter des maladies infectieuses aiguës.",
+          "v": false,
+          "e": "FAUX : son domaine est celui des maladies génétiques rares, où l'on cherche à corriger durablement un gène défectueux.",
+          "sourceQuote": "Utile pour corriger des maladies génétiques rares"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-049-vecteurs-viraux.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au critère qui commande le choix d'un vecteur viral, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les trois vecteurs se distinguent d'abord par la durée pendant laquelle le gène reste actif.",
+          "v": true,
+          "e": "VRAI. C'est le critère de tri annoncé : ce n'est pas la nature du gène transporté qui change, c'est le temps pendant lequel il agit.",
+          "sourceQuote": "combien de temps le gène reste actif"
+        },
+        {
+          "t": "L'ordre à retenir est : quelques semaines, puis définitif, puis plusieurs années.",
+          "v": true,
+          "e": "VRAI. Cet ordre correspond à l'adénovirus, au lentivirus puis à l'AAV — et il évite de mélanger durée et intégration.",
+          "sourceQuote": "quelques semaines, puis définitif, puis plusieurs années"
+        },
+        {
+          "t": "Les trois vecteurs se distinguent surtout par la nature du gène qu'ils transportent.",
+          "v": false,
+          "e": "FAUX : ils transportent le même type de matériel. Ce qui les sépare, c'est la durée de l'effet obtenu.",
+          "sourceQuote": "ils ne se distinguent pas par ce qu'ils transportent"
+        },
+        {
+          "t": "Deux des trois vecteurs s'intègrent à l'ADN de la cellule.",
+          "v": false,
+          "e": "FAUX : un seul des trois s'intègre. Les deux autres laissent le gène en dehors du génome.",
+          "sourceQuote": "Un seul des trois le fait"
+        },
+        {
+          "t": "Les deux vecteurs qui ne s'intègrent pas ont exactement la même durée d'effet.",
+          "v": false,
+          "e": "FAUX : leurs durées sont très différentes — quelques semaines pour l'un, plusieurs années pour l'autre — bien qu'aucun des deux ne s'intègre.",
+          "sourceQuote": "n'ont pourtant pas du tout la même durée"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-049-vecteurs-viraux.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives au devenir du gène après division cellulaire et au lien entre durée et intégration, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le matériel apporté par l'adénovirus reste à côté du chromosome et se perd après la division.",
+          "v": true,
+          "e": "VRAI. Rester à côté du chromosome, c'est n'être recopié par personne : à la division suivante, le gène est dilué puis perdu.",
+          "sourceQuote": "le cercle rouge reste à côté du chromosome, non intégré → perdu après la division"
+        },
+        {
+          "t": "Le matériel apporté par le lentivirus s'insère dans le chromosome et se transmet aux cellules filles.",
+          "v": true,
+          "e": "VRAI. Une fois inséré dans le chromosome, le gène est recopié avec lui et passe donc à toutes les cellules filles.",
+          "sourceQuote": "le rouge s'insère dans le chromosome bleu → transmis aux cellules filles"
+        },
+        {
+          "t": "Le matériel apporté par l'AAV apparaît lui aussi inséré dans le chromosome.",
+          "v": false,
+          "e": "FAUX : l'AAV laisse son matériel à part du chromosome, exactement comme l'adénovirus. Il ne s'intègre pas.",
+          "sourceQuote": "le cercle rouge reste lui aussi à part du chromosome"
+        },
+        {
+          "t": "Un effet qui dure longtemps implique nécessairement une intégration au génome.",
+          "v": false,
+          "e": "FAUX : l'AAV en est le contre-exemple. Son effet tient des années sans la moindre intégration : long ne veut pas dire intégré.",
+          "sourceQuote": "long ne veut pas dire intégré"
+        },
+        {
+          "t": "L'adénovirus est présenté comme le mauvais vecteur, à éviter systématiquement.",
+          "v": false,
+          "e": "FAUX : son effet temporaire n'est pas un défaut en soi. Pour un vaccin, c'est exactement ce que l'on recherche.",
+          "sourceQuote": "l'adénovirus n'est pas « le mauvais » : son effet temporaire est exactement ce qu'on cherche pour un vaccin"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-049-vecteurs-viraux.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives aux médicaments cités et au vocabulaire des deux voies d'entrée, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Luxturna®, en 2017, restaure la vision chez des enfants nés aveugles.",
+          "v": true,
+          "e": "VRAI. C'est l'un des deux exemples marquants de correction durable d'une maladie génétique rare.",
+          "sourceQuote": "Luxturna® (2017) restaure la vision chez des enfants nés aveugles"
+        },
+        {
+          "t": "Zolgensma®, en 2019, traite l'amyotrophie spinale infantile, mortelle sans traitement.",
+          "v": true,
+          "e": "VRAI. Deux ans après Luxturna®, ce traitement s'attaque à une maladie qui, sans lui, ne laisse aucune issue.",
+          "sourceQuote": "Zolgensma® (2019) traite l'amyotrophie spinale infantile, mortelle sans traitement"
+        },
+        {
+          "t": "La transfection désigne l'entrée de l'ADN à l'aide d'un virus transporteur.",
+          "v": false,
+          "e": "FAUX : la transfection, c'est faire entrer l'ADN sans virus. Avec un virus transporteur, on parle de transduction virale.",
+          "sourceQuote": "Transfection = faire entrer l'ADN sans virus"
+        },
+        {
+          "t": "Transduction virale et transfection sont deux noms d'une même voie d'entrée.",
+          "v": false,
+          "e": "FAUX : l'objectif est le même, mais les deux voies sont distinctes et portent chacune leur nom. Il ne faut pas les échanger.",
+          "sourceQuote": "Même objectif, deux noms différents : ne les échange pas."
+        },
+        {
+          "t": "L'AAV est présenté comme le plus sûr des trois vecteurs.",
+          "v": true,
+          "e": "VRAI. Sa sûreté vient de sa nature : c'est un virus qui, à l'état naturel, ne rend pas malade.",
+          "sourceQuote": "L'AAV — le plus sûr."
+        }
+      ]
+    },
+
+    {
+      "fiche": "biologie-050-crispr-cas9-mecanisme.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à ce qu'est CRISPR/Cas9 et à sa reconnaissance scientifique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "CRISPR/Cas9 permet de couper et de modifier l'ADN là où on veut.",
+          "v": true,
+          "e": "VRAI. C'est l'image qui résume l'outil : des ciseaux ultra-précis, dirigés vers un endroit choisi du génome.",
+          "sourceQuote": "des ciseaux ultra-précis pour couper et modifier l'ADN là où on veut"
+        },
+        {
+          "t": "Cette technique a valu le Prix Nobel 2020 à Emmanuelle Charpentier et Jennifer Doudna.",
+          "v": true,
+          "e": "VRAI. Deux chercheuses, un Nobel en 2020 : c'est la date et les noms à retenir.",
+          "sourceQuote": "Prix Nobel 2020 pour Emmanuelle Charpentier et Jennifer Doudna"
+        },
+        {
+          "t": "Le Prix Nobel correspondant a été décerné en 2018.",
+          "v": false,
+          "e": "FAUX : le Nobel a été attribué en 2020, et non en 2018.",
+          "sourceQuote": "Prix Nobel 2020"
+        },
+        {
+          "t": "CRISPR/Cas9 est présentée comme une technique marginale, éclipsée par des méthodes plus anciennes.",
+          "v": false,
+          "e": "FAUX : elle est au contraire présentée comme la technique la plus révolutionnaire de ces vingt dernières années.",
+          "sourceQuote": "C'est la technique la plus révolutionnaire de ces 20 dernières années"
+        },
+        {
+          "t": "Cette technique n'agit qu'au hasard sur le génome, sans ciblage possible.",
+          "v": false,
+          "e": "FAUX : tout son intérêt tient à sa précision. Elle coupe et modifie un gène à un endroit choisi, pas au hasard.",
+          "sourceQuote": "coupe et modifie un gène avec précision"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-050-crispr-cas9-mecanisme.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à l'origine bactérienne du système CRISPR, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "CRISPR provient du système de défense naturel des bactéries.",
+          "v": true,
+          "e": "VRAI. Avant d'être un outil de laboratoire, CRISPR est une arme que les bactéries utilisent contre les virus qui les attaquent.",
+          "sourceQuote": "Les bactéries utilisent naturellement CRISPR comme système de défense."
+        },
+        {
+          "t": "Quand un virus attaque, la bactérie enregistre un morceau de l'ADN du virus dans son propre génome.",
+          "v": true,
+          "e": "VRAI. La bactérie garde une trace de l'agresseur, inscrite dans son propre génome : c'est ce qui lui permettra de le reconnaître plus tard.",
+          "sourceQuote": "la bactérie elle-même enregistre un petit morceau de l'ADN du virus dans son propre génome"
+        },
+        {
+          "t": "Cet enregistrement constitue sa mémoire immunitaire.",
+          "v": true,
+          "e": "VRAI. C'est le mot exact : une mémoire, qui permet à la bactérie de se souvenir des virus déjà rencontrés.",
+          "sourceQuote": "c'est sa mémoire immunitaire"
+        },
+        {
+          "t": "Si le virus revient, la bactérie utilise Cas9 pour recopier l'ADN viral et le conserver.",
+          "v": false,
+          "e": "FAUX : au retour du virus, Cas9 sert à couper l'ADN viral et à le détruire, pas à le recopier.",
+          "sourceQuote": "pour le couper et le détruire"
+        },
+        {
+          "t": "CRISPR a été inventé de toutes pièces en laboratoire.",
+          "v": false,
+          "e": "FAUX : le système n'a pas été inventé, il a été emprunté. Il vient de la bactérie, pas d'un laboratoire.",
+          "sourceQuote": "Pas d'un laboratoire : de la bactérie."
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-050-crispr-cas9-mecanisme.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives aux deux premières étapes de la modification d'un gène par CRISPR/Cas9, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La première étape consiste à fabriquer un ARN guide.",
+          "v": true,
+          "e": "VRAI. Tout commence par la fabrication du guide : c'est lui qui portera l'adresse de la cible.",
+          "sourceQuote": "On fabrique un ARN guide"
+        },
+        {
+          "t": "Cet ARN guide connaît la page et la ligne où se trouve l'erreur, c'est-à-dire le gène défectueux.",
+          "v": true,
+          "e": "VRAI. L'image du livre rend la fonction évidente : le guide sait exactement où se situe la séquence à corriger.",
+          "sourceQuote": "qui connaît exactement la page et la ligne où se trouve l'erreur (= le gène défectueux)"
+        },
+        {
+          "t": "C'est l'ARN guide lui-même qui coupe l'ADN.",
+          "v": false,
+          "e": "FAUX : l'ARN guide ne coupe rien. Il amène Cas9, la protéine ciseaux, jusqu'au bon endroit sur l'ADN.",
+          "sourceQuote": "Ce GPS amène Cas9 (une protéine qui agit comme des ciseaux moléculaires) pile au bon endroit sur l'ADN."
+        },
+        {
+          "t": "Cas9 est une protéine qui agit comme des ciseaux moléculaires.",
+          "v": true,
+          "e": "VRAI. Cas9 est l'outil coupant du système : une protéine dont le rôle est de sectionner l'ADN.",
+          "sourceQuote": "une protéine qui agit comme des ciseaux moléculaires"
+        },
+        {
+          "t": "Cas9 se rend seule sur la séquence visée, sans avoir besoin d'un guide.",
+          "v": false,
+          "e": "FAUX : sans guide, Cas9 ne sait pas où aller. C'est l'ARN guide qui l'amène pile au bon endroit.",
+          "sourceQuote": "Guider les ciseaux. Ce GPS amène Cas9"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-050-crispr-cas9-mecanisme.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux deux dernières étapes de la modification d'un gène par CRISPR/Cas9, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "À la troisième étape, Cas9 coupe les deux brins de l'ADN.",
+          "v": true,
+          "e": "VRAI. La coupure porte sur les deux brins à la fois : la double hélice est sectionnée d'un coup, à l'endroit visé.",
+          "sourceQuote": "Cas9 coupe les deux brins de l'ADN."
+        },
+        {
+          "t": "Cas9 ne coupe qu'un seul des deux brins de l'ADN.",
+          "v": false,
+          "e": "FAUX : Cas9 coupe les deux brins, ce qui revient à découper la page du livre à l'endroit précis de l'erreur.",
+          "sourceQuote": "Cas9 coupe les deux brins de l'ADN → c'est comme découper la page du livre"
+        },
+        {
+          "t": "La cellule répare automatiquement la coupure.",
+          "v": true,
+          "e": "VRAI. Aucune intervention extérieure n'est nécessaire : la cellule ne laisse pas son ADN cassé et lance seule la réparation.",
+          "sourceQuote": "La cellule répare automatiquement la coupure."
+        },
+        {
+          "t": "Selon le mode de réparation, on peut soit supprimer le gène défectueux, soit insérer un gène correct.",
+          "v": true,
+          "e": "VRAI. C'est la réparation, et non la coupure, qui décide du résultat obtenu.",
+          "sourceQuote": "on peut soit supprimer le gène défectueux, soit insérer un gène correct"
+        },
+        {
+          "t": "C'est Cas9 qui assure elle-même la réparation de la coupure.",
+          "v": false,
+          "e": "FAUX : une fois la coupure faite, Cas9 n'intervient plus. La réparation est l'affaire de la cellule.",
+          "sourceQuote": "Ce qui vient après — la réparation — n'est plus l'affaire de Cas9, mais de la cellule."
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-050-crispr-cas9-mecanisme.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux raisons du succès de CRISPR/Cas9, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Pour cibler un autre gène, il suffit de changer la séquence de l'ARN guide.",
+          "v": true,
+          "e": "VRAI. C'est ce qui rend la technique si simple : on ne change pas l'outil coupant, seulement l'adresse qu'on lui donne.",
+          "sourceQuote": "il suffit de changer la séquence de l'ARN guide pour cibler n'importe quel gène"
+        },
+        {
+          "t": "La technique demande quelques semaines, là où les anciennes techniques demandaient des mois ou des années.",
+          "v": true,
+          "e": "VRAI. Le gain de temps est considérable, et c'est l'un des trois arguments qui expliquent son adoption massive.",
+          "sourceQuote": "quelques semaines, contre des mois ou des années avec les anciennes techniques d'édition du génome"
+        },
+        {
+          "t": "ZFN et TALEN sont citées comme les anciennes techniques d'édition du génome.",
+          "v": true,
+          "e": "VRAI. Ce sont les deux méthodes que CRISPR a largement supplantées, précisément parce qu'elles étaient longues et lourdes.",
+          "sourceQuote": "anciennes techniques d'édition du génome (ZFN, TALEN)"
+        },
+        {
+          "t": "Un ARN guide coûte plusieurs dizaines de milliers d'euros, ce qui réserve la technique à quelques laboratoires.",
+          "v": false,
+          "e": "FAUX : un ARN guide revient à quelques dizaines d'euros seulement. C'est ce faible coût qui rend la technique accessible à tous les laboratoires.",
+          "sourceQuote": "un ARN guide revient à quelques dizaines d'euros, ce qui la rend accessible à tous les laboratoires"
+        },
+        {
+          "t": "Le multiplexage désigne le fait de cibler un seul gène à la fois, avec une précision accrue.",
+          "v": false,
+          "e": "FAUX : le multiplexage, c'est au contraire cibler plusieurs gènes simultanément.",
+          "sourceQuote": "le multiplexage : cibler plusieurs gènes simultanément"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-050-crispr-cas9-mecanisme.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la répartition des rôles entre l'ARN guide et Cas9, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "C'est l'ARN guide qui décide de l'endroit où l'ADN est coupé.",
+          "v": true,
+          "e": "VRAI. L'ARN guide porte l'adresse : il fixe le lieu de la coupure, Cas9 se contente de l'exécuter.",
+          "sourceQuote": "c'est lui qui décide où on coupe"
+        },
+        {
+          "t": "C'est Cas9 qu'on modifie pour cibler un autre gène.",
+          "v": false,
+          "e": "FAUX : Cas9 reste la même d'une expérience à l'autre. C'est l'ARN guide, et lui seul, qu'on change pour viser une autre séquence.",
+          "sourceQuote": "c'est lui seul qu'on change pour cibler un autre gène"
+        },
+        {
+          "t": "Cas9 coupe les deux brins de l'ADN, et rien d'autre.",
+          "v": true,
+          "e": "VRAI. Son rôle s'arrête à la coupure : elle ne cherche pas la cible et ne répare pas non plus.",
+          "sourceQuote": "elle coupe les deux brins de l'ADN, et rien d'autre"
+        },
+        {
+          "t": "La coupure réalisée par Cas9 suffit à corriger le gène.",
+          "v": false,
+          "e": "FAUX : couper ne corrige rien. Le résultat dépend entièrement de ce qui se passe ensuite, au moment de la réparation.",
+          "sourceQuote": "La coupure ne corrige rien à elle seule."
+        },
+        {
+          "t": "Ce qui décide du résultat final, gène cassé ou gène corrigé, est la façon dont Cas9 referme la coupure.",
+          "v": false,
+          "e": "FAUX : Cas9 ne referme rien. C'est la façon dont la cellule répare la coupure qui détermine le résultat.",
+          "sourceQuote": "c'est la façon dont la cellule répare la coupure"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-050-crispr-cas9-mecanisme.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives aux analogies employées pour décrire CRISPR/Cas9, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'ADN y est comparé à un livre géant dans lequel on veut corriger une faute de frappe.",
+          "v": true,
+          "e": "VRAI. Le livre, c'est l'ADN ; la faute de frappe, le gène défectueux. L'analogie donne un rôle clair à chaque acteur.",
+          "sourceQuote": "tu veux corriger une faute de frappe dans un livre géant (l'ADN)"
+        },
+        {
+          "t": "Dans cette analogie, c'est Cas9 qui connaît la page et la ligne de l'erreur.",
+          "v": false,
+          "e": "FAUX : c'est l'ARN guide qui connaît la page et la ligne, et qui y amène les ciseaux. Cas9 ne connaît aucune adresse.",
+          "sourceQuote": "l'ARN guide connaît la page et la ligne de l'erreur, il y amène les ciseaux"
+        },
+        {
+          "t": "La coupure y est comparée au fait de découper la page du livre à l'endroit précis de l'erreur.",
+          "v": true,
+          "e": "VRAI. La double coupure de l'ADN correspond, dans l'image, au découpage net de la page à l'endroit fautif.",
+          "sourceQuote": "c'est comme découper la page du livre à l'endroit précis de l'erreur"
+        },
+        {
+          "t": "Le mnémo compare la bactérie à un laboratoire qui fabrique de nouveaux virus.",
+          "v": false,
+          "e": "FAUX : le mnémo compare la bactérie à une mémoire — elle se souvient des virus qu'elle a déjà combattus.",
+          "sourceQuote": "la bactérie se souvient des virus qu'elle a déjà combattus"
+        },
+        {
+          "t": "L'ordre des rôles est le suivant : Cas9 repère l'adresse, puis l'ARN guide coupe les deux brins.",
+          "v": false,
+          "e": "FAUX : les deux rôles sont intervertis. L'ARN guide porte l'adresse et amène Cas9 ; c'est Cas9 qui coupe les deux brins.",
+          "sourceQuote": "l'ARN guide porte l'adresse et amène Cas9 pile au bon endroit ; Cas9 coupe les deux brins de l'ADN"
+        }
+      ]
+    },
+
+    {
+      "fiche": "biologie-051-nhej-hdr-knock-out-knock-in.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à ce qui détermine le résultat d'une édition du génome, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Après la coupure, la cellule répare automatiquement l'ADN cassé.",
+          "v": true,
+          "e": "VRAI. Une cassure double brin ne reste jamais en l'état : la cellule engage aussitôt une réparation.",
+          "sourceQuote": "La cellule répare automatiquement la coupure"
+        },
+        {
+          "t": "C'est Cas9 qui décide si le gène sera détruit ou corrigé.",
+          "v": false,
+          "e": "FAUX : Cas9 se contente de couper. C'est le mode de réparation choisi par la cellule qui décide du sort du gène.",
+          "sourceQuote": "ce n'est pas Cas9 qui décide si le gène sera détruit ou corrigé, c'est le mode de réparation"
+        },
+        {
+          "t": "Il existe deux modes de réparation possibles.",
+          "v": true,
+          "e": "VRAI. Deux voies seulement, et tout le chapitre consiste à savoir laquelle est empruntée et pourquoi.",
+          "sourceQuote": "Les 2 façons dont la cellule peut réparer"
+        },
+        {
+          "t": "Le résultat de l'édition dépend de la cellule et non de Cas9.",
+          "v": true,
+          "e": "VRAI. C'est le point central : l'outil coupe, mais c'est la cellule qui écrit la fin de l'histoire.",
+          "sourceQuote": "Le résultat de l'édition ne dépend pas de Cas9 mais de la cellule."
+        },
+        {
+          "t": "Laissée sans intervention, la cellule laisse son ADN cassé en l'état.",
+          "v": false,
+          "e": "FAUX : la cellule ne laisse jamais son ADN cassé. Elle répare, et c'est justement cette réparation qui détermine le résultat.",
+          "sourceQuote": "elle ne laisse pas son ADN cassé"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-051-nhej-hdr-knock-out-knock-in.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives au NHEJ et au knock-out, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "NHEJ signifie Non-Homologous End Joining, soit la jonction des bouts sans modèle.",
+          "v": true,
+          "e": "VRAI. Le nom dit déjà tout : on joint les extrémités, sans homologie, donc sans modèle à recopier.",
+          "sourceQuote": "Non-Homologous End Joining (jonction des bouts sans modèle)"
+        },
+        {
+          "t": "Le NHEJ recolle les deux bouts de l'ADN coupé en suivant fidèlement un modèle.",
+          "v": false,
+          "e": "FAUX : le NHEJ recolle justement sans suivre de modèle. C'est cette absence de référence qui le rend imprécis.",
+          "sourceQuote": "La cellule recolle les deux bouts de l'ADN coupé, mais sans suivre de modèle"
+        },
+        {
+          "t": "Le NHEJ fait des erreurs : il ajoute ou enlève quelques lettres.",
+          "v": true,
+          "e": "VRAI. Ces quelques bases en trop ou en moins décalent la lecture du gène et le rendent inexploitable.",
+          "sourceQuote": "elle fait des erreurs, ajoute ou enlève quelques lettres"
+        },
+        {
+          "t": "Le gène ainsi réparé devient illisible et ne fonctionne plus : c'est le knock-out.",
+          "v": true,
+          "e": "VRAI. Le gène est encore là, mais il ne produit plus rien : il est inactivé.",
+          "sourceQuote": "le gène devient illisible et ne fonctionne plus → KNOCK-OUT"
+        },
+        {
+          "t": "Le knock-out est défini comme l'insertion précise d'un nouveau gène.",
+          "v": false,
+          "e": "FAUX : le knock-out est l'inactivation d'un gène. L'insertion précise, c'est le knock-in.",
+          "sourceQuote": "KNOCK-OUT (inactivation du gène)"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-051-nhej-hdr-knock-out-knock-in.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au HDR et au knock-in, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "HDR signifie Homology-Directed Repair, la réparation guidée par homologie.",
+          "v": true,
+          "e": "VRAI. L'homologie, c'est la ressemblance entre la séquence coupée et le modèle fourni : c'est elle qui guide la réparation.",
+          "sourceQuote": "Homology-Directed Repair (réparation guidée par homologie)"
+        },
+        {
+          "t": "Le HDR suppose qu'on fournisse à la cellule un modèle de correction, l'ADN matrice.",
+          "v": true,
+          "e": "VRAI. Sans matrice apportée de l'extérieur, la cellule n'a rien à copier et cette voie ne peut pas s'engager.",
+          "sourceQuote": "On fournit à la cellule un modèle de correction (ADN matrice)"
+        },
+        {
+          "t": "La cellule copie ce modèle pour réparer la coupure.",
+          "v": true,
+          "e": "VRAI. Elle reproduit fidèlement la séquence du modèle, ce qui donne une réparation exacte.",
+          "sourceQuote": "qu'elle copie pour réparer la coupure"
+        },
+        {
+          "t": "Le HDR aboutit au knock-out, c'est-à-dire à l'inactivation du gène.",
+          "v": false,
+          "e": "FAUX : le HDR aboutit au knock-in — un gène corrigé ou un gène inséré. L'inactivation, c'est le NHEJ.",
+          "sourceQuote": "on peut corriger un gène défectueux ou insérer un nouveau gène → KNOCK-IN"
+        },
+        {
+          "t": "Le HDR est présenté comme utile pour étudier ce qui se passe quand un gène ne marche plus.",
+          "v": false,
+          "e": "FAUX : cette utilité est celle du NHEJ, qui casse le gène. Le HDR sert à la thérapie génique et à la correction d'une maladie génétique.",
+          "sourceQuote": "Utile pour étudier ce qui se passe quand un gène ne marche plus."
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-051-nhej-hdr-knock-out-knock-in.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes comparant point par point le NHEJ et le HDR, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le NHEJ est la voie par défaut, la plus fréquente.",
+          "v": true,
+          "e": "VRAI. Il ne demande aucune condition particulière : c'est la voie que la cellule emprunte spontanément.",
+          "sourceQuote": "c'est la voie par défaut, la plus fréquente"
+        },
+        {
+          "t": "Le HDR ne demande aucune condition particulière.",
+          "v": false,
+          "e": "FAUX : le HDR impose une condition, et elle est stricte : il faut fournir la matrice ADN.",
+          "sourceQuote": "il faut fournir la matrice ADN"
+        },
+        {
+          "t": "Le HDR aboutit à la séquence voulue, à l'endroit voulu.",
+          "v": true,
+          "e": "VRAI. C'est la définition même de sa précision : la bonne séquence, au bon emplacement.",
+          "sourceQuote": "précise : la séquence voulue, à l'endroit voulu"
+        },
+        {
+          "t": "Avec le NHEJ, la cellule copie le modèle ADN qu'on lui fournit.",
+          "v": false,
+          "e": "FAUX : le NHEJ se contente de recoller les deux bouts, sans modèle. La copie d'une matrice, c'est le HDR.",
+          "sourceQuote": "elle recolle les deux bouts, sans modèle"
+        },
+        {
+          "t": "Le NHEJ aboutit à un gène corrigé ou inséré.",
+          "v": false,
+          "e": "FAUX : le NHEJ rend le gène illisible et conduit au knock-out. Corriger ou insérer relève du HDR.",
+          "sourceQuote": "gène illisible → knock-out"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-051-nhej-hdr-knock-out-knock-in.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux repères de mémorisation des deux voies de réparation, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le repère retenu est « NHEJ = N'importe comment », pour une réparation rapide mais sale.",
+          "v": true,
+          "e": "VRAI. Rapide et sale : la cellule recolle vite, sans soin, et laisse des erreurs derrière elle.",
+          "sourceQuote": "« NHEJ = N'importe comment » → réparation rapide mais sale, fait des erreurs"
+        },
+        {
+          "t": "Le HDR est associé à la haute définition, donc à une réparation précise.",
+          "v": true,
+          "e": "VRAI. HD comme High Definition : une réparation de haute qualité, guidée par le modèle exact qu'on a fourni.",
+          "sourceQuote": "« HDR = HD (comme High Definition) » → réparation haute qualité, précise"
+        },
+        {
+          "t": "Dans l'image photographique employée, le NHEJ correspond à la photo nette.",
+          "v": false,
+          "e": "FAUX : dans cette image, le NHEJ est la photo floue et le HDR la photo nette.",
+          "sourceQuote": "NHEJ = photo floue, HDR = photo nette en 4K"
+        },
+        {
+          "t": "Le HDR est le mécanisme par défaut, et c'est le NHEJ qui nécessite de fournir une matrice ADN.",
+          "v": false,
+          "e": "FAUX : la hiérarchie est inverse. Le NHEJ est le mécanisme par défaut, le plus fréquent, et c'est le HDR qui exige une matrice.",
+          "sourceQuote": "le NHEJ est le mécanisme par défaut, le plus fréquent ; le HDR, lui, nécessite de fournir une matrice ADN"
+        },
+        {
+          "t": "La formule à retenir est : NHEJ = erreurs = knock-out, HDR = précis = knock-in.",
+          "v": true,
+          "e": "VRAI. Cette double équation relie en une ligne le mode de réparation, sa qualité et le résultat obtenu.",
+          "sourceQuote": "NHEJ = erreurs = knock-out (casser le gène). HDR = précis = knock-in"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-051-nhej-hdr-knock-out-knock-in.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives aux applications concrètes de l'édition du génome, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "En recherche fondamentale, on crée des modèles knock-out ou knock-in pour étudier la fonction des gènes.",
+          "v": true,
+          "e": "VRAI. Casser un gène ou en insérer un permet d'observer ce qui change, et donc d'en déduire sa fonction.",
+          "sourceQuote": "créer des modèles knock-out ou knock-in pour étudier la fonction des gènes"
+        },
+        {
+          "t": "En agriculture, la seule application citée est la conservation des récoltes.",
+          "v": false,
+          "e": "FAUX : l'application citée est l'amélioration des plantes, notamment leur résistance aux maladies et leur rendement.",
+          "sourceQuote": "à améliorer les plantes (résistance aux maladies, rendement)"
+        },
+        {
+          "t": "Casgevy® est le premier traitement CRISPR approuvé, en 2023.",
+          "v": true,
+          "e": "VRAI. Il concerne la drépanocytose et la β-thalassémie, et marque le passage de la technique au médicament.",
+          "sourceQuote": "Casgevy®, premier traitement CRISPR approuvé en 2023"
+        },
+        {
+          "t": "Les CAR-T cells modifiées sont citées pour le traitement de maladies auto-immunes.",
+          "v": false,
+          "e": "FAUX : les CAR-T cells modifiées sont citées pour certains cancers, les lymphocytes T étant reprogrammés pour attaquer les cellules cancéreuses.",
+          "sourceQuote": "certains cancers avec les CAR-T cells modifiées"
+        },
+        {
+          "t": "Le provirus désigne l'ADN du virus avant son entrée dans la cellule.",
+          "v": false,
+          "e": "FAUX : le provirus, c'est l'ADN du virus une fois intégré dans celui de la cellule. C'est justement ce qu'on cherche à exciser dans le VIH.",
+          "sourceQuote": "l'ADN du virus une fois intégré dans celui de la cellule"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-051-nhej-hdr-knock-out-knock-in.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives aux limites éthiques de l'édition du génome et à la condition du knock-in, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'édition de la lignée germinale concerne les spermatozoïdes, les ovocytes et les embryons.",
+          "v": true,
+          "e": "VRAI. Ce sont les cellules de la reproduction : toucher à leur génome, c'est toucher à celui de la descendance.",
+          "sourceQuote": "lignée germinale (spermatozoïdes, ovocytes, embryons)"
+        },
+        {
+          "t": "Ces modifications posent question parce qu'elles sont transmissibles aux générations futures.",
+          "v": true,
+          "e": "VRAI. C'est précisément ce qui distingue cette édition des autres : elle ne s'arrête pas à la personne traitée.",
+          "sourceQuote": "car les modifications sont transmissibles aux générations futures"
+        },
+        {
+          "t": "La naissance de bébés génétiquement modifiés en Chine remonte à 2023.",
+          "v": false,
+          "e": "FAUX : cet épisode date de 2018. C'est en 2023 qu'a été approuvé le premier traitement CRISPR.",
+          "sourceQuote": "En 2018, la naissance de bébés génétiquement modifiés en Chine"
+        },
+        {
+          "t": "Cet épisode a été salué par la communauté scientifique internationale.",
+          "v": false,
+          "e": "FAUX : il a provoqué un scandale international, et le chercheur responsable a été condamné.",
+          "sourceQuote": "a provoqué un scandale international et une condamnation du chercheur"
+        },
+        {
+          "t": "Sans matrice ADN fournie, la cellule emprunte la voie par défaut et le gène finit corrigé avec précision.",
+          "v": false,
+          "e": "FAUX : sans matrice, pas de knock-in. La cellule part par le NHEJ, la voie par défaut, et le gène finit cassé, pas corrigé.",
+          "sourceQuote": "la cellule part par la voie par défaut, le NHEJ, et le gène finit cassé, pas corrigé"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1649 @@
+{
+  "matiere": "physique",
+  "chapitre": 1,
+  "questions": [
+    {
+      "fiche": "physique-023-facteur-de-dilution.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à ce qu'est une dilution et à ce que résume le facteur de dilution F, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Diluer une solution, c'est ajouter du solvant sans changer la quantité de soluté.",
+          "v": true,
+          "e": "VRAI. C'est toute la définition : on rajoute du solvant, mais le soluté déjà présent, lui, ne bouge pas — on n'en ajoute ni n'en retire.",
+          "sourceQuote": "diluer une solution, c'est ajouter du solvant sans changer la quantité de soluté"
+        },
+        {
+          "t": "Au cours d'une dilution, la quantité n = C × V augmente à mesure qu'on ajoute du solvant.",
+          "v": false,
+          "e": "FAUX : la quantité de matière n = C × V reste constante. C'est justement ce qui permet d'écrire l'égalité entre l'avant et l'après : le volume grandit, la concentration baisse, mais le produit ne change pas.",
+          "sourceQuote": "la quantité n = C × V reste constante"
+        },
+        {
+          "t": "Le facteur de dilution F dit de combien le volume a été multiplié entre l'avant et l'après.",
+          "v": true,
+          "e": "VRAI. F n'est rien d'autre que ce nombre-là : le rapport entre le volume final et le volume de départ.",
+          "sourceQuote": "de combien le volume a été multiplié entre l'avant et l'après"
+        },
+        {
+          "t": "Le facteur de dilution apporte une information nouvelle sur la matière, que la relation C₁ × V₁ = C₂ × V₂ ne contient pas.",
+          "v": false,
+          "e": "FAUX : il ne t'apprend rien de neuf sur la matière. C'est un raccourci de calcul, rien de plus — mais un raccourci qui fait gagner beaucoup de temps.",
+          "sourceQuote": "Le facteur de dilution ne t'apprend rien de neuf sur la matière"
+        },
+        {
+          "t": "F permet de résumer une dilution entière en un seul nombre.",
+          "v": true,
+          "e": "VRAI. Plutôt que de manipuler quatre grandeurs (deux volumes et deux concentrations), on retient un seul nombre qui décrit toute l'opération.",
+          "sourceQuote": "pour résumer une dilution en un seul nombre"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-023-facteur-de-dilution.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à l'expression du facteur de dilution et aux précautions de son emploi, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le rapport des volumes s'écrit V₂ / V₁, c'est-à-dire après / avant.",
+          "v": true,
+          "e": "VRAI. Côté volumes, on met le volume final au numérateur : c'est bien le rapport après / avant.",
+          "sourceQuote": "les volumes après / avant (V₂/V₁)"
+        },
+        {
+          "t": "Le rapport des concentrations s'écrit C₂ / C₁, c'est-à-dire après / avant.",
+          "v": false,
+          "e": "FAUX : côté concentrations, le rapport est C₁ / C₂, donc avant / après. C'est l'inversion classique — et elle donne l'inverse du bon résultat.",
+          "sourceQuote": "les concentrations avant / après (C₁/C₂)"
+        },
+        {
+          "t": "V₁ et C₁ décrivent l'état d'avant dilution, V₂ et C₂ celui d'après.",
+          "v": true,
+          "e": "VRAI. L'indice 1 désigne toujours la solution de départ, l'indice 2 la solution obtenue après ajout de solvant.",
+          "sourceQuote": "V₁, C₁ : avant dilution · V₂, C₂ : après dilution."
+        },
+        {
+          "t": "Les deux volumes peuvent être exprimés dans des unités différentes, le rapport se simplifiant de lui-même.",
+          "v": false,
+          "e": "FAUX : les deux volumes doivent être dans la même unité avant de faire le rapport. Diviser des millilitres par des litres donne un facteur mille fois trop petit.",
+          "sourceQuote": "Les deux volumes doivent être dans la même unité"
+        },
+        {
+          "t": "F est défini par une double égalité, qui relie le rapport des volumes et celui des concentrations.",
+          "v": true,
+          "e": "VRAI. Le même nombre peut se calculer de deux façons — par les volumes ou par les concentrations —, et c'est ce que dit la double égalité.",
+          "sourceQuote": "c'est ce que dit la double égalité F = V₂/V₁ = C₁/C₂."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-023-facteur-de-dilution.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la vérification du facteur de dilution sur l'exemple d'une solution portée de 100 mL à 1 L, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "On prélève 100 mL dans la solution-mère et on complète jusqu'à 1 L au total.",
+          "v": true,
+          "e": "VRAI. Le volume de départ est le volume prélevé (100 mL), le volume d'arrivée est le volume final de la solution obtenue (1 L).",
+          "sourceQuote": "On est passé de 100 mL prélevés dans la solution-mère (V₁) à 1 L au total (V₂)"
+        },
+        {
+          "t": "Avant de calculer F, on convertit les deux volumes dans la même unité, ici 1 L = 1000 mL.",
+          "v": true,
+          "e": "VRAI. C'est le premier geste, avant même la division : on ramène tout aux millilitres, puis on divise.",
+          "sourceQuote": "On met d'abord les deux dans la même unité (1 L = 1000 mL)"
+        },
+        {
+          "t": "Le facteur de dilution vaut ici 10.",
+          "v": true,
+          "e": "VRAI. Une fois les deux volumes en millilitres, le rapport donne 1000 divisé par 100, soit 10.",
+          "sourceQuote": "F = 1000 / 100 = 10"
+        },
+        {
+          "t": "La concentration passe dans cet exemple de 1 mol/L à 0,01 mol/L.",
+          "v": false,
+          "e": "FAUX : elle passe de 1 mol/L à 0,1 mol/L, soit une division par 10 — pas par 100. Le chiffre 0,01 correspondrait à un facteur 100.",
+          "sourceQuote": "Elle est passée de 1 mol/L à 0,1 mol/L"
+        },
+        {
+          "t": "Le facteur obtenu à partir des volumes diffère ici de celui obtenu à partir des concentrations.",
+          "v": false,
+          "e": "FAUX : c'est tout l'intérêt de la vérification — le même nombre 10 se retrouve des deux côtés. Si les deux calculs ne donnent pas la même valeur, c'est qu'il y a une erreur quelque part.",
+          "sourceQuote": "Le même nombre 10 se lit des deux côtés"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-023-facteur-de-dilution.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à l'effet du facteur F sur la concentration et à la lecture d'un protocole de laboratoire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Multiplier le volume par F revient à diviser la concentration par F.",
+          "v": true,
+          "e": "VRAI. Comme la quantité de soluté ne change pas, tout ce qu'on gagne en volume, on le perd en concentration : les deux effets sont exactement inverses.",
+          "sourceQuote": "Multiplier le volume par F revient à diviser la concentration par F."
+        },
+        {
+          "t": "Un protocole qui indique « dilue au 1/10 » impose un facteur de dilution F = 0,1.",
+          "v": false,
+          "e": "FAUX : « dilue au 1/10 » veut dire F = 10. Le 1/10 décrit la concentration finale, pas le facteur.",
+          "sourceQuote": "« dilue au 1/10 » ne veut pas dire F = 0,1 : ça veut dire F = 10"
+        },
+        {
+          "t": "L'indication « dilue au 1/10 » correspond à F = 10.",
+          "v": true,
+          "e": "VRAI. C'est la traduction directe du protocole : le volume est multiplié par 10.",
+          "sourceQuote": "Quand un protocole te dit « dilue au 1/10 », ça veut juste dire F = 10"
+        },
+        {
+          "t": "Dans une dilution au 1/10, c'est la concentration finale qui vaut le dixième de celle de départ.",
+          "v": true,
+          "e": "VRAI. Le 1/10 porte sur la concentration : la solution obtenue est dix fois moins concentrée que la solution-mère.",
+          "sourceQuote": "c'est la concentration finale qui vaut 1/10 de celle de départ"
+        },
+        {
+          "t": "Une dilution au 1/10 divise le volume par 10.",
+          "v": false,
+          "e": "FAUX : c'est le volume qu'on MULTIPLIE par F, et la concentration qu'on divise. Diluer, c'est ajouter du solvant, donc augmenter le volume.",
+          "sourceQuote": "Si tu multiplies le volume par F, tu divises la concentration par F (n constant)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-023-facteur-de-dilution.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à la série de trois dilutions successives décrite dans cette fiche, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Chaque étage consiste à prélever 1 mL du contenu précédent et à le porter à 10 mL.",
+          "v": true,
+          "e": "VRAI. C'est le geste répété à chaque étage : 1 mL du précédent dans 10 mL, ce qui fait bien une dilution au 1/10 à chaque fois.",
+          "sourceQuote": "1 mL du précédent dans 10 mL"
+        },
+        {
+          "t": "Après la deuxième dilution au 1/10, la concentration totale est divisée par 20.",
+          "v": false,
+          "e": "FAUX : elle est divisée par 100. Les facteurs ne s'additionnent pas (10 + 10 = 20), ils se multiplient (10 × 10 = 100).",
+          "sourceQuote": "C totale divisée par 100"
+        },
+        {
+          "t": "Après la troisième dilution au 1/10, la concentration totale est divisée par 1000.",
+          "v": true,
+          "e": "VRAI. Troisième étage, troisième facteur 10 : la division cumulée atteint 1000.",
+          "sourceQuote": "C totale divisée par 1000"
+        },
+        {
+          "t": "À chaque étage, on repart de la concentration de la solution-mère initiale.",
+          "v": false,
+          "e": "FAUX : on ne repart pas de zéro. Le nouveau facteur vient multiplier celui qu'on a déjà accumulé — c'est exactement ce qui fait grimper la division de 10 à 100 puis à 1000.",
+          "sourceQuote": "tu ne repars pas de zéro — le nouveau facteur vient multiplier celui que tu as déjà accumulé"
+        },
+        {
+          "t": "Une cascade de dilutions sert à obtenir rapidement une concentration très élevée.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. On enchaîne les dilutions pour descendre vers une concentration très faible, inatteignable en une seule étape.",
+          "sourceQuote": "on enchaîne souvent plusieurs dilutions successives pour atteindre une concentration très faible"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-023-facteur-de-dilution.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la façon de mener le calcul devant une série de dilutions, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Il faut reposer la relation C₁ × V₁ = C₂ × V₂ à chaque étage de la cascade.",
+          "v": false,
+          "e": "FAUX : c'est précisément ce qu'il ne faut pas faire. On multiplie les facteurs entre eux, une seule fois, et le résultat tombe directement.",
+          "sourceQuote": "ne repose pas C₁ × V₁ = C₂ × V₂ à chaque étage"
+        },
+        {
+          "t": "Les facteurs de dilution successifs se multiplient entre eux.",
+          "v": true,
+          "e": "VRAI. Dans une cascade, chaque étage vient multiplier le facteur déjà accumulé : c'est ce qui rend le calcul faisable de tête.",
+          "sourceQuote": "Dans une cascade, les facteurs se multiplient"
+        },
+        {
+          "t": "Trois dilutions successives au 1/10 donnent un facteur total de 30.",
+          "v": false,
+          "e": "FAUX : le facteur total vaut 10 × 10 × 10 = 1000. Additionner les facteurs (10 + 10 + 10 = 30) est l'erreur type de cet exercice.",
+          "sourceQuote": "trois dilutions au 1/10, c'est F total = 10 × 10 × 10 = 1000"
+        },
+        {
+          "t": "Deux dilutions successives au 1/10 aboutissent à une division de la concentration par 100.",
+          "v": true,
+          "e": "VRAI. Deux facteurs 10 qui se multiplient donnent 100 : la concentration finale vaut le centième de celle de départ.",
+          "sourceQuote": "1/10 puis 1/10 → division par 100"
+        },
+        {
+          "t": "Passer par le facteur global ne fait pas gagner de temps par rapport au calcul étage par étage.",
+          "v": false,
+          "e": "FAUX : c'est justement tout son intérêt. Le facteur de dilution n'apprend rien de nouveau sur la matière, mais il fait gagner tout le temps du calcul.",
+          "sourceQuote": "il te fait juste gagner tout le temps du calcul"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-023-facteur-de-dilution.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives aux domaines où l'on enchaîne des dilutions et aux erreurs de lecture du facteur F, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Cette technique est utilisée en bactériologie pour compter des colonies après dilution.",
+          "v": true,
+          "e": "VRAI. C'est l'usage le plus courant : on dilue jusqu'à obtenir un nombre de colonies dénombrable sur une boîte.",
+          "sourceQuote": "en bactériologie (compter des colonies après dilution)"
+        },
+        {
+          "t": "En pharmacologie, elle sert à préparer des concentrations très élevées.",
+          "v": false,
+          "e": "FAUX : en pharmacologie, la cascade sert à préparer des concentrations très basses. Diluer fait toujours descendre la concentration.",
+          "sourceQuote": "en pharmacologie (préparer des concentrations très basses)"
+        },
+        {
+          "t": "L'homéopathie est citée comme un cas de dilutions extrêmes.",
+          "v": true,
+          "e": "VRAI. C'est l'exemple limite de la cascade : les facteurs accumulés y atteignent des valeurs très grandes.",
+          "sourceQuote": "en homéopathie (dilutions extrêmes)"
+        },
+        {
+          "t": "Dans une dilution au 1/10, c'est le volume final qui vaut le dixième du volume de départ.",
+          "v": false,
+          "e": "FAUX : le 1/10 porte sur la concentration finale, pas sur le volume. Le volume, lui, est multiplié par 10.",
+          "sourceQuote": "c'est la concentration finale qui vaut 1/10 de celle de départ"
+        },
+        {
+          "t": "Le facteur de dilution indique de combien le volume a été multiplié.",
+          "v": true,
+          "e": "VRAI. C'est la lecture à garder en tête : F se lit d'abord du côté des volumes, et l'effet sur la concentration en découle.",
+          "sourceQuote": "F = V₂ / V₁ = C₁ / C₂ : le facteur de dilution dit de combien le volume a été multiplié"
+        }
+      ]
+    },
+
+    {
+      "fiche": "physique-024-fraction-molaire.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la nature de la fraction molaire et à ce qu'elle compare, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Elle compare des moles à des moles, et non une quantité à un volume.",
+          "v": true,
+          "e": "VRAI. C'est ce qui la distingue des concentrations : elle ne rapporte plus rien à un litre, elle met des moles en face d'autres moles.",
+          "sourceQuote": "elle ne rapporte plus rien à un litre, elle compare des moles à des moles"
+        },
+        {
+          "t": "La fraction molaire d'un soluté est la proportion qu'il représente parmi toutes les molécules de la solution.",
+          "v": true,
+          "e": "VRAI. C'est une part sur un tout : combien de molécules de cette espèce sur l'ensemble des molécules présentes.",
+          "sourceQuote": "c'est tout simplement la proportion qu'il représente parmi toutes les molécules de la solution"
+        },
+        {
+          "t": "Sa valeur peut dépasser 1 lorsque le soluté est très concentré.",
+          "v": false,
+          "e": "FAUX : une proportion ne peut pas dépasser le tout. La fraction molaire reste toujours comprise entre 0 et 1.",
+          "sourceQuote": "C'est un nombre entre 0 et 1"
+        },
+        {
+          "t": "Elle s'exprime en mol/L.",
+          "v": false,
+          "e": "FAUX : ce n'est pas une concentration. Il n'y a pas de « par litre » dans une fraction molaire, et pas d'unité du tout.",
+          "sourceQuote": "une fraction molaire n'est pas une concentration : pas de « par litre », pas d'unité"
+        },
+        {
+          "t": "Une fraction molaire ne peut pas se lire en pourcentage.",
+          "v": false,
+          "e": "FAUX : elle se lit très bien en pourcentage, entre 0 % et 100 %. Une fraction de 0,2 s'énonce aussi « 20 % des molécules ».",
+          "sourceQuote": "ou entre 0 % et 100 % si tu préfères raisonner en pourcentage"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-024-fraction-molaire.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à l'expression de la fraction molaire et à la somme des fractions d'une solution, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le dénominateur ne compte que les moles de solutés.",
+          "v": false,
+          "e": "FAUX : le dénominateur compte les moles totales en solution, solutés ET solvant. Oublier le solvant est l'erreur la plus coûteuse du calcul.",
+          "sourceQuote": "moles totales en solution (soluté + solvant)"
+        },
+        {
+          "t": "Le numérateur est le nombre de moles de l'espèce considérée.",
+          "v": true,
+          "e": "VRAI. On met au numérateur la quantité de l'espèce dont on veut la proportion, et au dénominateur le total.",
+          "sourceQuote": "n i = moles de l'espèce i"
+        },
+        {
+          "t": "La somme des fractions molaires d'une solution vaut toujours 1.",
+          "v": true,
+          "e": "VRAI. En additionnant toutes les espèces, on reconstitue au numérateur le total qui figure déjà au dénominateur : le résultat vaut 1.",
+          "sourceQuote": "La somme des fractions molaires d'une solution vaut toujours 1."
+        },
+        {
+          "t": "La fraction molaire est une grandeur sans dimension.",
+          "v": true,
+          "e": "VRAI. C'est un rapport de moles sur des moles : les unités se simplifient, il ne reste qu'un nombre.",
+          "sourceQuote": "Sans dimension."
+        },
+        {
+          "t": "La somme des fractions molaires dépend du nombre d'espèces présentes en solution.",
+          "v": false,
+          "e": "FAUX : quel que soit le nombre d'espèces, la somme vaut toujours 1. C'est ce qui permet de déduire la dernière fraction par simple soustraction.",
+          "sourceQuote": "Le résultat vaut donc toujours 1"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-024-fraction-molaire.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au mélange de 1 mole de glucose et de 4 moles d'eau, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le nombre total de moles en solution est de 5.",
+          "v": true,
+          "e": "VRAI. On additionne toutes les moles présentes, solvant compris : 1 + 4 = 5.",
+          "sourceQuote": "n total = 1 + 4 = 5 moles"
+        },
+        {
+          "t": "La fraction molaire du glucose vaut 0,2, soit 20 %.",
+          "v": true,
+          "e": "VRAI. Une mole de glucose sur cinq moles au total : 1/5 = 0,2, c'est-à-dire 20 % des molécules.",
+          "sourceQuote": "F glucose = 1 / 5 = 0,2 (soit 20 %)"
+        },
+        {
+          "t": "La fraction molaire de l'eau vaut 0,4.",
+          "v": false,
+          "e": "FAUX : elle vaut 0,8, soit 80 %. Quatre moles d'eau sur cinq moles au total, et non quatre sur dix.",
+          "sourceQuote": "F eau = 4 / 5 = 0,8 (soit 80 %)"
+        },
+        {
+          "t": "Sur 5 molécules prises au hasard, 4 sont du glucose et 1 est de l'eau.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. Sur 5 molécules, 1 seule est du glucose et 4 sont de l'eau — c'est exactement ce que traduisent les fractions 0,2 et 0,8.",
+          "sourceQuote": "Sur 5 molécules prises au hasard dans cette solution, 1 est du glucose et 4 sont de l'eau."
+        },
+        {
+          "t": "L'addition 0,2 + 0,8 = 1 sert de vérification du calcul.",
+          "v": true,
+          "e": "VRAI. Puisque la somme des fractions vaut toujours 1, retomber sur 1 confirme que les deux fractions ont été bien calculées.",
+          "sourceQuote": "Vérification : 0,2 + 0,8 = 1"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-024-fraction-molaire.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la fraction molaire des solutés dans le plasma, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un litre d'eau contient 55,5 mol.",
+          "v": true,
+          "e": "VRAI. C'est le chiffre de référence pour le solvant : il explique pourquoi l'eau écrase toutes les autres espèces au dénominateur.",
+          "sourceQuote": "1 L d'eau = 55,5 mol"
+        },
+        {
+          "t": "Une solution biologique typique contient environ 0,3 mol/L de solutés.",
+          "v": true,
+          "e": "VRAI. C'est l'ordre de grandeur retenu pour les solutés d'un milieu biologique, à comparer aux 55,5 mol/L d'eau.",
+          "sourceQuote": "Une solution biologique typique a ~0,3 mol/L de solutés"
+        },
+        {
+          "t": "L'osmolarité plasmatique retenue ici est de 30 mOsm/L.",
+          "v": false,
+          "e": "FAUX : elle est de 300 mOsm/L. C'est la valeur qui correspond aux 0,3 mol/L de solutés du plasma.",
+          "sourceQuote": "osmolarité plasmatique = 300 mOsm/L"
+        },
+        {
+          "t": "La fraction molaire des solutés du plasma est de l'ordre de 5 × 10⁻², soit 5 %.",
+          "v": false,
+          "e": "FAUX : elle est de l'ordre de 5 × 10⁻³, soit 0,5 %. Une puissance de dix d'écart change complètement l'image que l'on se fait du plasma.",
+          "sourceQuote": "F solutés ≈ 0,3 / 55,5 ≈ 5 × 10⁻³ (soit 0,5 %)"
+        },
+        {
+          "t": "Sur 1000 molécules du plasma, 5 sont de l'eau et 995 sont des solutés.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. Sur 1000 molécules, 995 sont de l'eau et 5 seulement sont des solutés : le milieu intérieur est presque entièrement de l'eau.",
+          "sourceQuote": "995 sont de l'eau et seulement 5 sont des solutés"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-024-fraction-molaire.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au calcul de la fraction molaire pour 1 mol de glucose dissoute dans 1 L d'eau pure, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le nombre de moles d'eau contenu dans 1 L se retrouve en divisant 18 g par 1000 g/mol.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. On divise la masse d'un litre d'eau, 1000 g, par la masse molaire de l'eau, 18 g/mol — ce qui donne bien 55,5 mol.",
+          "sourceQuote": "1000 g / 18 g/mol"
+        },
+        {
+          "t": "Le nombre total de moles vaut ici 56,5 mol.",
+          "v": true,
+          "e": "VRAI. On additionne la mole de glucose et les 55,5 mol d'eau : 1 + 55,5 = 56,5. L'eau y pèse pour presque tout.",
+          "sourceQuote": "n total = 1 + 55,5 = 56,5 mol"
+        },
+        {
+          "t": "Pour estimer 1/56,5 sans calculatrice, on encadre : 1/100 = 0,01 est trop petit et 1/50 = 0,02 trop grand.",
+          "v": true,
+          "e": "VRAI. C'est la méthode retenue : plutôt que de poser la division, on l'encadre entre deux valeurs faciles, puis on se rapproche du diviseur réel.",
+          "sourceQuote": "1/100 = 0,01 (trop petit, 100 trop grand comme diviseur) · 1/50 = 0,02 (trop grand, 50 trop petit)"
+        },
+        {
+          "t": "La fraction molaire du glucose vaut environ 0,18, soit 18 %.",
+          "v": false,
+          "e": "FAUX : elle vaut environ 0,018, soit 1,8 %. Le facteur dix d'écart vient d'une virgule mal placée dans l'estimation.",
+          "sourceQuote": "1/56,5 ≈ 0,018 (≈ 1,8 %)"
+        },
+        {
+          "t": "Sur 1000 molécules de cette solution, 18 sont de l'eau et 982 sont du glucose.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. 982 molécules sur 1000 sont de l'eau et 18 seulement sont du glucose — et pourtant la solution est déjà très concentrée pour la biologie.",
+          "sourceQuote": "982 sont de l'eau et 18 sont du glucose"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-024-fraction-molaire.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la lettre F, employée dans ce chapitre pour deux grandeurs distinctes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La fraction molaire et le facteur de dilution se notent tous deux avec la lettre F.",
+          "v": true,
+          "e": "VRAI. C'est une source de confusion réelle : même lettre, deux grandeurs qui n'ont rien à voir l'une avec l'autre.",
+          "sourceQuote": "La fraction molaire se note F — exactement la même lettre que le facteur de dilution"
+        },
+        {
+          "t": "Pour les distinguer, on garde la notation avec l'indice de l'espèce pour la fraction molaire.",
+          "v": true,
+          "e": "VRAI. L'indice est le signal : dès qu'il y a un nom d'espèce en indice, on parle de fraction molaire.",
+          "sourceQuote": "Garde la notation F i, avec l'indice de l'espèce, pour la fraction molaire"
+        },
+        {
+          "t": "Le facteur de dilution compare une espèce au total des moles de la solution.",
+          "v": false,
+          "e": "FAUX : c'est la fraction molaire qui fait cette comparaison. Le facteur de dilution, lui, compare une même solution avant et après ajout de solvant.",
+          "sourceQuote": "le facteur de dilution compare une même solution avant et après ajout de solvant"
+        },
+        {
+          "t": "La fraction molaire compare une même solution avant et après ajout de solvant.",
+          "v": false,
+          "e": "FAUX : c'est la définition du facteur de dilution. La fraction molaire, elle, compare une espèce au total des moles présentes.",
+          "sourceQuote": "la fraction molaire compare une espèce au total des moles"
+        },
+        {
+          "t": "Le F employé seul, sans indice, est réservé au facteur de dilution.",
+          "v": true,
+          "e": "VRAI. C'est la convention à tenir pour ne plus confondre : F seul pour la dilution, F avec indice pour la proportion.",
+          "sourceQuote": "réserve le F seul au facteur de dilution"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-024-fraction-molaire.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives aux erreurs classiques commises sur la fraction molaire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Oublier l'eau au dénominateur fait exploser le résultat.",
+          "v": true,
+          "e": "VRAI. Comme le solvant représente presque tout le total, l'écarter fait chuter le dénominateur et gonfle démesurément la fraction obtenue.",
+          "sourceQuote": "Oublier l'eau au dénominateur fait exploser le résultat."
+        },
+        {
+          "t": "Dans une solution aqueuse, la fraction du solvant est proche de 1 et celle des solutés très inférieure à 1.",
+          "v": true,
+          "e": "VRAI. C'est la signature des solutions aqueuses, et c'est ce qui justifie de traiter l'eau comme étant en excès.",
+          "sourceQuote": "F solvant ≈ 1, F solutés << 1"
+        },
+        {
+          "t": "Une fraction molaire s'exprime « par litre ».",
+          "v": false,
+          "e": "FAUX : il n'y a ni « par litre » ni aucune unité. C'est un nombre pur, une proportion.",
+          "sourceQuote": "pas de « par litre », pas d'unité"
+        },
+        {
+          "t": "Les valeurs 55,5 et 0,3 mol/L constituent la réponse finale attendue du calcul.",
+          "v": false,
+          "e": "FAUX : ces valeurs sont des données en mol/L qui servent à calculer la fraction. La réponse, elle, est un nombre sans unité.",
+          "sourceQuote": "ils servent à calculer la fraction, ils ne sont jamais la réponse"
+        },
+        {
+          "t": "On traite l'eau comme étant en excès dans les calculs biochimiques.",
+          "v": true,
+          "e": "VRAI. Puisque sa fraction molaire est proche de 1 dans toute solution biologique, on la considère comme un réservoir qui ne s'épuise pas.",
+          "sourceQuote": "on traite toujours l'eau comme étant en excès dans les calculs biochimiques"
+        }
+      ]
+    },
+
+    {
+      "fiche": "physique-025-concentration-equivalente.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives aux différentes façons de compter une solution et à ce que compte la concentration équivalente, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La concentration pondérale compte les grammes par litre.",
+          "v": true,
+          "e": "VRAI. C'est le premier des compteurs : une masse rapportée à un volume.",
+          "sourceQuote": "La concentration pondérale C p compte les grammes par litre."
+        },
+        {
+          "t": "La concentration molaire compte les grammes par litre.",
+          "v": false,
+          "e": "FAUX : la concentration molaire compte les molécules par litre. Ce sont les grammes par litre qui définissent la concentration pondérale.",
+          "sourceQuote": "La concentration molaire C compte les molécules par litre."
+        },
+        {
+          "t": "La fraction molaire donne la proportion de chaque espèce dans le mélange.",
+          "v": true,
+          "e": "VRAI. Elle ne compte ni masse ni volume : elle donne la part que chaque espèce représente dans l'ensemble.",
+          "sourceQuote": "La fraction molaire F donne la proportion de chaque espèce dans le mélange."
+        },
+        {
+          "t": "La concentration équivalente compte, elle aussi, des molécules par litre.",
+          "v": false,
+          "e": "FAUX : elle compte les charges apportées par litre, et non les molécules. C'est justement ce qui la rend indispensable en physiologie.",
+          "sourceQuote": "la concentration équivalente compte les charges apportées par litre, pas les molécules"
+        },
+        {
+          "t": "La concentration équivalente est présentée comme le troisième compteur de la série.",
+          "v": false,
+          "e": "FAUX : c'est le quatrième, après la concentration pondérale, la concentration molaire et la fraction molaire.",
+          "sourceQuote": "Voici le quatrième compteur"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-025-concentration-equivalente.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à l'expression de la concentration équivalente et à son unité, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Elle s'obtient en multipliant la concentration molaire par la valeur absolue de la valence.",
+          "v": true,
+          "e": "VRAI. Un seul produit : la concentration de l'ion, multipliée par le nombre de charges qu'il porte.",
+          "sourceQuote": "C éq = |Z| × C : la concentration équivalente compte les charges apportées par litre"
+        },
+        {
+          "t": "La valence est un nombre sans unité.",
+          "v": true,
+          "e": "VRAI. C'est un simple compteur de charges, donc un nombre pur — ce qui explique que l'unité du résultat vienne entièrement de la concentration.",
+          "sourceQuote": "Z = valence (nombre de charges) de l'ion, sans unité."
+        },
+        {
+          "t": "L'unité de la concentration équivalente est le mol/L.",
+          "v": false,
+          "e": "FAUX : son unité est l'équivalent par litre, noté Eq/L. Le mol/L est celle de la concentration molaire.",
+          "sourceQuote": "Unité de C éq : Eq/L (équivalent par litre)"
+        },
+        {
+          "t": "Pour passer de Eq/L à mEq/L, on divise par 1000.",
+          "v": false,
+          "e": "FAUX : on multiplie par 1000, exactement comme pour passer de mol/L à mmol/L. Le préfixe « milli » découpe l'unité en mille parts, donc le chiffre grandit.",
+          "sourceQuote": "Pour passer de Eq/L à mEq/L, on multiplie par 1000"
+        },
+        {
+          "t": "En clinique, les valeurs sont le plus souvent données en Eq/L plutôt qu'en mEq/L.",
+          "v": false,
+          "e": "FAUX : c'est le mEq/L qui domine en clinique, parce qu'il donne des nombres de taille commode pour les ions du sang.",
+          "sourceQuote": "souvent en mEq/L pour les valeurs cliniques"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-025-concentration-equivalente.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au calcul mené sur une calcémie normale de 5 mmol/L de Ca²⁺, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La valence à utiliser est Z = 2.",
+          "v": true,
+          "e": "VRAI. Le calcium porte deux charges : c'est cette valeur qui vient multiplier la concentration.",
+          "sourceQuote": "Ca²⁺ porte 2 charges, donc Z = 2"
+        },
+        {
+          "t": "La concentration équivalente correspondante vaut 10 mEq/L.",
+          "v": true,
+          "e": "VRAI. Deux charges par ion et 5 mmol d'ions par litre : le produit donne 10 mEq/L.",
+          "sourceQuote": "C éq = |Z| × C = 2 × 5 = 10 mEq/L"
+        },
+        {
+          "t": "La formule exige une concentration exprimée en mol/L : il faut d'abord convertir les mmol/L.",
+          "v": false,
+          "e": "FAUX : la formule marche à toutes les échelles. Si on entre une concentration en mmol/L, on obtient directement un résultat en mEq/L.",
+          "sourceQuote": "La formule marche à toutes les échelles : si tu entres un C en mmol/L, tu sors des mEq/L."
+        },
+        {
+          "t": "On a 5 mmol d'ions Ca²⁺ par litre, ce qui donne 5 mmol de charges par litre.",
+          "v": false,
+          "e": "FAUX : chaque ion apportant 2 charges, on obtient 10 mmol de charges par litre. Le nombre d'ions et le nombre de charges ne se confondent que pour les monovalents.",
+          "sourceQuote": "chaque ion apporte 2 charges → 10 mmol de charges par litre"
+        },
+        {
+          "t": "Le mEq donne ici un chiffre plus petit que le mmol.",
+          "v": false,
+          "e": "FAUX : le mEq gonfle le chiffre du mmol par la valence. Pour un divalent, il le double.",
+          "sourceQuote": "Le mEq « gonfle » le chiffre du mmol par la valence."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-025-concentration-equivalente.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la valence des ions courants et à sa traduction en mEq/L, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le chlorure Cl⁻ est un ion divalent.",
+          "v": false,
+          "e": "FAUX : le chlorure est monovalent, au même titre que le sodium et le potassium. Il n'apporte qu'une seule charge par ion.",
+          "sourceQuote": "ne vaut que pour les monovalents (Na⁺, K⁺, Cl⁻)"
+        },
+        {
+          "t": "Pour un ion monovalent, la valeur en mmol/L et celle en mEq/L sont identiques.",
+          "v": true,
+          "e": "VRAI. Une charge par ion : le nombre d'ions et le nombre de charges coïncident, donc les deux chiffres sont les mêmes.",
+          "sourceQuote": "pour un ion monovalent, mmol/L = mEq/L (les deux nombres sont identiques)"
+        },
+        {
+          "t": "Pour un ion divalent, la valeur en mEq/L vaut trois fois celle en mmol/L.",
+          "v": false,
+          "e": "FAUX : pour un divalent, le facteur est 2, pas 3. Le facteur 3 est celui des ions trivalents.",
+          "sourceQuote": "Pour un divalent, mEq/L = 2 × mmol/L."
+        },
+        {
+          "t": "Pour un ion trivalent, la valeur en mEq/L vaut trois fois celle en mmol/L.",
+          "v": true,
+          "e": "VRAI. Trois charges par ion, donc un chiffre trois fois plus grand une fois compté en équivalents.",
+          "sourceQuote": "Pour un trivalent, mEq/L = 3 × mmol/L."
+        },
+        {
+          "t": "Le résumé retenu est : monovalent, même chiffre qu'en mmol/L ; divalent, ×2 ; trivalent, ×3.",
+          "v": true,
+          "e": "VRAI. Trois cas, trois facteurs — et le facteur est toujours la valence elle-même.",
+          "sourceQuote": "Monovalent → même chiffre qu'en mmol/L · divalent → ×2 · trivalent → ×3."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-025-concentration-equivalente.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à la marche à suivre devant un ion et à la question à laquelle répond cette grandeur, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Devant un ion, on lit d'abord sa valence, puis on multiplie.",
+          "v": true,
+          "e": "VRAI. Deux gestes, dans cet ordre : la valence se lit sur la charge de l'ion, et la multiplication vient ensuite.",
+          "sourceQuote": "deux gestes dans cet ordre : lis sa valence, puis multiplie"
+        },
+        {
+          "t": "Au-delà de la valence et de la concentration, il reste une autre information à chercher dans l'énoncé.",
+          "v": false,
+          "e": "FAUX : il n'y a rien d'autre à chercher. La formule ne demande que ces deux données, et un énoncé qui semble en exiger plus cherche à égarer.",
+          "sourceQuote": "il n'y a rien d'autre à chercher dans l'énoncé"
+        },
+        {
+          "t": "La grandeur répond à la question : combien de charges l'ion apporte-t-il, par litre ?",
+          "v": true,
+          "e": "VRAI. C'est la lecture en français de la formule, et c'est elle qui empêche de la confondre avec la concentration molaire.",
+          "sourceQuote": "combien de charges l'ion apporte-t-il, par litre ?"
+        },
+        {
+          "t": "Comparer les contributions électriques entre ions suppose une grandeur qui tienne compte de leur valence.",
+          "v": true,
+          "e": "VRAI. Sans la valence, on comparerait des nombres d'ions, pas des nombres de charges — et l'équilibre électrique deviendrait illisible.",
+          "sourceQuote": "on a donc besoin d'une grandeur qui prenne en compte la valence (le nombre de charges) de chaque ion"
+        },
+        {
+          "t": "Les trois premiers compteurs suffisaient déjà à comparer les contributions électriques des ions.",
+          "v": false,
+          "e": "FAUX : les trois premiers comptent des masses ou des molécules. Aucun ne compte les charges, d'où la nécessité d'un quatrième.",
+          "sourceQuote": "les trois premiers comptent des masses"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-025-concentration-equivalente.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à l'équilibre électrique du sang et à ce qui distingue deux ions de charges différentes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans le sang, la somme des charges positives doit égaler la somme des charges négatives.",
+          "v": true,
+          "e": "VRAI. C'est le raisonnement physiologique qui motive toute la notion : les deux côtés doivent s'équilibrer.",
+          "sourceQuote": "la somme des charges positives doit égaler la somme des charges négatives"
+        },
+        {
+          "t": "Un sang qui ne serait pas électroneutre reste physiquement envisageable.",
+          "v": false,
+          "e": "FAUX : un sang chargé est physiquement impossible. C'est bien pour cela que l'égalité des charges sert de contrôle, jamais de résultat à démontrer.",
+          "sourceQuote": "sinon le sang ne serait pas électroneutre, ce qui est physiquement impossible"
+        },
+        {
+          "t": "Un ion Ca²⁺ apporte 2 charges par particule, alors qu'un ion Na⁺ n'en apporte qu'une.",
+          "v": true,
+          "e": "VRAI. C'est l'exemple qui justifie la grandeur : deux ions, un même nombre de particules, mais pas le même poids électrique.",
+          "sourceQuote": "un ion comme Ca²⁺ apporte 2 charges par particule, alors qu'un ion Na⁺ n'en apporte qu' une"
+        },
+        {
+          "t": "Un ion Na⁺ compte pour deux particules et un ion Ca²⁺ pour une seule.",
+          "v": false,
+          "e": "FAUX : chacun compte pour une particule. Ce qui les sépare n'est pas leur nombre, c'est leur nombre de charges.",
+          "sourceQuote": "Un Na⁺ et un Ca²⁺, c'est une particule chacun"
+        },
+        {
+          "t": "Ce qui distingue ces deux ions en physiologie n'est pas le nombre de particules mais le nombre de charges.",
+          "v": true,
+          "e": "VRAI. Une particule chacun, mais pas le même nombre de charges : c'est ce second point qui compte pour l'équilibre électrique.",
+          "sourceQuote": "Mais pas le même nombre de charges — et en physiologie, c'est ça qui compte."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-025-concentration-equivalente.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives au raccourci « mmol/L = mEq/L » et à ses limites, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Ce raccourci ne vaut que pour les ions monovalents.",
+          "v": true,
+          "e": "VRAI. Dès qu'un ion porte plus d'une charge, les deux chiffres cessent d'être égaux : le raccourci ne s'applique plus.",
+          "sourceQuote": "Le raccourci « mmol/L = mEq/L » ne vaut que pour les monovalents"
+        },
+        {
+          "t": "Une calcémie de 5 mmol/L de Ca²⁺ correspond à 5 mEq/L.",
+          "v": false,
+          "e": "FAUX : elle correspond à 10 mEq/L. Appliquer le raccourci au calcium, qui est divalent, revient à diviser le résultat par deux.",
+          "sourceQuote": "une calcémie de 5 mmol/L de Ca²⁺ fait 10 mEq/L, pas 5"
+        },
+        {
+          "t": "Dès qu'un ion est divalent ou trivalent, le mEq gonfle le chiffre du mmol par la valence.",
+          "v": true,
+          "e": "VRAI. Le facteur d'écart entre les deux unités est exactement la valence de l'ion.",
+          "sourceQuote": "Dès qu'un ion est divalent ou trivalent, le mEq gonfle le chiffre du mmol par la valence"
+        },
+        {
+          "t": "Le passage de Eq/L à mEq/L suit la même logique que celui de mol/L à mmol/L.",
+          "v": true,
+          "e": "VRAI. C'est le même préfixe « milli » dans les deux cas, donc la même conversion.",
+          "sourceQuote": "comme pour mol/L → mmol/L"
+        },
+        {
+          "t": "Appliquer ce raccourci à un ion trivalent revient à sous-estimer sa concentration équivalente d'un facteur 2.",
+          "v": false,
+          "e": "FAUX : pour un trivalent, le facteur d'écart est 3, pas 2. On sous-estimerait donc le résultat trois fois.",
+          "sourceQuote": "Pour un trivalent, mEq/L = 3 × mmol/L."
+        }
+      ]
+    },
+
+    {
+      "fiche": "physique-026-electroneutralite.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la neutralité électrique d'une solution ionique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Toute solution ionique réelle est électriquement neutre.",
+          "v": true,
+          "e": "VRAI. C'est la règle d'or : quelle que soit la solution, l'ensemble des charges qu'elle contient s'annule.",
+          "sourceQuote": "Toute solution ionique réelle est électriquement neutre"
+        },
+        {
+          "t": "Les cations sont les ions porteurs de charges positives.",
+          "v": true,
+          "e": "VRAI. Cation rime avec « plus » : ce sont eux qui apportent les charges positives de la solution.",
+          "sourceQuote": "portées par les cations (les ions +)"
+        },
+        {
+          "t": "Les anions portent les charges positives de la solution.",
+          "v": false,
+          "e": "FAUX : les anions sont les ions négatifs. Ce sont les cations qui portent les charges positives.",
+          "sourceQuote": "charges négatives, portées par les anions (les ions −)"
+        },
+        {
+          "t": "Une solution ionique réelle peut porter une charge globale non nulle.",
+          "v": false,
+          "e": "FAUX : une solution ionique réelle ne peut pas être chargée. Trouver une charge globale au bout d'un calcul signale une erreur, pas une découverte.",
+          "sourceQuote": "Une solution ionique réelle ne peut pas être chargée."
+        },
+        {
+          "t": "Le nombre de charges positives dépasse toujours légèrement celui des charges négatives.",
+          "v": false,
+          "e": "FAUX : il y a toujours exactement autant de charges positives que de charges négatives. Aucun excédent, même léger.",
+          "sourceQuote": "il y a toujours autant de charges positives, portées par les cations (les ions +), que de charges négatives, portées par les anions (les ions −)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-026-electroneutralite.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à l'écriture de la règle d'électroneutralité et à l'usage qu'on en fait, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans l'écriture de la règle, le signe Σ désigne une différence.",
+          "v": false,
+          "e": "FAUX : le signe Σ se lit « somme de ». La règle met en balance deux sommes, pas une différence.",
+          "sourceQuote": "le signe Σ se lit « somme de »"
+        },
+        {
+          "t": "La règle s'écrit en égalant la somme des concentrations équivalentes des cations et celle des anions.",
+          "v": true,
+          "e": "VRAI. C'est la traduction de la neutralité en langage de calcul : d'un côté les cations, de l'autre les anions, et l'égalité entre les deux.",
+          "sourceQuote": "Σ C éq (cations) = Σ C éq (anions)"
+        },
+        {
+          "t": "C'est une règle qui se calcule, et non qui se vérifie.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. On ne la calcule pas, on s'en sert comme d'un contrôle, une fois le reste du travail fait.",
+          "sourceQuote": "C'est une règle qu'on ne calcule pas — on la vérifie"
+        },
+        {
+          "t": "Elle se vérifie aussi bien à la fin d'un exercice qu'à la lecture d'un ionogramme.",
+          "v": true,
+          "e": "VRAI. Le même réflexe sert dans les deux situations : additionner chaque côté et regarder si les deux totaux coïncident.",
+          "sourceQuote": "à la fin d'un exercice comme à la lecture d'un ionogramme"
+        },
+        {
+          "t": "La règle s'exprime en concentrations molaires, et non en concentrations équivalentes.",
+          "v": false,
+          "e": "FAUX : elle s'écrit en concentrations équivalentes, puisqu'elle compare des charges. En concentrations molaires, l'égalité serait fausse dès qu'un ion n'est pas monovalent.",
+          "sourceQuote": "Traduit en concentrations équivalentes"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-026-electroneutralite.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la dissolution d'un chlorure de calcium à 0,1 mol/L, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'équation de dissolution s'écrit CaCl₂ → Ca²⁺ + 2 Cl⁻.",
+          "v": true,
+          "e": "VRAI. C'est la première étape, avant tout calcul : écrire l'équation, avec son coefficient 2 devant le chlorure.",
+          "sourceQuote": "Le CaCl₂ se dissocie totalement dans l'eau : CaCl₂ → Ca²⁺ + 2 Cl⁻"
+        },
+        {
+          "t": "Une molécule de CaCl₂ libère 1 ion Ca²⁺ et 2 ions Cl⁻.",
+          "v": true,
+          "e": "VRAI. C'est la lecture de l'équation : un calcium d'un côté, deux chlorures de l'autre.",
+          "sourceQuote": "1 molécule de CaCl₂ donne 1 ion Ca²⁺ et 2 ions Cl⁻."
+        },
+        {
+          "t": "La concentration en ions Ca²⁺ vaut 0,2 mol/L.",
+          "v": false,
+          "e": "FAUX : elle vaut 0,1 mol/L, comme le sel de départ, puisque chaque molécule ne libère qu'un seul calcium. C'est le chlorure qui est à 0,2 mol/L.",
+          "sourceQuote": "[Ca²⁺] = 1 × 0,1 = 0,1 mol/L"
+        },
+        {
+          "t": "La concentration en ions Cl⁻ vaut 0,1 mol/L.",
+          "v": false,
+          "e": "FAUX : elle vaut 0,2 mol/L. Chaque molécule libère deux chlorures, donc le coefficient 2 de l'équation double la concentration.",
+          "sourceQuote": "[Cl⁻] = 2 × 0,1 = 0,2 mol/L"
+        },
+        {
+          "t": "Le chlorure de calcium ne se dissocie que partiellement dans l'eau.",
+          "v": false,
+          "e": "FAUX : il se dissocie totalement. C'est cette dissociation complète qui permet de déduire directement les concentrations des ions.",
+          "sourceQuote": "Le CaCl₂ se dissocie totalement dans l'eau"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-026-electroneutralite.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux concentrations équivalentes des deux ions issus de ce sel, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La concentration équivalente du calcium vaut 0,2 Eq/L, soit 200 mEq/L.",
+          "v": true,
+          "e": "VRAI. Deux charges par ion et 0,1 mol/L d'ions calcium : le produit donne 0,2 Eq/L, c'est-à-dire 200 mEq/L.",
+          "sourceQuote": "C éq (Ca²⁺) = 2 × 0,1 = 0,2 Eq/L = 200 mEq/L"
+        },
+        {
+          "t": "La concentration équivalente du chlorure vaut 0,1 Eq/L, soit 100 mEq/L.",
+          "v": false,
+          "e": "FAUX : elle vaut 0,2 Eq/L, soit 200 mEq/L. Une seule charge par ion, mais deux fois plus d'ions : on retombe sur la même valeur que pour le calcium.",
+          "sourceQuote": "C éq (Cl⁻) = 1 × 0,2 = 0,2 Eq/L = 200 mEq/L"
+        },
+        {
+          "t": "Le chlorure porte une charge, donc sa valence vaut 1.",
+          "v": true,
+          "e": "VRAI. C'est un ion monovalent : sa concentration équivalente se lit directement sur sa concentration molaire.",
+          "sourceQuote": "Cl⁻ porte 1 charge (Z = 1)"
+        },
+        {
+          "t": "Pour passer de Eq/L à mEq/L, on multiplie par 1000.",
+          "v": true,
+          "e": "VRAI. C'est le même passage que de mol/L à mmol/L : 0,2 Eq/L devient 200 mEq/L.",
+          "sourceQuote": "de Eq/L à mEq/L, on multiplie par 1000"
+        },
+        {
+          "t": "Le calcium porte 2 charges, mais on retient une valence de 1 dans le calcul.",
+          "v": false,
+          "e": "FAUX : la valence utilisée est bien 2. Retenir 1 reviendrait à ignorer la seconde charge et à casser l'équilibre électrique de la solution.",
+          "sourceQuote": "Ca²⁺ porte 2 charges (Z = 2)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-026-electroneutralite.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à la vérification finale menée sur cette solution, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La somme du côté des cations vaut 0,2 Eq/L.",
+          "v": true,
+          "e": "VRAI. Le calcium est ici le seul cation : sa concentration équivalente constitue à elle seule toute la somme.",
+          "sourceQuote": "Σ cations = C éq (Ca²⁺) = 0,2 Eq/L"
+        },
+        {
+          "t": "La somme du côté des anions vaut 0,4 Eq/L.",
+          "v": false,
+          "e": "FAUX : elle vaut 0,2 Eq/L. Le chlorure est deux fois plus concentré que le calcium, mais il ne porte qu'une charge : le total revient au même.",
+          "sourceQuote": "Σ anions = C éq (Cl⁻) = 0,2 Eq/L"
+        },
+        {
+          "t": "L'égalité entre les deux sommes est respectée.",
+          "v": true,
+          "e": "VRAI. Les deux côtés donnent la même valeur : la solution est bien électriquement neutre, comme elle doit l'être.",
+          "sourceQuote": "Égalité respectée"
+        },
+        {
+          "t": "Le résultat doit être vu en mettant les deux ions côte à côte.",
+          "v": true,
+          "e": "VRAI. C'est sous cette forme que la solution devient lisible d'un coup d'œil : chaque ion avec sa concentration, sa valence et sa concentration équivalente.",
+          "sourceQuote": "c'est sous cette forme que tu dois « voir » la solution"
+        },
+        {
+          "t": "Une solution dont les deux sommes ne s'égalisent pas reste physiquement acceptable.",
+          "v": false,
+          "e": "FAUX : cela décrirait une solution chargée, ce qui est impossible. Un tel résultat signale toujours une erreur de calcul, le plus souvent un coefficient oublié.",
+          "sourceQuote": "une solution « chargée », donc un résultat impossible"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-026-electroneutralite.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la raison pour laquelle l'électroneutralité se trouve toujours satisfaite, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans cette solution, il y a deux fois plus d'ions Cl⁻ que d'ions Ca²⁺ en nombre.",
+          "v": true,
+          "e": "VRAI. Le coefficient 2 de l'équation de dissolution donne deux chlorures pour un calcium.",
+          "sourceQuote": "il y a 2 fois plus de Cl⁻ que de Ca²⁺ en nombre"
+        },
+        {
+          "t": "Chaque ion Ca²⁺ porte deux fois plus de charges qu'un ion Cl⁻.",
+          "v": true,
+          "e": "VRAI. Deux charges contre une : c'est le second des deux effets qui s'opposent.",
+          "sourceQuote": "mais chaque Ca²⁺ porte 2 fois plus de charges"
+        },
+        {
+          "t": "Ces deux effets se compensent exactement.",
+          "v": true,
+          "e": "VRAI. Deux fois plus d'ions d'un côté, deux fois plus de charges de l'autre : le produit est le même, et l'égalité tombe toute seule.",
+          "sourceQuote": "Les deux effets se compensent exactement"
+        },
+        {
+          "t": "L'électroneutralité n'est satisfaite que pour certains sels particuliers.",
+          "v": false,
+          "e": "FAUX : elle est automatiquement satisfaite pour tout sel dissous. C'est la conséquence directe du fait que le sel de départ était lui-même neutre.",
+          "sourceQuote": "l'électroneutralité est automatiquement satisfaite pour tout sel dissous"
+        },
+        {
+          "t": "L'écart entre le nombre d'ions et le nombre de charges rend l'électroneutralité inatteignable ici.",
+          "v": false,
+          "e": "FAUX : c'est justement cet écart qui la rend automatique, puisque les deux effets se compensent exactement.",
+          "sourceQuote": "Les deux effets se compensent exactement → l'électroneutralité est automatiquement satisfaite"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-026-electroneutralite.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la lecture d'un ionogramme plasmatique et à l'erreur classique de calcul, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un ionogramme plasmatique est la liste des ions dosés dans le sang d'un patient.",
+          "v": true,
+          "e": "VRAI. C'est un examen courant, et sa lecture repose directement sur la règle d'électroneutralité.",
+          "sourceQuote": "la liste des ions dosés dans le sang d'un patient"
+        },
+        {
+          "t": "Devant un ionogramme, le premier réflexe est de vérifier que l'électroneutralité est respectée.",
+          "v": true,
+          "e": "VRAI. On additionne chaque côté avant toute interprétation : c'est le contrôle de cohérence de l'examen.",
+          "sourceQuote": "son premier réflexe est de vérifier que l'électroneutralité est respectée"
+        },
+        {
+          "t": "Si l'électroneutralité n'est pas retrouvée sur un ionogramme, c'est que la règle est prise en défaut.",
+          "v": false,
+          "e": "FAUX : la règle n'est jamais fausse. Un déséquilibre apparent signale qu'un ion n'a pas été mesuré.",
+          "sourceQuote": "ce n'est pas la règle qui est fausse : c'est qu'il manque un ion non mesuré"
+        },
+        {
+          "t": "Un tel écart peut révéler une acidose ou une intoxication.",
+          "v": true,
+          "e": "VRAI. L'ion manquant n'est pas anodin : sa présence silencieuse peut être le signe d'un trouble à rechercher.",
+          "sourceQuote": "ce qui peut révéler une acidose, une intoxication"
+        },
+        {
+          "t": "Oublier le coefficient 2 de l'équation de dissolution conduit à trouver 200 mEq/L des deux côtés.",
+          "v": false,
+          "e": "FAUX : cette omission donne 100 mEq/L d'un côté et 200 de l'autre — donc une solution chargée, ce qui est impossible.",
+          "sourceQuote": "tu trouves 100 mEq/L d'un côté, 200 de l'autre"
+        }
+      ]
+    },
+
+    {
+      "fiche": "physique-027-osmolarite-entites-cinetiques.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la définition de l'osmolarité et à son unité, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'osmolarité est le nombre de moles d'entités cinétiques par litre de solution.",
+          "v": true,
+          "e": "VRAI. Une entité cinétique, c'est une particule libre en solution : l'osmolarité les compte, rapportées au litre.",
+          "sourceQuote": "est le nombre de moles d'entités cinétiques — de particules en solution — par litre de solution"
+        },
+        {
+          "t": "Elle s'exprime en Osm/L, souvent en mOsm/L pour les valeurs physiologiques.",
+          "v": true,
+          "e": "VRAI. Comme pour les autres concentrations, le millième d'unité donne des nombres commodes à manipuler en physiologie.",
+          "sourceQuote": "Unité : Osm/L, souvent en mOsm/L pour les ordres de grandeur physiologiques"
+        },
+        {
+          "t": "Elle compte les particules en tenant compte de leur charge.",
+          "v": false,
+          "e": "FAUX : elle compte les particules sans regarder leur charge. Ce sont les concentrations équivalentes qui s'occupent des charges.",
+          "sourceQuote": "les particules, sans regarder leur charge"
+        },
+        {
+          "t": "Le corps se soucie davantage du nombre de moles de soluté que du nombre de particules en solution.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. Ce sont les particules libres qui gouvernent l'osmose et la pression osmotique, pas le nombre de moles de sel versées au départ.",
+          "sourceQuote": "le corps ne se soucie pas tellement du nombre de moles de soluté — il se soucie du nombre de particules en solution"
+        },
+        {
+          "t": "L'osmolarité se compte par litre de solvant.",
+          "v": false,
+          "e": "FAUX : elle se compte par litre de solution, solutés compris — comme toutes les concentrations volumiques de ce chapitre.",
+          "sourceQuote": "par litre de solution"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-027-osmolarite-entites-cinetiques.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux deux grandeurs qui interviennent dans la formule de l'osmolarité, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'un des deux facteurs est la concentration molaire du soluté.",
+          "v": true,
+          "e": "VRAI. L'osmolarité part toujours de la concentration molaire : c'est elle qu'on corrige ensuite par le nombre de particules libérées.",
+          "sourceQuote": "C = la concentration molaire"
+        },
+        {
+          "t": "L'autre facteur est le nombre d'entités cinétiques par molécule de soluté.",
+          "v": true,
+          "e": "VRAI. C'est un compteur : combien de particules distinctes une seule molécule de soluté produit-elle en se dissolvant ?",
+          "sourceQuote": "n = le nombre d'entités cinétiques par molécule de soluté"
+        },
+        {
+          "t": "Pour un soluté qui ne se dissocie pas, ce compteur vaut 0.",
+          "v": false,
+          "e": "FAUX : il vaut 1. Une molécule qui ne se dissocie pas reste une particule en solution, elle ne disparaît pas.",
+          "sourceQuote": "ou 1 pour un soluté non dissociant"
+        },
+        {
+          "t": "Pour un soluté dissociant, ce compteur correspond au nombre d'ions issus de la dissociation totale.",
+          "v": true,
+          "e": "VRAI. On compte les ions produits par une molécule, coefficients de l'équation compris.",
+          "sourceQuote": "nombre d'ions résultant de la dissociation totale"
+        },
+        {
+          "t": "Ce compteur se devine à partir de la formule chimique, sans écrire l'équation de dissociation.",
+          "v": false,
+          "e": "FAUX : il ne se devine pas, il se lit sur l'équation de dissociation. C'est le seul moyen de ne pas oublier un coefficient.",
+          "sourceQuote": "Le facteur n ne se devine pas : il se lit sur l'équation de dissociation du soluté."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-027-osmolarite-entites-cinetiques.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la comparaison entre une mole de NaCl et une mole de glucose dissoutes dans un litre d'eau, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une mole de glucose donne une mole de molécules de glucose en solution.",
+          "v": true,
+          "e": "VRAI. Le glucose ne se dissocie pas : ce qu'on a versé, on le retrouve tel quel, molécule pour molécule.",
+          "sourceQuote": "tu obtiens 1 mole de molécules de glucose en solution"
+        },
+        {
+          "t": "Une mole de NaCl donne deux moles d'entités séparées en solution.",
+          "v": true,
+          "e": "VRAI. Le sel se dissocie complètement : une mole de sodium et une mole de chlorure, soit deux moles de particules libres.",
+          "sourceQuote": "soit 2 moles d'entités séparées dans la solution"
+        },
+        {
+          "t": "À concentration molaire identique, le glucose pèse deux fois plus lourd que NaCl pour ces phénomènes.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. C'est NaCl qui pèse deux fois plus lourd, parce qu'il libère deux particules là où le glucose n'en libère qu'une.",
+          "sourceQuote": "NaCl « pèse » donc 2 fois plus lourd que le glucose à concentration molaire identique"
+        },
+        {
+          "t": "L'osmose, la pression osmotique et l'abaissement cryoscopique dépendent du nombre de particules.",
+          "v": true,
+          "e": "VRAI. Ce sont les phénomènes qui ne comptent pas la nature du soluté, seulement le nombre d'objets qui flottent dans la solution.",
+          "sourceQuote": "les phénomènes qui dépendent du nombre de particules (osmose, pression osmotique, abaissement cryoscopique"
+        },
+        {
+          "t": "L'abaissement cryoscopique désigne une élévation de la température de congélation.",
+          "v": false,
+          "e": "FAUX : c'est bien un abaissement — la température de congélation qui baisse. C'est pour cela qu'on sale les routes en hiver.",
+          "sourceQuote": "abaissement cryoscopique — la température de congélation qui baisse"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-027-osmolarite-entites-cinetiques.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux deux sens de la lettre n et à ce que devient une molécule de NaCl dans l'eau, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans n = m / M, la lettre n désigne la quantité de matière, en moles.",
+          "v": true,
+          "e": "VRAI. C'est le sens le plus familier de la lettre : une quantité de matière, qui s'exprime en moles.",
+          "sourceQuote": "Dans n = m / M, n est la quantité de matière, en moles"
+        },
+        {
+          "t": "Dans la formule de l'osmolarité, cette même lettre s'exprime elle aussi en moles.",
+          "v": false,
+          "e": "FAUX : elle y désigne un simple compteur, sans unité — 1, 2, 3 ou 4 selon le soluté. Même lettre, deux sens complètement différents.",
+          "sourceQuote": "un simple compteur, sans unité (1, 2, 3, 4…)"
+        },
+        {
+          "t": "Devant la lettre n, il suffit de la traduire toujours de la même façon.",
+          "v": false,
+          "e": "FAUX : il faut regarder la formule qui l'entoure avant de la traduire. Le contexte seul dit s'il s'agit d'une quantité de matière ou d'un compteur d'entités.",
+          "sourceQuote": "regarde la formule autour avant de traduire"
+        },
+        {
+          "t": "Dans l'eau, une molécule de NaCl aboutit à un Na⁺ et un Cl⁻ séparés, soit deux entités cinétiques.",
+          "v": true,
+          "e": "VRAI. À la fin, il n'y a plus de NaCl du tout : il y a deux objets distincts qui flottent chacun de leur côté.",
+          "sourceQuote": "il n'y a plus de NaCl, il y a un Na⁺ et un Cl⁻, séparés"
+        },
+        {
+          "t": "C'est l'attraction Na⁺-Cl⁻ qui maintient les deux ions ensemble une fois le sel dissous.",
+          "v": false,
+          "e": "FAUX : l'eau oriente ses dipôles autour de chaque ion et brise précisément cette attraction. C'est ce qui permet la séparation en deux entités.",
+          "sourceQuote": "l'eau oriente ses dipôles autour de chaque ion et « brise » l'attraction Na⁺-Cl⁻"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-027-osmolarite-entites-cinetiques.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au nombre d'entités cinétiques des solutés courants, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Pour le glucose, ce nombre vaut 1.",
+          "v": true,
+          "e": "VRAI. Le glucose ne se dissocie pas : une molécule versée donne une particule en solution.",
+          "sourceQuote": "1 pour le glucose, 2 pour NaCl"
+        },
+        {
+          "t": "Pour NaCl, ce nombre vaut 2.",
+          "v": true,
+          "e": "VRAI. Un sodium et un chlorure : deux particules pour une molécule de sel.",
+          "sourceQuote": "2 pour NaCl, 3 pour CaCl₂ et Na₂SO₄"
+        },
+        {
+          "t": "Pour CaCl₂, ce nombre vaut 2.",
+          "v": false,
+          "e": "FAUX : il vaut 3 — un calcium et deux chlorures. Oublier le coefficient 2 de l'équation est l'erreur la plus fréquente sur ce soluté.",
+          "sourceQuote": "3 pour CaCl₂ et Na₂SO₄, 4 pour AlCl₃"
+        },
+        {
+          "t": "Pour Na₂SO₄, ce nombre vaut 2, contrairement à CaCl₂ qui vaut 3.",
+          "v": false,
+          "e": "FAUX : Na₂SO₄ vaut 3 lui aussi — deux sodiums et un sulfate. Les deux solutés donnent bien le même nombre de particules.",
+          "sourceQuote": "3 pour CaCl₂ et Na₂SO₄"
+        },
+        {
+          "t": "Pour AlCl₃, ce nombre vaut 3.",
+          "v": false,
+          "e": "FAUX : il vaut 4 — un aluminium et trois chlorures. C'est le soluté qui produit le plus de particules parmi ceux à connaître.",
+          "sourceQuote": "3 pour CaCl₂ et Na₂SO₄, 4 pour AlCl₃"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-027-osmolarite-entites-cinetiques.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à une solution contenant 0,1 mol/L de NaCl, 0,05 mol/L de CaCl₂ et 0,2 mol/L de glucose, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La contribution du NaCl vaut 0,2 Osm/L.",
+          "v": true,
+          "e": "VRAI. Deux particules par molécule et 0,1 mol/L de sel : le produit donne 0,2 Osm/L.",
+          "sourceQuote": "NaCl (n = 2) : ω₁ = 2 × 0,1 = 0,2 Osm/L"
+        },
+        {
+          "t": "La contribution du CaCl₂ vaut 0,15 Osm/L.",
+          "v": true,
+          "e": "VRAI. Trois particules par molécule et 0,05 mol/L de sel : le produit donne 0,15 Osm/L, malgré une concentration deux fois plus faible que celle du NaCl.",
+          "sourceQuote": "CaCl₂ (n = 3) : ω₂ = 3 × 0,05 = 0,15 Osm/L"
+        },
+        {
+          "t": "La contribution du glucose vaut 0,1 Osm/L.",
+          "v": false,
+          "e": "FAUX : elle vaut 0,2 Osm/L. Le glucose ne se dissocie pas, donc sa contribution est exactement sa concentration molaire, soit 0,2.",
+          "sourceQuote": "Glucose (n = 1) : ω₃ = 1 × 0,2 = 0,2 Osm/L"
+        },
+        {
+          "t": "L'osmolarité totale de la solution vaut 550 mOsm/L.",
+          "v": true,
+          "e": "VRAI. On additionne les trois contributions : 0,2 + 0,15 + 0,2 = 0,55 Osm/L, soit 550 mOsm/L.",
+          "sourceQuote": "ω = 0,2 + 0,15 + 0,2 = 0,55 Osm/L = 550 mOsm/L"
+        },
+        {
+          "t": "Cette solution est hypo-osmolaire par rapport au plasma.",
+          "v": false,
+          "e": "FAUX : elle est hyperosmolaire. Avec 550 mOsm/L face aux 300 mOsm/L du plasma, elle tirerait de l'eau hors des cellules.",
+          "sourceQuote": "Cette solution est hyperosmolaire par rapport au plasma"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-027-osmolarite-entites-cinetiques.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la conduite du calcul devant un mélange et à l'erreur la plus fréquente, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Chaque soluté apporte sa propre contribution, et l'osmolarité de la solution est la somme de ces contributions.",
+          "v": true,
+          "e": "VRAI. Un soluté à la fois, avec son propre nombre de particules et sa propre concentration — puis on additionne.",
+          "sourceQuote": "chaque soluté apporte sa propre contribution n × C , et l'osmolarité de la solution est la somme de ces contributions"
+        },
+        {
+          "t": "Devant un mélange, il faut comparer les solutés entre eux pour trouver un raccourci.",
+          "v": false,
+          "e": "FAUX : il ne faut ni chercher de raccourci, ni comparer les solutés entre eux. Chacun se traite séparément, puis on additionne.",
+          "sourceQuote": "ne cherche pas de raccourci et ne compare pas les solutés entre eux"
+        },
+        {
+          "t": "À concentration molaire égale, une solution de NaCl est deux fois plus osmolaire qu'une solution de glucose.",
+          "v": true,
+          "e": "VRAI. Deux particules contre une : l'osmolarité double, alors que la concentration molaire est la même.",
+          "sourceQuote": "une solution de NaCl est deux fois plus osmolaire qu'une solution de glucose"
+        },
+        {
+          "t": "Une solution de glucose à 100 mmol/L a une osmolarité de 200 mOsm/L.",
+          "v": false,
+          "e": "FAUX : elle est à 100 mOsm/L, puisque le glucose ne se dissocie pas. Ce sont les 200 mOsm/L du NaCl à la même concentration molaire.",
+          "sourceQuote": "100 mmol/L donnent 200 mOsm/L d'un côté, 100 mOsm/L de l'autre"
+        },
+        {
+          "t": "Il faut écrire la dissociation avant de multiplier.",
+          "v": true,
+          "e": "VRAI. C'est le geste qui évite l'erreur de réflexe consistant à compter une seule particule par molécule.",
+          "sourceQuote": "Toujours écrire la dissociation avant de multiplier."
+        }
+      ]
+    },
+
+    {
+      "fiche": "physique-028-tableau-avancement-dissolution.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à l'objet du tableau d'avancement de dissolution et à sa construction, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "On dresse le tableau en écrivant d'abord l'équation de dissolution.",
+          "v": true,
+          "e": "VRAI. L'équation vient toujours en premier : c'est elle qui fixe les coefficients que le tableau reportera ensuite ligne par ligne.",
+          "sourceQuote": "tu écris l'équation de dissolution, puis tu remplis ligne par ligne"
+        },
+        {
+          "t": "Le tableau comporte quatre lignes.",
+          "v": true,
+          "e": "VRAI. L'état initial, l'état final, les valences, puis les concentrations équivalentes : quatre lignes, dans cet ordre.",
+          "sourceQuote": "Quatre lignes : ① l'état initial, ② l'état final"
+        },
+        {
+          "t": "Lire un tableau de nombres d'entités suffit dès que l'énoncé demande aussi la concentration de chaque ion.",
+          "v": false,
+          "e": "FAUX : dès que les concentrations ioniques sont demandées, il faut poser le calcul. Le tableau de nombres d'entités ne donne que l'osmolarité.",
+          "sourceQuote": "il faut poser le calcul, pas seulement lire un tableau de n"
+        },
+        {
+          "t": "Le tableau donne l'osmolarité, mais pas les concentrations équivalentes.",
+          "v": false,
+          "e": "FAUX : il donne les deux. Le haut du tableau traite la dissolution, le bas le calcul des charges équivalentes.",
+          "sourceQuote": "la dissolution (haut du tableau) et le calcul des charges équivalentes (bas du tableau)"
+        },
+        {
+          "t": "Un seul tableau rassemble les deux calculs.",
+          "v": true,
+          "e": "VRAI. C'est tout son intérêt : une seule construction, deux résultats — l'osmolarité et les concentrations équivalentes.",
+          "sourceQuote": "On va remplir un seul tableau qui rassemble deux choses"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-028-tableau-avancement-dissolution.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux deux premières lignes du tableau, dressé pour un chlorure de calcium de concentration initiale C₀, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "À l'état initial, la concentration du sel vaut C₀ et il n'y a encore aucun ion en solution.",
+          "v": true,
+          "e": "VRAI. C'est l'état d'avant dissolution : tout le sel est encore intact, et la partie droite du tableau ne contient que des zéros.",
+          "sourceQuote": "[CaCl₂] = C₀, et il n'y a encore aucun ion en solution (zéros à droite)"
+        },
+        {
+          "t": "À l'état final, il reste encore la moitié du sel intact.",
+          "v": false,
+          "e": "FAUX : le sel a entièrement disparu. La dissolution est totale, donc sa concentration tombe à zéro.",
+          "sourceQuote": "Le CaCl₂ a entièrement disparu (0)"
+        },
+        {
+          "t": "À l'état final, la concentration en Ca²⁺ vaut C₀ et celle en Cl⁻ vaut 2 C₀.",
+          "v": true,
+          "e": "VRAI. Chaque molécule a libéré un calcium et deux chlorures : le coefficient 2 de l'équation se retrouve directement dans la concentration.",
+          "sourceQuote": "donc [Ca²⁺] = C₀ et [Cl⁻] = 2 C₀"
+        },
+        {
+          "t": "L'état final correspond à une dissolution totale.",
+          "v": true,
+          "e": "VRAI. C'est l'hypothèse de travail du tableau : à la fin, plus rien du sel de départ ne subsiste.",
+          "sourceQuote": "l'état final (t = fin, dissolution totale)"
+        },
+        {
+          "t": "À l'état initial, une partie du sel est déjà dissociée.",
+          "v": false,
+          "e": "FAUX : l'état initial se place avant que la dissolution ait lieu. Rien n'est encore dissocié.",
+          "sourceQuote": "L'état initial, avant que la dissolution ait lieu."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-028-tableau-avancement-dissolution.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la lecture de l'osmolarité dans le tableau et à la ligne des valences, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'osmolarité se lit en sommant la ligne de l'état final.",
+          "v": true,
+          "e": "VRAI. Une simple addition sur cette ligne suffit : on additionne les concentrations de toutes les espèces présentes à la fin.",
+          "sourceQuote": "L'osmolarité se lit directement en sommant cette ligne"
+        },
+        {
+          "t": "Pour ce sel, l'osmolarité vaut 2 C₀.",
+          "v": false,
+          "e": "FAUX : elle vaut 3 C₀ — un calcium plus deux chlorures. Trouver 2 C₀ signale un coefficient oublié dans l'équation.",
+          "sourceQuote": "L'osmolarité se lit directement en sommant cette ligne : ω = ΣC = 0 + C₀ + 2 C₀ = 3 C₀"
+        },
+        {
+          "t": "La valence de chaque ion dépend de sa concentration.",
+          "v": false,
+          "e": "FAUX : la valence ne dépend pas de la concentration. C'est une donnée propre à l'ion, la même quelle que soit la solution.",
+          "sourceQuote": "Ça ne dépend pas de la concentration"
+        },
+        {
+          "t": "Le calcium porte 2 charges et le chlorure 1.",
+          "v": true,
+          "e": "VRAI. Ce sont les deux valences à reporter dans la troisième ligne du tableau.",
+          "sourceQuote": "Ca²⁺ porte 2 charges, Cl⁻ en porte 1"
+        },
+        {
+          "t": "La ligne des valences est une donnée à connaître pour chaque ion.",
+          "v": true,
+          "e": "VRAI. Elle ne se calcule pas : elle se sait, et c'est la seule ligne du tableau qui ne se déduit d'aucune autre.",
+          "sourceQuote": "Une simple donnée à connaître pour chaque ion."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-028-tableau-avancement-dissolution.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives au calcul des concentrations équivalentes dans ce tableau, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "On multiplie, colonne par colonne, la concentration de l'ion à l'état final par sa valence.",
+          "v": true,
+          "e": "VRAI. C'est la construction de la quatrième ligne : chaque colonne reçoit le produit de la concentration finale par la valence de son ion.",
+          "sourceQuote": "On multiplie colonne par colonne la valeur de la ligne ② (concentration de l'ion à t = fin) par celle de la ligne ③ (valence)"
+        },
+        {
+          "t": "Pour le calcium, on obtient 2 C₀.",
+          "v": true,
+          "e": "VRAI. Sa concentration finale vaut C₀ et sa valence 2 : le produit donne 2 C₀.",
+          "sourceQuote": "Pour Ca²⁺ : 2 × C₀ = 2 C₀"
+        },
+        {
+          "t": "Pour le chlorure, on obtient C₀.",
+          "v": false,
+          "e": "FAUX : on obtient 2 C₀. Sa valence ne vaut que 1, mais sa concentration finale est déjà de 2 C₀ — les deux ions retombent donc sur la même valeur.",
+          "sourceQuote": "Pour Cl⁻ : 1 × 2 C₀ = 2 C₀"
+        },
+        {
+          "t": "L'électroneutralité se vérifie en sommant la ligne des valences.",
+          "v": false,
+          "e": "FAUX : elle se lit colonne par colonne sur la ligne des concentrations équivalentes, en comparant le côté des cations et celui des anions. La ligne des valences ne s'additionne jamais.",
+          "sourceQuote": "elle se lit colonne par colonne sur la ligne ④"
+        },
+        {
+          "t": "Les deux sommes obtenues de part et d'autre sont différentes, ce qui invalide le calcul.",
+          "v": false,
+          "e": "FAUX : les deux sont égales, et c'est bien ce qu'on attendait. Cette égalité est la vérification, pas un problème.",
+          "sourceQuote": "Les deux sont égaux"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-028-tableau-avancement-dissolution.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux équations de dissolution à connaître et à l'osmolarité qui en découle, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Pour NaCl, l'osmolarité vaut 2 C₀.",
+          "v": true,
+          "e": "VRAI. Un sodium et un chlorure : deux particules par molécule, donc une osmolarité double de la concentration de départ.",
+          "sourceQuote": "NaCl → Na⁺ + Cl⁻ ω = C₀ + C₀ = 2 C₀"
+        },
+        {
+          "t": "Pour Na₂CO₃, l'osmolarité vaut 2 C₀.",
+          "v": false,
+          "e": "FAUX : elle vaut 3 C₀ — deux sodiums et un carbonate. Le coefficient 2 porte ici sur le cation, pas sur l'anion.",
+          "sourceQuote": "Na₂CO₃ → 2 Na⁺ + CO₃²⁻ ω = 2 C₀ + C₀ = 3 C₀"
+        },
+        {
+          "t": "Na₃PO₄ libère 3 ions Na⁺ et 1 ion PO₄³⁻, d'où une osmolarité de 4 C₀.",
+          "v": true,
+          "e": "VRAI. Trois sodiums plus un phosphate : quatre particules par molécule dissoute.",
+          "sourceQuote": "Na₃PO₄ → 3 Na⁺ + PO₄³⁻ ω = 3 C₀ + C₀ = 4 C₀"
+        },
+        {
+          "t": "Pour AlCl₃, l'osmolarité vaut 3 C₀.",
+          "v": false,
+          "e": "FAUX : elle vaut 4 C₀ — un aluminium et trois chlorures. Le coefficient 3 s'ajoute au cation, il ne le remplace pas.",
+          "sourceQuote": "AlCl₃ → Al³⁺ + 3 Cl⁻ ω = C₀ + 3 C₀ = 4 C₀"
+        },
+        {
+          "t": "La méthode du tableau ne vaut que pour le chlorure de calcium.",
+          "v": false,
+          "e": "FAUX : elle marche pour n'importe quel soluté ionique. Une fois l'équation écrite, le reste du tableau suit de la même façon.",
+          "sourceQuote": "La méthode marche pour n'importe quel soluté ionique"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-028-tableau-avancement-dissolution.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives aux deux lectures possibles de la concentration équivalente d'une solution, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans la convention retenue ici, elle désigne la valeur commune du côté des cations ou du côté des anions.",
+          "v": true,
+          "e": "VRAI. Comme les deux côtés sont égaux par électroneutralité, on annonce cette valeur unique, sans l'additionner deux fois.",
+          "sourceQuote": "« C éq d'une solution » désigne la valeur commune côté cations ou côté anions"
+        },
+        {
+          "t": "Cette convention est dite clinique et donne 200 mEq/L pour une solution de CaCl₂ à 0,1 mol/L.",
+          "v": true,
+          "e": "VRAI. C'est la lecture des laboratoires, et elle retombe exactement sur la valeur calculée dans la fiche précédente.",
+          "sourceQuote": "C'est la convention clinique, celle qui donne bien 200 mEq/L pour une solution de CaCl₂ à 0,1 mol/L"
+        },
+        {
+          "t": "Un énoncé qui additionne les deux côtés écrira une somme égale à 2 C₀.",
+          "v": false,
+          "e": "FAUX : en additionnant les deux côtés, on obtient 4 C₀ — le total des charges en valeur absolue. La valeur 2 C₀ est celle d'un seul côté.",
+          "sourceQuote": "un énoncé peut additionner les deux côtés et écrire Σ C éq = 4 C₀"
+        },
+        {
+          "t": "Dans cette seconde lecture, une concentration équivalente de 50 mEq/L pour une solution de CaCl₂ correspond à 12,5 mmol/L.",
+          "v": true,
+          "e": "VRAI. La relation inverse change avec la convention : on divise alors par 4 et non par 2.",
+          "sourceQuote": "donne dans ce cas C₀ = C éq /4 = 12,5 mmol/L"
+        },
+        {
+          "t": "La lecture employée par l'énoncé n'a pas d'incidence sur le calcul.",
+          "v": false,
+          "e": "FAUX : elle change le résultat d'un facteur deux. Il faut repérer laquelle des deux lectures l'énoncé utilise avant de calculer.",
+          "sourceQuote": "Repère laquelle des deux lectures l'énoncé utilise avant de calculer."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-028-tableau-avancement-dissolution.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives aux deux chiffres à retenir sur ce sel et à l'erreur la plus coûteuse, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Sur CaCl₂ à C₀, l'osmolarité vaut 3 C₀ et la concentration équivalente 2 C₀.",
+          "v": true,
+          "e": "VRAI. Ce sont les deux chiffres à sortir du tableau, et ils ne sont pas égaux : trois particules, mais deux charges de chaque côté.",
+          "sourceQuote": "Sur CaCl₂ à C₀ : ω = 3 C₀ et C éq = 2 C₀"
+        },
+        {
+          "t": "L'osmolarité compte les charges apportées et la concentration équivalente les particules en solution.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. L'osmolarité compte les particules, la concentration équivalente compte les charges.",
+          "sourceQuote": "ω = 3 C₀ → l'osmolarité, qui compte les particules en solution"
+        },
+        {
+          "t": "Oublier le coefficient 2 conduit à écrire le chlorure à 3 C₀ au lieu de 2 C₀.",
+          "v": false,
+          "e": "FAUX : l'oubli conduit à écrire le chlorure à C₀ au lieu de 2 C₀. C'est un chiffre en moins, pas un de plus.",
+          "sourceQuote": "le chlorure est à 2 C₀, pas C₀"
+        },
+        {
+          "t": "Cette omission donne une osmolarité de 2 C₀ au lieu de 3 C₀ et une solution qui ne serait plus électroneutre.",
+          "v": true,
+          "e": "VRAI. Un seul chiffre manquant produit deux erreurs à la fois : une osmolarité fausse et une solution chargée, donc impossible.",
+          "sourceQuote": "tu sors ω = 2 C₀ au lieu de 3 C₀ et une solution qui ne serait plus électroneutre"
+        },
+        {
+          "t": "Tout part de la ligne de l'état initial : sommée telle quelle, elle donne l'osmolarité.",
+          "v": false,
+          "e": "FAUX : c'est la ligne de l'état final dont la somme donne l'osmolarité. L'état initial ne contient encore aucun ion.",
+          "sourceQuote": "② l'état final (dont la somme donne ω)"
+        }
+      ]
+    }
+  ]
+}

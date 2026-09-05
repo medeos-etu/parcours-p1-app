@@ -1,0 +1,1371 @@
+{
+  "matiere": "physique",
+  "chapitre": 2,
+  "questions": [
+    {
+      "fiche": "physique-035-definition-ph-echelle-0-14.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la définition du pH, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le sigle pH signifie « potentiel hydrogène ».",
+          "v": true,
+          "e": "VRAI. pH est l'abréviation de potentiel hydrogène : le nombre qui traduit la concentration en ions H⁺ d'un milieu.",
+          "sourceQuote": "Le pH (Potentiel hydrogène) est défini comme l'opposé du logarithme décimal de la concentration en ions H⁺"
+        },
+        {
+          "t": "Le pH est le logarithme décimal de la concentration en ions H⁺, sans changement de signe.",
+          "v": false,
+          "e": "FAUX : le pH est l'OPPOSÉ de ce logarithme. Sans le signe moins, on obtiendrait des valeurs négatives pour toutes les solutions courantes.",
+          "sourceQuote": "défini comme l'opposé du logarithme décimal de la concentration en ions H⁺"
+        },
+        {
+          "t": "Dans la formule, la concentration en ions H⁺ s'exprime en mol/L.",
+          "v": true,
+          "e": "VRAI. L'unité de [H⁺] est la mole par litre : c'est cette valeur, et pas une autre, que l'on passe au logarithme.",
+          "sourceQuote": "avec [H⁺] = concentration en ions H⁺, en mol/L."
+        },
+        {
+          "t": "Raisonner sur H₃O⁺ plutôt que sur H⁺ change le résultat en solution aqueuse.",
+          "v": false,
+          "e": "FAUX : en solution aqueuse, parler de H⁺ ou de H₃O⁺ revient exactement au même. Les deux écritures désignent le proton en solution.",
+          "sourceQuote": "(ou H₃O⁺, ce qui revient au même en solution aqueuse)"
+        },
+        {
+          "t": "La formule de définition s'écrit pH = −log₁₀([H⁺]).",
+          "v": true,
+          "e": "VRAI. C'est la formule à connaître par cœur : on prend la concentration en H⁺, on la passe au logarithme décimal, et on change le signe.",
+          "sourceQuote": "pH = −log₁₀([H⁺]), et dans l'autre sens"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-035-definition-ph-echelle-0-14.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux trois zones de l'échelle des pH, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une solution dont le pH est compris entre 0 et 7 est acide.",
+          "v": true,
+          "e": "VRAI. C'est la première des trois zones : en dessous de 7, la solution est acide.",
+          "sourceQuote": "pH = 0 à 7 → solution acide."
+        },
+        {
+          "t": "À pH = 7, dans l'eau pure à 25 °C, [H⁺] et [OH⁻] valent toutes deux 10⁻⁷ mol/L.",
+          "v": true,
+          "e": "VRAI. C'est la définition même de la neutralité : autant d'ions d'un côté que de l'autre, soit 10⁻⁷ mol/L pour chacun.",
+          "sourceQuote": "C'est le cas de l'eau pure à 25 °C, où [H⁺] = [OH⁻] = 10⁻⁷ mol/L : autant d'ions d'un côté que de l'autre"
+        },
+        {
+          "t": "Une solution de pH 12 est acide, car au-delà de 7 l'échelle repasse du côté des H⁺.",
+          "v": false,
+          "e": "FAUX : au-dessus de 7, on est dans la zone basique. Un pH de 12 correspond donc à une solution nettement basique.",
+          "sourceQuote": "pH = 7 à 14 → solution basique (on dit aussi alcaline)."
+        },
+        {
+          "t": "Le mot « alcaline » est un synonyme de « acide ».",
+          "v": false,
+          "e": "FAUX : alcaline est le synonyme de basique, pas d'acide. Une solution alcaline se situe donc au-dessus de pH 7.",
+          "sourceQuote": "solution basique (on dit aussi alcaline)"
+        },
+        {
+          "t": "L'échelle des pH s'étend conventionnellement de 1 à 10.",
+          "v": false,
+          "e": "FAUX : l'échelle va conventionnellement de 0 à 14, découpée en trois zones — acide, neutre, basique.",
+          "sourceQuote": "L'échelle des pH s'étend conventionnellement de 0 à 14"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-035-definition-ph-echelle-0-14.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au calcul inverse et à la notation du logarithme, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Connaissant le pH, on remonte à la concentration par [H⁺] = 10⁻ᵖᴴ.",
+          "v": true,
+          "e": "VRAI. La relation marche dans les deux sens : de la concentration au pH par le −log, et du pH à la concentration par la puissance de 10.",
+          "sourceQuote": "et dans l'autre sens [H⁺] = 10−pH"
+        },
+        {
+          "t": "Pour pH = 7, la concentration en H⁺ vaut 10⁻⁷ mol/L, soit 100 nmol/L.",
+          "v": true,
+          "e": "VRAI. C'est l'exemple de référence : 10⁻⁷ mol/L s'écrit aussi 100 nmol/L, l'ordre de grandeur de l'eau pure et du sang.",
+          "sourceQuote": "Exemple : pour pH = 7, [H⁺] = 10⁻⁷ mol/L = 100 nmol/L."
+        },
+        {
+          "t": "En physique-chimie, « log » et « log₁₀ » désignent la même chose : le logarithme décimal, base 10.",
+          "v": true,
+          "e": "VRAI. Les deux écritures sont strictement équivalentes ; préciser le 10 sert seulement à lever toute ambiguïté.",
+          "sourceQuote": "« log » et « log₁₀ » désignent exactement la même chose : le logarithme décimal, base 10"
+        },
+        {
+          "t": "Dans la définition du pH, « log » renvoie au logarithme népérien.",
+          "v": false,
+          "e": "FAUX : il s'agit du logarithme décimal, de base 10. Le logarithme népérien, noté ln, est justement celui dont il faut le distinguer.",
+          "sourceQuote": "Le « 10 » est juste explicite ici pour bien la distinguer du logarithme népérien ln."
+        },
+        {
+          "t": "Écrire pH = −log([H⁺]) sans préciser la base est une écriture fausse.",
+          "v": false,
+          "e": "FAUX : cette écriture est très courante et strictement équivalente, puisque « log » désigne déjà le logarithme décimal.",
+          "sourceQuote": "Tu verras souvent la formule écrite simplement pH = −log([H⁺]) — c'est strictement équivalent."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-035-definition-ph-echelle-0-14.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives au facteur associé à une unité de pH, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une unité de pH correspond à un facteur 10 sur la concentration en H⁺.",
+          "v": true,
+          "e": "VRAI. C'est le point le plus important de toute l'échelle : une unité de pH, ce n'est pas « un peu », c'est dix fois plus ou dix fois moins de H⁺.",
+          "sourceQuote": "chaque unité de pH = un facteur 10 sur [H⁺]"
+        },
+        {
+          "t": "Une solution à pH 3 contient 10 fois plus de H⁺ qu'une solution à pH 4.",
+          "v": true,
+          "e": "VRAI. Une unité d'écart, un facteur 10 : pH 3 est dix fois plus riche en protons que pH 4.",
+          "sourceQuote": "Une solution à pH 3 a 10 fois plus de H⁺ qu'une solution à pH 4"
+        },
+        {
+          "t": "Entre pH 7 et pH 5, l'écart correspond à un facteur 2 sur [H⁺].",
+          "v": false,
+          "e": "FAUX : deux unités d'écart valent deux facteurs 10, soit 100 fois plus de H⁺, et non deux fois plus.",
+          "sourceQuote": "De pH 7 à pH 5, l'écart n'est pas de « 2 petites unités » : il y a 100 fois plus de H⁺."
+        },
+        {
+          "t": "Passer de pH 7 à pH 6 fait passer [H⁺] de 100 nmol/L à 1 000 nmol/L, soit 100 fois plus.",
+          "v": false,
+          "e": "FAUX : la concentration passe bien de 100 à 1 000 nmol/L, mais cela fait 10 fois plus, pas 100 fois plus. Une seule unité de pH a été franchie.",
+          "sourceQuote": "1 000 nmol/L (10× plus !)"
+        },
+        {
+          "t": "L'échelle des pH est une échelle linéaire.",
+          "v": false,
+          "e": "FAUX : elle est logarithmique. C'est pour cela qu'une variation qui semble minuscule sur le chiffre est en réalité énorme sur la concentration.",
+          "sourceQuote": "l'échelle est LOGARITHMIQUE, donc une variation qui semble petite est en réalité énorme"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-035-definition-ph-echelle-0-14.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux repères de pH des milieux biologiques, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le suc gastrique a un pH de 1 à 2, ce qui en fait un milieu très acide.",
+          "v": true,
+          "e": "VRAI. C'est le milieu le plus acide du corps : un pH de 1 à 2, soit une concentration en protons considérable.",
+          "sourceQuote": "Suc gastrique 1-2 (très acide)"
+        },
+        {
+          "t": "Le sang artériel est verrouillé sur une plage de 7,35 à 7,45.",
+          "v": true,
+          "e": "VRAI. Le sang artériel ne se promène pas sur l'échelle : il est maintenu dans une fourchette très étroite, 7,35-7,45.",
+          "sourceQuote": "Le sang artériel est verrouillé sur 7,35-7,45."
+        },
+        {
+          "t": "La bile et le suc pancréatique ont un pH de 8 à 9, donc basique.",
+          "v": true,
+          "e": "VRAI. Ces deux sécrétions digestives se situent au-dessus de 7 : elles sont basiques, à l'inverse du suc gastrique.",
+          "sourceQuote": "Bile / suc pancréatique 8-9 (basique)"
+        },
+        {
+          "t": "L'eau pure a un pH de 7,0, ce qui la classe parmi les milieux légèrement acides.",
+          "v": false,
+          "e": "FAUX : à 7,0 exactement, l'eau pure est neutre, ni acide ni basique. C'est la référence de l'échelle.",
+          "sourceQuote": "Eau pure 7,0 (neutre)"
+        },
+        {
+          "t": "Sur l'échelle, le sang artériel occupe une plage aussi large que les autres fluides du corps.",
+          "v": false,
+          "e": "FAUX : le sang artériel n'occupe qu'une bande minuscule, alors que les autres fluides s'étalent sur toute l'échelle. C'est justement ce contraste qui est frappant.",
+          "sourceQuote": "une bande minuscule, 7,35-7,45, verrouillée — quand les autres fluides du corps s'étalent sur toute l'échelle"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-035-definition-ph-echelle-0-14.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la conversion d'un écart de pH en facteur de concentration, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Quand un patient passe de pH 7,40 à pH 7,10, sa concentration en H⁺ est multipliée par 2.",
+          "v": true,
+          "e": "VRAI. Trois dixièmes d'unité seulement, et pourtant deux fois plus de protons : c'est ce qui rend une acidose sévère si dangereuse.",
+          "sourceQuote": "Quand un patient passe de pH 7,40 à 7,10 (acidose sévère), [H⁺] est multiplié par 2."
+        },
+        {
+          "t": "Un écart de 0,3 unité de pH correspond approximativement à un facteur 2 sur [H⁺].",
+          "v": true,
+          "e": "VRAI. C'est le premier des trois repères de conversion : 0,3 unité vaut environ un facteur 2.",
+          "sourceQuote": "(0,3 unité ≈ ×2 · 1 unité = ×10 · 2 unités = ×100)"
+        },
+        {
+          "t": "Un écart de 2 unités de pH correspond à un facteur 20 sur [H⁺].",
+          "v": false,
+          "e": "FAUX : deux unités valent un facteur 100, pas 20. Les facteurs se multiplient entre eux, ils ne s'additionnent pas.",
+          "sourceQuote": "1 unité = ×10 · 2 unités = ×100"
+        },
+        {
+          "t": "Devant un pH à peine décalé, le bon réflexe est de lire le chiffre seul, sans revenir à la concentration.",
+          "v": false,
+          "e": "FAUX : le chiffre seul trompe. Il faut toujours revenir à la concentration qui se cache derrière avant de conclure.",
+          "sourceQuote": "ne lis jamais le chiffre seul : reviens à la concentration qui se cache derrière"
+        },
+        {
+          "t": "Le suc gastrique à pH 2 contient environ 1 000 fois plus de H⁺ que le sang à pH 7.",
+          "v": false,
+          "e": "FAUX : cinq unités d'écart valent cinq facteurs 10, soit 100 000 fois plus de protons, et non 1 000 fois.",
+          "sourceQuote": "10 mmol/L — 100 000× plus que le sang à pH 7"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-035-definition-ph-echelle-0-14.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives au sens de variation de l'échelle et à ses valeurs extrêmes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "À pH = 0, la concentration en H⁺ vaut 1 mol/L.",
+          "v": true,
+          "e": "VRAI. C'est l'extrémité acide de l'échelle : 10 puissance 0 vaut 1, donc une mole de protons par litre — énormément.",
+          "sourceQuote": "pH = 0 → [H⁺] = 1 mol/L → solution très acide"
+        },
+        {
+          "t": "À pH = 14, la concentration en H⁺ vaut 10⁻¹⁴ mol/L.",
+          "v": true,
+          "e": "VRAI. C'est l'autre extrémité : une concentration en protons quasi nulle, celle d'une solution très basique comme la soude concentrée.",
+          "sourceQuote": "pH = 14 → [H⁺] = 10⁻¹⁴ mol/L → solution très basique"
+        },
+        {
+          "t": "Plus le pH s'éloigne vers 14, plus la concentration en H⁺ augmente.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. En allant vers 14, la concentration en H⁺ devient de plus en plus petite — jusqu'à quasi rien.",
+          "sourceQuote": "Plus le pH s'éloigne vers 14, plus la concentration en H⁺ devient petite"
+        },
+        {
+          "t": "Un pH bas signifie très peu de H⁺ dans la solution.",
+          "v": false,
+          "e": "FAUX : un pH bas signifie au contraire beaucoup de H⁺. C'est le signe moins de la formule qui inverse ainsi la lecture.",
+          "sourceQuote": "pH bas = beaucoup de H⁺ = acide"
+        },
+        {
+          "t": "L'analogie retenue compare l'échelle du pH à une balance, mais pour la masse.",
+          "v": false,
+          "e": "FAUX : l'image est celle d'un thermomètre, mais pour l'acidité — un instrument gradué qui donne une valeur d'un seul coup d'œil.",
+          "sourceQuote": "pense à un thermomètre, mais pour l'acidité"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-036-produit-ionique-eau-ph-poh.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à l'auto-protolyse de l'eau et au produit ionique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans l'eau pure, une infime fraction des molécules d'eau s'auto-ionise.",
+          "v": true,
+          "e": "VRAI. L'eau n'est jamais totalement inerte : une très petite partie de ses molécules se coupe spontanément en ions.",
+          "sourceQuote": "Dans l'eau pure, une infime fraction des molécules d'H₂O s'auto-ionise, selon la réaction d'auto-protolyse"
+        },
+        {
+          "t": "La réaction d'auto-protolyse s'écrit 2 H₂O ⇌ H₃O⁺ + OH⁻.",
+          "v": true,
+          "e": "VRAI. Deux molécules d'eau donnent un ion H₃O⁺ et un ion OH⁻ : c'est de là que viennent les deux ions présents dans toute solution aqueuse.",
+          "sourceQuote": "Auto-protolyse de l'eau 2 H₂O ⇌ H₃O⁺ + OH⁻"
+        },
+        {
+          "t": "À l'équilibre et à 25 °C, le produit des concentrations [H⁺] × [OH⁻] est constant.",
+          "v": true,
+          "e": "VRAI. C'est tout l'intérêt de cette grandeur : le produit des deux concentrations ne bouge pas, quelle que soit la solution aqueuse considérée.",
+          "sourceQuote": "À l'équilibre, à 25 °C, le produit des concentrations [H⁺] × [OH⁻] est constant."
+        },
+        {
+          "t": "Ce produit constant est appelé produit ionique de l'eau et se note Ka.",
+          "v": false,
+          "e": "FAUX : le produit ionique de l'eau se note Ke. Ka est une autre constante, celle qui décrira l'acidité d'un couple.",
+          "sourceQuote": "On l'appelle le produit ionique de l'eau, et on le note Ke."
+        },
+        {
+          "t": "Par définition, pKe = −log(Ke) = 7.",
+          "v": false,
+          "e": "FAUX : pKe vaut 14, et non 7. Le 7 est la valeur du pH neutre, pas celle du pKe.",
+          "sourceQuote": "Par définition, pKe = −log(Ke) = 14."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-036-produit-ionique-eau-ph-poh.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la relation entre pH et pOH et à son emploi, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "À 25 °C, la somme du pH et du pOH est égale au pKe, soit 14.",
+          "v": true,
+          "e": "VRAI. C'est la relation à retenir : les deux lectures d'une même solution s'additionnent toujours à 14.",
+          "sourceQuote": "pH + pOH = pKe = 14"
+        },
+        {
+          "t": "Le pOH est défini par pOH = −log[OH⁻].",
+          "v": true,
+          "e": "VRAI. Le pOH est construit exactement comme le pH, mais à partir de la concentration en ions hydroxyde.",
+          "sourceQuote": "avec pOH = −log[OH⁻]"
+        },
+        {
+          "t": "Connaissant [OH⁻], on obtient le pH en calculant pOH puis pH = pOH − 14.",
+          "v": false,
+          "e": "FAUX : le calcul est pH = 14 − pOH. En inversant les deux termes, on obtiendrait un nombre négatif dans presque tous les cas.",
+          "sourceQuote": "puis pH = 14 − pOH"
+        },
+        {
+          "t": "Pour utiliser cette relation, il faut connaître à la fois [H⁺] et [OH⁻].",
+          "v": false,
+          "e": "FAUX : connaître l'une des deux suffit, puisque le produit des deux est fixé. C'est précisément ce qui rend la relation utile.",
+          "sourceQuote": "Si tu connais l'un, tu déduis l'autre."
+        },
+        {
+          "t": "Dans une solution aqueuse, [H⁺] et [OH⁻] varient indépendamment l'une de l'autre.",
+          "v": false,
+          "e": "FAUX : les deux concentrations sont verrouillées l'une à l'autre par une constante unique. Dès que l'une monte, l'autre descend.",
+          "sourceQuote": "toute solution aqueuse a un second ion, l'ion OH⁻ — et les deux ne sont pas indépendants : une seule constante les relie"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-036-produit-ionique-eau-ph-poh.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au passage du produit ionique à la relation additive, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans toute solution aqueuse à 25 °C, le produit [H⁺] × [OH⁻] vaut 10⁻¹⁴.",
+          "v": true,
+          "e": "VRAI. Ce n'est pas réservé à l'eau pure : toute solution aqueuse à 25 °C respecte cette valeur du produit.",
+          "sourceQuote": "Dans toute solution aqueuse à 25 °C, le produit [H⁺] × [OH⁻] vaut 10⁻¹⁴."
+        },
+        {
+          "t": "On passe au logarithme pour transformer une relation multiplicative en relation additive.",
+          "v": true,
+          "e": "VRAI. C'est tout l'intérêt du logarithme ici : un produit difficile à manipuler devient une simple somme.",
+          "sourceQuote": "pour transformer cette relation multiplicative en relation additive, plus simple à manipuler"
+        },
+        {
+          "t": "Le logarithme d'un produit est égal au produit des logarithmes.",
+          "v": false,
+          "e": "FAUX : le logarithme d'un produit est la SOMME des logarithmes. C'est cette propriété qui fait apparaître pH + pOH.",
+          "sourceQuote": "Le log d'un produit est la somme des logs"
+        },
+        {
+          "t": "Pour remettre l'ensemble en « p », on multiplie par +1.",
+          "v": false,
+          "e": "FAUX : on multiplie par −1. Le « p » signifie justement que l'on prend l'opposé du logarithme.",
+          "sourceQuote": "on remet tout en « p » en multipliant par −1"
+        },
+        {
+          "t": "La relation pH + pOH = 14 n'est rien d'autre que le produit ionique de l'eau écrit en logarithmes.",
+          "v": true,
+          "e": "VRAI. Ce n'est pas une formule tombée du ciel : c'est exactement la même information que Ke, présentée autrement.",
+          "sourceQuote": "c'est le produit ionique de l'eau, écrit en logarithmes"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-036-produit-ionique-eau-ph-poh.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux deux lectures d'une même solution par le pH et par le pOH, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un pOH petit correspond à une concentration en OH⁻ élevée, donc à une solution très basique.",
+          "v": true,
+          "e": "VRAI. Le pOH obéit à la même mécanique du −log que le pH : petit pOH veut dire beaucoup d'ions hydroxyde, donc milieu basique.",
+          "sourceQuote": "pOH petit → [OH⁻] grande → très basique"
+        },
+        {
+          "t": "Une solution de pH 2 a un pOH de 12 et une concentration en OH⁻ de 10⁻¹² mol/L.",
+          "v": true,
+          "e": "VRAI. Beaucoup de H⁺ d'un côté, quasi rien en OH⁻ de l'autre : les deux lectures décrivent bien la même solution très acide.",
+          "sourceQuote": "2 10⁻² mol/L (beaucoup) 12 10⁻¹² mol/L (quasi rien) très acide"
+        },
+        {
+          "t": "Une solution neutre a un pH de 7 et un pOH de 14.",
+          "v": false,
+          "e": "FAUX : une solution neutre a un pOH de 7, comme son pH. Les deux concentrations y sont égales, à 10⁻⁷ mol/L.",
+          "sourceQuote": "7 10⁻⁷ mol/L 7 10⁻⁷ mol/L neutre"
+        },
+        {
+          "t": "Un pOH grand traduit une concentration en OH⁻ élevée.",
+          "v": false,
+          "e": "FAUX : un pOH grand signifie au contraire une concentration en OH⁻ quasi nulle — donc une solution acide.",
+          "sourceQuote": "pOH grand → [OH⁻] quasi nulle → très acide"
+        },
+        {
+          "t": "Une solution très basique correspond à un pH de 12 et à un pOH de 12.",
+          "v": false,
+          "e": "FAUX : si le pH vaut 12, le pOH vaut 2, puisque leur somme fait 14. Les deux nombres ne peuvent pas être identiques hors de la neutralité.",
+          "sourceQuote": "12 10⁻¹² mol/L (quasi rien) 2 10⁻² mol/L (beaucoup) très basique"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-036-produit-ionique-eau-ph-poh.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au calcul du pH d'une solution de soude à 0,01 mol/L, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "NaOH est une base forte, totalement dissociée dans l'eau.",
+          "v": true,
+          "e": "VRAI. La soude se dissocie entièrement en Na⁺ et OH⁻ : la concentration en ions hydroxyde est donc égale à celle qui a été versée.",
+          "sourceQuote": "NaOH est une base forte, totalement dissociée dans l'eau"
+        },
+        {
+          "t": "Pour NaOH à 0,01 mol/L, on obtient pOH = 2, donc pH = 12.",
+          "v": true,
+          "e": "VRAI. La concentration en OH⁻ vaut 10⁻² mol/L, d'où un pOH de 2 ; et 14 − 2 donne bien un pH de 12.",
+          "sourceQuote": "donc [OH⁻] = C = 10⁻² mol/L. Alors pOH = 2 → pH = 14 − 2 = 12."
+        },
+        {
+          "t": "Le pH se calcule toujours à partir de la concentration en ions OH⁻.",
+          "v": false,
+          "e": "FAUX : le pH se calcule toujours à partir de [H⁺]. Quand l'énoncé ne donne que [OH⁻], il faut passer par le pOH puis basculer.",
+          "sourceQuote": "Le pH se calcule toujours à partir de [H⁺]"
+        },
+        {
+          "t": "Une solution de soude à 0,01 mol/L est acide.",
+          "v": false,
+          "e": "FAUX : elle est très basique — ce qui est logique, puisqu'on y a versé une base forte.",
+          "sourceQuote": "La solution est très basique — logique, on a versé une base forte."
+        },
+        {
+          "t": "En clinique, on utilise quasi exclusivement le pOH, le pH n'étant qu'un intermédiaire de calcul.",
+          "v": false,
+          "e": "FAUX : c'est exactement l'inverse. Le pH est la grandeur utilisée en pratique, le pOH n'est qu'un outil intermédiaire de calcul.",
+          "sourceQuote": "on utilise quasi exclusivement le pH — le pOH n'est qu'un outil intermédiaire de calcul"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-036-produit-ionique-eau-ph-poh.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la confusion entre un pH et un pOH portant le même chiffre, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un pOH égal à 12 correspond à une solution acide.",
+          "v": true,
+          "e": "VRAI. Un pOH de 12 signifie très peu d'ions OH⁻ : la solution est acide, malgré un chiffre qui évoque spontanément une base.",
+          "sourceQuote": "si quelqu'un te parle d'un pOH = 12, c'est calculé à partir de [OH⁻] → peu de OH⁻ → solution acide, et pas basique du tout"
+        },
+        {
+          "t": "Un pH égal à 12 correspond à une solution basique.",
+          "v": true,
+          "e": "VRAI. Un pH de 12 signifie peu de H⁺ : la solution est bien basique. Même chiffre que le pOH précédent, sens opposé.",
+          "sourceQuote": "Quand on dit « 12, c'est basique », on parle d'un pH = 12 : peu de H⁺ → solution basique"
+        },
+        {
+          "t": "Le chiffre annoncé suffit à conclure, sans avoir à regarder de quel ion il est question.",
+          "v": false,
+          "e": "FAUX : le chiffre seul est un piège. Il faut revenir à la concentration derrière le nombre, et vérifier s'il s'agit de H⁺ ou de OH⁻.",
+          "sourceQuote": "Ne te laisse pas piéger par le chiffre : reviens toujours à la concentration qui se cache derrière, ET regarde de quel ion on parle."
+        },
+        {
+          "t": "Le pH et le pOH varient dans le même sens, et leur somme augmente avec l'acidité.",
+          "v": false,
+          "e": "FAUX : ce sont deux curseurs qui bougent en sens opposés, et leur somme reste bloquée à 14 quelle que soit l'acidité.",
+          "sourceQuote": "Le pH et le pOH sont deux « curseurs » qui bougent dans des sens opposés, et leur somme reste toujours 14."
+        },
+        {
+          "t": "Une faible concentration en OH⁻ favorise la neutralisation des H⁺.",
+          "v": false,
+          "e": "FAUX : s'il y a peu d'ions OH⁻, il n'y a justement personne pour neutraliser les protons — et l'acidité persiste.",
+          "sourceQuote": "peu de OH⁻ signifie qu'il n'y a personne pour neutraliser les H⁺ → l'acidité reste"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-036-produit-ionique-eau-ph-poh.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à l'influence de la température sur le produit ionique de l'eau, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La valeur 10⁻¹⁴ du produit ionique n'est valable qu'à 25 °C.",
+          "v": true,
+          "e": "VRAI. C'est une valeur tabulée à 25 °C : à une autre température, le produit ionique n'a plus la même valeur.",
+          "sourceQuote": "Ke = 10⁻¹⁴ n'est valable qu'à 25 °C."
+        },
+        {
+          "t": "Si la température augmente, l'auto-protolyse augmente et Ke augmente.",
+          "v": true,
+          "e": "VRAI. Chauffer favorise la coupure des molécules d'eau : il y a davantage d'ions formés, donc un produit ionique plus grand.",
+          "sourceQuote": "Si la température augmente, l'auto-protolyse augmente, Ke augmente, donc pKe diminue."
+        },
+        {
+          "t": "À 37 °C, le pKe vaut environ 13,6 et le pH neutre se situe autour de 6,8.",
+          "v": true,
+          "e": "VRAI. À la température du corps, la neutralité ne correspond plus à 7 mais à environ 6,8 — la moitié de 13,6.",
+          "sourceQuote": "À 37 °C, pKe ≈ 13,6 : le pH neutre n'est plus 7 mais ~6,8."
+        },
+        {
+          "t": "Quand la température augmente, le pKe augmente lui aussi.",
+          "v": false,
+          "e": "FAUX : Ke augmente, donc son pKe — qui en est l'opposé du logarithme — diminue. Les deux évoluent en sens contraires.",
+          "sourceQuote": "Ke augmente, donc pKe diminue"
+        },
+        {
+          "t": "Le pH intracellulaire dit « neutre » est noté 7,4.",
+          "v": false,
+          "e": "FAUX : il est noté 6,8, et c'est justement l'effet de la température corporelle sur le produit ionique qui l'explique.",
+          "sourceQuote": "Voilà pourquoi le pH intracellulaire « neutre » est noté 6,8 et pas 7."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-037-acide-base-bronsted-lowry.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la définition d'un acide et d'une base selon Brønsted-Lowry, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un acide est une espèce chimique capable de céder un proton.",
+          "v": true,
+          "e": "VRAI. C'est la définition de référence : être acide, c'est pouvoir donner un H⁺, rien d'autre.",
+          "sourceQuote": "Acide : espèce chimique capable de céder un proton"
+        },
+        {
+          "t": "Une base est une espèce chimique capable de capter un proton.",
+          "v": true,
+          "e": "VRAI. La base est le partenaire inverse de l'acide : elle attrape le proton que celui-ci largue.",
+          "sourceQuote": "Base : espèce chimique capable de capter un proton"
+        },
+        {
+          "t": "Cette théorie date de 1923.",
+          "v": true,
+          "e": "VRAI. La théorie de Brønsted-Lowry a été posée en 1923, et c'est encore elle qui sert de définition de référence en P1.",
+          "sourceQuote": "Théorie de Brønsted-Lowry (1923)"
+        },
+        {
+          "t": "Un acide capte un proton, tandis qu'une base le cède.",
+          "v": false,
+          "e": "FAUX : les deux rôles sont inversés. L'acide cède le proton, la base le capte.",
+          "sourceQuote": "un acide cède un proton, une base capte un proton"
+        },
+        {
+          "t": "Selon cette théorie, l'acidité se définit par la capacité à céder un électron.",
+          "v": false,
+          "e": "FAUX : ce qui est échangé est un proton, l'ion H⁺, et non un électron. Toute la théorie tient à ce transfert de H⁺.",
+          "sourceQuote": "elle se résume à une seule action : donner ou prendre un proton (H⁺)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-037-acide-base-bronsted-lowry.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives au couple acide / base conjuguée et à sa notation, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Toute molécule acide AH se décompose selon AH ⇌ A⁻ + H⁺.",
+          "v": true,
+          "e": "VRAI. L'acide largue son proton, et il reste la partie qui l'entourait, chargée négativement.",
+          "sourceQuote": "Toute molécule acide AH se décompose selon AH ⇌ A⁻ + H⁺."
+        },
+        {
+          "t": "Ce qui reste après le départ du proton porte le nom de base conjuguée.",
+          "v": true,
+          "e": "VRAI. A⁻ est la base conjuguée de AH : à chaque acide correspond ainsi une base, et une seule.",
+          "sourceQuote": "À chaque acide AH correspond une base conjuguée A⁻"
+        },
+        {
+          "t": "Dans la notation AH/A⁻, la base conjuguée est écrite en premier.",
+          "v": false,
+          "e": "FAUX : la convention est d'écrire l'acide en premier et sa base conjuguée en second. L'ordre n'est donc pas libre.",
+          "sourceQuote": "l'acide toujours écrit en premier, sa base conjuguée en second"
+        },
+        {
+          "t": "Un acide peut exister sans base conjuguée associée.",
+          "v": false,
+          "e": "FAUX : acide et base ne viennent jamais seuls, ils marchent toujours par deux. Dès qu'un acide cède son proton, sa base conjuguée apparaît.",
+          "sourceQuote": "Acide et base ne viennent jamais seuls : ils marchent par deux."
+        },
+        {
+          "t": "La base conjuguée A⁻ est incapable de reprendre le proton cédé par AH.",
+          "v": false,
+          "e": "FAUX : c'est justement parce qu'elle peut le reprendre qu'elle mérite le nom de base. Elle capte le proton, par définition.",
+          "sourceQuote": "puisque A⁻, lui, est capable de reprendre ce proton"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-037-acide-base-bronsted-lowry.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives aux couples HCl / Cl⁻, H₂CO₃ / HCO₃⁻ et NH₄⁺ / NH₃, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le couple HCl / Cl⁻ est celui de l'acide chlorhydrique et du chlorure.",
+          "v": true,
+          "e": "VRAI. HCl est l'acide chlorhydrique, Cl⁻ sa base conjuguée, l'ion chlorure.",
+          "sourceQuote": "HCl / Cl⁻ acide chlorhydrique / chlorure"
+        },
+        {
+          "t": "Ce couple se rencontre dans le suc gastrique.",
+          "v": true,
+          "e": "VRAI. C'est l'acide de l'estomac : le suc gastrique est l'endroit où ce couple se rencontre.",
+          "sourceQuote": "acide chlorhydrique / chlorure le suc gastrique"
+        },
+        {
+          "t": "Le couple H₂CO₃ / HCO₃⁻ est celui de l'acide carbonique et du bicarbonate.",
+          "v": true,
+          "e": "VRAI. Acide carbonique d'un côté, ion bicarbonate de l'autre : les deux ne diffèrent que d'un H⁺.",
+          "sourceQuote": "H₂CO₃ / HCO₃⁻ acide carbonique / bicarbonate"
+        },
+        {
+          "t": "Le couple acide carbonique / bicarbonate est le couple phare du tampon urinaire.",
+          "v": false,
+          "e": "FAUX : c'est le couple phare du sang. Le tampon urinaire repose sur un autre couple, celui de l'ammonium et de l'ammoniac.",
+          "sourceQuote": "acide carbonique / bicarbonate LE couple phare du sang"
+        },
+        {
+          "t": "Le couple NH₄⁺ / NH₃, ammonium et ammoniac, est celui du tampon intracellulaire.",
+          "v": false,
+          "e": "FAUX : ammonium et ammoniac forment le couple du tampon urinaire. Le tampon intracellulaire repose sur les phosphates.",
+          "sourceQuote": "ammonium / ammoniac le tampon urinaire"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-037-acide-base-bronsted-lowry.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux couples phosphate et acétate, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le couple H₂PO₄⁻ / HPO₄²⁻ est celui du tampon intracellulaire.",
+          "v": true,
+          "e": "VRAI. C'est le couple des phosphates : celui qui amortit les variations de pH à l'intérieur de la cellule.",
+          "sourceQuote": "dihydrogénophosphate / monohydrogénophosphate le tampon intracellulaire"
+        },
+        {
+          "t": "Le couple CH₃COOH / CH₃COO⁻ est celui de l'acide acétique et de l'acétate.",
+          "v": true,
+          "e": "VRAI. L'acide acétique cède son proton et devient l'ion acétate : c'est le couple modèle de l'acidité faible.",
+          "sourceQuote": "CH₃COOH / CH₃COO⁻ acide acétique / acétate"
+        },
+        {
+          "t": "L'acide acétique est présenté comme l'acide fort de référence.",
+          "v": false,
+          "e": "FAUX : c'est l'acide FAIBLE de référence. Il sert de modèle pour tout ce qui concerne la dissociation partielle.",
+          "sourceQuote": "l'acide faible de référence, dès la fiche suivante"
+        },
+        {
+          "t": "Ces couples doivent être appris par cœur immédiatement, avant d'aller plus loin.",
+          "v": false,
+          "e": "FAUX : ils ne sont pas à mémoriser tout de suite. Ce sont les acteurs du chapitre, que l'on retrouvera assez souvent pour les retenir sans forcer.",
+          "sourceQuote": "Ce n'est pas une liste à mémoriser maintenant : ce sont les acteurs du chapitre"
+        },
+        {
+          "t": "H₂PO₄⁻ est le monohydrogénophosphate et HPO₄²⁻ le dihydrogénophosphate.",
+          "v": false,
+          "e": "FAUX : les deux noms sont intervertis. H₂PO₄⁻, qui porte deux hydrogènes, est le dihydrogénophosphate ; HPO₄²⁻ est le monohydrogénophosphate.",
+          "sourceQuote": "H₂PO₄⁻ / HPO₄²⁻ dihydrogénophosphate / monohydrogénophosphate"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-037-acide-base-bronsted-lowry.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à l'eau et à son double rôle acide-base, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une espèce capable de jouer les deux rôles est appelée ampholyte, ou amphotère.",
+          "v": true,
+          "e": "VRAI. Ampholyte et amphotère désignent la même chose : une espèce qui peut, selon la réaction, donner ou capter un proton.",
+          "sourceQuote": "on les appelle des ampholytes (ou amphotères)"
+        },
+        {
+          "t": "Quand l'eau capte un H⁺, elle devient H₃O⁺ et joue le rôle de base.",
+          "v": true,
+          "e": "VRAI. Capter un proton, c'est le comportement d'une base : l'eau devient alors l'ion hydronium H₃O⁺.",
+          "sourceQuote": "Elle capte le proton et devient H₃O⁺ → dans cette réaction, l'eau joue le rôle de base."
+        },
+        {
+          "t": "Quand l'eau cède un H⁺, elle devient OH⁻ et joue le rôle d'acide.",
+          "v": true,
+          "e": "VRAI. Céder un proton, c'est le comportement d'un acide : l'eau devient alors l'ion hydroxyde OH⁻.",
+          "sourceQuote": "Elle largue le proton et devient OH⁻ → dans cette réaction, l'eau joue le rôle d'acide."
+        },
+        {
+          "t": "Lorsqu'elle devient H₃O⁺, l'eau a joué le rôle d'acide.",
+          "v": false,
+          "e": "FAUX : pour devenir H₃O⁺, l'eau a capté un proton — c'est donc le rôle de base. C'est en devenant OH⁻ qu'elle joue le rôle d'acide.",
+          "sourceQuote": "elle devient H₃O⁺ quand elle capte un H⁺"
+        },
+        {
+          "t": "La réaction 2 H₂O ⇌ H₃O⁺ + OH⁻ n'a aucun rapport avec la théorie de Brønsted-Lowry.",
+          "v": false,
+          "e": "FAUX : c'est au contraire l'illustration parfaite de cette théorie — une molécule d'eau donne son proton à une autre, l'une joue l'acide, l'autre la base.",
+          "sourceQuote": "C'est exactement l'auto-protolyse de la fiche précédente — vue cette fois avec les mots de Brønsted-Lowry."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-037-acide-base-bronsted-lowry.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la signature d'un couple et à la nature du transfert, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans un couple acide / base, les deux espèces ne diffèrent que d'un seul H⁺.",
+          "v": true,
+          "e": "VRAI. C'est la signature d'un couple : un proton d'écart, pas deux, pas zéro.",
+          "sourceQuote": "dans chaque couple, les deux espèces ne diffèrent que d'un seul H⁺"
+        },
+        {
+          "t": "Cette régularité permet de reconstruire la base conjuguée d'un acide sans l'avoir apprise par cœur.",
+          "v": true,
+          "e": "VRAI. Il suffit d'enlever un H⁺ à l'acide et d'ajuster la charge : la base conjuguée se retrouve sans effort de mémoire.",
+          "sourceQuote": "c'est ce qui te permet de reconstruire la base conjuguée d'un acide sans l'avoir apprise par cœur"
+        },
+        {
+          "t": "Un acide est un receveur de H⁺ et une base un donneur de H⁺.",
+          "v": false,
+          "e": "FAUX : les rôles sont inversés. L'acide est le donneur, la base le receveur.",
+          "sourceQuote": "Un acide, c'est un donneur de H⁺ (il largue son proton). Une base, c'est un receveur de H⁺"
+        },
+        {
+          "t": "Une réaction acide-base est une réaction de transfert d'électrons.",
+          "v": false,
+          "e": "FAUX : c'est un transfert de proton, pas d'électron. Une espèce passe le H⁺ à une autre.",
+          "sourceQuote": "C'est une réaction de transfert — comme une passe au rugby, mais avec un proton."
+        },
+        {
+          "t": "L'acidité est une propriété isolée d'une espèce, indépendante de tout transfert.",
+          "v": false,
+          "e": "FAUX : elle n'existe que dans un échange. Sans partenaire pour prendre le proton, il n'y a pas de réaction acide-base.",
+          "sourceQuote": "C'est une réaction de transfert de H⁺, jamais une propriété isolée."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-037-acide-base-bronsted-lowry.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives au rôle variable d'une espèce et au réflexe à adopter, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Être acide ou base n'est pas une étiquette collée à vie à une espèce.",
+          "v": true,
+          "e": "VRAI. Certaines espèces jouent l'un ou l'autre rôle selon l'environnement : le statut dépend de la réaction, pas de la molécule seule.",
+          "sourceQuote": "être acide ou base n'est pas une étiquette collée à vie"
+        },
+        {
+          "t": "Le bon réflexe est de se demander si, dans cette réaction-là, l'espèce donne un H⁺ ou en prend un.",
+          "v": true,
+          "e": "VRAI. La question se pose réaction par réaction : donne-t-elle un proton, ou en prend-elle un ? La réponse détermine son rôle.",
+          "sourceQuote": "dans cette réaction-là, est-ce qu'elle donne un H⁺ ou est-ce qu'elle en prend un ?"
+        },
+        {
+          "t": "Devant une espèce chimique, il faut d'abord la classer une fois pour toutes comme acide ou basique de nature.",
+          "v": false,
+          "e": "FAUX : c'est précisément l'erreur à éviter. Une espèce n'est pas acide « de nature » ; elle l'est dans une réaction donnée.",
+          "sourceQuote": "ne cherche pas à savoir si elle est « acide » ou « basique » de nature"
+        },
+        {
+          "t": "Ce n'est pas la même espèce chimique qui devient H₃O⁺ et OH⁻ : l'eau change de molécule selon le rôle joué.",
+          "v": false,
+          "e": "FAUX : c'est bien la même molécule d'eau dans les deux cas. Elle devient H₃O⁺ si elle capte un proton, OH⁻ si elle en cède un.",
+          "sourceQuote": "C'est la même molécule dans les deux cas."
+        },
+        {
+          "t": "Une fois le rôle identifié, il est inutile d'écrire le couple acide / base conjuguée.",
+          "v": false,
+          "e": "FAUX : écrire le couple en face fait justement partie du réflexe. C'est lui qui sécurise la suite du raisonnement.",
+          "sourceQuote": "Puis écris le couple en face — l'acide, sa base conjuguée."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-038-acide-fort-vs-acide-faible.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives au critère qui distingue un acide fort d'un acide faible, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "« Fort » et « faible » se jugent sur la capacité à lâcher le proton dans l'eau.",
+          "v": true,
+          "e": "VRAI. C'est le seul critère : la façon dont l'acide cède son H⁺ au contact de l'eau.",
+          "sourceQuote": "« Fort » et « faible » se jugent uniquement sur la capacité à lâcher le proton dans l'eau."
+        },
+        {
+          "t": "Un acide fort se dissocie totalement dans l'eau.",
+          "v": true,
+          "e": "VRAI. Il lâche tout : au contact de l'eau, la totalité de ses molécules cède son proton.",
+          "sourceQuote": "Il se dissocie totalement dans l'eau"
+        },
+        {
+          "t": "Un acide faible ne se dissocie que partiellement, en atteignant un équilibre dynamique.",
+          "v": true,
+          "e": "VRAI. Il en garde une partie : la réaction n'est pas complète, elle s'arrête sur un équilibre entre forme intacte et forme dissociée.",
+          "sourceQuote": "Il ne se dissocie que partiellement, en atteignant un équilibre dynamique"
+        },
+        {
+          "t": "Un acide est dit fort lorsqu'il est présent à forte concentration dans la solution.",
+          "v": false,
+          "e": "FAUX : fort et faible ne parlent pas de concentration mais de comportement. Un acide fort très dilué reste un acide fort.",
+          "sourceQuote": "Par rapport à leur capacité à lâcher leur proton dans l'eau. C'est la seule chose qui compte."
+        },
+        {
+          "t": "Un acide faible libère davantage de H⁺ qu'un acide fort.",
+          "v": false,
+          "e": "FAUX : il n'en lâche qu'une petite fraction, parfois 1 %, parfois 0,01 %. Il libère donc peu de protons, contrairement à l'acide fort.",
+          "sourceQuote": "Il n'en lâche qu'une fraction — parfois 1 %, parfois 0,01 % — donc il libère peu de H⁺."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-038-acide-fort-vs-acide-faible.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à l'écriture des réactions de dissociation, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La dissociation d'un acide fort s'écrit avec une seule flèche : HA → A⁻ + H⁺.",
+          "v": true,
+          "e": "VRAI. Une seule flèche, un seul sens : la réaction est complète, il ne reste rien de l'acide de départ.",
+          "sourceQuote": "HA → A⁻ + H⁺ (dissociation complète, sens unique — une seule flèche"
+        },
+        {
+          "t": "L'acide faible s'écrit AH + H₂O ⇌ A⁻ + H₃O⁺, avec une double flèche.",
+          "v": true,
+          "e": "VRAI. La double flèche traduit l'équilibre : la réaction se fait dans les deux sens en même temps.",
+          "sourceQuote": "AH + H₂O ⇌ A⁻ + H₃O⁺ (la double flèche dit que la réaction se fait dans les deux sens)"
+        },
+        {
+          "t": "Écrire HA ou AH désigne deux espèces chimiques différentes.",
+          "v": false,
+          "e": "FAUX : c'est la même écriture de l'acide et de son proton, dans un ordre différent. Rien ne change chimiquement.",
+          "sourceQuote": "HA ou AH, c'est la même écriture de l'acide et de son proton"
+        },
+        {
+          "t": "La double flèche indique que la réaction ne se produit que dans un seul sens.",
+          "v": false,
+          "e": "FAUX : elle indique justement les deux sens à la fois. Le sens unique est signalé, lui, par une flèche simple.",
+          "sourceQuote": "la double flèche dit que la réaction se fait dans les deux sens"
+        },
+        {
+          "t": "HNO₃ et H₂SO₄ sont des acides faibles.",
+          "v": false,
+          "e": "FAUX : ils figurent tous deux dans la liste des acides forts à connaître, aux côtés de HCl, HBr, HI et HClO₄.",
+          "sourceQuote": "Les exemples à connaître : HCl, HNO₃, H₂SO₄, HBr, HI, HClO₄."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-038-acide-fort-vs-acide-faible.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la comparaison de deux béchers, l'un d'acide chlorhydrique et l'autre d'acide acétique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans le bécher d'acide chlorhydrique, il ne reste plus une seule molécule HCl intacte.",
+          "v": true,
+          "e": "VRAI. La dissociation est totale : il n'y a plus que des ions H⁺ et Cl⁻ en solution.",
+          "sourceQuote": "il ne reste plus une seule molécule HCl intacte, uniquement des H⁺ et des Cl⁻"
+        },
+        {
+          "t": "Dans le bécher d'acide acétique, environ 1 % seulement des molécules sont dissociées.",
+          "v": true,
+          "e": "VRAI. Un pour cent, c'est l'ordre de grandeur pour cet acide faible : la dissociation reste marginale.",
+          "sourceQuote": "CH₃COOH, l'acide faible : ≈ 1 % dissocié seulement"
+        },
+        {
+          "t": "Chez l'acide faible, l'immense majorité des molécules restent sous la forme AH, proton compris.",
+          "v": true,
+          "e": "VRAI. La quasi-totalité de l'acide n'a pas bougé : les molécules ont gardé leur proton.",
+          "sourceQuote": "l'immense majorité des molécules sont encore sous la forme AH, proton compris"
+        },
+        {
+          "t": "Les deux béchers sont comparés à des concentrations différentes.",
+          "v": false,
+          "e": "FAUX : la comparaison n'a de sens qu'à concentration identique. C'est bien le comportement, et non la quantité versée, qui diffère.",
+          "sourceQuote": "Compare les deux béchers à concentration identique."
+        },
+        {
+          "t": "La valeur de pKa 4,8 portée sur le schéma doit être maîtrisée dès maintenant.",
+          "v": false,
+          "e": "FAUX : cette valeur est mentionnée par anticipation seulement. Elle sera expliquée plus loin dans le chapitre.",
+          "sourceQuote": "on y viendra deux fiches plus loin, ignore-le pour l'instant"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-038-acide-fort-vs-acide-faible.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives au calcul du pH d'un acide fort, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Pour un acide fort, la concentration en H⁺ est égale à la concentration initiale C₀.",
+          "v": true,
+          "e": "VRAI. Comme la dissociation est complète, tout ce qui a été versé se retrouve sous forme de protons libres.",
+          "sourceQuote": "la dissociation étant complète, à concentration initiale C₀ on a [H⁺] = C₀"
+        },
+        {
+          "t": "Le pH d'un acide fort se calcule par pH = −log(C₀).",
+          "v": true,
+          "e": "VRAI. Puisque [H⁺] vaut C₀, il suffit de passer la concentration initiale au −log : le calcul est immédiat.",
+          "sourceQuote": "Le pH d'un acide fort pH = −log(C₀)"
+        },
+        {
+          "t": "Cette formule est valable pour une concentration initiale inférieure à 10⁻⁶ mol/L.",
+          "v": false,
+          "e": "FAUX : elle est valable au-dessus de 10⁻⁶ mol/L. En dessous, les protons apportés par l'eau elle-même ne sont plus négligeables.",
+          "sourceQuote": "valable pour C₀ > 10⁻⁶ mol/L"
+        },
+        {
+          "t": "Ce calcul repose sur une formule nouvelle, sans rapport avec la définition du pH.",
+          "v": false,
+          "e": "FAUX : c'est la définition du pH appliquée telle quelle. Rien n'a été ajouté, on remplace simplement [H⁺] par C₀.",
+          "sourceQuote": "Ce calcul n'a rien de nouveau : c'est la définition du pH appliquée telle quelle."
+        },
+        {
+          "t": "Chez l'acide faible aussi, on peut poser [H⁺] = C₀.",
+          "v": false,
+          "e": "FAUX : seule une petite fraction est dissociée, donc la concentration en protons est très inférieure à la concentration initiale.",
+          "sourceQuote": "Chez l'acide faible, impossible : seule une petite fraction est dissociée, donc [H⁺] est très inférieure à C₀."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-038-acide-fort-vs-acide-faible.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à la conséquence physiologique de la dichotomie et à l'image de la pièce de monnaie, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Ce sont les acides faibles qui peuvent jouer le rôle d'amortisseur.",
+          "v": true,
+          "e": "VRAI. Comme ils gardent une partie de leur H⁺, ils disposent d'une réserve : c'est ce qui leur permet d'amortir les variations de pH.",
+          "sourceQuote": "Ce sont précisément les acides faibles, ceux qui gardent une partie de leur H⁺, qui peuvent jouer le rôle d'amortisseur"
+        },
+        {
+          "t": "Un acide fort n'a plus rien en réserve, puisqu'il a tout donné d'un coup.",
+          "v": true,
+          "e": "VRAI. Après une dissociation totale, il ne reste plus un seul proton à céder : aucune marge de manœuvre.",
+          "sourceQuote": "Un acide fort, lui, a tout donné d'un coup : il n'a plus rien en réserve."
+        },
+        {
+          "t": "Dans l'image de la pièce de monnaie, l'acide fort serre les doigts sur sa pièce.",
+          "v": false,
+          "e": "FAUX : c'est l'acide faible qui serre les doigts. L'acide fort, lui, ouvre grand la main et la pièce tombe à chaque fois.",
+          "sourceQuote": "Un acide fort ouvre tout grand la main dès qu'il rencontre quelqu'un (l'eau) → la pièce tombe systématiquement."
+        },
+        {
+          "t": "Dans cette image, la pièce de monnaie représente la molécule d'eau.",
+          "v": false,
+          "e": "FAUX : la pièce représente le proton H⁺. L'eau, elle, est la personne que l'on rencontre et à qui la pièce peut tomber.",
+          "sourceQuote": "une personne qui tient une pièce de monnaie (le H⁺) dans sa main"
+        },
+        {
+          "t": "Ce sont les acides forts qui fabriquent les solutions tampons et régulent le pH physiologique.",
+          "v": false,
+          "e": "FAUX : cette capacité revient aux acides faibles, précisément parce qu'ils gardent une partie de leurs protons en réserve.",
+          "sourceQuote": "Ce sont précisément les acides faibles, ceux qui gardent une partie de leur H⁺, qui peuvent jouer le rôle d'amortisseur — donc fabriquer des solutions tampons et réguler le pH physiologique."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-038-acide-fort-vs-acide-faible.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à l'erreur consistant à appliquer pH = −log(C₀) à un acide faible, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Appliquer cette formule à un acide faible conduit à annoncer un pH bien trop bas.",
+          "v": true,
+          "e": "VRAI. On surestime la concentration en protons, donc on annonce une solution beaucoup plus acide qu'elle ne l'est réellement.",
+          "sourceQuote": "le pH que tu annonces serait bien trop bas"
+        },
+        {
+          "t": "Cette formule suppose que la totalité de l'acide s'est dissociée.",
+          "v": true,
+          "e": "VRAI. Elle repose entièrement sur l'hypothèse d'une dissociation complète — vraie pour un acide fort, fausse pour un acide faible.",
+          "sourceQuote": "Cette formule suppose que tout l'acide s'est dissocié — c'est vrai pour un acide fort seulement."
+        },
+        {
+          "t": "Sur un acide faible, la concentration en H⁺ est égale à la concentration initiale.",
+          "v": false,
+          "e": "FAUX : elle lui est très inférieure, puisque la plupart des molécules n'ont pas libéré leur proton.",
+          "sourceQuote": "[H⁺] n'est pas C₀, et le pH que tu annonces serait bien trop bas"
+        },
+        {
+          "t": "Sur un acide faible, l'immense majorité des molécules ont déjà cédé leur proton.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse — l'immense majorité des molécules ont GARDÉ leur proton. Seule une petite fraction s'est dissociée.",
+          "sourceQuote": "Sur un acide faible, l'immense majorité des molécules ont gardé leur proton"
+        },
+        {
+          "t": "Un acide faible libère un maximum de H⁺ dès qu'il rencontre une molécule d'eau.",
+          "v": false,
+          "e": "FAUX : ce comportement est celui de l'acide fort, qui lâche son proton à 100 % dès le contact avec l'eau.",
+          "sourceQuote": "Il lâche son H⁺ à 100 % dès qu'il rencontre une molécule d'eau, et libère donc un maximum de H⁺ dans la solution."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-038-acide-fort-vs-acide-faible.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives au réflexe à adopter devant un énoncé donnant une concentration d'acide, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La première question à se poser est de savoir si l'acide est fort ou faible.",
+          "v": true,
+          "e": "VRAI. C'est le tri qui commande tout le reste : la méthode de calcul dépend entièrement de cette réponse.",
+          "sourceQuote": "la première question est toujours la même : fort ou faible ?"
+        },
+        {
+          "t": "Six acides forts sont à connaître : HCl, HNO₃, H₂SO₄, HBr, HI et HClO₄.",
+          "v": true,
+          "e": "VRAI. Ces six-là forment la liste de référence : les reconnaître donne aussitôt le droit au calcul direct.",
+          "sourceQuote": "Si c'est un des six de la liste (HCl, HNO₃, H₂SO₄, HBr, HI, HClO₄)"
+        },
+        {
+          "t": "Si l'acide n'appartient pas à cette liste, il faut passer par l'équilibre.",
+          "v": true,
+          "e": "VRAI. Hors de la liste, le raccourci n'est plus permis : il faut traiter la dissociation partielle, donc l'équilibre.",
+          "sourceQuote": "tu n'as pas le droit à ce raccourci — il faudra passer par l'équilibre"
+        },
+        {
+          "t": "L'acide chlorhydrique fait partie des acides faibles de référence.",
+          "v": false,
+          "e": "FAUX : HCl est l'exemple type de l'acide fort — il libère 100 % de ses protons dans l'eau.",
+          "sourceQuote": "À gauche, HCl, l'acide fort : il a libéré 100 % de ses H⁺"
+        },
+        {
+          "t": "Le raccourci pH = −log(C₀) s'applique à tout acide dont l'énoncé donne la concentration.",
+          "v": false,
+          "e": "FAUX : il est réservé aux acides forts de la liste. Pour les autres, la concentration seule ne suffit pas à conclure.",
+          "sourceQuote": "Si c'est un des six de la liste (HCl, HNO₃, H₂SO₄, HBr, HI, HClO₄), tu appliques pH = −log(C₀) directement."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-039-constante-acidite-ka.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à l'expression de la constante d'acidité Ka et à son statut, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La constante d'acidité s'écrit Ka = [A⁻] × [H⁺] / [AH].",
+          "v": true,
+          "e": "VRAI. C'est l'expression à connaître : les deux produits de la dissociation au numérateur, l'acide resté intact au dénominateur.",
+          "sourceQuote": "Ka = [A⁻] × [H⁺] / [AH], à l'équilibre."
+        },
+        {
+          "t": "Ka caractérise l'équilibre AH + H₂O ⇌ A⁻ + H₃O⁺.",
+          "v": true,
+          "e": "VRAI. C'est justement l'équilibre de l'acide faible que Ka vient chiffrer : on passe de l'image de la main qui hésite à un nombre.",
+          "sourceQuote": "Cet équilibre AH + H₂O ⇌ A⁻ + H₃O⁺ est justement caractérisé par une grandeur mesurable, la constante d'acidité Ka."
+        },
+        {
+          "t": "Cette expression est définie à l'équilibre et en solution aqueuse.",
+          "v": true,
+          "e": "VRAI. Les concentrations à utiliser sont celles de l'équilibre, en solution aqueuse — pas celles versées au départ.",
+          "sourceQuote": "à l'équilibre, en solution aqueuse"
+        },
+        {
+          "t": "Dans l'expression de Ka, la concentration [AH] figure au numérateur.",
+          "v": false,
+          "e": "FAUX : [AH], qui représente les molécules restées intactes, se trouve au dénominateur.",
+          "sourceQuote": "Au dénominateur : ce qui est resté entier. [AH] = les molécules d'acide encore intactes"
+        },
+        {
+          "t": "Ka est une image commode, mais ce n'est pas une grandeur mesurable.",
+          "v": false,
+          "e": "FAUX : Ka est bel et bien une grandeur mesurable. C'est ce qui permet de comparer objectivement deux acides entre eux.",
+          "sourceQuote": "caractérisé par une grandeur mesurable, la constante d'acidité Ka"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-039-constante-acidite-ka.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la lecture du numérateur et du dénominateur de Ka, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le numérateur rassemble les produits de la dissociation : la base conjuguée et les protons libérés.",
+          "v": true,
+          "e": "VRAI. En haut de la fraction, on trouve ce qui s'est cassé : A⁻ d'un côté, les H⁺ libérés de l'autre.",
+          "sourceQuote": "[A⁻] × [H⁺] = les produits de la dissociation (la base conjuguée ET les protons libérés"
+        },
+        {
+          "t": "Le dénominateur correspond aux molécules d'acide encore intactes.",
+          "v": true,
+          "e": "VRAI. En bas de la fraction, ce qui n'a pas bougé : les molécules qui n'ont pas encore lâché leur proton.",
+          "sourceQuote": "[AH] = les molécules d'acide encore intactes, celles qui n'ont pas (encore) lâché leur H⁺"
+        },
+        {
+          "t": "Écrire H⁺ ou H₃O⁺ au numérateur change la valeur de Ka en solution aqueuse.",
+          "v": false,
+          "e": "FAUX : les deux écritures reviennent au même en solution aqueuse. Le choix de notation ne modifie rien au calcul.",
+          "sourceQuote": "on écrit H⁺ ou H₃O⁺, ça revient au même en solution aqueuse"
+        },
+        {
+          "t": "C'est la forme intacte de l'acide qui occupe le numérateur.",
+          "v": false,
+          "e": "FAUX : le numérateur porte ce qui s'est cassé, pas ce qui est resté entier. La forme intacte est au dénominateur.",
+          "sourceQuote": "Au numérateur : ce qui s'est cassé."
+        },
+        {
+          "t": "Ka n'est pas un rapport, mais une différence entre forme dissociée et forme intacte.",
+          "v": false,
+          "e": "FAUX : Ka est un rapport de force, une fraction — pas une soustraction. C'est ce rapport qui permet de trancher fort ou faible.",
+          "sourceQuote": "Donc Ka est un rapport de force."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-039-constante-acidite-ka.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à ce que la taille de Ka indique sur un acide, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un Ka grand signale beaucoup de molécules dissociées par rapport aux intactes, donc un acide fort.",
+          "v": true,
+          "e": "VRAI. Numérateur lourd, dénominateur léger : la molécule se casse facilement, c'est le comportement d'un acide fort.",
+          "sourceQuote": "beaucoup de molécules dissociées par rapport aux intactes → l'acide se dissocie facilement acide fort"
+        },
+        {
+          "t": "Un Ka petit traduit peu de dissociation, la plupart des molécules restant intactes : c'est un acide faible.",
+          "v": true,
+          "e": "VRAI. Quand la fraction est petite, c'est que presque tout l'acide a gardé son proton — la signature de l'acide faible.",
+          "sourceQuote": "peu de dissociation, la plupart des molécules restent intactes acide faible"
+        },
+        {
+          "t": "Le verdict fort ou faible se lit sur la taille de Ka, sans avoir à le calculer.",
+          "v": true,
+          "e": "VRAI. Il n'y a pas de calcul à faire pour lire un Ka : sa taille suffit à trancher.",
+          "sourceQuote": "tu n'as pas à le calculer pour le lire — sa taille suffit à trancher, grand → fort, petit → faible"
+        },
+        {
+          "t": "Un Ka grand correspond à un acide faible et un Ka petit à un acide fort.",
+          "v": false,
+          "e": "FAUX : la correspondance est inversée. Ka grand va avec acide fort, Ka petit avec acide faible.",
+          "sourceQuote": "Ka grand → acide fort, Ka petit → acide faible."
+        },
+        {
+          "t": "Ka mesure uniquement la proportion de molécules restées intactes.",
+          "v": false,
+          "e": "FAUX : Ka compare les deux formes l'une à l'autre — la dissociée rapportée à l'intacte. Une seule des deux ne suffirait pas.",
+          "sourceQuote": "Une fraction qui compare, à l'équilibre, la forme dissociée à la forme intacte de l'acide."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-039-constante-acidite-ka.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives au simple rapport [A⁻]/[AH], laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Ce rapport change quand on rajoute de l'acide dans la solution.",
+          "v": true,
+          "e": "VRAI. Ajouter de l'acide déplace l'équilibre, donc modifie la proportion entre forme dissociée et forme intacte.",
+          "sourceQuote": "Si tu rajoutes de l'acide, il change."
+        },
+        {
+          "t": "Ce rapport change également quand on dilue la solution.",
+          "v": true,
+          "e": "VRAI. La dilution modifie elle aussi la proportion des deux formes : le rapport n'est stable dans aucune des deux situations.",
+          "sourceQuote": "Si tu dilues, il change aussi."
+        },
+        {
+          "t": "Ce rapport constitue une constante caractéristique de l'acide.",
+          "v": false,
+          "e": "FAUX : il n'a rien d'une constante, puisqu'il bouge dès qu'on touche à la solution. C'est précisément pour cela qu'il ne peut pas servir de référence.",
+          "sourceQuote": "Donc ce ratio n'est PAS une constante."
+        },
+        {
+          "t": "Ce rapport est indépendant du pH de la solution.",
+          "v": false,
+          "e": "FAUX : il change avec le pH — c'est même son principal défaut, et la raison pour laquelle on lui préfère Ka.",
+          "sourceQuote": "Le souci, c'est que ce ratio change avec le pH de la solution."
+        },
+        {
+          "t": "Ka change lui aussi lorsqu'on dilue la solution.",
+          "v": false,
+          "e": "FAUX : la dilution laisse Ka inchangé. C'est le rapport simple qui bouge, pas la constante.",
+          "sourceQuote": "tu dilues il change inchangé"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-039-constante-acidite-ka.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à l'image du ressort de dissociation et aux ordres de grandeur cités, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un ressort très tendu correspond à un Ka grand et à un acide fort.",
+          "v": true,
+          "e": "VRAI. Plus le ressort est tendu, plus la molécule est poussée à se casser dès le contact avec l'eau.",
+          "sourceQuote": "Ressort très tendu (Ka grand, ex : 10⁻¹ ou plus) → la molécule veut se casser en A⁻ + H⁺ dès qu'elle touche l'eau → acide fort."
+        },
+        {
+          "t": "L'acide chlorhydrique a un ressort énorme, avec un Ka supérieur à 1.",
+          "v": true,
+          "e": "VRAI. C'est la valeur la plus haute des trois exemples cités, cohérente avec son statut d'acide fort.",
+          "sourceQuote": "HCl a un ressort énorme (Ka > 1)"
+        },
+        {
+          "t": "L'ion ammonium a un ressort très faible.",
+          "v": true,
+          "e": "VRAI. Son Ka est le plus petit des trois exemples : il ne cède son proton que très difficilement.",
+          "sourceQuote": "NH₄⁺ un ressort très faible (Ka = 10⁻⁹·²)"
+        },
+        {
+          "t": "Un ressort détendu décrit une molécule qui se casse dès qu'elle touche l'eau.",
+          "v": false,
+          "e": "FAUX : un ressort détendu correspond à un Ka petit, donc à une molécule qui reste sagement entière — un acide faible.",
+          "sourceQuote": "Ressort détendu (Ka petit, ex : 10⁻⁹) → la molécule reste sagement en AH → acide faible."
+        },
+        {
+          "t": "La tension de ce ressort varie selon le contexte dans lequel se trouve la molécule.",
+          "v": false,
+          "e": "FAUX : cette tension est une propriété fixe de la molécule. Quel que soit le contexte, elle ne change pas.",
+          "sourceQuote": "Quel que soit le contexte, ces tensions ne changent pas."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-039-constante-acidite-ka.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à ce qui rend l'expression de Ka invariante, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "C'est la multiplication par [H⁺] au numérateur qui rend l'expression strictement constante.",
+          "v": true,
+          "e": "VRAI. Sans ce facteur, l'expression bougerait avec la solution. C'est lui qui verrouille la valeur.",
+          "sourceQuote": "en multipliant par [H⁺] au numérateur, on obtient une expression qui reste strictement constante quelles que soient les conditions de la solution"
+        },
+        {
+          "t": "Ka est une propriété intrinsèque de la molécule, et non de la solution.",
+          "v": true,
+          "e": "VRAI. Ka décrit la molécule elle-même, comme le ferait sa masse molaire : la solution dans laquelle on la place n'y change rien.",
+          "sourceQuote": "Ka est une propriété intrinsèque de la molécule, pas de la solution."
+        },
+        {
+          "t": "Ka est comparé à une grandeur variable, comme le pH de la solution.",
+          "v": false,
+          "e": "FAUX : la comparaison est faite avec des grandeurs fixes de la molécule — masse molaire, température de fusion — et non avec une grandeur qui varie.",
+          "sourceQuote": "Comme la masse molaire ou la température de fusion."
+        },
+        {
+          "t": "Ka reste constant même lorsque la température change.",
+          "v": false,
+          "e": "FAUX : la constance de Ka est affirmée à température fixe. Changer la température fait sortir de ce cadre.",
+          "sourceQuote": "Oui (à température fixe)"
+        },
+        {
+          "t": "Le facteur [H⁺] au numérateur amplifie les variations de pH.",
+          "v": false,
+          "e": "FAUX : il les compense automatiquement. C'est exactement l'inverse d'une amplification.",
+          "sourceQuote": "Le surplus de [H⁺] compense automatiquement les variations de pH."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-039-constante-acidite-ka.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives au comportement de Ka face à une dilution ou à un changement de pH, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Si l'énoncé dilue la solution ou en modifie le pH, Ka ne bouge pas.",
+          "v": true,
+          "e": "VRAI. C'est le réflexe à avoir : quoi qu'on fasse à la solution, la constante reste la même.",
+          "sourceQuote": "si l'énoncé dilue la solution ou en modifie le pH, Ka ne bouge pas"
+        },
+        {
+          "t": "C'est le rapport [A⁻]/[AH] qui s'ajuste, et non la constante.",
+          "v": true,
+          "e": "VRAI. La solution se réorganise en modifiant la proportion des deux formes ; la constante, elle, ne bouge pas.",
+          "sourceQuote": "C'est le ratio [A⁻]/[AH] qui s'ajuste, pas la constante."
+        },
+        {
+          "t": "Confondre Ka avec le simple rapport [A⁻]/[AH] est sans conséquence.",
+          "v": false,
+          "e": "FAUX : cette confusion vide Ka de ce qui en fait une constante. On perd exactement la propriété qui rend la grandeur utile.",
+          "sourceQuote": "L'oublier, c'est vider Ka de ce qui en fait une constante."
+        },
+        {
+          "t": "Le rapport [A⁻]/[AH] reste stable quand on change le pH de la solution.",
+          "v": false,
+          "e": "FAUX : ce rapport bouge dès que l'on dilue ou que l'on change le pH. Il n'a rien d'une constante.",
+          "sourceQuote": "Ce ratio-là bouge dès que tu dilues ou que tu changes le pH — ce n'est pas une constante."
+        },
+        {
+          "t": "Ka décrit la solution dans laquelle se trouve la molécule.",
+          "v": false,
+          "e": "FAUX : Ka décrit la molécule, pas la solution. Deux solutions différentes de la même espèce ont le même Ka.",
+          "sourceQuote": "Ka décrit la molécule, pas la solution dans laquelle elle se trouve."
+        }
+      ]
+    }
+  ]
+}

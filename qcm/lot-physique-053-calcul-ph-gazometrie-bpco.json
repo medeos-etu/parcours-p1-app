@@ -1,0 +1,2190 @@
+{
+  "matiere": "physique",
+  "chapitre": 2,
+  "questions": [
+    {
+      "fiche": "physique-053-calcul-ph-gazometrie-bpco.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à l'énoncé de départ et à l'outil utilisé pour le résoudre, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La formule mobilisée est pH = 6,1 + log( [HCO₃⁻] / (0,03 × PCO₂) ).",
+          "v": true,
+          "e": "VRAI. C'est la formule du sang, et c'est l'outil unique de cet exercice : on part toujours d'elle.",
+          "sourceQuote": "pH = 6,1 + log( [HCO₃⁻] / (0,03 × PCO₂) )"
+        },
+        {
+          "t": "Le patient de l'énoncé présente un [HCO₃⁻] de 30 mmol/L et une PCO₂ de 60 mmHg.",
+          "v": true,
+          "e": "VRAI. Ce sont les deux chiffres que donne la gazométrie de ce patient atteint de BPCO, et ce sont les seules mesures dont on a besoin.",
+          "sourceQuote": "[HCO₃⁻] = 30 mmol/L et PCO₂ = 60 mmHg"
+        },
+        {
+          "t": "L'énoncé fournit directement la valeur de log(16,67).",
+          "v": false,
+          "e": "FAUX : on te donne log 2 et log 3, mais surtout pas log(16,67). C'est justement ce qui fait l'exercice : il faut le reconstruire.",
+          "sourceQuote": "On te donne log 2 et log 3, mais pas log(16,67)."
+        },
+        {
+          "t": "Les logarithmes fournis dans l'énoncé sont log 2 ≈ 0,30 et log 5 ≈ 0,70.",
+          "v": false,
+          "e": "FAUX : les deux valeurs données sont log 2 ≈ 0,30 et log 3 ≈ 0,48. Le log 5 n'apparaît nulle part.",
+          "sourceQuote": "On donne : log 2 ≈ 0,30 ; log 3 ≈ 0,48"
+        },
+        {
+          "t": "La gazométrie artérielle est la prise de sang qui donne le pH, la PCO₂ et le [HCO₃⁻] d'un patient.",
+          "v": true,
+          "e": "VRAI. C'est l'examen d'où sortent les chiffres qu'on fait ensuite tourner dans la formule.",
+          "sourceQuote": "la prise de sang qui donne le pH, la PCO₂ et le [HCO₃⁻] d'un patient"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-053-calcul-ph-gazometrie-bpco.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux étapes du calcul chez ce patient, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le passage de la PCO₂ à la concentration de CO₂ dissous se fait grâce à la loi de Henry.",
+          "v": true,
+          "e": "VRAI. La formule réclame une concentration, pas une pression : c'est la loi de Henry qui fait le pont entre les deux.",
+          "sourceQuote": "La loi de Henry fait le pont"
+        },
+        {
+          "t": "Chez ce patient, [CO₂ dissous] = 0,03 × 60 = 1,8 mmol/L.",
+          "v": true,
+          "e": "VRAI. On multiplie la pression mesurée par le coefficient 0,03, ce qui donne 1,8 mmol/L de CO₂ dissous.",
+          "sourceQuote": "[CO₂ dissous] = 0,03 × 60 = 1,8 mmol/L"
+        },
+        {
+          "t": "Le ratio base / acide de ce patient vaut 30 / 60 = 0,5.",
+          "v": false,
+          "e": "FAUX : le dénominateur du ratio n'est pas la PCO₂ mais la concentration de CO₂ dissous. On divise donc 30 par 1,8, ce qui donne 16,67.",
+          "sourceQuote": "[HCO₃⁻] / [CO₂ dissous] = 30 / 1,8 = 16,67"
+        },
+        {
+          "t": "La valeur normale du [CO₂ dissous] est de 1,8 mmol/L.",
+          "v": false,
+          "e": "FAUX : la normale est de 1,2 mmol/L. La valeur de 1,8 est celle de ce patient, plus élevée précisément parce qu'il hypoventile.",
+          "sourceQuote": "Plus élevé que la normale (1,2 mmol/L)"
+        },
+        {
+          "t": "Le pH final obtenu chez ce patient est de 7,42.",
+          "v": false,
+          "e": "FAUX : la somme donne 6,1 + 1,22 = 7,32, et non 7,42. Un pH de 7,42 serait d'ailleurs normal, ce qui contredirait tout le raisonnement.",
+          "sourceQuote": "pH = 6,1 + 1,22 = 7,32"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-053-calcul-ph-gazometrie-bpco.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au calcul de log(16,67) à partir des données fournies, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le calcul repose sur la reconnaissance que 16,67 = 100 / 6.",
+          "v": true,
+          "e": "VRAI. C'est l'astuce centrale : réécrire 16,67 sous une forme dont on sait calculer le logarithme.",
+          "sourceQuote": "en reconnaissant que 16,67 = 100 / 6"
+        },
+        {
+          "t": "On décompose ensuite log(16,67) en log(100) − log(6).",
+          "v": true,
+          "e": "VRAI. Le logarithme d'un quotient est la différence des logarithmes : log(100 / 6) = log(100) − log(6).",
+          "sourceQuote": "log(16,67) = log(100 / 6) = log(100) − log(6)"
+        },
+        {
+          "t": "log(6) s'obtient en additionnant log 2 et log 3, soit 0,78.",
+          "v": true,
+          "e": "VRAI. Comme 6 = 2 × 3, son logarithme est la somme des deux : 0,30 + 0,48 = 0,78.",
+          "sourceQuote": "= 2 − (log 2 + log 3) = 2 − (0,30 + 0,48) = 2 − 0,78 = 1,22"
+        },
+        {
+          "t": "La valeur finale de log(16,67) est 0,78.",
+          "v": false,
+          "e": "FAUX : 0,78 est la valeur de log(6). Il reste à la retrancher de 2, ce qui donne log(16,67) = 1,22.",
+          "sourceQuote": "= 2 − (0,30 + 0,48) = 2 − 0,78 = 1,22"
+        },
+        {
+          "t": "Le mnémo consiste à reconnaître que 16,67 = 10 × 6.",
+          "v": false,
+          "e": "FAUX : 10 × 6 fait 60, pas 16,67. L'écriture utile est 100 / 6, puisque 100 / 6 = 16,666… ≈ 16,67.",
+          "sourceQuote": "Reconnaître que 16,67 = 100 / 6."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-053-calcul-ph-gazometrie-bpco.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la comparaison entre la gazométrie normale et celle de ce patient, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Chez un sujet normal, le ratio base / acide vaut 20.",
+          "v": true,
+          "e": "VRAI. C'est le ratio physiologique de référence : celui qui correspond au pH de 7,40.",
+          "sourceQuote": "Le ratio normal physiologique est 20"
+        },
+        {
+          "t": "Ce ratio normal de 20 s'obtient en divisant 24 par 1,8.",
+          "v": false,
+          "e": "FAUX : le ratio normal vient de 24 / 1,2, la valeur normale du CO₂ dissous étant 1,2 mmol/L. 24 / 1,8 correspond à un autre calcul, celui du patient non compensé.",
+          "sourceQuote": "Le ratio normal physiologique est 20 (24 / 1,2)"
+        },
+        {
+          "t": "Chez ce patient, le ratio est monté au-dessus de sa valeur normale.",
+          "v": false,
+          "e": "FAUX : il est descendu à 16,67. Le ratio a baissé parce que l'acide a augmenté plus que la base.",
+          "sourceQuote": "Ici on est à 16,67 → le ratio a baissé"
+        },
+        {
+          "t": "La baisse du ratio permet d'annoncer un pH inférieur à 7,4 avant même de finir le calcul.",
+          "v": true,
+          "e": "VRAI. C'est le réflexe à prendre dès l'étape du ratio : il donne le sens de la réponse, et sert de contrôle si le calcul part à l'envers.",
+          "sourceQuote": "on s'attend à un pH plus bas que 7,4"
+        },
+        {
+          "t": "La PCO₂ mesurée chez ce patient est de 40 mmHg, comme chez le sujet normal.",
+          "v": false,
+          "e": "FAUX : la normale est bien de 40 mmHg, mais ce patient est à 60 mmHg. C'est justement cette PCO₂ élevée qui fait tout le trouble.",
+          "sourceQuote": "PCO₂ (mesurée) 40 mmHg 60 mmHg"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-053-calcul-ph-gazometrie-bpco.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à l'interprétation clinique de cette gazométrie, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'anomalie primaire de ce patient est d'origine respiratoire.",
+          "v": true,
+          "e": "VRAI. C'est le poumon qui n'élimine plus assez de CO₂ : la PCO₂ très élevée est le point de départ du trouble.",
+          "sourceQuote": "Anomalie primaire = respiratoire."
+        },
+        {
+          "t": "L'accumulation de CO₂ tire l'équilibre CO₂ + H₂O ⇌ HCO₃⁻ + H⁺ vers la droite.",
+          "v": true,
+          "e": "VRAI. Plus de CO₂ pousse la réaction vers la droite, donc vers la production de H⁺ : le pH baisse.",
+          "sourceQuote": "l'équilibre CO₂ + H₂O ⇌ HCO₃⁻ + H⁺ est tiré vers la droite"
+        },
+        {
+          "t": "La compensation observée chez ce patient est d'origine respiratoire.",
+          "v": false,
+          "e": "FAUX : la compensation est rénale. Comme le trouble est déjà respiratoire, c'est nécessairement l'autre organe qui rattrape.",
+          "sourceQuote": "Compensation = rénale."
+        },
+        {
+          "t": "Le rein a diminué la réabsorption de bicarbonate pour lutter contre l'acidose.",
+          "v": false,
+          "e": "FAUX : il l'a augmentée. Plus de base réabsorbée, c'est plus de capacité à éponger les H⁺, donc un [HCO₃⁻] qui monte à 30 mmol/L.",
+          "sourceQuote": "le rein a augmenté la réabsorption de bicarbonate pour compenser l'acidose"
+        },
+        {
+          "t": "Sans cette compensation rénale, avec un [HCO₃⁻] resté à 24, le pH serait tombé à environ 7,22.",
+          "v": true,
+          "e": "VRAI. Le ratio serait alors de 13,33, son logarithme 1,12, et le pH 6,1 + 1,12 ≈ 7,22 : nettement plus grave.",
+          "sourceQuote": "soit 40 / 3 → log = 2 log 2 + 1 − log 3 = 0,60 + 1 − 0,48 = 1,12 → pH ≈ 7,22"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-053-calcul-ph-gazometrie-bpco.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives aux pièges de ce calcul et à la conclusion à en tirer, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Oublier le facteur 0,03 et diviser 30 par 60 conduit à un ratio de 0,5 et à un pH absurde.",
+          "v": true,
+          "e": "VRAI. C'est l'erreur la plus coûteuse : sans la conversion de Henry, on divise une concentration par une pression, et le résultat n'a plus aucun sens physiologique.",
+          "sourceQuote": "diviser 30 par 60 au lieu de 1,8 donne un ratio de 0,5 et un pH absurde"
+        },
+        {
+          "t": "L'absence de log(16,67) dans les données trahit une erreur d'énoncé.",
+          "v": false,
+          "e": "FAUX : cette absence est voulue. On attend précisément que tu recomposes cette valeur à partir de log 2 et log 3.",
+          "sourceQuote": "Ne bloque pas parce que log(16,67) n'est pas donné : c'est voulu."
+        },
+        {
+          "t": "La suite des cinq étapes est : formule, puis Henry (×0,03), puis ratio, puis log recombiné, puis somme.",
+          "v": true,
+          "e": "VRAI. C'est l'enchaînement à dérouler devant n'importe quelle gazométrie : il ne change jamais.",
+          "sourceQuote": "formule → Henry (×0,03) → ratio → log recombiné → somme"
+        },
+        {
+          "t": "Le pH de 7,32 traduit une alcalose, puisqu'il est supérieur à 7,35.",
+          "v": false,
+          "e": "FAUX : 7,32 est inférieur à 7,35, donc il s'agit bien d'une acidose. L'inégalité est ici inversée.",
+          "sourceQuote": "acidose (puisque pH < 7,35)"
+        },
+        {
+          "t": "Cette acidose est décrite comme critique et immédiatement menaçante.",
+          "v": false,
+          "e": "FAUX : elle est qualifiée de modérée et non critique. Le pH est abaissé, mais on reste loin des valeurs mettant en jeu le pronostic vital.",
+          "sourceQuote": "mais modérée et non critique"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-053-calcul-ph-gazometrie-bpco.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la BPCO de ce patient et aux repères de calcul, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le CO₂ dissous de ce patient dépasse la normale parce qu'il hypoventile et accumule du CO₂.",
+          "v": true,
+          "e": "VRAI. Moins de ventilation, c'est moins de CO₂ expiré : la pression monte, donc la concentration dissoute monte aussi.",
+          "sourceQuote": "parce que le patient hypoventile → il accumule du CO₂"
+        },
+        {
+          "t": "La BPCO correspond à une hypoventilation chronique avec rétention de CO₂.",
+          "v": true,
+          "e": "VRAI. C'est la logique de la maladie : les poumons n'évacuent plus assez de CO₂, qui s'accumule durablement dans le sang.",
+          "sourceQuote": "BPCO = hypoventilation chronique = rétention de CO₂"
+        },
+        {
+          "t": "Le mnémo du calcul s'appuie sur le fait que 100 = 10² et que 6 = 2 × 3.",
+          "v": true,
+          "e": "VRAI. Ces deux décompositions rendent tout calculable : le premier donne un log immédiat, le second se ramène à log 2 + log 3.",
+          "sourceQuote": "Et 100 = 10² (log facile = 2), 6 = 2 × 3 (log connu = log 2 + log 3)"
+        },
+        {
+          "t": "Le [HCO₃⁻] mesuré chez ce patient est plus bas que la valeur normale de 24 mmol/L.",
+          "v": false,
+          "e": "FAUX : il est plus haut, à 30 mmol/L contre 24 normalement. C'est le signe de la compensation rénale, pas d'une perte de base.",
+          "sourceQuote": "[HCO₃⁻] (mesurée) 24 mmol/L 30 mmol/L"
+        },
+        {
+          "t": "C'est la compensation respiratoire qui permet aux patients BPCO chroniques de vivre avec une PCO₂ pathologique.",
+          "v": false,
+          "e": "FAUX : c'est la compensation rénale. Le poumon est justement l'organe défaillant ici, il ne peut pas se rattraper lui-même.",
+          "sourceQuote": "C'est la compensation rénale qui permet aux BPCO chroniques de vivre avec une PCO₂ pathologique."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-054-autres-tampons-sanguins.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives aux systèmes tampons du sang autres que le bicarbonate, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le bicarbonate est le principal tampon du plasma.",
+          "v": true,
+          "e": "VRAI. Il fait l'essentiel du travail de tamponnement plasmatique — mais pas la totalité, d'où l'existence des autres systèmes.",
+          "sourceQuote": "le bicarbonate est le principal tampon du plasma"
+        },
+        {
+          "t": "Le phosphate a un pKa de 7,2 et agit comme tampon intracellulaire et urinaire.",
+          "v": true,
+          "e": "VRAI. Son pKa très proche du pH physiologique en fait un tampon redoutable là où il se trouve : dans la cellule et dans l'urine.",
+          "sourceQuote": "Le phosphate (pKa = 7,2) — tampon intracellulaire et urinaire"
+        },
+        {
+          "t": "L'hémoglobine a un pKa d'environ 6,9 et constitue le tampon majeur du globule rouge.",
+          "v": true,
+          "e": "VRAI. C'est le tampon du globule rouge, et il est directement couplé au transport de l'O₂ et du CO₂.",
+          "sourceQuote": "L'hémoglobine (pKa ≈ 6,9) — le tampon majeur du globule rouge"
+        },
+        {
+          "t": "Les protéines plasmatiques constituent un tampon puissant, mais actif sur une gamme de pH très étroite.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse sur les deux points. Elles sont un tampon faible mais permanent, et elles agissent sur une large gamme de pH.",
+          "sourceQuote": "tampon faible mais permanent, actif sur une large gamme de pH"
+        },
+        {
+          "t": "En dehors du bicarbonate, le sang ne dispose que d'un seul autre système tampon.",
+          "v": false,
+          "e": "FAUX : il en existe trois autres — le phosphate, les protéines plasmatiques et l'hémoglobine.",
+          "sourceQuote": "trois autres systèmes contribuent au pouvoir tampon global"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-054-autres-tampons-sanguins.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la comparaison des pKa au pH du sang, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Plus l'écart entre le pKa d'un tampon et 7,4 est petit, plus ce tampon est efficace au pH du sang.",
+          "v": true,
+          "e": "VRAI. C'est le réflexe à prendre devant n'importe quel tampon : on compare son pKa au pH auquel il doit travailler.",
+          "sourceQuote": "Plus l'écart est petit, plus le tampon est efficace au pH du sang"
+        },
+        {
+          "t": "L'écart au pH du sang est de 0,2 pour le phosphate et de 0,5 pour l'hémoglobine.",
+          "v": true,
+          "e": "VRAI. Phosphate à 7,2 donc écart 0,2 ; hémoglobine à 6,9 donc écart 0,5 : le phosphate est le mieux placé des deux.",
+          "sourceQuote": "Phosphate 7,2 → écart 0,2. Hémoglobine 6,9 → écart 0,5."
+        },
+        {
+          "t": "Le bicarbonate a un pKa de 6,1, soit un écart de 0,5 avec 7,4.",
+          "v": false,
+          "e": "FAUX : le pKa est bien 6,1, mais l'écart avec 7,4 est de 1,3, et non de 0,5. C'est justement le plus mauvais des trois écarts.",
+          "sourceQuote": "Bicarbonate 6,1 → écart 1,3"
+        },
+        {
+          "t": "C'est l'hémoglobine que l'on choisit au laboratoire pour préparer une solution à pH 7,4.",
+          "v": false,
+          "e": "FAUX : c'est le phosphate, précisément parce que son pKa de 7,2 est le plus proche de 7,4. Ce choix relève de la chimie optimale.",
+          "sourceQuote": "C'est d'ailleurs celui qu'on choisit au laboratoire pour préparer une solution à pH 7,4."
+        },
+        {
+          "t": "Le bicarbonate doit son efficacité au fait que son pKa est le plus proche de 7,4.",
+          "v": false,
+          "e": "FAUX : sur le seul critère du pKa, il est médiocre — c'est même le plus mal placé. S'il reste imbattable, c'est grâce à ses trois super-pouvoirs, pas à son pKa.",
+          "sourceQuote": "le bicarbonate, médiocre sur le papier, n'est imbattable que grâce à ses trois super-pouvoirs"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-054-autres-tampons-sanguins.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au cycle de l'hémoglobine, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "À l'aller, l'hémoglobine livre l'O₂ aux tissus et HbO₂ devient HbH.",
+          "v": true,
+          "e": "VRAI. C'est le trajet aller : l'oxygène est délivré aux tissus, et l'hémoglobine change de forme en captant des H⁺.",
+          "sourceQuote": "l'hémoglobine livre l'O₂ aux tissus, HbO₂ devient HbH"
+        },
+        {
+          "t": "Au retour, la même molécule ramène les H⁺ captés et le CO₂ vers les poumons.",
+          "v": true,
+          "e": "VRAI. Le trajet retour ramène les déchets acides : c'est ce couplage aller-retour qui fait toute l'efficacité du tampon globulaire.",
+          "sourceQuote": "la même molécule ramène les H⁺ captés et le CO₂ vers les poumons"
+        },
+        {
+          "t": "Le pH passe d'environ 7,40 à l'aller à environ 7,36 au retour.",
+          "v": true,
+          "e": "VRAI. Quatre centièmes d'écart seulement : malgré toute la charge acide ramassée en route, le pH n'a quasiment pas bougé.",
+          "sourceQuote": "≈ 7,40 à l'aller, ≈ 7,36 au retour"
+        },
+        {
+          "t": "Deux transporteurs distincts assurent respectivement l'aller et le retour.",
+          "v": false,
+          "e": "FAUX : c'est une seule et même molécule qui fait les deux trajets — d'où l'image du même camion qui livre puis ramène.",
+          "sourceQuote": "Un aller, un retour, un seul transporteur."
+        },
+        {
+          "t": "Arrivée aux poumons, l'hémoglobine se recharge en H⁺ et y libère son O₂.",
+          "v": false,
+          "e": "FAUX : l'échange est inversé. Aux poumons, elle se recharge en O₂ et libère ses H⁺, le CO₂ reformé étant ensuite expiré.",
+          "sourceQuote": "où elle se recharge en O₂, libère ses H⁺ et reforme le CO₂ qui sera expiré"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-054-autres-tampons-sanguins.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives au pouvoir tampon du sang total comparé à celui du plasma, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le pouvoir tampon total du sang est environ 4 fois supérieur à celui du plasma seul.",
+          "v": true,
+          "e": "VRAI. Passer du plasma au sang total multiplie par quatre la capacité d'amortissement mesurée.",
+          "sourceQuote": "le pouvoir tampon total du sang est environ 4 fois supérieur à celui du plasma seul"
+        },
+        {
+          "t": "Cette différence tient à la contribution massive de l'hémoglobine dans les globules rouges.",
+          "v": true,
+          "e": "VRAI. Ce sont les globules rouges, absents du plasma seul, qui apportent l'essentiel de ce supplément.",
+          "sourceQuote": "grâce à la contribution massive de l'hémoglobine dans les globules rouges"
+        },
+        {
+          "t": "Doser le plasma seul suffit à mesurer toute la capacité d'amortissement du sang.",
+          "v": false,
+          "e": "FAUX : c'est passer à côté des trois quarts de cette capacité, puisqu'on laisse de côté les globules rouges.",
+          "sourceQuote": "Doser le plasma seul, c'est passer à côté des trois quarts de la capacité d'amortissement."
+        },
+        {
+          "t": "Le pouvoir tampon du sang total est environ 4 fois inférieur à celui du plasma seul.",
+          "v": false,
+          "e": "FAUX : le rapport est inversé. Le sang total tamponne environ 4 fois mieux que le plasma seul, et non l'inverse.",
+          "sourceQuote": "Le pouvoir tampon du sang total ≈ 4× celui du plasma seul."
+        },
+        {
+          "t": "L'analogie du camion illustre le fait que deux molécules différentes transportent l'une l'O₂, l'autre le CO₂.",
+          "v": false,
+          "e": "FAUX : l'image dit exactement le contraire — c'est le même camion qui fait les deux trajets, une seule molécule pour l'aller et le retour.",
+          "sourceQuote": "Le même camion fait les deux trajets"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-054-autres-tampons-sanguins.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à la répartition de la neutralisation d'une charge acide dans l'organisme, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le sang ne neutralise que 15-20 % d'une charge acide.",
+          "v": true,
+          "e": "VRAI. Bicarbonate, hémoglobine et protéines réunis n'encaissent qu'une petite fraction de la charge acide totale.",
+          "sourceQuote": "Le sang ne neutralise que 15-20 % d'une charge acide"
+        },
+        {
+          "t": "Le liquide extracellulaire prend en charge 20-25 % de cette charge acide.",
+          "v": true,
+          "e": "VRAI. C'est le deuxième compartiment de la répartition, juste au-dessus du sang.",
+          "sourceQuote": "Le liquide extracellulaire 20-25 %"
+        },
+        {
+          "t": "Les tampons cellulaires et osseux encaissent environ 60 % de la charge acide.",
+          "v": true,
+          "e": "VRAI. C'est de loin la part la plus importante — et la plus invisible, puisqu'elle n'apparaît sur aucun dosage sanguin.",
+          "sourceQuote": "≈ 60 % est pris en charge par les tampons cellulaires et osseux"
+        },
+        {
+          "t": "Face à une agression acide, le sang est le principal encaisseur.",
+          "v": false,
+          "e": "FAUX : c'est justement la surprise de cette répartition. Le sang n'est pas le principal encaisseur ; les cellules et l'os le devancent largement.",
+          "sourceQuote": "le sang n'est pas le principal encaisseur"
+        },
+        {
+          "t": "La part prise par les tampons cellulaires et osseux est d'environ 15 %.",
+          "v": false,
+          "e": "FAUX : elle est d'environ 60 %. Les 15-20 % correspondent à la part du sang.",
+          "sourceQuote": "Les tampons cellulaires et osseux (phosphate, protéines, échanges Ca²⁺/H⁺) ≈ 60 %"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-054-autres-tampons-sanguins.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives au retentissement osseux des acidoses chroniques, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une acidose chronique finit toujours par retentir sur l'os.",
+          "v": true,
+          "e": "VRAI. L'os fait partie des tampons de l'organisme : sollicité pendant des années, il finit par en payer le prix.",
+          "sourceQuote": "une acidose chronique finit toujours par retentir sur l'os"
+        },
+        {
+          "t": "Quand les autres tampons sont saturés, l'os cède ses carbonates au prix d'une déminéralisation.",
+          "v": true,
+          "e": "VRAI. C'est le mécanisme : l'os offre ses carbonates pour tamponner, et cette contribution se paie en minéral perdu.",
+          "sourceQuote": "l'os « offre » ses carbonates au prix d'une déminéralisation"
+        },
+        {
+          "t": "L'ostéopathie de l'insuffisance rénale chronique traduit d'abord une maladie primitive de l'os.",
+          "v": false,
+          "e": "FAUX : l'os n'est pas malade au départ. Il est fragilisé par des années de pH à rattraper, ce qui en fait la conséquence d'un trouble acido-basique, pas d'une atteinte osseuse.",
+          "sourceQuote": "un os fragilisé, non pas par un problème d'os, mais par des années de pH à rattraper"
+        },
+        {
+          "t": "Le sang encaisse l'essentiel de la charge acide, ce qui met l'os à l'abri des acidoses prolongées.",
+          "v": false,
+          "e": "FAUX : croire que tout se joue dans le sang est précisément le piège. Le sang n'encaisse que 15-20 %, et l'os est bel et bien mis à contribution.",
+          "sourceQuote": "Croire que tout se joue dans le sang."
+        },
+        {
+          "t": "L'os intervient dès les premières minutes, avant même les tampons du sang.",
+          "v": false,
+          "e": "FAUX : il n'offre ses carbonates que lorsque les autres tampons sont saturés. Il n'est pas la première ligne, mais le recours de fond.",
+          "sourceQuote": "quand les autres tampons sont saturés, l'os « offre » ses carbonates"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-054-autres-tampons-sanguins.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives aux caractéristiques respectives des tampons du sang, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le phosphate est très efficace au pH physiologique parce que son pKa est proche de 7,4.",
+          "v": true,
+          "e": "VRAI. Un tampon travaille au mieux quand le pH du milieu avoisine son pKa : avec 7,2, le phosphate est presque au point idéal.",
+          "sourceQuote": "Très efficace au pH physiologique, parce que son pKa est proche de 7,4"
+        },
+        {
+          "t": "L'hémoglobine tamponne là où le sang transporte déjà quelque chose.",
+          "v": true,
+          "e": "VRAI. C'est ce qui en fait le cas le plus intéressant : la molécule de transport est aussi la molécule tampon.",
+          "sourceQuote": "elle tamponne là où le sang transporte déjà quelque chose"
+        },
+        {
+          "t": "Le phosphate est décrit comme le tampon majeur du globule rouge.",
+          "v": false,
+          "e": "FAUX : le tampon majeur du globule rouge est l'hémoglobine. Le phosphate, lui, est intracellulaire et urinaire.",
+          "sourceQuote": "phosphate (pKa 7,2, intracellulaire et urinaire)"
+        },
+        {
+          "t": "Les protéines plasmatiques font l'essentiel du travail de tamponnement.",
+          "v": false,
+          "e": "FAUX : elles ne font jamais l'essentiel du travail. Leur intérêt est ailleurs : elles sont toujours là, sur une large gamme de pH.",
+          "sourceQuote": "Elles ne font jamais l'essentiel du travail, mais elles sont toujours là."
+        },
+        {
+          "t": "En dehors du bicarbonate, seuls le phosphate et l'hémoglobine tamponnent le sang.",
+          "v": false,
+          "e": "FAUX : il faut y ajouter les protéines plasmatiques. Cela fait bien trois tampons en plus du bicarbonate.",
+          "sourceQuote": "Trois tampons en plus du bicarbonate"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-055-pourquoi-quatre-troubles.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives aux termes fixes et aux termes mobiles de la formule du sang, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le 6,1 de la formule est le pKa apparent du couple et ne bouge pas.",
+          "v": true,
+          "e": "VRAI. C'est une constante du couple acide-base : elle ne varie pas d'un patient à l'autre, donc elle ne peut pas expliquer un trouble.",
+          "sourceQuote": "est le pKa apparent du couple, il ne bouge pas"
+        },
+        {
+          "t": "Le 0,03 est le coefficient de solubilité du CO₂ dans le sang à 37 °C.",
+          "v": true,
+          "e": "VRAI. C'est la constante de Henry pour le CO₂ à température corporelle : elle non plus ne bouge pas.",
+          "sourceQuote": "Le 0,03 est le coefficient de solubilité du CO₂ dans le sang à 37 °C, il ne bouge pas non plus."
+        },
+        {
+          "t": "Les deux seules variables mobiles sont le [HCO₃⁻] au numérateur et la PCO₂ au dénominateur.",
+          "v": true,
+          "e": "VRAI. Une fois les deux constantes écartées, il ne reste que ces deux grandeurs — et c'est de là que découle tout le reste.",
+          "sourceQuote": "Restent [HCO₃⁻] au numérateur et PCO₂ au dénominateur"
+        },
+        {
+          "t": "Le pKa apparent varie d'un patient à l'autre, ce qui explique la diversité des troubles.",
+          "v": false,
+          "e": "FAUX : le pKa apparent est fixe. La diversité des troubles vient uniquement des deux variables mobiles, pas de lui.",
+          "sourceQuote": "est le pKa apparent du couple, il ne bouge pas"
+        },
+        {
+          "t": "La formule du sang comporte quatre grandeurs que l'on peut faire bouger.",
+          "v": false,
+          "e": "FAUX : elle n'en a que deux. C'est précisément ce qui limite à quatre le nombre de troubles possibles.",
+          "sourceQuote": "elle n'a que deux variables qu'on peut faire bouger"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-055-pourquoi-quatre-troubles.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à l'origine que signale chaque variable, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une variation du [HCO₃⁻] signe une origine métabolique.",
+          "v": true,
+          "e": "VRAI. Le bicarbonate est au numérateur, et sa variation renvoie au rein, au tube digestif ou au métabolisme.",
+          "sourceQuote": "Une variation de [HCO₃⁻] — au numérateur — signe une origine métabolique"
+        },
+        {
+          "t": "Une variation de la PCO₂ signe une origine respiratoire, c'est-à-dire ventilatoire.",
+          "v": true,
+          "e": "VRAI. La PCO₂ est au dénominateur, et elle dépend de la ventilation : c'est le poumon qui la fixe.",
+          "sourceQuote": "Une variation de PCO₂ — au dénominateur — signe une origine respiratoire (la ventilation)"
+        },
+        {
+          "t": "Le [HCO₃⁻] occupe le dénominateur de la formule.",
+          "v": false,
+          "e": "FAUX : le [HCO₃⁻] est au numérateur. C'est la PCO₂ qui est au dénominateur.",
+          "sourceQuote": "[HCO₃⁻] — numérateur → origine métabolique"
+        },
+        {
+          "t": "Une variation de la PCO₂ traduit une cause rénale, digestive ou métabolique.",
+          "v": false,
+          "e": "FAUX : ces causes sont celles d'une variation du [HCO₃⁻], donc d'un trouble métabolique. La PCO₂, elle, renvoie à la ventilation.",
+          "sourceQuote": "signe une origine métabolique (rénale, digestive, métabolisme)"
+        },
+        {
+          "t": "La PCO₂ est le paramètre du numérateur.",
+          "v": false,
+          "e": "FAUX : la PCO₂ est au dénominateur, ce qui explique qu'une hausse de PCO₂ fasse baisser le rapport.",
+          "sourceQuote": "PCO₂ — dénominateur → origine respiratoire"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-055-pourquoi-quatre-troubles.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au compte des quatre troubles, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Deux variables multipliées par deux sens donnent quatre combinaisons possibles.",
+          "v": true,
+          "e": "VRAI. Chacune des deux variables peut monter ou descendre : 2 × 2 = 4, et le compte s'arrête là.",
+          "sourceQuote": "Donc 2 variables × 2 sens = 4 combinaisons possibles"
+        },
+        {
+          "t": "Il existe quatre troubles acido-basiques fondamentaux, ni plus ni moins.",
+          "v": true,
+          "e": "VRAI. C'est la conséquence directe du compte : la formule ne permet pas d'en construire un cinquième.",
+          "sourceQuote": "les 4 troubles acido-basiques fondamentaux, ni plus, ni moins"
+        },
+        {
+          "t": "Une baisse du [HCO₃⁻] fait baisser le rapport, donc le pH.",
+          "v": true,
+          "e": "VRAI. Le bicarbonate est au numérateur : s'il diminue, le rapport diminue et le pH suit vers le bas.",
+          "sourceQuote": "[HCO₃⁻] ↓ (métabolique) le rapport baisse → pH ↓"
+        },
+        {
+          "t": "Une hausse de la PCO₂ fait monter le rapport, donc le pH.",
+          "v": false,
+          "e": "FAUX : la PCO₂ est au dénominateur. Quand elle monte, le rapport baisse et le pH baisse : c'est une acidose.",
+          "sourceQuote": "PCO₂ ↑ (respiratoire) le rapport baisse → pH ↓"
+        },
+        {
+          "t": "Une cinquième case reste envisageable dans certains cas particuliers.",
+          "v": false,
+          "e": "FAUX : il n'y en aura jamais une cinquième. Chaque patient tombe forcément dans l'une des quatre.",
+          "sourceQuote": "Quatre cases, et il n'y en aura jamais une cinquième."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-055-pourquoi-quatre-troubles.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux deux coordonnées à identifier et à l'image de la boussole, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un pH inférieur à 7,35 définit une acidose et un pH supérieur à 7,45 une alcalose.",
+          "v": true,
+          "e": "VRAI. Ce sont les deux bornes qui donnent le sens du trouble, la seconde des deux coordonnées à repérer.",
+          "sourceQuote": "pH < 7,35 = acidose ; pH > 7,45 = alcalose"
+        },
+        {
+          "t": "Deux questions suffisent à situer un patient : d'où ça vient, et dans quel sens ça part.",
+          "v": true,
+          "e": "VRAI. L'origine puis le sens : ces deux réponses désignent une case et une seule.",
+          "sourceQuote": "d'où ça vient, et dans quel sens ça part"
+        },
+        {
+          "t": "Dans l'image de la boussole, le « nord » correspond à la question acidose ou alcalose.",
+          "v": false,
+          "e": "FAUX : le « nord » est l'origine, métabolique ou respiratoire. Le sens acidose / alcalose correspond à l'« est ».",
+          "sourceQuote": "le « nord » (origine métabolique ou respiratoire ?)"
+        },
+        {
+          "t": "Dans cette même image, le « est » désigne l'origine métabolique ou respiratoire.",
+          "v": false,
+          "e": "FAUX : les deux coordonnées sont inversées ici. Le « est » est le sens du trouble, acidose ou alcalose.",
+          "sourceQuote": "le « est » (acidose ou alcalose ?)"
+        },
+        {
+          "t": "Un même patient peut relever simultanément de deux cases différentes de la boussole.",
+          "v": false,
+          "e": "FAUX : chaque patient tombe dans une seule des quatre cases, celle que désignent ses deux coordonnées.",
+          "sourceQuote": "Chaque patient que tu croiseras tombe dans l'une d'elles"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-055-pourquoi-quatre-troubles.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux deux vitesses de compensation, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un trouble métabolique se compense par le poumon.",
+          "v": true,
+          "e": "VRAI. On ventile plus ou moins, la PCO₂ bouge, et le rapport est partiellement restauré.",
+          "sourceQuote": "Un trouble métabolique se compense par le poumon."
+        },
+        {
+          "t": "La compensation respiratoire s'installe en quelques minutes.",
+          "v": true,
+          "e": "VRAI. C'est le levier rapide : le poumon peut changer la PCO₂ en quelques cycles respiratoires.",
+          "sourceQuote": "Délai : quelques minutes (le levier rapide)"
+        },
+        {
+          "t": "Le rein compense en réabsorbant davantage de bicarbonate, ou en le laissant fuir dans les urines.",
+          "v": true,
+          "e": "VRAI. Ce sont ses deux façons de faire bouger le [HCO₃⁻], selon le sens dans lequel il faut rattraper le trouble.",
+          "sourceQuote": "Le rein réabsorbe davantage de bicarbonate, ou le laisse fuir dans les urines"
+        },
+        {
+          "t": "Le rein est le levier rapide, et le poumon le levier lent.",
+          "v": false,
+          "e": "FAUX : les rôles sont inversés. Le poumon agit en minutes, le rein demande des heures à des jours.",
+          "sourceQuote": "Délai : heures à jours (le levier lent)"
+        },
+        {
+          "t": "La compensation se fait par la même variable que celle qui a dérapé.",
+          "v": false,
+          "e": "FAUX : elle passe toujours par l'autre variable. L'organe atteint ne peut pas se rattraper lui-même.",
+          "sourceQuote": "elle passe toujours par l'autre variable"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-055-pourquoi-quatre-troubles.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à ce que la présence d'une compensation apprend sur l'ancienneté du trouble, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un trouble métabolique arrive presque toujours accompagné de sa compensation respiratoire.",
+          "v": true,
+          "e": "VRAI. Comme cette compensation s'installe en minutes, elle a eu le temps de se mettre en place avant même l'arrivée du patient.",
+          "sourceQuote": "arrive presque toujours accompagné de sa compensation respiratoire"
+        },
+        {
+          "t": "Un trouble respiratoire vu tôt n'a pas encore de compensation rénale.",
+          "v": true,
+          "e": "VRAI. Le rein demande des heures à des jours : sur un trouble récent, il n'a matériellement pas eu le temps d'agir.",
+          "sourceQuote": "vu tôt, lui, n'a pas encore de compensation rénale"
+        },
+        {
+          "t": "Chercher la compensation ne renseigne en rien sur l'ancienneté du trouble.",
+          "v": false,
+          "e": "FAUX : c'est au contraire une façon de dater le trouble, puisque chaque compensation a son délai propre.",
+          "sourceQuote": "Chercher la compensation, c'est donc aussi dater le trouble."
+        },
+        {
+          "t": "La compensation rénale s'installe en quelques minutes, comme la compensation respiratoire.",
+          "v": false,
+          "e": "FAUX : elle demande des heures à des jours. C'est le levier lent, par opposition au poumon.",
+          "sourceQuote": "elle demande des heures à des jours"
+        },
+        {
+          "t": "Un trouble métabolique n'a jamais eu le temps de se compenser lorsqu'on le découvre.",
+          "v": false,
+          "e": "FAUX : sa compensation s'installe en minutes, donc elle a eu le temps. C'est le trouble respiratoire vu tôt qui, lui, n'est pas encore compensé.",
+          "sourceQuote": "elle s'installe en minutes, elle a eu le temps"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-055-pourquoi-quatre-troubles.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la distinction entre anomalie primaire et compensation, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Deux paramètres anormaux en même temps ne signifient pas forcément deux troubles.",
+          "v": true,
+          "e": "VRAI. C'est le piège principal : le second paramètre n'est souvent anormal que parce qu'il rattrape le premier.",
+          "sourceQuote": "Les deux paramètres peuvent être anormaux en même temps sans qu'il y ait deux troubles"
+        },
+        {
+          "t": "Le second paramètre bouge souvent uniquement pour rattraper le premier.",
+          "v": true,
+          "e": "VRAI. C'est la définition même d'une compensation : un déplacement volontaire, au service du rapport à restaurer.",
+          "sourceQuote": "le second bouge souvent uniquement pour rattraper le premier"
+        },
+        {
+          "t": "Deux chiffres anormaux ne veulent pas dire deux maladies.",
+          "v": true,
+          "e": "VRAI. C'est la formule qui résume le piège : une anomalie primaire et sa compensation font deux chiffres, mais un seul trouble.",
+          "sourceQuote": "Deux chiffres anormaux ≠ deux maladies."
+        },
+        {
+          "t": "La compensation restaure totalement le rapport et ramène le pH exactement à sa valeur normale.",
+          "v": false,
+          "e": "FAUX : elle ne restaure le rapport que partiellement. Elle limite les dégâts, elle ne les annule pas.",
+          "sourceQuote": "le rapport est partiellement restauré"
+        },
+        {
+          "t": "Comme les deux variables appartiennent à des formules différentes, aucune ne peut rattraper l'autre.",
+          "v": false,
+          "e": "FAUX : elles vivent dans la même formule, et c'est précisément pour cela que chacune peut rattraper l'autre.",
+          "sourceQuote": "puisque les deux variables vivent dans la même formule, chacune peut rattraper l'autre"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-056-acidose-metabolique-lucas.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à l'histoire de Lucas et à son examen d'arrivée, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Lucas est diabétique depuis l'enfance et porte une pompe à insuline.",
+          "v": true,
+          "e": "VRAI. C'est un diabétique de type 1 de 22 ans, dont l'insuline est délivrée en continu par une pompe.",
+          "sourceQuote": "Lucas est diabétique depuis l'enfance et porte une pompe à insuline"
+        },
+        {
+          "t": "Sa pompe est tombée en panne 48 h avant son admission.",
+          "v": true,
+          "e": "VRAI. Deux jours sans insuline suffisent à déclencher la cascade qui l'amène aux urgences.",
+          "sourceQuote": "Il y a 48 h, sa pompe est tombée en panne"
+        },
+        {
+          "t": "Son haleine sent légèrement la pomme pourrie, ce qui correspond à une odeur d'acétone.",
+          "v": true,
+          "e": "VRAI. C'est un signe clinique caractéristique : l'acétone produite avec les corps cétoniques est éliminée par la respiration.",
+          "sourceQuote": "Son haleine sent légèrement la pomme pourrie (odeur d'acétone)"
+        },
+        {
+          "t": "À son arrivée, Lucas respire de façon superficielle et rapide.",
+          "v": false,
+          "e": "FAUX : sa respiration est au contraire très profonde et très lente, comme s'il manquait d'air en permanence.",
+          "sourceQuote": "très profondément, très lentement, comme s'il manquait d'air en permanence"
+        },
+        {
+          "t": "Lucas arrive aux urgences inconscient.",
+          "v": false,
+          "e": "FAUX : il est conscient, mais somnolent. La distinction compte : la conscience est altérée, pas abolie.",
+          "sourceQuote": "Lucas est conscient mais somnolent"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-056-acidose-metabolique-lucas.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux chiffres de la gazométrie de Lucas, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Son pH est à 7,15, ce qui correspond à une acidose sévère.",
+          "v": true,
+          "e": "VRAI. On est très en dessous de la borne basse de 7,35 : l'acidose est franche et sévère.",
+          "sourceQuote": "pH 7,15 7,35–7,45 acidose sévère"
+        },
+        {
+          "t": "Son HCO₃⁻ est effondré à 12 mmol/L, contre 24 normalement.",
+          "v": true,
+          "e": "VRAI. Le réservoir de base est à moitié vide : c'est là que se lit l'anomalie primaire.",
+          "sourceQuote": "HCO₃⁻ (mmol/L) 12 24 effondré"
+        },
+        {
+          "t": "Sa PCO₂ est montée à 60 mmHg.",
+          "v": false,
+          "e": "FAUX : sa PCO₂ est effondrée, à 22 mmHg au lieu de 40. Elle a baissé, elle n'a pas monté.",
+          "sourceQuote": "PCO₂ (mmHg) 22 40 effondrée aussi"
+        },
+        {
+          "t": "Le HCO₃⁻ de Lucas est au-dessus de sa valeur normale.",
+          "v": false,
+          "e": "FAUX : il est passé de 24 à 12 mmol/L, donc bien au-dessous. C'est le HCO₃⁻ de Michel, le patient BPCO, qui est au-dessus.",
+          "sourceQuote": "le HCO₃⁻ passe de 24 à 12 mmol/L"
+        },
+        {
+          "t": "Le pH de Lucas reste dans la plage normale de 7,35 à 7,45.",
+          "v": false,
+          "e": "FAUX : à 7,15, il est très en dessous de cette plage. Le pH a bel et bien baissé : c'est une acidose métabolique.",
+          "sourceQuote": "le pH baisse. C'est une acidose métabolique."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-056-acidose-metabolique-lucas.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au mécanisme de l'acidocétose chez Lucas, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Sans insuline pendant 48 h, ses cellules n'arrivent plus à utiliser le glucose comme carburant.",
+          "v": true,
+          "e": "VRAI. C'est le point de départ de toute la cascade : sans insuline, le glucose reste inutilisable et l'organisme doit trouver un autre carburant.",
+          "sourceQuote": "les cellules de Lucas n'arrivent plus à utiliser le glucose comme carburant"
+        },
+        {
+          "t": "Le foie fabrique alors des corps cétoniques, qui sont des acides fixes, non volatils.",
+          "v": true,
+          "e": "VRAI. Acétoacétate et β-hydroxybutyrate sont des acides fixes : le poumon ne peut pas les expirer, ils s'accumulent.",
+          "sourceQuote": "ce sont des acides fixes (non volatils)"
+        },
+        {
+          "t": "Chaque molécule de corps cétonique produite libère un H⁺ supplémentaire.",
+          "v": true,
+          "e": "VRAI. C'est ce qui rend la charge acide énorme et continue : plus le foie en produit, plus le sang reçoit de H⁺.",
+          "sourceQuote": "Chaque molécule produite libère un H⁺ supplémentaire."
+        },
+        {
+          "t": "Le tampon bicarbonate reste inactif face à cet afflux d'acide.",
+          "v": false,
+          "e": "FAUX : il capture massivement les H⁺ — c'est justement pour cela qu'il s'épuise et que le HCO₃⁻ tombe à 12 mmol/L.",
+          "sourceQuote": "Le tampon bicarbonate fait son boulot et capture massivement les H⁺"
+        },
+        {
+          "t": "Les corps cétoniques sont des acides volatils, que le poumon peut éliminer.",
+          "v": false,
+          "e": "FAUX : ce sont des acides fixes, donc non volatils. Le seul acide volatil du raisonnement acido-basique est le CO₂.",
+          "sourceQuote": "(acétoacétate, β-hydroxybutyrate) — ce sont des acides fixes (non volatils), qui s'accumulent dans le sang"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-056-acidose-metabolique-lucas.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la respiration de Lucas et à la compensation qu'elle traduit, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le cerveau déclenche une hyperventilation réflexe automatique pour expirer un maximum de CO₂.",
+          "v": true,
+          "e": "VRAI. Le cerveau détecte la chute du pH et augmente la ventilation : moins de CO₂, donc un rapport partiellement restauré.",
+          "sourceQuote": "il déclenche une hyperventilation réflexe automatique pour expirer un maximum de CO₂"
+        },
+        {
+          "t": "Cette respiration ample et lente porte le nom de respiration de Kussmaul.",
+          "v": true,
+          "e": "VRAI. C'est le nom historique de ce signe : le SOS automatique des poumons face à une acidose métabolique.",
+          "sourceQuote": "Cette respiration ample et lente porte un nom historique : la respiration de Kussmaul"
+        },
+        {
+          "t": "Le délai de réponse de cette compensation est de plusieurs jours.",
+          "v": false,
+          "e": "FAUX : elle répond en quelques minutes seulement. C'est le rein, pas le poumon, qui demande des heures à des jours.",
+          "sourceQuote": "son délai de réponse est de quelques minutes seulement"
+        },
+        {
+          "t": "Cette hyperventilation fait monter la PCO₂ de Lucas au-dessus de 40 mmHg.",
+          "v": false,
+          "e": "FAUX : hyperventiler fait chuter la PCO₂, et non monter. Elle s'effondre à 22 mmHg au lieu de 40.",
+          "sourceQuote": "la PCO₂ s'effondre (22 mmHg au lieu de 40)"
+        },
+        {
+          "t": "Cette compensation fait baisser encore davantage le rapport HCO₃⁻/CO₂.",
+          "v": false,
+          "e": "FAUX : elle le fait remonter un peu, et c'est tout l'intérêt : le pH ne chute pas autant qu'il aurait dû.",
+          "sourceQuote": "le ratio HCO₃⁻/CO₂ remonte un peu"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-056-acidose-metabolique-lucas.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux autres situations donnant la même gazométrie que celle de Lucas, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une diarrhée aiguë sévère entraîne une perte digestive massive de HCO₃⁻ intestinal.",
+          "v": true,
+          "e": "VRAI. Ici, ce n'est pas l'acide qui est produit en excès : c'est la base qui part par l'intestin, et le résultat sur le rapport est le même.",
+          "sourceQuote": "Diarrhée aiguë sévère — perte digestive massive de HCO₃⁻ intestinal."
+        },
+        {
+          "t": "L'acidose lactique peut résulter d'une hypoxie tissulaire ou d'un surdosage en metformine.",
+          "v": true,
+          "e": "VRAI. État de choc ou surdosage médicamenteux : dans les deux cas, l'acide lactique s'accumule et consomme le bicarbonate.",
+          "sourceQuote": "Acidose lactique — hypoxie tissulaire (état de choc), surdosage en metformine"
+        },
+        {
+          "t": "Dans l'insuffisance rénale chronique, le rein n'élimine plus les acides fixes.",
+          "v": true,
+          "e": "VRAI. L'acide n'est ni produit en excès ni perdu comme base : il n'est simplement plus évacué, et il s'accumule.",
+          "sourceQuote": "Insuffisance rénale chronique — le rein n'élimine plus les acides fixes."
+        },
+        {
+          "t": "Une intoxication par l'aspirine à forte dose donne au contraire une alcalose métabolique.",
+          "v": false,
+          "e": "FAUX : les intoxications à l'aspirine, comme celles au méthanol ou à l'éthylène glycol, figurent parmi les causes d'acidose métabolique.",
+          "sourceQuote": "Intoxications — aspirine à forte dose, antigel (méthanol, éthylène glycol)"
+        },
+        {
+          "t": "Chez Lucas, le mécanisme en cause est une fuite de base par l'intestin.",
+          "v": false,
+          "e": "FAUX : chez lui, l'acide est fabriqué, sous forme de corps cétoniques. La fuite de base par l'intestin, c'est le mécanisme de la diarrhée sévère.",
+          "sourceQuote": "Chez Lucas, l'acide est fabriqué (corps cétoniques)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-056-acidose-metabolique-lucas.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à l'identification du paramètre primaire chez Lucas, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Chez Lucas, la PCO₂ basse n'est pas la cause du trouble mais la réponse de l'organisme.",
+          "v": true,
+          "e": "VRAI. C'est la compensation respiratoire, une réaction et non une anomalie de départ.",
+          "sourceQuote": "Cette PCO₂ basse n'est pas la cause, c'est la réponse"
+        },
+        {
+          "t": "Le paramètre primaire est celui qui pousse le pH du mauvais côté ; ici, c'est le HCO₃⁻ à 12.",
+          "v": true,
+          "e": "VRAI. C'est le critère de tri : parmi deux chiffres anormaux, le primaire est celui dont la variation explique le sens du pH.",
+          "sourceQuote": "Le paramètre primaire est celui qui pousse le pH du mauvais côté : ici le HCO₃⁻ à 12."
+        },
+        {
+          "t": "Puisque la PCO₂ de Lucas est anormale, son trouble est d'origine respiratoire.",
+          "v": false,
+          "e": "FAUX : sa PCO₂ est anormale, et pourtant le trouble n'est pas respiratoire. Un chiffre anormal ne suffit pas à désigner l'origine.",
+          "sourceQuote": "et pourtant le trouble n'est pas respiratoire"
+        },
+        {
+          "t": "La PCO₂ de Lucas, à 22 mmHg contre 40, est au-dessus de la normale.",
+          "v": false,
+          "e": "FAUX : 22 est inférieur à 40. Sa PCO₂ est effondrée, pas augmentée.",
+          "sourceQuote": "la PCO₂ aussi est effondrée (22 au lieu de 40)"
+        },
+        {
+          "t": "Une acidose métabolique se reconnaît à un HCO₃⁻ augmenté.",
+          "v": false,
+          "e": "FAUX : elle se reconnaît à un HCO₃⁻ consommé, donc abaissé. C'est cette chute du numérateur qui fait tomber le rapport et le pH.",
+          "sourceQuote": "un excès d'acides « fixes » (non volatils) consomme le HCO₃⁻ → le ratio HCO₃⁻/CO₂ chute → le pH baisse"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-056-acidose-metabolique-lucas.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives au traitement de Lucas et à la question à se poser devant une acidose métabolique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Son traitement associe insuline, réhydratation massive et correction du potassium.",
+          "v": true,
+          "e": "VRAI. L'insuline arrête la production d'acide à la source, la réhydratation et le potassium corrigent les conséquences.",
+          "sourceQuote": "L'équipe perfuse Lucas avec de l'insuline (pour relancer l'utilisation du glucose et arrêter la production de corps cétoniques), réhydrate massivement, corrige le potassium."
+        },
+        {
+          "t": "Devant une acidose métabolique, la question à se poser est : d'où vient l'acide, ou par où fuit la base ?",
+          "v": true,
+          "e": "VRAI. Ces deux chemins expliquent toutes les causes possibles, et le HCO₃⁻ effondré est leur dénominateur commun.",
+          "sourceQuote": "d'où vient l'acide, ou par où fuit la base ?"
+        },
+        {
+          "t": "Dans l'insuffisance rénale chronique, c'est la base qui fuit par l'intestin.",
+          "v": false,
+          "e": "FAUX : dans ce cas, c'est l'acide qui n'est plus éliminé. La fuite de base par l'intestin correspond à la diarrhée sévère.",
+          "sourceQuote": "Dans une insuffisance rénale chronique, c'est l'acide qui n'est plus éliminé"
+        },
+        {
+          "t": "Le pH de Lucas met plusieurs semaines à se normaliser après le début du traitement.",
+          "v": false,
+          "e": "FAUX : en quelques heures la production d'acide s'arrête et le pH remonte ; dès le lendemain, la gazométrie est normalisée.",
+          "sourceQuote": "En quelques heures, la production d'acide s'arrête, le rein réabsorbe à nouveau du HCO₃⁻, le pH remonte. À J+1, gazométrie normalisée."
+        },
+        {
+          "t": "Les trois chemins évoqués — acide fabriqué, base perdue, acide non éliminé — donnent chacun une gazométrie différente.",
+          "v": false,
+          "e": "FAUX : ces trois chemins aboutissent au même résultat visible, un HCO₃⁻ effondré. C'est le contexte clinique, non la gazométrie, qui les sépare.",
+          "sourceQuote": "Trois chemins différents, un seul et même HCO₃⁻ effondré sur la gazométrie."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-057-acidose-respiratoire-michel.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à l'histoire de Michel et à son arrivée aux urgences, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Michel a fumé un paquet par jour pendant 40 ans.",
+          "v": true,
+          "e": "VRAI. C'est ce tabagisme prolongé qui a abîmé ses poumons et conduit au diagnostic de BPCO à 60 ans.",
+          "sourceQuote": "Michel a fumé un paquet par jour pendant 40 ans"
+        },
+        {
+          "t": "La BPCO désigne la broncho-pneumopathie chronique obstructive.",
+          "v": true,
+          "e": "VRAI. C'est le nom complet de la maladie : une obstruction chronique des bronches qui gêne l'évacuation du CO₂.",
+          "sourceQuote": "il avait une BPCO — broncho-pneumopathie chronique obstructive"
+        },
+        {
+          "t": "Chez Michel, les petites bronches sont obstruées en permanence.",
+          "v": true,
+          "e": "VRAI. C'est ce qui explique qu'il ait de plus en plus de mal à évacuer le CO₂ produit par son métabolisme.",
+          "sourceQuote": "les petites bronches sont obstruées en permanence"
+        },
+        {
+          "t": "Ce qui l'amène aux urgences ce soir-là est une chute avec fracture.",
+          "v": false,
+          "e": "FAUX : c'est un rhume aggravé depuis deux jours, avec toux grasse, fièvre et essoufflement majeur même au repos.",
+          "sourceQuote": "il a attrapé un rhume. Depuis 2 jours, ça s'est aggravé — toux grasse, fièvre, essoufflement majeur même au repos"
+        },
+        {
+          "t": "À son arrivée, Michel est parfaitement lucide et sa peau est bien colorée.",
+          "v": false,
+          "e": "FAUX : il est confus, somnolent, et sa peau est légèrement bleutée — c'est une cyanose.",
+          "sourceQuote": "Michel est confus, somnolent, sa peau est légèrement bleutée"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-057-acidose-respiratoire-michel.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux chiffres de la gazométrie de Michel, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Son pH est à 7,28, donc en dessous de la plage normale : il est en acidose.",
+          "v": true,
+          "e": "VRAI. Comme Lucas, Michel est en acidose — c'est le sens du trouble qui est commun aux deux patients.",
+          "sourceQuote": "pH 7,28 normale 7,35–7,45 acidose"
+        },
+        {
+          "t": "Sa PCO₂ est très élevée, à 70 mmHg au lieu de 40.",
+          "v": true,
+          "e": "VRAI. Le CO₂ ne sort plus assez : c'est cette rétention qui constitue l'anomalie primaire.",
+          "sourceQuote": "PCO₂ 70 mmHg normale 40 très élevée"
+        },
+        {
+          "t": "Son HCO₃⁻ est effondré à 12 mmol/L.",
+          "v": false,
+          "e": "FAUX : son HCO₃⁻ est élevé, à 32 mmol/L contre 24 normalement. Le chiffre de 12 est celui de Lucas.",
+          "sourceQuote": "HCO₃⁻ 32 mmol/L normale 24 élevé aussi"
+        },
+        {
+          "t": "Comme Lucas, Michel a une PCO₂ effondrée.",
+          "v": false,
+          "e": "FAUX : la PCO₂ de Lucas est tombée à 22, celle de Michel est montée à 70. Les deux partent dans des sens opposés.",
+          "sourceQuote": "PCO₂ (mmHg) 40 22 ↓ 70 ↑↑"
+        },
+        {
+          "t": "Le HCO₃⁻ de Michel est au-dessous de la normale de 24 mmol/L.",
+          "v": false,
+          "e": "FAUX : il est au-dessus, à 32 mmol/L. C'est précisément ce chiffre élevé qui trahit une compensation rénale installée de longue date.",
+          "sourceQuote": "Mais pourquoi le HCO₃⁻ est aussi élevé — 32 au lieu de 24 ?"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-057-acidose-respiratoire-michel.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au mécanisme de l'acidose respiratoire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les poumons de Michel n'évacuent plus suffisamment le CO₂ produit par ses cellules.",
+          "v": true,
+          "e": "VRAI. La production continue, l'élimination ne suit plus : le CO₂ s'accumule et la PCO₂ monte à 70 mmHg.",
+          "sourceQuote": "Les poumons de Michel n'arrivent plus à évacuer suffisamment le CO₂ produit par ses cellules"
+        },
+        {
+          "t": "Plus il y a de CO₂, plus la réaction CO₂ + H₂O ⇌ HCO₃⁻ + H⁺ est poussée vers la droite.",
+          "v": true,
+          "e": "VRAI. C'est le déplacement d'équilibre : un excès de réactif pousse la réaction dans le sens de la formation des produits.",
+          "sourceQuote": "Plus il y a de CO₂, plus la réaction est poussée vers la droite"
+        },
+        {
+          "t": "L'excès de H⁺ ainsi produits fait chuter le pH.",
+          "v": true,
+          "e": "VRAI. Plus de H⁺ libres, c'est un pH plus bas : voilà pourquoi une rétention de CO₂ acidifie le sang.",
+          "sourceQuote": "plus de H⁺ produits → le pH chute"
+        },
+        {
+          "t": "Dans ce trouble, c'est le métabolisme qui est en cause.",
+          "v": false,
+          "e": "FAUX : c'est le poumon, et non le métabolisme. C'est ce qui fait de ce trouble une acidose respiratoire.",
+          "sourceQuote": "C'est le poumon — et non le métabolisme — qui est en cause."
+        },
+        {
+          "t": "L'accumulation de CO₂ déplace l'équilibre vers la gauche.",
+          "v": false,
+          "e": "FAUX : elle le pousse vers la droite. Un déplacement vers la gauche consommerait des H⁺ et ferait au contraire monter le pH.",
+          "sourceQuote": "L'équilibre est poussé vers la droite."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-057-acidose-respiratoire-michel.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives au bicarbonate élevé de Michel et à ce qu'il signifie, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Ses reins ont progressivement augmenté la réabsorption de bicarbonate.",
+          "v": true,
+          "e": "VRAI. Vivant depuis des années avec une PCO₂ élevée, il s'est constitué une réserve de base plus grande pour compenser l'excès d'acide.",
+          "sourceQuote": "ses reins ont progressivement augmenté la réabsorption de bicarbonate"
+        },
+        {
+          "t": "Cette compensation rénale est lente : elle prend des heures à des jours.",
+          "v": true,
+          "e": "VRAI. C'est ce délai qui explique qu'elle soit déjà en place chez Michel, dont la maladie évolue depuis des années.",
+          "sourceQuote": "Cette compensation rénale est lente — elle prend des heures à des jours"
+        },
+        {
+          "t": "Chez Michel, le HCO₃⁻ élevé constitue le trouble primaire.",
+          "v": false,
+          "e": "FAUX : chez lui, le HCO₃⁻ haut est la réparation, pas le trouble. Le trouble, c'est la PCO₂ à 70.",
+          "sourceQuote": "chez Michel, le HCO₃⁻ haut est la réparation"
+        },
+        {
+          "t": "Chez Lucas comme chez Michel, le bicarbonate part dans le même sens.",
+          "v": false,
+          "e": "FAUX : leurs bicarbonates partent dans des directions opposées — effondré chez Lucas, élevé chez Michel — alors que les deux sont en acidose.",
+          "sourceQuote": "leurs bicarbonates partent dans des directions opposées"
+        },
+        {
+          "t": "La compensation rénale est plus rapide que la compensation respiratoire.",
+          "v": false,
+          "e": "FAUX : elle est bien plus lente. Le poumon répond en minutes, le rein en heures à jours.",
+          "sourceQuote": "Délai : heures à jours, bien plus lent que la compensation respiratoire de l'acidose métabolique"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-057-acidose-respiratoire-michel.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à la comparaison entre forme aiguë et forme chronique à PCO₂ identique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "À la même PCO₂, sans compensation rénale, le pH serait à environ 7,10.",
+          "v": true,
+          "e": "VRAI. C'est la trajectoire aiguë : sans réserve de base constituée, la même PCO₂ fait tomber le pH bien plus bas.",
+          "sourceQuote": "sans compensation rénale, le pH serait à ~7,10"
+        },
+        {
+          "t": "Cette forme aiguë expose au coma et à un danger vital immédiat.",
+          "v": true,
+          "e": "VRAI. C'est ce qui sépare les deux trajectoires : à chiffres de PCO₂ identiques, l'une est survivable, l'autre non.",
+          "sourceQuote": "→ coma, danger vital immédiat"
+        },
+        {
+          "t": "Avec la compensation rénale, le pH de Michel ne tombe qu'à 7,28 : c'est grave, mais survivable.",
+          "v": true,
+          "e": "VRAI. Les reins ont eu le temps de s'adapter, et ce délai d'adaptation fait toute la différence de gravité.",
+          "sourceQuote": "le pH de Michel ne tombe « que » à 7,28 → grave mais survivable"
+        },
+        {
+          "t": "Un surdosage en opioïdes donne une acidose respiratoire chronique bien compensée.",
+          "v": false,
+          "e": "FAUX : c'est le type même de l'hypoventilation brutale, donc d'une forme aiguë. Les reins n'ont pas eu le temps de compenser.",
+          "sourceQuote": "C'est le cas de quelqu'un qui hypoventile brutalement, par exemple sur un surdosage en opioïdes : les reins n'ont pas eu le temps."
+        },
+        {
+          "t": "À PCO₂ identique, la forme chronique est plus dangereuse que la forme aiguë.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. La forme aiguë, non compensée, est bien plus dangereuse que la forme chronique compensée.",
+          "sourceQuote": "la forme aiguë (non compensée) est bien plus dangereuse que la chronique (compensée)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-057-acidose-respiratoire-michel.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives au traitement de Michel et aux autres causes de cette gazométrie, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'oxygénothérapie doit rester prudente, trop d'O₂ pouvant aggraver l'hypoventilation d'un patient BPCO chronique.",
+          "v": true,
+          "e": "VRAI. C'est un effet paradoxal bien connu : donner trop d'oxygène à ces patients peut les faire respirer encore moins.",
+          "sourceQuote": "trop d'O₂ peut paradoxalement aggraver l'hypoventilation chez un BPCO chronique"
+        },
+        {
+          "t": "Une crise d'asthme sévère peut donner la même gazométrie que celle de Michel.",
+          "v": true,
+          "e": "VRAI. Les bronches se ferment brutalement, le CO₂ ne sort plus : le mécanisme diffère, le résultat sur la PCO₂ est le même.",
+          "sourceQuote": "Crise d'asthme sévère — les bronches se ferment brutalement, le CO₂ ne sort plus."
+        },
+        {
+          "t": "L'objectif du traitement est de ramener Michel à une PCO₂ de 40 mmHg.",
+          "v": false,
+          "e": "FAUX : c'est impossible, ses poumons sont durablement abîmés. L'objectif est de le ramener à son état de base.",
+          "sourceQuote": "L'objectif n'est pas de ramener Michel à PCO₂ = 40"
+        },
+        {
+          "t": "Une fibrose pulmonaire rend les poumons plus souples et améliore la ventilation.",
+          "v": false,
+          "e": "FAUX : elle les rend rigides, et ils ventilent mal. C'est d'ailleurs pour cela qu'elle figure parmi les causes d'acidose respiratoire.",
+          "sourceQuote": "fibrose pulmonaire (poumons rigides, qui ventilent mal)"
+        },
+        {
+          "t": "Une intoxication aux morphiniques provoque une alcalose respiratoire par hyperventilation.",
+          "v": false,
+          "e": "FAUX : elle provoque une hypoventilation neurologique, donc une rétention de CO₂ et une acidose respiratoire.",
+          "sourceQuote": "Hypoventilation neurologique — coma, intoxication aux morphiniques"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-057-acidose-respiratoire-michel.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la façon de lire le bon paramètre sur une gazométrie, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Chez un patient en acidose, une PCO₂ haute signe une acidose respiratoire.",
+          "v": true,
+          "e": "VRAI. La PCO₂ élevée pousse le pH vers le bas : elle est bien le paramètre primaire, et elle donne l'origine respiratoire.",
+          "sourceQuote": "PCO₂ haute → acidose respiratoire"
+        },
+        {
+          "t": "Chez un patient en acidose, un HCO₃⁻ bas signe une acidose métabolique.",
+          "v": true,
+          "e": "VRAI. Le bicarbonate effondré fait chuter le rapport : c'est lui qui pousse le pH du mauvais côté.",
+          "sourceQuote": "HCO₃⁻ bas → acidose métabolique"
+        },
+        {
+          "t": "Le paramètre anormal dans le sens qui aide n'est pas la cause : c'est la compensation.",
+          "v": true,
+          "e": "VRAI. C'est le tri à faire systématiquement entre deux chiffres anormaux : l'un est le trouble, l'autre la réparation.",
+          "sourceQuote": "L'autre paramètre, s'il est anormal dans le sens qui aide, n'est pas la cause : c'est la compensation"
+        },
+        {
+          "t": "Un HCO₃⁻ élevé suffit à affirmer une alcalose.",
+          "v": false,
+          "e": "FAUX : Michel a un HCO₃⁻ à 32 et il est bel et bien en acidose. Ce bicarbonate haut est sa compensation, pas son trouble.",
+          "sourceQuote": "Un HCO₃⁻ élevé ne veut pas dire « alcalose »."
+        },
+        {
+          "t": "Le sens du trouble peut se lire sur un seul chiffre pris isolément.",
+          "v": false,
+          "e": "FAUX : le sens se lit sur le pH, et sur lui seul. Un paramètre isolé ne dit rien tant qu'on n'a pas le pH.",
+          "sourceQuote": "Le sens du pH se lit sur le pH, jamais sur un seul chiffre pris isolément."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-058-alcalose-metabolique-marie.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à l'histoire de Marie et à son arrivée aux urgences, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Marie présente depuis 3 jours une gastro-entérite virale qui ne passe pas.",
+          "v": true,
+          "e": "VRAI. C'est la durée qui compte ici : trois jours suffisent à faire monter le bicarbonate de 24 à 34 mmol/L.",
+          "sourceQuote": "Depuis 3 jours, Marie a une gastro-entérite virale qui ne passe pas."
+        },
+        {
+          "t": "Elle vomit toutes les heures et ne parvient à garder aucun liquide.",
+          "v": true,
+          "e": "VRAI. Chaque vomissement fait sortir de l'acide gastrique, et la répétition finit par modifier le sang.",
+          "sourceQuote": "Elle vomit toutes les heures — impossible de garder le moindre liquide"
+        },
+        {
+          "t": "À l'arrivée, Marie est déshydratée et fatiguée.",
+          "v": true,
+          "e": "VRAI. C'est la conséquence directe de 48 h sans pouvoir s'hydrater, et c'est ce qui motive la réhydratation.",
+          "sourceQuote": "Marie est déshydratée, fatiguée."
+        },
+        {
+          "t": "Ses constantes sont franchement anormales, ce qui motive la demande de gazométrie.",
+          "v": false,
+          "e": "FAUX : ses constantes sont correctes. La gazométrie fait partie d'un bilan complet demandé malgré tout, pas d'une alerte sur les constantes.",
+          "sourceQuote": "Ses constantes sont correctes, mais l'équipe demande quand même un bilan complet"
+        },
+        {
+          "t": "Elle est amenée aux urgences dès le premier jour de sa gastro-entérite.",
+          "v": false,
+          "e": "FAUX : elle n'y arrive qu'au bout de 48 h sans pouvoir s'hydrater correctement. C'est ce délai qui laisse le temps au trouble de s'installer.",
+          "sourceQuote": "Au bout de 48 h sans pouvoir s'hydrater correctement, sa famille l'amène aux urgences pour réhydratation."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-058-alcalose-metabolique-marie.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux chiffres de la gazométrie de Marie, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Son pH est à 7,52, donc au-dessus de 7,45 : c'est une alcalose.",
+          "v": true,
+          "e": "VRAI. Le pH sort de la plage par le haut : le sens du trouble est celui d'une alcalose.",
+          "sourceQuote": "pH 7,52 7,35–7,45 au-dessus de 7,45 → alcalose"
+        },
+        {
+          "t": "Son HCO₃⁻ est élevé, à 34 mmol/L : c'est l'anomalie de départ, d'origine métabolique.",
+          "v": true,
+          "e": "VRAI. Le bicarbonate est au numérateur : sa hausse fait grimper le rapport et pousse le pH vers le haut.",
+          "sourceQuote": "HCO₃⁻ (mmol/L — numérateur) 34 ↑ 24 élevé → l'anomalie de départ, métabolique"
+        },
+        {
+          "t": "Sa PCO₂ est effondrée à 22 mmHg.",
+          "v": false,
+          "e": "FAUX : sa PCO₂ est légèrement élevée, à 46 mmHg au lieu de 40, et c'est sa compensation respiratoire. Le chiffre de 22 est celui de Lucas et de Sophie.",
+          "sourceQuote": "PCO₂ (mmHg — dénominateur) 46 40 légèrement élevée → la compensation respiratoire"
+        },
+        {
+          "t": "Chez Marie, la PCO₂ est la cause du trouble et le HCO₃⁻ n'en est que la réponse.",
+          "v": false,
+          "e": "FAUX : les rôles sont inversés. Le HCO₃⁻ est la cause ; la PCO₂ n'est que la réponse de l'organisme.",
+          "sourceQuote": "Le HCO₃⁻ est la cause ; la PCO₂ n'est que la réponse de l'organisme"
+        },
+        {
+          "t": "Un seul des deux paramètres, le HCO₃⁻, est anormal chez Marie.",
+          "v": false,
+          "e": "FAUX : les deux bougent. Simplement, ils ne jouent pas le même rôle : l'un est le trouble, l'autre la compensation.",
+          "sourceQuote": "Deux paramètres bougent, mais ils ne jouent pas le même rôle."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-058-alcalose-metabolique-marie.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au mécanisme de l'alcalose métabolique chez Marie, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le suc gastrique est très acide, de pH 1-2, et contient de l'acide chlorhydrique.",
+          "v": true,
+          "e": "VRAI. C'est ce contenu très acide qui quitte le corps à chaque vomissement, et c'est là toute l'explication du trouble.",
+          "sourceQuote": "du suc gastrique très acide (pH 1-2, plein d'acide chlorhydrique HCl)"
+        },
+        {
+          "t": "Perdre de l'acide revient à enrichir le sang en base.",
+          "v": true,
+          "e": "VRAI. Rien n'a été ajouté : il reste simplement relativement plus de bicarbonate, ce qui suffit à faire monter le pH.",
+          "sourceQuote": "Perdre de l'acide revient à enrichir le sang en base"
+        },
+        {
+          "t": "En trois jours, le HCO₃⁻ sanguin de Marie est passé de 24 à 34 mmol/L.",
+          "v": true,
+          "e": "VRAI. Dix millimoles par litre de plus : c'est la traduction chiffrée de trois jours de vomissements répétés.",
+          "sourceQuote": "le HCO₃⁻ sanguin est passé de 24 à 34 mmol/L"
+        },
+        {
+          "t": "Le rapport HCO₃⁻/CO₂ a baissé, ce qui fait monter le pH.",
+          "v": false,
+          "e": "FAUX : le rapport a grimpé, et c'est pour cela que le pH s'envole vers 7,52. Un rapport qui baisse ferait au contraire baisser le pH.",
+          "sourceQuote": "Le ratio HCO₃⁻/CO₂ a grimpé → le pH s'envole vers 7,52"
+        },
+        {
+          "t": "Chaque vomissement fait entrer de l'acide dans le corps.",
+          "v": false,
+          "e": "FAUX : chaque vomissement fait sortir de l'acide du corps. C'est cette perte, et non un apport, qui alcalinise le sang.",
+          "sourceQuote": "Chaque vomissement = de l'acide qui sort du corps."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-058-alcalose-metabolique-marie.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la compensation respiratoire de Marie et à ses limites, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'organisme compense en ralentissant la respiration afin de retenir du CO₂.",
+          "v": true,
+          "e": "VRAI. Retenir du CO₂ fait monter le dénominateur et abaisse le rapport : c'est bien le sens qui freine le trouble.",
+          "sourceQuote": "il ralentit la respiration (hypoventilation) pour retenir du CO₂"
+        },
+        {
+          "t": "Cette compensation reste limitée, car on ne peut pas s'empêcher de respirer indéfiniment.",
+          "v": true,
+          "e": "VRAI. L'hypoxie qui en résulterait alerterait le cerveau : retenir sa respiration a un plafond.",
+          "sourceQuote": "on ne peut pas s'empêcher de respirer indéfiniment"
+        },
+        {
+          "t": "Grâce à cette compensation, la PCO₂ de Marie est montée de 40 à 70 mmHg.",
+          "v": false,
+          "e": "FAUX : elle ne monte que de 40 à 46. C'est précisément la marque du plafond de cette compensation.",
+          "sourceQuote": "l'hypoventilation de Marie ne la fait monter que de 40 à 46"
+        },
+        {
+          "t": "Une alcalose métabolique seulement partiellement compensée constitue une anomalie supplémentaire.",
+          "v": false,
+          "e": "FAUX : ce n'est pas une anomalie de plus, c'est le cas normal. Il ne faut pas chercher ici une compensation complète.",
+          "sourceQuote": "Une alcalose métabolique partiellement compensée n'est donc pas une anomalie de plus — c'est le cas normal."
+        },
+        {
+          "t": "L'organisme compense en accélérant la respiration pour éliminer davantage de CO₂.",
+          "v": false,
+          "e": "FAUX : accélérer la respiration ferait baisser la PCO₂ et aggraverait l'alcalose. Ici, la PCO₂ remonte légèrement, à 46 au lieu de 40.",
+          "sourceQuote": "la PCO₂ remonte légèrement, 46 au lieu de 40 → ça aide à faire baisser un peu le ratio"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-058-alcalose-metabolique-marie.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux autres causes de cette gazométrie et au traitement de Marie, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une aspiration gastrique prolongée par sonde naso-gastrique peut donner la même gazométrie.",
+          "v": true,
+          "e": "VRAI. La sonde aspire le contenu acide de l'estomac : le mécanisme est celui des vomissements, en version médicale.",
+          "sourceQuote": "Aspiration gastrique prolongée — sonde naso-gastrique en post-chirurgie"
+        },
+        {
+          "t": "Un excès d'antiacides type bicarbonate de soude peut provoquer une alcalose métabolique.",
+          "v": true,
+          "e": "VRAI. Ici, ce n'est plus une perte d'acide mais un apport de base : le résultat sur le numérateur est le même.",
+          "sourceQuote": "Excès d'antiacides type bicarbonate de soude — pansement gastrique pris en quantité déraisonnable."
+        },
+        {
+          "t": "Une hypokaliémie sévère alcalinise le sang, le rein compensant en éliminant des H⁺.",
+          "v": true,
+          "e": "VRAI. Le manque de potassium pousse le rein à éliminer des H⁺, ce qui fait monter le pH.",
+          "sourceQuote": "Hypokaliémie sévère — manque de potassium (le rein compense en éliminant des H⁺ → alcalinisation du sang)"
+        },
+        {
+          "t": "Le traitement de Marie repose sur des perfusions de bicarbonate.",
+          "v": false,
+          "e": "FAUX : lui donner du bicarbonate aggraverait son alcalose. On la réhydrate au sérum physiologique avec du potassium, et on arrête les vomissements.",
+          "sourceQuote": "Réhydratation par perfusion (sérum physiologique + potassium) et antiémétiques pour arrêter les vomissements"
+        },
+        {
+          "t": "Le HCO₃⁻ excédentaire de Marie sera éliminé par le poumon.",
+          "v": false,
+          "e": "FAUX : le bicarbonate est éliminé par les reins. Le poumon, lui, ne gère que le CO₂.",
+          "sourceQuote": "le HCO₃⁻ excédentaire est ensuite éliminé par les reins"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-058-alcalose-metabolique-marie.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la reconnaissance de l'anomalie primaire chez Marie, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le pH monte et le HCO₃⁻ monte : les deux allant dans le même sens, le HCO₃⁻ est l'anomalie primaire.",
+          "v": true,
+          "e": "VRAI. C'est la règle de tri : le paramètre primaire est celui qui varie dans le sens du pH.",
+          "sourceQuote": "Ici le pH monte et le HCO₃⁻ monte → les deux vont dans le même sens → le HCO₃⁻ est l'anomalie primaire"
+        },
+        {
+          "t": "Un paramètre qui bouge dans le sens qui freine le trouble signe une compensation, pas une deuxième maladie.",
+          "v": true,
+          "e": "VRAI. C'est sa signature : il ne raconte pas un second trouble, il raconte la réaction de l'organisme au premier.",
+          "sourceQuote": "bouge dans le sens qui freine le trouble : c'est la signature d'une compensation, pas d'une deuxième maladie"
+        },
+        {
+          "t": "Sur une gazométrie, il faut s'arrêter au premier chiffre anormal rencontré.",
+          "v": false,
+          "e": "FAUX : c'est justement ce qu'il ne faut pas faire. Il faut regarder lequel des deux part dans le sens du pH.",
+          "sourceQuote": "ne t'arrête pas au premier chiffre anormal"
+        },
+        {
+          "t": "L'alcalose de Marie est le miroir du trouble de Michel, le patient BPCO.",
+          "v": false,
+          "e": "FAUX : son miroir est le trouble de Lucas, puisque c'est le même paramètre — le numérateur — mais dans l'autre sens. Chez Michel, c'est le dénominateur qui dérapait.",
+          "sourceQuote": "On revient maintenant au numérateur, le [HCO₃⁻] — celui qui s'était effondré chez Lucas — mais cette fois dans l'autre sens."
+        },
+        {
+          "t": "Chez Marie, la PCO₂ est le paramètre primaire, puisqu'elle est anormale.",
+          "v": false,
+          "e": "FAUX : elle bouge dans le sens qui freine le trouble, donc elle est la compensation. Un chiffre anormal n'est pas forcément le paramètre primaire.",
+          "sourceQuote": "La PCO₂, elle, bouge dans le sens qui freine le trouble"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-058-alcalose-metabolique-marie.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la symétrie entre les quatre troubles et à l'évolution de Marie, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'hyperventilation de Lucas avait fait tomber sa PCO₂ de 40 à 22.",
+          "v": true,
+          "e": "VRAI. Dix-huit millimètres de mercure d'écart, contre six seulement chez Marie : la compensation respiratoire n'a pas le même pouvoir dans les deux sens.",
+          "sourceQuote": "L'hyperventilation de Lucas avait fait tomber sa PCO₂ de 40 à 22"
+        },
+        {
+          "t": "Le [HCO₃⁻] peut augmenter par perte d'acide ou par apport de base.",
+          "v": true,
+          "e": "VRAI. Ce sont les deux chemins qui mènent à une alcalose métabolique : soit l'acide part, soit la base arrive.",
+          "sourceQuote": "le [HCO₃⁻] augmente, par perte d'acide ou apport de base"
+        },
+        {
+          "t": "Chez Michel, c'était le numérateur qui dérapait.",
+          "v": false,
+          "e": "FAUX : chez Michel, c'est le dénominateur qui dérapait — le poumon n'évacuait plus le CO₂, la PCO₂ montait et le pH baissait.",
+          "sourceQuote": "Avec Michel, tu as vu le dénominateur déraper : le poumon n'évacuait plus le CO₂, la PCO₂ montait, le pH baissait."
+        },
+        {
+          "t": "Dans une alcalose, on a soit trop d'acide, soit trop peu de base.",
+          "v": false,
+          "e": "FAUX : c'est exactement l'inverse. Dans une alcalose, on a soit trop de base, soit trop peu d'acide.",
+          "sourceQuote": "Au lieu d'avoir trop d'acide, on a soit trop de base, soit trop peu d'acide."
+        },
+        {
+          "t": "Le retour à la normale demande plusieurs semaines chez Marie.",
+          "v": false,
+          "e": "FAUX : une fois les vomissements arrêtés et la réhydratation faite, tout rentre dans l'ordre en 24-48 h.",
+          "sourceQuote": "tout rentre dans l'ordre en 24-48 h"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-059-alcalose-respiratoire-sophie.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à l'histoire de Sophie et à son examen aux urgences, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Sophie a un partiel important dans 2 heures et stresse depuis 3 jours.",
+          "v": true,
+          "e": "VRAI. C'est le contexte de sa crise : une angoisse d'examen qui bascule en hyperventilation dans le métro.",
+          "sourceQuote": "Sophie a un partiel important dans 2 heures"
+        },
+        {
+          "t": "Au bout d'une dizaine de minutes, elle présente des fourmillements intenses aux extrémités.",
+          "v": true,
+          "e": "VRAI. Mains et pourtour de la bouche : ce sont les paresthésies liées à l'alcalose brutale, et ses doigts se crispent malgré elle.",
+          "sourceQuote": "elle a des fourmillements intenses aux extrémités"
+        },
+        {
+          "t": "Aux urgences, elle respire à environ 40 cycles par minute au lieu de 15.",
+          "v": true,
+          "e": "VRAI. Près de trois fois la fréquence normale : c'est cette hyperventilation qui vide son sang de CO₂.",
+          "sourceQuote": "Sophie respire à ~40 cycles/min au lieu de 15"
+        },
+        {
+          "t": "Elle arrive fébrile et se plaint d'une douleur thoracique.",
+          "v": false,
+          "e": "FAUX : elle n'a ni fièvre, ni douleur thoracique, ni signe d'embolie. C'est précisément cette absence qui oriente vers une cause psychogène.",
+          "sourceQuote": "Pas de fièvre, pas de douleur thoracique, pas de signe d'embolie."
+        },
+        {
+          "t": "Sophie est confuse et n'est plus consciente à son arrivée.",
+          "v": false,
+          "e": "FAUX : elle est paniquée, mais consciente et lucide. C'est un point qui la distingue nettement de Michel, confus et somnolent.",
+          "sourceQuote": "paniquée mais consciente et lucide"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-059-alcalose-respiratoire-sophie.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux chiffres de la gazométrie de Sophie, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Son pH est à 7,55, très au-dessus de 7,45 : c'est une alcalose franche.",
+          "v": true,
+          "e": "VRAI. Le pH sort largement de la plage normale par le haut : le sens du trouble ne fait aucun doute.",
+          "sourceQuote": "pH 7,55 7,35–7,45 très au-dessus de 7,45 → alcalose franche"
+        },
+        {
+          "t": "Sa PCO₂ est effondrée à 22 mmHg : c'est l'anomalie de départ, d'origine respiratoire.",
+          "v": true,
+          "e": "VRAI. La PCO₂ est au dénominateur : quand elle s'effondre, le rapport grimpe et le pH monte.",
+          "sourceQuote": "PCO₂ (mmHg — dénominateur) 22 ↓↓ 40 effondrée → l'anomalie de départ, respiratoire"
+        },
+        {
+          "t": "Son HCO₃⁻ est effondré à 12 mmol/L.",
+          "v": false,
+          "e": "FAUX : son HCO₃⁻ est à 23 mmol/L, donc pratiquement normal. C'est justement ce qui montre l'absence de compensation.",
+          "sourceQuote": "HCO₃⁻ (mmol/L — numérateur) 23 24 normal → aucune compensation"
+        },
+        {
+          "t": "Chez Sophie, la PCO₂ est montée au-dessus de 40 mmHg.",
+          "v": false,
+          "e": "FAUX : elle est tombée à 22 mmHg. C'est chez Michel que la PCO₂ monte, jusqu'à 70.",
+          "sourceQuote": "Sa PCO₂ est tombée à 22 mmHg"
+        },
+        {
+          "t": "Le HCO₃⁻ normal de Sophie témoigne d'une compensation rénale déjà en place.",
+          "v": false,
+          "e": "FAUX : un HCO₃⁻ resté normal signifie exactement l'inverse — aucune compensation n'a encore eu lieu.",
+          "sourceQuote": "normal → aucune compensation"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-059-alcalose-respiratoire-sophie.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au mécanisme de l'alcalose respiratoire de Sophie, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "En hyperventilant pendant dix minutes, Sophie a expiré une quantité énorme de CO₂.",
+          "v": true,
+          "e": "VRAI. Elle n'a rien produit et rien perdu d'autre : elle a seulement soufflé beaucoup trop de CO₂.",
+          "sourceQuote": "Sophie a expiré une quantité énorme de CO₂"
+        },
+        {
+          "t": "L'équilibre CO₂ + H₂O ⇌ HCO₃⁻ + H⁺ a été tiré vers la gauche.",
+          "v": true,
+          "e": "VRAI. En manque de CO₂, la réaction consomme des H⁺ pour en reformer : c'est le déplacement vers la gauche.",
+          "sourceQuote": "a été tiré vers la gauche (consommation des H⁺ pour reformer du CO₂ + H₂O)"
+        },
+        {
+          "t": "La disparition de H⁺ fait s'envoler le pH.",
+          "v": true,
+          "e": "VRAI. Moins de H⁺ libres, c'est un pH plus haut : voilà pourquoi hyperventiler alcalinise le sang.",
+          "sourceQuote": "des H⁺ ont disparu → le pH s'envole"
+        },
+        {
+          "t": "Dans ce trouble, c'est le métabolisme qui débloque dans le sens basique.",
+          "v": false,
+          "e": "FAUX : c'est le poumon qui débloque. Le métabolisme n'est pas en cause, et le HCO₃⁻ le montre bien : il est resté normal.",
+          "sourceQuote": "c'est le poumon qui débloque, dans le sens basique cette fois"
+        },
+        {
+          "t": "Le HCO₃⁻ de Sophie est normal parce que le rein a déjà eu le temps d'agir.",
+          "v": false,
+          "e": "FAUX : c'est parce qu'il n'a PAS eu le temps. La compensation rénale demande des heures à des jours, et la crise ne dure que dix minutes.",
+          "sourceQuote": "Le rein, qui pourrait compenser en éliminant un peu de bicarbonate, n'a pas eu le temps d'intervenir"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-059-alcalose-respiratoire-sophie.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux fourmillements de Sophie et à leur mécanisme, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'alcalose brutale fait baisser la fraction de calcium libre dans le sang.",
+          "v": true,
+          "e": "VRAI. C'est ce qu'on appelle une hypocalcémie ionisée fonctionnelle : le calcium n'a pas disparu, il est seulement moins libre.",
+          "sourceQuote": "L'alcalose brutale fait baisser la fraction de calcium libre dans le sang"
+        },
+        {
+          "t": "Quand le pH monte, le Ca²⁺ se lie davantage aux protéines plasmatiques.",
+          "v": true,
+          "e": "VRAI. C'est le mécanisme exact : la montée du pH augmente la liaison du calcium aux protéines, donc réduit sa forme libre.",
+          "sourceQuote": "quand le pH monte, le Ca²⁺ se lie davantage aux protéines plasmatiques"
+        },
+        {
+          "t": "Cette hypocalcémie ionisée fonctionnelle entraîne une dépression neuromusculaire.",
+          "v": false,
+          "e": "FAUX : elle provoque au contraire une hyperexcitabilité neuromusculaire — d'où les paresthésies, les spasmes et les contractures.",
+          "sourceQuote": "provoque une hyperexcitabilité neuromusculaire"
+        },
+        {
+          "t": "Les fourmillements de Sophie témoignent d'un calcium total effondré.",
+          "v": false,
+          "e": "FAUX : le calcium total est normal. C'est sa fraction libre qui baisse, et cette baisse est purement fonctionnelle.",
+          "sourceQuote": "le calcium total, lui, est normal"
+        },
+        {
+          "t": "Ces manifestations persistent même après la normalisation du pH.",
+          "v": false,
+          "e": "FAUX : elles disparaissent dès que le pH revient à la normale. Spectaculaires, mais bénignes et réversibles.",
+          "sourceQuote": "ça disparaît dès que le pH revient à la normale"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-059-alcalose-respiratoire-sophie.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à la prise en charge de Sophie, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le traitement consiste avant tout à ralentir sa respiration.",
+          "v": true,
+          "e": "VRAI. Le médecin la rassure et respire lentement avec elle : quatre secondes à l'inspiration, six à l'expiration.",
+          "sourceQuote": "il faut juste ralentir la respiration de Sophie"
+        },
+        {
+          "t": "En 5 à 10 minutes de respiration contrôlée, la PCO₂ remonte et le pH revient à 7,40.",
+          "v": true,
+          "e": "VRAI. Le trouble se corrige aussi vite qu'il s'est installé, et les fourmillements disparaissent avec lui.",
+          "sourceQuote": "en 5-10 minutes de respiration contrôlée, la PCO₂ remonte, le pH revient à 7,40"
+        },
+        {
+          "t": "Faire respirer dans un sac en papier est aujourd'hui déconseillé, car cela peut masquer une vraie hypoxie.",
+          "v": true,
+          "e": "VRAI. C'était la pratique historique, mais elle a été abandonnée pour ce motif de sécurité.",
+          "sourceQuote": "c'est désormais déconseillé, car ça peut masquer une vraie hypoxie"
+        },
+        {
+          "t": "Un traitement médicamenteux est indispensable dans cette situation.",
+          "v": false,
+          "e": "FAUX : surtout pas de médicament. Le seul geste utile est de faire ralentir la respiration.",
+          "sourceQuote": "Surtout pas de médicament"
+        },
+        {
+          "t": "Sophie sort des urgences sans aucun suivi prévu.",
+          "v": false,
+          "e": "FAUX : elle en sort avec un suivi psychologique, puisque la cause de sa crise est une angoisse.",
+          "sourceQuote": "Sophie sort des urgences avec un suivi psychologique"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-059-alcalose-respiratoire-sophie.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives aux autres situations donnant la même gazométrie que celle de Sophie, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un séjour en altitude peut donner cette gazométrie, le corps hyperventilant pour compenser la baisse d'O₂ dans l'air.",
+          "v": true,
+          "e": "VRAI. L'hyperventilation n'est plus psychogène mais adaptative ; l'effet sur la PCO₂ et le pH reste le même.",
+          "sourceQuote": "séjour en altitude (le corps hyperventile pour compenser la baisse d'O₂ dans l'air)"
+        },
+        {
+          "t": "La grossesse peut donner cette gazométrie, la progestérone stimulant directement la ventilation.",
+          "v": true,
+          "e": "VRAI. C'est une cause hormonale d'hyperventilation, à côté de l'hyperthyroïdie.",
+          "sourceQuote": "grossesse (la progestérone stimule directement la ventilation)"
+        },
+        {
+          "t": "Une hyperventilation iatrogène suppose un respirateur mal réglé qui pousse trop peu d'air.",
+          "v": false,
+          "e": "FAUX : le respirateur mal réglé pousse trop d'air. En pousser trop peu provoquerait l'inverse, une rétention de CO₂.",
+          "sourceQuote": "avec un respirateur mal réglé qui pousse trop d'air"
+        },
+        {
+          "t": "Une anémie sévère provoque une hypoventilation et donc une acidose respiratoire.",
+          "v": false,
+          "e": "FAUX : l'anémie sévère figure parmi les hypoxies compensées par hyperventilation, donc parmi les causes d'alcalose respiratoire.",
+          "sourceQuote": "(le corps hyperventile pour compenser la baisse d'O₂ dans l'air), anémie sévère"
+        },
+        {
+          "t": "Une encéphalopathie ne peut pas être en cause, le centre respiratoire étant indépendant du cerveau.",
+          "v": false,
+          "e": "FAUX : les encéphalopathies figurent bien parmi les causes, précisément parce que l'atteinte cérébrale déstabilise le centre respiratoire.",
+          "sourceQuote": "Encéphalopathies — atteinte cérébrale qui déstabilise le centre respiratoire."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-059-alcalose-respiratoire-sophie.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à ce que l'absence de compensation apprend sur l'ancienneté du trouble, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une gazométrie sans compensation n'est pas une gazométrie ratée : c'est une gazométrie récente.",
+          "v": true,
+          "e": "VRAI. L'absence de compensation est une information à part entière : elle date le trouble.",
+          "sourceQuote": "Une gazométrie sans compensation n'est pas une gazométrie ratée : c'est une gazométrie récente"
+        },
+        {
+          "t": "Devant une alcalose respiratoire, il faut se demander depuis combien de temps cela dure.",
+          "v": true,
+          "e": "VRAI. C'est la question qui permet de prédire l'état du bicarbonate : normal si c'est récent, abaissé si cela dure.",
+          "sourceQuote": "demande-toi toujours depuis combien de temps ça dure"
+        },
+        {
+          "t": "Si l'alcalose respiratoire durait plusieurs jours, on verrait un HCO₃⁻ abaissé.",
+          "v": true,
+          "e": "VRAI. Le rein aurait alors eu le temps d'éliminer du bicarbonate — c'est le cas d'un séjour prolongé en altitude.",
+          "sourceQuote": "il aurait eu le temps d'éliminer du bicarbonate, et tu verrais un HCO₃⁻ abaissé"
+        },
+        {
+          "t": "La compensation rénale d'une alcalose respiratoire consiste à augmenter le HCO₃⁻.",
+          "v": false,
+          "e": "FAUX : puisqu'il faut faire baisser le rapport, la compensation consiste à diminuer le HCO₃⁻, pas à l'augmenter.",
+          "sourceQuote": "Compensation rénale : diminution du HCO₃⁻"
+        },
+        {
+          "t": "Sophie relève d'une alcalose respiratoire chronique compensée.",
+          "v": false,
+          "e": "FAUX : sa crise dure dix minutes et son bicarbonate n'a pas bougé. Il s'agit d'une alcalose respiratoire aiguë non compensée.",
+          "sourceQuote": "Sophie est donc en alcalose respiratoire aiguë non compensée"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-060-lecture-gazometrie-matrice-algorithme.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la matrice croisant l'origine et le sens du trouble, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La matrice croise l'origine (métabolique ou respiratoire) en ligne et le sens (acidose ou alcalose) en colonne.",
+          "v": true,
+          "e": "VRAI. Ce sont les deux coordonnées déjà connues : une ligne, une colonne, et le patient tombe dans une case unique.",
+          "sourceQuote": "l'origine (métabolique ou respiratoire) en ligne, le sens (acidose ou alcalose) en colonne"
+        },
+        {
+          "t": "Lucas occupe la case de l'acidose métabolique, avec un HCO₃⁻ à 12.",
+          "v": true,
+          "e": "VRAI. Son acidocétose fait chuter le numérateur : origine métabolique, sens acidose.",
+          "sourceQuote": "Lucas acidocétose HCO₃⁻ ↓ (12)"
+        },
+        {
+          "t": "Sophie occupe la case de l'alcalose respiratoire, avec une PCO₂ à 22.",
+          "v": true,
+          "e": "VRAI. Sa crise d'angoisse fait chuter le dénominateur : origine respiratoire, sens alcalose.",
+          "sourceQuote": "Sophie angoisse PCO₂ ↓ (22)"
+        },
+        {
+          "t": "Michel occupe la case de l'alcalose respiratoire.",
+          "v": false,
+          "e": "FAUX : Michel est en ACIDOSE respiratoire, avec une PCO₂ montée à 70. L'alcalose respiratoire, c'est la case de Sophie.",
+          "sourceQuote": "Michel BPCO PCO₂ ↑ (70)"
+        },
+        {
+          "t": "Marie se trouve en bas à droite de la matrice.",
+          "v": false,
+          "e": "FAUX : Marie est en haut à droite, dans la case de l'alcalose métabolique. Le bas à droite est occupé par Sophie.",
+          "sourceQuote": "Marie en haut-droite"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-060-lecture-gazometrie-matrice-algorithme.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives au repère des quatre patients-type et aux bornes de la matrice, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les quatre patients-type sont Lucas (céto-acidose), Michel (BPCO), Marie (vomissements) et Sophie (angoisse).",
+          "v": true,
+          "e": "VRAI. Quatre histoires, quatre cases : c'est le repère à retenir pour ranger n'importe quelle gazométrie.",
+          "sourceQuote": "Lucas (céto-acidose), Michel (BPCO), Marie (vomissements), Sophie (angoisse)"
+        },
+        {
+          "t": "Lucas est en haut-gauche et Michel en bas-gauche.",
+          "v": true,
+          "e": "VRAI. Ils partagent la colonne acidose : Lucas sur la ligne métabolique, Michel sur la ligne respiratoire.",
+          "sourceQuote": "Lucas est en haut-gauche, Michel en bas-gauche"
+        },
+        {
+          "t": "La colonne « Acidose » correspond à un pH supérieur à 7,45.",
+          "v": false,
+          "e": "FAUX : l'acidose correspond à un pH inférieur à 7,35. Au-dessus de 7,45, on est du côté de l'alcalose.",
+          "sourceQuote": "Acidose pH < 7,35"
+        },
+        {
+          "t": "Sophie est placée en haut-droite de la matrice.",
+          "v": false,
+          "e": "FAUX : Sophie est en bas-droite. Le haut-droite est la case de Marie, l'alcalose métabolique.",
+          "sourceQuote": "Sophie en bas-droite"
+        },
+        {
+          "t": "La ligne « Métabolique » regroupe Michel et Sophie.",
+          "v": false,
+          "e": "FAUX : la ligne métabolique regroupe Lucas et Marie. Michel et Sophie sont sur la ligne respiratoire.",
+          "sourceQuote": "Métabolique Lucas acidocétose HCO₃⁻ ↓ (12) Marie vomissements HCO₃⁻ ↑ (34)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-060-lecture-gazometrie-matrice-algorithme.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives aux deux premiers temps de l'algorithme de lecture, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le premier temps consiste à regarder le pH, qui donne le sens du trouble.",
+          "v": true,
+          "e": "VRAI. C'est toujours la première question, et elle décide de la colonne dans laquelle on cherchera ensuite.",
+          "sourceQuote": "Regarde le pH. Il donne le sens."
+        },
+        {
+          "t": "Un pH normal accompagné d'un HCO₃⁻ et d'une PCO₂ anormaux signe un trouble compensé ou mixte.",
+          "v": true,
+          "e": "VRAI. Un pH normal ne suffit pas à écarter un trouble : il peut simplement avoir été ramené dans la plage par la compensation.",
+          "sourceQuote": "pH normal mais HCO₃⁻ et PCO₂ anormaux → trouble compensé (ou mixte)"
+        },
+        {
+          "t": "Le paramètre primaire est celui qui pousse le pH du côté où on vient de le trouver, et c'est lui qui donne l'origine.",
+          "v": true,
+          "e": "VRAI. C'est le deuxième temps : parmi les deux chiffres, on cherche celui qui explique le sens déjà lu sur le pH.",
+          "sourceQuote": "C'est le paramètre primaire (celui qui pousse le pH du côté où tu viens de le trouver), et c'est lui qui donne l'origine."
+        },
+        {
+          "t": "Une acidose accompagnée d'une PCO₂ élevée oriente vers une acidose métabolique.",
+          "v": false,
+          "e": "FAUX : acidose plus PCO₂ élevée donne une acidose RESPIRATOIRE. L'acidose métabolique correspond à un HCO₃⁻ abaissé.",
+          "sourceQuote": "Acidose + PCO₂ ↑ → acidose respiratoire."
+        },
+        {
+          "t": "Une alcalose accompagnée d'un HCO₃⁻ élevé oriente vers une alcalose respiratoire.",
+          "v": false,
+          "e": "FAUX : alcalose plus HCO₃⁻ élevé donne une alcalose MÉTABOLIQUE. L'alcalose respiratoire correspond à une PCO₂ abaissée.",
+          "sourceQuote": "Alcalose + HCO₃⁻ ↑ → alcalose métabolique."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-060-lecture-gazometrie-matrice-algorithme.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux troisième et quatrième temps de l'algorithme, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Si l'autre paramètre est anormal dans le sens compensateur, le trouble est partiellement compensé.",
+          "v": true,
+          "e": "VRAI. C'est le troisième temps : une fois le paramètre primaire identifié, on regarde ce que fait le second.",
+          "sourceQuote": "S'il l'est, le trouble est partiellement compensé"
+        },
+        {
+          "t": "Le quatrième temps consiste à chercher la cause clinique en cohérence avec le terrain du patient.",
+          "v": true,
+          "e": "VRAI. Diabétique, BPCO, vomissements, angoisse : c'est le terrain qui referme le raisonnement.",
+          "sourceQuote": "Cherche la cause clinique en cohérence avec le terrain du patient"
+        },
+        {
+          "t": "Chez Lucas, c'est le rein qui a compensé en faisant monter le HCO₃⁻ à 32.",
+          "v": false,
+          "e": "FAUX : chez Lucas, c'est le poumon qui a compensé, en faisant tomber la PCO₂ à 22. Le HCO₃⁻ à 32 est celui de Michel.",
+          "sourceQuote": "Chez Lucas (acidose métabolique), la PCO₂ est tombée à 22 : le poumon a compensé."
+        },
+        {
+          "t": "Les trois premières questions de l'algorithme se posent simultanément.",
+          "v": false,
+          "e": "FAUX : elles sont séquentielles, jamais simultanées. Chaque réponse fait descendre d'un cran vers une seule case.",
+          "sourceQuote": "les trois premières questions, séquentielles, jamais simultanées"
+        },
+        {
+          "t": "La cause du trouble se lit directement sur la gazométrie.",
+          "v": false,
+          "e": "FAUX : la cause ne s'y lit pas. Elle se cherche sur le terrain du patient, une fois la case identifiée.",
+          "sourceQuote": "la cause, ne se lit pas sur la gazométrie : il se cherche sur le terrain du patient"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-060-lecture-gazometrie-matrice-algorithme.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au déroulé de l'algorithme sur le cas de la patiente de 22 ans, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Avec un pH à 7,52, l'étape 1 conclut à une alcalose.",
+          "v": true,
+          "e": "VRAI. 7,52 dépasse 7,45 : le sens est donné, et il reste à trouver l'origine.",
+          "sourceQuote": "7,52 > 7,45 → alcalose"
+        },
+        {
+          "t": "Une PCO₂ à 25 mmHg contre 40 normalement oriente vers une origine respiratoire.",
+          "v": true,
+          "e": "VRAI. C'est le paramètre qui pousse le pH vers le haut : il est primaire, et il désigne le poumon.",
+          "sourceQuote": "PCO₂ = 25 mmHg (vs 40 normal) → ↓ PCO₂ → origine respiratoire"
+        },
+        {
+          "t": "Un HCO₃⁻ encore normal signe un trouble non compensé.",
+          "v": true,
+          "e": "VRAI. Le rein n'a pas eu le temps d'intervenir : sa compensation demande des heures à des jours.",
+          "sourceQuote": "HCO₃⁻ est encore normal → trouble non compensé"
+        },
+        {
+          "t": "Le diagnostic final retenu est une acidose métabolique aiguë.",
+          "v": false,
+          "e": "FAUX : le diagnostic est une alcalose respiratoire aiguë non compensée d'origine psychogène.",
+          "sourceQuote": "alcalose respiratoire aiguë non compensée d'origine psychogène"
+        },
+        {
+          "t": "Cette patiente se range dans la case en haut à gauche de la matrice, celle de Lucas.",
+          "v": false,
+          "e": "FAUX : elle se range en bas à droite, dans la case de Sophie. Le haut-gauche est la case de Lucas, l'acidose métabolique.",
+          "sourceQuote": "Case en bas à droite : celle de Sophie."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-060-lecture-gazometrie-matrice-algorithme.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la comparaison entre Lucas et Sophie, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Lucas et Sophie ont exactement la même PCO₂ effondrée, à 22 mmHg.",
+          "v": true,
+          "e": "VRAI. Un chiffre identique chez deux patients dont les troubles sont pourtant opposés : c'est tout l'intérêt de la comparaison.",
+          "sourceQuote": "Lucas et Sophie ont exactement la même PCO₂ effondrée à 22 mmHg"
+        },
+        {
+          "t": "Ce qui les sépare, c'est le pH : 7,15 chez l'un, 7,55 chez l'autre.",
+          "v": true,
+          "e": "VRAI. Le pH tranche là où la PCO₂ ne dit rien : chez Lucas la PCO₂ basse compense, chez Sophie elle cause.",
+          "sourceQuote": "Ce qui les sépare, c'est le pH : 7,15 chez Lucas, 7,55 chez Sophie."
+        },
+        {
+          "t": "Il faut regarder le HCO₃⁻ ou la PCO₂ avant de regarder le pH.",
+          "v": false,
+          "e": "FAUX : c'est toujours le pH en premier. Sans lui, on ne sait pas si un chiffre anormal est une cause ou une compensation.",
+          "sourceQuote": "Toujours le pH en premier, jamais le HCO₃⁻ ou la PCO₂."
+        },
+        {
+          "t": "Un chiffre isolé suffit à identifier le trouble en cause.",
+          "v": false,
+          "e": "FAUX : un chiffre isolé ne dit rien tant qu'on n'a pas le sens du trouble, c'est-à-dire le pH.",
+          "sourceQuote": "Un chiffre isolé ne dit rien tant que tu n'as pas le sens du trouble."
+        },
+        {
+          "t": "Lucas et Sophie relèvent tous deux d'un trouble respiratoire, puisque leur PCO₂ est identique.",
+          "v": false,
+          "e": "FAUX : l'un est en acidose métabolique, l'autre en alcalose respiratoire. La même PCO₂ ne fait pas la même origine.",
+          "sourceQuote": "l'un est en acidose métabolique, l'autre en alcalose respiratoire"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-060-lecture-gazometrie-matrice-algorithme.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives au diagramme de Davenport et au piège du pH normal, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le diagramme de Davenport représente le [HCO₃⁻] en fonction du pH, avec les isobares de PCO₂.",
+          "v": true,
+          "e": "VRAI. C'est la représentation graphique synthétique des quatre troubles, dont la maîtrise n'est pas exigée ici.",
+          "sourceQuote": "le graphe du [HCO₃⁻] en fonction du pH, sur lequel on trace les isobares de PCO₂"
+        },
+        {
+          "t": "L'algorithme en quatre temps suffit à interpréter 95 % des gazométries en clinique courante.",
+          "v": true,
+          "e": "VRAI. C'est pourquoi il vaut mieux le maîtriser parfaitement plutôt que de se perdre dans le diagramme de Davenport.",
+          "sourceQuote": "l'algorithme ci-dessus suffit déjà pour interpréter 95 % des gazométries en clinique courante"
+        },
+        {
+          "t": "Un pH normal permet d'affirmer qu'il n'y a aucun trouble acido-basique.",
+          "v": false,
+          "e": "FAUX : si le HCO₃⁻ et la PCO₂ sont tous deux anormaux, il y a bel et bien un trouble — simplement compensé, ou mixte.",
+          "sourceQuote": "Un pH normal ne veut pas dire « tout va bien »"
+        },
+        {
+          "t": "Les isobares de PCO₂ relient les points de même pH.",
+          "v": false,
+          "e": "FAUX : ce sont les courbes qui relient les points de même PCO₂ — c'est le sens même du mot isobare.",
+          "sourceQuote": "les isobares de PCO₂ (les courbes qui relient les points de même PCO₂)"
+        },
+        {
+          "t": "Devant un pH anormal aux urgences, on dispose de plusieurs heures pour identifier le type de trouble.",
+          "v": false,
+          "e": "FAUX : il faut l'identifier en moins d'une minute, car c'est cette identification qui oriente le traitement.",
+          "sourceQuote": "on doit en moins d'une minute identifier le type de trouble pour orienter le traitement"
+        }
+      ]
+    }
+  ]
+}

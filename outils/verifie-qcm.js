@@ -50,7 +50,7 @@ const fichiers = (!cible || cible === '--tout')
   : [path.basename(cible)];
 
 let nQ = 0, nI = 0, ok = 0, ancreKO = 0, sansAncre = 0, ficheKO = 0, pas5 = 0, vraies = 0;
-const repartition = {}; let zeroVrai = 0;   /* de 1 à 5 vrais est légitime ; 0 vrai ne l'est pas */
+const repartition = {}; let zeroVrai = 0; const suite = [];   /* de 1 à 5 vrais est légitime ; 0 vrai ne l'est pas */
 const rejets = [];
 /* un lot = un QCM de cinq items. Sept lots par fiche : 1-2 gratuit, 3-5 pack, 6-7 arène.
    On vérifie ici que chaque fiche servie a bien ses sept lots, une fois chacun. */
@@ -67,7 +67,7 @@ fichiers.forEach(nom => {
     if (!t || !t[0]) { ficheKO++; rejets.push({ nom, k, cause: 'fiche introuvable : ' + q.fiche }); return; }
     if (!q.items || q.items.length !== 5) { pas5++; rejets.push({ nom, k, cause: (q.items || []).length + ' items au lieu de 5' }); return; }
     { const nv = q.items.filter(i => i.v || i.isCorrect).length;
-      vraies += nv; repartition[nv] = (repartition[nv] || 0) + 1;
+      vraies += nv; repartition[nv] = (repartition[nv] || 0) + 1; suite.push(nv);
       if (nv === 0) zeroVrai++; }
     let bon = true;
     q.items.forEach((it, n) => {
@@ -103,6 +103,16 @@ if (nQ) { const moy = vraies / nQ;
   console.log('    éventail des vrais par QCM                           : ' + eventail);
   console.log('    écart à un éventail équilibré                        : ' + Math.round(100 * ecart) + ' %' +
     (ecart > 0.35 ? '  ⚠ trop concentré — varie de 1 à 5' : ecart > 0.2 ? '  ⚠ à ouvrir un peu' : '  ✓'));
+  /* UNE PROPORTION JUSTE PEUT RESTER DEVINABLE : 1,2,3,4,5,1,2,3,4,5… donne 20 % partout et
+     s'anticipe au premier coup d'œil. On cherche donc si la suite se répète à période courte. */
+  let cycle = 0;
+  for (let p = 1; p <= 5 && !cycle; p++) {
+    if (suite.length < p * 3) continue;
+    let bons = 0;
+    for (let i = p; i < suite.length; i++) if (suite[i] === suite[i - p]) bons++;
+    if (bons / (suite.length - p) >= 0.9) cycle = p;
+  }
+  if (cycle) console.log('    ⚠ suite prévisible : elle se répète tous les ' + cycle + ' QCM — il faut du vrai hasard');
   if (zeroVrai) console.log('    QCM sans aucun item vrai                             : ' + zeroVrai + '  ⚠ à corriger');
 }
 

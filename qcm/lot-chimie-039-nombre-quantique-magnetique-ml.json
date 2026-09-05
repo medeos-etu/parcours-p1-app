@@ -1,0 +1,1644 @@
+{
+  "matiere": "chimie",
+  "chapitre": 2,
+  "questions": [
+    {
+      "fiche": "chimie-039-nombre-quantique-magnetique-ml.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives au rôle du nombre quantique magnétique mₗ et à ce que désigne une notation comme « 2p », laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "mₗ détermine l'orientation de l'orbitale dans l'espace.",
+          "v": true,
+          "e": "VRAI. C'est exactement sa fonction : une fois la couche et la forme fixées, mₗ dit dans quel sens l'orbitale est posée dans l'espace, sur l'axe x, y ou z par exemple.",
+          "sourceQuote": "détermine l'orientation de l'orbitale dans l'espace"
+        },
+        {
+          "t": "La notation « 2p » désigne une orbitale atomique unique.",
+          "v": false,
+          "e": "FAUX : « 2p » ne désigne pas une orbitale mais une famille d'orbitales, c'est-à-dire une sous-couche. Il y en a trois qui se cachent derrière cette écriture.",
+          "sourceQuote": "« 2p » ne désigne pas une orbitale"
+        },
+        {
+          "t": "Les orbitales d'une même sous-couche p ont toutes la même forme en deux lobes et ne diffèrent que par leur place dans l'espace.",
+          "v": true,
+          "e": "VRAI. C'est le seul point qui les sépare : forme identique, orientation différente. D'où l'utilité d'un nombre quantique dédié à l'orientation.",
+          "sourceQuote": "qui ont toutes la même forme en deux lobes et qui ne diffèrent que sur un point : leur place dans l'espace"
+        },
+        {
+          "t": "C'est le nombre quantique l qui fixe l'orientation de l'orbitale, et mₗ qui en donne la forme.",
+          "v": false,
+          "e": "FAUX : les deux rôles sont inversés. l donne la forme de l'orbitale et décide des sous-couches qui existent ; c'est mₗ qui donne l'orientation.",
+          "sourceQuote": "l donne la forme de l'orbitale et décide des sous-couches qui existent"
+        },
+        {
+          "t": "mₗ est le deuxième nombre quantique de la série.",
+          "v": false,
+          "e": "FAUX : mₗ est le troisième. Il vient après n, qui donne la couche, et après l, qui donne la forme.",
+          "sourceQuote": "C'est le rôle du troisième nombre quantique"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-039-nombre-quantique-magnetique-ml.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux valeurs que peut prendre mₗ et à leur nombre, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "mₗ prend toutes les valeurs entières de −l à +l, en passant par 0.",
+          "v": true,
+          "e": "VRAI. C'est la définition même de mₗ : on part de −l, on monte jusqu'à +l, et le 0 fait partie du trajet.",
+          "sourceQuote": "mₗ va de −l jusqu'à +l, en passant par 0"
+        },
+        {
+          "t": "Le nombre de valeurs possibles de mₗ vaut (2l+1).",
+          "v": true,
+          "e": "VRAI. En comptant de −l à +l, 0 compris, on obtient toujours (2l+1) valeurs.",
+          "sourceQuote": "Il y a donc (2l+1) valeurs possibles"
+        },
+        {
+          "t": "Le nombre d'orbitales d'une sous-couche est égal au nombre de valeurs que peut prendre mₗ.",
+          "v": true,
+          "e": "VRAI. À chaque valeur de mₗ correspond une orbitale : autant de valeurs, autant d'orbitales, soit (2l+1) par sous-couche.",
+          "sourceQuote": "(2l+1) valeurs possibles → et (2l+1) orbitales par sous-couche"
+        },
+        {
+          "t": "La valeur mₗ = 0 n'existe que pour les sous-couches de type s.",
+          "v": false,
+          "e": "FAUX : la valeur 0 apparaît pour toutes les sous-couches, puisque mₗ part de −l et monte jusqu'à +l en traversant 0. Pour une sous-couche p, par exemple, on a bien −1, 0 et +1.",
+          "sourceQuote": "mₗ va de −1 à +1 → mₗ = −1, 0, +1"
+        },
+        {
+          "t": "Le nombre de valeurs possibles de mₗ est toujours un nombre pair.",
+          "v": false,
+          "e": "FAUX : il est toujours impair. En comptant les valeurs négatives, la valeur 0 et les valeurs positives, on tombe forcément sur (2l+1), qui est impair.",
+          "sourceQuote": "le compte tombe toujours sur un nombre impair, (2l+1)"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-039-nombre-quantique-magnetique-ml.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives aux sous-couches de type s et de type p, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Pour une sous-couche de type s, l = 0 et mₗ ne peut valoir que 0.",
+          "v": true,
+          "e": "VRAI. Avec l = 0, mₗ va de −0 à +0 : il n'existe qu'une seule valeur possible, 0.",
+          "sourceQuote": "Type s (l = 0). mₗ va de −0 à +0 → mₗ = 0 seulement"
+        },
+        {
+          "t": "Il n'existe qu'une seule orbitale s, car la sphère ne peut pas s'orienter différemment.",
+          "v": true,
+          "e": "VRAI. Une seule valeur de mₗ, donc une seule orbitale : une sphère a beau tourner, elle reste identique à elle-même.",
+          "sourceQuote": "1 seule orbitale s (la sphère ne peut pas s'orienter différemment)"
+        },
+        {
+          "t": "La sous-couche de type p compte 2 orbitales, correspondant aux valeurs mₗ = −1 et mₗ = +1.",
+          "v": false,
+          "e": "FAUX : elle en compte 3. Oublier la valeur mₗ = 0 est l'erreur de comptage classique : les valeurs sont −1, 0 et +1, soit 2(1)+1 = 3.",
+          "sourceQuote": "mₗ = −1, 0, +1. Nombre de valeurs = 2(1)+1 = 3"
+        },
+        {
+          "t": "Sur le schéma de la sous-couche 2p, les trois orbitales ont chacune une forme différente.",
+          "v": false,
+          "e": "FAUX : c'est trois fois la même forme en deux lobes. Ce qui change, c'est l'axe sur lequel elle est posée, pas la forme elle-même.",
+          "sourceQuote": "trois fois exactement la même forme en deux lobes, mais posée sur un axe différent à chaque fois"
+        },
+        {
+          "t": "Dans une sous-couche de type p, chacune des trois orbitales correspond à une valeur différente de mₗ.",
+          "v": true,
+          "e": "VRAI. Une valeur de mₗ, une orbitale : −1, 0 et +1 donnent les trois orbitales de la sous-couche.",
+          "sourceQuote": "une orbitale par valeur de mₗ"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-039-nombre-quantique-magnetique-ml.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux sous-couches de type d et de type f, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Pour une sous-couche de type d, l = 2 et mₗ prend les valeurs −2, −1, 0, +1 et +2.",
+          "v": true,
+          "e": "VRAI. On déroule de −2 à +2 sans oublier le 0 : cinq valeurs en tout.",
+          "sourceQuote": "Type d (l = 2). mₗ va de −2 à +2 → mₗ = −2, −1, 0, +1, +2"
+        },
+        {
+          "t": "Le calcul 2l+1 appliqué à l = 2 donne 4 orbitales d.",
+          "v": false,
+          "e": "FAUX : 2(2)+1 = 5. Une sous-couche d contient donc 5 orbitales, pas 4.",
+          "sourceQuote": "Nombre de valeurs = 2(2)+1 = 5. Conclusion : 5 orbitales d"
+        },
+        {
+          "t": "Une sous-couche de type f compte 5 orbitales, comme une sous-couche de type d.",
+          "v": false,
+          "e": "FAUX : une sous-couche f en compte 7, car 2(3)+1 = 7. Les 5 orbitales sont celles de la sous-couche d.",
+          "sourceQuote": "Nombre de valeurs = 2(3)+1 = 7"
+        },
+        {
+          "t": "Une sous-couche de type f correspond à l = 3, et mₗ y varie de −3 à +3.",
+          "v": true,
+          "e": "VRAI. La lettre f correspond à l = 3 : mₗ court alors de −3 à +3, ce qui fait sept valeurs.",
+          "sourceQuote": "Type f (l = 3). mₗ va de −3 à +3"
+        },
+        {
+          "t": "Une sous-couche de type d compte davantage d'orbitales qu'une sous-couche de type f.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. La sous-couche d en compte 5, la sous-couche f en compte 7. Plus l augmente, plus le nombre d'orbitales augmente.",
+          "sourceQuote": "Conclusion : 7 orbitales f"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-039-nombre-quantique-magnetique-ml.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à la sous-couche 4f prise comme exemple complet, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La sous-couche 4f correspond à n = 4 et l = 3.",
+          "v": true,
+          "e": "VRAI. Le chiffre 4 donne la couche, la lettre f correspond à l = 3.",
+          "sourceQuote": "la sous-couche 4f (n=4, l=3)"
+        },
+        {
+          "t": "Elle contient 7 orbitales 4f différentes.",
+          "v": true,
+          "e": "VRAI. Avec l = 3, on obtient 2(3)+1 = 7 orbitales, toutes de forme f mais orientées différemment dans l'espace.",
+          "sourceQuote": "contient donc 7 orbitales 4f différentes, toutes de forme f mais orientées différemment dans l'espace"
+        },
+        {
+          "t": "Chaque orbitale 4f peut accueillir au maximum 3 électrons.",
+          "v": false,
+          "e": "FAUX : chaque orbitale accueille au maximum 2 électrons, pas 3. C'est cette limite de deux qui permet ensuite tous les comptages.",
+          "sourceQuote": "Chacune peut accueillir 2 électrons"
+        },
+        {
+          "t": "La sous-couche 4f peut donc accueillir au maximum 14 électrons.",
+          "v": true,
+          "e": "VRAI. Sept orbitales, deux électrons chacune : 7 × 2 = 14 électrons au maximum.",
+          "sourceQuote": "maximum 14 électrons dans 4f"
+        },
+        {
+          "t": "Les 7 orbitales 4f se distinguent les unes des autres par leur forme, chacune ayant une géométrie propre.",
+          "v": false,
+          "e": "FAUX : elles ont toutes la même forme, celle d'une orbitale f. Ce qui les distingue, c'est uniquement leur orientation dans l'espace.",
+          "sourceQuote": "toutes de forme f mais orientées différemment dans l'espace"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-039-nombre-quantique-magnetique-ml.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à ce dont dépend, ou non, le nombre d'orbitales d'une sous-couche, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le nombre d'orbitales d'une sous-couche dépend uniquement de la lettre, jamais du chiffre placé devant.",
+          "v": true,
+          "e": "VRAI. La formule (2l+1) ne fait intervenir que l, c'est-à-dire la lettre. Le numéro de couche n'y figure pas.",
+          "sourceQuote": "Le nombre d'orbitales dépend donc uniquement de la lettre, jamais du chiffre devant"
+        },
+        {
+          "t": "Les sous-couches 2p, 3p et 4p n'ont pas le même nombre d'orbitales.",
+          "v": false,
+          "e": "FAUX : elles en ont chacune 3. La lettre p impose l = 1, donc 2(1)+1 = 3 orbitales, quel que soit le chiffre devant.",
+          "sourceQuote": "2p, 3p et 4p ont chacune 3 orbitales"
+        },
+        {
+          "t": "Une sous-couche 5f compte davantage d'orbitales qu'une sous-couche 4f.",
+          "v": false,
+          "e": "FAUX : toutes deux en comptent 7. Changer le numéro de couche ne change pas le nombre d'orbitales.",
+          "sourceQuote": "une sous-couche f en a 7, qu'elle soit 4f ou 5f"
+        },
+        {
+          "t": "La formule qui donne le nombre d'orbitales d'une sous-couche fait intervenir à la fois n et l.",
+          "v": false,
+          "e": "FAUX : elle ne contient que l. C'est précisément pour cela que le numéro de couche n'a aucune influence sur le compte.",
+          "sourceQuote": "regarde bien la formule — elle ne contient que l"
+        },
+        {
+          "t": "Pour compter les orbitales, il faut dérouler les valeurs de mₗ de −l à +l sans oublier le 0.",
+          "v": true,
+          "e": "VRAI. C'est le premier réflexe : on énumère toutes les valeurs, la valeur 0 comprise, sans quoi il manque toujours une orbitale au compte.",
+          "sourceQuote": "déroule les valeurs de −l à +l sans oublier le 0"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-039-nombre-quantique-magnetique-ml.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à l'image de l'appartement, au triplet (n, l, mₗ) et à l'erreur d'oubli de la valeur 0, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans l'image retenue, mₗ correspond à la pièce dans l'appartement.",
+          "v": true,
+          "e": "VRAI. L'immeuble se lit par étages : n donne l'étage, l l'appartement, et mₗ la pièce dans laquelle on se trouve.",
+          "sourceQuote": "mₗ = 🛋️ La pièce dans l'appartement"
+        },
+        {
+          "t": "Dans cette même image, l'étage et l'appartement sont déjà fixés par n et l.",
+          "v": true,
+          "e": "VRAI. Quand on arrive à mₗ, les deux premiers niveaux de l'adresse sont déjà posés : il ne reste plus qu'à préciser la pièce.",
+          "sourceQuote": "L'étage et l'appartement sont déjà fixés par n et l"
+        },
+        {
+          "t": "Un triplet (n, l, mₗ) désigne une sous-couche entière, et non une orbitale précise.",
+          "v": false,
+          "e": "FAUX : le triplet identifie une orbitale atomique unique. C'est la lecture complète de l'adresse : étage, appartement, pièce.",
+          "sourceQuote": "chaque triplet (n, l, mₗ) identifie une OA unique"
+        },
+        {
+          "t": "Annoncer 2 orbitales pour l = 1 est correct dès lors que l'on ne compte que les valeurs non nulles de mₗ.",
+          "v": false,
+          "e": "FAUX : il y en a 3. Écarter la valeur mₗ = 0 est justement le piège de comptage à éviter.",
+          "sourceQuote": "oublier la valeur mₗ = 0 et annoncer 2 orbitales pour l = 1 au lieu de 3"
+        },
+        {
+          "t": "En plus de l'orientation, mₗ permet de savoir combien d'orbitales contient une sous-couche.",
+          "v": true,
+          "e": "VRAI. C'est sa double utilité : il dit dans quel sens l'orbitale est orientée, et le nombre de ses valeurs donne directement le nombre d'orbitales.",
+          "sourceQuote": "mₗ dit dans quel sens elle est orientée — et donc combien il y en a"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-040-nombre-quantique-spin.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à ce que décrit le quatrième nombre quantique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le spin caractérise la rotation propre de l'électron sur lui-même.",
+          "v": true,
+          "e": "VRAI. C'est sa définition : il ne parle pas du logement, mais du mouvement propre de l'électron.",
+          "sourceQuote": "il caractérise la rotation propre de l'électron sur lui-même"
+        },
+        {
+          "t": "Le spin se note s, ou encore mₛ.",
+          "v": true,
+          "e": "VRAI. Les deux notations désignent la même grandeur, le quatrième nombre quantique.",
+          "sourceQuote": "le spin, noté s (ou mₛ)"
+        },
+        {
+          "t": "Le spin est le troisième nombre quantique.",
+          "v": false,
+          "e": "FAUX : il est le quatrième. Les trois premiers sont n, l et mₗ, qui décrivent l'orbitale.",
+          "sourceQuote": "C'est le rôle du quatrième nombre quantique"
+        },
+        {
+          "t": "Le spin décrit l'orbitale, au même titre que n, l et mₗ.",
+          "v": false,
+          "e": "FAUX : il est justement le seul des quatre à ne pas parler de l'orbitale. Les trois autres décrivent le logement, lui décrit l'occupant.",
+          "sourceQuote": "C'est le seul des quatre qui ne parle pas de l'orbitale"
+        },
+        {
+          "t": "Le spin décrit l'électron qui occupe l'orbitale.",
+          "v": true,
+          "e": "VRAI. C'est la répartition des rôles : n, l et mₗ décrivent l'orbitale ; le spin décrit celui qui l'habite.",
+          "sourceQuote": "Le spin, lui, décrit l'électron qui l'occupe"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-040-nombre-quantique-spin.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux valeurs que peut prendre le spin, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le spin ne peut prendre que deux valeurs.",
+          "v": true,
+          "e": "VRAI. Deux valeurs, et deux seulement : c'est l'une ou l'autre, il n'y a rien d'autre à retenir sur ce point.",
+          "sourceQuote": "Deux valeurs possibles, et deux seulement"
+        },
+        {
+          "t": "Le spin « down » est représenté par une flèche dirigée vers le bas.",
+          "v": true,
+          "e": "VRAI. Le spin « down » se dessine ↓, flèche vers le bas ; le spin « up » se dessine ↑, flèche vers le haut.",
+          "sourceQuote": "spin « down » (la flèche vers le bas, ↓)"
+        },
+        {
+          "t": "Une valeur de spin égale à 0 est possible pour un électron seul dans son orbitale.",
+          "v": false,
+          "e": "FAUX : dès qu'apparaît une valeur autre que +1/2 ou −1/2, la proposition est fausse. Un électron seul a bien un spin, +1/2 ou −1/2.",
+          "sourceQuote": "s'il apparaît une valeur autre que +1/2 ou −1/2, même réflexe"
+        },
+        {
+          "t": "Le spin peut prendre trois valeurs : +1/2, 0 et −1/2.",
+          "v": false,
+          "e": "FAUX : il n'y a que deux valeurs, +1/2 et −1/2. Aucune valeur intermédiaire n'existe.",
+          "sourceQuote": "Il n'y a rien d'autre à retenir sur les valeurs : c'est l'une ou l'autre."
+        },
+        {
+          "t": "Les termes « up » et « down » désignent respectivement la flèche vers le bas et la flèche vers le haut.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. « Up » correspond à la flèche vers le haut, « down » à la flèche vers le bas.",
+          "sourceQuote": "On les appelle spin « up » (la flèche vers le haut, ↑) et spin « down » (la flèche vers le bas, ↓)"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-040-nombre-quantique-spin.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au nombre d'électrons que peut contenir une orbitale atomique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une orbitale peut être vide, à moitié occupée ou pleine.",
+          "v": true,
+          "e": "VRAI. Ce sont les trois états possibles d'une orbitale : aucun électron, un seul, ou deux.",
+          "sourceQuote": "Une orbitale peut être vide, à moitié occupée ou pleine"
+        },
+        {
+          "t": "L'orbitale 1s peut contenir 0, 1 ou 2 électrons.",
+          "v": true,
+          "e": "VRAI. Comme toute orbitale, elle accepte zéro, un ou deux électrons.",
+          "sourceQuote": "elle peut contenir 0, 1 ou 2 électrons"
+        },
+        {
+          "t": "Une orbitale peut accueillir trois électrons à condition que leurs spins soient tous différents.",
+          "v": false,
+          "e": "FAUX : jamais trois. La limite est de deux électrons par orbitale, quel que soit leur spin.",
+          "sourceQuote": "0, 1 ou 2 électrons. Jamais trois"
+        },
+        {
+          "t": "Une orbitale contenant un seul électron correspond à une situation impossible.",
+          "v": false,
+          "e": "FAUX : un électron seul dans son orbitale est parfaitement possible. C'est l'état « à moitié occupé ».",
+          "sourceQuote": "1 électron, seul dans l'orbitale"
+        },
+        {
+          "t": "Une orbitale vide, contenant 0 électron, est une situation possible.",
+          "v": true,
+          "e": "VRAI. Une orbitale peut très bien n'accueillir aucun électron : elle existe, elle est simplement inoccupée.",
+          "sourceQuote": "orbitale vide, 0 électron"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-040-nombre-quantique-spin.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux spins de deux électrons logés dans une même orbitale, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Deux électrons logés dans la même orbitale ont obligatoirement des spins opposés.",
+          "v": true,
+          "e": "VRAI. S'ils sont deux dans la même orbitale, l'un est à +1/2 et l'autre à −1/2 : c'est ↑↓, sans exception.",
+          "sourceQuote": "Deux électrons dans 1s : obligatoirement ↑↓, c'est-à-dire un +1/2 et un −1/2"
+        },
+        {
+          "t": "Que les deux spins soient opposés relève d'une simple préférence.",
+          "v": false,
+          "e": "FAUX : ce n'est pas une préférence mais une obligation. Deux électrons de même sens dans une même orbitale sont impossibles.",
+          "sourceQuote": "Ce n'est pas une préférence, c'est une obligation"
+        },
+        {
+          "t": "Deux électrons de même spin peuvent cohabiter dans une même orbitale si celle-ci est de type p.",
+          "v": false,
+          "e": "FAUX : l'interdiction ne dépend pas du type d'orbitale. Deux électrons de même spin dans une même orbitale sont impossibles, quelle qu'elle soit.",
+          "sourceQuote": "On ne peut pas avoir deux électrons de même spin dans la même OA"
+        },
+        {
+          "t": "Cette interdiction porte le nom de principe d'exclusion de Pauli.",
+          "v": true,
+          "e": "VRAI. C'est le principe d'exclusion de Pauli qui interdit deux électrons de même spin dans une même orbitale.",
+          "sourceQuote": "c'est interdit par le principe d'exclusion de Pauli"
+        },
+        {
+          "t": "D'après le tableau des cases, une orbitale contenant ↑↑ correspond à une situation autorisée.",
+          "v": false,
+          "e": "FAUX : c'est la seule ligne interdite du tableau. Deux électrons de même spin dans une même case ne sont pas permis.",
+          "sourceQuote": "2 électrons de même spin ❌ interdit"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-040-nombre-quantique-spin.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au caractère intrinsèque du spin, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le spin est une propriété intrinsèque de l'électron.",
+          "v": true,
+          "e": "VRAI. L'électron « l'a en lui » : le spin ne lui vient pas de l'orbitale qu'il occupe.",
+          "sourceQuote": "Le spin est une propriété intrinsèque de l'électron"
+        },
+        {
+          "t": "La valeur du spin dépend de la couche sur laquelle se trouve l'électron.",
+          "v": false,
+          "e": "FAUX : le spin ne dépend ni de n, ni de l, ni de mₗ. Changer de couche ne change rien à son spin.",
+          "sourceQuote": "Le spin ne dépend ni de n, ni de l, ni de mₗ"
+        },
+        {
+          "t": "L'orientation de l'orbitale modifie la valeur du spin de l'électron qui l'occupe.",
+          "v": false,
+          "e": "FAUX : ni la couche, ni la forme, ni l'orientation de l'orbitale n'ont d'effet sur le spin.",
+          "sourceQuote": "ni la couche, ni la forme, ni l'orientation de l'orbitale n'y changent quoi que ce soit"
+        },
+        {
+          "t": "Le spin appartient à l'électron lui-même, et non à l'orbitale.",
+          "v": true,
+          "e": "VRAI. C'est le point à retenir : l'orbitale se décrit par n, l et mₗ ; le spin, lui, est une propriété de l'électron.",
+          "sourceQuote": "C'est une propriété qui appartient à l'électron lui-même, pas à l'orbitale"
+        },
+        {
+          "t": "Une proposition qui fait dépendre le spin de la forme de l'orbitale peut être exacte selon les cas.",
+          "v": false,
+          "e": "FAUX : une telle proposition est fausse, sans exception. Le spin n'appartient pas à l'orbitale, donc rien de ce qui la décrit ne le détermine.",
+          "sourceQuote": "Si elle fait dépendre le spin de la couche (n), de la forme (l) ou de l'orientation (mₗ) de l'orbitale, elle est fausse"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-040-nombre-quantique-spin.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la distinction entre le nombre d'électrons d'une orbitale et leur sens de spin, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Placer deux électrons dans une même orbitale est permis.",
+          "v": true,
+          "e": "VRAI. Deux électrons dans une même orbitale, c'est autorisé : c'est même l'état plein normal d'une orbitale.",
+          "sourceQuote": "Deux électrons dans la même orbitale : permis"
+        },
+        {
+          "t": "Placer deux électrons ↑↑ dans une même orbitale est également permis.",
+          "v": false,
+          "e": "FAUX : c'est refusé. Le problème n'est pas d'être deux, mais d'être deux dans le même sens.",
+          "sourceQuote": "Deux électrons ↑↑ dans la même orbitale : non"
+        },
+        {
+          "t": "Dans le cas interdit, la faute porte sur le nombre d'électrons et non sur leur sens.",
+          "v": false,
+          "e": "FAUX : c'est exactement l'inverse. Le nombre, deux, est correct ; c'est le sens des spins qui ne l'est pas.",
+          "sourceQuote": "la faute n'est pas dans leur nombre, mais dans leur sens"
+        },
+        {
+          "t": "Chaque électron d'un atome possède son propre quadruplet (n, l, mₗ, s).",
+          "v": true,
+          "e": "VRAI. Le triplet situe l'orbitale, le spin identifie l'électron : à eux quatre, ils forment son adresse complète.",
+          "sourceQuote": "chaque électron de l'atome a donc son quadruplet (n, l, mₗ, s) à lui"
+        },
+        {
+          "t": "Le spin est ce qui distingue les deux électrons pouvant occuper une même orbitale.",
+          "v": true,
+          "e": "VRAI. Comme ils partagent la même orbitale, donc le même triplet, seule la valeur du spin les différencie.",
+          "sourceQuote": "le spin distingue les deux électrons qui peuvent s'y trouver"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-040-nombre-quantique-spin.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives aux images retenues pour le spin et à ce qu'elles permettent ensuite, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La rotation propre de l'électron est comparée à une toupie qui tourne.",
+          "v": true,
+          "e": "VRAI. C'est l'image du mnémo : l'électron tourne sur lui-même comme une toupie.",
+          "sourceQuote": "comme une toupie qui tourne"
+        },
+        {
+          "t": "Dans ce mnémo, la chambre peut accueillir au maximum 3 électrons.",
+          "v": false,
+          "e": "FAUX : la chambre accueille au maximum 2 électrons. C'est cette limite de deux qui structure tout le comptage qui suit.",
+          "sourceQuote": "Une orbitale atomique est comme une chambre qui peut accueillir au maximum 2 électrons"
+        },
+        {
+          "t": "Dans ce mnémo, le spin correspond à la pièce de l'appartement.",
+          "v": false,
+          "e": "FAUX : le spin, c'est la personne, avec un maximum de deux par pièce. La pièce elle-même correspond à mₗ.",
+          "sourceQuote": "s = 👤 La personne (max 2 par pièce)"
+        },
+        {
+          "t": "C'est la limite de deux électrons par orbitale qui rend possible le comptage d'une couche entière.",
+          "v": true,
+          "e": "VRAI. Sans plafond par orbitale, aucun total ne serait calculable ; avec lui, on peut annoncer le nombre d'électrons d'une couche.",
+          "sourceQuote": "c'est cette limite de deux par pièce qui rend le comptage possible"
+        },
+        {
+          "t": "Les deux électrons d'une même chambre peuvent avoir le même spin.",
+          "v": false,
+          "e": "FAUX : ils doivent avoir des spins opposés, ↑↓. Deux occupants de même sens dans la même chambre, c'est exclu.",
+          "sourceQuote": "mais ils doivent avoir des spins opposés"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-041-compter-oa-et-electrons-couche.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives aux deux formules qui donnent le contenu d'une couche, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Chaque couche n contient n² orbitales atomiques.",
+          "v": true,
+          "e": "VRAI. C'est la première des deux formules : le nombre d'orbitales d'une couche est le carré de son numéro.",
+          "sourceQuote": "Chaque couche n contient n² orbitales atomiques"
+        },
+        {
+          "t": "Une couche n peut accueillir au maximum 2n² électrons.",
+          "v": true,
+          "e": "VRAI. Chaque orbitale logeant deux électrons, la capacité de la couche est le double de son nombre d'orbitales.",
+          "sourceQuote": "peut accueillir 2n² électrons maximum"
+        },
+        {
+          "t": "Ces deux formules sont admises telles quelles et ne peuvent pas être retrouvées par un comptage.",
+          "v": false,
+          "e": "FAUX : on les retrouve justement en comptant, une case après l'autre. C'est tout l'objet de l'exercice sur la couche n = 3.",
+          "sourceQuote": "Ici, on les retrouve en comptant, une case après l'autre"
+        },
+        {
+          "t": "Pour la couche n = 3, on compte 9 orbitales et 18 électrons.",
+          "v": true,
+          "e": "VRAI. 3² = 9 orbitales, et 2 × 9 = 18 électrons au maximum.",
+          "sourceQuote": "Couche n = 3 : 9 orbitales, 18 électrons"
+        },
+        {
+          "t": "Pour la couche n = 3, on compte 18 orbitales et 9 électrons.",
+          "v": false,
+          "e": "FAUX : les deux nombres sont intervertis. C'est 9 orbitales et 18 électrons, jamais l'inverse.",
+          "sourceQuote": "Pour n = 3, c'est 9 orbitales et 18 électrons, jamais l'inverse"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-041-compter-oa-et-electrons-couche.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux sous-couches présentes dans la couche n = 3, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le nombre quantique l va de 0 jusqu'à n−1.",
+          "v": true,
+          "e": "VRAI. C'est ce qui fixe le nombre de sous-couches d'une couche : l démarre à 0 et s'arrête à n−1.",
+          "sourceQuote": "l va de 0 jusqu'à n−1"
+        },
+        {
+          "t": "Pour n = 3, les sous-couches possibles sont 3s, 3p et 3d.",
+          "v": true,
+          "e": "VRAI. l peut valoir 0, 1 ou 2, ce qui donne respectivement les sous-couches 3s, 3p et 3d.",
+          "sourceQuote": "Pour n = 3 : l = 0, 1 ou 2 → les sous-couches 3s, 3p et 3d"
+        },
+        {
+          "t": "La couche n = 3 comporte également une sous-couche 3f.",
+          "v": false,
+          "e": "FAUX : la sous-couche 3f n'existe pas. Il faudrait l = 3, or l ne dépasse pas 2 dans la couche 3.",
+          "sourceQuote": "il n'existe pas de « 3f », puisque l ne dépasse pas 2"
+        },
+        {
+          "t": "La couche n = 3 comporte quatre sous-couches.",
+          "v": false,
+          "e": "FAUX : elle en comporte trois, 3s, 3p et 3d. La quatrième supposerait l = 3, ce qui est impossible ici.",
+          "sourceQuote": "Trois sous-couches, et l'on s'arrête là"
+        },
+        {
+          "t": "Dans la couche n = 3, le nombre quantique l peut atteindre la valeur 3.",
+          "v": false,
+          "e": "FAUX : l s'arrête à n−1, soit 2. La couche 3 se termine donc à la sous-couche 3d.",
+          "sourceQuote": "l ne monte que jusqu'à n−1, donc la couche 3 s'arrête à 3d"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-041-compter-oa-et-electrons-couche.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au nombre d'orbitales que contient la couche n = 3, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La sous-couche 3s contient 1 orbitale, la 3p en contient 3 et la 3d en contient 5.",
+          "v": true,
+          "e": "VRAI. Chaque sous-couche apporte (2l+1) orbitales : 1 pour l = 0, 3 pour l = 1, 5 pour l = 2.",
+          "sourceQuote": "3s → 1 OA · 3p → 3 OA · 3d → 5 OA"
+        },
+        {
+          "t": "Chaque sous-couche contient (2l+1) orbitales.",
+          "v": true,
+          "e": "VRAI. C'est la formule qui sert à compter sous-couche par sous-couche avant d'additionner.",
+          "sourceQuote": "Chaque sous-couche contient (2l+1) orbitales"
+        },
+        {
+          "t": "Le total des orbitales de la couche 3 s'obtient par la somme 1 + 3 + 5, soit 9.",
+          "v": true,
+          "e": "VRAI. On additionne les trois sous-couches : 1 + 3 + 5 = 9 orbitales pour la couche n = 3.",
+          "sourceQuote": "Total = 1 + 3 + 5 = 9 OA"
+        },
+        {
+          "t": "Ce total obtenu par énumération diffère de la valeur annoncée par la formule n².",
+          "v": false,
+          "e": "FAUX : les deux comptes tombent d'accord. L'énumération donne 9, et n² = 3² = 9 également.",
+          "sourceQuote": "9 lignes écrites à la main, 9 orbitales annoncées par n²"
+        },
+        {
+          "t": "La sous-couche 3d contient 3 orbitales.",
+          "v": false,
+          "e": "FAUX : elle en contient 5, puisque l = 2 donne 2(2)+1 = 5. Les 3 orbitales sont celles de la sous-couche 3p.",
+          "sourceQuote": "3p → 3 OA · 3d → 5 OA"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-041-compter-oa-et-electrons-couche.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives au nombre d'électrons que peut accueillir la couche n = 3, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Chaque orbitale peut accueillir au maximum 2 électrons, de spins opposés.",
+          "v": true,
+          "e": "VRAI. C'est la limite héritée du spin : deux électrons par orbitale au plus, et de sens opposés.",
+          "sourceQuote": "qui peut accueillir au maximum 2 électrons, de spins opposés"
+        },
+        {
+          "t": "La couche n = 3 accueille au maximum 18 électrons.",
+          "v": true,
+          "e": "VRAI. Neuf orbitales, deux électrons chacune : 2 × 9 = 18 électrons au maximum.",
+          "sourceQuote": "Donc 2 × 9 = 18 électrons"
+        },
+        {
+          "t": "Le nombre maximal d'électrons d'une couche est égal au nombre d'orbitales qu'elle contient.",
+          "v": false,
+          "e": "FAUX : il en est le double. La couche contient n² orbitales et accueille 2n² électrons.",
+          "sourceQuote": "la couche en contient n² en tout et accueille 2n² électrons"
+        },
+        {
+          "t": "Une orbitale de la couche 3 peut loger 3 électrons si leurs spins diffèrent.",
+          "v": false,
+          "e": "FAUX : la limite est de 2 électrons par orbitale, sans exception. Un troisième n'a pas de place.",
+          "sourceQuote": "comme une chambre qui peut accueillir au maximum 2 électrons"
+        },
+        {
+          "t": "Pour n = 3, la formule 2n² annonce 12 électrons.",
+          "v": false,
+          "e": "FAUX : 2n² = 2 × 3² = 2 × 9 = 18. Le chiffre 12 ne correspond à rien ici.",
+          "sourceQuote": "Donc 2 × 9 = 18 électrons (= 2n² = 2 × 9 = 18 ✓)"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-041-compter-oa-et-electrons-couche.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à l'écriture de tous les triplets (n, l, mₗ) de la couche n = 3, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Pour établir la liste, on fait varier mₗ de −l à +l dans chaque sous-couche.",
+          "v": true,
+          "e": "VRAI. On prend les sous-couches l'une après l'autre et, pour chacune, on déroule toutes les valeurs de mₗ.",
+          "sourceQuote": "on fait varier ml de −l à +l et on écrit chaque ligne"
+        },
+        {
+          "t": "La liste des triplets de la couche n = 3 comporte neuf lignes, ni plus ni moins.",
+          "v": true,
+          "e": "VRAI. Neuf triplets pour neuf orbitales : le compte est fermé.",
+          "sourceQuote": "Neuf lignes — pas une de plus, pas une de moins"
+        },
+        {
+          "t": "Cette liste se compose d'une ligne 3s, de trois lignes 3p et de cinq lignes 3d.",
+          "v": true,
+          "e": "VRAI. Chaque sous-couche fournit autant de lignes qu'elle a d'orbitales : 1, puis 3, puis 5.",
+          "sourceQuote": "Une ligne 3s, trois lignes 3p, cinq lignes 3d"
+        },
+        {
+          "t": "La sous-couche 3s donne à elle seule trois triplets différents.",
+          "v": false,
+          "e": "FAUX : elle n'en donne qu'un, puisqu'elle ne compte qu'une orbitale. Les trois lignes sont celles de la sous-couche 3p.",
+          "sourceQuote": "Une ligne 3s, trois lignes 3p, cinq lignes 3d"
+        },
+        {
+          "t": "La sous-couche 3d n'apparaît que sur une seule ligne de cette liste.",
+          "v": false,
+          "e": "FAUX : elle en occupe cinq, une par valeur de mₗ allant de −2 à +2.",
+          "sourceQuote": "cinq lignes 3d : les neuf triplets de la couche n = 3"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-041-compter-oa-et-electrons-couche.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la différence entre un triplet et un quadruplet de nombres quantiques, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un triplet (n, l, mₗ) identifie une orbitale.",
+          "v": true,
+          "e": "VRAI. Trois nombres suffisent à désigner une orbitale précise : la couche, la forme et l'orientation.",
+          "sourceQuote": "Un triplet (n, l, ml) identifie une orbitale"
+        },
+        {
+          "t": "Un quadruplet (n, l, mₗ, s) identifie une sous-couche.",
+          "v": false,
+          "e": "FAUX : le quadruplet identifie un électron. C'est le quatrième nombre, le spin, qui fait la différence avec le triplet.",
+          "sourceQuote": "un quadruplet (n, l, ml, s) identifie un électron"
+        },
+        {
+          "t": "Pour la couche n = 3, on dénombre 9 triplets et 18 quadruplets.",
+          "v": true,
+          "e": "VRAI. Neuf orbitales, donc neuf triplets ; en ajoutant les deux valeurs du spin, on obtient dix-huit quadruplets, soit dix-huit électrons au maximum.",
+          "sourceQuote": "9 triplets = 9 OA. Chaque triplet (n, l, ml) identifie une OA unique. Avec le spin (±1/2), on obtient 18 quadruplets = 18 électrons maximum"
+        },
+        {
+          "t": "Le passage de 9 triplets à 18 quadruplets s'explique par les deux valeurs possibles de mₗ.",
+          "v": false,
+          "e": "FAUX : c'est le spin, avec ses deux valeurs ±1/2, qui double le compte. mₗ est déjà pris en compte dans le triplet.",
+          "sourceQuote": "Avec le spin (±1/2), on obtient 18 quadruplets = 18 électrons maximum"
+        },
+        {
+          "t": "Le nombre de quadruplets d'une couche est égal à son nombre de triplets.",
+          "v": false,
+          "e": "FAUX : il en est le double, puisque chaque orbitale peut loger deux électrons de spins opposés.",
+          "sourceQuote": "9 triplets = 9 OA"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-041-compter-oa-et-electrons-couche.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la méthode de vérification du comptage et à ce qu'il reste à découvrir ensuite, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Il est conseillé de compter deux fois, une fois par énumération et une fois par la formule.",
+          "v": true,
+          "e": "VRAI. Deux chemins pour un même résultat : l'addition 1 + 3 + 5 d'un côté, la formule n² de l'autre.",
+          "sourceQuote": "Compte toujours deux fois, de deux façons différentes : par énumération (1 + 3 + 5) et par la formule (n²)"
+        },
+        {
+          "t": "Si les deux comptes ne concordent pas, c'est qu'une sous-couche ou une valeur de mₗ a été oubliée.",
+          "v": true,
+          "e": "VRAI. Le désaccord est un signal : il manque une case quelque part, généralement une valeur de mₗ.",
+          "sourceQuote": "c'est qu'une sous-couche ou une valeur de ml est passée à la trappe"
+        },
+        {
+          "t": "En cas de doute, il faut reprendre la liste des valeurs de mₗ de −l à +l, en excluant la valeur 0.",
+          "v": false,
+          "e": "FAUX : la valeur 0 doit être comprise dans la liste. L'écarter est précisément la source de l'erreur de comptage.",
+          "sourceQuote": "reprends alors la liste des ml de −l à +l, 0 compris"
+        },
+        {
+          "t": "Confondre n² et 2n² est sans conséquence, les deux formules donnant le même résultat.",
+          "v": false,
+          "e": "FAUX : les deux ne donnent jamais le même résultat. n² compte les orbitales, 2n² compte les électrons, soit le double.",
+          "sourceQuote": "Ne jamais confondre n² et 2n²"
+        },
+        {
+          "t": "Une fois les cases comptées, il ne reste plus rien à savoir sur le remplissage d'une couche.",
+          "v": false,
+          "e": "FAUX : il reste à savoir dans quel ordre les électrons viennent occuper ces cases, ce qui fait l'objet de la suite du chapitre.",
+          "sourceQuote": "Il reste une question, et c'est celle de la suite du chapitre : dans quel ordre les électrons viennent-ils occuper ces cases ?"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-042-regle-klechkowski.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à l'énoncé de la règle de Klechkowski, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les sous-couches se remplissent par ordre de (n+l) croissant.",
+          "v": true,
+          "e": "VRAI. C'est le premier critère de la règle : on classe les sous-couches selon la somme du numéro de couche et du nombre associé à la lettre.",
+          "sourceQuote": "Les sous-couches se remplissent par ordre de (n+l) croissant"
+        },
+        {
+          "t": "À somme (n+l) égale, on remplit d'abord la sous-couche dont n est le plus grand.",
+          "v": false,
+          "e": "FAUX : c'est celle dont n est le plus petit qui passe la première. Le second critère départage toujours par le plus petit numéro de couche.",
+          "sourceQuote": "on remplit d'abord celle de n le plus petit"
+        },
+        {
+          "t": "La règle repose sur deux critères, appliqués dans un ordre précis.",
+          "v": true,
+          "e": "VRAI. D'abord la somme n+l, ensuite seulement n pour départager les égalités : jamais l'inverse.",
+          "sourceQuote": "Deux critères, et toujours dans cet ordre : d'abord la somme n+l, ensuite n pour départager"
+        },
+        {
+          "t": "Klechkowski est la première des trois règles fondamentales du remplissage.",
+          "v": true,
+          "e": "VRAI. C'est celle qui donne l'ordre ; les deux autres viendront préciser la capacité, puis la répartition.",
+          "sourceQuote": "Il existe 3 règles fondamentales qui dictent le remplissage. Voici la première — celle qui donne l'ordre"
+        },
+        {
+          "t": "Les électrons remplissent les sous-couches dans l'ordre croissant du seul nombre quantique n.",
+          "v": false,
+          "e": "FAUX : c'est justement ce que l'on croirait, et ce n'est pas le cas. L'ordre suit la somme n+l, pas le numéro de couche.",
+          "sourceQuote": "on remplirait volontiers 1s, puis 2s, 2p, 3s, 3p, 3d… dans l'ordre de n. Mais ce n'est pas le cas"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-042-regle-klechkowski.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives au calcul de la somme n+l et à la comparaison entre 4s et 3d, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Pour calculer n+l, on additionne le numéro de couche et le nombre associé à la lettre, avec s = 0, p = 1, d = 2 et f = 3.",
+          "v": true,
+          "e": "VRAI. La lettre se traduit en valeur de l, puis on additionne : c'est tout le calcul.",
+          "sourceQuote": "le numéro de couche et le nombre qui correspond à la lettre (s = 0, p = 1, d = 2, f = 3)"
+        },
+        {
+          "t": "La sous-couche 4s a une somme n+l égale à 4.",
+          "v": true,
+          "e": "VRAI. 4 + 0 = 4, puisque la lettre s correspond à l = 0.",
+          "sourceQuote": "4s → 4 + 0 = 4. 3d → 3 + 2 = 5"
+        },
+        {
+          "t": "La sous-couche 3d a une somme n+l égale à 4.",
+          "v": false,
+          "e": "FAUX : 3 + 2 = 5, car la lettre d correspond à l = 2. C'est cette somme de 5 qui la fait passer après le 4s.",
+          "sourceQuote": "3d → 3 + 2 = 5. La plus petite passe la première"
+        },
+        {
+          "t": "Entre deux sous-couches, c'est celle dont la somme n+l est la plus grande qui se remplit en premier.",
+          "v": false,
+          "e": "FAUX : c'est la plus petite somme qui passe la première. On classe par sommes croissantes.",
+          "sourceQuote": "La plus petite somme se remplit la première"
+        },
+        {
+          "t": "Le 3d se remplit avant le 4s parce que sa couche porte un numéro plus petit.",
+          "v": false,
+          "e": "FAUX : c'est le 4s qui se remplit avant le 3d, malgré son numéro de couche plus grand. Le numéro de couche n'est pas le critère principal.",
+          "sourceQuote": "le 4s se remplit avant le 3d, même si sa couche porte un numéro plus grand"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-042-regle-klechkowski.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au départage de deux sous-couches ayant la même somme n+l, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les sous-couches 3p et 4s ont la même somme n+l, égale à 4.",
+          "v": true,
+          "e": "VRAI. 3 + 1 = 4 pour la 3p, 4 + 0 = 4 pour la 4s : il y a bien égalité, et il faut donc départager.",
+          "sourceQuote": "3p (3 + 1 = 4) et 4s (4 + 0 = 4) ont la même somme"
+        },
+        {
+          "t": "En cas d'égalité, on remplit d'abord la sous-couche dont n est le plus petit : 3p avant 4s.",
+          "v": true,
+          "e": "VRAI. À somme égale, le plus petit numéro de couche passe devant : la 3p d'abord, la 4s ensuite.",
+          "sourceQuote": "On prend alors celle dont n est le plus petit → 3p d'abord, 4s ensuite"
+        },
+        {
+          "t": "En cas d'égalité, c'est la sous-couche dont l est le plus grand qui passe en premier.",
+          "v": false,
+          "e": "FAUX : le second critère porte sur n, pas sur l. On départage par le plus petit numéro de couche.",
+          "sourceQuote": "Départage les égalités par n"
+        },
+        {
+          "t": "Les sous-couches 2p et 3s ont des sommes n+l différentes.",
+          "v": false,
+          "e": "FAUX : elles valent toutes deux 3. C'est un cas d'égalité, tranché par n : la 2p passe avant la 3s.",
+          "sourceQuote": "2p et 3s valent 3"
+        },
+        {
+          "t": "Entre 3d et 4p, qui ont la même somme n+l, c'est le 4p qui se remplit en premier.",
+          "v": false,
+          "e": "FAUX : à somme égale, c'est le plus petit n qui l'emporte, donc le 3d avant le 4p.",
+          "sourceQuote": "2p avant 3s, 3p avant 4s, 3d avant 4p"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-042-regle-klechkowski.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à l'ordre de remplissage complet donné par la règle, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'ordre de remplissage commence par 1s, 2s, 2p, 3s, puis 3p.",
+          "v": true,
+          "e": "VRAI. Ces cinq premières sous-couches se suivent bien dans cet ordre, avant que le 4s ne vienne s'intercaler.",
+          "sourceQuote": "1s → 2s → 2p → 3s → 3p → 4s → 3d → 4p → 5s"
+        },
+        {
+          "t": "Après la sous-couche 3p vient la 4s, et seulement ensuite la 3d.",
+          "v": true,
+          "e": "VRAI. C'est le passage qui coûte le plus de points : le 4s s'intercale entre le 3p et le 3d.",
+          "sourceQuote": "après 3p vient 4s, et seulement ensuite 3d"
+        },
+        {
+          "t": "Après la sous-couche 5s, l'ordre se poursuit par 4d, puis 5p, puis 6s.",
+          "v": true,
+          "e": "VRAI. La suite continue exactement ainsi, en alternant les couches selon les sommes n+l croissantes.",
+          "sourceQuote": "5s → 4d → 5p → 6s → 4f"
+        },
+        {
+          "t": "L'ordre de remplissage donné se termine par la sous-couche 5f.",
+          "v": false,
+          "e": "FAUX : la suite se poursuit après 5f par 6d, puis 7p, qui en est le dernier terme.",
+          "sourceQuote": "6p → 7s → 5f → 6d → 7p"
+        },
+        {
+          "t": "Cet ordre doit être connu en entier, ses premiers termes étant insuffisants pour la plupart des atomes.",
+          "v": false,
+          "e": "FAUX : les premiers termes suffisent pour la grande majorité des atomes que l'on a à écrire.",
+          "sourceQuote": "Les premiers termes suffisent pour la grande majorité des atomes que tu auras à écrire"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-042-regle-klechkowski.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au diagramme en diagonales et à sa lecture, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le diagramme se lit en suivant des flèches diagonales.",
+          "v": true,
+          "e": "VRAI. C'est l'astuce de mémorisation : plutôt que d'apprendre la suite par cœur, on suit les diagonales du diagramme.",
+          "sourceQuote": "utilise le diagramme en diagonales (méthode de Klechkowski), lis en suivant les flèches diagonales"
+        },
+        {
+          "t": "Chaque ligne du diagramme correspond à une valeur de la somme n+l.",
+          "v": false,
+          "e": "FAUX : chaque ligne correspond à une couche. Ce sont les flèches, et non les lignes, qui regroupent les sous-couches de même somme n+l.",
+          "sourceQuote": "une ligne par couche"
+        },
+        {
+          "t": "Chaque flèche se lit de la gauche vers la droite, en remontant.",
+          "v": false,
+          "e": "FAUX : la flèche part en haut à droite et descend vers la gauche. On la suit dans le sens de sa pointe.",
+          "sourceQuote": "elle part en haut à droite et descend vers la gauche"
+        },
+        {
+          "t": "La flèche numérotée (4) regroupe la sous-couche 2p puis la 3s.",
+          "v": false,
+          "e": "FAUX : 2p puis 3s, ce sont les sous-couches de la flèche (3). La flèche (4) regroupe la 3p puis la 4s.",
+          "sourceQuote": "(3) = 2p puis 3s · (4) = 3p puis 4s · (5) = 3d puis 4p puis 5s"
+        },
+        {
+          "t": "Chaque flèche du diagramme regroupe des sous-couches de même somme (n+l).",
+          "v": true,
+          "e": "VRAI. C'est ce qui fait la cohérence du diagramme avec la règle : une flèche, une valeur de n+l.",
+          "sourceQuote": "Chaque flèche regroupe les sous-couches de même (n+l)"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-042-regle-klechkowski.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives aux sommes n+l qui se répètent et à l'origine du « 4s avant 3d », laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les sous-couches 3d, 4p et 5s ont toutes une somme n+l égale à 5.",
+          "v": true,
+          "e": "VRAI. 3 + 2, 4 + 1 et 5 + 0 donnent chacun 5 : ces trois sous-couches sont donc à égalité, et c'est n qui les départage.",
+          "sourceQuote": "3d, 4p et 5s valent 5"
+        },
+        {
+          "t": "Le fait que le 4s se remplisse avant le 3d résulte d'une égalité de sommes départagée par n.",
+          "v": false,
+          "e": "FAUX : il n'y a ici aucune égalité. Le 4s vaut 4 et le 3d vaut 5 : c'est le premier critère, celui de la somme, qui tranche directement.",
+          "sourceQuote": "ne vient même pas d'une égalité : 4s a une somme de 4, 3d une somme de 5"
+        },
+        {
+          "t": "Sur le diagramme, le 4s termine la flèche (4) tandis que le 3d ouvre la flèche (5).",
+          "v": true,
+          "e": "VRAI. C'est là que se lit visuellement le « 4s avant 3d » : une flèche s'achève sur le 4s, la suivante commence par le 3d.",
+          "sourceQuote": "le 4s termine la flèche (4), le 3d n'ouvre que la flèche (5)"
+        },
+        {
+          "t": "Deux sous-couches au maximum peuvent partager une même valeur de la somme n+l.",
+          "v": false,
+          "e": "FAUX : elles peuvent être trois, comme 3d, 4p et 5s, qui valent toutes 5.",
+          "sourceQuote": "Les sommes n+l se répètent : 2p et 3s valent 3, 3p et 4s valent 4, 3d, 4p et 5s valent 5"
+        },
+        {
+          "t": "Tout le « paradoxe » du remplissage tient dans cette différence de sommes entre 4s et 3d.",
+          "v": true,
+          "e": "VRAI. Ce qui passe pour une bizarrerie n'en est pas une : 4 est plus petit que 5, donc le 4s passe devant.",
+          "sourceQuote": "Tout le « paradoxe » est là"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-042-regle-klechkowski.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à ce que Klechkowski dit et ne dit pas, et à l'erreur classique de remplissage, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'ordre de remplissage est l'ordre des numéros de couche.",
+          "v": false,
+          "e": "FAUX : les deux ordres ne coïncident pas. Une couche ne se termine pas avant que la suivante ne s'ouvre.",
+          "sourceQuote": "L'ordre de remplissage n'est pas l'ordre des numéros de couche"
+        },
+        {
+          "t": "Enchaîner « 3s, 3p, 3d » comme si la couche 3 se terminait avant l'ouverture de la couche 4 est une erreur.",
+          "v": true,
+          "e": "VRAI. Entre le 3p et le 3d s'intercale le 4s : la couche 3 n'est donc pas terminée d'un seul tenant.",
+          "sourceQuote": "Enchaîner « 3s, 3p, 3d » comme si une couche se terminait avant d'ouvrir la suivante est FAUX"
+        },
+        {
+          "t": "La configuration du fer comporte la séquence 3p⁶ 4s² 3d⁶.",
+          "v": true,
+          "e": "VRAI. C'est la conséquence directe de l'ordre : le 4s se remplit avant le 3d, et l'écriture le montre.",
+          "sourceQuote": "le fer s'écrit … 3p⁶ 4s² 3d⁶"
+        },
+        {
+          "t": "Klechkowski indique aussi combien d'électrons chaque case peut recevoir.",
+          "v": false,
+          "e": "FAUX : elle ne dit rien du contenu des cases. Elle donne seulement l'ordre dans lequel on les remplit.",
+          "sourceQuote": "Elle ne dit rien de ce qu'on met dans chaque case ni de combien"
+        },
+        {
+          "t": "Les deux autres règles de remplissage interviennent dans l'ordre suivant : Hund d'abord, Pauli ensuite.",
+          "v": false,
+          "e": "FAUX : c'est Pauli qui vient en deuxième, et Hund en troisième.",
+          "sourceQuote": "ce sera le rôle des deux autres règles de remplissage — Pauli, puis Hund"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-043-principe-exclusion-pauli.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à l'énoncé du principe d'exclusion de Pauli, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Deux électrons d'un même atome ne peuvent pas avoir les 4 mêmes nombres quantiques.",
+          "v": true,
+          "e": "VRAI. C'est l'énoncé exact du principe : n, l, mₗ et s ne peuvent pas être simultanément identiques pour deux électrons du même atome.",
+          "sourceQuote": "Deux électrons d'un même atome ne peuvent pas avoir les 4 mêmes nombres quantiques"
+        },
+        {
+          "t": "Deux électrons d'un même atome peuvent partager trois de leurs quatre nombres quantiques.",
+          "v": true,
+          "e": "VRAI. Trois en commun, c'est permis ; les quatre, jamais. C'est exactement le cas de deux électrons d'une même orbitale.",
+          "sourceQuote": "Ils peuvent en partager trois. Jamais les quatre."
+        },
+        {
+          "t": "Deux électrons d'un même atome ne peuvent partager aucun nombre quantique.",
+          "v": false,
+          "e": "FAUX : ils peuvent en partager jusqu'à trois. Deux électrons logés dans la même orbitale ont d'ailleurs le même trio (n, l, mₗ).",
+          "sourceQuote": "Deux électrons logés dans la même orbitale partagent donc déjà trois nombres sur quatre"
+        },
+        {
+          "t": "Pauli est la deuxième des trois règles de remplissage.",
+          "v": true,
+          "e": "VRAI. Après Klechkowski qui donne l'ordre, Pauli fixe la capacité ; Hund viendra en troisième.",
+          "sourceQuote": "C'est la deuxième règle qui s'en charge"
+        },
+        {
+          "t": "C'est Pauli qui indique dans quel ordre les sous-couches se remplissent.",
+          "v": false,
+          "e": "FAUX : l'ordre, c'est Klechkowski. Pauli dit jusqu'où on remplit, pas dans quel ordre.",
+          "sourceQuote": "Klechkowski dit dans quel ordre remplir"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-043-principe-exclusion-pauli.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives au nombre maximal d'électrons dans une orbitale atomique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une orbitale atomique, définie par n, l et mₗ, contient au maximum 2 électrons.",
+          "v": true,
+          "e": "VRAI. C'est la première conséquence du principe : au-delà de deux, il y aurait forcément deux électrons parfaitement identiques.",
+          "sourceQuote": "Une OA (définie par n, l, ml) contient au maximum 2 électrons"
+        },
+        {
+          "t": "Un troisième électron dans la même orbitale aurait les 4 mêmes nombres quantiques que l'un des deux autres.",
+          "v": true,
+          "e": "VRAI. Il partagerait le trio, et son spin serait forcément déjà pris : d'où l'impossibilité.",
+          "sourceQuote": "il aurait les 4 mêmes nombres qu'un des deux autres"
+        },
+        {
+          "t": "Un troisième électron serait possible s'il adoptait un spin différent de celui des deux premiers.",
+          "v": false,
+          "e": "FAUX : il n'existe que deux valeurs de spin, et elles sont déjà occupées. Aucune troisième valeur n'est disponible.",
+          "sourceQuote": "Un troisième électron aurait forcément le même trio et l'un des deux spins déjà pris"
+        },
+        {
+          "t": "Le trio (n, l, mₗ) identifie une sous-couche précise.",
+          "v": false,
+          "e": "FAUX : il identifie une orbitale précise. Une sous-couche se désigne seulement par n et l.",
+          "sourceQuote": "le trio (n, l, ml) identifie une OA précise"
+        },
+        {
+          "t": "Le spin peut prendre trois valeurs, ce qui autorise trois électrons par orbitale.",
+          "v": false,
+          "e": "FAUX : le spin ne prend que deux valeurs, +1/2 et −1/2. C'est bien pour cela que la limite est de deux électrons.",
+          "sourceQuote": "le spin s, qui ne prend que deux valeurs, +1/2 (↑) ou −1/2 (↓)"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-043-principe-exclusion-pauli.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives aux spins des deux électrons d'une même orbitale selon Pauli, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Ces deux électrons ont des spins opposés, que l'on qualifie aussi d'antiparallèles.",
+          "v": true,
+          "e": "VRAI. Opposés et antiparallèles désignent la même chose : un électron à +1/2, l'autre à −1/2.",
+          "sourceQuote": "Ils doivent avoir des spins opposés : ↑↓ (on dit aussi antiparallèles)"
+        },
+        {
+          "t": "Le fait que leurs spins soient opposés est facultatif.",
+          "v": false,
+          "e": "FAUX : c'est obligatoire. Comme le spin est leur seule différence possible, elle ne peut pas être laissée au hasard.",
+          "sourceQuote": "C'est leur seule différence possible, donc elle est obligatoire"
+        },
+        {
+          "t": "Deux électrons ↑↑ dans une même orbitale sont exclus.",
+          "v": true,
+          "e": "VRAI. Deux flèches dans le même sens signifieraient deux électrons rigoureusement identiques : c'est ce que le principe interdit.",
+          "sourceQuote": "Deux électrons ↑↑ dans la même OA sont exclus"
+        },
+        {
+          "t": "Outre le spin, l'énergie de l'électron permet de distinguer deux électrons d'une même orbitale.",
+          "v": false,
+          "e": "FAUX : une fois le trio (n, l, mₗ) partagé, il ne reste qu'un seul critère disponible, le spin.",
+          "sourceQuote": "il ne leur reste qu'un seul critère disponible : le spin s"
+        },
+        {
+          "t": "Deux électrons de spins identiques sont permis dans une même orbitale à condition que la sous-couche soit pleine.",
+          "v": false,
+          "e": "FAUX : aucune condition ne lève l'interdiction. Deux électrons d'une même orbitale ont toujours des spins opposés.",
+          "sourceQuote": "un +1/2 et un −1/2. C'est leur seule différence possible, donc elle est obligatoire"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-043-principe-exclusion-pauli.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la capacité maximale d'une sous-couche, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une sous-couche peut accueillir au maximum 2(2l+1) électrons.",
+          "v": true,
+          "e": "VRAI. C'est la troisième conséquence du principe : le nombre d'orbitales multiplié par deux.",
+          "sourceQuote": "Au maximum 2(2l+1) électrons par sous-couche"
+        },
+        {
+          "t": "La capacité d'une sous-couche est le double de son nombre d'orbitales.",
+          "v": true,
+          "e": "VRAI. Chaque orbitale porte deux électrons, donc la capacité vaut exactement deux fois le nombre de cases.",
+          "sourceQuote": "La capacité d'une sous-couche est donc le double du nombre d'OA"
+        },
+        {
+          "t": "Une sous-couche de type p accueille au maximum 6 électrons, et une sous-couche de type d, 10.",
+          "v": true,
+          "e": "VRAI. Ce sont deux des quatre nombres à connaître : s = 2, p = 6, d = 10, f = 14.",
+          "sourceQuote": "s = 2, p = 6, d = 10, f = 14"
+        },
+        {
+          "t": "La suite des capacités à connaître est 2 – 6 – 10 – 12.",
+          "v": false,
+          "e": "FAUX : le dernier terme est 14, pas 12. La suite est 2 – 6 – 10 – 14, chaque terme étant le double du nombre d'orbitales correspondant.",
+          "sourceQuote": "2 – 6 – 10 – 14 : la suite à connaître"
+        },
+        {
+          "t": "Une sous-couche de type f peut contenir 7 électrons au maximum.",
+          "v": false,
+          "e": "FAUX : 7, c'est son nombre d'orbitales. Sa capacité en électrons en est le double, soit 14.",
+          "sourceQuote": "Une sous-couche f → 7 OA → 14 électrons"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-043-principe-exclusion-pauli.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à la manière de compter les cases puis les électrons d'une sous-couche, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "On compte d'abord le nombre d'orbitales, 2l+1, puis seulement le nombre d'électrons, qui en est le double.",
+          "v": true,
+          "e": "VRAI. L'ordre des deux temps compte : les cases d'abord, les électrons ensuite.",
+          "sourceQuote": "D'abord le nombre d'orbitales de la sous-couche : 2l+1. Ensuite seulement le nombre d'électrons : le double"
+        },
+        {
+          "t": "Le premier chiffre obtenu est celui des cases à dessiner, à raison d'une case par orbitale.",
+          "v": true,
+          "e": "VRAI. Ce premier nombre sert au dessin : une case pour chaque orbitale de la sous-couche.",
+          "sourceQuote": "Le premier chiffre est celui des cases à dessiner — une case par orbitale"
+        },
+        {
+          "t": "Une sous-couche de type d correspond à 10 cases et à 5 électrons au maximum.",
+          "v": false,
+          "e": "FAUX : les deux nombres sont intervertis. Une sous-couche d, ce sont 5 cases et 10 électrons.",
+          "sourceQuote": "Une sous-couche d → 5 OA → 10 électrons"
+        },
+        {
+          "t": "Le second chiffre obtenu donne le nombre de cases à dessiner.",
+          "v": false,
+          "e": "FAUX : le second chiffre donne le nombre maximal d'électrons. Les cases, c'est le premier.",
+          "sourceQuote": "le second, le nombre maximal d'électrons que tu peux y loger"
+        },
+        {
+          "t": "Il faut commencer par compter les électrons, puis en déduire le nombre d'orbitales.",
+          "v": false,
+          "e": "FAUX : l'ordre est inverse. On compte en deux temps, et les orbitales viennent en premier.",
+          "sourceQuote": "Compte toujours en deux temps, dans cet ordre"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-043-principe-exclusion-pauli.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la distinction entre 2l+1 et 2(2l+1), laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'expression 2l+1 donne le nombre d'orbitales de la sous-couche.",
+          "v": true,
+          "e": "VRAI. C'est la colonne des cases : 1 pour une s, 3 pour une p, 5 pour une d, 7 pour une f.",
+          "sourceQuote": "2l+1 = le nombre d'orbitales de la sous-couche"
+        },
+        {
+          "t": "L'expression 2(2l+1) donne le nombre d'électrons que la sous-couche peut accueillir.",
+          "v": true,
+          "e": "VRAI. C'est la colonne des capacités : 2, 6, 10 et 14.",
+          "sourceQuote": "2(2l+1) = le nombre d'électrons qu'elle peut accueillir"
+        },
+        {
+          "t": "Une sous-couche de type d, ce sont 5 orbitales et 5 électrons.",
+          "v": false,
+          "e": "FAUX : 5 orbitales, mais 10 électrons. Confondre les deux colonnes est l'erreur type sur ce point.",
+          "sourceQuote": "Une sous-couche d, ce sont 5 OA et 10 électrons — jamais 5 électrons"
+        },
+        {
+          "t": "La formule de capacité produit un grand nombre de valeurs différentes selon la sous-couche considérée.",
+          "v": false,
+          "e": "FAUX : elle n'en produit que quatre, correspondant aux types s, p, d et f.",
+          "sourceQuote": "elle ne produit que quatre nombres"
+        },
+        {
+          "t": "Chaque capacité est le double du nombre d'orbitales de la même ligne : 2 × 1, 2 × 3, 2 × 5, 2 × 7.",
+          "v": true,
+          "e": "VRAI. C'est la lecture ligne par ligne du tableau : la capacité s'obtient toujours en doublant le nombre de cases.",
+          "sourceQuote": "Chaque nombre est le double de celui de la colonne d'à côté : 2 × 1, 2 × 3, 2 × 5, 2 × 7"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-043-principe-exclusion-pauli.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à l'image des deux habitants et à ce que Pauli laisse en suspens, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans le mnémo, deux personnes peuvent habiter le même appartement à condition de différer sur au moins un critère.",
+          "v": true,
+          "e": "VRAI. C'est l'image du principe : la cohabitation est permise, l'identité parfaite ne l'est pas.",
+          "sourceQuote": "Deux personnes peuvent habiter le même appartement, mais elles doivent être différentes sur au moins un critère"
+        },
+        {
+          "t": "Le mot-clé associé à Pauli est RÉPARTITION.",
+          "v": false,
+          "e": "FAUX : le mot-clé de Pauli est CAPACITÉ. La répartition sera l'affaire de la règle suivante.",
+          "sourceQuote": "Mot-clé : CAPACITÉ"
+        },
+        {
+          "t": "C'est Klechkowski qui indique à quel moment une sous-couche est pleine.",
+          "v": false,
+          "e": "FAUX : Klechkowski donne seulement la file d'attente. Savoir quand une sous-couche est pleine relève de Pauli.",
+          "sourceQuote": "Elle ne dit pas, en revanche, quand une sous-couche est pleine"
+        },
+        {
+          "t": "Après Pauli, il reste à savoir comment les électrons se répartissent entre les orbitales d'une même sous-couche.",
+          "v": true,
+          "e": "VRAI. L'ordre et la capacité sont réglés ; la répartition à l'intérieur d'une sous-couche fait l'objet de la troisième règle.",
+          "sourceQuote": "à l'intérieur d'une même sous-couche qui compte plusieurs orbitales, comment les électrons se répartissent-ils entre elles ?"
+        },
+        {
+          "t": "Pauli répond à lui seul à la question de la répartition à l'intérieur d'une sous-couche.",
+          "v": false,
+          "e": "FAUX : il manque encore une chose après Pauli. La répartition entre les orbitales d'une même sous-couche n'est pas de son ressort.",
+          "sourceQuote": "Tu sais désormais dans quel ordre remplir les sous-couches et jusqu'où chacune peut aller. Il manque encore une chose"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-044-regle-de-hund.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à l'énoncé de la règle de Hund, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans une sous-couche, les électrons occupent d'abord chaque orbitale avec des spins parallèles avant de s'apparier.",
+          "v": true,
+          "e": "VRAI. C'est l'énoncé de la règle : chacun sa case d'abord, et seulement ensuite les paires.",
+          "sourceQuote": "les électrons occupent d'abord chaque OA avec des spins parallèles"
+        },
+        {
+          "t": "Des spins parallèles signifient que les électrons concernés sont tous orientés dans le même sens.",
+          "v": true,
+          "e": "VRAI. Parallèles veut dire orientés de la même façon : trois électrons seuls dans trois cases se dessinent ↑↑↑.",
+          "sourceQuote": "spins parallèles (tous dans le même sens)"
+        },
+        {
+          "t": "Les électrons forment d'abord des paires, puis occupent les orbitales restées libres.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. On sert d'abord chaque case, et les paires ne viennent qu'ensuite.",
+          "sourceQuote": "D'abord chacun sa case. Ensuite seulement les paires"
+        },
+        {
+          "t": "Hund est la troisième et dernière des règles de remplissage.",
+          "v": true,
+          "e": "VRAI. Après l'ordre donné par Klechkowski et la capacité fixée par Pauli, Hund règle la répartition.",
+          "sourceQuote": "C'est la troisième et dernière règle qui décide"
+        },
+        {
+          "t": "La règle de Hund intervient dès qu'une sous-couche ne compte qu'une seule orbitale.",
+          "v": false,
+          "e": "FAUX : elle n'a de sens que lorsqu'une sous-couche compte plusieurs orbitales. Avec une seule case, il n'y a rien à répartir.",
+          "sourceQuote": "Quand une sous-couche a plusieurs OA — comme les 3 OA de la sous-couche p —, dans quel ordre met-on les électrons ?"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-044-regle-de-hund.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à l'autre nom de la règle de Hund et à l'image du bus, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Cette règle porte aussi le nom de règle de la multiplicité de spin maximale.",
+          "v": true,
+          "e": "VRAI. Les deux appellations désignent la même règle de répartition.",
+          "sourceQuote": "la règle de la multiplicité de spin maximale"
+        },
+        {
+          "t": "Le principe consiste à garder le plus d'électrons possible à spins parallèles.",
+          "v": true,
+          "e": "VRAI. C'est ce que traduit son autre nom : on maximise le nombre d'électrons orientés dans le même sens.",
+          "sourceQuote": "on garde le plus d'électrons possible à spins parallèles"
+        },
+        {
+          "t": "Dans l'image du bus, les rangées comptent 3 places.",
+          "v": false,
+          "e": "FAUX : elles en comptent 2, comme une orbitale accueille au maximum 2 électrons.",
+          "sourceQuote": "Imagine un bus avec des rangées de 2 places"
+        },
+        {
+          "t": "Dans cette image, les passagers s'assoient d'abord à côté de quelqu'un avant de s'installer seuls.",
+          "v": false,
+          "e": "FAUX : ils préfèrent d'abord s'asseoir seuls, un par rangée. C'est justement ce comportement que reproduisent les électrons.",
+          "sourceQuote": "Les passagers préfèrent d'abord s'asseoir seuls (un par rangée) avant de s'asseoir à côté de quelqu'un"
+        },
+        {
+          "t": "Le mot-clé associé à cette règle est CAPACITÉ.",
+          "v": false,
+          "e": "FAUX : le mot-clé de Hund est RÉPARTITION. La capacité, c'est Pauli.",
+          "sourceQuote": "Mot-clé : RÉPARTITION"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-044-regle-de-hund.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au remplissage électronique de l'atome d'azote, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'azote a Z = 7, donc 7 électrons à placer.",
+          "v": true,
+          "e": "VRAI. Z = 7 donne 7 protons, et donc 7 électrons dans l'atome neutre.",
+          "sourceQuote": "L'azote a Z = 7 → il a 7 protons → donc 7 électrons à placer"
+        },
+        {
+          "t": "Le remplissage se fait dans l'ordre de Klechkowski, soit 1s, puis 2s, puis 2p.",
+          "v": true,
+          "e": "VRAI. On reprend la file d'attente des sous-couches, et on y verse les électrons un groupe après l'autre.",
+          "sourceQuote": "Remplir dans l'ordre de Klechkowski (1s → 2s → 2p…)"
+        },
+        {
+          "t": "Une fois les sous-couches 1s et 2s remplies, il reste 3 électrons à placer.",
+          "v": true,
+          "e": "VRAI. Deux électrons dans 1s, deux dans 2s : sur les sept, il en reste trois pour la sous-couche 2p.",
+          "sourceQuote": "2s peut contenir 2 e⁻ → on met 2 électrons → il reste 3 électrons"
+        },
+        {
+          "t": "La sous-couche 2p ne peut contenir que 3 électrons au maximum.",
+          "v": false,
+          "e": "FAUX : elle peut en contenir 6, soit 3 orbitales à 2 électrons chacune. L'azote n'en apporte que trois, mais la place est bien de six.",
+          "sourceQuote": "2p peut contenir 6 e⁻ (3 OA × 2 e⁻)"
+        },
+        {
+          "t": "L'azote possède 5 protons.",
+          "v": false,
+          "e": "FAUX : il en possède 7, puisque Z = 7. Le numéro atomique donne directement le nombre de protons.",
+          "sourceQuote": "il a 7 protons"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-044-regle-de-hund.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la configuration électronique de l'azote et à la lecture de l'exposant, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La configuration électronique de l'azote s'écrit 1s² 2s² 2p³.",
+          "v": true,
+          "e": "VRAI. Deux électrons dans 1s, deux dans 2s, trois dans 2p : au total les sept électrons de l'atome.",
+          "sourceQuote": "On obtient : 1s² 2s² 2p³"
+        },
+        {
+          "t": "Le chiffre placé en exposant indique le nombre d'électrons de la sous-couche.",
+          "v": true,
+          "e": "VRAI. C'est un décompte d'électrons, et rien d'autre.",
+          "sourceQuote": "Le chiffre en exposant indique le nombre d'électrons dans cette sous-couche"
+        },
+        {
+          "t": "La notation 2p³ signifie que la sous-couche 2p compte 3 orbitales.",
+          "v": false,
+          "e": "FAUX : elle signifie 3 électrons dans la sous-couche 2p. Que celle-ci compte aussi 3 orbitales est une coïncidence sur cet exemple.",
+          "sourceQuote": "2p³ = 3 électrons dans la sous-couche 2p"
+        },
+        {
+          "t": "L'exposant renseigne également sur la répartition des électrons entre les orbitales de la sous-couche.",
+          "v": false,
+          "e": "FAUX : il compte les électrons sans dire où ils se trouvent. C'est précisément pour cela qu'il faut descendre jusqu'aux cases.",
+          "sourceQuote": "L'exposant ne dit pas comment ils se répartissent entre ces trois cases"
+        },
+        {
+          "t": "La sous-couche 2p compte 3 orbitales parce que l = 2.",
+          "v": false,
+          "e": "FAUX : la lettre p correspond à l = 1, et 2(1)+1 = 3. La valeur l = 2 est celle des sous-couches de type d.",
+          "sourceQuote": "La sous-couche 2p a 3 orbitales (car l = 1 → 2l+1 = 3)"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-044-regle-de-hund.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux deux remplissages représentés pour la sous-couche 2p de l'azote, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans le remplissage correct, chaque orbitale contient 1 électron, tous ayant le même spin.",
+          "v": true,
+          "e": "VRAI. Trois cases, trois électrons seuls, tous orientés dans le même sens : c'est la règle appliquée.",
+          "sourceQuote": "chaque OA contient 1 électron, tous avec le même spin"
+        },
+        {
+          "t": "Dans ce remplissage correct, les trois cases sont servies avant que la moindre paire se forme.",
+          "v": true,
+          "e": "VRAI. Aucune paire tant qu'une case reste vide : c'est l'ordre imposé par la règle.",
+          "sourceQuote": "Les trois cases sont servies avant que la moindre paire se forme"
+        },
+        {
+          "t": "Dans le remplissage incorrect, l'erreur commise est un appariement trop précoce.",
+          "v": true,
+          "e": "VRAI. Une paire s'est formée dans la première case alors que la troisième n'avait encore reçu personne.",
+          "sourceQuote": "On a apparié trop tôt !"
+        },
+        {
+          "t": "Dans le remplissage incorrect, les trois orbitales de 2p contiennent chacune un électron.",
+          "v": false,
+          "e": "FAUX : la troisième case y est restée vide, alors que la première en contenait déjà deux. C'est ce déséquilibre qui rend le schéma faux.",
+          "sourceQuote": "La troisième case est restée vide alors que la première en avait déjà deux"
+        },
+        {
+          "t": "Les deux remplissages représentés correspondent à des nombres d'électrons différents dans la sous-couche 2p.",
+          "v": false,
+          "e": "FAUX : les deux comportent 3 électrons dans 2p, et s'écriraient tous deux 2p³. Seule leur répartition entre les cases diffère.",
+          "sourceQuote": "dans les deux cas, il y a 3 électrons dans 2p, et dans les deux cas on écrirait 2p³"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-044-regle-de-hund.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la méthode à appliquer devant une sous-couche incomplète, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "On dessine autant de cases que d'orbitales : 3 pour une sous-couche p, 5 pour une d, 7 pour une f.",
+          "v": true,
+          "e": "VRAI. Le dessin commence toujours par les cases, en nombre égal à celui des orbitales.",
+          "sourceQuote": "autant que d'orbitales : 3 pour une p, 5 pour une d, 7 pour une f"
+        },
+        {
+          "t": "On distribue ensuite les électrons un par case, tous dans le même sens.",
+          "v": true,
+          "e": "VRAI. Un électron par case, toutes les flèches dans le même sens : c'est l'application directe de la règle.",
+          "sourceQuote": "Distribue ensuite les électrons un par case, tous dans le même sens"
+        },
+        {
+          "t": "On peut commencer à apparier dès que la première case contient un électron.",
+          "v": false,
+          "e": "FAUX : l'appariement n'est permis que lorsque chaque case a déjà reçu un électron.",
+          "sourceQuote": "Tu ne commences à apparier (↑↓) que lorsque chaque case en a déjà reçu un"
+        },
+        {
+          "t": "On ne descend jusqu'aux cases quantiques que lorsque la sous-couche est pleine.",
+          "v": false,
+          "e": "FAUX : c'est exactement quand elle n'est pas pleine qu'il faut descendre aux cases, puisque l'exposant seul ne dit pas où sont les électrons.",
+          "sourceQuote": "on descend jusqu'aux cases quantiques dès qu'une sous-couche n'est pas pleine"
+        },
+        {
+          "t": "Une paire peut se former même s'il reste une orbitale vide dans la sous-couche.",
+          "v": false,
+          "e": "FAUX : tant qu'une orbitale est vide, aucune paire ne se forme. C'est la condition qui rend le schéma valide.",
+          "sourceQuote": "Tant qu'une OA de la sous-couche est vide, aucune paire ne se forme"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-044-regle-de-hund.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives aux trois règles de remplissage et à l'erreur d'appariement prématuré, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les trois règles correspondent respectivement à l'ordre, à la capacité et à la répartition.",
+          "v": true,
+          "e": "VRAI. Klechkowski donne l'ordre, Pauli la capacité, Hund la répartition : le trio est complet.",
+          "sourceQuote": "les trois règles sont maintenant complètes : l'ordre, la capacité, la répartition"
+        },
+        {
+          "t": "Écrire 2p³ avec une première case appariée, une deuxième à un seul électron et une troisième vide est une écriture valide.",
+          "v": false,
+          "e": "FAUX : cette écriture est fautive. Il fallait d'abord occuper les trois orbitales séparément avant de former la moindre paire.",
+          "sourceQuote": "Écrire 2p³ avec [↑↓][↑][ ] est faux"
+        },
+        {
+          "t": "En P1, on demande le plus souvent de réciter les trois règles.",
+          "v": false,
+          "e": "FAUX : on demande rarement de les réciter. Le plus souvent, une configuration est donnée et il faut décider si elle est valide.",
+          "sourceQuote": "on te demande rarement de les réciter : on te donne une configuration déjà écrite, et il faut trancher"
+        },
+        {
+          "t": "L'erreur type visée par cette règle est l'appariement prématuré.",
+          "v": true,
+          "e": "VRAI. C'est le piège à repérer : une paire formée avant que toutes les cases soient occupées.",
+          "sourceQuote": "L'appariement prématuré"
+        },
+        {
+          "t": "C'est Hund qui donne l'ordre des sous-couches et Klechkowski qui fixe leur capacité.",
+          "v": false,
+          "e": "FAUX : les rôles sont intervertis. Klechkowski donne l'ordre, et la capacité, 2, 6, 10, 14, revient à Pauli.",
+          "sourceQuote": "Klechkowski t'a donné l'ordre des sous-couches, Pauli leur capacité : 2, 6, 10, 14"
+        }
+      ]
+    }
+  ]
+}
