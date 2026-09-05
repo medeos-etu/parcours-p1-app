@@ -3199,7 +3199,7 @@
     </div>
 
     <div class="rescards" id="rescards-free">
-      <div class="rescard" onclick="ouvrirMetiers()">
+      <div class="rescard" id="carte-metiers" onclick="ouvrirMetiers()">
         <span class="pricechip">GRATUIT</span><img src="img/cover-metiers.jpg" alt="">
         <div class="rc-body">
           <b>Les métiers de la santé</b>
@@ -3207,7 +3207,7 @@
           <div class="rc-meta">🩺 6 métiers · 4 min chacun</div>
         </div>
       </div>
-      <div class="rescard" onclick="ouvrirPanoramas()">
+      <div class="rescard" id="carte-panoramas" onclick="ouvrirPanoramas()">
         <span class="pricechip">GRATUIT</span><img src="img/cover-panorama.jpg" alt="">
         <div class="rc-body">
           <b>Panorama de la P1</b>
@@ -3217,7 +3217,7 @@
       </div>
       
       
-      <div class="rescard" onclick="window.open('https://medeos-sante.fr/ressources/guide-methodologique?src=parcours-app','_blank')">
+      <div class="rescard" id="carte-guide" onclick="window.open('https://medeos-sante.fr/ressources/guide-methodologique?src=parcours-app','_blank')">
         <span class="pricechip">GRATUIT</span><img src="img/cover-methode-p1.png" onerror="this.src='img/cover-methode.jpg'" alt="">
         <div class="rc-body">
           <b>Guide méthodologique</b>
@@ -3225,7 +3225,7 @@
           <div class="rc-meta">🛠️ Un aperçu de la méthode</div>
         </div>
       </div>
-      <div class="rescard" onclick="window.open('https://medeos-sante.fr/ressources/agenda-p1?src=parcours-app','_blank')">
+      <div class="rescard" id="carte-agenda" onclick="window.open('https://medeos-sante.fr/ressources/agenda-p1?src=parcours-app','_blank')">
         <span class="pricechip">GRATUIT</span>
         <img src="img/cover-agenda.jpg" alt="">
         <div class="rc-body">
@@ -3461,7 +3461,7 @@ function go(id){
     else if(id==='arene' && accOk()) kT='arene';
     else if(id==='social' && accOk()) kT='social';
     else if(id==='profil' && accOk()) kT='profil';
-    if(kT && !tutoFait(kT)) setTimeout(()=>{ const sc=document.getElementById(id); if(sc&&sc.classList.contains('on')) startTuto(kT); },450);
+    if(kT && !tutoFait(kT) && TUTO_DIFFERE!==kT) setTimeout(()=>{ const sc=document.getElementById(id); if(sc&&sc.classList.contains('on')) startTuto(kT); },450);
   }
 }
 function selOnly(btn){ btn.parentElement.querySelectorAll('.opt').forEach(o=>o.classList.remove('sel')); btn.classList.add('sel'); }
@@ -7852,6 +7852,7 @@ function accApresEntree(){
     if(typeof applyPrenom==='function') applyPrenom();
   }
   saveS(); renderCompte(); renderLB(); renderIdBar(); renderCurArena(); renderSideAcc();
+  if(S.codeAttente) setTimeout(()=>activerCode(S.codeAttente), 500);   /* le code arrivé par le lien, avant le compte */
   const b=document.getElementById('ar-acc');
   if(b){ b.animate([{transform:'scale(1)'},{transform:'scale(1.015)'},{transform:'scale(1)'}],{duration:320,easing:'ease-out'}); }
   /* si on venait de la porte, on entre là où on voulait aller */
@@ -8727,7 +8728,10 @@ function openSheet(id){
   if(id==='sheet-jour') renderJourSheet();
   m.classList.add('on');
 }
-function closeSheet(id){ const m=document.getElementById(id); if(m) m.classList.remove('on'); }
+function closeSheet(id){ const m=document.getElementById(id); if(m) m.classList.remove('on');
+  /* la visite mise en attente démarre quand la fenêtre qui la retenait se referme */
+  if(id==='sheet-pioche' && TUTO_DIFFERE){ const k=TUTO_DIFFERE; TUTO_DIFFERE=null; setTimeout(()=>{ if(!tutoFait(k)) startTuto(k); }, 350); }
+}
 /* la bulle de la flamme : petit popover, se referme au clic ailleurs */
 const FLAMME_ROUTE=[[3,'la bannière « Braise »'],[7,'la photo « La Flamme »'],[14,'un gel de série'],[30,'la bannière « Brasier »'],[60,'la photo « L\'Inarrêtable »'],[100,'la bannière « Légende de feu »']];
 /* POSER UN GEL SUR DEMAIN. L'élève prévoit de souffler un jour : il pose son gel la veille,
@@ -9130,6 +9134,7 @@ const TUTOS={
   }
 };
 let TU=null;
+let TUTO_DIFFERE=null;   /* une visite qui attend qu'une fenêtre se referme pour démarrer */
 function tutoFait(k){ return !!(S.tuto && S.tuto[k]); }
 function startTuto(k){
   if(TU || tutoFait(k) || !TUTOS[k]) return;
@@ -9486,10 +9491,11 @@ const CODES_ANNEE=[
  '5ab52ba7e96ac8234cad110db23585a1061e1bb4d12832a2173678bd4a009a5d',
  'b89d4496552f935ffc25219a379e22ee5a41ee82ec9d5c06d231115501aacf0f',
  'cbc9d36014d556bb1de461fa6b3c0c00cf85ca24f9ac2a86e1b659bb1d93a58c'];
-async function activerCode(){
+async function activerCode(codeDirect){
   const inp=document.getElementById('code-inp'), msg=document.getElementById('code-msg');
-  if(!inp) return;
-  const brut=(inp.value||'').trim().toUpperCase().replace(/\s+/g,'');
+  if(!inp && !codeDirect) return;
+  /* codeDirect : le code arrivé par le lien du tableau de bord (?code=…), appliqué sans saisie */
+  const brut=String(codeDirect||(inp&&inp.value)||'').trim().toUpperCase().replace(/\s+/g,'');
   if(!brut){ if(msg) msg.textContent='Entre ton code.'; return; }
   const uses=JSON.parse(localStorage.getItem('m4_codes_uses')||'[]');
   if(uses.includes(brut)){ if(msg) msg.textContent='Ce code a déjà été utilisé.'; return; }
@@ -9512,9 +9518,14 @@ async function activerCode(){
   }
   if(!ok){ if(msg) msg.textContent='Code non reconnu — vérifie les tirets et les caractères.'; return; }
   uses.push(brut); localStorage.setItem('m4_codes_uses',JSON.stringify(uses));
-  S.stage=true; S.codeAnnee=Date.now(); saveS();
+  S.stage=true; S.codeAnnee=Date.now(); delete S.codeAttente; saveS();
   renderCodeZone(); renderAcces(); renderState();
   if(typeof renderCurArena==='function') renderCurArena();
+  if(codeDirect){
+    const d=document.createElement('div'); d.className='axotoast';
+    d.innerHTML='<img src="img/axo-guide-bravo.png" alt="" onerror="this.remove()"><span>⚔️ <b>Ton Pack Année complète est activé.</b> Toutes les fiches, tous les QCM, 3 ascensions par jour.</span>';
+    document.body.appendChild(d); setTimeout(()=>{ d.classList.add('out'); setTimeout(()=>d.remove(),400); },5200);
+  }
 }
 function renderCodeZone(){
   const z=document.getElementById('code-zone'); if(!z) return;
@@ -13777,9 +13788,33 @@ if(!['biblio','home','arene','social','carte','chemin','profil'].includes(ECRAN0
 /* un compte qui n'a pas encore vu la visite du Parcours atterrit sur le Parcours, pas sur
    l'Arène : c'est là que la méthode lui est racontée (progressif, Lucas 05/09) */
 const PARCOURS_A_VOIR = (typeof accOk==='function'&&accOk()) && !(S.tuto&&S.tuto.home);
+/* ═══ D'OÙ VIENT LA PERSONNE ? Le lien doit tenir sa promesse (Lucas, 05/09 : « hyper limpide
+   et logique, quelle que soit la voie d'accès »). src dit par quelle carte du site elle est
+   entrée ; code, qu'elle est acheteuse du Pack. ═══ */
+let SRC0='', CODE0='';
+try{ const q=new URLSearchParams(location.search);
+  SRC0=String(q.get('src')||'').trim().toLowerCase().replace(/[^a-z0-9-]/g,'').slice(0,40);
+  CODE0=String(q.get('code')||'').trim().toUpperCase().replace(/\s+/g,'');
+  if(!/^MEDEOS-[A-Z0-9]{4}-[A-Z0-9]{4}$/.test(CODE0)) CODE0='';
+}catch(e){}
+if(SRC0==='accueil-panorama-p1') TUTO_DIFFERE='biblio';   /* le Panorama d'abord, la visite après */
 go(['biblio','home','arene','social'].includes(HASH0) ? HASH0 : (NOUVEAU?'biblio':(ECRAN0||(PARCOURS_A_VOIR?'home':'arene'))));
 if(ECRAN0==='carte' && typeof renderCarte==='function') renderCarte();
 if(ECRAN0==='chemin' && typeof renderChemin==='function') renderChemin();
+if(SRC0==='accueil-panorama-p1'){
+  /* il venait chercher le Panorama : il l'a sous les yeux tout de suite */
+  setTimeout(()=>{ try{ ouvrirPanoramas(); }catch(e){ TUTO_DIFFERE=null; } }, 350);
+}
+if(SRC0==='accueil-guide-methodologique'){
+  /* il venait chercher le guide : la visite commence sur sa carte, et dit où il s'ouvre */
+  TUTOS.biblio.unshift({sel:'#carte-guide', img:'axo-guide-pointe-haut', t:"Le <b>guide méthodologique</b> que tu viens chercher est ici. Il s'ouvre sur le site Medeos — on te demandera juste ton email pour te l'envoyer."});
+  setTimeout(()=>{ const c=document.getElementById('carte-guide'); if(c) try{ c.scrollIntoView({block:'center'}); }catch(e){} }, 300);
+}
+if(CODE0){
+  /* acheteur du Pack : le code s'applique tout de suite, ou dès que le compte est créé */
+  S.codeAttente=CODE0; saveS();
+  if(typeof accOk==='function' && accOk()) setTimeout(()=>activerCode(CODE0), 700);
+}
 /* pas de fenêtre de compte imposée à qui vient lire la Bibliothèque librement */
 if(!accOk() && !S.acD && HASH0!=='biblio' && !NOUVEAU){ setTimeout(()=>{ if(!accOk() && !S.acD && !TU) focusAcc(); }, 1400); }
 calcSim();
