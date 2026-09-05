@@ -3558,6 +3558,7 @@ if(!S || typeof S!=='object') S={"points":0,"streak":0,"qcm":0,"nodeDone":false,
 function saveS(){
   localStorage.setItem('m4_state',JSON.stringify(S));
   majRegistreT();
+  if(typeof programmerPoussee==='function') programmerPoussee();   /* et le serveur suit, 2,5 s plus tard */
 }
 /* Le total de trophées suit le COMPTE, pas l'appareil : sans ça, un deuxième compte
    ne pourrait jamais apparaître au classement avec son vrai score. */
@@ -7871,6 +7872,53 @@ function renderArenes(){
 /* ═══ COMPTE JOUEUR — l'Arène est ouverte à tous ; le compte sert à SAUVEGARDER
    et à entrer au classement. Prototype : stocké en local. En production, ce sera
    le compte Medeos (identifiant + mot de passe), et l'email restera facultatif. */
+/* ═══ LE COMPTE VIT SUR LE SERVEUR (Lucas, 05/09 : « c'est censé être stocké dans notre base de
+   données »). Le serveur du site tient l'email, le pseudo, le mot de passe haché et la progression
+   entière (l'objet S). L'app garde un JETON, pousse S à chaque sauvegarde, et reprend la version
+   serveur si elle est plus récente — un autre appareil, une autre adresse. Le stockage local reste
+   la copie de travail ; il n'est plus la vérité. ═══ */
+const COMPTE_API='https://medeos-sante.fr/api/app-compte';
+function jetonCompte(){ try{ return localStorage.getItem('m4_jeton')||''; }catch(e){ return ''; } }
+function poserJeton(t){ try{ if(t) localStorage.setItem('m4_jeton',t); else { localStorage.removeItem('m4_jeton'); localStorage.removeItem('m4_etatMaj'); } }catch(e){} }
+async function apiCompte(chemin, corps, methode, keepalive){
+  const en={'Content-Type':'application/json'}; const j=jetonCompte(); if(j) en['Authorization']='Bearer '+j;
+  const r=await fetch(COMPTE_API+'/'+chemin,{method:methode||'POST',headers:en,body:(methode==='GET')?undefined:JSON.stringify(corps||{}),keepalive:!!keepalive});
+  let d={}; try{ d=await r.json(); }catch(e){} d._status=r.status; return d;
+}
+let _pousseeT=null;
+function programmerPoussee(){ if(!jetonCompte()) return; clearTimeout(_pousseeT); _pousseeT=setTimeout(function(){ pousserEtat(false); }, 2500); }
+async function pousserEtat(keepalive){
+  if(!jetonCompte() || !accOk()) return;
+  try{
+    const d=await apiCompte('etat',{etat:S, prenom:localStorage.getItem('m4_prenom')||''},'POST',keepalive);
+    if(d._status===401){ poserJeton(''); return; }
+    if(d.ok && d.etatMaj) try{ localStorage.setItem('m4_etatMaj', String(d.etatMaj)); }catch(e){}
+  }catch(e){}
+}
+/* au démarrage : si le serveur a une progression plus récente que la dernière connue ici, on la prend */
+async function recupererEtat(){
+  if(!jetonCompte()) return false;
+  let d; try{ d=await apiCompte('etat',null,'GET'); }catch(e){ return false; }
+  if(d._status===401){ poserJeton(''); return false; }
+  if(!d.ok || !d.etat || !d.etatMaj) return false;
+  const connu=parseInt(localStorage.getItem('m4_etatMaj')||'0',10)||0;
+  if(d.etatMaj<=connu) return false;
+  S=d.etat; if(!S||typeof S!=='object') return false;
+  localStorage.setItem('m4_state',JSON.stringify(S)); localStorage.setItem('m4_etatMaj',String(d.etatMaj));
+  if(d.prenom) localStorage.setItem('m4_prenom',d.prenom);
+  return true;
+}
+/* un compte créé avant le serveur (registre local avec son mot de passe) s'y inscrit tout seul */
+async function migrerCompteLocal(){
+  if(!accOk() || jetonCompte()) return;
+  const reg=accRegistre(), c=reg[(S.ar.compte.id||'').toLowerCase()];
+  if(!c || !c.mail || !c.mp) return;
+  try{
+    let d=await apiCompte('connexion',{email:c.mail, mdp:c.mp});
+    if(d._status===401) d=await apiCompte('inscription',{email:c.mail, pseudo:c.id, prenom:localStorage.getItem('m4_prenom')||'', mdp:c.mp, etat:S});
+    if(d.ok && d.jeton){ poserJeton(d.jeton); delete c.mp; localStorage.setItem('m4_comptes',JSON.stringify(reg)); pousserEtat(false); }
+  }catch(e){}
+}
 function accOk(){ return !!(S.ar && S.ar.compte && S.ar.compte.id); }
 function arTotalSafe(){ return S.ar? arTotal():0; }
 function accInit(){ if(S.ar && !('compte' in S.ar)) { S.ar.compte=null; saveS(); }
@@ -7887,6 +7935,7 @@ function accInit(){ if(S.ar && !('compte' in S.ar)) { S.ar.compte=null; saveS();
 let accMode=null;   /* 'login' | 'create' — choisi au premier affichage */
 function accRegistre(){ try{ return JSON.parse(localStorage.getItem('m4_comptes')||'{}'); }catch(e){ return {}; } }
 function seDeconnecter(){
+  poserJeton('');
   /* on détache le compte, rien d'autre : la progression locale et le registre restent intacts */
   if(S.ar) S.ar.compte=null;
   accMode='login';
@@ -7926,9 +7975,17 @@ function accApresEntree(neuf){
   if(b){ b.animate([{transform:'scale(1)'},{transform:'scale(1.015)'},{transform:'scale(1)'}],{duration:320,easing:'ease-out'}); }
   /* si on venait de la porte, on entre là où on voulait aller */
   const cur=document.querySelector('.scr.on');
-  if(cur && cur.id==='gate') setTimeout(()=>go(gateVers),660);
+  if(cur && cur.id==='gate'){
+    /* venu par l'Arène avant sa première séance : on commence par le Parcours, et on le dit
+       (Lucas, 05/09 : « on verra l'Arène juste après, ça bascule vers le Parcours ») */
+    const areneFermee = gateVers==='arene' && !((typeof areneOuvrable==='function') && areneOuvrable());
+    setTimeout(()=>go(areneFermee ? 'home' : gateVers),660);
+    if(areneFermee) setTimeout(()=>{ const d=document.createElement('div'); d.className='axotoast';
+      d.innerHTML='<img src="img/axo-guide-bienvenue.png" alt="" onerror="this.remove()"><span>On verra l\'Arène juste après : elle s\'ouvre avec ta première séance. On commence par <b>ton Parcours</b>.</span>';
+      document.body.appendChild(d); setTimeout(()=>{ d.classList.add('out'); setTimeout(()=>d.remove(),400); },5200); },900);
+  }
 }
-function creerCompte(){
+async function creerCompte(){
   if(!S.ar) initAr();
   const id=(document.getElementById('acc-id').value||'').trim();
   const mp=(document.getElementById('acc-mp').value||'');
@@ -7936,67 +7993,87 @@ function creerCompte(){
   if(id.length<3){ err.textContent='Choisis un identifiant d\'au moins 3 caractères.'; return; }
   if(!/^[a-zA-Z0-9._-]+$/.test(id)){ err.textContent='Lettres, chiffres, point, tiret ou souligné uniquement.'; return; }
   if(mp.length<6){ err.textContent='Ton mot de passe doit faire au moins 6 caractères.'; return; }
-  const reg=accRegistre();
-  if(reg[id.toLowerCase()]){ err.textContent='Cet identifiant existe déjà sur cet appareil — passe par « J\'ai déjà un compte ».'; return; }
   const mail=(document.getElementById('acc-mail')||{value:''}).value.trim();
   if(!/.+@.+\..+/.test(mail)){ err.textContent='Entre un email valide — c\'est lui qui te permet de te reconnecter.'; return; }
-  if(Object.values(reg).some(x=>(x.mail||'').toLowerCase()===mail.toLowerCase())){ err.textContent='Cet email a déjà un compte — passe par « J\'ai déjà un compte ».'; return; }
-  reg[id.toLowerCase()]={id:id, mp:mp, mail:mail, cree:Date.now()};
+  err.textContent='Création du compte…';
+  let d; try{ d=await apiCompte('inscription',{email:mail, pseudo:id, prenom:localStorage.getItem('m4_prenom')||'', mdp:mp, etat:S}); }catch(e){ d={_status:0}; }
+  if(!d.ok){
+    err.textContent = d.erreur==='email-pris' ? 'Cet email a déjà un compte — passe par « J\'ai déjà un compte ».'
+      : d.erreur==='pseudo-pris' ? 'Cet identifiant est déjà pris — choisis-en un autre.'
+      : d._status===429 ? 'Trop d\'essais d\'un coup — réessaie dans une minute.'
+      : d._status===0 ? 'Pas de connexion : réessaie dans un instant.' : 'Impossible de créer le compte pour l\'instant.';
+    return;
+  }
+  poserJeton(d.jeton);
+  const reg=accRegistre();
+  reg[id.toLowerCase()]={id:id, mail:mail, cree:Date.now()};   /* copie locale, sans mot de passe */
   localStorage.setItem('m4_comptes',JSON.stringify(reg));
   S.ar.compte={id:id, mail:mail, cree:reg[id.toLowerCase()].cree};
   accApresEntree(true);
 }
-function seConnecter(){
+async function seConnecter(){
   if(!S.ar) initAr();
   const q=(document.getElementById('acc-lid').value||'').trim().toLowerCase();
   const mp=(document.getElementById('acc-lmp').value||'');
   const err=document.getElementById('acc-lerr');
   if(!q||!mp){ err.textContent='Entre ton email et ton mot de passe.'; return; }
-  const reg=accRegistre();
-  /* la connexion se fait par EMAIL ; seul un vieux compte de démo créé sans email
-     est encore accepté par son identifiant, sinon il serait irrécupérable */
-  const c=Object.values(reg).find(x=>(x.mail||'').toLowerCase()===q) || (reg[q]&&!reg[q].mail?reg[q]:null);
-  if(!c){ err.textContent='Aucun compte avec cet email sur cet appareil. Ton compte vit sur l\'appareil où tu l\'as créé.'; return; }
-  if(c.mp===null){ err.textContent='Ce compte date d\'avant la mise à jour et n\'a pas de mot de passe enregistré — passe par « Mot de passe oublié ? » pour en définir un.'; return; }
-  if(c.mp!==mp){ err.textContent='Mot de passe incorrect. Tu peux le réinitialiser avec « Mot de passe oublié ? ».'; return; }
-  S.ar.compte={id:c.id, mail:c.mail||null, cree:c.cree};
-  if(c.skin) S.ar.skin=c.skin;   /* la photo et la bannière suivent le compte */
-  accApresEntree();
+  err.textContent='Connexion…';
+  let d; try{ d=await apiCompte('connexion',{email:q, mdp:mp}); }catch(e){ d={_status:0}; }
+  if(!d.ok){
+    err.textContent = d._status===401 ? 'Email ou mot de passe incorrect. Tu peux le réinitialiser avec « Mot de passe oublié ? ».'
+      : d._status===429 ? 'Trop d\'essais d\'un coup — réessaie dans une minute.'
+      : d._status===0 ? 'Pas de connexion : réessaie dans un instant.' : 'Connexion impossible pour l\'instant.';
+    return;
+  }
+  entrerAvecCompte(d, q);
+}
+/* après connexion ou nouveau mot de passe : le jeton, la progression du serveur, et on repart avec */
+function entrerAvecCompte(d, mail){
+  poserJeton(d.jeton);
+  if(d.etat && typeof d.etat==='object'){ S=d.etat; if(!S.ar) initAr(); }
+  if(!S.ar) initAr();
+  S.ar.compte={id:d.pseudo, mail:mail, cree:(S.ar.compte&&S.ar.compte.cree)||Date.now()};
+  if(d.prenom) localStorage.setItem('m4_prenom', d.prenom);
+  localStorage.setItem('m4_onboarded','1');
+  const reg=accRegistre(); reg[String(d.pseudo).toLowerCase()]={id:d.pseudo, mail:mail, cree:S.ar.compte.cree, T:(S.ar.T||0)};
+  localStorage.setItem('m4_comptes',JSON.stringify(reg));
+  localStorage.setItem('m4_state',JSON.stringify(S));
+  if(d.etatMaj) localStorage.setItem('m4_etatMaj',String(d.etatMaj));
+  /* toute la progression vient peut-être de changer : on redessine tout, proprement */
+  setTimeout(function(){ location.reload(); }, 500);
 }
 /* Réinitialisation SÉCURISÉE : demande → email → lien → nouveau mot de passe.
    Personne ne peut changer le mot de passe d'un autre sans accès à sa boîte mail.
    En démo, le bouton « Ouvrir l'email reçu » remplace la boîte mail ; en production,
    le lien arrivera par un vrai email. */
 let resetCible=null, resetEnvoye=false;
-function resetDemande(){
+async function resetDemande(){
   const q=(document.getElementById('acc-rid').value||'').trim().toLowerCase();
   const err=document.getElementById('acc-rerr');
   if(!q){ err.textContent='Entre ton email.'; return; }
-  const reg=accRegistre();
-  /* réponse volontairement neutre : on ne révèle jamais si un compte existe.
-     Recherche par EMAIL ; l'identifiant n'est accepté que pour un vieux compte sans email. */
-  resetCible=Object.keys(reg).find(k=>(reg[k].mail||'').toLowerCase()===q)||(reg[q]&&!reg[q].mail?q:null);
-  /* le compte vit sur cet appareil : pas de faux email, on passe droit au nouveau mot de passe (05/09) */
-  if(!resetCible){ err.textContent='Aucun compte avec cet email sur cet appareil.'; return; }
-  accMode='reset2'; renderCompte();
+  err.textContent='Envoi du code…';
+  let d; try{ d=await apiCompte('reset',{action:'demande', email:q}); }catch(e){ d={_status:0}; }
+  if(!d.ok){ err.textContent = d._status===0 ? 'Pas de connexion : réessaie dans un instant.' : 'Impossible pour l\'instant — réessaie dans une minute.'; return; }
+  resetCible=q; accMode='reset2'; renderCompte();
 }
 function resetOuvrirEmail(){
   if(!resetCible){ const err=document.getElementById('acc-rerr');
     if(err) err.textContent='(Démo) Aucun email n\'est parti : aucun compte ne correspond sur cet appareil.'; return; }
   accMode='reset2'; renderCompte();
 }
-function resetMdp(){
+async function resetMdp(){
   if(!S.ar) initAr();
   const mp=(document.getElementById('acc-rmp').value||'');
+  const code=((document.getElementById('acc-rcode')||{}).value||'').replace(/\D/g,'');
   const err=document.getElementById('acc-rerr2');
-  const reg=accRegistre(), k=resetCible;
-  if(!k||!reg[k]){ accMode='reset'; resetEnvoye=false; renderCompte(); return; }
+  if(!resetCible){ accMode='reset'; renderCompte(); return; }
+  if(code.length!==6){ err.textContent='Entre les 6 chiffres du code reçu par email.'; return; }
   if(mp.length<6){ err.textContent='Ton nouveau mot de passe doit faire au moins 6 caractères.'; return; }
-  reg[k].mp=mp; localStorage.setItem('m4_comptes',JSON.stringify(reg));
-  S.ar.compte={id:reg[k].id, mail:reg[k].mail||null, cree:reg[k].cree};
-  if(reg[k].skin) S.ar.skin=reg[k].skin;
-  resetCible=null; resetEnvoye=false; accMode=null;
-  accApresEntree();
+  err.textContent='Vérification…';
+  let d; try{ d=await apiCompte('reset',{action:'valider', email:resetCible, code:code, mdp:mp}); }catch(e){ d={_status:0}; }
+  if(!d.ok){ err.textContent = d.erreur==='code' ? 'Code faux ou expiré — redemande-en un.' : d._status===0 ? 'Pas de connexion : réessaie dans un instant.' : 'Impossible pour l\'instant.'; return; }
+  const mail=resetCible; resetCible=null; resetEnvoye=false; accMode=null;
+  entrerAvecCompte(d, mail);
 }
 function renderCompte(){
   const box=document.getElementById('ar-acc'); if(!box) return;
@@ -8024,22 +8101,22 @@ function renderCompte(){
             '<button class="btn" onclick="resetOuvrirEmail()">📬 Ouvrir l\'email reçu (démo)</button>'+
           '</div>'+
           '<p style="font-size:11px;color:var(--muted);margin-top:8px;text-align:center">Démo locale : ce bouton remplace ta boîte mail. En version complète, le lien arrive par email.</p>'
-        : '<p>Entre l\'email de ton compte : il est enregistré sur cet appareil, tu choisiras un nouveau mot de passe juste après.</p>'+
+        : '<p>Entre l\'email de ton compte : tu recevras un code à 6 chiffres, puis tu choisiras un nouveau mot de passe.</p>'+
           '<form class="accform" method="post" action="#" onsubmit="event.preventDefault();resetDemande()">'+
             '<input id="acc-rid" name="email" type="email" placeholder="Ton email" autocomplete="username" inputmode="email" autocapitalize="none" spellcheck="false" />'+
             '<p class="accerr" id="acc-rerr"></p>'+
-            '<button class="btn" type="submit">Continuer</button>'+
+            '<button class="btn" type="submit">Recevoir le code</button>'+
           '</form>')+
       '<button class="se-alt" onclick="accMode=\'login\';resetEnvoye=false;renderCompte()">← Retour à la connexion</button>';
     return;
   }
   if(accMode==='reset2'){
-    const regR=accRegistre(), cR=regR[resetCible]||{};
     box.innerHTML =
       '<h4>🔑 Nouveau mot de passe</h4>'+
-      '<p>Tu viens du lien de réinitialisation. Choisis le nouveau mot de passe du compte <b>'+(cR.id||'')+'</b>.</p>'+
+      '<p>Un code à 6 chiffres vient de partir à <b>'+(resetCible||'')+'</b>. Entre-le, et choisis ton nouveau mot de passe.</p>'+
       '<form class="accform" method="post" action="#" onsubmit="event.preventDefault();resetMdp()">'+
-        '<input style="display:none" name="email" type="email" autocomplete="username" value="'+(cR.mail||'')+'" readonly />'+
+        '<input style="display:none" name="email" type="email" autocomplete="username" value="'+(resetCible||'')+'" readonly />'+
+        '<input id="acc-rcode" name="code" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="Le code reçu (6 chiffres)" />'+
         '<input id="acc-rmp" name="password" type="password" placeholder="Ton nouveau mot de passe" autocomplete="new-password" />'+
         '<p class="accerr" id="acc-rerr2"></p>'+
         '<button class="btn" type="submit">Définir et me connecter</button>'+
@@ -13248,7 +13325,15 @@ function arWeek(){ const d=new Date(Date.now()-6*3600*1000); const j=(d.getDay()
 function initAr(){
   if(!S.ar) S.ar={R:R0,T:T0,gold:T0,n:0,runs:runsParJour(),day:arDay(),seen:{},errs:{},notions:{},
                    qd:{},runsDone:0,last:null,wk:arWeek(),wdt:0,boost:0,played:0,mats:{},arene:'Anatomie'};
-  if(!S.ar.mats) S.ar.mats={};
+  /* UN ÉTAT PARTIEL NE DOIT JAMAIS FAIRE TOMBER L'APP : un compte d'avant, un état venu du
+     serveur, une clé qui manque — chaque sous-objet est reposé s'il n'est pas là (05/09 : un état
+     minimal faisait planter renderArene sur Object.keys, et tout le démarrage avec lui). */
+  ['seen','errs','notions','qd','mats'].forEach(k=>{ if(!S.ar[k] || typeof S.ar[k]!=='object') S.ar[k]={}; });
+  ['T','gold','n','runsDone','wdt','boost','played'].forEach(k=>{ if(typeof S.ar[k]!=='number') S.ar[k]=(k==='T'||k==='gold')?T0:0; });
+  if(typeof S.ar.R!=='number') S.ar.R=R0;
+  if(typeof S.ar.runs!=='number') S.ar.runs=runsParJour();
+  if(!S.ar.day) S.ar.day=arDay();
+  if(!S.ar.wk) S.ar.wk=arWeek();
   if(!S.ar.arene) S.ar.arene='Anatomie';
   if(!S.ar.skin) S.ar.skin={av:'axo',ban:'violet'};
   if(!S.ar.debut) S.ar.debut=Date.now();
@@ -13947,6 +14032,13 @@ if(!['biblio','home','arene','social','carte','chemin','profil'].includes(ECRAN0
 /* un compte qui n'a pas encore vu la visite du Parcours atterrit sur le Parcours, pas sur
    l'Arène : c'est là que la méthode lui est racontée (progressif, Lucas 05/09) */
 try{ if(typeof verifierSerie==='function') verifierSerie(); }catch(e){}   /* une série rompue s'affiche à 0 dès l'ouverture */
+/* le serveur d'abord : une progression plus récente (autre appareil) remplace celle-ci, une fois par ouverture */
+(async function(){ try{
+  if(sessionStorage.getItem('m4_sync_fait')){ sessionStorage.removeItem('m4_sync_fait'); return; }
+  if(jetonCompte()){ if(await recupererEtat()){ sessionStorage.setItem('m4_sync_fait','1'); location.reload(); return; } }
+  else await migrerCompteLocal();
+}catch(e){} })();
+window.addEventListener('pagehide', function(){ try{ if(_pousseeT){ clearTimeout(_pousseeT); pousserEtat(true); } }catch(e){} });
 try{ if(S.tuto && S.tuto.arene && !(S.sdone && Object.keys(S.sdone).length)){ delete S.tuto.arene; saveS(); } }catch(e){}   /* présentée fermée : à représenter ouverte */
 const PARCOURS_A_VOIR = (typeof accOk==='function'&&accOk()) && !(S.tuto&&S.tuto.home);
 /* ═══ D'OÙ VIENT LA PERSONNE ? Le lien doit tenir sa promesse (Lucas, 05/09 : « hyper limpide
