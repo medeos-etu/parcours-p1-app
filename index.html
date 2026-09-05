@@ -1949,7 +1949,13 @@
   #compare-toggle{border:none;background:none;font-family:inherit;font-size:12px;font-weight:900;
     color:var(--violet);padding:9px;cursor:pointer;letter-spacing:.02em}
   #compare-corps{overflow-y:auto;padding:0 14px 14px;display:flex;gap:12px}
-  #compare-pan.plie #compare-corps{display:none}
+  #compare-pan.plie #compare-corps,#compare-pan.plie #notes-corps{display:none !important}
+  #notes-corps{overflow-y:auto;padding:0 14px 14px;display:flex;gap:12px;flex-wrap:wrap}
+  #notes-corps .cmp-col{flex:1;min-width:200px}
+  #notes-corps textarea{width:100%;min-height:96px;border:1.5px solid var(--line);border-radius:12px;padding:10px;font:inherit;font-size:13px;line-height:1.5;background:#fff;resize:vertical}
+  .notes-actions{flex-basis:100%;display:flex;align-items:center;gap:10px}
+  .notes-actions span{font-size:11.5px;color:var(--muted)}
+  @media (max-width:700px){ #notes-corps{flex-direction:column} }
   #compare-pan.plie{max-height:none}
   .cmp-col{flex:1;min-width:0}
   .cmp-col b{font-size:11px;font-weight:900;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
@@ -2806,6 +2812,22 @@
         <div class="cmp-col">
           <b>✏️ Note ce qui t'avait échappé</b>
           <textarea id="compare-oublis" placeholder="Les éléments que tu avais oubliés…"></textarea>
+        </div>
+      </div>
+      <!-- À LA RELECTURE (depuis la carte) : ce que l'élève avait écrit pendant sa séance, à relire
+           et à compléter — ses notes vivent avec la fiche (Lucas, 05/09). -->
+      <div id="notes-corps" style="display:none">
+        <div class="cmp-col">
+          <b>📝 Ce que tu avais retenu</b>
+          <textarea id="notes-retenu" placeholder="Tu n'avais rien écrit — note ici ce que tu retiens maintenant."></textarea>
+        </div>
+        <div class="cmp-col">
+          <b>✏️ Ce qui t'avait échappé</b>
+          <textarea id="notes-oublie" placeholder="Les points à ne plus rater la prochaine fois…"></textarea>
+        </div>
+        <div class="notes-actions">
+          <button type="button" class="btn small" onclick="sauverNotes(NOTES_SLUG)">Enregistrer mes notes</button>
+          <span id="notes-etat"></span>
         </div>
       </div>
     </div>
@@ -10804,14 +10826,14 @@ function ouvrirTuile(k){
   let prochaine=false; const lignes=[]; let verrous=0;
   t.fiches.forEach((f,i)=>{
     const titre=TITRES_FICHES[f]||f;
-    if(faite(f)){ lignes.push('<button type="button" class="tu-f faite" onclick="consulterFiche(\''+f+'\')"><span class="tu-n">✓</span><span class="tu-t">'+titre+'</span><span class="tu-go">relire</span></button>'); return; }
+    if(faite(f)){ lignes.push('<button type="button" class="tu-f faite" onclick="consulterFiche(\''+f+'\')"><span class="tu-n">✓</span><span class="tu-t">'+titre+'</span><span class="tu-go">'+((S.oublis&&S.oublis[f]&&(S.oublis[f].retenu||S.oublis[f].oublie))?'relire · 📝 tes notes':'relire')+'</span></button>'); return; }
     if(!prochaine && et.etat!=='avenir'){ prochaine=true; lignes.push('<div class="tu-f suiv"><span class="tu-n">→</span><span class="tu-t">'+titre+'</span><span class="tu-go">prochaine</span></div>'); return; }
     verrous++;
     if(verrous<=2) lignes.push('<div class="tu-f lock"><span class="tu-n">🔒</span><span class="tu-t">Fiche '+(i+1)+'</span></div>');
   });
   if(verrous>2) lignes.push('<div class="tu-reste">+ '+(verrous-2)+' fiche'+(verrous-2>1?'s':'')+' à découvrir ensuite</div>');
   const entete = p.lues
-    ? '<p class="tu-p"><b>'+p.lues+' fiche'+(p.lues>1?'s':'')+' sur '+p.tot+' travaillée'+(p.lues>1?'s':'')+'.</b> Relire une fiche déjà faite, c\'est ce qui la garde en mémoire — reviens ici régulièrement.</p>'
+    ? '<p class="tu-p"><b>'+p.lues+' fiche'+(p.lues>1?'s':'')+' sur '+p.tot+' travaillée'+(p.lues>1?'s':'')+'.</b> Relire une fiche déjà faite, c\'est ce qui la garde en mémoire — reviens ici régulièrement. Tes notes de séance y sont, à relire et à compléter.</p>'
     : et.etat==='avenir'
       ? '<p class="tu-p">Cette thématique n\'est pas encore ouverte : tu la découvriras en arrivant. '+p.tot+' fiches t\'y attendent.</p>'
       : '<p class="tu-p">'+p.tot+' fiches. Chacune, une fois travaillée, restera ouverte ici pour être relue.</p>';
@@ -12511,6 +12533,8 @@ function seanceEtape(){
     openFiche(slug);
     const pan=document.getElementById('compare-pan');
     if(pan){ pan.style.display='flex'; pan.classList.remove('plie');
+      { const cc=document.getElementById('compare-corps'), nc=document.getElementById('notes-corps'); if(cc) cc.style.display='flex'; if(nc) nc.style.display='none';
+        document.getElementById('compare-toggle').textContent='▾ Ce que tu avais écrit'; }
       document.getElementById('compare-retenu').textContent = SR.note || '(tu n\'avais rien écrit)';
       document.getElementById('compare-oublis').value=''; }
     const nb=document.getElementById('lect-suivant');
@@ -12999,7 +13023,31 @@ let CONSULT=false;
 function consulterFiche(slug){
   /* relire une fiche déjà travaillée compte pour « Le Curieux » : c'est la relecture qu'on récompense */
   if(S.oublis && S.oublis[slug]){ S.relu=S.relu||{}; if(!S.relu[slug]){ S.relu[slug]=Date.now(); saveS(); } }
-  CONSULT=true; openFiche(slug); }
+  CONSULT=true; openFiche(slug); afficherNotes(slug); }
+/* ═══ LES NOTES DE SÉANCE VIVENT AVEC LA FICHE (Lucas, 05/09) : à la relecture, l'élève retrouve
+   ce qu'il avait écrit de mémoire et ce qui lui avait échappé — et peut le compléter. Les deux
+   textes sont ceux de S.oublis[slug], posés à la comparaison pendant la séance. ═══ */
+let NOTES_SLUG=null;
+function afficherNotes(slug){
+  const pan=document.getElementById('compare-pan'), cc=document.getElementById('compare-corps'), nc=document.getElementById('notes-corps');
+  if(!pan || !nc) return;
+  NOTES_SLUG=slug;
+  const n=(S.oublis&&S.oublis[slug])||{};
+  document.getElementById('notes-retenu').value=n.retenu||'';
+  document.getElementById('notes-oublie').value=n.oublie||'';
+  document.getElementById('notes-etat').textContent = n.quand ? 'notes du '+n.quand.split('-').reverse().join('/') : '';
+  document.getElementById('compare-toggle').textContent='▾ Tes notes sur cette fiche';
+  if(cc) cc.style.display='none'; nc.style.display='flex';
+  pan.style.display='flex'; pan.classList.remove('plie');
+}
+function sauverNotes(slug){
+  if(!slug) return;
+  S.oublis=S.oublis||{};
+  const avant=S.oublis[slug]||{};
+  S.oublis[slug]={retenu:(document.getElementById('notes-retenu').value||'').trim(), oublie:(document.getElementById('notes-oublie').value||'').trim(), quand:avant.quand||arDay(), modif:arDay()};
+  saveS();
+  const e=document.getElementById('notes-etat'); if(e){ e.textContent='Enregistré ✓'; setTimeout(()=>{ if(e.textContent==='Enregistré ✓') e.textContent='notes du '+(S.oublis[slug].quand||'').split('-').reverse().join('/'); },2200); }
+}
 /* ═══ LES PAGES DE LA BIBLIOTHÈQUE S'OUVRENT DANS L'APP (Lucas, 05/09 : « comme si c'était
    une autre page web », sans nouvel onglet vers le site). Le guide et les quatre panoramas
    sont des pages complètes copiées dans biblio/ ; on les affiche dans la liseuse des fiches,
