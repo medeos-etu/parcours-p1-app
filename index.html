@@ -9332,7 +9332,9 @@ const TUTOS={
   profil:function(){ const suite=!tutoFait('social'); return [
     {sel:'#p-streak', img:'axo-guide-bienvenue', t:"<b>Ton profil</b> : tout ce que tu construis est rangé ici. Tes chiffres d'abord — série, points, QCM joués, trophées. Ils bougent tout seuls, à chaque séance."},
     {sel:'#profil-av', img:'axo-guide-pointe-haut', t:"<b>Ta photo et ta bannière</b> se changent ici. Tu en débloques une nouvelle à chaque monde terminé, et c'est ce que tes amis voient de toi."},
-    {sel:'#p-code', img:'axo-guide-carte', t:"Si tu as le <b>Pack Année complète</b>, ton code se saisit ici. Et tout en bas, <b>ton point de départ</b> : trois questions, une fois, pour situer ta fac."+(suite? " Dernier endroit : <b>le Social</b>." : ""),
+    {sel:'#p-code', img:'axo-guide-carte', t:"<b>Ton code</b> se saisit ici. Il est pour ceux qui ont pris le <b>Pack Année complète</b> : il ouvre toutes les fiches, tous les QCM et trois ascensions par jour dans l'Amphi — plus de limite de deux fiches par jour, tu avances <b>à ton rythme</b>. Sans le Pack, ce cadre ne te concerne pas : le Parcours reste gratuit jusqu'à ta rentrée."},
+    {el:function(){ return document.getElementById('p-simcard') || [...document.querySelectorAll('#profil h3,#profil h2')].map(x=>/point de départ/i.test(x.textContent)? x.parentElement : null).find(Boolean) || null; },
+     img:'axo-guide-pointe-bas', t:"Et tout en bas, <b>ton point de départ</b>. Trois questions sur ta fac et ton profil, une seule fois : on <b>évalue tes chances</b> d'entrer en deuxième année, d'où tu pars, et ce que ton Parcours peut y changer. Deux minutes."+(suite? " Dernier endroit ensuite : <b>le Social</b>." : ""),
      btn: suite ? "Et le Social →" : "C'est compris", act:function(){ if(suite) try{ go('social'); }catch(e){} }}
   ]; },
   /* LE SOCIAL : ta carte, tes amis — trois étapes, la première fois qu'on y entre avec un compte */
