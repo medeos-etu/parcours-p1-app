@@ -9151,15 +9151,18 @@ const TUTOS={
        morceau a désormais SA visite, au moment où l'élève y met les pieds : les Salles et le
        Grand Amphi à l'entrée dans l'Arène, les mondes et les stages à l'ouverture de la carte. */
     {sel:'#pt-flame', img:'axo-guide-pointe-haut', t:"Chaque jour travaillé allonge ta série 🔥. Un jour sans venir, elle repart à 0 — sauf si tu as posé un gel la veille."},
-    {sel:'#mainnav button[data-t="arene"]', img:'axo-guide-bravo', t:"Et l'Arène, juste là ? <b>Elle s'ouvre dès que tu as fini ta première séance.</b> Tu y retrouves tes deux fiches du jour en questions, sans rien risquer. Et derrière l'app, il y a <b>l'équipe Medeos</b> : si tu as une question, écris-nous sur Instagram, <b>@medeos.sante</b>. Bonne première séance !", btn:"C'est parti !"}
+    {sel:'#mainnav button[data-t="arene"]', img:'axo-guide-bravo', t:"Et l'Arène, juste là ? <b>Elle s'ouvre dès que tu as fini ta première séance.</b> Tu y retrouves tes deux fiches du jour en questions, sans rien risquer. Et derrière l'app, il y a <b>l'équipe Medeos</b> : si tu as une question, écris-nous sur Instagram, <b>@medeos.sante</b>.", btn:"Voir ma route →",
+     /* la présentation du parcours des mondes fait partie de l'introduction (Lucas, 05/09) :
+        on ouvre la carte, et sa visite — ta rentrée, ton monde, les stages, le sommet — enchaîne */
+     act:function(){ try{ ouvrirCarte(); }catch(e){} }}
   ],
   arene:[
     {img:'axo-guide-bienvenue', t:"Bienvenue dans l'Arène ! Ici il y a <b>deux endroits</b>, et ils ne servent pas à la même chose. Je te montre."},
     {sel:'.modeswitch', img:'axo-guide-pointe-haut', t:"Tu passes de l'un à l'autre avec ces deux boutons — c'est tout ce qu'il y a à retenir."},
     {sel:'#vue-salles', img:'axo-guide-carte', t:"<b>Les Salles</b> : une par matière. Tu t'y entraînes sur les fiches que tu viens de travailler, <b>sans rien risquer</b> — ni chrono, ni trophée."},
-    {sel:'#ms-amphi', img:'mascotte-arene-prete-au-combat', t:"<b>Le Grand Amphi</b>, c'est l'inverse : toutes les matières mélangées, du vrai jeu. Chaque case juste vaut <b>+2 🏆</b>, chaque erreur <b>−2</b>."},
+    {sel:'#ms-amphi', avant:function(){ try{ setLieu('amphi'); }catch(e){} }, img:'mascotte-arene-prete-au-combat', t:"<b>Le Grand Amphi</b>, c'est l'inverse : toutes les matières mélangées, du vrai jeu. Chaque case juste vaut <b>+2 🏆</b>, chaque erreur <b>−2</b>."},
     {sel:'.goldplate', img:'axo-guide-pointe-haut', t:"Tes <b>trophées</b>, en haut à droite : <b>touche-les</b> pour ouvrir le classement — le podium, et la place où tu te trouves. Tu y entres dès ton premier trophée."},
-    {img:'axo-guide-bravo', t:"L'Amphi s'ouvre après <b>4 jours de Parcours</b> — le temps de te constituer un bagage. D'ici là, les Salles sont à toi.", btn:"J'ai compris"}
+    {img:'axo-guide-bravo', t:"L'Amphi s'ouvre après <b>4 jours de Parcours</b> — le temps de te constituer un bagage. D'ici là, les Salles sont à toi.", btn:"J'ai compris", act:function(){ try{ setLieu('salles'); }catch(e){} }}
   ],
   /* LE PROFIL : ce qu'on y trouve, et pourquoi y revenir. Quatre étapes, la première fois
      qu'on l'ouvre avec un compte (Lucas, 05/09 : « une petite introduction quand la personne
@@ -9199,8 +9202,7 @@ const TUTOS={
     s.push({el:function(){ return document.getElementById('cr-sommet'); }, img:'axo-guide-bravo', t: p1
       ? "Le sommet, c'est <b>le bout de la route</b> : les "+M.length+" mondes terminés, toutes les bases reprises. On y monte ensemble, monde après monde."
       : "Le sommet, c'est <b>ta rentrée en première année</b> — avec tout le bagage que tu auras construit d'ici là. On y monte ensemble, monde après monde.",
-      btn:"C'est parti !", act:function(){ const m=(typeof mondeCourant==='function')&&mondeCourant();
-        if(m && typeof centrerSurMonde==='function') centrerSurMonde(m.num, true); }});
+      btn:"Commencer ma première séance →", act:function(){ try{ go('home'); }catch(e){} }});
     return s;
   }
 };
@@ -9220,6 +9222,8 @@ function startTuto(k){
 function tutoReplace(){ if(TU) tutoShow(); }
 function tutoShow(){
   if(!TU) return;
+  /* une étape peut préparer l'écran avant de s'afficher : ouvrir le Grand Amphi quand on en parle (Lucas, 05/09) */
+  try{ const s0=TU&&TU.s[TU.i]; if(s0 && typeof s0.avant==='function') s0.avant(); }catch(e){}
   const st=TU.s[TU.i];
   const hole=document.getElementById('tuto-hole'), box=document.getElementById('tuto-box');
   document.getElementById('tuto-bulle').innerHTML=st.t;
@@ -13965,8 +13969,13 @@ try{ majPackCarte(); }catch(e){}
       try{
         var reg=JSON.parse(d.m4_comptes||'{}');
         if(reg && Object.keys(reg).length){
+          /* l'état (m4_state) existe déjà ici, créé au démarrage — vide. On le remplace par l'ancien
+             tant qu'aucun compte n'est connecté localement : c'est lui qui porte la session et la
+             progression. Les autres clés ne s'importent que si elles manquent. */
           ['m4_state','m4_comptes','m4_prenom','m4_onboarded','m4_ecran','m4_codes_uses'].forEach(function(k){
-            if(d[k]!==undefined && localStorage.getItem(k)===null) localStorage.setItem(k, d[k]); });
+            if(d[k]===undefined) return;
+            if(k==='m4_state'){ if(!(typeof accOk==='function' && accOk())) localStorage.setItem(k, d[k]); }
+            else if(localStorage.getItem(k)===null) localStorage.setItem(k, d[k]); });
           importe=true;
         }
       }catch(e){}
