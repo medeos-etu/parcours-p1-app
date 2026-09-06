@@ -14150,6 +14150,8 @@ async function envoyerChat(){
   et.textContent=''; t.value='';
   if(d.message){ CHAT.msgs.push(d.message); CHAT.dernier=Math.max(CHAT.dernier, d.message.cree||0); }
   rendreChat(); t.focus();
+  /* au tuteur : le serveur prépare une proposition de réponse pour Lucas (sa carte Telegram) — sans attendre */
+  if(CHAT.avec==='tuteur' && d.message && d.message.id){ try{ apiCompte('messages/suggerer',{id:d.message.id}).catch(()=>{}); }catch(e){} }
 }
 /* les non-lus : la pastille sur l'onglet Social, les compteurs sur les cartes, la boîte du tuteur */
 async function majMessagesNonLus(){
