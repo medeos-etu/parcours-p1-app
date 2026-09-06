@@ -658,6 +658,29 @@
   .so-t{flex-shrink:0;font-family:Fredoka,Inter,sans-serif;font-size:15px;font-weight:600;padding:6px 11px;border-radius:999px;background:linear-gradient(180deg,#FCD34D,#E29C5C);color:#3A2408;box-shadow:0 3px 0 #8A5B24}
   .so-stats{display:flex;flex-wrap:wrap;gap:6px 12px;margin-top:9px;font-size:11.5px;font-weight:700;color:rgba(250,246,240,.9)}
   .so-x{position:absolute;top:6px;right:6px;width:26px;height:26px;border-radius:50%;border:none;background:rgba(0,0,0,.28);color:#fff;font-size:12px;cursor:pointer;display:none}
+  /* le tuteur, la messagerie (06/09) */
+  .so-carte.tuteur{cursor:pointer}
+  .so-ecrire{flex-shrink:0;font-size:12.5px;font-weight:800;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);color:#fff;display:inline-flex;align-items:center;gap:6px}
+  .so-ecrire i,.so-chat i{font-style:normal;background:#E53E3E;color:#fff;border-radius:999px;font-size:10px;padding:1px 6px;font-weight:900}
+  .so-chat{position:absolute;bottom:8px;right:8px;border:none;background:rgba(0,0,0,.32);color:#fff;font-size:14px;min-width:34px;height:34px;padding:0 8px;border-radius:999px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:4px}
+  .so-conv{display:flex;align-items:center;gap:10px;width:100%;text-align:left;border:none;background:var(--line2);border-radius:14px;padding:10px 12px;margin-top:8px;font-family:inherit;cursor:pointer;color:var(--ink)}
+  .so-conv b{font-size:13.5px;flex-shrink:0}.so-conv span{flex:1;min-width:0;font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .so-conv i{font-style:normal;background:#6B46C1;color:#fff;border-radius:999px;font-size:10px;padding:2px 7px;font-weight:900}
+  #mainnav button{position:relative}
+  .nav-pastille{position:absolute;top:2px;right:12px;background:#E53E3E;color:#fff;font-style:normal;font-size:10px;font-weight:900;border-radius:999px;padding:1px 6px;line-height:1.4;z-index:2}
+  .chat-sheet{max-height:88vh;display:flex;flex-direction:column}
+  .chat-corps{display:flex;flex-direction:column;min-height:52vh}
+  .chat-fil{flex:1;overflow-y:auto;display:flex;flex-direction:column;gap:6px;padding:4px 0 10px}
+  .chat-b{max-width:82%;padding:9px 12px;border-radius:16px;font-size:14px;line-height:1.45}
+  .chat-b.moi{align-self:flex-end;background:#6B46C1;color:#fff;border-bottom-right-radius:5px}
+  .chat-b.eux{align-self:flex-start;background:var(--line2);color:var(--ink);border-bottom-left-radius:5px}
+  .chat-b time{display:block;font-size:10px;opacity:.65;margin-top:3px;text-align:right}
+  .chat-jour{align-self:center;font-size:11px;font-weight:800;color:var(--muted);margin:6px 0 2px}
+  .chat-vide{text-align:center;color:var(--muted);font-size:13.5px;padding:18px 10px}.chat-vide img{width:72px;display:block;margin:0 auto 8px}
+  .chat-saisie{display:flex;gap:8px;align-items:flex-end;padding-top:8px;border-top:1px solid var(--line)}
+  .chat-saisie textarea{flex:1;resize:none;border:1px solid var(--line);border-radius:14px;padding:10px 12px;font-family:inherit;font-size:15px;background:#fff;color:var(--ink);max-height:120px}
+  .chat-env{width:44px;height:44px;border-radius:50%;border:none;background:#6B46C1;color:#fff;font-size:16px;cursor:pointer;flex-shrink:0}
+  .chat-etat{font-size:12px;color:var(--muted);margin:6px 0 0;min-height:14px}
   .so-carte:hover .so-x,.so-carte:focus-within .so-x{display:block}
   @media(hover:none){ .so-x{display:block;opacity:.7} }
   .so-add{display:flex;gap:8px;margin-bottom:10px}
@@ -3108,6 +3131,20 @@
       <div class="sheet-b" id="jour-corps"></div>
     </div>
   </div>
+  <!-- la conversation avec un ami ou le tuteur (06/09) -->
+  <div class="modal" id="sheet-chat" onclick="if(event.target===this)fermerChat()">
+    <div class="sheet chat-sheet">
+      <div class="sheet-h"><b id="chat-nom">💬</b><button onclick="fermerChat()">✕</button></div>
+      <div class="sheet-b chat-corps">
+        <div class="chat-fil" id="chat-fil"></div>
+        <form class="chat-saisie" onsubmit="event.preventDefault();envoyerChat()">
+          <textarea id="chat-texte" rows="1" maxlength="1000" placeholder="Écris ton message…"></textarea>
+          <button type="submit" class="chat-env" aria-label="Envoyer">➤</button>
+        </form>
+        <p class="chat-etat" id="chat-etat"></p>
+      </div>
+    </div>
+  </div>
 
   <!-- ═══ FENÊTRE : ton compagnon (la mascotte a un nom et une humeur) ═══ -->
   <div class="modal" id="sheet-axo" onclick="if(event.target===this)closeSheet('sheet-axo')">
@@ -3494,6 +3531,7 @@ function go(id){
   document.querySelectorAll('.scr').forEach(s=>s.classList.remove('on','uinl','uinr'));
   cible.classList.add('on');
   if(id==='profil' && typeof renderState==='function') renderState();   /* « Tes chiffres » à jour (05/09) */
+  if(id==='social' && typeof majMessagesNonLus==='function') majMessagesNonLus();
   /* d'un univers à l'autre : l'ancien écran SORT d'un côté, le nouveau ENTRE de l'autre */
   if(i>=0 && avant && avant!==cible && UNIVERS.indexOf(avant.id)>=0 && i!==univIdx){
     const versDroite = i>univIdx;
@@ -9341,8 +9379,9 @@ const TUTOS={
   /* LE SOCIAL : ta carte, tes amis — trois étapes, la première fois qu'on y entre avec un compte */
   social:[
     {sel:'.so-carte.moi', img:'axo-guide-bienvenue', t:"Ici, c'est <b>ta carte</b> : ta photo, ta bannière, tes trophées, ton monde, ta série. C'est ce que tes amis voient de toi."},
+    {sel:'.so-carte.tuteur', img:'axo-guide-pointe-haut', t:"<b>Lucas Crepin</b>, ton tuteur Medeos, est déjà dans tes amis. Une question, un doute, un coup de mou : <b>écris-lui ici</b>, il te répond dans l'app."},
     {sel:'.so-add', img:'axo-guide-pointe-haut', t:"Pour ajouter un ami, il te faut <b>son identifiant</b> — celui qu'il a choisi en créant son compte. Tu l'écris ici, tu ajoutes."},
-    {img:'axo-guide-bravo', t:"Vous verrez chacun la carte de l'autre : <b>trophées, monde, série</b>. De quoi se tirer vers le haut, ensemble.", btn:"C'est parti !"}
+    {img:'axo-guide-bravo', t:"Vous verrez chacun la carte de l'autre : <b>trophées, monde, série</b>, et vous pouvez vous écrire. De quoi se tirer vers le haut, ensemble.", btn:"C'est parti !"}
   ],
   /* LA CARTE. Elle se construit au démarrage, parce qu'elle parle de la rentrée de CET élève :
      la date, le nombre de jours, son monde, le stage le plus proche. On finit tout en haut,
@@ -14034,7 +14073,95 @@ function renderArene(){
    Ce qu'un ami voit de toi : photo, bannière, pseudo, grade, trophées, monde, fiches, série.
    Les amis se trouvent par identifiant ; un identifiant que personne n'a encore reste
    « en attente » — on n'invente jamais une carte. ═══ */
-function amisListe(){ S.amis=Array.isArray(S.amis)? S.amis : []; return S.amis; }
+/* ═══ LE TUTEUR ET LA MESSAGERIE (Lucas, 06/09) : chaque inscrit a Lucas en ami d'office, et peut écrire à ses amis
+   et à lui depuis le Social. Les messages vivent sur le serveur ; Lucas répond depuis l'admin ou Telegram. ═══ */
+const TUTEUR={id:'tuteur', nom:'Lucas Crepin', slogan:'Tuteur Medeos', av:'professeur', ban:'legende'};
+const CHAT={avec:null, nom:'', timer:null, dernier:0, msgs:[], rendu:0, resume:null, tuteur:false, cache:{}, enCours:{}};
+function chatEsc(s){ return String(s==null?'':s).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function amiNom(id){ return id==='tuteur'? TUTEUR.nom : id; }
+function chatNonLus(id){ const r=CHAT.resume; if(!r) return 0; const c=r.find(x=>x.avec===String(id).toLowerCase()); return c? (c.nonLus||0) : 0; }
+function amisListe(){
+  S.amis=Array.isArray(S.amis)? S.amis : [];
+  /* le tuteur, d'office et en premier — sauf pour le tuteur lui-même */
+  if(S.ar && S.ar.compte && !CHAT.tuteur && !S.amis.some(a=>a && a.id==='tuteur')) S.amis.unshift({id:'tuteur', tuteur:true, depuis:Date.now()});
+  return S.amis;
+}
+function carteTuteurHtml(){
+  const av=AVATARS.find(a=>a.id===TUTEUR.av)||AVATARS[0], ban=BANNIERES.find(b=>b.id===TUTEUR.ban)||BANNIERES[0];
+  const nl=chatNonLus('tuteur');
+  return '<div class="so-carte tuteur" style="'+banFond(ban)+'" onclick="ouvrirChat(\'tuteur\')" role="button">'+
+    '<div class="so-haut"><span class="so-av av-or"><img src="'+av.img+'" alt="" onerror="this.remove()"></span>'+
+    '<span class="so-nom"><b>'+TUTEUR.nom+'</b><em>🎓 '+TUTEUR.slogan+' · te répond dans l\'app</em></span>'+
+    '<span class="so-ecrire">💬 Écrire'+(nl?' <i>'+nl+'</i>':'')+'</span></div></div>';
+}
+/* la carte d'un ami vient du serveur (sa progression y est) : valable une heure, puis rafraîchie */
+async function chargerAmi(id){
+  const k=String(id).toLowerCase(); if(CHAT.enCours[k] || !jetonCompte()) return; CHAT.enCours[k]=1;
+  try{ const d=await apiCompte('ami?pseudo='+encodeURIComponent(k),null,'GET');
+    if(d && d.ok && d.carte){ const c=d.carte; CHAT.cache[k]={id:c.pseudo, T:(typeof c.T==='number'?c.T:0), streak:c.streak||0, skin:c.skin||{}, medeos:!!c.medeos, fiches:(c.seances||0)*2, ts:Date.now()}; }
+    else if(d && d._status===404) CHAT.cache[k]={absent:true, ts:Date.now()};
+  }catch(e){}
+  delete CHAT.enCours[k];
+  const sc=document.getElementById('social'); if(sc && sc.classList.contains('on')) renderSocial();
+}
+/* ── la conversation ── */
+function ouvrirChat(id){
+  if(!accOk()) return;
+  CHAT.avec=String(id).toLowerCase(); CHAT.nom=amiNom(CHAT.avec); CHAT.dernier=0; CHAT.msgs=[]; CHAT.rendu=0;
+  document.getElementById('chat-nom').textContent='💬 '+CHAT.nom;
+  document.getElementById('chat-fil').innerHTML='<p class="chat-etat">Chargement…</p>';
+  document.getElementById('chat-etat').textContent='';
+  openSheet('sheet-chat'); chargerChat();
+  clearInterval(CHAT.timer);
+  CHAT.timer=setInterval(()=>{ const m=document.getElementById('sheet-chat'); if(!m || !m.classList.contains('on')){ clearInterval(CHAT.timer); return; } chargerChat(); },12000);
+}
+function fermerChat(){ clearInterval(CHAT.timer); closeSheet('sheet-chat'); CHAT.avec=null; majMessagesNonLus(); }
+async function chargerChat(){
+  if(!CHAT.avec) return; const avec=CHAT.avec;
+  let d; try{ d=await apiCompte('messages?avec='+encodeURIComponent(avec)+(CHAT.dernier?'&depuis='+CHAT.dernier:''),null,'GET'); }catch(e){ d={_status:0}; }
+  if(CHAT.avec!==avec) return;
+  if(!d.ok){ if(!CHAT.msgs.length) document.getElementById('chat-fil').innerHTML='<p class="chat-etat">'+(d._status===0?'Pas de connexion pour l\'instant.':'Impossible de charger les messages.')+'</p>'; return; }
+  const nouveaux=d.messages||[];
+  if(nouveaux.length){ nouveaux.forEach(m=>{ if(!CHAT.msgs.some(x=>x.id===m.id)) CHAT.msgs.push(m); }); CHAT.dernier=Math.max(CHAT.dernier, ...nouveaux.map(m=>m.cree||0)); }
+  if(nouveaux.length || !CHAT.rendu) rendreChat();
+}
+function rendreChat(){
+  const f=document.getElementById('chat-fil'); CHAT.rendu=1;
+  if(!CHAT.msgs.length){
+    f.innerHTML='<div class="chat-vide"><img src="img/axo-mains.png" alt="" onerror="this.remove()"><p>'+(CHAT.avec==='tuteur'
+      ? 'Une question, un doute, un coup de mou ? Écris à Lucas : il te répond ici, dans l\'app.'
+      : 'Dis bonjour à '+chatEsc(CHAT.nom)+' !')+'</p></div>';
+    return;
+  }
+  let jour='';
+  f.innerHTML=CHAT.msgs.map(m=>{
+    const d=new Date(m.cree||0); const j=d.toLocaleDateString('fr-FR',{day:'numeric',month:'long'});
+    let x=''; if(j!==jour){ jour=j; x+='<div class="chat-jour">'+j+'</div>'; }
+    return x+'<div class="chat-b '+(m.de==='moi'?'moi':'eux')+'"><span>'+chatEsc(m.texte).replace(/\n/g,'<br>')+'</span><time>'+d.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'})+'</time></div>';
+  }).join('');
+  f.scrollTop=f.scrollHeight;
+}
+async function envoyerChat(){
+  const t=document.getElementById('chat-texte'); const texte=(t.value||'').trim(); if(!texte || !CHAT.avec) return;
+  const et=document.getElementById('chat-etat'); et.textContent='Envoi…'; t.disabled=true;
+  let d; try{ d=await apiCompte('messages',{a:CHAT.avec, texte:texte}); }catch(e){ d={_status:0}; }
+  t.disabled=false;
+  if(!d.ok){ et.textContent= d._status===0 ? 'Pas de connexion : réessaie dans un instant.' : d.erreur==='inconnu' ? 'Ce compte n\'existe pas encore.' : d._status===429 ? 'Doucement : attends une minute.' : 'Message non envoyé.'; return; }
+  et.textContent=''; t.value='';
+  if(d.message){ CHAT.msgs.push(d.message); CHAT.dernier=Math.max(CHAT.dernier, d.message.cree||0); }
+  rendreChat(); t.focus();
+}
+/* les non-lus : la pastille sur l'onglet Social, les compteurs sur les cartes, la boîte du tuteur */
+async function majMessagesNonLus(){
+  if(!(typeof accOk==='function' && accOk()) || !jetonCompte()) return;
+  let d; try{ d=await apiCompte('messages?resume=1',null,'GET'); }catch(e){ return; }
+  if(!d || !d.ok) return;
+  CHAT.resume=(d.conversations||[]).map(c=>Object.assign({},c,{avec:String(c.avec||'').toLowerCase()})); CHAT.tuteur=!!d.tuteur;
+  const total=CHAT.resume.reduce((k,c)=>k+(c.nonLus||0),0);
+  const b=document.querySelector('#mainnav button[data-t="social"]');
+  if(b){ let p=b.querySelector('.nav-pastille'); if(total){ if(!p){ p=document.createElement('i'); p.className='nav-pastille'; b.appendChild(p); } p.textContent=total>9?'9+':String(total); } else if(p) p.remove(); }
+  const sc=document.getElementById('social'); if(sc && sc.classList.contains('on') && !CHAT.avec) renderSocial();
+}
 function joueurDepuis(c, estMoi){
   /* la carte d'un joueur, à partir de son entrée de registre (ou de S pour soi) */
   const skin=(estMoi? (S.ar.skin||{}) : (c.skin||{}));
@@ -14065,6 +14192,7 @@ function carteJoueurHtml(j, opts){
       '<span class="so-t">'+(j.T===null?'—':fmtT(j.T))+' 🏆</span>'+
     '</div>'+
     (stats.length? '<div class="so-stats">'+stats.join('')+'</div>' : '')+
+    (opts.chat? '<button class="so-chat" onclick="event.stopPropagation();ouvrirChat(\''+j.id.replace(/'/g,'')+'\')" aria-label="Écrire">💬'+(chatNonLus(j.id)?'<i>'+chatNonLus(j.id)+'</i>':'')+'</button>' : '')+
     (opts.retirer? '<button class="so-x" onclick="retirerAmi(\''+j.id.replace(/'/g,'')+'\')" aria-label="Retirer">✕</button>' : '')+
   '</div>';
 }
@@ -14077,20 +14205,33 @@ function renderSocial(){
       '<button class="btn ghost" style="margin-top:8px" onclick="accMode=\'login\';focusAcc()">J\'ai déjà un compte</button></div>';
     return;
   }
-  const moi=joueurDepuis(null,true), reg=accRegistre(), amis=amisListe();
-  const invite=S.amiInvite && /^[a-zA-Z0-9._-]{3,40}$/.test(S.amiInvite) && S.amiInvite.toLowerCase()!==moi.id.toLowerCase() && !amis.some(a=>a.id.toLowerCase()===S.amiInvite.toLowerCase()) ? S.amiInvite : null;
+  const moi=joueurDepuis(null,true), reg=accRegistre(), tous=amisListe(), amis=tous.filter(a=>a && !a.tuteur && a.id!=='tuteur');
+  const invite=S.amiInvite && /^[a-zA-Z0-9._-]{3,40}$/.test(S.amiInvite) && S.amiInvite.toLowerCase()!==moi.id.toLowerCase() && !amis.some(a=>a.id.toLowerCase()===S.amiInvite.toLowerCase()) ? S.amiInvite : null
   let x='';
   /* ma carte, telle que mes amis la voient */
   x+='<div class="card so-bloc"><h3>Ta carte</h3><p class="so-sous">Ce que tes amis voient de toi.</p>'+carteJoueurHtml(moi,{moi:true})+'</div>';
+  if(CHAT.tuteur){
+    /* LA BOÎTE DU TUTEUR : toutes les conversations, les non-lus d'abord */
+    const conv=(CHAT.resume||[]).slice().sort((a,b)=>(b.nonLus||0)-(a.nonLus||0) || ((b.dernier&&b.dernier.cree)||0)-((a.dernier&&a.dernier.cree)||0));
+    const total=conv.reduce((k,c)=>k+(c.nonLus||0),0);
+    x+='<div class="card so-bloc"><h3>Messages des élèves'+(total?' · '+total+' non lu'+(total>1?'s':''):'')+'</h3>'+
+       (conv.length? conv.map(c=>'<button class="so-conv" onclick="ouvrirChat(\''+chatEsc(c.avec).replace(/'/g,'')+'\')"><b>'+chatEsc(c.avec)+'</b><span>'+(c.dernier? (c.dernier.de==='moi'?'Toi : ':'')+chatEsc(c.dernier.texte) : '')+'</span>'+(c.nonLus?'<i>'+c.nonLus+'</i>':'')+'</button>').join('')
+                   : '<p class="so-sous">Personne n\'a encore écrit.</p>')+'</div>';
+  } else {
+    /* LE TUTEUR : en ami d'office, on lui écrit d'un geste */
+    x+='<div class="card so-bloc"><h3>Ton tuteur</h3><p class="so-sous">Déjà dans tes amis. Une question, un doute ? Écris-lui.</p>'+carteTuteurHtml()+'</div>';
+  }
   /* tes amis : la recherche et le bouton en tête, les cartes dessous */
   x+='<div class="card so-bloc"><h3>Tes amis'+(amis.length?' · '+amis.length:'')+'</h3>'+
      (invite? '<p class="so-sous so-inv">Tu as été invité par <b>'+invite+'</b>.</p>' : '')+
      '<div class="so-add"><input id="so-champ" type="search" autocapitalize="none" autocorrect="off" spellcheck="false" placeholder="Identifiant d\'un ami" value="'+(invite||'').replace(/"/g,'')+'" onkeydown="if(event.key===\'Enter\')ajouterAmi()">'+
      '<button class="so-plus" onclick="ajouterAmi()">+ Ajouter</button></div><p class="so-msg" id="so-msg"></p>';
-  if(!amis.length) x+='<div class="so-vide"><img src="img/axo-mains.png" alt="" onerror="this.remove()"><p>Personne pour l\'instant. Ajoute un ami avec son identifiant : sa carte apparaît ici — trophées, monde, série.</p></div>';
+  if(!amis.length) x+='<div class="so-vide"><img src="img/axo-mains.png" alt="" onerror="this.remove()"><p>Personne pour l\'instant. Ajoute un ami avec son identifiant : sa carte apparaît ici — trophées, monde, série — et vous pouvez vous écrire.</p></div>';
   else x+=amis.map(a=>{
-      const c=reg[a.id.toLowerCase()];
-      if(c && c.id) return carteJoueurHtml(joueurDepuis(c,false),{retirer:true});
+      const k=a.id.toLowerCase(); const cc=CHAT.cache[k];
+      if(!cc || (Date.now()-(cc.ts||0))>3600e3) chargerAmi(a.id);
+      const c=(cc && !cc.absent)? cc : reg[k];
+      if(c && c.id) return carteJoueurHtml(joueurDepuis(c,false),{retirer:true, chat:true});
       return '<div class="so-carte attente"><div class="so-haut"><span class="so-av"><i>👤</i></span><span class="so-nom"><b>'+a.id+'</b><em>En attente — pas encore inscrit</em></span></div>'+
              '<button class="so-x" onclick="retirerAmi(\''+a.id.replace(/'/g,'')+'\')" aria-label="Retirer">✕</button></div>';
     }).join('');
@@ -14226,6 +14367,8 @@ try{ if(S.tuto && S.tuto.arene && !(S.sdone && Object.keys(S.sdone).length)){ de
    pas en avoir. Les anciennes « missions du jour » en donnaient en silence — on remet à zéro, à chaque
    démarrage et à chaque état récupéré du serveur (pas de verrou « une fois » : il se posait trop tôt). */
 try{ if(corrigerTropheesSansAmphi()) saveS(); }catch(e){}
+/* la messagerie : les non-lus au démarrage, puis toutes les 90 s */
+try{ setTimeout(majMessagesNonLus, 2500); setInterval(majMessagesNonLus, 90000); }catch(e){}
 const PARCOURS_A_VOIR = (typeof accOk==='function'&&accOk()) && !(S.tuto&&S.tuto.home);
 /* ═══ D'OÙ VIENT LA PERSONNE ? Le lien doit tenir sa promesse (Lucas, 05/09 : « hyper limpide
    et logique, quelle que soit la voie d'accès »). src dit par quelle carte du site elle est
