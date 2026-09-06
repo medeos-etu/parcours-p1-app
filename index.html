@@ -3549,6 +3549,7 @@ function go(id){
   if(id==='biblio' && typeof S!=='undefined' && !S.libSeen){ S.libSeen=true; saveS(); renderState(); }
   setBg(id);
   document.body.classList.toggle('in-arene', id==='arene');
+  if(typeof traquerEcran==='function') traquerEcran(id);
   document.body.classList.toggle('in-salle', id==='salle');
   if(id==='profil'){ if(typeof renderSimCard==='function'){ renderSimCard(); renderAvancee(); } if(typeof renderProfilHead==='function') renderProfilHead();
     if(typeof renderCodeZone==='function') renderCodeZone();
@@ -3867,6 +3868,7 @@ function finSim(){ calcSim();
     prerentree:sim.prerentree==null?-1:sim.prerentree, heures:sim.heures==null?0:sim.heures,
     toi:simNum('finval',47), temoin:simNum('finTemoin',12) };
   saveS();
+  try{ traquer('point_depart',{toi:S.point.toi, temoin:S.point.temoin}); }catch(e){}
   /* le point fait = le profil rempli : c'est lui qui débloque la séance suivante */
   const avant=!!S.bonusSeance && S.bonusSeance===arDay();
   if(typeof verifBonusProfil==='function') verifBonusProfil(true);
@@ -7944,6 +7946,42 @@ function renderArenes(){
 const COMPTE_API='https://medeos-sante.fr/api/app-compte';
 function jetonCompte(){ try{ return localStorage.getItem('m4_jeton')||''; }catch(e){ return ''; } }
 function poserJeton(t){ try{ if(t) localStorage.setItem('m4_jeton',t); else { localStorage.removeItem('m4_jeton'); localStorage.removeItem('m4_etatMaj'); } }catch(e){} }
+/* ═══ LE SUIVI DES FAITS ET GESTES (Lucas, 06/09) : chaque geste part au serveur par lots, pour l'admin /admin/univers.
+   Jamais bloquant, jamais sans compte : sans jeton, rien ne part (la file reste locale, vidée à la connexion). ═══ */
+var EVT={q:[], ecran:null, t0:Date.now(), timer:null, enCours:false};
+function evtsLocaux(){ try{ return JSON.parse(localStorage.getItem('m4_evts')||'[]'); }catch(e){ return []; } }
+function evtsGarder(){ try{ localStorage.setItem('m4_evts', JSON.stringify(EVT.q.slice(-200))); }catch(e){} }
+function traquer(type, detail, ecran){
+  try{
+    if(!EVT) return;
+    EVT.q.push({type:String(type), detail:(detail&&typeof detail==='object')?detail:undefined, ecran:ecran||EVT.ecran||undefined, t:Date.now()});
+    if(EVT.q.length>200) EVT.q=EVT.q.slice(-200);
+    evtsGarder();
+    if(EVT.q.length>=25) viderEvts();
+  }catch(e){}
+}
+async function viderEvts(keepalive){
+  try{
+    if(!EVT || EVT.enCours || !EVT.q.length || !jetonCompte()) return;
+    EVT.enCours=true;
+    const lot=EVT.q.slice(0,50);
+    let d; try{ d=await apiCompte('evenements',{evts:lot},'POST',!!keepalive); }catch(e){ d={_status:0}; }
+    if(d && (d.ok || d._status===400)){ EVT.q=EVT.q.slice(lot.length); evtsGarder(); }
+    EVT.enCours=false;
+    if(EVT.q.length>=50) viderEvts();
+  }catch(e){ if(EVT) EVT.enCours=false; }
+}
+/* le changement d'écran : on note d'où on vient, où on va, et le temps passé sur l'écran quitté */
+function traquerEcran(vers){
+  try{
+    if(!EVT) return;
+    const de=EVT.ecran, duree=Date.now()-EVT.t0;
+    if(de===vers) return;
+    EVT.ecran=vers; EVT.t0=Date.now();
+    if(de) traquer('ecran',{de:de, vers:vers, duree:duree}, vers);
+  }catch(e){}
+}
+function srcInscription(){ try{ return SRC0||''; }catch(e){ return ''; } }
 async function apiCompte(chemin, corps, methode, keepalive){
   const en={'Content-Type':'application/json'}; const j=jetonCompte(); if(j) en['Authorization']='Bearer '+j;
   const r=await fetch(COMPTE_API+'/'+chemin,{method:methode||'POST',headers:en,body:(methode==='GET')?undefined:JSON.stringify(corps||{}),keepalive:!!keepalive});
@@ -8000,6 +8038,7 @@ function accInit(){ if(S.ar && !('compte' in S.ar)) { S.ar.compte=null; saveS();
 let accMode=null;   /* 'login' | 'create' — choisi au premier affichage */
 function accRegistre(){ try{ return JSON.parse(localStorage.getItem('m4_comptes')||'{}'); }catch(e){ return {}; } }
 function seDeconnecter(){
+  try{ traquer('deconnexion'); viderEvts(true); }catch(e){}
   poserJeton('');
   /* on détache le compte, rien d'autre : la progression locale et le registre restent intacts */
   if(S.ar) S.ar.compte=null;
@@ -8061,7 +8100,7 @@ async function creerCompte(){
   const mail=(document.getElementById('acc-mail')||{value:''}).value.trim();
   if(!/.+@.+\..+/.test(mail)){ err.textContent='Entre un email valide — c\'est lui qui te permet de te reconnecter.'; return; }
   err.textContent='Création du compte…';
-  let d; try{ d=await apiCompte('inscription',{email:mail, pseudo:id, prenom:localStorage.getItem('m4_prenom')||'', mdp:mp, etat:S}); }catch(e){ d={_status:0}; }
+  let d; try{ d=await apiCompte('inscription',{email:mail, pseudo:id, prenom:localStorage.getItem('m4_prenom')||'', mdp:mp, etat:S, source:srcInscription()}); }catch(e){ d={_status:0}; }
   if(!d.ok){
     err.textContent = d.erreur==='email-pris' ? 'Cet email a déjà un compte — passe par « J\'ai déjà un compte ».'
       : d.erreur==='pseudo-pris' ? 'Cet identifiant est déjà pris — choisis-en un autre.'
@@ -9417,6 +9456,7 @@ function startTuto(k){
   const s=(typeof TUTOS[k]==='function')? TUTOS[k]() : TUTOS[k];
   if(!s || !s.length) return;
   TU={k:k,i:0,s:s};
+  try{ traquer('visite_debut',{k:k}); }catch(e){}
   document.getElementById('tuto').hidden=false;
   tutoShow();
   window.addEventListener('resize',tutoReplace);
@@ -9479,6 +9519,7 @@ function tutoNext(ev){
 }
 function tutoEnd(sansMarquer){
   if(!TU) return;
+  try{ traquer('visite_fin',{k:TU.k, etape:TU.i+1, total:TU.s.length, passee:!sansMarquer && TU.i<TU.s.length-1}); }catch(e){}
   if(!sansMarquer){ S.tuto=S.tuto||{}; S.tuto[TU.k]=Date.now(); saveS(); }
   TU=null;
   document.getElementById('tuto').hidden=true;
@@ -11558,6 +11599,7 @@ function libreValide(){
   btn.onclick=()=>{ LB.i++; if(LB.i<LB.qs.length) libreShow(); else libreFin(); };
 }
 function libreFin(){
+  try{ if(LB && LB.qs && !LB._traque){ LB._traque=1; traquer('qcm',{mat:LB.mat||null, n:LB.qs.length, ok:LB.ok||0, type:LB.entrainement?'salle':'seance', fiche:LB.salleSlug||null}); } }catch(e){}
   /* on retient les fiches dont des questions viennent d'être jouées : la journée n'est « complète »
      que lorsque chaque fiche du jour a été testée (Lucas, 06/09 : « j'ai fait les QCM que pour 1 fiche
      sur les deux et il me met journée complète ») */
@@ -12717,6 +12759,7 @@ function consommerAlt(){
 
 /* ═══ LA BOUCLE : je rate → j'ouvre LA fiche → je rebats ═══ */
 function openFiche(slug,titre){
+  try{ traquer('fiche',{slug:slug}); }catch(e){}
   if(!slug) return;
   marquerVue(slug);
   if(typeof mjTrack==='function') mjTrack('fiche',{slug:slug});   /* jauge Apprends */
@@ -12861,6 +12904,7 @@ function seanceCredit(){
   if(!SR || SR.credited) return;
   const s=SR.s;
   S.sdone=S.sdone||{}; S.sdone[s.id]=Date.now();   /* la date nourrit l'Agenda des J */
+  if(typeof traquer==='function') traquer('seance',{id:s.id, rev:!!s.rev});
   if(s.rev){ delete S.revSeance; }            /* la révision s'efface une fois réparée */
   else { S.sjour=arDay();                     /* seule une séance du FIL consomme le jour */
     S.sj=(S.sj&&S.sj.day===arDay())?{day:arDay(),n:(S.sj.n||0)+1}:{day:arDay(),n:1}; }
@@ -13357,6 +13401,7 @@ function sortirSim(){
 }
 let CONSULT=false;
 function consulterFiche(slug){
+  try{ traquer('relecture',{slug:slug}); }catch(e){}
   /* relire une fiche déjà travaillée compte pour « Le Curieux » : c'est la relecture qu'on récompense */
   if(S.oublis && S.oublis[slug]){ S.relu=S.relu||{}; if(!S.relu[slug]){ S.relu[slug]=Date.now(); saveS(); } }
   CONSULT=true; openFiche(slug); afficherNotes(slug); }
@@ -13377,6 +13422,7 @@ function afficherNotes(slug){
   pan.style.display='flex'; pan.classList.remove('plie');
 }
 function sauverNotes(slug){
+  try{ traquer('notes',{slug:slug}); }catch(e){}
   if(!slug) return;
   S.oublis=S.oublis||{};
   const avant=S.oublis[slug]||{};
@@ -13389,6 +13435,7 @@ function sauverNotes(slug){
    sont des pages complètes copiées dans biblio/ ; on les affiche dans la liseuse des fiches,
    même origine, sans porte email. ═══ */
 function ouvrirRessource(fichier, titre){
+  try{ traquer('ressource',{fichier:fichier}); }catch(e){}
   const L=document.getElementById('lecteur'), fr=document.getElementById('fiche-frame');
   if(!L || !fr) return;
   fr.onload=()=>{ try{
@@ -13492,6 +13539,7 @@ function majPackCarte(){
   if(a) a.style.display=S.stage?'none':''; if(b) b.style.display=S.stage?'':'none';
 }
 function voirStages(){
+  try{ traquer('pack_vu'); }catch(e){}
   majPackCarte();
   go('biblio');
   setTimeout(()=>{ const r=document.getElementById('rayon-stages');
@@ -13527,7 +13575,7 @@ function heroMail(){
   return '<div style="margin-top:13px;margin-right:88px;background:var(--card);border:1px solid var(--line);border-radius:13px;padding:11px 13px;display:flex;align-items:center;gap:10px">'+
     '<div style="flex:1;min-width:0"><p style="font-size:12px;font-weight:800">📬 Être prévenu par email</p>'+
     '<p style="font-size:11px;color:var(--muted);margin-top:1px">Le soir, si tu n\'as pas encore fait ta séance</p></div>'+
-    '<label class="iosw"><input type="checkbox" '+(on?'checked':'')+' onchange="S.mailOn=this.checked;saveS();rappelReglage()"><span class="knob"></span></label>'+
+    '<label class="iosw"><input type="checkbox" '+(on?'checked':'')+' onchange="S.mailOn=this.checked;saveS();rappelReglage();try{traquer(\'rappel\',{on:this.checked})}catch(e){}"><span class="knob"></span></label>'+
     '</div>'+
     /* À CE MOMENT PRÉCIS — la séance finie, l'envie d'en faire une troisième — la seule chose qui
        compte, c'est la limite de deux fiches par jour (Lucas, 05/09). Le reste du Pack se lit sur
@@ -13859,6 +13907,7 @@ function closeRun(anticipee){
   dT=Math.max(dT, -avant, -arT(arCourante()));
   let T=avant+dT;
   S.ar.T=T;
+  try{ traquer('ascension',{delta:T-avant, ok:run.ok||0, n:(run.qs||[]).length, anticipee:!!anticipee}); }catch(e){}
   S.ar.Tmax=Math.max(S.ar.Tmax||0,T);   /* meilleur total atteint : débloque photos et bannières */
   histoSnap();
   if(run.ok>=RUN_LEN) S.ar.parfait=Date.now();   /* exploit : une ascension 10/10 */
@@ -14107,6 +14156,7 @@ async function chargerAmi(id){
 /* ── la conversation ── */
 function ouvrirChat(id){
   if(!accOk()) return;
+  try{ traquer('chat',{avec:String(id).toLowerCase()}); }catch(e){}
   CHAT.avec=String(id).toLowerCase(); CHAT.nom=amiNom(CHAT.avec); CHAT.dernier=0; CHAT.msgs=[]; CHAT.rendu=0;
   document.getElementById('chat-nom').textContent='💬 '+CHAT.nom;
   document.getElementById('chat-fil').innerHTML='<p class="chat-etat">Chargement…</p>';
@@ -14249,6 +14299,7 @@ function ajouterAmi(){
   if(amis.some(a=>a.id.toLowerCase()===id.toLowerCase())){ socialMsg('Déjà dans tes amis.', false); return; }
   const reg=accRegistre(), c=reg[id.toLowerCase()];
   amis.push({id: c&&c.id? c.id : id, depuis: Date.now()});
+  try{ traquer('ami',{id:id}); }catch(e){}
   if(S.amiInvite && S.amiInvite.toLowerCase()===id.toLowerCase()) S.amiInvite=null;
   saveS(); renderSocial();
   socialMsg(c&&c.id ? id+' est dans tes amis.' : id+' est ajouté — sa carte apparaîtra quand il aura rejoint Univers Medeos.', true);
@@ -14371,6 +14422,15 @@ try{ if(S.tuto && S.tuto.arene && !(S.sdone && Object.keys(S.sdone).length)){ de
 try{ if(corrigerTropheesSansAmphi()) saveS(); }catch(e){}
 /* la messagerie : les non-lus au démarrage, puis toutes les 90 s */
 try{ setTimeout(majMessagesNonLus, 2500); setInterval(majMessagesNonLus, 90000); }catch(e){}
+/* le suivi : la file locale reprend, la session s'ouvre, les lots partent toutes les 20 s et à la fermeture */
+try{
+  EVT.q=evtsLocaux().concat(EVT.q);
+  EVT.ecran=(document.querySelector('.scr.on')||{}).id||null; EVT.t0=Date.now();
+  setInterval(function(){ viderEvts(); }, 20000);
+  setTimeout(function(){ viderEvts(); }, 4000);
+  window.addEventListener('pagehide', function(){ try{ traquerEcran(null); viderEvts(true); }catch(e){} });
+  document.addEventListener('visibilitychange', function(){ try{ if(document.visibilityState==='hidden') viderEvts(true); }catch(e){} });
+}catch(e){}
 const PARCOURS_A_VOIR = (typeof accOk==='function'&&accOk()) && !(S.tuto&&S.tuto.home);
 /* ═══ D'OÙ VIENT LA PERSONNE ? Le lien doit tenir sa promesse (Lucas, 05/09 : « hyper limpide
    et logique, quelle que soit la voie d'accès »). src dit par quelle carte du site elle est
@@ -14397,6 +14457,8 @@ let LIEN0='', LIEN0_EMAIL='';
 try{ const q=new URLSearchParams(location.search); LIEN0=String(q.get('lien')||''); LIEN0_EMAIL=String(q.get('email')||'').trim().toLowerCase();
   if(!/^[a-f0-9]{64}$/.test(LIEN0)) LIEN0=''; }catch(e){}
 go(['biblio','home','arene','social'].includes(HASH0) ? HASH0 : ((PUB||CONNEXION) ? 'home' : (NOUVEAU?'biblio':(ECRAN0||((PARCOURS_A_VOIR||!premiereSeanceFaite())?'home':'arene')))));
+/* le suivi : la session s'ouvre ici, quand la source et le hash sont connus */
+try{ traquer('session',{src:SRC0||undefined, hash:HASH0||undefined, largeur:window.innerWidth, appli:!!(typeof navigateurIntegre==='function' && navigateurIntegre())}); }catch(e){}
 if(LIEN0 && LIEN0_EMAIL){
   (async function(){
     try{ history.replaceState(null,'',location.pathname+location.hash); }catch(e){}
