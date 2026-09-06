@@ -8055,7 +8055,10 @@ function seDeconnecter(){
    lien à copier pour ouvrir l'app dans Safari ou Chrome. */
 function navigateurIntegre(){ return /Instagram|FBAN|FBAV|FB_IAB|TikTok|Snapchat|Line\//i.test(navigator.userAgent||''); }
 function bandeauNavigateur(){
-  if(!navigateurIntegre()) return;
+  /* RETIRÉ (Lucas, 06/09) : « pas pertinent — si la personne revient via Instagram elle reste
+     connectée, et elle a un lien de reconnexion par mail ». navigateurIntegre() reste utilisé
+     pour le drapeau `appli` de l'événement session. */
+  return;
   const html='<div class="nav-integre">📱 Tu es dans le navigateur d\'Instagram. Pour <b>rester connecté</b> les prochains jours, ouvre cette page dans Safari ou Chrome. '+
     '<button type="button" onclick="try{navigator.clipboard.writeText(location.origin+\'/\');this.textContent=\'Lien copié ✓\'}catch(e){}">Copier le lien</button></div>';
   ['gate','sheet-compte'].forEach(id=>{ const c=document.getElementById(id); if(!c || c.querySelector('.nav-integre')) return;
