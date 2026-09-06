@@ -3326,15 +3326,27 @@
     <!-- PIVOT 06-07/09/2026 (Lucas) : une seule offre, MEDI PRO = nos 5 stages (4 stages de
          vacances + la pré-rentrée). Le message et le lien suivent l'année de rentrée dite dans
          le Parcours (S.profil.rentreeAn) — 2027 par défaut. Voir renderRayonMediPro(). -->
-    <div class="packcard" id="packcard">
-      <div class="pk-visuels"><img src="img/stage-vacances.png" alt="Stages de vacances" loading="lazy"><span>+</span><img src="img/stage-medipro.png" alt="Pré-rentrée" loading="lazy"></div>
-      <span class="pk-sur">Medi Pro · Nos 5 stages</span>
-      <b id="pk-titre">Tes 5 stages pour anticiper, jusqu'à ta rentrée.</b>
-      <p id="pk-texte">Un stage guidé à chaque vacances de Terminale, puis la pré-rentrée. Et dans l'app : plus de limite de deux fiches par jour, tous les QCM, 3 ascensions par jour.</p>
-      <div class="sc-btns">
-        <button class="sc-buy" onclick="ouvrirMediPro()">Découvrir Medi Pro</button>
-        <button class="sc-more" onclick="ouvrirMediPro('packs')">Un seul stage ? Dates et tarifs</button>
+    <div class="shopcard2" id="packcard">
+      <img src="img/stage-medipro.png" alt="Medi Pro" loading="lazy">
+      <div class="sc2-body">
+        <span class="sc-tag">Medi Pro · Nos 5 stages</span>
+        <b id="pk-titre" style="font-size:14px;line-height:1.3;font-weight:900">Tes 5 stages pour anticiper, jusqu'à ta rentrée.</b>
+        <p id="pk-texte">Un stage guidé à chaque vacances de Terminale, puis la pré-rentrée. Et dans l'app : plus de limite de deux fiches par jour, tous les QCM, 3 ascensions par jour.</p>
+        <div class="sc-btns">
+          <button class="sc-buy" onclick="ouvrirMediPro()">Découvrir Medi Pro</button>
+          <button class="sc-more" onclick="ouvrirMediPro('packs')">Un seul stage ?</button>
+        </div>
       </div>
+    </div>
+    <div class="shopcard2" id="packcard-actif" style="display:none">
+      <img src="img/stage-medipro.png" alt="" loading="lazy">
+      <div class="sc2-body">
+        <span class="sc-tag">Medi Pro · Nos 5 stages</span>
+        <b style="font-size:14px;line-height:1.3;font-weight:900">Ton Medi Pro est actif.</b>
+        <p>Toutes les fiches, tous les QCM, 3 ascensions par jour. Bon entraînement.</p>
+      </div>
+    </div>
+    </div>
     </div>
     <div class="packcard" id="packcard-actif" style="display:none">
       <div class="pk-visuels"><img src="img/stage-vacances.png" alt="" loading="lazy"><span>+</span><img src="img/stage-medipro.png" alt="" loading="lazy"></div>
