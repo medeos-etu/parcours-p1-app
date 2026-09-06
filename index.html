@@ -7930,6 +7930,7 @@ async function recupererEtat(){
   const connu=parseInt(localStorage.getItem('m4_etatMaj')||'0',10)||0;
   if(d.etatMaj<=connu) return false;
   S=d.etat; if(!S||typeof S!=='object') return false;
+  try{ corrigerTropheesSansAmphi(); }catch(e){}
   localStorage.setItem('m4_state',JSON.stringify(S)); localStorage.setItem('m4_etatMaj',String(d.etatMaj));
   if(d.prenom) localStorage.setItem('m4_prenom',d.prenom);
   return true;
@@ -9565,7 +9566,18 @@ function mjState(){
   return S.mj;
 }
 function mjCoffreVal(){ const n=(S.mjChest&&S.mjChest.n)||0; return n>=7?40:(n>=3?30:20); }
+function corrigerTropheesSansAmphi(){
+  if(!S || !S.ar || S.ar.runsDone>0) return false;
+  if(!(S.ar.T>0 || S.ar.Tmax>0 || S.ar.gold>0)) return false;
+  S.ar.T=0; S.ar.Tmax=0; S.ar.gold=0;
+  if(S.ar.mats) Object.keys(S.ar.mats).forEach(m=>{ const a=S.ar.mats[m]; if(a && typeof a==='object' && 'T' in a) a.T=0; });
+  return true;
+}
 function mjCredit(x,mat){
+  /* ⛔ DÉSACTIVÉ (Lucas, 06/09 : « mis à part l'Arène, il ne doit plus y avoir de système qui fait gagner des
+     trophées »). Les jauges des missions du jour continuent de se remplir en silence, mais elles ne
+     créditent plus rien : les trophées viennent du Grand Amphi, et de lui seul (closeRun). */
+  return;
   if(!S.ar) initAr();
   const cible=(mat && S.ar.mats && MJ_MATS.indexOf(mat)>=0) ? mat : arCourante();   /* l'arène de la matière si on la connaît */
   S.ar.T=(S.ar.T||0)+x;
@@ -14210,6 +14222,10 @@ try{ if(typeof verifierSerie==='function') verifierSerie(); }catch(e){}   /* une
 }catch(e){} })();
 window.addEventListener('pagehide', function(){ try{ if(_pousseeT){ clearTimeout(_pousseeT); pousserEtat(true); } }catch(e){} });
 try{ if(S.tuto && S.tuto.arene && !(S.sdone && Object.keys(S.sdone).length)){ delete S.tuto.arene; saveS(); } }catch(e){}   /* présentée fermée : à représenter ouverte */
+/* Les trophées ne viennent que du Grand Amphi (06/09) : un compte qui n'a jamais lancé d'ascension ne peut
+   pas en avoir. Les anciennes « missions du jour » en donnaient en silence — on remet à zéro, à chaque
+   démarrage et à chaque état récupéré du serveur (pas de verrou « une fois » : il se posait trop tôt). */
+try{ if(corrigerTropheesSansAmphi()) saveS(); }catch(e){}
 const PARCOURS_A_VOIR = (typeof accOk==='function'&&accOk()) && !(S.tuto&&S.tuto.home);
 /* ═══ D'OÙ VIENT LA PERSONNE ? Le lien doit tenir sa promesse (Lucas, 05/09 : « hyper limpide
    et logique, quelle que soit la voie d'accès »). src dit par quelle carte du site elle est
