@@ -3323,42 +3323,26 @@
     <!-- LE PACK D'ABORD (Lucas, 05/09 : « le Pack Année complète est encore plus important que les
          cartes stages ») — et ce qu'il change tout de suite : plus de limite de fiches. -->
     <!-- Épurée (Lucas, 05/09) : les deux visuels en petit, côte à côte, un message, un bouton. Fond plat. -->
+    <!-- PIVOT 06-07/09/2026 (Lucas) : une seule offre, MEDI PRO = nos 5 stages (4 stages de
+         vacances + la pré-rentrée). Le message et le lien suivent l'année de rentrée dite dans
+         le Parcours (S.profil.rentreeAn) — 2027 par défaut. Voir renderRayonMediPro(). -->
     <div class="packcard" id="packcard">
-      <div class="pk-visuels"><img src="img/stage-vacances.png" alt="Stages Vacances" loading="lazy"><span>+</span><img src="img/stage-medipro.png" alt="Medi Pro" loading="lazy"></div>
-      <span class="pk-sur">Pack Année complète</span>
-      <b>Plus de limite de deux fiches par jour.</b>
-      <p>Les 4 stages de vacances + la pré-rentrée offerte · tous les QCM · 3 ascensions par jour.</p>
-      <button class="sc-buy" onclick="window.open('https://medeos-sante.fr/packs/stages-vacances#pack-annee','_blank')">Découvrir le Pack Année complète</button>
+      <div class="pk-visuels"><img src="img/stage-vacances.png" alt="Stages de vacances" loading="lazy"><span>+</span><img src="img/stage-medipro.png" alt="Pré-rentrée" loading="lazy"></div>
+      <span class="pk-sur">Medi Pro · Nos 5 stages</span>
+      <b id="pk-titre">Tes 5 stages pour anticiper, jusqu'à ta rentrée.</b>
+      <p id="pk-texte">Un stage guidé à chaque vacances de Terminale, puis la pré-rentrée. Et dans l'app : plus de limite de deux fiches par jour, tous les QCM, 3 ascensions par jour.</p>
+      <div class="sc-btns">
+        <button class="sc-buy" onclick="ouvrirMediPro()">Découvrir Medi Pro</button>
+        <button class="sc-more" onclick="ouvrirMediPro('packs')">Un seul stage ? Dates et tarifs</button>
+      </div>
     </div>
     <div class="packcard" id="packcard-actif" style="display:none">
       <div class="pk-visuels"><img src="img/stage-vacances.png" alt="" loading="lazy"><span>+</span><img src="img/stage-medipro.png" alt="" loading="lazy"></div>
-      <span class="pk-sur">Pack Année complète</span>
-      <b>Ton Pack est actif.</b>
+      <span class="pk-sur">Medi Pro · Nos 5 stages</span>
+      <b>Ton Medi Pro est actif.</b>
       <p>Toutes les fiches, tous les QCM, 3 ascensions par jour. Bon entraînement.</p>
     </div>
-    <div class="shop">
-      <div class="shopcard2">
-        <img src="img/stage-vacances.png" alt="Stages Vacances" loading="lazy">
-        <div class="sc2-body">
-          <span class="sc-tag">Stages des vacances scolaires</span>
-          <p>Quatre stages guidés pendant tes vacances de Terminale, qui te transmettent les bases de la première année de santé. Un parcours qui reprend là où tu t'es arrêté, à ton rythme, et tes questions de cours trouvent une réponse à tout moment.</p>
-          <div class="sc-btns">
-            <button class="sc-more" onclick="window.open('https://medeos-sante.fr/packs/stages-vacances','_blank')">En savoir plus</button>
-            <button class="sc-buy" onclick="window.open('https://medeos-sante.fr/packs/stages-vacances#stages','_blank')">Dates et tarif</button>
-          </div>
-        </div>
-      </div>
-      <div class="shopcard2">
-        <img src="img/stage-medipro.png" alt="Medi Pro" loading="lazy">
-        <div class="sc2-body">
-          <span class="sc-tag">Stage de pré-rentrée</span>
-          <p>Un stage intensif juste avant la rentrée, qui te transmet les bases académiques et une méthode avancée pour aborder ta première année de santé. Tes questions de cours trouvent une réponse à tout moment, et ton tuteur t'accompagne sur la méthode.</p>
-          <div class="sc-btns">
-            <button class="sc-more" onclick="window.open('https://medeos-sante.fr/packs/medi-pro','_blank')">En savoir plus</button>
-            <button class="sc-buy" onclick="window.open('https://medeos-sante.fr/packs/medi-pro#packs','_blank')">Dates et tarif</button>
-          </div>
-        </div>
-      </div>
+    </div>
     </div>
     </div>
   </section>
@@ -3449,7 +3433,7 @@
 
     <div class="card" id="p-avancee"></div>
     <button class="btn ghost" id="btn-logout" onclick="seDeconnecter()">Se déconnecter</button>
-    <p style="font-size:10.5px;color:var(--muted);text-align:center;line-height:1.5"><a href="https://medeos-sante.fr/packs/stages-vacances" target="_blank" rel="noopener" style="color:inherit">Espace parents</a> · <a href="https://medeos-sante.fr/legal/confidentialite" target="_blank" rel="noopener" style="color:inherit">Confidentialité</a></p>
+    <p style="font-size:10.5px;color:var(--muted);text-align:center;line-height:1.5"><a href="#" onclick="ouvrirMediPro();return false" style="color:inherit">Espace parents</a> · <a href="https://medeos-sante.fr/legal/confidentialite" target="_blank" rel="noopener" style="color:inherit">Confidentialité</a></p>
   </section>
 
 
@@ -8491,8 +8475,8 @@ function renderProgression(){
       : 'Chaque séance élargit ton diagramme. Le bord, c\'est ce qu\'un élève régulier traverse en quelques mois — dis-moi ta date de rentrée et je l\'ajuste à ta route.')+'</p>'+
     (S.stage ? '<p style="margin-top:10px;border-top:1px solid var(--line);padding-top:10px;font-size:11px;color:var(--muted);line-height:1.55">⚔️ <b>Ton Pack Année complète est actif</b> : toutes les fiches, tous les QCM, et 3 ascensions par jour.</p>'
     : '<div style="margin-top:10px;border-top:1px solid var(--line);padding-top:10px;display:flex;align-items:center;gap:10px;flex-wrap:wrap">'+
-    '<p style="flex:1;min-width:200px;font-size:11px;color:var(--muted);line-height:1.55">🚀 <b>Pour accélérer :</b> le <b>Pack Année complète</b>, ce sont les quatre stages de vacances, la pré-rentrée offerte, et l\'app sans limite de fiches, tous les QCM, et 3 ascensions par jour au lieu de 2.</p>'+
-    '<button class="btn small" style="flex-shrink:0" onclick="window.open(\'https://medeos-sante.fr/packs/stages-vacances#pack-annee\',\'_blank\')">En savoir plus</button></div>');
+    '<p style="flex:1;min-width:200px;font-size:11px;color:var(--muted);line-height:1.55">🚀 <b>Pour accélérer :</b> <b>Medi Pro</b>, ce sont tes 5 stages — les quatre stages de vacances et la pré-rentrée — et l\'app sans limite de fiches, tous les QCM, et 3 ascensions par jour au lieu de 2.</p>'+
+    '<button class="btn small" style="flex-shrink:0" onclick="ouvrirMediPro(\'packs\')">En savoir plus</button></div>');
   cibles.forEach(e=>e.innerHTML=inner);
 }
 /* une fiche recommandée ne s'ouvre que si le PARCOURS l'a réellement servie :
@@ -10995,12 +10979,37 @@ function joursAvantRentree(){
   const d = dateRentree(); if(!d) return null;
   return Math.max(0, Math.ceil((d - new Date()) / 864e5));
 }
+/* ═══ MEDI PRO (pivot 06-07/09/2026) : UNE page « tous nos stages », par année de rentrée.
+   L'année = celle que l'élève a dite dans le Parcours (S.profil.rentreeAn), sinon la prochaine
+   rentrée (2027 par défaut). ⚠️ MEDI_PRO_SITE : la page n'existe qu'en preview tant que le pivot
+   n'est pas en prod — basculer l'hôte au moment de la mise en ligne. ═══ */
+const MEDI_PRO_SITE = 'https://medeos-sante.fr';
+function anneeRentreeMediPro(){
+  try { return (S.profil && S.profil.rentreeAn) || prochaineRentreeAn(); } catch(e){ return 2027; }
+}
+function lienMediPro(ancre){
+  const an = anneeRentreeMediPro() >= 2028 ? 2028 : 2027;
+  return MEDI_PRO_SITE + '/packs/medi-pro-v2/' + an + '?src=app' + (ancre ? '#' + ancre : '');
+}
+function ouvrirMediPro(ancre){ window.open(lienMediPro(ancre), '_blank'); }
+/* Le rayon « Aller plus loin » : le message suit l'année de rentrée. */
+function renderRayonMediPro(){
+  const t = document.getElementById('pk-titre'), p = document.getElementById('pk-texte'); if(!t || !p) return;
+  const an = anneeRentreeMediPro();
+  if (an >= 2028) {
+    t.textContent = 'Tes 5 stages pour anticiper, dès cette année.';
+    p.textContent = 'Ta rentrée est en ' + an + ' : tu as le temps de poser les bases solidement. Un stage guidé à chaque vacances, puis la pré-rentrée — et dans l\'app, plus de limite de deux fiches par jour, tous les QCM, 3 ascensions par jour.';
+  } else {
+    t.textContent = 'Tes 5 stages pour anticiper, jusqu\'à ta rentrée ' + an + '.';
+    p.textContent = 'Un stage guidé à chaque vacances de Terminale, puis la pré-rentrée. Et dans l\'app : plus de limite de deux fiches par jour, tous les QCM, 3 ascensions par jour.';
+  }
+}
 function poserRentree(an){
   S.profil = S.profil || {};
   S.profil.dejaP1 = (an === 'deja');
   S.profil.rentreeAn = (an && an !== 'deja') ? an : null;   /* null = « je ne sais pas encore » */
   S.profil.rentreeDite = true;
-  saveS(); renderCarte();
+  saveS(); renderCarte(); renderRayonMediPro();
 }
 /* l'élève a déjà fait sa rentrée : plus de compte à rebours, plus de sommet « rentrée »,
    la route entière — mais ses stages restent sur le chemin, à leurs vraies dates. */
@@ -11291,7 +11300,7 @@ function renderCarte(){
       const dj=Math.max(0, Math.round((p.m-new Date())/864e5));
       const pitch = (p1 && p.id && PITCH_P1[p.id]) ? PITCH_P1[p.id] : (p.pitch||'');
       poser(faites+dj, camp(p.emo+' '+p.quand+' · '+dans(dj), p.stage||'Stage Medeos', pitch,
-        'https://medeos-sante.fr/packs/stages-vacances#stages', 'Découvrir ce stage', imgStage(p.id||''),
+        lienMediPro('packs'), 'Découvrir ce stage', imgStage(p.id||''),
         {hook: p1 ? 'Pendant tes vacances, tu entres dans un <b>parcours guidé</b> : une demi-journée par jour, avec l\'équipe Medeos à tes côtés, pour <b>consolider</b> ce qui est passé trop vite et reprendre de l\'avance.'
                   : 'Pendant tes vacances, tu entres dans un <b>parcours guidé pour anticiper ta P1</b> : une demi-journée par jour, avec l\'équipe Medeos à tes côtés. Tu <b>accélères</b>, et tu consolides ce que tu sais déjà.',
          valeurs: VAL_VAC}));
@@ -11301,7 +11310,7 @@ function renderCarte(){
       const dj=Math.max(0, Math.round((pr.m-new Date())/864e5));
       poser(faites+dj, camp('☀️ '+pr.quand+' · '+dans(dj), 'Stage de pré-rentrée',
         'La dernière ligne droite avant ta première année : tu arrives le jour J en sachant travailler.',
-        'https://medeos-sante.fr/packs/medi-pro', 'Découvrir la pré-rentrée', imgStage('prerentree'),
+        lienMediPro('packs'), 'Découvrir la pré-rentrée', imgStage('prerentree'),
         {hook: 'Quinze jours avant ta rentrée, tu entres dans un <b>parcours guidé</b> : six heures par jour, <b>les bases et la méthode</b>, avec l\'équipe Medeos à tes côtés jusqu\'au concours.',
          valeurs: VAL_PRE}));
     }
@@ -11332,11 +11341,11 @@ function renderCarte(){
         ? '<div class="cr-audela">Ta route va jusqu\'au bout, et tes stages jalonnent les vacances.</div>'
         : auDela
           ? '<div class="cr-audela">Pendant l\'année scolaire, deux fiches par jour, c\'est déjà bien. À ce rythme, ta route s\'arrête ici : '+auDela+' monde'+(auDela>1?'s':'')+' reste'+(auDela>1?'nt':'')+' au-delà.</div>'+
-            '<a class="cr-plus" href="https://medeos-sante.fr/packs/stages-vacances#pack-annee" target="_blank" rel="noopener">'+
+            '<a class="cr-plus" href="'+lienMediPro()+'" target="_blank" rel="noopener">'+
               '<span class="cr-plus-k">Les vacances changent tout</span>'+
               '<b>C\'est là que tu as du temps</b>'+
               '<span class="cr-plus-l">Quatre stages de douze jours, guidés, avec un tuteur qui répond — et le stage de pré-rentrée juste avant ta P1. Chacun reprend le programme là où tu en es.</span>'+
-              '<em>Voir l\'année complète →</em></a>'
+              '<em>Voir Medi Pro, nos 5 stages →</em></a>'
           : '')+
       '</div>';
   }
@@ -13001,7 +13010,7 @@ function seanceFin(){
   { const suite=seanceCourante();
     if(suite && !s.rev) bilan+='<div class="fin-demain">📌 '+(seanceJourFaite()?'Demain':'Ensuite')+' : <b>'+suite.titre+'</b></div>';
     const st=(!s.rev && typeof prochainStageProche==='function')? prochainStageProche() : null;
-    if(st) bilan+='<a class="fin-stage" href="https://medeos-sante.fr/packs/stages-vacances#stages" target="_blank" rel="noopener">'+st.emo+' '+
+    if(st) bilan+='<a class="fin-stage" href="'+lienMediPro('packs')+'" target="_blank" rel="noopener">'+st.emo+' '+
       (st.jours<=0 ? 'En ce moment' : st.jours===1 ? 'Demain' : 'Dans '+st.jours+' jours')+', le '+st.stage.replace(/^Stage /,'stage ')+' ('+st.quand+') : douze jours guidés qui reprennent là où tu en es, avec un tuteur. <em>Voir les stages →</em></a>'; }
   bilan+=axoScene('vers_entrainement');
   bilan+='<p class="fin-bascule">⚔️ On quitte le Parcours : direction <b>l\'Arène</b>, salle <b>'+salle+'</b>, pour tester ce que tu viens de voir.</p>';
@@ -14565,4 +14574,5 @@ if(CODE0){
 /* pas de fenêtre de compte imposée à qui vient lire la Bibliothèque librement */
 if(!accOk() && !S.acD && HASH0!=='biblio' && !NOUVEAU){ setTimeout(()=>{ if(!accOk() && !S.acD && !TU) focusAcc(); }, 1400); }
 calcSim();
+try { renderRayonMediPro(); } catch(e) {}
 </script>
