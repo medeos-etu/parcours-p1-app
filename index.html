@@ -3016,7 +3016,7 @@
         </div>
         <div class="card" id="ar-stagecard" style="display:none;border:1px solid var(--tung)">
             <p style="font-size:12.5px;font-weight:800">Tes ascensions du jour sont faites. 👏</p>
-            <p style="font-size:11.5px;color:var(--muted);line-height:1.55;margin-top:3px">Avec le Pack Année complète, tu passes à 3 ascensions par jour.</p>
+            <p style="font-size:11.5px;color:var(--muted);line-height:1.55;margin-top:3px">Avec le Pack Medi Pro, tu passes à 3 ascensions par jour.</p>
             <button class="btn ghost small" style="margin-top:9px" onclick="voirStages()">Voir les stages</button>
           <button class="blien" style="display:block;margin:8px auto 0;font-size:10.5px" onclick="go('profil')">Déjà l'année complète ? J'ai un code</button>
         </div>
@@ -3262,7 +3262,7 @@
 
       <div class="card" id="arend-stagecard" style="display:none;width:100%;max-width:400px;text-align:left;border:1px solid var(--tung)">
         <p style="font-size:12.5px;font-weight:800">Tes ascensions du jour sont faites. 👏</p>
-        <p style="font-size:11.5px;color:var(--muted);line-height:1.55;margin-top:3px">Avec le Pack Année complète, tu passes à 3 ascensions par jour.</p>
+        <p style="font-size:11.5px;color:var(--muted);line-height:1.55;margin-top:3px">Avec le Pack Medi Pro, tu passes à 3 ascensions par jour.</p>
         <button class="btn ghost small" style="margin-top:9px" onclick="voirStages()">Voir les stages</button>
           <button class="blien" style="display:block;margin:8px auto 0;font-size:10.5px" onclick="go('profil')">Déjà l'année complète ? J'ai un code</button>
       </div>
@@ -3320,7 +3320,7 @@
 
     <div class="rayon-premium">
     <h2 id="rayon-stages">⚡ Aller plus loin avec Medeos</h2>
-    <!-- LE PACK D'ABORD (Lucas, 05/09 : « le Pack Année complète est encore plus important que les
+    <!-- LE PACK D'ABORD (Lucas, 05/09 : « le Pack Medi Pro est encore plus important que les
          cartes stages ») — et ce qu'il change tout de suite : plus de limite de fiches. -->
     <!-- Épurée (Lucas, 05/09) : les deux visuels en petit, côte à côte, un message, un bouton. Fond plat. -->
     <!-- PIVOT 06-07/09/2026 (Lucas) : une seule offre, MEDI PRO = nos 5 stages (4 stages de
@@ -3331,7 +3331,7 @@
       <div class="sc2-body">
         <span class="sc-tag">Medi Pro · Nos 5 stages</span>
         <b id="pk-titre" style="font-size:14px;line-height:1.3;font-weight:900">Tes 5 stages pour anticiper, jusqu'à ta rentrée.</b>
-        <p id="pk-texte">Un stage guidé à chaque vacances de Terminale, puis la pré-rentrée. Et dans l'app : plus de limite de deux fiches par jour, tous les QCM, 3 ascensions par jour.</p>
+        <p id="pk-texte">Un stage guidé à chaque vacances de Terminale, puis la pré-rentrée. Et dans l'app, l'accès illimité aux fiches : plus de limite de deux par jour, tu avances comme tu le sens — avec tous les QCM et 3 ascensions par jour.</p>
         <div class="sc-btns">
           <button class="sc-buy" onclick="ouvrirMediPro()">Découvrir Medi Pro</button>
           <button class="sc-more" onclick="ouvrirMediPro('packs')">Un seul stage ?</button>
@@ -3342,7 +3342,7 @@
       <img src="img/stage-medipro.png" alt="" loading="lazy">
       <div class="sc2-body">
         <span class="sc-tag">Medi Pro · Nos 5 stages</span>
-        <b style="font-size:14px;line-height:1.3;font-weight:900">Ton Medi Pro est actif.</b>
+        <b style="font-size:14px;line-height:1.3;font-weight:900">Ton Pack Medi Pro est actif.</b>
         <p>Toutes les fiches, tous les QCM, 3 ascensions par jour. Bon entraînement.</p>
       </div>
     </div>
@@ -3351,7 +3351,7 @@
     <div class="packcard" id="packcard-actif" style="display:none">
       <div class="pk-visuels"><img src="img/stage-vacances.png" alt="" loading="lazy"><span>+</span><img src="img/stage-medipro.png" alt="" loading="lazy"></div>
       <span class="pk-sur">Medi Pro · Nos 5 stages</span>
-      <b>Ton Medi Pro est actif.</b>
+      <b>Ton Pack Medi Pro est actif.</b>
       <p>Toutes les fiches, tous les QCM, 3 ascensions par jour. Bon entraînement.</p>
     </div>
     </div>
@@ -3434,7 +3434,7 @@
     <div class="card" id="prog-profil"></div>
     <div class="card" id="p-profil"></div>
     <div class="card" id="p-code">
-      <h3>⚔️ Ton code Pack Année complète</h3>
+      <h3>⚔️ Ton code Pack Medi Pro</h3>
       <div id="code-zone"></div>
     </div>
     <div class="card">
@@ -4003,7 +4003,7 @@ const ABANK=[
 /* ==PARCOURS-QCM-DEBUT== */
 /* ── LES QCM DU PARCOURS — 1890 questions sur 270 fiches.
    Chaque question porte son lot (lo) : 1-2 entraînement gratuit, 3-5 entraînement
-   pack année complète, 6-7 arène (ar:1). Écrites depuis la fiche, chaque item ancré
+   Pack Medi Pro, 6-7 arène (ar:1). Écrites depuis la fiche, chaque item ancré
    par une citation littérale vérifiée par outils/verifie-qcm.js.
    Bloc remplacé en entier à chaque implantation : ne rien écrire à la main ici. ── */
 {id:"pq-anatomie-001-position-reference-1", mat:"Anatomie", n:"La position anatomique de référence", f:"anatomie-001-position-reference", D:1000, M:12, lo:1, q:"Parmi les propositions suivantes relatives à la posture qui définit la position anatomique de référence, laquelle (lesquelles) est (sont) exacte(s) ?",
@@ -8485,7 +8485,7 @@ function renderProgression(){
       : toutLeCorpus ? 'Chaque séance élargit ton diagramme. Le bord, c\'est la matière entière — d\'ici ta rentrée, tu as le temps de la parcourir en entier.'
       : jR!=null ? 'Chaque séance élargit ton diagramme. Le bord, c\'est ce que tu peux traverser d\'ici ta rentrée, à deux fiches par jour.'
       : 'Chaque séance élargit ton diagramme. Le bord, c\'est ce qu\'un élève régulier traverse en quelques mois — dis-moi ta date de rentrée et je l\'ajuste à ta route.')+'</p>'+
-    (S.stage ? '<p style="margin-top:10px;border-top:1px solid var(--line);padding-top:10px;font-size:11px;color:var(--muted);line-height:1.55">⚔️ <b>Ton Pack Année complète est actif</b> : toutes les fiches, tous les QCM, et 3 ascensions par jour.</p>'
+    (S.stage ? '<p style="margin-top:10px;border-top:1px solid var(--line);padding-top:10px;font-size:11px;color:var(--muted);line-height:1.55">⚔️ <b>Ton Pack Medi Pro est actif</b> : toutes les fiches, tous les QCM, et 3 ascensions par jour.</p>'
     : '<div style="margin-top:10px;border-top:1px solid var(--line);padding-top:10px;display:flex;align-items:center;gap:10px;flex-wrap:wrap">'+
     '<p style="flex:1;min-width:200px;font-size:11px;color:var(--muted);line-height:1.55">🚀 <b>Pour accélérer :</b> <b>Medi Pro</b>, ce sont tes 5 stages — les quatre stages de vacances et la pré-rentrée — et l\'app sans limite de fiches, tous les QCM, et 3 ascensions par jour au lieu de 2.</p>'+
     '<button class="btn small" style="flex-shrink:0" onclick="ouvrirMediPro(\'packs\')">En savoir plus</button></div>');
@@ -9106,7 +9106,7 @@ function setLieu(l){
 /* — LES SALLES — */
 /* SEPT EMPLACEMENTS PAR FICHE, TOUJOURS LES MÊMES, remplis ou non :
      lots 1-2  entraînement, accès gratuit
-     lots 3-5  entraînement, pack année complète
+     lots 3-5  entraînement, Pack Medi Pro
      lots 6-7  arène (ar:1), jamais jouables à l'entraînement
    L'app raisonne sur cette structure, pas sur ce qu'elle a sous la main : une fiche
    dont les QCM ne sont pas encore écrits garde ses sept cases, simplement vides, et
@@ -9404,7 +9404,7 @@ const TUTOS={
       {sel:'#ms-amphi', img:'mascotte-arene-prete-au-combat', t:"<b>Le Grand Amphi</b>, c'est l'inverse des Salles : toutes les matières mélangées, du vrai jeu. Chaque case juste vaut <b>+2 🏆</b>, chaque erreur <b>−2</b>."},
       {sel:'.goldplate', img:'axo-guide-pointe-haut', t:"Tes <b>trophées</b>, en haut à droite : <b>touche-les</b> pour ouvrir le classement — le podium, et la place où tu te trouves. Tu y entres dès ton premier trophée."},
       {img:'axo-guide-bravo', t: (ouvert
-        ? "<b>Deux ascensions par jour</b> — trois avec le Pack Année complète. Chacune compte : joue-la quand tu te sens prêt."
+        ? "<b>Deux ascensions par jour</b> — trois avec le Pack Medi Pro. Chacune compte : joue-la quand tu te sens prêt."
         : "L'Amphi s'ouvre après <b>4 jours de Parcours</b> — le temps de te constituer un bagage. D'ici là, les Salles sont à toi.")
         +(suite ? " On passe à <b>ton profil</b> ?" : ""),
        btn: suite ? "Voir mon profil →" : "C'est compris", act:function(){ if(suite) try{ go('profil'); }catch(e){} }}
@@ -9416,7 +9416,7 @@ const TUTOS={
   profil:function(){ const suite=!tutoFait('social'); return [
     {sel:'#p-streak', img:'axo-guide-bienvenue', t:"<b>Ton profil</b> : tout ce que tu construis est rangé ici. Tes chiffres d'abord — série, points, QCM joués, trophées. Ils bougent tout seuls, à chaque séance."},
     {sel:'#profil-av', img:'axo-guide-pointe-haut', t:"<b>Ta photo et ta bannière</b> se changent ici. Tu en débloques une nouvelle à chaque monde terminé, et c'est ce que tes amis voient de toi."},
-    {sel:'#p-code', img:'axo-guide-carte', t:"<b>Ton code</b> se saisit ici. Il est pour ceux qui ont pris le <b>Pack Année complète</b> : il ouvre toutes les fiches, tous les QCM et trois ascensions par jour dans l'Amphi — plus de limite de deux fiches par jour, tu avances <b>à ton rythme</b>. Sans le Pack, ce cadre ne te concerne pas : le Parcours reste gratuit jusqu'à ta rentrée."},
+    {sel:'#p-code', img:'axo-guide-carte', t:"<b>Ton code</b> se saisit ici. Il est pour ceux qui ont pris le <b>Pack Medi Pro</b> : il ouvre toutes les fiches, tous les QCM et trois ascensions par jour dans l'Amphi — plus de limite de deux fiches par jour, tu avances <b>à ton rythme</b>. Sans le Pack, ce cadre ne te concerne pas : le Parcours reste gratuit jusqu'à ta rentrée."},
     {el:function(){ return document.getElementById('p-simcard') || [...document.querySelectorAll('#profil h3,#profil h2')].map(x=>/point de départ/i.test(x.textContent)? x.parentElement : null).find(Boolean) || null; },
      img:'axo-guide-pointe-bas', t:"Et tout en bas, <b>ton point de départ</b>. Trois questions sur ta fac et ton profil, une seule fois : on <b>évalue tes chances</b> d'entrer en deuxième année, d'où tu pars, et ce que ton Parcours peut y changer. Deux minutes."+(suite? " Dernier endroit ensuite : <b>le Social</b>." : ""),
      btn: suite ? "Et le Social →" : "C'est compris", act:function(){ if(suite) try{ go('social'); }catch(e){} }}
@@ -9838,7 +9838,7 @@ function toggleStage(){
   if(typeof renderCurArena==='function') renderCurArena();
 }
 /* ═══ CODE ANNÉE COMPLÈTE — à usage unique. Seules les EMPREINTES SHA-256 vivent ici,
-   jamais les codes en clair. Le code se récupère dans l'espace stage Medeos (pack année complète). ═══ */
+   jamais les codes en clair. Le code se récupère dans l'espace stage Medeos (Pack Medi Pro). ═══ */
 const CODES_ANNEE=[
  'dcb50e9aaca6458daeff136a77f0ce09f02ca43ba960486c691af1fea56c5329',
  '56db927e56399632d85231fbb58933bbbe6b4ba1bcee4776bd255b95adcc97f5',
@@ -9878,7 +9878,7 @@ async function activerCode(codeDirect){
   if(typeof renderCurArena==='function') renderCurArena();
   if(codeDirect){
     const d=document.createElement('div'); d.className='axotoast';
-    d.innerHTML='<img src="img/axo-guide-bravo.png" alt="" onerror="this.remove()"><span>⚔️ <b>Ton Pack Année complète est activé.</b> Toutes les fiches, tous les QCM, 3 ascensions par jour.</span>';
+    d.innerHTML='<img src="img/axo-guide-bravo.png" alt="" onerror="this.remove()"><span>⚔️ <b>Ton Pack Medi Pro est activé.</b> Toutes les fiches, tous les QCM, 3 ascensions par jour.</span>';
     document.body.appendChild(d); setTimeout(()=>{ d.classList.add('out'); setTimeout(()=>d.remove(),400); },5200);
   }
 }
@@ -9889,7 +9889,7 @@ function renderCodeZone(){
       '<p style="font-size:11.5px;color:var(--muted);line-height:1.5;margin-top:3px">Toutes les fiches, tous les QCM, 3 ascensions par jour. Bon entraînement.</p>';
     return;
   }
-  z.innerHTML='<p style="font-size:11.5px;color:var(--muted);line-height:1.5">Tu as choisi d\'aller plus loin avec le <b>Pack Année complète</b> ? Ton code personnel t\'attend sur ton espace medeos-sante.fr, dans la carte « Pack année complète » de ton tableau de bord — et son bouton ouvre l\'app avec ton accès déjà activé. Tu n\'as pas le Pack ? Cette section ne te concerne pas encore.</p>'+
+  z.innerHTML='<p style="font-size:11.5px;color:var(--muted);line-height:1.5">Tu as choisi d\'aller plus loin avec le <b>Pack Medi Pro</b> ? Ton code personnel t\'attend sur ton espace medeos-sante.fr, dans la carte « Pack Medi Pro » de ton tableau de bord — et son bouton ouvre l\'app avec ton accès déjà activé. Tu n\'as pas le Pack ? Cette section ne te concerne pas encore.</p>'+
     '<div style="display:flex;gap:7px;margin-top:8px">'+
     '<input class="field" id="code-inp" placeholder="MEDEOS-XXXX-XXXX" autocapitalize="characters" spellcheck="false" style="flex:1;margin:0;font-variant-numeric:tabular-nums">'+
     '<button class="btn small" style="flex-shrink:0" onclick="activerCode()">Activer</button></div>'+
@@ -9899,7 +9899,7 @@ function renderAcces(){
   const a=document.getElementById('p-acces'), s=document.getElementById('p-acces-sub'), b=document.getElementById('p-stagebtn');
   if(!a) return;
   if(S.stage){
-    a.textContent='Pack Année complète — sans limite de fiches par jour ⚔️';
+    a.textContent='Pack Medi Pro — sans limite de fiches par jour ⚔️';
     s.textContent='Tout le Parcours, tous les QCM, 3 ascensions par jour. Bon entraînement.';
     if(b) b.textContent='Démo : repasser en accès découverte';
   } else {
@@ -11010,10 +11010,10 @@ function renderRayonMediPro(){
   const an = anneeRentreeMediPro();
   if (an >= 2028) {
     t.textContent = 'Tes 5 stages pour anticiper, dès cette année.';
-    p.textContent = 'Ta rentrée est en ' + an + ' : tu as le temps de poser les bases solidement. Un stage guidé à chaque vacances, puis la pré-rentrée — et dans l\'app, plus de limite de deux fiches par jour, tous les QCM, 3 ascensions par jour.';
+    p.textContent = 'Ta rentrée est en ' + an + ' : tu as le temps de poser les bases solidement. Un stage guidé à chaque vacances, puis la pré-rentrée — et dans l\'app, l\'accès illimité aux fiches : plus de limite de deux par jour, tu avances comme tu le sens, avec tous les QCM et 3 ascensions par jour.';
   } else {
     t.textContent = 'Tes 5 stages pour anticiper, jusqu\'à ta rentrée ' + an + '.';
-    p.textContent = 'Un stage guidé à chaque vacances de Terminale, puis la pré-rentrée. Et dans l\'app : plus de limite de deux fiches par jour, tous les QCM, 3 ascensions par jour.';
+    p.textContent = 'Un stage guidé à chaque vacances de Terminale, puis la pré-rentrée. Et dans l\'app, l\'accès illimité aux fiches : plus de limite de deux par jour, tu avances comme tu le sens — avec tous les QCM et 3 ascensions par jour.';
   }
 }
 function poserRentree(an){
@@ -11543,7 +11543,7 @@ function renderSalle(){
     const mx=Math.max.apply(null,sups), mn=Math.min.apply(null,sups);
     const combien=(mn===mx? '+'+mx : 'jusqu\'à +'+mx);
     x+='<button class="salle-plus" onclick="go(\'profil\')">'+
-       '<b>'+combien+' QCM par fiche</b> avec le pack année complète Medeos.</button>';
+       '<b>'+combien+' QCM par fiche</b> avec le Pack Medi Pro Medeos.</button>';
   } else {
     x+='<p class="salle-hint">Tes prochaines séances de Parcours ouvriront d\'autres fiches ici.</p>';
   }
@@ -13632,7 +13632,7 @@ function heroMail(){
     /* À CE MOMENT PRÉCIS — la séance finie, l'envie d'en faire une troisième — la seule chose qui
        compte, c'est la limite de deux fiches par jour (Lucas, 05/09). Le reste du Pack se lit sur
        le profil. Et on ne le propose pas à qui l'a déjà. */
-    (S.stage ? '' : '<button class="stagelien" onclick="voirStages()">Envie de continuer ? Avec le <b>Pack Année complète</b>, <b>plus de limite de deux fiches par jour</b> : tu avances à ton rythme →</button>');
+    (S.stage ? '' : '<button class="stagelien" onclick="voirStages()">Envie de continuer ? Avec le <b>Pack Medi Pro</b>, <b>plus de limite de deux fiches par jour</b> : tu avances à ton rythme →</button>');
 }
 /* ---- état ---- */
 /* Le « jour » Medeos bascule à 6 h du matin, HEURE LOCALE : on recule l'horloge de 6 h
