@@ -1,0 +1,631 @@
+{
+ "matiere": "anatomie",
+ "chapitre": 1,
+ "note": "Renfort d'arène pour les deux fiches de la 1re séance du Parcours (lots 8 à 15, tous ar:1). Le Grand Amphi ne pioche que dans les fiches déjà travaillées : au jour 4, seize questions d'arène pour deux ascensions de dix, le stock se recyclait aussitôt. Le socle des lots 1-7 reste dans anatomie-ch01-p1.json.",
+ "questions": [
+  {
+   "fiche": "anatomie-001-position-reference.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 8,
+   "q": "Deux soignants exercent dans deux villes différentes et décrivent le même patient. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "C'est une posture unique, le point zéro de toute l'anatomie, qui leur permet de décrire exactement la même chose.",
+     "v": true,
+     "e": "VRAI. La fiche pose la question du chirurgien de Paris et du radiologue de Tokyo, et y répond par cette posture unique.",
+     "sourceQuote": "Grâce à une posture unique : le point zéro de toute l'anatomie."
+    },
+    {
+     "t": "L'adresse anatomique d'une structure est la même partout dans le monde.",
+     "v": true,
+     "e": "VRAI. Avec le point zéro, chaque structure a une adresse précise, et cette adresse ne change pas d'un pays à l'autre.",
+     "sourceQuote": "chaque structure du corps a une adresse précise, et cette adresse est la même partout dans le monde"
+    },
+    {
+     "t": "Chaque spécialité médicale utilise sa propre posture de départ.",
+     "v": false,
+     "e": "FAUX : la posture est universelle, utilisée par tous les médecins du monde comme point de départ.",
+     "sourceQuote": "une posture universelle que tous les médecins du monde utilisent comme point de départ"
+    },
+    {
+     "t": "Sans ce point zéro, « à gauche », « en dessous » ou « à l'extérieur » ne veulent plus rien dire.",
+     "v": true,
+     "e": "VRAI. C'est exactement l'exemple donné : sans référence commune, tout devient ambigu.",
+     "sourceQuote": "Sans ce « point zéro », tout devient ambigu — « à gauche », « en dessous », « à l'extérieur » ne veulent plus rien dire"
+    },
+    {
+     "t": "Cette ambiguïté vient de ce que ces termes sont mal définis, et non de la position réelle du patient.",
+     "v": false,
+     "e": "FAUX : l'ambiguïté vient précisément de ce que tout dépendrait de la position réelle du patient.",
+     "sourceQuote": "parce que tout dépendrait de la position réelle du patient"
+    }
+   ]
+  },
+  {
+   "fiche": "anatomie-001-position-reference.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 9,
+   "q": "La figure de la fiche montre la position de référence, deux flèches bleues pointant un détail précis. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Les deux flèches bleues désignent le détail qui compte le plus.",
+     "v": true,
+     "e": "VRAI. C'est ce que dit la légende de la figure.",
+     "sourceQuote": "les deux flèches bleues désignent le détail qui compte le plus"
+    },
+    {
+     "t": "Ce détail est l'orientation des paumes, tournées vers l'avant, pouces vers l'extérieur.",
+     "v": true,
+     "e": "VRAI. Les flèches pointent les paumes vers l'avant, pouces vers l'extérieur.",
+     "sourceQuote": "les paumes tournées vers l'avant, pouces vers l'extérieur"
+    },
+    {
+     "t": "La légende invite ensuite à regarder les pieds.",
+     "v": true,
+     "e": "VRAI. Après les paumes, la légende renvoie explicitement aux pieds.",
+     "sourceQuote": "Regarde ensuite les pieds"
+    },
+    {
+     "t": "Sur la figure, les pieds sont parallèles et les orteils dirigés vers l'avant.",
+     "v": true,
+     "e": "VRAI. C'est la seconde chose que la légende demande de vérifier.",
+     "sourceQuote": "parallèles, orteils vers l'avant"
+    },
+    {
+     "t": "La figure est légendée « La position de référence ».",
+     "v": true,
+     "e": "VRAI. C'est bien le titre de la figure, avant le commentaire sur les flèches.",
+     "sourceQuote": "La position de référence — les deux flèches bleues"
+    }
+   ]
+  },
+  {
+   "fiche": "anatomie-001-position-reference.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 10,
+   "q": "Un candidat récite de mémoire la position anatomique de référence. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le regard est dirigé vers le sol et la tête inclinée.",
+     "v": false,
+     "e": "FAUX : le regard est horizontal et la tête droite.",
+     "sourceQuote": "Corps debout, regard horizontal, tête droite."
+    },
+    {
+     "t": "Les membres supérieurs sont fléchis au coude.",
+     "v": false,
+     "e": "FAUX : les membres supérieurs sont le long du corps.",
+     "sourceQuote": "Membres supérieurs le long du corps"
+    },
+    {
+     "t": "Les membres inférieurs sont tendus.",
+     "v": true,
+     "e": "VRAI. Membres inférieurs tendus, pieds parallèles.",
+     "sourceQuote": "Membres inférieurs tendus, pieds parallèles"
+    },
+    {
+     "t": "Les paumes sont tournées vers le corps.",
+     "v": false,
+     "e": "FAUX : c'est justement l'erreur signalée comme la plus fréquente. Les paumes sont vers l'avant.",
+     "sourceQuote": "En QCM, « paumes tournées vers le corps » ou « vers l'arrière » = FAUX"
+    },
+    {
+     "t": "La position se décrit indifféremment debout ou assis.",
+     "v": false,
+     "e": "FAUX : on décrit toujours les structures comme si le patient était debout dans cette position.",
+     "sourceQuote": "on décrit toujours ses structures comme s'il était debout dans cette position"
+    }
+   ]
+  },
+  {
+   "fiche": "anatomie-001-position-reference.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 11,
+   "q": "Une confusion entre le côté droit et le côté gauche survient au bloc opératoire. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Une confusion droite/gauche est une erreur médicale grave.",
+     "v": true,
+     "e": "VRAI. C'est exactement le terme employé par la fiche.",
+     "sourceQuote": "une confusion droite/gauche est une erreur médicale grave"
+    },
+    {
+     "t": "C'est pour cette raison que l'OMS a instauré une liste de vérification avant chaque opération.",
+     "v": true,
+     "e": "VRAI. La check-list chirurgicale répond directement à ce risque.",
+     "sourceQuote": "l'OMS a instauré une liste de vérification avant chaque opération"
+    },
+    {
+     "t": "Cette liste porte sur le bon patient, le bon côté et la bonne procédure.",
+     "v": true,
+     "e": "VRAI. Ce sont les trois points cités.",
+     "sourceQuote": "le bon patient, le bon côté, la bonne procédure"
+    },
+    {
+     "t": "Le marquage du côté à opérer se fait en position anatomique de référence.",
+     "v": true,
+     "e": "VRAI. Le marquage utilise le même référentiel que tout le reste de la description.",
+     "sourceQuote": "Le marquage du côté à opérer se fait en position anatomique de référence"
+    },
+    {
+     "t": "Cette vérification est laissée à l'appréciation de l'équipe, sans référentiel commun.",
+     "v": false,
+     "e": "FAUX : le chirurgien vérifie systématiquement le côté en référence à la position anatomique.",
+     "sourceQuote": "Le chirurgien vérifie systématiquement le côté opératoire en référence à la position anatomique"
+    }
+   ]
+  },
+  {
+   "fiche": "anatomie-001-position-reference.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 12,
+   "q": "Un compte rendu de radiographie du thorax indique que le cœur est « à gauche ». Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Il s'agit de la gauche du patient, pas de celle de l'observateur.",
+     "v": true,
+     "e": "VRAI. Le côté est toujours donné dans le référentiel du patient.",
+     "sourceQuote": "c'est la gauche du patient, pas la tienne"
+    },
+    {
+     "t": "Le cœur apparaît donc à gauche sur l'image que l'on regarde.",
+     "v": false,
+     "e": "FAUX : il apparaît à la droite de celui qui regarde l'image.",
+     "sourceQuote": "il apparaît donc à ta droite sur l'image"
+    },
+    {
+     "t": "Une radio du thorax se lit comme si l'on était placé derrière le patient.",
+     "v": false,
+     "e": "FAUX : l'image se lit comme si l'on était face au patient.",
+     "sourceQuote": "l'image se lit comme si tu étais face au patient"
+    },
+    {
+     "t": "La bonne question à se poser n'est jamais « à gauche ? » mais « à gauche de qui ? ».",
+     "v": true,
+     "e": "VRAI. C'est la formule retenue par la fiche pour désamorcer le piège.",
+     "sourceQuote": "La question à te poser n'est jamais « à gauche ? », mais « à gauche de qui ? »"
+    },
+    {
+     "t": "Cette inversion est présentée comme une difficulté secondaire en imagerie.",
+     "v": false,
+     "e": "FAUX : elle est présentée comme le piège n°1 en imagerie.",
+     "sourceQuote": "Cette inversion est le piège n°1 en imagerie"
+    }
+   ]
+  },
+  {
+   "fiche": "anatomie-001-position-reference.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 13,
+   "q": "Un étudiant résume cette fiche en une phrase avant de passer à la suivante. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "La position se résume à : debout, regard horizontal, paumes vers l'avant, pieds parallèles.",
+     "v": true,
+     "e": "VRAI. Ce sont les quatre points du résumé de la fiche.",
+     "sourceQuote": "debout, regard horizontal, paumes vers l'avant, pieds parallèles"
+    },
+    {
+     "t": "C'est le point zéro universel dont part toute description anatomique.",
+     "v": true,
+     "e": "VRAI. Toute description part de cette référence.",
+     "sourceQuote": "C'est le point zéro universel — toute description anatomique part de là"
+    },
+    {
+     "t": "Cette description doit être adaptée à la position réelle du patient au moment de l'examen.",
+     "v": false,
+     "e": "FAUX : la description vaut quelle que soit la position réelle du patient.",
+     "sourceQuote": "quelle que soit la position réelle du patient"
+    },
+    {
+     "t": "Le piège le plus fréquent sur ce chapitre porte sur l'orientation des pieds.",
+     "v": false,
+     "e": "FAUX : le piège le plus fréquent porte sur l'orientation des paumes, qui doivent être vers l'avant.",
+     "sourceQuote": "La position impose les paumes vers l'AVANT, pouces vers l'extérieur. C'est le piège le plus fréquent sur ce chapitre."
+    },
+    {
+     "t": "Un énoncé décrivant les paumes tournées vers l'arrière est faux.",
+     "v": true,
+     "e": "VRAI. « Vers le corps » comme « vers l'arrière » sont deux formulations fausses.",
+     "sourceQuote": "« paumes tournées vers le corps » ou « vers l'arrière » = FAUX"
+    }
+   ]
+  },
+  {
+   "fiche": "anatomie-001-position-reference.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 14,
+   "q": "Un patient est allongé sur la table d'examen, jambes repliées. Parmi les propositions suivantes relatives à la description de ses structures, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "On décrit ses structures comme s'il était debout dans la position de référence.",
+     "v": true,
+     "e": "VRAI. La position de référence ne bouge jamais, quelle que soit la position réelle.",
+     "sourceQuote": "on décrit toujours ses structures comme s'il était debout dans cette position"
+    },
+    {
+     "t": "Cette règle vaut que le patient soit couché, assis ou en position fœtale.",
+     "v": true,
+     "e": "VRAI. Les trois cas sont explicitement cités.",
+     "sourceQuote": "Même si le patient est couché, assis ou en position fœtale"
+    },
+    {
+     "t": "Elle est comparée au nord d'une boussole, qui reste le nord quelle que soit la direction dans laquelle on marche.",
+     "v": true,
+     "e": "VRAI. C'est l'analogie retenue par la fiche.",
+     "sourceQuote": "peu importe dans quelle direction tu marches, le nord reste le nord"
+    },
+    {
+     "t": "Une limitation de l'abduction de l'épaule gauche se décrit comme si le patient était debout, même allongé sur la table.",
+     "v": true,
+     "e": "VRAI. C'est l'exemple donné en kinésithérapie.",
+     "sourceQuote": "décrit le mouvement comme si le patient était debout, même s'il est allongé sur la table"
+    },
+    {
+     "t": "L'abduction est le mouvement qui écarte le bras du corps.",
+     "v": true,
+     "e": "VRAI. La fiche donne cette définition entre parenthèses.",
+     "sourceQuote": "l'abduction, c'est le mouvement qui écarte le bras du corps"
+    }
+   ]
+  },
+  {
+   "fiche": "anatomie-001-position-reference.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 15,
+   "q": "Une planche d'atlas présente un os isolé, sans aucune légende ni indication de côté. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "On part du principe qu'il s'agit de l'os droit.",
+     "v": true,
+     "e": "VRAI. C'est la convention : l'os droit par défaut.",
+     "sourceQuote": "c'est l'os droit par défaut"
+    },
+    {
+     "t": "Aucune convention ne s'applique aux schémas : seule une légende peut indiquer le côté.",
+     "v": false,
+     "e": "FAUX : c'est justement devant un schéma non légendé que la convention sert de point de départ.",
+     "sourceQuote": "Devant un schéma non légendé, pars de là."
+    },
+    {
+     "t": "La scapula est l'os de la cuisse.",
+     "v": false,
+     "e": "FAUX : l'os de la cuisse est le fémur ; la scapula est l'omoplate.",
+     "sourceQuote": "fémur (os de la cuisse), scapula (omoplate)"
+    },
+    {
+     "t": "La scapula est aussi appelée omoplate.",
+     "v": true,
+     "e": "VRAI. La fiche donne le nom courant entre parenthèses.",
+     "sourceQuote": "scapula (omoplate)"
+    },
+    {
+     "t": "Cette convention relève d'une logique différente de celle de la position anatomique.",
+     "v": false,
+     "e": "FAUX : la fiche la présente comme la même logique de convention, appliquée aux schémas.",
+     "sourceQuote": "Même logique de convention pour les schémas"
+    }
+   ]
+  },
+  {
+   "fiche": "anatomie-002-trois-plans.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 8,
+   "q": "Une IRM est demandée en coupes sagittales. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le plan sagittal est une lame verticale orientée d'avant en arrière.",
+     "v": true,
+     "e": "VRAI. Verticale, et orientée d'avant en arrière : c'est ce qui le distingue du frontal.",
+     "sourceQuote": "Une lame verticale, orientée d'avant en arrière"
+    },
+    {
+     "t": "C'est ainsi que l'on voit le cerveau de profil.",
+     "v": true,
+     "e": "VRAI. La fiche donne cet exemple pour l'IRM sagittale.",
+     "sourceQuote": "c'est comme ça que tu vois le cerveau de profil"
+    },
+    {
+     "t": "Le plan sagittal est celui des flexions et des extensions.",
+     "v": true,
+     "e": "VRAI. C'est la famille de mouvements associée à ce plan.",
+     "sourceQuote": "C'est le plan des flexions et extensions"
+    },
+    {
+     "t": "Plier le coude et plier le genou sont donnés comme exemples de ces mouvements.",
+     "v": true,
+     "e": "VRAI. Ce sont les deux exemples cités entre parenthèses.",
+     "sourceQuote": "(plier le coude, plier le genou)"
+    },
+    {
+     "t": "La coupe sagittale montre le patient de face.",
+     "v": false,
+     "e": "FAUX : la coupe sagittale montre le patient de profil. C'est la coupe frontale qui le montre de face.",
+     "sourceQuote": "La coupe obtenue te montre le patient de profil"
+    }
+   ]
+  },
+  {
+   "fiche": "anatomie-002-trois-plans.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 9,
+   "q": "Un énoncé décrit une coupe frontale du thorax. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le plan frontal est une lame horizontale.",
+     "v": false,
+     "e": "FAUX : le plan frontal est vertical, comme le sagittal. Seul le transversal est horizontal.",
+     "sourceQuote": "Une lame verticale elle aussi, mais orientée d'un côté à l'autre"
+    },
+    {
+     "t": "Il sépare le corps en parties supérieure et inférieure.",
+     "v": false,
+     "e": "FAUX : il sépare l'avant de l'arrière, donc les parties antérieure et postérieure.",
+     "sourceQuote": "elle sépare le corps en parties antérieure et postérieure"
+    },
+    {
+     "t": "La radio du thorax de face est présentée comme l'imagerie la plus courante de toutes.",
+     "v": true,
+     "e": "VRAI. C'est l'exemple d'imagerie donné pour ce plan.",
+     "sourceQuote": "c'est la radio du thorax de face — la plus courante de toutes"
+    },
+    {
+     "t": "Le plan frontal est aussi appelé axial.",
+     "v": false,
+     "e": "FAUX : son autre nom est coronal. « Axial » est un synonyme de transversal.",
+     "sourceQuote": "Le plan frontal. Aussi appelé coronal"
+    },
+    {
+     "t": "C'est le plan des rotations.",
+     "v": false,
+     "e": "FAUX : c'est le plan des abductions et des adductions. Les rotations relèvent du plan transversal.",
+     "sourceQuote": "C'est le plan des abductions et adductions"
+    }
+   ]
+  },
+  {
+   "fiche": "anatomie-002-trois-plans.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 10,
+   "q": "Un scanner fournit une série de coupes du tronc. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le plan transversal est aussi appelé axial.",
+     "v": true,
+     "e": "VRAI. « Transversal », « transverse » et « axial » désignent le même plan.",
+     "sourceQuote": "Le plan transversal. Aussi appelé axial"
+    },
+    {
+     "t": "Il s'agit d'une lame horizontale, qui sépare le haut du bas.",
+     "v": true,
+     "e": "VRAI. C'est le seul des trois plans à être horizontal.",
+     "sourceQuote": "Une lame horizontale : elle sépare le corps en parties supérieure et inférieure"
+    },
+    {
+     "t": "La coupe obtenue montre le patient de profil.",
+     "v": false,
+     "e": "FAUX : la coupe transversale donne une rondelle. C'est la coupe sagittale qui montre le profil.",
+     "sourceQuote": "La coupe te montre une rondelle"
+    },
+    {
+     "t": "C'est le plan des rotations, comme tourner le tronc ou tourner la tête.",
+     "v": true,
+     "e": "VRAI. Ce sont les deux exemples donnés.",
+     "sourceQuote": "C'est le plan des rotations (tourner le tronc, tourner la tête)"
+    },
+    {
+     "t": "Le scanner donne une image unique et globale du corps, et non des coupes étage par étage.",
+     "v": false,
+     "e": "FAUX : le scanner est précisément décrit comme donnant des coupes étage par étage.",
+     "sourceQuote": "c'est le scanner : des coupes étage par étage"
+    }
+   ]
+  },
+  {
+   "fiche": "anatomie-002-trois-plans.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 11,
+   "q": "Deux mots servent partout en anatomie : médial et latéral. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Médial signifie proche du plan sagittal médian.",
+     "v": true,
+     "e": "VRAI. Médial = proche de ce plan.",
+     "sourceQuote": "médial (proche de ce plan)"
+    },
+    {
+     "t": "Latéral signifie proche du plan sagittal médian.",
+     "v": false,
+     "e": "FAUX : latéral signifie éloigné de ce plan. C'est l'inverse de médial.",
+     "sourceQuote": "latéral (éloigné de ce plan)"
+    },
+    {
+     "t": "C'est le plan sagittal médian qui sert de référence à ces deux mots.",
+     "v": true,
+     "e": "VRAI. La fiche demande de le retenir précisément pour cette raison.",
+     "sourceQuote": "il sert de référence à deux mots que tu utiliseras partout"
+    },
+    {
+     "t": "Ces deux mots se réfèrent au plan frontal.",
+     "v": false,
+     "e": "FAUX : leur référence est le plan sagittal médian, pas le plan frontal.",
+     "sourceQuote": "sert de référence à médial et latéral"
+    },
+    {
+     "t": "Le cœur est décrit comme strictement latéral gauche.",
+     "v": false,
+     "e": "FAUX : l'exemple donné le décrit en position médiane, légèrement décalé à gauche.",
+     "sourceQuote": "le cœur est en position médiane, légèrement décalé à gauche"
+    }
+   ]
+  },
+  {
+   "fiche": "anatomie-002-trois-plans.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 12,
+   "q": "La figure de la fiche représente trois « lames » qui se croisent dans le corps. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "La lame bleue sépare la droite et la gauche : c'est le plan sagittal.",
+     "v": true,
+     "e": "VRAI. C'est ce qu'indique la légende de la figure.",
+     "sourceQuote": "La bleue sépare droite et gauche (plan sagittal)"
+    },
+    {
+     "t": "La lame verte sépare l'avant et l'arrière : c'est le plan frontal.",
+     "v": true,
+     "e": "VRAI. La légende associe le vert au plan frontal.",
+     "sourceQuote": "la verte sépare avant et arrière (plan frontal)"
+    },
+    {
+     "t": "La lame orange sépare le haut et le bas : c'est le plan transversal.",
+     "v": true,
+     "e": "VRAI. La légende associe l'orange au plan transversal.",
+     "sourceQuote": "l'orange sépare haut et bas (plan transversal)"
+    },
+    {
+     "t": "Les deux premières lames sont verticales, la dernière est horizontale.",
+     "v": true,
+     "e": "VRAI. Sagittal et frontal sont verticaux, transversal est horizontal.",
+     "sourceQuote": "Les deux premières sont verticales, la dernière est horizontale"
+    },
+    {
+     "t": "La lame bleue est tracée pile au milieu du corps : c'est le cas particulier du plan sagittal médian.",
+     "v": true,
+     "e": "VRAI. La légende annonce ce cas particulier, expliqué plus bas dans la fiche.",
+     "sourceQuote": "la bleue est tracée pile au milieu du corps : c'est le cas particulier du plan sagittal médian"
+    }
+   ]
+  },
+  {
+   "fiche": "anatomie-002-trois-plans.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 13,
+   "q": "Plusieurs plans sagittaux sont tracés à différents niveaux du corps. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Un seul plan sagittal peut être tracé dans le corps.",
+     "v": false,
+     "e": "FAUX : on peut en tracer à différents niveaux ; un seul passe au milieu.",
+     "sourceQuote": "Tu peux tracer des plans sagittaux à différents niveaux du corps"
+    },
+    {
+     "t": "Tous ces plans séparent la droite de la gauche, mais un seul passe au milieu.",
+     "v": true,
+     "e": "VRAI. C'est exactement la mise en garde de la fiche.",
+     "sourceQuote": "tout plan sagittal sépare droite et gauche, mais un seul passe au milieu"
+    },
+    {
+     "t": "Chacun de ces plans divise le corps en deux moitiés symétriques.",
+     "v": false,
+     "e": "FAUX : seul le plan sagittal médian divise le corps en deux moitiés symétriques.",
+     "sourceQuote": "Il divise le corps en deux moitiés symétriques, et c'est le seul plan de symétrie du corps humain"
+    },
+    {
+     "t": "Le corps humain possède plusieurs plans de symétrie.",
+     "v": false,
+     "e": "FAUX : le plan sagittal médian est le seul plan de symétrie du corps humain.",
+     "sourceQuote": "c'est le seul plan de symétrie du corps humain"
+    },
+    {
+     "t": "Le plan qui passe exactement au milieu est appelé plan frontal médian.",
+     "v": false,
+     "e": "FAUX : il s'appelle le plan sagittal médian.",
+     "sourceQuote": "mais un seul passe exactement au milieu : c'est le plan sagittal médian"
+    }
+   ]
+  },
+  {
+   "fiche": "anatomie-002-trois-plans.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 14,
+   "q": "La fiche s'ouvre sur l'image d'un fruit que l'on coupe. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Selon l'angle de la lame, on obtient des tranches très différentes.",
+     "v": true,
+     "e": "VRAI. C'est l'idée que porte l'analogie du fruit.",
+     "sourceQuote": "selon l'angle de la lame, tu obtiens des tranches très différentes"
+    },
+    {
+     "t": "Il n'y a que trois façons de trancher le corps humain.",
+     "v": true,
+     "e": "VRAI. La fiche l'annonce dès l'accroche.",
+     "sourceQuote": "il n'y a que 3 façons de le trancher"
+    },
+    {
+     "t": "On utilise trois plans de coupe fondamentaux, et seulement trois.",
+     "v": true,
+     "e": "VRAI. Le nombre est fermé : trois, pas davantage.",
+     "sourceQuote": "on utilise 3 plans de coupe fondamentaux, et seulement 3"
+    },
+    {
+     "t": "Connaître ces plans, c'est savoir dans quel sens on regarde le patient.",
+     "v": true,
+     "e": "VRAI. C'est ce que la fiche présente comme l'intérêt pratique des plans.",
+     "sourceQuote": "c'est savoir dans quel sens on regarde le patient"
+    },
+    {
+     "t": "Ces plans servent uniquement à lire une radio, pas un compte-rendu.",
+     "v": false,
+     "e": "FAUX : ils servent à lire une radio, un scanner ou n'importe quel compte-rendu.",
+     "sourceQuote": "c'est la base pour lire une radio, un scanner ou n'importe quel compte-rendu"
+    }
+   ]
+  },
+  {
+   "fiche": "anatomie-002-trois-plans.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 15,
+   "q": "La fiche annonce ce qui vient juste après les trois plans. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "À chaque plan correspond un axe, perpendiculaire à lui.",
+     "v": true,
+     "e": "VRAI. Un axe par plan, et il lui est perpendiculaire.",
+     "sourceQuote": "il reste les 3 axes qui vont avec — un par plan, perpendiculaire à lui"
+    },
+    {
+     "t": "Ces axes font l'objet de la fiche suivante.",
+     "v": true,
+     "e": "VRAI. La fiche renvoie explicitement à la suivante.",
+     "sourceQuote": "C'est l'objet de la fiche suivante"
+    },
+    {
+     "t": "L'essentiel de cette fiche-ci est de savoir nommer les axes.",
+     "v": false,
+     "e": "FAUX : ici l'essentiel est de savoir découper ; les axes viennent après.",
+     "sourceQuote": "ici, l'essentiel est de savoir découper"
+    },
+    {
+     "t": "Le résumé tient en trois découpes : sagittal droite/gauche, frontal avant/arrière, transversal haut/bas.",
+     "v": true,
+     "e": "VRAI. C'est le résumé de la fiche, trois plans pour trois découpes.",
+     "sourceQuote": "sagittal = droite/gauche · frontal = avant/arrière · transversal = haut/bas"
+    },
+    {
+     "t": "Le plan sagittal médian est présenté comme facultatif.",
+     "v": false,
+     "e": "FAUX : c'est un cas particulier à connaître, explicitement retenu dans le résumé.",
+     "sourceQuote": "Et un cas particulier à connaître : le plan sagittal médian"
+    }
+   ]
+  }
+ ]
+}

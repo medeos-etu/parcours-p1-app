@@ -15,6 +15,14 @@
    QCM ne sont pas encore écrits a quand même ses sept cases, simplement vides. On les
    remplit ensuite sans retoucher une ligne de code.
 
+   ⭐ LOTS D'ARÈNE EN RENFORT — lots 8 et au-delà (Lucas, 07/09/2026).
+   « On n'a pas assez de QCM arène sur les fiches vues en premier dans le parcours. »
+   Le Grand Amphi ne pioche que dans les fiches DÉJÀ TRAVAILLÉES : au jour 4, l'élève
+   n'en a que huit, soit seize questions d'arène pour deux ascensions de dix — le stock
+   se recycle aussitôt. Les sept lots restent le socle de TOUTE fiche ; les premières
+   fiches du Parcours reçoivent en plus des lots 8, 9, 10… tous en arène (lot >= 6).
+   Rien d'autre ne change : l'entraînement reste plafonné aux lots 1-5.
+
    Relançable : le bloc de QCM du Parcours est délimité par des marqueurs et remplacé
    d'un coup, donc rejouer le script ne duplique rien. */
 const fs = require('fs');
@@ -63,22 +71,31 @@ const parFiche = {};
 lots.forEach((q, i) => {
   const où = q._f + '#' + i;
   if (!q.fiche || !dispo.has(q.fiche.replace(/\.html$/, ''))) return pb.push(où + ' : fiche inconnue ' + q.fiche);
-  if (!q.lot || q.lot < 1 || q.lot > 7) return pb.push(où + ' : lot ' + q.lot + ' hors 1-7');
+  /* les sept lots sont le socle ; au-delà de 7, ce sont des lots d'arène en renfort */
+  if (!Number.isInteger(q.lot) || q.lot < 1) return pb.push(où + ' : lot ' + q.lot + ' invalide (entier >= 1 attendu)');
   if (!Array.isArray(q.items) || q.items.length !== 5) return pb.push(où + ' : ' + (q.items || []).length + ' items');
   const slug = q.fiche.replace(/\.html$/, '');
-  (parFiche[slug] = parFiche[slug] || {})[q.lot] = q;
+  const dej = (parFiche[slug] = parFiche[slug] || {});
+  if (dej[q.lot]) return pb.push(où + ' : lot ' + q.lot + ' déjà pris pour ' + slug);
+  dej[q.lot] = q;
 });
 Object.keys(parFiche).forEach(f => {
-  const n = Object.keys(parFiche[f]).length;
-  if (n !== 7) pb.push(f + ' : ' + n + ' lots sur 7');
+  const manque = [1, 2, 3, 4, 5, 6, 7].filter(n => !parFiche[f][n]);
+  if (manque.length) pb.push(f + ' : lot(s) manquant(s) ' + manque.join(', ') + ' — le socle des 7 est obligatoire');
 });
 
 console.log('séances      : ' + seances.length + ' · fiches : ' + Object.keys(vues).length);
 console.log('titres       : ' + Object.keys(titres).length);
 console.log('QCM produits : ' + lots.length + ' · fiches servies : ' + Object.keys(parFiche).length
   + ' / ' + Object.keys(vues).length + '  (' + Math.round(100 * Object.keys(parFiche).length / Object.keys(vues).length) + ' %)');
-console.log('emplacements : ' + (Object.keys(vues).length * 7) + ' au total, ' + lots.length + ' remplis, '
-  + (Object.keys(vues).length * 7 - lots.length) + ' à remplir plus tard');
+/* on compte à part le socle (les 7 lots de chaque fiche) et les renforts d'arène (lot >= 8),
+   sinon le nombre « à remplir plus tard » se met à mentir dès qu'une fiche a des renforts */
+{
+  const socle = lots.filter(q => q.lot <= 7).length, renfort = lots.length - socle;
+  console.log('emplacements : ' + (Object.keys(vues).length * 7) + ' au total, ' + socle + ' remplis, '
+    + (Object.keys(vues).length * 7 - socle) + ' à remplir plus tard'
+    + (renfort ? '  ·  + ' + renfort + ' lot(s) d\'arène en renfort (lot >= 8)' : ''));
+}
 console.log('problèmes    : ' + pb.length);
 pb.slice(0, 10).forEach(x => console.log('   ' + x));
 if (pb.length) { console.log('\nRIEN ÉCRIT.'); process.exit(1); }
@@ -124,7 +141,8 @@ function melange(arr, graine) {
 const matDe = {}; seances.forEach(s => s.fiches.forEach(f => { matDe[f] = s.mat; }));
 const lignes = [];
 Object.keys(parFiche).sort().forEach(slug => {
-  [1, 2, 3, 4, 5, 6, 7].forEach(lot => {
+  /* tous les lots présents, dans l'ordre : 1-7 le socle, puis les renforts d'arène 8, 9, 10… */
+  Object.keys(parFiche[slug]).map(Number).sort((a, b) => a - b).forEach(lot => {
     const q = parFiche[slug][lot]; if (!q) return;
     const items = melange(q.items, 7919 * (lignes.length + 1) + 13);
     const its = items.map((t, k) => '[' + js(L[k]) + ', ' + js(t.t) + ', ' + (t.v ? 1 : 0) + ', ' + js(t.e) + ']').join(',');
@@ -164,7 +182,7 @@ if (pb.length) { console.log('\nRIEN ÉCRIT.'); process.exit(1); }
 const blocQcm = '\n' + DEB + '\n'
   + '/* ── LES QCM DU PARCOURS — ' + lignes.length + ' questions sur ' + Object.keys(parFiche).length + ' fiches.\n'
   + '   Chaque question porte son lot (lo) : 1-2 entraînement gratuit, 3-5 entraînement\n'
-  + '   pack année complète, 6-7 arène (ar:1). Écrites depuis la fiche, chaque item ancré\n'
+  + '   pack année complète, 6 et au-delà arène (ar:1). Écrites depuis la fiche, chaque item ancré\n'
   + '   par une citation littérale vérifiée par outils/verifie-qcm.js.\n'
   + '   Bloc remplacé en entier à chaque implantation : ne rien écrire à la main ici. ── */\n'
   + lignes.join(',\n') + '\n' + FIN;

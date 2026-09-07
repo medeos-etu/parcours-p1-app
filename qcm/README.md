@@ -83,6 +83,29 @@ Soit **7 questions et 35 items par fiche**. Chaque question porte son numéro de
 (1 à 7). Sept questions pour toute une fiche : chacune doit compter, aucune ne répète
 une autre, et ensemble elles balaient la fiche entière.
 
+## Les renforts d'arène — lots 8 et au-delà (Lucas, 07/09/2026)
+> « On n'a pas assez de QCM arène sur les fiches vues en premier dans le parcours.
+> Moins on a de fiches, moins l'Arène peut être remplie de QCM. »
+
+Le Grand Amphi ne tire QUE dans les fiches déjà travaillées, et il tire d'abord les
+questions d'arène de chaque fiche. Il ouvre au 4ᵉ jour (`AMPHI_SEUIL_JOURS`), quand
+l'élève a huit fiches : à deux lots d'arène par fiche, cela faisait **seize questions
+pour deux ascensions de dix** — le stock se recyclait dès le premier soir.
+
+D'où une exception, réservée aux **toutes premières fiches du Parcours** : une fiche
+peut porter des **lots supplémentaires numérotés 8, 9, 10…**, tous en arène (`ar:1`,
+puisque `lot >= 6`). Rien d'autre ne change :
+- le **socle des lots 1-7 reste obligatoire** sur toute fiche servie ;
+- l'entraînement reste plafonné aux lots 1-5, gratuit aux lots 1-2 ;
+- un lot ne peut être posé qu'une fois par fiche.
+
+`verifie-qcm.js` compte ces renforts sur une ligne à part, `implante-parcours.js` les
+pose comme les autres. **Fait au 07/09/2026** : les six fiches des trois premières
+séances (anatomie 001-002, biologie 001-002, chimie 001-002) ont **10 QCM d'arène
+chacune** (lots 6 à 15), dans `qcm/arene-premieres-fiches-<matière>.json`.
+**Candidat suivant** : physique 001-002, la 4ᵉ séance — elle entre dans le vivier de
+l'Amphi le jour même de son ouverture.
+
 ## Le périmètre du moment
 Les **45 premiers jours de Parcours**, soit les 112 fiches des chapitres :
 anatomie 1-3 · biologie 1-2 · chimie 1 · physique 1.

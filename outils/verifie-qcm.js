@@ -53,7 +53,10 @@ let nQ = 0, nI = 0, ok = 0, ancreKO = 0, sansAncre = 0, ficheKO = 0, pas5 = 0, v
 const repartition = {}; let zeroVrai = 0; const suite = [];   /* de 1 à 5 vrais est légitime ; 0 vrai ne l'est pas */
 const rejets = [];
 /* un lot = un QCM de cinq items. Sept lots par fiche : 1-2 gratuit, 3-5 pack, 6-7 arène.
-   On vérifie ici que chaque fiche servie a bien ses sept lots, une fois chacun. */
+   On vérifie ici que chaque fiche servie a bien ses sept lots, une fois chacun.
+   ⭐ 07/09/2026 — les lots 8 et au-delà sont autorisés EN PLUS : ce sont des renforts
+   d'arène pour les premières fiches du Parcours, que le Grand Amphi épuisait en deux
+   ascensions. Le socle des sept reste obligatoire, aucun lot ne peut être posé deux fois. */
 const lots = {}, enonces = {};
 fichiers.forEach(nom => {
   let j; try { j = JSON.parse(fs.readFileSync(path.join(APP, 'qcm', nom), 'utf8')); } catch (e) { return; }
@@ -118,22 +121,27 @@ if (nQ) { const moy = vraies / nQ;
 
 /* les sept lots, fiche par fiche */
 const fichesVues = Object.keys(lots), incompletes = [];
+let renforts = 0, fichesRenfort = 0;
 fichesVues.forEach(f => {
   const l = lots[f].slice().sort((a, b) => a - b);
-  const attendu = [1, 2, 3, 4, 5, 6, 7];
-  const manque = attendu.filter(n => !l.includes(n));
-  const double = attendu.filter(n => l.filter(x => x === n).length > 1);
-  const hors = l.filter(n => !attendu.includes(n));
+  const socle = [1, 2, 3, 4, 5, 6, 7];
+  const manque = socle.filter(n => !l.includes(n));
+  const double = [...new Set(l)].filter(n => l.filter(x => x === n).length > 1);
+  const hors = l.filter(n => !Number.isInteger(n) || n < 1);
+  const enPlus = l.filter(n => n > 7);
+  if (enPlus.length) { renforts += enPlus.length; fichesRenfort++; }
   if (manque.length || double.length || hors.length) {
     incompletes.push(f + ' — ' + [
       manque.length ? 'lot(s) manquant(s) : ' + manque.join(', ') : '',
       double.length ? 'lot(s) en double : ' + double.join(', ') : '',
-      hors.length ? 'lot(s) hors 1-7 : ' + hors.join(', ') : '',
+      hors.length ? 'lot(s) invalides (entier >= 1 attendu) : ' + hors.join(', ') : '',
     ].filter(Boolean).join(' · '));
   }
 });
 console.log('    fiches servies                                       : ' + fichesVues.length
   + ' · complètes (7 lots, une fois chacun) : ' + (fichesVues.length - incompletes.length));
+if (renforts) console.log('    lots d\'arène en renfort (lot >= 8)                   : ' + renforts
+  + ' sur ' + fichesRenfort + ' fiche(s)');
 if (incompletes.length) {
   console.log('\n  LOTS INCOMPLETS (' + incompletes.length + ') :');
   incompletes.slice(0, 12).forEach(x => console.log('    ' + x));
