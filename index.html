@@ -3331,10 +3331,9 @@
       <div class="sc2-body">
         <span class="sc-tag">Medi Pro · Nos 5 stages</span>
         <b id="pk-titre" style="font-size:14px;line-height:1.3;font-weight:900">Tes 5 stages pour anticiper, jusqu'à ta rentrée.</b>
-        <p id="pk-texte">Un stage guidé à chaque vacances de Terminale, puis la pré-rentrée. Et dans l'app, l'accès illimité aux fiches : plus de limite de deux par jour, tu avances comme tu le sens — avec tous les QCM et 3 ascensions par jour.</p>
+        <p id="pk-texte">Un stage guidé à chaque vacances de Terminale, puis la pré-rentrée. Et dans ton Parcours : fiches sans limite.</p>
         <div class="sc-btns">
           <button class="sc-buy" onclick="ouvrirMediPro()">Découvrir Medi Pro</button>
-          <button class="sc-more" onclick="ouvrirMediPro('packs')">Un seul stage ?</button>
         </div>
       </div>
     </div>
@@ -11009,11 +11008,12 @@ function renderRayonMediPro(){
   const t = document.getElementById('pk-titre'), p = document.getElementById('pk-texte'); if(!t || !p) return;
   const an = anneeRentreeMediPro();
   if (an >= 2028) {
-    t.textContent = 'Tes 5 stages pour anticiper, dès cette année.';
-    p.textContent = 'Ta rentrée est en ' + an + ' : tu as le temps de poser les bases solidement. Un stage guidé à chaque vacances, puis la pré-rentrée — et dans l\'app, l\'accès illimité aux fiches : plus de limite de deux par jour, tu avances comme tu le sens, avec tous les QCM et 3 ascensions par jour.';
+    /* Rentrée 2028 : ses stages sont ceux de l'année 2027-2028 (sa Terminale), en pré-réservation sur la page. */
+    t.textContent = 'Tes 5 stages pour anticiper, jusqu\'à ta rentrée ' + an + '.';
+    p.textContent = 'Un stage guidé à chaque vacances de ta Terminale (' + (an - 1) + '-' + an + '), puis la pré-rentrée. Et dans ton Parcours : fiches sans limite. Réservations bientôt ouvertes : sois prévenu en premier.';
   } else {
     t.textContent = 'Tes 5 stages pour anticiper, jusqu\'à ta rentrée ' + an + '.';
-    p.textContent = 'Un stage guidé à chaque vacances de Terminale, puis la pré-rentrée. Et dans l\'app, l\'accès illimité aux fiches : plus de limite de deux par jour, tu avances comme tu le sens — avec tous les QCM et 3 ascensions par jour.';
+    p.textContent = 'Un stage guidé à chaque vacances de Terminale, puis la pré-rentrée. Et dans ton Parcours : fiches sans limite.';
   }
 }
 function poserRentree(an){
