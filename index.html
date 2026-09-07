@@ -667,6 +667,11 @@
   .so-conv b{font-size:13.5px;flex-shrink:0}.so-conv span{flex:1;min-width:0;font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .so-conv i{font-style:normal;background:#6B46C1;color:#fff;border-radius:999px;font-size:10px;padding:2px 7px;font-weight:900}
   #mainnav button{position:relative}
+  /* l'Arène est fermée jusqu'à la première séance : un cadenas sur l'onglet, et l'icône s'efface un peu */
+  #mainnav button[data-t="arene"] .disc{position:relative}
+  #mainnav button[data-t="arene"].verrou .disc{opacity:.55}
+  #mainnav button[data-t="arene"].verrou .disc::after{content:'🔒';position:absolute;right:-6px;top:-6px;font-size:13px;line-height:1;opacity:1;filter:drop-shadow(0 1px 2px rgba(0,0,0,.35))}
+  .hero-side[data-t="arene"].verrou{opacity:.6}
   .nav-pastille{position:absolute;top:2px;right:12px;background:#E53E3E;color:#fff;font-style:normal;font-size:10px;font-weight:900;border-radius:999px;padding:1px 6px;line-height:1.4;z-index:2}
   .chat-sheet{max-height:88vh;display:flex;flex-direction:column}
   .chat-corps{display:flex;flex-direction:column;min-height:52vh}
@@ -3485,8 +3490,14 @@ let gateVers='home';   /* l'onglet visé quand la porte s'affiche */
    d'abord ça »). On reste sur le Parcours, et on le dit une fois par écran demandé. */
 function premiereSeanceFaite(){ return !!(S.sdone && Object.keys(S.sdone).length); }
 let _attenteDit={};
+function majVerrouArene(){
+  const ferme=!premiereSeanceFaite();
+  document.querySelectorAll('#mainnav button[data-t="arene"],.hero-side[data-t="arene"]').forEach(b=>b.classList.toggle('verrou', ferme));
+}
 function attendreLaSeance(id){
-  if(!(typeof accOk==='function' && accOk())) return false;
+  /* l'Arène attend la première séance pour tout le monde, compte ou pas (Lucas, 07/09 : « on peut y avoir
+     accès seulement si le premier jour de parcours a été fait ») ; le Social, lui, garde sa porte sans compte */
+  if(!(typeof accOk==='function' && accOk()) && id!=='arene') return false;
   if(id!=='arene' && id!=='social') return false;
   if(premiereSeanceFaite()) return false;
   if(!_attenteDit[id]){ _attenteDit[id]=1;
@@ -3504,8 +3515,9 @@ function go(id){
   /* Le PARCOURS se visite sans compte : son intro se joue en entier (Lucas, 07/09 : « l'inscription
      passera de façon beaucoup plus souple »). La porte se trouve à la PREMIÈRE FICHE (openFiche)
      et à l'Arène. */
+  if(typeof S!=='undefined' && attendreLaSeance(id)) id='home';   /* d'abord : sans première séance, l'Arène n'existe pas encore */
   if(id==='arene' && typeof S!=='undefined' && !accOk()){ gateVers='arene'; id='gate'; }
-  if(typeof S!=='undefined' && attendreLaSeance(id)) id='home';
+  try{ majVerrouArene(); }catch(e){}
   const cible=document.getElementById(id); if(!cible) return;
   /* UNE VISITE NE SURVIT PAS À UN CHANGEMENT D'ÉCRAN. Sinon la bulle « Bienvenue dans
      l'Arène » reste posée sur le Parcours (capturé le 05/09). On la ferme sans la marquer
@@ -11377,7 +11389,7 @@ function renderCarte(){
     const camp=(quand,titre,pitch,url,lien,img,o)=>'<a class="cr-stage" href="'+url+'" target="_blank" rel="noopener">'+
       '<span class="cr-stage-k">Un monde à part sur ta route</span>'+
       '<span class="cr-socle stage'+(img?' dio':'')+'">'+
-        (img?'<img class="cr-dio" src="'+img+'" alt="">':'<span class="cr-em">⛺</span>')+
+        (img?'<img class="cr-dio" src="'+img+'" alt="" onerror="imgRetry(this)">':'<span class="cr-em">⛺</span>')+
         '<span class="cr-cadenas">⛺ Stage Medeos · en option</span></span>'+
       '<span class="cr-nom stage">'+titre+'</span>'+
       '<span class="cr-band stage"><span>'+quand+'</span></span>'+
@@ -11411,7 +11423,7 @@ function renderCarte(){
   }
 
   const socleHtml=(m, badge)=>'<div class="cr-socle'+(m.img?' dio':'')+'" style="--c:'+m.teinte+'">'+
-      (m.img?'<img class="cr-dio" src="'+m.img+'" alt="" loading="lazy">':'<span class="cr-em">'+m.em+'</span>')+badge+'</div>';
+      (m.img?'<img class="cr-dio" src="'+m.img+'" alt="" loading="lazy" onerror="imgRetry(this)">':'<span class="cr-em">'+m.em+'</span>')+badge+'</div>';
   const bandeauHtml=(txt, img)=>'<div class="cr-band'+(img?' img':'')+'"'+(img?' style="background-image:url(\''+img+'\')"':'')+'><span>'+txt+'</span></div>';
 
   const railImg = IMG('rail');
@@ -11421,7 +11433,7 @@ function renderCarte(){
   { const themFaits = kRentree+1, fichesBagage = T.slice(0, kRentree+1).reduce((n,t)=>n+t.fiches.length,0);
     const imgR = IMG('rentree');
     x += '<div class="cr-sommet" id="cr-sommet">'+
-      '<div class="cr-socle grand'+(imgR?' dio':'')+'">'+(imgR?'<img class="cr-dio" src="'+imgR+'" alt="">':'<span class="cr-em">🎓</span>')+'</div>'+
+      '<div class="cr-socle grand'+(imgR?' dio':'')+'">'+(imgR?'<img class="cr-dio" src="'+imgR+'" alt="" onerror="imgRetry(this)">':'<span class="cr-em">🎓</span>')+'</div>'+
       '<div class="cr-nom">'+(enP1()? 'Le bout de la route' : 'Ta rentrée en première année de santé')+'</div>'+
       bandeauHtml(enP1()? 'Les '+M.length+' mondes, terminés' : '1<sup>er</sup> sept. '+d.getFullYear()+' &nbsp;·&nbsp; dans '+j+' j', bandeauR||bandeau)+
       '<div><button class="se-alt cr-chg" onclick="S.profil.rentreeDite=false;saveS();renderCarte()">'+(rentreeSupposee()?'tu ne l\'as pas encore dite — la préciser':'changer la date')+'</button></div>'+
@@ -11477,10 +11489,10 @@ function renderCarte(){
     /* le socle du monde, et ce qu'on a gagné en y arrivant */
     const debutM = cumDe(m.terr[0]) - m.terr[0].fiches.length;
     const badge = e.etat==='fini' ? '<i class="cr-badge ok">✓</i>' : e.etat==='verrouille' ? '<i class="cr-badge lock">🔒</i>'
-                : (marqueur ? '<img class="cr-marq" src="'+marqueur+'" alt="Tu es ici">' : '<i class="cr-badge ici">Tu es ici</i>');
+                : (marqueur ? '<img class="cr-marq" src="'+marqueur+'" alt="Tu es ici" onerror="imgRetry(this)">' : '<i class="cr-badge ici">Tu es ici</i>');
     const rec = recompensesArrivee(m);
     const chips = rec.map(r=>'<span class="cr-chip'+(e.etat==='verrouille'?' lock':'')+'">'+
-      (r.k==='avatar' ? '<span class="cr-chip-av">'+(r.img?'<img src="'+r.img+'" alt="">':'<i>'+r.em+'</i>')+'</span>'
+      (r.k==='avatar' ? '<span class="cr-chip-av">'+(r.img?'<img src="'+r.img+'" alt="" onerror="imgRetry(this)">':'<i>'+r.em+'</i>')+'</span>'
        : r.k==='ban' ? '<span class="cr-chip-ban"'+(r.img?' style="background-image:url(\''+r.img+'\')"':' style="background:linear-gradient(120deg,'+r.teinte+',#1A1530)"')+'></span>'
        : icone(r,'cr-chip-i'))+
       '<b>'+r.nom+'</b><em>'+r.sous+'</em></span>').join('');
@@ -11503,6 +11515,15 @@ function renderCarte(){
 }
 
 function ouvrirCarte(){ renderCarte(); go('carte'); }
+/* UNE IMAGE QUI RATE SE RECHARGE TOUTE SEULE (Lucas, 07/09 : des « ? » sur la carte des mondes après un
+   raté de connexion en 5G — les fichiers étaient bons). Deux reprises, espacées, puis on laisse. */
+function imgRetry(el){
+  try{
+    const n=(+el.dataset.retry||0); if(n>=2) return; el.dataset.retry=n+1;
+    const src=(el.getAttribute('src')||'').split('?')[0]; if(!src) return;
+    setTimeout(function(){ el.src=src+'?r='+(n+1)+'-'+Date.now(); }, 1200*(n+1));
+  }catch(e){}
+}
 /* « Revoir mes séances passées » mène là où elles vivent : sur la carte, au monde où l'on
    est, avec la dernière thématique travaillée déjà ouverte — ses fiches se relisent d'un
    geste. (Pas pendant la visite guidée de la carte : elle passe d'abord.) */
