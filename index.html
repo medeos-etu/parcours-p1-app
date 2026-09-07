@@ -1262,7 +1262,10 @@
   @keyframes cdpop{from{transform:scale(1.55);opacity:.25}to{transform:scale(1);opacity:1}}
 
   /* — visite guidée : voile percé d'un projecteur + carte de la mascotte — */
-  #tuto{position:fixed;inset:0;z-index:300;cursor:pointer}
+  #tuto{position:fixed;inset:0;z-index:300;cursor:pointer;touch-action:none;overscroll-behavior:contain}
+  #tuto *{touch-action:none}
+  /* pendant une visite, la page ne défile plus sous le doigt : c'est la visite qui la fait défiler */
+  html.tuto-on,html.tuto-on body{overflow:hidden;overscroll-behavior:none}
   /* La carte de fin d'entraînement prend une photo sombre en fond le jour où la journée
      est bouclée : le texte gris sur fond gris devenait illisible. Sous cette photo, on
      pose un voile et on repasse tout en clair. */
@@ -9367,17 +9370,15 @@ function renderPick(){
 const INTRO_TEXTE="La première année de santé, on y arrive souvent <b>à l'aveugle</b>. Ici, tu prends de l'avance : <b>un peu chaque jour, avant la rentrée</b>.";
 function introApp(){
   const src=(typeof SRC0==='string')?SRC0:'', ref=(typeof REF0==='string')?REF0:'';
+  /* JAMAIS « tu viens d'Instagram / du site / tu as vu telle story » (Lucas, 07/09 : « ça fait flicage ») :
+     l'accroche colle au sujet du lien, sans dire d'où l'on vient. */
   let d="Salut, moi c'est Axo.";
   if(typeof COMPTE_NEUF!=='undefined' && COMPTE_NEUF) d="Ton compte est prêt. Moi, c'est Axo.";
-  else if(src==='bio') d="Salut, moi c'est Axo. Tu viens d'Instagram : bienvenue.";
-  else if(src==='depart' || ref==='alaune-commence') d="Salut, moi c'est Axo. Tu as dit « Commencer » : c'est parti.";
-  else if(ref==='alaune-stages') d="Salut, moi c'est Axo. Les stages viendront ; tout commence ici, gratuitement.";
-  else if(ref==='alaune-quionest') d="Salut, moi c'est Axo. Tu connais l'équipe ; voici ce qu'on t'a construit.";
-  else if(ref==='alaune-p1') d="Salut, moi c'est Axo. Tu as vu la P1 ; voici comment s'y préparer.";
-  else if(ref==='alaune-methode') d="Salut, moi c'est Axo. Tu as vu la méthode ; ici, tu la vis.";
+  else if(src==='depart' || ref==='alaune-commence') d="Salut, moi c'est Axo. C'est ici que ça commence.";
+  else if(ref==='alaune-stages') d="Salut, moi c'est Axo. Avant les stages, tout commence ici, gratuitement.";
+  else if(ref==='alaune-quionest') d="Salut, moi c'est Axo. Voici ce que l'équipe t'a construit.";
+  else if(ref==='alaune-methode') d="Salut, moi c'est Axo. La méthode, ici, tu la vis.";
   else if(ref==='alaune-parents') d="Salut, moi c'est Axo. Voici l'app, telle que l'élève la voit.";
-  else if(src==='ig') d="Salut, moi c'est Axo. Tu viens d'Instagram : bienvenue.";
-  else if(src==='parcours') d="Salut, moi c'est Axo. Tu viens du site : ici, c'est l'app.";
   else if(src==='accueil-panorama-p1') d="Salut, moi c'est Axo. Le panorama que tu as lu vit ici, dans la Bibliothèque.";
   return {img:'axo-guide-bienvenue',
     avant:function(){ try{ S.tuto=S.tuto||{}; if(!S.tuto.intro){ S.tuto.intro=Date.now(); saveS(); } }catch(e){} },
@@ -9521,8 +9522,29 @@ function startTuto(k){
   TU={k:k,i:0,s:s};
   try{ traquer('visite_debut',{k:k}); }catch(e){}
   document.getElementById('tuto').hidden=false;
+  tutoVerrou(true);
   tutoShow();
   window.addEventListener('resize',tutoReplace);
+}
+/* LE VERROU DU DÉFILEMENT (Lucas, 07/09 : « bloquer le slide pendant l'introduction… pour bien se faire
+   guider »). Le doigt, la molette et le clavier ne font plus défiler la page tant qu'une visite est
+   ouverte ; seule la visite déplace l'écran (scrollIntoView vers chaque cible). */
+function tutoBloque(e){ if(TU){ try{ e.preventDefault(); }catch(x){} } }
+function tutoClavier(e){ if(TU && [' ','Spacebar','ArrowUp','ArrowDown','PageUp','PageDown','Home','End'].includes(e.key) && !/^(INPUT|TEXTAREA|SELECT)$/.test((e.target&&e.target.tagName)||'')) e.preventDefault(); }
+function tutoVerrou(on){
+  try{
+    const t=document.getElementById('tuto');
+    document.documentElement.classList.toggle('tuto-on', !!on);
+    if(on){
+      t.addEventListener('touchmove', tutoBloque, {passive:false});
+      t.addEventListener('wheel', tutoBloque, {passive:false});
+      document.addEventListener('keydown', tutoClavier);
+    } else {
+      t.removeEventListener('touchmove', tutoBloque);
+      t.removeEventListener('wheel', tutoBloque);
+      document.removeEventListener('keydown', tutoClavier);
+    }
+  }catch(e){}
 }
 function tutoReplace(){ if(TU) tutoShow(); }
 function tutoShow(){
@@ -9586,6 +9608,7 @@ function tutoEnd(sansMarquer){
   if(!sansMarquer){ S.tuto=S.tuto||{}; S.tuto[TU.k]=Date.now(); saveS(); }
   TU=null;
   document.getElementById('tuto').hidden=true;
+  tutoVerrou(false);
   window.removeEventListener('resize',tutoReplace);
 }
 
