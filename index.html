@@ -9384,11 +9384,17 @@ function introApp(){
   const src=(typeof SRC0==='string')?SRC0:'', ref=(typeof REF0==='string')?REF0:'';
   /* JAMAIS « tu viens d'Instagram / du site / tu as vu telle story » (Lucas, 07/09 : « ça fait flicage ») :
      l'accroche colle au sujet du lien, sans dire d'où l'on vient. */
-  /* TOUS LES LIENS INSTAGRAM (bio, stickers des à la une, /depart) ont LA MÊME intro (Lucas, 07/09 :
-     « pour ces liens l'intro ne doit pas varier »). Seuls varient : le compte qui vient d'être créé, et
-     la carte Panorama du site (elle parle de ce qui est à l'écran). */
+  /* LA MÊME INTRO POUR TOUT LE MONDE, mais la toute première phrase fait un petit clin d'œil au SUJET du lien
+     (Lucas, 07/09 : « un petit message qui varie en fonction de où la personne vient, juste le premier
+     message, c'était pas mal ») — sans JAMAIS dire d'où l'on vient (« ça fait flicage »). Les liens qui
+     visent un contenu de la Bibliothèque (panorama, guide) orientent vers cet élément, puis la suite. */
   let d="Salut, moi c'est Axo.";
   if(typeof COMPTE_NEUF!=='undefined' && COMPTE_NEUF) d="Ton compte est prêt. Moi, c'est Axo.";
+  else if(src==='depart' || ref==='alaune-commence') d="Salut, moi c'est Axo. C'est ici que ça commence.";
+  else if(ref==='alaune-stages') d="Salut, moi c'est Axo. Avant les stages, tout commence ici, gratuitement.";
+  else if(ref==='alaune-quionest') d="Salut, moi c'est Axo. Voici ce que l'équipe t'a construit.";
+  else if(ref==='alaune-methode') d="Salut, moi c'est Axo. La méthode, ici, tu la vis.";
+  else if(ref==='alaune-parents') d="Salut, moi c'est Axo. Voici l'app, telle que l'élève la voit.";
   else if(src==='accueil-panorama-p1') d="Salut, moi c'est Axo. Le panorama que tu as lu vit ici, dans la Bibliothèque.";
   return {img:'axo-guide-bienvenue',
     avant:function(){ try{ S.tuto=S.tuto||{}; if(!S.tuto.intro){ S.tuto.intro=Date.now(); saveS(); } }catch(e){} },
