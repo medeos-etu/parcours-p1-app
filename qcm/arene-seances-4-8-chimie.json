@@ -1,0 +1,631 @@
+{
+ "matiere": "chimie",
+ "chapitre": 1,
+ "note": "Renfort d'arène (lots 8 à 15, tous ar:1) pour les fiches de chimie de la séance 7 du Parcours. Le socle des lots 1-7 reste dans chimie-ch01-p1.json et chimie-ch01-p2.json.",
+ "questions": [
+  {
+   "fiche": "chimie-003-compter-particules-atomes-et-ions.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 8,
+   "q": "Un étudiant énonce les règles de comptage des électrons. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Un atome neutre porte autant d'électrons que de neutrons.",
+     "v": false,
+     "e": "FAUX : il en porte autant que de protons, donc Z électrons.",
+     "sourceQuote": "Électrons — atome neutre Autant que de protons"
+    },
+    {
+     "t": "Un cation a gagné des électrons.",
+     "v": false,
+     "e": "FAUX : un cation en a perdu. C'est l'anion qui en gagne.",
+     "sourceQuote": "L'atome a perdu n électrons"
+    },
+    {
+     "t": "Le nombre de protons se calcule à partir du nombre de masse.",
+     "v": false,
+     "e": "FAUX : il est directement donné par Z, sans calcul.",
+     "sourceQuote": "Directement donné par Z (numéro atomique)"
+    },
+    {
+     "t": "Le nombre de neutrons est directement lisible dans la notation.",
+     "v": false,
+     "e": "FAUX : il se calcule, comme différence entre le nombre de masse et le numéro atomique.",
+     "sourceQuote": "Se calcule (différence entre le nombre de masse et le numéro atomique)"
+    },
+    {
+     "t": "Les deux premières lignes du tableau ne dépendent que du noyau, et sont les mêmes pour l'atome et pour son ion.",
+     "v": true,
+     "e": "VRAI. Protons et neutrons ne bougent pas quand un ion se forme.",
+     "sourceQuote": "Les deux premières lignes ne dépendent que du noyau : elles sont les mêmes pour l'atome et pour son ion"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-003-compter-particules-atomes-et-ions.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 9,
+   "q": "La fiche détaille l'anion chlorure comme troisième exemple. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Un anion est un ion chargé négativement.",
+     "v": true,
+     "e": "VRAI. C'est la définition donnée dans le tableau.",
+     "sourceQuote": "anion X n− (ion chargé négativement)"
+    },
+    {
+     "t": "Un anion a gagné des électrons.",
+     "v": true,
+     "e": "VRAI. Gagner des charges négatives, c'est devenir négatif.",
+     "sourceQuote": "L'atome a gagné n électrons"
+    },
+    {
+     "t": "Si l'atome gagne 1 électron, il gagne 1 charge négative et devient chargé −1.",
+     "v": true,
+     "e": "VRAI. C'est le raisonnement donné pour l'anion.",
+     "sourceQuote": "Si l'atome gagne 1 électron , il gagne 1 charge négative. Résultat : il devient chargé négativement −1"
+    },
+    {
+     "t": "Un électron porte une charge négative.",
+     "v": true,
+     "e": "VRAI. C'est le point de départ de tout le raisonnement sur la charge.",
+     "sourceQuote": "Un électron porte une charge négative (−e)"
+    },
+    {
+     "t": "Le noyau du chlorure diffère de celui de l'atome de chlore.",
+     "v": false,
+     "e": "FAUX : le noyau ne change jamais lors de la formation d'un ion.",
+     "sourceQuote": "Quand un atome devient un ion, le noyau ne change jamais"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-003-compter-particules-atomes-et-ions.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 10,
+   "q": "La charge d'un ion se lit toujours de la même façon. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Elle se lit comme un bilan : le nombre de protons moins le nombre d'électrons.",
+     "v": true,
+     "e": "VRAI. C'est la formule retenue par la fiche.",
+     "sourceQuote": "La charge d'un ion se lit donc toujours comme un bilan : le nombre de protons moins le nombre d'électrons"
+    },
+    {
+     "t": "Perdre des électrons rend l'ion chargé positivement.",
+     "v": true,
+     "e": "VRAI. Perdre des charges négatives revient à devenir positif.",
+     "sourceQuote": "il perd 3 charges négatives. Résultat : il devient chargé positivement +3"
+    },
+    {
+     "t": "La charge est écrite en haut à droite du symbole.",
+     "v": true,
+     "e": "VRAI. C'est là qu'on va la lire avant de corriger le nombre d'électrons.",
+     "sourceQuote": "c'est la charge écrite en haut à droite du symbole"
+    },
+    {
+     "t": "Une charge positive signifie des électrons en plus : on ajoute.",
+     "v": false,
+     "e": "FAUX : une charge positive signifie des électrons en moins — on soustrait.",
+     "sourceQuote": "Une charge positive veut dire des électrons en moins : on soustrait"
+    },
+    {
+     "t": "Une charge négative signifie des électrons en moins : on soustrait.",
+     "v": false,
+     "e": "FAUX : une charge négative signifie des électrons en plus — on ajoute.",
+     "sourceQuote": "Une charge négative , des électrons en plus : on ajoute"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-003-compter-particules-atomes-et-ions.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 11,
+   "q": "La règle d'or de la fiche porte sur ce qui bouge, et sur ce qui ne bouge pas. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Seul le nombre d'électrons change lors de la formation d'ions.",
+     "v": true,
+     "e": "VRAI. C'est la règle d'or énoncée par la fiche.",
+     "sourceQuote": "seul le nombre d'électrons change lors de la formation d'ions"
+    },
+    {
+     "t": "Le noyau, protons et neutrons, reste identique.",
+     "v": true,
+     "e": "VRAI. Rien n'y est touché.",
+     "sourceQuote": "Le noyau (protons + neutrons) reste identique"
+    },
+    {
+     "t": "En formant un ion, on n'a touché qu'au cortège.",
+     "v": true,
+     "e": "VRAI. C'est la formule employée par la fiche.",
+     "sourceQuote": "on n'a touché qu'au cortège"
+    },
+    {
+     "t": "Un QCM qui fait varier le nombre de protons ou de neutrons entre un atome et son ion est faux.",
+     "v": true,
+     "e": "VRAI. Le noyau reste identique, donc un tel item est à écarter.",
+     "sourceQuote": "un QCM qui fait varier le nombre de protons ou de neutrons entre Fe et Fe 3+ est FAUX"
+    },
+    {
+     "t": "Quand un atome devient un ion, le noyau ne change jamais.",
+     "v": true,
+     "e": "VRAI. C'est l'accroche même de la fiche.",
+     "sourceQuote": "Quand un atome devient un ion, le noyau ne change jamais"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-003-compter-particules-atomes-et-ions.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 12,
+   "q": "Un étudiant décrit l'ordre dans lequel il compte les particules d'un ion. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Il faut commencer par le cortège électronique, puis remonter au noyau.",
+     "v": false,
+     "e": "FAUX : le noyau d'abord, le cortège ensuite — jamais dans l'autre sens.",
+     "sourceQuote": "Le noyau d'abord, le cortège ensuite : jamais dans l'autre sens"
+    },
+    {
+     "t": "La charge de l'ion modifie le nombre de neutrons à compter.",
+     "v": false,
+     "e": "FAUX : la charge n'y change rien, le noyau ne bouge pas.",
+     "sourceQuote": "puis N = A − Z neutrons — la charge n'y change rien"
+    },
+    {
+     "t": "Le décompte des électrons part de Z.",
+     "v": true,
+     "e": "VRAI. On part de Z, puis on applique la charge.",
+     "sourceQuote": "Ensuite seulement les électrons : tu pars de Z"
+    },
+    {
+     "t": "On commence par le noyau, qui ne bouge pas : Z protons, puis les neutrons.",
+     "v": true,
+     "e": "VRAI. Le noyau d'abord, et la charge n'y change rien.",
+     "sourceQuote": "D'abord le noyau, qui ne bouge pas : Z protons"
+    },
+    {
+     "t": "Cette notation ne s'applique qu'aux atomes neutres.",
+     "v": false,
+     "e": "FAUX : elle marche aussi pour les ions, à une nuance près.",
+     "sourceQuote": "elle marche aussi pour les ions, à une nuance près"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-003-compter-particules-atomes-et-ions.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 13,
+   "q": "La fiche s'ouvre en rappelant ce que la notation permet déjà de faire. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Z est le numéro atomique, A le nombre de masse, et N = A − Z le nombre de neutrons.",
+     "v": true,
+     "e": "VRAI. C'est le rappel de la fiche précédente.",
+     "sourceQuote": "Z est le numéro atomique, A le nombre de masse, et N = A − Z le nombre de neutrons"
+    },
+    {
+     "t": "Cette notation permet de connaître instantanément la composition d'un atome.",
+     "v": true,
+     "e": "VRAI. C'est ce que la fiche entreprend d'exploiter.",
+     "sourceQuote": "Cette notation permet de connaître instantanément la composition d'un atome"
+    },
+    {
+     "t": "Elle vaut aussi pour les ions, à une nuance près.",
+     "v": true,
+     "e": "VRAI. La nuance porte sur les électrons.",
+     "sourceQuote": "elle marche aussi pour les ions, à une nuance près qu'il faut avoir comprise une bonne fois"
+    },
+    {
+     "t": "Le nombre de neutrons est donné directement par le numéro atomique.",
+     "v": false,
+     "e": "FAUX : Z donne les protons. Les neutrons se calculent par N = A − Z.",
+     "sourceQuote": "Directement donné par Z (numéro atomique)"
+    },
+    {
+     "t": "Quand un atome devient un ion, c'est le nombre de neutrons qui bouge.",
+     "v": false,
+     "e": "FAUX : seul le nombre d'électrons bouge.",
+     "sourceQuote": "Seul le nombre d' électrons bouge"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-003-compter-particules-atomes-et-ions.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 14,
+   "q": "Le tableau de la fiche donne, ligne par ligne, où lire chaque nombre. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le nombre de protons est directement donné par Z.",
+     "v": true,
+     "e": "VRAI. Aucune opération à faire.",
+     "sourceQuote": "Directement donné par Z (numéro atomique)"
+    },
+    {
+     "t": "Le nombre de neutrons se calcule comme la différence entre le nombre de masse et le numéro atomique.",
+     "v": true,
+     "e": "VRAI. C'est la relation N = A − Z.",
+     "sourceQuote": "Se calcule (différence entre le nombre de masse et le numéro atomique)"
+    },
+    {
+     "t": "Un atome neutre porte Z électrons.",
+     "v": true,
+     "e": "VRAI. Autant d'électrons que de protons.",
+     "sourceQuote": "Autant que de protons"
+    },
+    {
+     "t": "Un cation Xⁿ⁺ porte Z − n électrons.",
+     "v": true,
+     "e": "VRAI. Il a perdu n électrons.",
+     "sourceQuote": "L'atome a perdu n électrons Z − n électrons"
+    },
+    {
+     "t": "Un anion Xⁿ⁻ porte lui aussi Z − n électrons.",
+     "v": false,
+     "e": "FAUX : un anion en porte Z + n, puisqu'il en a gagné n.",
+     "sourceQuote": "L'atome a gagné n électrons Z + n électrons"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-003-compter-particules-atomes-et-ions.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 15,
+   "q": "La fiche explique pourquoi la charge d'un cation s'écrit avec un signe plus. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Perdre des électrons, c'est perdre des charges négatives.",
+     "v": true,
+     "e": "VRAI. D'où le signe positif qui en résulte.",
+     "sourceQuote": "il perd 3 charges négatives"
+    },
+    {
+     "t": "Un cation est un ion chargé positivement.",
+     "v": true,
+     "e": "VRAI. C'est la définition donnée dans le tableau.",
+     "sourceQuote": "cation X n+ (ion chargé positivement)"
+    },
+    {
+     "t": "Pour l'anion, la même logique s'applique en sens inverse.",
+     "v": true,
+     "e": "VRAI. Gagner un électron, c'est gagner une charge négative.",
+     "sourceQuote": "Même logique inversée pour l'anion"
+    },
+    {
+     "t": "Un électron porte une charge positive, notée +e.",
+     "v": false,
+     "e": "FAUX : l'électron porte une charge négative, notée −e.",
+     "sourceQuote": "Un électron porte une charge négative (−e)"
+    },
+    {
+     "t": "La charge d'un ion se déduit du seul nombre de neutrons.",
+     "v": false,
+     "e": "FAUX : elle se lit comme un bilan entre protons et électrons.",
+     "sourceQuote": "La charge d'un ion se lit donc toujours comme un bilan : le nombre de protons moins le nombre d'électrons"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-004-trois-particules-charge-masse.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 8,
+   "q": "La colonne « charge » du tableau se lit d'un bloc. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le proton et l'électron portent la même valeur de charge, avec des signes contraires.",
+     "v": true,
+     "e": "VRAI. C'est la symétrie décrite par la fiche.",
+     "sourceQuote": "même valeur, signes contraires"
+    },
+    {
+     "t": "C'est cette symétrie qui rend neutre un atome comptant autant d'électrons que de protons.",
+     "v": true,
+     "e": "VRAI. La fiche en fait la conséquence directe.",
+     "sourceQuote": "C'est cette symétrie entre le proton et l'électron qui fait qu'un atome avec autant d'électrons que de protons est électriquement neutre"
+    },
+    {
+     "t": "Le neutron porte une charge faible mais non nulle.",
+     "v": false,
+     "e": "FAUX : il ne porte aucune charge.",
+     "sourceQuote": "Le neutron, lui, ne porte aucune charge : 0"
+    },
+    {
+     "t": "C désigne ici le degré Celsius.",
+     "v": false,
+     "e": "FAUX : C est le coulomb, l'unité de charge électrique.",
+     "sourceQuote": "C = coulomb, l'unité de charge électrique"
+    },
+    {
+     "t": "La neutralité d'un atome vient des neutrons, qui annulent la charge des protons.",
+     "v": false,
+     "e": "FAUX : elle vient de l'équilibre entre protons et électrons. Le neutron, lui, ne porte aucune charge.",
+     "sourceQuote": "Le neutron, lui, ne porte aucune charge : 0"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-004-trois-particules-charge-masse.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 9,
+   "q": "La colonne « masse » oppose les deux nucléons à l'électron. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le proton et le neutron pèsent la même chose.",
+     "v": true,
+     "e": "VRAI. Environ 1,67 × 10⁻²⁷ kg chacun.",
+     "sourceQuote": "Le proton et le neutron pèsent la même chose"
+    },
+    {
+     "t": "L'électron se lit avec un exposant différent de celui des deux nucléons.",
+     "v": true,
+     "e": "VRAI. Les deux nucléons en 10⁻²⁷, l'électron en 10⁻³¹.",
+     "sourceQuote": "les deux nucléons en 10⁻²⁷, l'électron en 10⁻³¹"
+    },
+    {
+     "t": "Ce qu'il faut surtout retenir, c'est cette différence d'écriture.",
+     "v": true,
+     "e": "VRAI. C'est de cet écart que vient l'ordre de grandeur du chapitre.",
+     "sourceQuote": "Retiens surtout la différence d'écriture"
+    },
+    {
+     "t": "Les masses du tableau sont exprimées en kilogrammes.",
+     "v": true,
+     "e": "VRAI. La note sous le tableau le précise.",
+     "sourceQuote": "Les masses sont en kilogrammes"
+    },
+    {
+     "t": "C'est de cet écart d'écriture que vient l'ordre de grandeur retenu ensuite.",
+     "v": true,
+     "e": "VRAI. La fiche l'annonce juste avant de donner le facteur 2000.",
+     "sourceQuote": "C'est de cet écart que vient l'ordre de grandeur ci-dessous"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-004-trois-particules-charge-masse.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 10,
+   "q": "Un étudiant décrit la localisation des trois particules. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le proton est dans le noyau, le neutron dans le cortège.",
+     "v": false,
+     "e": "FAUX : les deux sont dans le noyau. Ce sont les nucléons.",
+     "sourceQuote": "Le proton et le neutron sont dans le noyau (ce sont les nucléons, ceux que compte A)"
+    },
+    {
+     "t": "L'électron se trouve parfois dans le noyau.",
+     "v": false,
+     "e": "FAUX : il n'y est jamais. Il est dans le cortège électronique.",
+     "sourceQuote": "L'électron, lui, n'y est jamais : il est dans le cortège électronique"
+    },
+    {
+     "t": "Le nombre de masse A compte les électrons.",
+     "v": false,
+     "e": "FAUX : A compte les nucléons, c'est-à-dire les protons et les neutrons.",
+     "sourceQuote": "ce sont les nucléons, ceux que compte A"
+    },
+    {
+     "t": "Un QCM qui place l'électron dans le noyau est faux.",
+     "v": true,
+     "e": "VRAI. L'électron est léger ET dans le cortège.",
+     "sourceQuote": "Un QCM qui le place dans le noyau est FAUX"
+    },
+    {
+     "t": "Le cortège électronique se situe à l'intérieur du noyau.",
+     "v": false,
+     "e": "FAUX : il est autour du noyau.",
+     "sourceQuote": "il est dans le cortège électronique , autour du noyau"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-004-trois-particules-charge-masse.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 11,
+   "q": "Le facteur 2000 est l'ordre de grandeur à retenir de ce chapitre. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "La masse du proton vaut environ celle du neutron, et environ 2000 fois celle de l'électron.",
+     "v": true,
+     "e": "VRAI. C'est l'ordre de grandeur retenu par la fiche.",
+     "sourceQuote": "masse du proton ≈ masse du neutron ≈ 2000 × masse de l'électron"
+    },
+    {
+     "t": "Il faudrait environ 2000 électrons pour peser aussi lourd qu'un seul proton.",
+     "v": true,
+     "e": "VRAI. C'est la reformulation donnée juste après.",
+     "sourceQuote": "il faudrait environ 2000 électrons pour peser aussi lourd qu'un seul proton"
+    },
+    {
+     "t": "La masse de l'atome est concentrée dans le noyau, dans les protons et les neutrons, et seulement là.",
+     "v": true,
+     "e": "VRAI. C'est la conclusion qui tombe toute seule.",
+     "sourceQuote": "la masse de l'atome est concentrée dans le noyau — dans les protons et les neutrons, et seulement là"
+    },
+    {
+     "t": "Les électrons pèsent lourd dans le total de la masse atomique.",
+     "v": false,
+     "e": "FAUX : ils ne pèsent presque rien dans le total.",
+     "sourceQuote": "Les électrons ne pèsent donc presque rien dans le total"
+    },
+    {
+     "t": "Cet ordre de grandeur s'obtient en mettant la ligne de l'électron en face des deux autres.",
+     "v": true,
+     "e": "VRAI. C'est la lecture du tableau que propose la fiche.",
+     "sourceQuote": "Mets maintenant la ligne de l' électron en face des deux autres"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-004-trois-particules-charge-masse.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 12,
+   "q": "Une question porte sur la masse d'un atome, une autre sur sa charge. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Pour une question de masse, il ne faut regarder que le noyau.",
+     "v": true,
+     "e": "VRAI. Les électrons y sont négligeables.",
+     "sourceQuote": "ne regarde que le noyau : les électrons sont négligeables"
+    },
+    {
+     "t": "Pour une question de charge, il faut au contraire regarder les électrons.",
+     "v": true,
+     "e": "VRAI. C'est leur nombre qui fait le bilan.",
+     "sourceQuote": "regarde au contraire les électrons"
+    },
+    {
+     "t": "Ces deux questions se traitent au même endroit de l'atome.",
+     "v": false,
+     "e": "FAUX : deux questions, deux endroits différents où regarder.",
+     "sourceQuote": "Deux questions, deux endroits différents où regarder"
+    },
+    {
+     "t": "Pour la charge, ce sont les masses respectives qui font la différence.",
+     "v": false,
+     "e": "FAUX : proton et électron portent la même charge en valeur absolue ; c'est leur nombre qui fait le bilan.",
+     "sourceQuote": "le proton et l'électron portent la même charge en valeur absolue, et c'est leur nombre qui fait le bilan"
+    },
+    {
+     "t": "Pour la masse, il faut additionner celle des électrons à celle du noyau.",
+     "v": false,
+     "e": "FAUX : les électrons sont négligeables, on ne regarde que le noyau.",
+     "sourceQuote": "ne regarde que le noyau : les électrons sont négligeables"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-004-trois-particules-charge-masse.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 13,
+   "q": "La fiche met en garde contre deux raccourcis à propos du neutron et de l'électron. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Charge nulle ne veut pas dire masse nulle.",
+     "v": true,
+     "e": "VRAI. Le neutron le prouve : aucune charge, mais autant de masse que le proton.",
+     "sourceQuote": "Charge nulle ne veut pas dire masse nulle"
+    },
+    {
+     "t": "Le neutron ne porte aucune charge, mais il pèse autant que le proton.",
+     "v": true,
+     "e": "VRAI. C'est le premier raccourci démonté.",
+     "sourceQuote": "le neutron ne porte aucune charge, mais il pèse autant que le proton"
+    },
+    {
+     "t": "L'électron est léger et se trouve dans le cortège.",
+     "v": true,
+     "e": "VRAI. Léger, oui — mais pas dans le noyau.",
+     "sourceQuote": "il est léger et dans le cortège"
+    },
+    {
+     "t": "L'électron est léger, donc il se trouve dans le noyau.",
+     "v": false,
+     "e": "FAUX : c'est précisément le second raccourci démonté par la fiche.",
+     "sourceQuote": "l' électron n'est pas « léger et dans le noyau »"
+    },
+    {
+     "t": "Un neutron ne contribue pas à la masse du noyau, puisqu'il est neutre.",
+     "v": false,
+     "e": "FAUX : il pèse autant que le proton, sa contribution à la masse est entière.",
+     "sourceQuote": "le neutron ne porte aucune charge, mais il pèse autant que le proton"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-004-trois-particules-charge-masse.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 14,
+   "q": "Le résumé de la fiche reprend les trois particules ligne par ligne. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le proton est dans le noyau.",
+     "v": true,
+     "e": "VRAI. Avec sa charge positive et sa masse d'ordre 10⁻²⁷ kg.",
+     "sourceQuote": "masse ≈ 1,67 × 10⁻²⁷ kg, dans le noyau"
+    },
+    {
+     "t": "Le neutron porte une charge nulle et se trouve lui aussi dans le noyau.",
+     "v": true,
+     "e": "VRAI. Même masse que le proton, charge nulle.",
+     "sourceQuote": "Neutron : charge 0 , même masse, dans le noyau"
+    },
+    {
+     "t": "L'électron se trouve dans le cortège.",
+     "v": true,
+     "e": "VRAI. Jamais dans le noyau.",
+     "sourceQuote": "masse ≈ 9,1 × 10⁻³¹ kg, dans le cortège"
+    },
+    {
+     "t": "La masse de l'atome est concentrée dans le noyau.",
+     "v": true,
+     "e": "VRAI. C'est la conclusion du résumé.",
+     "sourceQuote": "la masse de l'atome est concentrée dans le noyau"
+    },
+    {
+     "t": "Cette fiche donne la charge et la masse des particules, mais pas leur localisation.",
+     "v": false,
+     "e": "FAUX : elle donne les trois — charge, masse et localisation, une colonne pour chacune.",
+     "sourceQuote": "Les trois particules : charge, masse, localisation"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-004-trois-particules-charge-masse.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 15,
+   "q": "La fiche explique pourquoi elle arrive après les deux précédentes. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Jusqu'ici, on comptait des particules sans savoir ce que chacune pèse.",
+     "v": true,
+     "e": "VRAI. C'est la case manquante que vient combler cette fiche.",
+     "sourceQuote": "on ne t'a encore jamais dit ce que chacune pèse"
+    },
+    {
+     "t": "Les deux fiches précédentes avaient déjà donné la charge de chaque particule.",
+     "v": false,
+     "e": "FAUX : ni la charge, ni la masse, ni la localisation n'avaient été données.",
+     "sourceQuote": "ni la charge qu'elle porte, ni où elle se trouve"
+    },
+    {
+     "t": "Il n'est pas nécessaire de connaître les propriétés des composants pour comprendre l'atome.",
+     "v": false,
+     "e": "FAUX : la fiche dit l'inverse — c'est justement ce qu'il faut connaître.",
+     "sourceQuote": "pour comprendre l'atome, il faut connaître les propriétés de ses composants"
+    },
+    {
+     "t": "La fiche annonce quatre particules fondamentales.",
+     "v": false,
+     "e": "FAUX : elle en annonce trois.",
+     "sourceQuote": "Voici les trois particules fondamentales"
+    },
+    {
+     "t": "Le rappel d'ouverture dit qu'un atome neutre porte autant d'électrons que de neutrons.",
+     "v": false,
+     "e": "FAUX : autant d'électrons que de protons.",
+     "sourceQuote": "et autant d'électrons que de protons si l'atome est neutre"
+    }
+   ]
+  }
+ ]
+}

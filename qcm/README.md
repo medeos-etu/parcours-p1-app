@@ -100,11 +100,21 @@ puisque `lot >= 6`). Rien d'autre ne change :
 - un lot ne peut être posé qu'une fois par fiche.
 
 `verifie-qcm.js` compte ces renforts sur une ligne à part, `implante-parcours.js` les
-pose comme les autres. **Fait au 07/09/2026** : les six fiches des trois premières
-séances (anatomie 001-002, biologie 001-002, chimie 001-002) ont **10 QCM d'arène
-chacune** (lots 6 à 15), dans `qcm/arene-premieres-fiches-<matière>.json`.
-**Candidat suivant** : physique 001-002, la 4ᵉ séance — elle entre dans le vivier de
-l'Amphi le jour même de son ouverture.
+pose comme les autres.
+
+**Fait au 07/09/2026 — les 16 fiches des HUIT premières séances ont 10 QCM d'arène
+chacune** (lots 6 à 15), soit **160 questions** dans le vivier de l'Amphi une fois la
+8ᵉ séance travaillée :
+- séances 1-3 → `qcm/arene-premieres-fiches-<matière>.json` (48 QCM)
+- séances 4-8 → `qcm/arene-seances-4-8-<matière>.json` (80 QCM)
+
+Sans ces renforts, un élève recroisait 61 % de questions déjà vues entre le jour 4 et le
+jour 18 ; avec eux, 12 %. **Suite** : les séances 9 et au-delà, dans l'ordre de `SEANCES`
+— c'est l'ordre dans lequel les fiches entrent dans le vivier.
+
+⚠️ **Physique** : les fiches de calcul (raccourcis, puissances de 10, préfixes, log) ne
+doivent jamais demander un calcul NOUVEAU à l'élève. Chaque item porte sur une règle ou
+sur un exemple **déjà résolu dans la fiche** — sinon la `sourceQuote` ne prouve plus rien.
 
 ## Le périmètre du moment
 Les **45 premiers jours de Parcours**, soit les 112 fiches des chapitres :

@@ -1,0 +1,1255 @@
+{
+ "matiere": "physique",
+ "chapitre": 1,
+ "note": "Renfort d'arène (lots 8 à 15, tous ar:1) pour les fiches de physique des séances 4 et 8 du Parcours. Aucun calcul nouveau n'est demandé à l'élève : chaque item porte sur une règle ou sur un exemple déjà résolu dans la fiche. Le socle des lots 1-7 reste dans physique-ch01-p1.json et physique-ch01-p2.json.",
+ "questions": [
+  {
+   "fiche": "physique-001-calcul-mental-decomposer.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 8,
+   "q": "Cette fiche ouvre le chapitre avant la moindre notion de physique. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Au concours, la calculette n'est pas autorisée.",
+     "v": true,
+     "e": "VRAI. C'est la raison d'être de cette fiche.",
+     "sourceQuote": "au concours, tu n'as PAS le droit à la calculette"
+    },
+    {
+     "t": "Tout doit être fait de tête.",
+     "v": true,
+     "e": "VRAI. Sans exception, d'où le travail sur le calcul mental.",
+     "sourceQuote": "Tout doit être fait de tête"
+    },
+    {
+     "t": "Sans réflexe de calcul mental, on perd un temps fou sur des opérations toutes simples.",
+     "v": true,
+     "e": "VRAI. C'est le coût annoncé.",
+     "sourceQuote": "tu perdras un temps fou sur des opérations toutes simples"
+    },
+    {
+     "t": "Ce temps perdu manque ensuite pour répondre aux QCM eux-mêmes.",
+     "v": true,
+     "e": "VRAI. C'est la conséquence directe.",
+     "sourceQuote": "temps qui te manquera pour répondre aux QCM eux-mêmes"
+    },
+    {
+     "t": "Quinze minutes investies ici font gagner des heures sur tout le reste du programme.",
+     "v": true,
+     "e": "VRAI. C'est l'argument de la fiche pour ne pas sauter ce passage.",
+     "sourceQuote": "Quinze minutes investies ici te feront gagner des heures sur tout le reste du programme"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-001-calcul-mental-decomposer.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 9,
+   "q": "Un étudiant récite les quatre raccourcis universels. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le raccourci × 5 s'écrit × 100 ÷ 4.",
+     "v": false,
+     "e": "FAUX : × 5 s'écrit × 10 ÷ 2. C'est × 25 qui s'écrit × 100 ÷ 4.",
+     "sourceQuote": "× 5 = × 10 ÷ 2 34 × 5 = 340 ÷ 2 = 170"
+    },
+    {
+     "t": "Le raccourci × 9 s'écrit × 10 ÷ 2.",
+     "v": false,
+     "e": "FAUX : × 9 s'écrit × 10 − × 1.",
+     "sourceQuote": "× 9 = × 10 − × 1 27 × 9 = 270 − 27 = 243"
+    },
+    {
+     "t": "Le raccourci × 11 s'écrit × 10 + × 1.",
+     "v": true,
+     "e": "VRAI. On ajoute une fois le nombre de départ.",
+     "sourceQuote": "× 11 = × 10 + × 1 43 × 11 = 430 + 43 = 473"
+    },
+    {
+     "t": "Le raccourci × 25 s'écrit × 100 ÷ 2.",
+     "v": false,
+     "e": "FAUX : × 25 s'écrit × 100 ÷ 4.",
+     "sourceQuote": "× 25 = × 100 ÷ 4 16 × 25 = 1600 ÷ 4 = 400"
+    },
+    {
+     "t": "Ces quatre raccourcis ne couvrent qu'une minorité des multiplications rencontrées.",
+     "v": false,
+     "e": "FAUX : ils suffisent pour 90 % des multiplications rencontrées.",
+     "sourceQuote": "quatre tours de magie qui suffisent pour 90 % des multiplications que tu rencontreras"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-001-calcul-mental-decomposer.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 10,
+   "q": "Le tableau des raccourcis donne un exemple pour chaque cas. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "L'exemple donné pour × 5 est 34 × 5 = 340 ÷ 2 = 170.",
+     "v": true,
+     "e": "VRAI. C'est la ligne × 5 du tableau.",
+     "sourceQuote": "34 × 5 = 340 ÷ 2 = 170"
+    },
+    {
+     "t": "L'exemple donné pour × 9 est 27 × 9 = 270 − 27 = 243.",
+     "v": true,
+     "e": "VRAI. C'est la ligne × 9 du tableau.",
+     "sourceQuote": "27 × 9 = 270 − 27 = 243"
+    },
+    {
+     "t": "L'exemple donné pour × 25 est 16 × 25 = 1600 ÷ 4 = 400.",
+     "v": true,
+     "e": "VRAI. C'est la ligne × 25 du tableau.",
+     "sourceQuote": "16 × 25 = 1600 ÷ 4 = 400"
+    },
+    {
+     "t": "L'exemple donné pour × 11 est 43 × 11 = 430 − 43.",
+     "v": false,
+     "e": "FAUX : c'est 430 + 43 = 473. Le × 11 ajoute, il ne retranche pas.",
+     "sourceQuote": "43 × 11 = 430 + 43 = 473"
+    },
+    {
+     "t": "Le tableau donne cinq raccourcis.",
+     "v": false,
+     "e": "FAUX : il en donne quatre.",
+     "sourceQuote": "Les 4 raccourcis universels"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-001-calcul-mental-decomposer.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 11,
+   "q": "La fiche prend 7 × 23 comme exemple de calcul qui fait blocage. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Réécrit sous la bonne forme, ce type de calcul prend trois secondes, sans calculette.",
+     "v": true,
+     "e": "VRAI. C'est la conclusion tirée de l'exemple 23 × 5.",
+     "sourceQuote": "Trois secondes. Pas une calculette en vue."
+    },
+    {
+     "t": "Un énoncé bien conçu proposera plutôt 23 × 5 ou 23 × 10, qui se font en deux secondes.",
+     "v": true,
+     "e": "VRAI. Les énoncés sont bâtis pour être faisables de tête.",
+     "sourceQuote": "il te donnera plutôt 23 × 5, ou 23 × 10, qui se font en deux secondes"
+    },
+    {
+     "t": "Si un calcul semble lourd, c'est le signe qu'il faudrait une calculette.",
+     "v": false,
+     "e": "FAUX : c'est très souvent le signe qu'on ne l'a pas réécrit dans la bonne forme.",
+     "sourceQuote": "c'est très souvent le signe que tu ne l'as pas réécrit dans la bonne forme"
+    },
+    {
+     "t": "Devant 7 × 23, le cerveau bloque parce que le résultat est trop grand.",
+     "v": false,
+     "e": "FAUX : il bloque parce qu'on n'a pas ce résultat en mémoire.",
+     "sourceQuote": "tu n'as pas ce résultat en mémoire"
+    },
+    {
+     "t": "Le geste consiste à poser proprement l'opération.",
+     "v": false,
+     "e": "FAUX : on ne pose pas l'opération, on la réécrit en morceaux faisables de tête.",
+     "sourceQuote": "tu ne poses pas l'opération, tu la réécris en morceaux que tu sais faire de tête"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-001-calcul-mental-decomposer.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 12,
+   "q": "Trois exemples illustrent la décomposition en facteurs ronds et reste. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "18 × 7 s'écrit (20 × 7) − (2 × 7).",
+     "v": true,
+     "e": "VRAI. On s'appuie sur 20, plus rond, puis on retire l'excédent.",
+     "sourceQuote": "18 × 7 = (20 × 7) − (2 × 7) = 140 − 14 = 126"
+    },
+    {
+     "t": "Pour 14 × 6, on coupe le 14 en 10 + 4.",
+     "v": true,
+     "e": "VRAI. C'est le deuxième exemple.",
+     "sourceQuote": "On coupe le 14 en 10 + 4"
+    },
+    {
+     "t": "Pour 32 × 15, c'est le multiplicateur que l'on coupe, en 10 + 5.",
+     "v": true,
+     "e": "VRAI. C'est le troisième exemple.",
+     "sourceQuote": "Ici c'est le multiplicateur qu'on coupe, en 10 + 5"
+    },
+    {
+     "t": "Le choix du nombre à découper est libre.",
+     "v": true,
+     "e": "VRAI. Rien n'impose de couper l'un plutôt que l'autre.",
+     "sourceQuote": "Le choix du nombre à découper est libre"
+    },
+    {
+     "t": "On prend toujours celui qui donne les morceaux les plus ronds.",
+     "v": true,
+     "e": "VRAI. C'est le seul critère de choix.",
+     "sourceQuote": "prends toujours celui qui donne les morceaux les plus ronds"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-001-calcul-mental-decomposer.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 13,
+   "q": "La règle d'or du calcul mental au concours tient en quelques lignes. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "La plupart des calculs des QCM sont conçus pour être faisables de tête en quelques secondes.",
+     "v": true,
+     "e": "VRAI. C'est la règle d'or énoncée par la fiche.",
+     "sourceQuote": "La plupart des calculs des QCM sont conçus pour être faisables de tête en quelques secondes"
+    },
+    {
+     "t": "Cela suppose de les décomposer intelligemment.",
+     "v": true,
+     "e": "VRAI. C'est la condition posée.",
+     "sourceQuote": "à condition de les décomposer intelligemment"
+    },
+    {
+     "t": "Il existe parfois des calculs un peu plus longs, de 10 à 20 secondes.",
+     "v": true,
+     "e": "VRAI. La fiche l'admet explicitement.",
+     "sourceQuote": "il y a parfois des calculs un peu plus longs (10 à 20 secondes)"
+    },
+    {
+     "t": "Ces calculs restent toujours réalisables sans calculette grâce aux techniques de simplification.",
+     "v": true,
+     "e": "VRAI. Plus longs, mais jamais impossibles.",
+     "sourceQuote": "ils restent toujours réalisables sans calculette grâce aux techniques de simplification"
+    },
+    {
+     "t": "Aucun calcul du concours ne dépasse quelques secondes.",
+     "v": false,
+     "e": "FAUX : certains prennent 10 à 20 secondes.",
+     "sourceQuote": "il y a parfois des calculs un peu plus longs (10 à 20 secondes)"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-001-calcul-mental-decomposer.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 14,
+   "q": "Le moyen mnémotechnique de la fiche porte sur l'angle d'attaque d'un calcul. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Quand un calcul coince, le bon diagnostic est qu'on est nul en calcul mental.",
+     "v": false,
+     "e": "FAUX : c'est justement le piège signalé par la fiche.",
+     "sourceQuote": "conclure qu'on est « nul en calcul mental » quand ça coince"
+    },
+    {
+     "t": "Le mnémo invite à poser l'opération avant de chercher une autre écriture.",
+     "v": false,
+     "e": "FAUX : le bon réflexe n'est pas de poser l'opération, mais de la réécrire.",
+     "sourceQuote": "Le bon réflexe n'est pas de poser l'opération comme à l'école primaire — c'est de la réécrire"
+    },
+    {
+     "t": "Le mnémo s'énonce : « Si c'est dur, ce n'est pas le bon angle ».",
+     "v": true,
+     "e": "VRAI. C'est le titre même de l'encadré.",
+     "sourceQuote": "Le mnémo — « Si c'est dur, ce n'est pas le bon angle »"
+    },
+    {
+     "t": "Si 7 × 23 bloque, le problème vient de l'élève.",
+     "v": false,
+     "e": "FAUX : le problème vient de la forme sous laquelle le calcul est écrit.",
+     "sourceQuote": "le problème n'est pas toi : c'est que le calcul n'est pas écrit dans la bonne forme"
+    },
+    {
+     "t": "Décomposer un calcul revient à le poser en plusieurs étapes écrites.",
+     "v": false,
+     "e": "FAUX : on ne pose rien, on réécrit en morceaux faisables de tête.",
+     "sourceQuote": "tu ne poses pas l'opération, tu la réécris en morceaux que tu sais faire de tête"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-001-calcul-mental-decomposer.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 15,
+   "q": "Le résumé de la fiche annonce aussi la suite du chapitre. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Quatre raccourcis couvrent 90 % des multiplications.",
+     "v": true,
+     "e": "VRAI. C'est le premier point du résumé.",
+     "sourceQuote": "Quatre raccourcis couvrent 90 % des multiplications"
+    },
+    {
+     "t": "Pour tout le reste, une seule stratégie : décomposer en facteurs ronds + reste.",
+     "v": true,
+     "e": "VRAI. C'est le second point du résumé.",
+     "sourceQuote": "Pour tout le reste, une seule stratégie : décomposer en facteurs ronds + reste"
+    },
+    {
+     "t": "Les divisions et les puissances de 10 se traitent exactement pareil, et font l'objet de la fiche suivante.",
+     "v": true,
+     "e": "VRAI. Même geste, appliqué à la division.",
+     "sourceQuote": "Les divisions et les puissances de 10 se traitent exactement pareil — c'est l'objet de la fiche suivante"
+    },
+    {
+     "t": "Cette fiche arrive après les premières notions du chapitre.",
+     "v": false,
+     "e": "FAUX : elle arrive avant la moindre notion, et la fiche explique pourquoi.",
+     "sourceQuote": "elle arrive avant la moindre notion"
+    },
+    {
+     "t": "Le geste à appliquer change selon le type d'opération.",
+     "v": false,
+     "e": "FAUX : le geste est toujours le même — réécrire plutôt que poser.",
+     "sourceQuote": "Le geste est toujours le même"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-002-divisions-puissances-de-10.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 8,
+   "q": "Cette fiche reprend le geste posé par la précédente et l'applique ailleurs. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Quand un calcul semble lourd, on ne le pose pas — on le réécrit.",
+     "v": true,
+     "e": "VRAI. C'est le geste hérité de la fiche précédente.",
+     "sourceQuote": "quand un calcul semble lourd, on ne le pose pas — on le réécrit"
+    },
+    {
+     "t": "Les quatre raccourcis rappelés sont × 5, × 9, × 11 et × 100.",
+     "v": false,
+     "e": "FAUX : le quatrième est × 25, pas × 100.",
+     "sourceQuote": "Les quatre raccourcis (× 5, × 9, × 11, × 25)"
+    },
+    {
+     "t": "Le même geste s'applique maintenant à la division, puis à la notation scientifique.",
+     "v": true,
+     "e": "VRAI. C'est le programme annoncé de la fiche.",
+     "sourceQuote": "On applique maintenant exactement le même geste à la division, puis à la notation scientifique"
+    },
+    {
+     "t": "Une division difficile cache rarement une fraction simple.",
+     "v": false,
+     "e": "FAUX : elle en cache presque toujours une, multipliée par une puissance de 10.",
+     "sourceQuote": "Une division qui te semble difficile cache presque toujours une fraction simple"
+    },
+    {
+     "t": "La méthode de division proposée compte quatre étapes.",
+     "v": false,
+     "e": "FAUX : elle en compte deux.",
+     "sourceQuote": "Diviser de tête — la méthode en 2 étapes"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-002-divisions-puissances-de-10.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 9,
+   "q": "La méthode de division mentale se déroule en deux temps. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "La première étape consiste à sortir les zéros.",
+     "v": true,
+     "e": "VRAI. C'est le titre de l'étape 1.",
+     "sourceQuote": "Sortir les zéros"
+    },
+    {
+     "t": "On met la virgule de côté sous forme de puissance de 10, et on garde une fraction propre.",
+     "v": true,
+     "e": "VRAI. C'est ce que fait concrètement l'étape 1.",
+     "sourceQuote": "on met la virgule de côté sous forme de puissance de 10, et on garde une fraction propre"
+    },
+    {
+     "t": "La seconde étape consiste à simplifier la fraction.",
+     "v": true,
+     "e": "VRAI. C'est le titre de l'étape 2.",
+     "sourceQuote": "Simplifier la fraction"
+    },
+    {
+     "t": "Une division difficile cache presque toujours une fraction simple multipliée par une puissance de 10.",
+     "v": true,
+     "e": "VRAI. C'est le principe qui justifie la méthode.",
+     "sourceQuote": "cache presque toujours une fraction simple multipliée par une puissance de 10"
+    },
+    {
+     "t": "L'exemple type sur lequel la méthode est démontrée est 0,2 / 8.",
+     "v": true,
+     "e": "VRAI. C'est l'exemple choisi par la fiche.",
+     "sourceQuote": "démontrée sur un exemple typique : combien fait 0,2 / 8 ?"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-002-divisions-puissances-de-10.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 10,
+   "q": "Un étudiant énonce les trois règles des puissances de 10. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Pour multiplier deux puissances de 10, on multiplie les exposants.",
+     "v": false,
+     "e": "FAUX : on les additionne.",
+     "sourceQuote": "Tu les additionnes"
+    },
+    {
+     "t": "Pour diviser deux puissances de 10, on additionne les exposants.",
+     "v": false,
+     "e": "FAUX : on les soustrait.",
+     "sourceQuote": "Tu les soustrais"
+    },
+    {
+     "t": "Pour élever une puissance de 10 à une puissance, on additionne les exposants.",
+     "v": false,
+     "e": "FAUX : on les multiplie.",
+     "sourceQuote": "Tu les multiplies"
+    },
+    {
+     "t": "Diviser par 10 puissance moins n revient à multiplier par 10 puissance plus n.",
+     "v": true,
+     "e": "VRAI. C'est la règle générale retenue par la fiche.",
+     "sourceQuote": "diviser par 10⁻ⁿ = multiplier par 10⁺ⁿ"
+    },
+    {
+     "t": "La notation scientifique ne sert qu'aux nombres très petits.",
+     "v": false,
+     "e": "FAUX : elle sert aux très grands comme aux très petits.",
+     "sourceQuote": "on jongle en permanence avec des nombres très grands (6 × 10²³ atomes…) ou très petits"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-002-divisions-puissances-de-10.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 11,
+   "q": "Le cas piégeux de la fiche est la division par un décimal très petit. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "La première étape consiste à réécrire le décimal en notation scientifique.",
+     "v": true,
+     "e": "VRAI. C'est l'étape 1 du cas piégeux.",
+     "sourceQuote": "Réécrire le décimal en notation scientifique"
+    },
+    {
+     "t": "L'astuce clé tient à ce que 1 divisé par 10⁻² vaut 10⁺².",
+     "v": true,
+     "e": "VRAI. C'est la justification donnée par la fiche.",
+     "sourceQuote": "Parce que 1 / 10⁻² = 10⁺²"
+    },
+    {
+     "t": "On change le signe de l'exposant quand l'expression passe au dénominateur.",
+     "v": true,
+     "e": "VRAI. C'est la formulation générale de l'astuce.",
+     "sourceQuote": "on change le signe de l'exposant quand l'expression passe au dénominateur"
+    },
+    {
+     "t": "Les exposants se manipulent algébriquement.",
+     "v": true,
+     "e": "VRAI. C'est tout ce qu'il y a à faire.",
+     "sourceQuote": "les exposants se manipulent algébriquement"
+    },
+    {
+     "t": "Ce cas exige une calculette.",
+     "v": false,
+     "e": "FAUX : aucune calculette n'est utile ici.",
+     "sourceQuote": "Aucune calculette n'est utile ici"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-002-divisions-puissances-de-10.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 12,
+   "q": "Le calcul guidé de la fiche se déroule en quatre étapes. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "La première étape consiste à séparer les chiffres et les puissances.",
+     "v": true,
+     "e": "VRAI. C'est le titre de l'étape 1.",
+     "sourceQuote": "Séparer chiffres et puissances"
+    },
+    {
+     "t": "On obtient ainsi deux petits calculs faciles au lieu d'un gros calcul qui fait peur.",
+     "v": true,
+     "e": "VRAI. C'est l'intérêt de la séparation.",
+     "sourceQuote": "deux petits calculs faciles au lieu d'un gros calcul qui fait peur"
+    },
+    {
+     "t": "L'étape finale combine les deux parties et donne 10⁵.",
+     "v": true,
+     "e": "VRAI. C'est le résultat du calcul guidé.",
+     "sourceQuote": "Combiner. 10 × 10⁴ = 10⁵"
+    },
+    {
+     "t": "La partie chiffres se traite en multipliant 6, 5 et 3 entre eux.",
+     "v": false,
+     "e": "FAUX : la partie chiffres donne 30 / 3 = 10.",
+     "sourceQuote": "La partie chiffres. 30 / 3 = 10"
+    },
+    {
+     "t": "Dans ce calcul, le 10⁻² du dénominateur reste négatif à l'arrivée.",
+     "v": false,
+     "e": "FAUX : il remonte en +2. Soustraire un exposant négatif, c'est ajouter.",
+     "sourceQuote": "le 10⁻² du dénominateur remonte en +2"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-002-divisions-puissances-de-10.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 13,
+   "q": "Le moyen mnémotechnique de la fiche porte sur le réflexe à graver avant toute division. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Avant toute division, il faut sortir les puissances de 10.",
+     "v": true,
+     "e": "VRAI. C'est le premier temps du réflexe.",
+     "sourceQuote": "Avant toute division, sors les puissances de 10"
+    },
+    {
+     "t": "On regarde ensuite si la fraction qui reste est une fraction connue.",
+     "v": true,
+     "e": "VRAI. C'est le second temps.",
+     "sourceQuote": "regarde si la fraction qui reste est une fraction « connue »"
+    },
+    {
+     "t": "Les fractions connues citées sont 1/2, 1/3, 1/4, 1/5 et 1/8.",
+     "v": true,
+     "e": "VRAI. Ce sont celles que la fiche énumère.",
+     "sourceQuote": "1/2, 1/3, 1/4, 1/5, 1/8"
+    },
+    {
+     "t": "La quasi-totalité des divisions se ramène à ce schéma.",
+     "v": true,
+     "e": "VRAI. C'est ce qui rend le réflexe rentable.",
+     "sourceQuote": "La quasi-totalité des divisions se ramènent à ça"
+    },
+    {
+     "t": "La notation scientifique est présentée comme la langue maternelle de la matière.",
+     "v": true,
+     "e": "VRAI. Ce n'est pas un détail, c'est un langage.",
+     "sourceQuote": "c'est la langue maternelle de la matière"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-002-divisions-puissances-de-10.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 14,
+   "q": "Deux autres divisions sont données en exemple, appliquées à la physique. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "0,012 / 4 se réécrit (12 / 4) × 0,001.",
+     "v": true,
+     "e": "VRAI. C'est la réécriture donnée dans le tableau.",
+     "sourceQuote": "(12 / 4) × 0,001 = 3 × 0,001"
+    },
+    {
+     "t": "0,9 / 6 se réécrit (9 / 6) × 0,1.",
+     "v": true,
+     "e": "VRAI. C'est la seconde ligne du tableau.",
+     "sourceQuote": "(9 / 6) × 0,1 = 1,5 × 0,1"
+    },
+    {
+     "t": "Ces deux exemples demandent plus de temps que la méthode générale.",
+     "v": false,
+     "e": "FAUX : même méthode, même durée.",
+     "sourceQuote": "Deux autres exemples appliqués à la physique — même méthode, même durée"
+    },
+    {
+     "t": "La méthode impose de poser la division pour conclure.",
+     "v": false,
+     "e": "FAUX : sans calculette et sans poser la division.",
+     "sourceQuote": "Sans calculette. Sans poser la division."
+    },
+    {
+     "t": "L'exemple 0,2 / 8 demande une trentaine de secondes.",
+     "v": false,
+     "e": "FAUX : cinq secondes au total.",
+     "sourceQuote": "Temps total : 5 secondes"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-002-divisions-puissances-de-10.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 15,
+   "q": "Le résumé et le piège de la fiche portent sur l'ordre des gestes et sur un signe. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Pour une division, on simplifie d'abord la fraction, puis on sort les zéros.",
+     "v": false,
+     "e": "FAUX : l'ordre est l'inverse — sortir les zéros, puis simplifier la fraction qui reste.",
+     "sourceQuote": "Division : sortir les zéros , puis simplifier la fraction qui reste"
+    },
+    {
+     "t": "En notation scientifique, on additionne les exposants pour une division.",
+     "v": false,
+     "e": "FAUX : on additionne pour une multiplication, on soustrait pour une division.",
+     "sourceQuote": "additionner (×), soustraire (/) ou multiplier (puissance) les exposants"
+    },
+    {
+     "t": "Le résumé demande de séparer les chiffres des puissances.",
+     "v": true,
+     "e": "VRAI. C'est le premier geste en notation scientifique.",
+     "sourceQuote": "séparer les chiffres des puissances"
+    },
+    {
+     "t": "Le piège signalé porte sur le signe de l'exposant au numérateur.",
+     "v": false,
+     "e": "FAUX : il porte sur le signe de l'exposant quand l'expression passe au dénominateur.",
+     "sourceQuote": "Le signe de l'exposant quand l'expression passe au dénominateur"
+    },
+    {
+     "t": "Soustraire un exposant négatif revient à retirer davantage.",
+     "v": false,
+     "e": "FAUX : soustraire un exposant négatif, c'est ajouter.",
+     "sourceQuote": "Soustraire un exposant négatif, c'est ajouter"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-003-prefixes-si.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 8,
+   "q": "La fiche s'ouvre sur ce qu'est réellement un préfixe. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Un préfixe est une puissance de 10 écrite en une seule lettre.",
+     "v": true,
+     "e": "VRAI. C'est l'accroche de la fiche.",
+     "sourceQuote": "C'est une puissance de 10 écrite en une seule lettre"
+    },
+    {
+     "t": "Un préfixe n'est pas de la décoration.",
+     "v": true,
+     "e": "VRAI. La fiche l'écrit en toutes lettres.",
+     "sourceQuote": "Un préfixe n'est pas de la décoration"
+    },
+    {
+     "t": "Ce sont les mêmes puissances de 10 que celles de la fiche précédente, collées devant l'unité.",
+     "v": true,
+     "e": "VRAI. Rien de neuf, sinon la notation.",
+     "sourceQuote": "ces mêmes puissances de 10, écrites en une lettre collée devant l'unité"
+    },
+    {
+     "t": "On en rencontre en permanence : nmol/L, µg/mL, mmol/L, pg/mL.",
+     "v": true,
+     "e": "VRAI. Ce sont les quatre exemples médicaux donnés.",
+     "sourceQuote": "nmol/L de protons dans le sang, µg/mL de médicament dans le plasma, mmol/L d'électrolytes, pg/mL d'hormones thyroïdiennes"
+    },
+    {
+     "t": "Lire « 40 nmol/L de H⁺ » sans savoir traduire le « n » en puissance de 10 laisse bloqué.",
+     "v": true,
+     "e": "VRAI. C'est l'enjeu pratique de la fiche.",
+     "sourceQuote": "sans savoir traduire le « n » en puissance de 10, tu es bloqué"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-003-prefixes-si.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 9,
+   "q": "Le tableau des préfixes donne pour chacun un exemple en biologie ou en médecine. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "1 dL = 0,1 L, unité dans laquelle on exprime l'hémoglobine en g/dL.",
+     "v": true,
+     "e": "VRAI. C'est l'exemple donné pour le déci.",
+     "sourceQuote": "1 dL = 0,1 L (hémoglobine en g/dL)"
+    },
+    {
+     "t": "1 mmol/L = 10⁻³ mol/L, unité de l'ionogramme sanguin.",
+     "v": true,
+     "e": "VRAI. C'est l'exemple donné pour le milli.",
+     "sourceQuote": "1 mmol/L = 10⁻³ mol/L (ionogramme sanguin)"
+    },
+    {
+     "t": "1 pg/mL = 10⁻¹² g/mL, unité des hormones comme la TSH, la T4 ou le cortisol.",
+     "v": true,
+     "e": "VRAI. C'est l'exemple donné pour le pico.",
+     "sourceQuote": "1 pg/mL = 10⁻¹² g/mL (hormones : TSH, T4, cortisol)"
+    },
+    {
+     "t": "Le femto est présenté comme fréquent en P1.",
+     "v": false,
+     "e": "FAUX : il est présenté comme rare en P1.",
+     "sourceQuote": "1 fmol (biologie moléculaire, rare en P1)"
+    },
+    {
+     "t": "Le centi correspond au facteur 10⁻³.",
+     "v": false,
+     "e": "FAUX : le centi vaut 10⁻². 1 cm = 10⁻² m.",
+     "sourceQuote": "1 cm = 10⁻² m, 1 cL = 10⁻² L"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-003-prefixes-si.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 10,
+   "q": "Cinq préfixes sont présentés comme vitaux en P1. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Ces cinq préfixes sont k, c, m, µ et n.",
+     "v": false,
+     "e": "FAUX : ce sont k, m, µ, n et p. Le centi n'en fait pas partie.",
+     "sourceQuote": "k (kilo) = × 10³ · m (milli) = × 10⁻³ · µ (micro) = × 10⁻⁶ · n (nano) = × 10⁻⁹ · p (pico) = × 10⁻¹²"
+    },
+    {
+     "t": "Chaque saut vers le plus petit correspond à un facteur 10.",
+     "v": false,
+     "e": "FAUX : chaque saut vaut un facteur 1000, soit trois zéros.",
+     "sourceQuote": "Chaque saut vers le « plus petit » = facteur 1000 (3 zéros)"
+    },
+    {
+     "t": "De milli à micro, puis à nano, puis à pico, on descend de 1000 à chaque marche.",
+     "v": true,
+     "e": "VRAI. C'est l'échelle donnée par le mnémo.",
+     "sourceQuote": "milli → micro → nano → pico : tu descends de 1000 à chaque marche"
+    },
+    {
+     "t": "Ces cinq préfixes ne servent qu'exceptionnellement en P1.",
+     "v": false,
+     "e": "FAUX : ils reviennent tous les jours.",
+     "sourceQuote": "En P1, ces 5 préfixes reviennent tous les jours"
+    },
+    {
+     "t": "La fiche conseille de les retrouver au cas par cas plutôt que de les mémoriser.",
+     "v": false,
+     "e": "FAUX : elle demande de les mémoriser comme l'alphabet.",
+     "sourceQuote": "Mémorise-les comme l'alphabet"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-003-prefixes-si.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 11,
+   "q": "La règle de conversion tient en une phrase, déclinée dans les deux sens. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Vers l'unité nue, on remplace le préfixe par sa puissance de 10.",
+     "v": true,
+     "e": "VRAI. C'est le premier sens de conversion.",
+     "sourceQuote": "Vers l'unité « nue » : tu remplaces le préfixe par sa puissance de 10"
+    },
+    {
+     "t": "Vers le préfixe, on factorise la puissance de 10.",
+     "v": true,
+     "e": "VRAI. C'est le sens inverse.",
+     "sourceQuote": "Vers le préfixe : tu factorises la puissance de 10"
+    },
+    {
+     "t": "C'est exactement le même geste, fait dans l'autre sens.",
+     "v": true,
+     "e": "VRAI. La fiche insiste : ce n'est pas un second raisonnement à apprendre.",
+     "sourceQuote": "C'est exactement le même geste, fait dans l'autre sens"
+    },
+    {
+     "t": "Avec deux préfixes dans la même unité, on les remplace tous les deux, puis on simplifie.",
+     "v": true,
+     "e": "VRAI. C'est le troisième cas de la règle.",
+     "sourceQuote": "Deux préfixes dans la même unité : tu les remplaces tous les deux, puis tu simplifies"
+    },
+    {
+     "t": "La fiche donne 5 mg = 5 × 10⁻³ g = 0,005 g comme exemple de conversion.",
+     "v": true,
+     "e": "VRAI. C'est l'un des trois exemples de l'étape 1.",
+     "sourceQuote": "5 mg = 5 × 10⁻³ g = 0,005 g"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-003-prefixes-si.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 12,
+   "q": "Le piège de la fiche est l'unité composée de deux préfixes. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Ce piège tombe aussi bien en concentration qu'en débit.",
+     "v": true,
+     "e": "VRAI. µmol/mL d'un côté, mL/min ou µL/h de l'autre.",
+     "sourceQuote": "soit en concentration (µmol/mL), soit en débit (mL/min, µL/h…)"
+    },
+    {
+     "t": "Il suffit de se fier au préfixe du numérateur.",
+     "v": false,
+     "e": "FAUX : la fiche interdit explicitement de s'y fier.",
+     "sourceQuote": "Ne te fie jamais à la seule lettre du numérateur"
+    },
+    {
+     "t": "La méthode ne change jamais : remplacer chaque préfixe par sa puissance, puis simplifier.",
+     "v": true,
+     "e": "VRAI. C'est la marche à suivre, quelle que soit l'unité.",
+     "sourceQuote": "La méthode ne change jamais : remplace mentalement chaque préfixe par sa puissance, puis simplifie"
+    },
+    {
+     "t": "1 µmol/mL vaut 1 µmol/L.",
+     "v": false,
+     "e": "FAUX : la fiche dit explicitement le contraire.",
+     "sourceQuote": "1 µmol/mL ne vaut pas 1 µmol/L"
+    },
+    {
+     "t": "Ce piège est rare dans les sujets.",
+     "v": false,
+     "e": "FAUX : il tombe régulièrement.",
+     "sourceQuote": "ce piège tombe régulièrement"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-003-prefixes-si.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 13,
+   "q": "Le tableau d'entraînement associe chaque valeur à sa situation physiologique. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "140 mmol/L de Na⁺ correspond à la concentration normale du sodium sanguin.",
+     "v": true,
+     "e": "VRAI. C'est la situation associée dans le tableau.",
+     "sourceQuote": "la concentration normale du sodium sanguin"
+    },
+    {
+     "t": "40 nmol/L de H⁺ correspond aux protons du sang.",
+     "v": true,
+     "e": "VRAI. C'est la deuxième ligne du tableau.",
+     "sourceQuote": "les protons du sang"
+    },
+    {
+     "t": "2 pmol/L de TSH donne l'ordre de grandeur typique d'une hormone circulante.",
+     "v": true,
+     "e": "VRAI. C'est la quatrième ligne du tableau.",
+     "sourceQuote": "l'ordre de grandeur typique d'une hormone circulante"
+    },
+    {
+     "t": "5 µg/mL décrit un médicament dosé dans le plasma.",
+     "v": true,
+     "e": "VRAI. C'est la troisième ligne du tableau.",
+     "sourceQuote": "un médicament dosé dans le plasma"
+    },
+    {
+     "t": "Ces valeurs sont toutes du même ordre de grandeur.",
+     "v": false,
+     "e": "FAUX : une hormone circule à 10⁻¹² mol/L, un électrolyte à 10⁻¹ mol/L.",
+     "sourceQuote": "une hormone circule à 10⁻¹² mol/L, un électrolyte à 10⁻¹ mol/L"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-003-prefixes-si.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 14,
+   "q": "La fiche tire une conclusion de l'écart entre une hormone et un électrolyte. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Une hormone circule à 10⁻¹² mol/L, un électrolyte à 10⁻¹ mol/L.",
+     "v": true,
+     "e": "VRAI. Ce sont les deux extrémités de l'échelle.",
+     "sourceQuote": "une hormone circule à 10⁻¹² mol/L, un électrolyte à 10⁻¹ mol/L"
+    },
+    {
+     "t": "L'écart atteint 11 ordres de grandeur.",
+     "v": true,
+     "e": "VRAI. C'est le chiffre donné par la fiche.",
+     "sourceQuote": "11 ordres de grandeur d'écart"
+    },
+    {
+     "t": "D'où l'absolue nécessité des préfixes pour ne pas écrire des nombres à 12 décimales.",
+     "v": true,
+     "e": "VRAI. C'est la conclusion tirée de cet écart.",
+     "sourceQuote": "d'où l'absolue nécessité des préfixes pour ne pas écrire des nombres à 12 décimales"
+    },
+    {
+     "t": "Cet écart est de 3 ordres de grandeur.",
+     "v": false,
+     "e": "FAUX : il est de 11 ordres de grandeur.",
+     "sourceQuote": "11 ordres de grandeur d'écart"
+    },
+    {
+     "t": "La fiche demande de convertir sans faire le lien avec la situation physiologique.",
+     "v": false,
+     "e": "FAUX : elle demande de faire ce lien à chaque fois.",
+     "sourceQuote": "fais à chaque fois le lien avec la situation physiologique correspondante"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-003-prefixes-si.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 15,
+   "q": "Le résumé et le piège de la fiche tiennent en deux gestes inverses. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Pour convertir vers l'unité nue, on factorise la puissance de 10.",
+     "v": false,
+     "e": "FAUX : on remplace le préfixe par sa puissance. La factorisation, c'est le sens inverse.",
+     "sourceQuote": "Pour convertir, tu remplaces le préfixe par sa puissance"
+    },
+    {
+     "t": "Pour écrire une valeur avec un préfixe, on remplace le préfixe par sa puissance.",
+     "v": false,
+     "e": "FAUX : dans ce sens, on factorise.",
+     "sourceQuote": "Pour écrire avec un préfixe, tu factorises"
+    },
+    {
+     "t": "Un préfixe est une puissance de 10 collée devant l'unité.",
+     "v": true,
+     "e": "VRAI. C'est la première ligne du résumé.",
+     "sourceQuote": "Un préfixe = une puissance de 10 collée devant l'unité"
+    },
+    {
+     "t": "0,002 mol/L s'écrit 2 µmol/L.",
+     "v": false,
+     "e": "FAUX : cela s'écrit 2 mmol/L.",
+     "sourceQuote": "0,002 mol/L = 2 mmol/L"
+    },
+    {
+     "t": "1 µmol/mL vaut 10⁻⁶ mol/L.",
+     "v": false,
+     "e": "FAUX : cela vaut 1 mmol/L, une fois les deux préfixes remplacés et simplifiés.",
+     "sourceQuote": "c'est 10⁻⁶ mol / 10⁻³ L = 1 mmol/L"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-004-logarithmes-lire-recombiner.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 8,
+   "q": "La fiche définit le logarithme décimal en une phrase. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le log d'un nombre est le nombre de fois qu'on peut le diviser par 10.",
+     "v": false,
+     "e": "FAUX : c'est la puissance de 10 qu'il faut élever pour atteindre ce nombre.",
+     "sourceQuote": "c'est la puissance de 10 qu'il faut élever pour atteindre ce nombre"
+    },
+    {
+     "t": "En physique-chimie, « log » désigne par convention le logarithme népérien.",
+     "v": false,
+     "e": "FAUX : log désigne log₁₀, le logarithme décimal.",
+     "sourceQuote": "log = log₁₀ par convention en physique-chimie, le « 10 » est sous-entendu"
+    },
+    {
+     "t": "Dans la notation « log », le 10 est sous-entendu.",
+     "v": true,
+     "e": "VRAI. C'est pour cela qu'on ne l'écrit pas.",
+     "sourceQuote": "le « 10 » est sous-entendu"
+    },
+    {
+     "t": "Le log est un outil qu'on n'utilise presque jamais en P1.",
+     "v": false,
+     "e": "FAUX : on le manipule tous les jours en P1, et en médecine ensuite.",
+     "sourceQuote": "En P1 — et en médecine plus tard — tu vas le manipuler tous les jours"
+    },
+    {
+     "t": "Le logarithme décimal est le premier outil de calcul pur du chapitre.",
+     "v": false,
+     "e": "FAUX : c'est le dernier avant d'entrer dans le chapitre lui-même.",
+     "sourceQuote": "Voici le dernier outil de calcul pur avant d'entrer dans le chapitre"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-004-logarithmes-lire-recombiner.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 9,
+   "q": "L'image mentale proposée distingue deux cas de figure. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Pour un nombre qui est une puissance de 10, le log compte les zéros.",
+     "v": true,
+     "e": "VRAI. C'est le premier cas.",
+     "sourceQuote": "le log « compte les zéros »"
+    },
+    {
+     "t": "Pour les autres nombres, il interpole entre deux puissances.",
+     "v": true,
+     "e": "VRAI. C'est le second cas.",
+     "sourceQuote": "Pour les autres, il interpole entre deux puissances"
+    },
+    {
+     "t": "log(2) vaut environ 0,3, parce que 2 est compris entre 1 et 10.",
+     "v": true,
+     "e": "VRAI. Le log est donc entre 0 et 1.",
+     "sourceQuote": "log(2) ≈ 0,3 (entre 0 et 1, car 2 est entre 1 et 10)"
+    },
+    {
+     "t": "log(50) vaut environ 1,7, parce que 50 est compris entre 10 et 100.",
+     "v": true,
+     "e": "VRAI. Le log est donc entre 1 et 2.",
+     "sourceQuote": "log(50) ≈ 1,7 (entre 1 et 2, car 50 est entre 10 et 100)"
+    },
+    {
+     "t": "Au lycée, le log a souvent été vu en passant, sans vraiment être utilisé.",
+     "v": true,
+     "e": "VRAI. C'est le constat qui ouvre la fiche.",
+     "sourceQuote": "tu as vu le log « en passant », souvent sans vraiment l'utiliser"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-004-logarithmes-lire-recombiner.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 10,
+   "q": "La fiche explique pourquoi le pH se définit avec un signe moins. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Dans le sang, la concentration en H⁺ vaut environ 10⁻⁷·⁴ mol/L.",
+     "v": true,
+     "e": "VRAI. C'est le point de départ du raisonnement.",
+     "sourceQuote": "Dans le sang, [H⁺] ≈ 10⁻⁷·⁴ mol/L"
+    },
+    {
+     "t": "Le signe moins du pH traduit une propriété physique du proton.",
+     "v": false,
+     "e": "FAUX : la fiche le qualifie de purement cosmétique.",
+     "sourceQuote": "C'est purement cosmétique"
+    },
+    {
+     "t": "Un « p » devant une grandeur signifie « −log de cette grandeur ».",
+     "v": true,
+     "e": "VRAI. C'est la règle générale.",
+     "sourceQuote": "c'est « −log de cette grandeur »"
+    },
+    {
+     "t": "Cette astuce du « p » ne se retrouve nulle part ailleurs que dans le pH.",
+     "v": false,
+     "e": "FAUX : on la retrouve avec pKa, pOH, pKe, pI.",
+     "sourceQuote": "Tu retrouveras la même astuce avec pKa, pOH, pKe, pI"
+    },
+    {
+     "t": "Dans le sang, log([H⁺]) vaut +7,4.",
+     "v": false,
+     "e": "FAUX : il vaut −7,4, ce qui est peu pratique à manipuler — d'où le signe moins ajouté.",
+     "sourceQuote": "log([H⁺]) = −7,4, donc négatif et peu pratique à manipuler"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-004-logarithmes-lire-recombiner.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 11,
+   "q": "La fiche décrit ce que les énoncés fournissent, et ce qu'ils ne fournissent pas. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Les énoncés donnent presque toujours les valeurs de log nécessaires en début de sujet.",
+     "v": true,
+     "e": "VRAI. C'est la bonne nouvelle annoncée.",
+     "sourceQuote": "les énoncés donnent presque toujours les valeurs de log nécessaires en début de sujet"
+    },
+    {
+     "t": "On n'a donc pas besoin de les connaître par cœur.",
+     "v": true,
+     "e": "VRAI. Elles sont sous les yeux pendant l'épreuve.",
+     "sourceQuote": "Tu n'as donc pas besoin de les connaître par cœur"
+    },
+    {
+     "t": "Les logarithmes népériens sont, eux, moins souvent donnés.",
+     "v": true,
+     "e": "VRAI. C'est la première des deux subtilités.",
+     "sourceQuote": "les logarithmes népériens (ln) sont, eux, moins souvent donnés"
+    },
+    {
+     "t": "Cette stratégie ne comporte aucune subtilité.",
+     "v": false,
+     "e": "FAUX : la fiche en signale deux.",
+     "sourceQuote": "Mais il y a deux subtilités"
+    },
+    {
+     "t": "Les valeurs de log ne sont pas visibles pendant l'épreuve.",
+     "v": false,
+     "e": "FAUX : elles sont sous les yeux pendant l'épreuve.",
+     "sourceQuote": "ils sont sous tes yeux pendant l'épreuve"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-004-logarithmes-lire-recombiner.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 12,
+   "q": "Trois règles de recombinaison sont à automatiser. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Un produit devient une addition : log(a × b) = log(a) + log(b).",
+     "v": true,
+     "e": "VRAI. C'est la première règle.",
+     "sourceQuote": "Produit → on additionne. log(a × b) = log(a) + log(b)"
+    },
+    {
+     "t": "Un quotient devient une soustraction : log(a / b) = log(a) − log(b).",
+     "v": true,
+     "e": "VRAI. C'est la deuxième règle.",
+     "sourceQuote": "Quotient → on soustrait. log(a / b) = log(a) − log(b)"
+    },
+    {
+     "t": "Une puissance se multiplie par l'exposant : log(aⁿ) = n × log(a).",
+     "v": true,
+     "e": "VRAI. C'est la troisième règle.",
+     "sourceQuote": "Puissance → on multiplie par l'exposant. log(aⁿ) = n × log(a)"
+    },
+    {
+     "t": "La règle du quotient est le réflexe pour tous les nombres inférieurs à 1.",
+     "v": true,
+     "e": "VRAI. C'est ce que la fiche en dit après l'exemple log(0,5).",
+     "sourceQuote": "C'est le réflexe pour tous les nombres inférieurs à 1"
+    },
+    {
+     "t": "Le vrai piège du logarithme n'est pas de le lire, mais de le recombiner.",
+     "v": true,
+     "e": "VRAI. C'est l'accroche même de la fiche.",
+     "sourceQuote": "Et le vrai piège n'est pas de le lire — c'est de le recombiner"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-004-logarithmes-lire-recombiner.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 13,
+   "q": "Les valeurs du logarithme népérien font l'objet d'un conseil particulier. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "ln(2) vaut environ 0,7 et ln(10) environ 2,3.",
+     "v": true,
+     "e": "VRAI. Ce sont les deux valeurs clés données.",
+     "sourceQuote": "ln(2) ≈ 0,7 · ln(10) ≈ 2,3"
+    },
+    {
+     "t": "On passe du log au ln en divisant par 2,3.",
+     "v": false,
+     "e": "FAUX : on multiplie par 2,3 — ln(x) ≈ 2,3 × log(x).",
+     "sourceQuote": "ln(x) ≈ 2,3 × log(x)"
+    },
+    {
+     "t": "Autant mémoriser ces valeurs clés une bonne fois pour toutes.",
+     "v": true,
+     "e": "VRAI. C'est le conseil donné, puisque les énoncés les fournissent rarement.",
+     "sourceQuote": "Autant en mémoriser les valeurs clés une bonne fois pour toutes"
+    },
+    {
+     "t": "Les énoncés fournissent le ln aussi souvent que le log.",
+     "v": false,
+     "e": "FAUX : le ln est moins souvent donné.",
+     "sourceQuote": "les logarithmes népériens (ln) sont, eux, moins souvent donnés"
+    },
+    {
+     "t": "Le ln et le log sont deux notations d'un même logarithme.",
+     "v": false,
+     "e": "FAUX : ils diffèrent, et la fiche donne le facteur de passage : ln(x) ≈ 2,3 × log(x).",
+     "sourceQuote": "ln(x) ≈ 2,3 × log(x)"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-004-logarithmes-lire-recombiner.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 14,
+   "q": "La seconde subtilité est présentée comme le vrai piège de l'épreuve. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "On demande log(6) en ne donnant que log(2) et log(3).",
+     "v": true,
+     "e": "VRAI. C'est l'exemple type du piège.",
+     "sourceQuote": "les profs te demandent log(6) en te donnant juste log(2) et log(3)"
+    },
+    {
+     "t": "La valeur nécessaire n'est pas écrite dans l'énoncé, mais elle est reconstructible à partir de celles qui le sont.",
+     "v": true,
+     "e": "VRAI. C'est tout l'objet des trois règles.",
+     "sourceQuote": "elle est reconstructible à partir de celles qui le sont"
+    },
+    {
+     "t": "La fiche reconstruit log(6) comme log(2) + log(3), soit 0,78.",
+     "v": true,
+     "e": "VRAI. C'est l'application de la règle du produit.",
+     "sourceQuote": "log(6) = log(2 × 3) = log(2) + log(3) = 0,3 + 0,48 = 0,78"
+    },
+    {
+     "t": "Elle reconstruit aussi log(20) comme log(2 × 10) = 1,3, puisque log(10) = 1.",
+     "v": true,
+     "e": "VRAI. C'est le second exemple de la règle du produit.",
+     "sourceQuote": "log(20) = log(2 × 10) = 0,3 + 1 = 1,3 (car log(10) = 1)"
+    },
+    {
+     "t": "Devant un log absent de l'énoncé, il faut conclure qu'il est incalculable.",
+     "v": false,
+     "e": "FAUX : la fiche demande de ne jamais en conclure cela.",
+     "sourceQuote": "ne conclus jamais qu'il est incalculable"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-004-logarithmes-lire-recombiner.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 15,
+   "q": "Le résumé de la fiche rassemble les valeurs repères et la règle du « p ». Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "log(x) est la puissance de 10 qu'il faut atteindre pour arriver à x.",
+     "v": true,
+     "e": "VRAI. C'est la définition reprise dans le résumé.",
+     "sourceQuote": "log(x) = la puissance de 10 qu'il faut atteindre pour arriver à x"
+    },
+    {
+     "t": "log(1) = 0 et log(10) = 1.",
+     "v": true,
+     "e": "VRAI. Ce sont les deux premiers repères du résumé.",
+     "sourceQuote": "log(1) = 0 · log(10) = 1"
+    },
+    {
+     "t": "log(0,1) = −1 et log(10⁻⁷) = −7.",
+     "v": true,
+     "e": "VRAI. Pour une puissance de 10, l'exposant se lit directement.",
+     "sourceQuote": "log(0,1) = −1 · log(10⁻⁷) = −7"
+    },
+    {
+     "t": "Un « p » devant une grandeur veut toujours dire « −log de cette grandeur ».",
+     "v": true,
+     "e": "VRAI. pH, pKa, pOH, pI : la règle ne change pas.",
+     "sourceQuote": "un « p » devant une grandeur (pH, pKa, pOH, pI) veut toujours dire « −log de cette grandeur »"
+    },
+    {
+     "t": "Le piège rappelé en fin de fiche porte sur la lecture du log, et non sur sa recombinaison.",
+     "v": false,
+     "e": "FAUX : le piège rappelé est celui de la recombinaison — on donne log(2) et log(3), on demande log(6).",
+     "sourceQuote": "On te donne log(2) et log(3), on te demande log(6)"
+    }
+   ]
+  }
+ ]
+}
