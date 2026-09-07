@@ -102,16 +102,22 @@ puisque `lot >= 6`). Rien d'autre ne change :
 `verifie-qcm.js` compte ces renforts sur une ligne à part, `implante-parcours.js` les
 pose comme les autres.
 
-**Fait au 07/09/2026 — les 28 fiches des QUATORZE premières séances ont 10 QCM d'arène
-chacune** (lots 6 à 15), soit **280 questions** dans le vivier de l'Amphi une fois la
-14ᵉ séance travaillée :
+**Fait au 07/09/2026 — les 40 fiches des VINGT premières séances ont 10 QCM d'arène
+chacune** (lots 6 à 15), soit **400 questions** dans le vivier de l'Amphi une fois la
+20ᵉ séance travaillée :
 - séances 1-3 → `qcm/arene-premieres-fiches-<matière>.json` (48 QCM)
 - séances 4-8 → `qcm/arene-seances-4-8-<matière>.json` (80 QCM)
 - séances 9-14 → `qcm/arene-seances-9-14-<matière>.json` (96 QCM)
+- séances 15-20 → `qcm/arene-seances-15-20-<matière>.json` (96 QCM)
 
 Sans ces renforts, un élève recroisait 61 % de questions déjà vues entre le jour 4 et le
-jour 18 ; avec eux, 12 %. **Suite** : les séances 15 et au-delà, dans l'ordre de `SEANCES`
+jour 18 ; avec eux, 12 %. **Suite** : les séances 21 et au-delà, dans l'ordre de `SEANCES`
 — c'est l'ordre dans lequel les fiches entrent dans le vivier.
+
+⚠️ **Exposants** : certaines fiches écrivent leurs puissances en `<sup>` (« 10 3 » une fois
+les balises retirées), d'autres en caractères Unicode (« 10³ »). Après normalisation ce
+n'est PAS le même texte — recopier la citation depuis `node outils/texte-fiche.js <slug>`,
+jamais de mémoire. chimie-009 mélange les deux formes dans la même fiche.
 
 ⚠️ **Physique** : les fiches de calcul (raccourcis, puissances de 10, préfixes, log,
 unités, analyse dimensionnelle) ne doivent jamais demander un calcul NOUVEAU à l'élève.

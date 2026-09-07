@@ -1,0 +1,1255 @@
+{
+ "matiere": "chimie",
+ "chapitre": 1,
+ "note": "Renfort d'arène (lots 8 à 15, tous ar:1) pour les fiches de chimie des séances 15 et 19 du Parcours. Le socle des lots 1-7 reste dans chimie-ch01-p2.json et chimie-ch01-p3.json.",
+ "questions": [
+  {
+   "fiche": "chimie-007-isotopes.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 8,
+   "q": "Un étudiant énonce la définition des isotopes. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Des isotopes ont des Z différents et le même A.",
+     "v": false,
+     "e": "FAUX : c'est l'inverse — même Z, A différents.",
+     "sourceQuote": "qui ont le même Z (même élément) mais des A différents"
+    },
+    {
+     "t": "Changer A fait changer d'élément.",
+     "v": false,
+     "e": "FAUX : on peut faire varier A sans quitter la famille, puisque l'identité ne tient qu'à Z.",
+     "sourceQuote": "on peut faire varier A — le nombre de nucléons — sans quitter la famille"
+    },
+    {
+     "t": "Des isotopes ont le même nombre de protons mais des nombres de neutrons différents.",
+     "v": true,
+     "e": "VRAI. Même Z, A différents, donc N différents.",
+     "sourceQuote": "le même Z (même élément) mais des A différents (nombre de neutrons différent)"
+    },
+    {
+     "t": "Deux isotopes d'un même élément ont la même masse.",
+     "v": false,
+     "e": "FAUX : même élément, mais masses différentes.",
+     "sourceQuote": "Même élément, masses différentes"
+    },
+    {
+     "t": "Un nucléide est défini par Z seulement.",
+     "v": false,
+     "e": "FAUX : un nucléide est défini par A ET Z.",
+     "sourceQuote": "des nucléides (des espèces définies par A ET Z)"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-007-isotopes.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 9,
+   "q": "Le tableau des isotopes de l'hydrogène se lit colonne par colonne. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "La colonne Z ne bouge jamais : 1 proton, c'est de l'hydrogène du premier au dernier.",
+     "v": true,
+     "e": "VRAI. C'est la consigne de lecture du tableau.",
+     "sourceQuote": "la colonne Z ne bouge jamais — 1 proton, c'est de l'hydrogène du premier au dernier"
+    },
+    {
+     "t": "Ce qui monte, c'est N, donc A.",
+     "v": true,
+     "e": "VRAI. Le nombre de neutrons augmente, donc le nombre de masse aussi.",
+     "sourceQuote": "Ce qui monte, c'est N, donc A"
+    },
+    {
+     "t": "Le deutérium peut aussi se noter D.",
+     "v": true,
+     "e": "VRAI. Le tableau donne les deux notations.",
+     "sourceQuote": "Deutérium ²H (ou D)"
+    },
+    {
+     "t": "Le tritium porte 3 protons.",
+     "v": false,
+     "e": "FAUX : il porte 1 proton et 2 neutrons, pour A = 3.",
+     "sourceQuote": "Tritium ³H (ou T) 1 2 3"
+    },
+    {
+     "t": "Le protium possède 1 neutron.",
+     "v": false,
+     "e": "FAUX : il n'en possède aucun.",
+     "sourceQuote": "Hydrogène (protium) ¹H 1 0 1"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-007-isotopes.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 10,
+   "q": "Le moyen mnémotechnique de la fiche tient en deux lignes. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Même Z signifie même élément, donc un électron chacun s'ils sont neutres, donc les mêmes propriétés chimiques.",
+     "v": true,
+     "e": "VRAI. C'est la première ligne du moyen mnémotechnique.",
+     "sourceQuote": "Même Z (= 1 proton) → même élément → donc 1 électron chacun si neutres → mêmes propriétés chimiques"
+    },
+    {
+     "t": "Des A différents signifient un nombre de neutrons différent, donc des masses différentes.",
+     "v": true,
+     "e": "VRAI. C'est la seconde ligne.",
+     "sourceQuote": "A différents → nombre de neutrons différent → masses différentes"
+    },
+    {
+     "t": "Des A différents entraînent des propriétés chimiques différentes.",
+     "v": false,
+     "e": "FAUX : à même Z, les propriétés chimiques sont les mêmes. Seule la masse change.",
+     "sourceQuote": "Même Z (= 1 proton) → même élément → donc 1 électron chacun si neutres → mêmes propriétés chimiques"
+    },
+    {
+     "t": "L'hydrogène est le seul élément à posséder des isotopes.",
+     "v": false,
+     "e": "FAUX : il n'est qu'un cas parmi beaucoup d'autres.",
+     "sourceQuote": "L'hydrogène n'est qu'un cas parmi beaucoup d'autres"
+    },
+    {
+     "t": "On connaît environ 240 isotopes.",
+     "v": false,
+     "e": "FAUX : environ 2400, naturels ou artificiels.",
+     "sourceQuote": "il existe environ 2400 isotopes connus (naturels ou artificiels)"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-007-isotopes.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 11,
+   "q": "La fiche explique pourquoi l'emploi médical des isotopes radioactifs fonctionne. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Ces isotopes ont le même Z que les éléments naturels.",
+     "v": true,
+     "e": "VRAI. C'est le point de départ de l'explication.",
+     "sourceQuote": "Ces isotopes ont le même Z que les éléments naturels"
+    },
+    {
+     "t": "Leurs propriétés chimiques sont donc identiques.",
+     "v": true,
+     "e": "VRAI. Même Z, même cortège, même chimie.",
+     "sourceQuote": "propriétés chimiques identiques"
+    },
+    {
+     "t": "Le corps ne fait donc pas la différence.",
+     "v": true,
+     "e": "VRAI. C'est ce qui permet de les administrer.",
+     "sourceQuote": "ton corps ne fait pas la différence"
+    },
+    {
+     "t": "Leurs propriétés nucléaires, elles, sont différentes.",
+     "v": true,
+     "e": "VRAI. C'est là que se fait le décalage.",
+     "sourceQuote": "ils ont des propriétés nucléaires différentes"
+    },
+    {
+     "t": "Ce sont ces propriétés nucléaires qui permettent de les détecter ou de les utiliser en thérapie.",
+     "v": true,
+     "e": "VRAI. Toute la médecine nucléaire tient dans ce décalage.",
+     "sourceQuote": "qui permettent de les détecter ou de les utiliser en thérapie"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-007-isotopes.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 12,
+   "q": "Devant un isotope, un seul calcul est à faire. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Il ne faut pas chercher les neutrons dans l'énoncé, mais les calculer.",
+     "v": true,
+     "e": "VRAI. C'est la consigne de la fiche.",
+     "sourceQuote": "Ne cherche pas les neutrons dans l'énoncé : calcule-les"
+    },
+    {
+     "t": "La relation A = Z + N donne N = A − Z.",
+     "v": true,
+     "e": "VRAI. C'est la seule relation à utiliser.",
+     "sourceQuote": "Comme A = Z + N , on a N = A − Z"
+    },
+    {
+     "t": "C'est le seul calcul à faire devant un isotope.",
+     "v": true,
+     "e": "VRAI. La fiche le précise expressément.",
+     "sourceQuote": "C'est le seul calcul à faire devant un isotope"
+    },
+    {
+     "t": "Le deutérium ²H possède 2 neutrons.",
+     "v": false,
+     "e": "FAUX : 2 − 1 = 1 neutron.",
+     "sourceQuote": "Deutérium ²H : 2 − 1 = 1 neutron"
+    },
+    {
+     "t": "Le tritium ³H possède 3 neutrons.",
+     "v": false,
+     "e": "FAUX : 3 − 1 = 2 neutrons.",
+     "sourceQuote": "Tritium ³H : 3 − 1 = 2 neutrons"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-007-isotopes.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 13,
+   "q": "Un QCM affirme que passer de ²H à ³H change d'élément chimique. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Cette affirmation est exacte.",
+     "v": false,
+     "e": "FAUX : changer A ne change pas l'élément.",
+     "sourceQuote": "Changer A ne change pas l'élément : ²H et ³H, c'est toujours de l'hydrogène, car Z = 1"
+    },
+    {
+     "t": "²H et ³H, c'est toujours de l'hydrogène, car Z = 1.",
+     "v": true,
+     "e": "VRAI. Le numéro atomique ne bouge pas.",
+     "sourceQuote": "²H et ³H, c'est toujours de l'hydrogène, car Z = 1"
+    },
+    {
+     "t": "Ce qui change entre ²H et ³H, ce sont les propriétés chimiques.",
+     "v": false,
+     "e": "FAUX : c'est la masse. La chimie, jamais.",
+     "sourceQuote": "Ce qui change, c'est la masse — et, pour les isotopes radioactifs, les propriétés nucléaires , jamais la chimie"
+    },
+    {
+     "t": "Chez un isotope radioactif, la chimie change en même temps que le noyau.",
+     "v": false,
+     "e": "FAUX : ce sont les propriétés nucléaires qui changent, jamais la chimie.",
+     "sourceQuote": "les propriétés nucléaires , jamais la chimie"
+    },
+    {
+     "t": "Les isotopes se distinguent par leur nombre d'électrons.",
+     "v": false,
+     "e": "FAUX : ils se distinguent par leur A, donc par leur nombre de neutrons.",
+     "sourceQuote": "Isotopes = même Z , A différents"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-007-isotopes.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 14,
+   "q": "La fiche part de ce que la précédente avait posé et annonce la suivante. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Un élément est défini par Z uniquement, le nombre de protons.",
+     "v": true,
+     "e": "VRAI. C'est l'acquis de la fiche précédente.",
+     "sourceQuote": "un élément est défini par Z uniquement , le nombre de protons"
+    },
+    {
+     "t": "Si l'identité ne tient qu'à Z, on peut faire varier A sans quitter la famille.",
+     "v": true,
+     "e": "VRAI. C'est le fil que la fiche tire.",
+     "sourceQuote": "si l'identité ne tient qu'à Z, on peut faire varier A — le nombre de nucléons — sans quitter la famille"
+    },
+    {
+     "t": "La notion suivante garde constant non pas Z, mais le nombre d'électrons.",
+     "v": true,
+     "e": "VRAI. Ce sont les espèces isoélectroniques.",
+     "sourceQuote": "Le suivant garde constant, non pas Z, mais le nombre d'électrons"
+    },
+    {
+     "t": "Les QCM adorent faire confondre les deux notions en « iso- ».",
+     "v": true,
+     "e": "VRAI. La fiche l'annonce explicitement.",
+     "sourceQuote": "et les QCM adorent faire confondre les deux"
+    },
+    {
+     "t": "L'hydrogène est donné comme un cas particulier sans équivalent.",
+     "v": false,
+     "e": "FAUX : il n'est qu'un cas parmi beaucoup d'autres.",
+     "sourceQuote": "L'hydrogène n'est qu'un cas parmi beaucoup d'autres"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-007-isotopes.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 15,
+   "q": "Le résumé de la fiche tient en trois éléments. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Isotopes = même Z, A différents.",
+     "v": true,
+     "e": "VRAI. C'est la définition résumée.",
+     "sourceQuote": "Isotopes = même Z , A différents"
+    },
+    {
+     "t": "Même élément, donc mêmes masses.",
+     "v": false,
+     "e": "FAUX : les nombres de neutrons diffèrent, donc les masses aussi.",
+     "sourceQuote": "nombres de neutrons différents, donc masses différentes"
+    },
+    {
+     "t": "Même élément, donc mêmes propriétés chimiques.",
+     "v": true,
+     "e": "VRAI. C'est la conséquence du Z commun.",
+     "sourceQuote": "Même élément, donc mêmes propriétés chimiques"
+    },
+    {
+     "t": "Le résumé annonce environ 24 000 isotopes connus.",
+     "v": false,
+     "e": "FAUX : environ 2400.",
+     "sourceQuote": "Environ 2400 isotopes connus"
+    },
+    {
+     "t": "Les isotopes se définissent comme des espèces ayant le même nombre d'électrons.",
+     "v": false,
+     "e": "FAUX : c'est la définition des espèces isoélectroniques, pas celle des isotopes.",
+     "sourceQuote": "Isotopes = même Z , A différents"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-008-especes-isoelectroniques.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 8,
+   "q": "La fiche présente les espèces isoélectroniques comme le miroir des isotopes. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Chez les isotopes, on gardait Z et on changeait les neutrons.",
+     "v": true,
+     "e": "VRAI. C'est le rappel de l'accroche.",
+     "sourceQuote": "Chez les isotopes, on gardait Z et on changeait les neutrons"
+    },
+    {
+     "t": "Ici, on garde le nombre d'électrons, et c'est Z qui varie.",
+     "v": true,
+     "e": "VRAI. C'est exactement l'inverse.",
+     "sourceQuote": "on garde le nombre d' électrons — et c'est Z qui varie"
+    },
+    {
+     "t": "Des espèces isoélectroniques ont le même nombre d'électrons, mais pas forcément le même Z.",
+     "v": true,
+     "e": "VRAI. C'est la définition.",
+     "sourceQuote": "des espèces isoélectroniques ont le même nombre d'électrons (mais pas forcément le même Z)"
+    },
+    {
+     "t": "Les trois espèces prises en exemple ont 10 électrons : un atome neutre, un cation, un anion.",
+     "v": true,
+     "e": "VRAI. Ne, Na⁺ et F⁻.",
+     "sourceQuote": "Regarde ces trois espèces à 10 électrons : un atome neutre, un cation, un anion"
+    },
+    {
+     "t": "Ce sont trois éléments différents qui arrivent au même cortège électronique.",
+     "v": true,
+     "e": "VRAI. C'est tout le sens du mot « isoélectronique ».",
+     "sourceQuote": "trois éléments différents qui arrivent au même cortège électronique"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-008-especes-isoelectroniques.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 9,
+   "q": "Le tableau des trois espèces donne pour chacune son Z et son explication. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le néon a Z = 10 et 10 électrons : c'est un atome neutre.",
+     "v": true,
+     "e": "VRAI. C'est la première ligne du tableau.",
+     "sourceQuote": "Ne (néon) 10 10 Atome neutre"
+    },
+    {
+     "t": "Na⁺ a Z = 11 et 10 électrons, car il a perdu un électron.",
+     "v": true,
+     "e": "VRAI. 11 − 1 = 10.",
+     "sourceQuote": "Na⁺ (sodium) 11 10 A perdu 1 e⁻ (11 − 1 = 10)"
+    },
+    {
+     "t": "F⁻ a Z = 9 et 10 électrons, car il a gagné un électron.",
+     "v": true,
+     "e": "VRAI. 9 + 1 = 10.",
+     "sourceQuote": "F⁻ (fluorure) 9 10 A gagné 1 e⁻ (9 + 1 = 10)"
+    },
+    {
+     "t": "La colonne Z varie : 9, 10, 11.",
+     "v": true,
+     "e": "VRAI. C'est elle qui bouge, à l'inverse du tableau des isotopes.",
+     "sourceQuote": "C'est la colonne Z qui varie : 9, 10, 11"
+    },
+    {
+     "t": "La colonne des électrons varie elle aussi.",
+     "v": false,
+     "e": "FAUX : elle affiche 10 partout.",
+     "sourceQuote": "la colonne « électrons » ne bouge pas — 10 partout"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-008-especes-isoelectroniques.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 10,
+   "q": "Avoir le même nombre d'électrons a une conséquence précise. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Cela entraîne des propriétés physiques similaires.",
+     "v": true,
+     "e": "VRAI. C'est la conséquence retenue par la fiche.",
+     "sourceQuote": "Même nombre d'électrons → propriétés physiques similaires"
+    },
+    {
+     "t": "Le rayon et l'énergie d'ionisation sont donnés en exemple.",
+     "v": true,
+     "e": "VRAI. Ce sont les deux exemples cités entre parenthèses.",
+     "sourceQuote": "propriétés physiques similaires (rayon, énergie d'ionisation…)"
+    },
+    {
+     "t": "Des Z différents signifient que ce ne sont pas les mêmes éléments.",
+     "v": true,
+     "e": "VRAI. Le cortège se ressemble, le noyau non.",
+     "sourceQuote": "Mais Z différents → ce ne sont pas les mêmes éléments !"
+    },
+    {
+     "t": "Être isoélectronique permet de conclure qu'il s'agit du même élément.",
+     "v": false,
+     "e": "FAUX : la fiche interdit expressément ce passage.",
+     "sourceQuote": "Ne va donc jamais de « isoélectronique » à « même élément »"
+    },
+    {
+     "t": "Le noyau, comme le cortège, peut se ressembler d'une espèce isoélectronique à l'autre.",
+     "v": false,
+     "e": "FAUX : le cortège se ressemble, le noyau non.",
+     "sourceQuote": "le cortège se ressemble, le noyau non"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-008-especes-isoelectroniques.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 11,
+   "q": "Deux mots qui commencent pareil désignent deux idées différentes. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Les isotopes ont le même nombre d'électrons et des Z différents.",
+     "v": false,
+     "e": "FAUX : les isotopes ont le même Z et des A différents.",
+     "sourceQuote": "Isotopes → même Z (même élément) , A différents"
+    },
+    {
+     "t": "Les espèces isoélectroniques ont nécessairement le même Z.",
+     "v": false,
+     "e": "FAUX : leur Z peut être différent.",
+     "sourceQuote": "Isoélectroniques → même nombre d'électrons , mais Z peut être différent"
+    },
+    {
+     "t": "Les isotopes sont décrits comme des frères de masse différente.",
+     "v": true,
+     "e": "VRAI. C'est l'image retenue par la fiche.",
+     "sourceQuote": "frères de masse différente"
+    },
+    {
+     "t": "Deux espèces isoélectroniques sont forcément le même élément.",
+     "v": false,
+     "e": "FAUX : pas forcément le même élément.",
+     "sourceQuote": "pas forcément le même élément"
+    },
+    {
+     "t": "C'est la différence entre les deux mots qui rend les QCM faciles.",
+     "v": false,
+     "e": "FAUX : c'est justement leur ressemblance qui sert aux QCM.",
+     "sourceQuote": "Deux mots qui commencent pareil, deux idées différentes : c'est là-dessus que jouent les QCM"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-008-especes-isoelectroniques.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 12,
+   "q": "Na⁺ porte 10 électrons, exactement comme le néon. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Il garde pourtant 11 protons.",
+     "v": true,
+     "e": "VRAI. Son noyau n'a pas bougé.",
+     "sourceQuote": "il garde 11 protons"
+    },
+    {
+     "t": "C'est donc du sodium, et non du néon.",
+     "v": true,
+     "e": "VRAI. C'est Z qui décide.",
+     "sourceQuote": "c'est du sodium , pas du néon"
+    },
+    {
+     "t": "Un élément est toujours défini par son nombre de protons, même si le nombre d'électrons change.",
+     "v": true,
+     "e": "VRAI. C'est la règle absolue déjà vue.",
+     "sourceQuote": "un élément est toujours défini par son nombre de protons (Z), même si le nombre d'électrons change"
+    },
+    {
+     "t": "Le cortège électronique peut être identique d'une espèce à l'autre.",
+     "v": true,
+     "e": "VRAI. C'est ce que dit le mot « isoélectronique ».",
+     "sourceQuote": "Le cortège électronique, lui, peut être identique d'une espèce à l'autre"
+    },
+    {
+     "t": "Le noyau, lui, ne l'est jamais.",
+     "v": true,
+     "e": "VRAI. C'est la formule de la fiche.",
+     "sourceQuote": "le noyau, jamais"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-008-especes-isoelectroniques.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 13,
+   "q": "Une astuce permet de trancher tout de suite entre les deux notions. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Si on donne ¹²C et ¹³C, ce sont des isotopes.",
+     "v": true,
+     "e": "VRAI. Même Z, A différents.",
+     "sourceQuote": "Si on te donne ¹²C et ¹³C → ce sont des isotopes"
+    },
+    {
+     "t": "Si on donne Ne, Na⁺ et F⁻, ce sont des espèces isoélectroniques.",
+     "v": true,
+     "e": "VRAI. Même nombre d'électrons, Z différents.",
+     "sourceQuote": "Si on te donne Ne, Na⁺, F⁻ → ce sont des espèces isoélectroniques"
+    },
+    {
+     "t": "Si on donne Ne, Na⁺ et F⁻, ce sont des isotopes.",
+     "v": false,
+     "e": "FAUX : ce sont des espèces isoélectroniques.",
+     "sourceQuote": "Si on te donne Ne, Na⁺, F⁻ → ce sont des espèces isoélectroniques"
+    },
+    {
+     "t": "Si on donne ¹²C et ¹³C, ce sont des espèces isoélectroniques.",
+     "v": false,
+     "e": "FAUX : ce sont des isotopes.",
+     "sourceQuote": "Si on te donne ¹²C et ¹³C → ce sont des isotopes"
+    },
+    {
+     "t": "Cette astuce ne concerne que les atomes neutres.",
+     "v": false,
+     "e": "FAUX : l'exemple retenu mêle un atome neutre, un cation et un anion.",
+     "sourceQuote": "Regarde ces trois espèces à 10 électrons : un atome neutre, un cation, un anion"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-008-especes-isoelectroniques.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 14,
+   "q": "Le résumé de la fiche tient en un critère et trois espèces. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Isoélectroniques = même nombre d'électrons, pas forcément le même Z.",
+     "v": true,
+     "e": "VRAI. C'est la première ligne du résumé.",
+     "sourceQuote": "Isoélectroniques = même nombre d'électrons , pas forcément le même Z"
+    },
+    {
+     "t": "Ne, Na⁺ et F⁻ ont tous 10 électrons.",
+     "v": true,
+     "e": "VRAI. C'est ce qui les rend isoélectroniques.",
+     "sourceQuote": "Ne, Na⁺ et F⁻ ont tous 10 électrons"
+    },
+    {
+     "t": "Leurs Z valent respectivement 10, 11 et 9.",
+     "v": true,
+     "e": "VRAI. Trois éléments différents.",
+     "sourceQuote": "pour Z = 10, 11 et 9"
+    },
+    {
+     "t": "La conséquence retenue est que leurs propriétés physiques sont similaires.",
+     "v": true,
+     "e": "VRAI. Physiques, pas chimiques.",
+     "sourceQuote": "Conséquence : propriétés physiques similaires"
+    },
+    {
+     "t": "La conséquence annoncée porte sur les propriétés chimiques.",
+     "v": false,
+     "e": "FAUX : elle porte sur les propriétés physiques.",
+     "sourceQuote": "Conséquence : propriétés physiques similaires"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-008-especes-isoelectroniques.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 15,
+   "q": "Le piège de la fiche demande de compter ce que l'énoncé garde constant. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Deux espèces isoélectroniques ne sont pas le même élément : leurs Z diffèrent.",
+     "v": true,
+     "e": "VRAI. C'est la première moitié du piège.",
+     "sourceQuote": "Deux espèces isoélectroniques ne sont pas le même élément — leurs Z diffèrent"
+    },
+    {
+     "t": "À l'inverse, deux isotopes sont bien le même élément.",
+     "v": true,
+     "e": "VRAI. C'est la seconde moitié.",
+     "sourceQuote": "à l'inverse, deux isotopes sont bien le même élément"
+    },
+    {
+     "t": "Il faut d'abord compter ce que l'énoncé garde constant : Z ou les électrons.",
+     "v": true,
+     "e": "VRAI. C'est la méthode donnée.",
+     "sourceQuote": "Compte d'abord ce que l'énoncé garde constant : Z ou les électrons"
+    },
+    {
+     "t": "Le tableau des isoélectroniques se lit exactement comme celui des isotopes.",
+     "v": false,
+     "e": "FAUX : c'est exactement l'inverse.",
+     "sourceQuote": "Exactement l'inverse du tableau des isotopes"
+    },
+    {
+     "t": "Cette fiche est le prolongement direct des isotopes, et non leur miroir.",
+     "v": false,
+     "e": "FAUX : la fiche se présente comme leur miroir.",
+     "sourceQuote": "Cette fiche-ci est leur miroir"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-009-nombre-avogadro.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 8,
+   "q": "La fiche pose le problème avant de donner le nombre. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Un atome ne se manipule jamais tout seul.",
+     "v": true,
+     "e": "VRAI. C'est l'accroche de la fiche.",
+     "sourceQuote": "Un atome ne se manipule jamais tout seul"
+    },
+    {
+     "t": "Il fallait donc un nombre pour relier l'invisible à ce qu'on peut peser.",
+     "v": true,
+     "e": "VRAI. C'est la raison d'être de cette constante.",
+     "sourceQuote": "Il fallait donc un nombre pour relier l'invisible à ce qu'on peut peser"
+    },
+    {
+     "t": "On a inventé des unités pour passer du monde des atomes au monde réel, celui qu'on peut peser.",
+     "v": true,
+     "e": "VRAI. Microscopique d'un côté, macroscopique de l'autre.",
+     "sourceQuote": "On a donc inventé des unités pour passer du monde des atomes (microscopique) au monde réel (macroscopique, ce qu'on peut peser)"
+    },
+    {
+     "t": "Il fallait une passerelle entre les deux mondes.",
+     "v": true,
+     "e": "VRAI. C'est le rôle de la mole et du nombre d'Avogadro.",
+     "sourceQuote": "Il fallait donc une passerelle entre les deux mondes"
+    },
+    {
+     "t": "Cette passerelle repose sur plusieurs constantes.",
+     "v": false,
+     "e": "FAUX : elle repose tout entière sur un nombre, un seul.",
+     "sourceQuote": "elle repose tout entière sur un nombre, un seul"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-009-nombre-avogadro.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 9,
+   "q": "Un étudiant récite la valeur du nombre d'Avogadro. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Il faut le retenir avec un exposant 22.",
+     "v": false,
+     "e": "FAUX : l'exposant exact est 23.",
+     "sourceQuote": "Retiens la valeur avec sa puissance exacte : 6,022 × 10 23"
+    },
+    {
+     "t": "Une erreur d'exposant reste sans conséquence sur les calculs.",
+     "v": false,
+     "e": "FAUX : elle fausse tout le calcul qui suit.",
+     "sourceQuote": "Une erreur d'exposant (10 22 , 10 24 ) fausse tout le calcul qui suit"
+    },
+    {
+     "t": "Ce nombre se note N_A.",
+     "v": true,
+     "e": "VRAI. C'est la notation employée par la fiche.",
+     "sourceQuote": "Le nombre d'Avogadro, noté N A , vaut 6,022 × 10²³"
+    },
+    {
+     "t": "N_A est une masse exprimée en grammes.",
+     "v": false,
+     "e": "FAUX : c'est un nombre d'entités, pas une masse.",
+     "sourceQuote": "N A est un nombre d'entités , pas une masse : il ne se compte pas en grammes"
+    },
+    {
+     "t": "Les QCM ne jouent jamais sur l'exposant de cette constante.",
+     "v": false,
+     "e": "FAUX : ils en vivent, dit la fiche.",
+     "sourceQuote": "les QCM en vivent"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-009-nombre-avogadro.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 10,
+   "q": "Ce nombre n'est pas tombé du ciel. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "On a décidé que 12 grammes de ¹²C contiennent exactement N_A atomes.",
+     "v": true,
+     "e": "VRAI. C'est le point de départ.",
+     "sourceQuote": "on a décidé que 12 grammes de ¹²C contiennent exactement N A atomes"
+    },
+    {
+     "t": "C'est le résultat d'un choix de référence.",
+     "v": true,
+     "e": "VRAI. Pas une valeur tombée du ciel.",
+     "sourceQuote": "c'est le résultat d'un choix de référence"
+    },
+    {
+     "t": "On part d'une masse qu'on peut poser sur une balance.",
+     "v": true,
+     "e": "VRAI. Douze grammes de carbone 12.",
+     "sourceQuote": "On part d'une masse qu'on peut poser sur une balance"
+    },
+    {
+     "t": "On appelle N_A le nombre d'atomes que cette masse contient.",
+     "v": true,
+     "e": "VRAI. C'est ainsi que la constante est définie.",
+     "sourceQuote": "on appelle N A le nombre d'atomes qu'elle contient"
+    },
+    {
+     "t": "Le pont est construit à partir du gramme.",
+     "v": true,
+     "e": "VRAI. C'est la conclusion de l'encadré.",
+     "sourceQuote": "Le pont est construit à partir du gramme"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-009-nombre-avogadro.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 11,
+   "q": "Le nombre d'Avogadro porte une unité et un rôle précis. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Il s'écrit 6,022 × 10²³ mol⁻¹.",
+     "v": true,
+     "e": "VRAI. C'est son écriture dans le tableau des grandeurs.",
+     "sourceQuote": "N A s'écrit 6,022 × 10²³ mol⁻¹"
+    },
+    {
+     "t": "Son rôle tient en une ligne : nombre d'entités dans une mole.",
+     "v": true,
+     "e": "VRAI. C'est tout ce qu'il fait.",
+     "sourceQuote": "son rôle tient en une ligne : nombre d'entités dans une mole"
+    },
+    {
+     "t": "Le mot « mole » fait l'objet de la fiche suivante.",
+     "v": true,
+     "e": "VRAI. Il n'est pas défini ici.",
+     "sourceQuote": "Le mot « mole », lui, fait l'objet de la fiche suivante"
+    },
+    {
+     "t": "Il désigne le nombre de moles contenues dans une entité.",
+     "v": false,
+     "e": "FAUX : c'est l'inverse — le nombre d'entités dans une mole.",
+     "sourceQuote": "nombre d'entités dans une mole"
+    },
+    {
+     "t": "La solution du chapitre s'appelle le gramme.",
+     "v": false,
+     "e": "FAUX : elle s'appelle la mole.",
+     "sourceQuote": "La solution du chapitre s'appelle la mole"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-009-nombre-avogadro.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 12,
+   "q": "Le moyen mnémotechnique donne à sentir l'énormité de ce nombre. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "C'est un 6 suivi de 12 zéros.",
+     "v": false,
+     "e": "FAUX : un 6 suivi de 23 zéros.",
+     "sourceQuote": "C'est un 6 suivi de 23 zéros"
+    },
+    {
+     "t": "En comptant 1 atome par seconde, il faudrait 19 000 ans pour l'atteindre.",
+     "v": false,
+     "e": "FAUX : 19 000 milliards d'années.",
+     "sourceQuote": "il te faudrait 19 000 milliards d'années pour arriver à N A"
+    },
+    {
+     "t": "Si tous les humains comptaient ensemble 24 h/24, il faudrait encore 240 milliards d'années.",
+     "v": true,
+     "e": "VRAI. C'est le second ordre de grandeur donné.",
+     "sourceQuote": "il faudrait encore 240 milliards d'années"
+    },
+    {
+     "t": "Ce nombre s'écrit 602 200 000 000.",
+     "v": false,
+     "e": "FAUX : il s'écrit 602 200 000 000 000 000 000 000.",
+     "sourceQuote": "602 200 000 000 000 000 000 000"
+    },
+    {
+     "t": "Compter ce nombre reste à la portée d'une seule personne au cours d'une vie.",
+     "v": false,
+     "e": "FAUX : il y faudrait 19 000 milliards d'années.",
+     "sourceQuote": "il te faudrait 19 000 milliards d'années pour arriver à N A"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-009-nombre-avogadro.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 13,
+   "q": "Le tableau du problème oppose deux mondes. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Un atome y est décrit comme minuscule et invisible.",
+     "v": true,
+     "e": "VRAI. C'est le monde microscopique.",
+     "sourceQuote": "Un atome (minuscule, invisible)"
+    },
+    {
+     "t": "1 gramme de matière y est décrit comme visible et pesable.",
+     "v": true,
+     "e": "VRAI. C'est le monde macroscopique.",
+     "sourceQuote": "1 gramme de matière (visible, pesable)"
+    },
+    {
+     "t": "Compter les atomes un par un est comparé au fait de compter les grains de sable d'une plage.",
+     "v": true,
+     "e": "VRAI. C'est l'image donnée pour dire l'impossibilité.",
+     "sourceQuote": "C'est comme vouloir compter les grains de sable d'une plage un par un : impossible !"
+    },
+    {
+     "t": "Jusqu'ici, on avait appris à décrire un atome isolé : protons, neutrons, électrons, isotopes, espèces isoélectroniques.",
+     "v": true,
+     "e": "VRAI. C'est l'acquis rappelé en ouverture.",
+     "sourceQuote": "tu as appris à décrire un atome isolé : ses protons, ses neutrons, ses électrons, ses isotopes, ses espèces isoélectroniques"
+    },
+    {
+     "t": "On prend maintenant le problème dans l'autre sens.",
+     "v": true,
+     "e": "VRAI. On part du pesable pour remonter à l'atome.",
+     "sourceQuote": "On prend maintenant le problème dans l'autre sens"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-009-nombre-avogadro.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 14,
+   "q": "La fiche indique comment retenir cette constante. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Il faut retenir la valeur avec sa puissance exacte.",
+     "v": true,
+     "e": "VRAI. L'exposant compte autant que le chiffre.",
+     "sourceQuote": "Retiens la valeur avec sa puissance exacte"
+    },
+    {
+     "t": "Il faut garder en tête le repère d'origine : 12 g de ¹²C.",
+     "v": true,
+     "e": "VRAI. C'est lui qui explique d'où sort ce nombre.",
+     "sourceQuote": "garde en tête le repère d'origine — 12 g de ¹²C"
+    },
+    {
+     "t": "Se tromper d'exposant ne change rien au résultat.",
+     "v": false,
+     "e": "FAUX : cela fausse tout le calcul qui suit.",
+     "sourceQuote": "Une erreur d'exposant (10 22 , 10 24 ) fausse tout le calcul qui suit"
+    },
+    {
+     "t": "Le repère d'origine vaut pour 12 g de n'importe quel élément.",
+     "v": false,
+     "e": "FAUX : c'est du carbone 12 précisément.",
+     "sourceQuote": "les 12 g de référence, c'est du carbone 12 précisément — pas 12 g de n'importe quel élément"
+    },
+    {
+     "t": "Ce repère d'origine n'explique pas d'où sort ce nombre.",
+     "v": false,
+     "e": "FAUX : c'est justement lui qui l'explique.",
+     "sourceQuote": "c'est lui qui explique d'où sort ce nombre"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-009-nombre-avogadro.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 15,
+   "q": "Le résumé et le piège de la fiche portent sur la nature de cette constante. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "C'est la constante qui fait le pont entre le monde microscopique et le monde macroscopique.",
+     "v": true,
+     "e": "VRAI. Un atome d'un côté, ce qu'on peut peser de l'autre.",
+     "sourceQuote": "C'est la constante qui fait le pont entre le monde microscopique (un atome) et le monde macroscopique (ce qu'on peut peser)"
+    },
+    {
+     "t": "Son origine : 12 g de ¹²C contiennent exactement N_A atomes.",
+     "v": true,
+     "e": "VRAI. C'est le choix de référence.",
+     "sourceQuote": "Son origine : 12 g de ¹²C contiennent exactement N A atomes"
+    },
+    {
+     "t": "N_A est un nombre d'entités, pas une masse.",
+     "v": true,
+     "e": "VRAI. C'est le piège signalé.",
+     "sourceQuote": "N A est un nombre d'entités , pas une masse"
+    },
+    {
+     "t": "Il ne se compte pas en grammes.",
+     "v": true,
+     "e": "VRAI. C'est la suite immédiate du piège.",
+     "sourceQuote": "il ne se compte pas en grammes"
+    },
+    {
+     "t": "Les 12 g de référence peuvent être ceux de n'importe quel élément.",
+     "v": false,
+     "e": "FAUX : c'est du carbone 12 précisément.",
+     "sourceQuote": "c'est du carbone 12 précisément — pas 12 g de n'importe quel élément"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-010-mole-unite-de-comptage.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 8,
+   "q": "La fiche part du nombre déjà connu pour lui donner un nom. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le nombre existait déjà : il ne lui manquait qu'un nom d'unité.",
+     "v": true,
+     "e": "VRAI. Ce nom sera la mole.",
+     "sourceQuote": "Il ne lui manquait qu'un nom d'unité — ce sera la mole"
+    },
+    {
+     "t": "Ce nom a été créé parce qu'on ignorait encore la valeur du nombre.",
+     "v": false,
+     "e": "FAUX : le nombre existait déjà, 6,022 × 10²³.",
+     "sourceQuote": "Le nombre existe déjà : 6,022 × 10²³"
+    },
+    {
+     "t": "Au lieu de dire ce nombre en entier, illisible, on dit simplement « 1 mole ».",
+     "v": true,
+     "e": "VRAI. C'est la raison pratique de l'unité.",
+     "sourceQuote": "Au lieu de dire ce nombre en entier (illisible !) , on dit simplement « 1 mole »"
+    },
+    {
+     "t": "La mole sert à compter les atomes un par un.",
+     "v": false,
+     "e": "FAUX : elle sert à les compter par gros paquets.",
+     "sourceQuote": "C'est juste une façon pratique de compter les atomes par gros paquets"
+    },
+    {
+     "t": "La fiche précédente n'avait pas donné la valeur du nombre d'Avogadro.",
+     "v": false,
+     "e": "FAUX : elle l'avait donnée.",
+     "sourceQuote": "La fiche précédente t'a donné le nombre d'Avogadro, N A = 6,022 × 10²³"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-010-mole-unite-de-comptage.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 9,
+   "q": "La mole se définit comme une unité de comptage. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Une mole est un paquet de N_A entités : atomes, molécules, ions.",
+     "v": true,
+     "e": "VRAI. C'est la définition.",
+     "sourceQuote": "Une mole (symbole : mol ) = un paquet de N A entités — atomes, molécules, ions…"
+    },
+    {
+     "t": "C'est une unité de comptage, exactement comme « douzaine » ou « vingtaine ».",
+     "v": true,
+     "e": "VRAI. C'est l'analogie retenue.",
+     "sourceQuote": "La mole est une unité de comptage , exactement comme « douzaine » ou « vingtaine »"
+    },
+    {
+     "t": "Elle dit combien il y a d'objets, pas ce qu'ils pèsent ni ce qu'ils sont.",
+     "v": true,
+     "e": "VRAI. Elle ne dit qu'une chose : combien.",
+     "sourceQuote": "Elle dit combien il y a d'objets, pas ce qu'ils pèsent ni ce qu'ils sont"
+    },
+    {
+     "t": "Ce qu'elle mesure porte un nom : la quantité de matière, notée n.",
+     "v": true,
+     "e": "VRAI. C'est le nom donné dans le tableau des grandeurs du chapitre.",
+     "sourceQuote": "ce qu'elle mesure porte un nom : la quantité de matière , notée n"
+    },
+    {
+     "t": "Son symbole est mol.",
+     "v": true,
+     "e": "VRAI. C'est le symbole donné dans la définition.",
+     "sourceQuote": "Une mole (symbole : mol )"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-010-mole-unite-de-comptage.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 10,
+   "q": "Le tableau des unités de comptage compare trois mots. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Une douzaine désigne 20 objets.",
+     "v": false,
+     "e": "FAUX : 12 objets. C'est la vingtaine qui en désigne 20.",
+     "sourceQuote": "1 douzaine = 12 objets"
+    },
+    {
+     "t": "Une vingtaine désigne 12 objets.",
+     "v": false,
+     "e": "FAUX : 20 objets.",
+     "sourceQuote": "1 vingtaine = 20 objets"
+    },
+    {
+     "t": "Une mole désigne 6,022 × 10²³ objets.",
+     "v": true,
+     "e": "VRAI. C'est la troisième ligne du tableau.",
+     "sourceQuote": "1 mole = 6,022 × 10²³ objets"
+    },
+    {
+     "t": "Le mot « douzaine » dit aussi de quoi il s'agit et ce que ça pèse.",
+     "v": false,
+     "e": "FAUX : le mot ne dit jamais qu'une chose — combien.",
+     "sourceQuote": "le mot ne dit jamais qu'une chose — combien . Ni de quoi il s'agit, ni ce que ça pèse"
+    },
+    {
+     "t": "La mole fonctionne autrement que ces unités de comptage.",
+     "v": false,
+     "e": "FAUX : elle fonctionne exactement pareil.",
+     "sourceQuote": "La mole fonctionne exactement pareil : elle compte des entités, un point c'est tout"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-010-mole-unite-de-comptage.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 11,
+   "q": "Trois exemples concrets fixent la notion. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Dans « 1 mole d'atomes de carbone », l'entité comptée est un atome.",
+     "v": true,
+     "e": "VRAI. C'est le premier exemple.",
+     "sourceQuote": "Ici, l'entité comptée est un atome"
+    },
+    {
+     "t": "Dans « 1 mole de molécules d'eau », l'entité comptée est une molécule entière, pas un atome.",
+     "v": true,
+     "e": "VRAI. C'est le deuxième exemple.",
+     "sourceQuote": "Ici, l'entité comptée est une molécule entière — pas un atome"
+    },
+    {
+     "t": "Le paquet a la même taille, son contenu est différent.",
+     "v": true,
+     "e": "VRAI. C'est la formule de la fiche.",
+     "sourceQuote": "Le paquet a la même taille, son contenu est différent"
+    },
+    {
+     "t": "Pour 2 moles d'atomes de fer, on multiplie le nombre de moles par N_A.",
+     "v": true,
+     "e": "VRAI. Deux paquets au lieu d'un.",
+     "sourceQuote": "Deux paquets au lieu d'un : on multiplie le nombre de moles par N A"
+    },
+    {
+     "t": "Une mole de molécules contient davantage d'entités qu'une mole d'atomes.",
+     "v": false,
+     "e": "FAUX : le paquet a la même taille, seul son contenu change.",
+     "sourceQuote": "Le paquet a la même taille, son contenu est différent"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-010-mole-unite-de-comptage.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 12,
+   "q": "Devant le mot « mole », une question s'impose. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Il faut toujours se demander : une mole de quoi ?",
+     "v": true,
+     "e": "VRAI. C'est le réflexe demandé.",
+     "sourceQuote": "pose-toi toujours la question « une mole de quoi ? »"
+    },
+    {
+     "t": "Le nombre d'entités est le même, mais les entités comptées ne le sont pas.",
+     "v": true,
+     "e": "VRAI. Atomes, molécules ou ions : même nombre, contenu différent.",
+     "sourceQuote": "le nombre d'entités est le même, mais les entités comptées ne le sont pas"
+    },
+    {
+     "t": "Les QCM évitent de glisser d'atomes à molécules en cours d'énoncé.",
+     "v": false,
+     "e": "FAUX : ils adorent le faire.",
+     "sourceQuote": "Les QCM adorent glisser d'atomes à molécules en cours d'énoncé"
+    },
+    {
+     "t": "Une mole d'ions contient moins d'entités qu'une mole d'atomes.",
+     "v": false,
+     "e": "FAUX : le nombre d'entités est le même.",
+     "sourceQuote": "le nombre d'entités est le même"
+    },
+    {
+     "t": "La nature de l'entité comptée est sans importance.",
+     "v": false,
+     "e": "FAUX : c'est justement ce qu'il faut préciser à chaque fois.",
+     "sourceQuote": "Une mole d' atomes , une mole de molécules , une mole d' ions : le nombre d'entités est le même, mais les entités comptées ne le sont pas"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-010-mole-unite-de-comptage.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 13,
+   "q": "L'analogie retenue par la fiche tient en une phrase. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "La mole est juste un mot plus court pour dire « 6,022 × 10²³ ».",
+     "v": true,
+     "e": "VRAI. C'est l'analogie de la douzaine.",
+     "sourceQuote": "La mole est juste un mot plus court pour dire « 6,022 × 10²³ »"
+    },
+    {
+     "t": "Exactement comme « douzaine » est un mot plus court pour dire « 12 ».",
+     "v": true,
+     "e": "VRAI. C'est la seconde moitié de l'analogie.",
+     "sourceQuote": "exactement comme « douzaine » est un mot plus court pour dire « 12 » !"
+    },
+    {
+     "t": "Une vingtaine de stylos, c'est 20 stylos.",
+     "v": true,
+     "e": "VRAI. C'est l'exemple du tableau.",
+     "sourceQuote": "1 vingtaine de stylos = 20 stylos"
+    },
+    {
+     "t": "Une mole désigne le même nombre d'objets qu'une douzaine.",
+     "v": false,
+     "e": "FAUX : une mole, c'est 6,022 × 10²³ objets ; une douzaine, 12.",
+     "sourceQuote": "1 mole = 6,022 × 10²³ objets"
+    },
+    {
+     "t": "Le mot « douzaine » indique aussi la masse des objets comptés.",
+     "v": false,
+     "e": "FAUX : ni de quoi il s'agit, ni ce que ça pèse.",
+     "sourceQuote": "Ni de quoi il s'agit, ni ce que ça pèse"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-010-mole-unite-de-comptage.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 14,
+   "q": "Le résumé de la fiche rassemble définition, symbole et nature de l'unité. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "1 mole = un paquet de N_A = 6,022 × 10²³ entités.",
+     "v": true,
+     "e": "VRAI. C'est la première ligne du résumé.",
+     "sourceQuote": "1 mole = un paquet de N A = 6,022 × 10²³ entités"
+    },
+    {
+     "t": "Ces entités peuvent être des atomes, des molécules ou des ions.",
+     "v": true,
+     "e": "VRAI. Le résumé les cite toutes trois.",
+     "sourceQuote": "atomes, molécules ou ions"
+    },
+    {
+     "t": "Le symbole de cette unité est mol.",
+     "v": true,
+     "e": "VRAI. Le résumé le rappelle.",
+     "sourceQuote": "Symbole : mol . C'est une unité de comptage"
+    },
+    {
+     "t": "C'est une unité de comptage, au même titre que la douzaine.",
+     "v": true,
+     "e": "VRAI. C'est la conclusion du résumé.",
+     "sourceQuote": "C'est une unité de comptage , au même titre que la douzaine"
+    },
+    {
+     "t": "2 moles d'atomes de fer font 1,204 × 10²⁴ atomes de Fe.",
+     "v": true,
+     "e": "VRAI. C'est le troisième exemple de la fiche.",
+     "sourceQuote": "2 × 6,022 × 10²³ = 1,204 × 10²⁴ atomes de Fe"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-010-mole-unite-de-comptage.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 15,
+   "q": "À ce stade du chapitre, la mole ne dit encore rien d'une masse. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Une mole pèse par définition 12 grammes.",
+     "v": false,
+     "e": "FAUX : à ce stade, la mole ne pèse encore rien.",
+     "sourceQuote": "À ce stade, la mole ne pèse encore rien : elle compte des entités, elle ne donne aucune masse"
+    },
+    {
+     "t": "Elle compte des entités, elle ne donne aucune masse.",
+     "v": true,
+     "e": "VRAI. C'est le piège de la fiche.",
+     "sourceQuote": "elle compte des entités, elle ne donne aucune masse"
+    },
+    {
+     "t": "Le passage aux grammes est traité dans cette fiche.",
+     "v": false,
+     "e": "FAUX : il arrive plus loin dans le chapitre.",
+     "sourceQuote": "Le passage aux grammes arrive plus loin dans le chapitre"
+    },
+    {
+     "t": "Le passage aux grammes se fera d'abord par la masse molaire, puis par l'u.m.a.",
+     "v": false,
+     "e": "FAUX : l'ordre annoncé est l'inverse — d'abord l'u.m.a., puis la masse molaire.",
+     "sourceQuote": "d'abord l' u.m.a. , puis la masse molaire"
+    },
+    {
+     "t": "La mole donne à la fois le nombre d'entités et leur masse.",
+     "v": false,
+     "e": "FAUX : elle ne donne aucune masse.",
+     "sourceQuote": "elle compte des entités, elle ne donne aucune masse"
+    }
+   ]
+  }
+ ]
+}

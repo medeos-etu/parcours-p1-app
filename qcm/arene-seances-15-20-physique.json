@@ -1,0 +1,1255 @@
+{
+ "matiere": "physique",
+ "chapitre": 1,
+ "note": "Renfort d'arène (lots 8 à 15, tous ar:1) pour les fiches de physique des séances 16 et 20 du Parcours. Aucun calcul nouveau n'est demandé : chaque item porte sur une règle énoncée ou sur un exemple déjà résolu dans la fiche. Le socle des lots 1-7 reste dans physique-ch01-p2.json et physique-ch01-p3.json.",
+ "questions": [
+  {
+   "fiche": "physique-007-trois-etats-matiere.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 8,
+   "q": "La fiche annonce deux critères, et deux seulement, pour séparer les trois états. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Les trois états se distinguent par l'intensité des interactions entre particules et par leur liberté de mouvement.",
+     "v": true,
+     "e": "VRAI. Ce sont les deux seuls critères.",
+     "sourceQuote": "qui se distinguent par l'intensité des interactions entre particules et par leur liberté de mouvement"
+    },
+    {
+     "t": "Tout le tableau qui suit sort de ces deux critères.",
+     "v": true,
+     "e": "VRAI. C'est ce qui permet de le reconstruire au lieu de l'apprendre.",
+     "sourceQuote": "Tout le tableau qui suit sort de ces deux critères"
+    },
+    {
+     "t": "Plus les interactions faiblissent, plus les particules gagnent en liberté.",
+     "v": true,
+     "e": "VRAI. C'est la consigne de lecture du tableau.",
+     "sourceQuote": "plus les interactions faiblissent, plus les particules gagnent en liberté"
+    },
+    {
+     "t": "La matière existe sous quatre états principaux.",
+     "v": false,
+     "e": "FAUX : sous trois états principaux.",
+     "sourceQuote": "La matière existe sous trois états principaux"
+    },
+    {
+     "t": "Cette fiche arrive avant la boîte à outils calcul.",
+     "v": false,
+     "e": "FAUX : elle arrive après, une fois qu'on sait calculer proprement.",
+     "sourceQuote": "Maintenant qu'on sait calculer proprement, on attaque la matière elle-même"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-007-trois-etats-matiere.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 9,
+   "q": "Le tableau des trois états se lit ligne par ligne. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le gaz n'a pas de volume propre : il occupe tout l'espace disponible.",
+     "v": true,
+     "e": "VRAI. C'est la ligne « Volume propre » du tableau.",
+     "sourceQuote": "Non — occupe tout l'espace disponible"
+    },
+    {
+     "t": "Le liquide n'a pas de forme propre : il épouse le contenant.",
+     "v": true,
+     "e": "VRAI. C'est la ligne « Forme propre ».",
+     "sourceQuote": "Non — épouse le contenant"
+    },
+    {
+     "t": "Les interactions sont très fortes dans le solide et nulles ou négligeables dans le gaz.",
+     "v": true,
+     "e": "VRAI. C'est la ligne « Interactions ».",
+     "sourceQuote": "Interactions Très fortes Faibles Nulles ou négligeables"
+    },
+    {
+     "t": "Le solide est le seul état ordonné, sous forme de cristal.",
+     "v": true,
+     "e": "VRAI. Liquide et gaz sont non ordonnés.",
+     "sourceQuote": "Ordre Ordonné (cristal) Non ordonné Non ordonné"
+    },
+    {
+     "t": "Dans le gaz, les particules vibrent sur place.",
+     "v": false,
+     "e": "FAUX : elles suivent des trajectoires libres entre chocs. C'est le solide qui vibre sur place.",
+     "sourceQuote": "Mouvement Vibration sur place Agitation thermique (mouvement brownien) Trajectoires libres entre chocs"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-007-trois-etats-matiere.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 10,
+   "q": "La température est présentée comme le moteur des changements d'état. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "L'énergie d'agitation thermique des particules augmente avec T.",
+     "v": true,
+     "e": "VRAI. C'est ce qui déclenche les transitions.",
+     "sourceQuote": "L'énergie d'agitation thermique des particules augmente avec T"
+    },
+    {
+     "t": "On passe à l'état suivant quand cette énergie dépasse les interactions qui maintiennent les particules ensemble.",
+     "v": true,
+     "e": "VRAI. C'est la condition du changement d'état.",
+     "sourceQuote": "Quand cette énergie dépasse les interactions qui maintiennent les particules ensemble, on passe à l'état suivant"
+    },
+    {
+     "t": "Les transitions inverses correspondent à un apport d'énergie.",
+     "v": false,
+     "e": "FAUX : elles correspondent à un refroidissement, donc à une perte d'énergie.",
+     "sourceQuote": "correspondent à un refroidissement . On enlève de l'énergie, les interactions reprennent le dessus"
+    },
+    {
+     "t": "Lors de la fusion, les particules s'échappent complètement les unes des autres.",
+     "v": false,
+     "e": "FAUX : elles gardent un contact mais peuvent glisser les unes sur les autres. C'est la vaporisation qui les sépare.",
+     "sourceQuote": "Les particules gardent un contact mais peuvent désormais glisser les unes sur les autres"
+    },
+    {
+     "t": "Lors de la fusion, le corps perd son volume propre et garde sa forme propre.",
+     "v": false,
+     "e": "FAUX : c'est l'inverse — le volume propre reste, la forme propre disparaît.",
+     "sourceQuote": "Le volume propre reste, la forme propre disparaît"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-007-trois-etats-matiere.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 11,
+   "q": "Un étudiant nomme les transitions entre états. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le passage direct du solide au gaz, sans étape liquide, s'appelle la sublimation.",
+     "v": true,
+     "e": "VRAI. On saute l'étape liquide.",
+     "sourceQuote": "Solide → Gaz directement : la sublimation"
+    },
+    {
+     "t": "Le passage du solide au liquide s'appelle la vaporisation.",
+     "v": false,
+     "e": "FAUX : c'est la fusion. La vaporisation fait passer du liquide au gaz.",
+     "sourceQuote": "Solide → Liquide : la fusion"
+    },
+    {
+     "t": "L'exemple de sublimation à connaître est la glace d'eau.",
+     "v": false,
+     "e": "FAUX : l'exemple retenu est le CO₂ solide, dit « glace carbonique ».",
+     "sourceQuote": "le CO₂ solide, dit « glace carbonique »"
+    },
+    {
+     "t": "La condensation solide correspond à un apport d'énergie.",
+     "v": false,
+     "e": "FAUX : c'est une transition inverse, donc un refroidissement.",
+     "sourceQuote": "les transitions inverses — condensation , solidification , condensation solide — correspondent à un refroidissement"
+    },
+    {
+     "t": "Lors de la vaporisation, il reste des interactions à vaincre entre les particules.",
+     "v": false,
+     "e": "FAUX : plus d'interactions à vaincre, elles occupent tout l'espace disponible.",
+     "sourceQuote": "Plus d'interactions à vaincre : elles occupent tout l'espace disponible"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-007-trois-etats-matiere.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 12,
+   "q": "La figure des trois états montre les blocs de particules et le sens des flèches. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Les trois blocs de particules sont, dans l'ordre, serrées et ordonnées, tassées mais désordonnées, puis dispersées.",
+     "v": true,
+     "e": "VRAI. C'est ce que la légende demande de repérer d'abord.",
+     "sourceQuote": "Repère d'abord les trois blocs de particules — serrées et ordonnées, tassées mais désordonnées, dispersées"
+    },
+    {
+     "t": "Les flèches bleues correspondent à un apport d'énergie, donc à un chauffage.",
+     "v": true,
+     "e": "VRAI. C'est le code de la figure.",
+     "sourceQuote": "les flèches bleues correspondent à un apport d'énergie (chauffage)"
+    },
+    {
+     "t": "Les flèches blanches correspondent à une perte d'énergie.",
+     "v": true,
+     "e": "VRAI. Donc à un refroidissement.",
+     "sourceQuote": "les blanches à une perte (refroidissement)"
+    },
+    {
+     "t": "La figure représente les trois états et les transitions associées.",
+     "v": true,
+     "e": "VRAI. C'est son titre même.",
+     "sourceQuote": "Les 3 états de la matière et les transitions associées"
+    },
+    {
+     "t": "La légende demande de repérer d'abord les blocs de particules, puis de suivre le sens des flèches.",
+     "v": true,
+     "e": "VRAI. C'est l'ordre de lecture indiqué.",
+     "sourceQuote": "Repère d'abord les trois blocs de particules — serrées et ordonnées, tassées mais désordonnées, dispersées — puis suis le sens des flèches"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-007-trois-etats-matiere.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 13,
+   "q": "La fiche indique comment reconstruire le tableau au lieu de l'apprendre. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Il n'est pas nécessaire d'apprendre les 18 cases du tableau par cœur.",
+     "v": true,
+     "e": "VRAI. La fiche le dit expressément.",
+     "sourceQuote": "Tu n'as pas besoin d'apprendre les 18 cases du tableau par cœur"
+    },
+    {
+     "t": "On se pose deux questions dans l'ordre : l'intensité des interactions, puis la liberté de mouvement qui en découle.",
+     "v": true,
+     "e": "VRAI. C'est la méthode donnée.",
+     "sourceQuote": "quelle est l'intensité des interactions , et quelle liberté de mouvement en découle ?"
+    },
+    {
+     "t": "Des interactions très fortes donnent une vibration sur place, donc un cristal ordonné, doté d'une forme et d'un volume propres.",
+     "v": true,
+     "e": "VRAI. C'est le premier exemple de reconstruction.",
+     "sourceQuote": "Interactions très fortes → vibration sur place → cristal ordonné, forme et volume propres"
+    },
+    {
+     "t": "Des interactions nulles donnent une vibration sur place.",
+     "v": false,
+     "e": "FAUX : elles donnent des trajectoires libres entre chocs, donc ni forme ni volume propre.",
+     "sourceQuote": "Interactions nulles → trajectoires libres entre chocs → ni forme, ni volume propre"
+    },
+    {
+     "t": "Une fois ces deux questions posées, il reste à mémoriser séparément chaque ligne du tableau.",
+     "v": false,
+     "e": "FAUX : tout le reste se reconstruit.",
+     "sourceQuote": "Tout le reste se reconstruit"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-007-trois-etats-matiere.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 14,
+   "q": "Le résumé rassemble les deux critères et les trois transitions. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Trois états, deux critères : interactions et liberté de mouvement.",
+     "v": true,
+     "e": "VRAI. C'est la première ligne du résumé.",
+     "sourceQuote": "Trois états, deux critères : interactions et liberté de mouvement"
+    },
+    {
+     "t": "Le moteur des changements d'état est l'agitation thermique, qui augmente avec T.",
+     "v": true,
+     "e": "VRAI. C'est la seconde ligne.",
+     "sourceQuote": "Le moteur des changements d'état, c'est l' agitation thermique , qui augmente avec T"
+    },
+    {
+     "t": "Les trois transitions retenues sont la fusion, la vaporisation et la sublimation.",
+     "v": true,
+     "e": "VRAI. La sublimation quand le solide part directement en gaz.",
+     "sourceQuote": "fusion , vaporisation , ou sublimation quand le solide part directement en gaz"
+    },
+    {
+     "t": "Les deux critères sont l'intensité des interactions entre particules et leur liberté de mouvement.",
+     "v": true,
+     "e": "VRAI. Ce sont ceux annoncés dès l'introduction de la fiche.",
+     "sourceQuote": "qui se distinguent par l'intensité des interactions entre particules et par leur liberté de mouvement"
+    },
+    {
+     "t": "Le moteur des changements d'état est la pression, indépendamment de la température.",
+     "v": false,
+     "e": "FAUX : c'est l'agitation thermique, qui augmente avec T.",
+     "sourceQuote": "Le moteur des changements d'état, c'est l' agitation thermique , qui augmente avec T"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-007-trois-etats-matiere.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 15,
+   "q": "Le piège de la fiche porte sur deux lignes du tableau qu'on confond souvent. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Volume propre et forme propre ne sont pas la même ligne.",
+     "v": true,
+     "e": "VRAI. C'est le piège central.",
+     "sourceQuote": "Volume propre et forme propre , ce n'est pas la même ligne"
+    },
+    {
+     "t": "Le liquide a bien un volume propre, mais pas de forme propre.",
+     "v": true,
+     "e": "VRAI. Il épouse le contenant.",
+     "sourceQuote": "Le liquide a bien un volume propre — mais pas de forme propre"
+    },
+    {
+     "t": "Le solide est le seul des trois états à n'avoir ni forme ni volume propres.",
+     "v": false,
+     "e": "FAUX : c'est le gaz qui n'a ni l'un ni l'autre.",
+     "sourceQuote": "Seul le gaz n'a ni l'un ni l'autre"
+    },
+    {
+     "t": "Un liquide est incompressible : sa compressibilité est nulle.",
+     "v": false,
+     "e": "FAUX : sa compressibilité est faible, pas nulle.",
+     "sourceQuote": "sa compressibilité est faible , pas nulle"
+    },
+    {
+     "t": "La compressibilité est forte pour le solide et très faible pour le gaz.",
+     "v": false,
+     "e": "FAUX : c'est l'inverse — très faible pour le solide, forte pour le gaz.",
+     "sourceQuote": "Compressibilité Très faible Faible Forte"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-008-diagramme-phases-eau-anomalie.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 8,
+   "q": "Le diagramme de phases reprend les trois états, mais lus sur un graphique. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "En faisant varier pression et température, on représente les domaines de stabilité des trois états.",
+     "v": true,
+     "e": "VRAI. C'est la définition du diagramme de phases.",
+     "sourceQuote": "on peut représenter sur un même graphique les domaines de stabilité des 3 états"
+    },
+    {
+     "t": "Le diagramme de l'eau est crucial pour la physique médicale.",
+     "v": true,
+     "e": "VRAI. C'est ce que la fiche en dit.",
+     "sourceQuote": "Celui de l'eau est crucial pour la physique médicale"
+    },
+    {
+     "t": "Sur ce diagramme, la pression figure en abscisse et la température en ordonnée.",
+     "v": false,
+     "e": "FAUX : la pression est en ordonnée, la température en abscisse.",
+     "sourceQuote": "La pression est en ordonnée, la température en abscisse"
+    },
+    {
+     "t": "Chaque zone du diagramme correspond à un domaine où deux états au moins sont stables.",
+     "v": false,
+     "e": "FAUX : un seul état y est stable.",
+     "sourceQuote": "Chaque zone est un domaine où un seul état est stable"
+    },
+    {
+     "t": "Les critères lus sur ce graphique sont différents de ceux de la fiche précédente.",
+     "v": false,
+     "e": "FAUX : ce sont exactement les mêmes, lus autrement.",
+     "sourceQuote": "Ce sont exactement les mêmes ici, mais lus sur un graphique"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-008-diagramme-phases-eau-anomalie.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 9,
+   "q": "Deux repères comptent sur ce diagramme. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le point triple est l'unique point où les trois états se rejoignent.",
+     "v": true,
+     "e": "VRAI. C'est le premier repère.",
+     "sourceQuote": "le point triple , l'unique point où les trois se rejoignent"
+    },
+    {
+     "t": "La courbe de fusion de l'eau monte vers la droite.",
+     "v": false,
+     "e": "FAUX : elle penche vers la gauche, au lieu de monter vers la droite.",
+     "sourceQuote": "la courbe de fusion , qui penche vers la gauche au lieu de monter vers la droite"
+    },
+    {
+     "t": "Le point triple de l'eau se situe à 6 atm.",
+     "v": false,
+     "e": "FAUX : à 0,006 atm.",
+     "sourceQuote": "le point triple (3 états coexistent à 0,006 atm et ~0,01 °C )"
+    },
+    {
+     "t": "L'anomalie de l'eau se lit sur la pente de sa courbe de vaporisation.",
+     "v": false,
+     "e": "FAUX : elle se lit sur la pente négative de la courbe de fusion.",
+     "sourceQuote": "la pente négative de la courbe de fusion (anomalie de l'eau)"
+    },
+    {
+     "t": "Le point triple est le seul repère à retenir sur ce diagramme.",
+     "v": false,
+     "e": "FAUX : il y en a deux — le point triple et la pente négative de la courbe de fusion.",
+     "sourceQuote": "Repère les deux choses qui comptent"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-008-diagramme-phases-eau-anomalie.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 10,
+   "q": "L'eau sort du rang par rapport à presque tous les autres corps. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Pour presque tous les corps, le solide est plus dense que le liquide : il coule.",
+     "v": true,
+     "e": "VRAI. C'est le cas général.",
+     "sourceQuote": "Pour presque tous les corps, le solide est plus dense que le liquide — autrement dit, il coule"
+    },
+    {
+     "t": "Pour l'eau comme pour les autres corps, le solide est plus dense que le liquide.",
+     "v": false,
+     "e": "FAUX : pour l'eau, c'est l'inverse — la glace est moins dense que l'eau liquide.",
+     "sourceQuote": "Pour l'eau, c'est l'inverse : la glace est moins dense que l'eau liquide"
+    },
+    {
+     "t": "La glace flotte et reste en surface au lieu de couler.",
+     "v": true,
+     "e": "VRAI. C'est la première conséquence de l'anomalie.",
+     "sourceQuote": "Elle reste en surface au lieu de couler"
+    },
+    {
+     "t": "Cette flottaison isole les lacs en hiver et protège la vie aquatique en dessous.",
+     "v": true,
+     "e": "VRAI. C'est la conséquence écologique donnée.",
+     "sourceQuote": "ce qui isole les lacs en hiver et protège la vie aquatique en dessous"
+    },
+    {
+     "t": "La densité de la glace vaut 1,00 et celle de l'eau liquide 0,92.",
+     "v": false,
+     "e": "FAUX : c'est l'inverse — 0,92 pour la glace, 1,00 pour le liquide.",
+     "sourceQuote": "densité 0,92 contre 1,00"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-008-diagramme-phases-eau-anomalie.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 11,
+   "q": "La pente négative de la courbe de fusion raconte quelque chose de précis. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Une pression élevée fait fondre la glace.",
+     "v": true,
+     "e": "VRAI. C'est la deuxième conséquence de l'anomalie.",
+     "sourceQuote": "La pression élevée fait fondre la glace"
+    },
+    {
+     "t": "À température constante, augmenter la pression fait passer du solide au liquide.",
+     "v": true,
+     "e": "VRAI. C'est exactement ce que raconte la pente négative.",
+     "sourceQuote": "à température constante, tu augmentes la pression et tu passes du solide au liquide"
+    },
+    {
+     "t": "Chez presque tous les autres corps, comprimer solidifie.",
+     "v": true,
+     "e": "VRAI. L'eau est l'exception.",
+     "sourceQuote": "Chez presque tous les autres corps, comprimer solidifie"
+    },
+    {
+     "t": "L'eau gelée fait éclater les canalisations parce que son volume diminue en gelant.",
+     "v": false,
+     "e": "FAUX : le volume augmente en gelant, puisque la glace est moins dense.",
+     "sourceQuote": "Puisque la glace est moins dense, le volume augmente en gelant"
+    },
+    {
+     "t": "Le tuyau, lui, ne s'agrandit pas : d'où l'éclatement.",
+     "v": true,
+     "e": "VRAI. Le volume augmente, le contenant non.",
+     "sourceQuote": "Le tuyau, lui, ne s'agrandit pas"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-008-diagramme-phases-eau-anomalie.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 12,
+   "q": "L'origine de l'anomalie de l'eau est moléculaire. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Les liaisons hydrogène organisent la glace en une structure cristalline « aérée ».",
+     "v": true,
+     "e": "VRAI. C'est l'origine moléculaire donnée.",
+     "sourceQuote": "Les liaisons hydrogène organisent la glace en une structure cristalline « aérée »"
+    },
+    {
+     "t": "L'eau liquide, elle, est plus compacte.",
+     "v": true,
+     "e": "VRAI. D'où la densité plus élevée du liquide.",
+     "sourceQuote": "alors que l'eau liquide est plus compacte"
+    },
+    {
+     "t": "Ces liaisons rapprochent les molécules quand l'eau cristallise.",
+     "v": false,
+     "e": "FAUX : elles les écartent.",
+     "sourceQuote": "retiens juste qu'elles écartent les molécules quand l'eau cristallise"
+    },
+    {
+     "t": "Ces liaisons sont étudiées en détail dans cette fiche.",
+     "v": false,
+     "e": "FAUX : on les regardera de près un peu plus loin.",
+     "sourceQuote": "On regardera ces liaisons de près un peu plus loin"
+    },
+    {
+     "t": "C'est l'eau liquide qui est organisée en structure cristalline aérée.",
+     "v": false,
+     "e": "FAUX : c'est la glace. L'eau liquide est plus compacte.",
+     "sourceQuote": "Les liaisons hydrogène organisent la glace en une structure cristalline « aérée »"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-008-diagramme-phases-eau-anomalie.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 13,
+   "q": "La fiche montre comment se servir du diagramme sur un exemple d'altitude. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Savoir lire le diagramme vaut mieux que le retenir par cœur.",
+     "v": true,
+     "e": "VRAI. C'est le principe de la démonstration.",
+     "sourceQuote": "Savoir lire le diagramme vaut mieux que le retenir par cœur"
+    },
+    {
+     "t": "Au sommet de l'Everest, la pression vaut environ 0,3 atm.",
+     "v": true,
+     "e": "VRAI. C'est la donnée de l'exemple.",
+     "sourceQuote": "au sommet de l'Everest, P ≈ 0,3 atm"
+    },
+    {
+     "t": "Quand la pression diminue, la température d'ébullition diminue aussi.",
+     "v": true,
+     "e": "VRAI. C'est la lecture du diagramme.",
+     "sourceQuote": "Quand P diminue, la température d'ébullition diminue aussi"
+    },
+    {
+     "t": "L'autocuiseur en altitude augmente la pression et donc la température d'ébullition.",
+     "v": true,
+     "e": "VRAI. C'est la solution technique évoquée.",
+     "sourceQuote": "l' autocuiseur en altitude, qui augmente la pression et donc la température d'ébullition"
+    },
+    {
+     "t": "À 0,3 atm, l'eau bout vers 70 °C, ce qui ne suffit pas à coaguler l'albumine d'un œuf.",
+     "v": true,
+     "e": "VRAI. L'albumine demande environ 80 °C.",
+     "sourceQuote": "ce qui ne suffit pas à coaguler l'albumine d'un œuf (≈ 80 °C)"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-008-diagramme-phases-eau-anomalie.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 14,
+   "q": "Le résumé de la fiche tient en deux repères. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le diagramme de phases est la carte des domaines de stabilité des trois états selon P et T.",
+     "v": true,
+     "e": "VRAI. C'est la première ligne du résumé.",
+     "sourceQuote": "Le diagramme de phases est la carte des domaines de stabilité des 3 états selon P et T"
+    },
+    {
+     "t": "Le premier repère est le point triple, à 0,006 atm et environ 0,01 °C.",
+     "v": true,
+     "e": "VRAI. C'est le repère à retenir.",
+     "sourceQuote": "le point triple (0,006 atm, ~0,01 °C)"
+    },
+    {
+     "t": "Le second repère est la pente négative de la courbe de fusion.",
+     "v": true,
+     "e": "VRAI. Elle traduit l'anomalie de l'eau.",
+     "sourceQuote": "la pente négative de la courbe de fusion. Elle traduit l'anomalie de l'eau"
+    },
+    {
+     "t": "Cette anomalie se chiffre par une densité de 1,00 pour la glace contre 0,92 pour le liquide.",
+     "v": false,
+     "e": "FAUX : c'est l'inverse — glace à 0,92 contre 1,00 pour le liquide.",
+     "sourceQuote": "glace à 0,92 contre 1,00 pour le liquide"
+    },
+    {
+     "t": "La courbe de vaporisation de l'eau passe par le point (0 °C, 1 atm).",
+     "v": false,
+     "e": "FAUX : elle passe par (100 °C, 1 atm).",
+     "sourceQuote": "la courbe de vaporisation passe par (100 °C, 1 atm)"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-008-diagramme-phases-eau-anomalie.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 15,
+   "q": "Le piège de la fiche interdit une généralisation. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Ce que l'on observe chez l'eau ne se généralise pas : c'est justement l'exception.",
+     "v": true,
+     "e": "VRAI. C'est le piège de la fiche.",
+     "sourceQuote": "Ne généralise pas ce que tu vois chez l'eau : c'est justement l'exception"
+    },
+    {
+     "t": "Chez presque tous les corps, la courbe de fusion penche dans le même sens que celle de l'eau.",
+     "v": false,
+     "e": "FAUX : elle penche dans l'autre sens.",
+     "sourceQuote": "la courbe de fusion penche dans l'autre sens"
+    },
+    {
+     "t": "Chez presque tous les corps, augmenter la pression fait fondre le solide.",
+     "v": false,
+     "e": "FAUX : augmenter la pression solidifie au lieu de faire fondre.",
+     "sourceQuote": "augmenter la pression solidifie au lieu de faire fondre"
+    },
+    {
+     "t": "Chez presque tous les corps, le solide est moins dense que le liquide.",
+     "v": false,
+     "e": "FAUX : il est plus dense.",
+     "sourceQuote": "Pour presque tous les corps, le solide est plus dense que le liquide"
+    },
+    {
+     "t": "Chez presque tous les corps, le solide flotte dans son liquide, comme la glace.",
+     "v": false,
+     "e": "FAUX : chez presque tous les corps, le solide coule.",
+     "sourceQuote": "Pour presque tous les corps, le solide coule"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-009-eau-molecule-dipolaire.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 8,
+   "q": "La molécule d'eau n'est pas comme les autres, pour trois raisons. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Elle n'est pas linéaire : l'angle H–O–H vaut 104,5°.",
+     "v": true,
+     "e": "VRAI. C'est la première raison.",
+     "sourceQuote": "L'atome d' oxygène central est lié aux deux H avec un angle de 104,5°"
+    },
+    {
+     "t": "Cet angle est presque tétraédrique, à cause des deux doublets non liants portés par l'oxygène.",
+     "v": true,
+     "e": "VRAI. Ce sont ses paires d'électrons qui ne servent à aucune liaison.",
+     "sourceQuote": "presque tétraédrique, à cause des deux doublets non liants portés par l'oxygène"
+    },
+    {
+     "t": "L'oxygène, très électronégatif, attire les électrons et porte une charge partielle négative.",
+     "v": true,
+     "e": "VRAI. C'est la deuxième raison.",
+     "sourceQuote": "L'oxygène, très électronégatif , attire les électrons vers lui : il porte une charge partielle δ−"
+    },
+    {
+     "t": "Les barycentres des charges positives et négatives ne tombent pas au même endroit.",
+     "v": true,
+     "e": "VRAI. C'est la troisième raison, celle qui fait le dipôle.",
+     "sourceQuote": "Le barycentre des charges + (côté H) et celui des charges − (côté O) ne tombent pas au même endroit"
+    },
+    {
+     "t": "Les doublets non liants de l'oxygène sont des paires d'électrons engagées dans les liaisons O–H.",
+     "v": false,
+     "e": "FAUX : ce sont justement ses paires d'électrons qui ne servent à aucune liaison.",
+     "sourceQuote": "ses paires d'électrons qui ne servent à aucune liaison"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-009-eau-molecule-dipolaire.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 9,
+   "q": "La figure de la molécule d'eau porte trois éléments à repérer. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "L'angle H–O–H de 104,5° donne à la molécule sa forme coudée.",
+     "v": true,
+     "e": "VRAI. C'est le premier élément à voir sur la figure.",
+     "sourceQuote": "l'angle H–O–H de 104,5° qui donne à la molécule sa forme coudée"
+    },
+    {
+     "t": "Le δ− est posé sur l'oxygène et les deux δ+ sur les hydrogènes.",
+     "v": true,
+     "e": "VRAI. C'est le second élément.",
+     "sourceQuote": "le δ− posé sur l'oxygène et les deux δ+ sur les hydrogènes"
+    },
+    {
+     "t": "La flèche violette du moment dipolaire remonte du côté + vers le côté −.",
+     "v": true,
+     "e": "VRAI. C'est le troisième élément.",
+     "sourceQuote": "la flèche violette du moment dipolaire, qui remonte du côté + vers le côté −"
+    },
+    {
+     "t": "Cette flèche vaut µ = 1,84 D.",
+     "v": true,
+     "e": "VRAI. C'est la valeur portée par la figure.",
+     "sourceQuote": "et vaut µ = 1,84 D"
+    },
+    {
+     "t": "La molécule d'eau est un dipôle : un côté légèrement négatif, un côté légèrement positif.",
+     "v": true,
+     "e": "VRAI. C'est la conclusion tirée des barycentres.",
+     "sourceQuote": "La molécule est donc un dipôle : un côté légèrement négatif, un côté légèrement positif"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-009-eau-molecule-dipolaire.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 10,
+   "q": "Le moment dipolaire quantifie le caractère dipolaire d'une molécule. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "C'est un nombre qui mesure à quel point la molécule est un dipôle.",
+     "v": true,
+     "e": "VRAI. C'est sa définition.",
+     "sourceQuote": "un nombre qui mesure « à quel point la molécule est un dipôle »"
+    },
+    {
+     "t": "Plus il est grand, plus la molécule est polaire.",
+     "v": true,
+     "e": "VRAI. C'est le sens de lecture.",
+     "sourceQuote": "Plus il est grand, plus la molécule est polaire"
+    },
+    {
+     "t": "Il se calcule en multipliant la charge partielle par la distance qui sépare les charges + et −.",
+     "v": true,
+     "e": "VRAI. C'est la formule µ = q × d.",
+     "sourceQuote": "on multiplie la charge partielle (q) par la distance qui sépare les charges + et − (d)"
+    },
+    {
+     "t": "Il s'obtient en additionnant la charge partielle et la distance.",
+     "v": false,
+     "e": "FAUX : on les multiplie.",
+     "sourceQuote": "on multiplie la charge partielle (q) par la distance qui sépare les charges + et − (d)"
+    },
+    {
+     "t": "Séparer davantage les charges dans l'espace fait baisser ce nombre.",
+     "v": false,
+     "e": "FAUX : plus la charge est séparée dans l'espace, plus µ est élevé.",
+     "sourceQuote": "Plus la charge est grande, ou plus elle est séparée dans l'espace, plus µ est élevé"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-009-eau-molecule-dipolaire.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 11,
+   "q": "Le CO₂ sert de contre-exemple à l'eau. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le CO₂ est constitué de deux liaisons C=O très polaires.",
+     "v": true,
+     "e": "VRAI. Et pourtant son moment dipolaire est nul.",
+     "sourceQuote": "il est constitué de deux liaisons C=O très polaires"
+    },
+    {
+     "t": "Sa géométrie est linéaire.",
+     "v": true,
+     "e": "VRAI. O=C=O.",
+     "sourceQuote": "Parce que sa géométrie est linéaire (O=C=O)"
+    },
+    {
+     "t": "Ses deux dipôles pointent dans la même direction et s'additionnent.",
+     "v": false,
+     "e": "FAUX : ils pointent dans des directions opposées et s'annulent.",
+     "sourceQuote": "les deux dipôles pointent dans des directions opposées et s'annulent"
+    },
+    {
+     "t": "Le moment dipolaire du CO₂ vaut 1,84 D.",
+     "v": false,
+     "e": "FAUX : il vaut 0 D. C'est l'eau qui vaut 1,84 D.",
+     "sourceQuote": "Le CO₂ : µ = 0 D. Pourtant, il est constitué de deux liaisons C=O très polaires"
+    },
+    {
+     "t": "L'eau a un moment dipolaire parmi les plus faibles des petites molécules courantes.",
+     "v": false,
+     "e": "FAUX : c'est l'un des plus élevés.",
+     "sourceQuote": "C'est l'un des moments dipolaires les plus élevés parmi les petites molécules courantes"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-009-eau-molecule-dipolaire.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 12,
+   "q": "L'unité debye demande une mise au point. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le coulomb-mètre est l'unité officielle du Système International.",
+     "v": true,
+     "e": "VRAI. Le debye, lui, est une unité historique.",
+     "sourceQuote": "(coulomb-mètre, l'unité « officielle » du Système International)"
+    },
+    {
+     "t": "Le debye a été conçu pour manipuler des valeurs de l'ordre de 10⁻³⁰.",
+     "v": false,
+     "e": "FAUX : il a été conçu pour avoir des chiffres simples, de 1 à 5, au lieu de jongler avec des 10⁻³⁰.",
+     "sourceQuote": "conçue pour avoir des chiffres simples — de 1 à 5 — au lieu de jongler avec des 10⁻³⁰"
+    },
+    {
+     "t": "En QCM, c'est la conversion en coulomb-mètre qui est demandée, pas la valeur en debye.",
+     "v": false,
+     "e": "FAUX : c'est le chiffre en debye qu'on demande, pas la conversion.",
+     "sourceQuote": "En QCM, c'est le chiffre qu'on te demande, pas la conversion"
+    },
+    {
+     "t": "Le debye est l'unité officielle du Système International pour le moment dipolaire.",
+     "v": false,
+     "e": "FAUX : c'est une unité historique ; l'officielle est le coulomb-mètre.",
+     "sourceQuote": "Le debye est une unité historique"
+    },
+    {
+     "t": "Il faut connaître la conversion pour pouvoir retenir « 1,84 D pour l'eau ».",
+     "v": false,
+     "e": "FAUX : on peut retenir 1,84 D sans se soucier de la conversion.",
+     "sourceQuote": "Tu peux retenir « 1,84 D pour l'eau » sans te soucier de la conversion"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-009-eau-molecule-dipolaire.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 13,
+   "q": "La fiche part d'un problème quotidien : le sel se dissout, l'huile non. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le sel versé dans un verre d'eau disparaît, l'huile reste en surface.",
+     "v": true,
+     "e": "VRAI. C'est l'accroche de la fiche.",
+     "sourceQuote": "Le sel disparaît dans le verre, l'huile reste en surface"
+    },
+    {
+     "t": "Toute la différence tient dans un angle.",
+     "v": true,
+     "e": "VRAI. C'est ce que l'accroche annonce.",
+     "sourceQuote": "Toute la différence tient dans un angle"
+    },
+    {
+     "t": "Ce comportement vient d'une particularité à la fois géométrique et électrique de l'eau.",
+     "v": true,
+     "e": "VRAI. L'eau est polaire.",
+     "sourceQuote": "Ce comportement vient d'une particularité géométrique et électrique de l'eau : elle est polaire"
+    },
+    {
+     "t": "Cette fiche traite de la cause de l'anomalie vue à la fiche précédente : la forme de la molécule.",
+     "v": true,
+     "e": "VRAI. C'est le lien annoncé entre les deux fiches.",
+     "sourceQuote": "On passe maintenant à la cause de cette anomalie : la forme de la molécule"
+    },
+    {
+     "t": "La polarité de l'eau n'explique rien d'autre que la dissolution du sel.",
+     "v": false,
+     "e": "FAUX : c'est de cette polarité que découlent toutes les propriétés étonnantes de l'eau vues ensuite.",
+     "sourceQuote": "c'est de cette polarité que découlent, une par une, toutes les propriétés étonnantes de l'eau"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-009-eau-molecule-dipolaire.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 14,
+   "q": "Le moyen mnémotechnique de la fiche oppose l'eau au CO₂. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "L'eau est coudée à 104,5°, si bien que les deux dipôles O–H ne s'annulent pas.",
+     "v": true,
+     "e": "VRAI. Ils s'additionnent au lieu de s'annuler.",
+     "sourceQuote": "L'eau, elle, est coudée à 104,5° → les deux dipôles O–H ne s'annulent pas, ils s'additionnent"
+    },
+    {
+     "t": "Il en résulte un moment dipolaire élevé.",
+     "v": true,
+     "e": "VRAI. 1,84 D pour l'eau.",
+     "sourceQuote": "ils s'additionnent → µ élevé"
+    },
+    {
+     "t": "C'est la géométrie qui fait toute la différence.",
+     "v": true,
+     "e": "VRAI. C'est la conclusion du moyen mnémotechnique.",
+     "sourceQuote": "C'est la géométrie qui fait toute la différence"
+    },
+    {
+     "t": "Il faut garder cette molécule coudée en tête pour la suite du chapitre.",
+     "v": true,
+     "e": "VRAI. Les fiches suivantes en découlent.",
+     "sourceQuote": "Garde cette molécule coudée en tête"
+    },
+    {
+     "t": "Des liaisons polaires ne font pas forcément une molécule polaire.",
+     "v": true,
+     "e": "VRAI. Le CO₂ le démontre — deux liaisons polaires, un moment dipolaire nul.",
+     "sourceQuote": "Des liaisons polaires ne font pas forcément une molécule polaire"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-009-eau-molecule-dipolaire.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 15,
+   "q": "Le résumé de la fiche rassemble angle, charges et moment dipolaire. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "L'eau est coudée à 104,5°, avec l'oxygène en δ− et les deux hydrogènes en δ+.",
+     "v": true,
+     "e": "VRAI. C'est la première ligne du résumé.",
+     "sourceQuote": "L'eau est coudée à 104,5° : O en δ− , les deux H en δ+"
+    },
+    {
+     "t": "Les barycentres des charges + et − ne se superposent pas, donc la molécule est un dipôle.",
+     "v": true,
+     "e": "VRAI. C'est la conclusion du résumé.",
+     "sourceQuote": "Les barycentres des charges + et − ne se superposent pas → la molécule est un dipôle"
+    },
+    {
+     "t": "Son moment dipolaire vaut µ = q × d = 1,84 D.",
+     "v": true,
+     "e": "VRAI. C'est la valeur du résumé.",
+     "sourceQuote": "de moment µ = q × d = 1,84 D"
+    },
+    {
+     "t": "C'est la polarité des liaisons, et non la géométrie, qui tranche.",
+     "v": false,
+     "e": "FAUX : c'est la géométrie qui tranche.",
+     "sourceQuote": "C'est la géométrie qui tranche"
+    },
+    {
+     "t": "Le CO₂ a un moment dipolaire non nul malgré sa géométrie linéaire.",
+     "v": false,
+     "e": "FAUX : son moment dipolaire est nul, précisément à cause de sa géométrie linéaire.",
+     "sourceQuote": "Le CO₂ a deux liaisons C=O très polaires et pourtant µ = 0 D : sa géométrie linéaire annule les deux dipôles"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-010-ponts-hydrogene-transpiration.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 8,
+   "q": "La polarité de l'eau a une première conséquence entre molécules. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Les molécules d'eau se collent entre elles.",
+     "v": true,
+     "e": "VRAI. C'est la première conséquence de la polarité.",
+     "sourceQuote": "les molécules d'eau se collent entre elles"
+    },
+    {
+     "t": "Un H δ+ d'une molécule s'aligne avec un O δ− d'une autre.",
+     "v": true,
+     "e": "VRAI. C'est le mécanisme du pont hydrogène.",
+     "sourceQuote": "Un H δ+ d'une molécule s'aligne avec un O δ− d'une autre"
+    },
+    {
+     "t": "Cette liaison porte le nom de liaison hydrogène, ou pont H.",
+     "v": true,
+     "e": "VRAI. Les deux noms sont donnés.",
+     "sourceQuote": "c'est la liaison hydrogène , ou pont H"
+    },
+    {
+     "t": "Chaque molécule d'eau peut établir jusqu'à 4 liaisons hydrogène avec ses voisines.",
+     "v": true,
+     "e": "VRAI. C'est le premier des trois nombres à retenir.",
+     "sourceQuote": "Chaque molécule d'eau peut établir jusqu'à 4 liaisons hydrogène avec ses voisines"
+    },
+    {
+     "t": "Les ponts hydrogène sont présentés comme la « colle » de l'eau.",
+     "v": true,
+     "e": "VRAI. C'est le titre de la section.",
+     "sourceQuote": "Les ponts hydrogène, la « colle » de l'eau"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-010-ponts-hydrogene-transpiration.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 9,
+   "q": "Un étudiant décrit la force des ponts hydrogène. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Chaque pont hydrogène est plus fort qu'une liaison covalente.",
+     "v": false,
+     "e": "FAUX : il est environ 10 fois plus faible.",
+     "sourceQuote": "Ces liaisons sont 10 fois plus faibles qu'une liaison covalente"
+    },
+    {
+     "t": "C'est la force individuelle de chaque pont qui explique la cohésion de l'eau.",
+     "v": false,
+     "e": "FAUX : c'est la quantité qui fait la force, pas l'unité.",
+     "sourceQuote": "C'est la quantité qui fait la force, pas l'unité"
+    },
+    {
+     "t": "Leur nombre est gigantesque.",
+     "v": true,
+     "e": "VRAI. Faibles une par une, mais innombrables.",
+     "sourceQuote": "mais leur nombre est gigantesque"
+    },
+    {
+     "t": "Le détail des liaisons hydrogène est traité dans cette fiche.",
+     "v": false,
+     "e": "FAUX : le détail relève du chapitre 6 de chimie.",
+     "sourceQuote": "le détail des liaisons H, c'est Chimie ch.6"
+    },
+    {
+     "t": "Chaque molécule d'eau peut établir jusqu'à 6 liaisons hydrogène.",
+     "v": false,
+     "e": "FAUX : jusqu'à 4.",
+     "sourceQuote": "jusqu'à 4 liaisons hydrogène avec ses voisines"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-010-ponts-hydrogene-transpiration.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 10,
+   "q": "La chaleur latente de vaporisation de l'eau découle de ces ponts. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Pour évaporer 1 g d'eau, il faut casser un grand nombre de ponts hydrogène.",
+     "v": true,
+     "e": "VRAI. D'où l'énergie nécessaire.",
+     "sourceQuote": "Pour évaporer 1 g d'eau , il faut casser un grand nombre de ponts H"
+    },
+    {
+     "t": "Il faut donc fournir beaucoup d'énergie : environ 540 cal par gramme.",
+     "v": true,
+     "e": "VRAI. C'est le deuxième des trois nombres à retenir.",
+     "sourceQuote": "donc fournir beaucoup d'énergie : environ 540 cal par gramme"
+    },
+    {
+     "t": "Cette chaleur latente de vaporisation est qualifiée d'énorme.",
+     "v": true,
+     "e": "VRAI. C'est le titre de ce point.",
+     "sourceQuote": "D'où une chaleur latente de vaporisation énorme"
+    },
+    {
+     "t": "L'énergie de l'évaporation n'est jamais gratuite.",
+     "v": true,
+     "e": "VRAI. Elle est prise quelque part — ici, à la peau.",
+     "sourceQuote": "l'énergie de l'évaporation n'est jamais gratuite"
+    },
+    {
+     "t": "Il faut environ 54 cal pour évaporer 1 g d'eau.",
+     "v": false,
+     "e": "FAUX : environ 540 cal par gramme.",
+     "sourceQuote": "environ 540 cal par gramme"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-010-ponts-hydrogene-transpiration.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 11,
+   "q": "La transpiration en tire une conséquence physiologique directe. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "La transpiration est un mécanisme de refroidissement extrêmement efficace.",
+     "v": true,
+     "e": "VRAI. C'est la conséquence directe de la chaleur latente élevée.",
+     "sourceQuote": "la transpiration est un mécanisme de refroidissement extrêmement efficace"
+    },
+    {
+     "t": "L'énergie nécessaire à l'évaporation est prélevée directement à la peau.",
+     "v": true,
+     "e": "VRAI. C'est cette chaleur arrachée au corps qui refroidit.",
+     "sourceQuote": "l'énergie nécessaire à cette évaporation est prélevée directement à ta peau"
+    },
+    {
+     "t": "Le corps ne déclenche la transpiration qu'en cas de fièvre.",
+     "v": false,
+     "e": "FAUX : il la déclenche aussi à l'effort intense et par chaleur extérieure.",
+     "sourceQuote": "il déclenche la transpiration dès qu'il a besoin de se refroidir : fièvre, effort intense, chaleur extérieure"
+    },
+    {
+     "t": "En s'évaporant, la sueur cède de la chaleur à la peau et la réchauffe.",
+     "v": false,
+     "e": "FAUX : c'est la chaleur arrachée au corps qui le refroidit.",
+     "sourceQuote": "c'est cette chaleur arrachée à ton corps qui te refroidit"
+    },
+    {
+     "t": "Le corps ne peut évacuer par la sueur qu'une part négligeable de l'énergie d'un repas.",
+     "v": false,
+     "e": "FAUX : il peut en évacuer l'équivalent énergétique complet.",
+     "sourceQuote": "Ton corps peut donc évacuer en sueur l'équivalent énergétique d'un repas complet"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-010-ponts-hydrogene-transpiration.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 12,
+   "q": "Le calcul du litre de sueur se déroule en trois temps dans la fiche. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le premier temps donne la masse : 1 L de sueur pèse environ 1000 g.",
+     "v": true,
+     "e": "VRAI. C'est de l'eau, de masse volumique 1 g/mL.",
+     "sourceQuote": "1 L de sueur pèse ~1000 g (c'est de l'eau, ρ = 1 g/mL)"
+    },
+    {
+     "t": "Le deuxième temps donne le prix du gramme : 540 cal.",
+     "v": true,
+     "e": "VRAI. C'est la chaleur latente de vaporisation.",
+     "sourceQuote": "Chaque gramme évaporé coûte 540 cal"
+    },
+    {
+     "t": "Le troisième temps donne 540 000 cal, soit 540 kcal.",
+     "v": true,
+     "e": "VRAI. C'est le produit des deux étapes.",
+     "sourceQuote": "1000 g × 540 cal/g = 540 000 cal = 540 kcal"
+    },
+    {
+     "t": "1 kcal vaut 100 cal.",
+     "v": false,
+     "e": "FAUX : 1 kcal vaut 1000 cal.",
+     "sourceQuote": "1 kcal = 1000 cal"
+    },
+    {
+     "t": "540 kcal correspond à l'équivalent d'une simple collation.",
+     "v": false,
+     "e": "FAUX : c'est l'équivalent d'un repas.",
+     "sourceQuote": "540 kcal, c'est l'équivalent d'un repas"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-010-ponts-hydrogene-transpiration.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 13,
+   "q": "La fiche fait une mise au point sur le mot « calorie ». Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Les « calories » lues sur les paquets de gâteaux sont en réalité des kilocalories.",
+     "v": true,
+     "e": "VRAI. C'est la mise au point de la fiche.",
+     "sourceQuote": "les « calories » qu'on lit sur les paquets de gâteaux sont en réalité des kilo calories"
+    },
+    {
+     "t": "Il ne faut pas confondre cal et kcal.",
+     "v": true,
+     "e": "VRAI. C'est le piège signalé.",
+     "sourceQuote": "Ne confonds pas cal et kcal"
+    },
+    {
+     "t": "Un facteur 1000 oublié rend le résultat mille fois faux.",
+     "v": true,
+     "e": "VRAI. C'est la conséquence de la confusion.",
+     "sourceQuote": "Un facteur 1000 oublié, et ton résultat est mille fois faux"
+    },
+    {
+     "t": "540 cal/g multipliés par 1000 g donnent 540 000 cal, soit 540 kcal, et non 540 cal.",
+     "v": true,
+     "e": "VRAI. C'est le calcul rappelé dans le piège.",
+     "sourceQuote": "540 cal/g × 1000 g = 540 000 cal, soit 540 kcal — et non 540 cal"
+    },
+    {
+     "t": "L'accroche de la fiche annonce que l'évaporation de 1 litre de sueur évacue 540 kcal.",
+     "v": true,
+     "e": "VRAI. C'est l'équivalent d'un repas, pris sur la peau.",
+     "sourceQuote": "Évaporer 1 litre de sueur évacue 540 kcal"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-010-ponts-hydrogene-transpiration.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 14,
+   "q": "Trois nombres suffisent à refaire tout le raisonnement en QCM. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le premier est 6 ponts H au maximum par molécule d'eau.",
+     "v": false,
+     "e": "FAUX : 4 ponts H au maximum.",
+     "sourceQuote": "4 ponts H au maximum par molécule d'eau"
+    },
+    {
+     "t": "Le deuxième est 54 cal/g de chaleur latente de vaporisation.",
+     "v": false,
+     "e": "FAUX : 540 cal/g.",
+     "sourceQuote": "540 cal/g de chaleur latente de vaporisation"
+    },
+    {
+     "t": "Le troisième est 1 kcal = 100 cal.",
+     "v": false,
+     "e": "FAUX : 1 kcal = 1000 cal.",
+     "sourceQuote": "1 kcal = 1000 cal"
+    },
+    {
+     "t": "L'idée derrière ces trois nombres : l'énergie de l'évaporation est prise quelque part, ici à la peau.",
+     "v": true,
+     "e": "VRAI. C'est ce que la fiche demande de retenir en plus des chiffres.",
+     "sourceQuote": "elle est prise quelque part , ici à ta peau"
+    },
+    {
+     "t": "Il faut en réalité cinq nombres pour refaire le raisonnement.",
+     "v": false,
+     "e": "FAUX : trois suffisent.",
+     "sourceQuote": "Trois nombres suffisent à refaire tout le raisonnement en QCM"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-010-ponts-hydrogene-transpiration.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 15,
+   "q": "Le résumé de la fiche rassemble les ponts H et la chaleur latente. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Chaque molécule d'eau établit jusqu'à 4 ponts H avec ses voisines, un H δ+ face à un O δ−.",
+     "v": true,
+     "e": "VRAI. C'est la première ligne du résumé.",
+     "sourceQuote": "Chaque molécule d'eau établit jusqu'à 4 ponts H avec ses voisines (H δ+ face à O δ−)"
+    },
+    {
+     "t": "Ces ponts sont dix fois plus faibles qu'une liaison covalente, mais en nombre gigantesque.",
+     "v": true,
+     "e": "VRAI. C'est ce qui fait leur force collective.",
+     "sourceQuote": "Dix fois plus faibles qu'une covalente, mais en nombre gigantesque"
+    },
+    {
+     "t": "Il en résulte une chaleur latente de vaporisation d'environ 540 cal/g.",
+     "v": true,
+     "e": "VRAI. C'est la conséquence chiffrée.",
+     "sourceQuote": "chaleur latente de vaporisation ≈ 540 cal/g"
+    },
+    {
+     "t": "1 L de sueur évaporé évacue 540 kcal.",
+     "v": true,
+     "e": "VRAI. C'est le chiffre final du résumé.",
+     "sourceQuote": "1 L de sueur évaporé évacue 540 kcal"
+    },
+    {
+     "t": "Dans la molécule d'eau, l'oxygène porte le δ+ et les hydrogènes le δ−.",
+     "v": false,
+     "e": "FAUX : c'est l'inverse — H δ+ face à O δ−.",
+     "sourceQuote": "jusqu'à 4 ponts H avec ses voisines (H δ+ face à O δ−)"
+    }
+   ]
+  }
+ ]
+}

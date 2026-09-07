@@ -1,0 +1,631 @@
+{
+ "matiere": "biologie",
+ "chapitre": 1,
+ "note": "Renfort d'arène (lots 8 à 15, tous ar:1) pour les fiches de biologie de la séance 18 du Parcours. Le socle des lots 1-7 reste dans biologie-ch01-p3.json et lot-biologie-009-procaryote-vs-eucaryote.json.",
+ "questions": [
+  {
+   "fiche": "biologie-009-procaryote-vs-eucaryote.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 8,
+   "q": "Un étudiant lit la ligne « Taille » du tableau comparatif. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le procaryote mesure 1 à 10 µm, l'eucaryote 10 à 100 µm.",
+     "v": true,
+     "e": "VRAI. C'est la première ligne du tableau.",
+     "sourceQuote": "Taille 1-10 µm 10-100 µm"
+    },
+    {
+     "t": "Les deux intervalles se touchent à 10 µm.",
+     "v": true,
+     "e": "VRAI. La fiche demande de retenir les bornes telles quelles.",
+     "sourceQuote": "Les deux intervalles se touchent à 10 µm : retiens les bornes telles quelles"
+    },
+    {
+     "t": "Cette taille de procaryote diffère de celle que la fiche sur les trois domaines donnait aux bactéries.",
+     "v": false,
+     "e": "FAUX : c'est exactement la même — la fiche sur les trois domaines la donnait déjà aux bactéries.",
+     "sourceQuote": "c'est la taille que la fiche sur les trois domaines donnait déjà aux bactéries"
+    },
+    {
+     "t": "L'eucaryote mesure 1 à 10 µm.",
+     "v": false,
+     "e": "FAUX : c'est la taille du procaryote. L'eucaryote va de 10 à 100 µm.",
+     "sourceQuote": "Taille 1-10 µm 10-100 µm"
+    },
+    {
+     "t": "Cette fiche introduit huit critères entièrement nouveaux.",
+     "v": false,
+     "e": "FAUX : elle n'ajoute aucune notion, elle range en deux colonnes ce qui a déjà été vu.",
+     "sourceQuote": "Cette fiche n'ajoute aucune notion : elle range tout ça en deux colonnes"
+    }
+   ]
+  },
+  {
+   "fiche": "biologie-009-procaryote-vs-eucaryote.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 9,
+   "q": "Les lignes « Noyau » et « ADN » séparent nettement les deux colonnes. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Chez le procaryote, le noyau est absent et l'ADN occupe le nucléoïde.",
+     "v": true,
+     "e": "VRAI. C'est la deuxième ligne du tableau.",
+     "sourceQuote": "Absent chez le procaryote : son ADN occupe le nucléoïde"
+    },
+    {
+     "t": "Le nucléoïde est une région du cytoplasme qui n'est pas entourée d'une membrane.",
+     "v": true,
+     "e": "VRAI. C'est la définition donnée.",
+     "sourceQuote": "cette région du cytoplasme qui n'est pas entourée d'une membrane"
+    },
+    {
+     "t": "Chez l'eucaryote, le noyau est présent et délimité par une enveloppe nucléaire.",
+     "v": true,
+     "e": "VRAI. C'est l'autre colonne.",
+     "sourceQuote": "Présent chez l'eucaryote, délimité par une enveloppe nucléaire"
+    },
+    {
+     "t": "L'ADN procaryote est circulaire et unique : c'est le chromosome bactérien.",
+     "v": true,
+     "e": "VRAI. C'est la troisième ligne du tableau.",
+     "sourceQuote": "Circulaire et unique chez le procaryote (le chromosome bactérien)"
+    },
+    {
+     "t": "Chez l'eucaryote, l'ADN est circulaire et unique.",
+     "v": false,
+     "e": "FAUX : il est linéaire et réparti en chromosomes multiples, dans le noyau.",
+     "sourceQuote": "Linéaire et réparti en chromosomes multiples chez l'eucaryote, dans le noyau"
+    }
+   ]
+  },
+  {
+   "fiche": "biologie-009-procaryote-vs-eucaryote.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 10,
+   "q": "La ligne « Ribosomes » comporte une exception à savoir expliquer. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le procaryote a des ribosomes 70S, l'eucaryote des 80S.",
+     "v": true,
+     "e": "VRAI. C'est la quatrième ligne du tableau.",
+     "sourceQuote": "70S chez le procaryote. 80S chez l'eucaryote"
+    },
+    {
+     "t": "Les mitochondries de l'eucaryote portent des ribosomes 80S, comme le reste de la cellule.",
+     "v": false,
+     "e": "FAUX : elles gardent des ribosomes 70S.",
+     "sourceQuote": "80S chez l'eucaryote — mais 70S dans les mitochondries"
+    },
+    {
+     "t": "Cette exception des mitochondries reste sans explication à ce stade du chapitre.",
+     "v": false,
+     "e": "FAUX : on sait déjà l'expliquer — c'est l'une des quatre preuves de l'endosymbiose.",
+     "sourceQuote": "Cette exception, tu sais déjà l'expliquer : c'est l'une des quatre preuves de l' endosymbiose"
+    },
+    {
+     "t": "L'eucaryote possède des ribosomes 70S dans tout son cytoplasme.",
+     "v": false,
+     "e": "FAUX : ses 70S sont dans ses mitochondries ; ailleurs, ce sont des 80S.",
+     "sourceQuote": "80S chez l'eucaryote — mais 70S dans les mitochondries"
+    },
+    {
+     "t": "Le procaryote possède à la fois des ribosomes 70S et 80S.",
+     "v": false,
+     "e": "FAUX : il n'a que des 70S.",
+     "sourceQuote": "70S chez le procaryote"
+    }
+   ]
+  },
+  {
+   "fiche": "biologie-009-procaryote-vs-eucaryote.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 11,
+   "q": "La ligne « Paroi » est décrite comme la plus glissante du tableau. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Elle est glissante parce qu'elle ne se retient pas en un mot.",
+     "v": true,
+     "e": "VRAI. C'est ce que la fiche en dit.",
+     "sourceQuote": "C'est la ligne la plus glissante, parce qu'elle ne se retient pas en un mot"
+    },
+    {
+     "t": "Chez le procaryote, c'est le peptidoglycane des bactéries.",
+     "v": true,
+     "e": "VRAI. Structure rigide qui protège la bactérie et lui donne sa forme.",
+     "sourceQuote": "Chez le procaryote : peptidoglycane (bactéries"
+    },
+    {
+     "t": "Chez l'eucaryote, elle change selon le règne : cellulose, chitine, ou absente.",
+     "v": true,
+     "e": "VRAI. Plantes, champignons, animaux.",
+     "sourceQuote": "cellulose chez les plantes, chitine chez les champignons, absente chez les animaux"
+    },
+    {
+     "t": "Chez les champignons, la paroi est faite de cellulose.",
+     "v": false,
+     "e": "FAUX : de chitine. La cellulose, c'est chez les plantes.",
+     "sourceQuote": "cellulose chez les plantes, chitine chez les champignons"
+    },
+    {
+     "t": "La ligne Paroi appartient en propre au camp des procaryotes.",
+     "v": false,
+     "e": "FAUX : elle n'appartient en propre à aucun camp.",
+     "sourceQuote": "La ligne Paroi n'appartient en propre à aucun camp"
+    }
+   ]
+  },
+  {
+   "fiche": "biologie-009-procaryote-vs-eucaryote.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 12,
+   "q": "Les deux dernières lignes du tableau portent sur la division et l'ARNr. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le procaryote se divise par scissiparité, la division binaire de la bactérie.",
+     "v": true,
+     "e": "VRAI. C'est la septième ligne.",
+     "sourceQuote": "Scissiparité chez le procaryote (la division binaire de la bactérie)"
+    },
+    {
+     "t": "L'eucaryote se divise par mitose ou par méiose.",
+     "v": true,
+     "e": "VRAI. C'est l'autre colonne de la même ligne.",
+     "sourceQuote": "Mitose ou méiose chez l'eucaryote"
+    },
+    {
+     "t": "L'ARNr de classification est le 16S pour les procaryotes et le 18S pour les eucaryotes.",
+     "v": true,
+     "e": "VRAI. C'est la huitième ligne.",
+     "sourceQuote": "16S pour les procaryotes, 18S pour les eucaryotes"
+    },
+    {
+     "t": "Ces codes-barres moléculaires servent à construire l'arbre du vivant.",
+     "v": true,
+     "e": "VRAI. C'est leur rôle, rappelé ici.",
+     "sourceQuote": "les codes-barres moléculaires qui servent à construire l'arbre du vivant"
+    },
+    {
+     "t": "Chacune des huit lignes est une question possible en QCM.",
+     "v": true,
+     "e": "VRAI. C'est le titre même de la section détaillée.",
+     "sourceQuote": "chacune est une question possible"
+    }
+   ]
+  },
+  {
+   "fiche": "biologie-009-procaryote-vs-eucaryote.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 13,
+   "q": "La fiche indique comment apprendre ce tableau. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Il faut l'apprendre ligne par ligne, jamais en bloc.",
+     "v": true,
+     "e": "VRAI. C'est la consigne de la fiche.",
+     "sourceQuote": "Apprends ce tableau ligne par ligne , jamais en bloc"
+    },
+    {
+     "t": "Un item de QCM isolera une case et l'attribuera à la mauvaise colonne.",
+     "v": true,
+     "e": "VRAI. C'est la forme que prend la question.",
+     "sourceQuote": "il isolera une case et l'attribuera à la mauvaise colonne"
+    },
+    {
+     "t": "Il faut s'entraîner à le réciter dans les deux sens.",
+     "v": true,
+     "e": "VRAI. De la caractéristique vers les colonnes, puis d'une valeur isolée vers sa colonne.",
+     "sourceQuote": "Entraîne-toi à le réciter dans les deux sens"
+    },
+    {
+     "t": "Le cours demande d'apprendre ce tableau par cœur.",
+     "v": true,
+     "e": "VRAI. Les questions sur ce tableau sont très fréquentes en première année.",
+     "sourceQuote": "Apprenez-le par cœur !"
+    },
+    {
+     "t": "Un item de QCM demandera de restituer le tableau entier d'un seul coup.",
+     "v": false,
+     "e": "FAUX : il ne demandera pas « le tableau », il isolera une case.",
+     "sourceQuote": "Un item de QCM ne te demandera pas « le tableau »"
+    }
+   ]
+  },
+  {
+   "fiche": "biologie-009-procaryote-vs-eucaryote.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 14,
+   "q": "Le résumé range les huit caractéristiques en deux lignes. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Procaryote : 10-100 µm, enveloppe nucléaire, ADN linéaire.",
+     "v": false,
+     "e": "FAUX : ce sont les caractères de l'eucaryote. Le procaryote fait 1-10 µm, avec nucléoïde et ADN circulaire unique.",
+     "sourceQuote": "Procaryote : 1-10 µm · nucléoïde · ADN circulaire unique"
+    },
+    {
+     "t": "Procaryote : organites présents, division par mitose, ARNr 18S.",
+     "v": false,
+     "e": "FAUX : pas d'organites, scissiparité, ARNr 16S.",
+     "sourceQuote": "pas d'organites · peptidoglycane · scissiparité · ARNr 16S"
+    },
+    {
+     "t": "Eucaryote : 10-100 µm, enveloppe nucléaire, ADN linéaire en chromosomes multiples.",
+     "v": true,
+     "e": "VRAI. C'est la seconde ligne du résumé.",
+     "sourceQuote": "Eucaryote : 10-100 µm · enveloppe nucléaire · ADN linéaire en chromosomes multiples"
+    },
+    {
+     "t": "Eucaryote : ribosomes 70S, pas d'organites, division par scissiparité.",
+     "v": false,
+     "e": "FAUX : ribosomes 80S, organites présents, mitose ou méiose.",
+     "sourceQuote": "ribosomes 80S · organites · paroi variable ou absente · mitose/méiose · ARNr 18S"
+    },
+    {
+     "t": "Un item qui donne une paroi de peptidoglycane à une cellule humaine est exact.",
+     "v": false,
+     "e": "FAUX : chez les animaux, donc chez nous, la paroi est absente.",
+     "sourceQuote": "Un item qui donne une paroi de peptidoglycane à une cellule humaine est FAUX"
+    }
+   ]
+  },
+  {
+   "fiche": "biologie-009-procaryote-vs-eucaryote.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 15,
+   "q": "La fiche se referme sur ce qui n'entre dans aucune des deux colonnes. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Cette fiche n'ajoute aucune notion : elle range en deux colonnes ce qui a déjà été vu.",
+     "v": true,
+     "e": "VRAI. Les huit critères ont été rencontrés un par un.",
+     "sourceQuote": "Cette fiche n'ajoute aucune notion : elle range tout ça en deux colonnes"
+    },
+    {
+     "t": "Il reste un objet biologique qui ne remplit aucune des huit lignes du tableau.",
+     "v": true,
+     "e": "VRAI. C'est le virus, objet de la fiche suivante.",
+     "sourceQuote": "il reste un objet biologique qui ne remplit aucune des huit lignes de ce tableau"
+    },
+    {
+     "t": "Cet objet occupe une troisième colonne du tableau.",
+     "v": false,
+     "e": "FAUX : le chapitre l'a mis à part, il n'a pas de colonne.",
+     "sourceQuote": "que le chapitre a donc mis à part"
+    },
+    {
+     "t": "Les organites de la cellule eucaryote sont détaillés une nouvelle fois dans cette fiche.",
+     "v": false,
+     "e": "FAUX : c'était la fiche précédente, on ne les rouvre pas ici.",
+     "sourceQuote": "c'est la fiche précédente, on ne les rouvre pas ici"
+    },
+    {
+     "t": "L'exception des ribosomes 70S dans les mitochondries reste inexpliquée à ce stade.",
+     "v": false,
+     "e": "FAUX : on sait déjà l'expliquer — c'est une des quatre preuves de l'endosymbiose.",
+     "sourceQuote": "Cette exception, tu sais déjà l'expliquer"
+    }
+   ]
+  },
+  {
+   "fiche": "biologie-010-virus-frontieres-du-vivant.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 8,
+   "q": "Le virus est présenté comme une entité très particulière. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Les virus ne sont pas considérés comme vivants car ils ne peuvent pas fonctionner seuls.",
+     "v": true,
+     "e": "VRAI. C'est le critère qui les met à part.",
+     "sourceQuote": "ils ne sont pas considérés comme vivants car ils ne peuvent pas fonctionner seuls"
+    },
+    {
+     "t": "Un virus est comparé à un parasite absolu.",
+     "v": true,
+     "e": "VRAI. Il doit obligatoirement infecter une cellule pour se multiplier.",
+     "sourceQuote": "Un virus est comme un parasite absolu"
+    },
+    {
+     "t": "Il mesure 20 à 300 nm, soit environ 1000 fois moins qu'une bactérie.",
+     "v": true,
+     "e": "VRAI. Le nanomètre est le milliardième de mètre.",
+     "sourceQuote": "20 à 300 nm (nanomètres = milliardièmes de mètre) — soit 1000 fois plus petits que les bactéries"
+    },
+    {
+     "t": "Ce n'est pas une cellule : juste une coque de protéines contenant du matériel génétique.",
+     "v": true,
+     "e": "VRAI. C'est le point qui décide de tout le reste.",
+     "sourceQuote": "Ce n'est pas une cellule : juste une coque de protéines contenant du matériel génétique"
+    },
+    {
+     "t": "Il dépend totalement d'une cellule hôte.",
+     "v": true,
+     "e": "VRAI. Sans elle, pas de reproduction possible.",
+     "sourceQuote": "Il dépend totalement d'une cellule hôte"
+    }
+   ]
+  },
+  {
+   "fiche": "biologie-010-virus-frontieres-du-vivant.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 9,
+   "q": "La structure d'un virus se démonte en deux ou trois éléments. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le génome est soit de l'ADN, soit de l'ARN, jamais les deux en même temps.",
+     "v": true,
+     "e": "VRAI. C'est la règle du génome viral.",
+     "sourceQuote": "Soit de l' ADN , soit de l' ARN — jamais les deux en même temps"
+    },
+    {
+     "t": "Le VIH a un génome à ARN, le virus de l'hépatite B un génome à ADN.",
+     "v": true,
+     "e": "VRAI. Ce sont les deux exemples qui fixent la règle.",
+     "sourceQuote": "le VIH a un génome à ARN (c'est un rétrovirus) , le virus de l' hépatite B a un génome à ADN"
+    },
+    {
+     "t": "La capside est la coque protectrice, faite de protéines.",
+     "v": true,
+     "e": "VRAI. Avec le génome, elle forme le minimum vital de tout virus.",
+     "sourceQuote": "La coque protectrice , faite de protéines , qui protège le génome"
+    },
+    {
+     "t": "L'enveloppe lipidique est présente chez tous les virus.",
+     "v": false,
+     "e": "FAUX : elle est optionnelle.",
+     "sourceQuote": "Une enveloppe lipidique — optionnelle"
+    },
+    {
+     "t": "Cette enveloppe est fabriquée par le virus lui-même.",
+     "v": false,
+     "e": "FAUX : elle vient de l'hôte — un morceau de membrane volé à la cellule infectée.",
+     "sourceQuote": "Elle ne vient donc pas du virus : elle vient de l'hôte"
+    }
+   ]
+  },
+  {
+   "fiche": "biologie-010-virus-frontieres-du-vivant.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 10,
+   "q": "Trois raisons expliquent que les virus ne soient pas rangés parmi les vivants. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Ils n'ont pas de ribosomes, ni 70S ni 80S.",
+     "v": true,
+     "e": "VRAI. Ils ne peuvent donc pas fabriquer leurs propres protéines.",
+     "sourceQuote": "Ils ne peuvent pas fabriquer leurs propres protéines — ni 70S, ni 80S, aucun"
+    },
+    {
+     "t": "Ils ne produisent pas d'énergie : ils ne créent pas d'ATP.",
+     "v": true,
+     "e": "VRAI. C'est la deuxième raison.",
+     "sourceQuote": "Pas de production d'énergie. Ils ne créent pas d'ATP"
+    },
+    {
+     "t": "Ils doivent pirater une cellule pour utiliser ses ribosomes, son ATP et ses enzymes.",
+     "v": true,
+     "e": "VRAI. C'est la troisième raison.",
+     "sourceQuote": "Ils doivent « pirater » une cellule pour utiliser ses ribosomes, son ATP, ses enzymes"
+    },
+    {
+     "t": "Pour être vivant, il faut pouvoir fonctionner de façon autonome.",
+     "v": true,
+     "e": "VRAI. C'est la logique qui range les virus à part.",
+     "sourceQuote": "pour être vivant, il faut pouvoir fonctionner de façon autonome"
+    },
+    {
+     "t": "C'est leur très petite taille qui suffit à les classer hors du vivant.",
+     "v": false,
+     "e": "FAUX : c'est leur incapacité à fonctionner seuls.",
+     "sourceQuote": "Les virus ne le peuvent pas — et c'est pour ça qu'on les range à part"
+    }
+   ]
+  },
+  {
+   "fiche": "biologie-010-virus-frontieres-du-vivant.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 11,
+   "q": "La figure oppose un virus nu à un virus enveloppé. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Les deux ont en commun le génome au centre et la capside de protéines autour.",
+     "v": true,
+     "e": "VRAI. C'est ce que la légende demande de chercher d'abord.",
+     "sourceQuote": "le génome au centre, la capside de protéines autour"
+    },
+    {
+     "t": "L'enveloppe lipidique externe porte des glycoprotéines de surface.",
+     "v": true,
+     "e": "VRAI. Elle seule change d'un schéma à l'autre.",
+     "sourceQuote": "l' enveloppe lipidique externe, avec ses glycoprotéines de surface"
+    },
+    {
+     "t": "L'étiquette de cette enveloppe indique qu'elle est fabriquée par le virus.",
+     "v": false,
+     "e": "FAUX : elle indique « dérivée de la cellule hôte ».",
+     "sourceQuote": "« dérivée de la cellule hôte » — c'est le morceau de membrane volé à la cellule infectée"
+    },
+    {
+     "t": "Un virus nu est un virus incomplet.",
+     "v": false,
+     "e": "FAUX : un virus nu est un virus complet.",
+     "sourceQuote": "un virus nu est un virus complet"
+    },
+    {
+     "t": "Sur le schéma, le génome occupe la couche la plus externe.",
+     "v": false,
+     "e": "FAUX : il est au centre, la capside autour.",
+     "sourceQuote": "le génome au centre, la capside de protéines autour"
+    }
+   ]
+  },
+  {
+   "fiche": "biologie-010-virus-frontieres-du-vivant.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 12,
+   "q": "L'analogie retenue compare le virus à un objet informatique. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le virus est comparé à un logiciel malveillant.",
+     "v": true,
+     "e": "VRAI. Un programme informatique.",
+     "sourceQuote": "Un virus est comme un logiciel malveillant (un programme informatique)"
+    },
+    {
+     "t": "Ce programme ne peut rien faire tout seul.",
+     "v": true,
+     "e": "VRAI. C'est ce qui fait l'analogie.",
+     "sourceQuote": "qui ne peut rien faire tout seul"
+    },
+    {
+     "t": "Il détourne un ordinateur pour se dupliquer.",
+     "v": true,
+     "e": "VRAI. L'ordinateur, c'est la cellule.",
+     "sourceQuote": "qui détourne un ordinateur (la cellule) pour se dupliquer"
+    },
+    {
+     "t": "Dans cette analogie, l'ordinateur détourné représente la cellule.",
+     "v": true,
+     "e": "VRAI. C'est la correspondance donnée entre parenthèses.",
+     "sourceQuote": "détourne un ordinateur (la cellule)"
+    },
+    {
+     "t": "L'analogie compare le virus à un logiciel antivirus qui protège l'ordinateur.",
+     "v": false,
+     "e": "FAUX : c'est à un logiciel malveillant qu'il est comparé.",
+     "sourceQuote": "Un virus est comme un logiciel malveillant"
+    }
+   ]
+  },
+  {
+   "fiche": "biologie-010-virus-frontieres-du-vivant.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 13,
+   "q": "Le cours limite ce qu'il faut savoir des virus en première année. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Pour la première année, les virus ne sont pas détaillés.",
+     "v": true,
+     "e": "VRAI. Le cours est explicite sur ce point.",
+     "sourceQuote": "pour la première année, les virus ne sont pas détaillés"
+    },
+    {
+     "t": "Deux mots suffisent : les virus sont acellulaires et parasites obligatoires.",
+     "v": true,
+     "e": "VRAI. Ce sont eux qui reviennent en QCM.",
+     "sourceQuote": "les virus sont acellulaires et parasites obligatoires"
+    },
+    {
+     "t": "Ils ne font pas partie du vivant classique, mais ce sont des objets biologiques majeurs en médecine.",
+     "v": true,
+     "e": "VRAI. C'est la formule du cours.",
+     "sourceQuote": "Ils ne font pas partie du vivant classique, mais ce sont des objets biologiques majeurs en médecine"
+    },
+    {
+     "t": "Ces deux mots-clés sont rarement demandés en QCM.",
+     "v": false,
+     "e": "FAUX : ce sont eux qui reviennent en QCM.",
+     "sourceQuote": "ce sont eux qui reviennent en QCM"
+    },
+    {
+     "t": "Un virus ne peut infecter que des cellules humaines.",
+     "v": false,
+     "e": "FAUX : bactérie, plante, animal ou humain.",
+     "sourceQuote": "il doit infecter une cellule (bactérie, plante, animal, humain) pour se reproduire"
+    }
+   ]
+  },
+  {
+   "fiche": "biologie-010-virus-frontieres-du-vivant.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 14,
+   "q": "Le piège de la fiche démonte deux formulations classiques. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "« Un virus contient de l'ADN et de l'ARN » est faux : c'est l'un ou l'autre, jamais les deux.",
+     "v": true,
+     "e": "VRAI. C'est la première formulation démontée.",
+     "sourceQuote": "« Un virus contient de l'ADN et de l'ARN » → FAUX : c'est l'un ou l'autre, jamais les deux"
+    },
+    {
+     "t": "« Un virus est la plus petite cellule connue » est faux aussi.",
+     "v": true,
+     "e": "VRAI. Ce n'est pas une cellule du tout.",
+     "sourceQuote": "« Un virus est la plus petite cellule connue » → FAUX aussi : ce n'est pas une cellule"
+    },
+    {
+     "t": "Un virus n'étant pas une cellule, il n'est ni procaryote ni eucaryote.",
+     "v": true,
+     "e": "VRAI. C'est la conséquence directe.",
+     "sourceQuote": "ce n'est pas une cellule, donc ni procaryote, ni eucaryote"
+    },
+    {
+     "t": "Le VIH est un rétrovirus, dont le génome est fait d'ARN.",
+     "v": true,
+     "e": "VRAI. C'est le premier des deux exemples.",
+     "sourceQuote": "le VIH a un génome à ARN (c'est un rétrovirus)"
+    },
+    {
+     "t": "Un nanomètre est un milliardième de mètre.",
+     "v": true,
+     "e": "VRAI. C'est la précision donnée entre parenthèses.",
+     "sourceQuote": "nanomètres = milliardièmes de mètre"
+    }
+   ]
+  },
+  {
+   "fiche": "biologie-010-virus-frontieres-du-vivant.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 15,
+   "q": "La fiche se referme sur ce que le chapitre a nommé et ce qu'il lui reste à faire. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "À ce stade, le chapitre n'a pas encore nommé les trois domaines du vivant.",
+     "v": false,
+     "e": "FAUX : il a nommé les trois domaines, les deux types de cellules et cet objet à part.",
+     "sourceQuote": "les trois domaines, les deux types de cellules, et cet objet à part qui n'en est pas une"
+    },
+    {
+     "t": "Il reste à ouvrir la plus simple de ces cellules et à regarder ce qu'il y a dedans.",
+     "v": true,
+     "e": "VRAI. C'est la fiche suivante, qui clôt le chapitre.",
+     "sourceQuote": "ouvrir la plus simple de toutes ces cellules et regarder ce qu'il y a dedans"
+    },
+    {
+     "t": "Le virus mesure de 20 à 300 µm.",
+     "v": false,
+     "e": "FAUX : de 20 à 300 nm, mille fois plus petit qu'une bactérie.",
+     "sourceQuote": "20 à 300 nm , 1000 fois plus petits qu'une bactérie"
+    },
+    {
+     "t": "Le résumé retient un génome contenant à la fois de l'ADN et de l'ARN.",
+     "v": false,
+     "e": "FAUX : un génome ADN ou ARN, jamais les deux.",
+     "sourceQuote": "un génome (ADN ou ARN), une capside de protéines"
+    },
+    {
+     "t": "La fiche suivante ouvrira la cellule la plus complexe du chapitre.",
+     "v": false,
+     "e": "FAUX : elle ouvrira la plus simple de toutes ces cellules.",
+     "sourceQuote": "ouvrir la plus simple de toutes ces cellules"
+    }
+   ]
+  }
+ ]
+}
