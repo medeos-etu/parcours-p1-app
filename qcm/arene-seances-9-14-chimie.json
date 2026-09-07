@@ -1,0 +1,631 @@
+{
+ "matiere": "chimie",
+ "chapitre": 1,
+ "note": "Renfort d'arène (lots 8 à 15, tous ar:1) pour les fiches de chimie de la séance 11 du Parcours. Le socle des lots 1-7 reste dans chimie-ch01-p2.json.",
+ "questions": [
+  {
+   "fiche": "chimie-005-atome-essentiellement-vide.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 8,
+   "q": "Deux ordres de grandeur suffisent à établir la notion de cette fiche. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le diamètre du noyau vaut environ 10⁻¹⁵ m, soit 1 femtomètre.",
+     "v": true,
+     "e": "VRAI. C'est la première ligne du tableau.",
+     "sourceQuote": "Diamètre du noyau ~ 10⁻¹⁵ m = 1 femtomètre (fm)"
+    },
+    {
+     "t": "Le diamètre de l'atome, noyau et cortège compris, vaut environ 10⁻¹⁰ m, soit 1 Ångström.",
+     "v": true,
+     "e": "VRAI. C'est la deuxième ligne du tableau.",
+     "sourceQuote": "Diamètre de l'atome (noyau + cortège électronique) ~ 10⁻¹⁰ m = 1 Ångström (Å)"
+    },
+    {
+     "t": "Ce sont deux chiffres à connaître par cœur, avec l'unité qui va avec chacun.",
+     "v": true,
+     "e": "VRAI. La fiche insiste sur l'unité autant que sur la valeur.",
+     "sourceQuote": "Ce sont deux chiffres à connaître par cœur, avec l'unité qui va avec chacun"
+    },
+    {
+     "t": "Le femtomètre est l'unité de l'atome entier.",
+     "v": false,
+     "e": "FAUX : le femtomètre est l'unité du noyau. L'atome se mesure en Ångström.",
+     "sourceQuote": "le femtomètre (fm) est l'unité du noyau"
+    },
+    {
+     "t": "Ce sont les deux valeurs prises isolément qui portent toute la notion.",
+     "v": false,
+     "e": "FAUX : c'est leur rapport qui porte la notion, pas les valeurs isolées.",
+     "sourceQuote": "c'est ce rapport, pas les valeurs prises isolément, qui porte toute la notion"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-005-atome-essentiellement-vide.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 9,
+   "q": "L'écart entre les deux diamètres est le vrai contenu de la fiche. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Cinq puissances de dix séparent les deux diamètres.",
+     "v": true,
+     "e": "VRAI. C'est le rapport de 10 puissance 5.",
+     "sourceQuote": "Cinq puissances de dix séparent les deux diamètres"
+    },
+    {
+     "t": "Le noyau est 100 000 fois plus grand que l'atome.",
+     "v": false,
+     "e": "FAUX : il est 100 000 fois plus petit que l'atome.",
+     "sourceQuote": "le noyau est 100 000 fois plus petit que l'atome"
+    },
+    {
+     "t": "Trois puissances de dix séparent les deux diamètres.",
+     "v": false,
+     "e": "FAUX : elles sont cinq.",
+     "sourceQuote": "Cinq puissances de dix séparent les deux diamètres"
+    },
+    {
+     "t": "C'est ce rapport, et non les valeurs isolées, qui porte toute la notion.",
+     "v": true,
+     "e": "VRAI. C'est ce que la fiche demande de retenir.",
+     "sourceQuote": "c'est ce rapport, pas les valeurs prises isolément, qui porte toute la notion"
+    },
+    {
+     "t": "Le femtomètre et l'Ångström sont séparés par deux puissances de dix.",
+     "v": false,
+     "e": "FAUX : par cinq puissances de dix.",
+     "sourceQuote": "fm et Å sont séparés par cinq puissances de dix"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-005-atome-essentiellement-vide.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 10,
+   "q": "La fiche tire trois conséquences de ces deux ordres de grandeur. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le noyau est minuscule : environ 1 femtomètre.",
+     "v": true,
+     "e": "VRAI. C'est la première conséquence.",
+     "sourceQuote": "Le noyau est minuscule. ~ 10⁻¹⁵ m , soit 1 femtomètre"
+    },
+    {
+     "t": "C'est lui qui contient les protons et les neutrons, donc la quasi-totalité de la masse.",
+     "v": true,
+     "e": "VRAI. C'est le lien avec la fiche précédente.",
+     "sourceQuote": "C'est lui qui contient les protons et les neutrons — donc, on l'a vu, la quasi-totalité de la masse"
+    },
+    {
+     "t": "L'atome entier est cent mille fois plus large, environ 1 Ångström.",
+     "v": true,
+     "e": "VRAI. C'est la deuxième conséquence.",
+     "sourceQuote": "L'atome entier est cent mille fois plus large. ~ 10⁻¹⁰ m , soit 1 Ångström"
+    },
+    {
+     "t": "Ce diamètre-là mesure la place que prend l'atome avec son cortège électronique autour.",
+     "v": true,
+     "e": "VRAI. Ce n'est plus le noyau seul.",
+     "sourceQuote": "c'est la place que prend l'atome avec son cortège électronique autour"
+    },
+    {
+     "t": "Entre le noyau et les électrons, l'espace est rempli de matière dense.",
+     "v": false,
+     "e": "FAUX : tout le reste n'est occupé par presque rien.",
+     "sourceQuote": "tout le reste, entre lui et les électrons, n'est occupé par presque rien"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-005-atome-essentiellement-vide.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 11,
+   "q": "Le dessin des deux échelles porte deux doubles flèches. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "La petite double flèche mesure l'atome entier.",
+     "v": false,
+     "e": "FAUX : la petite, sous la boule rouge, mesure le noyau.",
+     "sourceQuote": "La petite, sous la boule rouge, mesure le noyau"
+    },
+    {
+     "t": "La grande double flèche mesure le noyau.",
+     "v": false,
+     "e": "FAUX : la grande, en bas à droite, mesure l'atome entier.",
+     "sourceQuote": "La grande, en bas à droite, traverse tout le dessin et mesure l'atome entier"
+    },
+    {
+     "t": "Entre les deux flèches, il n'y a que des cercles et quelques billes bleues : c'est le vide de l'atome.",
+     "v": true,
+     "e": "VRAI. C'est ce que la légende demande de voir.",
+     "sourceQuote": "entre les deux, il n'y a que des cercles et quelques billes bleues — c'est ça, le vide de l'atome"
+    },
+    {
+     "t": "Sur l'image, le noyau est dessiné à l'échelle réelle.",
+     "v": false,
+     "e": "FAUX : il y est dessiné beaucoup trop gros.",
+     "sourceQuote": "sur l'image, le noyau est encore dessiné beaucoup trop gros"
+    },
+    {
+     "t": "À l'échelle réelle, le noyau resterait bien visible sur un tel dessin.",
+     "v": false,
+     "e": "FAUX : il serait invisible.",
+     "sourceQuote": "à l'échelle réelle, il serait 100 000 fois plus petit que l'atome, donc invisible"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-005-atome-essentiellement-vide.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 12,
+   "q": "Une analogie donne la mesure de l'écart entre le noyau et l'atome. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Si le noyau était une bille de 1 cm posée au centre d'un terrain de football, l'atome s'étendrait jusqu'aux tribunes.",
+     "v": true,
+     "e": "VRAI. C'est l'analogie de la fiche.",
+     "sourceQuote": "Si le noyau était une bille de 1 cm posée au centre d'un terrain de football , l'atome s'étendrait jusqu'aux tribunes"
+    },
+    {
+     "t": "Presque tout est vide entre le noyau et les électrons.",
+     "v": true,
+     "e": "VRAI. C'est ce que l'analogie met en image.",
+     "sourceQuote": "Presque tout est vide entre le noyau et les électrons"
+    },
+    {
+     "t": "Cette image dit à la fois que le noyau est ridiculement petit et que l'électron est très loin de lui.",
+     "v": true,
+     "e": "VRAI. Elle porte les deux idées à la fois.",
+     "sourceQuote": "elle dit à la fois que le noyau est ridiculement petit et que l'électron est très loin de lui"
+    },
+    {
+     "t": "Il faut retenir l'Ångström au passage.",
+     "v": true,
+     "e": "VRAI. La fiche le demande expressément.",
+     "sourceQuote": "retiens l' Ångström au passage"
+    },
+    {
+     "t": "C'est l'unité dans laquelle on donnera plus tard le rayon des orbites de l'électron.",
+     "v": true,
+     "e": "VRAI. D'où l'intérêt de la retenir dès maintenant.",
+     "sourceQuote": "c'est l'unité dans laquelle on donnera plus tard le rayon des orbites de l'électron"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-005-atome-essentiellement-vide.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 13,
+   "q": "La fiche indique comment mémoriser ces deux valeurs. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Il ne faut pas les mémoriser comme deux nombres isolés, mais mémoriser l'écart.",
+     "v": true,
+     "e": "VRAI. C'est la consigne de mémorisation.",
+     "sourceQuote": "Ne mémorise pas ces valeurs comme deux nombres isolés : mémorise l' écart"
+    },
+    {
+     "t": "Le facteur à retenir est 100 000.",
+     "v": true,
+     "e": "VRAI. Soit 10 puissance 5.",
+     "sourceQuote": "donc un facteur 10⁵ = 100 000"
+    },
+    {
+     "t": "Il faut associer chaque échelle à son unité.",
+     "v": true,
+     "e": "VRAI. Le femtomètre au noyau, l'Ångström à l'atome.",
+     "sourceQuote": "associe chaque échelle à son unité"
+    },
+    {
+     "t": "Un énoncé qui donne une taille en Ångström parle du noyau.",
+     "v": false,
+     "e": "FAUX : il parle de l'atome, jamais du noyau.",
+     "sourceQuote": "Un énoncé qui te donne une taille en Å parle de l'atome, jamais du noyau"
+    },
+    {
+     "t": "L'Ångström est l'unité du noyau.",
+     "v": false,
+     "e": "FAUX : c'est celle de l'atome.",
+     "sourceQuote": "Ångström (Å) est celle de l'atome"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-005-atome-essentiellement-vide.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 14,
+   "q": "La fiche met en garde contre un glissement entre deux notions. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Il ne faut pas mélanger masse et taille.",
+     "v": true,
+     "e": "VRAI. C'est le piège de la fiche.",
+     "sourceQuote": "Ne mélange pas masse et taille"
+    },
+    {
+     "t": "« Presque toute la masse est dans le noyau » est une affirmation vraie.",
+     "v": true,
+     "e": "VRAI. C'est la conclusion de la fiche précédente.",
+     "sourceQuote": "« Presque toute la masse est dans le noyau » est vrai"
+    },
+    {
+     "t": "« Le noyau occupe presque tout l'atome » est vraie également.",
+     "v": false,
+     "e": "FAUX : cette seconde affirmation est explicitement donnée comme fausse.",
+     "sourceQuote": "« le noyau occupe presque tout l'atome » est FAUX"
+    },
+    {
+     "t": "Le noyau, qui pèse presque tout, occupe aussi presque toute la place.",
+     "v": false,
+     "e": "FAUX : il n'occupe presque rien.",
+     "sourceQuote": "le noyau, qui pèse presque tout, n'occupe presque rien"
+    },
+    {
+     "t": "Regardé par sa taille, le noyau confirme la conclusion tirée de sa masse.",
+     "v": false,
+     "e": "FAUX : la conclusion bascule complètement.",
+     "sourceQuote": "Et là, la conclusion bascule complètement"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-005-atome-essentiellement-vide.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 15,
+   "q": "La fiche reprend la conclusion de la précédente et la retourne. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "La fiche précédente concluait que la masse de l'atome est concentrée dans le noyau.",
+     "v": true,
+     "e": "VRAI. C'est l'acquis rappelé en ouverture.",
+     "sourceQuote": "donc la masse de l'atome est concentrée dans le noyau"
+    },
+    {
+     "t": "Cette conclusion reposait sur le fait que le proton pèse environ 2000 fois plus que l'électron.",
+     "v": true,
+     "e": "VRAI. C'est l'ordre de grandeur de la fiche précédente.",
+     "sourceQuote": "la masse du proton ≈ la masse du neutron ≈ 2000 × la masse de l'électron"
+    },
+    {
+     "t": "Le même noyau est ici regardé par sa taille, et non plus par sa masse.",
+     "v": true,
+     "e": "VRAI. C'est le changement de point de vue.",
+     "sourceQuote": "Même noyau ici, mais regardé autrement : plus par sa masse, par sa taille"
+    },
+    {
+     "t": "La conclusion bascule alors complètement.",
+     "v": true,
+     "e": "VRAI. Le noyau pèse presque tout, mais n'occupe presque rien.",
+     "sourceQuote": "Et là, la conclusion bascule complètement"
+    },
+    {
+     "t": "Un seul ordre de grandeur suffit à montrer que l'atome est essentiellement du vide.",
+     "v": false,
+     "e": "FAUX : il en faut deux, celui du noyau et celui de l'atome.",
+     "sourceQuote": "Deux ordres de grandeur suffisent à le montrer"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-006-nucleide-et-element.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 8,
+   "q": "Le premier des deux mots de la fiche est le plus complet. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Un nucléide est une espèce atomique définie par A ET Z.",
+     "v": true,
+     "e": "VRAI. Les deux nombres, ensemble.",
+     "sourceQuote": "un nucléide est une espèce atomique définie par A ET Z"
+    },
+    {
+     "t": "Changer l'un des deux nombres, c'est changer de nucléide.",
+     "v": true,
+     "e": "VRAI. C'est la conséquence directe de la définition.",
+     "sourceQuote": "change l'un des deux, et tu changes de nucléide"
+    },
+    {
+     "t": "Un nucléide, c'est comme une carte d'identité complète de l'atome.",
+     "v": true,
+     "e": "VRAI. C'est l'analogie de la fiche.",
+     "sourceQuote": "Un nucléide, c'est comme une carte d'identité complète de l'atome"
+    },
+    {
+     "t": "La différence entre nucléide et élément tient au nombre de nombres utilisés pour définir l'espèce.",
+     "v": true,
+     "e": "VRAI. Deux nombres pour l'un, un seul pour l'autre.",
+     "sourceQuote": "La différence tient à combien de nombres on utilise pour définir l'espèce"
+    },
+    {
+     "t": "Nucléide et élément désignent la même chose.",
+     "v": false,
+     "e": "FAUX : ces deux mots, que l'on croise partout, ne désignent pas la même chose.",
+     "sourceQuote": "deux mots que tu croises partout ne désignent pas la même chose"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-006-nucleide-et-element.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 9,
+   "q": "Le carbone sert d'exemple aux deux définitions. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "¹²C et ¹³C ont le même A.",
+     "v": false,
+     "e": "FAUX : c'est justement leur A qui diffère, 12 et 13.",
+     "sourceQuote": "Ce sont deux nucléides différents parce qu'ils n'ont pas le même A"
+    },
+    {
+     "t": "¹²C et ¹³C appartiennent à deux éléments différents.",
+     "v": false,
+     "e": "FAUX : ils appartiennent tous les deux à l'élément carbone.",
+     "sourceQuote": "¹²C et ¹³C, malgré leurs A différents, appartiennent tous les deux à l'élément carbone"
+    },
+    {
+     "t": "¹²C et ¹³C ont tous deux Z = 6.",
+     "v": true,
+     "e": "VRAI. C'est ce qui en fait un seul et même élément.",
+     "sourceQuote": "ils ont le même Z = 6 protons"
+    },
+    {
+     "t": "Le carbone 13 a pour caractéristiques A = 12 et Z = 6.",
+     "v": false,
+     "e": "FAUX : le carbone 13 a A = 13 et Z = 6.",
+     "sourceQuote": "¹³C (carbone 13) est un autre nucléide, avec A = 13, Z = 6"
+    },
+    {
+     "t": "Le carbone 12 est un élément, pas un nucléide.",
+     "v": false,
+     "e": "FAUX : c'est un nucléide, de caractéristiques A = 12 et Z = 6.",
+     "sourceQuote": "¹²C (carbone 12) est un nucléide avec A = 12, Z = 6"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-006-nucleide-et-element.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 10,
+   "q": "Le second mot de la fiche désigne la famille chimique. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Un élément est défini par Z uniquement, c'est-à-dire par le nombre de protons.",
+     "v": true,
+     "e": "VRAI. Un seul nombre suffit.",
+     "sourceQuote": "est défini par Z uniquement , c'est-à-dire par le nombre de protons"
+    },
+    {
+     "t": "C'est la famille chimique.",
+     "v": true,
+     "e": "VRAI. C'est la définition retenue par la fiche.",
+     "sourceQuote": "C'est la famille chimique"
+    },
+    {
+     "t": "Il en existe 118 dans le tableau périodique.",
+     "v": true,
+     "e": "VRAI. C'est le nombre donné.",
+     "sourceQuote": "il en existe 118 dans le tableau périodique"
+    },
+    {
+     "t": "Ce sont les électrons qui définissent l'élément.",
+     "v": false,
+     "e": "FAUX : c'est Z, donc les protons, pas les électrons.",
+     "sourceQuote": "c'est Z (les PROTONS) qui définit l'élément, PAS les électrons"
+    },
+    {
+     "t": "Un élément se définit par le couple A et Z, comme le nucléide.",
+     "v": false,
+     "e": "FAUX : l'élément se définit par Z uniquement.",
+     "sourceQuote": "Élément Z uniquement (les protons)"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-006-nucleide-et-element.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 11,
+   "q": "Le test du chlore prouve ce qui définit un élément. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le chlore neutre compte 17 protons et 17 électrons.",
+     "v": true,
+     "e": "VRAI. C'est le premier temps du test.",
+     "sourceQuote": "17 protons , 17 électrons → élément chlore"
+    },
+    {
+     "t": "L'ion Cl⁻ compte 17 protons, mais 18 électrons.",
+     "v": true,
+     "e": "VRAI. C'est le deuxième temps du test.",
+     "sourceQuote": "17 protons , mais 18 électrons"
+    },
+    {
+     "t": "Cl⁻ reste l'élément chlore, car Z = 17 n'a pas bougé.",
+     "v": true,
+     "e": "VRAI. C'est ce que le test démontre.",
+     "sourceQuote": "toujours l'élément chlore , car Z = 17 n'a pas bougé"
+    },
+    {
+     "t": "Un élément est toujours défini par son nombre de protons.",
+     "v": true,
+     "e": "VRAI. C'est la règle absolue énoncée par la fiche.",
+     "sourceQuote": "Un élément est toujours défini par son nombre de protons"
+    },
+    {
+     "t": "C'est le chlore qui sert de test à cette règle.",
+     "v": true,
+     "e": "VRAI. La fiche le désigne explicitement.",
+     "sourceQuote": "Le test qui le prouve, c'est le chlore"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-006-nucleide-et-element.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 12,
+   "q": "Protons et électrons ne jouent pas le même rôle. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Les protons restent dans le noyau et ne bougent jamais.",
+     "v": true,
+     "e": "VRAI. C'est le premier des deux rôles.",
+     "sourceQuote": "Les protons restent dans le noyau. Ils ne bougent jamais"
+    },
+    {
+     "t": "Ils assurent l'identité stable de l'atome.",
+     "v": true,
+     "e": "VRAI. C'est la conséquence de leur immobilité.",
+     "sourceQuote": "ils assurent l' identité stable de l'atome"
+    },
+    {
+     "t": "Les électrons, surtout ceux de la couche externe, participent aux liaisons.",
+     "v": true,
+     "e": "VRAI. C'est le second rôle.",
+     "sourceQuote": "surtout ceux de la couche externe , participent aux liaisons"
+    },
+    {
+     "t": "Ce sont eux qui portent les propriétés chimiques.",
+     "v": true,
+     "e": "VRAI. Z définit l'identité, les électrons font la chimie.",
+     "sourceQuote": "ce sont eux qui portent les propriétés chimiques"
+    },
+    {
+     "t": "Pour un atome neutre, le nombre de protons diffère du nombre d'électrons.",
+     "v": false,
+     "e": "FAUX : pour un atome neutre, les deux se rejoignent — Z protons = Z électrons.",
+     "sourceQuote": "les deux se rejoignent : Z protons = Z électrons"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-006-nucleide-et-element.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 13,
+   "q": "Devant une espèce donnée dans un énoncé, la fiche impose un ordre de lecture. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "On regarde Z d'abord : il donne l'élément, et il ne change jamais.",
+     "v": true,
+     "e": "VRAI. C'est le premier réflexe.",
+     "sourceQuote": "regarde Z d'abord : il te donne l'élément, et il ne change jamais"
+    },
+    {
+     "t": "On regarde ensuite les électrons, puis A.",
+     "v": false,
+     "e": "FAUX : A vient avant les électrons — il précise le nucléide, les électrons la charge.",
+     "sourceQuote": "regarde A (qui précise le nucléide) puis les électrons (qui précisent la charge)"
+    },
+    {
+     "t": "Une question qui demande de quel élément il s'agit se répond avec le seul nombre de protons.",
+     "v": true,
+     "e": "VRAI. Jamais avec le nombre d'électrons.",
+     "sourceQuote": "se répond avec le seul nombre de protons — jamais avec le nombre d'électrons"
+    },
+    {
+     "t": "Cette même question se répond avec le nombre d'électrons.",
+     "v": false,
+     "e": "FAUX : jamais avec le nombre d'électrons.",
+     "sourceQuote": "jamais avec le nombre d'électrons"
+    },
+    {
+     "t": "A précise la charge, et les électrons précisent le nucléide.",
+     "v": false,
+     "e": "FAUX : c'est l'inverse — A précise le nucléide, les électrons la charge.",
+     "sourceQuote": "A (qui précise le nucléide) puis les électrons (qui précisent la charge)"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-006-nucleide-et-element.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 14,
+   "q": "Un QCM change l'élément parce que l'atome est devenu un ion. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Ce QCM a raison.",
+     "v": false,
+     "e": "FAUX : la fiche le donne explicitement comme faux.",
+     "sourceQuote": "Un QCM qui change l'élément parce que l'atome est devenu un ion est FAUX"
+    },
+    {
+     "t": "Cl⁻ a 18 électrons et reste du chlore, parce qu'il a toujours 17 protons.",
+     "v": true,
+     "e": "VRAI. C'est le contre-exemple donné.",
+     "sourceQuote": "Cl⁻ a 18 électrons et reste du chlore , parce qu'il a toujours 17 protons"
+    },
+    {
+     "t": "Ce sont les électrons qui définissent l'élément.",
+     "v": false,
+     "e": "FAUX : c'est précisément la croyance que la fiche démonte.",
+     "sourceQuote": "Croire que ce sont les électrons qui définissent l'élément"
+    },
+    {
+     "t": "Devenir un ion fait changer d'élément.",
+     "v": false,
+     "e": "FAUX : le nombre de protons ne bouge pas, donc l'élément non plus.",
+     "sourceQuote": "Un QCM qui change l'élément parce que l'atome est devenu un ion est FAUX"
+    },
+    {
+     "t": "Le nombre de protons de Cl⁻ vaut 18.",
+     "v": false,
+     "e": "FAUX : il en a toujours 17. Ce sont ses électrons qui sont 18.",
+     "sourceQuote": "parce qu'il a toujours 17 protons"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-006-nucleide-et-element.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 15,
+   "q": "Ce double étage prépare deux distinctions qui arrivent juste après. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "La première fait varier A à Z constant.",
+     "v": true,
+     "e": "VRAI. C'est la première des deux distinctions annoncées.",
+     "sourceQuote": "celle qui fait varier A à Z constant"
+    },
+    {
+     "t": "La seconde fait varier le nombre d'électrons.",
+     "v": true,
+     "e": "VRAI. C'est la seconde.",
+     "sourceQuote": "celle qui fait varier le nombre d'électrons"
+    },
+    {
+     "t": "Ce sont deux concepts très testés en QCM.",
+     "v": true,
+     "e": "VRAI. La fiche le signale expressément.",
+     "sourceQuote": "Ce sont deux concepts très testés en QCM"
+    },
+    {
+     "t": "À ce stade du chapitre, l'atome n'a pas encore été décrit.",
+     "v": false,
+     "e": "FAUX : la fiche s'ouvre en disant que la description de l'atome est finie — trois particules, masse, taille.",
+     "sourceQuote": "On a fini de décrire l'atome : ses trois particules, sa masse, sa taille"
+    },
+    {
+     "t": "Il reste encore à apprendre à lire la notation pour compter ce que l'atome contient.",
+     "v": false,
+     "e": "FAUX : cette lecture est acquise avant cette fiche.",
+     "sourceQuote": "tu sais lire la notation A/Z X pour compter ce qu'il contient"
+    }
+   ]
+  }
+ ]
+}

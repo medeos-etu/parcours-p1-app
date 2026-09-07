@@ -1,0 +1,631 @@
+{
+ "matiere": "physique",
+ "chapitre": 1,
+ "note": "Renfort d'arène (lots 8 à 15, tous ar:1) pour les fiches de physique de la séance 12 du Parcours. Aucun calcul nouveau n'est demandé à l'élève : chaque item porte sur une règle énoncée ou sur un exemple déjà résolu dans la fiche. Le socle des lots 1-7 reste dans physique-ch01-p1.json et physique-ch01-p2.json.",
+ "questions": [
+  {
+   "fiche": "physique-005-regle-dor-des-unites.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 8,
+   "q": "Cette fiche arrive après quatre fiches consacrées au calcul rapide. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "On sait désormais décomposer une multiplication, sortir les puissances de 10, traduire un préfixe et recombiner un logarithme.",
+     "v": true,
+     "e": "VRAI. C'est l'acquis des quatre fiches précédentes.",
+     "sourceQuote": "décomposer une multiplication, sortir les puissances de 10, traduire un préfixe et recombiner un logarithme"
+    },
+    {
+     "t": "Reste le plus important : apprendre à ne pas calculer faux.",
+     "v": true,
+     "e": "VRAI. C'est l'objet de cette fiche.",
+     "sourceQuote": "Reste le plus important — apprendre à ne pas calculer faux"
+    },
+    {
+     "t": "Le piège favori des profs de physique n'est pas la formule.",
+     "v": true,
+     "e": "VRAI. C'est l'unité.",
+     "sourceQuote": "Le piège favori des profs de physique, ce n'est pas la formule"
+    },
+    {
+     "t": "Le scénario type : l'énoncé annonce une masse en grammes, la formule attend des kilogrammes.",
+     "v": true,
+     "e": "VRAI. C'est le scénario décrit par la fiche.",
+     "sourceQuote": "l'énoncé annonce une masse en grammes , la formule attend des kilogrammes"
+    },
+    {
+     "t": "On sort alors un résultat 1000 fois trop grand, sans voir l'erreur.",
+     "v": true,
+     "e": "VRAI. C'est ce qui rend l'erreur si coûteuse.",
+     "sourceQuote": "tu sors un résultat 1000 fois trop grand — sans voir l'erreur"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-005-regle-dor-des-unites.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 9,
+   "q": "La fiche chiffre le poids de ce type d'erreur. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Plus de 30 % des erreurs aux QCM de physique viennent d'une conversion d'unité oubliée.",
+     "v": true,
+     "e": "VRAI. C'est le chiffre donné par la fiche.",
+     "sourceQuote": "plus de 30 % des erreurs aux QCM de physique viennent d'une conversion d'unité oubliée"
+    },
+    {
+     "t": "Les rédacteurs d'énoncés cherchent vraiment à piéger sur ce point précis.",
+     "v": true,
+     "e": "VRAI. Ils le savent et en jouent.",
+     "sourceQuote": "ils vont vraiment chercher à te piéger sur ce point précis"
+    },
+    {
+     "t": "Ils mélangent délibérément des unités différentes dans le même énoncé.",
+     "v": true,
+     "e": "VRAI. C'est le procédé décrit.",
+     "sourceQuote": "en mélangeant délibérément des unités différentes dans le même énoncé"
+    },
+    {
+     "t": "Ce type d'erreur reste un accident isolé.",
+     "v": false,
+     "e": "FAUX : la fiche dit explicitement le contraire.",
+     "sourceQuote": "Ce n'est pas un accident isolé"
+    },
+    {
+     "t": "Moins de 5 % des erreurs viennent des unités.",
+     "v": false,
+     "e": "FAUX : plus de 30 %.",
+     "sourceQuote": "plus de 30 % des erreurs aux QCM de physique viennent d'une conversion d'unité oubliée"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-005-regle-dor-des-unites.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 10,
+   "q": "Une règle absolue précède tout calcul. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Avant de commencer le moindre calcul, il faut mettre toutes les valeurs sur la même unité.",
+     "v": true,
+     "e": "VRAI. C'est la règle absolue de la fiche.",
+     "sourceQuote": "avant de commencer le moindre calcul, tu dois mettre TOUTES les valeurs sur la même unité"
+    },
+    {
+     "t": "Tant que ce n'est pas fait, on ne pose pas un seul chiffre.",
+     "v": true,
+     "e": "VRAI. Sinon on fonce dans le mur.",
+     "sourceQuote": "Tant que ce n'est pas fait, tu ne poses pas un seul chiffre"
+    },
+    {
+     "t": "On peut commencer sans convertir : cela ne change rien au résultat.",
+     "v": false,
+     "e": "FAUX : sinon on fonce dans le mur.",
+     "sourceQuote": "sinon tu fonces dans le mur"
+    },
+    {
+     "t": "Le calcul peut commencer dès que la moitié des valeurs est convertie.",
+     "v": false,
+     "e": "FAUX : il ne commence que quand toutes les unités sont homogènes.",
+     "sourceQuote": "Le calcul ne commence QUE quand toutes les unités sont homogènes"
+    },
+    {
+     "t": "Ce réflexe coûte 20 secondes et en fait perdre 3.",
+     "v": false,
+     "e": "FAUX : il coûte 3 secondes et en fait gagner 20.",
+     "sourceQuote": "Ce réflexe coûte 3 secondes, en fait gagner 20, et évite la faute bête"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-005-regle-dor-des-unites.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 11,
+   "q": "La méthode tient en trois étapes, sur le brouillon. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "La première étape consiste à recopier toutes les valeurs de l'énoncé avec leur unité.",
+     "v": true,
+     "e": "VRAI. Au crayon, avant d'écrire un seul chiffre.",
+     "sourceQuote": "recopie au crayon TOUTES les valeurs de l'énoncé avec leur unité"
+    },
+    {
+     "t": "La deuxième étape consiste à repérer les conversions à faire, qui sautent alors aux yeux.",
+     "v": true,
+     "e": "VRAI. L'annotation les rend visibles.",
+     "sourceQuote": "Repère les conversions à faire. Elles te sautent alors aux yeux"
+    },
+    {
+     "t": "Sur l'exemple travaillé, la conversion à faire est mL vers L, parce qu'une concentration molaire s'exprime en mol/L.",
+     "v": true,
+     "e": "VRAI. C'est la conversion que l'annotation fait apparaître.",
+     "sourceQuote": "parce qu'une concentration molaire s'exprime en mol/L"
+    },
+    {
+     "t": "La troisième étape seulement est le calcul, quand toutes les unités sont homogènes.",
+     "v": true,
+     "e": "VRAI. Le calcul vient en dernier.",
+     "sourceQuote": "Le calcul ne commence QUE quand toutes les unités sont homogènes"
+    },
+    {
+     "t": "Ce réflexe coûte 3 secondes, en fait gagner 20, et évite la faute bête.",
+     "v": true,
+     "e": "VRAI. C'est le rendement annoncé de la méthode.",
+     "sourceQuote": "Ce réflexe coûte 3 secondes, en fait gagner 20, et évite la faute bête"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-005-regle-dor-des-unites.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 12,
+   "q": "Un cas clinique mesure l'enjeu d'une conversion oubliée. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "La posologie était exprimée en mg/L.",
+     "v": false,
+     "e": "FAUX : elle était en mg/kg.",
+     "sourceQuote": "La posologie est en mg/kg"
+    },
+    {
+     "t": "Le poids du patient était noté en kilogrammes.",
+     "v": false,
+     "e": "FAUX : il était noté en livres anglo-saxonnes.",
+     "sourceQuote": "Le poids du patient est noté en livres anglo-saxonnes (lbs)"
+    },
+    {
+     "t": "L'interne a oublié la conversion et a doublé la dose.",
+     "v": true,
+     "e": "VRAI. Une livre vaut 0,45 kg.",
+     "sourceQuote": "oublie la conversion ( 1 lb = 0,45 kg ) et double la dose"
+    },
+    {
+     "t": "L'oubli a conduit à administrer une dose deux fois trop faible.",
+     "v": false,
+     "e": "FAUX : la conséquence est un surdosage immédiat.",
+     "sourceQuote": "double la dose. Conséquence : surdosage immédiat"
+    },
+    {
+     "t": "Ce cas est purement théorique et ne figure pas parmi les cas enseignés en pharmacologie.",
+     "v": false,
+     "e": "FAUX : il fait partie des cas types enseignés en pharmacologie.",
+     "sourceQuote": "fait partie des cas types enseignés en pharmacologie"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-005-regle-dor-des-unites.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 13,
+   "q": "Trois lignes de conversions sont à connaître par cœur dès maintenant. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "La ligne « Masse » donne : 1 kg = 10³ g = 10⁶ mg = 10⁹ µg.",
+     "v": true,
+     "e": "VRAI. C'est la première ligne du tableau.",
+     "sourceQuote": "1 kg = 10 3 g = 10 6 mg = 10 9 µg"
+    },
+    {
+     "t": "La ligne « Volume » donne : 1 m³ = 10³ L = 10⁶ mL.",
+     "v": true,
+     "e": "VRAI. C'est la deuxième ligne.",
+     "sourceQuote": "1 m 3 = 10 3 L = 10 6 mL"
+    },
+    {
+     "t": "Elle donne aussi : 1 L = 1 dm³ = 10³ cm³.",
+     "v": true,
+     "e": "VRAI. C'est la suite de la même ligne.",
+     "sourceQuote": "1 L = 1 dm 3 = 10 3 cm 3"
+    },
+    {
+     "t": "La ligne « Température » donne : T(K) = T(°C) + 273.",
+     "v": true,
+     "e": "VRAI. C'est la troisième ligne.",
+     "sourceQuote": "Température T(K) = T(°C) + 273"
+    },
+    {
+     "t": "Les unités de concentration, de pression et d'énergie sont elles aussi à connaître dès maintenant.",
+     "v": false,
+     "e": "FAUX : ces unités plus spécifiques arriveront au fil du programme.",
+     "sourceQuote": "Les unités plus spécifiques — concentration, pression, énergie — arriveront naturellement au fil du programme"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-005-regle-dor-des-unites.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 14,
+   "q": "La ligne « Température » cache la subtilité la plus piégeuse du tableau. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "La relation T(K) = T(°C) + 273 vaut pour une température absolue.",
+     "v": true,
+     "e": "VRAI. 25 °C, c'est 298 K.",
+     "sourceQuote": "vaut pour une température absolue"
+    },
+    {
+     "t": "Un écart de température se transporte tel quel : un ΔT de 10 K est un ΔT de 10 °C.",
+     "v": true,
+     "e": "VRAI. C'est la subtilité de la ligne.",
+     "sourceQuote": "un ΔT de 10 K est un ΔT de 10 °C"
+    },
+    {
+     "t": "Les 273 s'annulent dans la soustraction.",
+     "v": true,
+     "e": "VRAI. C'est la raison de l'égalité.",
+     "sourceQuote": "les 273 s'annulent dans la soustraction"
+    },
+    {
+     "t": "Un écart de température doit lui aussi être converti.",
+     "v": false,
+     "e": "FAUX : une température absolue se convertit, un écart non.",
+     "sourceQuote": "Une T absolue se convertit, un ΔT non"
+    },
+    {
+     "t": "La ligne « Température » est la moins piégeuse du tableau.",
+     "v": false,
+     "e": "FAUX : elle cache la subtilité la plus piégeuse.",
+     "sourceQuote": "La ligne « Température » cache la subtilité la plus piégeuse du tableau"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-005-regle-dor-des-unites.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 15,
+   "q": "Le résumé de la fiche tient en une règle et trois lignes. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Avant tout calcul, toutes les valeurs sur la même unité.",
+     "v": true,
+     "e": "VRAI. C'est la première phrase du résumé.",
+     "sourceQuote": "Avant tout calcul, toutes les valeurs sur la même unité"
+    },
+    {
+     "t": "Tant que ce n'est pas fait, aucun chiffre n'est posé.",
+     "v": true,
+     "e": "VRAI. C'est la suite immédiate.",
+     "sourceQuote": "tant que ce n'est pas fait, aucun chiffre n'est posé"
+    },
+    {
+     "t": "Le résumé compte cinq lignes de conversions à connaître par cœur.",
+     "v": false,
+     "e": "FAUX : trois lignes.",
+     "sourceQuote": "Trois lignes à connaître par cœur"
+    },
+    {
+     "t": "Le réflexe « quelle est mon unité ? » n'a d'intérêt qu'à l'écrit.",
+     "v": false,
+     "e": "FAUX : la fiche dit qu'il sauve littéralement des vies.",
+     "sourceQuote": "Le réflexe « quelle est mon unité ? » sauve littéralement des vies"
+    },
+    {
+     "t": "Les rédacteurs d'énoncés évitent de mélanger les unités dans un même énoncé.",
+     "v": false,
+     "e": "FAUX : ils les mélangent délibérément.",
+     "sourceQuote": "Les profs mélangent délibérément les unités dans le même énoncé"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-006-analyse-dimensionnelle.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 8,
+   "q": "Un étudiant explique pourquoi il n'apprend plus toutes les formules par cœur. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Oublier des formules est le signe d'un travail mal fait.",
+     "v": false,
+     "e": "FAUX : la fiche dit que c'est normal.",
+     "sourceQuote": "Le cours est plein de formules et tu vas en oublier — c'est normal"
+    },
+    {
+     "t": "Cette démarche s'appelle l'analyse fonctionnelle.",
+     "v": false,
+     "e": "FAUX : elle s'appelle l'analyse dimensionnelle.",
+     "sourceQuote": "C'est ce qu'on appelle l' analyse dimensionnelle"
+    },
+    {
+     "t": "C'est sans doute le réflexe qui sauve le plus souvent en QCM.",
+     "v": true,
+     "e": "VRAI. C'est ce que la fiche en dit.",
+     "sourceQuote": "c'est sans doute le réflexe qui te sauvera le plus souvent en QCM"
+    },
+    {
+     "t": "Les unités ne servent qu'à vérifier un calcul déjà posé.",
+     "v": false,
+     "e": "FAUX : elles savent faire bien plus — reconstruire la formule elle-même.",
+     "sourceQuote": "Elles savent faire bien plus"
+    },
+    {
+     "t": "Dans la fiche précédente, les unités servaient déjà à reconstruire des formules.",
+     "v": false,
+     "e": "FAUX : elles y servaient à vérifier.",
+     "sourceQuote": "Dans la fiche précédente, les unités servaient à vérifier"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-006-analyse-dimensionnelle.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 9,
+   "q": "L'idée centrale de la méthode tient en quelques lignes. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "On cherche une grandeur exprimée dans une certaine unité.",
+     "v": true,
+     "e": "VRAI. C'est le point de départ.",
+     "sourceQuote": "Tu cherches une grandeur exprimée dans une certaine unité"
+    },
+    {
+     "t": "On dispose de données exprimées dans d'autres unités.",
+     "v": true,
+     "e": "VRAI. C'est la matière première.",
+     "sourceQuote": "Tu as des données dans d'autres unités"
+    },
+    {
+     "t": "Il n'existe en général qu'une seule combinaison des données qui donne l'unité cible, et c'est la formule.",
+     "v": true,
+     "e": "VRAI. C'est le cœur de la méthode.",
+     "sourceQuote": "Il n'existe en général qu'une seule combinaison de tes données qui donne l'unité cible — et c'est ta formule"
+    },
+    {
+     "t": "La première question porte sur l'unité dans laquelle doit s'exprimer ce que l'on cherche.",
+     "v": true,
+     "e": "VRAI. C'est la cible.",
+     "sourceQuote": "Dans quelle unité doit s'exprimer ce que je cherche ? (c'est ta cible)"
+    },
+    {
+     "t": "La troisième question porte sur la combinaison, par multiplication ou division, qui reconstitue l'unité cible.",
+     "v": true,
+     "e": "VRAI. C'est la dernière des trois questions.",
+     "sourceQuote": "Quelle combinaison (× ou /) reconstitue l'unité cible ?"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-006-analyse-dimensionnelle.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 10,
+   "q": "Trois formules sont reconstruites à partir des seules unités. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Pour une concentration en mol/L, l'unité se lit comme des moles divisées par des litres.",
+     "v": true,
+     "e": "VRAI. D'où C = n / V.",
+     "sourceQuote": "« mol / L » = des moles divisées par des litres"
+    },
+    {
+     "t": "0,5 mol dans 2 L donne 0,25 mol/L.",
+     "v": true,
+     "e": "VRAI. C'est l'application donnée dans le tableau.",
+     "sourceQuote": "0,5 mol dans 2 L → 0,25 mol/L"
+    },
+    {
+     "t": "Pour un nombre d'entités sans unité, la multiplication s'impose toute seule.",
+     "v": true,
+     "e": "VRAI. mol × mol⁻¹ = sans unité.",
+     "sourceQuote": "la multiplication s'impose toute seule"
+    },
+    {
+     "t": "1 mol de glucose correspond à environ 6 × 10²³ molécules.",
+     "v": true,
+     "e": "VRAI. C'est l'application donnée dans le tableau.",
+     "sourceQuote": "1 mol de glucose → 6 × 10 23 molécules"
+    },
+    {
+     "t": "Ces trois formules doivent être connues par cœur avant d'appliquer la méthode.",
+     "v": false,
+     "e": "FAUX : c'est précisément le but de la méthode que de les retrouver sans les mémoriser.",
+     "sourceQuote": "Ne t'inquiète pas si tu ne les connais pas par cœur — c'est précisément le but de la méthode"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-006-analyse-dimensionnelle.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 11,
+   "q": "La deuxième ligne du tableau montre toute la mécanique. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "On part de grammes et on veut arriver à des moles.",
+     "v": true,
+     "e": "VRAI. C'est le point de départ du raisonnement.",
+     "sourceQuote": "On part de grammes , on veut arriver à des moles"
+    },
+    {
+     "t": "La seule grandeur qui contient déjà des « mol » dans son unité est la masse molaire M, en g/mol.",
+     "v": true,
+     "e": "VRAI. C'est donc elle qui doit servir.",
+     "sourceQuote": "La seule grandeur qui contient déjà des « mol » dans son unité est M (g/mol)"
+    },
+    {
+     "t": "Diviser par une fraction revient à multiplier par son inverse.",
+     "v": true,
+     "e": "VRAI. C'est ce qui fait disparaître les grammes.",
+     "sourceQuote": "or diviser par une fraction revient à multiplier par son inverse"
+    },
+    {
+     "t": "9 g de NaCl, de masse molaire 58,5, représentent environ 1,54 mol.",
+     "v": false,
+     "e": "FAUX : l'application donnée par la fiche est d'environ 0,154 mol.",
+     "sourceQuote": "9 g de NaCl (M = 58,5) → ≈ 0,154 mol"
+    },
+    {
+     "t": "Le rapport M / m donnerait lui aussi un résultat en moles.",
+     "v": false,
+     "e": "FAUX : il donnerait des 1/mol, ce qui n'a aucun sens physique.",
+     "sourceQuote": "L'inverse (M / m) donnerait 1/mol, ce qui n'a aucun sens physique"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-006-analyse-dimensionnelle.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 12,
+   "q": "Une règle d'or permet d'éliminer une réponse sans calculer. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Si la combinaison proposée donne la bonne unité, c'est la bonne formule.",
+     "v": true,
+     "e": "VRAI. C'est la règle d'or énoncée.",
+     "sourceQuote": "si la combinaison que tu proposes donne la bonne unité"
+    },
+    {
+     "t": "Si l'unité est fausse, la formule l'est aussi, sans même avoir à calculer.",
+     "v": true,
+     "e": "VRAI. C'est l'autre moitié de la règle.",
+     "sourceQuote": "Si l'unité est fausse, ta formule l'est aussi — sans même avoir à calculer"
+    },
+    {
+     "t": "Une réponse de QCM dont l'unité ne tombe pas juste peut malgré tout être exacte.",
+     "v": false,
+     "e": "FAUX : elle est fausse, sans même avoir à calculer.",
+     "sourceQuote": "Une réponse de QCM dont l'unité ne tombe pas juste est FAUSSE"
+    },
+    {
+     "t": "Il suffit de vérifier que les bonnes lettres figurent dans la formule proposée.",
+     "v": false,
+     "e": "FAUX : la fiche demande de ne pas se contenter de voir les bonnes lettres.",
+     "sourceQuote": "Ne te contente pas de « voir » les bonnes lettres"
+    },
+    {
+     "t": "Le sens de la division est libre.",
+     "v": false,
+     "e": "FAUX : il est imposé par les unités.",
+     "sourceQuote": "le sens de la division est imposé par les unités"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-006-analyse-dimensionnelle.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 13,
+   "q": "La fiche propose de retrouver seul la formule de la masse volumique. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "La masse volumique s'exprime en cm³ par gramme.",
+     "v": false,
+     "e": "FAUX : elle s'exprime en g/cm³.",
+     "sourceQuote": "s'exprime en g/cm 3"
+    },
+    {
+     "t": "La combinaison V / m donne la masse volumique.",
+     "v": false,
+     "e": "FAUX : la seule combinaison qui marche est m / V.",
+     "sourceQuote": "la seule combinaison qui marche est ρ = m / V"
+    },
+    {
+     "t": "Un morceau de fer de 79 g occupant 10 cm³ a une masse volumique de 7,9 g/cm³.",
+     "v": true,
+     "e": "VRAI. C'est l'application donnée, et c'est bien la densité du fer.",
+     "sourceQuote": "79 / 10 = 7,9 g/cm 3"
+    },
+    {
+     "t": "La masse volumique n'a aucun rapport avec la densité vue au lycée.",
+     "v": false,
+     "e": "FAUX : c'est justement cette densité-là.",
+     "sourceQuote": "la « densité » que tu as vue au lycée"
+    },
+    {
+     "t": "Retrouver cette formule impose d'aller la chercher dans le cahier de cours.",
+     "v": false,
+     "e": "FAUX : on la retrouve avec les seules unités, sans la chercher dans son cahier.",
+     "sourceQuote": "Tu viens de retrouver la formule sans la chercher dans ton cahier, juste avec les unités"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-006-analyse-dimensionnelle.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 14,
+   "q": "Le résumé rappelle les trois questions et une propriété des unités. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Première question : quelle unité pour ma cible ?",
+     "v": true,
+     "e": "VRAI. C'est la première des trois.",
+     "sourceQuote": "quelle unité pour ma cible ?"
+    },
+    {
+     "t": "Deuxième question : quelles unités pour mes données ?",
+     "v": true,
+     "e": "VRAI. C'est la deuxième.",
+     "sourceQuote": "quelles unités pour mes données ?"
+    },
+    {
+     "t": "Troisième question : quelle combinaison reconstitue l'unité cible ?",
+     "v": true,
+     "e": "VRAI. C'est la troisième.",
+     "sourceQuote": "quelle combinaison (× ou /) reconstitue l'unité cible ?"
+    },
+    {
+     "t": "En général, une seule combinaison marche : c'est la formule.",
+     "v": true,
+     "e": "VRAI. C'est ce qui rend la méthode utilisable.",
+     "sourceQuote": "En général, une seule marche : c'est ta formule"
+    },
+    {
+     "t": "Les unités se manipulent comme des nombres : elles se multiplient, se divisent et s'annulent.",
+     "v": true,
+     "e": "VRAI. C'est la propriété qui fonde toute la méthode.",
+     "sourceQuote": "Les unités se manipulent comme des nombres — elles se multiplient, se divisent et s'annulent"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-006-analyse-dimensionnelle.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 15,
+   "q": "Le piège de la fiche porte sur le sens d'une division. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le sens de la division est imposé par les unités.",
+     "v": true,
+     "e": "VRAI. C'est le piège de la fiche.",
+     "sourceQuote": "le sens de la division est imposé par les unités"
+    },
+    {
+     "t": "Le rapport m / M donne des moles.",
+     "v": true,
+     "e": "VRAI. C'est le bon sens de division.",
+     "sourceQuote": "m / M donne des mol"
+    },
+    {
+     "t": "Le rapport M / m donne des 1/mol, ce qui n'a aucun sens physique.",
+     "v": true,
+     "e": "VRAI. L'unité suffit à l'éliminer.",
+     "sourceQuote": "M / m donne des 1/mol — aucun sens physique"
+    },
+    {
+     "t": "Une réponse de QCM dont l'unité ne tombe pas juste est fausse, sans même avoir à calculer.",
+     "v": true,
+     "e": "VRAI. C'est la conclusion du piège.",
+     "sourceQuote": "dont l'unité ne tombe pas juste est FAUSSE"
+    },
+    {
+     "t": "Il suffit de voir les bonnes lettres pour valider une formule.",
+     "v": false,
+     "e": "FAUX : la fiche demande de ne pas s'en contenter.",
+     "sourceQuote": "Ne te contente pas de « voir » les bonnes lettres"
+    }
+   ]
+  }
+ ]
+}
