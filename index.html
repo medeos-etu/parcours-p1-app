@@ -7948,7 +7948,7 @@ function appareilId(){
 }
 function balise(type, detail){
   try{
-    const corps=JSON.stringify(Object.assign({appareil:appareilId(), type:type, src:(typeof SRC0==='string'?SRC0:''), ref:String(document.referrer||'').slice(0,200)}, detail||{}));
+    const corps=JSON.stringify(Object.assign({appareil:appareilId(), type:type, src:(function(){ const a=(typeof SRC0==='string')?SRC0:'', r=(typeof REF0==='string')?REF0:''; return (a&&r)? a+'-'+r : (a||r); })(), ref:String(document.referrer||'').slice(0,200)}, detail||{}));
     fetch(ARRIVEE_API,{method:'POST',headers:{'Content-Type':'text/plain'},body:corps,keepalive:true}).catch(function(){});
   }catch(e){}
 }
@@ -8070,6 +8070,7 @@ function bandeauNavigateur(){
     const d=document.createElement('div'); d.innerHTML=html; cible.insertBefore(d.firstChild, cible.firstChild); });
 }
 function accApresEntree(neuf){
+  if(neuf) COMPTE_NEUF=true;
   /* la fiche demandée avant le compte s'ouvre toute seule (porte de la première fiche, 07/09) */
   try{ if(S.ficheVoulue && S.ficheVoulue.slug){ const f=S.ficheVoulue; delete S.ficheVoulue; saveS(); setTimeout(function(){ try{ go('home'); openFiche(f.slug,f.titre); }catch(e){} }, 950); } }catch(e){}
   setTimeout(()=>closeSheet('sheet-compte'),650);
@@ -9024,7 +9025,8 @@ function openSheet(id){
 }
 function closeSheet(id){ const m=document.getElementById(id); if(m) m.classList.remove('on');
   /* la visite mise en attente démarre quand la fenêtre qui la retenait se referme */
-  if(id==='sheet-pioche' && TUTO_DIFFERE){ const k=TUTO_DIFFERE; TUTO_DIFFERE=null; setTimeout(()=>{ if(!tutoFait(k)) startTuto(k); }, 350); }
+  /* la visite différée reprend quand la fenêtre qui la retenait se referme : le Panorama, ou le formulaire de connexion (#connexion, 07/09) */
+  if((id==='sheet-pioche' || id==='sheet-compte') && TUTO_DIFFERE){ const k=TUTO_DIFFERE; TUTO_DIFFERE=null; setTimeout(()=>{ if(!tutoFait(k)) startTuto(k); }, 350); }
 }
 /* la bulle de la flamme : petit popover, se referme au clic ailleurs */
 const FLAMME_ROUTE=[[3,'la bannière « Braise »'],[7,'la photo « La Flamme »'],[14,'un gel de série'],[30,'la bannière « Brasier »'],[60,'la photo « L\'Inarrêtable »'],[100,'la bannière « Légende de feu »']];
@@ -9356,27 +9358,57 @@ function renderPick(){
    Étape 1 : l'arrivée présente la Bibliothèque · étape 2 : le compte ouvre le Parcours ·
    étape 3 : l'Arène se découvre. Jamais revu une fois fait (S.tuto). ═══ */
 /* L'INTÉRÊT DE L'APP D'ABORD (Lucas, 07/09 : « faut bien commencer l'introduction toujours en
-   expliquant rapidement l'intérêt de l'app »). Cette bulle ouvre la première visite qu'on voit,
-   Parcours ou Bibliothèque — une seule fois : elle se marque faite dès qu'elle s'affiche. */
-const INTRO_APP={img:'axo-guide-bienvenue',
-  avant:function(){ try{ S.tuto=S.tuto||{}; if(!S.tuto.intro){ S.tuto.intro=Date.now(); saveS(); } }catch(e){} },
-  t:"Salut, moi c'est Axo. Entrer en première année de santé, c'est souvent entrer <b>à l'aveugle</b> — comme sauter dans une piscine sans savoir nager. Cette app sert à ça : <b>apprendre à nager avant de sauter</b>. Les bases des quatre matières qui pèsent le plus — anatomie, biologie, chimie, physique — vues <b>avant</b> la rentrée, un peu chaque jour. Le jour où le cours tombera à la fac, tu ne découvriras pas : <b>tu reconnaîtras</b>."};
+   expliquant rapidement l'intérêt de l'app »), et une PREMIÈRE PHRASE QUI TIENT LA PROMESSE DU LIEN
+   CLIQUÉ (Lucas, 07/09 : « cohérente en fonction de sur quel lien on va cliquer ») : la bio, une
+   story à la une (?src=ig&ref=alaune-…), une carte du site, un compte qui vient d'être créé.
+   Cette bulle ouvre la première visite qu'on voit, Parcours ou Bibliothèque — une seule fois :
+   elle se marque faite dès qu'elle s'affiche. Courte : Lucas a trouvé la première version
+   « agressive » pour quelqu'un qui vient d'arriver. */
+const INTRO_TEXTE="Entrer en première année de santé, c'est souvent entrer <b>à l'aveugle</b>. Cette app est là pour ça : <b>voir les bases avant la rentrée</b>, un peu chaque jour.";
+function introApp(){
+  const src=(typeof SRC0==='string')?SRC0:'', ref=(typeof REF0==='string')?REF0:'';
+  let d="Salut, moi c'est Axo.";
+  if(typeof COMPTE_NEUF!=='undefined' && COMPTE_NEUF) d="Ton compte est prêt : bienvenue. Moi, c'est Axo.";
+  else if(src==='bio') d="Salut, moi c'est Axo. Tu arrives du profil Instagram de Medeos : bienvenue.";
+  else if(src==='depart' || ref==='alaune-commence') d="Salut, moi c'est Axo. Tu as appuyé sur « Commencer gratuitement » : c'est ici que ça démarre.";
+  else if(ref==='alaune-stages') d="Salut, moi c'est Axo. Avant nos stages, il y a l'app, gratuite : c'est ici que tout commence.";
+  else if(ref==='alaune-quionest') d="Salut, moi c'est Axo. Tu sais qui on est ; voici ce qu'on a construit pour toi.";
+  else if(ref==='alaune-p1') d="Salut, moi c'est Axo. Tu viens de voir la première année ; voici comment t'y préparer.";
+  else if(ref==='alaune-methode') d="Salut, moi c'est Axo. Tu viens de voir la méthode ; ici, tu la mets en pratique.";
+  else if(ref==='alaune-parents') d="Salut, moi c'est Axo. Tu arrives de la story pour les parents : voici l'app, telle que l'élève la voit.";
+  else if(src==='ig') d="Salut, moi c'est Axo. Tu arrives d'Instagram : bienvenue.";
+  else if(src==='parcours') d="Salut, moi c'est Axo. Tu viens du site Medeos : ici, c'est l'app du Parcours.";
+  else if(src==='accueil-panorama-p1') d="Salut, moi c'est Axo. Le panorama que tu viens de voir habite ici, dans la Bibliothèque.";
+  return {img:'axo-guide-bienvenue',
+    avant:function(){ try{ S.tuto=S.tuto||{}; if(!S.tuto.intro){ S.tuto.intro=Date.now(); saveS(); } }catch(e){} },
+    t:d+' '+INTRO_TEXTE};
+}
 const TUTOS={
   /* L'ORDRE (Lucas, 07/09) : on présente LE PARCOURS D'ABORD — l'intérêt de l'app, la route, la
      séance, la série, l'Arène — et on finit en disant qu'il y a AUSSI la Bibliothèque. Plus de
      bouton « Créer mon compte » en fin de visite : le compte se demande à la première fiche. */
   home:function(){
     const s=[];
-    if(!tutoFait('intro')) s.push(INTRO_APP);
-    s.push({img:'axo-guide-pointe-bas', t:"Ici, c'est ton <b>Parcours</b> : ta route jour après jour jusqu'à la rentrée, construite par <b>l'équipe Medeos</b>. <b>Deux fiches par jour, une vingtaine de minutes.</b> Pas plus — on ne te demande pas de sacrifier ta Terminale. Ce n'est pas la quantité qui fait la différence, c'est de revenir chaque jour. Et c'est <b>gratuit</b>, jusqu'à ta rentrée."});
+    if(!tutoFait('intro')) s.push(introApp());
+    /* la route se montre (la carte « Le parcours des mondes », visible sans compte — Lucas, 07/09 :
+       « il faut montrer l'aperçu quand même puisqu'on en parle dans l'introduction ») */
+    s.push({sel:'#acces-mondes', img:'axo-guide-pointe-bas', t:"Ici, c'est ton <b>Parcours</b> : ta route monde après monde jusqu'à la rentrée, construite par <b>l'équipe Medeos</b>. <b>Deux fiches par jour</b>, une vingtaine de minutes — et c'est <b>gratuit</b>."});
     s.push({sel:'#seance', img:'axo-guide-pointe-haut', t:"Ta <b>séance du jour</b> t'attend ici. Chaque fiche, tu la <b>lis</b>, tu la <b>restitues de mémoire</b>, tu <b>compares</b>. Un quart d'heure environ. C'est ça qui fait tenir les notions — pas la relecture."});
+    /* venu avec un code Medi Pro (?code=…) : on le dit là où ça change quelque chose, la séance */
+    const code=(S.codeAttente||((typeof CODE0==='string')?CODE0:''))||'';
+    if(code) s.push({sel:'#seance', img:'axo-guide-pointe-haut', t: accOk()
+      ? "Ton <b>code Medi Pro</b> est activé : plus de limite de deux fiches par jour, tout le Parcours est à toi."
+      : "Ton <b>code Medi Pro</b> est bien reçu : il s'activera dès que ton compte sera créé — plus de limite de deux fiches par jour."});
     /* La route en image n'est plus racontée ici (Lucas, 05/09 : « c'est tôt »). Chaque
        morceau a désormais SA visite, au moment où l'élève y met les pieds : les Salles et le
        Grand Amphi à l'entrée dans l'Arène, les mondes et les stages à l'ouverture de la carte. */
     s.push({sel:'#pt-flame', img:'axo-guide-pointe-haut', t:"Chaque jour travaillé allonge ta série 🔥. Un jour sans venir, elle repart à 0 — sauf si tu as posé un gel la veille."});
     s.push({sel:'#mainnav button[data-t="arene"]', img:'axo-guide-pointe-haut', t:"Et l'Arène, juste là ? <b>Elle s'ouvre dès que tu as fini ta première séance.</b> Tu y retrouves tes deux fiches du jour en questions, sans rien risquer."});
+    /* invité par un ami (?ami=…) : le Social, où ils se retrouveront */
+    const ami=String(S.amiInvite||'');
+    if(ami) s.push({sel:'#mainnav button[data-t="social"]', img:'axo-guide-pointe-haut', t:"<b>"+ami+"</b> t'invite à avancer ensemble : vous vous retrouverez dans le <b>Social</b>, juste là"+(accOk()?".":", dès que ton compte sera créé.")});
     /* la Bibliothèque se dit EN DERNIER, après le Parcours (Lucas, 07/09) */
-    s.push({sel:'#mainnav button[data-t="biblio"]', img:'axo-guide-bravo', t:"Il y a aussi la <b>Bibliothèque</b>, juste là : le panorama de chaque matière de première année, les métiers de la santé, la méthode — <b>en accès libre</b>, quand tu veux. Et derrière l'app, il y a <b>l'équipe Medeos</b> : une question, écris-nous sur Instagram, <b>@medeos.sante</b>.", btn:"Voir ma route →",
+    s.push({sel:'#mainnav button[data-t="biblio"]', img:'axo-guide-bravo', t:"Il y a aussi la <b>Bibliothèque</b>, juste là : le panorama de chaque matière, les métiers de la santé, la méthode — <b>en accès libre</b>. Une question ? L'équipe Medeos est sur Instagram, <b>@medeos.sante</b>.", btn:"Voir ma route →",
      /* la présentation du parcours des mondes fait partie de l'introduction (Lucas, 05/09) :
         on ouvre la carte, et sa visite — ta rentrée, ton monde, les stages, le sommet — enchaîne */
      act:function(){ try{ ouvrirCarte(); }catch(e){} }});
@@ -9387,12 +9419,16 @@ const TUTOS={
      elle commence par là ; elle finit en renvoyant au Parcours, le vrai départ. */
   biblio:function(){
     const s=[]; const parcoursVu=tutoFait('home');
-    if(!tutoFait('intro')) s.push(INTRO_APP);
-    s.push({sel:'#rescards-free', img:'axo-guide-carte', t:"Ici, c'est la <b>Bibliothèque</b> : le panorama de chaque matière de première année, les métiers de la santé, la méthode — <b>tout est en accès libre</b>. Ouvre ce qui t'intéresse, referme, reviens : rien n'est chronométré, rien n'est noté."});
+    const apresPanorama=!tutoFait('intro') && (typeof SRC0==='string') && SRC0==='accueil-panorama-p1';
+    if(BIBLIO_AVANT) s.push(BIBLIO_AVANT);   /* ce qu'il venait chercher, d'abord */
+    if(!tutoFait('intro')) s.push(introApp());
+    s.push({sel:'#rescards-free', img:'axo-guide-carte', t: apresPanorama
+      ? "Tu y trouves aussi les métiers de la santé et la méthode — <b>en accès libre</b>. Ouvre, referme, reviens : rien n'est noté."
+      : "Ici, c'est la <b>Bibliothèque</b> : le panorama de chaque matière, les métiers de la santé, la méthode — <b>en accès libre</b>. Ouvre, referme, reviens : rien n'est noté."});
     s.push(parcoursVu
       ? {sel:'#mainnav button[data-t="home"]', img:'axo-guide-bravo', t:"Ton point de départ, lui, reste le <b>Parcours</b>, juste là en bas : deux fiches par jour, jusqu'à ta rentrée. La Bibliothèque, c'est pour regarder autour ; le Parcours, c'est pour avancer.",
          btn:"Retour au Parcours →", act:function(){ go('home'); }, skip:"Rester dans la Bibliothèque"}
-      : {sel:'#mainnav button[data-t="home"]', img:'axo-guide-bravo', t:"Mais le vrai départ, c'est le <b>Parcours</b>, juste là en bas : ta route jour après jour jusqu'à la rentrée, construite par <b>l'équipe Medeos</b>. <b>Gratuit</b> — deux fiches par jour, jusqu'à ta rentrée. Je te le montre ?",
+      : {sel:'#mainnav button[data-t="home"]', img:'axo-guide-bravo', t:"Mais le vrai départ, c'est le <b>Parcours</b>, juste là en bas : deux fiches par jour jusqu'à ta rentrée, <b>gratuit</b>. Je te le montre ?",
          btn:"Découvrir le Parcours →", act:function(){ go('home'); }, skip:"Rester dans la Bibliothèque"});
     return s;
   },
@@ -9474,6 +9510,8 @@ const TUTOS={
 };
 let TU=null;
 let TUTO_DIFFERE=null;   /* une visite qui attend qu'une fenêtre se referme pour démarrer */
+let BIBLIO_AVANT=null;
+let COMPTE_NEUF=false;   /* le compte vient d'être créé dans cette ouverture : l'intro commence par le dire */   /* une bulle posée par le lien d'arrivée en tête de la visite Bibliothèque (le guide méthodologique) */
 function tutoFait(k){ return !!(S.tuto && S.tuto[k]); }
 function startTuto(k){
   if(TU || tutoFait(k) || !TUTOS[k]) return;
@@ -10983,7 +11021,8 @@ function renderParcours(){ renderPtop(); renderSeance(); renderAccesMondes(); }
    dit ce qu'on fait aujourd'hui, la carte dit où l'on en est — deux choses, deux cartes */
 function renderAccesMondes(){
   const b=document.getElementById('acces-mondes'); if(!b) return;
-  const html=(typeof accOk==='function' && !accOk()) ? '' : ligneConquete();
+  /* visible sans compte aussi (Lucas, 07/09 : on en parle dans l'intro, elle doit être là) */
+  const html=ligneConquete();
   b.hidden=!html; b.innerHTML=html;
 }
 
@@ -14481,6 +14520,11 @@ const HASH0=(location.hash||'').slice(1);
 /* premier passage (ni compte ni visite faite) : on arrive par le PARCOURS (Lucas, 07/09 : « présenter le
    parcours d'abord avant la bibliothèque ») — l'intro dit l'intérêt de l'app, la route, et finit sur la
    Bibliothèque. Seul celui qui vient pour le Panorama (accueil-panorama-p1) arrive à la Bibliothèque. */
+/* ?neuf=1 : REJOUER L'ARRIVÉE D'UN NOUVEAU VENU sur un appareil qui a déjà vu l'app (les tests de Lucas, 07/09).
+   Sans compte seulement : les visites, la rentrée dite et le dernier écran s'oublient, et rien ne part
+   vers l'entonnoir de l'admin pour cette ouverture. */
+let NEUF0=false; try{ NEUF0=new URLSearchParams(location.search).get('neuf')==='1'; }catch(e){}
+if(NEUF0 && !(typeof accOk==='function'&&accOk())){ try{ S.tuto={}; if(S.profil) delete S.profil.rentreeDite; delete S.ficheVoulue; saveS(); localStorage.removeItem('m4_ecran'); }catch(e){} }
 const NOUVEAU=!(typeof accOk==='function'&&accOk()) && !(S.tuto&&(S.tuto.home||S.tuto.biblio));
 /* l'ancre du site passe avant tout ; sinon on rend sa place à qui revient, et l'Arène
    n'est le point de chute que d'un habitué qui n'a encore rien visité */
@@ -14516,9 +14560,10 @@ const PARCOURS_A_VOIR = (typeof accOk==='function'&&accOk()) && !(S.tuto&&S.tuto
 /* ═══ D'OÙ VIENT LA PERSONNE ? Le lien doit tenir sa promesse (Lucas, 05/09 : « hyper limpide
    et logique, quelle que soit la voie d'accès »). src dit par quelle carte du site elle est
    entrée ; code, qu'elle est acheteuse du Pack. ═══ */
-let SRC0='', CODE0='';
+let SRC0='', CODE0='', REF0='';
 try{ const q=new URLSearchParams(location.search);
   SRC0=String(q.get('src')||'').trim().toLowerCase().replace(/[^a-z0-9-]/g,'').slice(0,40);
+  REF0=String(q.get('ref')||'').trim().toLowerCase().replace(/[^a-z0-9-]/g,'').slice(0,40);   /* la story à la une : ?src=ig&ref=alaune-commence */
   CODE0=String(q.get('code')||'').trim().toUpperCase().replace(/\s+/g,'');
   if(!/^MEDEOS-[A-Z0-9]{4}-[A-Z0-9]{4}$/.test(CODE0)) CODE0='';
 }catch(e){}
@@ -14537,11 +14582,15 @@ const CONNEXION = HASH0==='connexion';
 let LIEN0='', LIEN0_EMAIL='';
 try{ const q=new URLSearchParams(location.search); LIEN0=String(q.get('lien')||''); LIEN0_EMAIL=String(q.get('email')||'').trim().toLowerCase();
   if(!/^[a-f0-9]{64}$/.test(LIEN0)) LIEN0=''; }catch(e){}
-go(['biblio','home','arene','social'].includes(HASH0) ? HASH0 : ((PUB||CONNEXION) ? 'home' : (NOUVEAU?(SRC0==='accueil-panorama-p1'?'biblio':'home'):(ECRAN0||((PARCOURS_A_VOIR||!premiereSeanceFaite())?'home':'arene')))));
+/* #inscription sans compte : la porte, avec le message de l'annonce (le lien promet l'inscription) */
+if(PUB && !(typeof accOk==='function'&&accOk())) gateVers='home';
+/* #connexion sans session : le formulaire s'ouvre tout de suite — la visite du Parcours attend qu'il se referme (sinon les deux se superposent) */
+if(CONNEXION && !(typeof accOk==='function'&&accOk())) TUTO_DIFFERE='home';
+go(['biblio','home','arene','social'].includes(HASH0) ? HASH0 : (PUB ? ((typeof accOk==='function'&&accOk()) ? 'home' : 'gate') : CONNEXION ? 'home' : (NOUVEAU?(['accueil-panorama-p1','accueil-guide-methodologique'].includes(SRC0)?'biblio':'home'):(ECRAN0||((PARCOURS_A_VOIR||!premiereSeanceFaite())?'home':'arene')))));
 /* le suivi : la session s'ouvre ici, quand la source et le hash sont connus */
 /* l'arrivée anonyme : une fois par jour et par appareil */
-try{ const jA=new Date().toISOString().slice(0,10); if(localStorage.getItem('m4_arrivee_jour')!==jA){ localStorage.setItem('m4_arrivee_jour',jA); balise('arrivee',{ecran:HASH0||''}); } }catch(e){ try{ balise('arrivee',{}); }catch(e2){} }
-try{ traquer('session',{src:SRC0||undefined, hash:HASH0||undefined, largeur:window.innerWidth, appli:!!(typeof navigateurIntegre==='function' && navigateurIntegre())}); }catch(e){}
+if(!NEUF0) try{ const jA=new Date().toISOString().slice(0,10); if(localStorage.getItem('m4_arrivee_jour')!==jA){ localStorage.setItem('m4_arrivee_jour',jA); balise('arrivee',{ecran:HASH0||''}); } }catch(e){ try{ balise('arrivee',{}); }catch(e2){} }
+try{ traquer('session',{src:SRC0||undefined, ref:REF0||undefined, hash:HASH0||undefined, largeur:window.innerWidth, appli:!!(typeof navigateurIntegre==='function' && navigateurIntegre())}); }catch(e){}
 if(LIEN0 && LIEN0_EMAIL){
   (async function(){
     try{ history.replaceState(null,'',location.pathname+location.hash); }catch(e){}
@@ -14606,7 +14655,7 @@ if(SRC0==='accueil-panorama-p1'){
 }
 if(SRC0==='accueil-guide-methodologique'){
   /* il venait chercher le guide : la visite commence sur sa carte, et dit où il s'ouvre */
-  TUTOS.biblio.unshift({sel:'#carte-guide', img:'axo-guide-pointe-haut', t:"Le <b>guide méthodologique</b> que tu viens chercher est ici — touche la carte, il s'ouvre directement."});
+  BIBLIO_AVANT={sel:'#carte-guide', img:'axo-guide-pointe-haut', t:"Le <b>guide méthodologique</b> que tu viens chercher est ici — touche la carte, il s'ouvre directement."};
   setTimeout(()=>{ const c=document.getElementById('carte-guide'); if(c) try{ c.scrollIntoView({block:'center'}); }catch(e){} }, 300);
 }
 if(CODE0){
