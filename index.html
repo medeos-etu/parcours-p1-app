@@ -3556,8 +3556,8 @@ function go(id){
   if(id==='social' && typeof renderSocial==='function'){ try{ renderSocial(); }catch(e){ const b=document.getElementById('social-corps'); if(b) b.innerHTML='<div class="card so-porte"><h2>Oups</h2><p>Le Social n\'a pas pu s\'afficher. Recharge l\'app ; si ça continue, écris-nous.</p></div>'; } }
   window.scrollTo({top:0});
   /* visite guidée : chaque monde se présente à la première arrivée.
-     La visite Bibliothèque est réservée aux NON connectés (c'est l'accueil des nouveaux) —
-     un connecté ne la voit jamais, et elle se marque faite pour de bon. */
+     La visite Bibliothèque est réservée aux NON connectés — un connecté ne la voit jamais, et
+     elle se marque faite pour de bon. L'entrée des nouveaux, c'est le Parcours (07/09). */
   if(typeof startTuto==='function'){
     let kT=null;
     if(id==='biblio'){
@@ -9355,38 +9355,47 @@ function renderPick(){
 /* ═══ VISITE GUIDÉE — le voile sombre, la mascotte qui parle, une fois par monde.
    Étape 1 : l'arrivée présente la Bibliothèque · étape 2 : le compte ouvre le Parcours ·
    étape 3 : l'Arène se découvre. Jamais revu une fois fait (S.tuto). ═══ */
+/* L'INTÉRÊT DE L'APP D'ABORD (Lucas, 07/09 : « faut bien commencer l'introduction toujours en
+   expliquant rapidement l'intérêt de l'app »). Cette bulle ouvre la première visite qu'on voit,
+   Parcours ou Bibliothèque — une seule fois : elle se marque faite dès qu'elle s'affiche. */
+const INTRO_APP={img:'axo-guide-bienvenue',
+  avant:function(){ try{ S.tuto=S.tuto||{}; if(!S.tuto.intro){ S.tuto.intro=Date.now(); saveS(); } }catch(e){} },
+  t:"Salut, moi c'est Axo. Entrer en première année de santé, c'est souvent entrer <b>à l'aveugle</b> — comme sauter dans une piscine sans savoir nager. Cette app sert à ça : <b>apprendre à nager avant de sauter</b>. Les bases des quatre matières qui pèsent le plus — anatomie, biologie, chimie, physique — vues <b>avant</b> la rentrée, un peu chaque jour. Le jour où le cours tombera à la fac, tu ne découvriras pas : <b>tu reconnaîtras</b>."};
 const TUTOS={
-  biblio:[
-    /* PROGRESSIF (Lucas, 05/09) : celui qui arrive à la Bibliothèque vient souvent chercher un
-       contenu gratuit — le guide, le panorama. Lui dérouler la méthode entière (deux fiches par
-       jour, restituer, QCM) avant qu'il ait rien demandé, c'est trop d'un coup. Ici, quatre
-       bulles : où il est et ce qui est libre, comment ça s'ouvre, le problème qu'on résout, et
-       l'envie d'aller voir le Parcours. La méthode, elle, se raconte dans la visite du Parcours,
-       une fois le compte créé — à quelqu'un qui a dit oui. */
-    /* POURQUOI ON COMMENCE ICI (Lucas, 06/09) : celui qui arrive d'Instagram doit comprendre
-       en une phrase pourquoi on lui montre la Bibliothèque d'abord — pour regarder sans
-       s'engager — et que le vrai départ, c'est le Parcours, juste après. */
-    {img:'axo-guide-bienvenue', t:"Salut, moi c'est Axo. <b>On commence par la Bibliothèque</b> pour que tu regardes sans t'engager : le panorama de chaque matière de première année, les métiers de la santé, la méthode — <b>tout est en accès libre</b>, rien à créer, rien à payer."},
-    {sel:'#rescards-free', img:'axo-guide-carte', t:"Ouvre ce qui t'intéresse, referme, reviens — rien n'est chronométré, rien n'est noté. Et quand tu voudras vraiment t'y mettre, ton point de départ, c'est le <b>Parcours</b> : je te le montre juste après."},
-    {img:'axo-guide-pointe-bas', t:"Entrer en première année de santé, c'est souvent entrer <b>à l'aveugle</b> — comme sauter dans une piscine sans savoir nager. Ici, tu peux <b>apprendre à nager avant de sauter</b> : un peu chaque jour, jusqu'à ta rentrée."},
-    {sel:'#mainnav button[data-t="home"]', img:'axo-guide-bravo', t:"C'est le rôle du <b>Parcours</b>, juste là en bas : ta route jour après jour jusqu'à la rentrée, construite par <b>l'équipe Medeos</b>. <b>Il est gratuit</b> — deux fiches par jour, jusqu'à ta rentrée, sans rien payer. Il te faut juste un compte, deux minutes, et je t'explique tout étape par étape.",
-     btn:"Créer mon compte gratuit →", act:function(){ go('home'); }, skip:"Explorer la Bibliothèque d'abord"}
-  ],
-  home:[
-    /* LA MÉTHODE SE RACONTE ICI, à quelqu'un qui vient de créer son compte : la promesse,
-       l'effort réel, la technique, la série, l'Arène — et l'humain pour finir. Cinq bulles. */
-    {img:'axo-guide-bienvenue', t:"Bienvenue dans ton <b>Parcours</b>. L'idée est simple : les bases des quatre matières qui pèsent le plus en première année — anatomie, biologie, chimie, physique — vues <b>avant</b> la rentrée. Le jour où le cours tombera à la fac, tu ne découvriras pas : <b>tu reconnaîtras</b>."},
-    {img:'axo-guide-pointe-bas', t:"On ne te demande pas de sacrifier ta Terminale. <b>Deux fiches par jour, une vingtaine de minutes.</b> Pas plus. Ce n'est pas la quantité qui fait la différence, c'est de revenir chaque jour — et tout ici est construit pour que tu aies envie de revenir."},
-    {sel:'#seance', img:'axo-guide-pointe-haut', t:"Ta <b>séance du jour</b> t'attend ici. Chaque fiche, tu la <b>lis</b>, tu la <b>restitues de mémoire</b>, tu <b>compares</b>. Un quart d'heure environ. C'est ça qui fait tenir les notions — pas la relecture."},
+  /* L'ORDRE (Lucas, 07/09) : on présente LE PARCOURS D'ABORD — l'intérêt de l'app, la route, la
+     séance, la série, l'Arène — et on finit en disant qu'il y a AUSSI la Bibliothèque. Plus de
+     bouton « Créer mon compte » en fin de visite : le compte se demande à la première fiche. */
+  home:function(){
+    const s=[];
+    if(!tutoFait('intro')) s.push(INTRO_APP);
+    s.push({img:'axo-guide-pointe-bas', t:"Ici, c'est ton <b>Parcours</b> : ta route jour après jour jusqu'à la rentrée, construite par <b>l'équipe Medeos</b>. <b>Deux fiches par jour, une vingtaine de minutes.</b> Pas plus — on ne te demande pas de sacrifier ta Terminale. Ce n'est pas la quantité qui fait la différence, c'est de revenir chaque jour. Et c'est <b>gratuit</b>, jusqu'à ta rentrée."});
+    s.push({sel:'#seance', img:'axo-guide-pointe-haut', t:"Ta <b>séance du jour</b> t'attend ici. Chaque fiche, tu la <b>lis</b>, tu la <b>restitues de mémoire</b>, tu <b>compares</b>. Un quart d'heure environ. C'est ça qui fait tenir les notions — pas la relecture."});
     /* La route en image n'est plus racontée ici (Lucas, 05/09 : « c'est tôt »). Chaque
        morceau a désormais SA visite, au moment où l'élève y met les pieds : les Salles et le
        Grand Amphi à l'entrée dans l'Arène, les mondes et les stages à l'ouverture de la carte. */
-    {sel:'#pt-flame', img:'axo-guide-pointe-haut', t:"Chaque jour travaillé allonge ta série 🔥. Un jour sans venir, elle repart à 0 — sauf si tu as posé un gel la veille."},
-    {sel:'#mainnav button[data-t="arene"]', img:'axo-guide-bravo', t:"Et l'Arène, juste là ? <b>Elle s'ouvre dès que tu as fini ta première séance.</b> Tu y retrouves tes deux fiches du jour en questions, sans rien risquer. Et derrière l'app, il y a <b>l'équipe Medeos</b> : si tu as une question, écris-nous sur Instagram, <b>@medeos.sante</b>.", btn:"Voir ma route →",
+    s.push({sel:'#pt-flame', img:'axo-guide-pointe-haut', t:"Chaque jour travaillé allonge ta série 🔥. Un jour sans venir, elle repart à 0 — sauf si tu as posé un gel la veille."});
+    s.push({sel:'#mainnav button[data-t="arene"]', img:'axo-guide-pointe-haut', t:"Et l'Arène, juste là ? <b>Elle s'ouvre dès que tu as fini ta première séance.</b> Tu y retrouves tes deux fiches du jour en questions, sans rien risquer."});
+    /* la Bibliothèque se dit EN DERNIER, après le Parcours (Lucas, 07/09) */
+    s.push({sel:'#mainnav button[data-t="biblio"]', img:'axo-guide-bravo', t:"Il y a aussi la <b>Bibliothèque</b>, juste là : le panorama de chaque matière de première année, les métiers de la santé, la méthode — <b>en accès libre</b>, quand tu veux. Et derrière l'app, il y a <b>l'équipe Medeos</b> : une question, écris-nous sur Instagram, <b>@medeos.sante</b>.", btn:"Voir ma route →",
      /* la présentation du parcours des mondes fait partie de l'introduction (Lucas, 05/09) :
         on ouvre la carte, et sa visite — ta rentrée, ton monde, les stages, le sommet — enchaîne */
-     act:function(){ try{ ouvrirCarte(); }catch(e){} }}
-  ],
+     act:function(){ try{ ouvrirCarte(); }catch(e){} }});
+    return s;
+  },
+  /* LA BIBLIOTHÈQUE n'est plus le point d'entrée : sa visite se joue quand un non-connecté y
+     arrive (lien #biblio, Panorama, ou l'onglet). Si l'intérêt de l'app n'a pas encore été dit,
+     elle commence par là ; elle finit en renvoyant au Parcours, le vrai départ. */
+  biblio:function(){
+    const s=[]; const parcoursVu=tutoFait('home');
+    if(!tutoFait('intro')) s.push(INTRO_APP);
+    s.push({sel:'#rescards-free', img:'axo-guide-carte', t:"Ici, c'est la <b>Bibliothèque</b> : le panorama de chaque matière de première année, les métiers de la santé, la méthode — <b>tout est en accès libre</b>. Ouvre ce qui t'intéresse, referme, reviens : rien n'est chronométré, rien n'est noté."});
+    s.push(parcoursVu
+      ? {sel:'#mainnav button[data-t="home"]', img:'axo-guide-bravo', t:"Ton point de départ, lui, reste le <b>Parcours</b>, juste là en bas : deux fiches par jour, jusqu'à ta rentrée. La Bibliothèque, c'est pour regarder autour ; le Parcours, c'est pour avancer.",
+         btn:"Retour au Parcours →", act:function(){ go('home'); }, skip:"Rester dans la Bibliothèque"}
+      : {sel:'#mainnav button[data-t="home"]', img:'axo-guide-bravo', t:"Mais le vrai départ, c'est le <b>Parcours</b>, juste là en bas : ta route jour après jour jusqu'à la rentrée, construite par <b>l'équipe Medeos</b>. <b>Gratuit</b> — deux fiches par jour, jusqu'à ta rentrée. Je te le montre ?",
+         btn:"Découvrir le Parcours →", act:function(){ go('home'); }, skip:"Rester dans la Bibliothèque"});
+    return s;
+  },
   /* L'ARÈNE, juste après les deux fiches du jour (ordre voulu par Lucas, 05/09 : intro Parcours + carte →
      deux fiches → intro Arène → QCM → intro Amphi en entrant dans l'Amphi → profil → social).
      Elle profite des fiches qu'on vient de lire pour montrer OÙ sont les QCM d'entraînement, et
@@ -14469,8 +14478,10 @@ try{ const am=(new URLSearchParams(location.search).get('ami')||'').trim(); if(/
 /* PWA : le service worker rend l'app installable (réseau d'abord, jamais de vieille version) */
 if('serviceWorker' in navigator && location.protocol==='https:'){ navigator.serviceWorker.register('sw.js').catch(()=>{}); }
 const HASH0=(location.hash||'').slice(1);
-/* premier passage (ni compte ni visite faite) : on arrive par la Bibliothèque — étape 1 du parcours d'accueil */
-const NOUVEAU=!(typeof accOk==='function'&&accOk()) && !(S.tuto&&S.tuto.biblio);
+/* premier passage (ni compte ni visite faite) : on arrive par le PARCOURS (Lucas, 07/09 : « présenter le
+   parcours d'abord avant la bibliothèque ») — l'intro dit l'intérêt de l'app, la route, et finit sur la
+   Bibliothèque. Seul celui qui vient pour le Panorama (accueil-panorama-p1) arrive à la Bibliothèque. */
+const NOUVEAU=!(typeof accOk==='function'&&accOk()) && !(S.tuto&&(S.tuto.home||S.tuto.biblio));
 /* l'ancre du site passe avant tout ; sinon on rend sa place à qui revient, et l'Arène
    n'est le point de chute que d'un habitué qui n'a encore rien visité */
 let ECRAN0=null; try{ ECRAN0=localStorage.getItem('m4_ecran'); }catch(e){}
@@ -14526,7 +14537,7 @@ const CONNEXION = HASH0==='connexion';
 let LIEN0='', LIEN0_EMAIL='';
 try{ const q=new URLSearchParams(location.search); LIEN0=String(q.get('lien')||''); LIEN0_EMAIL=String(q.get('email')||'').trim().toLowerCase();
   if(!/^[a-f0-9]{64}$/.test(LIEN0)) LIEN0=''; }catch(e){}
-go(['biblio','home','arene','social'].includes(HASH0) ? HASH0 : ((PUB||CONNEXION) ? 'home' : (NOUVEAU?'biblio':(ECRAN0||((PARCOURS_A_VOIR||!premiereSeanceFaite())?'home':'arene')))));
+go(['biblio','home','arene','social'].includes(HASH0) ? HASH0 : ((PUB||CONNEXION) ? 'home' : (NOUVEAU?(SRC0==='accueil-panorama-p1'?'biblio':'home'):(ECRAN0||((PARCOURS_A_VOIR||!premiereSeanceFaite())?'home':'arene')))));
 /* le suivi : la session s'ouvre ici, quand la source et le hash sont connus */
 /* l'arrivée anonyme : une fois par jour et par appareil */
 try{ const jA=new Date().toISOString().slice(0,10); if(localStorage.getItem('m4_arrivee_jour')!==jA){ localStorage.setItem('m4_arrivee_jour',jA); balise('arrivee',{ecran:HASH0||''}); } }catch(e){ try{ balise('arrivee',{}); }catch(e2){} }
