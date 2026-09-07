@@ -9057,6 +9057,8 @@ function renderCurArena(){
   const lim=document.getElementById('ar-limite');
   if(lim){
     if(false) lim.innerHTML='';
+    else if(!ascensionsDebloquees()) lim.innerHTML='<span class="pips2">'+Array.from({length:runsParJour()},()=>'<span class="pip2"></span>').join('')+'</span>'+
+      '<span>Fais ta séance du jour (deux fiches) : tes '+runsParJour()+' ascensions se débloquent juste après</span>';
     else lim.innerHTML='<span class="pips2">'+Array.from({length:runsParJour()},(x,i)=>'<span class="pip2'+(i<S.ar.runs?' on':'')+'"></span>').join('')+'</span>'+
       '<span>Il te reste '+S.ar.runs+' ascension'+(S.ar.runs>1?'s':'')+' aujourd\'hui'+(S.stage?' (3 par jour, élève Medeos)':'')+' · recharge chaque matin à 6 h</span>';
   }
@@ -9066,6 +9068,7 @@ function renderCurArena(){
     else { bb.onclick=startRun; }
     if(areneArmee(a.k) && !dispo){ bt.textContent='BIENTÔT'; bs.textContent='cette arène ouvre plus tard'; bb.disabled=true; }
     else if(!areneArmee(a.k)){ }
+    else if(!ascensionsDebloquees()){ bt.textContent='FAIRE MA SÉANCE D\'ABORD'; bs.textContent='tes '+runsParJour()+' ascensions du jour se débloquent après tes deux fiches'; bb.disabled=false; bb.onclick=function(){ seanceDabord(); go('home'); }; }
     else if(S.ar.runs<=0){ bt.textContent='REVIENS DEMAIN'; bs.textContent='tes '+runsParJour()+' ascensions du jour sont faites'; bb.disabled=true; }
     else {
       /* la taille réelle de la prochaine ascension, et l'état du stock */
@@ -9104,7 +9107,12 @@ function majActionAmphi(){
   }
   if(lim) lim.style.display='';
   bb.className='bigaction';
-  if(S.ar.runs<=0){
+  if(!ascensionsDebloquees()){
+    /* la séance du jour d'abord (Lucas, 07/09) : le bouton mène au Parcours */
+    bt.textContent='FAIRE MA SÉANCE D\'ABORD';
+    bs.textContent='tes '+runsParJour()+' ascensions du jour se débloquent après tes deux fiches';
+    bb.className='bigaction ferme'; bb.disabled=false; bb.onclick=function(){ seanceDabord(); go('home'); };
+  } else if(S.ar.runs<=0){
     bt.textContent='REVIENS DEMAIN';
     bs.textContent='tes '+runsParJour()+' ascensions du jour sont faites';
     bb.disabled=true; bb.onclick=null;
@@ -9572,7 +9580,7 @@ const TUTOS={
       {sel:'#ms-amphi', img:'mascotte-arene-prete-au-combat', t:"<b>Le Grand Amphi</b>, c'est l'inverse des Salles : toutes les matières mélangées, du vrai jeu. Chaque case juste vaut <b>+2 🏆</b>, chaque erreur <b>−2</b>."},
       {sel:'.goldplate', img:'axo-guide-pointe-haut', t:"Tes <b>trophées</b>, en haut à droite : <b>touche-les</b> pour ouvrir le classement — le podium, et la place où tu te trouves. Tu y entres dès ton premier trophée."},
       {img:'axo-guide-bravo', t: (ouvert
-        ? "<b>Deux ascensions par jour</b> — trois avec le Pack Medi Pro. Chacune compte : joue-la quand tu te sens prêt."
+        ? "<b>Deux ascensions par jour</b> — trois avec le Pack Medi Pro — débloquées par <b>ta séance du jour</b>. Chacune compte : joue-la quand tu te sens prêt."
         : "L'Amphi s'ouvre après <b>4 jours de Parcours</b> — le temps de te constituer un bagage. D'ici là, les Salles sont à toi.")
         +(suite ? " On passe à <b>ton profil</b> ?" : ""),
        btn: suite ? "Voir mon profil →" : "C'est compris", act:function(){ if(suite) try{ go('profil'); }catch(e){} }}
@@ -10609,6 +10617,17 @@ const MONDES=['Ce qu\'on ne te dit pas sur la P1','Le corps','La vie en petit','
 function seancesMaxJour(){ return 1 + ((S.bonusSeance===arDay())?1:0); }
 function seancesFaitesJour(){ return (S.sj && S.sj.day===arDay())? (S.sj.n||0) : 0; }
 function seanceJourFaite(){ return !S.stage && seancesFaitesJour()>=seancesMaxJour(); }
+/* LES ASCENSIONS DU JOUR SE DÉBLOQUENT PAR LA SÉANCE DU JOUR (Lucas, 07/09 : « sinon les gens spamment
+   l'Arène sans faire le Parcours et grimpent en trophées facilement, les QCM se répètent »). Une séance
+   du fil finie aujourd'hui (ses deux fiches) ouvre les ascensions ; Pack ou pas, même règle. */
+function ascensionsDebloquees(){ return seancesFaitesJour()>=1; }
+function seanceDabord(){
+  try{
+    const d=document.createElement('div'); d.className='axotoast';
+    d.innerHTML='<img src="img/axo-guide-pointe-bas.png" alt="" onerror="this.remove()"><span>Tes ascensions se débloquent après <b>ta séance du jour</b> — deux fiches, et l\'Amphi est à toi.</span>';
+    document.body.appendChild(d); setTimeout(()=>{ d.classList.add('out'); setTimeout(()=>d.remove(),400); },5200);
+  }catch(e){}
+}
 function seanceCourante(){
   S.skip=S.skip||{};
   /* la séance engagée aujourd'hui (première fiche ouverte) reste LA séance du jour tant
@@ -13954,6 +13973,7 @@ let cdTimer=null;
 function preRun(){
   initAr();
   if(!areneOuvrable()){ renderArene(); go('arene'); return; }   /* l'Arène n'est pas encore ouverte */
+  if(!ascensionsDebloquees()){ seanceDabord(); renderArene(); go('arene'); return; }   /* la séance du jour d'abord */
   if(S.ar.runs<=0){ renderArene(); go('arene'); return; }
   const e=document.getElementById('cd-num');
   let n=3; if(e) e.textContent=n;
@@ -13970,7 +13990,7 @@ function preRun(){
 function annulerLancement(){ clearInterval(cdTimer); cdTimer=null; closeSheet('sheet-launch'); }
 function doStartRun(){
   initAr();
-
+  if(!ascensionsDebloquees()){ seanceDabord(); renderArene(); go('arene'); return; }
   if(S.ar.runs<=0){ renderArene(); go('arene'); return; }
   const qsTirees=pickQuestions();
   if(!qsTirees.length){ renderArene(); go('arene'); return; }   /* arène pas encore armée : rien n'est consommé */
