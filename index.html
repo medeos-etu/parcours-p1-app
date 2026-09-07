@@ -13364,7 +13364,8 @@ function consommerAlt(){
 
 /* ═══ LA BOUCLE : je rate → j'ouvre LA fiche → je rebats ═══ */
 function openFiche(slug,titre){
-  if(typeof accOk==='function' && !accOk()){
+  /* les fiches MÉTIERS sont en libre accès, sans compte (Lucas, 07/09) : seules les fiches du Parcours ont la porte */
+  if(typeof accOk==='function' && !accOk() && !(typeof notesLibres==='function' && notesLibres(slug))){
     /* LA PORTE SE TROUVE ICI (Lucas, 07/09) : le Parcours se visite sans compte, la fiche s'ouvre avec.
        On retient la fiche voulue : elle s'ouvre toute seule une fois le compte créé. */
     try{ S.ficheVoulue={slug:slug, titre:titre||''}; saveS(); }catch(e){}
