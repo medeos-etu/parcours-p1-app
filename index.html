@@ -2970,7 +2970,7 @@
     <div class="gatebox">
       <img class="gaxo" src="img/axo-canon.png" alt="">
       <h2 id="gate-titre">Crée ton compte pour entrer</h2>
-      <p>Le Parcours et l'Arène suivent ta progression, tes trophées et tes erreurs — il leur faut un compte. C'est gratuit. La Bibliothèque, elle, reste en accès libre.</p>
+      <p>Pour ouvrir tes fiches et suivre ta progression — tes trophées, tes erreurs, tes amis — il te faut un compte. C'est gratuit, en trente secondes. La Bibliothèque et le Parcours, eux, restent en accès libre.</p>
       <button class="btn" onclick="accMode='create';focusAcc()">Créer mon compte gratuit</button>
       <button class="btn ghost" style="margin-top:8px" onclick="accMode='login';focusAcc()">J'ai déjà un compte</button>
     </div>
@@ -3498,7 +3498,10 @@ function attendreLaSeance(id){
 }
 function go(id){
   /* Parcours & Arène : réservés aux comptes connectés — la Bibliothèque reste libre (Lucas, 24/08) */
-  if((id==='home'||id==='arene') && typeof S!=='undefined' && !accOk()){ gateVers=id; id='gate'; }
+  /* Le PARCOURS se visite sans compte : son intro se joue en entier (Lucas, 07/09 : « l'inscription
+     passera de façon beaucoup plus souple »). La porte se trouve à la PREMIÈRE FICHE (openFiche)
+     et à l'Arène. */
+  if(id==='arene' && typeof S!=='undefined' && !accOk()){ gateVers='arene'; id='gate'; }
   if(typeof S!=='undefined' && attendreLaSeance(id)) id='home';
   const cible=document.getElementById(id); if(!cible) return;
   /* UNE VISITE NE SURVIT PAS À UN CHANGEMENT D'ÉCRAN. Sinon la bulle « Bienvenue dans
@@ -3509,7 +3512,7 @@ function go(id){
     const gt=document.getElementById('gate-tease');
     if(gt) gt.className='gate-tease '+(gateVers==='arene'?'t-arene':'t-home');
     const t2=document.getElementById('gate-titre');
-    if(t2) t2.textContent=(gateVers==='arene')?'L\'Arène t\'attend':'Ton Parcours t\'attend';
+    if(t2) t2.textContent=(gateVers==='arene')?'L\'Arène t\'attend':(gateVers==='fiche')?'Ta première fiche t\'attend':'Ton Parcours t\'attend';
   }
   const i=UNIVERS.indexOf(id);
   const avant=document.querySelector('.scr.on');
@@ -3550,7 +3553,7 @@ function go(id){
   if(['home','arene','profil'].includes(id) && typeof verifSkins==='function') setTimeout(verifSkins,700);
   if(id==='home' && typeof renderParcours==='function'){ renderParcours(); }
   if(id==='arene' && typeof renderArene==='function'){ renderArene(); }
-  if(id==='social' && typeof renderSocial==='function'){ renderSocial(); }
+  if(id==='social' && typeof renderSocial==='function'){ try{ renderSocial(); }catch(e){ const b=document.getElementById('social-corps'); if(b) b.innerHTML='<div class="card so-porte"><h2>Oups</h2><p>Le Social n\'a pas pu s\'afficher. Recharge l\'app ; si ça continue, écris-nous.</p></div>'; } }
   window.scrollTo({top:0});
   /* visite guidée : chaque monde se présente à la première arrivée.
      La visite Bibliothèque est réservée aux NON connectés (c'est l'accueil des nouveaux) —
@@ -3560,7 +3563,7 @@ function go(id){
     if(id==='biblio'){
       if(accOk()){ if(!tutoFait('biblio')){ S.tuto=S.tuto||{}; S.tuto.biblio=Date.now(); saveS(); } }
       else kT='biblio';
-    } else if(id==='home' && accOk()) kT='home';
+    } else if(id==='home') kT='home';   /* l'intro du Parcours se joue aussi sans compte (07/09) */
     else if(id==='arene' && accOk() && (typeof areneOuvrable!=='function' || areneOuvrable())) kT='arene';   /* fermée, elle parle d'elle-même ; on la présente quand elle s'ouvre */
     else if(id==='social' && accOk()) kT='social';
     else if(id==='profil' && accOk()) kT='profil';
@@ -7933,6 +7936,22 @@ function renderArenes(){
    serveur si elle est plus récente — un autre appareil, une autre adresse. Le stockage local reste
    la copie de travail ; il n'est plus la vérité. ═══ */
 const COMPTE_API='https://medeos-sante.fr/api/app-compte';
+/* ═══ LA BALISE D'ARRIVÉE ANONYME (Lucas, 07/09 : « beaucoup de clics, on ne voit pas ce qu'ils
+   deviennent »). Sans compte, on dit juste : un appareil est arrivé, par tel lien — puis « il a voulu
+   ouvrir une fiche » — et le même identifiant est renvoyé à l'inscription. L'entonnoir
+   clics → arrivées → fiche → compte se lit dans l'admin (/admin/univers). Aucune donnée
+   personnelle avant le compte. Corps en text/plain : requête simple, sans preflight. ═══ */
+const ARRIVEE_API='https://medeos-sante.fr/api/app-arrivee';
+function appareilId(){
+  try{ let a=localStorage.getItem('m4_appareil'); if(!a){ a=Math.random().toString(36).slice(2,10)+Date.now().toString(36); localStorage.setItem('m4_appareil',a); } return a; }
+  catch(e){ return 'sans-stockage-'+Math.random().toString(36).slice(2,8); }
+}
+function balise(type, detail){
+  try{
+    const corps=JSON.stringify(Object.assign({appareil:appareilId(), type:type, src:(typeof SRC0==='string'?SRC0:''), ref:String(document.referrer||'').slice(0,200)}, detail||{}));
+    fetch(ARRIVEE_API,{method:'POST',headers:{'Content-Type':'text/plain'},body:corps,keepalive:true}).catch(function(){});
+  }catch(e){}
+}
 function jetonCompte(){ try{ return localStorage.getItem('m4_jeton')||''; }catch(e){ return ''; } }
 function poserJeton(t){ try{ if(t) localStorage.setItem('m4_jeton',t); else { localStorage.removeItem('m4_jeton'); localStorage.removeItem('m4_etatMaj'); } }catch(e){} }
 /* ═══ LE SUIVI DES FAITS ET GESTES (Lucas, 06/09) : chaque geste part au serveur par lots, pour l'admin /admin/univers.
@@ -8051,6 +8070,8 @@ function bandeauNavigateur(){
     const d=document.createElement('div'); d.innerHTML=html; cible.insertBefore(d.firstChild, cible.firstChild); });
 }
 function accApresEntree(neuf){
+  /* la fiche demandée avant le compte s'ouvre toute seule (porte de la première fiche, 07/09) */
+  try{ if(S.ficheVoulue && S.ficheVoulue.slug){ const f=S.ficheVoulue; delete S.ficheVoulue; saveS(); setTimeout(function(){ try{ go('home'); openFiche(f.slug,f.titre); }catch(e){} }, 950); } }catch(e){}
   setTimeout(()=>closeSheet('sheet-compte'),650);
   /* UN COMPTE NEUF DOIT POUVOIR REVENIR (Lucas, 05/09 : « un mail ou un moyen de se reconnecter
      facilement les prochains jours »). Le rappel du soir est enclenché dès maintenant — pas au
@@ -8075,7 +8096,7 @@ function accApresEntree(neuf){
     /* venu par l'Arène avant sa première séance : on commence par le Parcours, et on le dit
        (Lucas, 05/09 : « on verra l'Arène juste après, ça bascule vers le Parcours ») */
     const areneFermee = gateVers==='arene' && !((typeof areneOuvrable==='function') && areneOuvrable());
-    setTimeout(()=>go(areneFermee ? 'home' : gateVers),660);
+    setTimeout(()=>go((areneFermee || gateVers==='fiche') ? 'home' : gateVers),660);
     if(areneFermee) setTimeout(()=>{ const d=document.createElement('div'); d.className='axotoast';
       d.innerHTML='<img src="img/axo-guide-bienvenue.png" alt="" onerror="this.remove()"><span>On verra l\'Arène juste après : elle s\'ouvre avec ta première séance. On commence par <b>ton Parcours</b>.</span>';
       document.body.appendChild(d); setTimeout(()=>{ d.classList.add('out'); setTimeout(()=>d.remove(),400); },5200); },900);
@@ -8092,7 +8113,7 @@ async function creerCompte(){
   const mail=(document.getElementById('acc-mail')||{value:''}).value.trim();
   if(!/.+@.+\..+/.test(mail)){ err.textContent='Entre un email valide — c\'est lui qui te permet de te reconnecter.'; return; }
   err.textContent='Création du compte…';
-  let d; try{ d=await apiCompte('inscription',{email:mail, pseudo:id, prenom:localStorage.getItem('m4_prenom')||'', mdp:mp, etat:S, source:srcInscription()}); }catch(e){ d={_status:0}; }
+  let d; try{ d=await apiCompte('inscription',{email:mail, pseudo:id, prenom:localStorage.getItem('m4_prenom')||'', mdp:mp, etat:S, source:srcInscription(), appareil:appareilId()}); }catch(e){ d={_status:0}; }
   if(!d.ok){
     err.textContent = d.erreur==='email-pris' ? 'Cet email a déjà un compte — passe par « J\'ai déjà un compte ».'
       : d.erreur==='pseudo-pris' ? 'Cet identifiant est déjà pris — choisis-en un autre.'
@@ -12780,6 +12801,13 @@ function consommerAlt(){
 
 /* ═══ LA BOUCLE : je rate → j'ouvre LA fiche → je rebats ═══ */
 function openFiche(slug,titre){
+  if(typeof accOk==='function' && !accOk()){
+    /* LA PORTE SE TROUVE ICI (Lucas, 07/09) : le Parcours se visite sans compte, la fiche s'ouvre avec.
+       On retient la fiche voulue : elle s'ouvre toute seule une fois le compte créé. */
+    try{ S.ficheVoulue={slug:slug, titre:titre||''}; saveS(); }catch(e){}
+    try{ balise('fiche_gate',{slug:slug}); }catch(e){}
+    gateVers='fiche'; go('gate'); return;
+  }
   try{ traquer('fiche',{slug:slug}); }catch(e){}
   if(!slug) return;
   marquerVue(slug);
@@ -14172,7 +14200,7 @@ function chatEsc(s){ return String(s==null?'':s).replace(/[&<>"']/g, c=>({'&':'&
 function amiNom(id){ return id==='tuteur'? TUTEUR.nom : id; }
 function chatNonLus(id){ const r=CHAT.resume; if(!r) return 0; const c=r.find(x=>x.avec===String(id).toLowerCase()); return c? (c.nonLus||0) : 0; }
 function amisListe(){
-  S.amis=Array.isArray(S.amis)? S.amis : [];
+  S.amis=(Array.isArray(S.amis)? S.amis : []).filter(function(a){ return a && typeof a.id==='string' && a.id; });   /* une entrée abîmée ne doit jamais vider l'écran (07/09) */
   /* le tuteur, d'office et en premier — sauf pour le tuteur lui-même */
   if(S.ar && S.ar.compte && !CHAT.tuteur && !S.amis.some(a=>a && a.id==='tuteur')) S.amis.unshift({id:'tuteur', tuteur:true, depuis:Date.now()});
   return S.amis;
@@ -14299,7 +14327,7 @@ function renderSocial(){
       '<button class="btn ghost" style="margin-top:8px" onclick="accMode=\'login\';focusAcc()">J\'ai déjà un compte</button></div>';
     return;
   }
-  const moi=joueurDepuis(null,true), reg=accRegistre(), tous=amisListe(), amis=tous.filter(a=>a && !a.tuteur && a.id!=='tuteur');
+  const moi=joueurDepuis(null,true), reg=accRegistre(), tous=amisListe(), amis=tous.filter(a=>a && typeof a.id==='string' && a.id && !a.tuteur && a.id!=='tuteur');
   const invite=S.amiInvite && /^[a-zA-Z0-9._-]{3,40}$/.test(S.amiInvite) && S.amiInvite.toLowerCase()!==moi.id.toLowerCase() && !amis.some(a=>a.id.toLowerCase()===S.amiInvite.toLowerCase()) ? S.amiInvite : null
   let x='';
   /* ma carte, telle que mes amis la voient */
@@ -14500,6 +14528,8 @@ try{ const q=new URLSearchParams(location.search); LIEN0=String(q.get('lien')||'
   if(!/^[a-f0-9]{64}$/.test(LIEN0)) LIEN0=''; }catch(e){}
 go(['biblio','home','arene','social'].includes(HASH0) ? HASH0 : ((PUB||CONNEXION) ? 'home' : (NOUVEAU?'biblio':(ECRAN0||((PARCOURS_A_VOIR||!premiereSeanceFaite())?'home':'arene')))));
 /* le suivi : la session s'ouvre ici, quand la source et le hash sont connus */
+/* l'arrivée anonyme : une fois par jour et par appareil */
+try{ const jA=new Date().toISOString().slice(0,10); if(localStorage.getItem('m4_arrivee_jour')!==jA){ localStorage.setItem('m4_arrivee_jour',jA); balise('arrivee',{ecran:HASH0||''}); } }catch(e){ try{ balise('arrivee',{}); }catch(e2){} }
 try{ traquer('session',{src:SRC0||undefined, hash:HASH0||undefined, largeur:window.innerWidth, appli:!!(typeof navigateurIntegre==='function' && navigateurIntegre())}); }catch(e){}
 if(LIEN0 && LIEN0_EMAIL){
   (async function(){
