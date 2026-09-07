@@ -1,0 +1,631 @@
+{
+ "matiere": "physique",
+ "chapitre": 1,
+ "note": "Renfort d'arène (lots 8 à 15, tous ar:1) pour les fiches de physique de la séance 24 du Parcours. Aucun calcul nouveau n'est demandé : chaque item porte sur une règle énoncée ou sur une valeur déjà résolue dans la fiche. Le socle des lots 1-7 reste dans physique-ch01-p3.json.",
+ "questions": [
+  {
+   "fiche": "physique-011-constante-dielectrique-hydratation.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 8,
+   "q": "La fiche part de la polarité de l'eau et pose le problème du sel. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "La molécule d'eau est un dipôle : oxygène δ− d'un côté, deux hydrogènes δ+ de l'autre.",
+     "v": true,
+     "e": "VRAI. C'est l'acquis de la fiche précédente.",
+     "sourceQuote": "avec un oxygène δ− d'un côté et deux hydrogènes δ+ de l'autre : c'est un dipôle"
+    },
+    {
+     "t": "La première conséquence de cette polarité, déjà vue, était les ponts hydrogène.",
+     "v": true,
+     "e": "VRAI. L'eau collée à elle-même.",
+     "sourceQuote": "Première conséquence, tu l'as vue : les ponts hydrogène, l'eau collée à elle-même"
+    },
+    {
+     "t": "La deuxième conséquence : l'eau s'enroule autour des ions.",
+     "v": true,
+     "e": "VRAI. Elle ne se colle pas qu'à elle-même.",
+     "sourceQuote": "l'eau ne se colle pas qu'à elle-même, elle s'enroule autour des ions"
+    },
+    {
+     "t": "Le sel est fait d'ions Na⁺ et Cl⁻ qui se collent par attraction électrique.",
+     "v": true,
+     "e": "VRAI. C'est ce qu'il faut défaire pour le dissoudre.",
+     "sourceQuote": "Le sel (NaCl) est fait d'ions Na⁺ et Cl⁻ qui se collent les uns aux autres par attraction électrique"
+    },
+    {
+     "t": "Pour dissoudre le sel, il faut renforcer cette attraction.",
+     "v": false,
+     "e": "FAUX : il faut l'affaiblir.",
+     "sourceQuote": "Pour le dissoudre, il faut affaiblir cette attraction"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-011-constante-dielectrique-hydratation.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 9,
+   "q": "Les molécules d'eau s'orientent autour de chaque ion. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le côté oxygène, chargé δ−, se colle aux ions Na⁺.",
+     "v": true,
+     "e": "VRAI. Les charges opposées s'attirent.",
+     "sourceQuote": "Leur côté − (l'oxygène) se colle aux ions Na⁺"
+    },
+    {
+     "t": "Le côté oxygène se colle aussi aux ions Cl⁻.",
+     "v": false,
+     "e": "FAUX : autour du Cl⁻, ce sont les hydrogènes, chargés δ+.",
+     "sourceQuote": "Leur côté + (les hydrogènes) se colle aux ions Cl⁻"
+    },
+    {
+     "t": "Cette cage de dipôles neutralise localement la charge des ions.",
+     "v": true,
+     "e": "VRAI. Chaque ion se retrouve emballé.",
+     "sourceQuote": "Cette « cage » de dipôles d'eau neutralise localement la charge des ions"
+    },
+    {
+     "t": "Cette cage augmente la charge effective des ions et renforce leur attraction.",
+     "v": false,
+     "e": "FAUX : elle la neutralise localement.",
+     "sourceQuote": "Cette « cage » de dipôles d'eau neutralise localement la charge des ions"
+    },
+    {
+     "t": "Chaque ion reste au contact direct de son voisin.",
+     "v": false,
+     "e": "FAUX : il se retrouve emballé, isolé de son voisin.",
+     "sourceQuote": "Chaque Na⁺ et chaque Cl⁻ se retrouve emballé, isolé de son voisin"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-011-constante-dielectrique-hydratation.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 10,
+   "q": "Un étudiant décrit l'effondrement de l'attraction dans l'eau. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Dans l'eau, l'attraction Na⁺-Cl⁻ est environ 80 fois plus forte que dans l'air.",
+     "v": false,
+     "e": "FAUX : elle y est environ 80 fois plus faible.",
+     "sourceQuote": "dans l'eau, l'attraction entre Na⁺ et Cl⁻ est environ 80 fois plus faible que dans l'air"
+    },
+    {
+     "t": "L'agitation thermique suffit alors à séparer les ions.",
+     "v": true,
+     "e": "VRAI. C'est ce qui achève la dissolution.",
+     "sourceQuote": "L'agitation thermique des molécules suffit alors à séparer les ions"
+    },
+    {
+     "t": "Dans l'huile, la force électrique est divisée par 80.",
+     "v": false,
+     "e": "FAUX : par 2 seulement, ce qui est insuffisant pour dissoudre le sel.",
+     "sourceQuote": "Huile ~ 2 Force divisée par 2 — insuffisant pour dissoudre le sel"
+    },
+    {
+     "t": "Dans l'air, la constante diélectrique vaut 80.",
+     "v": false,
+     "e": "FAUX : elle vaut 1, sans aucun effet sur les forces électriques.",
+     "sourceQuote": "Air 1 Aucun effet"
+    },
+    {
+     "t": "Plus la constante diélectrique est faible, plus le milieu écrante les charges.",
+     "v": false,
+     "e": "FAUX : c'est l'inverse — plus elle est élevée, plus le milieu écrante.",
+     "sourceQuote": "Plus ε r est élevée, plus le milieu écrante les charges"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-011-constante-dielectrique-hydratation.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 11,
+   "q": "Le tableau compare trois milieux par leur constante diélectrique. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "La constante diélectrique mesure la capacité d'un milieu à affaiblir les forces électriques.",
+     "v": true,
+     "e": "VRAI. C'est sa définition.",
+     "sourceQuote": "la capacité d'un milieu à affaiblir les forces électriques — s'appelle la constante diélectrique"
+    },
+    {
+     "t": "Elle vaut 1 pour l'air : aucun effet.",
+     "v": true,
+     "e": "VRAI. C'est la première ligne du tableau.",
+     "sourceQuote": "Air 1 Aucun effet"
+    },
+    {
+     "t": "Elle vaut environ 2 pour l'huile : force divisée par 2, insuffisant pour dissoudre le sel.",
+     "v": true,
+     "e": "VRAI. C'est la deuxième ligne.",
+     "sourceQuote": "Huile ~ 2 Force divisée par 2 — insuffisant pour dissoudre le sel"
+    },
+    {
+     "t": "Elle vaut 80 pour l'eau : force divisée par 80, ce qui dissout tous les sels ioniques.",
+     "v": true,
+     "e": "VRAI. C'est la troisième ligne.",
+     "sourceQuote": "Eau 80 Force divisée par 80 — dissout tous les sels ioniques"
+    },
+    {
+     "t": "Plus la constante diélectrique est élevée, plus le milieu écrante les charges.",
+     "v": true,
+     "e": "VRAI. C'est le sens de lecture du tableau.",
+     "sourceQuote": "Plus ε r est élevée, plus le milieu écrante les charges"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-011-constante-dielectrique-hydratation.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 12,
+   "q": "La valeur extrême de l'eau porte un nom. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "C'est cette valeur de 80 qui fait de l'eau le meilleur solvant pour tous les ions du vivant.",
+     "v": true,
+     "e": "VRAI. Na⁺, K⁺, Ca²⁺, Cl⁻…",
+     "sourceQuote": "C'est cette valeur extrême ε r = 80 qui fait de l'eau le meilleur solvant pour tous les ions du vivant"
+    },
+    {
+     "t": "Cette capacité à déchirer les cristaux ioniques s'appelle le pouvoir ionisant et dissolvant.",
+     "v": true,
+     "e": "VRAI. C'est le nom donné par la fiche.",
+     "sourceQuote": "le pouvoir ionisant et dissolvant de l'eau"
+    },
+    {
+     "t": "C'est la base physique de toute la chimie biologique.",
+     "v": true,
+     "e": "VRAI. C'est ce que la fiche en tire.",
+     "sourceQuote": "et donc la base physique de toute la chimie biologique"
+    },
+    {
+     "t": "Cette valeur fait de l'eau un solvant médiocre pour les ions du vivant.",
+     "v": false,
+     "e": "FAUX : elle en fait le meilleur solvant.",
+     "sourceQuote": "qui fait de l'eau le meilleur solvant pour tous les ions du vivant"
+    },
+    {
+     "t": "Na⁺, K⁺, Ca²⁺ et Cl⁻ ne comptent pas parmi les ions du vivant cités.",
+     "v": false,
+     "e": "FAUX : ce sont précisément les exemples donnés.",
+     "sourceQuote": "tous les ions du vivant (Na⁺, K⁺, Ca²⁺, Cl⁻…)"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-011-constante-dielectrique-hydratation.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 13,
+   "q": "La fiche mentionne la loi de Coulomb, puis dit quoi en retenir. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "La formule complète décrivant la force entre deux charges est la loi de Coulomb.",
+     "v": true,
+     "e": "VRAI. C'est le nom donné par la fiche.",
+     "sourceQuote": "la formule complète est la loi de Coulomb"
+    },
+    {
+     "t": "La constante diélectrique du milieu y figure au dénominateur.",
+     "v": true,
+     "e": "VRAI. C'est ce qui divise la force par 80 dans l'eau.",
+     "sourceQuote": "Le ε r au dénominateur, c'est ce qui divise la force par 80 dans l'eau"
+    },
+    {
+     "t": "L'intuition à retenir est celle d'une force « 80× plus faible ».",
+     "v": true,
+     "e": "VRAI. C'est ce que la fiche demande de garder.",
+     "sourceQuote": "Retiens juste l'intuition « 80× plus faible »"
+    },
+    {
+     "t": "C'est tout ce qui compte pour la suite du chapitre.",
+     "v": true,
+     "e": "VRAI. La formule complète n'est pas exigée.",
+     "sourceQuote": "c'est tout ce qui compte pour la suite du chapitre"
+    },
+    {
+     "t": "Il faut maîtriser la formule complète de Coulomb pour aborder la suite.",
+     "v": false,
+     "e": "FAUX : seule l'intuition « 80× plus faible » compte pour la suite.",
+     "sourceQuote": "Retiens juste l'intuition « 80× plus faible » — c'est tout ce qui compte pour la suite du chapitre"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-011-constante-dielectrique-hydratation.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 14,
+   "q": "Une fois séparés, les ions ne restent pas seuls dans la solution. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Une fois séparés, les ions restent nus dans la solution.",
+     "v": false,
+     "e": "FAUX : chacun s'entoure d'une cage de molécules d'eau.",
+     "sourceQuote": "les ions ne restent pas nus dans la solution"
+    },
+    {
+     "t": "L'eau hydrate tous les ions de la même façon.",
+     "v": false,
+     "e": "FAUX : elle n'hydrate pas tous les ions de la même façon.",
+     "sourceQuote": "l'eau n'hydrate pas tous les ions de la même façon"
+    },
+    {
+     "t": "Chaque ion est entouré d'une cage de molécules d'eau orientées selon sa charge : c'est l'hydratation.",
+     "v": true,
+     "e": "VRAI. C'est la définition donnée.",
+     "sourceQuote": "Chaque ion est entouré d'une « cage » de molécules d'eau orientées selon sa charge : c'est l'hydratation"
+    },
+    {
+     "t": "Un gros ion faiblement chargé est mieux hydraté qu'un petit ion très chargé.",
+     "v": false,
+     "e": "FAUX : l'eau hydrate d'autant mieux que l'ion est petit et fortement chargé.",
+     "sourceQuote": "Elle hydrate d'autant mieux que l'ion est petit"
+    },
+    {
+     "t": "Ca²⁺ est moins hydraté que Na⁺.",
+     "v": false,
+     "e": "FAUX : Ca²⁺ est plus hydraté, parce qu'il est plus fortement chargé.",
+     "sourceQuote": "Ca²⁺ est plus hydraté que Na⁺"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-011-constante-dielectrique-hydratation.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 15,
+   "q": "Le moyen mnémotechnique et le piège de la fiche portent sur deux comparaisons. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Plus l'ion est petit et chargé, plus il est hydraté.",
+     "v": true,
+     "e": "VRAI. C'est le moyen mnémotechnique de la fiche.",
+     "sourceQuote": "plus l'ion est petit et chargé, plus il est hydraté"
+    },
+    {
+     "t": "Mg²⁺, petit et bivalent, est beaucoup plus hydraté que K⁺, gros et monovalent.",
+     "v": true,
+     "e": "VRAI. C'est l'exemple de comparaison donné.",
+     "sourceQuote": "Mg²⁺ (petit + bivalent) est beaucoup plus hydraté que K⁺ (gros + monovalent)"
+    },
+    {
+     "t": "Mg²⁺ possède une masse atomique plus élevée que K⁺.",
+     "v": false,
+     "e": "FAUX : sa masse atomique est plus faible que celle de K⁺, et pourtant il « pèse plus lourd » en solution.",
+     "sourceQuote": "malgré sa masse atomique plus faible que K⁺"
+    },
+    {
+     "t": "L'image proposée est celle de deux aimants qu'on rapproche pour renforcer leur attraction.",
+     "v": false,
+     "e": "FAUX : l'image est celle d'un écran glissé entre deux aimants pour casser leur attraction.",
+     "sourceQuote": "la cage de dipôles d'eau agit comme si on glissait un écran entre deux aimants opposés pour casser leur attraction"
+    },
+    {
+     "t": "Une constante diélectrique non nulle suffit à dissoudre le sel.",
+     "v": false,
+     "e": "FAUX : l'huile en a une, et le sel ne s'y dissout pas.",
+     "sourceQuote": "Et un ε r non nul ne suffit pas — l'huile ne divise la force que par 2"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-012-compartiments-eau-organisme.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 8,
+   "q": "La fiche chiffre la place de l'eau dans le corps. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "L'eau représente 60 à 65 % de la masse corporelle totale d'un adulte.",
+     "v": true,
+     "e": "VRAI. C'est le chiffre de départ.",
+     "sourceQuote": "L'eau représente 60 à 65 % de la masse corporelle totale d'un adulte"
+    },
+    {
+     "t": "Ce pourcentage est plus élevé chez l'enfant.",
+     "v": true,
+     "e": "VRAI. Il n'est pas le même pour tout le monde.",
+     "sourceQuote": "il est plus élevé chez l'enfant"
+    },
+    {
+     "t": "Il est plus bas chez l'adulte âgé ou obèse, parce que le tissu adipeux contient moins d'eau.",
+     "v": true,
+     "e": "VRAI. C'est l'explication donnée.",
+     "sourceQuote": "plus bas chez l'adulte âgé ou obèse — parce que le tissu adipeux contient moins d'eau"
+    },
+    {
+     "t": "Cette eau se répartit dans trois compartiments séparés par des membranes.",
+     "v": true,
+     "e": "VRAI. C'est le plan de la fiche.",
+     "sourceQuote": "Cette eau se répartit dans trois compartiments séparés par des membranes"
+    },
+    {
+     "t": "Cette eau n'est pas en vrac : elle est rangée.",
+     "v": true,
+     "e": "VRAI. C'est l'accroche de la fiche.",
+     "sourceQuote": "Mais elle n'est pas en vrac : elle est rangée dans trois compartiments séparés par des membranes"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-012-compartiments-eau-organisme.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 9,
+   "q": "Le tableau donne pour chaque compartiment son pourcentage et son volume. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "L'eau intracellulaire représente environ 45 % de la masse corporelle, soit environ 28 L chez un adulte de 70 kg.",
+     "v": true,
+     "e": "VRAI. C'est la première ligne du tableau.",
+     "sourceQuote": "Eau intracellulaire ~ 45 % ~ 28 L"
+    },
+    {
+     "t": "L'eau interstitielle représente environ 15 %, soit environ 10 L.",
+     "v": true,
+     "e": "VRAI. C'est la deuxième ligne.",
+     "sourceQuote": "Eau interstitielle entre les cellules ~ 15 % ~ 10 L"
+    },
+    {
+     "t": "L'eau plasmatique représente environ 4 à 5 %, soit environ 3 L.",
+     "v": true,
+     "e": "VRAI. C'est la troisième ligne.",
+     "sourceQuote": "Eau plasmatique dans le sang ~ 4 à 5 % ~ 3 L"
+    },
+    {
+     "t": "Le total avoisine 42 L chez un adulte de 70 kg.",
+     "v": true,
+     "e": "VRAI. C'est la ligne TOTAL du tableau.",
+     "sourceQuote": "TOTAL ~ 60-65 % ~ 42 L"
+    },
+    {
+     "t": "L'eau plasmatique est le plus gros des trois compartiments.",
+     "v": false,
+     "e": "FAUX : c'est le plus petit, avec environ 3 L seulement.",
+     "sourceQuote": "~ 3 L seulement — le plus petit des trois compartiments"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-012-compartiments-eau-organisme.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 10,
+   "q": "Les trois compartiments se définissent par leur localisation. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "L'eau intracellulaire se trouve à l'intérieur des cellules, de l'autre côté de la membrane cellulaire.",
+     "v": true,
+     "e": "VRAI. C'est de très loin le plus gros des trois.",
+     "sourceQuote": "C'est l'eau qui se trouve à l'intérieur des cellules , de l'autre côté de la membrane cellulaire"
+    },
+    {
+     "t": "L'eau interstitielle baigne l'espace entre les cellules.",
+     "v": true,
+     "e": "VRAI. Environ 15 % de la masse corporelle.",
+     "sourceQuote": "C'est l'eau qui baigne l'espace entre les cellules"
+    },
+    {
+     "t": "L'eau plasmatique est l'eau du sang, à l'intérieur des vaisseaux.",
+     "v": true,
+     "e": "VRAI. C'est le plus petit compartiment.",
+     "sourceQuote": "C'est l'eau contenue dans le sang , à l'intérieur des vaisseaux"
+    },
+    {
+     "t": "L'eau intracellulaire est le plus petit des trois compartiments.",
+     "v": false,
+     "e": "FAUX : c'est de très loin le plus gros.",
+     "sourceQuote": "de très loin le plus gros des trois"
+    },
+    {
+     "t": "L'eau interstitielle se trouve du même côté de la membrane que l'eau intracellulaire.",
+     "v": false,
+     "e": "FAUX : l'eau intracellulaire est de l'autre côté de la membrane ; l'interstitielle baigne entre les cellules.",
+     "sourceQuote": "à l'intérieur des cellules , de l'autre côté de la membrane cellulaire"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-012-compartiments-eau-organisme.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 11,
+   "q": "La figure des trois compartiments se lit dans un ordre précis. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "On compare d'abord les tailles : le compartiment intracellulaire écrase les deux autres.",
+     "v": true,
+     "e": "VRAI. C'est la première consigne de lecture.",
+     "sourceQuote": "compare d'abord les tailles : le compartiment intracellulaire écrase les deux autres"
+    },
+    {
+     "t": "On repère ensuite les membranes qui les séparent.",
+     "v": true,
+     "e": "VRAI. C'est la seconde consigne.",
+     "sourceQuote": "Repère ensuite les membranes qui les séparent"
+    },
+    {
+     "t": "Ces membranes sont étanches : l'eau ne passe pas d'un compartiment à l'autre.",
+     "v": false,
+     "e": "FAUX : c'est justement à travers elles que l'eau circule.",
+     "sourceQuote": "c'est à travers elles que l'eau circule d'un compartiment à l'autre"
+    },
+    {
+     "t": "La légende demande de repérer les membranes avant de comparer les tailles.",
+     "v": false,
+     "e": "FAUX : les tailles d'abord, les membranes ensuite.",
+     "sourceQuote": "compare d'abord les tailles"
+    },
+    {
+     "t": "Les trois compartiments sont séparés par des parois osseuses.",
+     "v": false,
+     "e": "FAUX : par des membranes.",
+     "sourceQuote": "trois compartiments séparés par des membranes"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-012-compartiments-eau-organisme.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 12,
+   "q": "L'estimation des volumes se fait de tête, sur un exemple. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Estimer ces volumes de tête, c'est deux multiplications, pas plus.",
+     "v": true,
+     "e": "VRAI. C'est ce que la fiche annonce.",
+     "sourceQuote": "Savoir estimer ces volumes de tête, c'est deux multiplications, pas plus"
+    },
+    {
+     "t": "Pour une patiente de 80 kg d'IMC normal, l'eau totale est estimée à 48 L.",
+     "v": true,
+     "e": "VRAI. 60 % × 80 = 48 L.",
+     "sourceQuote": "eau totale ≈ 60 % × 80 = 48 L"
+    },
+    {
+     "t": "Son eau plasmatique est estimée à 4 L.",
+     "v": true,
+     "e": "VRAI. 5 % × 80 = 4 L.",
+     "sourceQuote": "eau plasmatique ≈ 5 % × 80 = 4 L"
+    },
+    {
+     "t": "Cette estimation permet à un anesthésiste de calculer la dose d'anesthésique en fonction du poids.",
+     "v": true,
+     "e": "VRAI. C'est l'usage clinique donné.",
+     "sourceQuote": "de calculer la dose d'anesthésique en fonction du poids"
+    },
+    {
+     "t": "Le pourcentage utilisé pour estimer l'eau plasmatique est de 15 %.",
+     "v": false,
+     "e": "FAUX : 5 %. Les 15 %, c'est l'eau interstitielle.",
+     "sourceQuote": "eau plasmatique ≈ 5 % × 80 = 4 L"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-012-compartiments-eau-organisme.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 13,
+   "q": "Le corps régule la répartition de l'eau, et sa rupture se voit. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le corps régule strictement la répartition de l'eau entre ces compartiments.",
+     "v": true,
+     "e": "VRAI. C'est ce que la fiche affirme.",
+     "sourceQuote": "Le corps régule strictement la répartition de l'eau entre ces compartiments"
+    },
+    {
+     "t": "Une rupture d'équilibre se traduit par une soif intense, une hypotension ou des œdèmes.",
+     "v": true,
+     "e": "VRAI. Ce sont les signes cliniques cités.",
+     "sourceQuote": "soif intense , hypotension , œdèmes"
+    },
+    {
+     "t": "Des troubles neurologiques apparaissent dans les cas graves.",
+     "v": true,
+     "e": "VRAI. C'est le dernier des signes cités.",
+     "sourceQuote": "ou troubles neurologiques dans les cas graves"
+    },
+    {
+     "t": "Une rupture de cet équilibre ne se traduit par aucun signe clinique.",
+     "v": false,
+     "e": "FAUX : quand l'équilibre se rompt, ça se voit cliniquement.",
+     "sourceQuote": "Quand l'équilibre se rompt, ça se voit cliniquement"
+    },
+    {
+     "t": "Les troubles neurologiques apparaissent dès les déséquilibres les plus légers.",
+     "v": false,
+     "e": "FAUX : dans les cas graves.",
+     "sourceQuote": "ou troubles neurologiques dans les cas graves"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-012-compartiments-eau-organisme.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 14,
+   "q": "Cette estimation sert directement au lit du patient. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Elle ne sert qu'en recherche, jamais au lit du patient.",
+     "v": false,
+     "e": "FAUX : elle sert à l'anesthésiste et au réanimateur.",
+     "sourceQuote": "à un réanimateur de savoir combien il peut « remplir » sans surcharger le cœur"
+    },
+    {
+     "t": "Elle aide le réanimateur à savoir combien il peut « remplir » sans surcharger le cœur.",
+     "v": true,
+     "e": "VRAI. C'est le second usage clinique cité.",
+     "sourceQuote": "à un réanimateur de savoir combien il peut « remplir » sans surcharger le cœur"
+    },
+    {
+     "t": "Le choix d'une perfusion à l'hôpital se fait au hasard.",
+     "v": false,
+     "e": "FAUX : on ne choisit jamais une perfusion au hasard.",
+     "sourceQuote": "pourquoi on ne choisit jamais une perfusion au hasard à l'hôpital"
+    },
+    {
+     "t": "Ce point sur les perfusions est traité dans cette fiche même.",
+     "v": false,
+     "e": "FAUX : il sera expliqué plus loin dans le chapitre.",
+     "sourceQuote": "C'est aussi ce qui expliquera, plus loin dans le chapitre, pourquoi on ne choisit jamais une perfusion au hasard à l'hôpital"
+    },
+    {
+     "t": "L'eau totale d'une patiente de 80 kg est estimée à environ 80 L.",
+     "v": false,
+     "e": "FAUX : environ 48 L.",
+     "sourceQuote": "eau totale ≈ 60 % × 80 = 48 L"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-012-compartiments-eau-organisme.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 15,
+   "q": "Le résumé et le piège de la fiche portent sur les chiffres et leur portée. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "L'eau représente 60 à 65 % de la masse corporelle, répartie dans trois compartiments séparés par des membranes.",
+     "v": true,
+     "e": "VRAI. C'est la première ligne du résumé.",
+     "sourceQuote": "L'eau = 60 à 65 % de la masse corporelle, répartie dans trois compartiments séparés par des membranes"
+    },
+    {
+     "t": "Intracellulaire environ 45 % (28 L), interstitielle environ 15 % (10 L), plasmatique 4-5 % (3 L).",
+     "v": true,
+     "e": "VRAI. C'est le détail du résumé.",
+     "sourceQuote": "intracellulaire ~45 % (~28 L), interstitielle ~15 % (~10 L), plasmatique 4-5 % (~3 L)"
+    },
+    {
+     "t": "Le total avoisine 42 L chez un adulte de 70 kg.",
+     "v": true,
+     "e": "VRAI. C'est la fin du résumé.",
+     "sourceQuote": "Total ~42 L chez un adulte de 70 kg"
+    },
+    {
+     "t": "Le pourcentage n'est pas universel.",
+     "v": true,
+     "e": "VRAI. C'est le piège de la fiche.",
+     "sourceQuote": "Le pourcentage n'est pas universel"
+    },
+    {
+     "t": "Appliquer mécaniquement 60 % à n'importe quel patient, c'est se tromper sur son eau totale.",
+     "v": true,
+     "e": "VRAI. C'est la conclusion du piège.",
+     "sourceQuote": "Appliquer mécaniquement 60 % à n'importe quel patient, c'est se tromper sur son eau totale"
+    }
+   ]
+  }
+ ]
+}

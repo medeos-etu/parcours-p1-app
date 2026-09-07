@@ -1,0 +1,631 @@
+{
+ "matiere": "chimie",
+ "chapitre": 1,
+ "note": "Renfort d'arène (lots 8 à 15, tous ar:1) pour les fiches de chimie de la séance 23 du Parcours. Le socle des lots 1-7 reste dans chimie-ch01-p3.json et chimie-ch01-p4.json.",
+ "questions": [
+  {
+   "fiche": "chimie-011-uma-peser-un-atome.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 8,
+   "q": "La fiche pose le problème avant de donner l'unité. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Un atome de carbone pèse environ 1,99 × 10⁻²³ gramme.",
+     "v": true,
+     "e": "VRAI. C'est la réponse décourageante de la balance.",
+     "sourceQuote": "1 atome de carbone ≈ 1,99 × 10⁻²³ grammes"
+    },
+    {
+     "t": "Le gramme est une unité beaucoup trop grande pour peser un atome.",
+     "v": true,
+     "e": "VRAI. C'est le problème à résoudre.",
+     "sourceQuote": "le gramme est une unité beaucoup trop grande"
+    },
+    {
+     "t": "Cette valeur en grammes permet de mener les calculs commodément.",
+     "v": false,
+     "e": "FAUX : aucun calcul n'est possible avec un nombre pareil.",
+     "sourceQuote": "Aucun calcul n'est possible avec un nombre pareil"
+    },
+    {
+     "t": "Pour résoudre le problème, on a modifié la masse réelle de l'atome.",
+     "v": false,
+     "e": "FAUX : on a changé d'unité, comme on l'avait fait pour le comptage.",
+     "sourceQuote": "on a fait exactement ce qu'on avait fait pour le comptage : on a changé d'unité"
+    },
+    {
+     "t": "La masse réelle d'un atome est ridiculement grande.",
+     "v": false,
+     "e": "FAUX : elle est ridiculement petite.",
+     "sourceQuote": "La masse réelle d'un atome est ridiculement petite"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-011-uma-peser-un-atome.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 9,
+   "q": "L'unité de masse atomique se définit à partir d'un étalon. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Elle vaut 1/12 de la masse d'un atome de ¹²C.",
+     "v": true,
+     "e": "VRAI. On prend un étalon et on le coupe en 12.",
+     "sourceQuote": "vaut 1/12 de la masse d'un atome de ¹²C"
+    },
+    {
+     "t": "Elle se note u.m.a. ou simplement u.",
+     "v": true,
+     "e": "VRAI. Les deux notations sont données.",
+     "sourceQuote": "L' unité de masse atomique — u.m.a., ou simplement u"
+    },
+    {
+     "t": "Conséquence : un atome de ¹²C pèse 12 u.m.a.",
+     "v": true,
+     "e": "VRAI. Au lieu de 1,99 × 10⁻²³ g.",
+     "sourceQuote": "on dit qu'un atome de ¹²C pèse 12 u.m.a."
+    },
+    {
+     "t": "1 u.m.a. vaut à peu près la masse d'un proton, ou d'un neutron.",
+     "v": true,
+     "e": "VRAI. C'est la règle pratique.",
+     "sourceQuote": "1 u.m.a. ≈ 1 proton ≈ 1 neutron"
+    },
+    {
+     "t": "L'étalon choisi est coupé en 100 parts égales.",
+     "v": false,
+     "e": "FAUX : il est coupé en 12.",
+     "sourceQuote": "on prend un étalon et on le coupe en 12"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-011-uma-peser-un-atome.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 10,
+   "q": "Un étudiant explique pourquoi 1 u.m.a. vaut à peu près un nucléon. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le ¹²C compte 12 nucléons : 6 protons et 6 neutrons.",
+     "v": true,
+     "e": "VRAI. Couper sa masse en 12, c'est donc peser un nucléon.",
+     "sourceQuote": "Le ¹²C compte justement 12 nucléons (6 protons + 6 neutrons)"
+    },
+    {
+     "t": "Les électrons pèsent autant que les nucléons et comptent dans le bilan.",
+     "v": false,
+     "e": "FAUX : ils ne changent rien à l'affaire — toute la masse est dans le noyau.",
+     "sourceQuote": "Les électrons, eux, ne changent rien à l'affaire"
+    },
+    {
+     "t": "Le proton est environ 2000 fois plus léger que l'électron.",
+     "v": false,
+     "e": "FAUX : c'est l'inverse — le proton pèse environ 2000 fois plus que l'électron.",
+     "sourceQuote": "masse du proton ≈ masse du neutron ≈ 2000 × masse de l'électron"
+    },
+    {
+     "t": "Une u.m.a. correspond à peu près à la masse d'un électron.",
+     "v": false,
+     "e": "FAUX : à celle d'un proton ou d'un neutron.",
+     "sourceQuote": "1 u.m.a. ≈ 1 proton ≈ 1 neutron"
+    },
+    {
+     "t": "La masse d'un atome en u.m.a. est à peu près égale à son nombre de neutrons.",
+     "v": false,
+     "e": "FAUX : elle est à peu près égale à A, son nombre de nucléons.",
+     "sourceQuote": "masse d'un atome (en u.m.a.) ≈ A , son nombre de nucléons"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-011-uma-peser-un-atome.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 11,
+   "q": "Le tableau donne trois atomes, leur composition et leur masse. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "¹H compte 1 proton, 0 neutron, et pèse environ 1 u.m.a.",
+     "v": true,
+     "e": "VRAI. C'est la première ligne du tableau.",
+     "sourceQuote": "1 proton, 0 neutron"
+    },
+    {
+     "t": "¹²C compte 6 protons et 6 neutrons, et pèse 12 u.m.a. par définition.",
+     "v": true,
+     "e": "VRAI. C'est l'étalon.",
+     "sourceQuote": "= 12 u.m.a. (par définition)"
+    },
+    {
+     "t": "⁵⁶Fe compte 26 protons et 30 neutrons, et pèse environ 56 u.m.a.",
+     "v": true,
+     "e": "VRAI. C'est la troisième ligne.",
+     "sourceQuote": "26 protons, 30 neutrons"
+    },
+    {
+     "t": "Une seule ligne du tableau porte un signe « = » : celle du ¹²C.",
+     "v": true,
+     "e": "VRAI. C'est lui qui définit l'unité.",
+     "sourceQuote": "Une seule ligne porte un « = » : celle du ¹²C"
+    },
+    {
+     "t": "Le fer 56 compte 26 protons et 30 neutrons.",
+     "v": true,
+     "e": "VRAI. C'est la composition donnée par le tableau.",
+     "sourceQuote": "26 protons, 30 neutrons"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-011-uma-peser-un-atome.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 12,
+   "q": "Le statut du carbone 12 dans ce tableau est particulier. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "C'est lui l'étalon qui définit l'unité.",
+     "v": true,
+     "e": "VRAI. D'où le signe « = » sur sa ligne.",
+     "sourceQuote": "parce que c'est lui, l'étalon qui définit l'unité"
+    },
+    {
+     "t": "Partout ailleurs dans le tableau, c'est « ≈ ».",
+     "v": true,
+     "e": "VRAI. Les autres masses sont approchées.",
+     "sourceQuote": "Partout ailleurs, c'est « ≈ »"
+    },
+    {
+     "t": "Un atome de ¹²C pèse 12 u.m.a.",
+     "v": true,
+     "e": "VRAI. C'est la conséquence immédiate de la définition.",
+     "sourceQuote": "on dit qu'un atome de ¹²C pèse 12 u.m.a."
+    },
+    {
+     "t": "Le ⁵⁶Fe pèse exactement 56 u.m.a.",
+     "v": false,
+     "e": "FAUX : environ 56 u.m.a. Seul le ¹²C porte un « = ».",
+     "sourceQuote": "Une seule ligne porte un « = » : celle du ¹²C"
+    },
+    {
+     "t": "Un atome de ¹²C pèse 6 u.m.a.",
+     "v": false,
+     "e": "FAUX : 12 u.m.a., puisque l'unité est le douzième de sa masse.",
+     "sourceQuote": "on dit qu'un atome de ¹²C pèse 12 u.m.a."
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-011-uma-peser-un-atome.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 13,
+   "q": "Devant un nucléide, la masse ne se calcule pas. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le nombre écrit en haut à gauche du symbole est déjà la masse en u.m.a.",
+     "v": true,
+     "e": "VRAI. Rien à calculer.",
+     "sourceQuote": "le nombre écrit en haut à gauche du symbole, le A , est déjà sa masse en u.m.a."
+    },
+    {
+     "t": "⁵⁶Fe pèse environ 56 u.m.a. et ¹³C environ 13 u.m.a.",
+     "v": true,
+     "e": "VRAI. Ce sont les deux exemples donnés.",
+     "sourceQuote": "⁵⁶Fe → 56 u.m.a. ¹³C → 13 u.m.a."
+    },
+    {
+     "t": "Le A qui donne la masse est un autre nombre que celui qui sert à trouver les neutrons.",
+     "v": false,
+     "e": "FAUX : c'est le même A — un seul nombre, deux services.",
+     "sourceQuote": "C'est le même A qui te donnait le nombre de neutrons avec N = A − Z"
+    },
+    {
+     "t": "Devant un nucléide, il faut calculer la masse à partir de la composition du noyau.",
+     "v": false,
+     "e": "FAUX : on n'a rien à calculer, le A donne directement la masse.",
+     "sourceQuote": "tu n'as rien à calculer pour connaître sa masse"
+    },
+    {
+     "t": "Ce nombre A ne rend qu'un seul service.",
+     "v": false,
+     "e": "FAUX : un seul nombre, deux services — la masse et le nombre de neutrons.",
+     "sourceQuote": "Un seul nombre, deux services"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-011-uma-peser-un-atome.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 14,
+   "q": "Le résumé de la fiche tient en deux phrases. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "1 u.m.a. vaut 1/12 de la masse d'un atome de ¹²C.",
+     "v": true,
+     "e": "VRAI. C'est la définition.",
+     "sourceQuote": "1 u.m.a. = 1/12 de la masse d'un atome de ¹²C"
+    },
+    {
+     "t": "C'est à peu près la masse d'un proton, ou d'un neutron.",
+     "v": true,
+     "e": "VRAI. Les deux nucléons pèsent la même chose.",
+     "sourceQuote": "c'est-à-dire à peu près la masse d' un proton , ou d' un neutron"
+    },
+    {
+     "t": "Comme les électrons ne pèsent presque rien, la masse d'un atome en u.m.a. est à peu près son A.",
+     "v": true,
+     "e": "VRAI. Toute la masse est dans le noyau.",
+     "sourceQuote": "Comme les électrons ne pèsent presque rien, la masse d'un atome en u.m.a. est à peu près son A"
+    },
+    {
+     "t": "Toute la masse de l'atome se trouve dans le noyau.",
+     "v": true,
+     "e": "VRAI. C'est ce qui justifie l'approximation.",
+     "sourceQuote": "toute la masse est dans le noyau"
+    },
+    {
+     "t": "La mole avait déjà résolu l'autre moitié du problème : le comptage.",
+     "v": true,
+     "e": "VRAI. Un atome est trop petit pour être manipulé seul, d'où le paquet de 6,022 × 10²³ entités.",
+     "sourceQuote": "la mole, ce paquet de 6,022 × 10²³ entités qu'on a inventé parce qu'un atome est bien trop petit pour être manipulé tout seul"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-011-uma-peser-un-atome.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 15,
+   "q": "Le piège de la fiche porte sur le nombre qu'il faut lire. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Pour ⁵⁶Fe, la masse vaut 26 u.m.a.",
+     "v": false,
+     "e": "FAUX : 56 u.m.a. Le 26, c'est Z, le nombre de protons.",
+     "sourceQuote": "Pour ⁵⁶Fe, la réponse est 56 u.m.a. , pas 26"
+    },
+    {
+     "t": "La masse se lit sur Z, en bas du symbole.",
+     "v": false,
+     "e": "FAUX : elle se lit sur A, en haut, jamais sur Z.",
+     "sourceQuote": "La masse se lit sur A (en haut), jamais sur Z (en bas)"
+    },
+    {
+     "t": "Z compte les protons et les neutrons.",
+     "v": false,
+     "e": "FAUX : Z ne compte que les protons ; c'est la masse qui compte les deux.",
+     "sourceQuote": "Z ne compte que les protons, alors que la masse compte les protons et les neutrons"
+    },
+    {
+     "t": "La masse d'un atome ne compte que ses protons.",
+     "v": false,
+     "e": "FAUX : elle compte les protons et les neutrons.",
+     "sourceQuote": "la masse compte les protons et les neutrons"
+    },
+    {
+     "t": "La masse se lit sur A, jamais sur Z.",
+     "v": true,
+     "e": "VRAI. C'est le piège de la fiche, énoncé tel quel.",
+     "sourceQuote": "La masse se lit sur A (en haut), jamais sur Z (en bas)"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-012-masse-molaire-n-m-sur-m.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 8,
+   "q": "La masse molaire soude les deux moitiés du problème. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "C'est la masse, en grammes, d'une mole d'atomes.",
+     "v": true,
+     "e": "VRAI. C'est sa définition.",
+     "sourceQuote": "c'est la masse — en grammes — d'une mole d'atomes"
+    },
+    {
+     "t": "Elle dit combien pèsent 6,022 × 10²³ atomes posés ensemble sur une balance.",
+     "v": true,
+     "e": "VRAI. C'est la traduction concrète.",
+     "sourceQuote": "combien pèsent 6,022 × 10²³ atomes de cet élément, posés ensemble sur une balance"
+    },
+    {
+     "t": "Elle s'exprime en g/mol, des grammes par mole.",
+     "v": true,
+     "e": "VRAI. C'est son unité.",
+     "sourceQuote": "Elle s'exprime en g/mol (des grammes par mole)"
+    },
+    {
+     "t": "Elle est numériquement égale au numéro atomique Z.",
+     "v": false,
+     "e": "FAUX : elle vaut A, le nombre de masse.",
+     "sourceQuote": "La formule magique : M (en g/mol) = A"
+    },
+    {
+     "t": "Le résultat se lit dans le monde microscopique, pas sur une balance.",
+     "v": false,
+     "e": "FAUX : cette fois, le résultat se lit en grammes, sur une vraie balance.",
+     "sourceQuote": "cette fois, le résultat se lit en grammes , sur une vraie balance"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-012-masse-molaire-n-m-sur-m.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 9,
+   "q": "Un étudiant applique la formule magique M = A. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Pour ¹²C, une mole pèse 6 grammes.",
+     "v": false,
+     "e": "FAUX : 12 grammes, puisque A = 12.",
+     "sourceQuote": "¹²C (A = 12) → 1 mole pèse 12 grammes"
+    },
+    {
+     "t": "Pour ⁵⁶Fe, une mole pèse 26 grammes.",
+     "v": false,
+     "e": "FAUX : 56 grammes, puisque A = 56. Le 26, c'est Z.",
+     "sourceQuote": "⁵⁶Fe (A = 56) → 1 mole pèse 56 grammes"
+    },
+    {
+     "t": "Pour ¹H, une mole pèse 1 gramme.",
+     "v": true,
+     "e": "VRAI. A = 1, donc M = 1 g/mol.",
+     "sourceQuote": "¹H (A = 1) → 1 mole pèse 1 gramme"
+    },
+    {
+     "t": "Cette correspondance est un hasard heureux.",
+     "v": false,
+     "e": "FAUX : le nombre d'Avogadro a été choisi pour ça.",
+     "sourceQuote": "Parce que le nombre d'Avogadro a été choisi pour ça"
+    },
+    {
+     "t": "La masse molaire relie deux grandeurs appartenant toutes deux au monde microscopique.",
+     "v": false,
+     "e": "FAUX : c'est le passage du microscopique au macroscopique.",
+     "sourceQuote": "C'est le passage du monde microscopique, celui de l'atome invisible, au monde macroscopique, celui que tu peux peser"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-012-masse-molaire-n-m-sur-m.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 10,
+   "q": "Le calcul pratique n = m / M se déroule sur un exemple. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "La masse molaire du carbone vaut 12 g/mol, car A = 12.",
+     "v": true,
+     "e": "VRAI. C'est la formule magique appliquée.",
+     "sourceQuote": "M(C) = 12 g/mol (car A = 12)"
+    },
+    {
+     "t": "24 g de carbone représentent 2 moles.",
+     "v": true,
+     "e": "VRAI. 24 / 12 = 2.",
+     "sourceQuote": "n = 24 / 12 = 2 moles"
+    },
+    {
+     "t": "Ces 2 moles correspondent à 1,204 × 10²⁴ atomes.",
+     "v": true,
+     "e": "VRAI. On multiplie par le nombre d'Avogadro.",
+     "sourceQuote": "Soit 2 × 6,022 × 10²³ = 1,204 × 10²⁴ atomes dans ta main"
+    },
+    {
+     "t": "La quantité de matière se calcule par n = m / M.",
+     "v": true,
+     "e": "VRAI. C'est la formule du calcul pratique.",
+     "sourceQuote": "Le calcul pratique : n = m / M"
+    },
+    {
+     "t": "Le calcul correct s'écrit n = M / m.",
+     "v": false,
+     "e": "FAUX : n = m / M, jamais l'inverse.",
+     "sourceQuote": "n = m / M , jamais M / m"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-012-masse-molaire-n-m-sur-m.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 11,
+   "q": "Le tableau rassemble les quatre grandeurs de cette partie du chapitre. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le nombre d'Avogadro vaut 6,022 × 10²³ mol⁻¹ et donne le nombre d'entités dans une mole.",
+     "v": true,
+     "e": "VRAI. C'est la première ligne du tableau.",
+     "sourceQuote": "Nombre d'entités dans 1 mole"
+    },
+    {
+     "t": "La mole mesure la quantité de matière, comme une « douzaine ».",
+     "v": true,
+     "e": "VRAI. C'est la deuxième ligne.",
+     "sourceQuote": "Quantité de matière (comme « douzaine »)"
+    },
+    {
+     "t": "L'u.m.a. est l'unité utilisée pour peser une mole entière.",
+     "v": false,
+     "e": "FAUX : c'est l'unité pour peser un atome. La mole se pèse en grammes.",
+     "sourceQuote": "Unité pour peser un atome"
+    },
+    {
+     "t": "La masse molaire donne la masse d'un seul atome, en grammes.",
+     "v": false,
+     "e": "FAUX : elle donne la masse d'une mole, en grammes.",
+     "sourceQuote": "Masse d'une mole (en grammes)"
+    },
+    {
+     "t": "La dernière ligne du tableau écrit « = A » et non « ≈ A ».",
+     "v": false,
+     "e": "FAUX : elle écrit « ≈ A », parce qu'un élément naturel est un mélange d'isotopes.",
+     "sourceQuote": "la dernière ligne écrit ≈ A , pas « = A »"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-012-masse-molaire-n-m-sur-m.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 12,
+   "q": "L'énoncé type du fer se déroule en une chaîne d'étapes. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "⁵⁶Fe compte 26 protons, 30 neutrons et 26 électrons.",
+     "v": true,
+     "e": "VRAI. C'est la première étape, la composition.",
+     "sourceQuote": "26 protons, N = A − Z = 56 − 26 = 30 neutrons, 26 électrons"
+    },
+    {
+     "t": "Sa masse molaire vaut 56 g/mol.",
+     "v": true,
+     "e": "VRAI. M = A.",
+     "sourceQuote": "Masse molaire : M = A = 56 g/mol"
+    },
+    {
+     "t": "112 grammes de fer représentent 2 moles.",
+     "v": true,
+     "e": "VRAI. 112 / 56 = 2.",
+     "sourceQuote": "n = m / M = 112 / 56 = 2 moles"
+    },
+    {
+     "t": "Ces 112 grammes contiennent 6,022 × 10²³ atomes de fer.",
+     "v": false,
+     "e": "FAUX : ils en contiennent 1,204 × 10²⁴, soit deux fois le nombre d'Avogadro.",
+     "sourceQuote": "N = n × N A = 2 × 6,022 × 10²³ = 1,204 × 10²⁴ atomes"
+    },
+    {
+     "t": "La chaîne à dérouler est M → A → N → n.",
+     "v": false,
+     "e": "FAUX : la chaîne est A → M → n → N.",
+     "sourceQuote": "Une seule chaîne : A → M → n → N"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-012-masse-molaire-n-m-sur-m.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 13,
+   "q": "Le moyen mnémotechnique de la fiche porte sur ce que A permet d'obtenir. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "A donne le nombre de neutrons, par A − Z.",
+     "v": true,
+     "e": "VRAI. C'est le premier des trois services.",
+     "sourceQuote": "nombre de neutrons (A−Z)"
+    },
+    {
+     "t": "A donne la masse d'un atome, en u.m.a.",
+     "v": true,
+     "e": "VRAI. C'est le deuxième service.",
+     "sourceQuote": "masse d'un atome (≈ A u.m.a.)"
+    },
+    {
+     "t": "A donne la masse molaire, en g/mol.",
+     "v": true,
+     "e": "VRAI. C'est le troisième service.",
+     "sourceQuote": "masse molaire (M = A g/mol)"
+    },
+    {
+     "t": "A donne trois informations à lui seul.",
+     "v": true,
+     "e": "VRAI. C'est ce que le moyen mnémotechnique demande de retenir.",
+     "sourceQuote": "A te donne 3 infos"
+    },
+    {
+     "t": "Le nombre de masse A se relit tel quel en g/mol.",
+     "v": true,
+     "e": "VRAI. C'est la formule magique M = A.",
+     "sourceQuote": "M = A : le nombre de masse se relit tel quel en g/mol"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-012-masse-molaire-n-m-sur-m.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 14,
+   "q": "Le résumé de la fiche tient en trois relations. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "M = A : le nombre de masse se relit tel quel en g/mol.",
+     "v": true,
+     "e": "VRAI. C'est la formule magique.",
+     "sourceQuote": "M = A : le nombre de masse se relit tel quel en g/mol"
+    },
+    {
+     "t": "1 mole de ⁵⁶Fe pèse 56 g.",
+     "v": true,
+     "e": "VRAI. C'est l'exemple du résumé.",
+     "sourceQuote": "1 mole de ⁵⁶Fe pèse 56 g"
+    },
+    {
+     "t": "n = m / M donne la quantité de matière.",
+     "v": true,
+     "e": "VRAI. C'est la deuxième relation.",
+     "sourceQuote": "n = m / M donne la quantité de matière"
+    },
+    {
+     "t": "N = n × N_A donne le nombre d'atomes.",
+     "v": true,
+     "e": "VRAI. C'est la troisième relation.",
+     "sourceQuote": "N = n × N A le nombre d'atomes"
+    },
+    {
+     "t": "Le « à peu près » de M ≈ A vient de la masse des électrons.",
+     "v": false,
+     "e": "FAUX : il vient de ce qu'un élément naturel est un mélange d'isotopes.",
+     "sourceQuote": "Le « à peu près » vient de ce qu'un élément naturel n'est jamais un seul nucléide, mais un mélange d'isotopes"
+    }
+   ]
+  },
+  {
+   "fiche": "chimie-012-masse-molaire-n-m-sur-m.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 15,
+   "q": "Le piège de la fiche porte sur deux confusions. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "n est un nombre de moles, N un nombre d'atomes.",
+     "v": true,
+     "e": "VRAI. C'est la première confusion à éviter.",
+     "sourceQuote": "n est un nombre de moles , N un nombre d' atomes"
+    },
+    {
+     "t": "N est 6,022 × 10²³ fois plus grand que n.",
+     "v": true,
+     "e": "VRAI. C'est le facteur qui les sépare.",
+     "sourceQuote": "6,022 × 10²³ fois plus grand"
+    },
+    {
+     "t": "Le sens de la division est n = M / m.",
+     "v": false,
+     "e": "FAUX : n = m / M, jamais l'inverse.",
+     "sourceQuote": "n = m / M , jamais M / m"
+    },
+    {
+     "t": "Sur 24 g de carbone, le calcul donne 12 / 24 moles.",
+     "v": false,
+     "e": "FAUX : 24 / 12 = 2 moles.",
+     "sourceQuote": "sur 24 g de carbone, c'est 24 / 12 = 2 moles"
+    },
+    {
+     "t": "N est environ 6,022 × 10²³ fois plus petit que n.",
+     "v": false,
+     "e": "FAUX : il est plus grand, pas plus petit.",
+     "sourceQuote": "6,022 × 10²³ fois plus grand"
+    }
+   ]
+  }
+ ]
+}

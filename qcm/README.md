@@ -102,16 +102,17 @@ puisque `lot >= 6`). Rien d'autre ne change :
 `verifie-qcm.js` compte ces renforts sur une ligne à part, `implante-parcours.js` les
 pose comme les autres.
 
-**Fait au 07/09/2026 — les 40 fiches des VINGT premières séances ont 10 QCM d'arène
-chacune** (lots 6 à 15), soit **400 questions** dans le vivier de l'Amphi une fois la
-20ᵉ séance travaillée :
+**Fait au 07/09/2026 — les 52 fiches des VINGT-SIX premières séances ont 10 QCM d'arène
+chacune** (lots 6 à 15), soit **520 questions** dans le vivier de l'Amphi une fois la
+26ᵉ séance travaillée :
 - séances 1-3 → `qcm/arene-premieres-fiches-<matière>.json` (48 QCM)
 - séances 4-8 → `qcm/arene-seances-4-8-<matière>.json` (80 QCM)
 - séances 9-14 → `qcm/arene-seances-9-14-<matière>.json` (96 QCM)
 - séances 15-20 → `qcm/arene-seances-15-20-<matière>.json` (96 QCM)
+- séances 21-26 → `qcm/arene-seances-21-26-<matière>.json` (96 QCM)
 
 Sans ces renforts, un élève recroisait 61 % de questions déjà vues entre le jour 4 et le
-jour 18 ; avec eux, 12 %. **Suite** : les séances 21 et au-delà, dans l'ordre de `SEANCES`
+jour 18 ; avec eux, 12 %. **Suite** : les séances 27 et au-delà, dans l'ordre de `SEANCES`
 — c'est l'ordre dans lequel les fiches entrent dans le vivier.
 
 ⚠️ **Exposants** : certaines fiches écrivent leurs puissances en `<sup>` (« 10 3 » une fois
