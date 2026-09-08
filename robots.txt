@@ -1,0 +1,13 @@
+# robots.txt — Univers Medeos, l'app gratuite (parcours.medeos-sante.fr)
+# Tout est explorable, y compris par les robots des moteurs génératifs
+# (GPTBot, ClaudeBot, PerplexityBot…) : Medeos cherche à être cité.
+User-agent: *
+Allow: /
+# Les fiches du Parcours ne s'ouvrent que depuis l'app (403 partout ailleurs,
+# cf. middleware.js) : inutile de les explorer.
+Disallow: /fiches/
+# Outils techniques, sans intérêt pour un moteur.
+Disallow: /migration.html
+Disallow: /sw.js
+
+Sitemap: https://parcours.medeos-sante.fr/sitemap.xml
