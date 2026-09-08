@@ -3080,7 +3080,7 @@
         <div class="sub" id="ar-floor"></div>
         <div class="gstrip" id="ar-gstrip"></div><div class="niv" id="ar-niv"></div>
         <div class="pips" id="ar-pips"></div><b id="ar-runs"></b>
-        <div id="ar-contrat"></div><button id="ar-recharge" onclick="rechargeDemo()"></button>
+        <div id="ar-contrat"></div><!-- 09/09/2026 audit sécurité : bouton #ar-recharge retiré, il rechargeait les ascensions du jour d'un clic -->
         <div id="ar-lastcard"><div id="ar-last"></div><div id="ar-lastsub"></div></div>
         <div id="ar-rank"></div><div id="ar-ranklab"></div>
         <div id="arene-guide"></div>
@@ -10808,19 +10808,17 @@ function ensureOnb(next){
 
 
 /* ═══ ACCÈS STAGE (démo) — en production, ce statut viendra du compte Medeos ═══ */
-function toggleStage(){
-  S.stage=!S.stage; saveS(); renderAcces();
-  if(typeof renderCurArena==='function') renderCurArena();
-}
-/* ═══ CODE ANNÉE COMPLÈTE — à usage unique. Seules les EMPREINTES SHA-256 vivent ici,
-   jamais les codes en clair. Le code se récupère dans l'espace stage Medeos (Pack Medi Pro). ═══ */
-const CODES_ANNEE=[
- 'dcb50e9aaca6458daeff136a77f0ce09f02ca43ba960486c691af1fea56c5329',
- '56db927e56399632d85231fbb58933bbbe6b4ba1bcee4776bd255b95adcc97f5',
- 'dbba7bacacbbf6c2c1717773a5644ed60018216a63502b71e05c180f5d7394de',
- '5ab52ba7e96ac8234cad110db23585a1061e1bb4d12832a2173678bd4a009a5d',
- 'b89d4496552f935ffc25219a379e22ee5a41ee82ec9d5c06d231115501aacf0f',
- 'cbc9d36014d556bb1de461fa6b3c0c00cf85ca24f9ac2a86e1b659bb1d93a58c'];
+/* toggleStage() supprimée le 09/09/2026 (audit sécurité) : taper « toggleStage() » dans la
+   console donnait le Pack Medi Pro. Le bouton qui l'appelait n'existait déjà plus, mais la
+   fonction restait globale. ⚠️ Ce retrait ne suffit PAS : tant que le serveur accepte
+   « stage » dans l'état envoyé par le client, « S.stage=true; saveS() » reste possible.
+   Le vrai correctif est côté serveur (app/api/app-compte/etat), voir AUDIT-SECURITE. */
+/* ═══ CODE ANNÉE COMPLÈTE — validation SERVEUR uniquement.
+   09/09/2026 (audit sécurité) : les 6 empreintes SHA-256 embarquées ici ont été RETIRÉES.
+   Un SHA-256 nu, sans sel, d'un code de 8 caractères sur un alphabet de 30 (30^8 ≈ 6,6e11)
+   se casse en une minute sur un GPU grand public — et l'index.html est public. Trois des six
+   codes ont d'ailleurs été retrouvés en clair pendant l'audit. Le repli hors-ligne offrait
+   donc le Pack à qui savait lire le fichier. Sans réseau, on demande de réessayer plus tard. ═══ */
 async function activerCode(codeDirect){
   const inp=document.getElementById('code-inp'), msg=document.getElementById('code-msg');
   if(!inp && !codeDirect) return;
@@ -10838,15 +10836,9 @@ async function activerCode(codeDirect){
       headers:{'Content-Type':'application/json'},body:JSON.stringify({code:brut})});
     if(r.ok){ const j=await r.json(); ok=!!j.ok; }
   }catch(e){}
-  /* 2) repli hors-ligne : les codes historiques embarqués (empreintes SHA-256) */
-  if(!ok){
-    try{
-      const buf=await crypto.subtle.digest('SHA-256', new TextEncoder().encode(brut));
-      const h=Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
-      ok=CODES_ANNEE.includes(h) && !uses.includes(h);
-    }catch(e){}
-  }
-  if(!ok){ if(msg) msg.textContent='Code non reconnu — vérifie les tirets et les caractères.'; return; }
+  /* 2) plus de repli hors-ligne (audit 09/09/2026) : un secret embarqué dans un fichier
+        public n'est pas un secret. Le serveur fait foi, et lui seul. */
+  if(!ok){ if(msg) msg.textContent='Code non reconnu — vérifie les tirets, ou réessaie avec du réseau.'; return; }
   uses.push(brut); localStorage.setItem('m4_codes_uses',JSON.stringify(uses));
   S.stage=true; S.codeAnnee=Date.now(); delete S.codeAttente; saveS();
   renderCodeZone(); renderAcces(); renderState(); if(typeof majPackCarte==='function') majPackCarte();
@@ -14614,7 +14606,9 @@ const RAPPEL_HOTES = ['parcours.medeos-sante.fr','parcours-p1-preview.vercel.app
 function rappelPost(corps){
   try{
     if(RAPPEL_HOTES.indexOf(location.hostname) < 0) return;
-    fetch(RAPPEL_API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(corps),keepalive:true}).catch(()=>{});
+    /* 09/09/2026 : le jeton part avec, pour que le serveur n'ait plus à croire l'email du corps. */
+    const enR={'Content-Type':'application/json'}; const jR=jetonCompte(); if(jR) enR['Authorization']='Bearer '+jR;
+    fetch(RAPPEL_API,{method:'POST',headers:enR,body:JSON.stringify(corps),keepalive:true}).catch(()=>{});
   }catch(e){}
 }
 function rappelReglage(){
@@ -15078,7 +15072,9 @@ function closeRun(anticipee){
     go('argrade');
   } else go('arend');
 }
-function rechargeDemo(){ initAr(); S.ar.runs=runsParJour(); saveS(); renderArene(); }
+/* rechargeDemo() supprimée le 09/09/2026 (audit sécurité) : reste de démo, elle remettait
+   les ascensions du jour à neuf. Elle était appelée par un bouton VISIBLE dès que le quota
+   était épuisé — aucune compétence requise pour contourner la limite. */
 
 /* ---- rendu de l'écran Arène ---- */
 function pips(id,n){
@@ -15166,7 +15162,8 @@ function renderArene(){
   } else {
     ct.innerHTML='<span>Tes ascensions du jour sont faites. Elles reviennent demain matin — <b>rien ne baisse entre-temps.</b></span>';
   }
-  document.getElementById('ar-recharge').style.display=S.ar.runs<=0?'block':'none';
+  /* 09/09/2026 : le bouton de recharge n'existe plus, cette ligne aurait levé une erreur
+     et cassé tout le rendu de l'Arène. */
   const lc=document.getElementById('ar-lastcard');
   if(S.ar.last){
     lc.style.display='block';
