@@ -1,0 +1,1376 @@
+{
+  "matiere": "mixte",
+  "chapitre": 0,
+  "note": "socle 1-7 — fiches sans QCM, ordre du Parcours",
+  "questions": [
+    {
+      "fiche": "chimie-162-reaction-ordre-0.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la réaction d'ordre 0, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "En ordre 0, la vitesse de la réaction ne dépend pas de la concentration du réactif.",
+          "v": true,
+          "e": "VRAI. C'est la définition même de l'ordre 0 : quelle que soit la quantité de réactif encore présente, la réaction avance au même rythme.",
+          "sourceQuote": "En ordre 0, la vitesse ne dépend pas de la concentration"
+        },
+        {
+          "t": "La loi de vitesse d'une réaction d'ordre 0 s'écrit v = k.",
+          "v": true,
+          "e": "VRAI. La vitesse se réduit à la constante k, sans aucun terme de concentration : c'est la forme la plus simple de loi de vitesse.",
+          "sourceQuote": "Ordre 0 : v = k , indépendante de [A]"
+        },
+        {
+          "t": "La loi intégrée de l'ordre 0 donne une droite de pente −k.",
+          "v": true,
+          "e": "VRAI. En intégrant v = k, on obtient [A] = [A]₀ − kt : la concentration décroît linéairement, ce qui donne une droite de pente −k.",
+          "sourceQuote": "Loi intégrée [A] = [A]₀ − kt → droite de pente −k"
+        },
+        {
+          "t": "Le graphe de [A] en fonction du temps est, en ordre 0, une courbe et non une droite.",
+          "v": false,
+          "e": "FAUX : c'est justement l'inverse. Une droite sur le graphe [A] = f(t) signe l'ordre 0 ; si l'on obtient une courbe, ce n'est pas de l'ordre 0.",
+          "sourceQuote": "Si le graphe [A] vs t est une droite → c'est de l'ordre 0"
+        },
+        {
+          "t": "En ordre 0, la vitesse augmente à mesure que le réactif se consomme.",
+          "v": false,
+          "e": "FAUX : la vitesse ne bouge pas. k est une constante indépendante de la concentration, donc la vitesse reste la même du début à la fin.",
+          "sourceQuote": "k est une constante, indépendante de [A]"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-162-reaction-ordre-0.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à l'analogie de la perfusion et à la façon d'obtenir une loi intégrée, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'ordre 0 est comparé à une perfusion à débit constant.",
+          "v": true,
+          "e": "VRAI. C'est l'image choisie pour l'ordre 0 : un débit fixe, qui ne se règle pas sur ce qui reste dans la poche.",
+          "sourceQuote": "C'est comme une perfusion à débit constant"
+        },
+        {
+          "t": "Dans cette analogie, le médicament entre dans le sang à un rythme fixe, quelle que soit la quantité déjà présente.",
+          "v": true,
+          "e": "VRAI. C'est exactement le point de l'analogie : le rythme d'entrée est indépendant de la quantité déjà là, comme la vitesse est indépendante de la concentration.",
+          "sourceQuote": "le médicament entre dans le sang à un rythme fixe, peu importe combien il y en a déjà"
+        },
+        {
+          "t": "Pour obtenir la loi intégrée, on part de la loi de vitesse et on l'intègre mathématiquement.",
+          "v": true,
+          "e": "VRAI. C'est la démarche commune à tous les ordres : on écrit v = …, puis on intègre, comme quand on calcule une primitive.",
+          "sourceQuote": "et on l' intègre mathématiquement (comme quand tu calcules une primitive en maths)"
+        },
+        {
+          "t": "La loi intégrée est la formule qui donne directement [A] en fonction du temps.",
+          "v": true,
+          "e": "VRAI. C'est tout son intérêt : au lieu de donner une vitesse, elle donne la concentration à l'instant t.",
+          "sourceQuote": "la formule qui donne directement [A] en fonction du temps t"
+        },
+        {
+          "t": "Il n'est pas nécessaire de savoir refaire l'intégration en première année : il faut en connaître le résultat.",
+          "v": true,
+          "e": "VRAI. Le calcul d'intégration n'est pas demandé ; ce qui est attendu, c'est de connaître la loi intégrée et de savoir s'en servir.",
+          "sourceQuote": "Pas besoin de refaire l'intégration en première année : il faut connaître le résultat"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-162-reaction-ordre-0.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à l'exemple chiffré développé dans la fiche et à son graphe, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "À t = 3 s, la concentration vaut 0,7 mol/L.",
+          "v": true,
+          "e": "VRAI. En partant de 1,0 mol/L et en retirant 0,1 mol/L par seconde, il reste 0,7 mol/L au bout de trois secondes.",
+          "sourceQuote": "à t = 3 s. [A] = 1,0 − 0,1 × 3 = 0,7 mol/L"
+        },
+        {
+          "t": "À t = 6 s, la concentration vaut encore 0,7 mol/L.",
+          "v": false,
+          "e": "FAUX : à six secondes il reste 0,4 mol/L. La valeur 0,7 mol/L correspond à trois secondes.",
+          "sourceQuote": "à t = 6 s. [A] = 1,0 − 0,1 × 6 = 0,4 mol/L"
+        },
+        {
+          "t": "La concentration baisse de 0,1 mol/L toutes les trois secondes.",
+          "v": false,
+          "e": "FAUX : la baisse est de 0,1 mol/L à chaque seconde, et non toutes les trois secondes. C'est ce rythme constant qui rend la décroissance linéaire.",
+          "sourceQuote": "La concentration baisse de 0,1 mol/L à chaque seconde , toujours pareil"
+        },
+        {
+          "t": "La droite obtenue a une pente positive, égale à +k, puisque le temps augmente.",
+          "v": false,
+          "e": "FAUX : c'est la concentration qu'on porte en ordonnée, et elle diminue. La pente vaut donc −k, elle est négative.",
+          "sourceQuote": "une droite de pente −k (la pente est négative car [A] diminue)"
+        },
+        {
+          "t": "Sur le graphe, le point (5 ; 0,5) correspond au double de la concentration initiale.",
+          "v": false,
+          "e": "FAUX : 0,5 mol/L, c'est la moitié de la concentration de départ, pas son double. C'est précisément le point de demi-vie.",
+          "sourceQuote": "(5 ; 0,5) = [A]₀/2, il ne reste que la moitié du réactif"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-162-reaction-ordre-0.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives au temps de demi-vie d'une réaction d'ordre 0, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La demi-vie est le temps au bout duquel la quantité de réactif a été divisée par deux.",
+          "v": true,
+          "e": "VRAI. La définition est purement quantitative : c'est le temps nécessaire pour qu'il ne reste que la moitié du réactif de départ.",
+          "sourceQuote": "le temps qu'il faut pour que la quantité de réactif soit divisée par 2"
+        },
+        {
+          "t": "Si l'on démarre avec 10 mol de réactif, la demi-vie est atteinte lorsqu'il en reste 5 mol.",
+          "v": true,
+          "e": "VRAI. C'est l'exemple donné pour fixer l'idée : peu importent les unités, la demi-vie correspond à la moitié restante.",
+          "sourceQuote": "la demi-vie est atteinte quand il n'en reste plus que 5 mol"
+        },
+        {
+          "t": "Avec les chiffres de l'exemple, la demi-vie vaut 5 s.",
+          "v": true,
+          "e": "VRAI. Le calcul est fait dans la fiche : 1,0 divisé par 0,2 donne 5 secondes.",
+          "sourceQuote": "t 1/2 = 1,0 / (2 × 0,1) = 1,0 / 0,2 = 5 s"
+        },
+        {
+          "t": "Ce résultat peut se retrouver sans formule : perdre 0,5 mol/L à raison de 0,1 mol/L par seconde demande cinq secondes.",
+          "v": true,
+          "e": "VRAI. C'est le raisonnement proposé pour comprendre la formule plutôt que de l'apprendre par cœur : elle ne fait qu'écrire ce calcul en général.",
+          "sourceQuote": "Il faut perdre 0,5 mol/L, à raison de 0,1 par seconde"
+        },
+        {
+          "t": "À t = 5 s dans cet exemple, il reste 0,8 mol/L de réactif.",
+          "v": false,
+          "e": "FAUX : à cinq secondes il reste 0,5 mol/L, soit la moitié du départ — c'est bien pour cela que la demi-vie vaut 5 s.",
+          "sourceQuote": "à t = 5 s, [A] = 1,0 − 0,1 × 5 = 0,5 mol/L"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-162-reaction-ordre-0.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à l'unité de k et au test qui permet de reconnaître un ordre 0, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "En ordre 0, la constante k s'exprime en mol·L⁻¹·s⁻¹.",
+          "v": true,
+          "e": "VRAI. Puisque k est ici égal à la vitesse elle-même, il en prend l'unité — celle d'une vitesse de réaction.",
+          "sourceQuote": "une vitesse s'exprime en mol·L⁻¹·s⁻¹ → donc k aussi"
+        },
+        {
+          "t": "Cette unité se retrouve en remarquant qu'en ordre 0, k est égal à une vitesse.",
+          "v": true,
+          "e": "VRAI. C'est le raisonnement à retenir plutôt que le résultat : v = k, donc k a nécessairement l'unité d'une vitesse.",
+          "sourceQuote": "L'unité de k se retrouve toute seule : v = k est une vitesse"
+        },
+        {
+          "t": "Si le graphe de [A] en fonction du temps est une courbe, la réaction est d'ordre 0.",
+          "v": false,
+          "e": "FAUX : une courbe exclut l'ordre 0. Le test est simple : droite pour l'ordre 0, courbe pour tout le reste.",
+          "sourceQuote": "Si c'est une courbe , ce n'est pas de l'ordre 0"
+        },
+        {
+          "t": "L'ordre 0 se reconnaît au fait que [A] décroît de façon exponentielle avec le temps.",
+          "v": false,
+          "e": "FAUX : la décroissance est linéaire, pas exponentielle. Le graphe est une droite descendante de pente −k.",
+          "sourceQuote": "[A] diminue linéairement avec le temps : droite descendante de pente −k"
+        },
+        {
+          "t": "En ordre 0, la valeur de k dépend de la concentration du réactif.",
+          "v": false,
+          "e": "FAUX : k est une constante. C'est même tout le sens de l'ordre 0 : la vitesse, donc k, ne se règle pas sur la concentration.",
+          "sourceQuote": "La vitesse ne dépend pas de la concentration du réactif : c'est une constante"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-162-reaction-ordre-0.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à l'influence de la concentration initiale sur la demi-vie d'une réaction d'ordre 0, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Doubler la concentration de départ double le temps de demi-vie.",
+          "v": true,
+          "e": "VRAI. Deux fois plus de réactif consommé au même rythme fixe demande mécaniquement deux fois plus de temps pour en perdre la moitié.",
+          "sourceQuote": "si tu doubles la concentration de départ, tu doubles aussi la demi-vie"
+        },
+        {
+          "t": "Ce comportement s'explique par le fait qu'en ordre 0 la vitesse reste constante, quelle que soit la concentration.",
+          "v": true,
+          "e": "VRAI. Le raisonnement ne tient que parce que le rythme de consommation ne varie pas : v = k, toujours la même.",
+          "sourceQuote": "parce qu'en ordre 0 la vitesse est constante — v = k, toujours la même, peu importe [A]"
+        },
+        {
+          "t": "Avec deux poches de perfusion au lieu d'une, à débit identique, il faut deux fois plus de temps pour en vider la moitié.",
+          "v": true,
+          "e": "VRAI. C'est la transposition de l'analogie : la quantité de départ double, le débit ne change pas, la durée double.",
+          "sourceQuote": "débit identique → il faut 2 fois plus de temps pour en vider la moitié"
+        },
+        {
+          "t": "La formule générale de la demi-vie revient à diviser la moitié de la concentration initiale par k.",
+          "v": true,
+          "e": "VRAI. La formule ne fait qu'écrire le raisonnement intuitif : la moitié à perdre, divisée par le rythme de perte.",
+          "sourceQuote": "La formule ne fait qu'écrire ça en général : t 1/2 = ([A]₀/2) ÷ k"
+        },
+        {
+          "t": "En ordre 0, la demi-vie ne dépend pas de la concentration de départ.",
+          "v": false,
+          "e": "FAUX : elle en dépend directement, et proportionnellement. C'est une particularité de l'ordre 0 qu'il faut savoir énoncer.",
+          "sourceQuote": "Et t 1/2 dépend de [A]₀"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-162-reaction-ordre-0.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives aux situations où l'on rencontre un ordre 0 et à la lecture des points du graphe, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'ordre 0 est fréquent en chimie « pure » et rare en pharmacologie.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. Il est rare en chimie pure, mais on le rencontre souvent en pharmacologie, notamment quand une enzyme est saturée.",
+          "sourceQuote": "Il est rare en chimie « pure », mais fréquent en pharmacologie"
+        },
+        {
+          "t": "Lorsqu'une enzyme est saturée, elle transforme le médicament à une vitesse proportionnelle à sa concentration.",
+          "v": false,
+          "e": "FAUX : une enzyme saturée travaille à plein régime. Sa vitesse de transformation devient constante et cesse de suivre la concentration — c'est bien de l'ordre 0.",
+          "sourceQuote": "la vitesse de transformation du médicament devient constante, indépendante de sa concentration"
+        },
+        {
+          "t": "Ce plateau est celui de la cinétique de Michaelis-Menten.",
+          "v": true,
+          "e": "VRAI. La saturation enzymatique correspond au plateau de la courbe de Michaelis-Menten, où la vitesse ne monte plus.",
+          "sourceQuote": "C'est le « plateau » de la cinétique de Michaelis-Menten"
+        },
+        {
+          "t": "À forte dose, la vitesse d'élimination de l'alcool éthylique augmente avec la dose ingérée.",
+          "v": false,
+          "e": "FAUX : à forte dose, l'enzyme est saturée et la vitesse d'élimination devient constante. C'est l'exemple type d'un ordre 0 en pharmacologie.",
+          "sourceQuote": "à forte dose, la vitesse d'élimination est constante"
+        },
+        {
+          "t": "Dans le point (3 ; 0,7), le 3 désigne la valeur de la constante k.",
+          "v": false,
+          "e": "FAUX : le premier nombre est toujours le temps écoulé. On lit un point dans l'ordre temps puis concentration, jamais l'inverse.",
+          "sourceQuote": "le 3 c'est le temps écoulé , pas k"
+        }
+      ]
+    },
+
+    {
+      "fiche": "anatomie-163-radius-ulna-morphologie-inversee.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à l'organisation générale des deux os de l'avant-bras, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'avant-bras est formé de deux os parallèles reliés par la membrane interosseuse.",
+          "v": true,
+          "e": "VRAI. Radius et ulna descendent côte à côte, et c'est la membrane interosseuse qui les relie sur toute leur longueur.",
+          "sourceQuote": "L'avant-bras est formé de 2 os parallèles reliés par la membrane interosseuse"
+        },
+        {
+          "t": "Le radius est petit au coude et gros au poignet.",
+          "v": true,
+          "e": "VRAI. C'est la morphologie du radius : discret en haut, où il doit pouvoir tourner, large en bas, où il encaisse le poids de la main.",
+          "sourceQuote": "le radius est petit en haut (coude) et gros en bas (poignet)"
+        },
+        {
+          "t": "L'ulna suit la même morphologie que le radius : petit en haut, gros en bas.",
+          "v": false,
+          "e": "FAUX : l'ulna fait exactement l'inverse — gros en haut, petit en bas. C'est ce croisement des morphologies qui donne son titre à la fiche.",
+          "sourceQuote": "Sa morphologie est l' inverse du radius : gros en haut, petit en bas"
+        },
+        {
+          "t": "Les deux os ont le même volume à leurs deux extrémités.",
+          "v": false,
+          "e": "FAUX : leur particularité est justement de ne pas avoir le même « poids » en haut et en bas. Chacun est massif à une extrémité et fin à l'autre.",
+          "sourceQuote": "ils n'ont pas le même « poids » aux deux extrémités"
+        },
+        {
+          "t": "Le gros bout du radius se situe au coude.",
+          "v": false,
+          "e": "FAUX : au coude, le radius est petit. C'est au poignet qu'il est large — et c'est l'ulna qui est massif au coude.",
+          "sourceQuote": "ne mets pas le gros bout du radius en haut"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-163-radius-ulna-morphologie-inversee.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives au radius, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le radius est l'os latéral de l'avant-bras, du côté du pouce.",
+          "v": true,
+          "e": "VRAI. Latéral veut dire du côté du pouce : c'est le repère le plus sûr pour ne jamais confondre les deux os.",
+          "sourceQuote": "Le radius est l'os latéral (côté pouce)"
+        },
+        {
+          "t": "Il est petit en haut parce qu'il doit pouvoir tourner.",
+          "v": true,
+          "e": "VRAI. Sa forme suit sa fonction : une extrémité fine et cylindrique en haut, c'est ce qu'il faut pour pivoter.",
+          "sourceQuote": "petit en haut , parce qu'il doit pouvoir tourner"
+        },
+        {
+          "t": "C'est lui qui assure la prono-supination.",
+          "v": true,
+          "e": "VRAI. Le radius est le mobile du duo : c'est sa rotation qui retourne la paume.",
+          "sourceQuote": "c'est lui qui assure la prono-supination , le mouvement qui retourne la paume"
+        },
+        {
+          "t": "Il est gros en bas parce qu'il porte le poids transmis par la main.",
+          "v": true,
+          "e": "VRAI. Toute la charge venue de la main passe par lui au poignet : il lui faut une extrémité large pour la recevoir.",
+          "sourceQuote": "gros en bas , parce qu'il porte tout le poids transmis par la main"
+        },
+        {
+          "t": "Son nom vient du latin « rayon ».",
+          "v": true,
+          "e": "VRAI. Le mot vient du latin « rayon », celui d'une roue — l'image d'un élément qui tourne autour d'un axe.",
+          "sourceQuote": "Son nom vient d'ailleurs du latin « rayon » (d'une roue)"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-163-radius-ulna-morphologie-inversee.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à l'ulna, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'ulna est l'os médial de l'avant-bras, du côté de l'auriculaire.",
+          "v": true,
+          "e": "VRAI. Médial signifie du côté du petit doigt : c'est la position de l'ulna, symétrique de celle du radius.",
+          "sourceQuote": "L' ulna est l'os médial (côté auriculaire)"
+        },
+        {
+          "t": "C'est le pilier fixe de l'avant-bras : il ne tourne pas.",
+          "v": true,
+          "e": "VRAI. L'ulna ne pivote pas. Il sert d'appui stable autour duquel le radius vient tourner.",
+          "sourceQuote": "c'est le pilier fixe de l'avant-bras — il ne tourne pas"
+        },
+        {
+          "t": "Son bord postérieur est palpable de l'olécrane jusqu'au poignet.",
+          "v": true,
+          "e": "VRAI. Il est sous-cutané sur toute sa longueur : c'est le repère osseux le plus facile à suivre sur son propre bras.",
+          "sourceQuote": "Son bord postérieur est sous-cutané de l'olécrane jusqu'au poignet"
+        },
+        {
+          "t": "L'ulna sert de charnière stable au poignet.",
+          "v": false,
+          "e": "FAUX : c'est au coude qu'il joue ce rôle de charnière. Au poignet, il est au contraire fin, et il ne touche même pas le carpe.",
+          "sourceQuote": "il sert de charnière stable au coude"
+        },
+        {
+          "t": "L'ulna est le mobile du duo : c'est lui qui tourne autour du radius.",
+          "v": false,
+          "e": "FAUX : les rôles sont inversés. C'est le radius le mobile, et c'est autour de l'ulna qu'il tourne.",
+          "sourceQuote": "C'est lui le mobile du duo — il tourne autour de l'ulna"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-163-radius-ulna-morphologie-inversee.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux repères des deux extrémités du radius, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La tête radiale est le cylindre qui pivote dans le ligament annulaire.",
+          "v": true,
+          "e": "VRAI. C'est le repère du haut du radius : un cylindre tenu par un anneau ligamentaire, qui l'autorise à tourner sur place.",
+          "sourceQuote": "La tête radiale = le cylindre qui pivote dans le ligament annulaire"
+        },
+        {
+          "t": "La tubérosité radiale est l'insertion du triceps.",
+          "v": false,
+          "e": "FAUX : la tubérosité radiale reçoit le biceps brachial. Le triceps, lui, s'insère sur l'olécrane, du côté de l'ulna.",
+          "sourceQuote": "la tubérosité radiale = insertion du biceps brachial"
+        },
+        {
+          "t": "L'extrémité inférieure du radius s'articule avec l'olécrane.",
+          "v": false,
+          "e": "FAUX : en bas, le radius offre une large surface articulaire pour les os du carpe. L'olécrane appartient à l'extrémité supérieure de l'ulna.",
+          "sourceQuote": "Une large surface articulaire pour les os du carpe"
+        },
+        {
+          "t": "Le processus styloïde radial se palpe au poignet du côté de l'auriculaire.",
+          "v": false,
+          "e": "FAUX : le styloïde radial se palpe du côté du pouce, puisque le radius est l'os latéral. Du côté de l'auriculaire, c'est le styloïde ulnaire.",
+          "sourceQuote": "Le processus styloïde radial est la petite bosse palpable au poignet, côté pouce"
+        },
+        {
+          "t": "L'extrémité supérieure du radius est la plus volumineuse des deux.",
+          "v": false,
+          "e": "FAUX : en haut, le radius est petit. Sa grosse extrémité est en bas, au poignet.",
+          "sourceQuote": "Radius, en haut (petit)"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-163-radius-ulna-morphologie-inversee.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux repères des deux extrémités de l'ulna, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'olécrane est la pointe du coude et reçoit l'insertion du triceps.",
+          "v": true,
+          "e": "VRAI. C'est la saillie que l'on sent en appuyant le coude sur une table, et c'est là que se termine le triceps.",
+          "sourceQuote": "L' olécrane (la pointe du coude, insertion du triceps)"
+        },
+        {
+          "t": "Le processus coronoïde est situé en avant.",
+          "v": true,
+          "e": "VRAI. Il fait partie de l'extrémité supérieure de l'ulna, en position antérieure.",
+          "sourceQuote": "le processus coronoïde (en avant)"
+        },
+        {
+          "t": "L'incisure trochléaire est la surface en C qui reçoit la trochlée.",
+          "v": true,
+          "e": "VRAI. Cette surface en forme de C emboîte la trochlée humérale : c'est elle qui fait du coude une charnière.",
+          "sourceQuote": "l' incisure trochléaire (la surface en C qui reçoit la trochlée)"
+        },
+        {
+          "t": "La tubérosité ulnaire est l'insertion du brachial.",
+          "v": true,
+          "e": "VRAI. À ne pas confondre avec la tubérosité radiale, qui reçoit le biceps : ici c'est le brachial.",
+          "sourceQuote": "la tubérosité ulnaire (insertion du brachial)"
+        },
+        {
+          "t": "En bas, la tête ulnaire s'articule avec le radius mais n'entre pas en contact avec le carpe, un disque articulaire s'interposant entre les deux.",
+          "v": true,
+          "e": "VRAI. Le fibrocartilage triangulaire fait tampon : l'ulna touche le radius, jamais le carpe.",
+          "sourceQuote": "elle s'articule avec le radius, mais elle ne touche PAS le carpe (un disque articulaire, le fibrocartilage triangulaire, fait tampon entre les deux)"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-163-radius-ulna-morphologie-inversee.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives aux rapports des deux os avec le carpe et à leurs conséquences cliniques, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Au poignet, c'est le radius qui touche le carpe.",
+          "v": true,
+          "e": "VRAI. C'est la différence capitale de l'étage distal : le radius s'articule avec le carpe, l'ulna non.",
+          "sourceQuote": "le radius touche le carpe , mais l' ulna ne touche PAS le carpe"
+        },
+        {
+          "t": "C'est le radius qui absorbe les chocs lors d'une chute sur la main.",
+          "v": true,
+          "e": "VRAI. Le raisonnement compte plus que le nom : l'os qui touche le carpe est celui qui encaisse la force venue de la main.",
+          "sourceQuote": "C'est donc le radius qui absorbe les chocs lors d'une chute sur la main"
+        },
+        {
+          "t": "La fracture de Pouteau-Colles est la plus fréquente du membre supérieur.",
+          "v": true,
+          "e": "VRAI. C'est la conséquence directe de ce contact avec le carpe : le radius encaisse, et c'est lui qui casse le plus souvent.",
+          "sourceQuote": "fracture de Pouteau-Colles , la plus fréquente du membre supérieur"
+        },
+        {
+          "t": "L'affirmation « l'ulna s'articule avec le carpe » est exacte.",
+          "v": false,
+          "e": "FAUX : c'est le piège annoncé de la fiche. Seul le radius s'articule avec le carpe.",
+          "sourceQuote": "« L'ulna s'articule avec le carpe » est FAUX : c'est le radius , et lui seul"
+        },
+        {
+          "t": "Le scaphoïde et le lunatum sont deux os de l'avant-bras.",
+          "v": false,
+          "e": "FAUX : ce sont des os du carpe, c'est-à-dire du poignet. L'avant-bras n'en compte que deux, le radius et l'ulna.",
+          "sourceQuote": "les os du carpe (les petits os du poignet, notamment le scaphoïde et le lunatum)"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-163-radius-ulna-morphologie-inversee.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la membrane interosseuse et aux repères palpables de l'avant-bras, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La membrane interosseuse est une membrane fibreuse tendue entre les deux os.",
+          "v": true,
+          "e": "VRAI. Elle occupe tout l'espace entre radius et ulna, sur la plus grande partie de leur longueur.",
+          "sourceQuote": "C'est une membrane fibreuse tendue entre les 2 os"
+        },
+        {
+          "t": "Elle transmet les forces du poignet vers le coude.",
+          "v": true,
+          "e": "VRAI. Ce que le radius encaisse au poignet ne reste pas au poignet : la membrane fait remonter ces forces vers le coude.",
+          "sourceQuote": "elle transmet les forces du poignet vers le coude"
+        },
+        {
+          "t": "Elle maintient les deux os à distance et sert de surface d'insertion musculaire.",
+          "v": true,
+          "e": "VRAI. Ce sont ses deux autres fonctions, en plus de la transmission des forces.",
+          "sourceQuote": "elle maintient les os à distance , et elle sert de surface d'insertion musculaire"
+        },
+        {
+          "t": "Au poignet, le processus styloïde ulnaire se situe du côté de l'auriculaire.",
+          "v": true,
+          "e": "VRAI. Les deux styloïdes se répartissent selon la latéralité de leur os : le radial côté pouce, l'ulnaire côté auriculaire.",
+          "sourceQuote": "le radial côté pouce, l' ulnaire côté auriculaire"
+        },
+        {
+          "t": "La membrane interosseuse fait descendre vers le poignet les forces reçues au coude.",
+          "v": false,
+          "e": "FAUX : le sens est inverse. Elle fait remonter vers le coude les forces reçues au poignet.",
+          "sourceQuote": "la membrane fait remonter ces forces vers le coude"
+        }
+      ]
+    },
+
+    {
+      "fiche": "anatomie-164-pronosupination.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives au mouvement de prono-supination et aux deux os qui y participent, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La prono-supination est le mouvement qui permet de tourner une clé ou de visser.",
+          "v": true,
+          "e": "VRAI. C'est l'exemple donné pour le rendre concret : tout geste qui fait tourner la paume relève de la prono-supination.",
+          "sourceQuote": "c'est lui qui te permet de tourner une clé ou de visser"
+        },
+        {
+          "t": "L'ulna est fixe : il ne tourne pas.",
+          "v": true,
+          "e": "VRAI. C'est le point de repère du mouvement : dans toute la prono-supination, l'ulna est ce qui ne bouge pas.",
+          "sourceQuote": "L'ulna est FIXE. Il ne tourne pas."
+        },
+        {
+          "t": "Le radius tourne autour de l'ulna.",
+          "v": true,
+          "e": "VRAI. C'est le mobile du duo : il pivote autour du pilier que constitue l'ulna.",
+          "sourceQuote": "Le radius TOURNE autour de l'ulna"
+        },
+        {
+          "t": "L'ulna reste la charnière stable du coude.",
+          "v": true,
+          "e": "VRAI. C'est sur lui que tout le reste s'appuie : sa stabilité est la condition du mouvement.",
+          "sourceQuote": "Il reste la charnière stable du coude"
+        },
+        {
+          "t": "Dans l'avant-bras, les deux os tournent l'un autour de l'autre.",
+          "v": false,
+          "e": "FAUX : un seul tourne, le radius. L'autre ne bouge pas — et c'est justement cette immobilité qui rend le mouvement possible.",
+          "sourceQuote": "Deux os dans l'avant-bras. Un seul tourne."
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-164-pronosupination.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la position des deux os en supination et en pronation, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "En supination, la paume regarde vers le haut et les deux os sont parallèles.",
+          "v": true,
+          "e": "VRAI. Supination et parallélisme vont ensemble : les deux os descendent sagement côte à côte.",
+          "sourceQuote": "En supination (paume vers le haut) , le radius et l'ulna sont parallèles"
+        },
+        {
+          "t": "En pronation, le radius croise l'ulna et les deux os forment un X.",
+          "v": true,
+          "e": "VRAI. La rotation du radius l'amène par-dessus l'ulna : le croisement en X signe la pronation.",
+          "sourceQuote": "le radius croise l'ulna et les deux os forment un X"
+        },
+        {
+          "t": "La position anatomique correspond à la pronation.",
+          "v": false,
+          "e": "FAUX : la position anatomique, c'est la supination — paume vers le haut, les deux os parallèles.",
+          "sourceQuote": "sagement côte à côte : c'est la position anatomique"
+        },
+        {
+          "t": "Écrire « en supination, le radius croise l'ulna » est exact.",
+          "v": false,
+          "e": "FAUX : c'est le piège d'inversion annoncé. En supination les os sont parallèles ; le croisement, c'est la pronation.",
+          "sourceQuote": "« en supination, le radius croise l'ulna » est FAUX"
+        },
+        {
+          "t": "Les deux os croisés en X correspondent à la supination.",
+          "v": false,
+          "e": "FAUX : les os croisés en X, c'est la pronation, paume vers le bas. Le mnémo de la soupe permet de trancher sans hésiter.",
+          "sourceQuote": "Les os croisés en X , c'est la pronation (paume vers le bas)"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-164-pronosupination.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives aux articulations qui rendent la prono-supination possible, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le mouvement met en jeu deux articulations trochoïdes, une à chaque extrémité de l'avant-bras.",
+          "v": true,
+          "e": "VRAI. Deux articulations, pas une : c'est l'une des réponses attendues si l'on demande où se déroule le mouvement.",
+          "sourceQuote": "Deux articulations trochoïdes, une à chaque bout"
+        },
+        {
+          "t": "Une articulation trochoïde correspond à un cylindre qui pivote sur lui-même.",
+          "v": true,
+          "e": "VRAI. C'est la définition donnée du type trochoïde, et elle décrit exactement ce que fait la tête radiale.",
+          "sourceQuote": "Trochoïde = un cylindre qui pivote sur lui-même"
+        },
+        {
+          "t": "L'articulation radio-ulnaire proximale se situe au coude.",
+          "v": true,
+          "e": "VRAI. Proximale veut dire du côté de la racine du membre : c'est donc au coude.",
+          "sourceQuote": "La radio-ulnaire proximale (au coude"
+        },
+        {
+          "t": "L'articulation radio-ulnaire distale se situe au poignet.",
+          "v": true,
+          "e": "VRAI. Distale veut dire du côté de la main : c'est la deuxième articulation du système, au poignet.",
+          "sourceQuote": "la radio-ulnaire distale (au poignet)"
+        },
+        {
+          "t": "Les deux articulations travaillent ensemble, le radius pivotant en haut et en bas en même temps.",
+          "v": true,
+          "e": "VRAI. Elles sont solidaires : le radius ne peut pas tourner en haut sans tourner en bas au même instant.",
+          "sourceQuote": "Elles travaillent ensemble : le radius pivote en haut et en bas en même temps"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-164-pronosupination.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives au moyen mnémotechnique de la fiche et au piège d'inversion, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le mnémo associe la supination à la position de la soupe, paume vers le haut.",
+          "v": true,
+          "e": "VRAI. Tenir un bol de soupe suppose la paume tournée vers le haut : c'est la supination.",
+          "sourceQuote": "SUPINATION = position de la SOUPE (paume vers le HAUT)"
+        },
+        {
+          "t": "Le mnémo associe la pronation au fait d'être « prono » sur le ventre, paume vers le bas.",
+          "v": true,
+          "e": "VRAI. Allongé sur le ventre, la paume regarde le sol : c'est la pronation.",
+          "sourceQuote": "PRONATION = PRONO sur le ventre (paume vers le BAS)"
+        },
+        {
+          "t": "En cas de doute sur les deux positions, la fiche conseille de repasser par la soupe.",
+          "v": true,
+          "e": "VRAI. C'est le réflexe proposé pour trancher vite : on repart du bol de soupe et la position se retrouve d'elle-même.",
+          "sourceQuote": "repasse par la soupe pour trancher"
+        },
+        {
+          "t": "En pronation, la paume regarde vers le haut.",
+          "v": false,
+          "e": "FAUX : en pronation la paume regarde vers le bas. C'est en supination qu'elle regarde vers le haut.",
+          "sourceQuote": "En pronation (paume vers le bas)"
+        },
+        {
+          "t": "Quand le radius a fini son tour, la paume regarde le plafond.",
+          "v": false,
+          "e": "FAUX : au terme de la rotation, les deux os sont croisés en X et la paume regarde le sol — c'est la pronation.",
+          "sourceQuote": "les deux os sont croisés en X , et la paume regarde le sol"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-164-pronosupination.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au schéma comparant supination et pronation, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Sur le schéma, la flèche de rotation est posée sur la tête du radius.",
+          "v": true,
+          "e": "VRAI. Elle est placée là parce que c'est le radius qui pivote — et le point de départ de son mouvement est sa tête.",
+          "sourceQuote": "la flèche de rotation est posée sur la tête du radius"
+        },
+        {
+          "t": "Sur le schéma, le rouge représente l'ulna et le bleu le radius.",
+          "v": false,
+          "e": "FAUX : les couleurs sont inversées. Le rouge est le radius, le bleu l'ulna.",
+          "sourceQuote": "le rouge (le radius) et le bleu (l'ulna) descendent parallèles"
+        },
+        {
+          "t": "En pronation, l'extrémité inférieure du radius est passée du côté latéral.",
+          "v": false,
+          "e": "FAUX : elle passe du côté médial. C'est ce déplacement vers l'intérieur qui crée le croisement en X.",
+          "sourceQuote": "son extrémité inférieure est passée du côté médial"
+        },
+        {
+          "t": "Le schéma est fidèle en tout point : l'ulna y tourne comme il le fait dans la réalité.",
+          "v": false,
+          "e": "FAUX : le dessin incline aussi l'ulna pour obtenir un beau X, mais dans la réalité l'ulna ne tourne pas. C'est une réserve explicitement signalée.",
+          "sourceQuote": "il incline aussi l'ulna pour obtenir un beau X. En réalité, l'ulna ne tourne pas"
+        },
+        {
+          "t": "Sur la partie gauche du schéma, la paume regarde vers le bas.",
+          "v": false,
+          "e": "FAUX : à gauche, les deux os descendent parallèles et la paume regarde vers le haut — c'est la supination.",
+          "sourceQuote": "descendent parallèles , paume vers le haut"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-164-pronosupination.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la méthode conseillée pour trancher une question de prono-supination, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Devant une telle question, il faut chercher l'os fixe en premier.",
+          "v": true,
+          "e": "VRAI. C'est le réflexe de méthode proposé : une fois l'os fixe identifié, tout le reste du mouvement se déduit.",
+          "sourceQuote": "cherche toujours l'os fixe en premier"
+        },
+        {
+          "t": "Une proposition qui écrit « l'ulna tourne autour du radius » est fausse, même si elle décrit correctement le reste du mouvement.",
+          "v": true,
+          "e": "VRAI. Une seule inversion suffit à rendre l'item faux : c'est le radius qui tourne, jamais l'ulna.",
+          "sourceQuote": "« l'ulna tourne autour du radius » est FAUSSE , même si elle décrit correctement le reste du mouvement"
+        },
+        {
+          "t": "L'os fixe de la prono-supination est le radius.",
+          "v": false,
+          "e": "FAUX : l'os fixe est l'ulna, jamais le radius. Le radius est celui qui tourne.",
+          "sourceQuote": "C'est l' ulna , jamais le radius"
+        },
+        {
+          "t": "La prono-supination se déroule en un seul endroit, le coude.",
+          "v": false,
+          "e": "FAUX : elle se déroule à deux endroits, au coude et au poignet, grâce aux deux articulations radio-ulnaires.",
+          "sourceQuote": "à deux endroits , pas un — au coude et au poignet"
+        },
+        {
+          "t": "C'est l'immobilité du radius qui rend le mouvement possible.",
+          "v": false,
+          "e": "FAUX : c'est l'immobilité de l'ulna. Le radius, lui, est l'os qui tourne.",
+          "sourceQuote": "dans tout ce mouvement, l'ulna est ce qui ne bouge pas"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-164-pronosupination.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives au détail du mouvement du radius et à la suite du chapitre, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le radius pivote en haut et balaie en bas, comme une aiguille de montre.",
+          "v": true,
+          "e": "VRAI. C'est l'image utilisée : un point de rotation en haut, et un large déplacement de l'extrémité inférieure.",
+          "sourceQuote": "Comme une aiguille de montre : il pivote en haut, et il balaie en bas"
+        },
+        {
+          "t": "Au coude, la tête radiale tourne à l'intérieur du ligament annulaire.",
+          "v": true,
+          "e": "VRAI. C'est le détail de l'articulation radio-ulnaire proximale : la tête radiale pivote dans un anneau ligamentaire.",
+          "sourceQuote": "la tête radiale tourne à l'intérieur du ligament annulaire"
+        },
+        {
+          "t": "Le ligament annulaire tient la tête radiale en place tout en la laissant tourner.",
+          "v": true,
+          "e": "VRAI. C'est sa double fonction : maintenir sans bloquer, ce qui est exactement ce qu'exige une articulation trochoïde.",
+          "sourceQuote": "cet anneau qui la tient en place tout en la laissant tourner"
+        },
+        {
+          "t": "Quand le radius a terminé sa rotation, il est passé par-dessus l'ulna.",
+          "v": true,
+          "e": "VRAI. C'est ce passage par-dessus qui produit le croisement en X caractéristique de la pronation.",
+          "sourceQuote": "il est passé par-dessus l'ulna"
+        },
+        {
+          "t": "Ce montage ne tourne pas tout seul : il faut des muscles pour l'entraîner, et c'est l'objet de la fiche suivante.",
+          "v": true,
+          "e": "VRAI. Les articulations rendent le mouvement possible, mais ce sont les muscles qui le produisent — avec leur point d'attache au coude.",
+          "sourceQuote": "ce montage ne tourne pas tout seul. Il faut des muscles pour l'entraîner"
+        }
+      ]
+    },
+
+    {
+      "fiche": "biologie-163-portions-minerale-et-organique.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la portion minérale de la matrice extracellulaire osseuse, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La portion minérale représente environ 70 % de la masse sèche.",
+          "v": true,
+          "e": "VRAI. C'est la part dominante en masse : le minéral pèse à lui seul près des trois quarts de la matrice sèche.",
+          "sourceQuote": "La portion minérale — ~70 % de la masse sèche"
+        },
+        {
+          "t": "Elle est faite de sels de calcium, de phosphate et de potassium.",
+          "v": false,
+          "e": "FAUX : le troisième élément est le magnésium, pas le potassium. Calcium, phosphate et magnésium forment la matière première du minéral osseux.",
+          "sourceQuote": "Des sels de calcium, de phosphate et de magnésium"
+        },
+        {
+          "t": "Sa structure principale est le collagène de type I.",
+          "v": false,
+          "e": "FAUX : le collagène I appartient à la portion organique. La structure principale du minéral, c'est l'hydroxyapatite.",
+          "sourceQuote": "Sa structure principale : l'hydroxyapatite"
+        },
+        {
+          "t": "L'hydroxyapatite est chimiquement un carbonate de sodium hydraté.",
+          "v": false,
+          "e": "FAUX : c'est un phosphate de calcium hydraté. Le carbonate de calcium n'est présent qu'à titre accessoire.",
+          "sourceQuote": "c'est du phosphate de calcium hydraté"
+        },
+        {
+          "t": "La portion minérale représente environ 30 % de la masse sèche.",
+          "v": false,
+          "e": "FAUX : les 30 %, c'est la portion organique. Le minéral en représente environ 70 %.",
+          "sourceQuote": "La portion organique — ~30 % de la masse sèche"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-163-portions-minerale-et-organique.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux cristaux minéraux de l'os, à leur origine et à leur rôle, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les cristaux sont aplatis et de section hexagonale.",
+          "v": true,
+          "e": "VRAI. Ce sont des plaquettes hexagonales, une forme qui leur permet de s'intercaler entre les fibres de collagène.",
+          "sourceQuote": "Ils sont aplatis , à section hexagonale"
+        },
+        {
+          "t": "Ils mesurent environ 50 nm de diamètre et 5 nm d'épaisseur.",
+          "v": true,
+          "e": "VRAI. Ce sont des dimensions nanométriques : dix fois plus larges qu'épais, d'où leur aspect de plaquettes.",
+          "sourceQuote": "environ 50 nm de diamètre et 5 nm d'épaisseur"
+        },
+        {
+          "t": "Ce sont des billes, et non des plaquettes.",
+          "v": false,
+          "e": "FAUX : la fiche insiste sur ce point. Ce sont des plaquettes aplaties, pas des billes.",
+          "sourceQuote": "(des plaquettes, pas des billes)"
+        },
+        {
+          "t": "Ils sont déposés par les ostéoblastes.",
+          "v": true,
+          "e": "VRAI. Ce sont les mêmes cellules qui ont d'abord sécrété l'ostéoïde, puis qui le minéralisent.",
+          "sourceQuote": "Qui la dépose ? Les ostéoblastes"
+        },
+        {
+          "t": "Le rôle de la portion minérale est d'assurer la souplesse et l'élasticité de l'os.",
+          "v": false,
+          "e": "FAUX : le minéral apporte la dureté et la résistance mécanique. La souplesse vient de la portion organique, en particulier du collagène.",
+          "sourceQuote": "Son rôle est la fixation des minéraux → dureté et résistance mécanique"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-163-portions-minerale-et-organique.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la portion organique de la matrice extracellulaire osseuse, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le collagène de type I représente environ 95 % de la portion organique.",
+          "v": true,
+          "e": "VRAI. C'est le chiffre à retenir : à lui seul, le collagène I occupe la quasi-totalité de la fraction organique.",
+          "sourceQuote": "Il représente à lui seul ≈ 95 % de la portion organique"
+        },
+        {
+          "t": "L'ostéoïde est la matrice déposée par l'ostéoblaste avant sa minéralisation.",
+          "v": true,
+          "e": "VRAI. L'ostéoblaste sécrète d'abord cette trame organique non minéralisée, qui sera ensuite durcie par les cristaux.",
+          "sourceQuote": "la matrice déposée par l'ostéoblaste avant sa minéralisation"
+        },
+        {
+          "t": "Trois glycoprotéines y sont décrites : l'ostéonectine, l'ostéopontine et l'ostéocalcine.",
+          "v": true,
+          "e": "VRAI. Ces trois noms commencent tous par « ostéo- », ce qui aide à les regrouper et à ne pas les confondre avec la chondronectine du cartilage.",
+          "sourceQuote": "L' ostéonectine , l' ostéopontine et l' ostéocalcine"
+        },
+        {
+          "t": "La portion organique de l'os contient très peu de protéoglycanes.",
+          "v": true,
+          "e": "VRAI. C'est une différence nette avec le cartilage, où les protéoglycanes sont au contraire abondants.",
+          "sourceQuote": "Très peu de protéoglycanes"
+        },
+        {
+          "t": "Les protéoglycanes sont aussi abondants dans l'os que dans le cartilage.",
+          "v": false,
+          "e": "FAUX : ils sont abondants dans le cartilage, sous la forme des agrécans, et très peu représentés dans l'os.",
+          "sourceQuote": "Contrairement au cartilage, où ils sont abondants (les agrécans)"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-163-portions-minerale-et-organique.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes comparant la matrice extracellulaire du cartilage et celle de l'os, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le cartilage résiste par l'eau, l'os par les cristaux de calcium.",
+          "v": true,
+          "e": "VRAI. C'est le couple qui résume toute la comparaison : deux matrices, deux stratégies de résistance.",
+          "sourceQuote": "le cartilage résiste par l'eau, l'os résiste par les cristaux de calcium"
+        },
+        {
+          "t": "Le collagène dominant est de type II dans le cartilage et de type I dans l'os.",
+          "v": true,
+          "e": "VRAI. C'est la distinction la plus souvent piégée : type I pour l'os, type II pour le cartilage hyalin.",
+          "sourceQuote": "Le collagène I est dans l' os , le collagène II dans le cartilage hyalin"
+        },
+        {
+          "t": "Les protéoglycanes sont abondants dans le cartilage et très peu représentés dans l'os.",
+          "v": true,
+          "e": "VRAI. Cette abondance dans le cartilage explique d'ailleurs sa forte teneur en eau.",
+          "sourceQuote": "abondants dans le cartilage, très peu dans l'os"
+        },
+        {
+          "t": "La glycoprotéine d'adhérence du cartilage est la chondronectine.",
+          "v": true,
+          "e": "VRAI. Le préfixe fait le tri : « chondro- » pour le cartilage, « ostéo- » pour l'os.",
+          "sourceQuote": "chondronectine ou ostéonectine"
+        },
+        {
+          "t": "Le cartilage contient environ 70 % d'eau, ce qui lui donne sa résistance à la pression.",
+          "v": true,
+          "e": "VRAI. L'eau retenue par les protéoglycanes joue le rôle d'amortisseur hydraulique sous la pression.",
+          "sourceQuote": "~70 % (résistance à la pression)"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-163-portions-minerale-et-organique.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au lien entre les deux portions et à la façon de retenir le tableau comparatif, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les glycoprotéines servent de « colle » entre le minéral et l'organique.",
+          "v": true,
+          "e": "VRAI. L'ostéocalcine et l'ostéonectine assurent la liaison entre les cristaux et la trame collagénique.",
+          "sourceQuote": "servent de « colle » entre minéral et organique"
+        },
+        {
+          "t": "La fiche conseille de mémoriser le tableau comparatif case par case.",
+          "v": false,
+          "e": "FAUX : elle conseille précisément l'inverse. On retient des couples de mots, et le tableau se reconstruit à partir d'eux.",
+          "sourceQuote": "Ne mémorise pas ce tableau case par case"
+        },
+        {
+          "t": "Chaque ligne du tableau tient dans un couple de mots.",
+          "v": true,
+          "e": "VRAI. Minéralisée ou non, collagène I ou II, et ainsi de suite : un couple par ligne suffit à retrouver les deux colonnes.",
+          "sourceQuote": "Chaque ligne tient dans un couple de mots"
+        },
+        {
+          "t": "Il y a huit couples de mots à retenir.",
+          "v": false,
+          "e": "FAUX : il y en a cinq, un par ligne du tableau — et ils se relisent dans les deux sens.",
+          "sourceQuote": "Cinq couples, et le tableau se relit dans les deux sens"
+        },
+        {
+          "t": "Dans la matrice osseuse, la portion minérale et la portion organique occupent des zones séparées.",
+          "v": false,
+          "e": "FAUX : elles sont mélangées dans le même espace, comme l'armature et le ciment d'un béton armé.",
+          "sourceQuote": "70 % de minéral et 30 % d'organique mélangés dans le même espace, comme du béton armé"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-163-portions-minerale-et-organique.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives aux pièges classiques sur la composition de la matrice osseuse, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une proposition affirmant que le collagène II est majoritaire dans l'os est fausse.",
+          "v": true,
+          "e": "VRAI. Le collagène majoritaire de l'os est le type I. Le type II appartient au cartilage hyalin.",
+          "sourceQuote": "un QCM qui écrit « collagène II majoritaire dans l'os » est FAUX"
+        },
+        {
+          "t": "Le chiffre de 95 % attribué au collagène I est un pourcentage de la portion organique, et non de la matrice entière.",
+          "v": true,
+          "e": "VRAI. Rapporté à la matrice entière, le collagène I ne représenterait qu'environ 95 % des 30 % organiques.",
+          "sourceQuote": "est un pourcentage de la portion organique , pas de la MEC entière"
+        },
+        {
+          "t": "Le collagène de type II est celui du cartilage hyalin.",
+          "v": true,
+          "e": "VRAI. C'est l'autre moitié du couple : type I pour l'os, type II pour le cartilage hyalin.",
+          "sourceQuote": "le collagène II dans le cartilage hyalin"
+        },
+        {
+          "t": "Le piège principal du chapitre consiste à confondre les deux matrices extracellulaires.",
+          "v": true,
+          "e": "VRAI. C'est le piège annoncé : les deux matrices se ressemblent dans la formulation, mais tout les oppose ligne par ligne.",
+          "sourceQuote": "Confondre les deux MEC"
+        },
+        {
+          "t": "Dans l'os comme dans le cartilage, les protéoglycanes sont abondants.",
+          "v": false,
+          "e": "FAUX : dans l'os, ils sont très peu représentés. Leur abondance est une caractéristique du cartilage.",
+          "sourceQuote": "les glycoprotéines ostéonectine, ostéopontine, ostéocalcine ; très peu de protéoglycanes"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-163-portions-minerale-et-organique.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la composition chimique détaillée du minéral osseux et au rôle des glycoprotéines, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'hydroxyapatite peut s'accompagner de phosphate de magnésium et de carbonate de calcium.",
+          "v": true,
+          "e": "VRAI. Ce sont les composants accessoires du cristal, en plus du phosphate de calcium hydraté qui en constitue la base.",
+          "sourceQuote": "± du phosphate de magnésium et du carbonate de calcium"
+        },
+        {
+          "t": "L'ostéocalcine est impliquée dans la fixation des sels calciques.",
+          "v": true,
+          "e": "VRAI. Parmi les trois glycoprotéines citées, c'est celle dont ce rôle est précisé.",
+          "sourceQuote": "cette dernière étant impliquée dans la fixation des sels calciques"
+        },
+        {
+          "t": "Les sels de calcium, de phosphate et de magnésium constituent la matière première du minéral osseux.",
+          "v": true,
+          "e": "VRAI. Ce sont les briques de base à partir desquelles s'organise l'hydroxyapatite.",
+          "sourceQuote": "C'est la matière première du minéral osseux"
+        },
+        {
+          "t": "L'hydroxyapatite est déposée par les ostéoclastes.",
+          "v": false,
+          "e": "FAUX : elle est déposée par les ostéoblastes. Les ostéoclastes, eux, résorbent l'os plutôt qu'ils ne le construisent.",
+          "sourceQuote": "déposés par les ostéoblastes"
+        },
+        {
+          "t": "La chondronectine fait partie des glycoprotéines de la matrice osseuse.",
+          "v": false,
+          "e": "FAUX : la chondronectine est la glycoprotéine d'adhérence du cartilage. Dans l'os, ce sont l'ostéonectine, l'ostéopontine et l'ostéocalcine.",
+          "sourceQuote": "Ostéonectine, ostéopontine, ostéocalcine"
+        }
+      ]
+    },
+
+    {
+      "fiche": "biologie-164-os-tisse-vs-os-lamellaire.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives aux deux architectures du tissu osseux, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Il n'existe que deux façons de ranger les fibres de collagène de l'os : l'os tissé et l'os lamellaire.",
+          "v": true,
+          "e": "VRAI. La recette de la matrice ne change pas ; ce qui change, c'est l'orientation des fibres, et il n'y a que deux possibilités.",
+          "sourceQuote": "il n'y a que deux façons de le faire : l' os tissé et l' os lamellaire"
+        },
+        {
+          "t": "L'os tissé est aussi appelé os non lamellaire.",
+          "v": true,
+          "e": "VRAI. Les deux noms désignent le même tissu, celui dont les fibres ne sont pas rangées en lamelles.",
+          "sourceQuote": "Os tissé (os non lamellaire)"
+        },
+        {
+          "t": "Dans l'os tissé, les fibres de collagène sont orientées en tous sens.",
+          "v": true,
+          "e": "VRAI. Aucune direction n'est privilégiée, et c'est précisément ce désordre qui rend ce tissu fragile.",
+          "sourceQuote": "Fibres de collagène en tous sens"
+        },
+        {
+          "t": "Dans l'os lamellaire, les fibres sont parallèles à l'intérieur d'une couche et tournées d'environ 90° d'une couche à l'autre.",
+          "v": true,
+          "e": "VRAI. Cette alternance en spires croisées est ce qui donne au tissu sa résistance, quel que soit le sens de la contrainte.",
+          "sourceQuote": "parallèles dans une même couche, tournées d'environ 90° d'une couche à l'autre"
+        },
+        {
+          "t": "L'os lamellaire est l'os de l'adulte.",
+          "v": true,
+          "e": "VRAI. Chez l'adulte, le squelette est fait d'os lamellaire — l'os tissé n'y réapparaît qu'en cas de fracture.",
+          "sourceQuote": "Os lamellaire (os adulte)"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-164-os-tisse-vs-os-lamellaire.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la localisation de l'os tissé, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'os tissé est présent au cours du développement embryonnaire.",
+          "v": true,
+          "e": "VRAI. C'est la première forme d'os fabriquée : elle apparaît chez l'embryon avant d'être remplacée.",
+          "sourceQuote": "Il est présent au cours du développement embryonnaire"
+        },
+        {
+          "t": "Chez l'adulte, l'os tissé constitue la majeure partie du squelette.",
+          "v": false,
+          "e": "FAUX : chez l'adulte, le squelette est fait d'os lamellaire. L'os tissé ne réapparaît qu'à l'occasion d'une cicatrisation de fracture.",
+          "sourceQuote": "Chez l'adulte, uniquement en cas de cicatrisation de fracture"
+        },
+        {
+          "t": "Chez l'adulte, l'os tissé se rencontre dans plusieurs situations physiologiques courantes.",
+          "v": false,
+          "e": "FAUX : il n'existe que dans un seul cas, la cicatrisation d'une fracture. C'est une exception, pas une situation courante.",
+          "sourceQuote": "chez l'adulte il ne réapparaît que dans un seul cas : la cicatrisation d'une fracture"
+        },
+        {
+          "t": "Le cal osseux qui referme une fracture est constitué d'os lamellaire d'emblée.",
+          "v": false,
+          "e": "FAUX : le cal est d'abord de l'os tissé. Il ne deviendra lamellaire qu'après remodelage.",
+          "sourceQuote": "le cal osseux qui referme une fracture est de l' os tissé"
+        },
+        {
+          "t": "L'os tissé est une forme définitive, qui persiste toute la vie une fois constituée.",
+          "v": false,
+          "e": "FAUX : il est toujours transitoire. Il apparaît en premier, puis il est remodelé en os lamellaire.",
+          "sourceQuote": "L'os tissé est toujours transitoire"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-164-os-tisse-vs-os-lamellaire.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la formation et à l'organisation de l'os lamellaire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'os lamellaire est issu de l'apposition de lamelles par l'ostéoblaste.",
+          "v": true,
+          "e": "VRAI. L'ostéoblaste dépose des couches successives, et c'est cet empilement ordonné qui définit le tissu lamellaire.",
+          "sourceQuote": "issu de l' apposition de lamelles par l' ostéoblaste"
+        },
+        {
+          "t": "Cette apposition se fait couche après couche, comme un millefeuille.",
+          "v": true,
+          "e": "VRAI. C'est l'image reprise du dépôt d'ostéoïde : des couches minces empilées les unes sur les autres.",
+          "sourceQuote": "couche après couche, comme le millefeuille du dépôt d'ostéoïde"
+        },
+        {
+          "t": "Les lamelles sont déposées par l'ostéoclaste.",
+          "v": false,
+          "e": "FAUX : c'est l'ostéoblaste qui les dépose. L'ostéoclaste est la cellule qui résorbe l'os, pas celle qui le construit.",
+          "sourceQuote": "de lamelles par l' ostéoblaste"
+        },
+        {
+          "t": "Dans l'os lamellaire, toutes les fibres de toutes les couches sont parallèles entre elles.",
+          "v": false,
+          "e": "FAUX : elles ne sont parallèles qu'à l'intérieur d'une même couche. D'une couche à la suivante, l'orientation tourne d'environ 90°.",
+          "sourceQuote": "d'une couche à la suivante leur orientation tourne d'environ 90°"
+        },
+        {
+          "t": "C'est l'orientation aléatoire des fibres qui confère à l'os lamellaire sa résistance.",
+          "v": false,
+          "e": "FAUX : c'est l'alternance régulière des spires, et non le désordre. L'orientation aléatoire est celle de l'os tissé, qui est fragile.",
+          "sourceQuote": "C'est cette alternance qui lui confère une grande résistance mécanique"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-164-os-tisse-vs-os-lamellaire.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la solidité et au devenir des deux types d'os, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'os tissé est fragile.",
+          "v": true,
+          "e": "VRAI. Ses fibres partent dans tous les sens, sans direction privilégiée : l'ensemble ne résiste pas bien aux contraintes.",
+          "sourceQuote": "sans direction privilégiée : l'ensemble est fragile"
+        },
+        {
+          "t": "L'os lamellaire possède une grande résistance mécanique.",
+          "v": true,
+          "e": "VRAI. C'est l'aboutissement de l'organisation en spires alternées : un tissu solide, adapté aux contraintes.",
+          "sourceQuote": "Grande résistance mécanique"
+        },
+        {
+          "t": "L'os tissé est rapidement remodelé en os lamellaire.",
+          "v": true,
+          "e": "VRAI. Il n'est jamais une forme finale : il sert de première ébauche, puis il est remplacé.",
+          "sourceQuote": "Il est ensuite rapidement remodelé en os lamellaire"
+        },
+        {
+          "t": "C'est l'os lamellaire qui est remodelé en os tissé.",
+          "v": false,
+          "e": "FAUX : le sens est inverse. C'est l'os tissé qui est remodelé en os lamellaire, lequel constitue l'aboutissement.",
+          "sourceQuote": "c'est en os lamellaire que l'os tissé est remodelé"
+        },
+        {
+          "t": "L'os tissé apparaît après l'os lamellaire, une fois celui-ci dégradé.",
+          "v": false,
+          "e": "FAUX : l'os tissé apparaît en premier, lors du développement ou de la cicatrisation. C'est lui qui précède, jamais l'inverse.",
+          "sourceQuote": "il apparaît en premier lors du développement ou de la cicatrisation"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-164-os-tisse-vs-os-lamellaire.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à ce qui distingue — et à ce qui ne distingue pas — l'os tissé de l'os lamellaire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Aucune ligne du tableau comparatif ne porte sur la composition.",
+          "v": true,
+          "e": "VRAI. Le tableau compare la localisation, l'orientation, la solidité et le devenir — jamais la composition.",
+          "sourceQuote": "Aucune ligne de ce tableau ne parle de composition"
+        },
+        {
+          "t": "Les proportions de 70 % de minéral et 30 % d'organique sont les mêmes dans les deux types d'os.",
+          "v": true,
+          "e": "VRAI. Ni ces proportions ni le collagène I ne changent d'un type à l'autre : c'est le rangement qui diffère, pas la recette.",
+          "sourceQuote": "ni les 70/30, ni le collagène I ne changent d'une colonne à l'autre"
+        },
+        {
+          "t": "Les deux architectures partagent la même matrice minéralisée et le même collagène de type I.",
+          "v": true,
+          "e": "VRAI. Même matrice, mêmes cristaux, même collagène : seule l'orientation des fibres les sépare.",
+          "sourceQuote": "Même matrice minéralisée, mêmes 70 % d'hydroxyapatite, même collagène de type I"
+        },
+        {
+          "t": "Ce qui fait qu'un os casse ou qu'il tient, c'est la direction dans laquelle ses fibres sont posées.",
+          "v": true,
+          "e": "VRAI. C'est l'idée centrale de la fiche : dans l'os, l'organisation compte autant que la composition.",
+          "sourceQuote": "c'est uniquement la direction dans laquelle ses fibres sont posées"
+        },
+        {
+          "t": "L'os tissé et l'os lamellaire se distinguent par leur teneur en collagène de type I.",
+          "v": false,
+          "e": "FAUX : leur composition est identique. Ce qui les sépare, c'est l'orientation des fibres, pas leur nature ni leur quantité.",
+          "sourceQuote": "Ce qui sépare les deux, c'est l'orientation, pas la composition"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-164-os-tisse-vs-os-lamellaire.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives au cal osseux et à la cicatrisation d'une fracture, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le cal osseux qui referme une fracture est encore fragile.",
+          "v": true,
+          "e": "VRAI. Il est fait d'os tissé, dont les fibres partent en tous sens : la consolidation mécanique n'est pas encore acquise.",
+          "sourceQuote": "est de l' os tissé , donc encore fragile"
+        },
+        {
+          "t": "C'est une minéralisation supplémentaire du cal qui lui donnera sa résistance mécanique.",
+          "v": false,
+          "e": "FAUX : c'est son remodelage en os lamellaire, c'est-à-dire une réorganisation des fibres, et non un ajout de minéral.",
+          "sourceQuote": "c'est son remodelage en os lamellaire qui lui donnera sa résistance mécanique"
+        },
+        {
+          "t": "Chez l'adulte, l'os tissé apparaît aussi en dehors de toute fracture, au cours du remodelage normal.",
+          "v": false,
+          "e": "FAUX : chez l'adulte, il n'existe qu'au moment de la cicatrisation d'une fracture. En dehors de ce cas, le squelette est lamellaire.",
+          "sourceQuote": "chez l'adulte, il n'existe qu'au moment de la cicatrisation d'une fracture"
+        },
+        {
+          "t": "Une proposition présentant l'os tissé comme un os normal de l'adulte est exacte.",
+          "v": false,
+          "e": "FAUX : c'est précisément le piège signalé. L'os tissé n'est jamais l'os normal de l'adulte.",
+          "sourceQuote": "Un QCM qui en fait un os normal de l'adulte est FAUX"
+        },
+        {
+          "t": "Le caractère transitoire et fragile de l'os tissé ne figure pas parmi les pièges classiques du chapitre.",
+          "v": false,
+          "e": "FAUX : il en fait explicitement partie. C'est l'un des cinq pièges classiques annoncés pour ce chapitre.",
+          "sourceQuote": "C'est l'un des 5 pièges classiques du chapitre"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-164-os-tisse-vs-os-lamellaire.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives au moyen mnémotechnique de la fiche et à l'idée générale qu'elle défend, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le mnémo présente l'os lamellaire comme résistant grâce à ses spires alternées à environ 90°.",
+          "v": true,
+          "e": "VRAI. C'est le deuxième volet du moyen mnémotechnique, qui oppose désordre et alternance régulière.",
+          "sourceQuote": "Os lamellaire = résistant (spires alternées à 90°)"
+        },
+        {
+          "t": "Dans l'os, l'organisation compte autant que la composition.",
+          "v": true,
+          "e": "VRAI. C'est l'idée à retenir de la fiche, et elle commande toute la suite du chapitre.",
+          "sourceQuote": "l' organisation compte autant que la composition"
+        },
+        {
+          "t": "La recette de la matrice osseuse change d'un type d'os à l'autre.",
+          "v": false,
+          "e": "FAUX : la recette ne bouge pas. Ce sont les fibres de collagène qui sont rangées différemment.",
+          "sourceQuote": "Cette recette-là ne bouge pas"
+        },
+        {
+          "t": "Le mnémo présente l'os tissé comme le plus résistant des deux.",
+          "v": false,
+          "e": "FAUX : il le présente comme fragile, parce que ses fibres partent en tous sens. Le résistant, c'est l'os lamellaire.",
+          "sourceQuote": "Os tissé = fragile (fibres en tous sens)"
+        },
+        {
+          "t": "Dans l'os lamellaire, les fibres tournent d'environ 45° d'une couche à l'autre.",
+          "v": false,
+          "e": "FAUX : la rotation est d'environ 90°, soit un quart de tour, d'une couche à la suivante.",
+          "sourceQuote": "spires alternées à ~90°"
+        }
+      ]
+    }
+  ]
+}

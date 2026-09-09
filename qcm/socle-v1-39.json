@@ -1,0 +1,1376 @@
+{
+  "matiere": "mixte",
+  "chapitre": 0,
+  "note": "socle 1-7 — fiches sans QCM, ordre du Parcours",
+  "questions": [
+    {
+      "fiche": "chimie-115-premier-principe-selon-transformation.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la portée de la relation ΔU = W + Q et à la manière de l'aborder devant un exercice de thermodynamique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La relation ΔU = W + Q reste vraie quelle que soit la situation envisagée.",
+          "v": true,
+          "e": "VRAI. C'est le point de départ : la formule générale ne souffre aucune exception. Ce sont seulement ses termes qui s'annulent ou non selon la transformation.",
+          "sourceQuote": "Cette formule est toujours vraie , quelle que soit la situation"
+        },
+        {
+          "t": "Elle constitue le bilan des deux seules façons d'échanger de l'énergie.",
+          "v": true,
+          "e": "VRAI. Un système ne peut échanger de l'énergie que de deux manières : par le travail W et par la chaleur Q. La formule additionne ces deux voies, et il n'y en a pas de troisième.",
+          "sourceQuote": "le bilan des deux seules façons d'échanger de l'énergie"
+        },
+        {
+          "t": "En pratique, on applique presque toujours cette formule telle quelle, sans la simplifier.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. On ne l'utilise presque jamais telle quelle, parce que les conditions de la transformation font tomber un terme, parfois les deux.",
+          "sourceQuote": "on ne l'utilise presque jamais telle quelle"
+        },
+        {
+          "t": "Devant un exercice, on simplifie d'abord la formule, on identifie la transformation ensuite.",
+          "v": false,
+          "e": "FAUX : l'ordre est exactement l'inverse. On identifie la transformation, on écrit la formule générale, et la simplification ne vient qu'en dernier.",
+          "sourceQuote": "et seulement après simplifier selon les conditions"
+        },
+        {
+          "t": "C'est l'étape d'identification de la transformation qui décide du terme qui tombe.",
+          "v": true,
+          "e": "VRAI. Tant qu'on n'a pas nommé la transformation, on ne sait pas quel terme s'annule : c'est pour cela qu'il ne faut jamais sauter cette étape.",
+          "sourceQuote": "c'est elle qui décide quel terme tombe"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-115-premier-principe-selon-transformation.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à ce qu'il reste du premier principe une fois la transformation identifiée, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Pour un système isolé, l'énergie interne ne change pas.",
+          "v": true,
+          "e": "VRAI. Rien ne rentre, rien ne sort : ni chaleur, ni travail. Les deux termes tombent ensemble, il ne reste rien à droite du signe égal.",
+          "sourceQuote": "l'énergie interne ne change pas"
+        },
+        {
+          "t": "Dans une transformation adiabatique, il ne reste que le travail.",
+          "v": true,
+          "e": "VRAI. La condition adiabatique annule la chaleur : toute la variation d'énergie interne passe alors par le travail.",
+          "sourceQuote": "Il ne reste que le travail"
+        },
+        {
+          "t": "Dans une transformation isochore, aucun travail n'est échangé et toute l'énergie passe par la chaleur.",
+          "v": true,
+          "e": "VRAI. Le volume ne bougeant pas, le travail est nul : la chaleur est la seule voie d'échange restante.",
+          "sourceQuote": "Aucun travail échangé — toute l'énergie passe uniquement par la chaleur"
+        },
+        {
+          "t": "Dans une transformation isobare, aucun terme de la relation ne tombe.",
+          "v": true,
+          "e": "VRAI. C'est le seul des quatre cas où les deux termes subsistent : le travail vaut −PΔV et vient s'ajouter à la chaleur.",
+          "sourceQuote": "Ici aucun terme ne tombe"
+        },
+        {
+          "t": "Dans trois cas sur quatre, il ne reste au plus qu'un seul terme à droite du signe égal.",
+          "v": true,
+          "e": "VRAI. Système isolé, adiabatique et isochore se réduisent à zéro ou à un seul terme. Seule l'isobare conserve les deux.",
+          "sourceQuote": "Dans trois cas sur quatre, il ne reste donc au plus un seul terme à droite"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-115-premier-principe-selon-transformation.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Un étudiant analyse une transformation adiabatique. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La condition adiabatique est une condition portant sur la température, la pression ou le volume.",
+          "v": false,
+          "e": "FAUX : elle porte uniquement sur les échanges de chaleur. T, P et V peuvent parfaitement varier dans une transformation adiabatique.",
+          "sourceQuote": "ce n'est pas une condition sur T, P ou V"
+        },
+        {
+          "t": "Un gaz comprimé dans un piston entouré d'un isolant thermique subit une transformation adiabatique.",
+          "v": true,
+          "e": "VRAI. L'isolant thermique empêche tout échange de chaleur : la condition adiabatique est remplie, même si le volume change.",
+          "sourceQuote": "un gaz comprimé dans un piston entouré d'un isolant thermique est adiabatique"
+        },
+        {
+          "t": "En adiabatique, toute la variation d'énergie interne passe par la chaleur.",
+          "v": false,
+          "e": "FAUX : c'est précisément la chaleur qui est nulle. Toute la variation d'énergie interne passe par le travail.",
+          "sourceQuote": "toute la variation d'énergie interne passe par W"
+        },
+        {
+          "t": "La condition adiabatique porte sur les échanges de travail.",
+          "v": false,
+          "e": "FAUX : elle porte sur les échanges de chaleur, pas sur ceux de travail. Le travail, lui, est le seul terme qui subsiste.",
+          "sourceQuote": "La condition porte sur les échanges de chaleur"
+        },
+        {
+          "t": "En adiabatique, les deux termes du second membre s'annulent simultanément.",
+          "v": false,
+          "e": "FAUX : c'est le cas du système isolé, pas de l'adiabatique. Ici, seule la chaleur tombe et le travail demeure.",
+          "sourceQuote": "Il ne reste que le travail"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-115-premier-principe-selon-transformation.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la transformation isochore et au raisonnement qui l'accompagne, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'isochore correspond à un volume qui ne change pas, par exemple dans un récipient rigide.",
+          "v": true,
+          "e": "VRAI. C'est la définition même de l'isochore : le volume est bloqué, le contenant ne se déforme pas.",
+          "sourceQuote": "Le volume ne change pas (récipient rigide)"
+        },
+        {
+          "t": "Puisque la variation de volume est nulle, le travail se calcule comme le produit de la pression par zéro, et vaut donc zéro.",
+          "v": true,
+          "e": "VRAI. C'est le raisonnement complet à retenir, et non le seul résultat : volume constant, donc variation de volume nulle, donc travail nul.",
+          "sourceQuote": "donc ΔV = 0 , donc W = −P × 0 = 0"
+        },
+        {
+          "t": "Toute l'énergie échangée passe alors uniquement par la chaleur.",
+          "v": true,
+          "e": "VRAI. Le travail étant nul, la chaleur est la seule voie qui reste pour faire varier l'énergie interne.",
+          "sourceQuote": "toute l'énergie passe uniquement par la chaleur"
+        },
+        {
+          "t": "La notation Qv désigne la chaleur échangée à volume constant.",
+          "v": true,
+          "e": "VRAI. L'indice v rappelle la condition d'emploi : cette chaleur est celle mesurée à volume constant.",
+          "sourceQuote": "la chaleur à volume constant"
+        },
+        {
+          "t": "En isochore, un travail non nul est échangé avec l'extérieur.",
+          "v": false,
+          "e": "FAUX : justement, aucun travail n'est échangé. C'est ce qui distingue l'isochore de l'isobare, où le terme de travail subsiste.",
+          "sourceQuote": "Aucun travail échangé — toute l'énergie passe"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-115-premier-principe-selon-transformation.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à la transformation isobare et au piège qui l'accompagne, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le terme « isobare » signifie que le volume du système reste constant.",
+          "v": false,
+          "e": "FAUX : isobare désigne une pression constante, pas un volume constant. C'est l'isochore qui bloque le volume.",
+          "sourceQuote": "« Isobare » = la pression P reste constante , pas le volume"
+        },
+        {
+          "t": "L'isobare correspond à une pression constante : c'est le cas d'un bécher ouvert sur la paillasse.",
+          "v": true,
+          "e": "VRAI. À l'air libre, la pression imposée au système est celle de l'atmosphère, et elle ne bouge pas.",
+          "sourceQuote": "La pression est constante (un bécher ouvert sur la paillasse)"
+        },
+        {
+          "t": "En isobare, la variation de volume est nécessairement nulle puisque la pression est fixe.",
+          "v": false,
+          "e": "FAUX : pression fixe et variation de volume non nulle ne sont pas contradictoires. Le piston se déplace alors que la pression atmosphérique, elle, ne bouge pas.",
+          "sourceQuote": "P fixe et ΔV ≠ 0 ne sont pas contradictoires"
+        },
+        {
+          "t": "C'est justement parce que le volume change qu'il subsiste un terme de travail.",
+          "v": true,
+          "e": "VRAI. Si le volume ne variait pas, le travail serait nul. C'est parce qu'il varie que le terme −PΔV reste dans l'écriture.",
+          "sourceQuote": "c'est exactement pour ça qu'il reste un terme −PΔV"
+        },
+        {
+          "t": "L'isobare est le cas le moins fréquemment rencontré en chimie.",
+          "v": false,
+          "e": "FAUX : c'est au contraire le plus courant, puisque la chimie se pratique le plus souvent à l'air libre, à la pression de l'atmosphère.",
+          "sourceQuote": "est justement le plus courant en chimie"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-115-premier-principe-selon-transformation.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Une étudiante relit le tableau des simplifications en cherchant ce qui distingue chacune de ses lignes. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le système isolé est le cas où les deux termes tombent en même temps.",
+          "v": true,
+          "e": "VRAI. Par définition, rien ne rentre et rien ne sort : ni chaleur, ni travail. Les deux disparaissent ensemble.",
+          "sourceQuote": "Les deux termes tombent en même temps"
+        },
+        {
+          "t": "Le seul cas qui conserve ses deux termes est l'isobare.",
+          "v": true,
+          "e": "VRAI. Et c'est aussi le plus fréquent en chimie, ce qui rend son écriture d'autant plus utile à connaître.",
+          "sourceQuote": "le seul cas qui garde ses deux termes, l' isobare"
+        },
+        {
+          "t": "Le tableau se lit en partant de la formule simplifiée pour remonter à la condition.",
+          "v": false,
+          "e": "FAUX : le sens de lecture est l'inverse. On part de la condition, on barre ce qu'elle annule, et ce qui reste est la formule à appliquer.",
+          "sourceQuote": "on lit la condition, on barre ce qu'elle annule"
+        },
+        {
+          "t": "Sur une paillasse, à l'air libre, la pression est celle de l'atmosphère.",
+          "v": true,
+          "e": "VRAI. C'est exactement ce qui rend l'isobare si courante en chimie : le montage ouvert impose la pression atmosphérique.",
+          "sourceQuote": "sur une paillasse, à l'air libre, la pression est celle de l'atmosphère"
+        },
+        {
+          "t": "Dans une transformation isolée, l'énergie interne varie, mais faiblement.",
+          "v": false,
+          "e": "FAUX : elle ne varie pas du tout. Les deux termes étant nuls, il ne reste rien à droite du signe égal.",
+          "sourceQuote": "il ne reste rien à droite : l'énergie interne ne change pas"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-115-premier-principe-selon-transformation.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "En fin de révision, un étudiant récapitule les quatre écritures simplifiées du premier principe. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une seule formule donne quatre simplifications, selon la transformation subie.",
+          "v": true,
+          "e": "VRAI. C'est le résumé de la fiche : une formule générale, quatre écritures raccourcies selon les conditions.",
+          "sourceQuote": "Une seule formule, quatre simplifications"
+        },
+        {
+          "t": "En isobare, il faut retenir que la variation d'énergie interne se réduit à la chaleur à volume constant.",
+          "v": false,
+          "e": "FAUX : la chaleur à volume constant appartient au cas isochore. En isobare, il subsiste en plus le terme de travail −PΔV.",
+          "sourceQuote": "isobare (W = −PΔV) → ΔU = Q p − PΔV"
+        },
+        {
+          "t": "En isochore, il faut retenir le raisonnement complet, et pas seulement le résultat.",
+          "v": true,
+          "e": "VRAI. La fiche insiste : on part du volume constant, on en déduit une variation de volume nulle, donc un travail nul, et seulement alors le résultat.",
+          "sourceQuote": "En isochore, retiens le raisonnement complet"
+        },
+        {
+          "t": "Le signe moins du travail est démontré dans cette fiche même.",
+          "v": false,
+          "e": "FAUX : il est admis ici. Son explication est renvoyée à la fiche suivante, consacrée au travail.",
+          "sourceQuote": "le signe − s'explique dans la fiche suivante, consacrée au travail W"
+        },
+        {
+          "t": "Ce réflexe de simplification fait surtout perdre du temps en épreuve.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. Savoir quel terme tombe évite d'écrire et de manipuler des termes nuls, et fait gagner du temps.",
+          "sourceQuote": "C'est ce réflexe-là qui fait gagner du temps au concours"
+        }
+      ]
+    },
+
+    {
+      "fiche": "chimie-116-travail-w-compression-detente.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à l'expression du travail W et à sa condition d'emploi, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'expression du travail employée ici n'est valable qu'à pression constante.",
+          "v": true,
+          "e": "VRAI. C'est une condition d'emploi, à vérifier avant d'écrire quoi que ce soit : si la pression varie, la formule ne s'applique pas.",
+          "sourceQuote": "a une condition d'emploi : la pression doit rester constante"
+        },
+        {
+          "t": "La variation de volume se calcule en retranchant le volume final du volume initial.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. On retranche le volume initial du volume final. Intervertir les deux inverse le signe du travail, donc le sens de l'échange d'énergie.",
+          "sourceQuote": "calcule ΔV = V final − V initial"
+        },
+        {
+          "t": "La pression qui intervient dans la formule est la pression extérieure, qui ne bouge pas.",
+          "v": true,
+          "e": "VRAI. C'est bien la pression extérieure, supposée constante, qui apparaît dans l'expression du travail.",
+          "sourceQuote": "la pression extérieure, qui ne bouge pas"
+        },
+        {
+          "t": "Le signe du travail se devine, sans qu'il soit nécessaire de calculer la variation de volume.",
+          "v": false,
+          "e": "FAUX : la consigne est de ne jamais deviner ce signe. On calcule la variation de volume, on remplace dans la formule, et le signe apparaît tout seul.",
+          "sourceQuote": "ne devine jamais le signe de W"
+        },
+        {
+          "t": "Le travail transfère de l'énergie par l'intermédiaire de la température.",
+          "v": false,
+          "e": "FAUX : c'est la chaleur qui transfère de l'énergie via la température. Le travail, lui, en transfère quand le volume du gaz change.",
+          "sourceQuote": "le travail W, lui, transfère de l'énergie quand le volume du gaz change"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-116-travail-w-compression-detente.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives au signe du travail selon ce que fait le gaz, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une détente correspond à une variation de volume positive et à un travail négatif.",
+          "v": true,
+          "e": "VRAI. Le gaz occupe plus de place qu'au départ, donc la variation de volume est positive ; le signe moins de la formule rend alors le travail négatif.",
+          "sourceQuote": "Détente (ΔV > 0) → W < 0 , le système en cède"
+        },
+        {
+          "t": "Quand le gaz se dilate, il pousse et perd de l'énergie : le système cède.",
+          "v": true,
+          "e": "VRAI. Pousser le piston coûte de l'énergie mécanique au gaz : il en cède, d'où un travail négatif.",
+          "sourceQuote": "Il pousse, il perd de l'énergie : le système cède"
+        },
+        {
+          "t": "Une compression correspond à une variation de volume négative et à un travail positif : le système reçoit de l'énergie.",
+          "v": true,
+          "e": "VRAI. Comprimer, c'est fournir de l'énergie mécanique au gaz. La variation de volume est négative, le signe moins la rend positive.",
+          "sourceQuote": "Compression (ΔV < 0) → W > 0 , le système reçoit de l'énergie"
+        },
+        {
+          "t": "Quand le volume ne bouge pas, le travail est nul et toute l'énergie passe par la chaleur.",
+          "v": true,
+          "e": "VRAI. Récipient rigide, variation de volume nulle : le produit s'annule et il ne reste que la chaleur comme voie d'échange.",
+          "sourceQuote": "Aucun travail échangé : toute l'énergie passe uniquement par la chaleur"
+        },
+        {
+          "t": "Le signe moins de la formule traduit une convention prise du point de vue de l'extérieur.",
+          "v": false,
+          "e": "FAUX : la convention est toujours prise du point de vue du système. Ce qu'il cède est compté négativement, ce qu'il reçoit positivement.",
+          "sourceQuote": "il traduit la convention cédé = − , toujours du point de vue du système"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-116-travail-w-compression-detente.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "On chauffe le gaz contenu dans une seringue ouverte à l'atmosphère. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le gaz reçoit de la chaleur, donc la chaleur échangée est positive.",
+          "v": true,
+          "e": "VRAI. Chauffer le gaz, c'est lui apporter de la chaleur : du point de vue du système, ce qui est reçu est compté positivement.",
+          "sourceQuote": "il reçoit de la chaleur Q (Q > 0)"
+        },
+        {
+          "t": "En se dilatant, le gaz dépense de l'énergie mécanique contre l'atmosphère.",
+          "v": true,
+          "e": "VRAI. Pour repousser le piston, le gaz doit vaincre la pression atmosphérique : cela lui coûte de l'énergie mécanique.",
+          "sourceQuote": "il dépense de l'énergie mécanique contre l'atmosphère"
+        },
+        {
+          "t": "Le travail échangé au cours de cette dilatation est positif.",
+          "v": false,
+          "e": "FAUX : le gaz se dilate et pousse le piston vers l'extérieur, il cède donc de l'énergie mécanique. Le travail est négatif.",
+          "sourceQuote": "l'énergie mécanique contre l'atmosphère → W < 0"
+        },
+        {
+          "t": "L'énergie interne augmente autant que si le volume avait été bloqué.",
+          "v": false,
+          "e": "FAUX : une partie de la chaleur reçue repart en travail de dilatation. L'énergie interne augmente donc moins que si le volume était bloqué.",
+          "sourceQuote": "L'énergie interne n'augmente pas autant que si le volume était bloqué"
+        },
+        {
+          "t": "Une partie de la chaleur reçue repart sous forme de travail de dilatation.",
+          "v": true,
+          "e": "VRAI. C'est cette fuite en travail qui explique que l'énergie interne ne profite pas de toute la chaleur apportée.",
+          "sourceQuote": "une partie de la chaleur reçue « s'échappe » en travail de dilatation"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-116-travail-w-compression-detente.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la manière dont la chaleur et le travail se combinent dans un même système, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La chaleur et le travail échangés par un système sont toujours de signes opposés.",
+          "v": false,
+          "e": "FAUX : ils sont liés, mais pas toujours opposés. Ils peuvent parfaitement être positifs tous les deux et s'additionner.",
+          "sourceQuote": "Q et W sont liés — mais pas toujours opposés"
+        },
+        {
+          "t": "Si l'on comprime et que l'on chauffe en même temps, la chaleur et le travail sont de signes contraires.",
+          "v": false,
+          "e": "FAUX : dans ce cas ils sont tous deux positifs et s'additionnent, si bien que l'énergie interne monte beaucoup.",
+          "sourceQuote": "si tu comprimes et tu chauffes en même temps, W > 0 et Q > 0"
+        },
+        {
+          "t": "Quand on fournit de la chaleur à pression constante, la dilatation engendrée produit un travail positif.",
+          "v": false,
+          "e": "FAUX : le gaz se dilate, donc il cède de l'énergie mécanique. Le travail engendré est négatif, et il ampute la chaleur apportée.",
+          "sourceQuote": "Cette dilatation génère du W < 0"
+        },
+        {
+          "t": "C'est cette compensation partielle entre chaleur et travail qui explique que la capacité thermique à pression constante dépasse celle à volume constant.",
+          "v": true,
+          "e": "VRAI. À pression constante, une partie de la chaleur apportée repart en travail : il en faut donc davantage pour obtenir la même élévation de température.",
+          "sourceQuote": "C'est exactement pour ça que C p > C v"
+        },
+        {
+          "t": "Le premier principe impose que les deux contributions se compensent toujours.",
+          "v": false,
+          "e": "FAUX : il dit seulement que les deux contributions comptent, quelle que soit leur combinaison. Elles peuvent s'opposer comme s'additionner.",
+          "sourceQuote": "dit juste que les deux contributions comptent , quelle que soit leur combinaison"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-116-travail-w-compression-detente.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Un énoncé propose la situation suivante : un gaz est comprimé de façon adiabatique. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La compression donne une variation de volume négative, donc un travail positif.",
+          "v": true,
+          "e": "VRAI. Le volume final est inférieur au volume initial : la variation est négative, et le signe moins de la formule rend le travail positif.",
+          "sourceQuote": "Compression → ΔV < 0 → W = −P ext × ΔV > 0"
+        },
+        {
+          "t": "Le système reçoit de l'énergie mécanique.",
+          "v": true,
+          "e": "VRAI. Un travail positif signifie, du point de vue du système, une énergie reçue : c'est l'opérateur qui la lui fournit en comprimant.",
+          "sourceQuote": "le système reçoit de l'énergie mécanique"
+        },
+        {
+          "t": "La chaleur étant nulle, la variation d'énergie interne se réduit au travail et elle est positive.",
+          "v": true,
+          "e": "VRAI. En adiabatique, la chaleur est nulle : il ne reste que le travail, ici positif, donc l'énergie interne augmente.",
+          "sourceQuote": "Et comme Q = 0, ΔU = W > 0"
+        },
+        {
+          "t": "La température du gaz augmente.",
+          "v": true,
+          "e": "VRAI. L'énergie interne augmentant, la température suit : c'est exactement ce qui rend ce piège classique en épreuve.",
+          "sourceQuote": "l'énergie interne augmente , donc la température aussi"
+        },
+        {
+          "t": "Un énoncé affirmant que la température du gaz diminue serait faux.",
+          "v": true,
+          "e": "VRAI. C'est le distracteur que la fiche signale explicitement : dans une compression adiabatique, la température monte, elle ne descend pas.",
+          "sourceQuote": "Un QCM qui écrit « la température du gaz diminue » est FAUX"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-116-travail-w-compression-detente.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Une étudiante utilise l'image du ballon pour retrouver rapidement le signe du travail. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Gonfler un ballon revient à comprimer l'air, donc le travail est positif.",
+          "v": true,
+          "e": "VRAI. C'est la première moitié du moyen mnémotechnique : on comprime, donc on fournit de l'énergie au gaz.",
+          "sourceQuote": "Tu gonfles un ballon : tu comprimes l'air → W > 0"
+        },
+        {
+          "t": "Un ballon qui éclate correspond à une détente, donc à un travail positif.",
+          "v": false,
+          "e": "FAUX : la détente donne bien un travail, mais négatif. Le gaz se détend, il pousse, il cède de l'énergie.",
+          "sourceQuote": "Le ballon éclate : le gaz se détend → W < 0"
+        },
+        {
+          "t": "Dans un récipient rigide, le travail est le produit de la pression par une variation de volume nulle, donc il est nul.",
+          "v": true,
+          "e": "VRAI. Aucun travail n'est alors échangé, et toute l'énergie doit passer par la chaleur.",
+          "sourceQuote": "W = −P × 0 = 0. Aucun travail échangé"
+        },
+        {
+          "t": "La seringue prise en exemple dans la fiche est un système isolé.",
+          "v": false,
+          "e": "FAUX : elle est ouverte à l'atmosphère, ce que la fiche souligne. Elle échange donc avec l'extérieur, à pression constante.",
+          "sourceQuote": "une seringue ouverte à l'atmosphère (pas isolée !)"
+        },
+        {
+          "t": "La chaleur transfère de l'énergie via la température, là où le travail le fait par la variation de volume.",
+          "v": true,
+          "e": "VRAI. Ce sont les deux voies d'échange, et elles ne passent pas par la même grandeur : température d'un côté, volume de l'autre.",
+          "sourceQuote": "La chaleur Q transfère de l'énergie via la température"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-116-travail-w-compression-detente.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "En relisant l'ensemble de la fiche, un étudiant vérifie ce qu'il a retenu du travail échangé par un gaz. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le terme de travail est apparu dans le cas du laboratoire ouvert, à pression constante.",
+          "v": true,
+          "e": "VRAI. C'est en simplifiant le premier principe dans le cas isobare que ce terme est apparu, et cette fiche en explique l'origine.",
+          "sourceQuote": "le cas du labo ouvert — un terme est apparu"
+        },
+        {
+          "t": "Avant d'écrire quoi que ce soit, il faut vérifier que la pression reste constante.",
+          "v": true,
+          "e": "VRAI. C'est la condition d'emploi de la formule : on la contrôle d'abord, on calcule ensuite.",
+          "sourceQuote": "Vérifie-la avant d'écrire quoi que ce soit"
+        },
+        {
+          "t": "Le signe moins qui figure dans l'expression du travail traduit une convention.",
+          "v": true,
+          "e": "VRAI. Il ne sort pas de nulle part : il traduit la convention selon laquelle ce que le système cède est compté négativement.",
+          "sourceQuote": "Le signe − de W = −PΔV ne sort pas de nulle part"
+        },
+        {
+          "t": "Les trois cas possibles se lisent tous sur le signe de la variation de volume.",
+          "v": true,
+          "e": "VRAI. Dilatation, compression, volume bloqué : trois cas, et le signe de la variation de volume suffit à les distinguer.",
+          "sourceQuote": "ils se lisent tous sur le signe de ΔV"
+        },
+        {
+          "t": "Comprimer un gaz revient à lui fournir de l'énergie.",
+          "v": true,
+          "e": "VRAI. Le système reçoit alors de l'énergie mécanique, ce que traduit un travail de signe positif.",
+          "sourceQuote": "On lui fournit de l'énergie : le système reçoit"
+        }
+      ]
+    },
+
+    {
+      "fiche": "physique-115-interface-contraste-impedance.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à ce qu'est une interface acoustique et à ce que l'ultrason y devient, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une interface est une frontière entre deux milieux différents.",
+          "v": true,
+          "e": "VRAI. C'est simplement l'endroit précis où le milieu change : peau et graisse, muscle et os, foie et vésicule.",
+          "sourceQuote": "une interface est simplement une frontière entre deux milieux différents"
+        },
+        {
+          "t": "Une interface est une couche de tissu spécialisée dans la réflexion des ultrasons.",
+          "v": false,
+          "e": "FAUX : ce n'est ni une couche ni une machine. C'est uniquement la limite entre deux milieux, sans épaisseur propre.",
+          "sourceQuote": "Ce n'est pas une couche, pas une machine — juste l'endroit précis où ça change"
+        },
+        {
+          "t": "À une interface, une partie de l'onde est réfléchie et renvoyée vers la sonde.",
+          "v": true,
+          "e": "VRAI. C'est cette part réfléchie que la sonde capte : sans elle, il n'y aurait aucune image.",
+          "sourceQuote": "Une partie est réfléchie = renvoyée vers la sonde"
+        },
+        {
+          "t": "La partie transmise poursuit son trajet dans le second milieu.",
+          "v": true,
+          "e": "VRAI. Elle continue plus loin et pourra rebondir sur l'interface suivante, ce qui permet d'explorer en profondeur.",
+          "sourceQuote": "elle continue dans le 2 e milieu, plus loin"
+        },
+        {
+          "t": "C'est le signal de retour capté par la sonde qui forme l'image échographique.",
+          "v": true,
+          "e": "VRAI. L'image est faite des échos revenus vers la sonde, jamais de l'énergie qui a continué son chemin.",
+          "sourceQuote": "Ce signal de retour, c'est ce qui forme l'image échographique"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-115-interface-contraste-impedance.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux deux coefficients qui chiffrent le partage de l'énergie à une interface, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le coefficient de réflexion désigne la fraction de l'énergie qui passe dans le second milieu.",
+          "v": false,
+          "e": "FAUX : le coefficient de réflexion est la fraction qui rebondit. Celle qui passe est décrite par le coefficient de transmission.",
+          "sourceQuote": "coefficient de R éflexion = la fraction de l'énergie qui rebondit"
+        },
+        {
+          "t": "Ces deux coefficients peuvent prendre des valeurs supérieures à 1.",
+          "v": false,
+          "e": "FAUX : ce sont des fractions d'énergie, comprises entre 0 et 1, soit entre 0 % et 100 %.",
+          "sourceQuote": "Tous les deux sont compris entre 0 et 1"
+        },
+        {
+          "t": "Si l'interface renvoie 20 % de l'énergie, 80 % la traverse.",
+          "v": true,
+          "e": "VRAI. C'est l'exemple chiffré de la fiche : le budget énergie de l'interface se répartit entre rebond et passage, et il totalise toujours 100 %.",
+          "sourceQuote": "(R = 0,2), alors 80 % passe (T = 0,8)"
+        },
+        {
+          "t": "La somme des deux coefficients peut être inférieure à 1 lorsqu'une partie de l'énergie disparaît à l'interface.",
+          "v": false,
+          "e": "FAUX : rien ne disparaît à une interface. L'énergie totale est conservée, donc la somme vaut toujours 1.",
+          "sourceQuote": "l'énergie totale est conservée — rien ne disparaît à une interface"
+        },
+        {
+          "t": "Le coefficient noté T est le coefficient de réflexion.",
+          "v": false,
+          "e": "FAUX : T est le coefficient de transmission, celui qui chiffre la fraction qui passe. La réflexion est notée R.",
+          "sourceQuote": "T = coefficient de T ransmission = la fraction qui passe"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-115-interface-contraste-impedance.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la façon dont les échos deviennent une image à l'écran, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Après une seule impulsion, la sonde reçoit une série d'échos, chacun avec un délai différent.",
+          "v": true,
+          "e": "VRAI. Chaque interface rencontrée sur le trajet renvoie un petit pourcentage de l'énergie, et ces retours n'arrivent pas en même temps.",
+          "sourceQuote": "La sonde reçoit donc une série d'échos , chacun avec un délai différent"
+        },
+        {
+          "t": "Les échos venus des interfaces les plus profondes reviennent plus tard.",
+          "v": true,
+          "e": "VRAI. Le trajet aller-retour est plus long : c'est ce décalage temporel qui permet de reconstruire la profondeur.",
+          "sourceQuote": "les échos profonds reviennent plus tard"
+        },
+        {
+          "t": "Un ordinateur mesure le temps de retour de chaque écho.",
+          "v": true,
+          "e": "VRAI. C'est la mesure de base : à partir de ce temps, l'appareil calcule à quelle profondeur se trouvait l'interface.",
+          "sourceQuote": "Un ordinateur mesure le temps de retour de chaque écho"
+        },
+        {
+          "t": "Ce calcul suppose de connaître la vitesse du son dans les tissus, de l'ordre de 1 540 m/s.",
+          "v": true,
+          "e": "VRAI. Sans cette vitesse admise, un temps de retour ne se convertit pas en profondeur.",
+          "sourceQuote": "il connaît la vitesse du son dans les tissus (c ≈ 1 540 m/s)"
+        },
+        {
+          "t": "Plus la réflexion est forte, plus le point correspondant est lumineux à l'écran.",
+          "v": true,
+          "e": "VRAI. C'est la convention d'affichage à retenir : forte réflexion, point blanc ; faible réflexion, point sombre.",
+          "sourceQuote": "plus la réflexion est forte, plus le point est lumineux"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-115-interface-contraste-impedance.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à l'impédance acoustique et à ce qui décide réellement de la réflexion, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Plus l'impédance d'un milieu est grande, plus l'onde y rebondit.",
+          "v": false,
+          "e": "FAUX : c'est l'intuition qui vient en premier, et elle est trompeuse. La valeur absolue de l'impédance ne décide ni de la réflexion ni de la transmission.",
+          "sourceQuote": "La valeur absolue de Z ne décide ni de R ni de T"
+        },
+        {
+          "t": "Une impédance élevée caractérise un milieu dur, comme l'os ou le métal.",
+          "v": true,
+          "e": "VRAI. L'impédance mesure à quel point un milieu résiste aux vibrations sonores : grande pour l'os, petite pour l'air ou le gras.",
+          "sourceQuote": "Z grande = milieu « dur » (os, métal)"
+        },
+        {
+          "t": "Ce qui décide de la réflexion est le contraste entre les impédances des deux milieux.",
+          "v": true,
+          "e": "VRAI. Seul l'écart compte : deux milieux d'impédances voisines ne renvoient rien, même si ces impédances sont énormes.",
+          "sourceQuote": "Ce qui décide, c'est le contraste entre Z₁ et Z₂"
+        },
+        {
+          "t": "Une impédance énorme suffit à provoquer un rebond, même en l'absence de contraste.",
+          "v": false,
+          "e": "FAUX : sans contraste avec l'autre côté, une impédance même énorme ne fera rien rebondir du tout.",
+          "sourceQuote": "Même un Z énorme ne fera rien rebondir s'il n'y a pas de contraste"
+        },
+        {
+          "t": "Une interface entre deux milieux de même impédance reste visible à l'échographie dès lors que ces impédances sont élevées.",
+          "v": false,
+          "e": "FAUX : sans contraste, il n'y a aucun rebond, donc aucun écho. L'interface est purement et simplement invisible pour l'ultrason.",
+          "sourceQuote": "Aucun contraste → aucun rebond → interface invisible pour l'ultrason"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-115-interface-contraste-impedance.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux configurations d'interface chiffrées dans la fiche, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Deux tissus mous de part et d'autre d'une interface donnent une réflexion quasi nulle.",
+          "v": true,
+          "e": "VRAI. Les impédances sont pratiquement identiques : le contraste est nul, donc rien ne rebondit.",
+          "sourceQuote": "donnent pourtant le même R ≈ 0 %"
+        },
+        {
+          "t": "Une interface entre deux os, malgré des impédances énormes des deux côtés, ne renvoie presque rien.",
+          "v": true,
+          "e": "VRAI. C'est le cas le plus contre-intuitif du tableau : deux impédances énormes mais identiques donnent une réflexion nulle.",
+          "sourceQuote": "même avec un Z énorme (7·10⁶) des deux côtés, R = 0 !"
+        },
+        {
+          "t": "Une interface entre un tissu mou et de l'air renvoie environ 99,9 % de l'énergie.",
+          "v": true,
+          "e": "VRAI. Le contraste est énorme, et pourtant l'air est le milieu le plus mou du tableau : preuve que c'est bien l'écart qui compte, pas la dureté.",
+          "sourceQuote": "tissu mou → air renvoie ≈ 99,9 % de l'énergie"
+        },
+        {
+          "t": "C'est la valeur de l'impédance du premier milieu, prise séparément, qui fixe le rebond.",
+          "v": false,
+          "e": "FAUX : ni celle du premier milieu, ni celle du second prises séparément. Le seul chiffre qui compte est leur écart.",
+          "sourceQuote": "ce n'est pas la valeur de Z₁ ni celle de Z₂ séparément"
+        },
+        {
+          "t": "Un milieu uniforme, même très dur, réfléchit fortement les ultrasons.",
+          "v": false,
+          "e": "FAUX : un milieu uniforme est transparent aux ultrasons, quelle que soit sa dureté. Pour qu'il y ait écho, il faut un changement de milieu.",
+          "sourceQuote": "Un milieu uniforme, même très dur, est transparent aux ultrasons"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-115-interface-contraste-impedance.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Un étudiant reprend l'analogie du ballon pour classer les trois cas d'interface. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le ballon qui passe d'un coussin à un autre coussin rebondit fortement.",
+          "v": false,
+          "e": "FAUX : il s'enfonce et continue, sans aucun rebond. C'est le cas de deux milieux d'impédances voisines.",
+          "sourceQuote": "il s'enfonce et continue. Aucun rebond"
+        },
+        {
+          "t": "Le ballon qui frappe un mur de béton après avoir traversé l'air illustre le cas où l'impédance du premier milieu dépasse largement celle du second.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. L'air a une impédance très faible et le béton une impédance très forte : c'est le second milieu qui domine largement.",
+          "sourceQuote": "Ballon qui frappe un mur en béton après l'air (Z₁ ≪ Z₂)"
+        },
+        {
+          "t": "Le passage d'une éponge à du bois correspond au compromis idéal : un peu rebondit, beaucoup passe.",
+          "v": true,
+          "e": "VRAI. Ce compromis donne une image fine tout en laissant assez d'énergie pour explorer plus profond.",
+          "sourceQuote": "un peu rebondit, beaucoup passe"
+        },
+        {
+          "t": "Quand les deux impédances sont voisines, l'interface reste visible pour l'ultrason.",
+          "v": false,
+          "e": "FAUX : sans rebond, aucun écho ne revient à la sonde. L'interface est invisible pour l'ultrason.",
+          "sourceQuote": "L'interface est invisible pour l'ultrason"
+        },
+        {
+          "t": "L'image du ballon frappant une vitre décrit un phénomène où toute l'énergie rebondit.",
+          "v": false,
+          "e": "FAUX : l'image sert justement à montrer que les deux choses se produisent en même temps, un peu rebondit et un peu passe à travers.",
+          "sourceQuote": "un peu rebondit, et un peu passe à travers"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-115-interface-contraste-impedance.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Une étudiante récapitule ce que la fiche demande de faire devant un énoncé qui fournit deux valeurs d'impédance. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Il faut comparer les deux impédances plutôt que les lire séparément.",
+          "v": true,
+          "e": "VRAI. C'est la consigne de méthode : deux configurations qui n'ont rien à voir en valeur peuvent donner exactement la même réflexion.",
+          "sourceQuote": "ne lis jamais Z₁ et Z₂ séparément : compare-les"
+        },
+        {
+          "t": "Sans réflexion, aucune image n'est possible.",
+          "v": true,
+          "e": "VRAI. L'image est faite des échos revenus vers la sonde : si rien ne rebondit, il n'y a rien à afficher.",
+          "sourceQuote": "Sans réflexion, pas d'image possible"
+        },
+        {
+          "t": "Pour qu'il y ait un écho, il faut un changement de milieu.",
+          "v": true,
+          "e": "VRAI. C'est le mémo de la fiche : c'est le saut d'impédance qui crée l'image, pas la nature du milieu pris isolément.",
+          "sourceQuote": "Pour qu'il y ait écho, il faut un changement"
+        },
+        {
+          "t": "C'est la part transmise qui fait l'image, la part réfléchie continuant plus loin dans le corps.",
+          "v": false,
+          "e": "FAUX : les deux rôles sont inversés. C'est la part réfléchie qui fait l'image, et la part transmise qui continue plus loin.",
+          "sourceQuote": "une part réfléchie (elle fait l'image)"
+        },
+        {
+          "t": "C'est le saut entre deux impédances qui crée l'image, et non la dureté en soi.",
+          "v": true,
+          "e": "VRAI. Un milieu uniforme, même très dur, ne produit aucun écho : seul le changement d'impédance en produit un.",
+          "sourceQuote": "C'est le saut entre deux Z qui crée l'image, pas la dureté en soi"
+        }
+      ]
+    },
+
+    {
+      "fiche": "physique-116-diffusion-moteur-gradient.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la définition de la diffusion et à ce qu'elle explique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La diffusion est le mouvement spontané de la matière de la zone où il y en a beaucoup vers celle où il y en a moins.",
+          "v": true,
+          "e": "VRAI. C'est la définition la plus simple : la matière se déplace toute seule dans le sens du déséquilibre de concentration.",
+          "sourceQuote": "le mouvement spontané de la matière du « beaucoup » vers le « moins »"
+        },
+        {
+          "t": "Elle explique le passage de l'oxygène de l'air alvéolaire vers le sang.",
+          "v": true,
+          "e": "VRAI. C'est l'exemple central de la fiche : l'oxygène passe de l'alvéole, riche, vers le capillaire, pauvre.",
+          "sourceQuote": "C'est ce qui fait passer l'oxygène de l'air alvéolaire au sang"
+        },
+        {
+          "t": "Elle explique aussi le nettoyage du plasma chez un patient en dialyse.",
+          "v": true,
+          "e": "VRAI. En hémodialyse, l'urée passe du sang, où elle est concentrée, vers le bain de dialyse, où elle l'est moins.",
+          "sourceQuote": "c'est ce qui nettoie le plasma d'un patient en dialyse"
+        },
+        {
+          "t": "Elle explique enfin la dilution d'une goutte d'encre dans un verre d'eau.",
+          "v": true,
+          "e": "VRAI. Le même phénomène se retrouve hors du corps : l'encre part de la zone concentrée vers tout le volume d'eau.",
+          "sourceQuote": "c'est ce qui dilue une goutte d'encre dans un verre d'eau"
+        },
+        {
+          "t": "Il s'agit d'un transport passif, sans consommation d'énergie par la cellule.",
+          "v": true,
+          "e": "VRAI. Aucune pompe, aucun carburant cellulaire : le gradient suffit à lui seul à faire passer la matière.",
+          "sourceQuote": "Aucune énergie n'est consommée par la cellule : c'est un transport passif"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-116-diffusion-moteur-gradient.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux valeurs chiffrées de l'échange entre l'alvéole et le capillaire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Chaque inspiration fait entrer environ 500 mL d'air dans les poumons.",
+          "v": true,
+          "e": "VRAI. C'est le volume mobilisé à chaque inspiration, et il apporte l'air riche en oxygène au contact des alvéoles.",
+          "sourceQuote": "tu fais entrer ~500 mL d'air dans tes poumons"
+        },
+        {
+          "t": "La pression partielle en oxygène de l'air alvéolaire vaut environ 100 mmHg.",
+          "v": true,
+          "e": "VRAI. C'est la valeur du côté riche : l'air fraîchement inspiré est nettement plus chargé en oxygène que le sang veineux.",
+          "sourceQuote": "Cet air est riche en oxygène : PO₂ alvéolaire ≈ 100 mmHg"
+        },
+        {
+          "t": "Le sang veineux arrive au contact des alvéoles avec une pression partielle en oxygène d'environ 60 mmHg.",
+          "v": false,
+          "e": "FAUX : il arrive à environ 40 mmHg. C'est 60 mmHg qui correspond au gradient, c'est-à-dire à l'écart entre les deux côtés.",
+          "sourceQuote": "le sang veineux ramène du sang à PO₂ ≈ 40 mmHg"
+        },
+        {
+          "t": "La membrane alvéolaire a une épaisseur de l'ordre d'un demi-micromètre.",
+          "v": true,
+          "e": "VRAI. Cette épaisseur, de l'ordre du deux-millième de millimètre, est si faible que le gradient suffit largement à faire passer l'oxygène.",
+          "sourceQuote": "Une membrane alvéolaire d'épaisseur 0,5 µm"
+        },
+        {
+          "t": "Le gradient entre l'alvéole et le capillaire vaut 100 mmHg.",
+          "v": false,
+          "e": "FAUX : le gradient est l'écart entre les deux valeurs, soit 60 mmHg. La valeur de 100 mmHg est celle du seul côté alvéolaire.",
+          "sourceQuote": "Le gradient de 60 mmHg suffit à faire diffuser l'O₂"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-116-diffusion-moteur-gradient.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à ce qui pousse l'oxygène à franchir la membrane alvéolaire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une pompe consommant de l'énergie assure ce passage.",
+          "v": false,
+          "e": "FAUX : aucune pompe n'intervient. Le passage se fait sans dépense d'énergie cellulaire.",
+          "sourceQuote": "aucune pompe consommant de l'énergie"
+        },
+        {
+          "t": "Le seul moteur du passage est un gradient de concentration.",
+          "v": true,
+          "e": "VRAI. C'est le message central de la fiche : rien d'autre n'est nécessaire, et cela suffit largement.",
+          "sourceQuote": "juste un gradient de concentration . Et c'est largement suffisant"
+        },
+        {
+          "t": "Ce gradient est insuffisant à lui seul et doit être complété par un mécanisme actif.",
+          "v": false,
+          "e": "FAUX : le gradient fait tout le travail, et il suffit largement. Aucun mécanisme actif n'a besoin de s'y ajouter.",
+          "sourceQuote": "c'est le gradient qui fait tout le travail , et il suffit largement"
+        },
+        {
+          "t": "Le passage se fait sans aucun apport d'énergie cellulaire.",
+          "v": true,
+          "e": "VRAI. C'est précisément ce qui définit un transport passif : la cellule ne dépense rien pour que la matière traverse.",
+          "sourceQuote": "sans aucun apport d'énergie cellulaire"
+        },
+        {
+          "t": "Un moteur biologique est indispensable pour franchir une membrane, même très fine.",
+          "v": false,
+          "e": "FAUX : aucun moteur biologique n'intervient ici. L'agitation des molécules et le déséquilibre de concentration suffisent.",
+          "sourceQuote": "Aucun moteur biologique, aucune pompe consommant de l'énergie"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-116-diffusion-moteur-gradient.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives au mouvement brownien et à l'analogie du flacon de parfum, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "À l'échelle moléculaire, chaque molécule s'agite en permanence dans toutes les directions.",
+          "v": true,
+          "e": "VRAI. C'est cette agitation permanente qui rend le passage possible sans qu'aucune énergie ne soit dépensée par la cellule.",
+          "sourceQuote": "chaque molécule s'agite en permanence dans toutes les directions"
+        },
+        {
+          "t": "Ce mouvement brownien est une conséquence de la température.",
+          "v": true,
+          "e": "VRAI. L'agitation thermique est le nom même de ce phénomène : c'est la température qui l'entretient.",
+          "sourceQuote": "c'est le mouvement brownien , conséquence de la température"
+        },
+        {
+          "t": "L'énergie cinétique des molécules est d'autant plus grande que la température est élevée.",
+          "v": true,
+          "e": "VRAI. Plus il fait chaud, plus les molécules bougent vite : c'est le lien direct entre température et agitation.",
+          "sourceQuote": "les molécules ont une énergie cinétique d'autant plus grande que T est élevée"
+        },
+        {
+          "t": "Les molécules de parfum se déplacent chacune en ligne droite vers le coin pauvre de la pièce.",
+          "v": false,
+          "e": "FAUX : chaque molécule se cogne et rebondit dans des directions aléatoires. Ce n'est que statistiquement que le déplacement se fait vers la zone pauvre.",
+          "sourceQuote": "rebondir dans des directions aléatoires"
+        },
+        {
+          "t": "Statistiquement, elles se déplacent du coin riche vers le coin pauvre, et ce déplacement net constitue la diffusion.",
+          "v": true,
+          "e": "VRAI. La diffusion n'est pas le mouvement d'une molécule prise à part, mais le bilan net de tous ces trajets aléatoires.",
+          "sourceQuote": "statistiquement elles iront du coin riche (le flacon) vers le coin pauvre"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-116-diffusion-moteur-gradient.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à la distinction entre l'effet Donnan et la loi de Fick, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'effet Donnan suppose des ions chargés et un soluté non diffusible.",
+          "v": true,
+          "e": "VRAI. Ce sont ses deux ingrédients : des ions chargés d'un côté, et des protéinates trop gros pour traverser de l'autre.",
+          "sourceQuote": "Donnan : ions chargés + un soluté non diffusible"
+        },
+        {
+          "t": "Les protéinates du plasma traversent facilement la membrane.",
+          "v": false,
+          "e": "FAUX : ce sont justement les protéines du plasma, trop grosses pour traverser. C'est leur immobilité qui crée la situation de Donnan.",
+          "sourceQuote": "les protéines du plasma, trop grosses pour traverser"
+        },
+        {
+          "t": "La diffusion selon Fick aboutit à l'apparition d'un potentiel électrique.",
+          "v": false,
+          "e": "FAUX : c'est Donnan qui s'accompagne d'un potentiel électrique. Avec Fick, il n'y a ni équilibre particulier ni potentiel électrique.",
+          "sourceQuote": "pas d'équilibre, pas de potentiel électrique"
+        },
+        {
+          "t": "Le passage de l'oxygène à travers la membrane alvéolaire relève de l'effet Donnan.",
+          "v": false,
+          "e": "FAUX : l'oxygène est une molécule neutre. Il n'y a donc pas de redistribution électrique à attendre : c'est simplement de la diffusion selon Fick.",
+          "sourceQuote": "L'O₂ est neutre → c'est juste Fick"
+        },
+        {
+          "t": "La loi de Fick ne s'applique qu'aux molécules chargées.",
+          "v": false,
+          "e": "FAUX : elle s'applique à n'importe quelle molécule, y compris neutre. Il suffit qu'il existe un gradient pour qu'un flux net apparaisse.",
+          "sourceQuote": "Fick : n'importe quelle molécule, même neutre comme l'O₂"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-116-diffusion-moteur-gradient.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "La fiche ouvre un nouveau chapitre en énumérant trois situations où quelque chose doit traverser un milieu biologique. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le chapitre qui s'ouvre porte sur la façon dont la matière et l'information traversent un milieu biologique.",
+          "v": true,
+          "e": "VRAI. C'est l'annonce du chapitre, et elle explique pourquoi diffusion, dialyse et échographie y voisinent.",
+          "sourceQuote": "comment la matière et l'information traversent (ou pas) un milieu biologique"
+        },
+        {
+          "t": "L'oxygène inspiré doit traverser la membrane alvéolaire pour rejoindre les globules rouges.",
+          "v": true,
+          "e": "VRAI. C'est la première des trois situations, et celle que la fiche développe entièrement.",
+          "sourceQuote": "traverser la membrane alvéolaire pour rejoindre tes globules rouges"
+        },
+        {
+          "t": "En hémodialyse, l'urée doit traverser une membrane semi-perméable sans que les protéines la suivent.",
+          "v": true,
+          "e": "VRAI. Toute la difficulté est là : laisser passer les déchets tout en retenant les protéines.",
+          "sourceQuote": "traverser une membrane semi-perméable sans que les protéines ne suivent"
+        },
+        {
+          "t": "En échographie obstétricale, les ultrasons traversent les tissus et se réfléchissent sur le fœtus.",
+          "v": true,
+          "e": "VRAI. C'est la troisième situation citée : ici, ce n'est plus de la matière qui traverse, mais de l'information.",
+          "sourceQuote": "des ultrasons traversent les tissus, se réfléchissent sur le fœtus"
+        },
+        {
+          "t": "La question commune à ces trois situations est de savoir ce qui passe, ce qui est arrêté, et à quelle vitesse.",
+          "v": true,
+          "e": "VRAI. C'est le fil unique du chapitre : trois contextes différents, une seule et même question.",
+          "sourceQuote": "qu'est-ce qui passe, qu'est-ce qui est arrêté, et avec quelle vitesse"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-116-diffusion-moteur-gradient.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Un étudiant se demande par quoi commencer devant une molécule qui traverse une membrane. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Il faut d'abord chercher s'il existe un écart de concentration entre les deux côtés.",
+          "v": true,
+          "e": "VRAI. C'est le réflexe de méthode : on regarde d'abord le déséquilibre, avant d'invoquer quoi que ce soit d'autre.",
+          "sourceQuote": "regarde d'abord s'il existe un écart de concentration entre les deux côtés"
+        },
+        {
+          "t": "Il faut commencer par identifier la pompe responsable du transport.",
+          "v": false,
+          "e": "FAUX : c'est précisément ce qu'il ne faut pas faire en premier. On cherche d'abord un gradient, pas un mécanisme compliqué.",
+          "sourceQuote": "ne commence pas par chercher une pompe ou un mécanisme compliqué"
+        },
+        {
+          "t": "S'il existe un gradient, la matière passe toute seule du plus concentré vers le moins concentré.",
+          "v": true,
+          "e": "VRAI. Le gradient fait tout le travail : aucune intervention active n'est requise pour que le flux s'établisse.",
+          "sourceQuote": "la matière passe toute seule, du plus concentré vers le moins concentré"
+        },
+        {
+          "t": "La pression partielle en oxygène représente la fraction de la pression totale du gaz due au seul oxygène.",
+          "v": true,
+          "e": "VRAI. C'est la définition donnée dans la fiche, et elle se mesure en millimètres de mercure en médecine.",
+          "sourceQuote": "la fraction de la pression totale du gaz qui est due à l'O₂ seul"
+        },
+        {
+          "t": "L'effet Donnan ne produit aucune redistribution des ions à l'équilibre.",
+          "v": false,
+          "e": "FAUX : il produit au contraire une redistribution inégale des ions à l'équilibre, accompagnée d'un potentiel électrique.",
+          "sourceQuote": "redistribution inégale à l'équilibre + potentiel électrique"
+        }
+      ]
+    },
+
+    {
+      "fiche": "anatomie-117-tube-4-tuniques.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à l'organisation générale de la paroi du tube digestif, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La paroi du tube change d'architecture selon le segment considéré.",
+          "v": false,
+          "e": "FAUX : c'est justement la bonne nouvelle du chapitre. De l'œsophage au rectum, la paroi garde la même architecture en quatre couches.",
+          "sourceQuote": "de l'œsophage au rectum, elle a la même architecture en 4 couches concentriques"
+        },
+        {
+          "t": "Les quatre couches se décrivent de l'extérieur vers l'intérieur.",
+          "v": false,
+          "e": "FAUX : le sens de description est l'inverse. On part de l'intérieur, c'est-à-dire du côté où passe la nourriture, vers l'extérieur.",
+          "sourceQuote": "Les 4 tuniques, de l'intérieur vers l'extérieur"
+        },
+        {
+          "t": "L'ordre des couches varie d'un organe à l'autre du tube.",
+          "v": false,
+          "e": "FAUX : l'ordre est toujours le même sur toute la longueur du tube. Seule la spécialisation de chaque couche change d'un segment à l'autre.",
+          "sourceQuote": "Toujours dans le même ordre, de l'intérieur"
+        },
+        {
+          "t": "Le tube mesure 9 mètres, de la bouche à l'anus, et trois glandes annexes y sont branchées.",
+          "v": true,
+          "e": "VRAI. C'est la carte mentale posée juste avant : un seul tube continu, plus trois glandes annexes qui y déversent leurs sécrétions.",
+          "sourceQuote": "un seul tube de 9 mètres , de la bouche à l'anus, avec 3 glandes annexes"
+        },
+        {
+          "t": "Il faut apprendre quatre couches différentes pour chaque organe du tube digestif.",
+          "v": false,
+          "e": "FAUX : ces quatre couches ne s'apprennent qu'une seule fois. Elles se répètent ensuite à l'identique sur tous les segments.",
+          "sourceQuote": "Quatre couches, une seule fois à apprendre"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-117-tube-4-tuniques.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux deux tuniques les plus internes de la paroi du tube, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La muqueuse est la couche au contact des aliments et borde la lumière du tube.",
+          "v": true,
+          "e": "VRAI. C'est la première couche rencontrée depuis l'intérieur, celle qui travaille directement avec le contenu du tube.",
+          "sourceQuote": "La couche au contact des aliments , celle qui borde la lumière du tube"
+        },
+        {
+          "t": "La muqueuse assure la sécrétion et l'absorption.",
+          "v": true,
+          "e": "VRAI. Épithélium, sécrétion et absorption : c'est bien la muqueuse qui accomplit ce travail avec le contenu.",
+          "sourceQuote": "l' épithélium , la sécrétion et l' absorption"
+        },
+        {
+          "t": "La sous-muqueuse est constituée de muscle lisse.",
+          "v": false,
+          "e": "FAUX : elle est faite de tissu conjonctif riche en vaisseaux et en nerfs. Le muscle lisse appartient à la couche suivante, la musculeuse.",
+          "sourceQuote": "un tissu conjonctif riche en vaisseaux et en nerfs"
+        },
+        {
+          "t": "La sous-muqueuse est située en dehors de la musculeuse.",
+          "v": false,
+          "e": "FAUX : elle est située juste en dessous de la muqueuse, donc en dedans de la musculeuse. Elle occupe la deuxième position en partant de l'intérieur.",
+          "sourceQuote": "La sous-muqueuse. Juste en dessous : un tissu conjonctif"
+        },
+        {
+          "t": "C'est la muqueuse qui apporte le sang et les commandes nerveuses à la paroi.",
+          "v": false,
+          "e": "FAUX : ce rôle revient à la sous-muqueuse, l'autoroute interne de la paroi, riche en vaisseaux et en nerfs.",
+          "sourceQuote": "c'est par là qu'arrive le sang et que passent les commandes nerveuses"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-117-tube-4-tuniques.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la musculeuse et à ce qu'elle produit, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Elle comporte deux couches de muscle lisse.",
+          "v": true,
+          "e": "VRAI. Deux couches, et non une seule : c'est le premier point à ne pas perdre lorsqu'on décrit cette tunique.",
+          "sourceQuote": "2 couches de muscle lisse"
+        },
+        {
+          "t": "La couche circulaire est la plus interne, la couche longitudinale se place par-dessus.",
+          "v": true,
+          "e": "VRAI. L'ordre compte : la couche circulaire fait le tour du tube en dedans, la longitudinale court le long du tube en dehors.",
+          "sourceQuote": "une couche circulaire d'abord, puis une couche longitudinale par-dessus"
+        },
+        {
+          "t": "C'est cette tunique qui produit le péristaltisme.",
+          "v": true,
+          "e": "VRAI. C'est sa fonction propre : les deux couches musculaires font progresser le contenu le long du tube.",
+          "sourceQuote": "C'est elle qui produit le péristaltisme"
+        },
+        {
+          "t": "Le péristaltisme désigne les ondes de contraction qui poussent les aliments de segment en segment.",
+          "v": true,
+          "e": "VRAI. Ce n'est pas une contraction unique, mais une onde qui se propage et fait avancer le contenu.",
+          "sourceQuote": "les ondes de contraction qui poussent les aliments de segment en segment"
+        },
+        {
+          "t": "L'ordre des deux couches musculaires est indifférent.",
+          "v": false,
+          "e": "FAUX : l'ordre est précisément le piège de cette fiche. Circulaire à l'intérieur, longitudinale à l'extérieur : inverser les deux rend la proposition fausse.",
+          "sourceQuote": "pas dans n'importe quel ordre : circulaire à l'intérieur"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-117-tube-4-tuniques.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la couche la plus externe et à la lecture du schéma en coupe, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La quatrième tunique porte, selon l'endroit, le nom de séreuse ou celui d'adventice.",
+          "v": true,
+          "e": "VRAI. C'est bien la même couche : elle change simplement de nom selon le segment du tube où on l'observe.",
+          "sourceQuote": "Selon l'endroit, elle porte l'un ou l'autre de ces deux noms"
+        },
+        {
+          "t": "Elle constitue l'enveloppe externe du tube, la dernière couche avant le reste de l'abdomen.",
+          "v": true,
+          "e": "VRAI. C'est la limite du tube : au-delà, on quitte la paroi digestive.",
+          "sourceQuote": "L' enveloppe externe du tube, la dernière couche"
+        },
+        {
+          "t": "Sur le schéma en coupe, le trou central correspond à la musculeuse.",
+          "v": false,
+          "e": "FAUX : le trou du milieu, c'est la lumière du tube, l'espace où passent les aliments. La musculeuse est la troisième couche.",
+          "sourceQuote": "Le trou au milieu, c'est la lumière"
+        },
+        {
+          "t": "Les numéros du schéma se lisent du centre vers l'extérieur.",
+          "v": true,
+          "e": "VRAI. C'est le même sens que la description écrite : on part de la lumière et on avance vers l'enveloppe externe.",
+          "sourceQuote": "Lis les numéros du centre vers l'extérieur"
+        },
+        {
+          "t": "Les deux orientations de fibres se repèrent sur la deuxième couche du schéma.",
+          "v": false,
+          "e": "FAUX : les deux orientations de fibres, circulaire et longitudinale, sont à chercher sur la troisième couche, la musculeuse. La deuxième est la sous-muqueuse.",
+          "sourceQuote": "Sur la couche ③ , cherche les deux orientations de fibres"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-117-tube-4-tuniques.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à ce que cette architecture commune change pour l'apprentissage des segments du tube, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "On n'apprend pas six organes différents, mais une architecture de base et six variations spécialisées.",
+          "v": true,
+          "e": "VRAI. C'est la conséquence pédagogique majeure du chapitre, et elle allège énormément la mémorisation.",
+          "sourceQuote": "tu apprends 1 architecture de base , et 6 variations spécialisées"
+        },
+        {
+          "t": "À chaque nouveau segment, la même grille de lecture revient.",
+          "v": true,
+          "e": "VRAI. C'est ce qui rend la suite du chapitre prévisible : le squelette est toujours le même, seules les variations changent.",
+          "sourceQuote": "dans le tube, la même grille revient"
+        },
+        {
+          "t": "Sur un nouveau segment, la seule vraie nouveauté est la manière dont sa paroi est spécialisée par rapport au plan standard.",
+          "v": true,
+          "e": "VRAI. Le plan des quatre tuniques est déjà connu : il ne reste à retenir que l'écart de ce segment à ce plan.",
+          "sourceQuote": "la manière dont sa paroi est spécialisée par rapport à ce plan standard"
+        },
+        {
+          "t": "Cette grille comporte cinq questions, posées toujours dans le même ordre.",
+          "v": true,
+          "e": "VRAI. Cinq questions, la même grille à chaque segment : c'est ce qui permet de comparer les organes entre eux.",
+          "sourceQuote": "Cinq questions, la même grille à chaque segment"
+        },
+        {
+          "t": "La vascularisation fait partie des points à passer en revue pour chaque segment.",
+          "v": true,
+          "e": "VRAI. Elle clôt la grille, après la localisation, l'aspect, la fonction et la spécialisation de la paroi.",
+          "sourceQuote": "des 4 tuniques · comment c'est vascularisé"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-117-tube-4-tuniques.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Un énoncé d'épreuve décrit la musculeuse d'un segment du tube digestif. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un énoncé qui inverse les deux couches de la musculeuse est faux.",
+          "v": true,
+          "e": "VRAI. La fiche le signale explicitement : l'inversion des deux orientations est l'erreur classique sur cette tunique.",
+          "sourceQuote": "Un QCM qui inverse les deux, ou qui n'en donne qu'une seule, est FAUX"
+        },
+        {
+          "t": "Un énoncé qui ne mentionne qu'une seule couche musculaire reste acceptable.",
+          "v": false,
+          "e": "FAUX : n'en donner qu'une seule est également faux. La musculeuse en compte deux, toujours.",
+          "sourceQuote": "ou qui n'en donne qu'une seule, est FAUX"
+        },
+        {
+          "t": "La couche longitudinale est la plus interne des deux.",
+          "v": false,
+          "e": "FAUX : la couche interne est la circulaire, et la longitudinale se place à l'extérieur.",
+          "sourceQuote": "circulaire à l'intérieur , longitudinale à l'extérieur"
+        },
+        {
+          "t": "La musculeuse est faite de muscle lisse.",
+          "v": true,
+          "e": "VRAI. Ses deux couches sont bien du muscle lisse, c'est-à-dire un muscle non soumis au contrôle volontaire.",
+          "sourceQuote": "2 couches de muscle lisse"
+        },
+        {
+          "t": "La musculeuse compte trois couches superposées.",
+          "v": false,
+          "e": "FAUX : elle en compte deux, une circulaire et une longitudinale. Annoncer un troisième plan musculaire est une erreur.",
+          "sourceQuote": "La musculeuse compte 2 couches"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-117-tube-4-tuniques.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Une étudiante restitue de mémoire la suite des quatre tuniques en attribuant à chacune sa fonction. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La sécrétion et l'absorption sont attribuées à la sous-muqueuse.",
+          "v": false,
+          "e": "FAUX : ces deux fonctions reviennent à la muqueuse, la couche au contact des aliments. La sous-muqueuse, elle, apporte vaisseaux et nerfs.",
+          "sourceQuote": "De l'intérieur vers l'extérieur : muqueuse (sécrétion, absorption)"
+        },
+        {
+          "t": "Les vaisseaux et les nerfs sont attribués à la sous-muqueuse.",
+          "v": true,
+          "e": "VRAI. C'est l'autoroute interne de la paroi : le sang y arrive et les commandes nerveuses y passent.",
+          "sourceQuote": "sous-muqueuse (vaisseaux, nerfs) → musculeuse"
+        },
+        {
+          "t": "Le péristaltisme est produit par la séreuse.",
+          "v": false,
+          "e": "FAUX : le péristaltisme est produit par la musculeuse, grâce à ses deux couches circulaire puis longitudinale. La séreuse n'est qu'une enveloppe externe.",
+          "sourceQuote": "musculeuse (circulaire puis longitudinale → péristaltisme)"
+        },
+        {
+          "t": "La séreuse est la première couche rencontrée depuis la lumière du tube.",
+          "v": false,
+          "e": "FAUX : la première couche rencontrée depuis la lumière est la muqueuse. La séreuse est la dernière, tout à l'extérieur.",
+          "sourceQuote": "Lis les numéros du centre vers l'extérieur — ① muqueuse"
+        },
+        {
+          "t": "Cette architecture n'est valable que sur une partie du tube digestif.",
+          "v": false,
+          "e": "FAUX : c'est la même paroi sur les 9 mètres du tube, de l'œsophage au rectum. Seule la spécialisation de chaque couche varie.",
+          "sourceQuote": "La même paroi sur les 9 mètres"
+        }
+      ]
+    }
+  ]
+}

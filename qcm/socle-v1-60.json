@@ -1,0 +1,1376 @@
+{
+  "matiere": "mixte",
+  "chapitre": 0,
+  "note": "socle 1-7 — fiches sans QCM, ordre du Parcours",
+  "questions": [
+    {
+      "fiche": "chimie-143-acide-fort-faible-constante-acidite-ka.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives au proton H+ et à la définition d'un acide, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un acide est une molécule capable de libérer un H⁺.",
+          "v": true,
+          "e": "VRAI. C'est la définition de départ : un acide est une molécule capable de libérer un H⁺, autrement dit de donner un proton à l'eau.",
+          "sourceQuote": "une molécule capable de libérer un H"
+        },
+        {
+          "t": "Le proton H⁺ est un noyau d'hydrogène sans électron.",
+          "v": true,
+          "e": "VRAI. Un atome d'hydrogène privé de son unique électron ne laisse que son noyau : une toute petite charge positive, très réactive.",
+          "sourceQuote": "Un proton H⁺ est un noyau d'hydrogène sans électron"
+        },
+        {
+          "t": "Dans l'eau, le proton reste libre sous forme H⁺ et ne s'associe à aucune molécule d'eau.",
+          "v": false,
+          "e": "FAUX : le proton ne reste pas libre. Dans l'eau, il s'accroche immédiatement à une molécule d'eau pour former l'ion H₃O⁺.",
+          "sourceQuote": "il s'accroche immédiatement à une molécule H₂O pour former H₃O⁺"
+        },
+        {
+          "t": "Plus une solution contient d'ions oxonium, plus son pH est élevé.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. Plus il y a d'ions oxonium, plus le pH est bas et plus la solution est acide.",
+          "sourceQuote": "plus il y en a, plus le pH est bas, plus c'est acide"
+        },
+        {
+          "t": "Toutes les molécules d'acide libèrent leur H⁺ avec la même facilité.",
+          "v": false,
+          "e": "FAUX : toutes les molécules d'acide ne libèrent pas leur H⁺ avec la même facilité — c'est précisément ce qui sépare un acide fort d'un acide faible.",
+          "sourceQuote": "Mais toutes ne le font pas avec la même facilité"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-143-acide-fort-faible-constante-acidite-ka.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la comparaison entre acide fort et acide faible, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'acide chlorhydrique HCl est donné comme exemple d'acide fort.",
+          "v": true,
+          "e": "VRAI. HCl est l'exemple type d'acide fort, opposé à l'acide acétique CH₃COOH qui sert d'exemple d'acide faible.",
+          "sourceQuote": "Acide fort — ex. HCl"
+        },
+        {
+          "t": "La dissociation d'un acide fort dans l'eau est totale, celle d'un acide faible est partielle.",
+          "v": true,
+          "e": "VRAI. C'est le premier critère de comparaison : dissociation totale pour l'acide fort, partielle pour l'acide faible.",
+          "sourceQuote": "Dissociation dans l'eau Totale Partielle"
+        },
+        {
+          "t": "Dans une solution d'acide chlorhydrique, il ne reste plus du tout de HCl.",
+          "v": true,
+          "e": "VRAI. La dissociation étant totale, il ne reste plus de HCl dans le verre : seulement des ions Cl⁻ et H₃O⁺.",
+          "sourceQuote": "plus du tout de HCl : seulement des ions Cl⁻ et H₃O⁺"
+        },
+        {
+          "t": "Dans une solution d'acide acétique, il reste du CH₃COOH non dissocié.",
+          "v": true,
+          "e": "VRAI. La dissociation n'étant que partielle, il reste de l'acide acétique entier, en équilibre avec les ions CH₃COO⁻ et H₃O⁺.",
+          "sourceQuote": "il reste du CH₃COOH non dissocié"
+        },
+        {
+          "t": "Un acide fort ne met pas en jeu d'équilibre : sa réaction est à sens unique.",
+          "v": true,
+          "e": "VRAI. Puisque tout se dissocie, il n'y a pas de retour possible : la réaction est à sens unique, il n'y a pas d'équilibre à décrire.",
+          "sourceQuote": "Non — réaction à sens unique"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-143-acide-fort-faible-constante-acidite-ka.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à l'écriture de la constante d'acidité Ka, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'expression du Ka se construit comme celle d'un Keq : produits au numérateur, réactifs au dénominateur.",
+          "v": true,
+          "e": "VRAI. On applique la règle de construction déjà connue : les produits passent au numérateur, les réactifs au dénominateur, et l'eau comme les solides sont exclus.",
+          "sourceQuote": "produits au numérateur, réactifs au dénominateur, eau et solides exclus"
+        },
+        {
+          "t": "La concentration en eau figure au dénominateur de l'expression du Ka.",
+          "v": false,
+          "e": "FAUX : l'eau n'apparaît pas dans l'expression du Ka. C'est le solvant pur, son activité vaut 1, donc elle ne figure ni au numérateur ni au dénominateur.",
+          "sourceQuote": "[H₂O] n'apparaît pas : c'est le solvant pur, son activité vaut 1"
+        },
+        {
+          "t": "Écrire [H₃O⁺] ou [H⁺] revient au même.",
+          "v": true,
+          "e": "VRAI. Les deux notations désignent la même grandeur, on les écrit indifféremment.",
+          "sourceQuote": "c'est la même chose que [H⁺] — on l'écrit indifféremment"
+        },
+        {
+          "t": "Pour un acide faible AH en solution aqueuse, la réaction d'équilibre s'écrit AH + H₂O ⇌ A⁻ + H₃O⁺.",
+          "v": true,
+          "e": "VRAI. C'est l'équation de départ dont on tire l'expression du Ka : l'acide cède son proton à l'eau, qui devient H₃O⁺.",
+          "sourceQuote": "la réaction d'équilibre s'écrit AH + H₂O"
+        },
+        {
+          "t": "Le Ka est une constante d'un type nouveau, sans rapport avec les constantes d'équilibre Keq.",
+          "v": false,
+          "e": "FAUX : le Ka n'est rien d'autre qu'un Keq appliqué à un acide. Il n'y a rien de nouveau à apprendre sur sa forme ni sur sa lecture.",
+          "sourceQuote": "Ka est un Keq , exactement comme ceux des fiches précédentes"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-143-acide-fort-faible-constante-acidite-ka.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la lecture de la valeur du Ka, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un Ka supérieur à 1 signifie que les réactifs sont favorisés.",
+          "v": false,
+          "e": "FAUX : un Ka supérieur à 1 favorise les produits, c'est-à-dire A⁻ et H₃O⁺. L'acide se dissocie alors majoritairement.",
+          "sourceQuote": "Ka > 1 les produits (A⁻ et H₃O⁺) l'acide se dissocie majoritairement"
+        },
+        {
+          "t": "Un Ka voisin de 1 correspond à un acide dont la dissociation est quasi nulle.",
+          "v": false,
+          "e": "FAUX : un Ka voisin de 1 laisse réactifs et produits en quantités comparables, soit une dissociation à moitié — pas une dissociation quasi nulle.",
+          "sourceQuote": "réactifs et produits en quantités comparables → dissociation à moitié"
+        },
+        {
+          "t": "Un Ka très inférieur à 1 caractérise un acide fort.",
+          "v": false,
+          "e": "FAUX : un Ka très inférieur à 1 signifie que l'acide reste presque entier, très peu dissocié : c'est un acide faible.",
+          "sourceQuote": "l'acide reste presque entier, très peu dissocié → acide faible"
+        },
+        {
+          "t": "La grande majorité des acides biologiques ont un Ka très inférieur à 1.",
+          "v": true,
+          "e": "VRAI. Les acides que l'on rencontre en biologie sont dans leur grande majorité des acides faibles, donc de Ka très petit.",
+          "sourceQuote": "C'est le cas de la grande majorité des acides biologiques"
+        },
+        {
+          "t": "Comme HCl se dissocie totalement, son Ka est en pratique utilisable pour décrire son équilibre.",
+          "v": false,
+          "e": "FAUX : une dissociation totale veut dire qu'il n'y a pas d'équilibre. Sans équilibre, il n'y a pas de Ka utilisable en pratique.",
+          "sourceQuote": "Dissociation totale = pas d'équilibre, donc pas de Ka utilisable en pratique"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-143-acide-fort-faible-constante-acidite-ka.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux ordres de grandeur du Ka des acides faibles, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "En pratique, les acides faibles ont des Ka compris entre 10⁻² et 10⁻¹⁴.",
+          "v": true,
+          "e": "VRAI. C'est la fourchette donnée pour les acides faibles : des valeurs toutes très inférieures à 1.",
+          "sourceQuote": "les acides faibles ont des Ka entre 10⁻² et 10⁻¹⁴"
+        },
+        {
+          "t": "Un Ka de 10⁻² traduit une dissociation importante, donc un acide relativement fort.",
+          "v": true,
+          "e": "VRAI. C'est le premier des deux repères : à 10⁻², la dissociation est déjà importante, l'acide est relativement fort pour un acide faible.",
+          "sourceQuote": "dissociation importante → acide relativement fort"
+        },
+        {
+          "t": "Avec un Ka de 10⁻², on compte environ 10 fois plus d'ions que de molécules d'acide non dissociées.",
+          "v": true,
+          "e": "VRAI. Pour chaque molécule d'acide restée entière, il y a environ dix fois plus d'ions : la dissociation l'emporte largement.",
+          "sourceQuote": "il y a environ 10 fois plus d'ions"
+        },
+        {
+          "t": "Avec un Ka de 10⁻¹⁰, on compte à peine 1 ion pour 10 milliards de molécules d'acide.",
+          "v": true,
+          "e": "VRAI. C'est le second repère : à 10⁻¹⁰, la dissociation est quasi inexistante, l'acide est très faible.",
+          "sourceQuote": "Pour 10 milliards de molécules d'acide, à peine 1 ion"
+        },
+        {
+          "t": "Ces valeurs se comparent facilement à la simple lecture.",
+          "v": false,
+          "e": "FAUX : ce sont des nombres minuscules, difficiles à comparer à la lecture. C'est justement pour cela que la fiche propose deux repères concrets.",
+          "sourceQuote": "des nombres minuscules, difficiles à comparer à la lecture"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-143-acide-fort-faible-constante-acidite-ka.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la démarche à suivre devant un acide et à l'écriture correcte de sa dissociation, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Devant un acide, la première question à se poser est : fort ou faible ?",
+          "v": true,
+          "e": "VRAI. C'est l'ordre de raisonnement à garder : on tranche d'abord entre fort et faible, tout le reste en découle.",
+          "sourceQuote": "pose-toi la question dans cet ordre : fort ou faible"
+        },
+        {
+          "t": "Face à un acide fort, il n'y a rien à décrire avec un Ka.",
+          "v": true,
+          "e": "VRAI. Un acide fort se dissocie totalement : pas d'équilibre, donc rien à décrire avec une constante d'acidité.",
+          "sourceQuote": "il n'y a rien à décrire avec un Ka"
+        },
+        {
+          "t": "On n'écrit un Ka que dans le cas d'un acide faible.",
+          "v": true,
+          "e": "VRAI. C'est seulement quand la dissociation est partielle, donc quand il existe un équilibre réel, qu'on écrit la constante d'acidité.",
+          "sourceQuote": "c'est là, et seulement là, que tu écris Ka"
+        },
+        {
+          "t": "La dissociation d'un acide fort s'écrit avec le symbole de l'équilibre ⇌.",
+          "v": false,
+          "e": "FAUX : c'est le piège classique. Un acide fort se dissocie totalement, sa réaction est à sens unique et s'écrit avec une simple flèche.",
+          "sourceQuote": "un acide fort ne s'écrit pas avec"
+        },
+        {
+          "t": "L'ion H₃O⁺ porte le nom d'ion oxonium.",
+          "v": true,
+          "e": "VRAI. C'est le nom de l'ion formé quand le proton s'accroche à une molécule d'eau, et c'est lui qui rend la solution acide.",
+          "sourceQuote": "pour former H₃O⁺ , l'ion oxonium"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-143-acide-fort-faible-constante-acidite-ka.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes de synthèse sur l'acidité et sur ce qui décide de la force d'un acide, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La force d'un acide s'explique par le nombre d'hydrogènes de sa molécule.",
+          "v": false,
+          "e": "FAUX : le nombre d'hydrogènes n'entre pas en jeu. Ce qui décide, c'est la stabilité de ce qui reste une fois le proton parti.",
+          "sourceQuote": "La réponse ne tient pas au nombre d'hydrogènes de la molécule"
+        },
+        {
+          "t": "Ce qui décide de la force d'un acide, c'est la stabilité de A⁻, ce qui reste après le départ du H⁺.",
+          "v": true,
+          "e": "VRAI. La force d'un acide se joue sur la stabilité de sa base conjuguée A⁻ : plus elle est stable, plus le proton part facilement.",
+          "sourceQuote": "mais à la stabilité de A⁻ , ce qui reste après le départ du H"
+        },
+        {
+          "t": "Le proton H⁺ est décrit comme une charge négative peu réactive.",
+          "v": false,
+          "e": "FAUX : c'est une toute petite charge positive, et elle est au contraire très réactive — d'où sa fixation immédiate sur une molécule d'eau.",
+          "sourceQuote": "une toute petite charge positive très réactive"
+        },
+        {
+          "t": "Le Ka mesure à quel point un acide faible se dissocie.",
+          "v": true,
+          "e": "VRAI. C'est tout son sens : le Ka chiffre la part de l'acide qui s'est effectivement dissociée à l'équilibre.",
+          "sourceQuote": "Le Ka mesure précisément à quel point un acide faible se dissocie"
+        },
+        {
+          "t": "Dans l'expression du Ka, l'eau est comptée avec une activité qui varie selon la solution.",
+          "v": false,
+          "e": "FAUX : l'eau est le solvant, son activité vaut 1 quelle que soit la solution. Elle ne figure donc pas dans l'expression du Ka.",
+          "sourceQuote": "c'est le solvant, activité = 1"
+        }
+      ]
+    },
+
+    {
+      "fiche": "chimie-144-stabilite-base-conjuguee.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à ce qui détermine réellement l'acidité d'une molécule, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Ce n'est pas le nombre d'hydrogènes de la molécule qui détermine son acidité.",
+          "v": true,
+          "e": "VRAI. C'est le faux-ami le plus fréquent : compter les hydrogènes ne dit rien de la force de l'acide.",
+          "sourceQuote": "ce n'est pas le nombre d'hydrogènes dans la molécule qui détermine l'acidité"
+        },
+        {
+          "t": "Une molécule qui possède 10 hydrogènes peut être un acide très faible.",
+          "v": true,
+          "e": "VRAI. Le nombre d'hydrogènes disponibles ne fait pas la force : une molécule très hydrogénée peut rester un acide très faible.",
+          "sourceQuote": "Une molécule avec 10 hydrogènes peut être un acide très faible"
+        },
+        {
+          "t": "Une molécule ne portant qu'un seul hydrogène peut être un acide très fort.",
+          "v": true,
+          "e": "VRAI. Un seul H suffit à faire un acide très fort, si ce H part facilement.",
+          "sourceQuote": "une avec un seul H peut être un acide très fort"
+        },
+        {
+          "t": "Ce qui compte, c'est la facilité avec laquelle un H⁺ part.",
+          "v": true,
+          "e": "VRAI. Toute la force d'un acide tient à la facilité avec laquelle un seul proton quitte la molécule.",
+          "sourceQuote": "c'est la facilité avec laquelle UN H⁺ part"
+        },
+        {
+          "t": "La question déterminante est de savoir si la base conjuguée A⁻ est stable.",
+          "v": true,
+          "e": "VRAI. Toute la fiche tient dans cette question : A⁻, ce qui reste après le départ de H⁺, est-elle stable ou non ?",
+          "sourceQuote": "la base conjuguée A⁻, celle qui reste après le départ de H⁺, est-elle stable"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-144-stabilite-base-conjuguee.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives au lien entre la stabilité de A⁻, la force de l'acide et son pKa, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Quand A⁻ est stable, la charge négative est bien absorbée et le H⁺ part facilement.",
+          "v": true,
+          "e": "VRAI. Une base conjuguée qui encaisse bien sa charge négative laisse partir le proton sans difficulté : l'acide est fort.",
+          "sourceQuote": "la charge négative est bien « absorbée » H⁺ part facilement"
+        },
+        {
+          "t": "Un A⁻ instable correspond à un acide fort, donc à un petit pKa.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. Si A⁻ est instable, le H⁺ a du mal à partir, l'acide est faible et son pKa est grand.",
+          "sourceQuote": "H⁺ a du mal à partir faible (grand pKa)"
+        },
+        {
+          "t": "Le pKa est l'opposé du logarithme du Ka.",
+          "v": true,
+          "e": "VRAI. Le pKa n'est rien d'autre que −log(Ka) : une autre façon d'exprimer la même information.",
+          "sourceQuote": "c'est simplement −log(Ka)"
+        },
+        {
+          "t": "Plus le pKa est petit, plus l'acide est fort.",
+          "v": true,
+          "e": "VRAI. C'est le sens de lecture à retenir : petit pKa, acide fort ; grand pKa, acide faible.",
+          "sourceQuote": "plus il est petit , plus l'acide est fort"
+        },
+        {
+          "t": "Dans un A⁻ instable, la charge négative est bien répartie sur toute la molécule.",
+          "v": false,
+          "e": "FAUX : dans un A⁻ instable, la charge négative est au contraire concentrée et mal répartie. C'est justement ce qui la rend gênante.",
+          "sourceQuote": "la charge négative est concentrée, mal répartie"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-144-stabilite-base-conjuguee.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au rôle de l'électronégativité dans la stabilité de A⁻, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Plus un atome est électronégatif, moins il supporte de porter un électron supplémentaire.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. Un atome très électronégatif supporte au contraire mieux d'avoir un électron en plus, ce qui stabilise A⁻.",
+          "sourceQuote": "plus il est électronégatif, mieux il « supporte » d'avoir un électron en plus"
+        },
+        {
+          "t": "L'anion O⁻ est moins stable que l'anion N⁻.",
+          "v": false,
+          "e": "FAUX : O⁻ est plus stable que N⁻, parce que l'oxygène est plus électronégatif que l'azote.",
+          "sourceQuote": "O⁻ est plus stable que N⁻"
+        },
+        {
+          "t": "À ce titre, une liaison N−H est plus acide qu'une liaison O−H.",
+          "v": false,
+          "e": "FAUX : c'est la liaison O−H qui est la plus acide des deux, puisque l'oxygène stabilise mieux la charge négative laissée par le proton.",
+          "sourceQuote": "un O−H est plus acide qu'un N−H"
+        },
+        {
+          "t": "L'azote est plus électronégatif que l'oxygène.",
+          "v": false,
+          "e": "FAUX : c'est l'oxygène qui est le plus électronégatif des deux. C'est pour cela que O⁻ encaisse mieux la charge que N⁻.",
+          "sourceQuote": "l'oxygène est plus électronégatif que l'azote"
+        },
+        {
+          "t": "L'électronégativité de l'atome qui porte la charge est l'un des facteurs de stabilité de A⁻.",
+          "v": true,
+          "e": "VRAI. C'est le premier des quatre facteurs, et le plus intuitif : un atome électronégatif absorbe mieux la charge négative.",
+          "sourceQuote": "L'électronégativité de l'atome qui porte la charge"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-144-stabilite-base-conjuguee.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives au rôle de la taille de l'atome dans la stabilité de A⁻, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Plus l'atome est gros, plus la charge négative se répartit sur un grand volume.",
+          "v": true,
+          "e": "VRAI. Un gros atome offre plus de place à la charge : elle se dilue, et A⁻ est d'autant plus stable.",
+          "sourceQuote": "plus il est gros, plus la charge négative se répartit sur un grand volume"
+        },
+        {
+          "t": "L'anion S⁻ est plus stable que l'anion O⁻.",
+          "v": true,
+          "e": "VRAI. Le soufre est plus gros que l'oxygène : la charge s'y répartit sur un plus grand volume, ce qui stabilise S⁻.",
+          "sourceQuote": "S⁻ est plus stable que O⁻ (le soufre est plus gros)"
+        },
+        {
+          "t": "Une liaison S−H est plus acide qu'une liaison O−H.",
+          "v": true,
+          "e": "VRAI. Et c'est justement le point contre-intuitif : ici, la taille de l'atome l'emporte sur l'électronégativité.",
+          "sourceQuote": "un S−H est plus acide qu'un O−H"
+        },
+        {
+          "t": "HI est donné avec un pKa d'environ −10, HF avec un pKa d'environ 3.",
+          "v": true,
+          "e": "VRAI. Ces deux valeurs illustrent l'effet de taille : l'iode, énorme, stabilise très bien la charge, ce qui fait de HI un acide bien plus fort que HF.",
+          "sourceQuote": "HI (pKa ≈ −10) est bien plus fort que HF (pKa ≈ 3)"
+        },
+        {
+          "t": "HF est un acide bien plus fort que HI.",
+          "v": false,
+          "e": "FAUX : c'est HI le plus fort des deux. L'ion iodure est énorme, la charge négative s'y dilue, ce qui stabilise fortement la base conjuguée.",
+          "sourceQuote": "C'est pour ça que HI (pKa ≈ −10) est bien plus fort que HF"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-144-stabilite-base-conjuguee.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à l'effet inductif attracteur, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'effet inductif attracteur se note −I.",
+          "v": true,
+          "e": "VRAI. C'est le troisième facteur de stabilisation de A⁻, et il se note −I.",
+          "sourceQuote": "L'effet inductif attracteur (−I)"
+        },
+        {
+          "t": "Des atomes électronégatifs proches tirent sur les électrons et déstabilisent A⁻.",
+          "v": false,
+          "e": "FAUX : ils tirent bien sur les électrons, mais cela aide au contraire à stabiliser A⁻ en répartissant la charge négative.",
+          "sourceQuote": "« tirent » sur les électrons et aident à stabiliser A⁻"
+        },
+        {
+          "t": "L'acide CH₂Cl−COOH est plus acide que CH₃−COOH.",
+          "v": true,
+          "e": "VRAI. Le chlore, électronégatif, attire les électrons et stabilise le carboxylate : l'acide chloré est plus fort, avec un pKa plus petit.",
+          "sourceQuote": "CH₂Cl−COOH (pKa ≈ 2,9) est plus acide que CH₃−COOH (pKa ≈ 4,8)"
+        },
+        {
+          "t": "Le pKa de CH₂Cl−COOH est donné aux environs de 4,8.",
+          "v": false,
+          "e": "FAUX : le pKa de CH₂Cl−COOH est d'environ 2,9. La valeur 4,8 est celle de l'acide acétique CH₃−COOH, plus faible.",
+          "sourceQuote": "CH₂Cl−COOH (pKa ≈ 2,9)"
+        },
+        {
+          "t": "Dans CH₂Cl−COOH, le chlore repousse les électrons et déstabilise COO⁻.",
+          "v": false,
+          "e": "FAUX : le chlore attire les électrons, et c'est cela qui stabilise le carboxylate COO⁻ — donc qui renforce l'acidité.",
+          "sourceQuote": "le Cl attire les électrons et stabilise COO⁻"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-144-stabilite-base-conjuguee.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la résonance et à son effet sur la stabilité de A⁻, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La résonance correspond à une délocalisation des électrons de A⁻.",
+          "v": true,
+          "e": "VRAI. Résonance et délocalisation désignent la même chose : les électrons ne restent pas sur un seul atome.",
+          "sourceQuote": "La résonance (délocalisation) : si les électrons de A⁻ peuvent se délocaliser"
+        },
+        {
+          "t": "Quand les électrons se délocalisent sur plusieurs atomes, la charge est diluée et A⁻ devient très stable.",
+          "v": true,
+          "e": "VRAI. C'est le mécanisme le plus efficace des quatre : répartir la charge sur plusieurs atomes la dilue, et stabilise fortement A⁻.",
+          "sourceQuote": "la charge est diluée → A⁻ très stable"
+        },
+        {
+          "t": "Dans CH₃COO⁻, les électrons sont délocalisés sur les deux oxygènes du carboxylate.",
+          "v": true,
+          "e": "VRAI. C'est l'exemple donné : la charge du carboxylate se partage entre les deux oxygènes au lieu de rester sur un seul.",
+          "sourceQuote": "ses électrons délocalisés sur les 2 oxygènes du carboxylate"
+        },
+        {
+          "t": "L'acide acétique reste un acide faible, tout en étant bien plus fort qu'un alcool.",
+          "v": true,
+          "e": "VRAI. La résonance ne suffit pas à en faire un acide fort, mais elle le rend nettement plus acide qu'un alcool.",
+          "sourceQuote": "reste un acide faible, mais il est bien plus fort qu'un alcool"
+        },
+        {
+          "t": "Dans un alcoolate RO⁻, la charge négative est concentrée sur un seul oxygène.",
+          "v": true,
+          "e": "VRAI. L'alcoolate n'a pas de délocalisation possible : sa charge reste concentrée sur un seul atome, ce qui le rend peu stable.",
+          "sourceQuote": "l'alcoolate RO⁻ concentre la charge sur un seul O"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-144-stabilite-base-conjuguee.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes de synthèse sur la force d'un acide et sur le piège classique de l'électronégativité, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'électronégativité tranche toujours la comparaison entre deux acides.",
+          "v": false,
+          "e": "FAUX : entre S−H et O−H, c'est la taille de l'atome qui l'emporte, alors même que l'oxygène est le plus électronégatif des deux.",
+          "sourceQuote": "ici, c'est la taille de l'atome qui l'emporte"
+        },
+        {
+          "t": "Un acide est d'autant plus fort que sa base conjuguée A⁻ est stable.",
+          "v": true,
+          "e": "VRAI. C'est la phrase à retenir : toute la force d'un acide se lit dans la stabilité de ce qui reste après le départ du proton.",
+          "sourceQuote": "Un acide est d'autant plus fort que sa base conjuguée A⁻ est stable"
+        },
+        {
+          "t": "A⁻ est stable quand la charge négative est concentrée plutôt que répartie.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. A⁻ est stable quand la charge négative est répartie, et non concentrée sur un seul atome.",
+          "sourceQuote": "A⁻ est stable quand la charge négative est répartie plutôt que concentrée"
+        },
+        {
+          "t": "Les quatre facteurs de stabilité de A⁻ agissent tous dans le même sens.",
+          "v": true,
+          "e": "VRAI. Électronégativité, taille, effet inductif et résonance font tous la même chose : répartir la charge négative au lieu de la concentrer.",
+          "sourceQuote": "Tous font la même chose : répartir la charge négative au lieu de la concentrer"
+        },
+        {
+          "t": "Le pKa permet de comparer deux acides sans refaire à chaque fois le raisonnement sur A⁻.",
+          "v": true,
+          "e": "VRAI. C'est tout son intérêt pratique : un seul nombre résume le raisonnement et permet la comparaison d'un coup d'œil.",
+          "sourceQuote": "sans refaire à chaque fois le raisonnement sur A⁻"
+        }
+      ]
+    },
+
+    {
+      "fiche": "anatomie-145-miction-deux-phases.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la phase de remplissage du cycle vésical, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La phase de remplissage dure plusieurs heures.",
+          "v": true,
+          "e": "VRAI. Le remplissage se compte en heures, alors que la vidange, elle, se compte en secondes.",
+          "sourceQuote": "La phase de remplissage. Durée : plusieurs heures"
+        },
+        {
+          "t": "Pendant le remplissage, le détrusor est relâché.",
+          "v": true,
+          "e": "VRAI. Le muscle de la paroi vésicale reste relâché pour laisser la vessie se distendre sans résister.",
+          "sourceQuote": "Le détrusor est relâché"
+        },
+        {
+          "t": "Pendant le remplissage, les deux sphincters sont contractés.",
+          "v": true,
+          "e": "VRAI. Sphincter lisse et sphincter strié sont tous deux contractés : ce sont les deux verrous qui retiennent l'urine.",
+          "sourceQuote": "les 2 sphincters sont contractés"
+        },
+        {
+          "t": "La capacité de la paroi à se laisser distendre sans résister s'appelle la compliance vésicale.",
+          "v": true,
+          "e": "VRAI. C'est le terme exact : la compliance vésicale est ce qui permet à la vessie de se remplir sans que la pression monte.",
+          "sourceQuote": "la paroi se laisse distendre sans résister : c'est la compliance vésicale"
+        },
+        {
+          "t": "La vessie se remplit au rythme d'environ 10 mL par minute.",
+          "v": false,
+          "e": "FAUX : le remplissage se fait à environ 1 mL par minute, ce qui donne bien 1 à 1,5 L sur une journée.",
+          "sourceQuote": "La vessie se remplit progressivement, à ~1 mL/min"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-145-miction-deux-phases.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux volumes du cycle vésical, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le remplissage aboutit à environ 1 à 1,5 L d'urine par jour.",
+          "v": true,
+          "e": "VRAI. Un rythme d'environ 1 mL par minute donne, sur vingt-quatre heures, un volume de 1 à 1,5 L.",
+          "sourceQuote": "soit environ 1 à 1,5 L par jour"
+        },
+        {
+          "t": "Les premières sensations de besoin apparaissent vers 400-500 mL.",
+          "v": false,
+          "e": "FAUX : les premières sensations arrivent bien plus tôt, entre 150 et 250 mL. C'est le besoin impérieux qui survient vers 400-500 mL.",
+          "sourceQuote": "Premières sensations à 150-250 mL"
+        },
+        {
+          "t": "Le besoin impérieux apparaît vers 150-250 mL.",
+          "v": false,
+          "e": "FAUX : le besoin impérieux se manifeste vers 400-500 mL. La fourchette 150-250 mL correspond aux premières sensations.",
+          "sourceQuote": "besoin impérieux à 400-500 mL"
+        },
+        {
+          "t": "Le résidu post-mictionnel normal est inférieur à 150 mL.",
+          "v": false,
+          "e": "FAUX : le résidu post-mictionnel normal est inférieur à 50 mL. Au-delà, la vessie ne se vide pas correctement.",
+          "sourceQuote": "un résidu post-mictionnel normalement inférieur à 50 mL"
+        },
+        {
+          "t": "Un globe vésical ne dépasse jamais 500 mL.",
+          "v": false,
+          "e": "FAUX : une vessie en rétention peut contenir plus d'un litre — c'est ce qui la rend palpable au-dessus du pubis.",
+          "sourceQuote": "pouvant contenir plus d'1 L"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-145-miction-deux-phases.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au déroulement de la phase de vidange, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La phase de vidange dure 20 à 40 secondes.",
+          "v": true,
+          "e": "VRAI. La vidange est brève : quelques dizaines de secondes, à comparer aux heures qu'a duré le remplissage.",
+          "sourceQuote": "La phase de vidange (la miction). Durée : 20 à 40 secondes"
+        },
+        {
+          "t": "Le premier temps de la miction est le relâchement du sphincter strié.",
+          "v": true,
+          "e": "VRAI. C'est le geste volontaire qui lance toute la séquence : on relâche d'abord le sphincter strié.",
+          "sourceQuote": "relâchement du sphincter strié (volontaire — c'est toi qui lances)"
+        },
+        {
+          "t": "Le relâchement du sphincter lisse et la contraction du détrusor relèvent d'un réflexe parasympathique.",
+          "v": true,
+          "e": "VRAI. Une fois le strié relâché, le parasympathique prend le relais : il ouvre le sphincter lisse et contracte le détrusor.",
+          "sourceQuote": "réflexe parasympathique qui relâche le sphincter lisse et contracte le détrusor"
+        },
+        {
+          "t": "L'urine est ensuite éjectée par l'urètre.",
+          "v": true,
+          "e": "VRAI. C'est le troisième et dernier temps de la séquence, une fois les deux verrous ouverts et le détrusor contracté.",
+          "sourceQuote": "l'urine est éjectée par l'urètre"
+        },
+        {
+          "t": "Le cerveau commande la vidange selon un ordre précis.",
+          "v": true,
+          "e": "VRAI. La vidange n'est pas un déclenchement simultané : les trois temps se succèdent dans un ordre imposé.",
+          "sourceQuote": "le cerveau commande, dans cet ordre"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-145-miction-deux-phases.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux commandes nerveuses des différentes pièces de l'appareil vésical, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le sphincter lisse reçoit une commande sympathique issue des niveaux T11-L2.",
+          "v": true,
+          "e": "VRAI. Le sympathique, né de T11-L2, agit sur le sphincter lisse pour le maintenir fermé pendant le remplissage.",
+          "sourceQuote": "à gauche sympathique (T11-L2) sur le lisse"
+        },
+        {
+          "t": "Le nerf pudendal, issu de S2-S4, commande le sphincter strié.",
+          "v": true,
+          "e": "VRAI. Le pudendal est le nerf du contrôle volontaire : c'est lui qui commande le sphincter strié.",
+          "sourceQuote": "pudendal (S2-S4) sur le strié"
+        },
+        {
+          "t": "Le parasympathique relâche le détrusor au lieu de le contracter.",
+          "v": false,
+          "e": "FAUX : le parasympathique contracte le détrusor. C'est cette contraction qui chasse l'urine hors de la vessie.",
+          "sourceQuote": "le parasympathique (S2-S4) qui contracte le détrusor"
+        },
+        {
+          "t": "Le parasympathique vésical naît des niveaux T11-L2.",
+          "v": false,
+          "e": "FAUX : le parasympathique vésical naît de S2-S4. Les niveaux T11-L2 sont ceux du sympathique.",
+          "sourceQuote": "à droite le parasympathique (S2-S4)"
+        },
+        {
+          "t": "Le sphincter lisse siège à l'urètre membraneux et le sphincter strié au col vésical.",
+          "v": false,
+          "e": "FAUX : les deux positions sont inversées. Le sphincter lisse est au col vésical, le sphincter strié à l'urètre membraneux.",
+          "sourceQuote": "le lisse au col vésical, le strié à l'urètre membraneux"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-145-miction-deux-phases.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à la part volontaire et à la part réflexe du contrôle de la miction, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le seul geste vraiment volontaire de la miction est le relâchement du sphincter strié.",
+          "v": true,
+          "e": "VRAI. Tout le reste de la séquence est réflexe : la seule chose que l'on décide vraiment, c'est d'ouvrir le sphincter strié.",
+          "sourceQuote": "Le seul geste vraiment volontaire , c'est de relâcher le sphincter strié"
+        },
+        {
+          "t": "C'est la vessie qui décide de démarrer la miction, le sphincter suivant ensuite.",
+          "v": false,
+          "e": "FAUX : c'est exactement l'inverse. Le sphincter strié s'ouvre d'abord, et la vessie ne se contracte qu'ensuite, en réflexe.",
+          "sourceQuote": "Ce n'est pas la vessie qui décide et le sphincter qui suit : c'est l'inverse"
+        },
+        {
+          "t": "Pendant le remplissage, on peut à tout moment retenir en contractant le sphincter strié.",
+          "v": true,
+          "e": "VRAI. La contraction volontaire du sphincter strié est le moyen de retenir consciemment, à n'importe quel moment du remplissage.",
+          "sourceQuote": "tu peux choisir de retenir consciemment en contractant le sphincter strié"
+        },
+        {
+          "t": "Tant que le sphincter strié reste fermé, la miction ne se déclenche pas.",
+          "v": true,
+          "e": "VRAI. Le strié fermé bloque toute la séquence : le réflexe parasympathique n'est jamais lancé, donc rien ne démarre.",
+          "sourceQuote": "tant que tu gardes le strié fermé, la machine ne démarre pas"
+        },
+        {
+          "t": "Une fois le sphincter strié relâché, il faut encore ouvrir volontairement le sphincter lisse.",
+          "v": false,
+          "e": "FAUX : le sphincter lisse et le détrusor ne dépendent pas de la volonté. Une fois le strié relâché, tout le reste part en réflexe.",
+          "sourceQuote": "Tout le reste — sphincter lisse, détrusor — part ensuite en réflexe"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-145-miction-deux-phases.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la rétention aiguë d'urine et au globe vésical, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Chez l'homme âgé, la cause la plus fréquente en est l'hyperplasie prostatique.",
+          "v": true,
+          "e": "VRAI. La prostate augmentée de volume comprime l'urètre et empêche l'urine de sortir : c'est la cause la plus fréquente chez l'homme âgé.",
+          "sourceQuote": "le plus souvent par hyperplasie prostatique chez l'homme âgé"
+        },
+        {
+          "t": "La vessie distendue forme une masse palpable au-dessous du pubis.",
+          "v": false,
+          "e": "FAUX : le globe vésical se palpe au-dessus du pubis, sous la forme d'une masse arrondie.",
+          "sourceQuote": "une masse arrondie palpable au-dessus du pubis"
+        },
+        {
+          "t": "Il s'agit d'une situation qui peut attendre une consultation programmée.",
+          "v": false,
+          "e": "FAUX : c'est une urgence urologique. Elle impose un sondage immédiat pour drainer la vessie.",
+          "sourceQuote": "C'est une urgence urologique → sondage immédiat pour drainer"
+        },
+        {
+          "t": "La rétention aiguë d'urine correspond à une vessie qui ne se remplit plus.",
+          "v": false,
+          "e": "FAUX : la vessie se remplit toujours, mais l'urine ne peut plus sortir. Elle s'accumule et la vessie se distend.",
+          "sourceQuote": "Si l'urine ne peut plus sortir"
+        },
+        {
+          "t": "Cette distension de la vessie porte le nom de compliance vésicale.",
+          "v": false,
+          "e": "FAUX : la vessie ainsi distendue s'appelle un globe vésical. La compliance vésicale désigne, elle, la souplesse normale de la paroi pendant le remplissage.",
+          "sourceQuote": "La vessie se distend en globe vésical"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-145-miction-deux-phases.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes de synthèse sur les deux phases du cycle vésical, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le remplissage se compte en heures et la vidange en secondes.",
+          "v": true,
+          "e": "VRAI. C'est le contraste de durée à ne pas confondre : des heures d'un côté, quelques dizaines de secondes de l'autre.",
+          "sourceQuote": "le remplissage se compte en heures , la vidange en secondes"
+        },
+        {
+          "t": "Le premier mouvement de la vidange est volontaire et porte sur le sphincter strié.",
+          "v": true,
+          "e": "VRAI. C'est l'ordre à retenir : le geste volontaire sur le sphincter strié ouvre la séquence.",
+          "sourceQuote": "Le premier mouvement est volontaire et porte sur le sphincter strié"
+        },
+        {
+          "t": "La contraction du détrusor survient après le relâchement du strié, sur un mode réflexe.",
+          "v": true,
+          "e": "VRAI. Le détrusor ne se contracte pas en premier : sa contraction est réflexe et vient après l'ouverture volontaire du strié.",
+          "sourceQuote": "la contraction du détrusor vient après , en réflexe"
+        },
+        {
+          "t": "Pendant le remplissage, le détrusor est relâché et les deux sphincters sont fermés.",
+          "v": true,
+          "e": "VRAI. C'est la configuration du remplissage : paroi souple et relâchée, deux verrous fermés.",
+          "sourceQuote": "Remplissage : plusieurs heures, détrusor relâché, 2 sphincters fermés"
+        },
+        {
+          "t": "Les deux phases se succèdent en boucle tout au long de la journée.",
+          "v": true,
+          "e": "VRAI. Remplissage puis vidange, et l'on recommence : le cycle vésical tourne en permanence.",
+          "sourceQuote": "qui se succèdent en boucle toute la journée"
+        }
+      ]
+    },
+
+    {
+      "fiche": "anatomie-146-membre-superieur-4-segments.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à l'organisation générale du membre supérieur, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le membre supérieur compte 32 os.",
+          "v": true,
+          "e": "VRAI. De l'épaule au bout des doigts, on dénombre 32 os enchaînés.",
+          "sourceQuote": "c'est 32 os enchaînés de l'épaule jusqu'au bout des doigts"
+        },
+        {
+          "t": "Un seul os rattache le membre supérieur au tronc : la clavicule.",
+          "v": true,
+          "e": "VRAI. C'est le seul point d'attache osseux entre le membre supérieur et le squelette du tronc.",
+          "sourceQuote": "rattachés au tronc par un seul os , la clavicule"
+        },
+        {
+          "t": "Le membre supérieur s'organise en 4 segments empilés de proximal à distal.",
+          "v": true,
+          "e": "VRAI. Quatre segments s'empilent du plus proche du tronc au plus éloigné : ceinture scapulaire, bras, avant-bras, main.",
+          "sourceQuote": "s'organise en 4 segments empilés de proximal à distal"
+        },
+        {
+          "t": "Le terme proximal désigne ce qui est le plus éloigné du tronc.",
+          "v": false,
+          "e": "FAUX : proximal désigne ce qui est le plus proche du tronc. C'est distal qui désigne le plus éloigné.",
+          "sourceQuote": "du plus proche du tronc au plus éloigné"
+        },
+        {
+          "t": "Les fiches suivantes remontent de la main vers l'épaule.",
+          "v": false,
+          "e": "FAUX : le chapitre suit le sens inverse. On descend de l'épaule à la main, région par région.",
+          "sourceQuote": "on descend de l'épaule à la main , région par région"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-146-membre-superieur-4-segments.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la ceinture scapulaire et au bras, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La ceinture scapulaire comprend 2 os : la clavicule et la scapula.",
+          "v": true,
+          "e": "VRAI. Ce sont les deux os du premier segment, celui qui arrime le membre supérieur au thorax.",
+          "sourceQuote": "La ceinture scapulaire — 2 os : la clavicule et la scapula"
+        },
+        {
+          "t": "La ceinture scapulaire sert de plateforme d'attache du bras au thorax.",
+          "v": true,
+          "e": "VRAI. C'est son rôle : offrir au bras une base solide sur laquelle s'articuler.",
+          "sourceQuote": "C'est la plateforme d'attache du bras au thorax"
+        },
+        {
+          "t": "Le segment du bras comprend 2 os.",
+          "v": false,
+          "e": "FAUX : le bras ne compte qu'un seul os, l'humérus. C'est l'avant-bras qui en compte deux.",
+          "sourceQuote": "Le bras — 1 os : l' humérus"
+        },
+        {
+          "t": "L'humérus est décrit comme un os court.",
+          "v": false,
+          "e": "FAUX : l'humérus est un os long, unique, solide et puissant.",
+          "sourceQuote": "os long unique, solide et puissant"
+        },
+        {
+          "t": "Sans la ceinture scapulaire, le bras resterait solidement fixé au thorax.",
+          "v": false,
+          "e": "FAUX : sans elle, le bras n'aurait aucune attache et pendrait dans le vide. C'est bien elle qui assure la liaison.",
+          "sourceQuote": "Sans elle, ton bras pendrait dans le vide"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-146-membre-superieur-4-segments.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à l'avant-bras, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'avant-bras comprend 2 os, dont le radius.",
+          "v": true,
+          "e": "VRAI. L'avant-bras compte deux os : le radius et l'ulna.",
+          "sourceQuote": "L'avant-bras — 2 os : le radius"
+        },
+        {
+          "t": "Le radius est latéral, du côté du pouce.",
+          "v": true,
+          "e": "VRAI. C'est le repère à retenir pour ne pas confondre les deux os de l'avant-bras.",
+          "sourceQuote": "le radius (latéral, côté pouce)"
+        },
+        {
+          "t": "L'ulna est médial, du côté de l'auriculaire.",
+          "v": true,
+          "e": "VRAI. L'ulna occupe le côté médial, celui du petit doigt, à l'opposé du radius.",
+          "sourceQuote": "l' ulna (médial, côté auriculaire)"
+        },
+        {
+          "t": "Le croisement du radius et de l'ulna permet la prono-supination.",
+          "v": true,
+          "e": "VRAI. C'est parce que les deux os peuvent se croiser que l'avant-bras autorise ce mouvement de rotation.",
+          "sourceQuote": "Leur croisement permet la prono-supination"
+        },
+        {
+          "t": "La prono-supination est le mouvement qui plie le coude.",
+          "v": false,
+          "e": "FAUX : la prono-supination est le mouvement qui retourne la paume, pas la flexion du coude.",
+          "sourceQuote": "le mouvement qui retourne la paume"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-146-membre-superieur-4-segments.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux os de la main, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La main compte 27 os.",
+          "v": true,
+          "e": "VRAI. Vingt-sept os pour la seule main : c'est le segment le plus riche des quatre.",
+          "sourceQuote": "La main — 27 os ! Le carpe"
+        },
+        {
+          "t": "Le carpe compte 8 os, au poignet.",
+          "v": true,
+          "e": "VRAI. Huit os composent le carpe, qui forme le squelette du poignet.",
+          "sourceQuote": "Le carpe (8 os au poignet)"
+        },
+        {
+          "t": "Le métacarpe compte 5 os, dans la paume.",
+          "v": true,
+          "e": "VRAI. Cinq métacarpiens forment la charpente de la paume, un par rayon de la main.",
+          "sourceQuote": "le métacarpe (5 os dans la paume)"
+        },
+        {
+          "t": "Les phalanges sont au nombre de 14, aux doigts.",
+          "v": true,
+          "e": "VRAI. Quatorze phalanges pour les cinq doigts : 8 + 5 + 14 donnent bien les 27 os de la main.",
+          "sourceQuote": "les phalanges (14 os aux doigts)"
+        },
+        {
+          "t": "La main est la région la plus riche en os du corps.",
+          "v": true,
+          "e": "VRAI. Cette abondance d'os est le gage de la précision des mouvements de la main.",
+          "sourceQuote": "C'est la région la plus riche en os du corps"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-146-membre-superieur-4-segments.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au décompte des os et à la logique d'ensemble du membre supérieur, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le total se fait ainsi : 2 + 1 + 2 + 27 = 32 os par membre supérieur.",
+          "v": true,
+          "e": "VRAI. Deux os pour la ceinture, un pour le bras, deux pour l'avant-bras et vingt-sept pour la main : le compte est bon.",
+          "sourceQuote": "2 (ceinture) + 1 (bras) + 2 (avant-bras) + 27 (main) = 32 os"
+        },
+        {
+          "t": "Plus on descend vers la main, plus les os sont gros et peu nombreux.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. Plus on descend vers la main, plus les os sont petits et nombreux.",
+          "sourceQuote": "plus on descend vers la main, plus les os sont petits et nombreux"
+        },
+        {
+          "t": "La taille des os augmente à chaque étage tandis que leur nombre diminue.",
+          "v": false,
+          "e": "FAUX : la taille diminue à chaque étage pendant que le nombre augmente — c'est le schéma inverse de celui proposé.",
+          "sourceQuote": "elle diminue à chaque étage, pendant que leur nombre augmente"
+        },
+        {
+          "t": "La main est construite pour la puissance plutôt que pour la précision.",
+          "v": false,
+          "e": "FAUX : la main a besoin de précision, pas de puissance. C'est ce qui explique la multiplication de petits os.",
+          "sourceQuote": "car la main a besoin de précision, pas de puissance"
+        },
+        {
+          "t": "Dans l'analogie de la grue articulée, chaque segment perd en mobilité à mesure qu'on s'éloigne du tronc.",
+          "v": false,
+          "e": "FAUX : chaque segment gagne au contraire en mobilité à mesure qu'on s'éloigne du tronc.",
+          "sourceQuote": "chaque segment gagne en mobilité au fur et à mesure qu'on s'éloigne du tronc"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-146-membre-superieur-4-segments.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la méthode de travail proposée et au schéma d'ensemble, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Pour chaque région, l'ordre de lecture est : les os, puis les articulations, puis les muscles.",
+          "v": true,
+          "e": "VRAI. Cet ordre vaut pour tout le chapitre, à chaque étage du membre supérieur.",
+          "sourceQuote": "les os , puis les articulations , puis les muscles"
+        },
+        {
+          "t": "Les muscles s'apprennent plus vite lorsque les repères osseux sont déjà connus.",
+          "v": true,
+          "e": "VRAI. C'est la raison même de cet ordre : les muscles s'accrochent sur des repères osseux, autant les connaître d'abord.",
+          "sourceQuote": "Les muscles s'apprennent bien plus vite quand tu connais déjà les repères osseux"
+        },
+        {
+          "t": "Le schéma d'ensemble présente le membre supérieur gauche en vue postérieure.",
+          "v": false,
+          "e": "FAUX : le schéma montre le membre supérieur droit, en vue antérieure.",
+          "sourceQuote": "Vue d'ensemble du membre supérieur droit (vue antérieure)"
+        },
+        {
+          "t": "Sur ce schéma, les accolades se lisent de haut en bas en commençant par la ceinture scapulaire.",
+          "v": true,
+          "e": "VRAI. Les accolades suivent l'empilement des quatre segments, de la ceinture scapulaire jusqu'à la main.",
+          "sourceQuote": "suis les accolades de haut en bas : ceinture scapulaire"
+        },
+        {
+          "t": "Sur ce schéma, l'ulna se repère du côté du pouce.",
+          "v": false,
+          "e": "FAUX : c'est le radius qui se repère du côté du pouce. L'ulna est du côté de l'auriculaire.",
+          "sourceQuote": "Repère aussi le radius du côté du pouce"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-146-membre-superieur-4-segments.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives au repérage du radius et de l'ulna en position anatomique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "En position anatomique, la paume est tournée vers l'avant.",
+          "v": true,
+          "e": "VRAI. C'est la convention de la position anatomique, et c'est elle qui rend le repère du pouce utilisable.",
+          "sourceQuote": "en position anatomique, paume vers l'avant"
+        },
+        {
+          "t": "Dans cette position, le pouce se trouve du côté latéral.",
+          "v": true,
+          "e": "VRAI. Paume vers l'avant, le pouce est bien le doigt le plus externe, donc du côté latéral.",
+          "sourceQuote": "ton pouce est du côté latéral"
+        },
+        {
+          "t": "Le pouce se trouve donc du côté du radius.",
+          "v": true,
+          "e": "VRAI. Puisque le radius est l'os latéral, il est du même côté que le pouce : c'est le repère qui évite l'inversion.",
+          "sourceQuote": "donc du côté du radius"
+        },
+        {
+          "t": "L'ulna est l'os latéral de l'avant-bras.",
+          "v": false,
+          "e": "FAUX : l'ulna est médial, du côté de l'auriculaire. C'est le radius qui est latéral.",
+          "sourceQuote": "l'ulna est médial , côté auriculaire"
+        },
+        {
+          "t": "Le récapitulatif donne : ceinture scapulaire (2), bras (1), avant-bras (2), main (27).",
+          "v": true,
+          "e": "VRAI. Ce sont bien les quatre chiffres à retenir, dont la somme donne les 32 os du membre supérieur.",
+          "sourceQuote": "ceinture scapulaire (2) · bras (1) · avant-bras (2) · main (27)"
+        }
+      ]
+    },
+
+    {
+      "fiche": "biologie-145-tc-denses.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la composition générale des tissus conjonctifs denses, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les tissus conjonctifs denses sont riches en substance fondamentale et pauvres en fibres.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. Les tissus conjonctifs denses sont riches en fibres de collagène et pauvres en cellules comme en substance fondamentale.",
+          "sourceQuote": "Ils sont riches en fibres de collagène et pauvres en cellules et en substance fondamentale"
+        },
+        {
+          "t": "Les tissus conjonctifs denses sont moins résistants mécaniquement que les tissus conjonctifs lâches.",
+          "v": false,
+          "e": "FAUX : leur richesse en collagène les rend au contraire beaucoup plus résistants que les tissus conjonctifs lâches.",
+          "sourceQuote": "ils sont beaucoup plus résistants mécaniquement que les TC lâches"
+        },
+        {
+          "t": "Il existe quatre tissus conjonctifs denses.",
+          "v": false,
+          "e": "FAUX : il n'en existe que deux, le non orienté et l'orienté. Ce sont les tissus conjonctifs lâches qui sont au nombre de quatre.",
+          "sourceQuote": "Il n'en existe que deux"
+        },
+        {
+          "t": "Ce qui sépare les deux tissus conjonctifs denses, c'est leur composition.",
+          "v": false,
+          "e": "FAUX : leur composition est la même. Ce qui les sépare, c'est la direction dans laquelle leurs fibres sont posées.",
+          "sourceQuote": "ce qui les sépare n'est pas leur composition mais la direction"
+        },
+        {
+          "t": "Les tissus conjonctifs lâches sont pauvres en fibres et riches en substance fondamentale.",
+          "v": true,
+          "e": "VRAI. C'est le contrepoint exact des denses : beaucoup de substance fondamentale, peu de fibres, et des cellules nombreuses et variées.",
+          "sourceQuote": "riches en substance fondamentale, pauvres en fibres"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-145-tc-denses.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives au tissu conjonctif dense non orienté, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Il est aussi appelé tissu conjonctif dense irrégulier.",
+          "v": true,
+          "e": "VRAI. Non orienté et irrégulier désignent le même tissu, celui dont les fibres partent dans tous les sens.",
+          "sourceQuote": "Le TC dense non orienté, dit irrégulier"
+        },
+        {
+          "t": "Ses fibres de collagène sont disposées dans toutes les directions.",
+          "v": true,
+          "e": "VRAI. Elles forment un véritable feutrage, résistant quelle que soit la direction de la traction.",
+          "sourceQuote": "Les fibres de collagène sont disposées dans toutes les directions"
+        },
+        {
+          "t": "Sa résistance est multidirectionnelle.",
+          "v": true,
+          "e": "VRAI. D'où qu'arrive la traction, il y a des fibres pour l'encaisser : c'est la conséquence directe de l'orientation quelconque des fibres.",
+          "sourceQuote": "Sa résistance est donc multidirectionnelle"
+        },
+        {
+          "t": "Les capsules du rein, du foie et de la rate en sont des exemples.",
+          "v": true,
+          "e": "VRAI. Les capsules d'organes figurent parmi ses exemples types, aux côtés du derme, du périchondre et du périoste.",
+          "sourceQuote": "les capsules d'organes (rein, foie, rate)"
+        },
+        {
+          "t": "Le périoste et le périchondre sont des exemples de tissu conjonctif dense orienté.",
+          "v": false,
+          "e": "FAUX : périoste et périchondre sont des exemples de tissu conjonctif dense NON orienté. Ce sont les enveloppes de l'os et du cartilage.",
+          "sourceQuote": "le périchondre et le périoste (les enveloppes conjonctives du cartilage et de l'os)"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-145-tc-denses.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au tissu conjonctif dense orienté, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Il est aussi dit tissu conjonctif dense régulier.",
+          "v": true,
+          "e": "VRAI. Orienté et régulier désignent le même tissu, celui dont toutes les fibres sont alignées dans la même direction.",
+          "sourceQuote": "Le TC dense orienté, dit régulier"
+        },
+        {
+          "t": "Ses fibres lui donnent une résistance maximale dans toutes les directions.",
+          "v": false,
+          "e": "FAUX : sa résistance est maximale dans le sens des fibres, mais dans ce sens-là seulement. C'est la résistance multidirectionnelle qui caractérise le non orienté.",
+          "sourceQuote": "une résistance maximale dans le sens des fibres — mais dans ce sens-là seulement"
+        },
+        {
+          "t": "Ses cellules sont des fibroblastes en pleine activité de synthèse.",
+          "v": false,
+          "e": "FAUX : ses cellules sont des fibrocytes, alignés entre les faisceaux de collagène. Dans un tendon, la matrice est faite : il n'y a plus à la fabriquer.",
+          "sourceQuote": "Ses cellules sont des fibrocytes alignés entre les faisceaux de collagène"
+        },
+        {
+          "t": "Le fibrocyte est la forme quiescente et fusiforme du fibroblaste.",
+          "v": true,
+          "e": "VRAI. Le fibrocyte est le fibroblaste au repos : allongé, fusiforme, il ne fabrique plus de matrice.",
+          "sourceQuote": "la forme quiescente et fusiforme du fibroblaste"
+        },
+        {
+          "t": "Ses fibres de collagène partent dans des directions variées.",
+          "v": false,
+          "e": "FAUX : elles sont toutes alignées dans la même direction. Ce sont les fibres du tissu non orienté qui partent dans tous les sens.",
+          "sourceQuote": "Les fibres de collagène sont toutes alignées dans la même direction"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-145-tc-denses.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux exemples de tissus conjonctifs denses orientés et aux confusions classiques, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le tendon relie un muscle à un os.",
+          "v": true,
+          "e": "VRAI. C'est la définition du tendon, et la moitié du piège classique à ne pas inverser.",
+          "sourceQuote": "les tendons (relient muscle à os)"
+        },
+        {
+          "t": "Le ligament relie deux os entre eux.",
+          "v": true,
+          "e": "VRAI. Le ligament va d'un os à un autre : c'est ce qui le distingue du tendon.",
+          "sourceQuote": "les ligaments (relient os à os)"
+        },
+        {
+          "t": "Les aponévroses sont des tendons aplatis, en lame large.",
+          "v": true,
+          "e": "VRAI. Même tissu qu'un tendon, mais étalé en lame large au lieu d'être ramassé en cordon.",
+          "sourceQuote": "les aponévroses (des tendons aplatis, en lame large)"
+        },
+        {
+          "t": "Un énoncé qui présente le tendon comme reliant un os à un os est exact.",
+          "v": false,
+          "e": "FAUX : le tendon relie un muscle à un os. Relier un os à un os, c'est le rôle du ligament.",
+          "sourceQuote": "le tendon relie un muscle à un os , le ligament relie un os à un os"
+        },
+        {
+          "t": "Le derme fait partie des tissus conjonctifs denses orientés.",
+          "v": false,
+          "e": "FAUX : le derme est un tissu conjonctif dense NON orienté. Même s'il est dans la peau, ses fibres partent dans tous les sens.",
+          "sourceQuote": "il est dense non orienté , pas orienté"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-145-tc-denses.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à la cornée, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La cornée fait partie des exemples de tissu conjonctif dense orienté.",
+          "v": true,
+          "e": "VRAI. Elle figure dans la liste des exemples du dense orienté, avec les tendons, les ligaments et les aponévroses.",
+          "sourceQuote": "les aponévroses (des tendons aplatis, en lame large) et la cornée"
+        },
+        {
+          "t": "Sa transparence tient à l'organisation très régulière de ses fibres de collagène.",
+          "v": true,
+          "e": "VRAI. C'est la régularité de l'arrangement, et non la composition, qui laisse passer la lumière.",
+          "sourceQuote": "transparente grâce à l'organisation très régulière de ses fibres de collagène"
+        },
+        {
+          "t": "Ses lamelles successives ont des fibres orientées à 90° les unes par rapport aux autres.",
+          "v": true,
+          "e": "VRAI. Les lamelles s'empilent en tournant d'un quart de tour à chaque étage : c'est cette géométrie qui rend la cornée transparente.",
+          "sourceQuote": "des lamelles successives dont les fibres sont orientées à 90"
+        },
+        {
+          "t": "Une cicatrice qui désorganise ces fibres rend la cornée opaque.",
+          "v": true,
+          "e": "VRAI. Dès que la régularité disparaît, la lumière ne passe plus correctement et la cornée s'opacifie.",
+          "sourceQuote": "Si elle est désorganisée, par une cicatrice par exemple, la cornée s' opacifie"
+        },
+        {
+          "t": "Le lien à retenir pour la cornée est : régularité égale transparence.",
+          "v": true,
+          "e": "VRAI. C'est le raccourci à garder en tête : la régularité de l'arrangement est la cause, la transparence en est la conséquence.",
+          "sourceQuote": "retiens le lien de cause à effet : régularité = transparence"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-145-tc-denses.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives au tableau de classification des tissus conjonctifs, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le tissu conjonctif réticulé est riche en réticuline, c'est-à-dire en collagène III.",
+          "v": true,
+          "e": "VRAI. C'est sa caractéristique dans le tableau : la réticuline, qui n'est autre que du collagène de type III.",
+          "sourceQuote": "Riche en réticuline (collagène III)"
+        },
+        {
+          "t": "La gelée de Wharton et le corps vitré sont des exemples de tissu conjonctif adipeux.",
+          "v": false,
+          "e": "FAUX : ce sont les exemples du tissu conjonctif muqueux, riche en substance fondamentale gélatineuse. L'adipeux a pour exemple le tissu sous-cutané.",
+          "sourceQuote": "Riche en SF gélatineuse Gelée de Wharton, corps vitré"
+        },
+        {
+          "t": "Le tissu aréolaire a pour exemple type le chorion des muqueuses.",
+          "v": true,
+          "e": "VRAI. L'aréolaire est le tissu équilibré, avec autant de cellules que de fibres et de substance fondamentale ; son exemple type est le chorion des muqueuses.",
+          "sourceQuote": "Équilibré (cellules + fibres + SF) Chorion des muqueuses"
+        },
+        {
+          "t": "Le tissu réticulé a pour exemple type le tissu sous-cutané.",
+          "v": false,
+          "e": "FAUX : les exemples du réticulé sont la rate, les ganglions et la moelle. Le tissu sous-cutané est l'exemple du tissu adipeux.",
+          "sourceQuote": "Rate, ganglions, moelle"
+        },
+        {
+          "t": "La classification aboutit à huit tissus conjonctifs.",
+          "v": false,
+          "e": "FAUX : elle aboutit à six tissus — quatre lâches et deux denses — obtenus avec un seul critère de tri.",
+          "sourceQuote": "Six tissus, un seul critère de tri"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-145-tc-denses.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la démarche de tri des tissus conjonctifs denses, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Devant un tissu conjonctif dense, la question à se poser est celle du nombre de cellules.",
+          "v": false,
+          "e": "FAUX : la seule question qui tranche est celle du sens dans lequel tirent les fibres. Le nombre de cellules ne sépare pas les deux tissus denses.",
+          "sourceQuote": "une seule question à te poser : dans quel sens tirent les fibres"
+        },
+        {
+          "t": "Des fibres qui tirent toutes dans le même sens signent un tissu dense non orienté.",
+          "v": false,
+          "e": "FAUX : des fibres toutes dans le même sens signent le tissu dense ORIENTÉ. Le non orienté a ses fibres dans toutes les directions.",
+          "sourceQuote": "Toutes dans le même sens → orienté"
+        },
+        {
+          "t": "Le derme, les capsules d'organes, le périchondre et le périoste sont des tissus denses orientés.",
+          "v": false,
+          "e": "FAUX : ces quatre exemples appartiennent au tissu dense NON orienté, celui dont la résistance est multidirectionnelle.",
+          "sourceQuote": "non orienté , résistance multidirectionnelle : derme, capsules d'organes, périchondre, périoste"
+        },
+        {
+          "t": "Dans l'arbre de classification, les tissus lâches sont ceux qui sont riches en fibres de collagène.",
+          "v": false,
+          "e": "FAUX : dans l'arbre, les lâches sont riches en substance fondamentale ; ce sont les denses qui sont riches en fibres de collagène.",
+          "sourceQuote": "à gauche les lâches (riches en substance fondamentale), à droite les denses"
+        },
+        {
+          "t": "Sur la vignette du tissu dense non orienté, les fibres partent en tous sens.",
+          "v": true,
+          "e": "VRAI. C'est exactement le contraste à repérer entre les deux vignettes : fibres en tous sens à gauche, fibres parallèles à droite.",
+          "sourceQuote": "dans le non orienté les fibres partent en tous sens"
+        }
+      ]
+    }
+  ]
+}

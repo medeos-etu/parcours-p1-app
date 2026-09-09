@@ -1,0 +1,1372 @@
+{
+  "matiere": "mixte",
+  "chapitre": 0,
+  "note": "socle 1-7 — fiches sans QCM, ordre du Parcours",
+  "questions": [
+    {
+      "fiche": "chimie-112-gaz-parfait-pv-nrt.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives au modèle du gaz parfait et à ses hypothèses, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans ce modèle, les molécules sont assimilées à des points sans volume.",
+          "v": true,
+          "e": "VRAI. C'est la première des deux hypothèses : on traite les molécules comme des points sans dimension, en négligeant complètement leur taille.",
+          "sourceQuote": "Les molécules sont des points sans volume"
+        },
+        {
+          "t": "Le modèle conserve les forces d'attraction et de répulsion entre molécules.",
+          "v": false,
+          "e": "FAUX : c'est justement ce que le modèle abandonne. Les interactions mutuelles sont négligées : les molécules ne s'attirent plus et ne se repoussent plus.",
+          "sourceQuote": "elles ne s'attirent plus, ne se repoussent plus"
+        },
+        {
+          "t": "Les collisions entre molécules sont supposées élastiques.",
+          "v": true,
+          "e": "VRAI. C'est la seconde hypothèse du modèle : les chocs sont élastiques, comme entre des billes de billard parfaites.",
+          "sourceQuote": "Les collisions sont élastiques — quand deux molécules se heurtent"
+        },
+        {
+          "t": "Lors d'une collision élastique, une petite partie de l'énergie est perdue sous forme de chaleur.",
+          "v": false,
+          "e": "FAUX : une collision élastique se définit précisément par l'absence de perte d'énergie. S'il y avait perte, la collision ne serait plus élastique.",
+          "sourceQuote": "quand deux molécules se heurtent, aucune énergie n'est perdue"
+        },
+        {
+          "t": "On adopte ce modèle simplifié parce que le comportement réel des molécules rend les calculs impossibles.",
+          "v": true,
+          "e": "VRAI. Taille réelle, attractions, répulsions et chocs complexes rendent les calculs inextricables : le modèle simplifié est là pour s'en sortir.",
+          "sourceQuote": "Tout ça rend les calculs impossibles. Pour s'en sortir, on utilise un modèle simplifié"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-112-gaz-parfait-pv-nrt.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à l'équation d'état du gaz parfait et aux unités qu'elle impose, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La loi des gaz parfaits s'écrit PV = nRT.",
+          "v": true,
+          "e": "VRAI. Une seule équation résume tout le modèle : PV = nRT. C'est l'outil de calcul du chapitre.",
+          "sourceQuote": "Loi des gaz parfaits PV = nRT"
+        },
+        {
+          "t": "La pression s'y exprime en pascals et le volume en mètres cubes.",
+          "v": true,
+          "e": "VRAI. Ce sont les unités du système international imposées par la formule : le pascal pour P, le mètre cube pour V.",
+          "sourceQuote": "P en pascals · V en m³ · n en moles · T en kelvins"
+        },
+        {
+          "t": "La quantité de matière n s'exprime en moles et la température T en kelvins.",
+          "v": true,
+          "e": "VRAI. n est bien en moles et T en kelvins — jamais en degrés Celsius, sous peine de résultat absurde.",
+          "sourceQuote": "n en moles · T en kelvins · R = 8,314"
+        },
+        {
+          "t": "La constante des gaz parfaits R vaut 8,314 J·K⁻¹·mol⁻¹.",
+          "v": true,
+          "e": "VRAI. C'est sa valeur, et elle t'est fournie : tu n'as pas à l'apprendre par cœur.",
+          "sourceQuote": "R = 8,314 J·K⁻¹·mol⁻¹ , elle est toujours donnée dans l'énoncé"
+        },
+        {
+          "t": "Le résultat n'est correct que si toutes les grandeurs sont exprimées dans les bonnes unités.",
+          "v": true,
+          "e": "VRAI. C'est la condition d'emploi de la formule : une seule grandeur laissée dans une mauvaise unité et le résultat est faux.",
+          "sourceQuote": "La formule ne marche que si toutes les grandeurs sont dans les bonnes unités"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-112-gaz-parfait-pv-nrt.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au domaine de validité du modèle et à la constante R, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le modèle du gaz parfait est une excellente approximation à haute pression et basse température.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. Le modèle colle aux gaz réels à basse pression et haute température, situations dans lesquelles les molécules sont très éloignées les unes des autres.",
+          "sourceQuote": "excellente approximation pour les gaz réels à basse pression et haute température"
+        },
+        {
+          "t": "À basse pression et haute température, les molécules d'un gaz sont très rapprochées les unes des autres.",
+          "v": false,
+          "e": "FAUX : dans ces conditions les molécules sont au contraire très espacées — et c'est précisément pour cela qu'on peut négliger leurs interactions.",
+          "sourceQuote": "à basse pression et haute température (molécules très espacées)"
+        },
+        {
+          "t": "La valeur de R doit être apprise par cœur car elle n'est jamais fournie dans l'énoncé.",
+          "v": false,
+          "e": "FAUX : R est toujours donnée dans l'énoncé. Ce qu'il faut garder en tête, c'est seulement son ordre de grandeur.",
+          "sourceQuote": "elle est toujours donnée dans l'énoncé : pas besoin de la retenir"
+        },
+        {
+          "t": "Le gaz parfait sert de base à tous les calculs de thermodynamique de première année.",
+          "v": true,
+          "e": "VRAI. C'est le modèle de référence : tout ce que tu calculeras en thermo en première année part de là.",
+          "sourceQuote": "la base de tous les calculs en thermo de première année"
+        },
+        {
+          "t": "Connaître l'ordre de grandeur de R n'a aucune utilité pratique.",
+          "v": false,
+          "e": "FAUX : retenir que R vaut environ 8,3 te sert à vérifier tes résultats d'un coup d'œil, sans refaire le calcul.",
+          "sourceQuote": "Retiens seulement son ordre de grandeur (≈ 8,3) — il te sert à vérifier tes résultats"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-112-gaz-parfait-pv-nrt.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux conversions d'unités à effectuer avant d'appliquer la formule, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un volume de 50 L s'écrit 0,050 m³ dans la formule.",
+          "v": true,
+          "e": "VRAI. On divise le volume en litres par 1000 pour obtenir des mètres cubes : 50 L donnent bien 0,050 m³.",
+          "sourceQuote": "50 L 50 ÷ 1000 = 0,050 m³"
+        },
+        {
+          "t": "Une température de 25 °C s'écrit 298 K dans la formule.",
+          "v": true,
+          "e": "VRAI. On ajoute 273 à la température en degrés Celsius : 25 + 273 = 298 K.",
+          "sourceQuote": "25 °C 25 + 273 = 298 K"
+        },
+        {
+          "t": "Une température de 100 °C correspond à 373 K.",
+          "v": true,
+          "e": "VRAI. Même conversion : 100 + 273 = 373 K.",
+          "sourceQuote": "100 °C 100 + 273 = 373 K"
+        },
+        {
+          "t": "Pour convertir un volume donné en litres, on le multiplie par 1000.",
+          "v": false,
+          "e": "FAUX : on divise par 1000, puisqu'un litre vaut un millième de mètre cube. Multiplier ferait sortir un volume mille fois trop grand.",
+          "sourceQuote": "convertir les L en m³ → 1 L = 10⁻³ m³ (diviser par 1000)"
+        },
+        {
+          "t": "Un volume de 250 mL vaut 2,5 × 10⁻⁴ m³.",
+          "v": true,
+          "e": "VRAI. Des millilitres aux mètres cubes, on divise par un million : 250 mL donnent 2,5 × 10⁻⁴ m³.",
+          "sourceQuote": "250 mL 250 ÷ 1 000 000 = 2,5 × 10⁻⁴ m³"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-112-gaz-parfait-pv-nrt.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à l'emploi du kelvin dans PV = nRT, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "On passe des °C aux kelvins parce qu'une température en degrés Celsius peut être négative.",
+          "v": true,
+          "e": "VRAI. C'est la raison de fond : une valeur négative injectée dans la formule donnerait une pression ou un volume négatif.",
+          "sourceQuote": "Parce que les °C peuvent être négatifs (−10 °C existe)"
+        },
+        {
+          "t": "Une pression ou un volume négatif reste physiquement acceptable.",
+          "v": false,
+          "e": "FAUX : ni une pression ni un volume ne peuvent être négatifs. C'est exactement ce qu'on veut éviter en travaillant en kelvins.",
+          "sourceQuote": "une pression ou un volume négatif n'a aucun sens physique"
+        },
+        {
+          "t": "L'échelle Kelvin démarre au zéro absolu, situé à −273 °C.",
+          "v": true,
+          "e": "VRAI. Le zéro absolu est le point de départ de l'échelle : en dessous, rien n'existe, donc aucune valeur négative n'est possible.",
+          "sourceQuote": "démarre au zéro absolu (−273 °C) — en dessous, rien n'existe"
+        },
+        {
+          "t": "La conversion se fait par T(K) = T(°C) − 273.",
+          "v": false,
+          "e": "FAUX : on ajoute 273, on ne le retranche pas. T(K) = T(°C) + 273.",
+          "sourceQuote": "Température : convertir les °C en K → T(K) = T(°C) + 273"
+        },
+        {
+          "t": "Même avec T en kelvins, PV = nRT peut encore donner un résultat négatif.",
+          "v": false,
+          "e": "FAUX : une température en kelvins est toujours positive, donc le résultat de PV = nRT l'est aussi.",
+          "sourceQuote": "Avec T en kelvins, PV = nRT donne toujours un résultat positif"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-112-gaz-parfait-pv-nrt.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives au volume molaire et à la méthode de résolution proposée, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une mole de gaz parfait occupe 22,4 L à 0 °C.",
+          "v": true,
+          "e": "VRAI. C'est le premier des deux repères de volume molaire à connaître tels quels.",
+          "sourceQuote": "1 mol de gaz parfait → 22,4 L à 0 °C · 24,8 L à 25 °C"
+        },
+        {
+          "t": "À 25 °C, ce même volume molaire vaut 24,8 L.",
+          "v": true,
+          "e": "VRAI. Le second repère : 24,8 L à 25 °C, soit un peu plus qu'à 0 °C, puisque le gaz est plus chaud.",
+          "sourceQuote": "22,4 L à 0 °C · 24,8 L à 25 °C"
+        },
+        {
+          "t": "Ces valeurs de volume molaire permettent d'estimer un volume sans écrire PV = nRT.",
+          "v": true,
+          "e": "VRAI. C'est tout leur intérêt : elles servent de raccourci quand une estimation rapide suffit.",
+          "sourceQuote": "estimer rapidement un volume sans sortir PV = nRT"
+        },
+        {
+          "t": "Les conversions d'unités se font avant le calcul, jamais après.",
+          "v": true,
+          "e": "VRAI. On convertit d'abord litres et degrés, ensuite seulement on calcule — c'est ce qui désamorce le piège.",
+          "sourceQuote": "les deux conversions se font avant le calcul, jamais après"
+        },
+        {
+          "t": "Devant un résultat qui paraît aberrant, le premier réflexe est de revérifier les unités.",
+          "v": true,
+          "e": "VRAI. On remonte d'abord aux unités avant de mettre la formule elle-même en cause : c'est presque toujours là que se trouve l'erreur.",
+          "sourceQuote": "si le résultat te paraît aberrant, remonte d'abord aux unités"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-112-gaz-parfait-pv-nrt.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives aux pièges du gaz parfait et à la place de cette notion dans le chapitre, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un volume laissé en litres fausse le résultat d'un facteur 1000.",
+          "v": true,
+          "e": "VRAI. C'est le piège d'unités le plus coûteux : l'erreur ne se voit pas dans la formule, seulement dans l'ordre de grandeur du résultat.",
+          "sourceQuote": "Un volume laissé en litres, et le résultat est faux d'un facteur 1000"
+        },
+        {
+          "t": "Dans un gaz réel, les molécules n'ont ni taille physique ni interactions entre elles.",
+          "v": false,
+          "e": "FAUX : c'est le modèle qui les néglige, pas la réalité. Un gaz réel a bien des molécules de taille finie qui s'attirent et se repoussent.",
+          "sourceQuote": "les molécules d'un gaz ont une taille physique , s'attirent et se repoussent"
+        },
+        {
+          "t": "Les énoncés fournissent souvent les données en litres ou en degrés Celsius, et c'est délibéré.",
+          "v": true,
+          "e": "VRAI. Le piège est posé exprès : la donnée arrive dans une unité qui n'est pas celle de la formule.",
+          "sourceQuote": "les données sont souvent en litres ou en °C — c'est fait exprès pour piéger"
+        },
+        {
+          "t": "L'analogie des billes de billard illustre le fait que les molécules occupent un volume propre.",
+          "v": false,
+          "e": "FAUX : cette analogie illustre le caractère élastique des collisions, c'est-à-dire l'absence de perte d'énergie — pas la question du volume des molécules.",
+          "sourceQuote": "aucune énergie n'est perdue ( comme des billes de billard parfaites )"
+        },
+        {
+          "t": "La suite du chapitre porte sur un gaz unique enfermé seul dans un récipient.",
+          "v": false,
+          "e": "FAUX : la suite traite au contraire le cas de plusieurs gaz partageant le même récipient, chacun y exerçant sa part de pression.",
+          "sourceQuote": "le cas où plusieurs gaz partagent le même récipient"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-111-effet-doppler-cas-simple.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à l'effet Doppler tel qu'on l'entend au passage d'une ambulance, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Tant que l'ambulance se rapproche, le son perçu est plus aigu.",
+          "v": true,
+          "e": "VRAI. À l'approche, les ondes successives arrivent comprimées : la fréquence perçue monte, donc le son paraît plus aigu.",
+          "sourceQuote": "une ambulance arrive vers toi en hurlant, sa sirène a un son aigu"
+        },
+        {
+          "t": "Dès qu'elle s'éloigne, le son perçu devient plus grave.",
+          "v": true,
+          "e": "VRAI. En s'éloignant, les ondes s'étirent : la fréquence perçue baisse et le son devient plus grave.",
+          "sourceQuote": "dès qu'elle te dépasse et s'éloigne, le son devient plus grave"
+        },
+        {
+          "t": "C'est la sirène qui modifie réellement sa fréquence d'émission au moment du passage.",
+          "v": false,
+          "e": "FAUX : la sirène émet toujours la même fréquence. Ce qui change, c'est uniquement la fréquence perçue par l'oreille.",
+          "sourceQuote": "Pourtant, la sirène n'a pas changé. Ce qui a changé, c'est la fréquence perçue"
+        },
+        {
+          "t": "Le rapprochement de la source comprime les ondes dans le temps.",
+          "v": true,
+          "e": "VRAI. Les ondes successives arrivent plus vite que prévu, resserrées : c'est cette compression qui fait monter la fréquence perçue.",
+          "sourceQuote": "les ondes successives arrivent plus vite que prévu, comprimées dans le temps"
+        },
+        {
+          "t": "Cet effet a été décrit en 1842 par Christian Doppler.",
+          "v": true,
+          "e": "VRAI. Le physicien autrichien Christian Doppler l'a décrit en 1842, d'où le nom de l'effet.",
+          "sourceQuote": "décrit en 1842 par le physicien autrichien Christian Doppler"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-111-effet-doppler-cas-simple.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la formule f' = f × (1 − v/c) et à sa convention de signe, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans cette formule, v est négative lorsque le récepteur s'éloigne de la source.",
+          "v": false,
+          "e": "FAUX : la convention est l'inverse. v est positive quand le récepteur s'éloigne, négative quand il s'approche.",
+          "sourceQuote": "v = vitesse du récepteur, POSITIVE si s'éloigne , NÉGATIVE si s'approche"
+        },
+        {
+          "t": "f' désigne la fréquence émise par la source.",
+          "v": false,
+          "e": "FAUX : f est la fréquence émise par la source. f' est la fréquence perçue par le récepteur, celle qui change.",
+          "sourceQuote": "f = fréquence émise par la source (Hz) · f' = fréquence perçue par le récepteur"
+        },
+        {
+          "t": "c désigne la célérité du son dans le milieu.",
+          "v": true,
+          "e": "VRAI. c est la vitesse du son dans le milieu traversé, exprimée en mètres par seconde.",
+          "sourceQuote": "c = célérité du son dans le milieu (m/s)"
+        },
+        {
+          "t": "Lorsque le récepteur est immobile, la fréquence perçue diffère de la fréquence émise.",
+          "v": false,
+          "e": "FAUX : à l'arrêt, v = 0, le facteur (1 − v/c) vaut 1 et f' = f. Il n'y a aucun décalage.",
+          "sourceQuote": "Les bips arrivent à ton oreille au rythme normal → f' = f . Aucun changement"
+        },
+        {
+          "t": "Quand le récepteur s'approche, le facteur (1 − v/c) devient inférieur à 1.",
+          "v": false,
+          "e": "FAUX : à l'approche v est négative, donc (1 − v/c) est supérieur à 1 et f' dépasse f — le son est plus aigu.",
+          "sourceQuote": "v < 0 (s'approche) > 1 f' > f → plus aigu"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-111-effet-doppler-cas-simple.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la scène choisie pour construire la formule, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Pour construire la formule, on choisit une source fixe et un récepteur mobile.",
+          "v": true,
+          "e": "VRAI. C'est le cas le plus simple à mettre en équation : la sirène ne bouge pas, c'est l'oreille qui se déplace.",
+          "sourceQuote": "la source est fixe et c'est le récepteur qui bouge"
+        },
+        {
+          "t": "Dans la scène réelle de l'ambulance qui passe devant toi, c'est le récepteur qui bouge.",
+          "v": false,
+          "e": "FAUX : dans la vraie vie, c'est la source — l'ambulance — qui se déplace, et toi qui restes sur le trottoir. La construction inverse les rôles pour simplifier le calcul.",
+          "sourceQuote": "Dans la vraie vie (l'ambulance qui passe devant toi), c'est la source qui bouge"
+        },
+        {
+          "t": "Le cas de la source mobile est renvoyé au Doppler médical.",
+          "v": true,
+          "e": "VRAI. La configuration « source mobile » sera traitée plus loin, avec le Doppler médical.",
+          "sourceQuote": "On verra le cas « source mobile » dans le Doppler médical"
+        },
+        {
+          "t": "Les bips émis par la sirène fixe partent en cercles concentriques réguliers.",
+          "v": true,
+          "e": "VRAI. La source étant immobile, les fronts d'onde forment des cercles régulièrement espacés autour d'elle.",
+          "sourceQuote": "Les bips partent en cercles concentriques réguliers"
+        },
+        {
+          "t": "Dans cette scène, la longueur d'onde varie d'un bip au suivant.",
+          "v": false,
+          "e": "FAUX : la longueur d'onde reste constante, puisque les fronts d'onde sont tous à la même distance les uns des autres. Ce qui change, c'est le rythme auquel l'oreille les croise.",
+          "sourceQuote": "tous à la même distance les uns des autres (= longueur d'onde λ constante)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-111-effet-doppler-cas-simple.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la célérité c et à son rôle dans l'effet Doppler, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La célérité c dépend de la vitesse de la source sonore.",
+          "v": false,
+          "e": "FAUX : c caractérise le milieu traversé, pas la source. Que la source bouge ou non, le son se propage à la même vitesse.",
+          "sourceQuote": "la célérité c est une signature du milieu traversé , pas de la source sonore"
+        },
+        {
+          "t": "C'est parce que c ne bouge pas que le décalage de fréquence peut servir à mesurer une vitesse.",
+          "v": true,
+          "e": "VRAI. Comme la célérité est fixe, tout écart de fréquence ne peut venir que du mouvement — d'où la possibilité d'en déduire une vitesse.",
+          "sourceQuote": "le décalage de fréquence, lui, va pouvoir servir à mesurer une vitesse"
+        },
+        {
+          "t": "Dans l'air, le son se propage à environ 34 m/s.",
+          "v": false,
+          "e": "FAUX : dans l'air, le son voyage à environ 340 m/s, soit dix fois plus. C'est ce chiffre qu'on utilise dans les applications.",
+          "sourceQuote": "le son voyage à ≈ 340 m/s, que la source bouge ou non"
+        },
+        {
+          "t": "Dans l'effet Doppler, la source modifie sa fréquence d'émission et c change également.",
+          "v": false,
+          "e": "FAUX : ni la fréquence émise ni la célérité ne changent. Le seul terme qui bouge est la fréquence perçue f'.",
+          "sourceQuote": "la source n'a pas changé sa fréquence d'émission, et c non plus"
+        },
+        {
+          "t": "La célérité est une signature de la source sonore et non du milieu.",
+          "v": false,
+          "e": "FAUX : c'est exactement l'inverse. La célérité est une propriété du milieu traversé, et pas du tout de la source.",
+          "sourceQuote": "la célérité c est une signature du milieu traversé , pas de la source sonore"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-111-effet-doppler-cas-simple.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à l'exemple chiffré de la fiche et aux conversions de vitesse, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans l'exemple, la sirène émet à 1 000 Hz et la voiture roule à 30 m/s.",
+          "v": true,
+          "e": "VRAI. Ce sont les deux données de départ : f = 1 000 Hz pour la sirène garée, v = 30 m/s pour le récepteur mobile.",
+          "sourceQuote": "à f = 1 000 Hz. Toi, tu roules sur la route qui longe l'hôpital à v = 30 m/s"
+        },
+        {
+          "t": "Une vitesse de 30 m/s correspond à 108 km/h.",
+          "v": true,
+          "e": "VRAI. On multiplie par 3,6 pour passer des m/s aux km/h : 30 × 3,6 = 108 km/h.",
+          "sourceQuote": "30 m/s × 3,6 = 108 km/h"
+        },
+        {
+          "t": "Pour passer des mètres par seconde aux kilomètres par heure, on divise par 3,6.",
+          "v": false,
+          "e": "FAUX : dans ce sens on multiplie par 3,6. C'est le passage inverse, des km/h aux m/s, qui se fait par division.",
+          "sourceQuote": "m/s → km/h, on multiplie par 3,6"
+        },
+        {
+          "t": "Dans cet exemple, le rapport v/c vaut environ 0,09, soit 9 % de la vitesse du son.",
+          "v": true,
+          "e": "VRAI. 30 divisé par 340 donne environ 0,09 : la voiture roule à 9 % de la vitesse du son.",
+          "sourceQuote": "v/c = 30/340 ≈ 0,09 : tu roules à 9 % de la vitesse du son"
+        },
+        {
+          "t": "Le facteur 3,6 vient du rapport entre 1 000 mètres et 100 secondes.",
+          "v": false,
+          "e": "FAUX : il vient du rapport entre 1 000 mètres et 3 600 secondes, c'est-à-dire entre un kilomètre et une heure.",
+          "sourceQuote": "1 km/h = 1 000 m ÷ 3 600 s = 1/3,6 m/s"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-111-effet-doppler-cas-simple.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à l'application chiffrée menée jusqu'au bout et aux ordres de grandeur de vitesse, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "En fonçant vers l'ambulance, la fréquence perçue monte à 1 090 Hz.",
+          "v": true,
+          "e": "VRAI. À l'approche, le facteur vaut 1,09 : 1 000 × 1,09 = 1 090 Hz, soit environ 90 Hz de plus.",
+          "sourceQuote": "f' = 1 000 × (1 − (−0,09)) = 1 000 × 1,09 = 1 090 Hz → son plus aigu"
+        },
+        {
+          "t": "Après l'avoir dépassée, la fréquence perçue tombe à 910 Hz.",
+          "v": true,
+          "e": "VRAI. En s'éloignant, le facteur vaut 0,91 : 1 000 × 0,91 = 910 Hz, soit environ 90 Hz de moins.",
+          "sourceQuote": "f' = 1 000 × 0,91 = 910 Hz → son plus grave de ~90 Hz"
+        },
+        {
+          "t": "L'écart total entre l'aigu et le grave représente environ 18 % de la fréquence émise.",
+          "v": true,
+          "e": "VRAI. Environ 180 Hz d'écart sur 1 000 Hz : c'est très perceptible à l'oreille, d'où le son caractéristique du passage.",
+          "sourceQuote": "représente ~180 Hz sur 1 000 = 18 %"
+        },
+        {
+          "t": "Le repère mémorisable est que 36 km/h correspondent à 10 m/s.",
+          "v": true,
+          "e": "VRAI. C'est le repère de conversion à garder en tête, puisqu'il suffit ensuite de multiplier ou diviser.",
+          "sourceQuote": "Mémo Medeos : 36 km/h = 10 m/s"
+        },
+        {
+          "t": "Une voiture en ville roule à environ 14 m/s.",
+          "v": true,
+          "e": "VRAI. C'est l'ordre de grandeur donné pour la ville, soit 50 km/h environ.",
+          "sourceQuote": "voiture en ville ≈ 14 m/s (50 km/h)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-111-effet-doppler-cas-simple.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives aux pièges de l'effet Doppler et à la manière de retrouver le signe, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le bon réflexe le jour de l'épreuve est de retrouver le signe par l'intuition : s'éloigner donne un son plus grave.",
+          "v": true,
+          "e": "VRAI. Plutôt que de chercher le signe en mémoire, on part de l'intuition sonore : s'éloigner fait baisser la fréquence perçue, donc le son devient grave.",
+          "sourceQuote": "s'éloigner → f' baisse → son grave"
+        },
+        {
+          "t": "Le facteur (1 − v/c) est supérieur à 1 quand le récepteur s'éloigne.",
+          "v": false,
+          "e": "FAUX : quand le récepteur s'éloigne, v est positive et le facteur devient inférieur à 1, donc f' est plus petite que f.",
+          "sourceQuote": "v > 0 (s'éloigne) < 1 f' < f → plus grave"
+        },
+        {
+          "t": "La formulation correcte consiste à dire que la sirène change de son au moment du passage.",
+          "v": false,
+          "e": "FAUX : c'est précisément l'erreur à ne pas commettre. La sirène n'a rien changé ; seule la fréquence perçue varie.",
+          "sourceQuote": "Ne dis jamais que « la sirène change de son »"
+        },
+        {
+          "t": "Le décalage entendu est exactement symétrique quand c'est la sirène qui passe devant l'observateur.",
+          "v": true,
+          "e": "VRAI. Que ce soit le récepteur ou la source qui se déplace, l'auditeur entend le même écart, une fois vers l'aigu puis une fois vers le grave.",
+          "sourceQuote": "c'est exactement symétrique quand c'est la sirène qui passe devant toi"
+        },
+        {
+          "t": "Dans la scène construite, l'oreille du conducteur joue le rôle de la source.",
+          "v": false,
+          "e": "FAUX : l'oreille est le récepteur mobile, celui qui se déplace à la vitesse v. La source, c'est la sirène restée fixe.",
+          "sourceQuote": "ton oreille est le récepteur , à la vitesse v"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-112-doppler-medical-facteur-2.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives au principe du Doppler médical, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La sonde joue à la fois le rôle d'émetteur et de récepteur.",
+          "v": true,
+          "e": "VRAI. C'est la particularité du montage : la même sonde envoie l'ultrason et recueille l'écho qui revient.",
+          "sourceQuote": "la sonde fait les deux rôles : elle émet l'ultrason"
+        },
+        {
+          "t": "L'ultrason se réfléchit sur les globules rouges en mouvement.",
+          "v": true,
+          "e": "VRAI. Ce sont les globules rouges circulants qui renvoient l'ultrason : c'est leur mouvement qui produit le décalage exploité.",
+          "sourceQuote": "qui se réfléchit sur les globules rouges en mouvement"
+        },
+        {
+          "t": "Le décalage Doppler ne se produit qu'une seule fois, au moment de l'émission.",
+          "v": false,
+          "e": "FAUX : il se produit deux fois, une fois à l'aller et une fois au retour. C'est justement l'origine du facteur 2.",
+          "sourceQuote": "le décalage Doppler se produit une fois à l'aller, une fois au retour"
+        },
+        {
+          "t": "Les deux décalages s'ajoutent l'un à l'autre.",
+          "v": true,
+          "e": "VRAI. Ils vont dans le même sens et s'additionnent, ce qui double le décalage total mesuré par la sonde.",
+          "sourceQuote": "une fois au retour. Les deux s'ajoutent"
+        },
+        {
+          "t": "Le Doppler médical sert à mesurer la vitesse du sang.",
+          "v": true,
+          "e": "VRAI. C'est l'objectif clinique de la mesure : connaître la vitesse d'écoulement du sang dans un vaisseau.",
+          "sourceQuote": "on utilise une variante astucieuse de cet effet pour mesurer la vitesse du sang"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-112-doppler-medical-facteur-2.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux deux scènes enchaînées sur le même ultrason, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "À l'aller, le globule rouge tient le rôle du récepteur mobile.",
+          "v": true,
+          "e": "VRAI. La sonde émet, le globule reçoit en se déplaçant : c'est exactement la scène du récepteur mobile devant une source fixe.",
+          "sourceQuote": "Aller (sonde → sang) = scène A « récepteur mobile »"
+        },
+        {
+          "t": "À l'aller, le globule est comparé à la voiture qui passe devant la sirène garée.",
+          "v": true,
+          "e": "VRAI. C'est l'analogie retenue : le globule est la voiture en mouvement, la sonde est la sirène immobile.",
+          "sourceQuote": "il joue exactement le rôle de ta voiture qui passe devant la sirène garée"
+        },
+        {
+          "t": "Au retour, le globule devient la source en mouvement et la sonde le récepteur fixe.",
+          "v": true,
+          "e": "VRAI. Les rôles s'inversent : c'est le globule qui réémet en se déplaçant, et la sonde qui reçoit sans bouger.",
+          "sourceQuote": "le globule devient la source en mouvement , la sonde le récepteur fixe"
+        },
+        {
+          "t": "Au retour, le globule est comparé à l'ambulance qui passe devant toi sur le trottoir.",
+          "v": true,
+          "e": "VRAI. C'est l'analogie de la seconde scène : source mobile, observateur immobile.",
+          "sourceQuote": "le rôle de l'ambulance qui passe devant toi sur le trottoir"
+        },
+        {
+          "t": "Les deux décalages se produisent en sens opposés et se compensent partiellement.",
+          "v": false,
+          "e": "FAUX : ils se produisent dans le même sens — les deux compriment, ou les deux étirent — et c'est pour cela qu'ils s'additionnent au lieu de se compenser.",
+          "sourceQuote": "subit le décalage deux fois de suite, dans le même sens"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-112-doppler-medical-facteur-2.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à l'angle α et au terme cos α, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'angle α se mesure entre la direction de la sonde et le flux sanguin.",
+          "v": true,
+          "e": "VRAI. C'est la définition retenue : α est l'angle que fait l'axe de la sonde avec la direction d'écoulement du sang.",
+          "sourceQuote": "on appelle α l'angle entre la direction de la sonde et le flux sanguin"
+        },
+        {
+          "t": "En pratique, la sonde est toujours placée parfaitement alignée avec le vaisseau.",
+          "v": false,
+          "e": "FAUX : un alignement parfait supposerait de placer la sonde à l'intérieur de l'artère. On la pose obliquement sur la peau, d'où l'angle α.",
+          "sourceQuote": "la sonde n'est jamais parfaitement alignée avec le vaisseau"
+        },
+        {
+          "t": "La totalité de la vitesse du globule contribue à l'effet Doppler, quel que soit l'angle.",
+          "v": false,
+          "e": "FAUX : seule la part du mouvement dirigée vers la sonde compte. C'est précisément le rôle du cos α que de ne retenir que cette part.",
+          "sourceQuote": "Seule la composante du mouvement parallèle à la sonde contribue à l'effet Doppler"
+        },
+        {
+          "t": "Cette composante parallèle vaut v divisé par cos α.",
+          "v": false,
+          "e": "FAUX : elle vaut v multiplié par cos α. La composante est plus petite que la vitesse réelle, pas plus grande.",
+          "sourceQuote": "cette composante vaut v · cos α"
+        },
+        {
+          "t": "La démonstration du cos α est faite dans cette fiche même.",
+          "v": false,
+          "e": "FAUX : elle est renvoyée à la fiche suivante. Ici, on retient seulement à quoi sert ce terme, pour se concentrer sur le facteur 2.",
+          "sourceQuote": "on le démontre dans la fiche suivante"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-112-doppler-medical-facteur-2.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à l'écriture de la formule Doppler médicale et à son signe, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le décalage total s'écrit environ 2 × f × (v · cos α) / c.",
+          "v": true,
+          "e": "VRAI. C'est la somme des deux décalages, celui de l'aller et celui du retour, d'où le facteur 2 en tête.",
+          "sourceQuote": "Δf total = Δf₁ + Δf₂ ≈ 2 × f × (v · cos α) / c"
+        },
+        {
+          "t": "Le signe moins traduit le fait que la fréquence reçue est plus basse quand le sang s'éloigne de la sonde.",
+          "v": true,
+          "e": "VRAI. Sang qui s'éloigne, fréquence reçue plus basse que la fréquence émise : c'est ce que porte le signe négatif.",
+          "sourceQuote": "le signe « − » indique que f' < f quand le sang s'éloigne de la sonde"
+        },
+        {
+          "t": "Quand le sang vient vers la sonde, la fréquence reçue est plus basse que la fréquence émise.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. Un sang qui vient vers la sonde donne une fréquence reçue plus élevée que la fréquence émise.",
+          "sourceQuote": "f' > f quand le sang vient vers la sonde"
+        },
+        {
+          "t": "Le membre de gauche de la formule est une quantité calculée, jamais mesurée par l'appareil.",
+          "v": false,
+          "e": "FAUX : le décalage relatif de fréquence est justement ce que l'appareil mesure directement. C'est le point de départ de tout le raisonnement.",
+          "sourceQuote": "C'est la quantité directement mesurée par l'appareil"
+        },
+        {
+          "t": "Même sans aller-retour, la formule contiendrait le facteur 2.",
+          "v": false,
+          "e": "FAUX : sans aller-retour il n'y aurait qu'un seul décalage, comme pour la sirène, et donc pas de facteur 2.",
+          "sourceQuote": "il n'y aurait qu'un seul décalage — et donc pas de 2"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-112-doppler-medical-facteur-2.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux grandeurs connues de la sonde et à l'usage clinique de la mesure, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La fréquence émise est choisie par la sonde, typiquement autour de 5 MHz.",
+          "v": true,
+          "e": "VRAI. C'est la sonde qui fixe sa fréquence d'émission, valeur qu'elle connaît donc parfaitement.",
+          "sourceQuote": "Elle le sait, c'est elle qui choisit (typiquement 5 MHz)"
+        },
+        {
+          "t": "La célérité des ultrasons dans les tissus mous est prise égale à environ 1 540 m/s.",
+          "v": true,
+          "e": "VRAI. C'est une constante connue d'avance, propre aux tissus mous : elle n'a pas à être mesurée à chaque examen.",
+          "sourceQuote": "c ≈ 1 540 m/s Célérité des ultrasons dans les tissus mous"
+        },
+        {
+          "t": "L'angle α est réglé et lu par le médecin sur l'écran de l'échographe.",
+          "v": true,
+          "e": "VRAI. C'est le médecin qui positionne la sonde et lit l'angle affiché : α fait donc partie des données connues.",
+          "sourceQuote": "Le médecin le règle et le lit sur l'écran de l'écho"
+        },
+        {
+          "t": "La vitesse du sang est la seule inconnue de l'équation.",
+          "v": true,
+          "e": "VRAI. Tout le reste est connu ou mesuré : c'est pour obtenir v que la formule existe.",
+          "sourceQuote": "v — vitesse du sang La seule inconnue"
+        },
+        {
+          "t": "Une vitesse trop élevée dans la carotide fait suspecter une sténose.",
+          "v": true,
+          "e": "VRAI. Le sang accélère au passage d'un rétrécissement : une vitesse anormalement haute oriente donc vers une sténose.",
+          "sourceQuote": "Une vitesse trop élevée dans la carotide → suspicion de sténose"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-112-doppler-medical-facteur-2.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la lecture concrète de la formule et à l'inversion faite par l'appareil, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Si la sonde émet à 5 MHz et reçoit 4,997 MHz, le décalage relatif vaut environ −0,06 %.",
+          "v": true,
+          "e": "VRAI. C'est l'exemple chiffré : un écart minuscule en valeur absolue, mais parfaitement mesurable par l'appareil.",
+          "sourceQuote": "reçoit 4,997 MHz, ce membre vaut −0,0006 (= −0,06 %)"
+        },
+        {
+          "t": "L'appareil calcule la vitesse par v = c × (f − f') / (2 × f × cos α).",
+          "v": true,
+          "e": "VRAI. Il retourne simplement la formule pour isoler v, puisque c'est la seule grandeur inconnue.",
+          "sourceQuote": "une simple inversion : v = c × (f − f') / (2 × f × cos α)"
+        },
+        {
+          "t": "La vitesse obtenue est affichée en mètres par seconde sur l'écran.",
+          "v": false,
+          "e": "FAUX : elle est affichée en centimètres par seconde, unité usuelle des vitesses circulatoires.",
+          "sourceQuote": "Il affiche cette vitesse en cm/s sur l'écran"
+        },
+        {
+          "t": "Une vitesse anormalement basse dans une artère rénale évoque une obstruction.",
+          "v": true,
+          "e": "VRAI. Un flux ralenti en aval oriente vers un obstacle sur l'artère : c'est l'autre usage clinique de la mesure.",
+          "sourceQuote": "une vitesse anormalement basse dans une artère rénale → suspicion d' obstruction"
+        },
+        {
+          "t": "Dans le membre de droite, tout est connu sauf la fréquence émise f.",
+          "v": false,
+          "e": "FAUX : f est connue, c'est la sonde qui la choisit. La seule grandeur inconnue du membre de droite est la vitesse v.",
+          "sourceQuote": "Tout y est connu sauf v"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-112-doppler-medical-facteur-2.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives au facteur 2 et aux erreurs classiques du Doppler vasculaire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Oublier le facteur 2 conduit à une vitesse calculée deux fois trop grande.",
+          "v": true,
+          "e": "VRAI. Le 2 est au dénominateur au moment d'isoler v : le supprimer double artificiellement le résultat.",
+          "sourceQuote": "Sans lui, la vitesse calculée sort deux fois trop grande"
+        },
+        {
+          "t": "Le facteur 2 est une convention d'écriture sans signification physique.",
+          "v": false,
+          "e": "FAUX : il traduit un fait physique précis, le double décalage lié à l'aller-retour de l'ultrason.",
+          "sourceQuote": "Il n'est pas décoratif : il est là uniquement parce que l'ultrason fait l'aller-retour"
+        },
+        {
+          "t": "Dès qu'une onde part puis revient, il faut se méfier d'un facteur 2 dans la formule.",
+          "v": true,
+          "e": "VRAI. C'est un réflexe général : écho, radar, Doppler vasculaire — le phénomène se joue deux fois sur le même trajet.",
+          "sourceQuote": "un facteur 2 va probablement apparaître quelque part dans la formule"
+        },
+        {
+          "t": "Devant un énoncé de Doppler vasculaire, il faut partir de la formule de la sirène.",
+          "v": false,
+          "e": "FAUX : la formule de la sirène ne contient qu'un seul décalage. Il faut partir de la formule médicale, celle qui porte le 2.",
+          "sourceQuote": "ne pars pas de la formule de la sirène : elle ne contient qu'un seul décalage"
+        },
+        {
+          "t": "Le Doppler médical fait intervenir deux ultrasons différents, l'un à l'aller, l'autre au retour.",
+          "v": false,
+          "e": "FAUX : c'est un seul et même ultrason qui parcourt les deux scènes, l'aller puis le retour.",
+          "sourceQuote": "c'est ces deux scènes enchaînées sur le même ultrason"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-113-nerf-phrenique-c3-c4-c5.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à l'innervation du diaphragme, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le diaphragme est innervé par le nerf phrénique.",
+          "v": true,
+          "e": "VRAI. C'est le nerf moteur du diaphragme : sans lui, le muscle ne reçoit plus aucun ordre.",
+          "sourceQuote": "Innervation — par le nerf phrénique"
+        },
+        {
+          "t": "Le nerf phrénique naît du plexus cervical.",
+          "v": true,
+          "e": "VRAI. Il prend naissance dans le plexus cervical, c'est-à-dire au niveau du cou.",
+          "sourceQuote": "qui naît du plexus cervical à partir des racines C3-C4-C5"
+        },
+        {
+          "t": "Ses racines sont C3, C4 et C5.",
+          "v": true,
+          "e": "VRAI. Trois racines cervicales successives, C3, C4 et C5, se réunissent pour former le nerf phrénique.",
+          "sourceQuote": "à partir des racines C3-C4-C5"
+        },
+        {
+          "t": "Le mnémo classique associé est « C3, C4, C5 keep the diaphragm alive ».",
+          "v": true,
+          "e": "VRAI. C'est le moyen mnémotechnique le plus répandu pour retenir ces trois racines.",
+          "sourceQuote": "C3, C4, C5 keep the diaphragm alive"
+        },
+        {
+          "t": "La commande du diaphragme part d'un étage thoracique de la moelle.",
+          "v": false,
+          "e": "FAUX : c'est l'erreur classique. Le muscle est en bas, mais sa commande vient du cou, d'un étage cervical.",
+          "sourceQuote": "chercher une innervation « thoracique » est FAUX"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-113-nerf-phrenique-c3-c4-c5.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la situation du diaphragme et au trajet de sa commande nerveuse, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le diaphragme sépare le thorax de l'abdomen.",
+          "v": true,
+          "e": "VRAI. C'est la cloison musculaire située tout en bas de la cage thoracique, entre les deux cavités.",
+          "sourceQuote": "Il sépare le thorax de l'abdomen, tout en bas de la cage thoracique"
+        },
+        {
+          "t": "Bien que le muscle soit situé en bas, ses ordres proviennent du cou.",
+          "v": true,
+          "e": "VRAI. C'est ce qui fait du diaphragme un cas à part : la distance entre le muscle et l'origine de sa commande.",
+          "sourceQuote": "pourtant ses ordres viennent du cou"
+        },
+        {
+          "t": "Le nerf phrénique traverse le médiastin pour rejoindre le diaphragme.",
+          "v": true,
+          "e": "VRAI. Il descend du cou jusqu'au diaphragme en traversant le médiastin — un trajet long, donc exposé.",
+          "sourceQuote": "du cou jusqu'au diaphragme, en traversant le médiastin"
+        },
+        {
+          "t": "Les racines C3, C4 et C5 restent séparées jusqu'au diaphragme.",
+          "v": false,
+          "e": "FAUX : elles se rassemblent dès leur sortie de la moelle cervicale pour former un nerf unique, le phrénique.",
+          "sourceQuote": "sortent de la moelle cervicale et se rassemblent en un seul nerf, le phrénique"
+        },
+        {
+          "t": "Le nerf phrénique ne pilote qu'une seule des deux coupoles du diaphragme.",
+          "v": false,
+          "e": "FAUX : la commande née dans le cou pilote les deux coupoles diaphragmatiques.",
+          "sourceQuote": "va piloter les deux coupoles du diaphragme, tout en bas du thorax"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-113-nerf-phrenique-c3-c4-c5.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives aux conséquences d'une lésion du nerf phrénique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une lésion du nerf phrénique détruit le muscle diaphragmatique lui-même.",
+          "v": false,
+          "e": "FAUX : le muscle reste anatomiquement intact. Ce qui manque, c'est l'ordre nerveux qui le fait se contracter.",
+          "sourceQuote": "Le muscle est intact, mais plus personne ne lui donne d'ordre"
+        },
+        {
+          "t": "Une lésion du nerf phrénique entraîne une paralysie du diaphragme.",
+          "v": true,
+          "e": "VRAI. Couper la commande revient à paralyser le muscle : c'est tout l'intérêt clinique de la notion.",
+          "sourceQuote": "une lésion du nerf phrénique = une paralysie du diaphragme"
+        },
+        {
+          "t": "Seul un traumatisme cervical peut interrompre cette commande.",
+          "v": false,
+          "e": "FAUX : une compression sur le trajet, par exemple une tumeur du médiastin, produit le même effet sans toucher aux racines.",
+          "sourceQuote": "Une tumeur du médiastin comprime le phrénique en cours de route"
+        },
+        {
+          "t": "Une compression du nerf en cours de trajet reste sans conséquence sur la respiration.",
+          "v": false,
+          "e": "FAUX : le résultat est le même qu'une atteinte des racines, même si la lésion se situe beaucoup plus bas.",
+          "sourceQuote": "loin des racines, mais avec le même résultat"
+        },
+        {
+          "t": "Une lésion du phrénique laisse la respiration parfaitement normale.",
+          "v": false,
+          "e": "FAUX : la coupole concernée ne se contracte plus, ce qui affaiblit la respiration, voire la rend impossible.",
+          "sourceQuote": "la coupole correspondante ne se contracte plus → respiration affaiblie ou impossible"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-113-nerf-phrenique-c3-c4-c5.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la hauteur d'une lésion médullaire cervicale, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Au-dessus de C4, le diaphragme n'est plus innervé.",
+          "v": true,
+          "e": "VRAI. La lésion se situe au-dessus de l'origine des racines : la commande n'atteint plus le muscle.",
+          "sourceQuote": "Le diaphragme n'est plus innervé → arrêt respiratoire immédiat"
+        },
+        {
+          "t": "Une lésion médullaire haute, au-dessus de C4, provoque un arrêt respiratoire immédiat.",
+          "v": true,
+          "e": "VRAI. Sans commande diaphragmatique, la respiration s'arrête aussitôt, sauf assistance ventilatoire.",
+          "sourceQuote": "Au-dessus de C4 lésion médullaire haute Le diaphragme n'est plus innervé"
+        },
+        {
+          "t": "En dessous de C5, la respiration est préservée.",
+          "v": true,
+          "e": "VRAI. Les racines du phrénique sont épargnées : le diaphragme continue de recevoir sa commande.",
+          "sourceQuote": "En dessous de C5 lésion médullaire plus basse La respiration est préservée"
+        },
+        {
+          "t": "Une lésion située en dessous de C5 peut néanmoins paralyser les membres.",
+          "v": true,
+          "e": "VRAI. La respiration est sauvée, mais l'atteinte médullaire peut toucher les voies motrices des membres.",
+          "sourceQuote": "mais la lésion peut paralyser les membres"
+        },
+        {
+          "t": "La frontière décisive se situe entre C4 et C5.",
+          "v": true,
+          "e": "VRAI. De part et d'autre de C4/C5, les deux issues respiratoires sont opposées : c'est le niveau à repérer.",
+          "sourceQuote": "La frontière, c'est C4/C5 — et de part et d'autre, les deux issues sont opposées"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-113-nerf-phrenique-c3-c4-c5.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux deux mécanismes qui interrompent la commande du diaphragme, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un traumatisme cervical peut léser les racines C3-C4-C5 à la source même du nerf.",
+          "v": true,
+          "e": "VRAI. C'est la première situation classique : l'atteinte se produit dans le cou, là où le nerf prend naissance.",
+          "sourceQuote": "Il lèse les racines C3-C4-C5 , à la source même du nerf, dans le cou"
+        },
+        {
+          "t": "Une tumeur du médiastin peut comprimer le nerf phrénique sur son trajet.",
+          "v": true,
+          "e": "VRAI. C'est la seconde situation : la commande est interrompue en cours de route, dans le thorax.",
+          "sourceQuote": "Une tumeur du médiastin comprime le phrénique en cours de route"
+        },
+        {
+          "t": "Dans les deux cas, la coupole correspondante ne se contracte plus.",
+          "v": true,
+          "e": "VRAI. Que l'atteinte soit à la source ou sur le trajet, le résultat sur le muscle est identique.",
+          "sourceQuote": "Dans les deux cas, la coupole correspondante ne se contracte plus"
+        },
+        {
+          "t": "La conséquence est une respiration affaiblie, voire impossible.",
+          "v": true,
+          "e": "VRAI. Selon l'étendue de l'atteinte, la ventilation est diminuée ou totalement abolie du côté concerné.",
+          "sourceQuote": "ne se contracte plus : respiration affaiblie ou impossible"
+        },
+        {
+          "t": "La compression médiastinale agit loin des racines mais donne le même résultat.",
+          "v": true,
+          "e": "VRAI. Peu importe l'endroit où la commande est coupée : c'est le fait qu'elle soit coupée qui compte.",
+          "sourceQuote": "Une compression sur le trajet. Une tumeur du médiastin comprime le phrénique"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-113-nerf-phrenique-c3-c4-c5.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives au raisonnement à tenir devant un énoncé de lésion cervicale, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Devant l'expression « lésion médullaire cervicale », il faut chercher le niveau chiffré.",
+          "v": true,
+          "e": "VRAI. Le mot « cervicale » ne suffit pas : c'est le chiffre qui décide de l'issue respiratoire.",
+          "sourceQuote": "ne t'arrête jamais à « lésion médullaire cervicale » : cherche le chiffre"
+        },
+        {
+          "t": "La frontière C4/C5 sépare la survie du décès immédiat sans assistance ventilatoire.",
+          "v": true,
+          "e": "VRAI. C'est ce qui rend ce niveau si important : au-dessus, la ventilation artificielle devient indispensable.",
+          "sourceQuote": "la limite entre survie et décès immédiat sans assistance ventilatoire"
+        },
+        {
+          "t": "Une lésion située au-dessus de C4 laisse la respiration se poursuivre spontanément.",
+          "v": false,
+          "e": "FAUX : au-dessus de C4, la respiration s'arrête. C'est en dessous de C5 qu'elle continue.",
+          "sourceQuote": "Au-dessus de C4, la respiration s'arrête. En dessous de C5, elle continue"
+        },
+        {
+          "t": "Le diaphragme assure environ 75 % du travail inspiratoire au repos.",
+          "v": true,
+          "e": "VRAI. C'est le muscle inspiratoire principal : d'où la gravité immédiate de toute atteinte de sa commande.",
+          "sourceQuote": "assure ~75 % du travail inspiratoire au repos"
+        },
+        {
+          "t": "Quand la lésion touche la moelle, la hauteur de l'atteinte n'a pas d'importance.",
+          "v": false,
+          "e": "FAUX : la hauteur est au contraire la seule chose qui compte, puisqu'elle détermine si les racines du phrénique sont au-dessus ou en dessous de la lésion.",
+          "sourceQuote": "tout dépend alors d'une seule chose : sa hauteur"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-113-nerf-phrenique-c3-c4-c5.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives au schéma et aux confusions fréquentes sur le nerf phrénique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Sur le schéma, les racines cervicales se rassemblent en un nerf unique.",
+          "v": true,
+          "e": "VRAI. Les trois racines colorées sortent de la moelle cervicale puis convergent pour former le nerf phrénique.",
+          "sourceQuote": "se rassemblent en un seul nerf, le phrénique"
+        },
+        {
+          "t": "Le nerf phrénique naît du plexus brachial.",
+          "v": false,
+          "e": "FAUX : il naît du plexus cervical. Le plexus brachial commande le membre supérieur, pas le diaphragme.",
+          "sourceQuote": "qui naît du plexus cervical à partir des racines C3-C4-C5"
+        },
+        {
+          "t": "Lors de l'inspiration, le diaphragme se contracte, s'aplatit et remonte.",
+          "v": false,
+          "e": "FAUX : en se contractant il s'aplatit et DESCEND. C'est cette descente qui augmente le volume thoracique.",
+          "sourceQuote": "un dôme qui se contracte, s'aplatit, descend"
+        },
+        {
+          "t": "Couper la commande du diaphragme laisse le muscle anatomiquement intact.",
+          "v": true,
+          "e": "VRAI. Le muscle n'est pas lésé : il est simplement privé d'ordre, donc incapable de se contracter.",
+          "sourceQuote": "Coupe ce nerf : le muscle reste intact"
+        },
+        {
+          "t": "Une lésion en dessous de C5 impose immédiatement une assistance ventilatoire.",
+          "v": false,
+          "e": "FAUX : en dessous de C5, la respiration est préservée. Le risque porte alors sur la motricité des membres, pas sur la ventilation.",
+          "sourceQuote": "La respiration est préservée — mais la lésion peut paralyser les membres"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-114-muscles-accessoires-et-tirage.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives aux muscles accessoires de l'inspiration, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les intercostaux externes soulèvent les côtes en bloc.",
+          "v": true,
+          "e": "VRAI. Leur contraction relève l'ensemble des côtes, ce qui élargit la cage thoracique.",
+          "sourceQuote": "Quand ils se contractent, ils soulèvent les côtes en bloc"
+        },
+        {
+          "t": "Les scalènes soulèvent les deux premières côtes vers le haut.",
+          "v": true,
+          "e": "VRAI. Ce sont des muscles du cou, et leur action porte sur les deux premières côtes.",
+          "sourceQuote": "Ils soulèvent les 2 premières côtes vers le haut"
+        },
+        {
+          "t": "Le sterno-cléido-mastoïdien abaisse le sternum.",
+          "v": false,
+          "e": "FAUX : le SCM soulève le sternum vers le haut. C'est un muscle inspiratoire, pas expiratoire.",
+          "sourceQuote": "Il soulève le sternum vers le haut"
+        },
+        {
+          "t": "Les pectoraux ne sont recrutés qu'à l'extrême.",
+          "v": true,
+          "e": "VRAI. Ils n'entrent en jeu que dans les situations les plus intenses, comme après un sprint ou lors d'un asthme grave.",
+          "sourceQuote": "Recrutés à l'extrême seulement — sportif après un sprint, asthme grave"
+        },
+        {
+          "t": "Le SCM est recruté en hyperventilation ou en détresse respiratoire.",
+          "v": true,
+          "e": "VRAI. Il n'intervient pas au repos : sa mise en jeu signale déjà un effort ventilatoire important.",
+          "sourceQuote": "Recruté en hyperventilation (respiration très rapide et très ample) ou en détresse"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-114-muscles-accessoires-et-tirage.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à l'expiration, de repos comme forcée, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Au repos, l'expiration met en jeu la contraction des muscles abdominaux.",
+          "v": false,
+          "e": "FAUX : au repos, l'expiration est passive et aucun muscle ne travaille. Les abdominaux n'interviennent qu'en expiration forcée.",
+          "sourceQuote": "au repos, l'expiration est passive . Aucun muscle ne travaille"
+        },
+        {
+          "t": "Au repos, c'est l'élasticité du poumon qui chasse l'air.",
+          "v": true,
+          "e": "VRAI. Le poumon distendu revient sur lui-même : ce simple retour élastique suffit à vider l'air.",
+          "sourceQuote": "c'est l'élasticité du poumon qui chasse l'air"
+        },
+        {
+          "t": "Les intercostaux internes soulèvent les côtes.",
+          "v": false,
+          "e": "FAUX : ce sont les externes qui soulèvent les côtes. Les internes les abaissent, ce qui rétrécit la cage.",
+          "sourceQuote": "Les intercostaux internes. Ils abaissent les côtes"
+        },
+        {
+          "t": "Lors de l'expiration forcée, les abdominaux tirent le diaphragme vers le bas.",
+          "v": false,
+          "e": "FAUX : ils écrasent les viscères, qui repoussent le diaphragme vers le HAUT — c'est ce mouvement ascendant qui expulse l'air.",
+          "sourceQuote": "qui poussent le diaphragme vers le haut → expulsion d'air"
+        },
+        {
+          "t": "Chanter ou tousser relève d'une expiration passive.",
+          "v": false,
+          "e": "FAUX : ce sont des expirations actives, qui recrutent les abdominaux et les intercostaux internes.",
+          "sourceQuote": "quand on souffle activement — parler longtemps, chanter, tousser"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-114-muscles-accessoires-et-tirage.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au tirage et à ses signes cliniques, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le creusement des fosses sus-claviculaires est dû à la traction des intercostaux internes.",
+          "v": false,
+          "e": "FAUX : ce creusement au-dessus des clavicules est produit par la traction des scalènes, muscles inspiratoires du cou.",
+          "sourceQuote": "les creux juste au-dessus des clavicules : ce sont les scalènes qui tirent"
+        },
+        {
+          "t": "Le battement des ailes du nez s'observe surtout chez l'adulte.",
+          "v": false,
+          "e": "FAUX : c'est un signe surtout observé chez l'enfant.",
+          "sourceQuote": "un battement des ailes du nez (chez l'enfant surtout)"
+        },
+        {
+          "t": "Le creusement intercostal s'observe à chaque expiration.",
+          "v": false,
+          "e": "FAUX : il se produit à chaque inspiration, quand le patient tire fortement pour faire entrer l'air.",
+          "sourceQuote": "un creusement intercostal entre les côtes à chaque inspiration"
+        },
+        {
+          "t": "Le tirage constitue un signe de gravité immédiate.",
+          "v": true,
+          "e": "VRAI. Sa présence indique que le patient mobilise tous ses renforts pour respirer : le niveau d'alerte monte aussitôt.",
+          "sourceQuote": "Ce sont des signes de gravité immédiate"
+        },
+        {
+          "t": "Aux urgences, la présence d'un tirage fait baisser le niveau d'alerte.",
+          "v": false,
+          "e": "FAUX : elle le fait monter d'un cran. C'est un signe de gravité, jamais un signe rassurant.",
+          "sourceQuote": "leur présence fait monter le niveau d'alerte d'un cran"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-114-muscles-accessoires-et-tirage.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la description précise des muscles accessoires, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les intercostaux externes augmentent le diamètre antéro-postérieur et latéral du thorax.",
+          "v": true,
+          "e": "VRAI. En relevant les côtes, ils élargissent la cage dans les deux dimensions, d'avant en arrière et latéralement.",
+          "sourceQuote": "augmentation du diamètre antéro-postérieur et latéral du thorax"
+        },
+        {
+          "t": "Les intercostaux externes sont orientés en biais vers le bas et l'avant.",
+          "v": true,
+          "e": "VRAI. C'est cette orientation oblique qui explique que leur contraction relève les côtes.",
+          "sourceQuote": "les muscles entre les côtes, orientés en biais vers le bas-avant"
+        },
+        {
+          "t": "Leur mouvement est comparé à une anse de seau que l'on relèverait.",
+          "v": true,
+          "e": "VRAI. L'image de l'anse de seau rend bien le mouvement de relèvement en bloc des côtes.",
+          "sourceQuote": "comme une anse de seau qu'on relèverait"
+        },
+        {
+          "t": "Les muscles abdominaux concernés sont le grand droit, les obliques et le transverse.",
+          "v": true,
+          "e": "VRAI. Ce sont les trois groupes cités pour l'expiration forcée.",
+          "sourceQuote": "Les muscles abdominaux (grand droit, obliques, transverse)"
+        },
+        {
+          "t": "Les scalènes sont des muscles du cou.",
+          "v": true,
+          "e": "VRAI. Comme le SCM, ils appartiennent à la région cervicale, ce qui explique le creusement sus-claviculaire du tirage.",
+          "sourceQuote": "Les scalènes (muscles du cou) . Ils soulèvent les 2 premières côtes"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-114-muscles-accessoires-et-tirage.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au recrutement des muscles selon la situation et à leur représentation sur le schéma, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Au repos, le diaphragme suffit, avec une légère assistance des intercostaux externes.",
+          "v": true,
+          "e": "VRAI. La ventilation de repos se fait presque entièrement avec le diaphragme, très peu aidé.",
+          "sourceQuote": "avec une légère assistance des intercostaux externes"
+        },
+        {
+          "t": "Les muscles accessoires sont recrutés à l'effort ou en cas de détresse respiratoire.",
+          "v": true,
+          "e": "VRAI. Ce sont des renforts : ils n'entrent en jeu que lorsque le diaphragme seul ne suffit plus.",
+          "sourceQuote": "à l' effort ou en cas de détresse respiratoire"
+        },
+        {
+          "t": "Leur rôle est d'amplifier le mouvement de la cage thoracique.",
+          "v": true,
+          "e": "VRAI. Ils viennent augmenter l'amplitude des mouvements thoraciques, donc le volume d'air mobilisé.",
+          "sourceQuote": "le corps recrute des muscles supplémentaires pour amplifier le mouvement de la cage thoracique"
+        },
+        {
+          "t": "Sur le schéma, les muscles inspiratoires sont figurés en rouge et les expiratoires en bleu.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. Les inspiratoires sont en bleu, les expiratoires en rouge.",
+          "sourceQuote": "en bleu, les inspiratoires (SCM et scalènes au cou, intercostaux externes"
+        },
+        {
+          "t": "Sur le schéma, les flèches des muscles expiratoires rentrent, car ils compriment la cage.",
+          "v": true,
+          "e": "VRAI. Le sens des flèches résume l'action : celles des expiratoires rentrent, celles des inspiratoires montent.",
+          "sourceQuote": "leurs flèches rentrent, ils compriment la cage"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-114-muscles-accessoires-et-tirage.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la distinction entre les deux couches d'intercostaux, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les intercostaux externes soulèvent les côtes, les internes les abaissent.",
+          "v": true,
+          "e": "VRAI. C'est la distinction à retenir absolument : externes en inspiration, internes en expiration forcée.",
+          "sourceQuote": "les externes soulèvent les côtes, les internes les abaissent"
+        },
+        {
+          "t": "Les intercostaux internes réalisent le mouvement exactement opposé à celui des externes.",
+          "v": true,
+          "e": "VRAI. Les deux couches ont des actions strictement inverses sur les côtes.",
+          "sourceQuote": "le mouvement exactement opposé à celui des externes"
+        },
+        {
+          "t": "Sur le schéma, les intercostaux internes sont représentés entre les côtes hautes.",
+          "v": false,
+          "e": "FAUX : ils sont figurés entre les côtes basses. Ce sont les intercostaux externes qui apparaissent entre les côtes hautes.",
+          "sourceQuote": "intercostaux internes entre les côtes basses"
+        },
+        {
+          "t": "Affirmer qu'un muscle se contracte pendant l'expiration de repos est une erreur.",
+          "v": true,
+          "e": "VRAI. L'expiration de repos est passive : aucun muscle n'y travaille, c'est le rappel élastique qui agit.",
+          "sourceQuote": "un QCM qui fait travailler un muscle pendant l' expiration de repos est FAUX"
+        },
+        {
+          "t": "Les intercostaux internes participent à l'inspiration forcée.",
+          "v": false,
+          "e": "FAUX : ils sont classés parmi les muscles expiratoires. L'inspiration forcée mobilise les externes, les scalènes, le SCM et les pectoraux.",
+          "sourceQuote": "les expiratoires (abdominaux, intercostaux internes entre les côtes basses)"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-114-muscles-accessoires-et-tirage.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives au contexte clinique du recrutement des muscles accessoires, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le tirage s'observe dans l'asthme grave, la pneumonie sévère ou une obstruction.",
+          "v": true,
+          "e": "VRAI. Ce sont les trois situations de détresse citées, dans lesquelles le patient recrute ses renforts.",
+          "sourceQuote": "détresse respiratoire (asthme grave, pneumonie sévère, obstruction)"
+        },
+        {
+          "t": "Les pectoraux sont recrutés dès le moindre effort respiratoire.",
+          "v": false,
+          "e": "FAUX : ils ne sont mobilisés qu'à l'extrême, dans les situations les plus intenses.",
+          "sourceQuote": "Les pectoraux (grands et petits) . Recrutés à l'extrême seulement"
+        },
+        {
+          "t": "En expiration forcée, la contraction des abdominaux écrase les viscères.",
+          "v": true,
+          "e": "VRAI. Les viscères comprimés repoussent alors le diaphragme vers le haut, ce qui expulse l'air.",
+          "sourceQuote": "Leur contraction écrase les viscères"
+        },
+        {
+          "t": "Les scalènes soulèvent le sternum et le SCM les deux premières côtes.",
+          "v": false,
+          "e": "FAUX : les rôles sont inversés. Les scalènes soulèvent les deux premières côtes, le SCM soulève le sternum.",
+          "sourceQuote": "Les scalènes (muscles du cou) . Ils soulèvent les 2 premières côtes vers le haut"
+        },
+        {
+          "t": "Le tirage traduit un travail respiratoire modéré, sans caractère d'urgence.",
+          "v": false,
+          "e": "FAUX : il traduit au contraire un patient qui travaille à fond pour respirer — c'est un signe de gravité immédiate.",
+          "sourceQuote": "le patient travaille à fond pour respirer"
+        }
+      ]
+    }
+  ]
+}

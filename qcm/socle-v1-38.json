@@ -1,0 +1,1351 @@
+{
+  "matiere": "mixte",
+  "chapitre": 0,
+  "note": "socle 1-7 — fiches sans QCM, ordre du Parcours",
+  "questions": [
+    {
+      "fiche": "physique-114-calculer-vitesse-doppler.html",
+      "origine": "ecrite",
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives aux grandeurs qui interviennent dans la formule Doppler médicale, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans cette formule, la seule inconnue est v, la vitesse du sang.",
+          "v": true,
+          "e": "VRAI. Tout le reste est donné ou connu : c'est bien la vitesse du sang qu'on cherche à isoler.",
+          "sourceQuote": "v = vitesse du sang (la seule inconnue)"
+        },
+        {
+          "t": "La célérité c des ultrasons dans les tissus mous vaut environ 1 540 m/s.",
+          "v": true,
+          "e": "VRAI. C'est la constante du milieu : 1 540 m/s dans les tissus mous, qu'on arrondit parfois à 1 500 pour le calcul de tête.",
+          "sourceQuote": "des ultrasons dans les tissus mous est 1 540"
+        },
+        {
+          "t": "Δf désigne la fréquence émise par la sonde.",
+          "v": false,
+          "e": "FAUX : Δf n'est pas une fréquence émise, c'est un écart de fréquences, celui que l'appareil mesure entre l'onde reçue et l'onde émise.",
+          "sourceQuote": "le décalage mesuré par l'appareil"
+        },
+        {
+          "t": "L'angle α est réglé par l'opérateur.",
+          "v": true,
+          "e": "VRAI. Contrairement à c, qui dépend du milieu, l'angle entre l'axe de la sonde et le flux est un réglage de l'opérateur, lisible à l'écran.",
+          "sourceQuote": "α = l'angle réglé par l'opérateur"
+        },
+        {
+          "t": "La fréquence f qui figure au dénominateur est la fréquence reçue en retour par la sonde.",
+          "v": false,
+          "e": "FAUX : f est la fréquence émise. La fréquence reçue, c'est f', et elle n'intervient qu'à travers le décalage Δf = f' − f.",
+          "sourceQuote": "f = la fréquence émise"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-114-calculer-vitesse-doppler.html",
+      "origine": "ecrite",
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la simplification de la formule lorsque l'angle vaut 60°, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "À 60°, le cosinus vaut 1/2, si bien que 2 × cos 60° est égal à 1.",
+          "v": true,
+          "e": "VRAI. C'est tout le ressort de l'astuce : le facteur 2 et le cosinus se compensent exactement.",
+          "sourceQuote": "comme cos 60° = 1/2, on a 2 × cos 60° = 1"
+        },
+        {
+          "t": "À cet angle, le dénominateur de la fraction s'effondre.",
+          "v": true,
+          "e": "VRAI. Puisque le produit 2 × cos α vaut 1, il ne reste plus que f au dénominateur.",
+          "sourceQuote": "Toute la fraction au dénominateur s'effondre"
+        },
+        {
+          "t": "La formule se réduit alors à v = c × |Δf| / f.",
+          "v": true,
+          "e": "VRAI. C'est la forme allégée, celle qu'on utilise dès que l'angle affiché est de 60°.",
+          "sourceQuote": "La formule se simplifie en : v = c × |Δf| / f"
+        },
+        {
+          "t": "Cette simplification correspond à une étape identifiée du réflexe de résolution, celle qu'on applique quand α vaut 60°.",
+          "v": true,
+          "e": "VRAI. Elle n'est pas une astuce isolée : elle est rangée comme une étape du déroulé, entre l'isolement de v et le remplacement des valeurs.",
+          "sourceQuote": "L'astuce de simplification, à α = 60°"
+        },
+        {
+          "t": "Grâce à elle, le premier calcul chiffré se fait sans calculatrice.",
+          "v": true,
+          "e": "VRAI. Une fois la fraction allégée, les chiffres du premier cas se manient de tête.",
+          "sourceQuote": "3 millions / 5 millions = 0,6 . Pas besoin de calculatrice"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-114-calculer-vitesse-doppler.html",
+      "origine": "ecrite",
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au réflexe de résolution en cinq étapes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La première étape consiste à séparer ce qu'on cherche de ce qu'on a.",
+          "v": true,
+          "e": "VRAI. C'est le point de départ du déroulé : identifier l'inconnue, puis lister les grandeurs connues.",
+          "sourceQuote": "Ce qu'on cherche, ce qu'on a"
+        },
+        {
+          "t": "L'inconnue du problème est la célérité c du milieu.",
+          "v": false,
+          "e": "FAUX : c est une constante du milieu, donc une donnée. L'inconnue, c'est la vitesse du sang.",
+          "sourceQuote": "Inconnue : v , la vitesse du sang"
+        },
+        {
+          "t": "Selon l'énoncé, on peut partir indifféremment de plusieurs formules.",
+          "v": false,
+          "e": "FAUX : le déroulé impose un point de départ unique, la formule Doppler médicale. C'est ce qui rend le geste reproductible.",
+          "sourceQuote": "On ne part jamais d'autre chose"
+        },
+        {
+          "t": "La dernière étape consiste à convertir le résultat en m/s, l'unité affichée par l'écran de l'écho.",
+          "v": false,
+          "e": "FAUX : l'écran affiche des cm/s. C'est bien en cm/s qu'on convertit le résultat avant de le lire.",
+          "sourceQuote": "on convertit le résultat en cm/s"
+        },
+        {
+          "t": "L'angle α fait partie des grandeurs à trouver, il n'est pas lisible à l'écran.",
+          "v": false,
+          "e": "FAUX : α figure parmi les grandeurs connues, justement parce qu'il se lit à l'écran.",
+          "sourceQuote": "l'angle lu à l'écran) et c (constante du milieu)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-114-calculer-vitesse-doppler.html",
+      "origine": "ecrite",
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives au premier cas chiffré, celui qui se fait de tête, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La fréquence émise est de 5 MHz.",
+          "v": true,
+          "e": "VRAI. C'est la fréquence de départ, commune aux deux cas traités.",
+          "sourceQuote": "5 MHz = 5 × 10⁶ Hz"
+        },
+        {
+          "t": "Le décalage mesuré vaut −2 000 Hz, soit −2 kHz.",
+          "v": true,
+          "e": "VRAI. La fréquence reçue est plus basse que la fréquence émise : le décalage est bien négatif, de 2 000 Hz en valeur absolue.",
+          "sourceQuote": "−2 000 Hz (= −2 kHz)"
+        },
+        {
+          "t": "Le calcul posé est 1 500 × 2 000 / 5 000 000.",
+          "v": true,
+          "e": "VRAI. Trois millions divisés par cinq millions : la fraction se simplifie en 3/5, sans calculatrice.",
+          "sourceQuote": "1 500 × 2 000 / 5 000 000"
+        },
+        {
+          "t": "La vitesse obtenue est de 0,6 m/s, soit 60 cm/s.",
+          "v": true,
+          "e": "VRAI. Et on rend le résultat en cm/s, puisque c'est l'unité de l'écran de l'écho.",
+          "sourceQuote": "0,6 m/s = 60 cm/s"
+        },
+        {
+          "t": "Dans ce premier cas, on prend c = 1 540 m/s.",
+          "v": false,
+          "e": "FAUX : le premier cas est calibré pour le calcul mental, on y arrondit la célérité à 1 500 m/s. La valeur 1 540 est celle du second cas.",
+          "sourceQuote": "≈ 1 500 m/s (arrondi)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-114-calculer-vitesse-doppler.html",
+      "origine": "ecrite",
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au second cas chiffré et au choix de la valeur de la célérité, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans le second cas, on conserve c = 1 540 m/s parce que la calculatrice est disponible.",
+          "v": true,
+          "e": "VRAI. Quand on n'a plus besoin que les chiffres tombent ronds, on garde la valeur exacte de la célérité.",
+          "sourceQuote": "en QCM avec calculatrice, on garde 1 540 — c'est le cas 2"
+        },
+        {
+          "t": "La valeur 1 500 m/s est un arrondi réservé aux énoncés calibrés pour le calcul mental.",
+          "v": true,
+          "e": "VRAI. Ce n'est pas une autre constante, c'est la même arrondie, pour que la division tombe juste.",
+          "sourceQuote": "On l'arrondit à 1 500 quand l'énoncé est calibré pour le calcul mental"
+        },
+        {
+          "t": "La véritable célérité des ultrasons dans les tissus mous est de 1 500 m/s.",
+          "v": false,
+          "e": "FAUX : la vraie valeur est 1 540 m/s. 1 500 n'est qu'un arrondi de confort pour le calcul de tête.",
+          "sourceQuote": "La vraie célérité des ultrasons dans les tissus mous est 1 540 m/s"
+        },
+        {
+          "t": "Dans le second cas, la fréquence reçue f' est fournie par l'énoncé.",
+          "v": false,
+          "e": "FAUX : f' n'est pas donnée dans ce second cas. C'est directement le décalage Δf qui est fourni, ce qui suffit puisque la formule ne réclame que lui.",
+          "sourceQuote": "4 998 000 Hz non donnée"
+        },
+        {
+          "t": "Le second cas aboutit à une vitesse d'environ 0,6 m/s.",
+          "v": false,
+          "e": "FAUX : 0,6 m/s est le résultat du premier cas. Le second donne environ 0,92 m/s, soit 92 cm/s.",
+          "sourceQuote": "≈ 0,92 m/s = 92 cm/s"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-114-calculer-vitesse-doppler.html",
+      "origine": "ecrite",
+      "lot": 6,
+      "arene": true,
+      "q": "Parmi les propositions suivantes relatives à la lecture clinique des vitesses obtenues sur une carotide commune, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une vitesse de 60 cm/s est une valeur normale en milieu de cycle.",
+          "v": true,
+          "e": "VRAI. Le résultat du premier cas ne sort pas de la fourchette attendue : rien d'anormal.",
+          "sourceQuote": "60 cm/s est dans la fourchette normale d'une carotide commune en milieu de cycle"
+        },
+        {
+          "t": "Le pic systolique d'une carotide commune monte à 80-100 cm/s.",
+          "v": true,
+          "e": "VRAI. C'est le haut de la fourchette physiologique, atteint au moment de l'éjection.",
+          "sourceQuote": "le pic systolique monte à 80-100 cm/s"
+        },
+        {
+          "t": "En diastole, la vitesse retombe à 20-30 cm/s.",
+          "v": true,
+          "e": "VRAI. Le flux ne s'arrête pas entre deux battements, mais il ralentit nettement.",
+          "sourceQuote": "la diastole tombe à 20-30 cm/s"
+        },
+        {
+          "t": "Une vitesse de 92 cm/s reste normale, à condition de la lire comme un pic systolique.",
+          "v": true,
+          "e": "VRAI. Le chiffre seul ne suffit pas : c'est le moment du cycle où il est mesuré qui le rend normal ou non.",
+          "sourceQuote": "dans la fourchette normale en pic systolique"
+        },
+        {
+          "t": "Trouver 250 cm/s avec les mêmes réglages ferait suspecter une sténose carotidienne.",
+          "v": true,
+          "e": "VRAI. Un rétrécissement accélère le flux ; on demande alors une imagerie complémentaire pour évaluer le risque d'accident vasculaire cérébral.",
+          "sourceQuote": "avec les mêmes réglages → suspicion de sténose carotidienne"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-114-calculer-vitesse-doppler.html",
+      "origine": "ecrite",
+      "lot": 7,
+      "arene": true,
+      "q": "Parmi les propositions suivantes relatives au signe du décalage et aux limites de la simplification, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Comme l'axe d'émission de la sonde pointe dans le même sens que le flux, le sang s'éloigne et le décalage sera négatif.",
+          "v": true,
+          "e": "VRAI. La géométrie se lit avant tout calcul : source et cible qui s'éloignent, décalage vers le grave, donc Δf négatif.",
+          "sourceQuote": "il pointe dans le même sens que le flux sanguin"
+        },
+        {
+          "t": "Un décalage positif mesuré avec la même géométrie signalerait un flux à contre-courant.",
+          "v": true,
+          "e": "VRAI. Le signe contredirait alors la direction visible sur l'image : régurgitation, faux trajet. Le signe est une information, pas un détail de calcul.",
+          "sourceQuote": "on saurait tout de suite qu'il y a un flux à contre-courant"
+        },
+        {
+          "t": "Dans le calcul de la vitesse, on garde le signe du décalage, si bien qu'une vitesse peut ressortir négative.",
+          "v": false,
+          "e": "FAUX : le calcul utilise la valeur absolue du décalage. La vitesse s'exprime toujours en positif ; le signe sert à lire le sens du flux, pas à chiffrer.",
+          "sourceQuote": "la vitesse s'exprime toujours en positif"
+        },
+        {
+          "t": "La simplification vaut aussi bien à 30° qu'à 45°.",
+          "v": false,
+          "e": "FAUX : elle ne vaut qu'à 60°. À tout autre angle, le dénominateur ne s'effondre pas et il faut le garder en entier.",
+          "sourceQuote": "La simplification 2 · cos α = 1 ne vaut qu'à 60°"
+        },
+        {
+          "t": "À 45°, le cosinus vaut environ 0,87.",
+          "v": false,
+          "e": "FAUX : 0,87 est la valeur approchée du cosinus de 30°. À 45°, le cosinus vaut environ 0,71.",
+          "sourceQuote": "À 30° (cos ≈ 0,87) ou 45° (cos ≈ 0,71)"
+        }
+      ]
+    },
+
+    {
+      "fiche": "anatomie-115-loi-de-boyle-seringue.html",
+      "origine": "ecrite",
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives au principe général de la mécanique ventilatoire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le poumon ne possède aucun muscle propre.",
+          "v": true,
+          "e": "VRAI. Il est entièrement passif : rien en lui ne peut le gonfler, il subit ce que la cage thoracique lui impose.",
+          "sourceQuote": "le poumon en soi n'a aucun muscle propre"
+        },
+        {
+          "t": "Pour le ventiler, il faut déformer la cage thoracique autour de lui.",
+          "v": true,
+          "e": "VRAI. C'est la seule façon de faire varier le volume : agir sur le contenant, pas sur le contenu.",
+          "sourceQuote": "il faut déformer la cage thoracique autour de lui"
+        },
+        {
+          "t": "En respiration normale, les muscles inspiratoires insufflent l'air dans les poumons.",
+          "v": false,
+          "e": "FAUX : on ne pousse jamais l'air à l'intérieur, on le tire. Les muscles créent une dépression, et c'est elle qui aspire l'air.",
+          "sourceQuote": "on n'insuffle pas l'air dans les poumons"
+        },
+        {
+          "t": "Quand la cage thoracique s'élargit, la pression intra-thoracique passe en dessous de la pression atmosphérique.",
+          "v": true,
+          "e": "VRAI. Le volume augmente d'abord, la pression chute ensuite : c'est l'ordre à respecter dans le raisonnement.",
+          "sourceQuote": "la pression intra-thoracique chute en dessous de la pression atmosphérique"
+        },
+        {
+          "t": "L'air extérieur, à plus haute pression, est alors aspiré par le nez et la bouche jusqu'aux alvéoles.",
+          "v": true,
+          "e": "VRAI. L'air se déplace toujours du plus haute pression vers la plus basse : il entre parce que le thorax est devenu la zone de basse pression.",
+          "sourceQuote": "aspiré par le nez et la bouche jusqu'aux alvéoles"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-115-loi-de-boyle-seringue.html",
+      "origine": "ecrite",
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à l'analogie de la seringue et au schéma qui la met en regard du thorax, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'analogie retenue est celle d'une seringue dont on tire le piston.",
+          "v": true,
+          "e": "VRAI. Le geste du piston tiré reproduit exactement ce que fait la cage thoracique à l'inspiration.",
+          "sourceQuote": "le principe d'une seringue dont on tire le piston"
+        },
+        {
+          "t": "Dans cette analogie, on introduit le liquide dans la seringue en le poussant vers l'intérieur.",
+          "v": false,
+          "e": "FAUX : on n'introduit rien. On agrandit le volume, et le liquide est aspiré — comme l'air dans le thorax.",
+          "sourceQuote": "on n'introduit pas le liquide"
+        },
+        {
+          "t": "Sur le schéma, le piston relâché correspond à un volume qui augmente et à un fluide aspiré.",
+          "v": false,
+          "e": "FAUX : le piston relâché, c'est l'inverse — le volume diminue, la pression monte et le fluide est chassé. C'est le piston tiré qui aspire.",
+          "sourceQuote": "le piston relâché : volume ↓, pression ↑, le fluide est chassé"
+        },
+        {
+          "t": "Sur le schéma, le diaphragme aplati est placé sous le piston relâché.",
+          "v": false,
+          "e": "FAUX : sous le piston relâché figure le diaphragme remonté en dôme. Le diaphragme aplati accompagne, lui, le piston tiré.",
+          "sourceQuote": "en dessous, le diaphragme remonté en dôme"
+        },
+        {
+          "t": "Sur ce schéma, c'est le sens des flèches d'air qui commande le changement de volume.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. Le volume change d'abord, et le sens des flèches d'air en découle.",
+          "sourceQuote": "le sens des flèches d'air découle du volume, jamais l'inverse"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-115-loi-de-boyle-seringue.html",
+      "origine": "ecrite",
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à l'énoncé de la loi de Boyle et à son application au thorax, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Elle s'énonce à température constante.",
+          "v": true,
+          "e": "VRAI. La condition de température constante fait partie de la loi : sans elle, la relation entre pression et volume ne tient plus.",
+          "sourceQuote": "la loi de Boyle : à température constante"
+        },
+        {
+          "t": "La pression d'un gaz y est inversement proportionnelle à son volume.",
+          "v": true,
+          "e": "VRAI. Quand l'un monte, l'autre descend : c'est tout le mécanisme de la ventilation.",
+          "sourceQuote": "la pression d'un gaz est inversement proportionnelle à son volume"
+        },
+        {
+          "t": "Elle s'écrit sous la forme d'un produit constant entre pression et volume.",
+          "v": true,
+          "e": "VRAI. Le produit de la pression par le volume reste constant : c'est la traduction chiffrée de la proportionnalité inverse.",
+          "sourceQuote": "Autrement dit : P × V = constante"
+        },
+        {
+          "t": "Si l'on augmente le volume d'un récipient fermé, la pression du gaz augmente elle aussi.",
+          "v": false,
+          "e": "FAUX : elle diminue. Un volume plus grand pour la même quantité de gaz, c'est une pression plus basse.",
+          "sourceQuote": "la pression du gaz à l'intérieur diminue"
+        },
+        {
+          "t": "Appliquée au thorax, elle donne quatre temps et quatre chiffres.",
+          "v": false,
+          "e": "FAUX : elle en donne trois — le repos, l'inspiration et l'expiration de repos.",
+          "sourceQuote": "elle donne trois temps, et trois chiffres"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-115-loi-de-boyle-seringue.html",
+      "origine": "ecrite",
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux valeurs de pression des trois temps du cycle, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Au repos, en fin d'expiration, la pression dans les poumons vaut environ 760 mmHg.",
+          "v": true,
+          "e": "VRAI. Elle est égale à la pression atmosphérique : sans différence de pression, aucun air ne circule.",
+          "sourceQuote": "égale à la pression atmosphérique , soit ~760 mmHg"
+        },
+        {
+          "t": "Au repos, il subsiste un léger courant d'air dans les voies aériennes.",
+          "v": false,
+          "e": "FAUX : à ce moment précis, l'air ne bouge pas du tout, puisque les pressions sont égales de part et d'autre.",
+          "sourceQuote": "soit ~760 mmHg . Aucun mouvement d'air"
+        },
+        {
+          "t": "À l'inspiration, la pression intra-thoracique descend de 10 à 30 mmHg sous la pression atmosphérique.",
+          "v": false,
+          "e": "FAUX : l'écart est bien plus modeste, de l'ordre de 1 à 3 mmHg. Il suffit pourtant à faire entrer l'air.",
+          "sourceQuote": "descend en dessous de la pression atmosphérique de ~1 à 3 mmHg"
+        },
+        {
+          "t": "À l'inspiration, ce sont le diaphragme et les intercostaux externes qui augmentent le volume thoracique.",
+          "v": true,
+          "e": "VRAI. Leur contraction agrandit la cage : c'est le premier maillon de la chaîne volume, pression, sens de l'air.",
+          "sourceQuote": "Diaphragme contracté + intercostaux externes"
+        },
+        {
+          "t": "À l'expiration de repos, la pression remonte de 5 à 10 mmHg au-dessus de l'atmosphérique.",
+          "v": false,
+          "e": "FAUX : là encore l'écart est de 1 à 3 mmHg, symétrique de celui de l'inspiration.",
+          "sourceQuote": "la pression remonte au-dessus de l'atmosphérique de ~1 à 3 mmHg"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-115-loi-de-boyle-seringue.html",
+      "origine": "ecrite",
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à l'expiration de repos et au rythme du cycle, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Elle survient muscles relâchés.",
+          "v": true,
+          "e": "VRAI. Aucun muscle expiratoire ne travaille : la cage reprend sa forme d'elle-même.",
+          "sourceQuote": "Muscles relâchés → la cage reprend sa forme"
+        },
+        {
+          "t": "Le retour de la cage se fait par élasticité passive du poumon et du gril costal.",
+          "v": true,
+          "e": "VRAI. Ce sont les tissus étirés à l'inspiration qui restituent leur énergie, sans dépense musculaire.",
+          "sourceQuote": "par élasticité passive du poumon et du gril costal"
+        },
+        {
+          "t": "Le volume diminue, la pression remonte au-dessus de l'atmosphérique, et l'air est chassé.",
+          "v": true,
+          "e": "VRAI. La même chaîne que pour l'inspiration, parcourue en sens inverse : le volume commande, la pression suit, l'air suit la pression.",
+          "sourceQuote": "la pression remonte au-dessus de l'atmosphérique"
+        },
+        {
+          "t": "Ce cycle se répète 12 à 15 fois par minute.",
+          "v": true,
+          "e": "VRAI. C'est le rythme de la ventilation de repos.",
+          "sourceQuote": "Ce cycle se répète 12 à 15 fois par minute"
+        },
+        {
+          "t": "Respirer ne demande aucune décision consciente.",
+          "v": true,
+          "e": "VRAI. La ventilation de repos se fait toute seule : il suffit de ne pas l'empêcher.",
+          "sourceQuote": "tu ne décides pas de respirer"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-115-loi-de-boyle-seringue.html",
+      "origine": "ecrite",
+      "lot": 6,
+      "arene": true,
+      "q": "Parmi les propositions suivantes relatives à la méthode à appliquer devant un énoncé de mécanique respiratoire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La première chose à chercher est quel muscle pousse l'air.",
+          "v": false,
+          "e": "FAUX : c'est justement la fausse piste. Aucun muscle ne pousse l'air ; il faut partir du volume thoracique.",
+          "sourceQuote": "ne cherche jamais quel muscle « pousse » l'air"
+        },
+        {
+          "t": "La chaîne à dérouler part du volume thoracique, passe par la pression, et se termine par le sens de l'air.",
+          "v": true,
+          "e": "VRAI. Toujours dans cet ordre, quel que soit l'énoncé : le volume commande, la pression suit, l'air suit la pression.",
+          "sourceQuote": "que devient le volume thoracique ? → donc la pression ?"
+        },
+        {
+          "t": "Comprendre ce principe résout environ 90 % des questions de mécanique respiratoire.",
+          "v": true,
+          "e": "VRAI. C'est un principe unique, réutilisable d'un énoncé à l'autre, plutôt qu'une liste de cas particuliers.",
+          "sourceQuote": "résout 90 % des questions de mécanique respiratoire"
+        },
+        {
+          "t": "Le poumon subit la dépression, il ne la produit pas.",
+          "v": true,
+          "e": "VRAI. Il n'a aucun rôle actif : c'est la cage thoracique qui crée la dépression, le poumon ne fait que la subir.",
+          "sourceQuote": "Le poumon, lui, ne fait rien : il subit la dépression"
+        },
+        {
+          "t": "Dans cette chaîne, c'est la pression qui change en premier et le volume qui suit.",
+          "v": false,
+          "e": "FAUX : le sens de lecture est l'inverse. Le volume change d'abord, la pression n'en est que la conséquence.",
+          "sourceQuote": "c'est le volume qui change en premier"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-115-loi-de-boyle-seringue.html",
+      "origine": "ecrite",
+      "lot": 7,
+      "arene": true,
+      "q": "Parmi les propositions suivantes relatives aux formulations pièges rencontrées sur la ventilation de repos, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un énoncé qui décrit une respiration normale où l'air est poussé dans les poumons peut être considéré comme exact.",
+          "v": false,
+          "e": "FAUX : cette formulation est fautive. En respiration normale, l'air est tiré par dépression, jamais poussé.",
+          "sourceQuote": "en respiration normale est FAUX : on le tire par dépression"
+        },
+        {
+          "t": "Le poumon se gonfle tout seul dès que les voies aériennes s'ouvrent.",
+          "v": false,
+          "e": "FAUX : il est passif. Ouvrir les voies aériennes ne suffit pas : sans déformation de la cage, il ne se passe rien.",
+          "sourceQuote": "il ne se gonfle pas tout seul"
+        },
+        {
+          "t": "L'air suit toujours les gradients de pression.",
+          "v": true,
+          "e": "VRAI. C'est la règle qui permet de prévoir le sens du flux une fois la pression connue.",
+          "sourceQuote": "qui suit toujours les gradients de pression"
+        },
+        {
+          "t": "Le poumon possède quelques fibres musculaires propres qui lui permettent une contraction autonome.",
+          "v": false,
+          "e": "FAUX : il n'a aucun muscle propre. Tout le travail vient du diaphragme et des muscles de la paroi thoracique.",
+          "sourceQuote": "le poumon en soi n'a aucun muscle propre"
+        },
+        {
+          "t": "La déformation de la cage thoracique est une conséquence de l'entrée d'air, et non sa cause.",
+          "v": false,
+          "e": "FAUX : c'est bien elle la cause. La déformation crée la dépression, et la dépression aspire l'air.",
+          "sourceQuote": "c'est cette déformation qui crée une dépression qui aspire l'air"
+        }
+      ]
+    },
+
+    {
+      "fiche": "anatomie-116-tube-9m-et-3-glandes-annexes.html",
+      "origine": "ecrite",
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à l'image générale de l'appareil digestif et à la raison d'être de la digestion, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'appareil digestif se résume à un tube auquel se greffent trois glandes annexes.",
+          "v": true,
+          "e": "VRAI. C'est la carte mentale à poser d'emblée : un conduit, et trois usines chimiques greffées dessus.",
+          "sourceQuote": "auquel se greffent 3 glandes annexes"
+        },
+        {
+          "t": "Le tube digestif est le conduit dans lequel passe la nourriture, de la bouche à l'anus.",
+          "v": true,
+          "e": "VRAI. Un seul conduit continu, plié et replié dans l'abdomen, avec des compartiments spécialisés.",
+          "sourceQuote": "le conduit dans lequel passe la nourriture, de la bouche à l'anus"
+        },
+        {
+          "t": "Avant de traverser la paroi intestinale, chaque aliment doit être démonté en briques élémentaires.",
+          "v": true,
+          "e": "VRAI. Une baguette n'est pas du glucose : c'est ce démontage qui justifie tout l'appareil digestif.",
+          "sourceQuote": "chaque aliment doit être démonté en briques élémentaires"
+        },
+        {
+          "t": "Ce démontage chimique réclame des enzymes et un environnement adapté.",
+          "v": true,
+          "e": "VRAI. Et c'est pour cela que chaque segment a son propre environnement chimique.",
+          "sourceQuote": "Ce démontage chimique demande des enzymes , un environnement adapté"
+        },
+        {
+          "t": "Le trajet complet demande 24 à 48 heures.",
+          "v": true,
+          "e": "VRAI. Le démontage prend du temps : il faut compter un à deux jours de la bouche à la sortie.",
+          "sourceQuote": "24 à 48 heures pour le trajet complet"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-116-tube-9m-et-3-glandes-annexes.html",
+      "origine": "ecrite",
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la distinction entre le tube digestif et les glandes annexes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les glandes annexes sont les glandes salivaires, le foie et le pancréas.",
+          "v": true,
+          "e": "VRAI. Trois glandes, et trois seulement, à distinguer soigneusement du tube lui-même.",
+          "sourceQuote": "glandes annexes — glandes salivaires, foie, pancréas"
+        },
+        {
+          "t": "Elles font partie du tube digestif, que la nourriture traverse successivement.",
+          "v": false,
+          "e": "FAUX : elles ne sont pas dans le tube. Elles vivent à côté et n'en font pas partie.",
+          "sourceQuote": "ne sont pas dans le tube : elles vivent à côté"
+        },
+        {
+          "t": "Elles déversent leurs sucs dans le tube par des canaux.",
+          "v": true,
+          "e": "VRAI. C'est leur seul lien avec le tube : un canal qui apporte le suc là où il faut.",
+          "sourceQuote": "déversent leurs sucs dans le tube par des canaux"
+        },
+        {
+          "t": "Le bol alimentaire passe par le foie avant d'atteindre l'intestin grêle.",
+          "v": false,
+          "e": "FAUX : la nourriture n'entre jamais dans le foie. C'est le piège classique de ce chapitre.",
+          "sourceQuote": "La nourriture n'entre jamais dans le foie ni dans le pancréas"
+        },
+        {
+          "t": "Les glandes annexes sont décrites comme des usines chimiques internes au tube.",
+          "v": false,
+          "e": "FAUX : elles sont externes. Elles travaillent pour le tube sans jamais recevoir la nourriture.",
+          "sourceQuote": "Ce sont des usines chimiques externes"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-116-tube-9m-et-3-glandes-annexes.html",
+      "origine": "ecrite",
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives aux longueurs des différents segments du tube digestif, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Bouche, pharynx et œsophage mesurent ensemble environ 30 cm.",
+          "v": true,
+          "e": "VRAI. Le premier tronçon est court : l'essentiel de la longueur se joue plus bas.",
+          "sourceQuote": "Bouche, pharynx et œsophage ~30 cm"
+        },
+        {
+          "t": "L'estomac mesure environ 25 cm.",
+          "v": true,
+          "e": "VRAI. Malgré son importance fonctionnelle, il ne pèse presque rien dans la longueur totale.",
+          "sourceQuote": "œsophage ~30 cm · estomac ~25 cm"
+        },
+        {
+          "t": "L'intestin grêle mesure 6 à 7 mètres.",
+          "v": true,
+          "e": "VRAI. C'est de loin le segment le plus long, et ce n'est pas un hasard : c'est là que se fait l'absorption.",
+          "sourceQuote": "estomac ~25 cm · intestin grêle ~6-7 m"
+        },
+        {
+          "t": "Le gros intestin mesure environ 3 mètres.",
+          "v": false,
+          "e": "FAUX : il fait environ 1,5 m, soit deux fois moins. Ne pas le confondre avec le grêle.",
+          "sourceQuote": "intestin grêle ~6-7 m · gros intestin ~1,5 m"
+        },
+        {
+          "t": "Le grêle représente à lui seul plus de 70 % de la longueur du tube.",
+          "v": true,
+          "e": "VRAI. Sur 9 mètres, il en occupe plus des deux tiers : c'est le chiffre qui explique la place des anses au centre de l'abdomen.",
+          "sourceQuote": "Le grêle pèse à lui seul plus de 70 % de la longueur"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-116-tube-9m-et-3-glandes-annexes.html",
+      "origine": "ecrite",
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives au rôle propre de chacune des glandes annexes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les glandes salivaires assurent une pré-digestion dans la bouche.",
+          "v": true,
+          "e": "VRAI. La digestion chimique commence dès la bouche, avant même la déglutition.",
+          "sourceQuote": "Les glandes salivaires dans la bouche (pré-digestion)"
+        },
+        {
+          "t": "Le foie et sa vésicule biliaire fournissent le cocktail d'enzymes et neutralisent l'acidité.",
+          "v": false,
+          "e": "FAUX : c'est le rôle du pancréas. Le foie et la vésicule, eux, émulsionnent les graisses.",
+          "sourceQuote": "le pancréas (cocktail d'enzymes + neutralisation acide)"
+        },
+        {
+          "t": "Le pancréas assure l'émulsion des graisses.",
+          "v": false,
+          "e": "FAUX : l'émulsion des graisses revient au foie et à sa vésicule biliaire. Les deux rôles sont souvent échangés dans les énoncés.",
+          "sourceQuote": "le foie et sa vésicule biliaire (émulsion des graisses)"
+        },
+        {
+          "t": "Les glandes annexes sont au nombre de quatre.",
+          "v": false,
+          "e": "FAUX : elles sont trois. Le chiffre fait partie de la phrase-résumé du chapitre.",
+          "sourceQuote": "1 tube de 9 m + 3 glandes annexes"
+        },
+        {
+          "t": "Sur la vue d'ensemble, le foie et le pancréas figurent parmi les repères ① à ⑦ qui suivent le trajet de la nourriture.",
+          "v": false,
+          "e": "FAUX : ils sont les deux derniers repères du schéma, placés à côté du tube et raccordés par des canaux. Ils ne figurent pas sur le trajet de la nourriture.",
+          "sourceQuote": "les numéros ① à ⑦ suivent le trajet de la nourriture"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-116-tube-9m-et-3-glandes-annexes.html",
+      "origine": "ecrite",
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux trois premiers postes de la chaîne — bouche, œsophage et estomac —, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La bouche associe un broyage mécanique et un début de digestion chimique.",
+          "v": true,
+          "e": "VRAI. Mastication d'un côté, action enzymatique de l'autre : c'est un poste de pré-traitement complet.",
+          "sourceQuote": "broyage mécanique (mastication) et début de digestion chimique"
+        },
+        {
+          "t": "Dans la bouche, l'amylase salivaire agit sur l'amidon.",
+          "v": true,
+          "e": "VRAI. C'est l'enzyme du premier poste, et elle vise précisément l'amidon.",
+          "sourceQuote": "début de digestion chimique (amylase salivaire sur l'amidon)"
+        },
+        {
+          "t": "L'œsophage transforme chimiquement le bol alimentaire avant de l'envoyer plus bas.",
+          "v": false,
+          "e": "FAUX : il ne transforme rien. C'est un tapis roulant : du transport pur, sans aucune transformation.",
+          "sourceQuote": "Œsophage = tapis roulant : transport pur, aucune transformation"
+        },
+        {
+          "t": "L'estomac démonte les protéines et stocke le bol de 1 à 4 heures.",
+          "v": true,
+          "e": "VRAI. Il joue trois rôles à la fois : démontage des protéines, homogénéisation et stockage temporaire.",
+          "sourceQuote": "démontage des protéines, homogénéisation, stockage temporaire"
+        },
+        {
+          "t": "L'estomac est décrit comme un mixeur alcalin.",
+          "v": false,
+          "e": "FAUX : c'est un mixeur acide. L'acidité est la marque de ce poste, et c'est le pancréas qui la neutralisera plus loin.",
+          "sourceQuote": "Estomac = mixeur acide : démontage des protéines"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-116-tube-9m-et-3-glandes-annexes.html",
+      "origine": "ecrite",
+      "lot": 6,
+      "arene": true,
+      "q": "Parmi les propositions suivantes relatives aux derniers postes de la chaîne — grêle, côlon, rectum et canal anal —, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans l'intestin grêle, 95 % des nutriments traversent la paroi.",
+          "v": true,
+          "e": "VRAI. C'est le poste principal, et le chiffre dit à lui seul pourquoi ce segment est aussi long.",
+          "sourceQuote": "95 % des nutriments traversent la paroi à cet endroit précis"
+        },
+        {
+          "t": "C'est le seul segment où les aliments digérés quittent le tube pour rejoindre le sang.",
+          "v": true,
+          "e": "VRAI. Ailleurs, on transporte, on démonte ou on récupère de l'eau, mais on n'absorbe pas les nutriments.",
+          "sourceQuote": "le seul segment où les aliments digérés quittent le tube"
+        },
+        {
+          "t": "Le côlon récupère l'eau et les électrolytes du chyme restant.",
+          "v": true,
+          "e": "VRAI. Poste de finition : récupération de l'eau, compactage en selles et fermentation par le microbiote.",
+          "sourceQuote": "récupération de l' eau et des électrolytes du chyme restant"
+        },
+        {
+          "t": "Le chyme désigne les selles compactées à la sortie du côlon.",
+          "v": false,
+          "e": "FAUX : le chyme est la bouillie semi-liquide et acide qui sort de l'estomac. Les selles, elles, sont le produit final du côlon.",
+          "sourceQuote": "la bouillie semi-liquide et acide qui sort de l'estomac"
+        },
+        {
+          "t": "L'évacuation est contrôlée par deux sphincters, l'un involontaire et l'autre volontaire.",
+          "v": true,
+          "e": "VRAI. Le sphincter interne est involontaire, l'externe est volontaire : c'est ce couple qui fait du rectum un vrai sas de sortie.",
+          "sourceQuote": "2 sphincters (interne involontaire + externe volontaire)"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-116-tube-9m-et-3-glandes-annexes.html",
+      "origine": "ecrite",
+      "lot": 7,
+      "arene": true,
+      "q": "Parmi les propositions suivantes relatives au mnémo de la chaîne de démontage et aux chiffres-clés du chapitre, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans ce mnémo, la chaîne représente le tube de 9 m.",
+          "v": true,
+          "e": "VRAI. L'image industrielle est calquée poste par poste sur l'anatomie du tube.",
+          "sourceQuote": "La chaîne = le tube de 9 m"
+        },
+        {
+          "t": "Les postes de travail correspondent aux segments : bouche, estomac, grêle, côlon.",
+          "v": true,
+          "e": "VRAI. Chaque poste retire une partie de l'objet qui arrive, puis envoie le reste au suivant.",
+          "sourceQuote": "Les postes de travail = les segments (bouche, estomac, grêle, côlon)"
+        },
+        {
+          "t": "Les fournisseurs de produits chimiques représentent les trois glandes annexes.",
+          "v": true,
+          "e": "VRAI. Elles livrent leurs sucs à la chaîne sans jamais recevoir la nourriture : de vrais fournisseurs extérieurs.",
+          "sourceQuote": "Les fournisseurs de produits chimiques = les 3 glandes annexes"
+        },
+        {
+          "t": "Les péages correspondent aux sphincters et les rails de l'usine aux quatre tuniques.",
+          "v": true,
+          "e": "VRAI. Les sphincters contrôlent le passage, et les quatre tuniques forment la structure répétée tout au long du tube.",
+          "sourceQuote": "Les péages = les sphincters. Les rails de l'usine = les 4 tuniques"
+        },
+        {
+          "t": "Les quatre chiffres-clés sont 9 m de tube, 3 glandes annexes, 4 tuniques pariétales et 3 grandes artères.",
+          "v": true,
+          "e": "VRAI. Ces quatre chiffres suffisent à tenir le squelette de tout le chapitre.",
+          "sourceQuote": "3 glandes annexes · 4 tuniques pariétales · 3 grandes artères"
+        }
+      ]
+    },
+
+    {
+      "fiche": "biologie-115-microscopie-electronique-met-meb.html",
+      "origine": "ecrite",
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la limite de résolution du microscope optique et aux leviers qui la fixent, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le microscope optique plafonne à une résolution d'environ 0,2 à 0,4 µm.",
+          "v": true,
+          "e": "VRAI. Toutes les techniques qui se lisent au microscope optique partagent ce plafond.",
+          "sourceQuote": "une limite de résolution d'environ 0,2 à 0,4 µm"
+        },
+        {
+          "t": "On atteint 0,2 µm avec un objectif standard, et 0,4 µm au mieux.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. L'objectif standard donne 0,4 µm ; 0,2 µm est la performance maximale.",
+          "sourceQuote": "0,4 µm avec un objectif standard, 0,2 µm au mieux"
+        },
+        {
+          "t": "Augmenter le grossissement permet de franchir cette limite.",
+          "v": false,
+          "e": "FAUX : le grossissement n'y change rien. La barrière est celle de la résolution, et elle tient à la longueur d'onde de la lumière visible.",
+          "sourceQuote": "aucun grossissement ne passe cette barrière"
+        },
+        {
+          "t": "Les deux leviers de la résolution sont la longueur d'onde et l'ouverture numérique de l'objectif.",
+          "v": true,
+          "e": "VRAI. Ce sont les deux seules prises possibles ; c'est en épuisant la seconde qu'on est amené à agir sur la première.",
+          "sourceQuote": "la longueur d'onde (λ) et l' ouverture numérique (NA) de l'objectif"
+        },
+        {
+          "t": "L'ouverture numérique est le levier qu'il reste à pousser, l'huile d'immersion n'ayant rien apporté.",
+          "v": false,
+          "e": "FAUX : ce levier a déjà été poussé, précisément par l'huile d'immersion des objectifs ×100. Il ne reste que la longueur d'onde.",
+          "sourceQuote": "on l'a déjà poussé — c'est l' huile d'immersion des objectifs ×100"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-115-microscopie-electronique-met-meb.html",
+      "origine": "ecrite",
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives au passage des photons aux électrons et à la nature ondulatoire de ces derniers, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La lumière visible a une longueur d'onde de 400 à 700 nm.",
+          "v": true,
+          "e": "VRAI. C'est cette longueur d'onde qui fixe la résolution du microscope optique aux alentours de 0,2 µm.",
+          "sourceQuote": "la lumière visible a une λ de 400 à 700 nm"
+        },
+        {
+          "t": "Les électrons accélérés ont une longueur d'onde d'environ 0,005 nm.",
+          "v": true,
+          "e": "VRAI. Soit des dizaines de milliers de fois moins que la lumière visible : le saut n'est pas un réglage, c'est un changement de nature.",
+          "sourceQuote": "ont une λ d'environ 0,005 nm"
+        },
+        {
+          "t": "Leur résolution théorique est d'environ 0,1 nm.",
+          "v": true,
+          "e": "VRAI. C'est la limite théorique ; la résolution réellement atteinte au MET est plutôt de l'ordre du nanomètre.",
+          "sourceQuote": "résolution théorique ~ 0,1 nm"
+        },
+        {
+          "t": "Plus on accélère les électrons, plus leur longueur d'onde augmente.",
+          "v": false,
+          "e": "FAUX : elle diminue. C'est bien pour cela qu'on les accélère sous vide à haute tension, entre 50 et 100 kV.",
+          "sourceQuote": "plus leur longueur d'onde diminue"
+        },
+        {
+          "t": "Les électrons se comportent aussi comme une onde : c'est la dualité onde-particule.",
+          "v": true,
+          "e": "VRAI. C'est le principe de De Broglie : ayant une nature ondulatoire, ils possèdent une longueur d'onde.",
+          "sourceQuote": "Les électrons ont une nature ondulatoire (dualité onde-particule)"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-115-microscopie-electronique-met-meb.html",
+      "origine": "ecrite",
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à ce qui distingue le microscope à transmission du microscope à balayage, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Au MET, les électrons traversent l'échantillon.",
+          "v": true,
+          "e": "VRAI. C'est la différence de départ, celle dont tout le reste découle : préparation, type d'image et résolution.",
+          "sourceQuote": "Le microscope électronique à transmission (MET) le traverse"
+        },
+        {
+          "t": "Au MEB, les électrons balayent la surface.",
+          "v": true,
+          "e": "VRAI. L'image se reconstruit point par point à partir de ce balayage.",
+          "sourceQuote": "Les électrons balayent la surface"
+        },
+        {
+          "t": "Le MET donne une coupe en deux dimensions de l'intérieur de l'échantillon.",
+          "v": true,
+          "e": "VRAI. On regarde le dedans, en coupe — là où le MEB montre un relief de surface.",
+          "sourceQuote": "c'est le MET , une coupe 2D de l'intérieur"
+        },
+        {
+          "t": "Le MEB a une résolution d'environ 10 nm.",
+          "v": true,
+          "e": "VRAI. Dix fois moins fine que celle du MET, mais suffisante pour la morphologie de surface.",
+          "sourceQuote": "métallisé → relief 3D, ~ 10 nm"
+        },
+        {
+          "t": "Le MET sert à l'étude de l'ultrastructure des organites et des virus.",
+          "v": true,
+          "e": "VRAI. C'est son domaine propre : tout ce qui est trop petit pour le microscope optique.",
+          "sourceQuote": "Ultrastructure des organites , virus"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-115-microscopie-electronique-met-meb.html",
+      "origine": "ecrite",
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à ce que le microscope à transmission rend visible, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Il montre l'aspect trilaminaire des membranes : deux feuillets sombres encadrant un feuillet clair.",
+          "v": true,
+          "e": "VRAI. C'est l'image caractéristique de la membrane biologique en transmission.",
+          "sourceQuote": "2 feuillets sombres + 1 clair central"
+        },
+        {
+          "t": "Les ribosomes mesurent 25 nm.",
+          "v": true,
+          "e": "VRAI. Cette taille les rend invisibles en microscopie optique, mais parfaitement observables en transmission.",
+          "sourceQuote": "les ribosomes (25 nm) , les crêtes mitochondriales"
+        },
+        {
+          "t": "Les virus mesurent de 20 à 300 nm.",
+          "v": true,
+          "e": "VRAI. Toute cette gamme tombe largement au-dessus de la résolution du MET, de l'ordre du nanomètre.",
+          "sourceQuote": "les virus (20-300 nm) et les filaments du cytosquelette"
+        },
+        {
+          "t": "Sa résolution est environ vingt fois meilleure que celle du microscope optique.",
+          "v": false,
+          "e": "FAUX : elle est environ 200 fois meilleure — 1 nm contre 200 nm. C'est cet ordre de grandeur qui fait basculer les choses.",
+          "sourceQuote": "c'est 200× meilleur que le microscope optique"
+        },
+        {
+          "t": "L'épaisseur d'une membrane, de 8 nm, reste hors de portée même en transmission.",
+          "v": false,
+          "e": "FAUX : elle devient observable. Le ribosome et l'épaisseur d'une membrane, invisibles en microscopie optique, ne le sont plus au MET.",
+          "sourceQuote": "définitivement invisibles en microscopie optique — deviennent observables"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-115-microscopie-electronique-met-meb.html",
+      "origine": "ecrite",
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à la préparation d'un échantillon destiné au microscope à transmission, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La fixation renforcée fait appel au glutaraldéhyde puis au tétroxyde d'osmium.",
+          "v": true,
+          "e": "VRAI. Deux fixateurs successifs, bien plus agressifs que ceux de la microscopie optique de routine.",
+          "sourceQuote": "Glutaraldéhyde , puis tétroxyde d'osmium"
+        },
+        {
+          "t": "L'inclusion se fait en paraffine.",
+          "v": false,
+          "e": "FAUX : elle se fait en résine. La paraffine est trop molle pour tenir une coupe aussi fine — c'est le piège classique de cette fiche.",
+          "sourceQuote": "Inclusion en résine. Et non en paraffine (trop molle)"
+        },
+        {
+          "t": "Les coupes ultra-fines mesurent 5 à 10 µm.",
+          "v": false,
+          "e": "FAUX : elles mesurent 50 à 100 nm, soit cent fois moins. Une coupe de quelques micromètres serait bien trop épaisse pour être traversée.",
+          "sourceQuote": "Coupes ultra-fines. 50 à 100 nm"
+        },
+        {
+          "t": "Les coupes sont réalisées au microtome à lame d'acier.",
+          "v": false,
+          "e": "FAUX : on utilise un ultramicrotome, muni d'une lame de diamant ou de verre.",
+          "sourceQuote": "à l' ultramicrotome (lame de diamant ou de verre)"
+        },
+        {
+          "t": "Le contraste est obtenu par des colorants classiques comme l'hématéine et l'éosine.",
+          "v": false,
+          "e": "FAUX : le contraste se fait aux métaux lourds, acétate d'uranyle et citrate de plomb. Les colorants classiques n'ont aucun sens ici, puisque l'image n'a pas de couleur.",
+          "sourceQuote": "Aux métaux lourds (acétate d'uranyle, citrate de plomb)"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-115-microscopie-electronique-met-meb.html",
+      "origine": "ecrite",
+      "lot": 6,
+      "arene": true,
+      "q": "Parmi les propositions suivantes relatives au microscope à balayage et à la préparation qu'il exige, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'échantillon subit un séchage au point critique.",
+          "v": true,
+          "e": "VRAI. Il intervient après la fixation et la déshydratation, avant la métallisation.",
+          "sourceQuote": "un séchage au point critique"
+        },
+        {
+          "t": "Ce séchage évite la déformation due à la tension de surface.",
+          "v": true,
+          "e": "VRAI. C'est bien son objet : comme on observe un relief, la moindre rétraction ruinerait l'image.",
+          "sourceQuote": "qui évite la déformation due à la tension de surface"
+        },
+        {
+          "t": "La métallisation consiste à déposer une fine couche de résine isolante.",
+          "v": false,
+          "e": "FAUX : on dépose un métal conducteur, or ou platine, justement pour permettre le passage des électrons.",
+          "sourceQuote": "le dépôt d'une fine couche de métal conducteur — or ou platine"
+        },
+        {
+          "t": "Le MEB est l'appareil de choix pour observer l'ultrastructure des organites.",
+          "v": false,
+          "e": "FAUX : cela relève du MET. Le MEB sert à la morphologie de surface et à des objets comme les bactéries.",
+          "sourceQuote": "Morphologie de surface , bactéries"
+        },
+        {
+          "t": "Au MEB, on observe des coupes ultra-fines de 50 à 100 nm.",
+          "v": false,
+          "e": "FAUX : on observe l'échantillon entier, métallisé. Les coupes ultra-fines sont la préparation du MET.",
+          "sourceQuote": "Coupes ultra-fines (50-100 nm) Échantillon entier, métallisé"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-115-microscopie-electronique-met-meb.html",
+      "origine": "ecrite",
+      "lot": 7,
+      "arene": true,
+      "q": "Parmi les propositions suivantes relatives à la comparaison d'ensemble entre microscopie optique et microscopie électronique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le grossissement maximal atteint environ 500 000× en microscopie électronique, contre environ 1 000× en optique.",
+          "v": true,
+          "e": "VRAI. L'écart de grossissement suit celui de la résolution, lui-même commandé par la longueur d'onde du rayonnement.",
+          "sourceQuote": "Grossissement max ~1 000× ~500 000× (MET)"
+        },
+        {
+          "t": "On ne peut pas observer d'échantillon vivant en microscopie électronique, à cause du vide poussé.",
+          "v": true,
+          "e": "VRAI. Le contraste de phase permet d'observer du vivant en optique ; le vide de l'appareil l'interdit en électronique.",
+          "sourceQuote": "Possible (contraste de phase) Non (vide poussé)"
+        },
+        {
+          "t": "Les images obtenues sont en niveaux de gris, sans couleur.",
+          "v": true,
+          "e": "VRAI. Il n'y a pas de couleur en microscopie électronique : les colorations et la fluorescence appartiennent au monde optique.",
+          "sourceQuote": "Oui (colorations, fluorescence) Non (niveaux de gris)"
+        },
+        {
+          "t": "La microscopie électronique est aussi accessible en routine que la microscopie optique.",
+          "v": false,
+          "e": "FAUX : elle est coûteuse et réservée à des plateformes spécialisées, là où l'optique est un outil de routine.",
+          "sourceQuote": "Accessible, routine Coûteux, plateformes spécialisées"
+        },
+        {
+          "t": "Devant une question sur un microscope, il faut remonter au rayonnement, qui commande tout le reste.",
+          "v": true,
+          "e": "VRAI. Photons ou électrons : le rayonnement fixe la longueur d'onde, donc la résolution, donc ce qu'on voit et dans quelles conditions.",
+          "sourceQuote": "remonte toujours au rayonnement : c'est lui qui commande tout le reste"
+        }
+      ]
+    },
+
+    {
+      "fiche": "biologie-116-quatre-caracteristiques-epithelium-jpla.html",
+      "origine": "ecrite",
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la place des épithéliums dans l'organisme et au nombre de leurs critères, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les tissus épithéliaux recouvrent les surfaces du corps et tapissent les cavités internes.",
+          "v": true,
+          "e": "VRAI. Peau, tube digestif, voies respiratoires, vaisseaux : partout où il y a une surface, il y a un épithélium.",
+          "sourceQuote": "Ils recouvrent toutes les surfaces du corps et tapissent les cavités internes"
+        },
+        {
+          "t": "Les épithéliums ne participent pas à la constitution des glandes.",
+          "v": false,
+          "e": "FAUX : ils forment aussi les glandes. Ce n'est donc pas un tissu de revêtement uniquement.",
+          "sourceQuote": "ils forment aussi les glandes"
+        },
+        {
+          "t": "Les vaisseaux sanguins ne sont pas tapissés par un épithélium.",
+          "v": false,
+          "e": "FAUX : ils figurent explicitement parmi les cavités internes tapissées par un épithélium.",
+          "sourceQuote": "tube digestif, voies respiratoires, vaisseaux sanguins"
+        },
+        {
+          "t": "Les épithéliums partagent trois caractéristiques fondamentales.",
+          "v": false,
+          "e": "FAUX : ils en partagent quatre — celles que résume le mnémo JPLA.",
+          "sourceQuote": "les épithéliums partagent 4 caractéristiques fondamentales"
+        },
+        {
+          "t": "Ces caractéristiques les distinguent du seul tissu conjonctif.",
+          "v": false,
+          "e": "FAUX : elles les distinguent des trois autres familles de tissus : conjonctif, musculaire et nerveux.",
+          "sourceQuote": "qui les distinguent des autres tissus (conjonctif, musculaire, nerveux)"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-116-quatre-caracteristiques-epithelium-jpla.html",
+      "origine": "ecrite",
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives au premier critère, celui des cellules jointives, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les cellules épithéliales sont directement accolées les unes aux autres.",
+          "v": true,
+          "e": "VRAI. Pas de matrice interposée : elles se touchent, sans espace libre entre elles.",
+          "sourceQuote": "les cellules épithéliales sont directement accolées les unes aux autres"
+        },
+        {
+          "t": "Dans le tissu conjonctif, les cellules sont au contraire dispersées dans une matrice abondante.",
+          "v": true,
+          "e": "VRAI. C'est le contraste qui permet de reconnaître un épithélium sur une coupe.",
+          "sourceQuote": "où les cellules sont dispersées dans une matrice abondante"
+        },
+        {
+          "t": "Les jonctions citées sont les jonctions serrées, les desmosomes et les jonctions gap.",
+          "v": true,
+          "e": "VRAI. À ce stade il suffit de savoir qu'elles existent et à quoi elles servent ; leur détail vient plus loin.",
+          "sourceQuote": "jonctions serrées, desmosomes, jonctions gap"
+        },
+        {
+          "t": "Ces jonctions n'assurent qu'une cohésion mécanique, sans rôle fonctionnel.",
+          "v": false,
+          "e": "FAUX : elles assurent une cohésion à la fois mécanique et fonctionnelle du tissu.",
+          "sourceQuote": "assurent la cohésion mécanique et fonctionnelle du tissu"
+        },
+        {
+          "t": "L'analogie proposée est celle d'un mur de briques séparées par un mortier épais.",
+          "v": false,
+          "e": "FAUX : l'image est celle d'un mur de briques sans mortier visible, les briques étant parfaitement emboîtées les unes dans les autres.",
+          "sourceQuote": "un mur de briques sans mortier visible"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-116-quatre-caracteristiques-epithelium-jpla.html",
+      "origine": "ecrite",
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au deuxième critère, celui de la polarité cellulaire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Chaque cellule épithéliale présente une organisation asymétrique.",
+          "v": true,
+          "e": "VRAI. Le haut ne ressemble pas au bas : c'est cette asymétrie qu'on appelle polarité.",
+          "sourceQuote": "Chaque cellule épithéliale présente une organisation asymétrique"
+        },
+        {
+          "t": "Le pôle apical est la face qui repose sur la lame basale.",
+          "v": false,
+          "e": "FAUX : c'est le pôle basal qui repose sur la lame basale. Le pôle apical est la face libre, tournée vers l'extérieur.",
+          "sourceQuote": "Le pôle basal est la face qui repose sur la lame basale"
+        },
+        {
+          "t": "Le pôle apical peut porter des microvillosités ou des cils vibratiles.",
+          "v": true,
+          "e": "VRAI. Ces spécialisations sont propres à la face libre : elles n'existent ni au pôle basal ni sur les faces latérales.",
+          "sourceQuote": "elle peut porter des spécialisations (microvillosités, cils vibratiles)"
+        },
+        {
+          "t": "Les faces latérales sont celles qui communiquent avec le tissu conjonctif sous-jacent.",
+          "v": false,
+          "e": "FAUX : les faces latérales sont en contact avec les cellules voisines. C'est le pôle basal qui communique avec le conjonctif sous-jacent.",
+          "sourceQuote": "les faces latérales sont celles en contact avec les cellules voisines"
+        },
+        {
+          "t": "Les jonctions intercellulaires siègent au pôle apical.",
+          "v": false,
+          "e": "FAUX : elles siègent sur les faces latérales, là où les cellules se touchent.",
+          "sourceQuote": "c'est là que se trouvent les jonctions intercellulaires"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-116-quatre-caracteristiques-epithelium-jpla.html",
+      "origine": "ecrite",
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives au troisième critère, celui de la lame basale, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Tout épithélium repose sur une lame basale.",
+          "v": true,
+          "e": "VRAI. Il n'y a pas d'exception : c'est l'un des quatre traits constants des épithéliums.",
+          "sourceQuote": "Tout épithélium repose sur une lame basale"
+        },
+        {
+          "t": "Il s'agit d'une fine couche de matrice extracellulaire spécialisée.",
+          "v": true,
+          "e": "VRAI. Ce n'est pas une couche de cellules mais de matrice ; sa composition précise est vue en fin de chapitre.",
+          "sourceQuote": "une fine couche de matrice extracellulaire spécialisée"
+        },
+        {
+          "t": "Elle assure l'ancrage de l'épithélium au tissu conjonctif.",
+          "v": true,
+          "e": "VRAI. C'est le premier de ses trois rôles à retenir : elle fixe l'épithélium au tissu situé en dessous.",
+          "sourceQuote": "l' ancrage (elle fixe l'épithélium au tissu conjonctif)"
+        },
+        {
+          "t": "Elle joue un rôle de filtration en contrôlant les échanges de molécules.",
+          "v": true,
+          "e": "VRAI. Deuxième rôle : rien ne passe librement entre l'épithélium et le conjonctif, tout est filtré.",
+          "sourceQuote": "la filtration (elle contrôle les échanges de molécules)"
+        },
+        {
+          "t": "Son franchissement par des cellules épithéliales est un signe de malignité en cas de cancer.",
+          "v": true,
+          "e": "VRAI. Troisième rôle, celui de barrière : normalement infranchissable, son passage signe l'agressivité de la tumeur.",
+          "sourceQuote": "son franchissement est un signe de malignité en cas de cancer"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-116-quatre-caracteristiques-epithelium-jpla.html",
+      "origine": "ecrite",
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au quatrième critère, celui du caractère avasculaire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les épithéliums ne contiennent aucun vaisseau sanguin.",
+          "v": true,
+          "e": "VRAI. Les capillaires restent en dessous, dans le tissu conjonctif : aucun ne monte dans l'épithélium.",
+          "sourceQuote": "Les épithéliums ne contiennent aucun vaisseau sanguin"
+        },
+        {
+          "t": "Les cellules épithéliales ne sont donc pas nourries.",
+          "v": false,
+          "e": "FAUX : avasculaire ne veut pas dire « pas nourri ». Elles sont alimentées, simplement par un autre chemin.",
+          "sourceQuote": "Avasculaire ne veut pas dire « pas nourri »"
+        },
+        {
+          "t": "Leur nutrition se fait par diffusion depuis les capillaires du tissu conjonctif sous-jacent.",
+          "v": true,
+          "e": "VRAI. Les nutriments franchissent la lame basale et diffusent de proche en proche jusqu'aux cellules.",
+          "sourceQuote": "à partir des capillaires situés dans le tissu conjonctif sous-jacent"
+        },
+        {
+          "t": "Plus l'épithélium est épais, moins ses couches superficielles sont bien nourries.",
+          "v": true,
+          "e": "VRAI. C'est la conséquence directe de la diffusion : plus on s'éloigne des vaisseaux, moins l'apport est bon.",
+          "sourceQuote": "plus les couches superficielles sont éloignées des vaisseaux, donc moins bien nourries"
+        },
+        {
+          "t": "C'est pourquoi les cellules superficielles de l'épiderme meurent et desquament.",
+          "v": true,
+          "e": "VRAI. La desquamation n'est pas un accident : c'est l'aboutissement normal d'une nutrition par diffusion dans un épithélium épais.",
+          "sourceQuote": "les cellules superficielles de l'épiderme meurent et desquament"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-116-quatre-caracteristiques-epithelium-jpla.html",
+      "origine": "ecrite",
+      "lot": 6,
+      "arene": true,
+      "q": "Parmi les propositions suivantes relatives à ce que recouvre chacune des quatre lettres du mnémo, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le L renvoie aux liaisons intercellulaires.",
+          "v": false,
+          "e": "FAUX : le L est celui de la lame basale, sur laquelle repose l'épithélium. Les liaisons entre cellules relèvent, elles, du premier critère.",
+          "sourceQuote": "ame basale : l'épithélium repose sur une membrane basale"
+        },
+        {
+          "t": "Le A renvoie au pôle apical.",
+          "v": false,
+          "e": "FAUX : le A est celui d'avasculaire — aucun vaisseau ne pénètre dans l'épithélium. Le pôle apical relève du critère de polarité.",
+          "sourceQuote": "vasculaire : aucun vaisseau sanguin ne pénètre dans l'épithélium"
+        },
+        {
+          "t": "Le P signifie que chaque cellule possède un pôle apical et un pôle basal.",
+          "v": true,
+          "e": "VRAI. Polarisées : le haut et le bas d'une même cellule ne se ressemblent pas.",
+          "sourceQuote": "olarisées : chaque cellule a un pôle apical et un pôle basal"
+        },
+        {
+          "t": "Le J signifie que les cellules sont séparées par de larges espaces.",
+          "v": false,
+          "e": "FAUX : jointives veut dire l'inverse — les cellules sont étroitement accolées, sans espace libre entre elles.",
+          "sourceQuote": "ointives : les cellules sont étroitement accolées les unes aux autres"
+        },
+        {
+          "t": "Un énoncé peut faire pénétrer un vaisseau sanguin dans l'épithélium à condition que celui-ci soit très épais.",
+          "v": false,
+          "e": "FAUX : jamais. Quelle que soit son épaisseur, un épithélium reste avasculaire ; c'est l'épaisseur qui rend la diffusion moins efficace, pas les vaisseaux qui montent.",
+          "sourceQuote": "qui fait pénétrer un vaisseau sanguin dans l'épithélium est FAUX"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-116-quatre-caracteristiques-epithelium-jpla.html",
+      "origine": "ecrite",
+      "lot": 7,
+      "arene": true,
+      "q": "Parmi les propositions suivantes relatives à l'usage des quatre critères devant une coupe histologique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les quatre critères constituent une grille de lecture devant une coupe histologique.",
+          "v": true,
+          "e": "VRAI. Ce n'est pas une liste à réciter : c'est un outil d'identification, à appliquer sur l'image.",
+          "sourceQuote": "c'est ta grille de lecture devant une coupe histologique"
+        },
+        {
+          "t": "Ils se posent comme quatre questions, toujours dans le même ordre.",
+          "v": true,
+          "e": "VRAI. L'ordre du mnémo est aussi celui de l'examen : cellules jointives, polarité, lame basale, vaisseaux.",
+          "sourceQuote": "Quatre questions, toujours dans le même ordre"
+        },
+        {
+          "t": "Si les quatre réponses tombent juste, on regarde bien un épithélium.",
+          "v": true,
+          "e": "VRAI. Les quatre traits sont communs à tous les épithéliums : réunis, ils suffisent à conclure.",
+          "sourceQuote": "Si les quatre réponses tombent juste, tu regardes un épithélium"
+        },
+        {
+          "t": "Sur la vue d'ensemble, des capillaires montent à l'intérieur de l'épithélium.",
+          "v": false,
+          "e": "FAUX : aucun vaisseau n'y monte. Les capillaires restent en dessous, dans le tissu conjonctif.",
+          "sourceQuote": "aucun vaisseau ne monte dans l'épithélium, les capillaires restent en dessous"
+        },
+        {
+          "t": "Le détail des différents types de jonctions est traité dès l'énoncé du premier critère.",
+          "v": false,
+          "e": "FAUX : à ce stade, on retient seulement qu'elles existent et à quoi elles servent. Leur détail vient plus loin dans le chapitre.",
+          "sourceQuote": "le détail de chaque type vient plus loin dans le chapitre"
+        }
+      ]
+    }
+  ]
+}

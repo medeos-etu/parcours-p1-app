@@ -1,0 +1,1351 @@
+{
+  "matiere": "mixte",
+  "chapitre": 0,
+  "note": "socle 1-7 — fiches sans QCM, ordre du Parcours",
+  "questions": [
+    {
+      "fiche": "chimie-142-combiner-constantes-equilibre.html",
+      "origine": "ecrite",
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives aux règles de combinaison des constantes d'équilibre, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Inverser une réaction revient à prendre l'inverse de sa constante d'équilibre.",
+          "v": true,
+          "e": "VRAI. C'est la première des trois règles : la constante de la réaction inverse est l'inverse de la constante directe. Si le sens direct est favorisé, le sens inverse l'est d'autant moins.",
+          "sourceQuote": "K_inverse = 1 / K_direct"
+        },
+        {
+          "t": "Quand on additionne deux réactions, on additionne leurs constantes d'équilibre.",
+          "v": false,
+          "e": "FAUX : quand on additionne deux réactions, on MULTIPLIE leurs constantes. C'est l'erreur la plus fréquente, et la fiche en fait sa mise en garde principale.",
+          "sourceQuote": "Additionner deux réactions → K_total = K₁ × K₂"
+        },
+        {
+          "t": "Multiplier une réaction par un facteur revient à élever sa constante à la puissance de ce facteur.",
+          "v": true,
+          "e": "VRAI. C'est la troisième règle : multiplier tous les coefficients par un facteur élève la constante à la puissance de ce facteur, parce que les coefficients sont des exposants dans l'expression de la constante.",
+          "sourceQuote": "Multiplier une réaction par un facteur"
+        },
+        {
+          "t": "Ces trois règles jouent pour les constantes d'équilibre le rôle que la loi de Hess joue pour l'enthalpie libre standard.",
+          "v": true,
+          "e": "VRAI. La logique est la même : reconstruire une réaction inconnue à partir de réactions connues. Seules les opérations changent.",
+          "sourceQuote": "Trois règles suffisent — exactement comme la loi de Hess"
+        },
+        {
+          "t": "Les opérations à effectuer sur les constantes d'équilibre sont les mêmes que celles à effectuer sur les enthalpies libres standard.",
+          "v": false,
+          "e": "FAUX : c'est précisément là que le piège se referme. La démarche est la même, mais aucune des trois opérations ne se traduit de la même façon sur l'une et sur l'autre grandeur.",
+          "sourceQuote": "Mais les opérations, elles, ne sont pas les mêmes"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-142-combiner-constantes-equilibre.html",
+      "origine": "ecrite",
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux points à retenir et au piège central de cette fiche, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "On ne peut jamais additionner deux constantes d'équilibre.",
+          "v": true,
+          "e": "VRAI. C'est l'interdiction absolue de la fiche : additionner des constantes d'équilibre n'a aucun sens, quelle que soit la situation.",
+          "sourceQuote": "on ne peut JAMAIS additionner des constantes d'équilibre"
+        },
+        {
+          "t": "Lorsque deux réactions s'additionnent, la constante globale est le produit de leurs deux constantes.",
+          "v": true,
+          "e": "VRAI. C'est le pendant positif de l'interdiction précédente : on ne les additionne pas, on les multiplie.",
+          "sourceQuote": "Ne jamais additionner des K — on les multiplie"
+        },
+        {
+          "t": "Multiplier une réaction par un facteur ne revient pas à multiplier sa constante par ce même facteur.",
+          "v": true,
+          "e": "VRAI. On ne multiplie pas la constante par le facteur, on l'ÉLÈVE à la puissance de ce facteur. C'est le second piège annoncé par la fiche.",
+          "sourceQuote": "on élève K à la puissance"
+        },
+        {
+          "t": "Ces règles servent à obtenir la constante d'une réaction inconnue à partir de réactions connues.",
+          "v": true,
+          "e": "VRAI. C'est tout l'intérêt de la manœuvre : on ne mesure pas la constante cherchée, on la reconstruit à partir de constantes déjà données.",
+          "sourceQuote": "permettent de calculer le K d'une réaction inconnue à partir de réactions connues"
+        },
+        {
+          "t": "L'analogie proposée pour justifier la multiplication est celle de deux verrous à ouvrir en série.",
+          "v": true,
+          "e": "VRAI. Enchaîner deux équilibres, c'est enchaîner deux conditions : les probabilités se multiplient, comme lorsqu'il faut ouvrir deux verrous l'un après l'autre.",
+          "sourceQuote": "comme deux verrous à ouvrir en série"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-142-combiner-constantes-equilibre.html",
+      "origine": "ecrite",
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à l'inversion d'une réaction et aux exemples chiffrés donnés dans la fiche, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Si une réaction A ⇌ B possède une constante égale à 100, la réaction inverse B ⇌ A possède une constante de 0,01.",
+          "v": true,
+          "e": "VRAI. C'est l'exemple donné dans la fiche : l'inverse de 100 vaut 1/100, soit 0,01. La réaction inverse est alors très peu favorisée.",
+          "sourceQuote": "a K = 1/100 = 0,01 (très peu favorisée)"
+        },
+        {
+          "t": "Si la réaction A ⇌ 2B a une constante égale à 4, la réaction 2B ⇌ A a une constante de 0,25.",
+          "v": true,
+          "e": "VRAI. C'est le second exemple de la règle 1 : l'inverse de 4 vaut 1/4, soit 0,25.",
+          "sourceQuote": "inversée, 2B ⇌ A a K = 1/4 = 0,25"
+        },
+        {
+          "t": "Inverser une réaction change le signe de sa constante d'équilibre.",
+          "v": false,
+          "e": "FAUX : c'est le signe de l'enthalpie libre standard qui change quand on inverse une réaction. La constante, elle, devient son inverse — jamais son opposé.",
+          "sourceQuote": "K_inverse = 1 / K_direct"
+        },
+        {
+          "t": "Une réaction inversée conserve exactement la même constante d'équilibre que la réaction directe.",
+          "v": false,
+          "e": "FAUX : l'équilibre du sens inverse est le symétrique du sens direct, donc sa constante est l'inverse de la première, pas la même.",
+          "sourceQuote": "l'équilibre « du sens inverse » est le symétrique"
+        },
+        {
+          "t": "Une réaction A ⇌ B dont la constante vaut 100 est très peu favorisée dans le sens de formation de B.",
+          "v": false,
+          "e": "FAUX : une constante de 100 signale au contraire une réaction très favorisée vers B. C'est sa réciproque, égale à 0,01, qui traduit une réaction très peu favorisée.",
+          "sourceQuote": "Si A ⇌ B a K = 100 (très favorisée vers B)"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-142-combiner-constantes-equilibre.html",
+      "origine": "ecrite",
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la multiplication d'une réaction par un facteur et au détail de la troisième règle, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans l'expression d'une constante d'équilibre, les coefficients stœchiométriques figurent en exposant.",
+          "v": true,
+          "e": "VRAI. C'est le rappel sur lequel repose toute la troisième règle : chaque coefficient de l'équation devient un exposant dans l'expression de la constante.",
+          "sourceQuote": "les coefficients stœchiométriques deviennent des exposants"
+        },
+        {
+          "t": "Multiplier tous les coefficients d'une réaction par 2 double tous les exposants de sa constante.",
+          "v": true,
+          "e": "VRAI. Puisque les coefficients sont les exposants, les doubler double les exposants — et doubler tous les exposants revient à mettre la constante au carré.",
+          "sourceQuote": "Si on multiplie tous les coefficients par 2, tous les exposants de K doublent"
+        },
+        {
+          "t": "Doubler les coefficients d'une réaction revient à élever sa constante au carré.",
+          "v": true,
+          "e": "VRAI. C'est la conclusion du raisonnement détaillé de la fiche : facteur 2 sur les coefficients, puissance 2 sur la constante.",
+          "sourceQuote": "doubler les coefficients = mettre K au carré"
+        },
+        {
+          "t": "Si l'on multiplie la réaction par 3, la constante est élevée au cube.",
+          "v": true,
+          "e": "VRAI. La règle est générale : le facteur appliqué aux coefficients devient l'exposant appliqué à la constante. Facteur 3, donc puissance 3.",
+          "sourceQuote": "Si on avait multiplié par 3, K serait élevé au cube"
+        },
+        {
+          "t": "Cette troisième règle est présentée comme la plus simple des trois à appliquer correctement.",
+          "v": false,
+          "e": "FAUX : c'est au contraire celle qu'on applique de travers, et c'est pour cette raison que la fiche la déroule en entier sur un exemple chiffré.",
+          "sourceQuote": "c'est celle qu'on applique de travers"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-142-combiner-constantes-equilibre.html",
+      "origine": "ecrite",
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à la correspondance entre les opérations sur l'enthalpie libre standard et celles sur la constante d'équilibre, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Inverser une réaction change le signe de son enthalpie libre standard et laisse sa constante d'équilibre inchangée.",
+          "v": false,
+          "e": "FAUX : la première moitié est exacte, la seconde ne l'est pas. Inverser une réaction remplace la constante par son inverse.",
+          "sourceQuote": "K_inverse = 1 / K_direct"
+        },
+        {
+          "t": "Multiplier une réaction par un facteur multiplie l'enthalpie libre standard par ce facteur et multiplie aussi la constante par ce facteur.",
+          "v": false,
+          "e": "FAUX : sur l'enthalpie libre standard on multiplie effectivement, mais sur la constante on élève à la puissance. Les deux colonnes du tableau ne disent jamais la même chose.",
+          "sourceQuote": "on élève à la puissance"
+        },
+        {
+          "t": "Additionner deux réactions additionne leurs enthalpies libres standard et additionne aussi leurs constantes d'équilibre.",
+          "v": false,
+          "e": "FAUX : on additionne bien les enthalpies libres standard, mais on multiplie les constantes. C'est l'interdiction absolue de la fiche.",
+          "sourceQuote": "on multiplie les K"
+        },
+        {
+          "t": "Les trois opérations se traduisent de la même façon sur l'enthalpie libre standard et sur la constante d'équilibre.",
+          "v": false,
+          "e": "FAUX : aucune des trois ne se traduit de la même façon d'une colonne à l'autre. C'est exactement là que se joue la question en P1.",
+          "sourceQuote": "Aucune des trois opérations ne se traduit de la même façon"
+        },
+        {
+          "t": "L'énoncé est le même dans les deux cas — on donne deux réactions et on en demande une troisième — mais chaque opération se traduit autrement.",
+          "v": true,
+          "e": "VRAI. La forme de la question ne permet pas de savoir quelle grandeur est demandée : il faut lire ce qu'on cherche avant de choisir la table d'opérations.",
+          "sourceQuote": "L'énoncé du QCM est le même — on donne R1 et R2, on demande R3"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-142-combiner-constantes-equilibre.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "On donne, à 25 °C, une réaction R1 : A ⇌ 2B de constante 4 et une réaction R2 : B ⇌ C de constante 2, et l'on cherche la constante de la réaction R3 : 2C ⇌ A. Parmi les propositions suivantes relatives à la démarche de résolution exposée dans la fiche, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La première étape consiste à inverser R2, ce qui donne C → B avec une constante de 1/2.",
+          "v": true,
+          "e": "VRAI. On part du produit cherché : C figure à gauche dans R3, donc il faut d'abord retourner R2. Sa constante devient l'inverse de 2, soit 1/2.",
+          "sourceQuote": "On part de R2 inversée : C → B, donc K = 1/K₂ = 1/2"
+        },
+        {
+          "t": "On multiplie ensuite cette réaction inversée par 2, ce qui élève sa constante au carré et donne 1/4.",
+          "v": true,
+          "e": "VRAI. R3 fait intervenir 2C, il faut donc doubler la réaction précédente : la constante 1/2 est élevée au carré et vaut 1/4.",
+          "sourceQuote": "2C → 2B, donc K = (1/K₂)² = (1/2)² = 1/4"
+        },
+        {
+          "t": "On termine en ajoutant R1 dans son sens direct, avec une constante égale à 4.",
+          "v": false,
+          "e": "FAUX : c'est R1 INVERSÉE qu'on ajoute, puisqu'il faut passer de 2B à A et non de A à 2B. Sa constante intervient donc sous la forme 1/4, pas 4.",
+          "sourceQuote": "On ajoute R1 inversée : 2B → A, donc K = 1/K₁ = 1/4"
+        },
+        {
+          "t": "Le bilan des étapes s'écrit 2C → 2B → A.",
+          "v": true,
+          "e": "VRAI. Les deux étapes s'enchaînent : les 2C deviennent 2B, puis les 2B deviennent A. On retrouve bien la réaction R3 demandée.",
+          "sourceQuote": "Bilan. 2C → 2B → A"
+        },
+        {
+          "t": "La vérification finale écrit R3 comme la somme de 2 fois R2 et de 1 fois R1, prises toutes deux dans leur sens direct.",
+          "v": false,
+          "e": "FAUX : la vérification fait intervenir des coefficients NÉGATIFS sur les deux réactions, précisément parce qu'elles sont toutes deux prises dans leur sens inverse.",
+          "sourceQuote": "Vérification : R3 = (−2) × R2 + (−1) × R1"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-142-combiner-constantes-equilibre.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives au résultat obtenu dans l'exemple traité et à l'analyse des cinq réponses proposées, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La constante cherchée vaut 1/16, soit 0,0625.",
+          "v": true,
+          "e": "VRAI. Le produit des deux contributions, 1/4 par 1/4, donne 1/16, c'est-à-dire 0,0625.",
+          "sourceQuote": "(1/4) × (1/4) = 1/16 = 0,0625"
+        },
+        {
+          "t": "La proposition qui donne 16 est fausse parce qu'elle correspondrait au sens direct et non au sens inversé.",
+          "v": true,
+          "e": "VRAI. La valeur 16 est celle de la réaction A → 2C. Elle est l'inverse exact de la réponse attendue : c'est le distracteur qui piège l'oubli de l'inversion.",
+          "sourceQuote": "ça correspondrait à A → 2C, le sens direct, pas inversé"
+        },
+        {
+          "t": "La proposition qui présente le rapport des deux constantes de départ est fausse.",
+          "v": true,
+          "e": "VRAI. Diviser une constante par l'autre ne correspond à aucune des trois opérations autorisées : ce rapport n'a pas de sens dans cette combinaison.",
+          "sourceQuote": "n'a pas de sens ici"
+        },
+        {
+          "t": "Deux propositions sont exactes, et elles donnent le même résultat écrit différemment.",
+          "v": true,
+          "e": "VRAI. L'une l'exprime sous forme littérale, l'autre sous forme numérique : c'est la même valeur, donc les deux doivent être cochées.",
+          "sourceQuote": "même résultat, écrit différemment"
+        },
+        {
+          "t": "La proposition qui additionne les deux constantes de départ pour aboutir à 6 est fausse.",
+          "v": true,
+          "e": "VRAI. C'est le distracteur le plus grossier et le plus rentable : additionner des constantes d'équilibre est interdit en toutes circonstances.",
+          "sourceQuote": "on ne peut JAMAIS additionner des constantes d'équilibre"
+        }
+      ]
+    },
+
+    {
+      "fiche": "anatomie-143-uretre-homme-femme.html",
+      "origine": "ecrite",
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la définition de l'urètre et à sa longueur dans les deux sexes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'urètre est le conduit final qui amène l'urine de la vessie vers l'extérieur.",
+          "v": true,
+          "e": "VRAI. La vessie est le réservoir, l'urètre est la sortie : c'est le dernier segment du trajet de l'urine.",
+          "sourceQuote": "le conduit final qui amène l'urine de la vessie vers l'extérieur"
+        },
+        {
+          "t": "Avec la vessie, l'urètre constitue ce qu'on appelle le bas appareil.",
+          "v": true,
+          "e": "VRAI. Le bas appareil, c'est le couple réservoir et sortie : la vessie et l'urètre.",
+          "sourceQuote": "il forme ce qu'on appelle le bas appareil"
+        },
+        {
+          "t": "Chez l'homme, l'urètre mesure environ 16 à 18 cm.",
+          "v": true,
+          "e": "VRAI. C'est un conduit long chez l'homme, environ 16 à 18 cm — un chiffre à connaître, car il explique la différence de fréquence des infections urinaires.",
+          "sourceQuote": "Long — environ 16-18 cm"
+        },
+        {
+          "t": "Chez la femme, l'urètre mesure environ 8 à 10 cm.",
+          "v": false,
+          "e": "FAUX : l'urètre féminin est court, environ 3 à 4 cm. C'est près de cinq fois moins que chez l'homme.",
+          "sourceQuote": "Court — environ 3-4 cm"
+        },
+        {
+          "t": "La longueur et la fonction de l'urètre diffèrent radicalement entre l'homme et la femme.",
+          "v": true,
+          "e": "VRAI. L'anatomie fait ici quelque chose d'inhabituel : ce n'est pas seulement la taille qui change, la fonction aussi.",
+          "sourceQuote": "sa longueur et sa fonction diffèrent radicalement entre l'homme et la femme"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-143-uretre-homme-femme.html",
+      "origine": "ecrite",
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la fonction de l'urètre chez l'homme et chez la femme, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Chez la femme, l'urètre a une double fonction, urinaire et génitale.",
+          "v": false,
+          "e": "FAUX : l'urètre féminin est uniquement urinaire. C'est l'urètre masculin qui cumule les deux fonctions.",
+          "sourceQuote": "Uniquement urinaire"
+        },
+        {
+          "t": "Chez l'homme, l'urètre est exclusivement urinaire.",
+          "v": false,
+          "e": "FAUX : chez l'homme, l'urètre est à la fois urinaire et génital, puisqu'il sert aussi de voie de passage au sperme.",
+          "sourceQuote": "Double : urinaire et génitale"
+        },
+        {
+          "t": "Chez l'homme, l'urètre sert aussi de passage au sperme.",
+          "v": true,
+          "e": "VRAI. C'est précisément ce qui lui donne sa double fonction : le même conduit sert à l'appareil urinaire et à l'appareil génital.",
+          "sourceQuote": "il sert aussi de passage au sperme"
+        },
+        {
+          "t": "La différence entre l'urètre masculin et l'urètre féminin se réduit à une différence de longueur.",
+          "v": false,
+          "e": "FAUX : la fiche insiste sur ce point comme sur son piège principal. La longueur n'est qu'une partie de l'affaire ; la fonction change aussi.",
+          "sourceQuote": "Ne réduis pas la différence à la longueur"
+        },
+        {
+          "t": "Une proposition qui attribue un rôle génital à l'urètre féminin peut être tenue pour exacte.",
+          "v": false,
+          "e": "FAUX : elle doit au contraire être cochée fausse. L'urètre de la femme n'a qu'un rôle urinaire.",
+          "sourceQuote": "Un QCM qui lui fait jouer un rôle génital est FAUX"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-143-uretre-homme-femme.html",
+      "origine": "ecrite",
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au trajet et au débouché de l'urètre chez la femme, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Son trajet est rectiligne.",
+          "v": true,
+          "e": "VRAI. Contrairement à l'urètre masculin qui traverse trois structures successives, l'urètre féminin file droit.",
+          "sourceQuote": "Rectiligne : il chemine en arrière du pubis"
+        },
+        {
+          "t": "Il chemine en avant du pubis.",
+          "v": false,
+          "e": "FAUX : il chemine en ARRIÈRE du pubis. Inverser ce rapport est une erreur classique.",
+          "sourceQuote": "il chemine en arrière du pubis"
+        },
+        {
+          "t": "Il débouche au vestibule vulvaire.",
+          "v": true,
+          "e": "VRAI. Le vestibule vulvaire est la région de la vulve où s'ouvre le vagin : c'est là que se termine l'urètre féminin.",
+          "sourceQuote": "débouche au vestibule vulvaire"
+        },
+        {
+          "t": "Son méat s'ouvre à l'intérieur de l'orifice vaginal.",
+          "v": false,
+          "e": "FAUX : le méat s'ouvre EN AVANT de l'orifice vaginal, et non dedans. C'est l'autre moitié du piège signalé par la fiche.",
+          "sourceQuote": "en avant de l'orifice vaginal, pas dedans"
+        },
+        {
+          "t": "Chez la femme, l'urètre traverse successivement le plancher pelvien puis la prostate.",
+          "v": false,
+          "e": "FAUX : ce trajet en plusieurs traversées est celui de l'urètre masculin. Chez la femme, le trajet est rectiligne et ne franchit pas ces structures.",
+          "sourceQuote": "Chez l'homme, l'urètre traverse trois choses"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-143-uretre-homme-femme.html",
+      "origine": "ecrite",
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux structures traversées par l'urètre chez l'homme, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Il traverse la prostate, puis le plancher pelvien, puis le pénis.",
+          "v": true,
+          "e": "VRAI. L'ordre compte autant que la liste : prostate d'abord, plancher pelvien ensuite, pénis en dernier.",
+          "sourceQuote": "prostate → plancher pelvien → pénis"
+        },
+        {
+          "t": "La prostate est située juste sous la vessie.",
+          "v": true,
+          "e": "VRAI. Sa position explique qu'elle soit la toute première structure franchie par l'urètre à sa sortie de la vessie.",
+          "sourceQuote": "Elle est située juste sous la vessie"
+        },
+        {
+          "t": "L'urètre traverse la prostate dès sa sortie du col vésical.",
+          "v": true,
+          "e": "VRAI. Il n'y a rien entre le col vésical et la prostate : la traversée prostatique est immédiate.",
+          "sourceQuote": "l'urètre la traverse dès sa sortie du col vésical"
+        },
+        {
+          "t": "La portion qui traverse le plancher pelvien porte le nom d'urètre membraneux.",
+          "v": true,
+          "e": "VRAI. C'est un nom à retenir dès maintenant, car c'est sur cette portion que se situe le sphincter strié.",
+          "sourceQuote": "La portion qui le traverse porte un nom à retenir dès maintenant : l' urètre membraneux"
+        },
+        {
+          "t": "Le pénis est la troisième et dernière portion, et l'urètre en parcourt toute la longueur.",
+          "v": true,
+          "e": "VRAI. C'est le segment terminal, celui qui mène l'urine à l'extérieur.",
+          "sourceQuote": "L'urètre en parcourt toute la longueur"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-143-uretre-homme-femme.html",
+      "origine": "ecrite",
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à la fréquence plus élevée des infections urinaires chez la femme, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'urètre féminin est environ cinq fois plus court que l'urètre masculin.",
+          "v": true,
+          "e": "VRAI. Trois à quatre centimètres contre seize à dix-huit : le rapport est bien d'environ un à cinq.",
+          "sourceQuote": "plus court (3-4 cm contre 16-18 cm)"
+        },
+        {
+          "t": "Son méat est très proche de la flore microbienne périnéale.",
+          "v": true,
+          "e": "VRAI. Le trajet est court ET le point de départ est proche de la flore : les deux conditions se cumulent.",
+          "sourceQuote": "son méat très proche de la flore microbienne périnéale"
+        },
+        {
+          "t": "Des bactéries comme Escherichia coli remontent plus facilement et provoquent une cystite.",
+          "v": true,
+          "e": "VRAI. C'est le mécanisme complet : une distance courte, une flore proche, des bactéries qui remontent, une cystite au bout.",
+          "sourceQuote": "Les bactéries comme E. coli remontent donc plus facilement"
+        },
+        {
+          "t": "Cette fréquence plus élevée traduit une fragilité particulière de l'appareil urinaire féminin.",
+          "v": false,
+          "e": "FAUX : il n'y a aucune fragilité en cause. C'est une conséquence purement géométrique de la longueur du conduit.",
+          "sourceQuote": "Ce n'est pas une fragilité particulière"
+        },
+        {
+          "t": "Cette fréquence s'explique par la double fonction urinaire et génitale de l'urètre féminin.",
+          "v": false,
+          "e": "FAUX : l'urètre féminin n'a pas de fonction génitale. L'explication tient à une simple question de distance anatomique.",
+          "sourceQuote": "c'est une simple question de distance anatomique"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-143-uretre-homme-femme.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes comparant l'urètre masculin et l'urètre féminin, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'urètre masculin est à la fois urinaire et génital, tandis que l'urètre féminin est uniquement urinaire.",
+          "v": true,
+          "e": "VRAI. C'est la distinction fonctionnelle centrale, et celle qui tombe le plus souvent.",
+          "sourceQuote": "L'urètre masculin est urinaire ET génital"
+        },
+        {
+          "t": "Cette différence entre les deux urètres est présentée comme l'une des grandes différences anatomiques inter-sexes.",
+          "v": true,
+          "e": "VRAI. Peu de structures diffèrent autant d'un sexe à l'autre à la fois par leur taille, leur trajet et leur rôle.",
+          "sourceQuote": "l'une des grandes différences anatomiques inter-sexes"
+        },
+        {
+          "t": "Il ne s'agit pas du même conduit décliné en deux tailles, mais de deux organes au rôle différent.",
+          "v": true,
+          "e": "VRAI. C'est la conclusion à tirer de la lecture du tableau : la longueur n'est que le signe visible d'une différence de nature.",
+          "sourceQuote": "ce n'est pas le même conduit en deux tailles"
+        },
+        {
+          "t": "Le tableau comparatif se lit colonne par colonne, la lecture ligne par ligne n'apportant rien.",
+          "v": false,
+          "e": "FAUX : c'est la lecture LIGNE par ligne qui est demandée, car c'est elle qui met face à face les deux sexes sur un même critère.",
+          "sourceQuote": "Lis le tableau ligne par ligne"
+        },
+        {
+          "t": "Avec l'urètre, on a parcouru la totalité du trajet de l'urine, du filtre à la sortie.",
+          "v": true,
+          "e": "VRAI. Le rein filtre, les voies transportent, la vessie stocke, l'urètre évacue : la chaîne est complète.",
+          "sourceQuote": "tu as parcouru tout le trajet de l'urine, du filtre à la sortie"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-143-uretre-homme-femme.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la place de cette fiche dans le chapitre et au repère que constitue l'urètre membraneux, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "C'est la dernière fiche purement descriptive du chapitre.",
+          "v": true,
+          "e": "VRAI. Après elle, on quitte la description des organes pour aborder leur commande.",
+          "sourceQuote": "C'est la dernière fiche purement descriptive du chapitre"
+        },
+        {
+          "t": "La suite du chapitre poursuit la description de nouveaux organes de l'appareil urinaire.",
+          "v": false,
+          "e": "FAUX : à partir d'ici on ne décrit plus des organes, on regarde ce qui les commande — les sphincters et leurs nerfs.",
+          "sourceQuote": "on ne décrit plus des organes, on regarde ce qui les commande"
+        },
+        {
+          "t": "Le second des deux sphincters siège sur l'urètre membraneux.",
+          "v": true,
+          "e": "VRAI. C'est pour cela que le nom de cette portion doit être retenu dès cette fiche : il servira de repère au chapitre suivant.",
+          "sourceQuote": "que siège le second des deux sphincters"
+        },
+        {
+          "t": "L'urètre membraneux désigne la portion de l'urètre qui traverse la prostate.",
+          "v": false,
+          "e": "FAUX : c'est la portion qui traverse le plancher pelvien. La traversée prostatique est la première, et elle porte un autre nom.",
+          "sourceQuote": "La portion qui le traverse porte un nom à retenir dès maintenant : l' urètre membraneux"
+        },
+        {
+          "t": "L'urètre membraneux correspond à la portion qui parcourt le pénis.",
+          "v": false,
+          "e": "FAUX : la portion pénienne est la troisième et dernière. L'urètre membraneux est la portion intermédiaire, celle du plancher pelvien.",
+          "sourceQuote": "celui qui traverse le plancher pelvien"
+        }
+      ]
+    },
+
+    {
+      "fiche": "anatomie-144-sphincters-commande-nerveuse.html",
+      "origine": "ecrite",
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives aux deux sphincters qui contrôlent la sortie de l'urine, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Deux sphincters successifs contrôlent la sortie de l'urine.",
+          "v": true,
+          "e": "VRAI. Ils se succèdent au niveau du col vésical et de l'urètre proximal : l'urine doit franchir les deux.",
+          "sourceQuote": "il y a deux sphincters successifs qui contrôlent la sortie de l'urine"
+        },
+        {
+          "t": "Le sphincter lisse est également appelé sphincter interne.",
+          "v": true,
+          "e": "VRAI. Lisse et interne désignent le même sphincter : c'est la première maille de la chaîne à retenir.",
+          "sourceQuote": "Sphincter lisse (interne)"
+        },
+        {
+          "t": "Le sphincter lisse est constitué de muscle lisse et échappe au contrôle volontaire.",
+          "v": true,
+          "e": "VRAI. Muscle lisse veut dire muscle involontaire : on ne le commande pas consciemment, il travaille en réflexe.",
+          "sourceQuote": "Muscle lisse (involontaire)"
+        },
+        {
+          "t": "Le sphincter strié est fait de muscle strié squelettique et relève du contrôle volontaire.",
+          "v": true,
+          "e": "VRAI. C'est le sphincter que l'on serre consciemment pour se retenir.",
+          "sourceQuote": "Muscle strié squelettique (volontaire)"
+        },
+        {
+          "t": "Le sphincter strié est également appelé sphincter externe.",
+          "v": true,
+          "e": "VRAI. Strié et externe désignent le même sphincter, celui qui est le plus bas sur le trajet.",
+          "sourceQuote": "Sphincter strié (externe)"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-144-sphincters-commande-nerveuse.html",
+      "origine": "ecrite",
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à l'innervation propre à chacun des deux sphincters, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le sphincter lisse dépend du système nerveux autonome.",
+          "v": true,
+          "e": "VRAI. Le sympathique le ferme, le parasympathique l'ouvre : sa commande est entièrement autonome.",
+          "sourceQuote": "Système nerveux autonome (sympathique → fermeture / parasympathique → ouverture)"
+        },
+        {
+          "t": "Le sphincter strié est innervé par le nerf pudendal, issu des racines S2 à S4.",
+          "v": true,
+          "e": "VRAI. C'est un nerf somatique : il transmet un ordre conscient, ce qui explique le caractère volontaire de ce sphincter.",
+          "sourceQuote": "Nerf pudendal (somatique, S2-S4)"
+        },
+        {
+          "t": "Le sphincter lisse est innervé par le nerf pudendal.",
+          "v": false,
+          "e": "FAUX : le pudendal va au sphincter strié. Le sphincter lisse relève du système autonome — les deux chaînes ne se croisent jamais.",
+          "sourceQuote": "LISSE = INTERNE = INVOLONTAIRE = AUTONOME"
+        },
+        {
+          "t": "Le sphincter strié dépend du système nerveux autonome.",
+          "v": false,
+          "e": "FAUX : le sphincter strié est somatique, pas autonome. C'est le sphincter lisse qui relève de l'autonome.",
+          "sourceQuote": "STRIÉ = EXTERNE = VOLONTAIRE = SOMATIQUE"
+        },
+        {
+          "t": "La commande du sphincter lisse est volontaire et consciente.",
+          "v": false,
+          "e": "FAUX : sa commande est réflexe et automatique. Le caractère volontaire et conscient est celui du sphincter strié.",
+          "sourceQuote": "Réflexe, automatique"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-144-sphincters-commande-nerveuse.html",
+      "origine": "ecrite",
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la position respective des deux sphincters et à l'ordre dans lequel l'urine les franchit, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le sphincter strié est situé au niveau du col vésical.",
+          "v": false,
+          "e": "FAUX : c'est le sphincter LISSE qui occupe le col vésical. Le strié est plus bas.",
+          "sourceQuote": "Le sphincter lisse est au niveau du col vésical"
+        },
+        {
+          "t": "Le sphincter lisse siège au niveau de l'urètre membraneux.",
+          "v": false,
+          "e": "FAUX : l'urètre membraneux est le siège du sphincter STRIÉ. Le lisse est situé plus haut, au col vésical.",
+          "sourceQuote": "Le sphincter strié est plus bas"
+        },
+        {
+          "t": "L'urine franchit d'abord le sphincter strié, puis le sphincter lisse.",
+          "v": false,
+          "e": "FAUX : l'ordre est inverse. Le lisse d'abord, le strié ensuite — et cet ordre ne varie jamais.",
+          "sourceQuote": "Le lisse d'abord, le strié ensuite"
+        },
+        {
+          "t": "Le sphincter lisse se trouve juste au-dessous de l'urètre.",
+          "v": false,
+          "e": "FAUX : il se trouve juste au-DESSUS de l'urètre, au niveau du col vésical, à la sortie même de la vessie.",
+          "sourceQuote": "juste au-dessus de l'urètre"
+        },
+        {
+          "t": "Le sphincter strié se situe au niveau de la portion de l'urètre qui traverse le plancher pelvien.",
+          "v": true,
+          "e": "VRAI. Cette portion porte le nom d'urètre membraneux : c'est là que se trouve le sphincter volontaire.",
+          "sourceQuote": "celui qui traverse le plancher pelvien"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-144-sphincters-commande-nerveuse.html",
+      "origine": "ecrite",
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux commandes sympathique et parasympathique de la vessie, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le sympathique emprunte les nerfs hypogastriques, issus des niveaux T11 à L2.",
+          "v": true,
+          "e": "VRAI. C'est une commande haute, thoraco-lombaire, à ne pas confondre avec les niveaux sacrés des deux autres.",
+          "sourceQuote": "Nerfs hypogastriques, T11-L2"
+        },
+        {
+          "t": "Le sympathique relâche le détrusor et contracte le sphincter lisse.",
+          "v": true,
+          "e": "VRAI. C'est le mode alerte : la vessie se remplit tranquillement pendant que la sortie reste fermée.",
+          "sourceQuote": "il relâche le détrusor (la vessie se remplit tranquillement) et contracte le sphincter lisse"
+        },
+        {
+          "t": "Le sympathique est la commande de la miction.",
+          "v": false,
+          "e": "FAUX : le sympathique est la commande de la continence passive, celle du remplissage. C'est le parasympathique qui commande la miction.",
+          "sourceQuote": "C'est la commande de la continence passive"
+        },
+        {
+          "t": "Le parasympathique emprunte les nerfs pelviens, issus des niveaux S2 à S4.",
+          "v": true,
+          "e": "VRAI. Niveaux sacrés, comme le pudendal — mais ce sont deux nerfs différents pour deux muscles différents.",
+          "sourceQuote": "Nerfs pelviens, S2-S4"
+        },
+        {
+          "t": "Le parasympathique relâche le détrusor et contracte le sphincter lisse.",
+          "v": false,
+          "e": "FAUX : c'est exactement l'inverse. Le parasympathique contracte le détrusor pour vider et relâche le sphincter lisse pour laisser passer.",
+          "sourceQuote": "il contracte le détrusor (vidange) et relâche le sphincter lisse"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-144-sphincters-commande-nerveuse.html",
+      "origine": "ecrite",
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au détrusor, à la commande somatique et à l'organisation générale de la commande vésicale, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le détrusor est le muscle de la paroi vésicale, qui se contracte pour vider la vessie.",
+          "v": true,
+          "e": "VRAI. C'est le moteur de la miction : sans sa contraction, relâcher les sphincters ne suffirait pas.",
+          "sourceQuote": "le muscle de la paroi vésicale, qui se contracte pour vider"
+        },
+        {
+          "t": "La vessie est sous une triple commande nerveuse, qui pilote deux muscles.",
+          "v": true,
+          "e": "VRAI. Trois nerfs, deux effecteurs : le détrusor et les deux sphincters. Rien n'est à apprendre par cœur, tout se déduit.",
+          "sourceQuote": "triple commande nerveuse , qui pilote 2 muscles"
+        },
+        {
+          "t": "La commande somatique assure le contrôle volontaire du sphincter strié externe.",
+          "v": true,
+          "e": "VRAI. Elle passe par le nerf pudendal : c'est la seule des trois commandes qui obéisse à une décision consciente.",
+          "sourceQuote": "Le contrôle volontaire du sphincter strié externe"
+        },
+        {
+          "t": "Le sympathique est présenté comme le « mode lion », celui de l'alerte, où uriner n'est pas la priorité.",
+          "v": true,
+          "e": "VRAI. Cette image permet de retrouver ses deux effets sans les apprendre : en alerte, on remplit et on ferme.",
+          "sourceQuote": "C'est le « mode lion » (quand tu es en alerte, uriner n'est PAS la priorité)"
+        },
+        {
+          "t": "Le mode par défaut pendant le remplissage de la vessie est la commande parasympathique.",
+          "v": false,
+          "e": "FAUX : le mode par défaut pendant le remplissage est le sympathique, celui de la continence passive. Le parasympathique n'intervient qu'au moment de vider.",
+          "sourceQuote": "le mode par défaut pendant le remplissage"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-144-sphincters-commande-nerveuse.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives aux conséquences cliniques d'une atteinte de l'une ou l'autre des deux commandes sphinctériennes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une atteinte de la moelle ou des nerfs autonomes perturbe le sphincter strié.",
+          "v": false,
+          "e": "FAUX : une atteinte autonome perturbe le sphincter LISSE, puisque c'est lui qui dépend de ce territoire.",
+          "sourceQuote": "perturbe le sphincter lisse : c'est la vessie neurologique"
+        },
+        {
+          "t": "La vessie neurologique résulte d'une atteinte du périnée.",
+          "v": false,
+          "e": "FAUX : la vessie neurologique vient d'une atteinte de la moelle ou des nerfs autonomes. L'atteinte périnéale donne un tout autre tableau.",
+          "sourceQuote": "Une atteinte de la moelle ou des nerfs autonomes perturbe le sphincter lisse"
+        },
+        {
+          "t": "Une atteinte du périnée, après un accouchement ou une prostatectomie, affaiblit le sphincter lisse.",
+          "v": false,
+          "e": "FAUX : elle affaiblit le sphincter STRIÉ, qui est le sphincter du périnée. Le lisse n'est pas concerné par ces situations.",
+          "sourceQuote": "après une prostatectomie — affaiblit le sphincter strié"
+        },
+        {
+          "t": "L'incontinence d'effort correspond à une atteinte du sphincter strié.",
+          "v": true,
+          "e": "VRAI. Le sphincter volontaire n'assure plus la fermeture lors des poussées : c'est le tableau de l'incontinence d'effort.",
+          "sourceQuote": "c'est l' incontinence d'effort"
+        },
+        {
+          "t": "Les deux sphincters relevant du même territoire nerveux, leur atteinte donne un tableau clinique unique.",
+          "v": false,
+          "e": "FAUX : deux sphincters, deux territoires nerveux, deux tableaux différents. C'est justement ce qui rend la distinction utile en clinique.",
+          "sourceQuote": "deux territoires nerveux, deux tableaux différents"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-144-sphincters-commande-nerveuse.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives aux deux chaînes à ne jamais croiser et au maintien de la continence, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le sphincter qui maintient la continence pendant le sommeil est le sphincter lisse.",
+          "v": true,
+          "e": "VRAI. Il assure la continence passive, celle qui ne demande aucune décision : c'est pour cela qu'elle tient pendant le sommeil.",
+          "sourceQuote": "AUTONOME (sympathique) — c'est lui qui maintient la continence passive pendant le sommeil"
+        },
+        {
+          "t": "C'est le sphincter lisse que l'on contracte consciemment pour se retenir.",
+          "v": false,
+          "e": "FAUX : le sphincter que l'on contracte consciemment est le strié. Le lisse échappe totalement à la volonté.",
+          "sourceQuote": "nerf pudendal, S2-S4) — c'est lui que tu contractes consciemment pour retenir"
+        },
+        {
+          "t": "La formulation « sphincter externe égale involontaire » est exacte.",
+          "v": false,
+          "e": "FAUX : externe va avec strié, donc avec volontaire. C'est l'une des trois formulations croisées que la fiche donne comme fausses.",
+          "sourceQuote": "STRIÉ = EXTERNE = VOLONTAIRE = SOMATIQUE"
+        },
+        {
+          "t": "Sur le schéma, la flèche du sympathique désigne le sphincter lisse et celle du pudendal le sphincter strié.",
+          "v": true,
+          "e": "VRAI. Chaque valve est reliée au nerf qui la tient : sympathique thoraco-lombaire sur le lisse, pudendal sacré sur le strié.",
+          "sourceQuote": "sur le lisse, pudendal (S2-S4) sur le strié"
+        },
+        {
+          "t": "Les deux chaînes peuvent se croiser : le sphincter lisse relève parfois du somatique et le strié de l'autonome.",
+          "v": false,
+          "e": "FAUX : les deux chaînes ne se croisent jamais. Interne va avec lisse et autonome, externe avec strié et pudendal, sans exception.",
+          "sourceQuote": "Les deux chaînes ne se croisent jamais"
+        }
+      ]
+    },
+
+    {
+      "fiche": "biologie-143-fibres-reticuline.html",
+      "origine": "ecrite",
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la nature chimique des fibres de réticuline, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les fibres de réticuline sont un type particulier de fibres de collagène.",
+          "v": true,
+          "e": "VRAI. Ce n'est pas une protéine nouvelle à apprendre : c'est du collagène, simplement organisé autrement.",
+          "sourceQuote": "un type particulier de fibres de collagène"
+        },
+        {
+          "t": "Elles sont constituées de collagène de type III.",
+          "v": true,
+          "e": "VRAI. Le type III est celui de la réticuline : c'est le chiffre à retenir, et il est demandé tel quel en P1.",
+          "sourceQuote": "du collagène de type III"
+        },
+        {
+          "t": "Elles forment des fibres plus épaisses que le collagène de type I.",
+          "v": false,
+          "e": "FAUX : elles sont au contraire beaucoup plus FINES que le collagène de type I. La finesse fait partie de leur définition.",
+          "sourceQuote": "des fibres beaucoup plus fines que le collagène de type I"
+        },
+        {
+          "t": "Il s'agit du même collagène que celui trouvé dans la paroi des vaisseaux sanguins.",
+          "v": true,
+          "e": "VRAI. Le collagène III se retrouve dans les parois vasculaires : la molécule est la même, seule l'organisation change.",
+          "sourceQuote": "le même collagène que celui trouvé dans les parois des vaisseaux sanguins"
+        },
+        {
+          "t": "Le collagène de type I est celui que l'on trouve dans la rate et les ganglions.",
+          "v": false,
+          "e": "FAUX : le type I est celui des tendons et du derme. La rate et les ganglions relèvent du réseau de réticuline, donc du type III.",
+          "sourceQuote": "le collagène de type I (celui des tendons ou du derme)"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-143-fibres-reticuline.html",
+      "origine": "ecrite",
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à l'organisation structurale des fibres de réticuline, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les fibres de réticuline forment un réseau tridimensionnel délicat.",
+          "v": true,
+          "e": "VRAI. Un réseau, et non des faisceaux : c'est ce qui les distingue à l'œil du collagène de type I.",
+          "sourceQuote": "les fibres de réticuline forment un réseau tridimensionnel délicat"
+        },
+        {
+          "t": "Ce réseau sert de charpente de soutien pour les cellules.",
+          "v": true,
+          "e": "VRAI. Il ne résiste pas à la traction, il soutient : c'est un support souple, pas un câble.",
+          "sourceQuote": "Ce réseau sert de charpente de soutien pour les cellules"
+        },
+        {
+          "t": "Les grosses fibres de collagène de type I forment des faisceaux épais.",
+          "v": true,
+          "e": "VRAI. C'est le terme de comparaison : faisceaux épais d'un côté, réseau fin de l'autre.",
+          "sourceQuote": "aux grosses fibres de collagène I qui forment des faisceaux épais"
+        },
+        {
+          "t": "L'image proposée pour retenir cette organisation est celle d'une toile d'araignée ou d'un filet très fin.",
+          "v": true,
+          "e": "VRAI. C'est l'image du mnémo, et elle rend compte à la fois de la finesse et du caractère tridimensionnel du réseau.",
+          "sourceQuote": "comme une toile d'araignée ou un filet très fin"
+        },
+        {
+          "t": "Comme le collagène de type I, la réticuline s'organise en faisceaux épais.",
+          "v": false,
+          "e": "FAUX : c'est justement le contraire du collagène de type I. La réticuline forme un réseau, jamais des faisceaux.",
+          "sourceQuote": "Contrairement aux grosses fibres de collagène I"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-143-fibres-reticuline.html",
+      "origine": "ecrite",
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la localisation des fibres de réticuline, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "On en trouve dans les organes lymphoïdes, c'est-à-dire les organes du système immunitaire.",
+          "v": true,
+          "e": "VRAI. Ces organes ont besoin d'une trame de soutien souple pour tenir des cellules mobiles : c'est exactement le rôle de la réticuline.",
+          "sourceQuote": "les organes lymphoïdes (les organes du système immunitaire)"
+        },
+        {
+          "t": "La rate, les ganglions lymphatiques et la moelle osseuse en contiennent.",
+          "v": true,
+          "e": "VRAI. Ce sont les trois exemples cités pour le soutien des cellules immunitaires.",
+          "sourceQuote": "rate, ganglions lymphatiques, moelle osseuse"
+        },
+        {
+          "t": "Dans le foie, elles se disposent autour des hépatocytes.",
+          "v": true,
+          "e": "VRAI. Elles y maintiennent l'architecture hépatique, c'est-à-dire l'agencement des travées de cellules.",
+          "sourceQuote": "autour des hépatocytes"
+        },
+        {
+          "t": "Elles soutiennent les cellules sécrétrices des glandes endocrines.",
+          "v": true,
+          "e": "VRAI. Une glande endocrine a besoin d'un support fin qui laisse la place aux capillaires : la réticuline remplit ce rôle.",
+          "sourceQuote": "les glandes endocrines (pour supporter les cellules sécrétrices)"
+        },
+        {
+          "t": "Elles renforcent la paroi des capillaires.",
+          "v": true,
+          "e": "VRAI. Les capillaires ont une paroi très mince ; le réseau de réticuline vient la renforcer sans l'épaissir.",
+          "sourceQuote": "la paroi des capillaires (pour renforcer les petits vaisseaux)"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-143-fibres-reticuline.html",
+      "origine": "ecrite",
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la reconnaissance histologique des fibres de réticuline, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les fibres de réticuline se voient bien avec la coloration standard à l'hématoxyline-éosine.",
+          "v": false,
+          "e": "FAUX : elles ne s'y voient PAS bien. C'est pour cette raison qu'il faut une technique particulière pour les révéler.",
+          "sourceQuote": "Elles ne se voient PAS bien avec la coloration standard HE"
+        },
+        {
+          "t": "L'imprégnation argentique les fait apparaître en brun-rouge.",
+          "v": false,
+          "e": "FAUX : l'imprégnation argentique les fait apparaître en NOIR. Le brun-rouge est la couleur de l'orcéine sur les fibres élastiques.",
+          "sourceQuote": "les fibres apparaissent en noir"
+        },
+        {
+          "t": "On les dit argyrophiles parce qu'elles fixent les sels d'argent.",
+          "v": true,
+          "e": "VRAI. Argyrophile signifie littéralement « qui aime l'argent » : l'argent se fixe spécifiquement sur ces fibres, ce qui les noircit.",
+          "sourceQuote": "argyrophiles (= qui aime l'argent)"
+        },
+        {
+          "t": "Dire qu'elles sont mal visibles en hématoxyline-éosine revient à dire qu'elles sont absentes de la coupe.",
+          "v": false,
+          "e": "FAUX : mal visibles ne veut pas dire absentes. Les fibres sont bien là ; c'est la coloration qui ne les montre pas.",
+          "sourceQuote": "mal visibles ne veut pas dire absentes"
+        },
+        {
+          "t": "L'orcéine est la technique de choix pour révéler les fibres de réticuline.",
+          "v": false,
+          "e": "FAUX : l'orcéine, qui donne du brun-rouge, révèle les fibres élastiques. La réticuline demande une imprégnation argentique.",
+          "sourceQuote": "Orcéine, brun-rouge → fibres élastiques"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-143-fibres-reticuline.html",
+      "origine": "ecrite",
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au tableau de comparaison des trois familles de fibres et à l'illustration qui l'accompagne, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les fibres élastiques sont composées d'élastine et de fibrilline.",
+          "v": true,
+          "e": "VRAI. C'est leur ligne « composition » : deux protéines, dont l'élastine qui porte la propriété d'étirement réversible.",
+          "sourceQuote": "Élastine + fibrilline"
+        },
+        {
+          "t": "L'aspect du collagène est celui de fibres épaisses, ondulées et striées en microscopie électronique.",
+          "v": true,
+          "e": "VRAI. C'est la ligne « aspect » du collagène, et la striation n'est visible qu'en microscopie électronique.",
+          "sourceQuote": "Épaisses, ondulées, striées"
+        },
+        {
+          "t": "Le collagène se localise dans l'aorte, les poumons et la peau, tandis que les fibres élastiques siègent dans le derme, l'os et les tendons.",
+          "v": false,
+          "e": "FAUX : les deux localisations sont inversées. Le collagène occupe le derme, l'os et les tendons ; l'aorte et les poumons sont le domaine des fibres élastiques.",
+          "sourceQuote": "Derme, os, tendons"
+        },
+        {
+          "t": "Sur l'illustration comparative, les fibres élastiques apparaissent sous la forme de gros faisceaux roses torsadés.",
+          "v": false,
+          "e": "FAUX : les gros faisceaux roses torsadés sont ceux du collagène, à gauche de l'illustration. Les fibres élastiques sont fines, jaunes et ramifiées.",
+          "sourceQuote": "le collagène : de gros faisceaux roses torsadés"
+        },
+        {
+          "t": "Sur cette illustration, l'agrandissement du collagène en microscopie électronique montre une striation de 47 nm.",
+          "v": false,
+          "e": "FAUX : la striation du collagène est de 67 nm. Le chiffre est modifié dans la proposition.",
+          "sourceQuote": "la striation de 67 nm"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-143-fibres-reticuline.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la façon de trier les trois familles de fibres à partir du tableau, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le tableau est présenté comme une grille de tri : on donne une ligne et on demande la colonne.",
+          "v": true,
+          "e": "VRAI. Ce n'est pas un résumé à relire, c'est un outil à utiliser dans les deux sens : d'un critère vers une famille de fibres.",
+          "sourceQuote": "on te donne une ligne et on te demande la colonne"
+        },
+        {
+          "t": "La ligne la plus rentable du tableau est celle de la coloration.",
+          "v": true,
+          "e": "VRAI. Elle tranche plus vite que toutes les autres : dès qu'une technique de coloration est nommée, la réponse est acquise.",
+          "sourceQuote": "La ligne la plus rentable du tableau, c'est la coloration"
+        },
+        {
+          "t": "Une coloration à l'hématoxyline-éosine donnant du rose oriente vers le collagène.",
+          "v": true,
+          "e": "VRAI. Le collagène est la seule des trois familles à se colorer correctement avec la technique standard.",
+          "sourceQuote": "HE, rose → collagène"
+        },
+        {
+          "t": "Une coloration à l'orcéine donnant du brun-rouge oriente vers les fibres élastiques.",
+          "v": true,
+          "e": "VRAI. L'orcéine est le réactif propre aux fibres élastiques, et le brun-rouge sa couleur caractéristique.",
+          "sourceQuote": "Orcéine (brun-rouge)"
+        },
+        {
+          "t": "Une imprégnation argentique donnant du noir oriente vers les fibres de réticuline.",
+          "v": true,
+          "e": "VRAI. C'est la troisième entrée de la ligne coloration, et la signature des fibres argyrophiles.",
+          "sourceQuote": "Imprégnation argentique, noir → réticuline"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-143-fibres-reticuline.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives au piège de cette fiche, à l'aspect de la réticuline sur l'illustration et à la place de cette fiche dans le chapitre, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les fibres de réticuline constituent une troisième protéine, distincte du collagène et de l'élastine.",
+          "v": false,
+          "e": "FAUX : elles ne sont pas une protéine à part. C'est du collagène, de type III — c'est le piège central de la fiche.",
+          "sourceQuote": "ne sont pas une troisième protéine à côté du collagène et de l'élastine"
+        },
+        {
+          "t": "On distingue la réticuline des autres fibres par son aspect et sa coloration, jamais par sa nature.",
+          "v": true,
+          "e": "VRAI. Puisque sa nature est celle du collagène, seule l'organisation et la technique de révélation permettent de la reconnaître.",
+          "sourceQuote": "on les distingue par leur aspect et leur coloration, jamais par leur nature"
+        },
+        {
+          "t": "Sur l'illustration comparative, la réticuline apparaît comme un réseau noir très fin sur fond clair.",
+          "v": true,
+          "e": "VRAI. C'est exactement l'aspect d'une imprégnation argentique, et c'est la colonne de droite de l'illustration.",
+          "sourceQuote": "un réseau noir très fin sur fond clair"
+        },
+        {
+          "t": "Avec la réticuline, la description de la matrice extracellulaire est complète.",
+          "v": true,
+          "e": "VRAI. On a vu la substance fondamentale, puis ses trois familles de fibres : il ne reste plus rien à ajouter à la matrice.",
+          "sourceQuote": "la matrice extracellulaire est complète"
+        },
+        {
+          "t": "La fiche suivante reviendra sur la substance fondamentale.",
+          "v": false,
+          "e": "FAUX : la suite ne revient pas en arrière. On passe à ce qu'on fabrique avec ces composants, c'est-à-dire aux tissus conjonctifs eux-mêmes.",
+          "sourceQuote": "c'est-à-dire aux tissus conjonctifs eux-mêmes"
+        }
+      ]
+    },
+
+    {
+      "fiche": "biologie-144-tc-laches.html",
+      "origine": "ecrite",
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives au principe de classification des tissus conjonctifs, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les tissus conjonctifs sont classés selon la nature des composants qui les constituent.",
+          "v": false,
+          "e": "FAUX : ils sont classés selon la PROPORTION relative de leurs composants, pas selon leur nature. Les composants, eux, sont toujours les mêmes.",
+          "sourceQuote": "classés selon la proportion relative de cellules, de fibres et de substance fondamentale"
+        },
+        {
+          "t": "Ce qui change d'un tissu conjonctif à l'autre, c'est le dosage des composants.",
+          "v": true,
+          "e": "VRAI. C'est l'idée directrice de toute la classification : mêmes ingrédients partout, dosages différents.",
+          "sourceQuote": "c'est leur dosage"
+        },
+        {
+          "t": "On distingue trois grandes catégories de tissus conjonctifs.",
+          "v": false,
+          "e": "FAUX : il y en a DEUX, les lâches et les denses. La subdivision en quatre concerne les seuls tissus lâches.",
+          "sourceQuote": "On distingue deux grandes catégories : les lâches et les denses"
+        },
+        {
+          "t": "Les trois composants d'un tissu conjonctif sont les cellules, les fibres et la lame basale.",
+          "v": false,
+          "e": "FAUX : le troisième composant est la substance fondamentale, non la lame basale. La lame basale relève des épithéliums.",
+          "sourceQuote": "la substance fondamentale (GAG, protéoglycanes, glycoprotéines)"
+        },
+        {
+          "t": "Parmi les cellules citées figurent le fibroblaste, l'adipocyte, le macrophage, le mastocyte et l'ostéocyte.",
+          "v": false,
+          "e": "FAUX : la cinquième cellule de la liste est le PLASMOCYTE, pas l'ostéocyte. L'ostéocyte appartient au tissu osseux.",
+          "sourceQuote": "fibroblaste, adipocyte, macrophage, mastocyte, plasmocyte"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-144-tc-laches.html",
+      "origine": "ecrite",
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux caractères généraux des tissus conjonctifs lâches, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Ils sont riches en substance fondamentale et pauvres en fibres.",
+          "v": true,
+          "e": "VRAI. C'est la définition même du caractère « lâche » : beaucoup de substance fondamentale, peu de fibres.",
+          "sourceQuote": "riches en substance fondamentale et pauvres en fibres"
+        },
+        {
+          "t": "Leurs cellules y sont rares et peu variées.",
+          "v": false,
+          "e": "FAUX : les cellules y sont au contraire nombreuses et variées. C'est l'un de leurs traits distinctifs.",
+          "sourceQuote": "Les cellules y sont nombreuses et variées"
+        },
+        {
+          "t": "Ce sont les tissus conjonctifs les plus répandus dans l'organisme.",
+          "v": true,
+          "e": "VRAI. On les rencontre partout : sous les épithéliums, autour des vaisseaux et des nerfs, entre les organes.",
+          "sourceQuote": "les tissus conjonctifs les plus répandus dans l'organisme"
+        },
+        {
+          "t": "Il en existe trois variantes.",
+          "v": false,
+          "e": "FAUX : il en existe QUATRE — aréolaire, réticulé, muqueux et adipeux.",
+          "sourceQuote": "Il en existe quatre variantes"
+        },
+        {
+          "t": "Les tissus conjonctifs denses présentent les mêmes proportions de composants que les tissus lâches.",
+          "v": false,
+          "e": "FAUX : les denses ont des proportions inversées — beaucoup de fibres, peu de cellules, peu de substance fondamentale.",
+          "sourceQuote": "Mêmes ingrédients, mais proportions inversées"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-144-tc-laches.html",
+      "origine": "ecrite",
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au tissu conjonctif lâche aréolaire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "C'est le tissu conjonctif le plus commun.",
+          "v": true,
+          "e": "VRAI. L'aréolaire est le tissu conjonctif lâche « classique », celui qu'on rencontre par défaut.",
+          "sourceQuote": "C'est le TC le plus commun"
+        },
+        {
+          "t": "Il contient tous les types de cellules et de fibres en proportions équilibrées.",
+          "v": true,
+          "e": "VRAI. Aucun composant n'y prend le dessus : c'est précisément ce qui le définit et permet de le trier.",
+          "sourceQuote": "en proportions équilibrées : aucun composant n'y prend le dessus"
+        },
+        {
+          "t": "On le retrouve sous les épithéliums, où il constitue le chorion des muqueuses.",
+          "v": true,
+          "e": "VRAI. Le mot chorion désigne exactement cela : le tissu conjonctif lâche placé sous un épithélium de revêtement.",
+          "sourceQuote": "sous les épithéliums (= le chorion des muqueuses)"
+        },
+        {
+          "t": "On le retrouve également autour des vaisseaux et des nerfs, ainsi qu'entre les organes.",
+          "v": true,
+          "e": "VRAI. Il joue partout le même rôle de tissu de remplissage et de soutien souple.",
+          "sourceQuote": "autour des vaisseaux et des nerfs , et entre les organes"
+        },
+        {
+          "t": "Dans le tissu aréolaire, ce sont les fibres de réticuline qui dominent.",
+          "v": false,
+          "e": "FAUX : rien n'y domine, tout y est équilibré. La prédominance des fibres de réticuline caractérise le tissu réticulé.",
+          "sourceQuote": "Tout, en proportions équilibrées"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-144-tc-laches.html",
+      "origine": "ecrite",
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives au tissu réticulé et au tissu muqueux, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le tissu réticulé est riche en fibres de réticuline, c'est-à-dire en collagène de type III.",
+          "v": true,
+          "e": "VRAI. C'est ce qui lui donne son nom : un tissu construit autour d'un réseau de collagène III.",
+          "sourceQuote": "Riche en fibres de réticuline (le collagène III, celui qui forme un réseau"
+        },
+        {
+          "t": "Il forme la charpente des organes lymphoïdes et des organes hématopoïétiques.",
+          "v": true,
+          "e": "VRAI. Rate et ganglions pour les premiers, moelle osseuse rouge pour les seconds : partout, le même réseau de soutien.",
+          "sourceQuote": "il forme la charpente des organes lymphoïdes"
+        },
+        {
+          "t": "Le tissu muqueux est riche en fibres et pauvre en substance fondamentale.",
+          "v": false,
+          "e": "FAUX : c'est exactement l'inverse. Il est riche en substance fondamentale gélatineuse et pauvre en fibres comme en cellules.",
+          "sourceQuote": "pauvre en fibres et en cellules"
+        },
+        {
+          "t": "Le tissu muqueux doit sa consistance à l'acide hyaluronique, seul GAG non sulfaté.",
+          "v": true,
+          "e": "VRAI. C'est lui qui retient l'eau et donne l'aspect gélatineux caractéristique de ce tissu.",
+          "sourceQuote": "acide hyaluronique ++, le seul GAG non sulfaté"
+        },
+        {
+          "t": "Les deux exemples typiques de tissu muqueux sont la gelée de Wharton du cordon ombilical et le cristallin de l'œil.",
+          "v": false,
+          "e": "FAUX : le second exemple est le CORPS VITRÉ de l'œil, pas le cristallin. La gelée de Wharton, elle, est bien le premier.",
+          "sourceQuote": "la gelée de Wharton du cordon ombilical et le corps vitré de l'œil"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-144-tc-laches.html",
+      "origine": "ecrite",
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au tissu adipeux et à la notion de chorion, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le tissu adipeux est un tissu conjonctif spécialisé dans lequel les adipocytes sont le type cellulaire dominant.",
+          "v": true,
+          "e": "VRAI. C'est le critère de tri de cette variante : dès que les adipocytes dominent, il s'agit de tissu adipeux.",
+          "sourceQuote": "les adipocytes sont le type cellulaire dominant"
+        },
+        {
+          "t": "Le tissu adipeux blanc constitue une réserve énergétique et siège notamment sous la peau.",
+          "v": true,
+          "e": "VRAI. C'est le tissu adipeux le plus abondant chez l'adulte, et sa fonction est le stockage.",
+          "sourceQuote": "le tissu adipeux blanc (réserve énergétique, sous-cutané)"
+        },
+        {
+          "t": "Le tissu adipeux brun assure la thermogenèse et se rencontre chez le nouveau-né.",
+          "v": true,
+          "e": "VRAI. Il ne stocke pas, il produit de la chaleur — d'où son importance chez le nouveau-né, qui se refroidit vite.",
+          "sourceQuote": "le tissu adipeux brun (thermogenèse, nouveau-né)"
+        },
+        {
+          "t": "Le chorion est le tissu conjonctif lâche situé juste sous un épithélium de revêtement.",
+          "v": true,
+          "e": "VRAI. C'est la définition exacte du mot, et elle rappelle qu'un chorion est toujours du tissu conjonctif lâche.",
+          "sourceQuote": "le tissu conjonctif lâche qui se trouve juste sous un épithélium de revêtement"
+        },
+        {
+          "t": "L'ensemble formé par un épithélium et son chorion constitue une muqueuse.",
+          "v": true,
+          "e": "VRAI. Une muqueuse n'est pas un tissu unique : c'est l'association d'un épithélium et du tissu conjonctif lâche qui le porte.",
+          "sourceQuote": "l'ensemble épithélium + chorion forme une muqueuse"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-144-tc-laches.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la méthode de tri des quatre variantes en question, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Devant un tissu conjonctif lâche, le seul critère de tri consiste à chercher ce qui domine.",
+          "v": true,
+          "e": "VRAI. Puisque les composants sont les mêmes partout, c'est la prédominance de l'un d'eux qui nomme la variante.",
+          "sourceQuote": "cherche ce qui domine : c'est le seul critère de tri"
+        },
+        {
+          "t": "Des proportions équilibrées orientent vers le tissu aréolaire.",
+          "v": true,
+          "e": "VRAI. L'équilibre est lui-même un critère : c'est la signature de l'aréolaire.",
+          "sourceQuote": "Proportions équilibrées → aréolaire"
+        },
+        {
+          "t": "Une substance fondamentale gélatineuse oriente vers le tissu réticulé.",
+          "v": false,
+          "e": "FAUX : une substance fondamentale gélatineuse oriente vers le tissu MUQUEUX. Le réticulé se reconnaît à ses fibres de réticuline.",
+          "sourceQuote": "Substance fondamentale gélatineuse → muqueux"
+        },
+        {
+          "t": "Derrière le mot chorion, il n'y a que du tissu aréolaire.",
+          "v": true,
+          "e": "VRAI. C'est la traduction à appliquer systématiquement : chorion signifie tissu conjonctif lâche aréolaire sous un épithélium.",
+          "sourceQuote": "il n'y a que de l' aréolaire"
+        },
+        {
+          "t": "L'épithélium repose sur la lame basale, et le chorion situé juste en dessous lui apporte les vaisseaux sanguins.",
+          "v": true,
+          "e": "VRAI. L'épithélium n'étant pas vascularisé, il dépend du chorion sous-jacent pour son approvisionnement.",
+          "sourceQuote": "l'épithélium repose sur la lame basale"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-144-tc-laches.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives aux couples de mots voisins à ne pas confondre et aux localisations propres à chaque variante, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La réticuline est un tissu entier, tandis que le tissu réticulé est une fibre.",
+          "v": false,
+          "e": "FAUX : les deux termes sont inversés. La réticuline est une fibre ; le tissu réticulé est le tissu construit autour d'elle.",
+          "sourceQuote": "La réticuline est une fibre ; le tissu réticulé est un tissu entier"
+        },
+        {
+          "t": "Le tissu muqueux et une muqueuse désignent la même chose.",
+          "v": false,
+          "e": "FAUX : le tissu muqueux est le tissu gélatineux de la gelée de Wharton. Une muqueuse est un épithélium associé à son chorion. Deux mots voisins, deux réalités différentes.",
+          "sourceQuote": "le tissu muqueux (gélatineux, gelée de Wharton) n'est pas une muqueuse"
+        },
+        {
+          "t": "Le tissu réticulé se rencontre dans la gelée de Wharton et le corps vitré.",
+          "v": false,
+          "e": "FAUX : ces deux localisations sont celles du tissu muqueux. Le réticulé occupe la rate, les ganglions lymphatiques et la moelle osseuse rouge.",
+          "sourceQuote": "Rate, ganglions lymphatiques, moelle osseuse rouge"
+        },
+        {
+          "t": "Le tissu adipeux brun est celui du tissu sous-cutané de l'adulte.",
+          "v": false,
+          "e": "FAUX : le tissu sous-cutané correspond au tissu adipeux BLANC. Le brun est celui du nouveau-né.",
+          "sourceQuote": "Tissu sous-cutané (blanc)"
+        },
+        {
+          "t": "Une muqueuse est l'ensemble formé par un épithélium et son chorion.",
+          "v": true,
+          "e": "VRAI. C'est la seule des deux notions voisines qui associe deux tissus : un épithélium de revêtement et le tissu conjonctif lâche qui le soutient.",
+          "sourceQuote": "une muqueuse (épithélium + chorion)"
+        }
+      ]
+    }
+  ]
+}

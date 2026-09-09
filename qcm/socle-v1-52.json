@@ -1,0 +1,1376 @@
+{
+  "matiere": "mixte",
+  "chapitre": 0,
+  "note": "socle 1-7 — fiches sans QCM, ordre du Parcours",
+  "questions": [
+    {
+      "fiche": "chimie-132-signe-delta-g-exergonique-endergonique.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la lecture du signe de ΔG, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "À température et pression constantes, le signe de ΔG suffit à conclure sur le sens spontané de la réaction.",
+          "v": true,
+          "e": "VRAI. C'est tout l'intérêt de ΔG : dans les conditions du laboratoire et du corps humain, c'est-à-dire à T et P constantes, son seul signe donne le verdict, sans autre calcul.",
+          "sourceQuote": "À T et P constants (= conditions du labo et du corps humain)"
+        },
+        {
+          "t": "Un ΔG négatif signe une réaction exergonique, spontanée dans le sens direct.",
+          "v": true,
+          "e": "VRAI. ΔG < 0 correspond à une réaction exergonique : elle se fait toute seule des réactifs vers les produits.",
+          "sourceQuote": "ΔG < 0 → exergonique, spontanée dans le sens direct"
+        },
+        {
+          "t": "Un ΔG positif désigne une réaction endergonique, qui ne se fait pas toute seule dans le sens direct.",
+          "v": true,
+          "e": "VRAI. ΔG > 0 = endergonique : dans le sens direct, il faut fournir de l'énergie pour que la réaction se produise.",
+          "sourceQuote": "ΔG > 0 → endergonique, non spontanée dans ce sens mais spontanée en sens inverse"
+        },
+        {
+          "t": "Un ΔG positif rend la réaction impossible dans les deux sens.",
+          "v": false,
+          "e": "FAUX : elle est bloquée dans le sens direct, mais elle est justement spontanée dans le sens inverse. Un ΔG positif ne fige pas le système, il en indique le sens naturel.",
+          "sourceQuote": "mais spontanée en sens inverse"
+        },
+        {
+          "t": "Il faut connaître séparément ΔH et ΔS pour conclure : le seul signe de ΔG ne suffit pas.",
+          "v": false,
+          "e": "FAUX : une fois ΔG calculé, son signe donne la réponse directement. ΔH et ΔS servent à comprendre d'où vient ce signe, pas à trancher la spontanéité.",
+          "sourceQuote": "le signe de ΔG te donne la réponse directement"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-132-signe-delta-g-exergonique-endergonique.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives au vocabulaire de base employé pour décrire une réaction, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les réactifs sont les substances présentes au départ, à gauche de la flèche.",
+          "v": true,
+          "e": "VRAI. Ce sont les substances qu'on met au départ, écrites à gauche de la flèche de réaction.",
+          "sourceQuote": "Les substances qu'on met au départ (à gauche de la flèche)"
+        },
+        {
+          "t": "Les produits sont les substances formées à la fin, à droite de la flèche.",
+          "v": true,
+          "e": "VRAI. Les produits sont ce que la réaction fabrique ; on les écrit à droite de la flèche.",
+          "sourceQuote": "Les substances formées à la fin (à droite de la flèche)"
+        },
+        {
+          "t": "Le sens direct va des réactifs vers les produits.",
+          "v": true,
+          "e": "VRAI. Le sens direct, noté par la flèche vers la droite, correspond à la transformation des réactifs en produits.",
+          "sourceQuote": "La réaction va de gauche à droite : les réactifs se transforment en produits"
+        },
+        {
+          "t": "Dans le sens inverse, les produits se retransforment en réactifs.",
+          "v": true,
+          "e": "VRAI. Le sens inverse est le trajet retour : la réaction va de droite à gauche et les produits redonnent les réactifs.",
+          "sourceQuote": "les produits se retransforment en réactifs"
+        },
+        {
+          "t": "Une réaction spontanée se produit toute seule, sans apport d'énergie permanent.",
+          "v": true,
+          "e": "VRAI. C'est la définition retenue : la réaction se fait d'elle-même, sans qu'il faille l'entretenir en lui fournissant de l'énergie en continu.",
+          "sourceQuote": "sans qu'on ait besoin de lui fournir d'énergie en permanence"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-132-signe-delta-g-exergonique-endergonique.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la distinction entre spontanéité et rapidité d'une réaction, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Spontané est synonyme d'instantané.",
+          "v": false,
+          "e": "FAUX : ce sont deux notions différentes, et c'est même la précision qui vaut de l'or en question. Spontané dit que la réaction est favorable, pas qu'elle est immédiate.",
+          "sourceQuote": "Une précision qui vaut de l'or au QCM : spontané ≠ instantané"
+        },
+        {
+          "t": "Le diamant se transforme spontanément en graphite, mais le processus prend des millions d'années.",
+          "v": true,
+          "e": "VRAI. C'est l'exemple type : la transformation est thermodynamiquement favorable, donc spontanée, et pourtant elle est extraordinairement lente.",
+          "sourceQuote": "Le diamant se transforme spontanément en graphite"
+        },
+        {
+          "t": "La spontanéité indique à quelle vitesse la réaction se déroule.",
+          "v": false,
+          "e": "FAUX : la spontanéité dit dans quel sens la réaction va, jamais à quelle vitesse. La vitesse relève de la cinétique, pas de la thermodynamique.",
+          "sourceQuote": "La spontanéité dit dans quel sens la réaction va, pas à quelle vitesse"
+        },
+        {
+          "t": "Dans l'image de la pomme, c'est la pomme qui remonte qui illustre le caractère spontané.",
+          "v": false,
+          "e": "FAUX : c'est la pomme qui tombe qui est spontanée. La pomme qui remonte illustre au contraire ce qui n'est pas spontané.",
+          "sourceQuote": "une pomme qui tombe (spontané), une pomme qui remonte (non spontané)"
+        },
+        {
+          "t": "Une réaction spontanée est nécessairement rapide.",
+          "v": false,
+          "e": "FAUX : une réaction peut être thermodynamiquement favorable et pourtant très lente. Spontanéité et vitesse sont deux questions distinctes.",
+          "sourceQuote": "Une réaction peut être spontanée (thermodynamiquement favorable) mais très lente"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-132-signe-delta-g-exergonique-endergonique.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la différence entre exergonique et exothermique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une réaction exothermique se caractérise par un ΔH négatif et libère de la chaleur.",
+          "v": true,
+          "e": "VRAI. Exothermique se lit sur ΔH : ΔH < 0, la réaction cède de la chaleur au milieu.",
+          "sourceQuote": "Exothermique (ΔH < 0) → libère de la chaleur"
+        },
+        {
+          "t": "Une réaction exergonique libère de l'énergie libre et est spontanée.",
+          "v": true,
+          "e": "VRAI. Exergonique se lit sur ΔG : ΔG < 0, la réaction libère de l'énergie libre, donc elle est spontanée.",
+          "sourceQuote": "Exergonique (ΔG < 0) → libère de l' énergie libre → spontanée"
+        },
+        {
+          "t": "Une réaction peut être endothermique et pourtant exergonique si le terme TΔS est suffisamment grand et positif.",
+          "v": true,
+          "e": "VRAI. Les deux notions se croisent : un terme entropique important peut rendre ΔG négatif alors même que ΔH est positif.",
+          "sourceQuote": "si le terme TΔS est suffisamment grand et positif"
+        },
+        {
+          "t": "La dissolution de certains sels dans l'eau refroidit le milieu tout en se faisant toute seule.",
+          "v": true,
+          "e": "VRAI. C'est l'exemple donné du croisement des deux notions : on sent le froid, signe que la réaction absorbe de la chaleur, et pourtant elle se produit sans aide.",
+          "sourceQuote": "on sent le froid, mais ça se fait tout seul"
+        },
+        {
+          "t": "Exergonique et exothermique sont deux termes interchangeables.",
+          "v": false,
+          "e": "FAUX : c'est la confusion à ne jamais faire. Exergonique parle d'énergie libre et de spontanéité, exothermique parle de chaleur.",
+          "sourceQuote": "Exergonique ≠ exothermique — ne confonds jamais"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-132-signe-delta-g-exergonique-endergonique.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux unités à manipuler avant d'utiliser ΔG = ΔH − TΔS, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les unités doivent être vérifiées avant tout calcul.",
+          "v": true,
+          "e": "VRAI. C'est la première précaution : on regarde les unités avant de poser le moindre calcul, sinon le résultat est faux dès la première ligne.",
+          "sourceQuote": "Les unités, avant tout calcul"
+        },
+        {
+          "t": "G et H se comptent en J/mol ou en kJ/mol.",
+          "v": true,
+          "e": "VRAI. L'enthalpie libre et l'enthalpie s'expriment par mole, en joules ou en kilojoules.",
+          "sourceQuote": "G et H sont en J/mol (ou kJ/mol)"
+        },
+        {
+          "t": "L'entropie s'exprime exactement dans la même unité que l'enthalpie.",
+          "v": false,
+          "e": "FAUX : l'entropie porte un K⁻¹ supplémentaire, puisqu'elle se rapporte à une température. C'est cette différence qui piège en première année.",
+          "sourceQuote": "l'entropie a un K⁻¹ en plus ! C'est un piège classique"
+        },
+        {
+          "t": "Si ΔH est fourni en kJ et ΔS en J·K⁻¹, aucune conversion n'est nécessaire.",
+          "v": false,
+          "e": "FAUX : il faut convertir avant d'appliquer la relation, sinon les deux termes ne sont pas dans la même unité.",
+          "sourceQuote": "il faut convertir avant d'appliquer"
+        },
+        {
+          "t": "Une erreur de conversion sur ces unités reste sans conséquence sur le résultat.",
+          "v": false,
+          "e": "FAUX : oublier la conversion produit une erreur d'un facteur 1000 sur ΔG. Ce n'est pas un détail, c'est un résultat entièrement faux.",
+          "sourceQuote": "avant d'appliquer ΔG = ΔH − TΔS (sinon facteur 1000 d'erreur)"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-132-signe-delta-g-exergonique-endergonique.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives aux réactions endergoniques et à la notation ΔG°, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une réaction endergonique n'est pas spontanée dans le sens direct : il faut lui fournir de l'énergie.",
+          "v": true,
+          "e": "VRAI. C'est la définition même d'endergonique : pour que la réaction avance dans le sens direct, il faut la forcer par un apport d'énergie.",
+          "sourceQuote": "il faut fournir de l'énergie pour forcer la réaction"
+        },
+        {
+          "t": "La synthèse du glucose par photosynthèse est donnée comme exemple de réaction endergonique.",
+          "v": true,
+          "e": "VRAI. C'est l'exemple retenu : fabriquer du glucose coûte de l'énergie, la réaction ne se fait pas toute seule.",
+          "sourceQuote": "synthèse du glucose par photosynthèse"
+        },
+        {
+          "t": "Le ΔG° de cette synthèse est de l'ordre de +2 870 kJ/mol.",
+          "v": true,
+          "e": "VRAI. Un ΔG° très largement positif, ce qui traduit le coût énergétique considérable de la fabrication du glucose.",
+          "sourceQuote": "photosynthèse (ΔG° ≈ +2 870 kJ/mol) — impossible sans apport d'énergie lumineuse"
+        },
+        {
+          "t": "Cette synthèse est impossible sans apport d'énergie lumineuse.",
+          "v": true,
+          "e": "VRAI. C'est la lumière qui fournit l'énergie nécessaire pour forcer une réaction dont le ΔG° est fortement positif.",
+          "sourceQuote": "impossible sans apport d'énergie lumineuse"
+        },
+        {
+          "t": "Le petit ° de ΔG° indique les conditions standard, à savoir 25 °C et 1 bar.",
+          "v": true,
+          "e": "VRAI. Le ° n'est pas décoratif : il précise que la valeur est donnée dans les conditions standard, et cette notation revient dans tout le chapitre.",
+          "sourceQuote": "signale les conditions standard (25 °C, 1 bar)"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-132-signe-delta-g-exergonique-endergonique.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à l'origine du signe de ΔG et à la situation d'équilibre, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le signe de ΔG résulte d'une compétition entre la contribution énergétique ΔH et la contribution entropique −TΔS.",
+          "v": true,
+          "e": "VRAI. Puisque ΔG se construit comme ΔH − TΔS, son signe dépend de laquelle des deux contributions l'emporte.",
+          "sourceQuote": "une compétition entre la contribution énergétique"
+        },
+        {
+          "t": "Selon les signes de ΔH et ΔS, on distingue 6 cas de figure.",
+          "v": false,
+          "e": "FAUX : il y a 4 cas, puisque ΔH et ΔS peuvent chacun être positif ou négatif, soit deux possibilités croisées deux fois.",
+          "sourceQuote": "Selon les signes de ΔH et ΔS, il existe 4 cas"
+        },
+        {
+          "t": "À l'équilibre, la réaction ne se fait ni dans un sens ni dans l'autre.",
+          "v": true,
+          "e": "VRAI. Quand ΔG = 0, aucun des deux sens n'est favorisé : le système ne bouge plus globalement.",
+          "sourceQuote": "Ni dans un sens ni dans l'autre"
+        },
+        {
+          "t": "Le raisonnement sur le signe de ΔG vaut à volume et température constants.",
+          "v": false,
+          "e": "FAUX : les conditions annoncées sont température ET pression constantes, pas le volume. C'est le cadre du laboratoire et du corps humain.",
+          "sourceQuote": "À T et P constants, un seul signe donne trois verdicts"
+        },
+        {
+          "t": "À l'équilibre, les réactifs ont totalement disparu au profit des produits.",
+          "v": false,
+          "e": "FAUX : à l'équilibre, réactifs et produits sont présents ensemble, dans des proportions qui n'évoluent plus.",
+          "sourceQuote": "réactifs et produits coexistent en proportions stables"
+        }
+      ]
+    },
+
+    {
+      "fiche": "physique-131-formule-coefficient-reflexion.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la construction de la formule du coefficient de réflexion, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Ce qui décide du rebond à une interface, c'est l'écart entre les deux impédances, pas la valeur de chacune prise séparément.",
+          "v": true,
+          "e": "VRAI. C'est le point de départ de toute la formule : seul le contraste entre les deux milieux compte, pas la valeur absolue des impédances.",
+          "sourceQuote": "ce n'est pas la valeur de Z₁ ni celle de Z₂ séparément, c'est l'écart entre les deux"
+        },
+        {
+          "t": "On commence par former la différence Z₂ − Z₁, la « marche » entre les deux milieux.",
+          "v": true,
+          "e": "VRAI. Premier temps de la construction : traduire le mot « écart » par une différence entre les deux impédances.",
+          "sourceQuote": "On prend la différence Z₂ − Z₁ — la « marche » entre les deux milieux"
+        },
+        {
+          "t": "On divise ensuite cette différence par la somme Z₂ + Z₁ pour la normaliser.",
+          "v": true,
+          "e": "VRAI. Deuxième temps : diviser par la somme ramène l'écart à une grandeur relative, indépendante de l'échelle des impédances.",
+          "sourceQuote": "On la divise par la somme Z₂ + Z₁ , pour la normaliser"
+        },
+        {
+          "t": "Le dernier étage consiste à élever la différence relative au carré.",
+          "v": true,
+          "e": "VRAI. C'est le troisième et dernier étage de la construction, celui qui donne à R sa forme définitive.",
+          "sourceQuote": "on élève cette différence relative au carré"
+        },
+        {
+          "t": "Deux milieux d'impédances énormes mais identiques, comme os contre os, renvoient une grande partie de l'onde.",
+          "v": false,
+          "e": "FAUX : deux impédances identiques ne renvoient rien du tout, même si elles sont très élevées. Ce qui compte, c'est l'écart, et ici il est nul.",
+          "sourceQuote": "Deux Z énormes et identiques (os → os) ne renvoient rien du tout"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-131-formule-coefficient-reflexion.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la différence relative d'impédance, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "C'est un nombre compris entre 0 et 1, sans dimension.",
+          "v": true,
+          "e": "VRAI. La division par la somme normalise l'écart : on obtient un nombre pur, compris entre 0 et 1.",
+          "sourceQuote": "on obtient un nombre entre 0 et 1 , sans dimension"
+        },
+        {
+          "t": "Cette fraction s'approche de 1 lorsque les deux impédances sont voisines.",
+          "v": false,
+          "e": "FAUX : lorsque les impédances se ressemblent, il y a peu de contraste et la fraction s'approche de 0, pas de 1.",
+          "sourceQuote": "Cette fraction s'approche de 0 si Z₁ ≈ Z₂ (peu de contraste)"
+        },
+        {
+          "t": "Cette fraction tend vers 0 lorsque Z₂ est très supérieure à Z₁.",
+          "v": false,
+          "e": "FAUX : un contraste énorme fait tendre la fraction vers 1. Elle ne tend vers 0 que dans le cas inverse, quand les deux impédances se ressemblent.",
+          "sourceQuote": "et de 1 si Z₂ ≫ Z₁ (énorme contraste)"
+        },
+        {
+          "t": "La différence relative d'impédance s'exprime en kg·m⁻²·s⁻¹.",
+          "v": false,
+          "e": "FAUX : c'est justement une grandeur sans dimension, puisqu'on divise une impédance par une impédance. Aucune unité ne lui est attachée.",
+          "sourceQuote": "sans dimension. Ce qu'on appelle la différence relative d'impédance"
+        },
+        {
+          "t": "C'est la somme Z₂ + Z₁ qu'on appelle la différence relative d'impédance.",
+          "v": false,
+          "e": "FAUX : la différence relative est le quotient de la différence par la somme, pas la somme elle-même.",
+          "sourceQuote": "la différence relative d'impédance vaut donc (Z₂ − Z₁) / (Z₂ + Z₁)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-131-formule-coefficient-reflexion.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la mise au carré et au coefficient de transmission, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "On élève au carré parce que R mesure une proportion d'énergie.",
+          "v": true,
+          "e": "VRAI. C'est la raison du dernier étage : R n'est pas une proportion d'amplitude mais une proportion d'énergie.",
+          "sourceQuote": "Parce que R mesure une proportion d'énergie"
+        },
+        {
+          "t": "En physique des ondes, l'énergie est proportionnelle au carré de l'amplitude.",
+          "v": true,
+          "e": "VRAI. C'est le lien qui justifie le carré : passer de l'amplitude à l'énergie, c'est toujours passer au carré.",
+          "sourceQuote": "l'énergie est toujours proportionnelle au carré de l'amplitude"
+        },
+        {
+          "t": "Cette règle ne vaut que pour les ultrasons et ne s'applique à aucune autre onde.",
+          "v": false,
+          "e": "FAUX : c'est une règle générale de la physique des ondes, valable aussi pour les ondes lumineuses, sismiques ou électriques.",
+          "sourceQuote": "règle générale, valable aussi pour les ondes lumineuses, sismiques, électriques"
+        },
+        {
+          "t": "Le coefficient de transmission se déduit de R par la relation T = 1 − R.",
+          "v": true,
+          "e": "VRAI. Toute l'énergie se partage entre ce qui rebondit et ce qui passe : leur somme vaut 1, donc T se déduit directement de R.",
+          "sourceQuote": "et T = 1 − R = 4·Z₁·Z₂ / (Z₂ + Z₁)² , en incidence normale"
+        },
+        {
+          "t": "R et T s'expriment en décibels.",
+          "v": false,
+          "e": "FAUX : ce sont des grandeurs sans unité, comprises entre 0 et 1, qu'on présente parfois en pourcentage.",
+          "sourceQuote": "R et T sont sans unité, entre 0 et 1 (parfois exprimés en pourcentage)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-131-formule-coefficient-reflexion.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives au cadre de validité de la formule, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "« Incidence normale » signifie que l'onde arrive perpendiculairement à l'interface.",
+          "v": true,
+          "e": "VRAI. C'est la condition sous laquelle la formule simple est écrite : l'onde frappe l'interface à angle droit.",
+          "sourceQuote": "l'onde arrive perpendiculaire à l'interface"
+        },
+        {
+          "t": "Aucune formule ne permet de traiter le cas où l'onde arrive avec un angle.",
+          "v": false,
+          "e": "FAUX : une formule générale avec angle existe bel et bien. Elle est simplement plus complexe, et on ne la démontre pas ici.",
+          "sourceQuote": "la formule générale avec angle existe, mais elle est plus complexe"
+        },
+        {
+          "t": "La formule générale avec angle est démontrée pas à pas.",
+          "v": false,
+          "e": "FAUX : elle est admise, pas démontrée. On se contente d'en signaler l'existence.",
+          "sourceQuote": "mais elle est plus complexe : on l'admet"
+        },
+        {
+          "t": "R et T sont des grandeurs sans unité comprises entre 0 et 1.",
+          "v": true,
+          "e": "VRAI. Ce sont des proportions d'énergie : elles varient de 0 à 1, et on les exprime parfois en pourcentage.",
+          "sourceQuote": "sans unité, entre 0 et 1 (parfois exprimés en pourcentage)"
+        },
+        {
+          "t": "La formule donnée pour R vaut en incidence oblique.",
+          "v": false,
+          "e": "FAUX : elle est explicitement donnée en incidence normale. L'incidence oblique relève de la formule générale, plus complexe.",
+          "sourceQuote": "Coefficients de réflexion R et transmission T (incidence normale)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-131-formule-coefficient-reflexion.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux configurations d'impédances décrites, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Quand les deux impédances sont égales, tout passe et rien ne rebondit.",
+          "v": true,
+          "e": "VRAI. Le numérateur s'annule : R vaut 0 et T vaut 1. Rien ne revient vers la sonde, donc aucune image n'est formée à cette interface.",
+          "sourceQuote": "Tout passe, rien ne rebondit → aucune image"
+        },
+        {
+          "t": "Ce cas d'impédances identiques est justement ce que l'on cherche entre la sonde et la peau.",
+          "v": true,
+          "e": "VRAI. On ne veut aucun rebond à l'entrée du corps, pour que l'énergie parte explorer les tissus : c'est le rôle du gel.",
+          "sourceQuote": "C'est ce qu'on cherche entre la sonde et la peau (le rôle du gel)"
+        },
+        {
+          "t": "Deux tissus mous d'impédances voisines donnent un R faible et laissent passer assez d'énergie pour explorer en profondeur.",
+          "v": true,
+          "e": "VRAI. C'est le compromis qui fait vivre l'échographie : un peu de rebond pour dessiner l'interface, beaucoup de transmission pour aller plus loin.",
+          "sourceQuote": "un R faible, une image fine, et assez d'énergie transmise pour aller voir plus profond"
+        },
+        {
+          "t": "Ce cas des tissus mous voisins est présenté comme le cas idéal en clinique.",
+          "v": true,
+          "e": "VRAI. Image fine et exploration profonde à la fois : c'est exactement ce qu'on attend d'une échographie.",
+          "sourceQuote": "Image fine + l'ultrason continue d'explorer en profondeur. Cas idéal en clinique."
+        },
+        {
+          "t": "Lorsque Z₁ est très inférieure à Z₂, la quasi-totalité de l'onde est réfléchie.",
+          "v": true,
+          "e": "VRAI. Le contraste maximal renvoie presque tout : l'interface apparaît très blanche à l'écran.",
+          "sourceQuote": "Quasi-totalité réfléchie → interface très blanche"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-131-formule-coefficient-reflexion.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à ce que produit un coefficient de réflexion proche de 1, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un R proche de 1 donne une interface très blanche à l'écran.",
+          "v": true,
+          "e": "VRAI. Presque toute l'énergie revient vers la sonde, ce qui se traduit par une ligne très brillante à l'endroit de l'interface.",
+          "sourceQuote": "interface très blanche , mais zone d'ombre noire derrière"
+        },
+        {
+          "t": "Un R proche de 1 est une bonne nouvelle pour la qualité de l'image en profondeur.",
+          "v": false,
+          "e": "FAUX : c'est même le piège. L'interface ressort bien, mais l'exploration s'arrête là puisque plus rien ne passe derrière.",
+          "sourceQuote": "R → 1 n'est pas une bonne nouvelle pour l'image"
+        },
+        {
+          "t": "Quand R tend vers 1, T tend vers 0 et l'onde ne renseigne plus sur ce qui se trouve derrière l'interface.",
+          "v": true,
+          "e": "VRAI. Le budget total valant 1, un R maximal laisse une transmission quasi nulle : il n'y a plus d'information au-delà.",
+          "sourceQuote": "comme T → 0, il n'y a plus rien derrière"
+        },
+        {
+          "t": "Une réflexion maximale équivaut à une image maximale.",
+          "v": false,
+          "e": "FAUX : une réflexion maximale donne une image qui s'arrête à l'interface. Beaucoup de signal en un point ne fait pas une bonne exploration.",
+          "sourceQuote": "Une réflexion maximale, ce n'est pas une image maximale"
+        },
+        {
+          "t": "Le cas d'un contraste maximal correspond par exemple à une interface tissu/os ou tissu/air.",
+          "v": true,
+          "e": "VRAI. Ce sont les deux situations du corps où l'écart d'impédance est le plus violent, d'où une réflexion quasi totale.",
+          "sourceQuote": "(tissu vs os, ou tissu vs air)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-131-formule-coefficient-reflexion.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives au réflexe de vérification d'une formule aux extrêmes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le réflexe conseillé est de tester une formule aux valeurs extrêmes avant de s'en servir.",
+          "v": true,
+          "e": "VRAI. C'est le contrôle qui rattrape une formule mal recopiée : si les bornes ne tombent pas juste, l'écriture est fausse.",
+          "sourceQuote": "Vérifie une formule aux extrêmes avant de t'en servir"
+        },
+        {
+          "t": "En posant Z₁ = Z₂, le dénominateur s'annule et R devient infini.",
+          "v": false,
+          "e": "FAUX : c'est le numérateur qui s'annule, pas le dénominateur. R vaut alors 0, ce qui est parfaitement fini.",
+          "sourceQuote": "Pose Z₁ = Z₂ : le numérateur s'annule, donc R = 0"
+        },
+        {
+          "t": "Quand Z₂ écrase Z₁, la fraction tend vers 0 et R tend vers 0.",
+          "v": false,
+          "e": "FAUX : dans ce cas la fraction tend vers 1, donc R tend vers 1. Tout revient et rien ne continue.",
+          "sourceQuote": "quand Z₂ écrase Z₁, la fraction tend vers 1, donc R → 1"
+        },
+        {
+          "t": "Si la formule recopiée ne redonne pas ces deux bornes, c'est qu'elle est bien mémorisée.",
+          "v": false,
+          "e": "FAUX : c'est au contraire le signe qu'elle est mal recopiée. Les deux bornes sont le test de validité de ce qu'on a écrit.",
+          "sourceQuote": "Si ce que tu as écrit ne redonne pas ces deux bornes, c'est mal recopié"
+        },
+        {
+          "t": "Le cas « os → os » du tableau des configurations correspondait à un R égal à 1.",
+          "v": false,
+          "e": "FAUX : deux milieux identiques donnent R = 0 et T = 1. C'est exactement ce que redonne la formule quand on annule le numérateur.",
+          "sourceQuote": "le numérateur s'annule, donc R = 0 et T = 1 — exactement ce que disait la ligne"
+        }
+      ]
+    },
+
+    {
+      "fiche": "physique-132-gel-echographie.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives au rôle du gel d'échographie, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Sans gel, l'interface air/peau réfléchit environ 99,9 % de l'ultrason.",
+          "v": true,
+          "e": "VRAI. Le contraste d'impédance entre l'air et les tissus est tel que la quasi-totalité de l'énergie rebondit dès l'entrée.",
+          "sourceQuote": "l'interface air/peau réfléchit 99,9 % de l'ultrason (R ≈ 0,999)"
+        },
+        {
+          "t": "Sans gel, environ 10 % de l'ultrason pénètre dans le corps.",
+          "v": false,
+          "e": "FAUX : il n'en passe que 0,1 %, soit cent fois moins. C'est très largement insuffisant pour former une image.",
+          "sourceQuote": "n'en laisse passer que 0,1 %"
+        },
+        {
+          "t": "Le gel possède une impédance très différente de celle de la peau.",
+          "v": false,
+          "e": "FAUX : c'est justement l'inverse. Le gel a la même impédance que la peau, ce qui annule le contraste à l'entrée.",
+          "sourceQuote": "il a la même impédance que la peau"
+        },
+        {
+          "t": "Avec le gel, le coefficient de réflexion passe de 0,999 à environ 0.",
+          "v": true,
+          "e": "VRAI. En supprimant la couche d'air, le gel supprime le contraste : quasiment tout l'ultrason pénètre et l'image devient nette.",
+          "sourceQuote": "R passe de 0,999 (sans gel) à ≈ 0 (avec gel)"
+        },
+        {
+          "t": "Le gel agit en modifiant la fréquence des ultrasons émis par la sonde.",
+          "v": false,
+          "e": "FAUX : le gel ne fait qu'une seule chose, chasser l'air entre la sonde et la peau. Il ne touche pas aux caractéristiques de l'onde.",
+          "sourceQuote": "Le gel ne fait qu'une chose : chasser cet air"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-132-gel-echographie.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux impédances de l'air et des tissus mous, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'impédance de l'air vaut environ 440, celle des tissus mous environ 1,6 × 10⁶.",
+          "v": true,
+          "e": "VRAI. Ce sont les deux valeurs de référence, exprimées en kg·m⁻²·s⁻¹, qui servent ensuite à tout le calcul.",
+          "sourceQuote": "Z_air ≈ 440  ·  Z_tissu ≈ 1,6 × 10⁶"
+        },
+        {
+          "t": "L'air est très « mou » acoustiquement.",
+          "v": true,
+          "e": "VRAI. Son impédance est minuscule comparée à celle des tissus : acoustiquement, il n'oppose presque aucune résistance.",
+          "sourceQuote": "L' air est très « mou » acoustiquement"
+        },
+        {
+          "t": "Les tissus mous sont environ 3 500 fois plus « durs » acoustiquement que l'air.",
+          "v": true,
+          "e": "VRAI. C'est l'ordre de grandeur à retenir : plusieurs milliers de fois, ce qui explique l'ampleur du rebond.",
+          "sourceQuote": "les tissus mous sont ~3 500 fois plus « durs »"
+        },
+        {
+          "t": "En reprenant les deux valeurs précises, le rapport vaut environ 3 600.",
+          "v": true,
+          "e": "VRAI. Les 3 500 sont l'ordre de grandeur mémorisable ; le calcul exact à partir de 440 et 1,6 × 10⁶ donne près de 3 600.",
+          "sourceQuote": "avec ces deux valeurs précises, le rapport vaut ≈ 3 600"
+        },
+        {
+          "t": "L'interface air/tissu représente l'écart d'impédance le plus faible que la sonde puisse rencontrer.",
+          "v": false,
+          "e": "FAUX : c'est au contraire l'écart le plus violent du corps humain. C'est bien pour cela que le gel est indispensable.",
+          "sourceQuote": "C'est l'écart le plus violent que la sonde puisse rencontrer"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-132-gel-echographie.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives aux trois étapes du raisonnement conduisant à R ≈ 0,999, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La première étape consiste à comparer les ordres de grandeur des deux impédances.",
+          "v": true,
+          "e": "VRAI. On regarde d'abord le rapport entre les deux valeurs, avant même de toucher à la formule.",
+          "sourceQuote": "Comparer les ordres de grandeur"
+        },
+        {
+          "t": "L'impédance de l'air est négligeable devant celle des tissus.",
+          "v": true,
+          "e": "VRAI. Avec un rapport de l'ordre de 3 600, l'impédance de l'air peut être traitée comme nulle dans le calcul.",
+          "sourceQuote": "donc Z_air est négligeable devant Z_tissu"
+        },
+        {
+          "t": "Une fois l'impédance de l'air négligée, la fraction tend vers 1.",
+          "v": true,
+          "e": "VRAI. Numérateur et dénominateur se réduisent tous deux à l'impédance du tissu : leur quotient vaut 1.",
+          "sourceQuote": "La fraction tend donc vers Z₂/Z₂ = 1"
+        },
+        {
+          "t": "On conclut R ≈ 1, soit en valeur numérique R ≈ 0,999.",
+          "v": true,
+          "e": "VRAI. Le carré de 1 vaut 1 : en pratique on retient 0,999, c'est-à-dire 99,9 % de l'énergie renvoyée.",
+          "sourceQuote": "soit, en valeur numérique, R ≈ 0,999 (= 99,9 %)"
+        },
+        {
+          "t": "Le budget R + T = 1 donne alors T ≈ 0,001.",
+          "v": true,
+          "e": "VRAI. Ce qui ne rebondit pas est ce qui passe : 1 − 0,999 = 0,001, soit 0,1 % transmis.",
+          "sourceQuote": "Le budget R + T = 1 donne le reste : T ≈ 0,001 (= 0,1 %)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-132-gel-echographie.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à ce que rencontre l'ultrason et à ses conséquences en imagerie, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'os laisse passer l'ultrason sans difficulté.",
+          "v": false,
+          "e": "FAUX : l'os bloque tout. C'est même la deuxième ligne du moyen mnémotechnique : air invisible, os bloque tout, tissus mous parfaits.",
+          "sourceQuote": "Le mnémo Air = invisible. Os = bloque tout. Tissus mous = parfait."
+        },
+        {
+          "t": "L'échographie ne donne pas d'écho du poumon ni des intestins distendus.",
+          "v": true,
+          "e": "VRAI. Ces deux structures sont pleines d'air, et l'air est acoustiquement invisible : aucun écho exploitable n'en revient.",
+          "sourceQuote": "Pas d'écho du poumon (parenchyme = tissu pulmonaire fonctionnel) ni des intestins distendus"
+        },
+        {
+          "t": "Devant un poumon ou des intestins distendus, on reste en échographie plutôt que de changer d'examen.",
+          "v": false,
+          "e": "FAUX : puisque l'échographie ne voit rien à travers l'air, on bascule sur une radio ou un scanner.",
+          "sourceQuote": "on bascule sur radio ou scanner"
+        },
+        {
+          "t": "Le cerveau du nouveau-né est aussi inaccessible à l'échographie que celui de l'adulte.",
+          "v": false,
+          "e": "FAUX : tant que la fontanelle reste ouverte, l'ultrason passe par cette zone molle non ossifiée. C'est l'exception à la règle « os = bloque tout ».",
+          "sourceQuote": "sauf chez le nouveau-né , tant que la fontanelle"
+        },
+        {
+          "t": "Le foie, le rein et la vessie donnent des images médiocres, leurs impédances étant très différentes.",
+          "v": false,
+          "e": "FAUX : leurs impédances sont au contraire proches, donc le coefficient de réflexion est faible et l'image est nette avec une bonne exploration en profondeur.",
+          "sourceQuote": "Foie, rein, vessie, vaisseaux : Z proches → R faible → image nette"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-132-gel-echographie.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au réflexe de raisonnement devant une interface, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Devant une interface, on regarde d'abord si l'une des deux impédances est négligeable devant l'autre.",
+          "v": true,
+          "e": "VRAI. C'est le réflexe qui évite un calcul inutile : l'ordre de grandeur suffit souvent à conclure.",
+          "sourceQuote": "regarde d'abord si l'un des deux Z est négligeable devant l'autre"
+        },
+        {
+          "t": "Si c'est le cas, la fraction vaut 1 en valeur absolue, donc R tend vers 1 et T vers 0.",
+          "v": true,
+          "e": "VRAI. Numérateur et dénominateur se confondent : la conclusion tombe sans poser la moindre ligne de calcul.",
+          "sourceQuote": "la fraction vaut 1 en valeur absolue"
+        },
+        {
+          "t": "Il faut malgré tout dérouler le calcul complet avant de conclure.",
+          "v": false,
+          "e": "FAUX : justement, le raisonnement sur les ordres de grandeur permet de conclure sans écrire une ligne de plus.",
+          "sourceQuote": "sans écrire une seule ligne de plus"
+        },
+        {
+          "t": "Une transmission de 0,1 % suffit à fabriquer une image utile.",
+          "v": false,
+          "e": "FAUX : c'est beaucoup trop peu. Sans gel, il ne pénètre presque rien et l'image est impossible.",
+          "sourceQuote": "c'est beaucoup trop peu pour fabriquer une image utile"
+        },
+        {
+          "t": "L'impédance du gel est de l'ordre de 1,5 × 10⁶.",
+          "v": true,
+          "e": "VRAI. Cette valeur est très proche de celle des tissus mous : c'est précisément ce qui annule le contraste à l'entrée du corps.",
+          "sourceQuote": "il a la même impédance que la peau (Z ≈ 1,5 × 10⁶)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-132-gel-echographie.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à l'interprétation d'un coefficient de réflexion voisin de 1 à l'interface air/tissu, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un R voisin de 1 ne signifie pas qu'on ne voit rien à l'écran.",
+          "v": true,
+          "e": "VRAI. On voit au contraire très bien l'interface, qui ressort en blanc. Ce qu'on perd, c'est tout ce qui se trouve derrière.",
+          "sourceQuote": "R ≈ 1 ne veut pas dire « on ne voit rien »"
+        },
+        {
+          "t": "L'interface apparaît très blanche, mais une zone d'ombre noire s'étend derrière elle.",
+          "v": true,
+          "e": "VRAI. L'énergie ne franchit pas l'interface : au-delà, l'écran reste noir faute de signal renvoyé.",
+          "sourceQuote": "image très blanche à l'interface, mais zone d'ombre noire derrière"
+        },
+        {
+          "t": "L'air et l'os masquent uniquement eux-mêmes, pas ce qui se situe derrière.",
+          "v": false,
+          "e": "FAUX : ils cachent aussi tout ce qui se trouve derrière eux, puisque l'onde ne les traverse pas.",
+          "sourceQuote": "l'air et l'os ne cachent pas seulement eux-mêmes, mais aussi tout ce qui est derrière eux"
+        },
+        {
+          "t": "L'interface air/tissu constitue le contraste le plus extrême du corps humain.",
+          "v": true,
+          "e": "VRAI. C'est précisément pour cela qu'on fait tourner la formule sur ce cas : il donne la valeur maximale possible du coefficient de réflexion.",
+          "sourceQuote": "le contraste le plus extrême du corps humain : l'air contre les tissus"
+        },
+        {
+          "t": "Sans gel, l'image est impossible car presque rien ne pénètre.",
+          "v": true,
+          "e": "VRAI. Avec 0,1 % d'énergie transmise, il n'y a pas de quoi construire une image exploitable.",
+          "sourceQuote": "Sans gel, l'image est impossible : presque rien ne pénètre"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-132-gel-echographie.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives aux chiffres et aux termes précis employés dans cette application, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le rapport entre impédance des tissus et impédance de l'air se calcule comme 1,6·10⁶ divisé par 440, soit environ 3 600.",
+          "v": true,
+          "e": "VRAI. C'est la première étape chiffrée : le rapport des deux impédances, qui autorise ensuite à négliger l'air.",
+          "sourceQuote": "Z_air = 1,6·10⁶ / 440 ≈"
+        },
+        {
+          "t": "La fontanelle est une zone molle non ossifiée.",
+          "v": true,
+          "e": "VRAI. C'est ce défaut d'ossification qui laisse passer l'ultrason et rend l'échographie du cerveau possible chez le nouveau-né.",
+          "sourceQuote": "la fontanelle (zone molle non ossifiée) reste ouverte"
+        },
+        {
+          "t": "Le parenchyme désigne le tissu pulmonaire fonctionnel.",
+          "v": true,
+          "e": "VRAI. C'est la partie du poumon qui assure les échanges, et elle est remplie d'air : donc invisible à l'ultrason.",
+          "sourceQuote": "poumon (parenchyme = tissu pulmonaire fonctionnel) ni des intestins"
+        },
+        {
+          "t": "Le gel se pose entre la sonde et la peau pour éliminer la couche d'air.",
+          "v": true,
+          "e": "VRAI. Sa position est le tout : interposé à l'entrée du corps, il chasse l'air responsable de la réflexion quasi totale.",
+          "sourceQuote": "Posé entre la sonde et la peau, il élimine la couche d'air"
+        },
+        {
+          "t": "Sans gel, l'ultrason rebondit sur une couche d'air épaisse de plusieurs centimètres.",
+          "v": false,
+          "e": "FAUX : la couche d'air en cause est fine. Ce n'est pas son épaisseur qui pose problème, mais l'énorme contraste d'impédance qu'elle introduit.",
+          "sourceQuote": "une fine couche d'air renvoie 99,9 % de l'ultrason"
+        }
+      ]
+    },
+
+    {
+      "fiche": "anatomie-133-vascularisation-3-arteres-veine-porte.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives aux trois artères digestives et à leurs niveaux de naissance, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le tube digestif abdominal et ses glandes annexes sont irrigués par 3 grandes artères issues de l'aorte abdominale.",
+          "v": true,
+          "e": "VRAI. Trois branches seulement, qui sortent de l'aorte abdominale à trois niveaux successifs, se partagent tout le tube digestif abdominal.",
+          "sourceQuote": "irrigués par 3 grandes artères qui sortent de l' aorte abdominale"
+        },
+        {
+          "t": "Le tronc cœliaque naît en regard de T12 et prend en charge l'étage haut.",
+          "v": true,
+          "e": "VRAI. C'est la plus haute des trois, juste sous le diaphragme, et elle dessert l'estomac, le foie, la rate et le pancréas.",
+          "sourceQuote": "tronc cœliaque (T12, étage haut) · AMS (L1, étage moyen)"
+        },
+        {
+          "t": "L'artère mésentérique supérieure naît en regard de L1.",
+          "v": true,
+          "e": "VRAI. Elle sort une vertèbre plus bas que le tronc cœliaque, et prend en charge l'étage moyen du tube digestif.",
+          "sourceQuote": "AMS (L1, étage moyen) · AMI (L3, étage bas)"
+        },
+        {
+          "t": "L'artère mésentérique inférieure naît en regard de L3 et dessert l'étage bas.",
+          "v": true,
+          "e": "VRAI. C'est la plus basse des trois branches, et logiquement celle qui irrigue la portion la plus basse du tube.",
+          "sourceQuote": "AMI (L3, étage bas) — plus la sortie est basse, plus la zone irriguée est basse"
+        },
+        {
+          "t": "Plus le niveau de sortie est bas sur l'aorte, plus l'artère irrigue une zone basse du tube digestif.",
+          "v": true,
+          "e": "VRAI. C'est la logique d'ensemble à retenir : l'aorte descend et largue ses branches à mesure, chacune desservant l'étage en face duquel elle sort.",
+          "sourceQuote": "plus le niveau de sortie est bas sur l'aorte, plus l'artère irrigue une zone basse"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-133-vascularisation-3-arteres-veine-porte.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux territoires irrigués par chacune des trois artères, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le tronc cœliaque irrigue l'estomac, le foie et la vésicule, la rate et le pancréas.",
+          "v": true,
+          "e": "VRAI. C'est tout l'étage haut de l'abdomen digestif, glandes annexes comprises.",
+          "sourceQuote": "Étage haut : estomac, foie + vésicule, rate, pancréas"
+        },
+        {
+          "t": "L'artère mésentérique supérieure irrigue le duodénum, tout le grêle et le côlon droit.",
+          "v": true,
+          "e": "VRAI. Elle couvre l'étage moyen : la quasi-totalité de l'intestin grêle et la moitié droite du côlon.",
+          "sourceQuote": "Étage moyen : duodénum, tout le grêle, côlon droit"
+        },
+        {
+          "t": "L'artère mésentérique inférieure irrigue le côlon droit et le rectum supérieur.",
+          "v": false,
+          "e": "FAUX : elle irrigue le côlon GAUCHE et le rectum supérieur. Le côlon droit revient à l'artère mésentérique supérieure.",
+          "sourceQuote": "Étage bas : côlon gauche + rectum supérieur"
+        },
+        {
+          "t": "La rate est irriguée par l'artère mésentérique inférieure.",
+          "v": false,
+          "e": "FAUX : la rate dépend du tronc cœliaque, comme tout ce qui se trouve au-dessus du grêle.",
+          "sourceQuote": "Le tronc cœliaque dessert tout ce qui est au-dessus du grêle (estomac, foie, rate, pancréas)"
+        },
+        {
+          "t": "Les deux artères mésentériques se partagent l'intestin.",
+          "v": true,
+          "e": "VRAI. La supérieure prend le grêle et le côlon droit, l'inférieure le côlon gauche et le rectum : l'intestin est réparti entre elles deux.",
+          "sourceQuote": "Les deux mésentériques se partagent l'intestin"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-133-vascularisation-3-arteres-veine-porte.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à l'origine embryologique de cette répartition et au moyen mnémotechnique proposé, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La répartition des trois artères reflète l'embryologie du tube digestif.",
+          "v": true,
+          "e": "VRAI. Ce découpage n'est pas arbitraire : il reproduit la façon dont le tube digestif s'est formé.",
+          "sourceQuote": "Cette répartition n'a rien d'arbitraire : elle reflète l' embryologie"
+        },
+        {
+          "t": "Le tube digestif se forme à partir de 4 segments embryonnaires.",
+          "v": false,
+          "e": "FAUX : il s'en forme 3 — antérieur, moyen et postérieur — ce qui correspond exactement au nombre d'artères.",
+          "sourceQuote": "Le tube digestif se forme à partir de 3 segments — antérieur, moyen, postérieur"
+        },
+        {
+          "t": "Le moyen mnémotechnique « C-S-I » se lit de bas en haut.",
+          "v": false,
+          "e": "FAUX : il se lit de haut en bas, dans l'ordre de descente de l'aorte : Cœliaque, puis Supérieure, puis Inférieure.",
+          "sourceQuote": "retiens le « C-S-I » de haut en bas"
+        },
+        {
+          "t": "La toute première portion du duodénum, D1, est vascularisée par l'artère mésentérique supérieure.",
+          "v": false,
+          "e": "FAUX : D1 revient quand même au tronc cœliaque. C'est le piège classique de la vascularisation du duodénum.",
+          "sourceQuote": "la toute première portion (D1) revient quand même au tronc cœliaque"
+        },
+        {
+          "t": "Chacun des trois segments embryonnaires reste pris en charge par l'une des trois artères.",
+          "v": true,
+          "e": "VRAI. Un segment, une artère : c'est cette correspondance d'origine qui explique le découpage définitif.",
+          "sourceQuote": "chacun reste pris en charge par l'une des 3 artères"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-133-vascularisation-3-arteres-veine-porte.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives au retour veineux du tube digestif, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Partout ailleurs dans le corps, le sang veineux retourne directement à la veine cave inférieure.",
+          "v": true,
+          "e": "VRAI. C'est le schéma habituel du retour veineux, et c'est justement à ce schéma que le tube digestif fait exception.",
+          "sourceQuote": "le sang veineux retourne directement à la VCI (la veine cave inférieure)"
+        },
+        {
+          "t": "Le sang veineux du tube digestif passe d'abord par le foie avant de rejoindre la circulation générale.",
+          "v": true,
+          "e": "VRAI. C'est l'originalité du retour digestif : un détour obligatoire par le foie avant tout retour au cœur.",
+          "sourceQuote": "passe d'abord par le foie avant de rejoindre la circulation générale"
+        },
+        {
+          "t": "Ce dispositif porte le nom de système porte hépatique.",
+          "v": true,
+          "e": "VRAI. Un système porte, c'est un réseau veineux intercalé entre deux territoires capillaires : ici l'intestin puis le foie.",
+          "sourceQuote": "C'est le système porte hépatique"
+        },
+        {
+          "t": "Les veines de l'estomac, du grêle, du côlon, de la rate et du pancréas se rejoignent pour former la veine porte.",
+          "v": true,
+          "e": "VRAI. Tout le drainage de l'étage digestif converge en un seul tronc : la veine porte.",
+          "sourceQuote": "se rejoignent pour former la veine porte"
+        },
+        {
+          "t": "Le sang veineux du côlon rejoint directement la veine cave inférieure.",
+          "v": false,
+          "e": "FAUX : c'est la formulation piège. Le sang du côlon passe obligatoirement par la veine porte et le foie avant d'atteindre la veine cave inférieure.",
+          "sourceQuote": "le sang veineux du grêle ou du côlon ne rejoint jamais directement la VCI"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-133-vascularisation-3-arteres-veine-porte.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au trajet du sang à l'intérieur du foie et à sa sortie, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La veine porte entre au foie par le hile.",
+          "v": true,
+          "e": "VRAI. Le hile est la porte d'entrée du foie, celle par laquelle arrivent la veine porte et l'artère hépatique.",
+          "sourceQuote": "La veine porte entre au foie par le hile"
+        },
+        {
+          "t": "Dans le foie, la veine porte apporte environ 25 % du débit et l'artère hépatique 75 %.",
+          "v": false,
+          "e": "FAUX : les proportions sont inversées. La veine porte fournit environ 75 % du débit hépatique, l'artère hépatique environ 25 %.",
+          "sourceQuote": "la porte apporte ~75 % du débit, l'artère ~25 %"
+        },
+        {
+          "t": "Le sang porte traverse les capillaires glomérulaires du foie.",
+          "v": false,
+          "e": "FAUX : les capillaires du foie s'appellent les sinusoïdes hépatiques. Le glomérule est une structure rénale, pas hépatique.",
+          "sourceQuote": "et traverse les sinusoïdes hépatiques"
+        },
+        {
+          "t": "Le sang quitte le foie par la veine porte pour rejoindre la veine cave inférieure.",
+          "v": false,
+          "e": "FAUX : la veine porte est la voie d'ENTRÉE. La sortie se fait par les veines hépatiques.",
+          "sourceQuote": "Le sang rejoint la circulation générale par les veines hépatiques"
+        },
+        {
+          "t": "Les veines hépatiques se jettent dans l'aorte abdominale.",
+          "v": false,
+          "e": "FAUX : elles se jettent dans la veine cave inférieure. L'aorte est une artère, elle ne reçoit aucun retour veineux.",
+          "sourceQuote": "les veines hépatiques , qui se jettent dans la VCI"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-133-vascularisation-3-arteres-veine-porte.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives au rôle du foie dans ce dispositif et à l'image de la douane, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les hépatocytes récupèrent les nutriments absorbés et détoxifient les toxines.",
+          "v": true,
+          "e": "VRAI. C'est le travail effectué au passage : trier les nutriments utiles et neutraliser ce qui ne doit pas circuler.",
+          "sourceQuote": "Ils récupèrent les nutriments absorbés , détoxifient les toxines"
+        },
+        {
+          "t": "Le foie ne voit qu'une petite partie de ce qui est absorbé dans l'intestin.",
+          "v": false,
+          "e": "FAUX : il voit absolument tout ce qui est absorbé, bon ou mauvais, puisque le passage par lui est obligatoire.",
+          "sourceQuote": "Tout ce qui est absorbé dans l'intestin — bon ou mauvais — passe par lui"
+        },
+        {
+          "t": "Dans l'image de la douane, la douane représente l'intestin.",
+          "v": false,
+          "e": "FAUX : la douane, c'est le foie. L'intestin est le point d'entrée des marchandises, pas le poste de contrôle.",
+          "sourceQuote": "Et la douane, c'est le foie"
+        },
+        {
+          "t": "Les médicaments avalés et l'alcool échappent à ce passage obligé par le foie.",
+          "v": false,
+          "e": "FAUX : eux aussi doivent passer par le foie avant d'avoir le droit de circuler dans l'organisme.",
+          "sourceQuote": "les médicaments avalés, l'alcool…) doit obligatoirement passer par cette douane"
+        },
+        {
+          "t": "Le foie envoie aux autres organes une circulation filtrée.",
+          "v": true,
+          "e": "VRAI. C'est le sens de l'expression « laboratoire du corps » : le foie traite tout ce qui vient de l'intestin avant de le laisser partir.",
+          "sourceQuote": "envoie aux autres organes une circulation « filtrée »"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-133-vascularisation-3-arteres-veine-porte.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives aux repères vertébraux et aux deux réflexes à conserver, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le niveau T12 correspond à la dernière vertèbre du thorax, juste sous le diaphragme.",
+          "v": true,
+          "e": "VRAI. C'est le repère de sortie du tronc cœliaque, tout en haut de l'aorte abdominale.",
+          "sourceQuote": "T12 (dernière vertèbre du thorax, juste sous le diaphragme)"
+        },
+        {
+          "t": "L3 désigne la première vertèbre lombaire.",
+          "v": false,
+          "e": "FAUX : L3 est la TROISIÈME lombaire. La première lombaire est L1, niveau de sortie de l'artère mésentérique supérieure.",
+          "sourceQuote": "L1 (1 re lombaire) · L3 (3 e lombaire)"
+        },
+        {
+          "t": "Le premier réflexe est d'associer chaque artère à son niveau vertébral et à son étage.",
+          "v": true,
+          "e": "VRAI. Trois triplets à retenir ensemble : cœliaque-T12-haut, mésentérique supérieure-L1-milieu, mésentérique inférieure-L3-bas.",
+          "sourceQuote": "associe toujours l'artère à son niveau vertébral et à son étage"
+        },
+        {
+          "t": "Le second réflexe est de se méfier de la formulation la plus courante en question, celle du retour veineux.",
+          "v": true,
+          "e": "VRAI. C'est le piège attendu : une proposition qui fait partir le sang du grêle ou du côlon directement vers la veine cave inférieure.",
+          "sourceQuote": "méfie-toi de la formulation la plus courante des QCM"
+        },
+        {
+          "t": "Le détour par le foie via la veine porte est facultatif selon les repas.",
+          "v": false,
+          "e": "FAUX : ce détour est obligatoire, en toutes circonstances. C'est l'architecture même du système porte hépatique.",
+          "sourceQuote": "il y a le détour obligatoire par le foie , via la veine porte"
+        }
+      ]
+    },
+
+    {
+      "fiche": "anatomie-134-appareil-urinaire-vue-ensemble.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives aux chiffres qui caractérisent le rein, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Chaque rein contient environ 1 000 néphrons.",
+          "v": false,
+          "e": "FAUX : chaque rein en contient 1 million. C'est cette multitude de mini-filtres qui explique la capacité de filtration de l'organe.",
+          "sourceQuote": "chacun contenant 1 million de « mini-filtres » microscopiques appelés néphrons"
+        },
+        {
+          "t": "Les reins filtrent 18 litres de sang par jour.",
+          "v": false,
+          "e": "FAUX : ils en filtrent 180 litres par jour, soit dix fois plus. C'est l'un des quatre chiffres qui portent tout le chapitre.",
+          "sourceQuote": "Chaque jour, ils filtrent 180 litres de sang"
+        },
+        {
+          "t": "Il en sort 10 à 20 litres d'urines par jour.",
+          "v": false,
+          "e": "FAUX : il n'en sort que 1 à 2 litres. L'essentiel du volume filtré est réabsorbé au fil du trajet.",
+          "sourceQuote": "pour fabriquer au final seulement 1 à 2 litres d'urines"
+        },
+        {
+          "t": "Environ 178 litres sont réabsorbés dans le sang.",
+          "v": true,
+          "e": "VRAI. C'est la différence entre les 180 litres filtrés et les 1 à 2 litres d'urines émises : la quasi-totalité repart dans le sang.",
+          "sourceQuote": "Les 178 litres restants sont réabsorbés dans le sang"
+        },
+        {
+          "t": "Les 180 litres filtrés correspondent à l'équivalent de 40 baignoires.",
+          "v": false,
+          "e": "FAUX : l'image donnée est celle de 4 baignoires, pas 40.",
+          "sourceQuote": "180 litres de sang — l'équivalent de 4 baignoires"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-134-appareil-urinaire-vue-ensemble.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux quatre organes de l'appareil urinaire et à leur rôle, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les reins sont le filtre : c'est là que l'urine est fabriquée.",
+          "v": true,
+          "e": "VRAI. Premier organe du trajet, le rein est le seul à fabriquer l'urine ; les trois autres ne font que la conduire ou la stocker.",
+          "sourceQuote": "Les 2 reins — le filtre . C'est là que l'urine est fabriquée"
+        },
+        {
+          "t": "Les uretères assurent le drainage et descendent vers la vessie.",
+          "v": true,
+          "e": "VRAI. Ce sont les conduits qui acheminent l'urine du rein jusqu'au réservoir.",
+          "sourceQuote": "Les 2 uretères — les drainages , qui descendent vers la vessie"
+        },
+        {
+          "t": "La vessie est le filtre et l'urètre le réservoir.",
+          "v": false,
+          "e": "FAUX : les rôles sont inversés et déplacés. Le filtre est le rein, et le réservoir est la vessie ; l'urètre n'est que la sortie.",
+          "sourceQuote": "La vessie — le réservoir , en bas de l'abdomen (le pelvis)"
+        },
+        {
+          "t": "La vessie se situe en haut de l'abdomen.",
+          "v": false,
+          "e": "FAUX : elle se situe en bas de l'abdomen, dans le pelvis. Ce sont les reins qui occupent la partie haute.",
+          "sourceQuote": "en bas de l'abdomen (le pelvis)"
+        },
+        {
+          "t": "L'urètre est court chez l'homme et long chez la femme.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. L'urètre est long chez l'homme et court chez la femme.",
+          "sourceQuote": "long chez l'homme, court chez la femme"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-134-appareil-urinaire-vue-ensemble.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la distinction entre haut appareil et bas appareil urinaire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le haut appareil regroupe les 2 reins et les uretères.",
+          "v": true,
+          "e": "VRAI. Le filtre et son drainage forment un ensemble : c'est le haut appareil.",
+          "sourceQuote": "Le haut appareil = les 2 reins (le filtre) + les uretères (le drainage)"
+        },
+        {
+          "t": "Le bas appareil regroupe la vessie et l'urètre.",
+          "v": true,
+          "e": "VRAI. Le réservoir et sa sortie, et rien d'autre : c'est le bas appareil.",
+          "sourceQuote": "Le bas appareil = la vessie (le réservoir) + l' urètre (la sortie)"
+        },
+        {
+          "t": "L'uretère appartient au bas appareil.",
+          "v": false,
+          "e": "FAUX : c'est le piège de la fiche. Comme il descend vers la vessie, on le range spontanément en bas, alors qu'il appartient au haut appareil avec le rein.",
+          "sourceQuote": "il appartient au haut appareil, avec le rein dont il est le drainage"
+        },
+        {
+          "t": "La cystite et l'incontinence sont des pathologies du bas appareil.",
+          "v": true,
+          "e": "VRAI. Les pathologies ne se chevauchent pas : cystite, incontinence et hyperplasie prostatique relèvent du bas appareil.",
+          "sourceQuote": "bas = cystite, incontinence, hyperplasie prostatique"
+        },
+        {
+          "t": "Une douleur du haut appareil se projette au flanc.",
+          "v": true,
+          "e": "VRAI. Les douleurs suivent la même séparation que les pathologies : le haut appareil donne une douleur du flanc, le bas une douleur pubienne.",
+          "sourceQuote": "Les douleurs non plus : haut = flanc, bas = pubien"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-134-appareil-urinaire-vue-ensemble.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à l'opposition entre le rein et la vessie, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le rein filtre et fabrique l'urine tandis que la vessie la stocke.",
+          "v": true,
+          "e": "VRAI. C'est la deuxième distinction structurante : deux organes du même appareil, mais deux fonctions opposées.",
+          "sourceQuote": "Le rein filtre et fabrique l'urine. La vessie stocke"
+        },
+        {
+          "t": "Ces deux fonctions opposées se traduisent par deux architectures opposées.",
+          "v": true,
+          "e": "VRAI. La forme suit la fonction : ce que fait l'organe explique directement comment il est bâti.",
+          "sourceQuote": "Deux fonctions opposées, donc deux architectures opposées"
+        },
+        {
+          "t": "Le rein est dense, compact et fortement vascularisé.",
+          "v": true,
+          "e": "VRAI. Filtrer suppose de recevoir beaucoup de sang : d'où un organe plein et richement irrigué.",
+          "sourceQuote": "rein dense, compact, vascularisé à fond"
+        },
+        {
+          "t": "Le rein reçoit 20 à 25 % du débit cardiaque.",
+          "v": true,
+          "e": "VRAI. Un cinquième à un quart du sang éjecté par le cœur passe par les reins : c'est considérable pour un organe de cette taille.",
+          "sourceQuote": "vascularisé à fond (20-25 % du débit cardiaque !)"
+        },
+        {
+          "t": "La vessie est creuse, extensible et peu vascularisée.",
+          "v": true,
+          "e": "VRAI. Stocker suppose de pouvoir se distendre : d'où un organe creux, souple, qui n'a pas besoin d'une irrigation intense.",
+          "sourceQuote": "vessie creuse, extensible, peu vascularisée"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-134-appareil-urinaire-vue-ensemble.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à l'image de la station de traitement des eaux et aux structures qu'elle annonce, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La filtration grossière a lieu au glomérule.",
+          "v": true,
+          "e": "VRAI. C'est la première étape du travail rénal, l'équivalent du dégrossissage à l'entrée de la station.",
+          "sourceQuote": "c'est exactement le rein : filtration grossière au glomérule"
+        },
+        {
+          "t": "Le tri fin se fait dans le tubule.",
+          "v": true,
+          "e": "VRAI. Après la filtration grossière vient le tri fin, qui décide de ce qui repart dans le sang et de ce qui est éliminé.",
+          "sourceQuote": "puis tri fin dans le tubule"
+        },
+        {
+          "t": "Les urines concentrées sont évacuées par les calices, puis le bassinet, puis l'uretère.",
+          "v": true,
+          "e": "VRAI. C'est l'ordre du trajet de sortie à l'intérieur du rein, avant que l'urine ne gagne la vessie.",
+          "sourceQuote": "évacuation des urines concentrées par les calices → bassinet → uretère"
+        },
+        {
+          "t": "Le trajet d'évacuation part du bassinet, passe par les calices, puis gagne l'urètre.",
+          "v": false,
+          "e": "FAUX : deux erreurs. L'ordre est calices puis bassinet, et la suite est l'uretère, pas l'urètre qui se situe bien plus bas, après la vessie.",
+          "sourceQuote": "par les calices → bassinet → uretère"
+        },
+        {
+          "t": "Glomérule, tubule, calices et bassinet sont expliqués en détail dès cette étape.",
+          "v": false,
+          "e": "FAUX : ces quatre mots sont seulement posés en repère à ce stade ; chacun aura son développement plus loin dans le chapitre.",
+          "sourceQuote": "garde ces quatre mots en tête sans chercher à les comprendre maintenant"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-134-appareil-urinaire-vue-ensemble.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la régulation rénale et à la situation du rein dans l'abdomen, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le rein ajuste finement le volume et la composition des urines grâce à des hormones.",
+          "v": true,
+          "e": "VRAI. Selon les besoins du corps — déshydratation, excès d'eau, excès de sel — le rein module sa production : c'est cette capacité de réglage qui le rend vital.",
+          "sourceQuote": "le rein ajuste finement le volume et la composition des urines grâce à des hormones"
+        },
+        {
+          "t": "Le rein est un organe intrapéritonéal.",
+          "v": false,
+          "e": "FAUX : le rein est rétropéritonéal, c'est-à-dire situé en arrière du péritoine. C'est un rappel du classement des organes de l'abdomen.",
+          "sourceQuote": "Le rein est rétropéritonéal (rappel SADRAP du Ch.8)"
+        },
+        {
+          "t": "Étant rétropéritonéal, le rein est mobile dans l'abdomen.",
+          "v": false,
+          "e": "FAUX : la conséquence de cette position est justement qu'il est FIXE. Ce sont les organes intrapéritonéaux qui gardent une certaine mobilité.",
+          "sourceQuote": "Conséquence : il est fixe , et une douleur rénale se projette en arrière"
+        },
+        {
+          "t": "Une douleur rénale se projette en avant, dans la région pubienne.",
+          "v": false,
+          "e": "FAUX : elle se projette en arrière, au flanc et à la lombe. La douleur pubienne signe une atteinte du bas appareil.",
+          "sourceQuote": "une douleur rénale se projette en arrière — flanc, lombe — pas en avant"
+        },
+        {
+          "t": "On peut survivre plusieurs mois sans rein.",
+          "v": false,
+          "e": "FAUX : sans rein, la survie se compte en jours. C'est ce qui fait de cet organe une pièce essentielle de l'organisme.",
+          "sourceQuote": "sans rein, on meurt en quelques jours"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-134-appareil-urinaire-vue-ensemble.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives aux déchets éliminés et aux repères de la vue d'ensemble, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'urée, la créatinine et les médicaments métabolisés sont des déchets produits par l'organisme.",
+          "v": true,
+          "e": "VRAI. Ce sont les déchets issus de l'utilisation des nutriments, et ils doivent quitter le corps.",
+          "sourceQuote": "les nutriments produisent des déchets — urée, créatinine, médicaments métabolisés"
+        },
+        {
+          "t": "Une partie des déchets sort par les poumons et une autre par les selles, mais la majorité part par les urines.",
+          "v": true,
+          "e": "VRAI. Les trois voies existent, mais c'est bien la voie urinaire qui assure l'essentiel de l'élimination.",
+          "sourceQuote": "mais la majorité part par les urines"
+        },
+        {
+          "t": "L'urètre masculin mesure 16 à 18 cm et l'urètre féminin 3 à 4 cm.",
+          "v": true,
+          "e": "VRAI. Cette différence de longueur est frappante, et elle explique bien des différences cliniques entre les deux sexes.",
+          "sourceQuote": "sa version masculine (16-18 cm) et féminine (3-4 cm)"
+        },
+        {
+          "t": "Les deux reins sont situés en haut, de part et d'autre du rachis.",
+          "v": true,
+          "e": "VRAI. Ils encadrent la colonne vertébrale, en arrière de l'abdomen, tandis que la vessie occupe la partie basse.",
+          "sourceQuote": "les deux reins , en haut, de part et d'autre du rachis"
+        },
+        {
+          "t": "Les 4 organes de l'appareil urinaire concourent à une seule fonction : filtrer le sang.",
+          "v": true,
+          "e": "VRAI. Quatre organes, une seule finalité — le reste du chapitre ne fait que détailler comment cette fonction est assurée.",
+          "sourceQuote": "4 organes, 1 fonction : filtrer le sang"
+        }
+      ]
+    }
+  ]
+}

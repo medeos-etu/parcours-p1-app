@@ -1,0 +1,1347 @@
+{
+  "matiere": "mixte",
+  "chapitre": 0,
+  "note": "socle 1-7 — fiches sans QCM, ordre du Parcours",
+  "questions": [
+    {
+      "fiche": "physique-107-intensite-acoustique.html",
+      "origine": "ecrite",
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la définition de l'intensité acoustique W, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Elle correspond à l'énergie que l'onde transporte chaque seconde, par mètre carré.",
+          "v": true,
+          "e": "VRAI. C'est exactement la définition : une énergie rapportée à une seconde et à un mètre carré, c'est-à-dire une puissance par unité de surface.",
+          "sourceQuote": "c'est l'énergie que l'onde transporte chaque seconde, par mètre carré"
+        },
+        {
+          "t": "Elle s'exprime en watts par mètre carré.",
+          "v": true,
+          "e": "VRAI. Le watt par mètre carré (W/m²) est l'unité de l'intensité acoustique, ce qui découle directement de sa définition.",
+          "sourceQuote": "Elle se mesure en watts par mètre carré"
+        },
+        {
+          "t": "On l'appelle aussi « puissance surfacique ».",
+          "v": true,
+          "e": "VRAI. Les deux noms désignent la même grandeur : une puissance ramenée à une surface.",
+          "sourceQuote": "intensité acoustique W (ou « puissance surfacique »)"
+        },
+        {
+          "t": "L'intensité acoustique caractérise, par un seul nombre, la façon dont un milieu réagit au passage d'une onde sonore.",
+          "v": false,
+          "e": "FAUX : ce rôle-là est celui de l'impédance acoustique Z, qui est une propriété du milieu. L'intensité, elle, décrit l'onde, pas le milieu.",
+          "sourceQuote": "un seul nombre qui caractérise comment un milieu réagit au passage d'une onde sonore"
+        },
+        {
+          "t": "Elle ne dit rien du caractère fort ou faible d'un son.",
+          "v": false,
+          "e": "FAUX : c'est justement elle qui détermine si un son est perçu comme fort ou faible.",
+          "sourceQuote": "C'est ce qui détermine si un son est « fort » ou « faible »"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-107-intensite-acoustique.html",
+      "origine": "ecrite",
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux facteurs dont dépend l'intensité acoustique et au facteur numérique de la formule, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La fréquence intervient au carré, parce que l'énergie cinétique d'une molécule dépend du carré de sa vitesse.",
+          "v": true,
+          "e": "VRAI. La vitesse de pointe d'une molécule est proportionnelle à f, et l'énergie cinétique dépend du carré de la vitesse : la fréquence se retrouve donc élevée au carré.",
+          "sourceQuote": "La vitesse maximale d'une molécule en oscillation est proportionnelle à f, et l'énergie cinétique va comme la vitesse au carré"
+        },
+        {
+          "t": "L'amplitude intervient elle aussi au carré.",
+          "v": true,
+          "e": "VRAI. Comme pour toute oscillation, l'énergie dépend du carré de l'amplitude.",
+          "sourceQuote": "l'énergie va comme le carré de l'amplitude"
+        },
+        {
+          "t": "L'impédance du milieu intervient, mais sans être élevée au carré.",
+          "v": true,
+          "e": "VRAI. C'est le seul des trois facteurs à intervenir à la puissance 1 — un point à ne jamais oublier au moment de lire la formule.",
+          "sourceQuote": "Donc W ∝ Z (et cette fois, sans carré)"
+        },
+        {
+          "t": "Le facteur numérique qui complète la formule vient d'une démonstration hors programme, que l'on admet.",
+          "v": true,
+          "e": "VRAI. La démonstration mathématique n'est pas exigible : le facteur numérique est admis tel quel.",
+          "sourceQuote": "apparaît à la sortie de la démonstration mathématique, qui sort du cadre du programme"
+        },
+        {
+          "t": "Pour les calculs mentaux, on approxime souvent π² par 10, ce qui donne un facteur voisin de 20.",
+          "v": true,
+          "e": "VRAI. C'est le raccourci de calcul mental à retenir : π² ≈ 10, donc 2π² ≈ 20.",
+          "sourceQuote": "on approxime souvent π² ≈ 10 , donc 2π² ≈ 20"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-107-intensite-acoustique.html",
+      "origine": "ecrite",
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives aux conséquences chiffrées de la formule, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Doubler l'amplitude du déplacement moléculaire double l'intensité acoustique.",
+          "v": false,
+          "e": "FAUX : l'amplitude étant élevée au carré, la doubler multiplie l'intensité par 4, et non par 2.",
+          "sourceQuote": "Doubler f ou x₀ ne double pas l'intensité : elle est multipliée par 4"
+        },
+        {
+          "t": "Doubler la fréquence multiplie l'intensité par 2.",
+          "v": false,
+          "e": "FAUX : là encore le facteur est au carré, donc l'intensité est multipliée par 4.",
+          "sourceQuote": "puisque les deux sont au carré"
+        },
+        {
+          "t": "Passer de l'air à l'eau multiplie l'intensité par environ 3 500, à amplitude et fréquence identiques.",
+          "v": true,
+          "e": "VRAI. À amplitude et fréquence constantes, seul le milieu change : l'impédance de l'eau étant environ 3 500 fois celle de l'air, l'intensité suit dans le même rapport.",
+          "sourceQuote": "à amplitude et fréquence identiques, parce que Z est 3 500 fois plus grand dans l'eau"
+        },
+        {
+          "t": "Ce facteur d'environ 3 500 s'explique par le fait que l'impédance est élevée au carré.",
+          "v": false,
+          "e": "FAUX : l'impédance n'est pas au carré. Le rapport des impédances se reporte tel quel sur l'intensité.",
+          "sourceQuote": "Z, lui, n'est pas au carré"
+        },
+        {
+          "t": "L'impédance de l'air vaut 1,5 × 10⁶ et celle de l'eau vaut 440.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. L'air a l'impédance faible (440) et l'eau l'impédance élevée (1,5 × 10⁶) — sinon le facteur 3 500 n'aurait aucun sens.",
+          "sourceQuote": "Passer de l'air (Z = 440) à l'eau (Z = 1,5 × 10⁶)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-107-intensite-acoustique.html",
+      "origine": "ecrite",
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à l'application médicale de la formule et à la préparation d'un calcul, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Monter en fréquence fait grimper l'intensité au carré.",
+          "v": true,
+          "e": "VRAI. C'est la conséquence directe de la dépendance en f² : une fréquence plus élevée fait grimper l'intensité beaucoup plus vite qu'elle ne monte elle-même.",
+          "sourceQuote": "puisque W ∝ f², monter en fréquence fait grimper l'intensité au carré"
+        },
+        {
+          "t": "C'est ce qui rend les ultrasons de haute fréquence biologiquement actifs et exploitables en lithotripsie.",
+          "v": true,
+          "e": "VRAI. Toute une application médicale découle de cette seule ligne de la formule.",
+          "sourceQuote": "rend les ultrasons à haute fréquence biologiquement actifs et exploitables en lithotripsie"
+        },
+        {
+          "t": "La lithotripsie consiste à fragmenter les calculs rénaux par ultrasons focalisés.",
+          "v": true,
+          "e": "VRAI. C'est la définition donnée du terme : on concentre des ultrasons sur le calcul pour le casser.",
+          "sourceQuote": "fragmenter les calculs rénaux par ultrasons focalisés"
+        },
+        {
+          "t": "Avant de remplacer les lettres par des chiffres, il faut commencer par vérifier les unités.",
+          "v": true,
+          "e": "VRAI. C'est le premier réflexe : on vérifie les unités avant tout calcul, sinon le résultat est faux dès le départ.",
+          "sourceQuote": "Avant de remplacer les lettres par des chiffres, vérifie les unités"
+        },
+        {
+          "t": "Dans la formule, c'est l'impédance qui est élevée au carré, pas la fréquence ni l'amplitude.",
+          "v": false,
+          "e": "FAUX : c'est exactement l'inverse. La fréquence et l'amplitude sont au carré, l'impédance ne l'est pas.",
+          "sourceQuote": "f et x₀ sont élevés au carré, Z ne l'est pas"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-107-intensite-acoustique.html",
+      "origine": "ecrite",
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à l'impédance acoustique et au raisonnement physique qui justifie chaque facteur, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'impédance acoustique est le produit de la masse volumique par la célérité du son dans le milieu.",
+          "v": true,
+          "e": "VRAI. C'est l'expression vue juste avant : Z se construit à partir de deux propriétés du milieu, sa masse volumique et la célérité de l'onde.",
+          "sourceQuote": "impédance acoustique Z = ρ × c est une propriété du milieu"
+        },
+        {
+          "t": "L'impédance décrit la façon dont le milieu réagit à l'onde.",
+          "v": true,
+          "e": "VRAI. C'est la phrase d'ouverture de la fiche : l'impédance parle du milieu, l'intensité parle de l'énergie transportée.",
+          "sourceQuote": "L'impédance dit comment le milieu réagit à l'onde."
+        },
+        {
+          "t": "Plus une molécule bouge fort, moins elle possède d'énergie.",
+          "v": false,
+          "e": "FAUX : c'est le contraire. Plus le déplacement est ample, plus la molécule possède d'énergie — d'où la dépendance en x₀².",
+          "sourceQuote": "Plus la molécule bouge fort, plus elle a d'énergie"
+        },
+        {
+          "t": "Plus l'impédance du milieu est grande, moins l'onde transporte d'énergie par seconde.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. Une impédance plus grande signifie plus d'énergie transportée par seconde, ce qui explique le passage de l'air à l'eau.",
+          "sourceQuote": "Plus Z est grand, plus l'onde transporte d'énergie par seconde"
+        },
+        {
+          "t": "Une oscillation plus rapide donne à la molécule une vitesse de pointe plus faible.",
+          "v": false,
+          "e": "FAUX : une oscillation plus rapide donne au contraire une vitesse de pointe plus élevée, donc plus d'énergie cinétique.",
+          "sourceQuote": "Plus l'oscillation est rapide, plus la molécule a une vitesse de pointe élevée"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-107-intensite-acoustique.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la manière de lire la formule de l'intensité acoustique sans poser de calcul, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le facteur multiplicatif obtenu en changeant de milieu est le rapport des deux impédances, reporté tel quel.",
+          "v": true,
+          "e": "VRAI. Comme l'impédance n'est pas au carré, son rapport se reporte directement sur l'intensité, sans être modifié.",
+          "sourceQuote": "soit le rapport des deux impédances, reporté tel quel"
+        },
+        {
+          "t": "Repérer qui est au carré dans la formule suffit à prévoir l'effet d'un changement.",
+          "v": true,
+          "e": "VRAI. C'est la lecture qu'il faut prendre l'habitude de faire : voir quelles grandeurs sont au carré donne l'effet d'une variation sans poser le moindre calcul.",
+          "sourceQuote": "C'est cette lecture-là qui te donne l'effet d'un changement sans poser le moindre calcul"
+        },
+        {
+          "t": "Le nombre π qui apparaît dans le facteur numérique est le même que celui du périmètre d'un cercle.",
+          "v": true,
+          "e": "VRAI. Il n'y a pas de « π acoustique » particulier : c'est le π habituel, environ 3,14.",
+          "sourceQuote": "le même nombre que pour le périmètre d'un cercle"
+        },
+        {
+          "t": "Les trois facteurs sont assemblés en les multipliant entre eux.",
+          "v": true,
+          "e": "VRAI. Amplitude, fréquence et impédance se combinent par un produit, pas par une somme.",
+          "sourceQuote": "On assemble ces 3 facteurs en multipliant"
+        },
+        {
+          "t": "L'intensité ne dépend que de trois facteurs — l'amplitude, la fréquence et l'impédance du milieu.",
+          "v": true,
+          "e": "VRAI. Trois facteurs physiques, auxquels s'ajoute seulement le facteur numérique admis.",
+          "sourceQuote": "Trois facteurs seulement — l'amplitude x₀ , la fréquence f , l'impédance Z du milieu"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-107-intensite-acoustique.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives aux grandeurs manipulées dans cette fiche et aux confusions qu'elles entraînent, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'impédance mesure la capacité du milieu à transporter l'onde.",
+          "v": true,
+          "e": "VRAI. C'est le sens physique de Z, et c'est pour cela qu'elle entre dans l'expression de l'intensité.",
+          "sourceQuote": "Z mesure la capacité du milieu à transporter l'onde"
+        },
+        {
+          "t": "L'intensité acoustique est, comme l'impédance, une propriété du milieu.",
+          "v": false,
+          "e": "FAUX : seule l'impédance est une propriété du milieu. L'intensité dépend en plus de l'onde elle-même, par son amplitude et sa fréquence.",
+          "sourceQuote": "Z = ρ × c est une propriété du milieu"
+        },
+        {
+          "t": "L'amplitude désigne la vitesse maximale atteinte par une molécule.",
+          "v": false,
+          "e": "FAUX : l'amplitude est un déplacement maximal, mesuré en mètres, pas une vitesse.",
+          "sourceQuote": "L'amplitude x₀ (le déplacement maximal d'une molécule)"
+        },
+        {
+          "t": "La fréquence désigne le nombre de cycles par minute.",
+          "v": false,
+          "e": "FAUX : la fréquence compte les cycles par seconde, ce qui correspond au hertz.",
+          "sourceQuote": "La fréquence f (le nombre de cycles par seconde)"
+        },
+        {
+          "t": "Le facteur numérique de la formule vaut 2π, et non 2π².",
+          "v": false,
+          "e": "FAUX : c'est bien 2π², c'est-à-dire deux fois le carré de π, soit environ 20.",
+          "sourceQuote": "Un facteur numérique 2π² (= 2 × π², avec π ≈ 3,14"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-108-decibel-echelle-log.html",
+      "origine": "ecrite",
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la raison d'être de l'échelle en décibels, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Entre les deux extrêmes perçus par l'oreille, le rapport d'intensité est de mille milliards.",
+          "v": true,
+          "e": "VRAI. Du seuil d'audibilité au seuil de douleur, le rapport atteint 10¹² — un million de millions.",
+          "sourceQuote": "Soit un rapport de 10¹² — un million de millions — entre les deux extrêmes"
+        },
+        {
+          "t": "Le seuil d'audibilité à 1 kHz correspond à une intensité d'environ 1 W/m².",
+          "v": false,
+          "e": "FAUX : 1 W/m², c'est le seuil de douleur. Le seuil d'audibilité est mille milliards de fois plus bas.",
+          "sourceQuote": "jusqu'au seuil de douleur vers 1 W/m²"
+        },
+        {
+          "t": "C'est le logarithme qui est retenu comme solution mathématique pour compresser l'échelle.",
+          "v": true,
+          "e": "VRAI. Le logarithme est l'outil qui transforme des rapports démesurés en nombres de taille raisonnable.",
+          "sourceQuote": "La solution mathématique : le logarithme"
+        },
+        {
+          "t": "Manipuler au quotidien des valeurs comme 0,000 000 000 001 W/m² reste parfaitement praticable.",
+          "v": false,
+          "e": "FAUX : c'est précisément l'inconvénient que l'on cherche à éviter — de tels nombres sont impraticables au quotidien.",
+          "sourceQuote": "Travailler avec des nombres comme 0,000 000 000 001 W/m² au quotidien est impraticable"
+        },
+        {
+          "t": "L'échelle compressée recherchée doit fournir des nombres lisibles entre 0 et 1 000.",
+          "v": false,
+          "e": "FAUX : la plage visée va de 0 à 120, ce qui correspond aux douze ordres de grandeur de l'oreille multipliés par 10.",
+          "sourceQuote": "qui transforme ces ordres de grandeur démesurés en nombres lisibles entre 0 et 120"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-108-decibel-echelle-log.html",
+      "origine": "ecrite",
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la construction de la formule, brique par brique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "On compare l'intensité à une valeur de référence afin d'obtenir un nombre sans unité.",
+          "v": true,
+          "e": "VRAI. C'est la première brique : sans cette comparaison, on n'aurait pas de nombre pur à passer au logarithme.",
+          "sourceQuote": "Il faut comparer l'intensité W à une valeur de référence pour obtenir un nombre sans unité"
+        },
+        {
+          "t": "Un logarithme ne s'applique pas à une grandeur portant une unité.",
+          "v": true,
+          "e": "VRAI. C'est la raison mathématique pour laquelle la référence est indispensable.",
+          "sourceQuote": "Un logarithme ne marche pas sur des grandeurs « avec unité »"
+        },
+        {
+          "t": "La valeur de référence est fixée par convention internationale au seuil d'audibilité de l'oreille humaine à 1 kHz.",
+          "v": true,
+          "e": "VRAI. Ce n'est pas une valeur calculée : c'est une convention, calée sur le seuil d'audibilité à 1 kHz.",
+          "sourceQuote": "Par convention internationale : W_ref = 10⁻¹² W/m² , le seuil d'audibilité de l'oreille humaine à 1 kHz"
+        },
+        {
+          "t": "On multiplie par 10 parce qu'une échelle graduée en bels serait trop tassée.",
+          "v": true,
+          "e": "VRAI. De 0 à 12, l'échelle manquerait de finesse : diviser chaque bel en dix donne des nombres plus parlants.",
+          "sourceQuote": "Mais 0 à 12 bels donne une échelle trop tassée"
+        },
+        {
+          "t": "Le bel doit son nom à Alexander Graham Bell, inventeur de la radio.",
+          "v": false,
+          "e": "FAUX : Alexander Graham Bell est l'inventeur du téléphone, pas de la radio.",
+          "sourceQuote": "Alexander Graham Bell (l'inventeur du téléphone)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-108-decibel-echelle-log.html",
+      "origine": "ecrite",
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la vérification de la formule sur les valeurs-repères de l'oreille, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Au seuil d'audibilité, l'intensité est égale à la référence.",
+          "v": true,
+          "e": "VRAI. Le rapport vaut alors 1, son logarithme vaut 0 : le niveau est de 0 dB, ce qui est bien le point de départ de l'échelle.",
+          "sourceQuote": "Seuil d'audibilité (W = W_ref)"
+        },
+        {
+          "t": "Une conversation normale correspond à une intensité d'environ 10⁻⁶ W/m².",
+          "v": true,
+          "e": "VRAI. C'est le repère intermédiaire, à mi-chemin des douze ordres de grandeur, ce qui donne 60 dB.",
+          "sourceQuote": "Conversation normale (W ≈ 10⁻⁶ W/m²)"
+        },
+        {
+          "t": "Une intensité de 1 W/m² se situe au sommet de l'échelle, à 120 dB.",
+          "v": true,
+          "e": "VRAI. C'est le point d'arrivée de la construction : les douze ordres de grandeur tiennent sur une échelle allant de 0 à 120 dB.",
+          "sourceQuote": "La formule transforme donc les 12 ordres de grandeur (de 10⁻¹² à 1 W/m²) en une échelle simple de 0 à 120 dB"
+        },
+        {
+          "t": "Le logarithme décimal « compte les zéros » : celui d'un million vaut donc 12.",
+          "v": false,
+          "e": "FAUX : le logarithme d'un million vaut 6, pas 12. C'est celui de 10¹² qui vaut 12.",
+          "sourceQuote": "log(10) = 1, log(100) = 2, log(10⁶) = 6, log(10¹²) = 12"
+        },
+        {
+          "t": "Une fois le logarithme pris, les douze ordres de grandeur de l'oreille deviennent 120 unités.",
+          "v": false,
+          "e": "FAUX : le logarithme les transforme en 12 unités. C'est la multiplication par 10, ensuite, qui fait passer de 12 à 120.",
+          "sourceQuote": "les 12 ordres de grandeur de l'oreille deviennent ainsi 12 unités sur l'échelle log"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-108-decibel-echelle-log.html",
+      "origine": "ecrite",
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux niveaux sonores courants et à leurs effets, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un murmure se situe autour de 60 dB.",
+          "v": false,
+          "e": "FAUX : un murmure se situe entre 20 et 30 dB. C'est la conversation normale qui atteint 60 dB.",
+          "sourceQuote": "Murmure 20-30 dB"
+        },
+        {
+          "t": "Le trafic urbain se situe entre 70 et 80 dB.",
+          "v": true,
+          "e": "VRAI. C'est un niveau qualifié d'acceptable : gênant, mais sans lésion attendue.",
+          "sourceQuote": "Trafic urbain 70-80 dB"
+        },
+        {
+          "t": "Un concert ou un atelier bruyant provoque une perte auditive définitive et immédiate.",
+          "v": false,
+          "e": "FAUX : à ce niveau, l'effet décrit est une fatigue auditive, avec une perte transitoire d'environ 24 heures — pas une perte définitive.",
+          "sourceQuote": "Fatigue auditive (perte transitoire 24 h)"
+        },
+        {
+          "t": "Un coup de feu ou un décollage d'avion atteint 120 dB.",
+          "v": false,
+          "e": "FAUX : ces sources atteignent 140 dB. 120 dB, c'est le seuil de douleur.",
+          "sourceQuote": "Coup de feu, décollage avion 140 dB"
+        },
+        {
+          "t": "L'effet de blast, onde de choc capable de déchirer le tympan, apparaît dès 100 dB.",
+          "v": false,
+          "e": "FAUX : le blast est décrit au-delà de 140 dB, avec déchirure du tympan et surdité brutale. À 100 dB, on est au niveau d'un concert.",
+          "sourceQuote": "> 140 dB (blast) = déchirure du tympan, surdité brutale"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-108-decibel-echelle-log.html",
+      "origine": "ecrite",
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux effets biologiques d'une exposition sonore et à l'usage médical des ultrasons, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les effets biologiques dépendent à la fois de l'intensité et de la durée d'exposition.",
+          "v": true,
+          "e": "VRAI. Deux paramètres, jamais un seul : un niveau modéré subi longtemps peut faire plus de dégâts qu'un pic très bref.",
+          "sourceQuote": "dépendent de l'intensité ET de la durée"
+        },
+        {
+          "t": "Une exposition supérieure à 80 dB pendant huit heures peut entraîner une surdité professionnelle définitive.",
+          "v": true,
+          "e": "VRAI. C'est l'exposition chronique : bien en dessous du seuil de douleur, mais prolongée, elle suffit à créer une perte auditive définitive.",
+          "sourceQuote": "> 80 dB sur 8 h → surdité professionnelle (perte auditive définitive)"
+        },
+        {
+          "t": "La protection auditive est obligatoire au travail.",
+          "v": true,
+          "e": "VRAI. C'est la conséquence réglementaire directe du risque d'exposition chronique.",
+          "sourceQuote": "Protection auditive obligatoire au travail"
+        },
+        {
+          "t": "À forte intensité, les ultrasons médicaux échauffent les tissus qu'ils traversent.",
+          "v": true,
+          "e": "VRAI. C'est l'effet thermique, à ranger à part : il ne concerne plus un bruit subi, mais un ultrason envoyé volontairement.",
+          "sourceQuote": "les ultrasons médicaux échauffent les tissus traversés"
+        },
+        {
+          "t": "Cet échauffement est le principe de la lithotripsie.",
+          "v": true,
+          "e": "VRAI. On concentre des ultrasons pour fragmenter les calculs rénaux : l'effet recherché est bien celui-là.",
+          "sourceQuote": "c'est le principe de la lithotripsie (fragmenter les calculs rénaux"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-108-decibel-echelle-log.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à l'interprétation correcte de l'échelle en décibels, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "0 dB signifie l'absence totale de son.",
+          "v": false,
+          "e": "FAUX : c'est le piège classique. 0 dB correspond à une intensité bien réelle, celle du seuil d'audibilité.",
+          "sourceQuote": "0 dB ne veut pas dire « pas de son »"
+        },
+        {
+          "t": "0 dB correspond, par convention, exactement au seuil d'audibilité.",
+          "v": true,
+          "e": "VRAI. À ce point, l'intensité est égale à la référence, le rapport vaut 1 et son logarithme vaut 0.",
+          "sourceQuote": "c'est, par convention, exactement le seuil d'audibilité"
+        },
+        {
+          "t": "Un niveau bien inférieur au seuil de douleur peut rester dangereux si l'exposition dure.",
+          "v": true,
+          "e": "VRAI. La durée compte autant que le niveau : le danger ne commence pas à 120 dB.",
+          "sourceQuote": "Et un niveau bien en dessous du seuil de douleur reste dangereux si l'exposition dure"
+        },
+        {
+          "t": "L'échelle s'arrête au seuil de douleur : au-delà de 120 dB, la formule ne fournit plus de valeur.",
+          "v": false,
+          "e": "FAUX : la formule continue à répondre au-delà de 120 dB, comme le montrent les 140 dB d'un coup de feu.",
+          "sourceQuote": "la formule continue à répondre au-delà de 120 dB"
+        },
+        {
+          "t": "La valeur de référence doit être connue par cœur, faute de quoi la formule ne peut même pas s'écrire.",
+          "v": true,
+          "e": "VRAI. Sans référence, pas de rapport sans unité — et sans nombre sans unité, pas de logarithme possible.",
+          "sourceQuote": "Sans elle, la formule ne peut même pas s'écrire"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-108-decibel-echelle-log.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à l'écriture du niveau d'intensité acoustique et au passage du bel au décibel, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le niveau en décibels s'obtient en multipliant par 10 le logarithme du rapport de l'intensité à la référence.",
+          "v": true,
+          "e": "VRAI. C'est la formule complète : rapport à la référence, logarithme décimal, puis multiplication par 10.",
+          "sourceQuote": "W_dB = 10 × log(W / W_ref) , avec W_ref = 10⁻¹² W/m²"
+        },
+        {
+          "t": "Le décibel vaut un dixième de bel.",
+          "v": true,
+          "e": "VRAI. Chaque bel a été divisé en dix unités, d'où le préfixe « déci- ».",
+          "sourceQuote": "on a divisé chaque bel en 10 unités, le décibel (dB)"
+        },
+        {
+          "t": "Écrire 60 dB revient à écrire 6 bels.",
+          "v": true,
+          "e": "VRAI. C'est exactement l'exemple donné pour justifier le facteur 10 : on préfère 60 dB à 6 B, qui est moins parlant.",
+          "sourceQuote": "pour avoir des nombres plus parlants (60 dB au lieu de 6 B)"
+        },
+        {
+          "t": "Le rapport de l'intensité à la référence indique combien de fois le son est plus fort que le seuil.",
+          "v": true,
+          "e": "VRAI. C'est le sens concret de ce rapport, et c'est pour cela qu'il est plus parlant qu'une valeur brute en W/m².",
+          "sourceQuote": "combien de fois mon son est plus fort que le seuil"
+        },
+        {
+          "t": "Le logarithme décimal étire les ordres de grandeur au lieu de les compresser.",
+          "v": false,
+          "e": "FAUX : il les compresse, et c'est toute la raison pour laquelle on l'emploie ici.",
+          "sourceQuote": "Le log compresse les ordres de grandeur"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-109-zone-echange-sac-alveolaire.html",
+      "origine": "ecrite",
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives aux derniers niveaux de ramification de l'arbre bronchique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La bronchiole terminale, vers le niveau 16-17, est la dernière structure purement conductrice.",
+          "v": true,
+          "e": "VRAI. C'est là que s'arrête la simple tuyauterie : au-delà, la paroi commence à échanger.",
+          "sourceQuote": "vers le niveau 16-17 : la dernière structure purement conductrice"
+        },
+        {
+          "t": "Les bronchioles respiratoires apparaissent à partir du niveau 17 environ.",
+          "v": true,
+          "e": "VRAI. Elles prennent le relais juste après les bronchioles terminales.",
+          "sourceQuote": "Les bronchioles respiratoires (à partir du niveau ~17 de ramification)"
+        },
+        {
+          "t": "Les canaux alvéolaires correspondent aux niveaux 20 à 22.",
+          "v": true,
+          "e": "VRAI. Ils constituent l'étage intermédiaire, entre la bronchiole respiratoire et le sac alvéolaire.",
+          "sourceQuote": "Les canaux alvéolaires (niveaux 20-22)"
+        },
+        {
+          "t": "Les sacs alvéolaires occupent le niveau 23, qui est terminal.",
+          "v": true,
+          "e": "VRAI. C'est le dernier étage de l'arbre : au-delà, il n'y a plus que le sang, de l'autre côté de la paroi.",
+          "sourceQuote": "Les sacs alvéolaires (niveau 23 — terminal)"
+        },
+        {
+          "t": "Ce sont les bronchioles terminales qui donnent naissance aux bronchioles respiratoires.",
+          "v": true,
+          "e": "VRAI. La filiation va bien dans ce sens, et c'est ce qui explique la ressemblance des deux noms.",
+          "sourceQuote": "Ce sont les bronchioles terminales qui leur donnent naissance"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-109-zone-echange-sac-alveolaire.html",
+      "origine": "ecrite",
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à l'endroit où commencent les échanges gazeux, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans la bronchiole terminale, l'air circule encore sans jamais rien échanger.",
+          "v": true,
+          "e": "VRAI. C'est la définition d'une structure purement conductrice : elle transporte, elle n'échange pas.",
+          "sourceQuote": "où l'air circule encore sans jamais rien échanger"
+        },
+        {
+          "t": "Les premières alvéoles apparaissent dès la bronchiole terminale.",
+          "v": false,
+          "e": "FAUX : la bronchiole terminale est encore un tube lisse, sans aucune alvéole. Les premières apparaissent au niveau suivant.",
+          "sourceQuote": "En haut, la bronchiole terminale est un tube lisse, pas encore d'alvéole"
+        },
+        {
+          "t": "Dans la bronchiole respiratoire, la paroi reste un simple tuyau.",
+          "v": false,
+          "e": "FAUX : c'est justement là que la paroi cesse d'être un simple tuyau, puisque quelques alvéoles y apparaissent.",
+          "sourceQuote": "La paroi n'est donc plus un simple tuyau"
+        },
+        {
+          "t": "Dans le canal alvéolaire, les alvéoles ne concernent encore que quelques points isolés de la paroi.",
+          "v": false,
+          "e": "FAUX : à ce niveau, les alvéoles occupent déjà presque toute la paroi. Les alvéoles isolées, c'est l'étage précédent.",
+          "sourceQuote": "les alvéoles ne sont plus « quelques-unes » : elles occupent presque toute la paroi"
+        },
+        {
+          "t": "La frontière entre conduction et échange passe à un lobe pulmonaire précis.",
+          "v": false,
+          "e": "FAUX : cette frontière ne se lit ni sur un organe ni sur un lobe, mais sur un niveau de ramification.",
+          "sourceQuote": "ne passe ni à un organe, ni à un lobe"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-109-zone-echange-sac-alveolaire.html",
+      "origine": "ecrite",
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives aux chiffres de la zone d'échange, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Chaque poumon contient environ 300 millions d'alvéoles.",
+          "v": true,
+          "e": "VRAI. C'est bien un chiffre par poumon, et non pour les deux réunis.",
+          "sourceQuote": "~300 millions d'alvéoles par poumon"
+        },
+        {
+          "t": "Cela représente environ 600 millions d'alvéoles au total.",
+          "v": true,
+          "e": "VRAI. Le total pour les deux poumons est le double du chiffre unitaire.",
+          "sourceQuote": "soit environ 600 millions au total"
+        },
+        {
+          "t": "Une alvéole mesure environ 0,2 mm de diamètre.",
+          "v": true,
+          "e": "VRAI. Une taille microscopique, mais qui reste accessible à fort grossissement.",
+          "sourceQuote": "~0,2 mm de diamètre par alvéole"
+        },
+        {
+          "t": "La surface totale d'échange est d'environ 70 m² par poumon.",
+          "v": true,
+          "e": "VRAI. C'est le chiffre qui donne tout son sens à l'arbre : une surface énorme repliée dans un très petit volume.",
+          "sourceQuote": "~70 m² de surface totale par poumon"
+        },
+        {
+          "t": "Cette surface est compactée dans un volume d'environ 15 litres.",
+          "v": false,
+          "e": "FAUX : le volume est d'environ 1,5 litre, dix fois moins. C'est justement ce contraste qui rend le chiffre remarquable.",
+          "sourceQuote": "compactée dans ~1,5 L de volume"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-109-zone-echange-sac-alveolaire.html",
+      "origine": "ecrite",
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux confusions à éviter sur les chiffres et sur le sac alvéolaire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les 300 millions d'alvéoles et les 70 m² s'entendent pour les deux poumons réunis.",
+          "v": false,
+          "e": "FAUX : ces deux chiffres valent par poumon. Les rapporter aux deux revient à diviser la réalité par deux.",
+          "sourceQuote": "300 millions et 70 m², c'est par poumon — pas pour les deux"
+        },
+        {
+          "t": "Un sac alvéolaire et une alvéole désignent la même structure.",
+          "v": false,
+          "e": "FAUX : ce sont deux échelles différentes. Le sac est la grappe, l'alvéole est l'une des logettes qui la tapissent.",
+          "sourceQuote": "un sac alvéolaire n'est pas la même chose qu'une alvéole"
+        },
+        {
+          "t": "Le sac alvéolaire est une grappe terminale tapissée d'alvéoles sur toute sa surface.",
+          "v": true,
+          "e": "VRAI. C'est la définition exacte du sac, et ce qui le distingue d'une alvéole isolée.",
+          "sourceQuote": "le sac est la grappe terminale , tapissée d'alvéoles sur toute sa surface"
+        },
+        {
+          "t": "Après le sac alvéolaire, l'arbre se poursuit encore sur quelques niveaux de ramification.",
+          "v": false,
+          "e": "FAUX : le sac alvéolaire est terminal. Après lui, il n'y a plus de conduit, seulement le sang de l'autre côté de la paroi.",
+          "sourceQuote": "Après, il n'y a plus rien — juste le sang, de l'autre côté de la paroi"
+        },
+        {
+          "t": "Replier une surface immense dans un volume minuscule est tout le sens de l'arbre bronchique.",
+          "v": true,
+          "e": "VRAI. C'est l'idée directrice : les ramifications successives servent à loger 70 m² dans une cage thoracique.",
+          "sourceQuote": "C'est tout le sens de l'arbre : replier une surface immense dans une cage minuscule"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-109-zone-echange-sac-alveolaire.html",
+      "origine": "ecrite",
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux capillaires et à la lecture du schéma, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Chaque alvéole est entourée d'un maillage extrêmement dense de capillaires sanguins.",
+          "v": true,
+          "e": "VRAI. Cette densité est indispensable : sans elle, l'immense surface alvéolaire ne servirait à rien.",
+          "sourceQuote": "entourée d'un maillage extrêmement dense de capillaires sanguins"
+        },
+        {
+          "t": "On parle d'un véritable « tapis de capillaires » qui enveloppe les sacs.",
+          "v": true,
+          "e": "VRAI. C'est l'image retenue pour décrire cet enveloppement complet.",
+          "sourceQuote": "un véritable « tapis de capillaires » qui enveloppe les sacs"
+        },
+        {
+          "t": "Sur le schéma, le filet rouge qui enveloppe la grappe représente les bronchioles terminales.",
+          "v": false,
+          "e": "FAUX : ce filet rouge, c'est le tapis de capillaires. Les bronchioles terminales sont tout en haut du schéma.",
+          "sourceQuote": "le filet rouge qui l'enveloppe, c'est le tapis de capillaires"
+        },
+        {
+          "t": "Pour lire le schéma, il faut regarder avant tout la paroi du tuyau.",
+          "v": true,
+          "e": "VRAI. C'est elle qui change d'un étage à l'autre : lisse, puis bombée de quelques alvéoles, puis presque entièrement alvéolaire.",
+          "sourceQuote": "regarde une seule chose : la paroi du tuyau"
+        },
+        {
+          "t": "Sur le schéma, la paroi du canal alvéolaire est encore presque entièrement lisse.",
+          "v": false,
+          "e": "FAUX : à ce niveau, la paroi n'est presque plus faite que d'alvéoles. C'est la bronchiole terminale qui est lisse.",
+          "sourceQuote": "Puis la paroi du canal n'est presque plus faite que de ça"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-109-zone-echange-sac-alveolaire.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à ce qui se joue au bout de l'arbre et à ce qui a été posé auparavant, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'événement central de la respiration est le passage de l'oxygène de l'air au sang.",
+          "v": true,
+          "e": "VRAI. Tout le reste — la mécanique, la tuyauterie — n'existe que pour rendre ce passage possible.",
+          "sourceQuote": "l'événement central de la respiration — l'O₂ passe de l'air au sang"
+        },
+        {
+          "t": "Tout ce qui précède le sac alvéolaire assure déjà des échanges gazeux.",
+          "v": false,
+          "e": "FAUX : jusqu'à la bronchiole terminale, il ne s'agit que d'une traversée de tuyauterie, sans le moindre échange.",
+          "sourceQuote": "tout ce qui précède n'était que la traversée d'une tuyauterie"
+        },
+        {
+          "t": "Dans la mécanique déjà posée, c'est la plèvre qui tire et la cage qui transmet.",
+          "v": false,
+          "e": "FAUX : les rôles sont inversés. C'est la cage thoracique qui tire, et la plèvre qui transmet ce mouvement au poumon.",
+          "sourceQuote": "la cage tire, la plèvre transmet, les alvéoles s'ouvrent"
+        },
+        {
+          "t": "Entre le dernier tuyau conducteur et la première structure d'échange, c'est le nom entier de la structure qui change.",
+          "v": false,
+          "e": "FAUX : un seul mot change, « terminale » devenant « respiratoire ». C'est ce qui rend la confusion si facile.",
+          "sourceQuote": "Un seul mot change dans le nom — et c'est toute la différence"
+        },
+        {
+          "t": "Les premières alvéoles isolées apparaissent dans la paroi des canaux alvéolaires.",
+          "v": false,
+          "e": "FAUX : les premières alvéoles isolées apparaissent dans la paroi des bronchioles respiratoires, un étage plus haut.",
+          "sourceQuote": "les premières structures où apparaissent quelques alvéoles isolées dans la paroi"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-109-zone-echange-sac-alveolaire.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la synthèse de la fiche et à la suite du raisonnement, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une alvéole, bien que microscopique, reste visible à fort grossissement.",
+          "v": true,
+          "e": "VRAI. Son diamètre d'environ 0,2 mm la place à la limite de ce que l'on peut observer.",
+          "sourceQuote": "microscopique, mais visible à fort grossissement"
+        },
+        {
+          "t": "L'ordre de descente est : canal alvéolaire, puis bronchiole respiratoire, puis sac alvéolaire.",
+          "v": false,
+          "e": "FAUX : la bronchiole respiratoire vient en premier, puis le canal alvéolaire, puis le sac alvéolaire.",
+          "sourceQuote": "Trois étages, dans l'ordre : bronchiole respiratoire"
+        },
+        {
+          "t": "La question laissée ouverte est celle de ce qui sépare exactement l'air du sac et le sang du capillaire.",
+          "v": true,
+          "e": "VRAI. Savoir où se produit l'échange ne dit pas encore ce que les gaz ont à traverser : c'est l'objet de la suite.",
+          "sourceQuote": "entre l'air du sac et le sang du capillaire, qu'y a-t-il exactement ?"
+        },
+        {
+          "t": "Les sacs alvéolaires ne sont tapissés d'alvéoles que sur une partie de leur surface.",
+          "v": false,
+          "e": "FAUX : la grappe terminale est tapissée d'alvéoles sur toute sa surface — c'est ce qui en fait l'aboutissement de l'arbre.",
+          "sourceQuote": "des grappes terminales tapissées d'alvéoles sur toute leur surface"
+        },
+        {
+          "t": "Dans les bronchioles respiratoires, les alvéoles occupent déjà toute la paroi.",
+          "v": false,
+          "e": "FAUX : à ce niveau, seuls deux ou trois petits sacs bombent dans la paroi. L'occupation quasi complète vient au niveau du canal.",
+          "sourceQuote": "Puis 2-3 petits sacs bombent dans la paroi de la bronchiole respiratoire"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-110-paroi-alveolo-capillaire.html",
+      "origine": "ecrite",
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la composition de la paroi alvéolo-capillaire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Elle comprend trois couches superposées.",
+          "v": true,
+          "e": "VRAI. Trois couches, et pas une de plus : c'est ce qui rend la paroi si fine.",
+          "sourceQuote": "Elle comprend 3 couches superposées"
+        },
+        {
+          "t": "La première couche, du côté de l'air, est l'épithélium alvéolaire.",
+          "v": true,
+          "e": "VRAI. C'est la couche que l'oxygène rencontre en premier en quittant l'alvéole.",
+          "sourceQuote": "L'épithélium alvéolaire. La couche du côté de l' air"
+        },
+        {
+          "t": "L'interstitium est une mince lame de tissu conjonctif placée entre les deux autres couches.",
+          "v": true,
+          "e": "VRAI. C'est la couche intermédiaire, parfois fusionnée avec la membrane basale.",
+          "sourceQuote": "Une mince lame de tissu conjonctif glissée entre les deux autres couches"
+        },
+        {
+          "t": "L'endothélium capillaire est la couche située du côté du sang.",
+          "v": true,
+          "e": "VRAI. Il ne s'agit de rien d'autre que de la paroi du capillaire sanguin lui-même.",
+          "sourceQuote": "La couche du côté du sang : c'est tout simplement la paroi du capillaire sanguin"
+        },
+        {
+          "t": "L'air et le sang finissent par se mélanger au niveau du sac alvéolaire.",
+          "v": false,
+          "e": "FAUX : ils restent face à face sans jamais se mélanger. Seuls les gaz traversent la paroi qui les sépare.",
+          "sourceQuote": "mais ils ne se mélangent jamais"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-110-paroi-alveolo-capillaire.html",
+      "origine": "ecrite",
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux pneumocytes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les pneumocytes de type I sont très aplatis et couvrent 95 % de la surface.",
+          "v": true,
+          "e": "VRAI. Leur aplatissement extrême leur permet de couvrir presque toute la surface alvéolaire.",
+          "sourceQuote": "pneumocytes de type I (très aplatis, couvrant 95 % de la surface)"
+        },
+        {
+          "t": "Les pneumocytes de type II sont cuboïdes et couvrent 5 % de la surface.",
+          "v": true,
+          "e": "VRAI. Leur forme cubique explique qu'ils s'étalent peu, donc qu'ils couvrent peu de surface.",
+          "sourceQuote": "pneumocytes de type II (cuboïdes, 5 % de la surface)"
+        },
+        {
+          "t": "Ce sont les pneumocytes de type II qui assurent l'essentiel du revêtement alvéolaire.",
+          "v": false,
+          "e": "FAUX : ce sont les pneumocytes de type I, écrasés en une lame très mince, qui assurent l'essentiel du revêtement — donc l'essentiel de ce que les gaz traversent.",
+          "sourceQuote": "Ce sont donc les pneumocytes I, écrasés en une lame très mince, qui assurent l'essentiel du revêtement"
+        },
+        {
+          "t": "Les pneumocytes de type II produisent le surfactant.",
+          "v": true,
+          "e": "VRAI. C'est leur rôle propre, et c'est ce qui justifie qu'on leur consacre un développement à part.",
+          "sourceQuote": "Leur rôle propre, c'est de produire le surfactant"
+        },
+        {
+          "t": "Les pneumocytes de type II ne font pas partie de l'épithélium alvéolaire.",
+          "v": false,
+          "e": "FAUX : ils en font bien partie. C'est simplement leur fonction, et non leur place, qui les distingue des pneumocytes I.",
+          "sourceQuote": "ils font bien partie de l'épithélium alvéolaire"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-110-paroi-alveolo-capillaire.html",
+      "origine": "ecrite",
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à l'épaisseur de la paroi et à la lecture de sa coupe, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La paroi qui sépare l'air alvéolaire du sang capillaire est étonnamment fine, et c'est ce qui rend la diffusion possible.",
+          "v": true,
+          "e": "VRAI. La finesse n'est pas un détail : c'est la condition même de l'échange gazeux.",
+          "sourceQuote": "est étonnamment fine — c'est ce qui rend la diffusion gazeuse possible"
+        },
+        {
+          "t": "Son épaisseur totale atteint 0,5 millimètre.",
+          "v": false,
+          "e": "FAUX : elle est de 0,5 micromètre, soit mille fois moins. À l'échelle du millimètre, aucun échange ne serait possible.",
+          "sourceQuote": "Épaisseur totale : 0,5 µm, soit 2 000 fois plus fin qu'un cheveu"
+        },
+        {
+          "t": "Cette épaisseur correspond à la somme des trois couches.",
+          "v": true,
+          "e": "VRAI. Ce n'est pas l'épaisseur d'une couche isolée, mais bien le total du trajet que les gaz ont à franchir.",
+          "sourceQuote": "Additionne les trois couches : épaisseur totale, 0,5 µm"
+        },
+        {
+          "t": "Ce chiffre ne concerne en réalité que l'épithélium alvéolaire.",
+          "v": false,
+          "e": "FAUX : sur le schéma, l'accolade qui porte ce chiffre coiffe les trois couches, pas une seule.",
+          "sourceQuote": "l' accolade au-dessus des 3 couches, qui porte le 0,5 µm"
+        },
+        {
+          "t": "Sur le schéma en coupe, la bande se lit de droite à gauche, dans le sens du CO₂.",
+          "v": false,
+          "e": "FAUX : elle se lit de gauche à droite, dans le sens de l'oxygène, de l'air alvéolaire vers le sang capillaire.",
+          "sourceQuote": "Lis la bande de gauche à droite, dans le sens de l'O₂"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-110-paroi-alveolo-capillaire.html",
+      "origine": "ecrite",
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives au franchissement de la paroi par les gaz, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'oxygène traverse cette membrane par diffusion passive.",
+          "v": true,
+          "e": "VRAI. Aucun mécanisme cellulaire n'intervient : le gaz suit simplement son gradient.",
+          "sourceQuote": "L'O₂ traverse cette membrane par diffusion passive"
+        },
+        {
+          "t": "Il va de la concentration élevée du côté de l'alvéole vers la concentration basse du côté du sang.",
+          "v": true,
+          "e": "VRAI. C'est le sens du gradient, et c'est lui seul qui impose la direction du passage.",
+          "sourceQuote": "haute concentration côté alvéole → basse concentration côté sang"
+        },
+        {
+          "t": "Le dioxyde de carbone emprunte le chemin inverse.",
+          "v": true,
+          "e": "VRAI. Il quitte le sang pour rejoindre l'air alvéolaire, en suivant lui aussi son propre gradient.",
+          "sourceQuote": "Le CO₂ fait le chemin inverse"
+        },
+        {
+          "t": "Ce passage ne consomme aucune énergie.",
+          "v": true,
+          "e": "VRAI. Ni énergie, ni transport actif : le phénomène est purement physique.",
+          "sourceQuote": "Aucune énergie nécessaire, aucun transport actif"
+        },
+        {
+          "t": "Les deux gaz traversent la même paroi, en sens opposés et en même temps.",
+          "v": true,
+          "e": "VRAI. Il n'existe pas une paroi pour l'oxygène et une autre pour le dioxyde de carbone : c'est la même, franchie dans les deux sens simultanément.",
+          "sourceQuote": "Les deux traversent la même paroi , en sens opposés, en même temps"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-110-paroi-alveolo-capillaire.html",
+      "origine": "ecrite",
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux erreurs classiques sur cette paroi, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une proposition qui fait consommer de l'énergie au passage de l'oxygène est fausse.",
+          "v": true,
+          "e": "VRAI. Le passage est purement physique : dès qu'un énoncé y ajoute un transport actif, il est faux.",
+          "sourceQuote": "un QCM qui fait consommer de l'énergie au passage de l'O₂ est FAUX"
+        },
+        {
+          "t": "Les 95 % et les 5 % sont des pourcentages du nombre de cellules.",
+          "v": false,
+          "e": "FAUX : ce sont des pourcentages de surface couverte, ce qui n'a rien à voir avec un décompte de cellules.",
+          "sourceQuote": "Les 95 % et les 5 % sont des pourcentages de surface couverte"
+        },
+        {
+          "t": "Si les pneumocytes de type I couvrent autant de surface, c'est qu'ils sont volumineux.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. Ils sont très aplatis, donc ils s'étalent énormément — c'est leur minceur qui explique leur couverture.",
+          "sourceQuote": "les pneumocytes I sont très aplatis, donc ils s'étalent énormément"
+        },
+        {
+          "t": "Sur le schéma, la flèche rouge et la flèche bleue vont dans le même sens.",
+          "v": false,
+          "e": "FAUX : elles se croisent, puisque les deux gaz traversent la paroi en sens opposés.",
+          "sourceQuote": "c'est la flèche rouge et la flèche bleue : elles se croisent"
+        },
+        {
+          "t": "Dans le sens air vers sang, l'ordre des couches est : endothélium capillaire, interstitium, épithélium alvéolaire.",
+          "v": false,
+          "e": "FAUX : l'ordre est inversé. En partant de l'air, on rencontre d'abord l'épithélium alvéolaire, puis l'interstitium, puis l'endothélium capillaire.",
+          "sourceQuote": "air alvéolaire (riche en O₂) → ① épithélium alvéolaire → ② interstitium → ③ endothélium capillaire"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-110-paroi-alveolo-capillaire.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives au réflexe à avoir devant une question sur cette paroi, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le premier réflexe consiste à se demander dans quel sens va le gaz dont on parle.",
+          "v": true,
+          "e": "VRAI. Beaucoup d'erreurs viennent d'un sens inversé : poser la question d'emblée les évite.",
+          "sourceQuote": "demande-toi toujours dans quel sens va le gaz"
+        },
+        {
+          "t": "L'oxygène va de l'alvéole vers le sang.",
+          "v": true,
+          "e": "VRAI. C'est le sens de la flèche rouge : l'air est riche en oxygène, le sang qui arrive en est pauvre.",
+          "sourceQuote": "l'O₂ va de l'alvéole vers le sang"
+        },
+        {
+          "t": "Le dioxyde de carbone va du sang vers l'alvéole.",
+          "v": true,
+          "e": "VRAI. C'est la flèche inverse, celle qui permet ensuite l'élimination du gaz par l'expiration.",
+          "sourceQuote": "le CO₂ va du sang vers l'alvéole"
+        },
+        {
+          "t": "L'interstitium peut être fusionné avec la membrane basale.",
+          "v": true,
+          "e": "VRAI. C'est une précision de la description : la lame conjonctive n'est pas toujours individualisable.",
+          "sourceQuote": "parfois fusionnée à la membrane basale"
+        },
+        {
+          "t": "Le sang capillaire arrive au contact de la paroi déjà riche en oxygène.",
+          "v": false,
+          "e": "FAUX : il arrive pauvre en oxygène — c'est précisément ce qui crée le gradient et rend la diffusion possible.",
+          "sourceQuote": "sang capillaire (pauvre en O₂)"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-110-paroi-alveolo-capillaire.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la place de cette paroi dans l'ensemble de la respiration, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le sang circule juste à côté de l'air, dans le tapis de capillaires qui enveloppe chaque alvéole.",
+          "v": true,
+          "e": "VRAI. C'est cette proximité, ajoutée à la finesse de la paroi, qui rend l'échange efficace.",
+          "sourceQuote": "le sang circule juste à côté, dans le tapis de capillaires qui enveloppe chaque alvéole"
+        },
+        {
+          "t": "Le surfactant fera l'objet d'un développement à part, dans la suite.",
+          "v": true,
+          "e": "VRAI. Il est seulement annoncé ici : son rôle propre mérite un traitement entier.",
+          "sourceQuote": "un sujet à lui tout seul, celui de la fiche suivante"
+        },
+        {
+          "t": "Dans l'ordre air vers sang, l'interstitium se place entre l'épithélium alvéolaire et l'endothélium capillaire.",
+          "v": true,
+          "e": "VRAI. C'est la couche du milieu, celle qui sépare le revêtement alvéolaire de la paroi du capillaire.",
+          "sourceQuote": "interstitium (mince lame de tissu conjonctif) → endothélium capillaire"
+        },
+        {
+          "t": "La traversée de la paroi par l'oxygène et le dioxyde de carbone repose sur un transport actif membranaire.",
+          "v": false,
+          "e": "FAUX : les deux gaz la franchissent par diffusion passive, sans aucun transporteur ni dépense d'énergie.",
+          "sourceQuote": "L'O₂ et le CO₂ la franchissent par diffusion passive"
+        },
+        {
+          "t": "L'épithélium alvéolaire borde le sang, tandis que l'endothélium borde l'air.",
+          "v": false,
+          "e": "FAUX : les deux sont intervertis. L'épithélium alvéolaire est du côté de l'air, l'endothélium capillaire du côté du sang.",
+          "sourceQuote": "3 couches , dans l'ordre air → sang : épithélium alvéolaire"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-109-epifluorescence-et-confocal.html",
+      "origine": "ecrite",
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la différence entre transillumination et épifluorescence, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "En microscopie classique, la lumière traverse l'échantillon de part en part.",
+          "v": true,
+          "e": "VRAI. C'est ce qu'on appelle la transillumination : la lumière entre d'un côté de la lame et ressort de l'autre.",
+          "sourceQuote": "la lumière traverse l'échantillon — c'est la transillumination"
+        },
+        {
+          "t": "En transillumination, la lampe se trouve au-dessus de la lame.",
+          "v": false,
+          "e": "FAUX : la lampe est placée sous la lame, et la lumière remonte vers l'objectif après avoir traversé l'échantillon.",
+          "sourceQuote": "la lampe est sous la lame, la lumière la traverse et ressort de l'autre côté"
+        },
+        {
+          "t": "Le préfixe « épi- » signifie « à travers ».",
+          "v": false,
+          "e": "FAUX : il signifie « sur ». C'est justement ce qui oppose l'épifluorescence à la transillumination, où la lumière traverse.",
+          "sourceQuote": "d'où le préfixe « épi- », qui veut dire sur"
+        },
+        {
+          "t": "En épifluorescence, l'éclairage vient par le dessous de la préparation.",
+          "v": false,
+          "e": "FAUX : l'éclairage vient par le dessus, c'est-à-dire par l'objectif lui-même.",
+          "sourceQuote": "En épifluorescence , l'éclairage vient par le dessus"
+        },
+        {
+          "t": "En épifluorescence, l'excitation et l'émission empruntent deux objectifs différents.",
+          "v": false,
+          "e": "FAUX : c'est la même lentille qui sert à l'aller et au retour, ce qui est tout l'intérêt du montage.",
+          "sourceQuote": "La même lentille sert à l'aller et au retour"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-109-epifluorescence-et-confocal.html",
+      "origine": "ecrite",
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives au trajet de la lumière dans un microscope à épifluorescence, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La lumière d'excitation arrive par l'objectif.",
+          "v": true,
+          "e": "VRAI. C'est la première étape du trajet : elle descend jusqu'à l'échantillon en passant par l'objectif.",
+          "sourceQuote": "La lumière d'excitation arrive par l'objectif (du dessus)"
+        },
+        {
+          "t": "Elle excite les fluorophores contenus dans l'échantillon.",
+          "v": true,
+          "e": "VRAI. C'est le but de cette lumière : porter les fluorophores dans un état excité pour qu'ils émettent à leur tour.",
+          "sourceQuote": "Elle excite les fluorophores présents dans l' échantillon"
+        },
+        {
+          "t": "La lumière émise ressort par un chemin distinct, sans repasser par l'objectif.",
+          "v": false,
+          "e": "FAUX : elle remonte par ce même objectif. C'est précisément ce qui oblige à trier ensuite les deux lumières.",
+          "sourceQuote": "La lumière émise remonte par le même objectif"
+        },
+        {
+          "t": "Les filtres laissent volontairement la lumière d'excitation atteindre le détecteur.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. Le bleu envoyé ne doit jamais parvenir au détecteur, sur lequel on ne veut voir que l'émission.",
+          "sourceQuote": "Le bleu qu'on envoie ne doit jamais arriver jusqu'au détecteur"
+        },
+        {
+          "t": "Un fluorophore excité en bleu renvoie une lumière de longueur d'onde plus courte.",
+          "v": false,
+          "e": "FAUX : il en perd une partie sous forme de chaleur, donc la lumière émise a une longueur d'onde plus grande.",
+          "sourceQuote": "la lumière qu'il émet a une longueur d'onde plus grande"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-109-epifluorescence-et-confocal.html",
+      "origine": "ecrite",
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au miroir dichroïque, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Il réfléchit la lumière d'excitation vers l'échantillon.",
+          "v": true,
+          "e": "VRAI. C'est son premier comportement : renvoyer vers le bas la lumière de courte longueur d'onde.",
+          "sourceQuote": "Il réfléchit la lumière d'excitation (courte λ"
+        },
+        {
+          "t": "Il laisse passer la lumière d'émission vers le détecteur.",
+          "v": true,
+          "e": "VRAI. C'est son second comportement : la lumière de grande longueur d'onde le traverse sans être renvoyée.",
+          "sourceQuote": "mais laisse passer la lumière d'émission (grande λ) vers le détecteur"
+        },
+        {
+          "t": "Il trie les deux lumières d'après leur longueur d'onde.",
+          "v": true,
+          "e": "VRAI. C'est un filtre dont le comportement dépend de la longueur d'onde reçue : une seule pièce, deux réactions différentes.",
+          "sourceQuote": "C'est un filtre « intelligent » basé sur la longueur d'onde"
+        },
+        {
+          "t": "Ce tri n'est possible que parce que le décalage de Stokes existe.",
+          "v": true,
+          "e": "VRAI. Sans écart entre la longueur d'onde d'excitation et celle d'émission, aucun filtre ne pourrait les distinguer.",
+          "sourceQuote": "il ne peut trier que parce que le décalage de Stokes existe"
+        },
+        {
+          "t": "Sur le schéma, ce miroir est incliné à 45°.",
+          "v": true,
+          "e": "VRAI. Cette inclinaison est ce qui permet de renvoyer vers le bas une lumière arrivant horizontalement.",
+          "sourceQuote": "rebondit sur le miroir dichroïque incliné à 45°"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-109-epifluorescence-et-confocal.html",
+      "origine": "ecrite",
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives au problème du flou dans un tissu épais, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un tissu épais est constitué de plusieurs couches empilées.",
+          "v": true,
+          "e": "VRAI. C'est l'origine du problème : ce n'est pas une couche unique, et une seule d'entre elles intéresse l'observateur.",
+          "sourceQuote": "c'est plusieurs couches empilées"
+        },
+        {
+          "t": "En épifluorescence standard, le microscope ne capte que la lumière du plan de mise au point.",
+          "v": false,
+          "e": "FAUX : il capte la lumière de toutes les couches en même temps, et c'est exactement ce qui crée le flou.",
+          "sourceQuote": "le microscope capte la lumière de TOUTES les couches en même temps"
+        },
+        {
+          "t": "Ce flou provient d'un mauvais réglage de la mise au point.",
+          "v": false,
+          "e": "FAUX : il ne vient pas d'un réglage, mais de l'épaisseur du tissu. Aucun réglage ne peut le corriger.",
+          "sourceQuote": "Le flou de l'épifluorescence ne vient pas d'un mauvais réglage"
+        },
+        {
+          "t": "L'exemple pris est celui d'une peau de 50 µm d'épaisseur.",
+          "v": true,
+          "e": "VRAI. Cette épaisseur suffit à empiler plusieurs couches qui renvoient toutes de la lumière.",
+          "sourceQuote": "une peau de 50 µm d'épaisseur, par exemple"
+        },
+        {
+          "t": "Les trois couches représentées renvoient de la lumière en même temps.",
+          "v": true,
+          "e": "VRAI. Celle du haut, celle du milieu et celle du bas émettent simultanément : tout se mélange au détecteur.",
+          "sourceQuote": "Les trois renvoient de la lumière en même temps"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-109-epifluorescence-et-confocal.html",
+      "origine": "ecrite",
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au petit trou ajouté par le microscope confocal, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le microscope confocal ajoute un petit trou juste devant le détecteur.",
+          "v": true,
+          "e": "VRAI. C'est toute la modification apportée à l'épifluorescence : une pièce en plus, très simple.",
+          "sourceQuote": "ajoute un petit trou — en anglais, un pinhole"
+        },
+        {
+          "t": "Ce trou bloque la lumière venant des couches situées au-dessus et en dessous du plan observé.",
+          "v": true,
+          "e": "VRAI. Seule la lumière nette, celle du plan visé, parvient à le franchir.",
+          "sourceQuote": "il bloque la lumière floue — celle qui vient des couches au-dessus et en dessous"
+        },
+        {
+          "t": "Le résultat est une image nette d'une seule couche à la fois.",
+          "v": true,
+          "e": "VRAI. On observe le tissu plan par plan, au lieu de recevoir toutes les couches mélangées.",
+          "sourceQuote": "une image super nette d' une seule couche à la fois"
+        },
+        {
+          "t": "Ce procédé s'appelle le sectionnement optique.",
+          "v": true,
+          "e": "VRAI. On découpe le tissu en tranches virtuelles, sans jamais le couper réellement.",
+          "sourceQuote": "C'est ce qu'on appelle le sectionnement optique"
+        },
+        {
+          "t": "L'analogie proposée pour expliquer ce trou est celle d'une loupe.",
+          "v": false,
+          "e": "FAUX : l'analogie est celle du trou de serrure — on ne voit net que ce qui se trouve exactement en face.",
+          "sourceQuote": "L'analogie — le trou de serrure"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-109-epifluorescence-et-confocal.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives aux apports de la microscopie confocale, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'élimination du flou porte la résolution à environ 0,2 µm.",
+          "v": true,
+          "e": "VRAI. C'est le premier avantage annoncé : une image nette, et une résolution bien meilleure.",
+          "sourceQuote": "Le pinhole élimine le flou → résolution ~0,2 µm"
+        },
+        {
+          "t": "Le confocal permet d'observer l'échantillon plan par plan.",
+          "v": true,
+          "e": "VRAI. C'est le sectionnement optique : on avance dans l'épaisseur du tissu par tranches successives.",
+          "sourceQuote": "Observation plan par plan (comme des tranches)"
+        },
+        {
+          "t": "En empilant les plans obtenus, on reconstitue le tissu en trois dimensions.",
+          "v": true,
+          "e": "VRAI. Chaque plan est une tranche : leur empilement redonne le volume.",
+          "sourceQuote": "En empilant les plans , on reconstitue le tissu en 3D"
+        },
+        {
+          "t": "On peut observer des échantillons de plusieurs dizaines de micromètres d'épaisseur.",
+          "v": true,
+          "e": "VRAI. C'est justement là que l'épifluorescence seule échouait, en mélangeant toutes les couches.",
+          "sourceQuote": "On peut observer des échantillons épais (plusieurs dizaines de µm)"
+        },
+        {
+          "t": "Le confocal est une amélioration de l'épifluorescence, et non une technique qui s'y oppose.",
+          "v": true,
+          "e": "VRAI. L'un est la version améliorée de l'autre : le confocal reprend tout le montage et y ajoute une pièce.",
+          "sourceQuote": "les deux ne s'opposent pas, l'un est la version améliorée de l'autre"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-109-epifluorescence-et-confocal.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives aux usages de la microscopie confocale et aux deux notions à ne pas confondre, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le préfixe « épi- » dit d'où vient la lumière, tandis que le petit trou dit ce qu'on écarte avant le détecteur.",
+          "v": true,
+          "e": "VRAI. Les deux mots ne décrivent pas la même chose : l'un porte sur l'éclairage, l'autre sur le tri de ce qui est reçu.",
+          "sourceQuote": "« épi- » dit d'où vient la lumière (par le dessus, par l'objectif), le pinhole dit ce qu'on jette avant le détecteur"
+        },
+        {
+          "t": "Le confocal sert notamment à étudier la localisation des protéines dans les cellules.",
+          "v": true,
+          "e": "VRAI. C'est un usage majeur en recherche biomédicale, associé à l'immunofluorescence.",
+          "sourceQuote": "pour étudier la localisation des protéines dans les cellules (immunofluorescence)"
+        },
+        {
+          "t": "L'endomicroscopie confocale impose de prélever une biopsie pour observer les tissus.",
+          "v": false,
+          "e": "FAUX : elle permet au contraire d'observer les tissus in vivo pendant une endoscopie, sans prélèvement.",
+          "sourceQuote": "permet d'observer les tissus in vivo pendant une endoscopie — sans faire de biopsie"
+        },
+        {
+          "t": "Le confocal reste un outil purement expérimental, sans application clinique.",
+          "v": false,
+          "e": "FAUX : il a une application clinique directe, avec l'endomicroscopie confocale pratiquée pendant une endoscopie.",
+          "sourceQuote": "Et ce n'est pas qu'un outil de laboratoire : en clinique"
+        },
+        {
+          "t": "La microscopie confocale se passe du miroir dichroïque, remplacé par le petit trou.",
+          "v": false,
+          "e": "FAUX : le confocal conserve tout le montage de l'épifluorescence, miroir dichroïque compris, et y ajoute seulement le trou.",
+          "sourceQuote": "Un microscope confocal, c'est un microscope à épifluorescence auquel on a ajouté le pinhole"
+        }
+      ]
+    }
+  ]
+}

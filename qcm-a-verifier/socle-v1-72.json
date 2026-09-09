@@ -1,0 +1,1376 @@
+{
+  "matiere": "mixte",
+  "chapitre": 0,
+  "note": "socle 1-7 — fiches sans QCM, ordre du Parcours",
+  "questions": [
+    {
+      "fiche": "chimie-163-reaction-ordre-1-exponentielle.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la loi de vitesse d'une réaction d'ordre 1 et à sa comparaison avec l'ordre 0, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "En ordre 1, la vitesse de réaction est proportionnelle à la quantité de réactif encore présente.",
+          "v": true,
+          "e": "VRAI. C'est toute la différence avec l'ordre 0 : la vitesse n'est plus une constante, elle suit ce qui reste de réactif.",
+          "sourceQuote": "elle est proportionnelle à ce qui reste"
+        },
+        {
+          "t": "La loi de vitesse de l'ordre 1 exprime v comme proportionnelle à [A].",
+          "v": true,
+          "e": "VRAI. La loi de vitesse s'écrit v = k × [A] : v est bien proportionnelle à la concentration en réactif.",
+          "sourceQuote": "la loi de vitesse : v est proportionnelle à [A]"
+        },
+        {
+          "t": "En ordre 0, la vitesse changeait au cours du temps.",
+          "v": false,
+          "e": "FAUX : en ordre 0, la vitesse ne bougeait jamais, elle valait k du début à la fin. C'est précisément ce qui change en ordre 1.",
+          "sourceQuote": "la vitesse ne bougeait jamais"
+        },
+        {
+          "t": "En ordre 1, la concentration perd le même montant à chaque seconde.",
+          "v": false,
+          "e": "FAUX : c'est le comportement de l'ordre 0. En ordre 1, la baisse n'est pas d'un montant constant d'une seconde à l'autre.",
+          "sourceQuote": "la concentration ne baisse pas du même montant chaque seconde"
+        },
+        {
+          "t": "En ordre 1, la concentration baisse vite au début, puis de plus en plus lentement.",
+          "v": true,
+          "e": "VRAI. Tant qu'il reste beaucoup de réactif, la vitesse est élevée ; quand le réactif s'épuise, tout ralentit.",
+          "sourceQuote": "elle baisse vite au début"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-163-reaction-ordre-1-exponentielle.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la loi intégrée de l'ordre 1 et à l'allure de la courbe [A] = f(t), laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La loi intégrée de l'ordre 1 décrit une décroissance exponentielle de la concentration.",
+          "v": true,
+          "e": "VRAI. C'est la forme caractéristique de l'ordre 1 : la concentration décroît de façon exponentielle au cours du temps.",
+          "sourceQuote": "la loi intégrée : une décroissance exponentielle"
+        },
+        {
+          "t": "La courbe [A] = f(t) n'est pas une droite.",
+          "v": true,
+          "e": "VRAI. C'est le point à ne pas manquer : en ordre 1, la représentation de [A] en fonction du temps est une courbe, jamais une droite.",
+          "sourceQuote": "surtout, ce n'est pas une droite"
+        },
+        {
+          "t": "Cette courbe plonge au départ, puis s'aplatit de plus en plus.",
+          "v": true,
+          "e": "VRAI. Elle chute fortement tant qu'il reste beaucoup de réactif, puis tend à s'horizontaliser.",
+          "sourceQuote": "la courbe plonge au départ, puis s'aplatit de plus en plus"
+        },
+        {
+          "t": "On ne peut pas lire k directement sur cette courbe, car sa pente change en chaque point.",
+          "v": true,
+          "e": "VRAI. C'est exactement la raison pour laquelle on passe à la forme linéarisée : sur une courbe, la pente n'est jamais la même deux fois.",
+          "sourceQuote": "on ne peut pas lire k directement : la pente change en chaque point"
+        },
+        {
+          "t": "L'intervalle de temps qui sépare deux divisions par 2 successives de la concentration est toujours le même.",
+          "v": true,
+          "e": "VRAI. C'est la régularité que l'on voit sur le graphe, et qui donnera le temps de demi-vie.",
+          "sourceQuote": "L'écart de temps entre chaque division par 2 est toujours identique"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-163-reaction-ordre-1-exponentielle.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "L'exemple chiffré est traité avec une concentration initiale de 1,0 mol/L et une constante k de 0,2 s⁻¹. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "À t = 2 s, il reste 0,67 mol/L de réactif.",
+          "v": true,
+          "e": "VRAI. À deux secondes, la concentration est descendue à 0,67 mol/L : on a donc perdu 0,33 mol/L depuis le départ.",
+          "sourceQuote": "0,67 = 0,67 mol/L (on a perdu 0,33)"
+        },
+        {
+          "t": "À t = 5 s, il reste 0,63 mol/L de réactif.",
+          "v": false,
+          "e": "FAUX : à cinq secondes il reste 0,37 mol/L. Le nombre 0,63 est la quantité PERDUE depuis le départ, pas la quantité restante.",
+          "sourceQuote": "0,37 = 0,37 mol/L (on a perdu 0,63)"
+        },
+        {
+          "t": "À t = 10 s, il reste encore la moitié de la concentration initiale.",
+          "v": false,
+          "e": "FAUX : à dix secondes il ne reste que 0,14 mol/L, soit bien moins que la moitié du départ.",
+          "sourceQuote": "1,0 × 0,14 = 0,14 mol/L"
+        },
+        {
+          "t": "La concentration perd exactement la même quantité entre 0 et 2 s qu'entre 2 et 5 s.",
+          "v": false,
+          "e": "FAUX : contrairement à l'ordre 0, la perte n'est pas constante d'un intervalle à l'autre. Elle est forte au début, puis s'atténue.",
+          "sourceQuote": "Contrairement à l'ordre 0, la concentration ne baisse pas"
+        },
+        {
+          "t": "Dans cet exemple, la concentration initiale vaut 0,2 mol/L et la constante k vaut 1,0 s⁻¹.",
+          "v": false,
+          "e": "FAUX : les deux valeurs sont inversées. La concentration de départ est de 1,0 mol/L et la constante de vitesse vaut 0,2 s⁻¹.",
+          "sourceQuote": "1,0 mol/L, k = 0,2"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-163-reaction-ordre-1-exponentielle.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à l'obtention de la forme linéarisée de l'ordre 1, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "On obtient la forme linéarisée en prenant le logarithme naturel des deux côtés de la loi intégrée.",
+          "v": true,
+          "e": "VRAI. C'est la deuxième étape de la démonstration : on applique le ln à gauche comme à droite de l'égalité.",
+          "sourceQuote": "On prend le logarithme naturel (ln) des deux côtés"
+        },
+        {
+          "t": "Le développement s'appuie sur le fait que le logarithme d'un produit est la somme des logarithmes.",
+          "v": true,
+          "e": "VRAI. C'est cette règle qui permet de séparer le terme en [A]₀ du terme en exponentielle.",
+          "sourceQuote": "ln d'un produit = somme des ln"
+        },
+        {
+          "t": "En traçant ln[A] en fonction du temps, on obtient une droite.",
+          "v": true,
+          "e": "VRAI. C'est tout l'intérêt de la linéarisation : la courbe se redresse en droite, donc exploitable.",
+          "sourceQuote": "on obtient une droite de pente"
+        },
+        {
+          "t": "Dans la forme y = a + bx, l'ordonnée à l'origine correspond à ln[A]₀.",
+          "v": true,
+          "e": "VRAI. On identifie y = ln[A], x = t, l'ordonnée à l'origine vaut ln[A]₀ et la pente vaut −k.",
+          "sourceQuote": "l'équation d'une droite"
+        },
+        {
+          "t": "La pente de cette droite vaut +k.",
+          "v": false,
+          "e": "FAUX : la pente vaut −k. Elle est négative, ce qui traduit bien la disparition du réactif au cours du temps.",
+          "sourceQuote": "une droite de pente −k — et on peut alors lire k directement"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-163-reaction-ordre-1-exponentielle.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au graphe linéarisé et à l'unité de la constante k en ordre 1, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Sur le graphe linéarisé, on porte en ordonnée ln[A] et non plus [A].",
+          "v": true,
+          "e": "VRAI. C'est le seul changement par rapport au premier graphe, et c'est lui qui redresse la courbe.",
+          "sourceQuote": "on porte en ordonnée ln[A] au lieu de [A]"
+        },
+        {
+          "t": "Malgré ce changement d'ordonnée, la représentation reste incurvée.",
+          "v": false,
+          "e": "FAUX : c'est justement le résultat recherché, la courbe s'est redressée en droite.",
+          "sourceQuote": "La courbe s'est redressée en droite"
+        },
+        {
+          "t": "Avec une concentration initiale de 1,0 mol/L, l'ordonnée à l'origine de la droite vaut 0.",
+          "v": true,
+          "e": "VRAI. L'ordonnée à l'origine vaut ln[A]₀, et ln(1,0) = 0 : la droite part donc de l'origine.",
+          "sourceQuote": "ln(1,0) = 0, l'ordonnée à l'origine"
+        },
+        {
+          "t": "L'unité de la constante k d'une réaction d'ordre 1 est le mol·L⁻¹·s⁻¹.",
+          "v": false,
+          "e": "FAUX : les mol/L se simplifient dans le rapport v/[A]. Il ne reste qu'un « par seconde » : k s'exprime en s⁻¹.",
+          "sourceQuote": "se simplifient, il ne reste qu'un"
+        },
+        {
+          "t": "Sur le graphe linéarisé de cet exemple, on lit ln[A] = −0,2 à t = 10 s.",
+          "v": false,
+          "e": "FAUX : à dix secondes on lit −2,0, et non −0,2. La valeur −0,2 est la pente de la droite, c'est-à-dire −k.",
+          "sourceQuote": "à t = 10 s → ln[A] = 0 − 0,2 × 10"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-163-reaction-ordre-1-exponentielle.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à l'analogie du stade qui se vide et au rappel de l'ordre 0, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Au début, le débit de sortie est élevé parce que beaucoup de monde pousse vers la sortie.",
+          "v": true,
+          "e": "VRAI. C'est le point de départ de l'analogie : la foule nombreuse crée un débit fort.",
+          "sourceQuote": "au début, beaucoup de monde pousse vers la sortie"
+        },
+        {
+          "t": "Le débit ralentit à mesure que le stade se vide.",
+          "v": true,
+          "e": "VRAI. Moins il reste de personnes à l'intérieur, moins elles poussent vers la sortie, et plus le débit diminue.",
+          "sourceQuote": "Au fur et à mesure que le stade se vide"
+        },
+        {
+          "t": "La vitesse de sortie est proportionnelle au nombre de personnes encore à l'intérieur.",
+          "v": true,
+          "e": "VRAI. C'est exactement la transposition de v = k × [A] : la vitesse suit ce qui reste.",
+          "sourceQuote": "proportionnelle au nombre de personnes encore à l'intérieur"
+        },
+        {
+          "t": "Le stade ne se vide jamais d'un seul coup.",
+          "v": true,
+          "e": "VRAI. Le vidage s'étale : il diminue de plus en plus lentement, ce qui donne la décroissance exponentielle.",
+          "sourceQuote": "ça ne se vide jamais d'un coup"
+        },
+        {
+          "t": "En ordre 0, la concentration descendait en ligne droite.",
+          "v": true,
+          "e": "VRAI. À vitesse constante, la concentration perdait le même montant à chaque seconde : la représentation était une droite.",
+          "sourceQuote": "descendait en ligne droite, du même montant à chaque seconde"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-163-reaction-ordre-1-exponentielle.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives au test graphique qui identifie un ordre 1 et aux pièges à éviter, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Si le tracé de ln[A] en fonction du temps est une droite, l'ordre 1 est confirmé.",
+          "v": true,
+          "e": "VRAI. C'est le test à retenir : la linéarité du tracé de ln[A] signe l'ordre 1.",
+          "sourceQuote": "vs t est une droite → ordre 1 confirmé"
+        },
+        {
+          "t": "Si ce même tracé donne une courbe, il peut malgré tout s'agir d'un ordre 1.",
+          "v": false,
+          "e": "FAUX : si le tracé de ln[A] en fonction du temps n'est pas une droite, ce n'est pas de l'ordre 1. Le test est sans ambiguïté.",
+          "sourceQuote": "Si c'est une courbe, ce n'est pas de l'ordre 1"
+        },
+        {
+          "t": "En ordre 0, c'était [A] porté en ordonnée qui donnait une droite.",
+          "v": true,
+          "e": "VRAI. Il faut donc bien surveiller ce qu'on porte en ordonnée : [A] en ordre 0, ln[A] en ordre 1.",
+          "sourceQuote": "en ordre 0, c'était [A] qui donnait une droite"
+        },
+        {
+          "t": "En ordre 1, la courbe [A] = f(t) finit par devenir une droite aux temps longs.",
+          "v": false,
+          "e": "FAUX : en ordre 1, la représentation de [A] en fonction du temps n'est jamais une droite, quel que soit l'intervalle considéré.",
+          "sourceQuote": "elle, n'est jamais une droite en ordre 1"
+        },
+        {
+          "t": "Sur le graphe de [A] en fonction du temps, les points (3,47 ; 0,50) et (6,93 ; 0,25) sont marqués.",
+          "v": true,
+          "e": "VRAI. Ce sont les repères de division par deux successives, espacés du même intervalle de temps.",
+          "sourceQuote": "(3,47 ; 0,50) · (6,93 ; 0,25)"
+        }
+      ]
+    },
+
+    {
+      "fiche": "chimie-164-demi-vie-ordre-1.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la définition du temps de demi-vie et à son expression en ordre 1, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le temps de demi-vie est le temps nécessaire pour que la concentration du réactif soit divisée par 2.",
+          "v": true,
+          "e": "VRAI. C'est la définition exacte, et elle ne change pas d'un ordre à l'autre.",
+          "sourceQuote": "le temps nécessaire pour que la concentration du réactif soit divisée par 2"
+        },
+        {
+          "t": "Cette définition est la même quel que soit l'ordre de la réaction.",
+          "v": true,
+          "e": "VRAI. Seule la formule qui donne t½ change avec l'ordre ; la définition, elle, reste identique.",
+          "sourceQuote": "la même pour tous les ordres"
+        },
+        {
+          "t": "En ordre 1, le temps de demi-vie vaut ln(2) divisé par k.",
+          "v": true,
+          "e": "VRAI. C'est la formule à connaître, soit environ 0,693 divisé par k.",
+          "sourceQuote": "ln(2) / k ≈ 0,693 / k"
+        },
+        {
+          "t": "La valeur de ln(2) est d'environ 0,693.",
+          "v": true,
+          "e": "VRAI. C'est une valeur à connaître, souvent donnée à l'examen.",
+          "sourceQuote": "est une valeur à connaître"
+        },
+        {
+          "t": "En ordre 1, le temps de demi-vie dépend de la concentration initiale du réactif.",
+          "v": false,
+          "e": "FAUX : c'est justement l'inverse. En ordre 1, la concentration initiale disparaît de la formule finale.",
+          "sourceQuote": "c'est l'inverse qui se produit"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-164-demi-vie-ordre-1.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à l'exemple chiffré traité avec k = 0,2 s⁻¹ et à sa vérification, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Avec k = 0,2 s⁻¹, le temps de demi-vie vaut 3,47 s.",
+          "v": true,
+          "e": "VRAI. On applique la formule : 0,693 divisé par 0,2 donne bien 3,47 secondes.",
+          "sourceQuote": "0,693 / 0,2 = 3,47 s"
+        },
+        {
+          "t": "La vérification montre qu'à ce temps il reste 0,50 mol/L, soit la moitié de la concentration initiale.",
+          "v": true,
+          "e": "VRAI. C'est la vérification directe de la formule : à t½, on est bien à la moitié du départ.",
+          "sourceQuote": "0,50 = 0,50 mol/L"
+        },
+        {
+          "t": "Si l'on double la concentration initiale, le temps de demi-vie double également.",
+          "v": false,
+          "e": "FAUX : en ordre 1, doubler la concentration initiale ne change rien au temps de demi-vie, puisque celle-ci n'apparaît pas dans la formule.",
+          "sourceQuote": "doubler la concentration initiale ne change rien"
+        },
+        {
+          "t": "En ordre 0, la formule du temps de demi-vie s'écrit ln(2) divisé par 2k.",
+          "v": false,
+          "e": "FAUX : en ordre 0, le temps de demi-vie vaut la concentration initiale divisée par 2k. Le ln(2) est propre à l'ordre 1.",
+          "sourceQuote": "elle valait t 1/2 = [A]₀ / (2k)"
+        },
+        {
+          "t": "En ordre 0, la concentration de départ n'apparaît pas dans la formule du temps de demi-vie.",
+          "v": false,
+          "e": "FAUX : en ordre 0, la concentration de départ figure bien dans la formule, et c'est pour cela que la doubler double la demi-vie.",
+          "sourceQuote": "la concentration de départ était dans la formule"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-164-demi-vie-ordre-1.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la démonstration qui conduit à la formule du temps de demi-vie en ordre 1, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La démonstration part de la loi intégrée de l'ordre 1.",
+          "v": true,
+          "e": "VRAI. Tout part de l'expression de la concentration en fonction du temps ; le reste n'est que manipulation algébrique.",
+          "sourceQuote": "On part de la loi intégrée"
+        },
+        {
+          "t": "L'étape décisive consiste à diviser les deux côtés de l'égalité par la concentration initiale.",
+          "v": true,
+          "e": "VRAI. C'est le moment clé : c'est cette division qui fait disparaître la concentration initiale.",
+          "sourceQuote": "On divise les deux côtés par"
+        },
+        {
+          "t": "La démonstration utilise ensuite la règle selon laquelle le logarithme de l'inverse d'un nombre est l'opposé de son logarithme.",
+          "v": true,
+          "e": "VRAI. C'est la règle ln(1/a) = −ln(a), qui permet de faire apparaître ln(2) en supprimant les signes moins.",
+          "sourceQuote": "règle maths : ln(1/a) = −ln(a)"
+        },
+        {
+          "t": "À la demi-vie, on pose que la concentration vaut deux fois la concentration initiale.",
+          "v": false,
+          "e": "FAUX : à la demi-vie, la concentration vaut la MOITIÉ de la concentration initiale. C'est bien une division par 2, pas une multiplication.",
+          "sourceQuote": "À la demi-vie, [A] = [A]₀ / 2"
+        },
+        {
+          "t": "La concentration initiale réapparaît au dénominateur de la formule finale.",
+          "v": false,
+          "e": "FAUX : elle a disparu à l'étape de la division et n'apparaît plus nulle part dans la formule finale.",
+          "sourceQuote": "n'apparaît plus nulle part dans la formule finale"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-164-demi-vie-ordre-1.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Le tableau des concentrations seconde par seconde est calculé pour k = 0,2 s⁻¹ et une concentration initiale de 1,0 mol/L. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "À t = 1 s, la concentration vaut 0,819 mol/L.",
+          "v": true,
+          "e": "VRAI. Après une seconde, il reste 0,819 mol/L : la concentration a été multipliée par 0,819.",
+          "sourceQuote": "0,819 mol/L"
+        },
+        {
+          "t": "À t = 2 s, la concentration vaut 0,549 mol/L.",
+          "v": false,
+          "e": "FAUX : à deux secondes on est à 0,670 mol/L. La valeur 0,549 mol/L correspond à trois secondes.",
+          "sourceQuote": "0,670 mol/L"
+        },
+        {
+          "t": "D'une seconde à la suivante, la concentration perd toujours la même quantité exprimée en mol/L.",
+          "v": false,
+          "e": "FAUX : ce n'est pas la même quantité soustraite, mais le même facteur multiplicatif appliqué à chaque seconde.",
+          "sourceQuote": "on multiplie par le même facteur"
+        },
+        {
+          "t": "La suite des concentrations obtenues est une suite arithmétique.",
+          "v": false,
+          "e": "FAUX : puisqu'on multiplie toujours par le même facteur, il s'agit d'une suite géométrique.",
+          "sourceQuote": "C'est ça, une suite géométrique"
+        },
+        {
+          "t": "Le facteur constant qui relie une ligne à la précédente vaut 0,693.",
+          "v": false,
+          "e": "FAUX : ce facteur vaut 0,819. La valeur 0,693 est celle de ln(2), qui sert à calculer la demi-vie.",
+          "sourceQuote": "0,549 / 0,670 = 0,819"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-164-demi-vie-ordre-1.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à l'indépendance du temps de demi-vie vis-à-vis de la concentration initiale en ordre 1, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Partir de 1 mol/L ou de 1000 mol/L donne le même temps pour diviser la concentration par 2.",
+          "v": true,
+          "e": "VRAI. C'est la traduction concrète de l'absence de la concentration initiale dans la formule.",
+          "sourceQuote": "le temps pour diviser par 2 est le même"
+        },
+        {
+          "t": "Cette indépendance est présentée comme la signature de l'ordre 1.",
+          "v": true,
+          "e": "VRAI. C'est le critère qui permet de reconnaître un ordre 1 sans autre calcul.",
+          "sourceQuote": "C'est la signature de l'ordre 1"
+        },
+        {
+          "t": "En ordre 0 et en ordre 2, le temps de demi-vie dépend au contraire de la concentration initiale.",
+          "v": true,
+          "e": "VRAI. L'ordre 1 est le seul des trois pour lequel la concentration de départ n'intervient pas.",
+          "sourceQuote": "en ordre 0 et en ordre 2, t 1/2 dépend de"
+        },
+        {
+          "t": "L'explication tient à ce que la vitesse s'adapte : avec deux fois plus de réactif, la réaction va deux fois plus vite.",
+          "v": true,
+          "e": "VRAI. C'est le mnémo de la fiche : puisque la vitesse suit la quantité présente, le temps pour en perdre la moitié ne change pas.",
+          "sourceQuote": "plus de réactif, la réaction va"
+        },
+        {
+          "t": "Si le temps de demi-vie ne bouge pas quand on change la concentration initiale, on est en ordre 1.",
+          "v": true,
+          "e": "VRAI. C'est la manière pratique d'utiliser cette signature pour identifier l'ordre d'une réaction.",
+          "sourceQuote": "ne bouge pas quand on change"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-164-demi-vie-ordre-1.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives aux divisions successives par 2 de la concentration en ordre 1, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "En repartant de 0,50 mol/L à 3,47 s, on retrouve environ 0,25 mol/L à 6,94 s.",
+          "v": true,
+          "e": "VRAI. Un nouvel intervalle de 3,47 s divise encore la concentration par deux : c'est la définition même de la demi-vie.",
+          "sourceQuote": "(3,47 s plus tard)"
+        },
+        {
+          "t": "La séquence donnée en exemple est 1,0 puis 0,50 puis 0,25 puis 0,125 mol/L.",
+          "v": true,
+          "e": "VRAI. Trois divisions par deux successives, toutes séparées du même intervalle de 3,47 s.",
+          "sourceQuote": "0,50 → 0,25 → 0,125 mol/L, toujours en 3,47 s"
+        },
+        {
+          "t": "Chaque nouvelle division par 2 demande un temps de plus en plus long.",
+          "v": false,
+          "e": "FAUX : le temps pour perdre la moitié ne change jamais en ordre 1, puisqu'on multiplie toujours par le même facteur.",
+          "sourceQuote": "le temps pour perdre la moitié ne change jamais"
+        },
+        {
+          "t": "Après n demi-vies, la concentration vaut la concentration initiale multipliée par 2 puissance n.",
+          "v": false,
+          "e": "FAUX : elle vaut la concentration initiale DIVISÉE par 2 puissance n. La concentration diminue, elle n'augmente pas.",
+          "sourceQuote": "Après n demi-vies"
+        },
+        {
+          "t": "Après 3 demi-vies, il reste un quart du réactif.",
+          "v": false,
+          "e": "FAUX : après trois demi-vies, il reste un huitième du réactif, soit 12,5 %. Le quart correspond à deux demi-vies.",
+          "sourceQuote": "après 3 demi-vies"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-164-demi-vie-ordre-1.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la question type posée sur la demi-vie et au piège de l'ordre 0, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La question « si on double la concentration initiale, le temps de demi-vie double-t-il ? » revient souvent.",
+          "v": true,
+          "e": "VRAI. C'est la formulation classique de la question, et elle vise directement la signature de l'ordre 1.",
+          "sourceQuote": "le temps de demi-vie double-t-il ?"
+        },
+        {
+          "t": "En ordre 1, la réponse à cette question est non.",
+          "v": true,
+          "e": "VRAI. La formule ne contient pas la concentration initiale : la doubler ne change donc rien.",
+          "sourceQuote": "En ordre 1, la réponse est non"
+        },
+        {
+          "t": "En ordre 0, doubler la concentration initiale double bien le temps de demi-vie.",
+          "v": true,
+          "e": "VRAI. En ordre 0 la concentration initiale figure au numérateur de la formule : la doubler double la demi-vie.",
+          "sourceQuote": "doubler [A]₀ double la demi-vie"
+        },
+        {
+          "t": "La formule de la demi-vie de l'ordre 1 contient la concentration initiale.",
+          "v": false,
+          "e": "FAUX : il n'y a aucune concentration initiale dans cette formule, qui ne fait intervenir que ln(2) et k.",
+          "sourceQuote": "il n'y a aucun [A]₀ dedans"
+        },
+        {
+          "t": "En ordre 1, le temps de demi-vie ne dépend que de la constante de vitesse k.",
+          "v": true,
+          "e": "VRAI. C'est ce qui fait que chaque division par 2 prend toujours le même temps, du début à la fin de la réaction.",
+          "sourceQuote": "Elle ne dépend que de k"
+        }
+      ]
+    },
+
+    {
+      "fiche": "anatomie-165-loges-avant-bras-epicondylites.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à l'organisation générale des muscles de l'avant-bras, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'avant-bras contient une vingtaine de muscles.",
+          "v": true,
+          "e": "VRAI. Ils sont nombreux, mais on ne demande pas de les connaître un par un.",
+          "sourceQuote": "L'avant-bras contient une vingtaine de muscles"
+        },
+        {
+          "t": "Il faut retenir la liste de ces muscles un par un.",
+          "v": false,
+          "e": "FAUX : ce qu'il faut retenir, ce sont les grandes loges, pas la liste détaillée des muscles.",
+          "sourceQuote": "pas la liste des muscles un par un"
+        },
+        {
+          "t": "L'avant-bras se divise en quatre grandes loges musculaires.",
+          "v": false,
+          "e": "FAUX : il n'y a que deux grandes loges à retenir, l'antérieure et la postérieure.",
+          "sourceQuote": "retiens surtout les 2 grandes loges"
+        },
+        {
+          "t": "Chaque loge prend son origine sur un os du poignet.",
+          "v": false,
+          "e": "FAUX : chaque loge part d'un épicondyle du coude, et c'est précisément ce point d'attache qui explique les pathologies.",
+          "sourceQuote": "Chaque loge part d'un épicondyle du coude"
+        },
+        {
+          "t": "Les épicondyles sont deux saillies de l'extrémité proximale de l'humérus.",
+          "v": false,
+          "e": "FAUX : ces deux saillies ont été repérées sur l'extrémité DISTALE de l'humérus, c'est-à-dire du côté du coude.",
+          "sourceQuote": "l'extrémité distale de l'humérus"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-165-loges-avant-bras-epicondylites.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la loge antérieure de l'avant-bras, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La loge antérieure est celle des muscles fléchisseurs.",
+          "v": true,
+          "e": "VRAI. Antérieure et fléchisseurs vont ensemble : ce sont eux qui ferment le poignet et les doigts.",
+          "sourceQuote": "La loge antérieure — les fléchisseurs"
+        },
+        {
+          "t": "Ses muscles partent de l'épicondyle médial, la bosse interne du coude.",
+          "v": true,
+          "e": "VRAI. Médial signifie ici du côté interne : c'est la bosse qu'on sent à l'intérieur du coude.",
+          "sourceQuote": "partent de l'épicondyle MÉDIAL (la bosse interne du coude)"
+        },
+        {
+          "t": "Ils descendent le long de la face avant de l'avant-bras.",
+          "v": true,
+          "e": "VRAI. La loge antérieure occupe toute la face avant, du coude jusqu'au poignet et aux doigts.",
+          "sourceQuote": "descendent le long de la face avant de l'avant-bras"
+        },
+        {
+          "t": "Ces muscles assurent la supination, c'est-à-dire la paume tournée vers le haut.",
+          "v": false,
+          "e": "FAUX : ce sont eux qui font la PRONATION, paume vers le bas. C'est un piège classique de la fiche.",
+          "sourceQuote": "qui font la pronation (paume vers le bas)"
+        },
+        {
+          "t": "Sur la vue antérieure, ces muscles partent de plusieurs points d'origine largement étalés.",
+          "v": false,
+          "e": "FAUX : sur le schéma, la loge part d'un seul point, l'épicondyle médial, puis s'ouvre en éventail.",
+          "sourceQuote": "le rouge part d'un seul point"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-165-loges-avant-bras-epicondylites.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la loge postérieure de l'avant-bras, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La loge postérieure est celle des muscles extenseurs.",
+          "v": true,
+          "e": "VRAI. Postérieure et extenseurs vont ensemble, en miroir de la loge antérieure.",
+          "sourceQuote": "La loge postérieure — les extenseurs"
+        },
+        {
+          "t": "Ses muscles partent de l'épicondyle latéral, la bosse externe du coude.",
+          "v": true,
+          "e": "VRAI. Latéral signifie ici du côté externe : c'est la bosse qu'on sent à l'extérieur du coude.",
+          "sourceQuote": "partent de l'épicondyle LATÉRAL (la bosse externe du coude)"
+        },
+        {
+          "t": "Ils descendent le long de la face arrière de l'avant-bras.",
+          "v": true,
+          "e": "VRAI. C'est le même schéma que pour la loge antérieure, mais de l'autre côté du membre.",
+          "sourceQuote": "descendent le long de la face arrière de l'avant-bras"
+        },
+        {
+          "t": "Ils étendent le poignet et les doigts.",
+          "v": true,
+          "e": "VRAI. Leur action est l'extension du poignet et des doigts, symétrique de la flexion assurée par l'autre loge.",
+          "sourceQuote": "Ils étendent le poignet et les doigts"
+        },
+        {
+          "t": "Sur la vue postérieure, cette loge recouvre toute la face arrière jusqu'au dos de la main.",
+          "v": true,
+          "e": "VRAI. Elle part d'un point unique au coude et se déploie jusqu'au dos de la main.",
+          "sourceQuote": "recouvre toute la face arrière"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-165-loges-avant-bras-epicondylites.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la lecture comparée des deux vues de l'avant-bras, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "En passant de la vue antérieure à la vue postérieure, la droite et la gauche du dessin sont inversées.",
+          "v": true,
+          "e": "VRAI. On change de face d'observation : il faut donc réorienter sa lecture avant de comparer les deux schémas.",
+          "sourceQuote": "la droite et la gauche du dessin sont inversées"
+        },
+        {
+          "t": "L'épicondyle médial, situé à droite sur la vue antérieure, se retrouve à gauche sur la vue postérieure.",
+          "v": true,
+          "e": "VRAI. C'est la conséquence directe du changement de face : le repère n'a pas bougé, c'est le point de vue qui a tourné.",
+          "sourceQuote": "à droite sur la vue antérieure, se retrouve à gauche ici"
+        },
+        {
+          "t": "Sur les deux vues, les muscles s'insèrent sur une large surface osseuse étalée.",
+          "v": false,
+          "e": "FAUX : au contraire, beaucoup de muscles convergent vers une toute petite zone d'os. C'est ce qui explique les épicondylites.",
+          "sourceQuote": "convergent vers une toute petite zone d'os"
+        },
+        {
+          "t": "Sur les schémas, la loge antérieure est représentée en vert.",
+          "v": false,
+          "e": "FAUX : la loge antérieure est en rouge. C'est la loge postérieure, partant de l'épicondyle latéral, qui est en vert.",
+          "sourceQuote": "le vert part de l'épicondyle latéral"
+        },
+        {
+          "t": "Cette convergence des muscles vers un point unique est présentée comme un avantage sans contrepartie.",
+          "v": false,
+          "e": "FAUX : elle est commode pour mémoriser, mais c'est aussi la faiblesse du système, puisque c'est là que la douleur apparaît.",
+          "sourceQuote": "c'est aussi la faiblesse du système"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-165-loges-avant-bras-epicondylites.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux épicondylites, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Solliciter trop longtemps une loge finit par faire mal à l'endroit où toutes ses fibres se concentrent.",
+          "v": true,
+          "e": "VRAI. La zone d'insertion est petite : c'est le point faible du montage, et donc le siège de la douleur.",
+          "sourceQuote": "Si tu sollicites une loge trop longtemps"
+        },
+        {
+          "t": "Cette douleur au point d'attache porte le nom d'épicondylite.",
+          "v": true,
+          "e": "VRAI. Le nom vient directement de la structure osseuse concernée, l'épicondyle.",
+          "sourceQuote": "Cette douleur au point d'attache porte un nom"
+        },
+        {
+          "t": "L'épicondylite prend le nom de l'épicondyle concerné.",
+          "v": true,
+          "e": "VRAI. Elle est donc dite latérale ou médiale selon la loge que le geste a trop fait travailler.",
+          "sourceQuote": "Elle prend le nom de l'épicondyle concerné"
+        },
+        {
+          "t": "Le tennis elbow est une épicondylite latérale.",
+          "v": true,
+          "e": "VRAI. Le geste du revers sollicite les extenseurs, qui s'insèrent sur l'épicondyle latéral.",
+          "sourceQuote": "Tennis elbow (épicondylite latérale)"
+        },
+        {
+          "t": "Le tennis elbow se traduit par une douleur sur la bosse interne du coude.",
+          "v": false,
+          "e": "FAUX : la douleur siège sur la bosse EXTERNE du coude, celle des extenseurs. La bosse interne est celle des fléchisseurs.",
+          "sourceQuote": "douleurs sur la bosse externe du coude"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-165-loges-avant-bras-epicondylites.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives au raisonnement à tenir devant une épicondylite et aux pièges signalés, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le geste du revers au tennis sollicite les muscles fléchisseurs.",
+          "v": false,
+          "e": "FAUX : le revers sollicite les EXTENSEURS, ceux de la loge postérieure, qui s'insèrent sur l'épicondyle latéral.",
+          "sourceQuote": "le revers sollicite les extenseurs"
+        },
+        {
+          "t": "Une proposition qui rattache le tennis elbow à l'épicondyle médial est exacte.",
+          "v": false,
+          "e": "FAUX : une telle proposition est fausse. Le tennis elbow concerne l'épicondyle latéral, celui des extenseurs.",
+          "sourceQuote": "rattache le tennis elbow à l'épicondyle médial est FAUSSE"
+        },
+        {
+          "t": "Le raisonnement à retenir part du nom de la pathologie pour remonter au geste responsable.",
+          "v": false,
+          "e": "FAUX : le raisonnement va dans l'autre sens. On part du geste, on en déduit la loge sollicitée, puis l'épicondyle concerné.",
+          "sourceQuote": "quel geste ? → quelle loge ? → quel épicondyle ?"
+        },
+        {
+          "t": "Le tennis elbow est la pathologie du coude la plus fréquente.",
+          "v": true,
+          "e": "VRAI. C'est pour cela qu'elle sert d'exemple type pour comprendre le mécanisme des épicondylites.",
+          "sourceQuote": "C'est la pathologie du coude la plus fréquente"
+        },
+        {
+          "t": "La pronation est assurée par la loge postérieure.",
+          "v": false,
+          "e": "FAUX : la pronation est l'affaire de la loge ANTÉRIEURE, celle des fléchisseurs. C'est le second piège signalé.",
+          "sourceQuote": "la pronation est l'affaire de la loge antérieure"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-165-loges-avant-bras-epicondylites.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes qui résument ce qu'il faut retenir des deux loges de l'avant-bras, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'essentiel de la fiche tient en deux loges et deux épicondyles.",
+          "v": true,
+          "e": "VRAI. Une loge, un épicondyle, une action : c'est la structure complète à mémoriser.",
+          "sourceQuote": "Deux loges, deux épicondyles"
+        },
+        {
+          "t": "La loge antérieure assure la flexion du poignet et des doigts ainsi que la pronation.",
+          "v": true,
+          "e": "VRAI. La pronation s'ajoute à la flexion : c'est ce qui distingue la loge antérieure de sa symétrique.",
+          "sourceQuote": "flexion du poignet et des doigts + pronation"
+        },
+        {
+          "t": "La loge postérieure assure l'extension du poignet et des doigts.",
+          "v": true,
+          "e": "VRAI. Extension du poignet et des doigts, sans mouvement de rotation de l'avant-bras associé.",
+          "sourceQuote": "extension du poignet et des doigts"
+        },
+        {
+          "t": "Le piège principal signalé consiste à confondre les muscles de l'avant-bras avec ceux du bras.",
+          "v": false,
+          "e": "FAUX : le piège signalé est d'inverser les deux épicondyles, pas de confondre l'avant-bras et le bras.",
+          "sourceQuote": "Inverser les deux épicondyles"
+        },
+        {
+          "t": "Les deux loges partent chacune d'un épicondyle différent, mais aucune ne descend jusqu'aux doigts.",
+          "v": false,
+          "e": "FAUX : les deux loges descendent bien jusqu'aux doigts, l'une par la face avant, l'autre par la face arrière.",
+          "sourceQuote": "s'ouvre en éventail sur toute la face avant jusqu'au poignet et aux doigts"
+        }
+      ]
+    },
+
+    {
+      "fiche": "anatomie-166-27-os-de-la-main.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives au décompte général des os de la main, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La main compte 27 os.",
+          "v": true,
+          "e": "VRAI. Vingt-sept os concentrés dans un très petit volume : c'est ce qui fait la complexité de la région.",
+          "sourceQuote": "la main concentre 27 os dans un espace"
+        },
+        {
+          "t": "Ces 27 os se répartissent en 8, puis 5, puis 14.",
+          "v": true,
+          "e": "VRAI. Huit os pour le carpe, cinq pour le métacarpe, quatorze pour les phalanges : le total tombe bien sur 27.",
+          "sourceQuote": "8 (carpe) + 5 (métacarpe) + 14 (phalanges) = 27 os"
+        },
+        {
+          "t": "Le carpe compte 8 os, situés au poignet.",
+          "v": true,
+          "e": "VRAI. Ce sont eux qui forment le squelette du poignet, premier des trois étages de la main.",
+          "sourceQuote": "Le carpe — 8 os au poignet"
+        },
+        {
+          "t": "Le métacarpe compte 5 os, situés dans la paume.",
+          "v": true,
+          "e": "VRAI. Les cinq métacarpiens forment la charpente de la paume, deuxième étage de la main.",
+          "sourceQuote": "Le métacarpe — 5 os dans la paume"
+        },
+        {
+          "t": "Les phalanges sont au nombre de 14.",
+          "v": true,
+          "e": "VRAI. Quatorze phalanges pour cinq doigts, parce que le pouce n'en a que deux au lieu de trois.",
+          "sourceQuote": "Les phalanges — 14 os aux doigts"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-166-27-os-de-la-main.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives au carpe et à ses deux rangées, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les 8 os du carpe sont disposés en 2 rangées de 4.",
+          "v": true,
+          "e": "VRAI. Deux rangées de quatre : c'est la structure qui rend le carpe mémorisable.",
+          "sourceQuote": "disposés en 2 rangées de 4"
+        },
+        {
+          "t": "Ces rangées se lisent toujours de latéral vers médial, c'est-à-dire du pouce vers l'auriculaire.",
+          "v": true,
+          "e": "VRAI. Le sens de lecture est imposé, et c'est lui qui rend le mnémo utilisable.",
+          "sourceQuote": "de latéral (pouce) vers médial (auriculaire)"
+        },
+        {
+          "t": "La rangée proximale se lit scaphoïde, lunatum, triquetrum, pisiforme.",
+          "v": true,
+          "e": "VRAI. C'est la première moitié du mnémo, du côté du radius.",
+          "sourceQuote": "scaphoïde → lunatum → triquetrum → pisiforme"
+        },
+        {
+          "t": "La rangée distale se lit trapèze, trapézoïde, capitatum, hamatum.",
+          "v": true,
+          "e": "VRAI. C'est la seconde moitié du mnémo, du côté des doigts.",
+          "sourceQuote": "trapèze → trapézoïde → capitatum → hamatum"
+        },
+        {
+          "t": "La rangée proximale est celle qui se trouve du côté des doigts.",
+          "v": false,
+          "e": "FAUX : la rangée proximale est du côté du radius, donc de l'avant-bras. C'est la rangée distale qui est du côté des doigts.",
+          "sourceQuote": "Rangée proximale (côté radius)"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-166-27-os-de-la-main.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au métacarpe, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les métacarpiens sont numérotés de I à V, du pouce vers l'auriculaire.",
+          "v": true,
+          "e": "VRAI. La numérotation suit le même sens de lecture que le carpe : on part toujours du pouce.",
+          "sourceQuote": "numérotés I à V (du pouce vers l'auriculaire)"
+        },
+        {
+          "t": "Le premier métacarpien est le plus long et le plus fin des cinq.",
+          "v": false,
+          "e": "FAUX : c'est au contraire le plus court et le plus épais, ce qui va de pair avec son rôle particulier dans le pouce.",
+          "sourceQuote": "métacarpien est le plus court et le plus épais"
+        },
+        {
+          "t": "Le premier métacarpien s'articule en selle avec le trapèze.",
+          "v": true,
+          "e": "VRAI. Cette articulation en selle avec le trapèze est ce qui distingue le pouce des autres doigts.",
+          "sourceQuote": "il a une articulation en selle avec le trapèze"
+        },
+        {
+          "t": "Cette articulation permet la flexion des doigts II à V.",
+          "v": false,
+          "e": "FAUX : elle permet l'opposition du pouce, c'est-à-dire le mouvement qui amène le pouce face aux autres doigts.",
+          "sourceQuote": "qui permet l'opposition du pouce"
+        },
+        {
+          "t": "Les métacarpiens forment la charpente du poignet.",
+          "v": false,
+          "e": "FAUX : ils forment la charpente de la PAUME. Le squelette du poignet, ce sont les huit os du carpe.",
+          "sourceQuote": "forment la charpente de la paume"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-166-27-os-de-la-main.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux phalanges et à leur décompte, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le pouce ne possède que 2 phalanges, une proximale et une distale.",
+          "v": true,
+          "e": "VRAI. Il lui manque la phalange moyenne que possèdent les autres doigts.",
+          "sourceQuote": "n'a que 2 phalanges (proximale + distale)"
+        },
+        {
+          "t": "Le pouce est le seul doigt à n'en avoir que 2.",
+          "v": true,
+          "e": "VRAI. Cette exception du pouce est la source principale des erreurs de décompte.",
+          "sourceQuote": "c'est le seul doigt à n'en avoir que 2"
+        },
+        {
+          "t": "Les doigts II à V possèdent chacun 3 phalanges.",
+          "v": true,
+          "e": "VRAI. Une proximale, une moyenne et une distale pour chacun de ces quatre doigts.",
+          "sourceQuote": "Les doigts II à V ont 3 phalanges chacun"
+        },
+        {
+          "t": "Le décompte des phalanges donne 2 + 3 × 4 = 15.",
+          "v": false,
+          "e": "FAUX : 2 + 12 fait 14, et non 15. Un total de 15 phalanges signalerait une erreur sur le pouce.",
+          "sourceQuote": "3 × 4 (doigts II-V) = 2 + 12 = 14"
+        },
+        {
+          "t": "Attribuer 3 phalanges au pouce reste une approximation acceptable.",
+          "v": false,
+          "e": "FAUX : cela conduit à 15 phalanges et à un total de 28 os pour la main, ce qui est faux.",
+          "sourceQuote": "Lui en donner 3 fait 15 phalanges"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-166-27-os-de-la-main.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au mnémo du carpe et au code couleur du schéma de la main, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le mnémo du carpe se termine par « ton Trapèze Trapézoïde est la Capitale d'Hamatum ».",
+          "v": true,
+          "e": "VRAI. Cette seconde moitié du mnémo restitue la rangée distale dans l'ordre : trapèze, trapézoïde, capitatum, hamatum.",
+          "sourceQuote": "ton Trapèze Trapézoïde est la Capitale d'Hamatum"
+        },
+        {
+          "t": "Le mnémo peut se réciter indifféremment dans un sens ou dans l'autre.",
+          "v": false,
+          "e": "FAUX : il ne fonctionne que dans le bon sens de lecture. En partant de l'auriculaire, on récite la liste à l'envers.",
+          "sourceQuote": "le mnémo ne marche que dans le bon sens de lecture"
+        },
+        {
+          "t": "Sur le schéma, les 8 os du carpe sont représentés en jaune miel.",
+          "v": false,
+          "e": "FAUX : le carpe est en violet. Le jaune miel est la couleur des cinq métacarpiens de la paume.",
+          "sourceQuote": "en violet les 8 os du carpe"
+        },
+        {
+          "t": "Sur le schéma, les phalanges sont représentées en jaune miel.",
+          "v": false,
+          "e": "FAUX : les phalanges sont en terracotta. Le jaune miel désigne les métacarpiens.",
+          "sourceQuote": "en terracotta les 14 phalanges"
+        },
+        {
+          "t": "Le scaphoïde est l'os du carpe le plus proche de l'auriculaire.",
+          "v": false,
+          "e": "FAUX : le scaphoïde est l'os du carpe le plus proche du POUCE, dans la rangée qui touche l'avant-bras.",
+          "sourceQuote": "c'est l'os du carpe le plus proche du pouce"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-166-27-os-de-la-main.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives aux quatre repères à accrocher aux noms des os du carpe, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le scaphoïde est l'os du carpe le plus souvent fracturé.",
+          "v": true,
+          "e": "VRAI. C'est ce qui en fait un os à connaître en priorité, et l'objet de la fiche suivante.",
+          "sourceQuote": "le scaphoïde est le plus fracturé du carpe"
+        },
+        {
+          "t": "Il représente 60 à 70 % des fractures du carpe.",
+          "v": true,
+          "e": "VRAI. Une très large majorité des fractures du carpe le concernent, d'où l'attention qu'on lui porte.",
+          "sourceQuote": "des fractures du carpe"
+        },
+        {
+          "t": "Le capitatum occupe le centre de la rangée distale.",
+          "v": true,
+          "e": "VRAI. Sa position centrale est le repère qui permet de le placer sans hésiter sur un schéma.",
+          "sourceQuote": "le capitatum est au centre de la rangée distale"
+        },
+        {
+          "t": "Le pisiforme est un os sésamoïde, logé dans un tendon.",
+          "v": true,
+          "e": "VRAI. C'est ce qui explique sa position un peu à part, en saillie sur le bord médial du poignet.",
+          "sourceQuote": "le pisiforme est un os sésamoïde"
+        },
+        {
+          "t": "L'hamulus est le crochet du capitatum.",
+          "v": false,
+          "e": "FAUX : l'hamulus est le crochet de l'HAMATUM, et c'est un relief que l'on peut palper.",
+          "sourceQuote": "a un crochet — l' hamulus — que tu peux palper"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-166-27-os-de-la-main.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la place de cette fiche dans la progression et aux repères de lecture du schéma, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les os de la main tiennent dans un espace à peine plus grand qu'une feuille A5.",
+          "v": true,
+          "e": "VRAI. C'est l'image qui donne la mesure de la densité osseuse de la région.",
+          "sourceQuote": "un espace à peine plus grand qu'une feuille A5"
+        },
+        {
+          "t": "Sur le schéma, la rangée du carpe qui touche l'avant-bras est la rangée du bas.",
+          "v": true,
+          "e": "VRAI. C'est le repère donné pour situer le scaphoïde : rangée du bas, du côté du pouce.",
+          "sourceQuote": "dans la rangée du bas — celle qui touche l'avant-bras"
+        },
+        {
+          "t": "Si le total des os ne tombe pas juste, c'est presque toujours le pouce qui a été compté à 3 phalanges.",
+          "v": true,
+          "e": "VRAI. C'est l'erreur de décompte la plus fréquente, et le premier réflexe de vérification.",
+          "sourceQuote": "c'est presque toujours le pouce que tu as compté à 3 phalanges"
+        },
+        {
+          "t": "Il faut connaître les os de la main avant d'aborder les articulations du poignet.",
+          "v": true,
+          "e": "VRAI. Sans les noms, les descriptions articulaires qui suivent resteraient incompréhensibles.",
+          "sourceQuote": "il faut d'abord connaître les os"
+        },
+        {
+          "t": "La suite de la progression portera d'abord sur le scaphoïde et sa fracture.",
+          "v": true,
+          "e": "VRAI. Le scaphoïde vient d'être signalé comme l'os le plus fracturé : c'est logiquement lui qu'on traite ensuite.",
+          "sourceQuote": "sa fracture, et pourquoi on la rate si souvent"
+        }
+      ]
+    },
+
+    {
+      "fiche": "biologie-165-quatre-couches-de-la-diaphyse.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la coupe de diaphyse étudiée dans cette fiche, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La diaphyse est la partie cylindrique centrale d'un os long.",
+          "v": true,
+          "e": "VRAI. C'est le corps de l'os, entre ses deux extrémités élargies.",
+          "sourceQuote": "sa partie cylindrique centrale"
+        },
+        {
+          "t": "On l'observe ici en coupe longitudinale.",
+          "v": false,
+          "e": "FAUX : la coupe étudiée est TRANSVERSALE, c'est-à-dire perpendiculaire à l'axe de l'os. C'est elle qui révèle les couches concentriques.",
+          "sourceQuote": "pour la regarder en coupe transversale"
+        },
+        {
+          "t": "Cette coupe montre que la diaphyse est un bloc plein.",
+          "v": false,
+          "e": "FAUX : ce n'est pas un bloc plein, mais un empilement de couches organisées autour d'une cavité centrale.",
+          "sourceQuote": "ce n'est pas un bloc plein"
+        },
+        {
+          "t": "On y distingue 4 couches concentriques.",
+          "v": true,
+          "e": "VRAI. Quatre couches emboîtées, chacune avec son rôle propre, de l'extérieur vers l'intérieur.",
+          "sourceQuote": "c'est un empilement de 4 couches concentriques"
+        },
+        {
+          "t": "Les trois os longs cités en exemple sont le fémur, le tibia et le radius.",
+          "v": false,
+          "e": "FAUX : les exemples donnés sont le fémur, le tibia et l'humérus.",
+          "sourceQuote": "On prend un os long — fémur, tibia, humérus"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-165-quatre-couches-de-la-diaphyse.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à l'analogie de l'os comparé à un immeuble tubulaire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La façade extérieure de l'immeuble correspond au périoste.",
+          "v": true,
+          "e": "VRAI. C'est l'enveloppe la plus externe, celle qui porte les branchements, c'est-à-dire les vaisseaux et les nerfs.",
+          "sourceQuote": "Façade extérieure (périoste)"
+        },
+        {
+          "t": "Les murs porteurs épais correspondent à l'endoste.",
+          "v": false,
+          "e": "FAUX : les murs porteurs représentent l'os compact, c'est-à-dire la corticale. L'endoste, lui, n'est qu'un revêtement fin.",
+          "sourceQuote": "Murs porteurs épais (os compact)"
+        },
+        {
+          "t": "Les colonnes verticales de l'immeuble représentent les canaux de l'endoste.",
+          "v": false,
+          "e": "FAUX : ces colonnes verticales représentent les ostéons, les unités qui composent l'os compact.",
+          "sourceQuote": "faite de colonnes verticales"
+        },
+        {
+          "t": "Le revêtement intérieur de l'immeuble correspond au périoste.",
+          "v": false,
+          "e": "FAUX : le revêtement intérieur correspond à l'endoste. Le périoste, lui, est la façade extérieure.",
+          "sourceQuote": "Revêtement intérieur (endoste)"
+        },
+        {
+          "t": "L'espace central de l'immeuble correspond à l'os compact.",
+          "v": false,
+          "e": "FAUX : l'espace central correspond à la zone médullaire, remplie de moelle et d'os trabéculaire.",
+          "sourceQuote": "Espace central (zone médullaire)"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-165-quatre-couches-de-la-diaphyse.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au périoste, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le périoste est une membrane conjonctive fine.",
+          "v": true,
+          "e": "VRAI. C'est une membrane, pas une couche osseuse : elle enveloppe l'os sans en faire partie au sens minéral.",
+          "sourceQuote": "Une membrane conjonctive fine"
+        },
+        {
+          "t": "Il est vascularisé et apporte les nutriments à l'os.",
+          "v": true,
+          "e": "VRAI. C'est par lui que passent les vaisseaux qui nourrissent l'os depuis l'extérieur.",
+          "sourceQuote": "vascularisée (elle apporte les nutriments)"
+        },
+        {
+          "t": "Il est innervé et sensible à la douleur.",
+          "v": true,
+          "e": "VRAI. C'est cette innervation qui explique qu'une fracture soit douloureuse.",
+          "sourceQuote": "innervée (elle est sensible à la douleur)"
+        },
+        {
+          "t": "Il assure la fixation des tendons et des ligaments.",
+          "v": true,
+          "e": "VRAI. Protection, nutrition et fixation des tendons et des ligaments : ce sont ses trois rôles.",
+          "sourceQuote": "fixation des tendons et des ligaments"
+        },
+        {
+          "t": "Une fracture est indolore, car le périoste ne contient aucune terminaison nerveuse.",
+          "v": false,
+          "e": "FAUX : le périoste contient des nerfs, et c'est précisément pour cela qu'une fracture fait mal.",
+          "sourceQuote": "le périoste contient des nerfs"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-165-quatre-couches-de-la-diaphyse.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la corticale, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La corticale correspond à l'os compact.",
+          "v": true,
+          "e": "VRAI. Corticale et os compact désignent la même couche : le « béton armé » de l'os.",
+          "sourceQuote": "La corticale — l'os compact"
+        },
+        {
+          "t": "C'est une couche très dense et dure.",
+          "v": true,
+          "e": "VRAI. C'est elle qui donne à l'os sa résistance mécanique face au poids et aux chocs.",
+          "sourceQuote": "Une couche très dense et dure"
+        },
+        {
+          "t": "Elle est épaisse de quelques millimètres.",
+          "v": true,
+          "e": "VRAI. Quelques millimètres suffisent : c'est la couche la plus épaisse des quatre, encadrée par deux couches fines.",
+          "sourceQuote": "épaisse de quelques millimètres"
+        },
+        {
+          "t": "Elle est constituée de centaines d'ostéons serrés les uns contre les autres.",
+          "v": true,
+          "e": "VRAI. Ces ostéons sont les colonnes verticales de l'analogie de l'immeuble.",
+          "sourceQuote": "constituée de centaines d'ostéons serrés les uns contre les autres"
+        },
+        {
+          "t": "On l'appelle aussi os haversien.",
+          "v": true,
+          "e": "VRAI. C'est son autre nom, directement lié à son organisation en ostéons.",
+          "sourceQuote": "son autre nom : os haversien"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-165-quatre-couches-de-la-diaphyse.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à l'endoste et à la zone médullaire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'endoste est une fine couche située entre l'os compact et l'os spongieux.",
+          "v": true,
+          "e": "VRAI. C'est la zone de transition entre la couche dure et la cavité centrale.",
+          "sourceQuote": "située entre l'os compact et l'os spongieux"
+        },
+        {
+          "t": "Le rôle de l'endoste est le remodelage osseux permanent.",
+          "v": true,
+          "e": "VRAI. L'os se reconstruit en continu, et c'est à ce niveau que ce remaniement s'organise.",
+          "sourceQuote": "le remodelage osseux permanent"
+        },
+        {
+          "t": "La zone médullaire est un centre creux rempli de moelle osseuse.",
+          "v": true,
+          "e": "VRAI. C'est le cœur de l'os, occupé par la moelle et par un réseau d'os trabéculaire.",
+          "sourceQuote": "Un centre creux rempli de moelle osseuse"
+        },
+        {
+          "t": "C'est la moelle jaune qui fabrique les cellules sanguines.",
+          "v": false,
+          "e": "FAUX : c'est la moelle ROUGE qui fabrique les cellules sanguines. La moelle jaune, elle, est de la graisse.",
+          "sourceQuote": "rouge (elle fabrique les cellules sanguines) ou jaune"
+        },
+        {
+          "t": "L'endoste est creusé de gros canaux qui drainent la moelle vers l'extérieur de l'os.",
+          "v": false,
+          "e": "FAUX : il est creusé de PETITS canaux vasculaires, et ceux-ci amènent le sang vers l'intérieur, non l'inverse.",
+          "sourceQuote": "petits canaux vasculaires qui amènent le sang vers l'intérieur"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-165-quatre-couches-de-la-diaphyse.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à l'os trabéculaire et à la lecture du schéma en coupe, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'os trabéculaire, aussi appelé spongieux, se trouve dans la zone médullaire.",
+          "v": true,
+          "e": "VRAI. Il occupe le centre de l'os, et non sa périphérie : c'est le piège le plus classique de la coupe.",
+          "sourceQuote": "est au contraire dans la zone médullaire"
+        },
+        {
+          "t": "Il est décrit comme un réseau de poutres fines et solides.",
+          "v": true,
+          "e": "VRAI. Cette architecture en réseau assure à la fois la légèreté et une bonne résistance.",
+          "sourceQuote": "un réseau de poutres fines et solides"
+        },
+        {
+          "t": "La corticale est faite d'os spongieux.",
+          "v": false,
+          "e": "FAUX : la corticale est l'os COMPACT, dense et fait d'ostéons. L'os spongieux est au centre, dans la zone médullaire.",
+          "sourceQuote": "c'est l'os compact (dense, fait d'ostéons)"
+        },
+        {
+          "t": "Sur le schéma, les deux couches fines sont côte à côte du côté extérieur.",
+          "v": false,
+          "e": "FAUX : les deux couches fines encadrent la couche épaisse. L'une est en dehors, l'autre en dedans de la corticale.",
+          "sourceQuote": "encadrent la couche"
+        },
+        {
+          "t": "Le périoste est situé en dedans, et l'endoste en dehors.",
+          "v": false,
+          "e": "FAUX : c'est exactement l'inverse. Le périoste est dehors, l'endoste dedans : leurs noms se ressemblent, pas leur position.",
+          "sourceQuote": "le périoste est dehors, l' endoste dedans"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-165-quatre-couches-de-la-diaphyse.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la méthode de raisonnement proposée pour la diaphyse et à la suite du chapitre, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Devant une question sur la diaphyse, il faut redescendre les couches de l'extérieur vers l'intérieur.",
+          "v": true,
+          "e": "VRAI. Toujours le même ordre : c'est cette file qui sert de fil conducteur pour retrouver chaque couche.",
+          "sourceQuote": "redescends toujours dans le même ordre"
+        },
+        {
+          "t": "L'ordre proposé est : périoste, puis endoste, puis os compact, puis cavité centrale.",
+          "v": false,
+          "e": "FAUX : l'endoste vient APRÈS l'os compact. L'ordre est périoste, os compact, endoste, puis cavité centrale.",
+          "sourceQuote": "(os compact avec ses ostéons) → revêtement fin (endoste)"
+        },
+        {
+          "t": "Savoir placer une couche dans cette file ne renseigne pas sur son rôle.",
+          "v": false,
+          "e": "FAUX : c'est justement l'intérêt de la méthode. Une fois la couche située, son rôle se retrouve.",
+          "sourceQuote": "tu sais placer une couche dans cette file, tu retrouves son rôle"
+        },
+        {
+          "t": "La fiche détaille dès à présent la façon dont les ostéons sont assemblés.",
+          "v": false,
+          "e": "FAUX : on en reste au plan de coupe. L'assemblage des ostéons fait l'objet des deux fiches suivantes.",
+          "sourceQuote": "c'est tout l'objet des deux fiches suivantes"
+        },
+        {
+          "t": "Le rôle de la corticale est la production des cellules sanguines.",
+          "v": false,
+          "e": "FAUX : la corticale assure la résistance mécanique. La production des cellules sanguines revient à la moelle rouge, au centre.",
+          "sourceQuote": "la résistance mécanique — c'est elle qui supporte le poids"
+        }
+      ]
+    }
+  ]
+}

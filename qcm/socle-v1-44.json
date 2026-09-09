@@ -1,0 +1,1351 @@
+{
+  "matiere": "mixte",
+  "chapitre": 0,
+  "note": "socle 1-7 — fiches sans QCM, ordre du Parcours",
+  "questions": [
+    {
+      "fiche": "chimie-122-etat-standard-enthalpie-formation.html",
+      "origine": "ecrite",
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la notion d'état standard, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'état standard d'un corps est son état physique le plus stable à une température donnée.",
+          "v": true,
+          "e": "VRAI. C'est la définition exacte : on retient pour chaque corps la forme sous laquelle il est le plus stable à la température considérée.",
+          "sourceQuote": "l'état physique le plus stable d'un corps à T donnée"
+        },
+        {
+          "t": "La pression de référence de l'état standard est P = 1 bar, soit environ 1 atm.",
+          "v": true,
+          "e": "VRAI. La convention fixe la pression à 1 bar, valeur très proche de 1 atmosphère.",
+          "sourceQuote": "à T donnée et P = 1 bar (≈ 1 atm)"
+        },
+        {
+          "t": "L'état standard existe pour que l'on puisse comparer les ΔH de réactions différentes.",
+          "v": true,
+          "e": "VRAI. C'est toute sa raison d'être : sans référence commune, deux enthalpies mesurées dans des conditions différentes ne se comparent pas.",
+          "sourceQuote": "Pour pouvoir comparer les ΔH de différentes réactions"
+        },
+        {
+          "t": "Chaque corps peut être pris sous l'état physique que l'on veut : l'état standard n'impose rien.",
+          "v": false,
+          "e": "FAUX : l'état standard fixe justement, une fois pour toutes, la forme sous laquelle chaque corps est pris. Sans cet accord, aucune comparaison n'est possible.",
+          "sourceQuote": "on se met d'accord sur la forme sous laquelle chaque corps est pris, une fois pour toutes"
+        },
+        {
+          "t": "L'état standard est défini sans qu'aucune condition ne soit fixée.",
+          "v": false,
+          "e": "FAUX : l'état standard impose au contraire des conditions communes, une température donnée et une pression de 1 bar. C'est cela qui rend les valeurs comparables.",
+          "sourceQuote": "il faut que tout le monde mesure dans les mêmes conditions"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-122-etat-standard-enthalpie-formation.html",
+      "origine": "ecrite",
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à l'enthalpie standard de formation, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Elle correspond à la chaleur échangée lorsqu'on fabrique une mole du composé.",
+          "v": true,
+          "e": "VRAI. La quantité de référence est toujours une mole du composé formé, jamais une masse ni un volume.",
+          "sourceQuote": "c'est la chaleur échangée quand on fabrique 1 mole d'un composé"
+        },
+        {
+          "t": "Le composé est fabriqué à partir des corps simples pris dans leur état standard.",
+          "v": true,
+          "e": "VRAI. Le point de départ est toujours le même : les corps simples, chacun dans son état standard.",
+          "sourceQuote": "les corps simples, dans leur état standard"
+        },
+        {
+          "t": "Il existe une valeur par composé, que l'on lit dans une table.",
+          "v": true,
+          "e": "VRAI. Ces valeurs ne se recalculent pas : elles sont tabulées, une par composé.",
+          "sourceQuote": "Une valeur par composé, lue dans une table"
+        },
+        {
+          "t": "Ces valeurs servent ensuite à calculer l'énergie d'une réaction entière.",
+          "v": true,
+          "e": "VRAI. C'est leur utilité : à partir des valeurs de formation, on remonte à l'enthalpie de toute la réaction.",
+          "sourceQuote": "qui servira ensuite à calculer l'énergie d'une réaction entière"
+        },
+        {
+          "t": "Pour un corps simple pris dans son état standard, cette valeur est nulle.",
+          "v": true,
+          "e": "VRAI. C'est la règle fondamentale de la fiche, posée par définition et non par mesure.",
+          "sourceQuote": "l'enthalpie de formation d'un corps simple dans son état standard est nulle"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-122-etat-standard-enthalpie-formation.html",
+      "origine": "ecrite",
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à l'état standard de quelques corps à 25 °C, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "À 25 °C, l'état standard de l'eau est l'état liquide.",
+          "v": true,
+          "e": "VRAI. À 25 °C l'eau est liquide : c'est donc sous cette forme qu'on la prend comme référence, et non sous forme de vapeur.",
+          "sourceQuote": "l'eau est liquide à 25 °C, pas gazeuse"
+        },
+        {
+          "t": "À 25 °C, l'état standard du dioxyde de carbone est l'état liquide.",
+          "v": false,
+          "e": "FAUX : le dioxyde de carbone est gazeux à 25 °C, c'est donc l'état gazeux qui est retenu comme état standard.",
+          "sourceQuote": "CO₂ gazeux C (carbone) solide (graphite)"
+        },
+        {
+          "t": "L'état standard du carbone est le diamant.",
+          "v": false,
+          "e": "FAUX : c'est le graphite, forme la plus stable du carbone. Le diamant est précisément l'erreur attendue sur cette ligne du tableau.",
+          "sourceQuote": "solide (graphite) — pas diamant !"
+        },
+        {
+          "t": "Le sodium est pris à l'état gazeux dans son état standard.",
+          "v": false,
+          "e": "FAUX : le sodium est solide, c'est cet état-là qui sert de référence.",
+          "sourceQuote": "Na solide Br₂ liquide"
+        },
+        {
+          "t": "Le dibrome a pour état standard l'état solide.",
+          "v": false,
+          "e": "FAUX : le dibrome est liquide, et c'est son état liquide qui est retenu comme état standard.",
+          "sourceQuote": "Le graphite est la forme la plus stable Na solide Br₂ liquide"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-122-etat-standard-enthalpie-formation.html",
+      "origine": "ecrite",
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à l'exemple chiffré de l'eau liquide donné dans la fiche, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Cette valeur correspond à la formation d'une mole d'eau liquide.",
+          "v": true,
+          "e": "VRAI. Comme toute enthalpie de formation, elle est rapportée à une mole du composé formé.",
+          "sourceQuote": "pour former 1 mole d'eau liquide"
+        },
+        {
+          "t": "L'eau y est formée à partir du dihydrogène et du dioxygène.",
+          "v": true,
+          "e": "VRAI. Ce sont bien les deux corps simples de départ, combinés pour donner l'eau.",
+          "sourceQuote": "quand on combine H₂ et ½ O₂"
+        },
+        {
+          "t": "La réaction libère 285,6 kJ.",
+          "v": true,
+          "e": "VRAI. C'est exactement ce que dit la valeur : de la chaleur est libérée, et non absorbée.",
+          "sourceQuote": "la réaction libère 285,6 kJ"
+        },
+        {
+          "t": "Le signe négatif indique que cette formation est exothermique.",
+          "v": true,
+          "e": "VRAI. Un signe négatif se lit toujours de la même façon : la réaction cède de la chaleur au milieu.",
+          "sourceQuote": "Le signe négatif, tu sais déjà le lire : c'est exothermique"
+        },
+        {
+          "t": "Un ΔᵣH° positif signifie que la réaction libère de la chaleur dans le milieu.",
+          "v": false,
+          "e": "FAUX : un signe positif veut dire que la réaction absorbe de la chaleur au milieu, elle est endothermique. C'est le signe négatif qui correspond à une libération.",
+          "sourceQuote": "positif, elle en absorbe au milieu (endothermique)"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-122-etat-standard-enthalpie-formation.html",
+      "origine": "ecrite",
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à la convention de la valeur nulle et à son image des panneaux routiers, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Cette convention revient à choisir les corps simples comme point de départ de l'échelle.",
+          "v": true,
+          "e": "VRAI. On fixe une origine, et tout le reste se mesure par rapport à elle.",
+          "sourceQuote": "on choisit les corps simples comme point de départ"
+        },
+        {
+          "t": "Une valeur nulle signifie qu'il ne faut aucune énergie pour créer ces molécules.",
+          "v": false,
+          "e": "FAUX : c'est le premier piège de la fiche. La valeur nulle est un choix d'origine, pas une affirmation sur l'énergie réellement nécessaire.",
+          "sourceQuote": "ne veut pas dire qu'il faut zéro énergie pour créer ces molécules"
+        },
+        {
+          "t": "Cette valeur nulle est une mesure expérimentale, et non une convention.",
+          "v": false,
+          "e": "FAUX : c'est exactement l'inverse. Il s'agit d'une convention de référence, choisie pour simplifier les calculs.",
+          "sourceQuote": "c'est une convention de référence, pas une mesure"
+        },
+        {
+          "t": "Dans l'image des panneaux routiers, c'est Paris que l'on choisit comme point de départ.",
+          "v": true,
+          "e": "VRAI. Les distances sont comptées depuis Paris, qui vaut zéro par choix : rien n'empêcherait d'en choisir une autre.",
+          "sourceQuote": "on choisit Paris comme point de départ (= 0)"
+        },
+        {
+          "t": "Les corps simples représentent l'aboutissement de l'échelle, et non son origine.",
+          "v": false,
+          "e": "FAUX : ils en sont l'origine. C'est parce qu'ils servent de point de départ à toutes les fabrications qu'on leur attribue la valeur zéro.",
+          "sourceQuote": "ils sont l'origine de l'échelle"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-122-etat-standard-enthalpie-formation.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à l'usage de ces valeurs dans le calcul de l'enthalpie d'une réaction, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une seule formule permet de calculer l'enthalpie d'une réaction : la loi de Hess.",
+          "v": true,
+          "e": "VRAI. C'est elle qui relie les valeurs tabulées de formation à l'enthalpie de la réaction entière.",
+          "sourceQuote": "Une seule formule y répond : la loi de Hess"
+        },
+        {
+          "t": "Cette formule ne sert à rien tant qu'on ne dispose pas de valeurs tabulées et d'une convention qui les rend comparables.",
+          "v": true,
+          "e": "VRAI. Ce sont les deux ingrédients préalables, et c'est précisément ce que cette fiche met en place.",
+          "sourceQuote": "des valeurs tabulées , et la convention qui les rend comparables entre elles"
+        },
+        {
+          "t": "Devant un corps simple dans la formule, le réflexe est d'inscrire la valeur zéro.",
+          "v": true,
+          "e": "VRAI. Le réflexe tient en une ligne : dès qu'on reconnaît un corps simple, on écrit zéro.",
+          "sourceQuote": "corps simple → je mets 0"
+        },
+        {
+          "t": "Ce réflexe simplifie le calcul.",
+          "v": true,
+          "e": "VRAI. Plusieurs termes disparaissent d'un coup, ce qui allège nettement l'application de la formule.",
+          "sourceQuote": "tu mets 0 — ça simplifie le calcul"
+        },
+        {
+          "t": "Ce réflexe n'est pas un raccourci risqué : il découle de la définition elle-même.",
+          "v": true,
+          "e": "VRAI. Ce n'est pas une astuce approximative mais l'application directe de la convention posée plus haut.",
+          "sourceQuote": "Ce n'est pas un raccourci risqué : c'est la définition elle-même"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-122-etat-standard-enthalpie-formation.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Un étudiant relit les deux pièges signalés en fin de fiche. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le second piège, plus discret, porte sur l'état standard du carbone.",
+          "v": true,
+          "e": "VRAI. La fiche le présente comme le piège discret, celui qu'on rate parce qu'on ne le voit pas venir.",
+          "sourceQuote": "Deuxième piège, plus discret : l'état standard du carbone"
+        },
+        {
+          "t": "Le graphite est présenté comme la forme la plus stable du carbone.",
+          "v": true,
+          "e": "VRAI. C'est cette stabilité qui justifie qu'on prenne le graphite, et non le diamant, comme état de référence.",
+          "sourceQuote": "Le graphite est la forme la plus stable"
+        },
+        {
+          "t": "La convention fixe la pression de référence à 1 atm exactement.",
+          "v": false,
+          "e": "FAUX : la pression de référence est de 1 bar, valeur seulement voisine de 1 atmosphère. Confondre les deux revient à changer la convention.",
+          "sourceQuote": "à T donnée et P = 1 bar"
+        },
+        {
+          "t": "Le diazote a une enthalpie de formation différente de zéro, car c'est une molécule très stable.",
+          "v": false,
+          "e": "FAUX : le diazote est un corps simple, on lui attribue donc la valeur zéro. La stabilité de la molécule n'entre pas en ligne de compte : c'est une convention d'origine.",
+          "sourceQuote": "c'est à eux qu'on attribue la valeur zéro"
+        },
+        {
+          "t": "Pour le carbone, c'est le diamant qui est retenu comme état standard.",
+          "v": false,
+          "e": "FAUX : c'est le graphite. Le diamant est justement la réponse fausse que ce piège cherche à faire choisir.",
+          "sourceQuote": "l'état standard du carbone, c'est le graphite , pas le diamant"
+        }
+      ]
+    },
+
+    {
+      "fiche": "physique-121-vant-hoff-pression-osmotique.html",
+      "origine": "ecrite",
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à l'équation de van't Hoff et à ses grandeurs, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La pression osmotique s'exprime en pascals.",
+          "v": true,
+          "e": "VRAI. C'est une pression, elle s'exprime donc dans l'unité du Système International, le pascal.",
+          "sourceQuote": "pression osmotique (Pa)"
+        },
+        {
+          "t": "La température qui figure dans l'équation est une température absolue, exprimée en kelvins.",
+          "v": true,
+          "e": "VRAI. Jamais de degrés Celsius dans cette formule : la température doit être convertie en kelvins avant tout remplacement.",
+          "sourceQuote": "T = température absolue en kelvins"
+        },
+        {
+          "t": "La pression osmotique est proportionnelle à l'osmolarité.",
+          "v": true,
+          "e": "VRAI. Plus il y a de particules du côté concentré, plus l'eau pousse sur la membrane : la pression augmente dans les mêmes proportions.",
+          "sourceQuote": "La pression est donc proportionnelle à ω , l'osmolarité"
+        },
+        {
+          "t": "La pression osmotique est inversement proportionnelle à la température.",
+          "v": false,
+          "e": "FAUX : elle lui est proportionnelle. Plus il fait chaud, plus les particules s'agitent, et plus elles cognent fort sur la membrane.",
+          "sourceQuote": "La pression est donc proportionnelle à T , la température en kelvins"
+        },
+        {
+          "t": "Ce résultat a été publié en 1901.",
+          "v": false,
+          "e": "FAUX : le résultat date de 1886. C'est le prix Nobel de chimie qui a été décerné en 1901.",
+          "sourceQuote": "a publié le résultat en 1886 (premier prix Nobel de chimie en 1901)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-121-vant-hoff-pression-osmotique.html",
+      "origine": "ecrite",
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à l'osmolarité, première brique de la formule, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'osmolarité compte le nombre de particules cinétiquement actives par litre.",
+          "v": true,
+          "e": "VRAI. C'est bien un décompte de particules réellement présentes en solution, rapporté au litre.",
+          "sourceQuote": "compte le nombre de particules cinétiquement actives par litre"
+        },
+        {
+          "t": "L'osmolarité désigne la quantité de soluté que l'on a versée dans la solution.",
+          "v": false,
+          "e": "FAUX : c'est la confusion à éviter avant tout remplacement dans la formule. Une mole de soluté versée peut donner deux ou trois particules une fois dissociée.",
+          "sourceQuote": "un nombre de particules, pas une quantité de soluté versé"
+        },
+        {
+          "t": "Dans l'analogie de la bouteille de gaz, les particules de soluté sont rassemblées à la surface du liquide.",
+          "v": false,
+          "e": "FAUX : elles sont réparties dans tout le volume, du haut jusqu'au bas du liquide, comme des molécules de gaz dans une bouteille.",
+          "sourceQuote": "réparties dans tout le liquide, en haut, en bas, au milieu"
+        },
+        {
+          "t": "L'osmolarité se mesure en moles de soluté par kilogramme de solvant.",
+          "v": false,
+          "e": "FAUX : elle se mesure en osmoles par litre. Le dénominateur est un volume, et le numérateur un nombre de particules, non de soluté.",
+          "sourceQuote": "le nombre de particules cinétiquement actives par litre, en Osm/L"
+        },
+        {
+          "t": "Plus il y a de particules coincées du côté concentré, moins l'eau pousse sur la membrane.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. Plus les particules sont nombreuses, plus l'eau cherche à les rejoindre et plus elle pousse fort sur la membrane.",
+          "sourceQuote": "plus elle pousse fort sur la membrane"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-121-vant-hoff-pression-osmotique.html",
+      "origine": "ecrite",
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la température et à la constante de la formule, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Plus il fait chaud, plus les molécules s'agitent.",
+          "v": true,
+          "e": "VRAI. C'est ce qui fait monter la pression : une molécule rapide cogne plus fort sur la membrane.",
+          "sourceQuote": "Plus il fait chaud, plus les molécules s'agitent"
+        },
+        {
+          "t": "Cette agitation porte le nom de mouvement brownien.",
+          "v": true,
+          "e": "VRAI. C'est le même mouvement désordonné que celui qui fait diffuser les gaz : il revient ici comme moteur de la pression.",
+          "sourceQuote": "c'est le mouvement brownien"
+        },
+        {
+          "t": "Une température de 37 °C correspond à 310 K.",
+          "v": true,
+          "e": "VRAI. C'est la valeur à connaître par cœur, celle du corps humain, qui revient dans toutes les applications numériques.",
+          "sourceQuote": "au corps humain, 37 °C → 310 K"
+        },
+        {
+          "t": "La conversion vers les kelvins consiste à ajouter 273 à la température en degrés Celsius.",
+          "v": true,
+          "e": "VRAI. C'est la conversion à faire systématiquement avant de remplacer dans la formule.",
+          "sourceQuote": "rappel : T(K) = T(°C) + 273"
+        },
+        {
+          "t": "La constante vaut environ 8,3 et c'est une constante universelle de la physique.",
+          "v": true,
+          "e": "VRAI. Elle ne dépend ni du soluté ni du solvant : c'est ce qui rend la formule utilisable partout.",
+          "sourceQuote": "une constante universelle de la physique. Retiens juste sa valeur : R ≈ 8,3"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-121-vant-hoff-pression-osmotique.html",
+      "origine": "ecrite",
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux osmolarités obtenues pour une mole par litre de soluté dissoute, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le chlorure de sodium donne deux particules en solution.",
+          "v": true,
+          "e": "VRAI. Il se dissocie en un ion sodium et un ion chlorure, soit deux particules pour une mole de sel dissoute.",
+          "sourceQuote": "NaCl se casse en Na⁺ + Cl⁻ (2 particules)"
+        },
+        {
+          "t": "Le glucose ne se dissocie pas et ne compte que pour une particule.",
+          "v": true,
+          "e": "VRAI. C'est une molécule qui reste entière en solution : une mole versée donne une osmole.",
+          "sourceQuote": "le glucose ne se dissocie pas (1 particule)"
+        },
+        {
+          "t": "Le chlorure de calcium donne trois particules : un ion calcium et deux ions chlorure.",
+          "v": true,
+          "e": "VRAI. Deux chlorures pour un calcium, ce qui porte le décompte à trois particules.",
+          "sourceQuote": "CaCl₂ donne Ca²⁺ + 2 Cl⁻ (3 particules)"
+        },
+        {
+          "t": "Ces valeurs sont données pour une mole par litre de soluté dissoute.",
+          "v": true,
+          "e": "VRAI. C'est la lecture du tableau : on part toujours de la même quantité de soluté, seule la dissociation change.",
+          "sourceQuote": "ce sont les osmolarités obtenues pour 1 mol/L de soluté dissoute"
+        },
+        {
+          "t": "Le glucose donne, comme le chlorure de sodium, deux particules en solution.",
+          "v": false,
+          "e": "FAUX : le glucose ne se dissocie pas, il ne compte que pour une particule. Seul le chlorure de sodium en donne deux.",
+          "sourceQuote": "NaCl 2 Osm/L Glucose 1 Osm/L"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-121-vant-hoff-pression-osmotique.html",
+      "origine": "ecrite",
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à l'application numérique faite sur le plasma, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La pression osmotique du plasma vaut environ 773 000 Pa.",
+          "v": true,
+          "e": "VRAI. C'est le résultat de l'application numérique, et il est volontairement frappant : une pression énorme.",
+          "sourceQuote": "≈ 773 000 Pa ≈ 7,6 atm ≈ 5 800 mmHg"
+        },
+        {
+          "t": "L'osmolarité du plasma retenue pour ce calcul est de 30 mOsm/L.",
+          "v": false,
+          "e": "FAUX : le plasma est à 300 mOsm/L. C'est cette valeur, et non le dixième, qui entre dans le calcul.",
+          "sourceQuote": "Pour le plasma à 300 mOsm/L (= 0,300 Osm/L) et 310 K (= 37 °C)"
+        },
+        {
+          "t": "Pour obtenir un résultat en pascals, c'est la valeur 0,300 que l'on multiplie.",
+          "v": false,
+          "e": "FAUX : il faut passer aux unités du Système International, soit 300 osmoles par mètre cube. C'est ce nombre-là qui entre dans la multiplication.",
+          "sourceQuote": "c'est ce 300-là qu'on multiplie, pas 0,300"
+        },
+        {
+          "t": "Cette pression correspond à environ 76 atm.",
+          "v": false,
+          "e": "FAUX : elle vaut environ 7,6 atm. Un facteur dix sur cette conversion est l'erreur classique à surveiller.",
+          "sourceQuote": "≈ 7,6 atm ≈ 5 800 mmHg"
+        },
+        {
+          "t": "La température utilisée dans ce calcul est de 37 K.",
+          "v": false,
+          "e": "FAUX : la température utilisée est 310 K, qui correspond à 37 °C. Confondre les deux revient à oublier la conversion en kelvins.",
+          "sourceQuote": "0,300 Osm/L) et 310 K (= 37 °C)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-121-vant-hoff-pression-osmotique.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives aux trois unités de pression utilisées en physique médicale, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le pascal est l'unité officielle du Système International.",
+          "v": true,
+          "e": "VRAI. C'est l'unité de référence, définie comme un newton par mètre carré.",
+          "sourceQuote": "l'unité officielle du Système International"
+        },
+        {
+          "t": "Une atmosphère vaut environ 101 325 Pa.",
+          "v": true,
+          "e": "VRAI. On l'arrondit couramment à cent mille pascals pour les conversions rapides.",
+          "sourceQuote": "1 atm ≈ 101 325 Pa ≈ 10⁵ Pa"
+        },
+        {
+          "t": "Une atmosphère vaut 133 mmHg.",
+          "v": false,
+          "e": "FAUX : une atmosphère vaut 760 mmHg. C'est un millimètre de mercure qui vaut environ 133 pascals — les deux nombres sont souvent intervertis.",
+          "sourceQuote": "1 atm = 760 mmHg, donc 1 mmHg ≈ 133 Pa"
+        },
+        {
+          "t": "Le millimètre de mercure est l'unité officielle du Système International, le pascal étant l'unité historique de la médecine.",
+          "v": false,
+          "e": "FAUX : les deux rôles sont inversés. Le pascal est l'unité du Système International, et le millimètre de mercure l'unité historique de la médecine, utilisée pour la tension artérielle.",
+          "sourceQuote": "l'unité historique de la médecine (tension artérielle, gaz du sang)"
+        },
+        {
+          "t": "L'atmosphère correspond à la pression de l'air mesurée au sommet d'une montagne.",
+          "v": false,
+          "e": "FAUX : elle correspond à la pression de l'air au niveau de la mer. En altitude, la pression est plus basse.",
+          "sourceQuote": "la pression de l'air au niveau de la mer"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-121-vant-hoff-pression-osmotique.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Un étudiant affirme qu'une pression osmotique énorme entraîne forcément un mouvement d'eau. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une pression osmotique énorme ne veut pas dire que l'eau bouge.",
+          "v": true,
+          "e": "VRAI. C'est le piège principal de la fiche : une grande valeur calculée ne dit rien, à elle seule, sur le sens ou l'existence d'un flux.",
+          "sourceQuote": "Une pression osmotique énorme ne veut pas dire que l'eau bouge"
+        },
+        {
+          "t": "Si l'osmolarité est la même des deux côtés de la membrane, il n'y a aucun mouvement d'eau net.",
+          "v": true,
+          "e": "VRAI. Les deux poussées se compensent exactement : rien ne se déplace globalement.",
+          "sourceQuote": "il n'y a aucun mouvement d'eau net"
+        },
+        {
+          "t": "C'est la différence entre les deux côtés qui décide de tout, jamais la valeur brute de la pression.",
+          "v": true,
+          "e": "VRAI. On raisonne toujours sur un écart d'osmolarité, pas sur une valeur absolue.",
+          "sourceQuote": "C'est la différence entre les deux côtés qui fait tout"
+        },
+        {
+          "t": "Les compartiments interstitiel et intracellulaire sont tous deux à environ 300 mOsm/L.",
+          "v": true,
+          "e": "VRAI. C'est précisément cette égalité qui explique qu'aucun flux net ne traverse la membrane cellulaire en situation normale.",
+          "sourceQuote": "interstitiel et intracellulaire à ~300 mOsm/L"
+        },
+        {
+          "t": "Plonger un globule rouge dans de l'eau pure ne rompt pas cet équilibre.",
+          "v": false,
+          "e": "FAUX : c'est l'exemple même de la rupture d'équilibre. L'eau pure n'a presque pas de soluté, l'écart d'osmolarité devient maximal et un flux apparaît.",
+          "sourceQuote": "quand on rompt cet équilibre (par exemple, en mettant un globule rouge dans de l'eau pure)"
+        }
+      ]
+    },
+
+    {
+      "fiche": "physique-122-iso-hypo-hypertonique.html",
+      "origine": "ecrite",
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives au point de repère et à la règle directrice de cette fiche, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'osmolarité à l'intérieur du globule rouge est toujours d'environ 300 mOsm/L.",
+          "v": true,
+          "e": "VRAI. C'est le seul chiffre à mémoriser : il sert de point de comparaison pour toutes les situations.",
+          "sourceQuote": "L'osmolarité à l'intérieur du globule rouge est toujours d'environ 300 mOsm/L"
+        },
+        {
+          "t": "Les protéines, sels et hémoglobine du globule sont prisonniers de la membrane.",
+          "v": true,
+          "e": "VRAI. Ces solutés ne traversent pas : c'est pour cela que l'osmolarité intérieure ne varie pas.",
+          "sourceQuote": "ces solutés sont prisonniers de la membrane, ils ne bougent pas"
+        },
+        {
+          "t": "L'eau va toujours vers le côté où l'osmolarité est la plus forte.",
+          "v": true,
+          "e": "VRAI. C'est la règle directrice, et elle suffit à retrouver les trois cas : l'eau part diluer le côté le plus concentré.",
+          "sourceQuote": "L'eau va toujours vers le côté où l'osmolarité est la plus forte"
+        },
+        {
+          "t": "C'est l'osmolarité intérieure du globule qui change selon les situations cliniques.",
+          "v": false,
+          "e": "FAUX : l'intérieur reste à environ 300 mOsm/L. C'est le liquide extérieur qui change, et c'est lui qu'on compare au repère.",
+          "sourceQuote": "Ce qui change selon les situations cliniques, c'est l'osmolarité du liquide extérieur"
+        },
+        {
+          "t": "L'eau se dirige vers le compartiment le plus dilué.",
+          "v": false,
+          "e": "FAUX : elle va vers le plus concentré, pour le diluer. C'est l'inversion la plus fréquente sur ce chapitre.",
+          "sourceQuote": "L'eau va vers le côté le plus concentré , pas vers le plus dilué"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-122-iso-hypo-hypertonique.html",
+      "origine": "ecrite",
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à une solution isotonique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une solution isotonique a une osmolarité de 300 mOsm/L.",
+          "v": true,
+          "e": "VRAI. Elle contient autant de soluté que l'intérieur du globule : les deux compartiments sont à égalité.",
+          "sourceQuote": "Isotonique = 300 mOsm/L autant de soluté dehors que dedans"
+        },
+        {
+          "t": "Il n'y a aucun mouvement net d'eau et le globule reste inchangé.",
+          "v": true,
+          "e": "VRAI. Sans écart d'osmolarité, aucune force ne pousse l'eau dans un sens plutôt que dans l'autre.",
+          "sourceQuote": "Aucun mouvement net (équilibre) Globule inchangé"
+        },
+        {
+          "t": "Le sérum physiologique isotonique est une solution de chlorure de sodium à 3 %.",
+          "v": false,
+          "e": "FAUX : le sérum physiologique est à 0,9 % de chlorure de sodium. La solution à 3 % est l'exemple d'une solution hypertonique.",
+          "sourceQuote": "sérum physiologique 0,9 % NaCl, utilisé en perfusion"
+        },
+        {
+          "t": "En solution isotonique, le globule gonfle puis éclate.",
+          "v": false,
+          "e": "FAUX : il reste intact. Autant de soluté dehors que dedans, donc aucun flux net d'eau et aucune déformation.",
+          "sourceQuote": "autant de soluté dehors que dedans"
+        },
+        {
+          "t": "L'eau distillée pure est l'exemple type d'une solution isotonique.",
+          "v": false,
+          "e": "FAUX : son osmolarité est proche de zéro, très en dessous de 300. C'est l'exemple type de solution hypotonique.",
+          "sourceQuote": "eau distillée pure = osmolarité extérieure ≈ 0"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-122-iso-hypo-hypertonique.html",
+      "origine": "ecrite",
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à une solution hypotonique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Son osmolarité est inférieure à 300 mOsm/L : il y a moins de soluté dehors que dedans.",
+          "v": true,
+          "e": "VRAI. C'est la définition même de l'hypotonie, lue par comparaison avec le repère intérieur.",
+          "sourceQuote": "Hypotonique < 300 mOsm/L moins de soluté dehors"
+        },
+        {
+          "t": "L'intérieur du globule y est le côté le plus concentré.",
+          "v": true,
+          "e": "VRAI. Puisqu'il y a moins de soluté à l'extérieur, c'est l'intérieur qui devient le côté concentré.",
+          "sourceQuote": "l'intérieur du globule est le côté le plus concentré"
+        },
+        {
+          "t": "L'eau entre dans le globule.",
+          "v": true,
+          "e": "VRAI. L'eau part vers le côté concentré pour le diluer, c'est-à-dire vers l'intérieur.",
+          "sourceQuote": "L'eau ENTRE dans le globule"
+        },
+        {
+          "t": "Le globule subit une turgescence, puis une hémolyse.",
+          "v": true,
+          "e": "VRAI. Il se gonfle et se tend d'eau, puis finit par éclater si l'entrée d'eau se poursuit.",
+          "sourceQuote": "Turgescence (le globule gonflé, tendu d'eau) puis hémolyse"
+        },
+        {
+          "t": "L'eau distillée pure, d'osmolarité extérieure proche de zéro, en est l'exemple donné.",
+          "v": true,
+          "e": "VRAI. C'est le cas extrême de l'hypotonie : presque aucun soluté dehors, donc un écart maximal avec l'intérieur.",
+          "sourceQuote": "ex. eau distillée pure = osmolarité extérieure ≈ 0"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-122-iso-hypo-hypertonique.html",
+      "origine": "ecrite",
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à une solution hypertonique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Son osmolarité est supérieure à 300 mOsm/L : il y a plus de soluté dehors que dedans.",
+          "v": true,
+          "e": "VRAI. C'est la définition de l'hypertonie, toujours lue par rapport au repère de 300 mOsm/L.",
+          "sourceQuote": "Hypertonique > 300 mOsm/L plus de soluté dehors"
+        },
+        {
+          "t": "L'eau sort du globule.",
+          "v": true,
+          "e": "VRAI. Le côté concentré est maintenant l'extérieur : c'est là que part l'eau pour le diluer.",
+          "sourceQuote": "L'eau SORT du globule"
+        },
+        {
+          "t": "Le globule subit une plasmolyse : il rétrécit et se déshydrate.",
+          "v": true,
+          "e": "VRAI. En perdant son eau, la cellule se ratatine. C'est le sort opposé à celui de l'hypotonie.",
+          "sourceQuote": "Plasmolyse 🥒 cellule rétrécie, déshydratée"
+        },
+        {
+          "t": "L'exemple donné de solution hypertonique est le chlorure de sodium à 0,9 %.",
+          "v": false,
+          "e": "FAUX : l'exemple donné est une solution à 3 %. Celle à 0,9 % est le sérum physiologique, qui est isotonique.",
+          "sourceQuote": "ex. solution de NaCl à 3 %"
+        },
+        {
+          "t": "En solution hypertonique, l'extérieur devient le côté le plus dilué.",
+          "v": false,
+          "e": "FAUX : l'extérieur devient au contraire le côté le plus concentré, puisqu'il contient plus de soluté que l'intérieur.",
+          "sourceQuote": "l'extérieur devient le côté le plus concentré"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-122-iso-hypo-hypertonique.html",
+      "origine": "ecrite",
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à l'application de la règle directrice dans les deux sens, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Lorsque l'osmolarité externe est inférieure à 300, l'intérieur du globule est le côté concentré.",
+          "v": true,
+          "e": "VRAI. C'est le premier sens de lecture : moins de soluté dehors, donc le côté concentré est dedans.",
+          "sourceQuote": "osmolarité externe < 300) → l'intérieur du globule est le côté concentré"
+        },
+        {
+          "t": "Dans ce cas, l'eau entre dans le globule et il gonfle.",
+          "v": true,
+          "e": "VRAI. L'eau rejoint le côté concentré, donc l'intérieur, et la cellule se remplit.",
+          "sourceQuote": "l'eau entre dans le globule → il gonfle"
+        },
+        {
+          "t": "Lorsque l'extérieur est plus concentré que l'intérieur, l'eau sort du globule.",
+          "v": true,
+          "e": "VRAI. C'est le second sens de lecture : le côté concentré est désormais dehors, l'eau part le rejoindre.",
+          "sourceQuote": "L'extérieur est plus concentré que l'intérieur"
+        },
+        {
+          "t": "Le globule rétrécit alors.",
+          "v": true,
+          "e": "VRAI. En perdant de l'eau, il diminue de volume : c'est le sort inverse du gonflement.",
+          "sourceQuote": "l'eau sort du globule → il rétrécit"
+        },
+        {
+          "t": "L'eau se déplace pour concentrer davantage le côté déjà concentré.",
+          "v": false,
+          "e": "FAUX : elle s'y rend pour le diluer, pas pour le concentrer. C'est le sens même du mouvement osmotique.",
+          "sourceQuote": "pour diluer le côté concentré = l'intérieur"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-122-iso-hypo-hypertonique.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la lecture du schéma des trois destins du globule rouge, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Il faut regarder la direction des flèches d'eau avant la forme de la cellule.",
+          "v": true,
+          "e": "VRAI. Le sens du flux se lit en premier : la déformation de la cellule n'en est que la conséquence.",
+          "sourceQuote": "Regarde la direction des flèches d'eau avant la forme de la cellule"
+        },
+        {
+          "t": "À gauche du schéma, toutes les flèches rentrent dans la cellule.",
+          "v": false,
+          "e": "FAUX : à gauche, il y a autant de flèches dans un sens que dans l'autre et elles s'annulent. C'est le cas isotonique, où le globule reste intact.",
+          "sourceQuote": "à gauche , autant de flèches dans un sens que dans l'autre, elles s'annulent"
+        },
+        {
+          "t": "Au milieu du schéma, toutes les flèches sortent, ce qui traduit une plasmolyse.",
+          "v": false,
+          "e": "FAUX : au milieu, toutes les flèches rentrent. C'est le cas hypotonique, avec turgescence puis hémolyse.",
+          "sourceQuote": "au milieu , toutes les flèches rentrent → turgescence puis hémolyse"
+        },
+        {
+          "t": "À droite du schéma, toutes les flèches rentrent, ce qui correspond à une solution hypotonique.",
+          "v": false,
+          "e": "FAUX : à droite, toutes les flèches sortent. C'est le cas hypertonique, avec plasmolyse.",
+          "sourceQuote": "à droite , toutes les flèches sortent → plasmolyse (hypertonique)"
+        },
+        {
+          "t": "La méthode conseillée est d'apprendre les trois cas séparément, par cœur.",
+          "v": false,
+          "e": "FAUX : la fiche déconseille explicitement cette approche. Il suffit de retenir le repère de 300 mOsm/L et la règle directrice, les trois cas se retrouvent seuls.",
+          "sourceQuote": "N'essaie pas de retenir trois cas séparés"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-122-iso-hypo-hypertonique.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Un énoncé affirme qu'une solution hypotonique fait rétrécir la cellule. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Cet énoncé a inversé le sens du mouvement de l'eau.",
+          "v": true,
+          "e": "VRAI. En hypotonie il y a moins de soluté dehors : le côté concentré est l'intérieur, donc l'eau entre.",
+          "sourceQuote": "a inversé le sens : hypotonique = moins de soluté dehors"
+        },
+        {
+          "t": "En réalité, l'eau entre et le globule gonfle.",
+          "v": true,
+          "e": "VRAI. C'est la conséquence directe de la règle directrice appliquée à une solution hypotonique.",
+          "sourceQuote": "l'eau ENTRE et le globule gonfle"
+        },
+        {
+          "t": "Un tel item doit être compté faux.",
+          "v": true,
+          "e": "VRAI. La fiche le tranche explicitement : cette proposition est fausse.",
+          "sourceQuote": "Cet item est FAUX"
+        },
+        {
+          "t": "Devant n'importe quelle solution, il suffit de comparer son osmolarité à 300 puis de décider de quel côté part l'eau.",
+          "v": true,
+          "e": "VRAI. C'est la méthode en deux temps : comparer, puis appliquer la règle. Le sort de la cellule s'en déduit.",
+          "sourceQuote": "compare son osmolarité à 300, décide de quel côté part l'eau"
+        },
+        {
+          "t": "Il n'y a que trois cas possibles, et un seul point de repère à mémoriser pour les retrouver.",
+          "v": true,
+          "e": "VRAI. Trois situations seulement, et un unique chiffre à retenir : c'est ce qui rend ce chapitre rapide à maîtriser.",
+          "sourceQuote": "il n'y a que trois cas possibles , et un seul point de repère à mémoriser"
+        }
+      ]
+    },
+
+    {
+      "fiche": "anatomie-123-duodenum-en-c-d1-d4.html",
+      "origine": "ecrite",
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la forme générale et à la situation du duodénum, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le duodénum est un tube court d'environ 25 cm.",
+          "v": true,
+          "e": "VRAI. C'est le segment le plus court de l'intestin grêle, très loin des mètres du jéjunum et de l'iléon.",
+          "sourceQuote": "Le duodénum est un tube court, 25 cm"
+        },
+        {
+          "t": "Il décrit un grand C ouvert vers la gauche.",
+          "v": true,
+          "e": "VRAI. L'ouverture du C est tournée vers la gauche : c'est par là que s'échappe le reste du pancréas.",
+          "sourceQuote": "qui décrit un grand C ouvert vers la gauche"
+        },
+        {
+          "t": "Ce C est enroulé autour de la tête du pancréas.",
+          "v": true,
+          "e": "VRAI. La tête du pancréas se loge à l'intérieur de la courbure : les deux organes sont indissociables.",
+          "sourceQuote": "enroulé autour de la tête du pancréas"
+        },
+        {
+          "t": "Le duodénum est entièrement intra-péritonéal.",
+          "v": false,
+          "e": "FAUX : il est rétropéritonéal, à l'exception de sa toute première portion. Cette exception porte sur une seule portion, pas sur l'organe entier.",
+          "sourceQuote": "il est rétropéritonéal — sauf sa toute première portion, D1"
+        },
+        {
+          "t": "Le duodénum ne figure pas parmi les organes rétropéritonéaux du moyen mnémotechnique SADRAP.",
+          "v": false,
+          "e": "FAUX : le D de ce moyen mnémotechnique désigne précisément le duodénum. C'est même la première fois que la règle du péritoine sert concrètement.",
+          "sourceQuote": "le D de SADRAP , c'est lui"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-123-duodenum-en-c-d1-d4.html",
+      "origine": "ecrite",
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à l'intestin grêle pris dans son ensemble, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Environ 95 % de l'absorption des nutriments y a lieu.",
+          "v": true,
+          "e": "VRAI. C'est ce qui en fait le segment-clé du tube digestif : presque toute l'absorption se joue là.",
+          "sourceQuote": "celui où 95 % de l'absorption des nutriments a lieu"
+        },
+        {
+          "t": "Il se divise en trois portions.",
+          "v": true,
+          "e": "VRAI. Duodénum, jéjunum et iléon : trois portions, dont la première est la plus courte et la plus particulière.",
+          "sourceQuote": "et se divise en 3 portions"
+        },
+        {
+          "t": "Il mesure environ 10 mètres chez le vivant.",
+          "v": false,
+          "e": "FAUX : chez le vivant, il mesure environ 6 à 7 mètres. Les 10 mètres ne se mesurent qu'après le décès.",
+          "sourceQuote": "Il mesure environ 6 à 7 mètres chez le vivant"
+        },
+        {
+          "t": "L'allongement observé après le décès s'explique par une contraction du tonus musculaire.",
+          "v": false,
+          "e": "FAUX : c'est un relâchement du tonus musculaire, et non une contraction. Une contraction raccourcirait le tube au lieu de l'allonger.",
+          "sourceQuote": "10 m après le décès, à cause du relâchement du tonus musculaire"
+        },
+        {
+          "t": "L'intestin grêle est un segment accessoire du tube digestif.",
+          "v": false,
+          "e": "FAUX : il en est au contraire le segment-clé, celui où se joue l'essentiel de l'absorption.",
+          "sourceQuote": "l' intestin grêle est le segment-clé de tout le tube digestif"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-123-duodenum-en-c-d1-d4.html",
+      "origine": "ecrite",
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la première portion du duodénum, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Elle mesure 5 cm et va du pylore au coude duodénal supérieur.",
+          "v": true,
+          "e": "VRAI. C'est le tout début du C : la bouillie acide y arrive dès l'ouverture du pylore.",
+          "sourceQuote": "D1 — 5 cm, horizontale. Du pylore au coude duodénal supérieur"
+        },
+        {
+          "t": "Elle est verticale descendante.",
+          "v": false,
+          "e": "FAUX : elle est horizontale. C'est la deuxième portion qui descend verticalement.",
+          "sourceQuote": "D1 — 5 cm, horizontale"
+        },
+        {
+          "t": "Elle est rétropéritonéale, comme le reste du duodénum.",
+          "v": false,
+          "e": "FAUX : c'est justement la seule portion intra-péritonéale. Tout le reste du duodénum est rétropéritonéal.",
+          "sourceQuote": "C'est la portion intra-péritonéale"
+        },
+        {
+          "t": "Le siège préférentiel des ulcères duodénaux est la deuxième portion.",
+          "v": false,
+          "e": "FAUX : les ulcères duodénaux siègent préférentiellement en D1, la première portion, celle qui reçoit directement le contenu acide de l'estomac.",
+          "sourceQuote": "D1 5 cm → ulcères duodénaux"
+        },
+        {
+          "t": "Le coude duodénal supérieur est le dernier virage du C.",
+          "v": false,
+          "e": "FAUX : c'est le premier virage, celui où le duodénum plonge vers le bas pour former la portion descendante.",
+          "sourceQuote": "le premier virage du C , là où il plonge vers le bas"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-123-duodenum-en-c-d1-d4.html",
+      "origine": "ecrite",
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la deuxième portion du duodénum, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Elle mesure 8 cm et elle est verticale descendante.",
+          "v": true,
+          "e": "VRAI. C'est la branche descendante du C, celle qui longe la tête du pancréas sur sa droite.",
+          "sourceQuote": "D2 — 8 cm, verticale descendante"
+        },
+        {
+          "t": "C'est là que débouchent le cholédoque et le canal de Wirsung.",
+          "v": true,
+          "e": "VRAI. Le canal venu du foie et celui venu du pancréas arrivent tous deux sur cette portion.",
+          "sourceQuote": "débouchent les canaux du foie (le cholédoque) et du pancréas (le canal de Wirsung)"
+        },
+        {
+          "t": "Ces canaux débouchent au niveau de l'ampoule de Vater, aussi appelée ampoule hépato-pancréatique.",
+          "v": true,
+          "e": "VRAI. Les deux noms désignent la même structure, petite saillie sur la paroi interne de cette portion.",
+          "sourceQuote": "au niveau de l' ampoule de Vater (ou ampoule hépato-pancréatique)"
+        },
+        {
+          "t": "C'est donc là que la bile et le suc pancréatique se déversent dans l'intestin.",
+          "v": true,
+          "e": "VRAI. Les deux sécrétions arrivent au même endroit, ce qui explique l'importance de ce repère.",
+          "sourceQuote": "la bile et le suc pancréatique se déversent dans l'intestin"
+        },
+        {
+          "t": "Un énoncé qui fait déboucher le cholédoque dans la première portion est exact.",
+          "v": false,
+          "e": "FAUX : le cholédoque débouche en D2, jamais en D1. C'est le second piège signalé en fin de fiche.",
+          "sourceQuote": "un QCM qui fait déboucher le cholédoque dans D1 est FAUX"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-123-duodenum-en-c-d1-d4.html",
+      "origine": "ecrite",
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à la troisième portion du duodénum, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Elle mesure 10 cm et passe devant la colonne vertébrale.",
+          "v": true,
+          "e": "VRAI. C'est le segment qui traverse la ligne médiane en repassant vers la gauche, plaqué en avant du rachis.",
+          "sourceQuote": "D3 — 10 cm, horizontale. Elle passe devant la colonne vertébrale"
+        },
+        {
+          "t": "Elle passe au-dessus de l'origine de l'artère mésentérique supérieure.",
+          "v": false,
+          "e": "FAUX : elle passe sous l'origine de cette artère. Ce rapport est ce qui la rend vulnérable à une compression.",
+          "sourceQuote": "sous l'origine de l' artère mésentérique supérieure (AMS)"
+        },
+        {
+          "t": "Elle est la plus courte des quatre portions.",
+          "v": false,
+          "e": "FAUX : avec 10 cm, c'est au contraire la plus longue des quatre. La plus courte est la dernière, qui ne mesure que 2 cm.",
+          "sourceQuote": "C'est la plus longue des quatre"
+        },
+        {
+          "t": "Elle est verticale ascendante.",
+          "v": false,
+          "e": "FAUX : elle est horizontale. La portion verticale ascendante est la quatrième, celle qui remonte vers l'angle de Treitz.",
+          "sourceQuote": "D3 — 10 cm, horizontale"
+        },
+        {
+          "t": "Elle passe derrière la colonne vertébrale.",
+          "v": false,
+          "e": "FAUX : elle passe devant la colonne. Aucun segment du tube digestif ne chemine en arrière du rachis.",
+          "sourceQuote": "Elle passe devant la colonne vertébrale"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-123-duodenum-en-c-d1-d4.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la quatrième portion du duodénum et à l'angle de Treitz, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Elle mesure 2 cm, elle est verticale ascendante et c'est la plus courte.",
+          "v": true,
+          "e": "VRAI. C'est la remontée finale du C, très brève, juste avant la reprise du grêle mobile.",
+          "sourceQuote": "D4 — 2 cm, verticale ascendante. La plus courte"
+        },
+        {
+          "t": "Elle se termine à l'angle de Treitz.",
+          "v": true,
+          "e": "VRAI. Cet angle marque la fin du duodénum et le début du jéjunum.",
+          "sourceQuote": "Elle se termine à l' angle de Treitz"
+        },
+        {
+          "t": "L'angle de Treitz est un point de repère chirurgical majeur.",
+          "v": true,
+          "e": "VRAI. C'est un repère fixe, donc fiable : le chirurgien peut s'y référer sans risque de le voir se déplacer.",
+          "sourceQuote": "un point de repère chirurgical majeur"
+        },
+        {
+          "t": "C'est à ce niveau que reprend l'intestin intra-péritonéal, avec le jéjunum.",
+          "v": true,
+          "e": "VRAI. On y quitte la zone fixe pour retrouver un intestin mobile, suspendu dans le sac péritonéal.",
+          "sourceQuote": "C'est là que reprend l'intestin intra-péritonéal — le jéjunum"
+        },
+        {
+          "t": "Après l'angle de Treitz, le tube digestif reste rétropéritonéal.",
+          "v": false,
+          "e": "FAUX : le jéjunum redevient intra-péritonéal juste après cet angle. C'est précisément ce qui fait du duodénum un organe fixe entre deux segments mobiles.",
+          "sourceQuote": "angle de Treitz → le jéjunum redevient intra-péritonéal"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-123-duodenum-en-c-d1-d4.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Un étudiant décrit le schéma du duodénum et les conséquences de sa fixité. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Sur le schéma, la tête du pancréas est entourée sur trois côtés par le C duodénal.",
+          "v": true,
+          "e": "VRAI. Elle se loge à l'intérieur de la courbure, cernée sur trois de ses quatre côtés.",
+          "sourceQuote": "la tête du pancréas est à l'intérieur du C, entourée sur trois côtés"
+        },
+        {
+          "t": "Le quatrième côté, à gauche, est ouvert.",
+          "v": true,
+          "e": "VRAI. C'est par cette ouverture que le reste du pancréas, corps et queue, s'échappe vers la gauche.",
+          "sourceQuote": "le quatrième côté, à gauche, est ouvert"
+        },
+        {
+          "t": "Étant rétropéritonéal, le duodénum est fixe et plaqué contre la paroi postérieure.",
+          "v": true,
+          "e": "VRAI. Rétropéritonéal signifie collé au fond : l'organe ne flotte pas et ne se déplace pas.",
+          "sourceQuote": "donc fixe , plaqué contre la paroi postérieure"
+        },
+        {
+          "t": "Cette fixité explique que l'angle de Treitz serve de repère fiable en chirurgie.",
+          "v": true,
+          "e": "VRAI. Un repère mobile serait inutilisable : c'est parce qu'il ne bouge pas qu'on peut s'y fier au bloc.",
+          "sourceQuote": "l' angle de Treitz serve de repère fiable en chirurgie"
+        },
+        {
+          "t": "Le duodénum est décrit comme un organe fixe situé entre deux segments mobiles.",
+          "v": true,
+          "e": "VRAI. En amont l'estomac, en aval le jéjunum : entre les deux, un segment amarré au fond de l'abdomen.",
+          "sourceQuote": "Un organe fixe entre deux segments mobiles"
+        }
+      ]
+    },
+
+    {
+      "fiche": "anatomie-124-jejunum-ileon-mesentere.html",
+      "origine": "ecrite",
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives aux deux segments mobiles de l'intestin grêle, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le jéjunum mesure environ 2,5 mètres.",
+          "v": true,
+          "e": "VRAI. Il forme la première moitié, un peu plus courte, des six mètres mobiles du grêle.",
+          "sourceQuote": "le jéjunum (~2,5 m) puis l' iléon (~3,5 m)"
+        },
+        {
+          "t": "L'iléon mesure à lui seul environ 6 mètres.",
+          "v": false,
+          "e": "FAUX : l'iléon mesure environ 3,5 mètres. Les 6 mètres correspondent au jéjunum et à l'iléon réunis.",
+          "sourceQuote": "Jéjunum ~2,5 m + iléon ~3,5 m = les 6 m mobiles du grêle"
+        },
+        {
+          "t": "Ces deux segments sont intra-péritonéaux.",
+          "v": true,
+          "e": "VRAI. Ils flottent dans le sac péritonéal, suspendus par leur méso : c'est ce qui les rend mobiles.",
+          "sourceQuote": "les 6 m mobiles du grêle, intra-péritonéaux"
+        },
+        {
+          "t": "L'angle de Treitz marque la fin de l'intestin intra-péritonéal.",
+          "v": false,
+          "e": "FAUX : il marque au contraire l'endroit où l'intestin intra-péritonéal reprend, après la partie fixe du duodénum.",
+          "sourceQuote": "marque l'endroit où reprend l'intestin intra-péritonéal"
+        },
+        {
+          "t": "Après l'angle de Treitz, on reste dans un tube court et fixe, plaqué derrière le péritoine.",
+          "v": false,
+          "e": "FAUX : c'est précisément ce qu'on quitte à ce niveau. On entre alors dans les parties mobiles du grêle.",
+          "sourceQuote": "on quitte le tube court et fixe, plaqué derrière le péritoine"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-124-jejunum-ileon-mesentere.html",
+      "origine": "ecrite",
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la notion de méso, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un méso est un repli du péritoine à deux feuillets.",
+          "v": true,
+          "e": "VRAI. Deux feuillets accolés : c'est cette structure en repli qui permet de suspendre un organe.",
+          "sourceQuote": "un repli du péritoine à deux feuillets"
+        },
+        {
+          "t": "Le méso rattache l'organe à la paroi.",
+          "v": true,
+          "e": "VRAI. Sans ce rattachement, l'organe n'aurait aucune amarre dans la cavité abdominale.",
+          "sourceQuote": "qui rattache l'organe à la paroi"
+        },
+        {
+          "t": "Un organe intra-péritonéal flotte dans le sac péritonéal, mobile et suspendu par un méso.",
+          "v": true,
+          "e": "VRAI. C'est la définition même : mobile, mais tenu. C'est ce qui distingue un organe intra-péritonéal d'un organe rétropéritonéal, collé au fond.",
+          "sourceQuote": "flotte dans le sac péritonéal, mobile, suspendu par un méso"
+        },
+        {
+          "t": "Le méso immobilise complètement l'organe qu'il suspend.",
+          "v": false,
+          "e": "FAUX : il tient sans immobiliser. Les anses gardent leur mobilité tout en restant chacune à sa place.",
+          "sourceQuote": "il tient sans immobiliser"
+        },
+        {
+          "t": "Le mésentère est le méso court qui suspend le duodénum.",
+          "v": false,
+          "e": "FAUX : le mésentère est un long méso, et il suspend le jéjunum et l'iléon. Le duodénum, lui, est fixe et rétropéritonéal.",
+          "sourceQuote": "le mésentère , le long méso qui suspend le jéjunum et l'iléon"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-124-jejunum-ileon-mesentere.html",
+      "origine": "ecrite",
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la géométrie du mésentère, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Sa racine ne mesure que 15 à 20 cm.",
+          "v": true,
+          "e": "VRAI. C'est la partie contre-intuitive : une amarre très courte suffit à tenir plusieurs mètres d'intestin.",
+          "sourceQuote": "Elle ne mesure que 15-20 cm"
+        },
+        {
+          "t": "Cette racine est fixée le long de la colonne, en oblique.",
+          "v": true,
+          "e": "VRAI. Elle suit un trajet oblique le long du rachis : c'est le seul point d'ancrage du grêle mobile.",
+          "sourceQuote": "elle est fixée le long de la colonne , en oblique"
+        },
+        {
+          "t": "Cette obliquité va du flanc gauche vers le flanc droit.",
+          "v": true,
+          "e": "VRAI. Le sens du trajet est à retenir : de haut à gauche vers le bas à droite, comme la disposition des anses elle-même.",
+          "sourceQuote": "du flanc gauche vers le flanc droit"
+        },
+        {
+          "t": "À partir de cette racine, le mésentère s'évase comme un éventail.",
+          "v": true,
+          "e": "VRAI. C'est l'image centrale de la fiche : une base étroite qui s'ouvre largement pour porter toutes les anses.",
+          "sourceQuote": "le mésentère s'évase comme un éventail"
+        },
+        {
+          "t": "Le bord libre du mésentère mesure lui aussi 15 à 20 cm.",
+          "v": false,
+          "e": "FAUX : le bord libre court le long du grêle et mesure 6 à 7 mètres. Ce sont bien les deux bords de l'éventail qui font tout le contraste.",
+          "sourceQuote": "le bord libre (celui qui court le long du grêle) fait 6-7 m"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-124-jejunum-ileon-mesentere.html",
+      "origine": "ecrite",
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux anses intestinales et au contenu du mésentère, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les vaisseaux et les nerfs du grêle circulent dans le mésentère.",
+          "v": true,
+          "e": "VRAI. L'éventail n'est pas qu'un support : c'est aussi le chemin par lequel les six mètres sont irrigués et innervés.",
+          "sourceQuote": "c'est dans le mésentère que circulent les vaisseaux et les nerfs du grêle"
+        },
+        {
+          "t": "Les six mètres de grêle sont tendus en ligne droite dans l'abdomen.",
+          "v": false,
+          "e": "FAUX : le tube se replie en boucles. Sans cela, il ne tiendrait évidemment pas dans la cavité abdominale.",
+          "sourceQuote": "Ces 6 mètres ne sont évidemment pas tendus en ligne droite"
+        },
+        {
+          "t": "Le mésentère n'est qu'un hamac, sans autre fonction.",
+          "v": false,
+          "e": "FAUX : il porte aussi les vaisseaux et les nerfs du grêle. Sa fonction ne se limite pas au soutien.",
+          "sourceQuote": "le mésentère n'est pas qu'un hamac"
+        },
+        {
+          "t": "Une fois suspendues, les anses perdent toute mobilité.",
+          "v": false,
+          "e": "FAUX : elles restent mobiles et flottent dans le sac péritonéal, tout en étant maintenues chacune à sa place.",
+          "sourceQuote": "Les anses restent mobiles — elles flottent dans le sac péritonéal"
+        },
+        {
+          "t": "Le nom donné aux boucles formées par le tube est celui de villosités.",
+          "v": false,
+          "e": "FAUX : ces boucles s'appellent des anses intestinales. C'est le terme employé tout au long de la description.",
+          "sourceQuote": "ces boucles portent le nom qu'on va employer tout le long — les anses intestinales"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-124-jejunum-ileon-mesentere.html",
+      "origine": "ecrite",
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à la limite entre le jéjunum et l'iléon, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "On ne distingue pas les deux segments par un point anatomique précis.",
+          "v": true,
+          "e": "VRAI. Aucune structure ne marque le passage : c'est ce qui déroute au premier abord.",
+          "sourceQuote": "on ne les distingue pas anatomiquement par un point précis"
+        },
+        {
+          "t": "Le passage de l'un à l'autre est une transition progressive.",
+          "v": true,
+          "e": "VRAI. Les caractères changent peu à peu le long du trajet, sans frontière franche.",
+          "sourceQuote": "C'est une transition progressive"
+        },
+        {
+          "t": "Il n'existe entre eux ni sphincter, ni valve, ni repère osseux.",
+          "v": true,
+          "e": "VRAI. Aucun des trois types de repère qu'on chercherait spontanément n'est présent à ce niveau.",
+          "sourceQuote": "Il n'y a ni sphincter, ni valve, ni repère osseux entre les deux"
+        },
+        {
+          "t": "Un sphincter marque le passage du jéjunum à l'iléon.",
+          "v": false,
+          "e": "FAUX : il n'y a pas de frontière anatomique nette à cet endroit. Le seul dispositif de ce type se trouve plus loin, à la sortie de l'iléon.",
+          "sourceQuote": "il n'y a pas de frontière anatomique nette"
+        },
+        {
+          "t": "Le repère le plus simple à retenir est la longueur exacte de chaque segment.",
+          "v": false,
+          "e": "FAUX : le repère le plus simple est la disposition des anses dans l'abdomen, pas une mesure. C'est ce repère topographique qui est attendu.",
+          "sourceQuote": "Le repère le plus simple à retenir, c'est la disposition des anses dans l'abdomen"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-124-jejunum-ileon-mesentere.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la disposition du jéjunum et de l'iléon dans l'abdomen, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le jéjunum occupe la moitié haute-gauche de la masse intestinale.",
+          "v": true,
+          "e": "VRAI. C'est le repère topographique attendu, bien plus utile qu'une mesure de longueur.",
+          "sourceQuote": "Moitié haute-gauche de la masse intestinale"
+        },
+        {
+          "t": "Ses anses sont plutôt horizontales.",
+          "v": true,
+          "e": "VRAI. Anses horizontales en haut à gauche : c'est la moitié de la comparaison à retenir.",
+          "sourceQuote": "jéjunum en haut à gauche, anses horizontales"
+        },
+        {
+          "t": "L'iléon occupe la moitié basse-droite et descend vers le pelvis et la fosse iliaque droite.",
+          "v": true,
+          "e": "VRAI. Il descend vers le bas et la droite, jusqu'à la fosse iliaque droite où il rejoint le gros intestin.",
+          "sourceQuote": "Moitié basse-droite ; descend vers le pelvis et la fosse iliaque droite (FID)"
+        },
+        {
+          "t": "Les anses de l'iléon sont plutôt verticales.",
+          "v": true,
+          "e": "VRAI. C'est l'autre moitié de la comparaison : verticales en bas à droite, horizontales en haut à gauche.",
+          "sourceQuote": "iléon en bas à droite, anses verticales, jusqu'à la FID"
+        },
+        {
+          "t": "Le jéjunum se projette sur le flanc gauche et la région ombilicale.",
+          "v": true,
+          "e": "VRAI. Ce sont les deux régions abdominales qui correspondent à sa position haute et gauche.",
+          "sourceQuote": "(flanc gauche + région ombilicale)"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-124-jejunum-ileon-mesentere.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Un étudiant révise la sortie de l'intestin grêle et le moyen mnémotechnique de la fiche. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'iléon s'abouche dans le premier segment du gros intestin.",
+          "v": true,
+          "e": "VRAI. C'est là que se termine le grêle et que commence le gros intestin.",
+          "sourceQuote": "le premier segment du gros intestin"
+        },
+        {
+          "t": "La valvule iléo-cæcale est aussi appelée valvule de Bauhin.",
+          "v": true,
+          "e": "VRAI. Les deux noms désignent la même structure : un énoncé peut employer l'un ou l'autre indifféremment.",
+          "sourceQuote": "aussi appelée valvule de Bauhin"
+        },
+        {
+          "t": "Cette valvule laisse passer le contenu dans les deux sens.",
+          "v": false,
+          "e": "FAUX : c'est une valve unidirectionnelle. Elle ne fonctionne que dans un seul sens, comme une porte anti-retour.",
+          "sourceQuote": "C'est une valve unidirectionnelle"
+        },
+        {
+          "t": "Elle empêche le contenu du grêle de passer vers le gros intestin.",
+          "v": false,
+          "e": "FAUX : le sens est inversé. Elle empêche le contenu du gros intestin de remonter vers le grêle, pas l'inverse.",
+          "sourceQuote": "elle empêche le contenu du gros intestin de remonter vers le grêle"
+        },
+        {
+          "t": "Dans le moyen mnémotechnique de la fiche, le jéjunum est décrit avec des anses verticales.",
+          "v": false,
+          "e": "FAUX : le jéjunum y est décrit avec des anses horizontales, en haut à gauche. Les anses verticales sont celles de l'iléon.",
+          "sourceQuote": "J éjunum (~2,5 m, anses horizontales , haut-gauche)"
+        }
+      ]
+    }
+  ]
+}

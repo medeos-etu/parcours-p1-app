@@ -1,0 +1,1351 @@
+{
+  "matiere": "mixte",
+  "chapitre": 0,
+  "note": "socle 1-7 — fiches sans QCM, ordre du Parcours",
+  "questions": [
+    {
+      "fiche": "physique-084-ud-a-partir-de-dr.html",
+      "origine": "ecrite",
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la relation qui donne le potentiel de Donnan à partir de D_r, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La relation U_d (mV) ≈ 60 × log(D_r) est énoncée pour des ions monovalents à 37 °C.",
+          "v": true,
+          "e": "VRAI. Les deux conditions sont indiquées avec la formule : ions monovalents et température de 37 °C. Hors de ces conditions, le facteur 60 n'est plus valable tel quel.",
+          "sourceQuote": "(ions monovalents, 37 °C)"
+        },
+        {
+          "t": "Elle découle de U_d = 60 × log(C₁/C₂), puisque D_r est justement le rapport des concentrations.",
+          "v": true,
+          "e": "VRAI. Ce n'est pas une nouvelle formule : c'est la même expression, réécrite avec D_r à la place du rapport des concentrations.",
+          "sourceQuote": "Découle directement de U_d = 60 × log(C₁/C₂)"
+        },
+        {
+          "t": "Le résultat obtenu par cette relation s'exprime directement en volts.",
+          "v": false,
+          "e": "FAUX : après la multiplication par 60, on obtient directement un potentiel en millivolts, pas en volts.",
+          "sourceQuote": "Tu obtiens directement U_d en millivolts"
+        },
+        {
+          "t": "Une fois D_r calculé, il faut malgré tout repasser par les concentrations détaillées de chaque compartiment.",
+          "v": false,
+          "e": "FAUX : c'est tout l'intérêt du passage par D_r — le potentiel se lit sans revenir aux concentrations détaillées.",
+          "sourceQuote": "le potentiel de Donnan se lit sans repasser par les concentrations détaillées"
+        },
+        {
+          "t": "D_r est le facteur d'échelle entre les deux compartiments.",
+          "v": true,
+          "e": "VRAI. D_r a été défini comme le facteur d'échelle entre les deux compartiments : c'est cette grandeur unique qui résume l'asymétrie.",
+          "sourceQuote": "le facteur d'échelle entre les deux compartiments"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-084-ud-a-partir-de-dr.html",
+      "origine": "ecrite",
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux trois gestes qui conduisent de D_r au potentiel, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le premier geste ne demande aucun calcul nouveau : D_r a déjà été obtenu à la fin du tableau.",
+          "v": true,
+          "e": "VRAI. Le premier geste consiste seulement à récupérer D_r, déjà calculé à la fin du tableau : il n'y a rien de nouveau à chercher.",
+          "sourceQuote": "Il est déjà calculé à la fin du tableau Sudoku"
+        },
+        {
+          "t": "Le deuxième geste consiste à prendre le logarithme de D_r.",
+          "v": true,
+          "e": "VRAI. Deuxième geste : le logarithme décimal de D_r. C'est l'étape qui compresse l'asymétrie entre les deux compartiments.",
+          "sourceQuote": "Prends son logarithme décimal."
+        },
+        {
+          "t": "Ce logarithme se prend en base 10, jamais le logarithme népérien.",
+          "v": true,
+          "e": "VRAI. C'est bien le logarithme décimal, en base 10, et jamais le ln : la confusion change complètement le résultat.",
+          "sourceQuote": "base 10, jamais le ln"
+        },
+        {
+          "t": "Le troisième geste est une multiplication par 60.",
+          "v": true,
+          "e": "VRAI. Troisième et dernier geste : multiplier le logarithme obtenu par 60, ce qui donne le potentiel en millivolts.",
+          "sourceQuote": "Multiplie par 60."
+        },
+        {
+          "t": "C'est le passage au logarithme décimal qui fait apparaître le facteur 60.",
+          "v": true,
+          "e": "VRAI. Le 60 n'est pas arbitraire : il vient précisément du choix du logarithme décimal plutôt que du logarithme népérien.",
+          "sourceQuote": "c'est justement ce passage au log décimal qui fait apparaître le 60"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-084-ud-a-partir-de-dr.html",
+      "origine": "ecrite",
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au mémo des logarithmes usuels donné pour calculer sans calculatrice, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "log(2) vaut environ 0,30, et c'est la valeur présentée comme la plus importante à connaître.",
+          "v": true,
+          "e": "VRAI. log(2) ≈ 0,30 est signalée comme la valeur la plus importante du mémo : c'est d'elle que se déduisent log(4) et log(5).",
+          "sourceQuote": "log(2) ≈ 0,30 ← le plus important"
+        },
+        {
+          "t": "log(1) vaut 1.",
+          "v": false,
+          "e": "FAUX : log(1) vaut 0. C'est log(10) qui vaut 1.",
+          "sourceQuote": "log(1) = 0 · log(2)"
+        },
+        {
+          "t": "log(3) vaut environ 0,60.",
+          "v": false,
+          "e": "FAUX : log(3) vaut environ 0,48. La valeur 0,60 est celle de log(4).",
+          "sourceQuote": "log(3) ≈ 0,48 · log(4)"
+        },
+        {
+          "t": "log(4) se retrouve en écrivant log(10/2), c'est-à-dire 1 − log(2).",
+          "v": false,
+          "e": "FAUX : c'est log(5) qui s'écrit log(10/2) = 1 − log(2). log(4) se retrouve en écrivant log(2²) = 2 × log(2).",
+          "sourceQuote": "log(5) = log(10/2) = 1 − log(2)"
+        },
+        {
+          "t": "log(10) vaut environ 0,70.",
+          "v": false,
+          "e": "FAUX : log(10) vaut exactement 1. La valeur 0,70 est celle de log(5).",
+          "sourceQuote": "log(2) ≈ 0,70 · log(10) = 1"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-084-ud-a-partir-de-dr.html",
+      "origine": "ecrite",
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux valeurs de U_d données pour quelques D_r usuels chez un ion monovalent, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Pour D_r = 1, U_d vaut 0 mV : il n'y a pas d'effet Donnan.",
+          "v": true,
+          "e": "VRAI. Un D_r égal à 1 signifie que les deux compartiments sont au même niveau : le logarithme vaut 0, donc le potentiel aussi.",
+          "sourceQuote": "0 mV (pas de Donnan)"
+        },
+        {
+          "t": "Pour D_r = 2, U_d vaut 18 mV.",
+          "v": true,
+          "e": "VRAI. log(2) ≈ 0,30, et 60 × 0,30 donne bien 18 mV.",
+          "sourceQuote": "60 × 0,30 = 18 mV"
+        },
+        {
+          "t": "Pour D_r = 4, U_d vaut 36 mV.",
+          "v": true,
+          "e": "VRAI. log(4) ≈ 0,60, et 60 × 0,60 donne 36 mV — soit le double de la valeur obtenue pour D_r = 2.",
+          "sourceQuote": "60 × 0,60 = 36 mV"
+        },
+        {
+          "t": "Pour D_r = 10, U_d vaut 6 mV.",
+          "v": false,
+          "e": "FAUX : pour D_r = 10, le logarithme vaut 1 et le potentiel vaut 60 mV, pas 6 mV.",
+          "sourceQuote": "4 → 36 mV · 10 → 60 mV"
+        },
+        {
+          "t": "Chez un ion monovalent à 37 °C, multiplier D_r par 10 fait gagner 60 mV.",
+          "v": true,
+          "e": "VRAI. C'est le repère de calcul mental à retenir : une décade de D_r vaut 60 mV pour un ion monovalent à 37 °C.",
+          "sourceQuote": "60 mV par décade à 37 °C pour un monovalent"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-084-ud-a-partir-de-dr.html",
+      "origine": "ecrite",
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au sens du potentiel de Donnan, c'est-à-dire au compartiment qui est le plus positif, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "C'est le compartiment qui contient les protéinates qui est le plus positif.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse — le compartiment le plus positif est celui qui ne contient pas de protéinates.",
+          "sourceQuote": "c'est le compartiment sans protéinates qui est le plus positif"
+        },
+        {
+          "t": "L'écart de potentiel entre les deux compartiments vaut U_d millivolts.",
+          "v": true,
+          "e": "VRAI. La valeur calculée, U_d, est précisément l'écart en millivolts entre les deux compartiments.",
+          "sourceQuote": "qui est le plus positif, de U_d millivolts"
+        },
+        {
+          "t": "Pour D_r = 2, le compartiment B est environ 18 mV plus positif que le compartiment A.",
+          "v": true,
+          "e": "VRAI. C'est l'exemple donné : avec D_r = 2, on obtient 18 mV, et c'est le compartiment B qui est le plus positif.",
+          "sourceQuote": "le compartiment B est donc ~18 mV plus positif que A"
+        },
+        {
+          "t": "Le sens de lecture du potentiel change d'un exercice à l'autre.",
+          "v": false,
+          "e": "FAUX : le sens se lit toujours de la même façon, ce qui en fait un repère fiable — c'est le compartiment sans protéinates qui est le plus positif.",
+          "sourceQuote": "Le sens se lit toujours pareil"
+        },
+        {
+          "t": "Pour D_r = 1, un des deux compartiments reste malgré tout plus positif que l'autre.",
+          "v": false,
+          "e": "FAUX : pour D_r = 1, le potentiel vaut 0 mV. Il n'y a alors aucun écart entre les deux compartiments.",
+          "sourceQuote": "Repères : D_r = 1 → 0 mV · 2 → 18 mV"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-084-ud-a-partir-de-dr.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives au potentiel de Donnan lorsque l'ion étudié n'est pas monovalent, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Pour un ion de valence Z différente de 1, on divise le facteur 60 par Z.",
+          "v": true,
+          "e": "VRAI. La correction est simple : le facteur 60 devient 60/Z, où Z est la valence de l'ion considéré.",
+          "sourceQuote": "divise simplement par Z"
+        },
+        {
+          "t": "La relation devient alors U_d ≈ (60/Z) × log(D_r).",
+          "v": true,
+          "e": "VRAI. C'est la forme générale : seule la valence de l'ion vient modifier le facteur devant le logarithme.",
+          "sourceQuote": "U_d ≈ (60/Z) × log(D_r)"
+        },
+        {
+          "t": "Pour un ion divalent comme Ca²⁺, une décade de D_r ne vaut plus que 30 mV.",
+          "v": true,
+          "e": "VRAI. Avec Z = 2, le facteur passe de 60 à 30 : chaque décade de D_r ne vaut donc plus que la moitié.",
+          "sourceQuote": "chaque décade de D_r ne vaut donc plus que 30 mV"
+        },
+        {
+          "t": "Le réflexe à avoir avant de multiplier est de regarder la valence de l'ion sur lequel on travaille.",
+          "v": true,
+          "e": "VRAI. C'est le réflexe indiqué : vérifier la valence avant de multiplier évite d'appliquer un 60 qui ne convient pas.",
+          "sourceQuote": "avant de multiplier, regarde la valence de l'ion"
+        },
+        {
+          "t": "Garder le facteur 60 tel quel pour un ion divalent est la bonne méthode.",
+          "v": false,
+          "e": "FAUX : c'est justement le piège signalé. Pour un divalent, le facteur est 60/Z, soit 30, et non 60.",
+          "sourceQuote": "Garder le 60 tel quel pour un ion divalent"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-084-ud-a-partir-de-dr.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à ce que la relation en D_r apporte par rapport au tableau de départ, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une fois D_r connu, on obtient U_d sans toucher au reste du tableau.",
+          "v": true,
+          "e": "VRAI. C'est l'économie que permet D_r : il n'est plus nécessaire de reprendre les concentrations ligne par ligne.",
+          "sourceQuote": "sans toucher au reste du tableau"
+        },
+        {
+          "t": "Le repère de calcul mental à garder est de 60 mV par décade, et la moitié pour un ion divalent.",
+          "v": true,
+          "e": "VRAI. Ce repère résume toute la fiche : 60 mV par décade pour un monovalent à 37 °C, la moitié pour un divalent.",
+          "sourceQuote": "la moitié pour un divalent"
+        },
+        {
+          "t": "Prendre le logarithme décimal étale l'asymétrie : un facteur 10 devient 10, un facteur 100 devient 100.",
+          "v": false,
+          "e": "FAUX : le logarithme compresse l'asymétrie au lieu de l'étaler — un facteur 10 devient 1, un facteur 100 devient 2.",
+          "sourceQuote": "un facteur 10 → 1, un facteur 100 → 2"
+        },
+        {
+          "t": "Écrire la relation avec D_r change la valeur du potentiel obtenu par rapport à U_d = 60 × log(C₁/C₂).",
+          "v": false,
+          "e": "FAUX : c'est exactement la même expression, simplement écrite avec D_r à la place du rapport des concentrations. Le résultat est identique.",
+          "sourceQuote": "c'est U_d = 60 × log(C₁/C₂), écrit avec D_r à la place du rapport"
+        },
+        {
+          "t": "Le mémo des logarithmes est présenté comme un outil utile pour les calculs faits avec une calculatrice.",
+          "v": false,
+          "e": "FAUX : il sert précisément pour les calculs faits SANS calculatrice — c'est là que ces valeurs mémorisées deviennent indispensables.",
+          "sourceQuote": "(calculs sans calculatrice au concours)"
+        }
+      ]
+    },
+
+    {
+      "fiche": "anatomie-085-position-du-coeur-mediastin-base-apex.html",
+      "origine": "ecrite",
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la situation du cœur dans le thorax, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le cœur est logé dans le médiastin moyen.",
+          "v": true,
+          "e": "VRAI. Le médiastin moyen est le compartiment qui accueille le cœur : c'est le « couloir » central de la cage thoracique.",
+          "sourceQuote": "Le cœur est logé dans le médiastin moyen"
+        },
+        {
+          "t": "Ce compartiment correspond à la partie centrale du thorax, en arrière du sternum.",
+          "v": true,
+          "e": "VRAI. Le médiastin moyen occupe la partie centrale du thorax, derrière le sternum : c'est un repère à poser avant toute lecture de coupe.",
+          "sourceQuote": "la partie centrale du thorax, derrière le sternum"
+        },
+        {
+          "t": "Le cœur y est placé entre les deux poumons.",
+          "v": true,
+          "e": "VRAI. Les poumons encadrent le cœur de part et d'autre : il occupe l'espace central qu'ils laissent libre.",
+          "sourceQuote": "entre les deux poumons"
+        },
+        {
+          "t": "Le cœur occupe ce compartiment central en y étant parfaitement centré.",
+          "v": false,
+          "e": "FAUX : il occupe bien le compartiment central, mais il n'y est pas centré — c'est précisément la nouveauté de cette fiche.",
+          "sourceQuote": "le cœur occupe bien ce compartiment central, mais il n'y est pas centré"
+        },
+        {
+          "t": "Sa position dans la cage thoracique est asymétrique.",
+          "v": true,
+          "e": "VRAI. Le cœur penche : sa position est asymétrique, ce qui explique tout le reste de la fiche.",
+          "sourceQuote": "Sa position dans la cage thoracique est asymétrique"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-085-position-du-coeur-mediastin-base-apex.html",
+      "origine": "ecrite",
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la répartition du cœur de part et d'autre de la ligne médiane, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le cœur se répartit pour environ deux tiers à gauche de la ligne médiane et un tiers à droite.",
+          "v": true,
+          "e": "VRAI. C'est le premier des trois repères de position : environ 2/3 à gauche, 1/3 à droite.",
+          "sourceQuote": "2/3 à gauche de la ligne médiane, 1/3 à droite"
+        },
+        {
+          "t": "Le cœur est situé entièrement à gauche de la ligne médiane.",
+          "v": false,
+          "e": "FAUX : il n'est ni centré, ni entièrement à gauche. Il déborde nettement à gauche tout en gardant une part à droite.",
+          "sourceQuote": "ni centré, ni entièrement à gauche"
+        },
+        {
+          "t": "Le cœur ne garde aucune masse à droite de la ligne médiane.",
+          "v": false,
+          "e": "FAUX : un tiers de sa masse reste bien à droite de la ligne médiane.",
+          "sourceQuote": "tout en gardant un tiers de sa masse à droite"
+        },
+        {
+          "t": "Le cœur penche à droite.",
+          "v": false,
+          "e": "FAUX : il penche à gauche. C'est d'ailleurs pour cela qu'on entend les battements mieux de ce côté.",
+          "sourceQuote": "Il penche à gauche."
+        },
+        {
+          "t": "Sur une vue antérieure du thorax, la ligne médiane est le dernier repère à poser.",
+          "v": false,
+          "e": "FAUX : c'est au contraire le premier repère à poser — c'est lui qui rend visible d'un coup d'œil la répartition 2/3 - 1/3.",
+          "sourceQuote": "D'abord la ligne médiane en pointillés"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-085-position-du-coeur-mediastin-base-apex.html",
+      "origine": "ecrite",
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la base du cœur, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La base du cœur correspond à sa partie large, sa « tête ».",
+          "v": true,
+          "e": "VRAI. La base est la partie large de l'organe, comparée à sa tête — c'est ce qui la distingue de la pointe.",
+          "sourceQuote": "c'est sa « tête » (la partie large)"
+        },
+        {
+          "t": "Elle est orientée vers le haut.",
+          "v": true,
+          "e": "VRAI. La base est le pôle supérieur du cœur : elle est orientée vers le haut, à l'inverse de ce que le mot suggère.",
+          "sourceQuote": "elle est orientée vers le haut"
+        },
+        {
+          "t": "C'est elle qui reçoit les gros vaisseaux.",
+          "v": true,
+          "e": "VRAI. Les gros vaisseaux arrivent et partent par la base, en haut : c'est le repère qui permet de l'identifier sur un schéma.",
+          "sourceQuote": "C'est elle qui reçoit les gros vaisseaux"
+        },
+        {
+          "t": "Les gros vaisseaux qu'elle reçoit se limitent aux veines caves.",
+          "v": false,
+          "e": "FAUX : la liste comprend aussi l'aorte ainsi que l'artère et les veines pulmonaires — les veines caves n'en sont qu'une partie.",
+          "sourceQuote": "(aorte, veines caves, artère et veines pulmonaires"
+        },
+        {
+          "t": "Le mot « base » doit se comprendre ici comme la partie inférieure du cœur.",
+          "v": false,
+          "e": "FAUX : c'est exactement le piège du mot. Contrairement au langage courant, la base du cœur est en HAUT ; c'est l'apex qui est en bas.",
+          "sourceQuote": "la base du cœur est en HAUT"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-085-position-du-coeur-mediastin-base-apex.html",
+      "origine": "ecrite",
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à l'apex du cœur, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'apex correspond à la pointe du cœur.",
+          "v": true,
+          "e": "VRAI. Apex est le nom anatomique de la pointe du cœur, par opposition à la base qui en est la partie large.",
+          "sourceQuote": "c'est la pointe du cœur, en bas"
+        },
+        {
+          "t": "Il se situe en bas.",
+          "v": true,
+          "e": "VRAI. L'apex est le pôle inférieur du cœur : c'est le deuxième repère à poser après la base.",
+          "sourceQuote": "L'apex, en bas."
+        },
+        {
+          "t": "Il est orienté vers la gauche.",
+          "v": true,
+          "e": "VRAI. L'apex pointe vers la gauche, ce qui explique que les battements s'entendent mieux de ce côté.",
+          "sourceQuote": "Il est orienté vers la gauche"
+        },
+        {
+          "t": "Il est également orienté vers l'avant et vers le bas.",
+          "v": true,
+          "e": "VRAI. L'apex regarde dans trois directions à la fois : la gauche, l'avant et le bas.",
+          "sourceQuote": "l'avant et le bas — trois directions à la fois"
+        },
+        {
+          "t": "C'est cette triple orientation qui donne au cœur son air « posé de travers ».",
+          "v": true,
+          "e": "VRAI. Gauche, avant et bas simultanément : voilà pourquoi le cœur paraît posé de travers dans le thorax.",
+          "sourceQuote": "c'est cette triple orientation qui donne au cœur"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-085-position-du-coeur-mediastin-base-apex.html",
+      "origine": "ecrite",
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au choc de pointe, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le choc de pointe correspond à la pointe du cœur qui tape contre la paroi thoracique.",
+          "v": true,
+          "e": "VRAI. C'est bien la pointe du cœur qui vient frapper la paroi thoracique à chaque battement : ce contact donne le choc de pointe.",
+          "sourceQuote": "tape contre la paroi thoracique"
+        },
+        {
+          "t": "On le repère au 5e espace intercostal droit.",
+          "v": false,
+          "e": "FAUX : le repère est le 5e espace intercostal GAUCHE, conformément à l'orientation de l'apex vers la gauche.",
+          "sourceQuote": "5 e espace intercostal gauche"
+        },
+        {
+          "t": "Il s'ausculte, mais ne se palpe pas.",
+          "v": false,
+          "e": "FAUX : le choc de pointe se palpe en clinique. C'est même ce qui en fait un repère simple, utilisable sur un patient.",
+          "sourceQuote": "qu'on palpe en clinique"
+        },
+        {
+          "t": "C'est l'orientation de l'apex qui explique qu'on entende les battements mieux à gauche.",
+          "v": true,
+          "e": "VRAI. Puisque l'apex pointe vers la gauche et vers l'avant, c'est de ce côté que le cœur touche la paroi et que les battements s'entendent le mieux.",
+          "sourceQuote": "on entend les battements mieux à gauche"
+        },
+        {
+          "t": "C'est la base du cœur qui donne le choc de pointe.",
+          "v": false,
+          "e": "FAUX : c'est l'apex, en bas, qui donne le choc de pointe. La base, en haut, reçoit les gros vaisseaux.",
+          "sourceQuote": "C'est l'apex qui donne le choc de pointe"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-085-position-du-coeur-mediastin-base-apex.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives au moyen mnémotechnique proposé et au piège classique sur les deux pôles du cœur, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le mnémo « la main sur le cœur » sert à retenir l'orientation de l'apex.",
+          "v": true,
+          "e": "VRAI. Poser la main sur le cœur, c'est poser la main là où pointe l'apex : à gauche, en avant et en bas.",
+          "sourceQuote": "Le mnémo — la main sur le cœur"
+        },
+        {
+          "t": "Dans le langage courant, une base est en bas : c'est ce qui rend le mot trompeur en anatomie du cœur.",
+          "v": true,
+          "e": "VRAI. Le mot base induit en erreur parce que l'usage courant le place en bas, alors qu'ici c'est l'inverse.",
+          "sourceQuote": "dans le langage courant, une base est en bas"
+        },
+        {
+          "t": "Une proposition qui place la base du cœur en bas est exacte.",
+          "v": false,
+          "e": "FAUX : placer la base du cœur en bas est faux. La base est en haut, l'apex en bas.",
+          "sourceQuote": "Un QCM qui place la base du cœur en bas est FAUX"
+        },
+        {
+          "t": "Sur la vue antérieure du thorax, la base apparaît en haut, large, et c'est d'elle que sortent les gros vaisseaux.",
+          "v": true,
+          "e": "VRAI. Sur cette vue, la base se reconnaît à trois signes : en haut, large, et point de départ des gros vaisseaux.",
+          "sourceQuote": "en haut, large, d'où sortent les gros vaisseaux"
+        },
+        {
+          "t": "Sur cette même vue, la flèche de l'apex part vers la droite et vers le haut.",
+          "v": false,
+          "e": "FAUX : la flèche de l'apex part vers la gauche, le bas et l'avant — jamais vers la droite ni vers le haut.",
+          "sourceQuote": "qui part vers la gauche, le bas et l'avant"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-085-position-du-coeur-mediastin-base-apex.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la méthode de lecture d'une coupe du thorax et aux notions rappelées en ouverture, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Devant une coupe du thorax, on pose d'abord la ligne médiane, puis les deux pôles du cœur.",
+          "v": true,
+          "e": "VRAI. C'est la méthode proposée : toujours les mêmes repères en premier, la ligne médiane puis la base et l'apex.",
+          "sourceQuote": "pose toujours les mêmes repères en premier : la ligne médiane"
+        },
+        {
+          "t": "Une fois ces repères posés, il reste impossible de savoir dans quel sens l'organe est orienté.",
+          "v": false,
+          "e": "FAUX : c'est justement l'inverse. Ces repères posés, on sait dans quel sens l'organe est orienté et on peut lire cavités, valves et vaisseaux sans se tromper de côté.",
+          "sourceQuote": "tu sais dans quel sens l'organe est orienté"
+        },
+        {
+          "t": "En ouverture, la fiche rappelle qu'un vaisseau se définit par la couleur du sang qu'il transporte.",
+          "v": false,
+          "e": "FAUX : un vaisseau se définit par la direction du flux, jamais par la couleur du sang qu'il transporte.",
+          "sourceQuote": "un vaisseau se définit par la direction du flux"
+        },
+        {
+          "t": "Le rappel d'ouverture présente le cœur comme deux organes formant une seule pompe.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse — un seul organe, deux pompes, deux circulations.",
+          "sourceQuote": "1 organe = 2 pompes = 2 circulations"
+        },
+        {
+          "t": "Sur la vue antérieure, les poumons ne sont représentés que du côté gauche.",
+          "v": false,
+          "e": "FAUX : il y a un poumon de chaque côté, le cœur occupant l'espace central entre les deux.",
+          "sourceQuote": "un poumon de chaque côté"
+        }
+      ]
+    },
+
+    {
+      "fiche": "anatomie-086-pericarde-double-enveloppe.html",
+      "origine": "ecrite",
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à l'enveloppe qui entoure le cœur et à ses rôles, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le cœur flotte librement dans le thorax.",
+          "v": false,
+          "e": "FAUX : le cœur n'est pas libre dans le thorax. Il est emballé dans une enveloppe qui le maintient en place.",
+          "sourceQuote": "Le cœur n'est pas « libre » dans le thorax"
+        },
+        {
+          "t": "Le péricarde est une enveloppe à deux couches : une couche fibreuse, puis une couche séreuse.",
+          "v": true,
+          "e": "VRAI. Deux couches, dans cet ordre en allant de l'extérieur vers l'intérieur : d'abord fibreuse, puis séreuse.",
+          "sourceQuote": "une enveloppe à 2 couches appelée le péricarde"
+        },
+        {
+          "t": "Le péricarde est à la fois un sac protecteur et un système de glissement.",
+          "v": true,
+          "e": "VRAI. Ces deux fonctions vont ensemble : tenir le cœur en place, et lui permettre de bouger sans frotter.",
+          "sourceQuote": "à la fois un sac protecteur et un système de glissement"
+        },
+        {
+          "t": "Le péricarde n'a qu'un rôle de protection, sans fonction mécanique de glissement.",
+          "v": false,
+          "e": "FAUX : le péricarde a deux rôles. Le glissement en est un à part entière, assuré par le liquide entre les feuillets séreux.",
+          "sourceQuote": "Le péricarde a 2 rôles"
+        },
+        {
+          "t": "Le péricarde permet au cœur de battre en frottant contre les structures voisines.",
+          "v": false,
+          "e": "FAUX : son rôle est exactement d'éviter ce frottement — le cœur bat SANS frotter contre les structures voisines.",
+          "sourceQuote": "pour que le cœur puisse battre sans frotter"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-086-pericarde-double-enveloppe.html",
+      "origine": "ecrite",
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives au péricarde fibreux, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "C'est la première couche rencontrée en allant de l'extérieur vers l'intérieur.",
+          "v": true,
+          "e": "VRAI. Le péricarde fibreux est la couche la plus externe : c'est elle qu'on traverse en premier.",
+          "sourceQuote": "Le péricarde fibreux. (1 re couche)"
+        },
+        {
+          "t": "Il est fait de tissu conjonctif dense et résistant.",
+          "v": true,
+          "e": "VRAI. C'est un sac de tissu conjonctif dense et résistant : cette nature explique à la fois son rôle de maintien et sa rigidité.",
+          "sourceQuote": "Un sac de tissu conjonctif dense et résistant"
+        },
+        {
+          "t": "Il maintient le cœur en place dans le médiastin.",
+          "v": true,
+          "e": "VRAI. C'est lui qui empêche le cœur de se déplacer dans le médiastin : sans lui, l'organe ne serait pas amarré.",
+          "sourceQuote": "Il maintient le cœur en place dans le médiastin"
+        },
+        {
+          "t": "Il empêche le cœur de se distendre exagérément.",
+          "v": true,
+          "e": "VRAI. Deuxième conséquence de sa résistance : il fixe une limite au remplissage du cœur.",
+          "sourceQuote": "empêche de se distendre exagérément"
+        },
+        {
+          "t": "Il est souple et se distend facilement.",
+          "v": false,
+          "e": "FAUX : il est rigide et ne peut pas se distendre — c'est précisément ce qui rend une accumulation de liquide dangereuse.",
+          "sourceQuote": "le péricarde fibreux — qui est rigide — ne peut pas se distendre"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-086-pericarde-double-enveloppe.html",
+      "origine": "ecrite",
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à l'ordre des structures traversées autour du cœur, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "On rencontre d'abord le péricarde fibreux, épais et résistant.",
+          "v": true,
+          "e": "VRAI. C'est la première bande de la coupe, la plus externe et la plus épaisse.",
+          "sourceQuote": "le péricarde fibreux, épais et résistant"
+        },
+        {
+          "t": "Vient ensuite le feuillet pariétal, mince, plaqué contre lui.",
+          "v": true,
+          "e": "VRAI. Le feuillet pariétal est la deuxième structure : mince, il tapisse la face interne du fibreux.",
+          "sourceQuote": "le feuillet pariétal, mince, plaqué contre lui"
+        },
+        {
+          "t": "Puis vient la cavité péricardique et son film de liquide.",
+          "v": true,
+          "e": "VRAI. Entre les deux feuillets se trouve la cavité péricardique, occupée par un mince film de liquide.",
+          "sourceQuote": "la cavité péricardique et son film de liquide"
+        },
+        {
+          "t": "Enfin le feuillet viscéral, ou épicarde, collé au cœur.",
+          "v": true,
+          "e": "VRAI. C'est la dernière structure du péricarde, appliquée directement sur le cœur.",
+          "sourceQuote": "le feuillet viscéral (l'épicarde), collé au cœur"
+        },
+        {
+          "t": "Cette lecture doit toujours se faire de l'extérieur vers l'intérieur.",
+          "v": true,
+          "e": "VRAI. C'est le sens de lecture recommandé : il donne l'ordre des couches sans avoir à les apprendre par cœur.",
+          "sourceQuote": "parcours-les toujours de l'extérieur vers l'intérieur"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-086-pericarde-double-enveloppe.html",
+      "origine": "ecrite",
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la cavité péricardique et au liquide qu'elle contient, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La cavité péricardique est située entre le péricarde fibreux et le feuillet pariétal.",
+          "v": false,
+          "e": "FAUX : elle est située entre les DEUX FEUILLETS du séreux, pariétal et viscéral. Le pariétal, lui, est plaqué contre le fibreux, sans espace entre eux.",
+          "sourceQuote": "Entre les deux feuillets, un mince espace"
+        },
+        {
+          "t": "Elle contient environ 200 mL de liquide.",
+          "v": false,
+          "e": "FAUX : le volume est d'environ 20 mL. C'est un mince film, pas une poche.",
+          "sourceQuote": "~20 mL de liquide"
+        },
+        {
+          "t": "Ce liquide sert de lubrifiant et permet au cœur de glisser sans friction.",
+          "v": true,
+          "e": "VRAI. Ce film de liquide est le lubrifiant du système : c'est lui qui autorise le glissement à chaque battement.",
+          "sourceQuote": "Ce liquide sert de lubrifiant"
+        },
+        {
+          "t": "La cavité péricardique compte comme une couche supplémentaire du péricarde.",
+          "v": false,
+          "e": "FAUX : ce n'est pas une couche mais un espace, défini par ce qui l'encadre — les deux feuillets du séreux.",
+          "sourceQuote": "tu ne la prendras jamais pour une couche de plus"
+        },
+        {
+          "t": "Dans l'analogie du patin à glace, le rôle du liquide est joué par le métal de la lame.",
+          "v": false,
+          "e": "FAUX : ce n'est pas le métal qui fait glisser la lame, mais le mince film d'eau qui se forme entre elle et la glace. C'est ce film qui représente le liquide péricardique.",
+          "sourceQuote": "ce qui fait glisser la lame, ce n'est pas le métal"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-086-pericarde-double-enveloppe.html",
+      "origine": "ecrite",
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux deux feuillets du péricarde séreux, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le péricarde séreux est fait de deux feuillets séparés par un mince film de liquide.",
+          "v": true,
+          "e": "VRAI. Un seul nom, deux feuillets : le pariétal et le viscéral, entre lesquels s'interpose un mince film de liquide.",
+          "sourceQuote": "fait de 2 feuillets séparés par un mince film de liquide"
+        },
+        {
+          "t": "Le feuillet pariétal est plaqué contre l'intérieur du péricarde fibreux.",
+          "v": true,
+          "e": "VRAI. Le pariétal double la face interne du fibreux : il reste plaqué contre le sac pendant que le cœur bouge.",
+          "sourceQuote": "est plaqué contre l'intérieur du péricarde fibreux"
+        },
+        {
+          "t": "Le feuillet viscéral porte aussi le nom d'épicarde.",
+          "v": true,
+          "e": "VRAI. Feuillet viscéral et épicarde désignent la même structure : le feuillet appliqué sur le muscle cardiaque.",
+          "sourceQuote": "Le feuillet viscéral, ou épicarde"
+        },
+        {
+          "t": "L'épicarde est collé au péricarde fibreux.",
+          "v": false,
+          "e": "FAUX : l'épicarde est collé au cœur. C'est le feuillet pariétal qui est plaqué contre le fibreux.",
+          "sourceQuote": "Un QCM qui colle l'épicarde au péricarde fibreux est FAUX"
+        },
+        {
+          "t": "Lors des battements, c'est le feuillet pariétal qui suit le cœur dans ses mouvements.",
+          "v": false,
+          "e": "FAUX : c'est le feuillet viscéral qui suit le cœur. Le pariétal, lui, reste plaqué contre le sac fibreux.",
+          "sourceQuote": "le viscéral suit le cœur dans ses mouvements"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-086-pericarde-double-enveloppe.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la tamponnade péricardique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Elle survient lorsque du liquide ou du sang s'accumule en excès dans la cavité péricardique.",
+          "v": true,
+          "e": "VRAI. C'est la définition même de la tamponnade : un excès de liquide ou de sang dans la cavité péricardique.",
+          "sourceQuote": "Si du liquide ou du sang s'accumule en excès"
+        },
+        {
+          "t": "Un traumatisme, une infection ou un cancer peuvent en être à l'origine.",
+          "v": true,
+          "e": "VRAI. Ce sont les trois causes citées d'accumulation dans la cavité péricardique.",
+          "sourceQuote": "(suite à un traumatisme, une infection, un cancer)"
+        },
+        {
+          "t": "C'est la rigidité du péricarde fibreux qui rend cette accumulation grave.",
+          "v": true,
+          "e": "VRAI. Le sac fibreux ne cède pas : puisque l'enveloppe ne se distend pas, c'est le cœur qui est comprimé.",
+          "sourceQuote": "c'est exactement elle qui rend la tamponnade grave"
+        },
+        {
+          "t": "Le cœur comprimé de l'extérieur n'arrive plus à se remplir, d'où une chute brutale du débit cardiaque.",
+          "v": true,
+          "e": "VRAI. C'est la chaîne à retenir : compression, défaut de remplissage, puis effondrement du débit cardiaque.",
+          "sourceQuote": "il n'arrive plus à se remplir → chute brutale du débit cardiaque"
+        },
+        {
+          "t": "Le traitement immédiat consiste à ponctionner le liquide à l'aiguille.",
+          "v": true,
+          "e": "VRAI. Il s'agit d'une urgence vitale : on ponctionne le liquide à l'aiguille pour décomprimer le cœur.",
+          "sourceQuote": "ponctionner le liquide à l'aiguille"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-086-pericarde-double-enveloppe.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives aux limites du péricarde, à l'analogie du patin à glace et à la méthode d'apprentissage proposée, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le myocarde et l'endocarde ne font pas partie du péricarde.",
+          "v": true,
+          "e": "VRAI. Au-delà du feuillet viscéral commence la paroi du cœur elle-même : ces deux couches n'appartiennent plus au péricarde.",
+          "sourceQuote": "les deux dernières bandes ne font plus partie du péricarde"
+        },
+        {
+          "t": "Le myocarde est le muscle du cœur.",
+          "v": true,
+          "e": "VRAI. Le myocarde est la couche musculaire du cœur ; l'endocarde, plus interne encore, en est le revêtement.",
+          "sourceQuote": "le myocarde, le muscle du cœur"
+        },
+        {
+          "t": "Le liquide péricardique permet au cœur de glisser environ 100 000 fois par jour.",
+          "v": true,
+          "e": "VRAI. À raison d'environ 100 000 battements par jour, c'est autant de glissements rendus possibles par ce film de liquide.",
+          "sourceQuote": "glisser sans accroc à chaque battement, ~100 000 fois par jour"
+        },
+        {
+          "t": "La bonne méthode consiste à réciter les couches comme une simple liste.",
+          "v": false,
+          "e": "FAUX : la méthode proposée est de les parcourir de l'extérieur vers l'intérieur en se demandant, à chaque étape, contre quoi la couche est plaquée.",
+          "sourceQuote": "Ne récite pas les couches comme une liste"
+        },
+        {
+          "t": "Pour nommer un feuillet, la question à se poser est : contre quoi cette couche est-elle plaquée ?",
+          "v": true,
+          "e": "VRAI. C'est cette question qui donne le nom du feuillet, et non l'inverse : pariétal contre le fibreux, viscéral contre le cœur.",
+          "sourceQuote": "contre quoi cette couche est-elle plaquée"
+        }
+      ]
+    },
+
+    {
+      "fiche": "biologie-085-ovaire-et-follicule.html",
+      "origine": "ecrite",
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives aux ovaires et à leurs rôles, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les ovaires sont les organes reproducteurs féminins.",
+          "v": true,
+          "e": "VRAI. Ce sont les organes reproducteurs féminins, l'équivalent des testicules chez l'homme.",
+          "sourceQuote": "Les ovaires sont les organes reproducteurs féminins"
+        },
+        {
+          "t": "Ils produisent environ un ovocyte par semaine.",
+          "v": false,
+          "e": "FAUX : le rythme est d'environ un ovocyte par mois, et non par semaine.",
+          "sourceQuote": "les futurs ovules, environ 1 par mois"
+        },
+        {
+          "t": "Les hormones qu'ils produisent sont la testostérone et la progestérone.",
+          "v": false,
+          "e": "FAUX : les deux hormones produites par l'ovaire sont les œstrogènes et la progestérone.",
+          "sourceQuote": "les œstrogènes et la progestérone"
+        },
+        {
+          "t": "Contrairement aux testicules, les ovaires n'ont pas de fonction hormonale.",
+          "v": false,
+          "e": "FAUX : comme les testicules, les ovaires ont deux rôles, dont la production d'hormones.",
+          "sourceQuote": "Comme les testicules chez l'homme, ils ont deux rôles"
+        },
+        {
+          "t": "Les ovocytes sont les gamètes femelles diploïdes.",
+          "v": false,
+          "e": "FAUX : les ovocytes sont les gamètes femelles haploïdes, comme tous les gamètes.",
+          "sourceQuote": "les gamètes femelles haploïdes"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-085-ovaire-et-follicule.html",
+      "origine": "ecrite",
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives au cortex de l'ovaire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le cortex correspond à la périphérie de l'ovaire.",
+          "v": true,
+          "e": "VRAI. Le cortex est la zone périphérique de l'ovaire, celle que l'on rencontre en premier en allant de l'extérieur vers le centre.",
+          "sourceQuote": "C'est la périphérie de l'ovaire"
+        },
+        {
+          "t": "Il contient tous les follicules ovariens.",
+          "v": true,
+          "e": "VRAI. La totalité des follicules se trouve dans le cortex : c'est ce qui en fait la zone importante de l'organe.",
+          "sourceQuote": "elle contient tous les follicules ovariens"
+        },
+        {
+          "t": "Les follicules qu'il contient sont tous exactement au même stade de maturation.",
+          "v": false,
+          "e": "FAUX : ils sont à différents stades de maturation, ce qui explique leurs tailles différentes sur une coupe.",
+          "sourceQuote": "ils sont à différents stades de maturation"
+        },
+        {
+          "t": "Dans l'analogie du kiwi, le cortex correspond à la chair verte.",
+          "v": true,
+          "e": "VRAI. Le cortex est la périphérie, comme la chair verte du kiwi ; le centre blanc représente la médullaire.",
+          "sourceQuote": "comme la chair verte du kiwi"
+        },
+        {
+          "t": "Sur une coupe d'ovaire, les petites bulles se répartissent aussi bien au centre qu'en périphérie.",
+          "v": false,
+          "e": "FAUX : elles sont toutes en périphérie, dans le cortex. Au centre, on ne voit plus une seule bulle.",
+          "sourceQuote": "toutes en périphérie, dans le cortex"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-085-ovaire-et-follicule.html",
+      "origine": "ecrite",
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la médullaire de l'ovaire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La médullaire est la zone centrale de l'ovaire.",
+          "v": true,
+          "e": "VRAI. La médullaire occupe le centre de l'organe, à l'inverse du cortex qui en est la périphérie.",
+          "sourceQuote": "C'est la zone centrale"
+        },
+        {
+          "t": "Elle contient les vaisseaux sanguins et les nerfs.",
+          "v": true,
+          "e": "VRAI. C'est la zone de passage : vaisseaux sanguins et nerfs, plus du tissu de soutien.",
+          "sourceQuote": "Elle contient les vaisseaux sanguins et les nerfs"
+        },
+        {
+          "t": "Elle contient les follicules les plus matures.",
+          "v": false,
+          "e": "FAUX : elle ne contient aucun follicule, quel que soit son stade. Tous sont dans le cortex.",
+          "sourceQuote": "Pas de follicules ici, juste du tissu de soutien"
+        },
+        {
+          "t": "Dans l'analogie du kiwi, la médullaire correspond à la chair verte.",
+          "v": false,
+          "e": "FAUX : la médullaire, c'est le centre — le cœur blanc du kiwi. La chair verte représente le cortex.",
+          "sourceQuote": "le centre, comme le cœur blanc du kiwi"
+        },
+        {
+          "t": "Une proposition qui annonce des follicules dans la médullaire est exacte.",
+          "v": false,
+          "e": "FAUX : placer des follicules dans la médullaire est faux — ils sont tous dans le cortex. C'est le piège le plus souvent posé sur cette notion.",
+          "sourceQuote": "un QCM qui annonce des follicules dans la médullaire est FAUX"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-085-ovaire-et-follicule.html",
+      "origine": "ecrite",
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la définition d'un follicule ovarien, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un follicule n'est pas seulement un ovocyte : c'est un ovocyte plus ce qui l'entoure.",
+          "v": true,
+          "e": "VRAI. C'est la distinction essentielle : le follicule est un ensemble, dont l'ovocyte n'est que le centre.",
+          "sourceQuote": "c'est un ovocyte plus ce qu'il y a autour"
+        },
+        {
+          "t": "Il est comparé à une petite bulle protectrice entourant un ovocyte.",
+          "v": true,
+          "e": "VRAI. L'image de la petite bulle protectrice résume bien la structure : une enveloppe cellulaire autour du futur ovule.",
+          "sourceQuote": "comme une petite bulle protectrice qui entoure un ovocyte"
+        },
+        {
+          "t": "Au centre du follicule se trouve un seul ovocyte.",
+          "v": true,
+          "e": "VRAI. Un follicule contient un ovocyte, et un seul : jamais deux.",
+          "sourceQuote": "Un seul, jamais deux."
+        },
+        {
+          "t": "Autour de l'ovocyte se disposent les cellules de la granulosa.",
+          "v": true,
+          "e": "VRAI. Les cellules de la granulosa, dites nourricières, entourent l'ovocyte.",
+          "sourceQuote": "Les cellules de la granulosa (= cellules nourricières)"
+        },
+        {
+          "t": "Ce sont ces cellules qui forment la bulle autour de l'ovocyte.",
+          "v": true,
+          "e": "VRAI. La bulle du follicule est faite des cellules de la granulosa elles-mêmes.",
+          "sourceQuote": "Ce sont elles qui forment la bulle autour de l'ovocyte"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-085-ovaire-et-follicule.html",
+      "origine": "ecrite",
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux cellules de la granulosa, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Elles nourrissent l'ovocyte.",
+          "v": true,
+          "e": "VRAI. C'est le premier de leurs trois rôles, et c'est ce qui leur vaut le nom de cellules nourricières.",
+          "sourceQuote": "Les cellules de la granulosa nourrissent l'ovocyte"
+        },
+        {
+          "t": "Elles le protègent.",
+          "v": true,
+          "e": "VRAI. Deuxième rôle : la protection de l'ovocyte, assurée par la bulle qu'elles forment autour de lui.",
+          "sourceQuote": "elles le protègent"
+        },
+        {
+          "t": "Elles produisent des hormones, en particulier les œstrogènes.",
+          "v": true,
+          "e": "VRAI. Troisième rôle : la production hormonale, et notamment celle des œstrogènes.",
+          "sourceQuote": "elles produisent des hormones — les œstrogènes"
+        },
+        {
+          "t": "Chez l'homme, le poste équivalent est tenu par les cellules de Leydig.",
+          "v": false,
+          "e": "FAUX : l'équivalent masculin, ce sont les cellules de Sertoli, qui soutiennent, nourrissent et protègent les cellules germinales.",
+          "sourceQuote": "ce sont les cellules de Sertoli qui soutiennent, nourrissent et protègent"
+        },
+        {
+          "t": "Avec l'ovocyte, elles constituent le follicule.",
+          "v": true,
+          "e": "VRAI. Le follicule est l'ensemble formé par l'ovocyte et la granulosa qui l'entoure.",
+          "sourceQuote": "le follicule, c'est l'ensemble ovocyte + granulosa"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-085-ovaire-et-follicule.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à l'ovogenèse et à sa comparaison avec la gamétogenèse masculine, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'ovogenèse débute durant la vie fœtale.",
+          "v": true,
+          "e": "VRAI. C'est le contraste central de toute cette partie : chez la femme, le processus commence avant la naissance.",
+          "sourceQuote": "l'ovogenèse débute durant la vie fœtale"
+        },
+        {
+          "t": "Comme la spermatogenèse, elle se déroule de façon continue.",
+          "v": false,
+          "e": "FAUX : la spermatogenèse est continue, l'ovogenèse ne l'est pas. Elle reste bloquée pendant des années avant de reprendre.",
+          "sourceQuote": "contrairement à la spermatogenèse continue"
+        },
+        {
+          "t": "Elle reprend de façon cyclique de la naissance à la puberté.",
+          "v": false,
+          "e": "FAUX : la reprise cyclique s'étend de la puberté à la ménopause, pas de la naissance à la puberté.",
+          "sourceQuote": "ne reprend que cycliquement, de la puberté à la ménopause"
+        },
+        {
+          "t": "Chez l'homme, les cellules de Sertoli sont situées à l'extérieur des tubes séminifères.",
+          "v": false,
+          "e": "FAUX : les cellules de Sertoli sont à l'intérieur des tubes. Ce sont les cellules de Leydig qui se trouvent à l'extérieur.",
+          "sourceQuote": "Sertoli à l'intérieur des tubes, Leydig à l'extérieur"
+        },
+        {
+          "t": "L'ovogenèse désigne le processus de formation des ovules déjà fécondés.",
+          "v": false,
+          "e": "FAUX : l'ovogenèse est le processus de formation des ovocytes, les gamètes femelles. La fécondation n'entre pas dans cette définition.",
+          "sourceQuote": "c'est le processus de formation des ovocytes"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-085-ovaire-et-follicule.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives aux repères à retenir sur l'ovaire et aux confusions à éviter, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Devant un follicule, la première question à se poser est de savoir où il se trouve, et la réponse est toujours : dans le cortex.",
+          "v": true,
+          "e": "VRAI. C'est le repère le plus simple et le plus souvent testé : tous les follicules, quel que soit leur stade, sont dans le cortex.",
+          "sourceQuote": "Réponse toujours identique : dans le cortex"
+        },
+        {
+          "t": "La médullaire ne contient que des vaisseaux et des nerfs.",
+          "v": true,
+          "e": "VRAI. Aucun follicule dans la médullaire : uniquement des vaisseaux, des nerfs et du tissu de soutien.",
+          "sourceQuote": "ne contient aucun follicule — que des vaisseaux et des nerfs"
+        },
+        {
+          "t": "Follicule et ovocyte sont deux mots interchangeables.",
+          "v": false,
+          "e": "FAUX : l'ovocyte n'est que le centre du follicule. Le follicule, lui, est l'ensemble ovocyte plus granulosa.",
+          "sourceQuote": "Ne confonds pas follicule et ovocyte"
+        },
+        {
+          "t": "Le couple à retenir est : Sertoli chez l'homme, granulosa chez la femme.",
+          "v": true,
+          "e": "VRAI. Les deux types cellulaires tiennent le même poste de soutien du gamète en formation, chacun de son côté.",
+          "sourceQuote": "Sertoli chez l'homme, granulosa chez la femme"
+        },
+        {
+          "t": "L'ovaire n'a qu'un seul rôle : produire les ovocytes.",
+          "v": false,
+          "e": "FAUX : l'ovaire a deux rôles. À la production des ovocytes s'ajoute la production des œstrogènes et de la progestérone.",
+          "sourceQuote": "L'ovaire a deux rôles"
+        }
+      ]
+    },
+
+    {
+      "fiche": "biologie-086-stock-folliculaire-atresie.html",
+      "origine": "ecrite",
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives aux effectifs de follicules aux différents âges de la vie, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le stock maximal est atteint au 7e mois fœtal, avec 7 millions de follicules.",
+          "v": true,
+          "e": "VRAI. C'est le sommet de la courbe : 7 millions de follicules primordiaux au 7e mois de vie fœtale. On n'ira jamais plus haut.",
+          "sourceQuote": "7 millions au 7 e mois fœtal"
+        },
+        {
+          "t": "À la naissance, il reste environ 1 million de follicules.",
+          "v": true,
+          "e": "VRAI. Six millions ont déjà disparu avant même le premier jour de vie : il en reste environ 1 million.",
+          "sourceQuote": "~1 million à la naissance"
+        },
+        {
+          "t": "À la puberté, il en reste environ 400 000.",
+          "v": true,
+          "e": "VRAI. La chute s'est poursuivie pendant toute l'enfance : environ 400 000 follicules au moment de la puberté.",
+          "sourceQuote": "~400 000 à la puberté"
+        },
+        {
+          "t": "Sur toute la vie reproductive, 400 à 500 ovocytes seulement seront ovulés.",
+          "v": true,
+          "e": "VRAI. Ce chiffre ne compte plus les follicules présents mais ceux qui seront réellement ovulés, à raison d'environ un par mois.",
+          "sourceQuote": "seuls 400 à 500 ovocytes seront ovulés"
+        },
+        {
+          "t": "À la ménopause, le stock est totalement épuisé.",
+          "v": true,
+          "e": "VRAI. L'épuisement total du stock marque la ménopause, et donc la fin de la fertilité.",
+          "sourceQuote": "épuisement total à la ménopause"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-086-stock-folliculaire-atresie.html",
+      "origine": "ecrite",
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la folliculogenèse, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La folliculogenèse est la maturation progressive des follicules ovariens.",
+          "v": true,
+          "e": "VRAI. C'est le nom du processus qui fait mûrir les follicules, à distinguer de l'ovogenèse qui concerne l'ovocyte lui-même.",
+          "sourceQuote": "la maturation progressive des follicules ovariens"
+        },
+        {
+          "t": "Elle va du follicule primordial au follicule pré-ovulatoire.",
+          "v": true,
+          "e": "VRAI. Ces deux formes encadrent le processus : le primordial au départ, le pré-ovulatoire à l'arrivée.",
+          "sourceQuote": "depuis le follicule primordial jusqu'au follicule pré-ovulatoire"
+        },
+        {
+          "t": "Un follicule traverse trois stades.",
+          "v": false,
+          "e": "FAUX : le follicule traverse cinq stades, dont le primordial et le pré-ovulatoire sont le premier et le dernier.",
+          "sourceQuote": "des 5 stades qu'un follicule traverse"
+        },
+        {
+          "t": "La folliculogenèse est indépendante de l'ovogenèse.",
+          "v": false,
+          "e": "FAUX : les deux processus sont intimement liés — le follicule mûrit autour de l'ovocyte qu'il contient.",
+          "sourceQuote": "Elle est intimement liée à l'ovogenèse"
+        },
+        {
+          "t": "Le follicule pré-ovulatoire est le premier stade de la maturation.",
+          "v": false,
+          "e": "FAUX : c'est le dernier stade. Le premier est le follicule primordial.",
+          "sourceQuote": "le premier et le dernier des 5 stades qu'un follicule traverse"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-086-stock-folliculaire-atresie.html",
+      "origine": "ecrite",
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la cause de la diminution du stock folliculaire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La chute du stock est due à une destruction par apoptose.",
+          "v": true,
+          "e": "VRAI. C'est l'apoptose qui fait fondre le stock, et non le prélèvement mensuel de l'ovulation.",
+          "sourceQuote": "Destruction par apoptose (mort cellulaire programmée)"
+        },
+        {
+          "t": "L'apoptose est une mort cellulaire programmée.",
+          "v": true,
+          "e": "VRAI. Il ne s'agit pas d'un accident mais d'un processus programmé de mort cellulaire.",
+          "sourceQuote": "(mort cellulaire programmée)"
+        },
+        {
+          "t": "Six millions de follicules ont déjà disparu avant le premier jour de vie.",
+          "v": true,
+          "e": "VRAI. De 7 millions au 7e mois fœtal à environ 1 million à la naissance : six millions ont disparu avant même la naissance.",
+          "sourceQuote": "6 millions ont déjà disparu, avant même le premier jour de vie"
+        },
+        {
+          "t": "C'est l'ovulation qui vide l'ovaire de ses follicules.",
+          "v": false,
+          "e": "FAUX : l'ovulation ne prélève qu'un follicule par mois. C'est l'apoptose qui vide l'ovaire, et elle agit bien avant la première ovulation.",
+          "sourceQuote": "Ce n'est donc pas l'ovulation qui vide l'ovaire"
+        },
+        {
+          "t": "L'apoptose fait dégénérer les follicules avant, pendant et après la puberté.",
+          "v": true,
+          "e": "VRAI. Elle agit en continu tout au long de la vie, sans interruption liée à la puberté.",
+          "sourceQuote": "qui fait dégénérer les follicules en continu, avant, pendant et après la puberté"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-086-stock-folliculaire-atresie.html",
+      "origine": "ecrite",
+      "lot": 4,
+      "q": "Parmi les propositions suivantes comparant le stock folliculaire de la femme et la production de gamètes chez l'homme, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Chez l'homme, les spermatogonies maintiennent un stock de cellules souches tout au long de la vie.",
+          "v": true,
+          "e": "VRAI. C'est une réserve permanente, entretenue en continu, qui n'a pas d'équivalent chez la femme.",
+          "sourceQuote": "les spermatogonies maintiennent un stock de cellules souches"
+        },
+        {
+          "t": "Cette réserve permet de produire environ 100 millions de spermatozoïdes par jour.",
+          "v": true,
+          "e": "VRAI. La production masculine est quotidienne et massive : environ 100 millions de spermatozoïdes par jour.",
+          "sourceQuote": "environ 100 millions de spermatozoïdes par jour"
+        },
+        {
+          "t": "Chez la femme, le capital est fixé avant la naissance et n'est jamais renouvelé.",
+          "v": true,
+          "e": "VRAI. C'est la différence de fond entre les deux gamétogenèses : d'un côté une production continue, de l'autre un capital qui ne fait que décroître.",
+          "sourceQuote": "il ne fait que décroître, et il n'est jamais renouvelé"
+        },
+        {
+          "t": "Comme la spermatogenèse, la formation des follicules primordiaux débute à la puberté.",
+          "v": false,
+          "e": "FAUX : c'est le faux ami de la symétrie. La spermatogenèse débute à la puberté, mais les follicules primordiaux se forment durant la vie fœtale.",
+          "sourceQuote": "Contrairement à la spermatogenèse, qui débute à la puberté"
+        },
+        {
+          "t": "À la naissance, une fille conserve la capacité d'en fabriquer de nouveaux.",
+          "v": false,
+          "e": "FAUX : à la naissance, tout le stock est constitué et il ne s'en fabriquera plus jamais.",
+          "sourceQuote": "Il ne s'en fabriquera plus jamais."
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-086-stock-folliculaire-atresie.html",
+      "origine": "ecrite",
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à l'évolution du stock folliculaire au fil de la vie et à son terme, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'épuisement total du stock marque la fin de la fertilité.",
+          "v": true,
+          "e": "VRAI. Quand il ne reste plus de follicules, la fertilité prend fin : c'est la ménopause.",
+          "sourceQuote": "Épuisement total du stock → fin de la fertilité"
+        },
+        {
+          "t": "Le stock remonte légèrement au moment de la puberté.",
+          "v": false,
+          "e": "FAUX : aucun chiffre ne remonte jamais. Le stock ne fait que descendre, du 7e mois fœtal à la ménopause.",
+          "sourceQuote": "aucun chiffre ne remonte jamais"
+        },
+        {
+          "t": "Entre le 7e mois fœtal et la puberté, plusieurs centaines d'ovulations ont déjà eu lieu.",
+          "v": false,
+          "e": "FAUX : sur cette période, pas une seule ovulation n'a encore eu lieu. La chute est pourtant déjà de 6,6 millions de follicules.",
+          "sourceQuote": "pas une seule ovulation n'a encore eu lieu"
+        },
+        {
+          "t": "La chute observée pendant l'enfance s'accompagne d'ovulations régulières.",
+          "v": false,
+          "e": "FAUX : la chute continue pendant toute l'enfance sans qu'aucune ovulation ait lieu — c'est bien la preuve que l'ovulation n'en est pas la cause.",
+          "sourceQuote": "sans qu'aucune ovulation ait eu lieu"
+        },
+        {
+          "t": "Le nombre de 400 à 500 correspond aux follicules encore présents à la ménopause.",
+          "v": false,
+          "e": "FAUX : ce chiffre ne compte pas des follicules présents, mais des ovocytes ovulés sur toute la vie reproductive. À la ménopause, le stock est à zéro.",
+          "sourceQuote": "ce chiffre ne compte plus les follicules"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-086-stock-folliculaire-atresie.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la proportion de follicules qui atteignent l'ovulation, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "99,9 % des follicules dégénèrent sans jamais arriver à l'ovulation.",
+          "v": true,
+          "e": "VRAI. C'est le chiffre marquant du chapitre : l'immense majorité des follicules n'atteint jamais l'ovulation.",
+          "sourceQuote": "99,9 % dégénèrent sans jamais arriver à l'ovulation"
+        },
+        {
+          "t": "Les 400 à 500 follicules qui atteignent la maturité complète représentent 0,1 % du total.",
+          "v": true,
+          "e": "VRAI. Ces 400 à 500 follicules ne sont que 0,1 % du stock initial : le complément des 99,9 % qui dégénèrent.",
+          "sourceQuote": "Seuls 400-500 follicules (0,1 %) atteindront la maturité complète"
+        },
+        {
+          "t": "400 000 et 400-500 désignent la même population de follicules.",
+          "v": false,
+          "e": "FAUX : 400 000 est le nombre de follicules présents à la puberté ; 400 à 500 est le nombre de ceux qui seront ovulés. Ce sont deux grandeurs différentes.",
+          "sourceQuote": "Ne confonds pas 400 000 (les follicules présents à la puberté)"
+        },
+        {
+          "t": "Il y a à peu près autant de follicules ovulés que de follicules présents à la puberté.",
+          "v": false,
+          "e": "FAUX : il y en a près de mille fois moins. C'est précisément la confusion à éviter entre les deux chiffres.",
+          "sourceQuote": "il y en a près de mille fois moins"
+        },
+        {
+          "t": "Ces 400 à 500 ovulations se répartissent à raison d'environ une par semaine.",
+          "v": false,
+          "e": "FAUX : le rythme est d'environ une ovulation par mois, ce qui est cohérent avec 400 à 500 ovulations sur toute une vie reproductive.",
+          "sourceQuote": "à raison d'environ 1 par mois"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-086-stock-folliculaire-atresie.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la manière d'apprendre les repères du stock folliculaire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les chiffres doivent être appris dans l'ordre, avec le moment de la vie auquel ils correspondent.",
+          "v": true,
+          "e": "VRAI. C'est la méthode proposée : jamais en vrac, mais toujours associés à leur étape de la vie.",
+          "sourceQuote": "Apprends les chiffres dans l'ordre, avec leur moment"
+        },
+        {
+          "t": "L'ordre à retenir passe par 1 million à la naissance, puis 400 000 à la puberté.",
+          "v": true,
+          "e": "VRAI. La suite complète est : 7 millions au 7e mois fœtal, 1 million à la naissance, 400 000 à la puberté, puis 400 à 500 ovulés.",
+          "sourceQuote": "1 million (naissance) → 400 000 (puberté)"
+        },
+        {
+          "t": "Ces repères sont au nombre de quatre et correspondent à quatre étapes de la vie.",
+          "v": true,
+          "e": "VRAI. Quatre chiffres, quatre moments : savoir les replacer dans cet ordre suffit à répondre à la quasi-totalité des questions sur le stock.",
+          "sourceQuote": "Quatre repères, quatre étapes de la vie"
+        },
+        {
+          "t": "Le stock de follicules primordiaux se constitue pendant la vie fœtale et non à la puberté.",
+          "v": true,
+          "e": "VRAI. Tout est en place avant la naissance : la puberté ne fabrique aucun follicule supplémentaire.",
+          "sourceQuote": "se constitue pendant la vie fœtale, pas à la puberté"
+        },
+        {
+          "t": "Affirmer que la formation des follicules démarre à la puberté est une erreur.",
+          "v": true,
+          "e": "VRAI. C'est le faux ami de la symétrie avec la spermatogenèse : chez la femme, la formation des follicules est achevée avant la naissance.",
+          "sourceQuote": "qui fait démarrer la formation des follicules à la puberté"
+        }
+      ]
+    }
+  ]
+}

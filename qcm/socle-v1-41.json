@@ -1,0 +1,1376 @@
+{
+  "matiere": "mixte",
+  "chapitre": 0,
+  "note": "socle 1-7 — fiches sans QCM, ordre du Parcours",
+  "questions": [
+    {
+      "fiche": "physique-117-loi-de-fick.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives aux quatre briques de la loi de Fick et au sens dans lequel chacune fait varier le flux, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le flux de diffusion est proportionnel à la surface d'échange S.",
+          "v": true,
+          "e": "VRAI. Une membrane deux fois plus grande laisse passer deux fois plus de molécules en même temps : le flux suit la surface.",
+          "sourceQuote": "Le flux est donc proportionnel à S"
+        },
+        {
+          "t": "Le flux de diffusion est proportionnel à l'épaisseur e de la membrane.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. Le flux est inversement proportionnel à e — plus la membrane est épaisse, moins il passe de molécules par seconde.",
+          "sourceQuote": "Le flux est donc inversement proportionnel à e"
+        },
+        {
+          "t": "Le flux augmente quand l'écart de concentration entre les deux côtés augmente.",
+          "v": true,
+          "e": "VRAI. Plus il y a de molécules d'un côté par rapport à l'autre, plus « ça pousse » : le flux est proportionnel à cet écart.",
+          "sourceQuote": "proportionnel à l'écart de concentration entre les deux côtés"
+        },
+        {
+          "t": "Le coefficient de diffusion D est propre au couple molécule/milieu.",
+          "v": true,
+          "e": "VRAI. D rassemble en un seul nombre la nature de la molécule qui diffuse et celle du milieu qu'elle traverse.",
+          "sourceQuote": "le coefficient de diffusion D , propre au couple molécule/milieu"
+        },
+        {
+          "t": "Si la membrane est deux fois plus épaisse, les molécules la traversent deux fois plus vite.",
+          "v": false,
+          "e": "FAUX : elles mettent deux fois plus de temps à la traverser. Une membrane épaissie ralentit la diffusion, elle ne l'accélère pas.",
+          "sourceQuote": "les molécules mettent 2× plus de temps à la traverser"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-117-loi-de-fick.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la signification et aux unités des grandeurs qui composent la version biologique de la loi de Fick, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le flux désigne la quantité de matière qui traverse par seconde et s'exprime en mol/s.",
+          "v": true,
+          "e": "VRAI. C'est bien une quantité de matière rapportée à une durée : des moles par seconde.",
+          "sourceQuote": "quantité de matière qui traverse par seconde (mol/s)"
+        },
+        {
+          "t": "La surface d'échange s'exprime en mètres carrés et l'épaisseur de la membrane en mètres.",
+          "v": true,
+          "e": "VRAI. S est une surface (m²), e est une longueur (m) : les deux décrivent la géométrie de la membrane.",
+          "sourceQuote": "surface d'échange (m²) · e = épaisseur de la membrane (m)"
+        },
+        {
+          "t": "Le flux diminue quand l'épaisseur de la membrane augmente.",
+          "v": true,
+          "e": "VRAI. C'est la seule des quatre grandeurs qui fasse baisser le flux quand elle augmente : elle est au dénominateur.",
+          "sourceQuote": "il diminue quand l' épaisseur e augmente"
+        },
+        {
+          "t": "Le coefficient de diffusion s'exprime en mètres carrés par seconde.",
+          "v": true,
+          "e": "VRAI. D se compte en m²/s : c'est l'unité qui apparaît à côté du coefficient de diffusion dans la formule.",
+          "sourceQuote": "D = coefficient de diffusion (m²/s)"
+        },
+        {
+          "t": "L'écart de concentration se prend en valeur absolue.",
+          "v": true,
+          "e": "VRAI. On ne garde que le résultat positif de la différence : c'est la physique, et non le calcul, qui donne ensuite le sens du flux.",
+          "sourceQuote": "écart de concentration en valeur absolue (mol/m³)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-117-loi-de-fick.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à l'écriture de la loi de Fick rencontrée dans les manuels de physique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans cette écriture, le flux noté J se rapporte à un mètre carré de membrane.",
+          "v": true,
+          "e": "VRAI. J est un flux surfacique : il compte ce qui passe par mètre carré de membrane et par seconde.",
+          "sourceQuote": "J est le flux par mètre carré de membrane (mol/m²/s)"
+        },
+        {
+          "t": "Le signe « − » signifie que la matière remonte le gradient de concentration.",
+          "v": false,
+          "e": "FAUX : il dit exactement le contraire. Le signe « − » traduit le fait que le flux part vers l'endroit où la concentration diminue : la matière descend le gradient.",
+          "sourceQuote": "le flux va dans le sens où la concentration diminue"
+        },
+        {
+          "t": "Cette écriture décrit un phénomène physique différent de celui construit avec les quatre briques.",
+          "v": false,
+          "e": "FAUX : c'est la même physique, écrite avec une autre notation. Seule la façon de noter la variation de concentration change.",
+          "sourceQuote": "C'est la même physique que ce qu'on vient de construire"
+        },
+        {
+          "t": "En P1, on demandera de manipuler cette écriture plutôt que la version biologique.",
+          "v": false,
+          "e": "FAUX : on travaille avec la version biologique. Cette notation est présentée pour être reconnue, pas pour être manipulée.",
+          "sourceQuote": "tu n'auras pas à manipuler dC/dx"
+        },
+        {
+          "t": "Cette notation est une façon moins précise d'écrire la variation de concentration sur l'épaisseur.",
+          "v": false,
+          "e": "FAUX : elle en est au contraire une écriture plus précise. Le rapport de l'écart de concentration sur l'épaisseur en est la version simplifiée.",
+          "sourceQuote": "dC/dx est juste une façon plus précise d'écrire"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-117-loi-de-fick.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux leviers permettant d'augmenter un flux diffusif et à la méthode de lecture d'un énoncé, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une surface d'échange plus grande augmente le flux diffusif.",
+          "v": true,
+          "e": "VRAI. C'est le premier des trois leviers : agrandir S laisse passer davantage de molécules par seconde.",
+          "sourceQuote": "une plus grande surface S , une membrane plus fine e"
+        },
+        {
+          "t": "Amincir la membrane fait partie des moyens d'augmenter un flux diffusif.",
+          "v": true,
+          "e": "VRAI. Une membrane plus fine est l'un des trois leviers naturels, au même titre que la surface et le gradient.",
+          "sourceQuote": "trois leviers naturels pour augmenter un flux diffusif"
+        },
+        {
+          "t": "Un gradient de concentration plus marqué augmente le flux.",
+          "v": true,
+          "e": "VRAI. C'est le troisième levier : plus l'écart entre les deux côtés est grand, plus la diffusion est intense.",
+          "sourceQuote": "ou un gradient plus marqué"
+        },
+        {
+          "t": "Devant un énoncé qui fait varier un flux de diffusion, il faut commencer par identifier lequel des trois leviers est touché.",
+          "v": true,
+          "e": "VRAI. C'est le réflexe à prendre : ranger d'abord ce qui bouge dans la bonne grandeur avant de conclure sur le flux.",
+          "sourceQuote": "commence toujours par identifier lequel des trois est touché"
+        },
+        {
+          "t": "Cette forme de la loi de Fick n'est pas celle qu'on utilise en physiologie.",
+          "v": false,
+          "e": "FAUX : c'est précisément la version employée en physiologie, pour les poumons, la dialyse ou l'intestin.",
+          "sourceQuote": "Cette version est celle qu'on utilise en physiologie"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-117-loi-de-fick.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à l'origine de la loi de Fick et à la question à laquelle elle répond, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La loi doit son nom à un physiologiste allemand.",
+          "v": true,
+          "e": "VRAI. Adolf Fick était un physiologiste allemand : c'est à lui qu'on doit cette formule.",
+          "sourceQuote": "qu'on doit au physiologiste allemand Adolf Fick"
+        },
+        {
+          "t": "Elle a été établie en 1955.",
+          "v": false,
+          "e": "FAUX : la date est 1855, pas 1955. Un siècle sépare les deux, et c'est le genre de chiffre qu'un énoncé aime intervertir.",
+          "sourceQuote": "Adolf Fick (1855)"
+        },
+        {
+          "t": "La traversée de l'O₂ décrite auparavant réclame une pompe et de l'ATP.",
+          "v": false,
+          "e": "FAUX : un simple gradient de concentration suffit. Il n'y a ni pompe ni dépense d'énergie dans ce passage.",
+          "sourceQuote": "sans pompe et sans ATP"
+        },
+        {
+          "t": "Le calcul du flux de diffusion est gouverné par une seule formule.",
+          "v": true,
+          "e": "VRAI. Tout tient dans une formule unique, que l'on construit brique par brique plutôt que de l'apprendre telle quelle.",
+          "sourceQuote": "Tout est gouverné par une seule formule"
+        },
+        {
+          "t": "La question posée porte sur le nombre de molécules d'O₂ traversant la membrane alvéolaire par minute.",
+          "v": false,
+          "e": "FAUX : la question porte sur ce qui traverse par seconde. Le flux se compte par seconde, ce qui est cohérent avec son unité en mol/s.",
+          "sourceQuote": "traversent réellement la membrane alvéolaire par seconde"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-117-loi-de-fick.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la valeur absolue de l'écart de concentration et au sens du flux, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un écart calculé de 100 vers 40 et un écart calculé de 40 vers 100 donnent le même résultat.",
+          "v": true,
+          "e": "VRAI. La valeur absolue rend le résultat identique dans les deux sens : on obtient 60 dans un cas comme dans l'autre.",
+          "sourceQuote": "|100 − 40| = |40 − 100| = 60"
+        },
+        {
+          "t": "C'est la valeur absolue qui fixe le sens dans lequel va le flux.",
+          "v": false,
+          "e": "FAUX : la valeur absolue ne dit rien du sens, puisqu'elle efface le signe. Le sens est imposé séparément par la physique.",
+          "sourceQuote": "Le sens du flux, lui, est imposé séparément par la physique"
+        },
+        {
+          "t": "Le flux diffusif va du milieu le plus dilué vers le milieu le plus concentré.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. La matière descend le gradient, donc elle va du concentré vers le dilué.",
+          "sourceQuote": "du concentré vers le dilué"
+        },
+        {
+          "t": "Dans l'analogie de la route qui descend, plus la pente est raide, plus la diffusion est rapide.",
+          "v": true,
+          "e": "VRAI. La pente représente la variation de concentration sur une petite distance : plus elle est marquée, plus la diffusion est intense.",
+          "sourceQuote": "Plus la pente est raide, plus la diffusion est rapide"
+        },
+        {
+          "t": "Selon le côté choisi comme point de départ, l'écart de concentration peut être compté négativement.",
+          "v": false,
+          "e": "FAUX : il se compte toujours en positif. C'est justement l'intérêt de la valeur absolue, qui rend le choix du côté sans importance.",
+          "sourceQuote": "se compte toujours en positif"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-117-loi-de-fick.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives aux raisonnements de proportionnalité utilisés pour construire la loi de Fick et à son domaine d'emploi, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Doubler la surface de la membrane permet à deux fois plus de molécules de passer en même temps.",
+          "v": true,
+          "e": "VRAI. C'est le raisonnement qui fonde la proportionnalité à la surface : deux fois plus de place, deux fois plus de passage.",
+          "sourceQuote": "2× plus de molécules peuvent passer en même temps"
+        },
+        {
+          "t": "Une concentration cent fois supérieure d'un côté « pousse » cent fois plus fort.",
+          "v": true,
+          "e": "VRAI. C'est l'argument qui justifie la proportionnalité à l'écart de concentration.",
+          "sourceQuote": "ça « pousse » 100 fois plus fort"
+        },
+        {
+          "t": "Dans un même milieu, toutes les molécules ne diffusent pas à la même vitesse.",
+          "v": true,
+          "e": "VRAI. C'est exactement ce que traduit le coefficient de diffusion, propre à chaque couple molécule/milieu.",
+          "sourceQuote": "Toutes les molécules ne diffusent pas à la même vitesse dans le même milieu"
+        },
+        {
+          "t": "Cette version de la loi sert notamment pour la dialyse et l'intestin.",
+          "v": true,
+          "e": "VRAI. Elle s'applique à tous les échanges par diffusion à travers une membrane : poumons, dialyse, intestin.",
+          "sourceQuote": "en physiologie (poumons, dialyse, intestin)"
+        },
+        {
+          "t": "La lettre grecque utilisée pour noter le flux se lit « phi ».",
+          "v": true,
+          "e": "VRAI. C'est la lettre grecque phi, choisie pour représenter la quantité de matière qui traverse la membrane par seconde.",
+          "sourceQuote": "la lettre grecque « phi »"
+        }
+      ]
+    },
+
+    {
+      "fiche": "physique-118-coefficient-diffusion-d.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives aux trois règles de variation du coefficient de diffusion et aux deux exemples qui les illustrent, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "D augmente quand la température augmente.",
+          "v": true,
+          "e": "VRAI. Une température plus élevée signifie plus d'agitation, donc une diffusion plus rapide.",
+          "sourceQuote": "D augmente quand la température augmente"
+        },
+        {
+          "t": "D augmente quand la taille de la molécule augmente.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. Une molécule plus grosse diffuse moins bien, donc D diminue quand la taille augmente.",
+          "sourceQuote": "D diminue quand la taille de la molécule augmente"
+        },
+        {
+          "t": "D diminue quand la viscosité du solvant augmente.",
+          "v": true,
+          "e": "VRAI. Un milieu visqueux freine les molécules qui essaient d'y diffuser.",
+          "sourceQuote": "D diminue quand la viscosité du solvant augmente"
+        },
+        {
+          "t": "Dans un même milieu, le glucose diffuse plus vite que l'O₂.",
+          "v": false,
+          "e": "FAUX : c'est l'O₂ qui diffuse plus vite que le glucose. La petite molécule se faufile, la grosse rame.",
+          "sourceQuote": "l'O₂ diffuse plus vite que le glucose"
+        },
+        {
+          "t": "Une même molécule diffuse plus vite dans l'eau que dans le miel.",
+          "v": true,
+          "e": "VRAI. C'est le second exemple de référence : à molécule identique, le milieu plus visqueux ralentit la diffusion.",
+          "sourceQuote": "tout diffuse plus vite dans l'eau que dans le miel"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-118-coefficient-diffusion-d.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à ce que décrit le coefficient de diffusion et à ce qu'il ne décrit pas, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "D est un nombre unique, propre au couple molécule/milieu.",
+          "v": true,
+          "e": "VRAI. D résume en un seul nombre la nature de la molécule qui diffuse et celle du milieu qu'elle traverse.",
+          "sourceQuote": "un seul nombre, propre au couple molécule/milieu"
+        },
+        {
+          "t": "D dépend de l'épaisseur de la membrane traversée.",
+          "v": false,
+          "e": "FAUX : l'épaisseur décrit la membrane, pas la molécule. D ne dépend ni de la surface ni de l'épaisseur.",
+          "sourceQuote": "D ne dépend ni de S ni de e"
+        },
+        {
+          "t": "Agrandir la surface d'échange augmente la valeur de D.",
+          "v": false,
+          "e": "FAUX : modifier la géométrie de la membrane change le flux, jamais D lui-même.",
+          "sourceQuote": "épaissir ou agrandir la membrane ne change pas D"
+        },
+        {
+          "t": "Ce sont la surface et l'épaisseur qui décrivent la molécule, tandis que D décrit la membrane.",
+          "v": false,
+          "e": "FAUX : les rôles sont inversés. La surface et l'épaisseur décrivent la membrane ; D ne parle que de la molécule et du milieu.",
+          "sourceQuote": "S et e décrivent la membrane"
+        },
+        {
+          "t": "D est l'une des grandeurs de la loi de Fick que l'on peut dessiner sur un schéma.",
+          "v": false,
+          "e": "FAUX : seules trois des quatre grandeurs se dessinent. D reste une propriété qui ne se voit pas sur un schéma.",
+          "sourceQuote": "Trois d'entre elles se dessinent sur un schéma"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-118-coefficient-diffusion-d.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives aux mécanismes qui expliquent l'effet de la température et celui de la taille de la molécule sur la diffusion, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une température plus élevée signifie plus d'agitation thermique, donc plus de chocs.",
+          "v": true,
+          "e": "VRAI. C'est la chaîne d'explication : plus de chaleur, plus d'agitation, plus de chocs, diffusion plus rapide.",
+          "sourceQuote": "Plus d'agitation thermique → plus de chocs"
+        },
+        {
+          "t": "L'énergie cinétique des molécules est d'autant plus grande que la température est élevée.",
+          "v": true,
+          "e": "VRAI. C'est la traduction énergétique de l'agitation thermique.",
+          "sourceQuote": "une énergie cinétique d'autant plus grande que T est élevée"
+        },
+        {
+          "t": "Ce phénomène est rattaché au mouvement brownien vu au début du chapitre.",
+          "v": true,
+          "e": "VRAI. L'agitation qui fait monter D est celle du mouvement brownien déjà rencontré.",
+          "sourceQuote": "C'est le mouvement brownien du début du chapitre"
+        },
+        {
+          "t": "Une grosse molécule se déplace plus facilement dans le solvant qu'une petite.",
+          "v": false,
+          "e": "FAUX : elle traîne au contraire plus difficilement. C'est pour cela que D diminue quand la taille augmente.",
+          "sourceQuote": "Une grosse molécule traîne plus difficilement dans le solvant"
+        },
+        {
+          "t": "C'est la différence de taille qui explique que l'O₂ passe devant le glucose.",
+          "v": true,
+          "e": "VRAI. L'image est explicite : la petite molécule se faufile pendant que la grosse peine à avancer.",
+          "sourceQuote": "la petite molécule se faufile, la grosse rame"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-118-coefficient-diffusion-d.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives au cas clinique de l'hypothermie sévère, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La température du patient est descendue à 28 °C au lieu des 37 °C habituels.",
+          "v": true,
+          "e": "VRAI. C'est la donnée de départ du cas : une chute d'environ neuf degrés après une chute dans une rivière glacée.",
+          "sourceQuote": "sa température est descendue à 28 °C au lieu des 37 °C habituels"
+        },
+        {
+          "t": "Dans cette situation, c'est l'épaisseur de la membrane alvéolaire qui a été modifiée.",
+          "v": false,
+          "e": "FAUX : ni la membrane ni l'air respiré n'ont changé. La seule grandeur touchée est la température.",
+          "sourceQuote": "la membrane n'a pas changé, l'air respiré non plus"
+        },
+        {
+          "t": "La chute de température fait diminuer D, et donc le flux d'O₂.",
+          "v": true,
+          "e": "VRAI. Puisque D baisse avec la température, le flux qui lui est proportionnel baisse aussi.",
+          "sourceQuote": "D diminue avec T (relation de Stokes-Einstein) → Φ diminue"
+        },
+        {
+          "t": "La consommation d'O₂ des tissus diminue elle aussi.",
+          "v": true,
+          "e": "VRAI. C'est la nuance essentielle du cas : la demande baisse en même temps que l'apport.",
+          "sourceQuote": "la consommation d'O₂ tissulaire diminue aussi"
+        },
+        {
+          "t": "L'organisme compense.",
+          "v": true,
+          "e": "VRAI. La baisse simultanée de la demande tissulaire fait que l'effet principal n'est pas le manque d'apport.",
+          "sourceQuote": "et l'organisme compense"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-118-coefficient-diffusion-d.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à la relation théorique qui rassemble les trois dépendances du coefficient de diffusion, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Cette relation doit être sue par cœur pour la P1.",
+          "v": false,
+          "e": "FAUX : elle est citée pour comprendre les variations, pas pour être apprise telle quelle.",
+          "sourceQuote": "elle n'est pas à retenir par cœur"
+        },
+        {
+          "t": "La température y figure au numérateur.",
+          "v": true,
+          "e": "VRAI. C'est ce qui traduit la première règle : D monte quand la température monte.",
+          "sourceQuote": "la température T est au numérateur"
+        },
+        {
+          "t": "La viscosité y figure au numérateur, ce qui fait monter D quand elle augmente.",
+          "v": false,
+          "e": "FAUX : la viscosité est au dénominateur, comme le rayon de la molécule. Quand l'une des deux augmente, D descend.",
+          "sourceQuote": "la viscosité η et le rayon r de la molécule sont au dénominateur"
+        },
+        {
+          "t": "La constante de Boltzmann varie selon le milieu considéré.",
+          "v": false,
+          "e": "FAUX : c'est une constante, donc un nombre fixe. Elle ne dépend ni de la molécule ni du solvant.",
+          "sourceQuote": "un nombre fixe qui ne bouge jamais"
+        },
+        {
+          "t": "On demandera de manipuler cette relation dans les exercices.",
+          "v": false,
+          "e": "FAUX : elle est citée mais pas exigible. Seul le sens des trois variations est attendu.",
+          "sourceQuote": "on ne te demandera pas de la manipuler"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-118-coefficient-diffusion-d.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives au classement d'une modification d'énoncé dans la bonne grandeur de la loi de Fick, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une surface d'échange détruite relève de la géométrie de la membrane, pas du coefficient de diffusion.",
+          "v": true,
+          "e": "VRAI. Membrane épaissie ou surface détruite : ce sont l'épaisseur et la surface qui sont touchées.",
+          "sourceQuote": "Une membrane épaissie ou une surface détruite → c'est la géométrie"
+        },
+        {
+          "t": "Faire respirer de l'oxygène pur au patient agit sur le coefficient de diffusion.",
+          "v": false,
+          "e": "FAUX : changer la composition de l'air respiré modifie l'écart de concentration, c'est-à-dire le gradient.",
+          "sourceQuote": "Un air appauvri ou de l'oxygène pur → c'est le gradient"
+        },
+        {
+          "t": "Un milieu rendu plus visqueux agit sur le gradient de concentration.",
+          "v": false,
+          "e": "FAUX : la viscosité du milieu agit sur le coefficient de diffusion, et sur lui seul.",
+          "sourceQuote": "un milieu plus visqueux → c'est D , et seulement D"
+        },
+        {
+          "t": "Une molécule plus grosse agit sur le coefficient de diffusion.",
+          "v": true,
+          "e": "VRAI. La taille de la molécule est l'une des trois choses qui ne touchent que D.",
+          "sourceQuote": "une molécule plus grosse, un milieu plus visqueux"
+        },
+        {
+          "t": "Devant un énoncé qui fait varier quelque chose, il faut d'abord supposer que c'est le gradient qui est touché.",
+          "v": false,
+          "e": "FAUX : on ne présuppose rien. On range ce qui bouge dans la bonne grandeur, qui peut être la géométrie, le gradient ou D.",
+          "sourceQuote": "range d'abord ce qui bouge dans la bonne brique"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-118-coefficient-diffusion-d.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives aux images et aux repères à retenir sur le coefficient de diffusion, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'analogie du sirop illustre l'effet de la viscosité du milieu.",
+          "v": true,
+          "e": "VRAI. Le sirop est pris comme exemple de milieu très visqueux, donc de milieu qui ralentit la diffusion.",
+          "sourceQuote": "un sirop, c'est très visqueux"
+        },
+        {
+          "t": "Le milieu peut freiner les molécules qui essaient d'y diffuser.",
+          "v": true,
+          "e": "VRAI. C'est exactement le mécanisme par lequel la viscosité fait baisser le coefficient de diffusion.",
+          "sourceQuote": "il « freine » les molécules qui essayent d'y diffuser"
+        },
+        {
+          "t": "Deux exemples résument le coefficient de diffusion : l'O₂ devant le glucose, et l'eau devant le miel.",
+          "v": true,
+          "e": "VRAI. Le premier illustre l'effet de la taille de la molécule, le second celui du milieu.",
+          "sourceQuote": "l'O₂ devant le glucose, l'eau devant le miel"
+        },
+        {
+          "t": "Entre l'eau et le miel, la molécule est la même : c'est le milieu qui la retient.",
+          "v": true,
+          "e": "VRAI. C'est ce qui rend l'exemple probant : rien ne change du côté de la molécule, seul le solvant diffère.",
+          "sourceQuote": "même molécule, mais un milieu qui la retient"
+        },
+        {
+          "t": "Connaître le sens qualitatif des trois variations suffit.",
+          "v": true,
+          "e": "VRAI. On attend le sens des variations, pas un calcul : savoir ce qui fait monter et ce qui fait descendre le coefficient.",
+          "sourceQuote": "connaître les variations qualitatives suffit"
+        }
+      ]
+    },
+
+    {
+      "fiche": "anatomie-119-carte-du-ventre-quadrants-regions.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives au découpage de l'abdomen en quadrants, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Ce découpage se construit avec deux lignes.",
+          "v": true,
+          "e": "VRAI. Deux lignes seulement : c'est ce qui en fait la convention la plus rapide à poser.",
+          "sourceQuote": "On trace 2 lignes"
+        },
+        {
+          "t": "L'une de ces lignes est verticale et passe par la ligne médiane.",
+          "v": true,
+          "e": "VRAI. La verticale suit la ligne médiane, tandis que l'horizontale passe par l'ombilic.",
+          "sourceQuote": "une verticale passant par la ligne médiane"
+        },
+        {
+          "t": "Ce découpage donne six cases.",
+          "v": false,
+          "e": "FAUX : deux lignes qui se croisent donnent quatre cases, pas six. Six cases ne correspondent à aucune des deux conventions.",
+          "sourceQuote": "Ça donne 4 cases"
+        },
+        {
+          "t": "Cette convention est celle utilisée en pratique clinique, aux urgences et à la palpation.",
+          "v": true,
+          "e": "VRAI. C'est sa raison d'être : découper vite et grossièrement pour situer une douleur au lit du patient.",
+          "sourceQuote": "utilisée en pratique clinique (urgences, palpation)"
+        },
+        {
+          "t": "Les quatre cases sont notées QSD, QSG, QID et QIA.",
+          "v": false,
+          "e": "FAUX : la quatrième est le quadrant inférieur gauche, noté QIG. Les quatre sigles combinent supérieur ou inférieur avec droit ou gauche.",
+          "sourceQuote": "quadrant inférieur gauche (QIG)"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-119-carte-du-ventre-quadrants-regions.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la construction du découpage en neuf régions et à son usage, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Il se construit avec deux lignes horizontales et deux lignes verticales.",
+          "v": true,
+          "e": "VRAI. Quatre lignes au total, deux dans chaque direction : c'est le double de la convention des quadrants.",
+          "sourceQuote": "On trace 2 lignes horizontales + 2 lignes verticales"
+        },
+        {
+          "t": "Il aboutit à une grille de deux rangées et quatre colonnes.",
+          "v": false,
+          "e": "FAUX : la grille obtenue est carrée, trois sur trois, ce qui donne bien neuf cases.",
+          "sourceQuote": "ça fait une grille 3 × 3"
+        },
+        {
+          "t": "C'est la convention la plus rapide, réservée aux urgences.",
+          "v": false,
+          "e": "FAUX : c'est la convention la plus précise. La rapide, celle des urgences, est le découpage en quadrants.",
+          "sourceQuote": "Convention plus précise, utilisée en anatomie"
+        },
+        {
+          "t": "La sémiologie est l'étude des traitements de la maladie.",
+          "v": false,
+          "e": "FAUX : la sémiologie est l'étude des signes de la maladie, c'est-à-dire de ce qu'on observe chez le patient.",
+          "sourceQuote": "l'étude des signes de la maladie"
+        },
+        {
+          "t": "Les deux conventions n'ont aucun repère commun.",
+          "v": false,
+          "e": "FAUX : elles partagent au contraire un repère central, l'ombilic, posé sur le même ventre.",
+          "sourceQuote": "partagent le même repère central : l'ombilic"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-119-carte-du-ventre-quadrants-regions.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au contenu des trois rangées de la grille des neuf régions, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'épigastre occupe le milieu de la rangée haute.",
+          "v": true,
+          "e": "VRAI. Il est encadré par les deux hypochondres, l'un à droite, l'autre à gauche.",
+          "sourceQuote": "Rangée haute : hypochondre droit · épigastre"
+        },
+        {
+          "t": "Les flancs appartiennent à la rangée du milieu.",
+          "v": true,
+          "e": "VRAI. Flanc droit et flanc gauche bordent la rangée médiane, de part et d'autre du centre.",
+          "sourceQuote": "Rangée du milieu : flanc droit · région ombilicale · flanc gauche"
+        },
+        {
+          "t": "La région ombilicale est la case centrale de la grille.",
+          "v": true,
+          "e": "VRAI. Elle est au centre de la rangée du milieu, donc au centre de la grille entière.",
+          "sourceQuote": "flanc droit · région ombilicale · flanc gauche"
+        },
+        {
+          "t": "Les fosses iliaques appartiennent à la rangée basse.",
+          "v": true,
+          "e": "VRAI. Fosse iliaque droite et fosse iliaque gauche occupent les deux extrémités de la rangée inférieure.",
+          "sourceQuote": "Rangée basse : fosse iliaque droite · hypogastre"
+        },
+        {
+          "t": "L'hypogastre se situe entre les deux fosses iliaques.",
+          "v": true,
+          "e": "VRAI. Il est la case centrale de la rangée basse, encadrée par les deux fosses iliaques.",
+          "sourceQuote": "fosse iliaque droite · hypogastre · fosse iliaque gauche"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-119-carte-du-ventre-quadrants-regions.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux organes-repères posés dans chaque quadrant, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le foie sert de repère au quadrant supérieur droit.",
+          "v": true,
+          "e": "VRAI. C'est le premier des quatre repères à retenir pour la suite du chapitre.",
+          "sourceQuote": "foie en QSD, estomac en QSG"
+        },
+        {
+          "t": "L'estomac est le repère du quadrant inférieur gauche.",
+          "v": false,
+          "e": "FAUX : l'estomac est en haut à gauche, dans le quadrant supérieur gauche. Le quadrant inférieur gauche a un autre repère.",
+          "sourceQuote": "estomac en QSG, appendice en QID"
+        },
+        {
+          "t": "L'appendice se situe dans le quadrant inférieur droit.",
+          "v": true,
+          "e": "VRAI. C'est le repère classique du bas droit du ventre.",
+          "sourceQuote": "appendice en QID, sigmoïde en QIG"
+        },
+        {
+          "t": "Le sigmoïde est le repère du quadrant supérieur gauche.",
+          "v": false,
+          "e": "FAUX : le sigmoïde est en bas à gauche, dans le quadrant inférieur gauche. En haut à gauche, c'est l'estomac.",
+          "sourceQuote": "sigmoïde en QIG"
+        },
+        {
+          "t": "Ces quatre repères sont présentés comme un détail accessoire.",
+          "v": false,
+          "e": "FAUX : ils sont au contraire présentés comme la base à retenir pour situer les organes dans la suite du chapitre.",
+          "sourceQuote": "C'est la base"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-119-carte-du-ventre-quadrants-regions.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à la latéralité et à la lecture d'un schéma abdominal vu de face, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Sur un schéma vu de face, l'hypochondre droit apparaît à gauche de l'image.",
+          "v": true,
+          "e": "VRAI. Le patient est en face de l'observateur : sa droite se retrouve du côté gauche de l'image.",
+          "sourceQuote": "l'hypochondre droit apparaît à gauche de l'image"
+        },
+        {
+          "t": "La droite et la gauche employées sont celles du patient.",
+          "v": true,
+          "e": "VRAI. C'est la convention constante en anatomie : la latéralité est toujours celle du sujet, jamais celle de l'observateur.",
+          "sourceQuote": "Droite et gauche sont celles du patient"
+        },
+        {
+          "t": "Sur un schéma vu de face, le quadrant supérieur droit se lit à droite de l'image.",
+          "v": false,
+          "e": "FAUX : il se lit à gauche de l'image, comme l'hypochondre droit, puisque la droite est celle du patient.",
+          "sourceQuote": "le QSD et l'hypochondre droit sont à gauche de l'image"
+        },
+        {
+          "t": "C'est cette confusion qui conduit à placer le foie « à gauche » sur une copie.",
+          "v": true,
+          "e": "VRAI. En raisonnant avec sa propre droite plutôt qu'avec celle du patient, on déplace le foie du mauvais côté.",
+          "sourceQuote": "le foie se retrouve « à gauche » sur une copie"
+        },
+        {
+          "t": "Cette erreur fait perdre le point.",
+          "v": true,
+          "e": "VRAI. C'est un piège coûteux, d'autant plus qu'il porte sur une notion parfaitement connue par ailleurs.",
+          "sourceQuote": "et que le point est perdu"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-119-carte-du-ventre-quadrants-regions.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la façon de reconnaître, dans un énoncé, laquelle des deux conventions est employée, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un énoncé qui parle de « QIG » emploie la convention des quadrants.",
+          "v": true,
+          "e": "VRAI. Les sigles en QSD, QSG, QID et QIG appartiennent tous à la grille rapide en quatre cases.",
+          "sourceQuote": "S'il dit « QSD » ou « QIG », c'est la grille rapide des 4 quadrants"
+        },
+        {
+          "t": "Un énoncé qui parle d'« épigastre » emploie la convention des neuf régions.",
+          "v": true,
+          "e": "VRAI. Ce vocabulaire — épigastre, hypochondres, flancs, fosses iliaques — appartient à la grille fine.",
+          "sourceQuote": "c'est la grille fine des 9 régions"
+        },
+        {
+          "t": "Parler de « flanc droit » relève de la convention des quadrants.",
+          "v": false,
+          "e": "FAUX : le flanc droit est une case de la grille des neuf régions, pas un quadrant.",
+          "sourceQuote": "S'il dit « épigastre », « flanc droit » ou « fosse iliaque gauche »"
+        },
+        {
+          "t": "Passer d'une convention à l'autre introduit une notion anatomique nouvelle.",
+          "v": false,
+          "e": "FAUX : c'est le même ventre, seulement nommé avec un autre vocabulaire. Rien de nouveau n'est introduit.",
+          "sourceQuote": "Ce n'est jamais une notion nouvelle"
+        },
+        {
+          "t": "Devant un énoncé, il faut commencer par identifier quelle grille il emploie.",
+          "v": true,
+          "e": "VRAI. C'est le réflexe attendu : reconnaître le vocabulaire employé avant même de lire les propositions.",
+          "sourceQuote": "commence par identifier quelle grille il emploie"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-119-carte-du-ventre-quadrants-regions.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à l'usage respectif des deux conventions dans la suite du chapitre, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans les fiches qui suivent, ce sont surtout les neuf régions qui seront employées.",
+          "v": false,
+          "e": "FAUX : ce sont les quatre quadrants qui seront surtout utilisés, pour ne pas surcharger.",
+          "sourceQuote": "on va surtout utiliser les 4 quadrants dans les fiches qui suivent"
+        },
+        {
+          "t": "Les neuf régions s'apprendront au fur et à mesure des organes rencontrés.",
+          "v": true,
+          "e": "VRAI. Le vocabulaire fin s'installera organe par organe, plutôt que par un apprentissage en bloc.",
+          "sourceQuote": "Tu sauras situer les organes dans les 9 régions à mesure qu'on les rencontre"
+        },
+        {
+          "t": "Les deux conventions décrivent chacune un ventre différent.",
+          "v": false,
+          "e": "FAUX : elles se posent sur le même ventre. Seule la finesse du découpage change.",
+          "sourceQuote": "Les deux grilles se posent sur le même ventre"
+        },
+        {
+          "t": "La convention des quadrants découpe finement et nomme précisément.",
+          "v": false,
+          "e": "FAUX : elle découpe gros et va vite. C'est la grille des neuf régions qui découpe fin et nomme précisément.",
+          "sourceQuote": "La première découpe gros et va vite"
+        },
+        {
+          "t": "La convention des neuf régions est celle employée en sémiologie fine.",
+          "v": true,
+          "e": "VRAI. Elle sert en anatomie et en sémiologie fine, là où il faut nommer précisément un siège de douleur.",
+          "sourceQuote": "utilisée en anatomie et en sémiologie fine"
+        }
+      ]
+    },
+
+    {
+      "fiche": "anatomie-120-oesophage-retrecissements-et-cardia.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives aux caractères généraux de l'œsophage et à sa fonction, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "C'est un tube musculaire d'environ 25 cm.",
+          "v": true,
+          "e": "VRAI. Vingt-cinq centimètres de tube musculaire : c'est l'ordre de grandeur à retenir.",
+          "sourceQuote": "un tube musculaire d'environ 25 cm"
+        },
+        {
+          "t": "Il assure une partie de la transformation du bol alimentaire.",
+          "v": false,
+          "e": "FAUX : il ne transforme rien. C'est le tapis roulant de la chaîne : du transport, et rien d'autre.",
+          "sourceQuote": "ne transforme rien : c'est le tapis roulant de la chaîne"
+        },
+        {
+          "t": "Il descend du cou jusqu'à l'estomac en traversant le thorax.",
+          "v": true,
+          "e": "VRAI. Son trajet part du cou, franchit le thorax, puis se termine juste sous le diaphragme, à l'estomac.",
+          "sourceQuote": "qui descend du cou jusqu'à l'estomac à travers le thorax"
+        },
+        {
+          "t": "Il traverse trois régions successives.",
+          "v": true,
+          "e": "VRAI. Une région cervicale, une région thoracique et une région abdominale, dans cet ordre du haut vers le bas.",
+          "sourceQuote": "qui traverse 3 régions successives"
+        },
+        {
+          "t": "Son rôle est un transport pur, destiné à acheminer le bol alimentaire au poste suivant.",
+          "v": true,
+          "e": "VRAI. C'est la spécificité du segment : aucune transformation, seulement l'acheminement.",
+          "sourceQuote": "Du transport pur, juste pour acheminer le bol alimentaire"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-120-oesophage-retrecissements-et-cardia.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux étapes qui précèdent l'entrée du bol alimentaire dans l'œsophage, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les glandes salivaires déversent environ 1,5 L de salive par jour.",
+          "v": true,
+          "e": "VRAI. C'est le volume de référence de la production salivaire quotidienne.",
+          "sourceQuote": "déversent ~1,5 L de salive par jour"
+        },
+        {
+          "t": "La salive amorce la digestion des protéines.",
+          "v": false,
+          "e": "FAUX : elle amorce la digestion de l'amidon, donc des sucres complexes, pas des protéines.",
+          "sourceQuote": "qui amorce la digestion de l'amidon"
+        },
+        {
+          "t": "Dans la bouche, c'est la langue qui broie mécaniquement les aliments.",
+          "v": false,
+          "e": "FAUX : les dents broient, la langue mélange et propulse. Les deux rôles sont distincts.",
+          "sourceQuote": "les dents broient mécaniquement, la langue mélange et propulse"
+        },
+        {
+          "t": "Le pharynx est un carrefour exclusivement digestif.",
+          "v": false,
+          "e": "FAUX : c'est un carrefour aéro-digestif, donc commun aux voies aériennes et aux voies digestives.",
+          "sourceQuote": "le carrefour aéro-digestif"
+        },
+        {
+          "t": "C'est la luette qui bascule pour protéger les voies aériennes lors de la déglutition.",
+          "v": false,
+          "e": "FAUX : c'est l'épiglotte qui bascule pour fermer l'accès aux voies aériennes pendant le passage du bol.",
+          "sourceQuote": "épiglotte bascule pour protéger les voies aériennes"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-120-oesophage-retrecissements-et-cardia.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives aux trois régions de l'œsophage et à leurs rapports, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La portion cervicale mesure environ 5 cm.",
+          "v": true,
+          "e": "VRAI. C'est la portion située dans le cou, en arrière de la trachée.",
+          "sourceQuote": "L'œsophage cervical (~5 cm)"
+        },
+        {
+          "t": "La portion thoracique est la plus longue des trois.",
+          "v": true,
+          "e": "VRAI. Avec environ 16 cm, elle dépasse largement les portions cervicale et abdominale réunies.",
+          "sourceQuote": "la plus longue des trois"
+        },
+        {
+          "t": "La portion thoracique chemine dans le médiastin antérieur.",
+          "v": false,
+          "e": "FAUX : elle chemine dans le médiastin postérieur, en arrière du cœur et de la trachée.",
+          "sourceQuote": "dans le médiastin postérieur"
+        },
+        {
+          "t": "La portion abdominale mesure environ 10 cm.",
+          "v": false,
+          "e": "FAUX : elle est très courte, de l'ordre de 2 à 3 cm seulement, entre le diaphragme et l'estomac.",
+          "sourceQuote": "L'œsophage abdominal (~2-3 cm)"
+        },
+        {
+          "t": "Le médiastin postérieur est l'espace situé entre les deux poumons, dans sa partie arrière.",
+          "v": true,
+          "e": "VRAI. C'est la définition à connaître : la partie postérieure de l'espace compris entre les deux poumons.",
+          "sourceQuote": "l'espace situé entre les deux poumons, dans sa partie arrière"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-120-oesophage-retrecissements-et-cardia.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux trois rétrécissements anatomiques de l'œsophage et à leurs repères, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le premier se situe au niveau du cartilage cricoïde, en regard de C6.",
+          "v": true,
+          "e": "VRAI. C'est le rétrécissement le plus haut, dans le cou.",
+          "sourceQuote": "Au niveau du cartilage cricoïde (C6)"
+        },
+        {
+          "t": "Ce premier rétrécissement correspond à l'entrée de l'œsophage.",
+          "v": true,
+          "e": "VRAI. Il marque le point où l'œsophage commence, juste après le pharynx.",
+          "sourceQuote": "c'est l' entrée de l'œsophage , là où il commence"
+        },
+        {
+          "t": "Le deuxième se situe en regard de T4.",
+          "v": true,
+          "e": "VRAI. C'est le niveau où la crosse aortique et la bronche souche gauche croisent l'œsophage.",
+          "sourceQuote": "la bronche souche gauche (T4)"
+        },
+        {
+          "t": "Au deuxième rétrécissement, la compression vient de l'extérieur.",
+          "v": true,
+          "e": "VRAI. Ce n'est pas la paroi de l'œsophage qui s'épaissit : ce sont des structures voisines qui le compriment.",
+          "sourceQuote": "la compression vient de l'extérieur, pas de sa paroi"
+        },
+        {
+          "t": "Le troisième correspond au hiatus diaphragmatique, en regard de T10.",
+          "v": true,
+          "e": "VRAI. C'est le passage à travers le diaphragme, dernier rétrécissement avant l'estomac.",
+          "sourceQuote": "Au niveau du hiatus diaphragmatique (T10)"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-120-oesophage-retrecissements-et-cardia.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à la terminaison de l'œsophage et au dispositif anti-reflux, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'œsophage se termine au cardia, qui marque la jonction œso-gastrique.",
+          "v": true,
+          "e": "VRAI. Le cardia est le point de passage entre l'œsophage et l'estomac.",
+          "sourceQuote": "au cardia , qui marque la jonction œso-gastrique"
+        },
+        {
+          "t": "Le sphincter œsophagien inférieur est un sphincter fonctionnel plus qu'anatomique.",
+          "v": true,
+          "e": "VRAI. Il agit comme un sphincter sans être un anneau musculaire individualisé.",
+          "sourceQuote": "un sphincter fonctionnel plus qu'anatomique"
+        },
+        {
+          "t": "Il empêche le contenu acide de l'estomac de remonter vers l'œsophage.",
+          "v": true,
+          "e": "VRAI. C'est sa fonction : maintenir l'acide en bas et protéger la muqueuse œsophagienne.",
+          "sourceQuote": "empêche le reflux du contenu acide de l'estomac vers l'œsophage"
+        },
+        {
+          "t": "L'angle de His est un angle obtus entre l'œsophage et l'estomac.",
+          "v": false,
+          "e": "FAUX : c'est un angle aigu. C'est justement cette fermeture serrée qui lui donne son rôle anti-reflux.",
+          "sourceQuote": "l'angle aigu entre l'œsophage et l'estomac"
+        },
+        {
+          "t": "Quand l'estomac se remplit, il comprime cet angle et ferme la jonction.",
+          "v": true,
+          "e": "VRAI. Le remplissage gastrique referme la jonction comme une valve : le dispositif se renforce au moment où il est le plus utile.",
+          "sourceQuote": "quand l'estomac se remplit, il comprime cet angle et ferme la jonction"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-120-oesophage-retrecissements-et-cardia.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives aux conséquences cliniques d'une défaillance du verrou œso-gastrique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une hernie hiatale correspond à la remontée de l'estomac dans le thorax à travers le hiatus.",
+          "v": true,
+          "e": "VRAI. C'est l'une des deux situations qui favorisent le reflux, avec la défaillance du sphincter lui-même.",
+          "sourceQuote": "si l'estomac remonte dans le thorax à travers le hiatus"
+        },
+        {
+          "t": "Le pyrosis désigne une douleur de la fosse iliaque droite.",
+          "v": false,
+          "e": "FAUX : le pyrosis désigne des brûlures rétro-sternales, donc derrière le sternum, sur le trajet de l'œsophage.",
+          "sourceQuote": "des brûlures rétro-sternales — le pyrosis"
+        },
+        {
+          "t": "L'endobrachyœsophage de Barrett est un état déjà cancéreux.",
+          "v": false,
+          "e": "FAUX : c'est un état pré-cancéreux. Il n'est pas un cancer, mais il justifie une surveillance.",
+          "sourceQuote": "un état pré-cancéreux qui justifie un suivi"
+        },
+        {
+          "t": "Le reflux gastro-œsophagien survient notamment quand le sphincter œsophagien inférieur ne ferme plus bien.",
+          "v": true,
+          "e": "VRAI. C'est la première cause citée : le verrou du bas ne joue plus son rôle et l'acide remonte.",
+          "sourceQuote": "Si le SOI ne ferme plus bien"
+        },
+        {
+          "t": "L'acide qui remonte ne modifie jamais la muqueuse œsophagienne, même à long terme.",
+          "v": false,
+          "e": "FAUX : à long terme, l'acide peut transformer cette muqueuse, ce qui définit précisément l'endobrachyœsophage.",
+          "sourceQuote": "l'acide peut transformer la muqueuse œsophagienne"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-120-oesophage-retrecissements-et-cardia.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives aux confusions classiques sur l'œsophage et à la méthode de lecture proposée, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Au deuxième rétrécissement, c'est la bronche souche droite qui croise l'œsophage.",
+          "v": false,
+          "e": "FAUX : c'est la bronche souche gauche, avec la crosse aortique. Confondre les deux côtés est l'erreur classique à ce niveau.",
+          "sourceQuote": "c'est la bronche souche gauche qui croise l'œsophage en T4, pas la droite"
+        },
+        {
+          "t": "Le sphincter œsophagien inférieur est un vrai muscle annulaire qu'on isole à la dissection.",
+          "v": false,
+          "e": "FAUX : il n'est pas individualisable à la dissection. Il fonctionne comme un sphincter sans en être un au sens anatomique strict.",
+          "sourceQuote": "ce n'est pas un vrai muscle annulaire qu'on isole à la dissection"
+        },
+        {
+          "t": "Devant un énoncé sur l'œsophage, il faut d'abord se demander à quel étage on se situe.",
+          "v": true,
+          "e": "VRAI. Cervical, thoracique ou abdominal : situer l'étage avant de lire les propositions évite la plupart des erreurs.",
+          "sourceQuote": "commence par te demander à quel étage tu es"
+        },
+        {
+          "t": "La grille de lecture du chapitre pose deux questions à chaque segment digestif.",
+          "v": false,
+          "e": "FAUX : elle en pose trois — où c'est, à quoi ça sert, et ce qui en fait la spécificité.",
+          "sourceQuote": "on posera les trois mêmes questions"
+        },
+        {
+          "t": "Le repère vertébral du rétrécissement diaphragmatique est T4.",
+          "v": false,
+          "e": "FAUX : T4 est le repère du croisement avec la crosse aortique. Le passage du diaphragme se situe en T10.",
+          "sourceQuote": "T4 dans le thorax, T10 au diaphragme"
+        }
+      ]
+    },
+
+    {
+      "fiche": "biologie-119-nomenclature-nombre-assises.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives aux critères de classification des épithéliums de revêtement, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Cette classification repose sur deux critères.",
+          "v": true,
+          "e": "VRAI. Deux critères seulement, mais qu'il faut analyser systématiquement, l'un après l'autre.",
+          "sourceQuote": "repose sur deux critères qu'il faut systématiquement analyser"
+        },
+        {
+          "t": "Le premier critère est le nombre d'assises cellulaires.",
+          "v": true,
+          "e": "VRAI. Il revient à se demander combien de couches de cellules compose l'épithélium.",
+          "sourceQuote": "le nombre d'assises cellulaires (combien de couches de cellules ?)"
+        },
+        {
+          "t": "Le second critère porte sur la forme des cellules de la couche basale.",
+          "v": false,
+          "e": "FAUX : c'est la géométrie des cellules de la couche superficielle qui est prise en compte, pas celle de la couche basale.",
+          "sourceQuote": "quelle géométrie ont les cellules de la couche superficielle"
+        },
+        {
+          "t": "Ces deux critères s'analysent sur une coupe histologique.",
+          "v": true,
+          "e": "VRAI. C'est un travail d'observation : on lit la coupe, on ne devine pas.",
+          "sourceQuote": "analyser sur une coupe histologique"
+        },
+        {
+          "t": "Cette fiche traite le second de ces deux critères.",
+          "v": false,
+          "e": "FAUX : elle traite le premier, le nombre d'assises. La forme des cellules fait l'objet de la fiche suivante.",
+          "sourceQuote": "Cette fiche traite le premier"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-119-nomenclature-nombre-assises.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives au repère qui sert à compter les assises d'un épithélium, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Ce repère est la lame basale.",
+          "v": true,
+          "e": "VRAI. Tout le comptage se joue sur elle : c'est le trait du bas, celui qui porte l'épithélium.",
+          "sourceQuote": "le L de JPLA : la lame basale"
+        },
+        {
+          "t": "La bonne question n'est pas « combien de couches je crois voir ».",
+          "v": true,
+          "e": "VRAI. L'apparence trompe, notamment lorsque les noyaux sont placés à des hauteurs différentes.",
+          "sourceQuote": "n'est jamais « combien de couches je crois voir »"
+        },
+        {
+          "t": "La bonne question est de savoir quelles cellules touchent ce repère.",
+          "v": true,
+          "e": "VRAI. C'est le seul critère fiable, et c'est lui qui départage les quatre types d'assises.",
+          "sourceQuote": "quelles cellules touchent la lame basale"
+        },
+        {
+          "t": "Ce repère a déjà été rencontré dans le L du moyen mnémotechnique JPLA.",
+          "v": true,
+          "e": "VRAI. C'est le même repère que celui déjà vu ; il ressert ici pour compter les assises.",
+          "sourceQuote": "celui-là même que tu as vu dans le L de JPLA"
+        },
+        {
+          "t": "Pour compter les assises, tout se joue sur un seul repère.",
+          "v": true,
+          "e": "VRAI. Un seul repère suffit, ce qui rend la méthode simple à appliquer sur n'importe quelle coupe.",
+          "sourceQuote": "tout se joue sur un seul repère"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-119-nomenclature-nombre-assises.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à l'épithélium simple et à l'épithélium bistratifié, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'épithélium simple porte aussi le nom d'unistratifié.",
+          "v": true,
+          "e": "VRAI. Les deux termes désignent le même type : une seule couche de cellules.",
+          "sourceQuote": "Simple (unistratifié)"
+        },
+        {
+          "t": "Dans un épithélium simple, seules certaines cellules touchent la lame basale.",
+          "v": false,
+          "e": "FAUX : toutes la touchent. C'est même l'une des deux caractéristiques qui le définissent.",
+          "sourceQuote": "Toutes les cellules touchent la lame basale"
+        },
+        {
+          "t": "Dans un épithélium simple, les cellules n'atteignent pas la surface.",
+          "v": false,
+          "e": "FAUX : elles l'atteignent toutes. C'est ce point qui le distingue du pseudostratifié.",
+          "sourceQuote": "et toutes atteignent aussi la surface"
+        },
+        {
+          "t": "L'épithélium bistratifié comporte deux couches de cellules.",
+          "v": true,
+          "e": "VRAI. Deux couches, ni plus ni moins : au-delà, on parle de pluristratifié.",
+          "sourceQuote": "Bistratifié. 2 couches de cellules"
+        },
+        {
+          "t": "Dans un bistratifié, les deux couches touchent la lame basale.",
+          "v": false,
+          "e": "FAUX : seule la couche basale la touche ; celle du dessus repose sur la première.",
+          "sourceQuote": "Seule la couche basale touche la lame basale"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-119-nomenclature-nombre-assises.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à l'épithélium pluristratifié et à l'épithélium pseudostratifié, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'épithélium pluristratifié comporte trois couches de cellules ou plus.",
+          "v": true,
+          "e": "VRAI. C'est le seuil qui le sépare du bistratifié : à partir de trois étages, on parle de pluristratifié.",
+          "sourceQuote": "Pluristratifié. 3 couches ou plus"
+        },
+        {
+          "t": "Dans un pluristratifié, seule la couche basale touche la lame basale.",
+          "v": true,
+          "e": "VRAI. C'est le même cas de figure que le bistratifié, avec simplement davantage d'étages au-dessus.",
+          "sourceQuote": "seule la couche basale touche la lame basale — c'est le même cas de figure"
+        },
+        {
+          "t": "L'épithélium pseudostratifié ne comporte en réalité qu'une seule couche de cellules.",
+          "v": true,
+          "e": "VRAI. Une seule couche, mais qui donne l'apparence de plusieurs : d'où son nom.",
+          "sourceQuote": "Pseudostratifié. 1 seule couche , mais avec une apparence de plusieurs"
+        },
+        {
+          "t": "Dans un pseudostratifié, toutes les cellules atteignent la surface.",
+          "v": false,
+          "e": "FAUX : certaines s'arrêtent en chemin. C'est justement ce qui crée l'illusion d'un empilement.",
+          "sourceQuote": "mais pas toutes la surface : certaines s'arrêtent en chemin"
+        },
+        {
+          "t": "Dans un pseudostratifié, toutes les cellules touchent la lame basale.",
+          "v": true,
+          "e": "VRAI. C'est le critère qui prouve qu'il n'a qu'une seule assise, malgré son apparence.",
+          "sourceQuote": "Toutes les cellules touchent la lame basale, mais pas toutes la surface"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-119-nomenclature-nombre-assises.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à la méthode de lecture d'une coupe pour déterminer le nombre d'assises, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le réflexe est de partir du bas de la coupe, et non du haut.",
+          "v": true,
+          "e": "VRAI. Le repère utile est en bas : commencer par le haut revient à se fier à l'apparence.",
+          "sourceQuote": "prends le réflexe de partir du bas , pas du haut"
+        },
+        {
+          "t": "On repère d'abord la lame basale, puis on suit une cellule à la fois.",
+          "v": true,
+          "e": "VRAI. C'est la marche à suivre, cellule par cellule, de haut en bas.",
+          "sourceQuote": "Tu repères d'abord la lame basale , puis tu suis une cellule à la fois"
+        },
+        {
+          "t": "Si chaque cellule descend jusqu'à la lame basale, l'épithélium n'a qu'une seule assise.",
+          "v": true,
+          "e": "VRAI. C'est la conclusion directe du critère : toutes au contact, donc une seule assise.",
+          "sourceQuote": "tu es sur un épithélium à une seule assise"
+        },
+        {
+          "t": "Ce cas correspond soit à un épithélium simple, soit à un pseudostratifié.",
+          "v": true,
+          "e": "VRAI. Ces deux types partagent l'unique assise ; c'est ensuite l'accès à la surface qui les sépare.",
+          "sourceQuote": "une seule assise — simple ou pseudostratifié"
+        },
+        {
+          "t": "Si certaines cellules sont portées par d'autres sans jamais atteindre la lame basale, il s'agit d'un bistratifié ou d'un pluristratifié.",
+          "v": true,
+          "e": "VRAI. Dès qu'une cellule repose sur une autre au lieu de la lame basale, on est dans un épithélium stratifié.",
+          "sourceQuote": "tu es sur un bistratifié ou un pluristratifié"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-119-nomenclature-nombre-assises.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la confusion classique portant sur l'épithélium pseudostratifié, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le pseudostratifié est un épithélium stratifié.",
+          "v": false,
+          "e": "FAUX : il n'en est pas un. Malgré son apparence, il ne compte qu'une seule assise.",
+          "sourceQuote": "n'est PAS un épithélium stratifié"
+        },
+        {
+          "t": "Ce sont les noyaux placés à des hauteurs différentes qui font croire à plusieurs couches.",
+          "v": true,
+          "e": "VRAI. L'illusion vient de la position des noyaux, pas d'un véritable empilement de cellules.",
+          "sourceQuote": "les noyaux placés à des hauteurs différentes qui font croire à plusieurs couches"
+        },
+        {
+          "t": "Un item qui range le pseudostratifié parmi les pluristratifiés est faux.",
+          "v": true,
+          "e": "VRAI. C'est le piège annoncé : le pseudostratifié n'appartient pas aux épithéliums à plusieurs assises.",
+          "sourceQuote": "Un item qui le range parmi les pluristratifiés est FAUX"
+        },
+        {
+          "t": "Pour le reconnaître, il faut suivre chaque cellule et vérifier qu'elle touche la lame basale.",
+          "v": true,
+          "e": "VRAI. C'est l'astuce à appliquer : suivre les cellules une à une plutôt que compter les rangées de noyaux.",
+          "sourceQuote": "si vous suivez chaque cellule, vous verrez qu'elle touche bien la lame basale"
+        },
+        {
+          "t": "Sur un pseudostratifié, les noyaux sont tous alignés à la même hauteur.",
+          "v": false,
+          "e": "FAUX : ils apparaissent au contraire à des hauteurs différentes, et c'est précisément ce qui trompe l'œil.",
+          "sourceQuote": "Les noyaux apparaissent à différentes hauteurs"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-119-nomenclature-nombre-assises.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la construction du nom d'un épithélium en deux mots, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une fois les assises comptées, on tient le second mot du nom de l'épithélium.",
+          "v": false,
+          "e": "FAUX : les assises donnent le premier mot. Le second viendra du critère suivant.",
+          "sourceQuote": "tu tiens le premier mot du nom de ton épithélium"
+        },
+        {
+          "t": "Le second mot du nom vient du critère de la forme des cellules.",
+          "v": true,
+          "e": "VRAI. Le nom complet associe le nombre d'assises et la géométrie des cellules superficielles.",
+          "sourceQuote": "Le second mot viendra du deuxième critère, la forme des cellules"
+        },
+        {
+          "t": "Le premier mot peut être : simple, bistratifié, pluristratifié ou cubique.",
+          "v": false,
+          "e": "FAUX : la quatrième possibilité est pseudostratifié. « Cubique » décrit une forme de cellule, donc l'autre critère.",
+          "sourceQuote": "simple, bistratifié, pluristratifié ou pseudostratifié"
+        },
+        {
+          "t": "La forme des cellules est traitée dans la même fiche que le nombre d'assises.",
+          "v": false,
+          "e": "FAUX : elle fait l'objet de la fiche suivante. Chaque critère est traité séparément.",
+          "sourceQuote": "c'est la fiche suivante"
+        },
+        {
+          "t": "L'allure d'un épithélium ne dépend pas de l'endroit du corps où il se trouve.",
+          "v": false,
+          "e": "FAUX : elle change selon l'endroit, parce que sa forme suit sa fonction. C'est ce qui justifie de savoir le nommer.",
+          "sourceQuote": "pourquoi un épithélium change d'allure selon l'endroit"
+        }
+      ]
+    }
+  ]
+}

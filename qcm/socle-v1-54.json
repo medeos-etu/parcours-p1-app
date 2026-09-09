@@ -1,0 +1,1376 @@
+{
+  "matiere": "mixte",
+  "chapitre": 0,
+  "note": "socle 1-7 — fiches sans QCM, ordre du Parcours",
+  "questions": [
+    {
+      "fiche": "physique-134-absorption-compromis-frequence-profondeur.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à l'absorption d'une onde ultrasonore dans un milieu, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Même en l'absence de toute interface, l'onde perd de l'énergie au fil de sa progression.",
+          "v": true,
+          "e": "VRAI. L'absorption est indépendante des interfaces : même dans un milieu parfaitement homogène, l'onde ne se propage pas indéfiniment sans s'affaiblir.",
+          "sourceQuote": "Loin des interfaces, l'onde s'affaiblit quand même"
+        },
+        {
+          "t": "L'énergie acoustique perdue par absorption se transforme en chaleur.",
+          "v": true,
+          "e": "VRAI. À chaque mètre parcouru, une petite fraction de l'énergie acoustique devient de la chaleur : c'est exactement ce qu'on appelle l'absorption.",
+          "sourceQuote": "une petite fraction de l'énergie acoustique se transforme en chaleur"
+        },
+        {
+          "t": "L'absorption est due aux réflexions successives sur les interfaces rencontrées.",
+          "v": false,
+          "e": "FAUX : les réflexions sont un autre phénomène, celui des interfaces. L'absorption, elle, vient des frottements internes entre molécules, c'est-à-dire de la viscosité du milieu.",
+          "sourceQuote": "à cause des frottements internes entre molécules, c'est-à-dire de la viscosité du milieu"
+        },
+        {
+          "t": "L'absorption est liée à la viscosité du milieu traversé.",
+          "v": true,
+          "e": "VRAI. Ce sont les frottements internes entre molécules — la viscosité — qui dissipent l'énergie de l'onde en chaleur.",
+          "sourceQuote": "c'est-à-dire de la viscosité du milieu"
+        },
+        {
+          "t": "La quantité d'énergie perdue est la même à chaque pas de distance, en valeur absolue.",
+          "v": false,
+          "e": "FAUX : ce n'est pas une quantité fixe mais un pourcentage fixe de ce qu'il reste à l'onde. C'est précisément ce type de perte qui produit une décroissance exponentielle.",
+          "sourceQuote": "l'onde perd un pourcentage fixe de ce qu'il lui reste"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-134-absorption-compromis-frequence-profondeur.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux formules de l'absorption et à la signification de leurs symboles, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La décroissance de l'onde par absorption est une décroissance exponentielle.",
+          "v": true,
+          "e": "VRAI. Perdre un pourcentage constant à chaque pas de distance donne mathématiquement une exponentielle décroissante — la même loi que la radioactivité.",
+          "sourceQuote": "donne mathématiquement une exponentielle décroissante"
+        },
+        {
+          "t": "Le symbole α désigne le coefficient d'absorption du milieu.",
+          "v": true,
+          "e": "VRAI. C'est le coefficient d'absorption du milieu : il est propre au milieu traversé, et c'est lui qui pilote la vitesse d'extinction de l'onde.",
+          "sourceQuote": "coefficient d'absorption du milieu"
+        },
+        {
+          "t": "Ce coefficient mesure la vitesse à laquelle l'onde s'affaiblit.",
+          "v": true,
+          "e": "VRAI. Il ne mesure pas une distance ni une énergie, mais la rapidité avec laquelle l'onde s'éteint dans le milieu.",
+          "sourceQuote": "il mesure « la vitesse » à laquelle l'onde s'affaiblit"
+        },
+        {
+          "t": "Le e des deux formules est une constante mathématique fixe, voisine de 2,72.",
+          "v": true,
+          "e": "VRAI. C'est une constante, au même titre que π vaut environ 3,14 : rien à retenir de plus, rien à faire varier.",
+          "sourceQuote": "e ≈ 2,72 est juste une constante mathématique fixe, comme π ≈ 3,14"
+        },
+        {
+          "t": "En P1, la valeur de l'exponentielle est fournie dans l'énoncé et n'est jamais à calculer.",
+          "v": true,
+          "e": "VRAI. Sans calculatrice, la valeur de l'exponentielle est donnée : il n'y a ni à la calculer, ni à mémoriser des valeurs. Ce qu'on demande, c'est de lire la formule qualitativement.",
+          "sourceQuote": "te sera donnée dans l'énoncé"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-134-absorption-compromis-frequence-profondeur.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au facteur 2 qui apparaît dans l'exponentielle de l'intensité, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'intensité décroît plus vite que l'amplitude à mesure que l'onde s'enfonce.",
+          "v": true,
+          "e": "VRAI. L'exposant de l'intensité est doublé par rapport à celui de l'amplitude : à distance égale, l'intensité a donc chuté davantage.",
+          "sourceQuote": "Pourquoi un facteur 2 dans l'exponentielle pour W, mais pas pour x"
+        },
+        {
+          "t": "Ce facteur 2 traduit le fait que l'onde effectue un aller-retour dans le milieu.",
+          "v": false,
+          "e": "FAUX : il n'a rien à voir avec un trajet aller-retour. Il vient de ce que l'intensité est proportionnelle au carré de l'amplitude.",
+          "sourceQuote": "Parce que l'intensité W est proportionnelle au carré de l'amplitude"
+        },
+        {
+          "t": "Le facteur 2 découle de la mise au carré de l'amplitude.",
+          "v": true,
+          "e": "VRAI. Élever une exponentielle au carré double son exposant : c'est une simple conséquence mathématique, pas un phénomène physique supplémentaire.",
+          "sourceQuote": "C'est une simple conséquence de la mise au carré"
+        },
+        {
+          "t": "Le facteur 2 porte sur l'amplitude, et non sur l'intensité.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. Le facteur 2 est sur l'intensité, jamais sur l'amplitude — c'est le piège le plus classique de cette fiche.",
+          "sourceQuote": "Le facteur 2 est sur W, pas sur x"
+        },
+        {
+          "t": "Ce facteur 2 constitue une deuxième règle physique à mémoriser, indépendante de la première.",
+          "v": false,
+          "e": "FAUX : ce n'est pas une deuxième chose à apprendre. Il se retrouve à chaque fois qu'on se rappelle que l'intensité est le carré de l'amplitude.",
+          "sourceQuote": "pas une deuxième chose à apprendre"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-134-absorption-compromis-frequence-profondeur.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la lecture qualitative de la décroissance et aux facteurs dont dépend le coefficient d'absorption, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "À la sortie de la sonde, l'onde n'a encore rien perdu par absorption.",
+          "v": true,
+          "e": "VRAI. À la distance nulle, l'exponentielle vaut 1 : l'amplitude et l'intensité valent leurs valeurs initiales, rien n'est encore absorbé.",
+          "sourceQuote": "rien n'est absorbé, l'onde n'a rien perdu"
+        },
+        {
+          "t": "Plus la distance parcourue augmente, plus l'onde s'éteint.",
+          "v": true,
+          "e": "VRAI. L'exposant devient de plus en plus négatif, l'exponentielle tend vers zéro : l'onde s'éteint progressivement jusqu'à se dissiper complètement.",
+          "sourceQuote": "l'onde s'éteint progressivement"
+        },
+        {
+          "t": "Dans un milieu très absorbant comme l'os, l'onde s'éteint rapidement.",
+          "v": true,
+          "e": "VRAI. Un coefficient d'absorption élevé signifie une extinction rapide : c'est le cas de l'os.",
+          "sourceQuote": "milieu très absorbant, comme l'os"
+        },
+        {
+          "t": "Le coefficient d'absorption ne dépend que de la viscosité du milieu, pas de la fréquence de l'onde.",
+          "v": false,
+          "e": "FAUX : il dépend de deux choses, la viscosité du milieu et surtout la fréquence. C'est cette seconde dépendance qui commande tout le choix des sondes.",
+          "sourceQuote": "et surtout la fréquence f de l'onde : α augmente avec f"
+        },
+        {
+          "t": "Dans l'eau ou dans le sang, l'onde voyage loin.",
+          "v": true,
+          "e": "VRAI. Ce sont des milieux peu absorbants : le coefficient y est petit, donc l'onde conserve longtemps son énergie.",
+          "sourceQuote": "eau, sang) → l'onde voyage loin"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-134-absorption-compromis-frequence-profondeur.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux sondes de haute fréquence, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Elles travaillent typiquement entre 2 et 3,5 MHz.",
+          "v": false,
+          "e": "FAUX : les sondes de haute fréquence travaillent entre 10 et 15 MHz. La plage 2-3,5 MHz est celle des sondes basse fréquence, dites profondes.",
+          "sourceQuote": "10-15 MHz, sondes superficielles"
+        },
+        {
+          "t": "Elles offrent une bonne résolution spatiale, parce que leur longueur d'onde est petite.",
+          "v": true,
+          "e": "VRAI. C'est la longueur d'onde qui fixe la finesse de l'image : plus elle est petite, plus on distingue des détails fins.",
+          "sourceQuote": "λ petite → bonne résolution spatiale (on voit des détails fins)"
+        },
+        {
+          "t": "Monter en fréquence allonge la longueur d'onde.",
+          "v": false,
+          "e": "FAUX : la longueur d'onde vaut la célérité divisée par la fréquence. Monter en fréquence la raccourcit, ce qui affine justement l'image.",
+          "sourceQuote": "la longueur d'onde raccourcit (λ = c / f)"
+        },
+        {
+          "t": "Monter en fréquence diminue le coefficient d'absorption et permet donc d'explorer plus profond.",
+          "v": false,
+          "e": "FAUX : c'est le contraire. Le coefficient d'absorption grandit avec la fréquence, la pénétration devient faible et l'on n'explore plus que les premiers centimètres.",
+          "sourceQuote": "α grand → faible pénétration → on n'explore que les premiers cm"
+        },
+        {
+          "t": "Une même sonde peut offrir à la fois la résolution la plus fine et la plus grande profondeur d'exploration.",
+          "v": false,
+          "e": "FAUX : les deux effets de la fréquence s'opposent. Gagner en finesse, c'est perdre en profondeur — il est impossible de gagner sur les deux tableaux.",
+          "sourceQuote": "Impossible de gagner sur les deux tableaux"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-134-absorption-compromis-frequence-profondeur.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives aux sondes de basse fréquence et à l'arbitrage entre profondeur et finesse d'image, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une sonde de 2 à 3,5 MHz est une sonde d'exploration profonde.",
+          "v": true,
+          "e": "VRAI. Sa fréquence basse s'accompagne d'un coefficient d'absorption faible : l'onde conserve son énergie plus longtemps et descend plus bas dans les tissus.",
+          "sourceQuote": "2-3,5 MHz, sondes profondes"
+        },
+        {
+          "t": "Elle permet d'explorer jusqu'à 20-25 cm de profondeur.",
+          "v": true,
+          "e": "VRAI. C'est la profondeur d'exploration annoncée pour les sondes basse fréquence, ce qui les rend adaptées à l'abdomen.",
+          "sourceQuote": "grande profondeur d'exploration (jusqu'à 20-25 cm)"
+        },
+        {
+          "t": "Sa résolution est moins fine, parce que sa longueur d'onde est grande.",
+          "v": true,
+          "e": "VRAI. C'est le prix à payer : une grande longueur d'onde donne une image moins détaillée.",
+          "sourceQuote": "λ grande → résolution moins fine"
+        },
+        {
+          "t": "Deux structures plus rapprochées que la longueur d'onde restent malgré tout distinguables.",
+          "v": false,
+          "e": "FAUX : c'est justement la limite. On ne distingue pas deux structures plus rapprochées que la longueur d'onde — d'où l'intérêt de la raccourcir quand on cherche du détail.",
+          "sourceQuote": "puisqu'on ne distingue pas deux structures plus rapprochées que λ"
+        },
+        {
+          "t": "Choisir la fréquence d'une sonde revient à arbitrer entre voir loin et voir précis.",
+          "v": true,
+          "e": "VRAI. C'est le résumé du compromis : la fréquence ne se choisit pas dans l'absolu, mais en fonction de ce qu'on veut privilégier.",
+          "sourceQuote": "c'est arbitrer entre voir loin et voir précis"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-134-absorption-compromis-frequence-profondeur.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives au choix de la sonde selon la région explorée, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une sonde linéaire de haute fréquence convient aux vaisseaux superficiels et à la thyroïde.",
+          "v": true,
+          "e": "VRAI. Ce sont des structures peu profondes : on peut donc privilégier la finesse de l'image, ce que permet la haute fréquence.",
+          "sourceQuote": "une linéaire haute fréquence pour les vaisseaux superficiels et la thyroïde"
+        },
+        {
+          "t": "L'abdomen et l'obstétrique s'explorent avec une sonde de haute fréquence.",
+          "v": false,
+          "e": "FAUX : ces indications demandent de la profondeur. On y emploie une sonde convexe de basse fréquence.",
+          "sourceQuote": "une convexe basse fréquence pour l'abdomen et l'obstétrique"
+        },
+        {
+          "t": "L'exploration du pelvis par voie vaginale utilise une sonde de basse fréquence.",
+          "v": false,
+          "e": "FAUX : la voie endo-cavitaire approche l'organe de très près, ce qui autorise une sonde ultra-fréquence et donc une image très fine.",
+          "sourceQuote": "une endo-cavitaire ultra-fréquence pour le pelvis, par voie vaginale"
+        },
+        {
+          "t": "Un énoncé qui promet une résolution fine et une grande profondeur avec la même sonde est faux.",
+          "v": true,
+          "e": "VRAI. C'est le piège type de ce chapitre : les deux qualités s'excluent, puisqu'elles dépendent de la fréquence en sens opposés.",
+          "sourceQuote": "Un QCM qui promet résolution fine ET grande profondeur avec la même sonde est FAUX"
+        },
+        {
+          "t": "Une seule sonde, réglable en profondeur, suffit à l'opérateur pour toutes les explorations.",
+          "v": false,
+          "e": "FAUX : c'est précisément parce qu'aucune sonde ne peut tout faire que l'opérateur dispose de plusieurs sondes, choisies selon la région.",
+          "sourceQuote": "C'est pour cela que l'opérateur a plusieurs sondes"
+        }
+      ]
+    },
+
+    {
+      "fiche": "anatomie-135-rein-morphologie-externe-hile.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la situation des reins dans l'abdomen, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les deux reins sont rétropéritonéaux.",
+          "v": true,
+          "e": "VRAI. Ils ne sont pas dans la cavité péritonéale mais en arrière d'elle : c'est une caractéristique constante de l'appareil urinaire haut.",
+          "sourceQuote": "Les 2 reins sont rétropéritonéaux"
+        },
+        {
+          "t": "Ils sont plaqués contre la paroi postérieure de l'abdomen.",
+          "v": true,
+          "e": "VRAI. Le rein est appliqué contre le mur du dos, ce qui explique qu'on puisse l'aborder chirurgicalement par voie postérieure.",
+          "sourceQuote": "plaqués contre la paroi postérieure de l'abdomen"
+        },
+        {
+          "t": "Ils occupent la région lombaire.",
+          "v": true,
+          "e": "VRAI. C'est la région du dos située sous les côtes : d'où la douleur lombaire quand un rein souffre.",
+          "sourceQuote": "dans la région lombaire"
+        },
+        {
+          "t": "Ils s'étendent en hauteur entre T12 et L3.",
+          "v": true,
+          "e": "VRAI. C'est le repère vertébral à retenir : les reins occupent la hauteur allant de la douzième vertèbre thoracique à la troisième lombaire.",
+          "sourceQuote": "Ils sont situés entre T12 et L3"
+        },
+        {
+          "t": "Ce niveau correspond à peu près à la hauteur des dernières côtes.",
+          "v": true,
+          "e": "VRAI. Le repère osseux se traduit ainsi : à hauteur des dernières côtes et juste en dessous — ce qui rend la cage thoracique partiellement protectrice.",
+          "sourceQuote": "à hauteur des dernières côtes et juste en dessous"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-135-rein-morphologie-externe-hile.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la différence de hauteur entre les deux reins, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le rein gauche est légèrement plus bas que le rein droit.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse, et c'est l'asymétrie la plus classique. Le rein droit est légèrement plus bas que le gauche.",
+          "sourceQuote": "le rein droit est légèrement plus bas que le rein gauche"
+        },
+        {
+          "t": "C'est le volume du foie qui explique cette asymétrie.",
+          "v": true,
+          "e": "VRAI. Le foie est volumineux et occupe la place en haut à droite : il ne laisse pas d'autre choix au rein droit que de descendre.",
+          "sourceQuote": "le foie est volumineux et il est en haut à droite"
+        },
+        {
+          "t": "Le foie repousse le rein droit vers le haut.",
+          "v": false,
+          "e": "FAUX : il le repousse vers le bas. Un organe volumineux placé au-dessus ne peut pousser que vers le bas.",
+          "sourceQuote": "il ne peut que repousser le rein droit vers le bas"
+        },
+        {
+          "t": "Le sens de cette asymétrie varie d'un individu à l'autre.",
+          "v": false,
+          "e": "FAUX : la cause étant mécanique, le sens est toujours le même. C'est ce qui permet de la retrouver au lieu de la retenir.",
+          "sourceQuote": "La cause est mécanique, donc le sens est toujours le même"
+        },
+        {
+          "t": "Cette asymétrie est à apprendre par cœur, elle ne se déduit d'aucun repère.",
+          "v": false,
+          "e": "FAUX : justement, on la retrouve. Il suffit de penser au foie, volumineux et haut placé à droite, pour reconstruire le sens de l'asymétrie.",
+          "sourceQuote": "Ne l'apprends pas par cœur, retrouve-la"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-135-rein-morphologie-externe-hile.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la forme, aux dimensions et au poids d'un rein, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le rein a la forme d'un haricot, comparée aussi à celle d'un grain de café.",
+          "v": true,
+          "e": "VRAI. Les deux images reviennent constamment : une masse allongée, creusée sur un seul de ses bords.",
+          "sourceQuote": "la forme d'un haricot — ou d'un grain de café"
+        },
+        {
+          "t": "Ses dimensions sont d'environ 12 cm sur 6 cm sur 3 cm.",
+          "v": true,
+          "e": "VRAI. Ce triplet est le chiffre à retenir pour la taille du rein.",
+          "sourceQuote": "Dimensions. 12 cm × 6 cm × 3 cm"
+        },
+        {
+          "t": "Le rein pèse 120 à 170 g chez la femme et 100 à 150 g chez l'homme.",
+          "v": false,
+          "e": "FAUX : les deux fourchettes sont interverties. C'est chez l'homme que le rein pèse 120 à 170 g, et chez la femme 100 à 150 g.",
+          "sourceQuote": "Poids : 120-170 g chez l'homme, 100-150 g chez la femme"
+        },
+        {
+          "t": "C'est la forme du rein qui commande toute sa description externe.",
+          "v": true,
+          "e": "VRAI. De cette forme découlent les éléments décrits ensuite : deux extrémités, deux faces et deux bords.",
+          "sourceQuote": "C'est cette forme qui commande toute la description"
+        },
+        {
+          "t": "Les deux bords du rein sont creusés.",
+          "v": false,
+          "e": "FAUX : un seul des deux bords est creusé, le bord médial, qui porte le hile. Le bord latéral, lui, reste convexe.",
+          "sourceQuote": "deux bords dont un seul est creusé"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-135-rein-morphologie-externe-hile.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux pôles et aux faces du rein, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le pôle supérieur est étroit et coiffé par la glande surrénale.",
+          "v": true,
+          "e": "VRAI. C'est le pôle du haut qui porte la glande surrénale, posée dessus comme un bonnet.",
+          "sourceQuote": "étroit, coiffé par la glande surrénale"
+        },
+        {
+          "t": "Le pôle inférieur est le plus étroit des deux extrémités.",
+          "v": false,
+          "e": "FAUX : c'est le pôle supérieur qui est étroit. Le pôle inférieur est, lui, plus arrondi.",
+          "sourceQuote": "le pôle inférieur , plus arrondi"
+        },
+        {
+          "t": "Le rein présente une face antérieure et une face postérieure.",
+          "v": true,
+          "e": "VRAI. Les deux faces du rein sont bien une face avant et une face arrière.",
+          "sourceQuote": "Une face antérieure et une face postérieure"
+        },
+        {
+          "t": "Les deux faces du rein sont l'une médiale, l'autre latérale.",
+          "v": false,
+          "e": "FAUX : médial et latéral qualifient les bords, pas les faces. Les faces sont antérieure et postérieure.",
+          "sourceQuote": "Le bord latéral convexe (lisse) et le bord médial concave"
+        },
+        {
+          "t": "La glande surrénale est logée au niveau du hile, sur le bord médial.",
+          "v": false,
+          "e": "FAUX : la surrénale coiffe le pôle supérieur. Le hile, creusé dans le bord médial, livre passage aux vaisseaux et à la voie urinaire.",
+          "sourceQuote": "le bord médial concave , qui porte le hile rénal"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-135-rein-morphologie-externe-hile.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux deux bords du rein et à sa porte unique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le bord latéral est convexe et lisse.",
+          "v": true,
+          "e": "VRAI. C'est le bord bombé, tourné vers l'extérieur du corps.",
+          "sourceQuote": "Le bord latéral convexe (lisse)"
+        },
+        {
+          "t": "Le bord médial est concave et porte le hile rénal.",
+          "v": true,
+          "e": "VRAI. C'est le bord creusé, tourné vers le milieu du corps : la porte du rein s'y ouvre.",
+          "sourceQuote": "le bord médial concave , qui porte le hile rénal"
+        },
+        {
+          "t": "Le hile est la porte d'entrée et de sortie du rein.",
+          "v": true,
+          "e": "VRAI. Tout ce qui entre dans le rein et tout ce qui en sort passe par ce point unique.",
+          "sourceQuote": "est la porte d'entrée et de sortie du rein"
+        },
+        {
+          "t": "Le bord latéral ne porte aucune structure.",
+          "v": true,
+          "e": "VRAI. Il reste lisse d'un bout à l'autre : rien n'y entre, rien n'en sort.",
+          "sourceQuote": "Le bord latéral, lui, reste lisse — il ne porte rien"
+        },
+        {
+          "t": "Le sang entre et ressort par le hile, et l'urine en part également.",
+          "v": true,
+          "e": "VRAI. C'est la logique à retenir avant la liste : un seul point de passage pour tout l'organe, le sang comme l'urine.",
+          "sourceQuote": "Le sang entre par le hile et en ressort par le hile"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-135-rein-morphologie-externe-hile.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives aux éléments qui traversent le hile rénal et à leur disposition, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La veine rénale est l'élément le plus antérieur du hile.",
+          "v": true,
+          "e": "VRAI. C'est le V du moyen mnémotechnique V-A-P : la veine occupe le plan le plus avant.",
+          "sourceQuote": "la veine rénale (en avant)"
+        },
+        {
+          "t": "L'artère rénale occupe la position intermédiaire.",
+          "v": true,
+          "e": "VRAI. Elle est prise en sandwich entre la veine, en avant, et le pelvis rénal, en arrière.",
+          "sourceQuote": "l' artère rénale (au milieu)"
+        },
+        {
+          "t": "Le pelvis rénal est l'élément le plus antérieur, situé en avant de la veine.",
+          "v": false,
+          "e": "FAUX : le pelvis rénal, qui se prolonge par l'uretère, est l'élément le plus postérieur des trois.",
+          "sourceQuote": "qui se prolonge par l' uretère (en arrière)"
+        },
+        {
+          "t": "Des nerfs et des lymphatiques empruntent également le hile.",
+          "v": true,
+          "e": "VRAI. À côté des trois éléments principaux passent aussi des nerfs et des lymphatiques.",
+          "sourceQuote": "passent aussi des nerfs et des lymphatiques"
+        },
+        {
+          "t": "L'ordre V-A-P se lit de haut en bas.",
+          "v": false,
+          "e": "FAUX : il se lit d'avant en arrière. Le lire de haut en bas est l'erreur classique sur ce mnémo.",
+          "sourceQuote": "l'ordre V-A-P se lit d' avant en arrière — jamais de haut en bas"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-135-rein-morphologie-externe-hile.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives aux conséquences chirurgicales de la disposition des éléments du hile, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "En lombotomie, abord postérieur, on rencontre d'abord la veine rénale.",
+          "v": false,
+          "e": "FAUX : en abordant le rein par l'arrière, on rencontre d'abord l'élément le plus postérieur, c'est-à-dire le pelvis rénal.",
+          "sourceQuote": "En lombotomie (abord postérieur), on rencontre le pelvis en premier"
+        },
+        {
+          "t": "Par voie antérieure, la veine rénale est le premier élément rencontré.",
+          "v": true,
+          "e": "VRAI. En venant de l'avant, on tombe logiquement sur l'élément le plus antérieur : la veine.",
+          "sourceQuote": "En voie antérieure , on commence par la veine"
+        },
+        {
+          "t": "L'artère rénale est le plus gros vaisseau du hile et la première chose à clamper.",
+          "v": false,
+          "e": "FAUX : c'est la veine rénale qui est le plus gros vaisseau, et c'est elle qu'on clampe en premier en chirurgie rénale.",
+          "sourceQuote": "la veine — qui est le plus gros vaisseau et la première chose à clamper"
+        },
+        {
+          "t": "L'ordre des éléments du hile n'a aucune portée pratique.",
+          "v": false,
+          "e": "FAUX : cet ordre conditionne directement l'abord chirurgical du rein, et le geste change selon la voie choisie.",
+          "sourceQuote": "Cet ordre n'est pas anecdotique : il conditionne l'abord chirurgical du rein"
+        },
+        {
+          "t": "Le pelvis rénal se prolonge en avant par l'artère rénale.",
+          "v": false,
+          "e": "FAUX : le pelvis rénal, ou bassinet, se prolonge par l'uretère, en arrière. L'artère est un élément distinct, situé au milieu du hile.",
+          "sourceQuote": "le pelvis rénal — ou bassinet — qui se prolonge par l' uretère"
+        }
+      ]
+    },
+
+    {
+      "fiche": "anatomie-136-rein-trois-enveloppes-ccc.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives au nombre d'enveloppes du rein et à l'ordre dans lequel on les cite, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le rein est entouré de trois enveloppes protectrices.",
+          "v": true,
+          "e": "VRAI. Trois couches successives s'interposent entre la surface du rein et le reste de l'abdomen.",
+          "sourceQuote": "Le rein est entouré de 3 enveloppes protectrices"
+        },
+        {
+          "t": "On les cite classiquement de l'extérieur vers l'intérieur.",
+          "v": false,
+          "e": "FAUX : le sens de citation est toujours le même, et c'est de l'intérieur vers l'extérieur. Vérifier ce sens est le premier réflexe devant une question sur les enveloppes.",
+          "sourceQuote": "on les cite toujours dans le même sens — de l'intérieur vers l'extérieur"
+        },
+        {
+          "t": "La première d'entre elles, la plus interne, est la capsule fibreuse.",
+          "v": true,
+          "e": "VRAI. Elle est directement au contact du parenchyme, c'est-à-dire du tissu du rein lui-même.",
+          "sourceQuote": "La capsule fibreuse. Elle est directement au contact du parenchyme"
+        },
+        {
+          "t": "La graisse péri-rénale est la couche la plus externe des trois.",
+          "v": false,
+          "e": "FAUX : la graisse est la couche intermédiaire. Le fascia de Gerota est tendu autour d'elle, c'est donc lui le plus externe.",
+          "sourceQuote": "Une enveloppe conjonctive (du tissu de soutien) tendue autour de la graisse"
+        },
+        {
+          "t": "Le rein repose directement, sans interposition, contre la paroi de l'abdomen.",
+          "v": false,
+          "e": "FAUX : il n'est jamais posé nu contre la paroi. Trois couches l'emballent et le tiennent en place.",
+          "sourceQuote": "Un rein n'est pas posé nu contre la paroi du ventre"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-136-rein-trois-enveloppes-ccc.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux deux premières enveloppes du rein, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La capsule fibreuse est directement au contact du parenchyme rénal.",
+          "v": true,
+          "e": "VRAI. Rien ne s'interpose entre elle et le tissu du rein : c'est la toute première couche.",
+          "sourceQuote": "Elle est directement au contact du parenchyme"
+        },
+        {
+          "t": "Le parenchyme désigne le tissu vivant du rein.",
+          "v": true,
+          "e": "VRAI. C'est la partie fonctionnelle de l'organe, celle qu'on découvre en ouvrant le rein.",
+          "sourceQuote": "le tissu vivant du rein"
+        },
+        {
+          "t": "La capsule fibreuse est mince mais résistante.",
+          "v": true,
+          "e": "VRAI. Peu épaisse, mais solide : c'est l'emballage serré de l'organe.",
+          "sourceQuote": "Elle est mince mais résistante"
+        },
+        {
+          "t": "La graisse péri-rénale amortit les chocs.",
+          "v": true,
+          "e": "VRAI. Son rôle tient en trois mots : elle amortit les chocs, comme une mousse de protection.",
+          "sourceQuote": "son rôle tient en trois mots : elle amortit les chocs"
+        },
+        {
+          "t": "La graisse péri-rénale est plaquée directement contre le parenchyme, sous la capsule fibreuse.",
+          "v": false,
+          "e": "FAUX : elle est posée autour de la capsule fibreuse, donc à l'extérieur de celle-ci. Aucune couche ne saute son tour.",
+          "sourceQuote": "C'est une couche de graisse posée autour de la capsule fibreuse"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-136-rein-trois-enveloppes-ccc.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au fascia péri-rénal de Gerota, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "C'est une enveloppe conjonctive, faite de tissu de soutien.",
+          "v": true,
+          "e": "VRAI. Ce n'est ni de la graisse ni une capsule collée à l'organe, mais du tissu de soutien.",
+          "sourceQuote": "Une enveloppe conjonctive (du tissu de soutien)"
+        },
+        {
+          "t": "Elle est tendue autour de la graisse péri-rénale.",
+          "v": true,
+          "e": "VRAI. Elle referme l'ensemble par l'extérieur, en enveloppant la couche graisseuse.",
+          "sourceQuote": "tendue autour de la graisse"
+        },
+        {
+          "t": "C'est elle, et elle seule, qui délimite la loge rénale.",
+          "v": true,
+          "e": "VRAI. Aucune des deux autres enveloppes ne délimite la loge : cette fonction revient au seul fascia de Gerota.",
+          "sourceQuote": "C'est elle, et elle seule, qui délimite la « loge rénale »"
+        },
+        {
+          "t": "La loge rénale est l'espace dans lequel le rein est logé.",
+          "v": true,
+          "e": "VRAI. C'est le compartiment délimité par le fascia, dans lequel le rein est calé.",
+          "sourceQuote": "l'espace dans lequel le rein est logé"
+        },
+        {
+          "t": "Le fascia de Gerota est la plus externe des trois enveloppes.",
+          "v": true,
+          "e": "VRAI. Il vient en dernier dans l'énumération faite de l'intérieur vers l'extérieur.",
+          "sourceQuote": "Gerota, le plus externe"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-136-rein-trois-enveloppes-ccc.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux deux structures qui portent ici le mot « capsule », laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La capsule adipeuse est un autre nom de la graisse péri-rénale.",
+          "v": true,
+          "e": "VRAI. Les deux appellations désignent la même deuxième enveloppe, celle qui amortit les chocs.",
+          "sourceQuote": "Aussi appelée capsule adipeuse"
+        },
+        {
+          "t": "La capsule adipeuse est la première enveloppe, au contact du parenchyme.",
+          "v": false,
+          "e": "FAUX : c'est la capsule fibreuse qui est la première, au contact du parenchyme. La capsule adipeuse n'est que la deuxième.",
+          "sourceQuote": "La capsule fibreuse est la 1 re enveloppe, au contact du parenchyme"
+        },
+        {
+          "t": "La capsule fibreuse est la deuxième enveloppe du rein.",
+          "v": false,
+          "e": "FAUX : elle est la toute première couche, celle qui est collée à l'organe.",
+          "sourceQuote": "la toute première couche"
+        },
+        {
+          "t": "C'est la graisse péri-rénale qui délimite la loge rénale.",
+          "v": false,
+          "e": "FAUX : la loge rénale est délimitée par le fascia de Gerota, pas par la graisse.",
+          "sourceQuote": "ce n'est pas la graisse qui délimite la loge rénale"
+        },
+        {
+          "t": "« Capsule fibreuse » et « capsule adipeuse » désignent une seule et même enveloppe.",
+          "v": false,
+          "e": "FAUX : deux structures distinctes portent ici le mot capsule. La fibreuse est la première enveloppe, l'adipeuse est la deuxième.",
+          "sourceQuote": "Deux structures portent ici le mot « capsule »"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-136-rein-trois-enveloppes-ccc.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au moyen mnémotechnique C-C-C et aux images qui l'accompagnent, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "C-C-C se déplie en « Capsule, Coussin, Cage ».",
+          "v": true,
+          "e": "VRAI. Trois mots pour trois couches, dans l'ordre de l'intérieur vers l'extérieur.",
+          "sourceQuote": "Capsule, Coussin, Cage"
+        },
+        {
+          "t": "La capsule fibreuse est comparée à un film plastique.",
+          "v": true,
+          "e": "VRAI. L'image dit l'essentiel : un emballage serré, mince, appliqué directement sur l'organe.",
+          "sourceQuote": "l'emballage serré du parenchyme (comme un film plastique)"
+        },
+        {
+          "t": "Le coussin du mnémo désigne le fascia de Gerota.",
+          "v": false,
+          "e": "FAUX : le coussin est la graisse péri-rénale, l'amortisseur. Le fascia de Gerota, lui, est la cage.",
+          "sourceQuote": "La graisse péri-rénale est le coussin amortisseur"
+        },
+        {
+          "t": "La cage du mnémo est comparée à la boîte en carton qui maintient le tout.",
+          "v": true,
+          "e": "VRAI. Le fascia de Gerota joue le rôle du carton d'emballage : il referme l'ensemble et le maintient.",
+          "sourceQuote": "comme la boîte en carton qui maintient le tout"
+        },
+        {
+          "t": "L'ordre des trois enveloppes est indifférent, elles peuvent être interverties.",
+          "v": false,
+          "e": "FAUX : les trois s'emboîtent dans un ordre fixe, et aucune ne saute son tour. C'est justement ce que teste ce type de question.",
+          "sourceQuote": "Les trois s'emboîtent, aucune ne saute son tour"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-136-rein-trois-enveloppes-ccc.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la stabilité du rein dans sa loge et à ce qui peut la compromettre, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'empilement des trois couches fait que le rein n'est ni écrasé, ni ballotté.",
+          "v": true,
+          "e": "VRAI. Du résistant collé à l'organe, de la graisse au milieu, du tissu de soutien tendu autour : le rein est calé.",
+          "sourceQuote": "Le rein n'est ni écrasé, ni ballotté"
+        },
+        {
+          "t": "C'est là toute la raison d'être de la loge rénale.",
+          "v": true,
+          "e": "VRAI. La loge n'est pas un simple espace : elle sert à maintenir le rein en place.",
+          "sourceQuote": "C'est toute la raison d'être de la loge rénale"
+        },
+        {
+          "t": "Un amaigrissement majeur peut compromettre cette stabilité.",
+          "v": true,
+          "e": "VRAI. C'est l'exception : le rein est très stable dans sa loge, sauf en cas d'amaigrissement majeur.",
+          "sourceQuote": "un rein est si stable dans sa loge — sauf en cas d'amaigrissement majeur"
+        },
+        {
+          "t": "La ptose rénale correspond à une chute du rein.",
+          "v": true,
+          "e": "VRAI. Le terme désigne exactement cela : le rein descend, faute d'être calé.",
+          "sourceQuote": "la « ptose rénale » (chute du rein)"
+        },
+        {
+          "t": "Dans l'amaigrissement, c'est la disparition de la capsule fibreuse qui déstabilise le rein.",
+          "v": false,
+          "e": "FAUX : c'est la disparition de la graisse péri-rénale, le coussin amortisseur, qui provoque la ptose rénale.",
+          "sourceQuote": "où la disparition de la graisse provoque la « ptose rénale »"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-136-rein-trois-enveloppes-ccc.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la lecture du schéma des enveloppes et à la méthode à appliquer devant une question sur ce sujet, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Sur le schéma, la ligne fine collée à l'organe est la capsule fibreuse.",
+          "v": true,
+          "e": "VRAI. On part du rein au centre et on sort : la première ligne rencontrée est la capsule fibreuse.",
+          "sourceQuote": "la ligne fine collée à l'organe = la capsule fibreuse"
+        },
+        {
+          "t": "La bande jaune-crème, plus épaisse, correspond à la graisse péri-rénale.",
+          "v": true,
+          "e": "VRAI. Sa couleur et son épaisseur la distinguent immédiatement de la fine capsule fibreuse.",
+          "sourceQuote": "la bande jaune-crème, plus épaisse = la graisse péri-rénale"
+        },
+        {
+          "t": "L'enveloppe la plus externe du schéma referme la loge rénale.",
+          "v": true,
+          "e": "VRAI. C'est le fascia de Gerota, la troisième couche, qui ferme la loge autour de l'ensemble.",
+          "sourceQuote": "qui referme la loge rénale"
+        },
+        {
+          "t": "Les trois couches sont concentriques autour d'un même organe.",
+          "v": true,
+          "e": "VRAI. Elles s'emboîtent les unes dans les autres autour d'un seul rein, sans se croiser ni s'intervertir.",
+          "sourceQuote": "Trois couches concentriques autour d'un seul organe"
+        },
+        {
+          "t": "Devant une question sur les enveloppes, la première chose à vérifier est le sens de lecture.",
+          "v": true,
+          "e": "VRAI. Beaucoup d'items ne sont faux que parce qu'ils énumèrent les trois couches à l'envers : on vérifie donc d'abord le sens.",
+          "sourceQuote": "vérifie d'abord le sens de lecture"
+        }
+      ]
+    },
+
+    {
+      "fiche": "biologie-135-macrophage-leucocytes.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à l'origine du macrophage, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le macrophage dérive du monocyte sanguin.",
+          "v": true,
+          "e": "VRAI. C'est son origine : une cellule du sang, qui change de nom en changeant de territoire.",
+          "sourceQuote": "Le macrophage dérive du monocyte sanguin"
+        },
+        {
+          "t": "Le macrophage naît dans le tissu conjonctif, où il réside en permanence.",
+          "v": false,
+          "e": "FAUX : aucune des cellules mobiles ne naît dans le tissu conjonctif. Le macrophage y arrive par le sang, quand il y a du travail.",
+          "sourceQuote": "Aucune d'elles ne naît dans le tissu conjonctif"
+        },
+        {
+          "t": "Monocyte et macrophage sont deux cellules entièrement différentes.",
+          "v": false,
+          "e": "FAUX : il s'agit de la même cellule, désignée par deux noms selon l'endroit où elle se trouve — le sang ou le tissu.",
+          "sourceQuote": "même cellule, deux noms selon l'endroit où elle se trouve"
+        },
+        {
+          "t": "Le macrophage dérive du fibroblaste du tissu conjonctif.",
+          "v": false,
+          "e": "FAUX : le fibroblaste est une cellule fixe, chargée de fabriquer la matrice. Il ne donne pas le macrophage.",
+          "sourceQuote": "le fibroblaste , qui fabrique la matrice"
+        },
+        {
+          "t": "C'est en pénétrant dans le sang que le monocyte se différencie en macrophage.",
+          "v": false,
+          "e": "FAUX : c'est en quittant le sang pour entrer dans le tissu conjonctif que le monocyte devient macrophage.",
+          "sourceQuote": "Quand un monocyte quitte le sang et pénètre dans le tissu conjonctif"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-135-macrophage-leucocytes.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la forme du macrophage, à ses organites et à sa fonction principale, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Sa forme est irrégulière, avec des pseudopodes.",
+          "v": true,
+          "e": "VRAI. Une cellule qui se déplace n'a pas de contour figé : elle se déforme au gré de ses prolongements.",
+          "sourceQuote": "Irrégulière , avec des pseudopodes"
+        },
+        {
+          "t": "Sa fonction principale est la phagocytose.",
+          "v": true,
+          "e": "VRAI. Il englobe et digère ce qui ne devrait pas être là : c'est sa fonction première.",
+          "sourceQuote": "Sa fonction principale. La phagocytose"
+        },
+        {
+          "t": "Il est pauvre en lysosomes, puisqu'il ne digère pas ce qu'il ingère.",
+          "v": false,
+          "e": "FAUX : il est au contraire riche en lysosomes, les organites porteurs des enzymes de digestion. Ce qu'il avale, il doit ensuite le digérer.",
+          "sourceQuote": "Il est riche en lysosomes (les enzymes de digestion)"
+        },
+        {
+          "t": "Les pseudopodes sont des prolongements mobiles.",
+          "v": true,
+          "e": "VRAI. Ce sont eux qui lui permettent de se déplacer dans le tissu et d'englober ce qu'il rencontre.",
+          "sourceQuote": "avec des pseudopodes (des prolongements mobiles)"
+        },
+        {
+          "t": "Son contour est régulier et figé.",
+          "v": false,
+          "e": "FAUX : son contour est irrégulier, déformé par les pseudopodes. Une cellule mobile ne peut pas avoir de contour figé.",
+          "sourceQuote": "Une cellule qui se déplace n'a pas de contour figé"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-135-macrophage-leucocytes.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à ce que le macrophage ingère et à son rôle immunitaire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Il phagocyte les débris cellulaires, les bactéries et les corps étrangers.",
+          "v": true,
+          "e": "VRAI. Ce sont les trois catégories de cibles à retenir pour la phagocytose du macrophage.",
+          "sourceQuote": "les débris cellulaires , les bactéries et les corps étrangers"
+        },
+        {
+          "t": "Son rôle s'arrête au nettoyage du tissu.",
+          "v": false,
+          "e": "FAUX : il ne se contente pas de nettoyer, il prévient aussi le reste du système immunitaire.",
+          "sourceQuote": "Le macrophage ne se contente donc pas de nettoyer, il prévient le reste du système immunitaire"
+        },
+        {
+          "t": "C'est une cellule présentatrice d'antigène qui alerte les lymphocytes.",
+          "v": true,
+          "e": "VRAI. C'est son second rôle, souvent oublié : il fait le lien entre ce qu'il a phagocyté et l'immunité adaptative.",
+          "sourceQuote": "C'est une cellule présentatrice d'antigène (CPA) : il alerte les lymphocytes"
+        },
+        {
+          "t": "Une proposition qui lui laisse la phagocytose mais lui retire son rôle immunitaire reste exacte.",
+          "v": false,
+          "e": "FAUX : une telle proposition est fausse. Le macrophage est à la fois phagocytaire et présentateur d'antigène, on ne peut pas lui retirer la seconde casquette.",
+          "sourceQuote": "lui retire son rôle immunitaire est FAUSSE"
+        },
+        {
+          "t": "L'analogie retenue pour le macrophage est celle d'un maçon qui rebâtit la matrice.",
+          "v": false,
+          "e": "FAUX : l'image proposée est celle du Pac-Man du tissu conjonctif, qui se déplace et avale. Bâtir la matrice, c'est le travail du fibroblaste.",
+          "sourceQuote": "Le macrophage est le Pac-Man du tissu conjonctif"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-135-macrophage-leucocytes.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la famille des cellules mobiles du tissu conjonctif, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Elles proviennent du sang.",
+          "v": true,
+          "e": "VRAI. C'est la logique commune à toute la famille : elles arrivent par la circulation, elles ne naissent pas sur place.",
+          "sourceQuote": "Elles proviennent du sang et migrent dans le tissu conjonctif"
+        },
+        {
+          "t": "Elles migrent dans le tissu conjonctif pour assurer la défense immunitaire.",
+          "v": true,
+          "e": "VRAI. C'est la raison de leur venue : défendre le tissu, non le construire.",
+          "sourceQuote": "pour assurer la défense immunitaire"
+        },
+        {
+          "t": "Elles ne sont présentes qu'en fonction des besoins.",
+          "v": true,
+          "e": "VRAI. Contrairement aux cellules fixes, elles ne sont pas là en permanence : elles arrivent quand il y a du travail.",
+          "sourceQuote": "elles ne sont donc présentes qu'en fonction des besoins"
+        },
+        {
+          "t": "On les appelle aussi cellules libres.",
+          "v": true,
+          "e": "VRAI. Cellules mobiles et cellules libres sont deux noms pour la même famille.",
+          "sourceQuote": "les cellules mobiles (libres)"
+        },
+        {
+          "t": "Présenter un polynucléaire comme une cellule résidente du tissu est une erreur.",
+          "v": true,
+          "e": "VRAI. Une proposition qui fait d'un macrophage ou d'un polynucléaire une cellule fixe du tissu est fausse : tous viennent du sang.",
+          "sourceQuote": "Une proposition qui présente le macrophage ou un polynucléaire comme une cellule fixe"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-135-macrophage-leucocytes.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux polynucléaires venus en renfort dans le tissu conjonctif, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les polynucléaires neutrophiles sont les premiers arrivés en cas d'infection bactérienne.",
+          "v": true,
+          "e": "VRAI. Ce sont les cellules de première ligne devant une bactérie.",
+          "sourceQuote": "Les premiers arrivés en cas d' infection bactérienne"
+        },
+        {
+          "t": "Comme le macrophage, les neutrophiles font de la phagocytose.",
+          "v": true,
+          "e": "VRAI. Ils partagent avec lui cette fonction : englober et digérer ce qui menace le tissu.",
+          "sourceQuote": "Comme le macrophage, ils font de la phagocytose"
+        },
+        {
+          "t": "Les polynucléaires éosinophiles assurent la lutte antiparasitaire.",
+          "v": true,
+          "e": "VRAI. C'est leur première mission, celle qui les distingue des neutrophiles.",
+          "sourceQuote": "la lutte antiparasitaire et la modulation des réactions allergiques"
+        },
+        {
+          "t": "Les éosinophiles n'interviennent en rien dans les réactions allergiques.",
+          "v": false,
+          "e": "FAUX : la modulation des réactions allergiques est précisément leur seconde mission.",
+          "sourceQuote": "la modulation des réactions allergiques"
+        },
+        {
+          "t": "Les éosinophiles ont deux missions.",
+          "v": true,
+          "e": "VRAI. Deux, et il faut les citer ensemble : la lutte antiparasitaire et la modulation des réactions allergiques.",
+          "sourceQuote": "Deux missions : la lutte antiparasitaire"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-135-macrophage-leucocytes.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives aux lymphocytes et à ce que chaque lignée assure, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les lymphocytes sont les cellules de l'immunité innée.",
+          "v": false,
+          "e": "FAUX : ce sont les cellules de l'immunité adaptative, celle qui se construit contre une cible précise.",
+          "sourceQuote": "Ce sont les cellules de l' immunité adaptative"
+        },
+        {
+          "t": "Les lymphocytes T assurent l'immunité humorale.",
+          "v": false,
+          "e": "FAUX : les T assurent l'immunité cellulaire. L'immunité humorale revient aux lymphocytes B.",
+          "sourceQuote": "Les T assurent l'immunité cellulaire"
+        },
+        {
+          "t": "Les lymphocytes B donnent les plasmocytes.",
+          "v": true,
+          "e": "VRAI. Les B assurent l'immunité humorale et donnent les plasmocytes, cellules productrices d'anticorps.",
+          "sourceQuote": "les B assurent l'immunité humorale et donnent les plasmocytes"
+        },
+        {
+          "t": "Ce sont les lymphocytes T qui produisent les anticorps.",
+          "v": false,
+          "e": "FAUX : les anticorps sont produits par les plasmocytes, issus des lymphocytes B, et non par les T.",
+          "sourceQuote": "les cellules qui produisent les anticorps"
+        },
+        {
+          "t": "Les lymphocytes sont des cellules fixes du tissu conjonctif.",
+          "v": false,
+          "e": "FAUX : comme le macrophage et les polynucléaires, ils viennent du sang. Aucune des cellules mobiles n'est une résidente du tissu.",
+          "sourceQuote": "toutes les cellules de cette fiche viennent du sang"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-135-macrophage-leucocytes.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la distinction entre cellules fixes et cellules mobiles du tissu conjonctif, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le fibroblaste et l'adipocyte habitent le tissu en permanence.",
+          "v": true,
+          "e": "VRAI. Ce sont les deux cellules fixes : elles sont là tout le temps, indépendamment des besoins de défense.",
+          "sourceQuote": "Elles habitent le tissu en permanence"
+        },
+        {
+          "t": "L'adipocyte met les lipides en réserve.",
+          "v": true,
+          "e": "VRAI. C'est sa fonction, tandis que le fibroblaste, lui, fabrique la matrice.",
+          "sourceQuote": "l' adipocyte , qui met les lipides en réserve"
+        },
+        {
+          "t": "Le macrophage appartient, comme le fibroblaste, à la famille des cellules fixes.",
+          "v": false,
+          "e": "FAUX : il appartient aux cellules mobiles. Il vient du sang, contrairement au fibroblaste et à l'adipocyte qui, eux, sont nés dans le tissu.",
+          "sourceQuote": "Aucune d'elles ne naît dans le tissu conjonctif, contrairement au fibroblaste et à l'adipocyte"
+        },
+        {
+          "t": "Le macrophage est présenté comme l'éboueur du tissu conjonctif.",
+          "v": true,
+          "e": "VRAI. C'est l'image employée pour ouvrir la série des cellules mobiles — à condition de ne pas oublier son rôle de présentateur d'antigène.",
+          "sourceQuote": "le macrophage , l'« éboueur » du tissu conjonctif"
+        },
+        {
+          "t": "La cellule mobile annoncée juste après le macrophage est elle aussi une cellule phagocytaire.",
+          "v": false,
+          "e": "FAUX : elle ne mange rien. Son cytoplasme est bourré de granulations prêtes à être libérées, et son travail est de donner l'alerte.",
+          "sourceQuote": "Elle ne mange rien : son cytoplasme est bourré de granulations"
+        }
+      ]
+    },
+
+    {
+      "fiche": "biologie-136-mastocyte-allergie.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à l'aspect du mastocyte et au contenu de ses granulations, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "C'est une grande cellule arrondie ou ovale.",
+          "v": true,
+          "e": "VRAI. Sa forme est massive et régulière, sans les prolongements mobiles du macrophage.",
+          "sourceQuote": "Une grande cellule arrondie ou ovale"
+        },
+        {
+          "t": "Son cytoplasme est rempli de granulations basophiles.",
+          "v": true,
+          "e": "VRAI. Elles sont si nombreuses qu'elles occupent presque tout le cytoplasme.",
+          "sourceQuote": "dont le cytoplasme est rempli de granulations basophiles"
+        },
+        {
+          "t": "Ces granulations apparaissent violet foncé à la coloration.",
+          "v": true,
+          "e": "VRAI. C'est ce que veut dire basophile ici : elles prennent fortement le colorant et ressortent en violet foncé.",
+          "sourceQuote": "elles apparaissent violet foncé à la coloration"
+        },
+        {
+          "t": "Ses granulations contiennent une seule substance à retenir, l'histamine.",
+          "v": false,
+          "e": "FAUX : il y en a deux, pas une. Les granulations contiennent de l'histamine et de l'héparine.",
+          "sourceQuote": "les granulations contiennent deux substances, pas une : histamine et héparine"
+        },
+        {
+          "t": "L'héparine fait partie du contenu de ces granulations.",
+          "v": true,
+          "e": "VRAI. C'est la seconde substance à citer, aux côtés de l'histamine.",
+          "sourceQuote": "De l' histamine et de l' héparine"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-136-mastocyte-allergie.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la localisation du mastocyte et à son mode d'action, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le mastocyte se tient au contact des vaisseaux sanguins : il est périvasculaire.",
+          "v": true,
+          "e": "VRAI. Et cette position se retient avec sa fonction : posté contre le vaisseau, il agit sur le vaisseau.",
+          "sourceQuote": "on dit qu'il est périvasculaire"
+        },
+        {
+          "t": "Comme le macrophage, il assure la phagocytose des bactéries et des débris.",
+          "v": false,
+          "e": "FAUX : le mastocyte ne mange rien. La phagocytose est le propre du macrophage ; le mastocyte, lui, libère.",
+          "sourceQuote": "Le mastocyte ne mange rien"
+        },
+        {
+          "t": "La libération de son contenu porte le nom de dégranulation.",
+          "v": true,
+          "e": "VRAI. C'est le terme exact du largage de ses granulations, et il revient souvent dans les énoncés.",
+          "sourceQuote": "Ce largage porte un nom, et il tombe souvent en QCM : la dégranulation"
+        },
+        {
+          "t": "Ce qu'il libère agit surtout sur les cellules du tissu, à distance des vaisseaux.",
+          "v": false,
+          "e": "FAUX : sa cible, c'est le vaisseau contre lequel il est posté. Position et effet se retiennent ensemble.",
+          "sourceQuote": "il est posté contre le vaisseau, et ce qu'il libère agit sur le vaisseau"
+        },
+        {
+          "t": "Son travail consiste à nettoyer le tissu.",
+          "v": false,
+          "e": "FAUX : nettoyer est le travail du macrophage. Celui du mastocyte est de donner l'alerte.",
+          "sourceQuote": "ce n'est pas de nettoyer le tissu : c'est de donner l'alerte"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-136-mastocyte-allergie.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la place du mastocyte au sein des cellules mobiles, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le mastocyte est une cellule tissulaire.",
+          "v": true,
+          "e": "VRAI. Il appartient au tissu, pas à la circulation : c'est l'exception de la famille des cellules mobiles.",
+          "sourceQuote": "Le mastocyte est une cellule tissulaire"
+        },
+        {
+          "t": "On ne le retrouve pas dans le sang.",
+          "v": true,
+          "e": "VRAI. Contrairement aux autres cellules mobiles, il n'a pas de version circulante.",
+          "sourceQuote": "on ne le retrouve PAS dans le sang"
+        },
+        {
+          "t": "Il est déjà sur place, contre les vaisseaux, et il y reste.",
+          "v": true,
+          "e": "VRAI. Il n'a pas à migrer : il est posté d'avance, là où il devra agir.",
+          "sourceQuote": "Il est déjà sur place, contre les vaisseaux, et il y reste"
+        },
+        {
+          "t": "Le macrophage, lui, descend bien d'un monocyte sanguin.",
+          "v": true,
+          "e": "VRAI. C'est le contraste à tenir : le macrophage vient du sang, le mastocyte non.",
+          "sourceQuote": "le macrophage descend d'un monocyte sanguin"
+        },
+        {
+          "t": "Les polynucléaires et les lymphocytes migrent depuis le sang quand le tissu en a besoin.",
+          "v": true,
+          "e": "VRAI. Ils suivent la règle générale des cellules mobiles, celle à laquelle le mastocyte fait exception.",
+          "sourceQuote": "les polynucléaires et les lymphocytes migrent depuis le sang"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-136-mastocyte-allergie.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives au déroulement d'une réaction allergique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Lors d'une réaction allergique, les mastocytes libèrent massivement leur histamine.",
+          "v": true,
+          "e": "VRAI. L'allergie, c'est la dégranulation ordinaire portée à grande échelle.",
+          "sourceQuote": "les mastocytes libèrent massivement leur histamine"
+        },
+        {
+          "t": "Sur les vaisseaux, cela provoque une vasodilatation et un œdème.",
+          "v": true,
+          "e": "VRAI. Les vaisseaux s'élargissent et le tissu gonfle : ce sont les deux effets vasculaires de l'histamine libérée.",
+          "sourceQuote": "une vasodilatation (les vaisseaux s'élargissent) et un œdème"
+        },
+        {
+          "t": "Sur les bronches, l'histamine libérée provoque une dilatation bronchique.",
+          "v": false,
+          "e": "FAUX : c'est une bronchoconstriction, les bronches se resserrent. C'est ce qui rend la réaction allergique dangereuse sur le plan respiratoire.",
+          "sourceQuote": "Et une bronchoconstriction (les bronches se resserrent)"
+        },
+        {
+          "t": "Dans les cas graves, l'ensemble peut aller jusqu'au choc anaphylactique.",
+          "v": true,
+          "e": "VRAI. C'est le terme de la chaîne : dégranulation massive, effets vasculaires et bronchiques, puis choc.",
+          "sourceQuote": "L'ensemble peut aller jusqu'au choc anaphylactique"
+        },
+        {
+          "t": "L'œdème correspond à un rétrécissement du tissu.",
+          "v": false,
+          "e": "FAUX : l'œdème est un gonflement du tissu, pas un rétrécissement. Le resserrement, lui, concerne les bronches.",
+          "sourceQuote": "le gonflement du tissu"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-136-mastocyte-allergie.html",
+      "origine": "ecrite",
+      "arene": false,
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au traitement médicamenteux de l'allergie, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les antihistaminiques bloquent l'effet de l'histamine libérée par les mastocytes.",
+          "v": true,
+          "e": "VRAI. Le mot important est libérée : le médicament s'attaque à l'histamine déjà lâchée dans le tissu.",
+          "sourceQuote": "les antihistaminiques bloquent l'effet de l'histamine libérée par les mastocytes"
+        },
+        {
+          "t": "Ils empêchent le mastocyte de dégranuler.",
+          "v": false,
+          "e": "FAUX : ils n'agissent pas sur la cellule qui a lâché l'histamine, mais sur l'histamine elle-même une fois libérée.",
+          "sourceQuote": "pas sur la cellule qui l'a lâchée"
+        },
+        {
+          "t": "Ils agissent sur l'histamine encore stockée dans les granulations.",
+          "v": false,
+          "e": "FAUX : ils agissent sur l'histamine déjà lâchée dans le tissu, pas sur le stock resté dans la cellule.",
+          "sourceQuote": "le médicament agit sur l'histamine déjà lâchée dans le tissu"
+        },
+        {
+          "t": "Le mécanisme de ce médicament n'a aucun rapport avec la biologie du mastocyte.",
+          "v": false,
+          "e": "FAUX : il en découle directement. Comprendre la dégranulation suffit à comprendre l'action du médicament.",
+          "sourceQuote": "Le médicament de l'allergie découle directement de ce mécanisme"
+        },
+        {
+          "t": "L'histamine est fabriquée au moment de la réaction, elle n'est pas stockée d'avance.",
+          "v": false,
+          "e": "FAUX : elle est stockée d'avance dans les granulations. C'est ce stock déjà prêt que la cellule libère au moment de l'alerte.",
+          "sourceQuote": "C'est ce stock, déjà prêt dans la cellule, qu'elle va libérer"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-136-mastocyte-allergie.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives aux indices qui permettent de reconnaître un mastocyte dans un énoncé, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Trois mots suffisent à l'identifier : granulations, histamine, dégranulation.",
+          "v": true,
+          "e": "VRAI. Ce trio ne renvoie qu'à une seule cellule de cette famille : le mastocyte.",
+          "sourceQuote": "granulations , histamine , dégranulation → c'est le mastocyte"
+        },
+        {
+          "t": "La présence de pseudopodes est un indice en faveur du mastocyte.",
+          "v": false,
+          "e": "FAUX : les pseudopodes sont l'attribut du macrophage, cellule mobile et déformable. Le mastocyte est arrondi et reste sur place.",
+          "sourceQuote": "le macrophage : il dérive du monocyte sanguin, il se déplace avec ses pseudopodes"
+        },
+        {
+          "t": "Le macrophage mange, le mastocyte alerte.",
+          "v": true,
+          "e": "VRAI. C'est la formule qui résume la différence entre les deux cellules.",
+          "sourceQuote": "Le macrophage mange, le mastocyte alerte"
+        },
+        {
+          "t": "Une cellule décrite comme abondante dans le sang circulant peut être un mastocyte.",
+          "v": false,
+          "e": "FAUX : le mastocyte ne se retrouve pas dans le sang. Une description sanguine exclut donc cette cellule.",
+          "sourceQuote": "on ne le retrouve PAS dans le sang"
+        },
+        {
+          "t": "Le mastocyte est décrit comme une petite cellule au cytoplasme clair.",
+          "v": false,
+          "e": "FAUX : c'est une grande cellule arrondie, bourrée de granulations sombres — on ne voit presque plus son cytoplasme.",
+          "sourceQuote": "arrondie, bourrée de granulations sombres"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-136-mastocyte-allergie.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la lecture du schéma du mastocyte et à la cellule annoncée pour la suite, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Sur le schéma, les granulations sont si nombreuses qu'on ne distingue presque plus le cytoplasme entre elles.",
+          "v": true,
+          "e": "VRAI. C'est le premier élément à repérer : une cellule saturée de granulations.",
+          "sourceQuote": "on ne voit presque plus le cytoplasme entre elles"
+        },
+        {
+          "t": "La cellule y est représentée juste à côté d'un vaisseau sanguin.",
+          "v": true,
+          "e": "VRAI. Le schéma illustre sa position périvasculaire, qui explique l'effet de ce qu'elle libère.",
+          "sourceQuote": "juste à côté du vaisseau sanguin, elle est périvasculaire"
+        },
+        {
+          "t": "La dégranulation y est figurée par des granulations qui s'ouvrent et libèrent l'histamine hors de la cellule.",
+          "v": true,
+          "e": "VRAI. C'est bien un largage vers l'extérieur : l'histamine agit dans le tissu, pas dans la cellule.",
+          "sourceQuote": "les granulations s'ouvrent et libèrent l'histamine à l'extérieur de la cellule"
+        },
+        {
+          "t": "La cellule mobile qui reste à voir après le mastocyte est le monocyte.",
+          "v": false,
+          "e": "FAUX : celle qui reste à voir est la cellule qui fabrique les anticorps. Le monocyte, lui, a déjà été vu comme origine du macrophage.",
+          "sourceQuote": "c'est celle qui fabrique les anticorps"
+        },
+        {
+          "t": "Le mastocyte déclenche la réaction inflammatoire en libérant son contenu.",
+          "v": true,
+          "e": "VRAI. C'est sa fonction : l'inflammation démarre au moment où il lâche ses granulations.",
+          "sourceQuote": "Il déclenche la réaction inflammatoire en libérant son contenu"
+        }
+      ]
+    }
+  ]
+}

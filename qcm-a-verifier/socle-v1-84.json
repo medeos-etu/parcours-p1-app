@@ -1,0 +1,1351 @@
+{
+  "matiere": "mixte",
+  "chapitre": 0,
+  "note": "socle 1-7 — fiches sans QCM, ordre du Parcours",
+  "questions": [
+    {
+      "fiche": "chimie-183-degre-d-insaturation.html",
+      "origine": "ecrite",
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à ce que le degré d'insaturation permet de déterminer, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le degré d'insaturation se calcule à partir des seuls nombres d'atomes présents dans la formule brute.",
+          "v": true,
+          "e": "VRAI. C'est tout l'intérêt de l'outil : une formule brute suffit, aucune information sur la structure n'est nécessaire.",
+          "sourceQuote": "à partir des seuls nombres d'atomes dans la formule"
+        },
+        {
+          "t": "Il indique combien de doubles liaisons et/ou de cycles la molécule contient.",
+          "v": true,
+          "e": "VRAI. Le degré d'insaturation compte les doubles liaisons et les cycles cachés derrière une formule brute.",
+          "sourceQuote": "te dit combien de doubles liaisons et/ou cycles la molécule contient"
+        },
+        {
+          "t": "Chaque unité de degré d'insaturation correspond à 1 cycle OU à 1 double liaison.",
+          "v": true,
+          "e": "VRAI. Une unité = une insaturation, et une insaturation, c'est soit un cycle, soit une double liaison.",
+          "sourceQuote": "Chaque unité de DI correspond à 1 cycle OU 1 double liaison"
+        },
+        {
+          "t": "Une triple liaison ne compte que pour une seule unité de degré d'insaturation.",
+          "v": false,
+          "e": "FAUX : une triple liaison vaut 2 unités, puisqu'elle est faite d'une liaison sigma et de deux liaisons pi, soit deux insaturations.",
+          "sourceQuote": "Elle « vaut » 2 DI (logique : une triple = 1 σ + 2 π, donc 2 insaturations)"
+        },
+        {
+          "t": "Le degré d'insaturation indique aussi lesquelles de ces insaturations sont présentes dans la molécule.",
+          "v": false,
+          "e": "FAUX : il donne un nombre, jamais une identité. Savoir qu'il y a deux insaturations ne dit pas s'il s'agit de deux cycles, de deux doubles liaisons ou d'une triple.",
+          "sourceQuote": "Ce calcul te dit combien d'insaturations la molécule contient — jamais lesquelles"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-183-degre-d-insaturation.html",
+      "origine": "ecrite",
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux atomes qui interviennent dans la formule du degré d'insaturation, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le nombre de carbones intervient dans le calcul.",
+          "v": true,
+          "e": "VRAI. Le carbone est la référence du calcul : c'est lui qui fixe le nombre d'hydrogènes attendus pour une molécule saturée.",
+          "sourceQuote": "C = nombre de carbones · H = nombre d'hydrogènes"
+        },
+        {
+          "t": "Le nombre d'azotes intervient dans le calcul.",
+          "v": true,
+          "e": "VRAI. L'azote figure bien dans la formule, et il s'y ajoute — c'est ce qui le distingue des halogènes, qui se retranchent.",
+          "sourceQuote": "N = nombre d'azotes · X = nombre d'halogènes"
+        },
+        {
+          "t": "Les halogènes F, Cl, Br et I interviennent dans le calcul.",
+          "v": true,
+          "e": "VRAI. Ils sont regroupés sous la lettre X dans la formule : fluor, chlore, brome et iode.",
+          "sourceQuote": "X = nombre d'halogènes (F, Cl, Br, I)"
+        },
+        {
+          "t": "L'oxygène n'apparaît pas dans la formule du degré d'insaturation.",
+          "v": true,
+          "e": "VRAI. L'oxygène est le grand absent de la formule : il ne modifie jamais le résultat.",
+          "sourceQuote": "l'oxygène n'apparaît pas dans la formule du DI"
+        },
+        {
+          "t": "On peut barrer les oxygènes de la formule brute avant de calculer, sans changer le résultat.",
+          "v": true,
+          "e": "VRAI. C'est même le réflexe conseillé : barrer les oxygènes évite de se tromper, puisqu'ils ne changent rien.",
+          "sourceQuote": "Avant de calculer, barre les oxygènes"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-183-degre-d-insaturation.html",
+      "origine": "ecrite",
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la lecture des valeurs prises par le degré d'insaturation, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un degré d'insaturation nul correspond à une molécule totalement saturée.",
+          "v": true,
+          "e": "VRAI. Zéro insaturation, c'est une molécule « pleine » d'hydrogènes, donc totalement saturée.",
+          "sourceQuote": "Totalement saturée → c'est un alcane"
+        },
+        {
+          "t": "Un degré d'insaturation égal à 1 permet, à partir de la seule formule brute, de trancher entre un alcène et un cyclane.",
+          "v": false,
+          "e": "FAUX : une unité signifie une double liaison OU un cycle, et la formule brute ne permet pas de choisir entre les deux.",
+          "sourceQuote": "La formule brute seule ne tranche pas entre les deux"
+        },
+        {
+          "t": "Un degré d'insaturation égal à 2 ne peut correspondre qu'à une triple liaison.",
+          "v": false,
+          "e": "FAUX : deux insaturations, cela peut aussi être deux doubles liaisons, une double et un cycle, ou encore deux cycles.",
+          "sourceQuote": "1 triple liaison , OU 2 doubles liaisons, OU 1 double + 1 cycle, OU 2 cycles"
+        },
+        {
+          "t": "Un degré d'insaturation égal à 4 doit faire penser en premier au cyclohexane.",
+          "v": false,
+          "e": "FAUX : le réflexe attendu devant un degré de 4, c'est le benzène — trois doubles liaisons plus un cycle.",
+          "sourceQuote": "Réflexe : penser au benzène ! 3 C=C + 1 cycle = 4"
+        },
+        {
+          "t": "Un degré d'insaturation égal à 1 signifie qu'il manque 4 hydrogènes par rapport à l'alcane correspondant.",
+          "v": false,
+          "e": "FAUX : il n'en manque que 2. Chaque paire d'hydrogènes manquante ajoute une unité, donc 4 hydrogènes manquants donneraient 2.",
+          "sourceQuote": "Il manque 2 H. Soit 1 double liaison (alcène)"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-183-degre-d-insaturation.html",
+      "origine": "ecrite",
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la logique qui explique la formule du degré d'insaturation, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Pour un hydrocarbure ne contenant que du carbone et de l'hydrogène, la référence est la formule saturée.",
+          "v": true,
+          "e": "VRAI. C'est le point de départ du raisonnement : on compare le nombre réel d'hydrogènes à celui de l'hydrocarbure saturé de même squelette.",
+          "sourceQuote": "Pour un hydrocarbure pur (C et H uniquement)"
+        },
+        {
+          "t": "Créer une double liaison fait perdre 2 hydrogènes à la molécule.",
+          "v": true,
+          "e": "VRAI. Les deux carbones engagés dans la double liaison ont chacun une liaison de moins disponible pour un hydrogène : deux hydrogènes partent d'un coup.",
+          "sourceQuote": "on perd 2 H d'un coup"
+        },
+        {
+          "t": "Un cycle, en revanche, ne fait perdre aucun hydrogène.",
+          "v": false,
+          "e": "FAUX : un cycle fait lui aussi perdre 2 hydrogènes, puisque les deux carbones qui se rejoignent libèrent chacun une liaison pour se lier entre eux.",
+          "sourceQuote": "Un cycle aussi fait perdre 2 H"
+        },
+        {
+          "t": "Chaque paire d'hydrogènes manquante correspond à une insaturation.",
+          "v": true,
+          "e": "VRAI. C'est la traduction directe du mnémo : deux hydrogènes en moins, une unité de plus.",
+          "sourceQuote": "chaque paire de H manquante = 1 insaturation"
+        },
+        {
+          "t": "Un alcane à n carbones doit posséder exactement 2n + 2 hydrogènes.",
+          "v": true,
+          "e": "VRAI. C'est la formule de l'alcane saturé, celle qui sert de référence pour compter les hydrogènes manquants.",
+          "sourceQuote": "Un alcane à n carbones doit avoir exactement 2n + 2 hydrogènes"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-183-degre-d-insaturation.html",
+      "origine": "ecrite",
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux molécules données en exemple dans le tableau de la fiche, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'hexane y est présenté comme un alcane saturé.",
+          "v": true,
+          "e": "VRAI. Son degré d'insaturation vaut 0, ce qui correspond bien à une molécule saturée : un alcane.",
+          "sourceQuote": "Alcane, saturé"
+        },
+        {
+          "t": "Le cyclohexane et l'hex-1-ène partagent la même formule brute.",
+          "v": true,
+          "e": "VRAI. C'est justement pour cela que le degré d'insaturation, égal à 1 dans les deux cas, ne permet pas de les distinguer.",
+          "sourceQuote": "le cyclohexane et l'hex-1-ène ont la même formule brute"
+        },
+        {
+          "t": "Le benzène y est décrit comme portant 2 doubles liaisons et 1 cycle.",
+          "v": false,
+          "e": "FAUX : le benzène porte 3 doubles liaisons carbone-carbone et 1 cycle, ce qui fait bien 4 unités au total.",
+          "sourceQuote": "3 C=C + 1 cycle — c'est ce DI = 4 qu'il faut reconnaître"
+        },
+        {
+          "t": "L'éthanol ayant un degré d'insaturation nul, c'est donc un alcane.",
+          "v": false,
+          "e": "FAUX : il est bien saturé, mais il contient un oxygène. Un alcane ne contient que du carbone et de l'hydrogène.",
+          "sourceQuote": "mais ce n'est pas un alcane car il y a un oxygène"
+        },
+        {
+          "t": "Pour l'éthanol, l'oxygène est compté dans le calcul et abaisse le degré d'insaturation.",
+          "v": false,
+          "e": "FAUX : l'oxygène n'intervient pas du tout dans le calcul, ni pour l'éthanol ni pour aucune autre molécule.",
+          "sourceQuote": "O n'intervient pas dans le calcul → molécule saturée"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-183-degre-d-insaturation.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives aux deux premiers exercices corrigés de la fiche, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le premier exercice aboutit à un degré d'insaturation égal à 1.",
+          "v": true,
+          "e": "VRAI. Le calcul donne 2 divisé par 2, soit 1 : une seule insaturation.",
+          "sourceQuote": "DI = (2×8 + 2 − 16)/2 = 2/2 = 1"
+        },
+        {
+          "t": "Les deux structures proposées en réponse au premier exercice sont l'oct-1-ène et le cyclooctane.",
+          "v": true,
+          "e": "VRAI. Une double liaison donne l'oct-1-ène, un cycle donne le cyclooctane : la formule brute ne permet pas de choisir.",
+          "sourceQuote": "Exemples : oct-1-ène ou cyclooctane"
+        },
+        {
+          "t": "Dans le second exercice, les oxygènes n'entrent pas dans le calcul.",
+          "v": true,
+          "e": "VRAI. C'est le rappel du piège : quel que soit leur nombre, les oxygènes ne figurent pas dans la formule.",
+          "sourceQuote": "O n'intervient pas !"
+        },
+        {
+          "t": "Le second exercice aboutit à deux insaturations.",
+          "v": true,
+          "e": "VRAI. Le calcul donne 4 divisé par 2, soit 2 : deux insaturations à répartir.",
+          "sourceQuote": "Deux insaturations : cela peut être 2 C=O (diacide, diester…)"
+        },
+        {
+          "t": "Ces deux insaturations peuvent correspondre à une double liaison C=C associée à une double liaison C=O.",
+          "v": true,
+          "e": "VRAI. C'est l'une des combinaisons proposées, à côté de deux doubles liaisons C=O comme dans un diacide ou un diester.",
+          "sourceQuote": "ou 1 C=C + 1 C=O, etc."
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-183-degre-d-insaturation.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives au troisième exercice corrigé et à la portée de l'outil, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans cet exercice, l'azote est compté alors que les oxygènes ne le sont pas.",
+          "v": true,
+          "e": "VRAI. C'est précisément le double piège de l'énoncé : on barre les oxygènes, mais on n'oublie pas d'ajouter l'azote.",
+          "sourceQuote": "O n'intervient pas , mais N compte"
+        },
+        {
+          "t": "Le degré d'insaturation obtenu vaut 4.",
+          "v": false,
+          "e": "FAUX : le calcul donne 10 divisé par 2, soit 5. C'est un de plus que le benzène seul, à cause du groupe nitro.",
+          "sourceQuote": "DI = (2×6 + 2 + 1 − 5)/2 = 10/2 = 5"
+        },
+        {
+          "t": "Ce résultat se décompose en 4 apportés par le cycle benzénique et 1 apporté par une double liaison N=O.",
+          "v": true,
+          "e": "VRAI. Le noyau benzénique vaut 4, et le groupe nitro ajoute une insaturation avec sa double liaison azote-oxygène.",
+          "sourceQuote": "Soit 4 (benzène) + 1 (le groupe NO₂ contient une double liaison N=O)"
+        },
+        {
+          "t": "Le degré d'insaturation permet de savoir laquelle des structures possibles on a réellement en main.",
+          "v": false,
+          "e": "FAUX : il donne un nombre d'insaturations, jamais leur nature. Deux molécules très différentes peuvent avoir le même degré.",
+          "sourceQuote": "un DI ne te dit pas laquelle des structures possibles tu as"
+        },
+        {
+          "t": "Cet outil ne servira plus une fois les cycles abordés.",
+          "v": false,
+          "e": "FAUX : il resservira tel quel, sans modification, lorsque les cycles seront étudiés.",
+          "sourceQuote": "il resservira tel quel quand les cycles arriveront"
+        }
+      ]
+    },
+
+    {
+      "fiche": "chimie-184-alcanes-apolaires-hydrophobes.html",
+      "origine": "ecrite",
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la nature des liaisons d'un alcane et à sa polarité, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un alcane ne contient que des liaisons C−H et C−C.",
+          "v": true,
+          "e": "VRAI. C'est le fait de départ dont tout découle : pas d'autre type de liaison dans un alcane.",
+          "sourceQuote": "les alcanes ne contiennent que des liaisons C−H et C−C"
+        },
+        {
+          "t": "La différence d'électronégativité entre le carbone et l'hydrogène est minuscule.",
+          "v": true,
+          "e": "VRAI. Les deux valeurs sont très proches, et cet écart quasi nul est la raison de l'apolarité.",
+          "sourceQuote": "La différence d'électronégativité entre C (2,5) et H (2,2) est minuscule"
+        },
+        {
+          "t": "Les liaisons d'un alcane sont donc qualifiées de quasi-apolaires.",
+          "v": true,
+          "e": "VRAI. Faute d'écart d'électronégativité notable, les électrons ne sont pas attirés d'un côté : la liaison est quasi-apolaire.",
+          "sourceQuote": "les liaisons sont quasi-apolaires"
+        },
+        {
+          "t": "Il subsiste malgré tout un pôle positif et un pôle négatif dans la molécule.",
+          "v": false,
+          "e": "FAUX : il n'y a ni pôle positif ni pôle négatif dans un alcane, et c'est justement ce qui interdit toute interaction avec l'eau.",
+          "sourceQuote": "il n'y a pas de « pôle + » et de « pôle − » dans la molécule"
+        },
+        {
+          "t": "La molécule entière est apolaire.",
+          "v": true,
+          "e": "VRAI. Aucune liaison polarisée, donc aucun pôle à l'échelle de la molécule : l'ensemble est apolaire.",
+          "sourceQuote": "la molécule entière est apolaire"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-184-alcanes-apolaires-hydrophobes.html",
+      "origine": "ecrite",
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux trois conséquences de l'apolarité des alcanes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Seules les forces de London attirent les molécules d'alcane entre elles.",
+          "v": true,
+          "e": "VRAI. Sans pôle, aucune interaction dipolaire ni liaison hydrogène n'est possible : il ne reste que les forces de dispersion.",
+          "sourceQuote": "Seules les forces de London restent"
+        },
+        {
+          "t": "Ces forces de London sont les interactions de Van der Waals les plus fortes.",
+          "v": false,
+          "e": "FAUX : les interactions de dispersion sont au contraire les plus faibles de toutes les interactions de Van der Waals.",
+          "sourceQuote": "les interactions de Van der Waals de dispersion, les plus faibles de toutes"
+        },
+        {
+          "t": "Les alcanes sont solubles dans l'eau.",
+          "v": false,
+          "e": "FAUX : ils y sont insolubles. C'est même la deuxième conséquence directe de leur apolarité.",
+          "sourceQuote": "Les alcanes sont insolubles dans l'eau"
+        },
+        {
+          "t": "On dit des alcanes qu'ils sont hydrophiles.",
+          "v": false,
+          "e": "FAUX : on dit qu'ils sont hydrophobes, puisqu'ils ne se mélangent pas à l'eau.",
+          "sourceQuote": "On dit qu'ils sont hydrophobes"
+        },
+        {
+          "t": "Les alcanes sont insolubles dans les solvants apolaires comme l'hexane, le benzène ou l'éther.",
+          "v": false,
+          "e": "FAUX : dans ces solvants-là, ils se dissolvent au contraire sans difficulté.",
+          "sourceQuote": "ils sont solubles dans les solvants apolaires"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-184-alcanes-apolaires-hydrophobes.html",
+      "origine": "ecrite",
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la molécule d'eau et à ses interactions, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'eau possède un pôle négatif porté par l'oxygène.",
+          "v": true,
+          "e": "VRAI. L'oxygène, très électronégatif, attire les électrons et porte une charge partielle négative.",
+          "sourceQuote": "elle possède un pôle δ− sur l'oxygène"
+        },
+        {
+          "t": "L'eau possède deux pôles positifs portés par les hydrogènes.",
+          "v": true,
+          "e": "VRAI. Les deux hydrogènes, appauvris en électrons, portent chacun une charge partielle positive.",
+          "sourceQuote": "deux pôles δ+ sur les hydrogènes"
+        },
+        {
+          "t": "Une charge partielle correspond à une charge entière.",
+          "v": false,
+          "e": "FAUX : il s'agit d'un simple excès ou défaut de charge, très inférieur à une charge entière.",
+          "sourceQuote": "un petit excès de charge, pas une charge entière"
+        },
+        {
+          "t": "Les molécules d'eau s'attirent très fortement entre elles grâce à des liaisons hydrogène.",
+          "v": true,
+          "e": "VRAI. Cette cohésion très forte est la clé du phénomène : c'est elle qui exclut l'alcane.",
+          "sourceQuote": "s'attirent très fortement entre elles grâce à des liaisons hydrogène"
+        },
+        {
+          "t": "Un alcane peut former des liaisons hydrogène avec l'eau.",
+          "v": false,
+          "e": "FAUX : totalement apolaire, il ne peut former aucune interaction de ce type avec l'eau.",
+          "sourceQuote": "il ne peut pas former ce type d'interactions avec l'eau"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-184-alcanes-apolaires-hydrophobes.html",
+      "origine": "ecrite",
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à ce qui se passe au contact entre l'eau et un alcane, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "On observe une séparation en deux couches distinctes.",
+          "v": true,
+          "e": "VRAI. C'est le résultat visible du mélange impossible : deux phases nettement séparées.",
+          "sourceQuote": "séparation en deux couches distinctes"
+        },
+        {
+          "t": "C'est l'alcane qui repousse activement les molécules d'eau.",
+          "v": false,
+          "e": "FAUX : l'alcane ne repousse rien. Il subit la cohésion des molécules d'eau, qui le rejettent à la surface.",
+          "sourceQuote": "Ce n'est pas l'alcane qui « repousse » l'eau"
+        },
+        {
+          "t": "Ce sont les molécules d'eau qui se serrent entre elles et repoussent l'alcane à la surface.",
+          "v": true,
+          "e": "VRAI. Les liaisons hydrogène rapprochent les molécules d'eau entre elles, et l'alcane se retrouve exclu.",
+          "sourceQuote": "elles se serrent et repoussent l'alcane à la surface"
+        },
+        {
+          "t": "L'alcane dispose de liaisons hydrogène en plus des forces de London.",
+          "v": false,
+          "e": "FAUX : il ne dispose que des forces de London ; aucune liaison hydrogène n'est possible pour lui.",
+          "sourceQuote": "pas de liaison hydrogène possible"
+        },
+        {
+          "t": "La règle générale énoncée est que le polaire se dissout dans l'apolaire.",
+          "v": false,
+          "e": "FAUX : la règle est exactement l'inverse — le polaire se dissout dans le polaire, l'apolaire dans l'apolaire.",
+          "sourceQuote": "le polaire se dissout dans le polaire, l'apolaire dans l'apolaire"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-184-alcanes-apolaires-hydrophobes.html",
+      "origine": "ecrite",
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au prolongement de cette propriété en biochimie, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les chaînes hydrocarbonées des acides gras se comportent comme des alcanes.",
+          "v": true,
+          "e": "VRAI. Ce sont les mêmes liaisons quasi-apolaires, donc le même comportement vis-à-vis de l'eau.",
+          "sourceQuote": "se comportent exactement comme des alcanes"
+        },
+        {
+          "t": "La leucine, l'isoleucine et la valine sont citées comme acides aminés à chaîne latérale apolaire.",
+          "v": true,
+          "e": "VRAI. Leurs chaînes latérales sont des chaînes carbonées sans pôle, exactement comme un alcane.",
+          "sourceQuote": "la leucine , l' isoleucine , la valine"
+        },
+        {
+          "t": "Ces chaînes engagent des interactions de Van der Waals et sont hydrophobes.",
+          "v": true,
+          "e": "VRAI. Faute de pôle, elles ne peuvent créer que des interactions faibles, et elles fuient l'eau.",
+          "sourceQuote": "interactions de Van der Waals, hydrophobie"
+        },
+        {
+          "t": "C'est la base de ce que l'on appelle l'effet hydrophobe.",
+          "v": true,
+          "e": "VRAI. L'effet hydrophobe n'est rien d'autre que cette exclusion des groupements apolaires par l'eau.",
+          "sourceQuote": "C'est la base de l' effet hydrophobe"
+        },
+        {
+          "t": "Cet effet hydrophobe stabilise les membranes cellulaires et le repliement des protéines.",
+          "v": true,
+          "e": "VRAI. La même propriété qui sépare l'huile de l'eau tient les membranes en place et replie les protéines.",
+          "sourceQuote": "celui qui stabilise les membranes cellulaires et le repliement des protéines"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-184-alcanes-apolaires-hydrophobes.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à l'analogie proposée et aux solvants cités, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'analogie retenue pour illustrer l'insolubilité des alcanes est celle de l'huile et de l'eau.",
+          "v": true,
+          "e": "VRAI. Le mélange impossible de l'huile et de l'eau illustre exactement la même incompatibilité.",
+          "sourceQuote": "c'est comme l'huile et l'eau : ça ne se mélange pas"
+        },
+        {
+          "t": "La formule « qui se ressemble s'assemble » illustre la solubilité des alcanes dans les solvants apolaires.",
+          "v": true,
+          "e": "VRAI. Un alcane apolaire se dissout dans un solvant apolaire : deux partenaires de même nature s'assemblent.",
+          "sourceQuote": "« qui se ressemble s'assemble »"
+        },
+        {
+          "t": "Les alcanes sont hydrophobes, c'est-à-dire insolubles dans l'eau.",
+          "v": true,
+          "e": "VRAI. Hydrophobe signifie littéralement « qui fuit l'eau » : c'est le mot qui désigne cette insolubilité.",
+          "sourceQuote": "Les alcanes sont insolubles dans l'eau (hydrophobes)"
+        },
+        {
+          "t": "Mettre un alcane dans l'eau revient à faire cohabiter deux mondes compatibles.",
+          "v": false,
+          "e": "FAUX : les deux mondes sont au contraire incompatibles, et c'est ce qui produit les deux couches.",
+          "sourceQuote": "c'est forcer deux mondes incompatibles à cohabiter"
+        },
+        {
+          "t": "Dans l'hexane et l'éther, les alcanes ne se dissolvent que difficilement.",
+          "v": false,
+          "e": "FAUX : dans ces solvants apolaires, ils se dissolvent sans aucune difficulté.",
+          "sourceQuote": "là, ils se dissolvent sans difficulté"
+        }
+      ]
+    },
+    {
+      "fiche": "chimie-184-alcanes-apolaires-hydrophobes.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à l'enchaînement complet du raisonnement, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'apolarité d'un alcane découle du fait qu'il ne porte que des liaisons quasi-apolaires.",
+          "v": true,
+          "e": "VRAI. C'est le premier maillon de la chaîne : des liaisons sans polarité donnent une molécule sans pôle.",
+          "sourceQuote": "Un alcane n'a que des liaisons quasi-apolaires"
+        },
+        {
+          "t": "Malgré son apolarité, un alcane reste lié à ses voisines par des liaisons hydrogène.",
+          "v": false,
+          "e": "FAUX : seules les forces de London le lient à ses voisines. Une liaison hydrogène exige un pôle, qu'il n'a pas.",
+          "sourceQuote": "seules les forces de London le lient à ses voisines"
+        },
+        {
+          "t": "L'eau est décrite comme une molécule apolaire.",
+          "v": false,
+          "e": "FAUX : l'eau est polaire, avec un pôle négatif sur l'oxygène et deux pôles positifs sur les hydrogènes.",
+          "sourceQuote": "l'eau est une molécule polaire"
+        },
+        {
+          "t": "Les forces de London appartiennent aux interactions de Van der Waals de répulsion.",
+          "v": false,
+          "e": "FAUX : elles appartiennent aux interactions de Van der Waals de dispersion, pas de répulsion.",
+          "sourceQuote": "les interactions de Van der Waals de dispersion"
+        },
+        {
+          "t": "Les forces de London sont présentées comme les interactions les plus fortes de toutes.",
+          "v": false,
+          "e": "FAUX : elles sont au contraire les plus faibles de toutes, ce qui explique la faible cohésion des alcanes.",
+          "sourceQuote": "les plus faibles de toutes"
+        }
+      ]
+    },
+
+    {
+      "fiche": "anatomie-185-loges-jambe-membrane-interosseuse.html",
+      "origine": "ecrite",
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la membrane interosseuse de la jambe, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le tibia et la fibula sont reliés par une membrane interosseuse.",
+          "v": true,
+          "e": "VRAI. Les deux os ne sont pas simplement posés côte à côte : une membrane est tendue de l'un à l'autre.",
+          "sourceQuote": "le tibia et la fibula sont reliés par une membrane interosseuse"
+        },
+        {
+          "t": "Elle solidarise les deux os : il s'agit d'une syndesmose.",
+          "v": true,
+          "e": "VRAI. C'est son premier rôle, et le nom de cette articulation fibreuse est la syndesmose.",
+          "sourceQuote": "Solidariser les 2 os (c'est une syndesmose )"
+        },
+        {
+          "t": "Elle sépare les loges musculaires antérieure et postérieure.",
+          "v": true,
+          "e": "VRAI. C'est son deuxième rôle, et c'est celui qui organise toute la suite de la fiche.",
+          "sourceQuote": "Séparer les loges musculaires (antérieure vs postérieure)"
+        },
+        {
+          "t": "Elle sert d'insertion à de nombreux muscles.",
+          "v": true,
+          "e": "VRAI. Troisième rôle : la membrane offre une surface d'insertion supplémentaire aux muscles de la jambe.",
+          "sourceQuote": "Servir d'insertion à de nombreux muscles"
+        },
+        {
+          "t": "La même architecture — deux os parallèles reliés par une membrane interosseuse — se retrouve à l'avant-bras.",
+          "v": true,
+          "e": "VRAI. Radius et ulna sont reliés de la même façon : l'architecture est identique d'un segment à l'autre.",
+          "sourceQuote": "même architecture avant-bras / jambe — 2 os parallèles + membrane interosseuse"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-185-loges-jambe-membrane-interosseuse.html",
+      "origine": "ecrite",
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux loges de la jambe et au mouvement de chacune, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La jambe compte trois loges musculaires séparées par des cloisons appelées septa.",
+          "v": true,
+          "e": "VRAI. Trois compartiments, délimités par des cloisons fibreuses que l'on nomme septa.",
+          "sourceQuote": "3 loges musculaires séparées par des cloisons (les septa)"
+        },
+        {
+          "t": "La loge antérieure assure l'éversion du pied.",
+          "v": false,
+          "e": "FAUX : la loge antérieure assure la dorsiflexion, c'est-à-dire le fait de relever le pied. L'éversion est le mouvement de la loge latérale.",
+          "sourceQuote": "Mouvement : dorsiflexion (relever le pied)"
+        },
+        {
+          "t": "La loge latérale, située du côté de la fibula, assure l'éversion.",
+          "v": true,
+          "e": "VRAI. Sa position le long de la fibula et son mouvement, tourner la plante en dehors, vont ensemble.",
+          "sourceQuote": "Loge latérale. Côté fibula. Mouvement : éversion"
+        },
+        {
+          "t": "La loge postérieure assure la dorsiflexion.",
+          "v": false,
+          "e": "FAUX : la loge postérieure, c'est le mollet, et son mouvement est la flexion plantaire — pointer le pied.",
+          "sourceQuote": "Loge postérieure. Le mollet. Mouvement : flexion plantaire (pointer le pied)"
+        },
+        {
+          "t": "Chaque loge assure deux mouvements principaux du pied.",
+          "v": false,
+          "e": "FAUX : la logique à retenir est une loge, un mouvement principal. C'est ce qui rend la mémorisation simple.",
+          "sourceQuote": "chaque loge fait UN mouvement principal du pied"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-185-loges-jambe-membrane-interosseuse.html",
+      "origine": "ecrite",
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives aux muscles principaux des loges et au rôle des deux os, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le muscle principal de la loge antérieure est le tibial antérieur.",
+          "v": true,
+          "e": "VRAI. Son nom dit déjà sa position : devant le tibia, dans la loge antérieure.",
+          "sourceQuote": "Muscle principal : le tibial antérieur"
+        },
+        {
+          "t": "Les muscles principaux de la loge latérale sont les fibulaires.",
+          "v": true,
+          "e": "VRAI. Ils longent la fibula, d'où leur nom, et assurent l'éversion.",
+          "sourceQuote": "Muscles principaux : les fibulaires"
+        },
+        {
+          "t": "Le muscle principal de la loge postérieure est le triceps sural, formé du gastrocnémien et du soléaire.",
+          "v": true,
+          "e": "VRAI. C'est la masse du mollet, réunion du gastrocnémien et du soléaire.",
+          "sourceQuote": "le triceps sural (gastrocnémien + soléaire)"
+        },
+        {
+          "t": "Le tibia porte tout le poids, tandis que la fibula ne porte rien et stabilise la cheville.",
+          "v": true,
+          "e": "VRAI. Le partage des rôles est net : un os porteur, un os stabilisateur.",
+          "sourceQuote": "le tibia qui porte tout le poids, la fibula qui ne porte rien et stabilise la cheville"
+        },
+        {
+          "t": "Le tibial antérieur est situé le long de la fibula.",
+          "v": false,
+          "e": "FAUX : il est plaqué contre la face latérale du tibia. Ce sont les fibulaires qui longent la fibula.",
+          "sourceQuote": "le tibial antérieur , plaqué contre la face latérale du tibia"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-185-loges-jambe-membrane-interosseuse.html",
+      "origine": "ecrite",
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à ce qu'est une loge et à la comparaison avec l'avant-bras, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Entre le tibia et la fibula existe une prono-supination comparable à celle de l'avant-bras.",
+          "v": false,
+          "e": "FAUX : l'architecture est la même, mais pas les mouvements — il n'y a aucune prono-supination entre tibia et fibula.",
+          "sourceQuote": "entre tibia et fibula, il n'y a aucune prono-supination"
+        },
+        {
+          "t": "Les cloisons qui ferment une loge sont extensibles.",
+          "v": false,
+          "e": "FAUX : elles sont inextensibles, et c'est précisément pour cela qu'une augmentation de volume fait monter la pression.",
+          "sourceQuote": "cloisons fibreuses inextensibles (aponévroses et septa)"
+        },
+        {
+          "t": "Une loge ne contient que des muscles, à l'exclusion des vaisseaux et des nerfs.",
+          "v": false,
+          "e": "FAUX : la loge englobe ensemble les muscles, les vaisseaux et les nerfs — c'est ce qui rend sa mise sous pression dangereuse.",
+          "sourceQuote": "englobent ensemble les muscles, les vaisseaux et les nerfs"
+        },
+        {
+          "t": "Les muscles de la jambe flottent librement, sans être enfermés dans un compartiment.",
+          "v": false,
+          "e": "FAUX : chaque groupe musculaire est au contraire enfermé dans une loge, un compartiment fermé.",
+          "sourceQuote": "chacun est enfermé dans une loge"
+        },
+        {
+          "t": "Les cloisons qui délimitent les loges sont formées d'aponévroses et de septa.",
+          "v": true,
+          "e": "VRAI. Ce sont ces structures fibreuses qui ferment le compartiment de tous côtés.",
+          "sourceQuote": "aponévroses et septa"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-185-loges-jambe-membrane-interosseuse.html",
+      "origine": "ecrite",
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au syndrome des loges, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le syndrome des loges est une urgence chirurgicale.",
+          "v": true,
+          "e": "VRAI. Sans geste rapide, la compression des vaisseaux et des nerfs devient irréversible.",
+          "sourceQuote": "C'est une urgence chirurgicale"
+        },
+        {
+          "t": "Il survient typiquement après une fracture du tibia.",
+          "v": true,
+          "e": "VRAI. La fracture provoque un œdème qui fait gonfler le contenu d'une loge.",
+          "sourceQuote": "Après une fracture du tibia"
+        },
+        {
+          "t": "La loge la plus souvent touchée est la loge postérieure.",
+          "v": false,
+          "e": "FAUX : c'est le plus souvent la loge antérieure qui est concernée.",
+          "sourceQuote": "l'œdème fait gonfler le contenu d'une loge (souvent l'antérieure)"
+        },
+        {
+          "t": "Le traitement est l'aponévrotomie de décharge.",
+          "v": true,
+          "e": "VRAI. Il faut ouvrir la loge pour libérer la pression : c'est l'aponévrotomie de décharge.",
+          "sourceQuote": "aponévrotomie de décharge"
+        },
+        {
+          "t": "Le pied apparaît rouge et hypersensible.",
+          "v": false,
+          "e": "FAUX : le pied est pâle et insensible, signes de la compression des vaisseaux et des nerfs.",
+          "sourceQuote": "pied pâle et insensible"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-185-loges-jambe-membrane-interosseuse.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives au mécanisme du syndrome des loges et à la méthode de mémorisation conseillée, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Ce qui provoque la montée de pression, c'est que les parois de la loge ne cèdent pas.",
+          "v": true,
+          "e": "VRAI. Le gonflement seul ne suffirait pas : c'est l'impossibilité pour les cloisons de se distendre qui fait monter la pression.",
+          "sourceQuote": "ce n'est pas le gonflement qui blesse, c'est que les parois ne cèdent pas"
+        },
+        {
+          "t": "Cette montée de pression comprime les vaisseaux et les nerfs.",
+          "v": true,
+          "e": "VRAI. Vaisseaux et nerfs partagent le compartiment avec les muscles : ils subissent la pression de plein fouet.",
+          "sourceQuote": "compression des vaisseaux et des nerfs"
+        },
+        {
+          "t": "Le geste thérapeutique consiste à ouvrir la loge.",
+          "v": true,
+          "e": "VRAI. Puisque le problème vient de parois qui ne cèdent pas, on les ouvre pour libérer la pression.",
+          "sourceQuote": "qui consiste à ouvrir la loge"
+        },
+        {
+          "t": "La méthode conseillée est de mémoriser les muscles un par un plutôt que la loge.",
+          "v": false,
+          "e": "FAUX : c'est exactement l'inverse. On mémorise la loge, et le mouvement en découle tout seul.",
+          "sourceQuote": "Ne mémorise pas les muscles un par un : mémorise la loge"
+        },
+        {
+          "t": "L'ordre des trois questions à se poser est : où est le muscle, dans quelle loge, donc quel mouvement.",
+          "v": true,
+          "e": "VRAI. Position, puis loge, puis mouvement : cet enchaînement évite d'apprendre chaque muscle isolément.",
+          "sourceQuote": "où est le muscle (devant le tibia, côté fibula, ou au mollet) → dans quelle loge → donc quel mouvement du pied"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-185-loges-jambe-membrane-interosseuse.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives au schéma des trois loges et à la correspondance position-mouvement, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La membrane interosseuse y est représentée en pointillés, tendue entre le tibia et la fibula.",
+          "v": true,
+          "e": "VRAI. C'est le premier repère à identifier sur le schéma, avant de faire le tour des trois loges.",
+          "sourceQuote": "repère d'abord la membrane interosseuse , en pointillés, tendue entre le tibia et la fibula"
+        },
+        {
+          "t": "Les fibulaires y sont représentés le long de la fibula, dans la loge latérale.",
+          "v": true,
+          "e": "VRAI. Leur trajet suit la fibula, ce qui les place dans la loge latérale.",
+          "sourceQuote": "les fibulaires , le long de la fibula (loge latérale)"
+        },
+        {
+          "t": "La masse du triceps sural déborde en arrière, dans la loge postérieure.",
+          "v": true,
+          "e": "VRAI. C'est le volume du mollet, situé en arrière de la jambe.",
+          "sourceQuote": "la masse du triceps sural qui déborde en arrière (loge postérieure)"
+        },
+        {
+          "t": "Devant, latéral et derrière correspondent respectivement à relever, tourner en dehors et pointer.",
+          "v": true,
+          "e": "VRAI. Cette suite résume les trois loges : dorsiflexion, éversion, flexion plantaire.",
+          "sourceQuote": "Devant · latéral · derrière = relever · tourner en dehors · pointer"
+        },
+        {
+          "t": "L'éversion consiste à tourner la plante du pied en dehors.",
+          "v": true,
+          "e": "VRAI. C'est la définition donnée du mouvement propre à la loge latérale.",
+          "sourceQuote": "éversion (tourner la plante en dehors)"
+        }
+      ]
+    },
+
+    {
+      "fiche": "anatomie-186-triceps-sural-tendon-achille.html",
+      "origine": "ecrite",
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la présentation générale du triceps sural, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le triceps sural est le muscle le plus puissant de la jambe.",
+          "v": true,
+          "e": "VRAI. C'est lui qui soulève tout le poids du corps lors de la montée sur la pointe des pieds.",
+          "sourceQuote": "Le triceps sural est le muscle le plus puissant de la jambe"
+        },
+        {
+          "t": "Il appartient à la loge antérieure de la jambe.",
+          "v": false,
+          "e": "FAUX : il occupe la loge postérieure, c'est-à-dire le mollet.",
+          "sourceQuote": "La loge postérieure de la jambe, c'est le mollet"
+        },
+        {
+          "t": "Son mouvement est la flexion plantaire.",
+          "v": true,
+          "e": "VRAI. Pointer le pied : c'est le mouvement de la loge postérieure, donc du triceps sural.",
+          "sourceQuote": "son mouvement, c'est la flexion plantaire"
+        },
+        {
+          "t": "Il est composé de trois muscles superposés.",
+          "v": false,
+          "e": "FAUX : il n'est composé que de deux muscles superposés. Ce sont les chefs, et non les muscles, qui sont au nombre de trois.",
+          "sourceQuote": "il est composé de 2 muscles superposés"
+        },
+        {
+          "t": "Il se termine par trois tendons distincts.",
+          "v": false,
+          "e": "FAUX : les deux muscles se réunissent en bas en un seul tendon, le tendon calcanéen.",
+          "sourceQuote": "les 2 muscles se réunissent en un seul tendon"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-186-triceps-sural-tendon-achille.html",
+      "origine": "ecrite",
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives au tendon du triceps sural et à son insertion, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le tendon calcanéen est aussi appelé tendon d'Achille.",
+          "v": true,
+          "e": "VRAI. Les deux appellations désignent le même tendon, celui du triceps sural.",
+          "sourceQuote": "le tendon calcanéen (tendon d'Achille)"
+        },
+        {
+          "t": "C'est le tendon le plus épais du corps.",
+          "v": true,
+          "e": "VRAI. Il transmet la force du muscle le plus puissant de la jambe : son épaisseur est à la mesure de cette contrainte.",
+          "sourceQuote": "le plus épais du corps"
+        },
+        {
+          "t": "Il s'insère sur le talus.",
+          "v": false,
+          "e": "FAUX : il s'insère sur le calcanéus, l'os du talon.",
+          "sourceQuote": "qui s'insère sur le calcanéus — le talon"
+        },
+        {
+          "t": "Le calcanéus correspond au talon.",
+          "v": true,
+          "e": "VRAI. C'est l'os du pied sur lequel vient se fixer le tendon calcanéen.",
+          "sourceQuote": "le calcanéus — le talon"
+        },
+        {
+          "t": "Chacun des deux muscles conserve son propre tendon jusqu'au pied.",
+          "v": false,
+          "e": "FAUX : en bas, les deux muscles fusionnent en un seul et même tendon.",
+          "sourceQuote": "En bas, les 2 muscles se réunissent en un seul tendon"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-186-triceps-sural-tendon-achille.html",
+      "origine": "ecrite",
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au gastrocnémien, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le gastrocnémien est également appelé les jumeaux.",
+          "v": true,
+          "e": "VRAI. Ce second nom vient de ses deux chefs, qui lui donnent un aspect double.",
+          "sourceQuote": "Le gastrocnémien (= les jumeaux)"
+        },
+        {
+          "t": "Il forme la couche superficielle du mollet.",
+          "v": true,
+          "e": "VRAI. C'est lui que l'on voit et que l'on palpe : le soléaire est situé en dessous.",
+          "sourceQuote": "La couche superficielle du mollet"
+        },
+        {
+          "t": "Il possède deux chefs, médial et latéral.",
+          "v": true,
+          "e": "VRAI. Ces deux chefs sont la raison pour laquelle le muscle est dit « jumeau ».",
+          "sourceQuote": "avec 2 chefs (médial et latéral)"
+        },
+        {
+          "t": "Il part au-dessus des condyles du fémur.",
+          "v": true,
+          "e": "VRAI. Son origine se situe au-dessus du genou, sur le fémur : c'est cela qui détermine son statut.",
+          "sourceQuote": "Il part au-dessus des condyles du fémur"
+        },
+        {
+          "t": "Il est bi-articulaire : il agit sur le genou et sur la cheville.",
+          "v": true,
+          "e": "VRAI. Partant du fémur et se terminant au talon, il franchit deux articulations.",
+          "sourceQuote": "il agit sur le genou ET la cheville"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-186-triceps-sural-tendon-achille.html",
+      "origine": "ecrite",
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives au soléaire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le soléaire est la couche profonde, située juste sous le gastrocnémien.",
+          "v": true,
+          "e": "VRAI. Les deux muscles sont superposés, le soléaire occupant le plan profond.",
+          "sourceQuote": "La couche profonde , juste en dessous du gastrocnémien"
+        },
+        {
+          "t": "Il part du fémur.",
+          "v": false,
+          "e": "FAUX : il part du tibia et de la fibula, jamais du fémur. C'est toute la différence avec le gastrocnémien.",
+          "sourceQuote": "Il part du tibia + fibula (pas du fémur)"
+        },
+        {
+          "t": "Il est mono-articulaire.",
+          "v": true,
+          "e": "VRAI. Son origine étant située sous le genou, il ne franchit qu'une seule articulation.",
+          "sourceQuote": "il est donc mono-articulaire : la cheville uniquement"
+        },
+        {
+          "t": "Il n'agit pas sur le genou.",
+          "v": true,
+          "e": "VRAI. Ne partant pas du fémur, il ne croise pas le genou et ne peut donc pas le mobiliser.",
+          "sourceQuote": "le soléaire n'agit pas sur le genou"
+        },
+        {
+          "t": "Sur le schéma, il est représenté en bleu, sous le gastrocnémien.",
+          "v": true,
+          "e": "VRAI. Le code couleur du schéma oppose le gastrocnémien superficiel au soléaire profond situé dessous.",
+          "sourceQuote": "En bleu , dessous, le soléaire"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-186-triceps-sural-tendon-achille.html",
+      "origine": "ecrite",
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à l'aponévrose plantaire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'aponévrose plantaire est un muscle de la plante du pied.",
+          "v": false,
+          "e": "FAUX : elle ne contient aucune fibre musculaire, uniquement du tissu conjonctif.",
+          "sourceQuote": "sans fibres musculaires, que du tissu conjonctif"
+        },
+        {
+          "t": "Elle s'étend du talus jusqu'aux orteils.",
+          "v": false,
+          "e": "FAUX : elle s'étend du calcanéus jusqu'aux orteils, dans le prolongement du tendon calcanéen.",
+          "sourceQuote": "qui s'étend du calcanéus jusqu'aux orteils"
+        },
+        {
+          "t": "C'est le soléaire qui se prolonge sous le pied par l'aponévrose plantaire.",
+          "v": false,
+          "e": "FAUX : c'est le gastrocnémien qui se prolonge ainsi sous la plante du pied.",
+          "sourceQuote": "le gastrocnémien se prolonge par l' aponévrose plantaire"
+        },
+        {
+          "t": "Il s'agit d'une lame fibreuse épaisse.",
+          "v": true,
+          "e": "VRAI. C'est une lame de tissu conjonctif dense, épaisse, tendue sous la plante du pied.",
+          "sourceQuote": "une lame fibreuse épaisse"
+        },
+        {
+          "t": "Le système musculaire décrit ici s'arrête au talon.",
+          "v": false,
+          "e": "FAUX : la chaîne se poursuit au-delà du talon, sous le pied, par l'aponévrose plantaire.",
+          "sourceQuote": "Le système ne s'arrête pas au talon"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-186-triceps-sural-tendon-achille.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives au nom « triceps » et au raisonnement qui distingue un muscle mono-articulaire d'un muscle bi-articulaire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le préfixe « tri- » s'explique par les deux chefs du gastrocnémien ajoutés au soléaire, soit trois chefs pour un seul tendon.",
+          "v": true,
+          "e": "VRAI. Deux muscles seulement, mais trois chefs au total : c'est de là que vient le nom.",
+          "sourceQuote": "ça fait bien 3 chefs pour un seul tendon"
+        },
+        {
+          "t": "C'est le nom du muscle qui indique s'il est mono- ou bi-articulaire.",
+          "v": false,
+          "e": "FAUX : c'est son origine qui le dit, jamais son nom. Une seule question compte : d'où part-il ?",
+          "sourceQuote": "ce n'est pas le nom du muscle qui dit s'il est mono- ou bi-articulaire, c'est son origine"
+        },
+        {
+          "t": "Un muscle qui part au-dessus du genou franchit deux articulations.",
+          "v": true,
+          "e": "VRAI. Il croise le genou puis la cheville : deux articulations, donc bi-articulaire.",
+          "sourceQuote": "Au-dessus du genou (les condyles du fémur) → il franchit 2 articulations"
+        },
+        {
+          "t": "Un muscle qui part du tibia et de la fibula franchit lui aussi deux articulations.",
+          "v": false,
+          "e": "FAUX : partant sous le genou, il n'en franchit qu'une seule, la cheville : il est mono-articulaire.",
+          "sourceQuote": "En dessous (tibia et fibula) → une seule → mono-articulaire"
+        },
+        {
+          "t": "Le droit fémoral partait du fémur et franchissait le genou et la cheville.",
+          "v": false,
+          "e": "FAUX : le droit fémoral partait de l'os coxal et franchissait la hanche et le genou. C'est le gastrocnémien qui part du fémur et franchit genou et cheville.",
+          "sourceQuote": "Le droit fémoral partait de l'os coxal et franchissait hanche + genou"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-186-triceps-sural-tendon-achille.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la lecture du schéma du triceps sural, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le gastrocnémien y est représenté en rouge.",
+          "v": true,
+          "e": "VRAI. Le code couleur du schéma oppose le gastrocnémien rouge, superficiel, au soléaire bleu situé dessous.",
+          "sourceQuote": "en rouge , le gastrocnémien"
+        },
+        {
+          "t": "Ses deux chefs remontent au-dessus des condyles du fémur, donc au-dessus du genou.",
+          "v": true,
+          "e": "VRAI. C'est ce qui se lit en haut du schéma, et c'est ce qui fait de lui un muscle bi-articulaire.",
+          "sourceQuote": "ses 2 chefs remontent au-dessus des condyles du fémur , donc au-dessus du genou"
+        },
+        {
+          "t": "Le soléaire remonte lui aussi au-dessus du genou.",
+          "v": false,
+          "e": "FAUX : il ne remonte jamais plus haut que le tibia et la fibula, donc jamais au-dessus du genou.",
+          "sourceQuote": "il ne remonte jamais plus haut que le tibia et la fibula"
+        },
+        {
+          "t": "Le tendon calcanéen y est représenté en jaune, jusqu'au calcanéus.",
+          "v": true,
+          "e": "VRAI. Une fois les deux muscles réunis, le schéma suit le tendon jaune jusqu'à l'os du talon.",
+          "sourceQuote": "un seul tendon calcanéen jaune, jusqu'au calcanéus"
+        },
+        {
+          "t": "La chaîne se poursuit sous le pied, figurée en pointillés, vers les orteils.",
+          "v": true,
+          "e": "VRAI. Le schéma montre que le système ne s'arrête pas au talon mais continue sous la plante du pied.",
+          "sourceQuote": "regarde la chaîne repartir sous le pied, en pointillés, vers les orteils"
+        }
+      ]
+    },
+
+    {
+      "fiche": "biologie-185-oligodendrocytes.html",
+      "origine": "ecrite",
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives aux cellules gliales prises dans leur ensemble, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les cellules gliales sont environ dix fois moins nombreuses que les neurones.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse — elles sont environ dix fois plus nombreuses que les neurones.",
+          "sourceQuote": "beaucoup plus nombreuses que les neurones — environ 10 fois"
+        },
+        {
+          "t": "Les cellules gliales sont excitables et engendrent des potentiels d'action.",
+          "v": false,
+          "e": "FAUX : elles ne sont pas excitables et ne produisent aucun potentiel d'action. C'est ce qui les distingue des neurones.",
+          "sourceQuote": "Elles ne sont pas excitables (pas de potentiel d'action)"
+        },
+        {
+          "t": "Parmi leurs fonctions figurent le support, la nutrition, l'isolation, la défense immunitaire et la réparation.",
+          "v": true,
+          "e": "VRAI. Elles n'envoient pas de message nerveux, mais assurent tout ce qui permet au neurone de fonctionner.",
+          "sourceQuote": "support, nutrition, isolation, défense immunitaire et réparation"
+        },
+        {
+          "t": "Les cellules gliales sont classées selon leur forme, et non selon leur territoire.",
+          "v": false,
+          "e": "FAUX : le classement retenu est territorial — glie du système nerveux central d'un côté, glie périphérique de l'autre.",
+          "sourceQuote": "On les range selon leur territoire"
+        },
+        {
+          "t": "La substance blanche doit sa couleur aux corps cellulaires des neurones.",
+          "v": false,
+          "e": "FAUX : elle doit sa couleur à la myéline. Les corps cellulaires, eux, siègent dans la substance grise.",
+          "sourceQuote": "qui doit sa couleur à la myéline"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-185-oligodendrocytes.html",
+      "origine": "ecrite",
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la description de l'oligodendrocyte et à sa place dans le classement de la glie, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "C'est une petite cellule mesurant 6 à 8 micromètres.",
+          "v": true,
+          "e": "VRAI. C'est une cellule de petite taille, nettement plus petite qu'un corps cellulaire de neurone.",
+          "sourceQuote": "Petite cellule de 6 à 8 µm"
+        },
+        {
+          "t": "Son noyau est arrondi.",
+          "v": true,
+          "e": "VRAI. Noyau arrondi et cytoplasme réduit : c'est l'aspect caractéristique de cette cellule.",
+          "sourceQuote": "noyau arrondi, cytoplasme peu abondant"
+        },
+        {
+          "t": "Son cytoplasme est abondant et dépourvu de halo périnucléaire.",
+          "v": false,
+          "e": "FAUX : le cytoplasme est au contraire peu abondant, et l'on observe un halo clair autour du noyau.",
+          "sourceQuote": "cytoplasme peu abondant avec un halo clair périnucléaire"
+        },
+        {
+          "t": "L'oligodendrocyte fait partie de la macroglie.",
+          "v": true,
+          "e": "VRAI. Il appartient à la macroglie du système nerveux central, aux côtés des astrocytes.",
+          "sourceQuote": "Macroglie : oligodendrocytes · astrocytes"
+        },
+        {
+          "t": "Il existe sous deux sous-populations distinctes.",
+          "v": true,
+          "e": "VRAI. Deux sous-types portant le même nom mais n'assurant pas du tout le même travail.",
+          "sourceQuote": "elle existe en 2 sous-populations"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-185-oligodendrocytes.html",
+      "origine": "ecrite",
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives aux oligodendrocytes interfasciculaires, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Ils siègent dans la substance blanche, entre les faisceaux d'axones.",
+          "v": true,
+          "e": "VRAI. C'est logique : la substance blanche est le territoire des axones myélinisés, donc celui du myélinisateur.",
+          "sourceQuote": "Ils sont dans la substance blanche , entre les faisceaux d'axones"
+        },
+        {
+          "t": "Chacun envoie un seul prolongement vers un seul axone.",
+          "v": false,
+          "e": "FAUX : chacun envoie plusieurs prolongements fins vers plusieurs axones différents. C'est le piège classique de la comparaison avec la cellule de Schwann.",
+          "sourceQuote": "Chacun envoie plusieurs prolongements fins vers plusieurs axones différents"
+        },
+        {
+          "t": "Chaque prolongement s'enroule en spirale autour d'un segment d'axone.",
+          "v": true,
+          "e": "VRAI. Cet enroulement en spirale sur un segment d'axone constitue un internode de myéline.",
+          "sourceQuote": "s'enroule en spirale autour d'un segment d'axone"
+        },
+        {
+          "t": "Un seul oligodendrocyte peut myéliniser jusqu'à une soixantaine d'internodes.",
+          "v": true,
+          "e": "VRAI. C'est le chiffre à retenir, et il oppose radicalement l'oligodendrocyte à la cellule de Schwann.",
+          "sourceQuote": "peut ainsi myéliniser jusqu'à ~60 internodes"
+        },
+        {
+          "t": "Ces internodes se répartissent obligatoirement sur un seul et même axone.",
+          "v": false,
+          "e": "FAUX : ils peuvent se répartir sur des axones différents, ou sur plusieurs segments d'un même axone.",
+          "sourceQuote": "sur 60 axones différents, ou sur plusieurs segments du même axone"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-185-oligodendrocytes.html",
+      "origine": "ecrite",
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux oligodendrocytes satellites, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Ils siègent dans la substance grise.",
+          "v": true,
+          "e": "VRAI. La substance grise est le territoire des corps cellulaires : c'est là qu'on les trouve.",
+          "sourceQuote": "Ils sont dans la substance grise"
+        },
+        {
+          "t": "Ils sont au contact des somas neuronaux.",
+          "v": true,
+          "e": "VRAI. C'est précisément ce contact avec le corps cellulaire du neurone qui leur vaut le nom de satellites.",
+          "sourceQuote": "au contact des somas neuronaux"
+        },
+        {
+          "t": "Leur rôle est métabolique : échanges d'eau, d'ions et de nutriments avec le neurone.",
+          "v": true,
+          "e": "VRAI. Ils nourrissent et entretiennent le neurone, sans jamais fabriquer d'isolant.",
+          "sourceQuote": "échanges d'eau, d'ions, de nutriments avec le neurone"
+        },
+        {
+          "t": "Ils ne fabriquent pas de myéline.",
+          "v": true,
+          "e": "VRAI. Et pour une raison simple : la substance grise ne contient pas d'axones myélinisés.",
+          "sourceQuote": "ils ne fabriquent PAS de myéline"
+        },
+        {
+          "t": "Il ne faut pas les confondre avec les cellules satellites, qui relèvent de la glie périphérique.",
+          "v": true,
+          "e": "VRAI. Deux noms très proches pour deux cellules différentes : les cellules satellites appartiennent au système nerveux périphérique.",
+          "sourceQuote": "celles-là sont de la glie périphérique, pas des oligodendrocytes"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-185-oligodendrocytes.html",
+      "origine": "ecrite",
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives à la comparaison entre l'oligodendrocyte et la cellule de Schwann, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une cellule de Schwann myélinise un seul internode.",
+          "v": true,
+          "e": "VRAI. Un internode, un axone : c'est la limite de la cellule de Schwann, face à la soixantaine d'internodes de l'oligodendrocyte.",
+          "sourceQuote": "1 seul internode"
+        },
+        {
+          "t": "La lame basale est présente chez l'oligodendrocyte et absente chez la cellule de Schwann.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse — la lame basale est absente chez l'oligodendrocyte et présente chez la cellule de Schwann.",
+          "sourceQuote": "Lame basale ❌ Absente ✅ Présente"
+        },
+        {
+          "t": "Les incisures de Schmidt-Lanterman sont une particularité de la myéline fabriquée par la cellule de Schwann.",
+          "v": true,
+          "e": "VRAI. Elles n'existent que du côté périphérique : la myéline de l'oligodendrocyte n'en présente pas.",
+          "sourceQuote": "une particularité de la myéline fabriquée par la cellule de Schwann"
+        },
+        {
+          "t": "Un oligodendrocyte myélinise un seul axone.",
+          "v": false,
+          "e": "FAUX : il en myélinise plusieurs. C'est l'une des deux propositions à reconnaître les yeux fermés.",
+          "sourceQuote": "un oligodendrocyte myélinise un seul axone » → FAUX"
+        },
+        {
+          "t": "Une cellule de Schwann myélinise plusieurs axones.",
+          "v": false,
+          "e": "FAUX : elle n'en myélinise qu'un seul. Le sens est toujours le même : plusieurs côté central, un seul côté périphérique.",
+          "sourceQuote": "une cellule de Schwann myélinise plusieurs axones » → FAUX"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-185-oligodendrocytes.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à l'analogie du poulpe et de l'ouvrier, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans cette analogie, l'oligodendrocyte tient le rôle de l'ouvrier spécialisé.",
+          "v": false,
+          "e": "FAUX : l'oligodendrocyte est le poulpe. C'est la cellule de Schwann qui est l'ouvrier spécialisé.",
+          "sourceQuote": "Imagine un poulpe (l'oligodendrocyte) au milieu d'un groupe de câbles"
+        },
+        {
+          "t": "La cellule de Schwann ne s'occupe que d'un seul câble.",
+          "v": true,
+          "e": "VRAI. Un seul câble, c'est-à-dire un seul axone : moins efficace en nombre, mais plus contrôlé.",
+          "sourceQuote": "un ouvrier spécialisé qui ne s'occupe que d' un seul câble"
+        },
+        {
+          "t": "L'image du poulpe illustre le fait qu'un oligodendrocyte n'isole qu'un câble à la fois.",
+          "v": false,
+          "e": "FAUX : le poulpe illustre exactement l'inverse — un seul oligodendrocyte isole des dizaines de câbles en même temps.",
+          "sourceQuote": "Un seul poulpe peut isoler des dizaines de câbles en même temps"
+        },
+        {
+          "t": "Le sens à retenir est : un seul du côté du système nerveux central, plusieurs du côté périphérique.",
+          "v": false,
+          "e": "FAUX : le sens est l'inverse — plusieurs du côté central, un seul du côté périphérique.",
+          "sourceQuote": "plusieurs du côté du SNC, un seul du côté du SNP"
+        },
+        {
+          "t": "La cellule de Schwann est présentée comme plus efficace en nombre que l'oligodendrocyte.",
+          "v": false,
+          "e": "FAUX : elle est décrite comme moins efficace en nombre, mais plus contrôlée.",
+          "sourceQuote": "C'est moins efficace en nombre, mais plus contrôlé"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-185-oligodendrocytes.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la lecture du schéma opposant interfasciculaires et satellites, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "À gauche, l'interfasciculaire envoie des prolongements vers cinq axones différents.",
+          "v": true,
+          "e": "VRAI. Une seule cellule, cinq prolongements en étoile vers cinq axones distincts.",
+          "sourceQuote": "des prolongements qui partent en étoile vers cinq axones différents"
+        },
+        {
+          "t": "Chaque manchon orange posé sur un axone représente un internode.",
+          "v": true,
+          "e": "VRAI. Le manchon figure le segment d'axone entouré de myéline, c'est-à-dire un internode.",
+          "sourceQuote": "Chaque manchon orange posé sur un axone est un internode"
+        },
+        {
+          "t": "À droite, les satellites enroulent leurs prolongements autour des corps cellulaires.",
+          "v": false,
+          "e": "FAUX : ils sont simplement collés contre les corps cellulaires, sans rien enrouler du tout.",
+          "sourceQuote": "collées contre les gros corps cellulaires violets , sans rien enrouler du tout"
+        },
+        {
+          "t": "La flèche du schéma indique des échanges métaboliques.",
+          "v": true,
+          "e": "VRAI. Elle figure les échanges d'eau et d'ions entre la cellule satellite et le neurone.",
+          "sourceQuote": "la flèche indique les échanges métaboliques"
+        },
+        {
+          "t": "La position à retenir est : substance grise à gauche, substance blanche à droite.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse — la substance blanche est à gauche, avec l'interfasciculaire, et la grise à droite, avec les satellites.",
+          "sourceQuote": "Retiens la position : blanche à gauche, grise à droite"
+        }
+      ]
+    }
+  ]
+}
