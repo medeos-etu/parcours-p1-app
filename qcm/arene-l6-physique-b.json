@@ -1,0 +1,571 @@
+{
+ "matiere": "physique",
+ "chapitre": 1,
+ "note": "Renfort d'arène (lots 8 à 15, tous ar:1) pour cinq fiches de physique du lot 6 : concentration molaire, pont C = Cp/M, ordres de grandeur des solutions biologiques, dilution C1V1 = C2V2 et facteur de dilution. Aucun calcul nouveau n'est demandé : chaque item porte sur une règle énoncée ou sur une valeur déjà résolue dans la fiche. Le socle des lots 1-7 reste dans physique-ch01-p3.json, physique-ch01-p4.json et lot-physique-023-facteur-de-dilution.json.",
+ "questions": [
+  {
+   "fiche": "physique-019-concentration-molaire.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 8,
+   "q": "La fiche s'ouvre sur les limites de la pesée d'un soluté. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "Les réactions ne se font pas entre des grammes.", "v": true, "e": "VRAI. C'est la phrase d'ouverture de la fiche : les grammes ne réagissent pas.", "sourceQuote": "Les réactions ne se font pas entre des grammes" },
+    { "t": "Il faut apprendre à compter les molécules, puisque ce sont elles qui se rencontrent.", "v": true, "e": "VRAI. Les réactions se font entre molécules, d'où la nécessité de les compter.", "sourceQuote": "Elles se font entre des molécules — alors il faut apprendre à les compter" },
+    { "t": "Peser un soluté indique combien de molécules ont été versées dans le verre.", "v": false, "e": "FAUX : la pesée ne dit justement pas combien de molécules ont été versées.", "sourceQuote": "peser un soluté ne dit pas combien de molécules tu as versées dans le verre" },
+    { "t": "La concentration pondérale est facile à mesurer en pratique : on pèse, on dissout, on lit.", "v": true, "e": "VRAI. C'est son avantage pratique.", "sourceQuote": "facile à mesurer en pratique : tu pèses, tu dissous, tu lis" },
+    { "t": "Ce sont les grammes versés, et non les molécules, qui réagissent.", "v": false, "e": "FAUX : ce sont les molécules qui réagissent.", "sourceQuote": "et ce sont elles qui réagissent" }
+   ]
+  },
+  {
+   "fiche": "physique-019-concentration-molaire.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 9,
+   "q": "On relit terme par terme l'expression de la concentration molaire. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "n désigne la quantité de soluté et s'exprime en moles.", "v": true, "e": "VRAI. C'est la définition posée sous la formule.", "sourceQuote": "n = quantité de soluté (mol)" },
+    { "t": "V désigne le volume de solution et s'exprime en litres.", "v": true, "e": "VRAI. C'est le second terme de la formule.", "sourceQuote": "V = volume de solution (L)" },
+    { "t": "Le volume considéré est celui de la solution entière, soluté dissous compris.", "v": true, "e": "VRAI. On ne prend pas le volume du solvant seul.", "sourceQuote": "la solution entière, soluté dissous compris" },
+    { "t": "L'unité de la concentration molaire est le mol/L, aussi noté M pour « molaire ».", "v": true, "e": "VRAI. Les deux notations désignent la même unité.", "sourceQuote": "Unité : mol/L — aussi noté M pour « molaire »" },
+    { "t": "Passer de la masse à la mole revient à cesser de peser le soluté pour le compter.", "v": true, "e": "VRAI. C'est tout l'intérêt du changement de grandeur.", "sourceQuote": "on arrête de peser le soluté — on le compte" }
+   ]
+  },
+  {
+   "fiche": "physique-019-concentration-molaire.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 10,
+   "q": "Un étudiant énumère ce qu'il croit savoir sur les termes de C = n / V. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "Dans cette formule, le volume peut se laisser en millilitres.", "v": false, "e": "FAUX : le volume se met en litres.", "sourceQuote": "il se met en litres" },
+    { "t": "V est le volume de solvant, mesuré avant la dissolution du soluté.", "v": false, "e": "FAUX : c'est le volume de la solution entière, une fois le soluté dissous.", "sourceQuote": "C'est le volume de solution (la solution entière, soluté dissous compris)" },
+    { "t": "n s'exprime en grammes de soluté.", "v": false, "e": "FAUX : n est une quantité de matière, en moles.", "sourceQuote": "n, la quantité de soluté, en moles" },
+    { "t": "Le symbole M ne peut pas servir à noter une concentration molaire.", "v": false, "e": "FAUX : mol/L se note aussi M, pour « molaire ».", "sourceQuote": "aussi noté M pour « molaire »" },
+    { "t": "Une concentration molaire se lit : dans 1 litre de cette solution, il y a C moles de soluté.", "v": true, "e": "VRAI. C'est la lecture en français proposée par le mnémo.", "sourceQuote": "si je prends 1 litre de cette solution, j'y trouverai C moles de soluté" }
+   ]
+  },
+  {
+   "fiche": "physique-019-concentration-molaire.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 11,
+   "q": "On reprend le tableau qui compare 1 g de glucose et 1 g de sel. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "La masse molaire retenue pour le glucose est de 180 g/mol.", "v": true, "e": "VRAI. C'est la valeur inscrite en face du glucose.", "sourceQuote": "1 g de glucose M = 180 g/mol" },
+    { "t": "La masse molaire retenue pour le NaCl est de 58,5 g/mol.", "v": true, "e": "VRAI. C'est la valeur inscrite en face du sel.", "sourceQuote": "1 g de NaCl M = 58,5 g/mol" },
+    { "t": "1 g de NaCl correspond à environ 1,7 × 10⁻² mol.", "v": true, "e": "VRAI. C'est le résultat de la division 1 / 58,5.", "sourceQuote": "1 / 58,5 ≈ 1,7 × 10⁻² mol" },
+    { "t": "Les deux solutés sont comparés sur des masses différentes.", "v": false, "e": "FAUX : la comparaison se fait à masse égale, 1 g de chacun.", "sourceQuote": "À masse égale : 1 g de…" },
+    { "t": "1 g de glucose correspond à environ 3,3 × 10²¹ molécules.", "v": true, "e": "VRAI. C'est le nombre de molécules porté dans le tableau.", "sourceQuote": "~ 3,3 × 10²¹ molécules" }
+   ]
+  },
+  {
+   "fiche": "physique-019-concentration-molaire.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 12,
+   "q": "Devant un énoncé, il faut décider quelle concentration employer. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "Préparer une solution conduit à peser, donc à raisonner en grammes.", "v": true, "e": "VRAI. La préparation passe par la balance.", "sourceQuote": "Préparer une solution → tu pèses, donc tu raisonnes en grammes" },
+    { "t": "Prévoir ce que la solution va faire conduit à raisonner en grammes par litre.", "v": false, "e": "FAUX : prévoir suppose de compter des molécules, donc de passer en mol/L.", "sourceQuote": "Prévoir ce que cette solution va faire → tu comptes des molécules, donc tu passes en mol/L" },
+    { "t": "La grandeur reine en chimie est la concentration molaire.", "v": true, "e": "VRAI. C'est la grandeur la plus utilisée.", "sourceQuote": "la concentration molaire est la grandeur la plus utilisée en chimie, en biophysique et en clinique — la grandeur reine en chimie" },
+    { "t": "Elle est très utile en chimie, mais peu employée en clinique.", "v": false, "e": "FAUX : la clinique est justement citée parmi ses domaines d'emploi.", "sourceQuote": "la grandeur la plus utilisée en chimie, en biophysique et en clinique" },
+    { "t": "Le choix de la grandeur ne dépend pas de ce que l'énoncé demande de faire.", "v": false, "e": "FAUX : c'est précisément la question à se poser devant un énoncé.", "sourceQuote": "Devant un énoncé, demande-toi ce qu'on te fait faire" }
+   ]
+  },
+  {
+   "fiche": "physique-019-concentration-molaire.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 13,
+   "q": "La fiche cite trois effets pour lesquels le nombre de molécules compte. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "Osmoser, c'est attirer l'eau d'un compartiment vers l'autre.", "v": true, "e": "VRAI. C'est la définition donnée entre parenthèses.", "sourceQuote": "osmoser (attirer l'eau d'un compartiment vers l'autre" },
+    { "t": "Pour prévoir une osmose, ce qui compte est le nombre de grammes apportés.", "v": false, "e": "FAUX : ce qui compte est le nombre de molécules apportées.", "sourceQuote": "ce qui compte n'est donc pas combien de grammes ils pèsent, mais combien de molécules ils apportent" },
+    { "t": "La concentration molaire est indispensable dès qu'on parle réaction, osmose ou pH.", "v": true, "e": "VRAI. C'est ce qui la rend incontournable.", "sourceQuote": "c'est ce qui la rend indispensable dès qu'on parle réaction, osmose ou pH" },
+    { "t": "L'osmose est traitée en détail dès cette fiche.", "v": false, "e": "FAUX : elle est simplement annoncée, on y revient plus tard dans le chapitre.", "sourceQuote": "on y reviendra en fin de chapitre" },
+    { "t": "La concentration molaire compte des grammes, donc des masses.", "v": false, "e": "FAUX : elle compte des moles, donc des molécules.", "sourceQuote": "elle compte des moles , donc des molécules" }
+   ]
+  },
+  {
+   "fiche": "physique-019-concentration-molaire.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 14,
+   "q": "On récapitule ce qu'il faut garder de la concentration molaire. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "C = n / V, avec n en mol et V en litres de solution.", "v": true, "e": "VRAI. C'est le résumé de la formule et de ses unités.", "sourceQuote": "C = n / V · n en mol , V en L de solution" },
+    { "t": "L'unité mol/L est aussi notée M.", "v": true, "e": "VRAI. Les deux écritures sont équivalentes.", "sourceQuote": "unité mol/L , aussi notée M" },
+    { "t": "Compter des moles revient à compter des molécules.", "v": true, "e": "VRAI. C'est ce qui fait tout l'intérêt de la grandeur.", "sourceQuote": "Elle compte des moles, donc des molécules" },
+    { "t": "Deux solutions « à la même masse par litre » ne sont pas à la même concentration molaire.", "v": true, "e": "VRAI. Tout dépend du soluté et de sa masse molaire.", "sourceQuote": "Deux solutions « à la même masse par litre » ne sont donc pas à la même concentration molaire" },
+    { "t": "Une masse ne dit rien tant qu'on ne sait pas de quel soluté il s'agit.", "v": true, "e": "VRAI. C'est le piège central de la fiche.", "sourceQuote": "Une masse ne dit rien tant qu'on ne sait pas de quel soluté il s'agit" }
+   ]
+  },
+  {
+   "fiche": "physique-019-concentration-molaire.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 15,
+   "q": "Une élève commente l'écart de molécules entre le sel et le glucose. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "À masse égale, le sel apporte environ trois fois plus de molécules que le glucose.", "v": true, "e": "VRAI. C'est la conclusion tirée du tableau.", "sourceQuote": "3 fois plus de molécules pour le sel que pour le glucose , à masse égale" },
+    { "t": "Cet écart disparaît lorsqu'on compare les deux solutés à masse égale.", "v": false, "e": "FAUX : c'est justement à masse égale que l'écart apparaît.", "sourceQuote": "3 fois plus de molécules pour le sel que pour le glucose , à masse égale" },
+    { "t": "1 g de NaCl correspond à environ 10²² molécules.", "v": true, "e": "VRAI. C'est la valeur portée dans le tableau pour le sel.", "sourceQuote": "~ 10²² molécules" },
+    { "t": "1 g de glucose correspond à environ 1,7 × 10⁻² mol.", "v": false, "e": "FAUX : c'est la valeur du sel ; le glucose donne environ 5,5 × 10⁻³ mol.", "sourceQuote": "1 / 180 ≈ 5,5 × 10⁻³ mol" },
+    { "t": "La comparaison porte sur 1 g de chacun des deux solutés.", "v": true, "e": "VRAI. Le tableau compare bien 1 g contre 1 g.", "sourceQuote": "À masse égale : 1 g de…" }
+   ]
+  },
+
+  {
+   "fiche": "physique-020-pont-c-egale-cp-sur-m.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 8,
+   "q": "Une même solution peut se décrire de deux façons. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "La concentration pondérale compte des grammes par litre.", "v": true, "e": "VRAI. C'est ce que mesure Cp.", "sourceQuote": "la pondérale C p , qui compte des grammes par litre" },
+    { "t": "La concentration molaire compte des moles par litre.", "v": true, "e": "VRAI. C'est ce que mesure C.", "sourceQuote": "la molaire C , qui compte des moles par litre" },
+    { "t": "Les deux se manipulent souvent ensemble en clinique.", "v": true, "e": "VRAI. D'où l'intérêt du pont entre les deux.", "sourceQuote": "tu as souvent les deux à manipuler en clinique" },
+    { "t": "Le passage de l'une à l'autre est immédiat.", "v": true, "e": "VRAI. Une seule division suffit.", "sourceQuote": "le passage de l'une à l'autre est immédiat" },
+    { "t": "Les deux grandeurs décrivent deux solutions différentes.", "v": false, "e": "FAUX : ce sont deux façons de mesurer exactement la même solution.", "sourceQuote": "deux façons de mesurer exactement la même solution" }
+   ]
+  },
+  {
+   "fiche": "physique-020-pont-c-egale-cp-sur-m.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 9,
+   "q": "Un étudiant récapitule les unités et les précautions du pont massique-molaire. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "Dans la formule, M s'exprime en mol/g.", "v": false, "e": "FAUX : la masse molaire s'exprime en g/mol.", "sourceQuote": "C p en g/L · M en g/mol" },
+    { "t": "Dans la formule, C s'exprime en g/L.", "v": false, "e": "FAUX : C est une concentration molaire, en mol/L.", "sourceQuote": "C en mol/L · C p en g/L" },
+    { "t": "Dans la formule, Cp s'exprime en mol/L.", "v": false, "e": "FAUX : Cp est la concentration pondérale, en g/L.", "sourceQuote": "correspondre : C en mol/L, C p en g/L" },
+    { "t": "Les unités doivent se correspondre : C en mol/L, Cp en g/L, M en g/mol.", "v": true, "e": "VRAI. C'est la condition d'emploi de la formule.", "sourceQuote": "Les unités doivent se correspondre : C en mol/L, C p en g/L, M en g/mol" },
+    { "t": "Le facteur 1000 est facultatif : sans lui, on annonce quand même 5,5.", "v": false, "e": "FAUX : sans lui, on annonce 0,0055 au lieu de 5,5.", "sourceQuote": "sans lui, tu annonces une glycémie de 0,0055 au lieu de 5,5" }
+   ]
+  },
+  {
+   "fiche": "physique-020-pont-c-egale-cp-sur-m.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 10,
+   "q": "On reprend la solution de glucose détaillée dans l'exemple concret. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "Un litre de cette solution contient 18 g de glucose.", "v": true, "e": "VRAI. C'est ce que veut dire 18 g/L.", "sourceQuote": "Dans 1 L de solution, il y a 18 g de glucose" },
+    { "t": "L'application de la formule donne 18 / 180 = 0,1 mol/L.", "v": true, "e": "VRAI. C'est le résultat obtenu directement par la formule.", "sourceQuote": "C = C p / M = 18 / 180 = 0,1 mol/L" },
+    { "t": "Cette concentration s'écrit aussi 100 mmol/L.", "v": true, "e": "VRAI. 0,1 mol/L vaut 100 mmol/L.", "sourceQuote": "C = 0,1 mol/L = 100 mmol/L" },
+    { "t": "Le rapport 18/180 vaut 1/100.", "v": false, "e": "FAUX : il vaut 1/10.", "sourceQuote": "dans 18 g, il y a 18 / 180 = 1/10" },
+    { "t": "La masse molaire du glucose employée ici est de 18 g/mol.", "v": false, "e": "FAUX : une mole de glucose pèse 180 g.", "sourceQuote": "1 mole de glucose pèse 180 g" }
+   ]
+  },
+  {
+   "fiche": "physique-020-pont-c-egale-cp-sur-m.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 11,
+   "q": "D'où sort la formule du pont ? Parmi les propositions suivantes sur son établissement, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "Rien de plus n'a été ajouté en route dans ce raisonnement.", "v": true, "e": "VRAI. La démonstration n'introduit aucune hypothèse nouvelle.", "sourceQuote": "Rien de plus n'a été ajouté en route" },
+    { "t": "C = Cp / M est une conversion inédite, sans rapport avec n = m / M.", "v": false, "e": "FAUX : c'est exactement n = m / M, appliqué au litre.", "sourceQuote": "C'est exactement la formule n = m / M" },
+    { "t": "n = m / M est la première des trois conversions de la mole vues dans le chapitre.", "v": true, "e": "VRAI. Elle a déjà été rencontrée plus tôt.", "sourceQuote": "la première des trois conversions de la mole, déjà vue dans ce chapitre" },
+    { "t": "Ce nombre de moles n'est pas rapporté au litre : il reste à diviser par le volume.", "v": false, "e": "FAUX : il est déjà par litre, c'est donc par définition la concentration molaire.", "sourceQuote": "Et comme ce nombre est par litre , c'est par définition la concentration molaire C" },
+    { "t": "C = Cp / M est donc une formule de plus à apprendre.", "v": false, "e": "FAUX : ce n'est pas une formule supplémentaire.", "sourceQuote": "donc pas une formule de plus à apprendre" }
+   ]
+  },
+  {
+   "fiche": "physique-020-pont-c-egale-cp-sur-m.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 12,
+   "q": "On reprend l'énoncé du mini-exercice et ses deux premières étapes de correction. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "En France, la glycémie est exprimée en g/L, avec une valeur normale d'environ 1 g/L.", "v": true, "e": "VRAI. C'est l'unité française et son repère.", "sourceQuote": "En France, la glycémie est exprimée en g/L (valeur normale ~1 g/L)" },
+    { "t": "Au Royaume-Uni et aux États-Unis, elle est exprimée en mmol/L.", "v": true, "e": "VRAI. D'où l'intérêt de savoir convertir.", "sourceQuote": "Dans d'autres pays (Royaume-Uni, États-Unis) , elle est exprimée en mmol/L" },
+    { "t": "La première étape donne C = 1 / 180 mol/L.", "v": true, "e": "VRAI. C'est l'application directe de la formule.", "sourceQuote": "C = C p / M = 1 / 180 mol/L" },
+    { "t": "En multipliant par 1000, on obtient 1000 / 180 mmol/L, soit 100 / 18 mmol/L.", "v": true, "e": "VRAI. C'est le passage en millimoles par litre.", "sourceQuote": "C = 1000 / 180 mmol/L = 100 / 18 mmol/L" },
+    { "t": "Le calcul mental revient à chercher un nombre x tel que 18 × x soit proche de 100.", "v": true, "e": "VRAI. C'est la façon de mener 100/18 de tête.", "sourceQuote": "On cherche un nombre x tel que 18 × x ≈ 100" }
+   ]
+  },
+  {
+   "fiche": "physique-020-pont-c-egale-cp-sur-m.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 13,
+   "q": "On détaille les essais mentaux menés pour approcher le résultat. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "L'essai 18 × 5 donne 90 : il manque 10.", "v": true, "e": "VRAI. C'est le premier essai proposé.", "sourceQuote": "18 × 5 = 90 (il manque 10)" },
+    { "t": "L'essai 18 × 6 donne 108 : on dépasse de 8.", "v": true, "e": "VRAI. C'est le second essai proposé.", "sourceQuote": "18 × 6 = 108 (on dépasse de 8)" },
+    { "t": "Le résultat se situe entre 5 et 6, quasiment au milieu, soit environ 5,5.", "v": true, "e": "VRAI. Les deux essais encadrent la valeur.", "sourceQuote": "Donc x est entre 5 et 6 — quasiment au milieu, soit ≈ 5,5" },
+    { "t": "La vérification donne 18 × 5,5 = 99, soit environ 100.", "v": true, "e": "VRAI. C'est la vérification finale.", "sourceQuote": "18 × 5,5 = 18 × 5 + 18 × 0,5 = 90 + 9 = 99 ≈ 100" },
+    { "t": "Cette vérification se décompose en 18 × 5 + 18 × 5.", "v": false, "e": "FAUX : elle se décompose en 18 × 5 + 18 × 0,5.", "sourceQuote": "18 × 5,5 = 18 × 5 + 18 × 0,5" }
+   ]
+  },
+  {
+   "fiche": "physique-020-pont-c-egale-cp-sur-m.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 14,
+   "q": "Un étudiant restitue de mémoire le réflexe clinique de conversion. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "Le réflexe à retenir est : 1 g/L correspond à 55 mmol/L.", "v": false, "e": "FAUX : 1 g/L correspond à 5,5 mmol/L.", "sourceQuote": "Glycémie : 1 g/L ↔ 5,5 mmol/L" },
+    { "t": "2 g/L correspond à la moitié de la valeur obtenue pour 1 g/L.", "v": false, "e": "FAUX : c'est le double, soit environ 11 mmol/L.", "sourceQuote": "2 g/L (diabète déséquilibré) ↔ ≈ 11 mmol/L — le double" },
+    { "t": "Cette conversion est anecdotique et peu employée en médecine clinique.", "v": false, "e": "FAUX : c'est la conversion la plus utilisée en médecine clinique.", "sourceQuote": "C'est la conversion la plus utilisée en médecine clinique" },
+    { "t": "Une glycémie à 2 g/L signe un diabète déséquilibré.", "v": true, "e": "VRAI. C'est la situation citée pour cette valeur.", "sourceQuote": "2 g/L (diabète déséquilibré)" },
+    { "t": "Devant un résultat, on lit d'abord la valeur, l'unité ensuite.", "v": false, "e": "FAUX : la première question à se poser porte sur l'unité.", "sourceQuote": "devant un résultat, demande-toi d'abord dans quelle unité il est écrit" }
+   ]
+  },
+  {
+   "fiche": "physique-020-pont-c-egale-cp-sur-m.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 15,
+   "q": "On résume l'essentiel du passage entre les deux concentrations. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "La glycémie est tantôt donnée en g/L, tantôt en mmol/L.", "v": true, "e": "VRAI. C'est le point de départ de la fiche.", "sourceQuote": "La glycémie est tantôt donnée en g/L , tantôt en mmol/L" },
+    { "t": "Une seule division fait le pont entre les deux.", "v": true, "e": "VRAI. La division par la masse molaire suffit.", "sourceQuote": "Une seule division fait le pont entre les deux" },
+    { "t": "C = Cp / M, c'est n = m/M appliqué au litre.", "v": true, "e": "VRAI. Rien de nouveau n'est introduit.", "sourceQuote": "C = C p / M — c'est n = m/M appliqué au litre" },
+    { "t": "L'exemple type est un glucose à 18 g/L avec M = 180, soit 0,1 mol/L ou 100 mmol/L.", "v": true, "e": "VRAI. C'est l'exemple retenu par la fiche.", "sourceQuote": "glucose à 18 g/L avec M = 180 → 0,1 mol/L = 100 mmol/L" },
+    { "t": "Le réflexe clinique est 1 g/L ↔ 5,5 mmol/L, donc 2 g/L ↔ environ 11 mmol/L.", "v": true, "e": "VRAI. C'est l'automatisme à installer.", "sourceQuote": "1 g/L ↔ 5,5 mmol/L , donc 2 g/L ↔ ≈ 11 mmol/L" }
+   ]
+  },
+
+  {
+   "fiche": "physique-021-ordres-de-grandeur-solutions-biologiques.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 8,
+   "q": "Pourquoi les concentrations du vivant s'écrivent-elles avec des préfixes ? Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "Une solution du vivant n'est presque jamais à 1 mol/L.", "v": true, "e": "VRAI. C'est le constat de départ.", "sourceQuote": "Une solution du vivant n'est presque jamais à 1 mol/L" },
+    { "t": "Les solutions biologiques sont en général 1000 à 1 000 000 fois plus concentrées que 1 mol/L.", "v": false, "e": "FAUX : elles sont bien plus diluées, pas plus concentrées.", "sourceQuote": "elles sont souvent 1000 à 1 000 000 fois plus diluées" },
+    { "t": "Savoir convertir ne suffit pas : encore faut-il savoir à quoi ressemble un résultat normal une fois converti.", "v": true, "e": "VRAI. C'est la raison d'être de cette fiche.", "sourceQuote": "Encore faut-il savoir à quoi ressemble un résultat normal une fois converti" },
+    { "t": "Les préfixes servent surtout à alourdir la notation.", "v": false, "e": "FAUX : ils évitent d'écrire des zéros à n'en plus finir.", "sourceQuote": "On utilise donc des préfixes pour ne pas écrire des zéros à n'en plus finir" },
+    { "t": "La glycémie de 1 g/L vaut environ 55 mmol/L.", "v": false, "e": "FAUX : elle vaut environ 5,5 mmol/L.", "sourceQuote": "une glycémie de 1 g/L vaut ≈ 5,5 mmol/L" }
+   ]
+  },
+  {
+   "fiche": "physique-021-ordres-de-grandeur-solutions-biologiques.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 9,
+   "q": "On relit ligne à ligne le tableau des noms de solutions. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "Une solution décimolaire vaut 0,1 mol/L.", "v": true, "e": "VRAI. C'est la deuxième ligne du tableau.", "sourceQuote": "mol/L = 0,1 mol/L" },
+    { "t": "Une solution centimolaire vaut 0,01 mol/L.", "v": true, "e": "VRAI. C'est la troisième ligne du tableau.", "sourceQuote": "mol/L = 0,01 mol/L" },
+    { "t": "Une solution millimolaire vaut 1 mmol/L.", "v": true, "e": "VRAI. C'est la quatrième ligne du tableau.", "sourceQuote": "mol/L = 1 mmol/L" },
+    { "t": "Une solution micromolaire vaut 1 µmol/L.", "v": true, "e": "VRAI. C'est la dernière ligne du tableau.", "sourceQuote": "mol/L = 1 µmol/L" },
+    { "t": "La solution molaire correspond à 10 mol/L.", "v": false, "e": "FAUX : la solution molaire vaut 1 mol/L.", "sourceQuote": "Solution molaire 1 mol/L" }
+   ]
+  },
+  {
+   "fiche": "physique-021-ordres-de-grandeur-solutions-biologiques.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 10,
+   "q": "On compare les deux repères millimolaires de la fiche. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "La clinique lit la natrémie en millimolaire, tous les jours.", "v": true, "e": "VRAI. C'est l'unité de lecture courante.", "sourceQuote": "c'est l'unité dans laquelle la clinique lit la natrémie, tous les jours" },
+    { "t": "Le repère de la glycémie est l'arrondi du résultat 1 g/L ↔ 5,5 mmol/L.", "v": true, "e": "VRAI. C'est le résultat calculé à la fiche précédente, arrondi.", "sourceQuote": "C'est le repère arrondi du résultat que tu viens de calculer : 1 g/L ↔ 5,5 mmol/L" },
+    { "t": "La glycémie se situe environ 30 fois au-dessus de la natrémie.", "v": false, "e": "FAUX : elle est environ 30 fois plus basse.", "sourceQuote": "~30 fois plus bas que la natrémie" },
+    { "t": "La glycémie de référence est d'environ 5 mmol/L.", "v": true, "e": "VRAI. C'est le deuxième repère à mémoriser.", "sourceQuote": "La glycémie — ~5 mmol/L" },
+    { "t": "La natrémie et la glycémie ne se lisent pas au même étage de l'échelle.", "v": false, "e": "FAUX : elles sont toutes deux au millimolaire.", "sourceQuote": "Même étage, le millimolaire" }
+   ]
+  },
+  {
+   "fiche": "physique-021-ordres-de-grandeur-solutions-biologiques.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 11,
+   "q": "Où se situent les hormones circulantes sur cette échelle ? Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "Une hormone circulante se situe au même étage que la natrémie.", "v": false, "e": "FAUX : on descend de trois à six crans sous le millimolaire.", "sourceQuote": "on descend encore de trois à six crans sous le millimolaire" },
+    { "t": "L'échelle s'arrête au micromolaire : rien n'est plus dilué.", "v": false, "e": "FAUX : c'est le tableau qui s'arrête là, pas l'échelle.", "sourceQuote": "Le tableau ci-dessus s'arrête au micromolaire, mais l'échelle continue" },
+    { "t": "Les hormones circulantes descendent jusqu'au nmol/L.", "v": true, "e": "VRAI. L'échelle continue sous le micromolaire.", "sourceQuote": "les hormones vont jusqu'au nmol/L" },
+    { "t": "La natrémie et la glycémie se situent au micromolaire.", "v": false, "e": "FAUX : elles sont au millimolaire.", "sourceQuote": "quand la natrémie et la glycémie sont à 10⁻³" },
+    { "t": "Les hormones circulantes se comptent en millimoles par litre.", "v": false, "e": "FAUX : elles se comptent en micromoles ou nanomoles par litre.", "sourceQuote": "Une hormone circulante — quelques µmol/L à nmol/L" }
+   ]
+  },
+  {
+   "fiche": "physique-021-ordres-de-grandeur-solutions-biologiques.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 12,
+   "q": "À quoi sert concrètement cette échelle des concentrations ? Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "Ces repères servent à trier.", "v": true, "e": "VRAI. C'est leur usage premier.", "sourceQuote": "ils servent à trier" },
+    { "t": "Une glycémie annoncée à 5 mol/L serait mille fois plus concentrée que ce que le vivant contient.", "v": true, "e": "VRAI. Le préfixe manquant fait sortir la valeur de l'échelle.", "sourceQuote": "une glycémie à 5 mol/L , ce serait mille fois plus concentré que ce que le vivant contient" },
+    { "t": "Le tableau n'est pas là pour être récité.", "v": true, "e": "VRAI. Il sert de repère, pas de récitation.", "sourceQuote": "Ce tableau n'est pas là pour être récité" },
+    { "t": "Il est là pour que trois valeurs aient un étage bien à elles.", "v": true, "e": "VRAI. C'est sa fonction annoncée.", "sourceQuote": "Il est là pour que trois valeurs aient un étage bien à elles" },
+    { "t": "Le mmol/L est l'étage des repères courants, natrémie et glycémie.", "v": true, "e": "VRAI. Les deux repères courants y logent.", "sourceQuote": "Le mmol/L est l'étage des repères courants (natrémie ~140, glycémie ~5)" }
+   ]
+  },
+  {
+   "fiche": "physique-021-ordres-de-grandeur-solutions-biologiques.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 13,
+   "q": "La lettre M apparaît dans deux contextes différents. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "Dans « 1 M », le M est une unité, qui se lit collée à un nombre.", "v": true, "e": "VRAI. C'est l'abréviation de mol/L.", "sourceQuote": "ici, M est une unité , et elle se lit collée à un nombre — « 1 M »" },
+    { "t": "Dans C = Cp / M, le M désigne la même chose que dans « 1 M ».", "v": false, "e": "FAUX : dans la formule, M est la masse molaire.", "sourceQuote": "ce M-là n'est pas celui de C = C p / M" },
+    { "t": "« 1 M » ne veut pas dire « 1 mole ».", "v": true, "e": "VRAI. C'est une concentration, pas une quantité.", "sourceQuote": "« 1 M » ne veut pas dire « 1 mole »" },
+    { "t": "Le M des notations abrégées désigne une quantité de matière.", "v": false, "e": "FAUX : il désigne une concentration.", "sourceQuote": "Le M est l'abréviation de mol/L : c'est une concentration , pas une quantité" },
+    { "t": "Confondre les deux revient à perdre le volume en route.", "v": true, "e": "VRAI. C'est le mécanisme même de l'erreur.", "sourceQuote": "Confondre les deux, c'est perdre le volume en route" }
+   ]
+  },
+  {
+   "fiche": "physique-021-ordres-de-grandeur-solutions-biologiques.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 14,
+   "q": "On s'intéresse aux écritures abrégées portées dans la colonne de droite du tableau. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "Une solution millimolaire se note « 1 mM ».", "v": true, "e": "VRAI. C'est la notation portée en face de la millimolaire.", "sourceQuote": "1 mmol/L « 1 mM »" },
+    { "t": "Une solution décimolaire se note « 0,1 M ».", "v": true, "e": "VRAI. C'est la notation portée en face de la décimolaire.", "sourceQuote": "0,1 mol/L « 0,1 M »" },
+    { "t": "Une solution micromolaire se note elle aussi « 1 mM ».", "v": false, "e": "FAUX : elle se note « 1 µM ».", "sourceQuote": "Solution micromolaire 10⁻⁶ mol/L = 1 µmol/L « 1 µM »" },
+    { "t": "La concentration molaire ne s'exprime qu'en mol/L, sans abréviation possible.", "v": false, "e": "FAUX : mol/L se note aussi M.", "sourceQuote": "la concentration molaire s'exprime en mol/L , aussi noté M pour « molaire »" },
+    { "t": "Un préfixe posé devant la mole ne change pas le nom de la solution.", "v": false, "e": "FAUX : chaque préfixe donne son nom à la solution.", "sourceQuote": "Chaque préfixe posé devant la mole donne son nom à la solution" }
+   ]
+  },
+  {
+   "fiche": "physique-021-ordres-de-grandeur-solutions-biologiques.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 15,
+   "q": "On récapitule les étages de l'échelle et ce qu'ils abritent. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "Le µmol/L et le nmol/L sont l'étage des hormones circulantes.", "v": true, "e": "VRAI. C'est le bas de l'échelle.", "sourceQuote": "le µmol/L et le nmol/L celui des hormones circulantes" },
+    { "t": "C'est la dilution des solutions du vivant qui explique la présence de préfixes partout.", "v": true, "e": "VRAI. Sans préfixes, il faudrait aligner les zéros.", "sourceQuote": "plus diluées que 1 mol/L — d'où les préfixes partout" },
+    { "t": "Les deux repères courants retenus sont une natrémie d'environ 140 et une glycémie d'environ 5.", "v": true, "e": "VRAI. Ce sont les valeurs rappelées dans le résumé.", "sourceQuote": "(natrémie ~140, glycémie ~5)" },
+    { "t": "Le mmol/L est réservé aux hormones circulantes.", "v": false, "e": "FAUX : c'est l'étage des repères courants, natrémie et glycémie.", "sourceQuote": "Le mmol/L est l'étage des repères courants (natrémie ~140, glycémie ~5)" },
+    { "t": "Le sodium dont on mesure la concentration dans la natrémie est celui du plasma.", "v": true, "e": "VRAI. C'est la définition de la natrémie.", "sourceQuote": "La concentration du sodium dans le plasma" }
+   ]
+  },
+
+  {
+   "fiche": "physique-022-dilution-conservation-c1v1-c2v2.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 8,
+   "q": "Que devient le soluté quand on ajoute de l'eau à une solution ? Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "Ajouter de l'eau ne fait pas disparaître le soluté.", "v": true, "e": "VRAI. Il est toujours là, simplement plus dispersé.", "sourceQuote": "Ajouter de l'eau ne fait pas disparaître le soluté" },
+    { "t": "Après les fiches qui décrivaient une solution donnée, celle-ci apprend à la fabriquer.", "v": true, "e": "VRAI. On passe de la description à la préparation.", "sourceQuote": "Ici, on la fabrique" },
+    { "t": "C₁ et V₁ décrivent l'état d'avant dilution, C₂ et V₂ celui d'après.", "v": true, "e": "VRAI. C'est la convention d'écriture posée sous la formule.", "sourceQuote": "C₁, V₁ : avant dilution · C₂, V₂ : après dilution" },
+    { "t": "La quantité de soluté n = C × V reste constante.", "v": true, "e": "VRAI. C'est la conservation de la matière.", "sourceQuote": "La quantité de soluté n = C × V reste constante" },
+    { "t": "Diluer, c'est ajouter du solvant sans changer la quantité de soluté.", "v": true, "e": "VRAI. C'est la définition même de la dilution.", "sourceQuote": "Diluer une solution, c'est ajouter du solvant sans changer la quantité de soluté" }
+   ]
+  },
+  {
+   "fiche": "physique-022-dilution-conservation-c1v1-c2v2.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 9,
+   "q": "On reprend l'exemple guidé de préparation d'une solution-fille à 0,1 mol/L. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "On cherche à préparer 1 L d'une solution-fille dix fois plus diluée que la mère.", "v": true, "e": "VRAI. On passe de 1 mol/L à 0,1 mol/L.", "sourceQuote": "préparer 1 L d'une solution-fille à 0,1 mol/L (10 fois plus diluée)" },
+    { "t": "L'inconnue de cet exemple est V₂.", "v": false, "e": "FAUX : V₂ est donné, c'est V₁ qu'on cherche.", "sourceQuote": "On cherche V₁" },
+    { "t": "La solution-fille est dix fois plus concentrée que la mère.", "v": false, "e": "FAUX : elle est dix fois plus diluée.", "sourceQuote": "0,1 mol/L (10 fois plus diluée)" },
+    { "t": "Le calcul aboutit à V₁ = 0,1 L, soit 100 mL.", "v": true, "e": "VRAI. C'est le volume de mère à prélever.", "sourceQuote": "V₁ = C₂ × V₂ / C₁ = 0,1 × 1 / 1 = 0,1 L = 100 mL" },
+    { "t": "On complète ensuite avec de l'eau jusqu'à 100 mL au total.", "v": false, "e": "FAUX : on complète jusqu'à 1 L au total.", "sourceQuote": "complète avec de l'eau jusqu'à 1 L au total" }
+   ]
+  },
+  {
+   "fiche": "physique-022-dilution-conservation-c1v1-c2v2.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 10,
+   "q": "On relit la vérification intuitive proposée après cet exemple. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "La concentration a été divisée par 10, passant de 1 à 0,1 mol/L.", "v": true, "e": "VRAI. C'est le facteur de la dilution.", "sourceQuote": "on a divisé la concentration par 10 (1 → 0,1 mol/L)" },
+    { "t": "Le volume final doit donc être 10 fois plus grand que le volume prélevé.", "v": true, "e": "VRAI. Volume et concentration varient en sens inverse.", "sourceQuote": "le volume final doit être 10× plus grand que le volume prélevé" },
+    { "t": "On passe ainsi de 100 mL à 1 L.", "v": true, "e": "VRAI. C'est bien un facteur 10 sur les volumes.", "sourceQuote": "que le volume prélevé (100 mL → 1 L)" },
+    { "t": "Cette vérification repose sur la conservation de n = C × V.", "v": true, "e": "VRAI. C'est la quantité de soluté qui est conservée.", "sourceQuote": "C'est ça, la conservation de n = C × V" },
+    { "t": "Cette vérification repose sur la conservation du volume.", "v": false, "e": "FAUX : c'est la quantité de soluté qui se conserve, pas le volume.", "sourceQuote": "C'est ça, la conservation de n = C × V" }
+   ]
+  },
+  {
+   "fiche": "physique-022-dilution-conservation-c1v1-c2v2.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 11,
+   "q": "On identifie les données du mini-exercice sur le NaCl. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "La solution-fille visée fait 250 mL à 0,15 mol/L.", "v": true, "e": "VRAI. Ce sont les données de la fille.", "sourceQuote": "préparer 250 mL d'une solution-fille à 0,15 mol/L" },
+    { "t": "Cette valeur de 0,15 mol/L correspond à la concentration plasmatique de Na⁺.", "v": true, "e": "VRAI. C'est la précision donnée dans l'énoncé.", "sourceQuote": "(concentration plasmatique de Na⁺)" },
+    { "t": "La solution-mère de NaCl est à 1 mol/L.", "v": true, "e": "VRAI. C'est la solution de départ.", "sourceQuote": "tu disposes d'une solution-mère de NaCl à 1 mol/L" },
+    { "t": "Ici V₁ est connu et V₂ est l'inconnue.", "v": false, "e": "FAUX : c'est V₁ qui est inconnu.", "sourceQuote": "V₁ = inconnu (c'est ce qu'on cherche)" },
+    { "t": "Ce cas aux chiffres qui ne tombent pas rond est celui qu'on ne rencontre pas en QCM.", "v": false, "e": "FAUX : c'est justement ce cas-là qui tombe en QCM.", "sourceQuote": "c'est ce cas-là qui tombe en QCM" }
+   ]
+  },
+  {
+   "fiche": "physique-022-dilution-conservation-c1v1-c2v2.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 12,
+   "q": "Un étudiant relate sa conduite du calcul mental de ce mini-exercice. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "V₁ et V₂ peuvent être exprimés dans deux unités différentes.", "v": false, "e": "FAUX : les deux volumes doivent être dans la même unité.", "sourceQuote": "V₁ et V₂ doivent être dans la même unité" },
+    { "t": "L'astuce de calcul décompose 0,15 en 0,1 + 0,5.", "v": false, "e": "FAUX : la décomposition est 0,1 + 0,05.", "sourceQuote": "0,15 = 0,1 + 0,05" },
+    { "t": "Cette décomposition donne 25 + 25, soit 50 mL.", "v": false, "e": "FAUX : elle donne 25 + 12,5, soit 37,5 mL.", "sourceQuote": "(0,1 × 250) + (0,05 × 250) = 25 + 12,5 = 37,5 mL" },
+    { "t": "En gardant tout en millilitres, les mL se retrouvent en mL des deux côtés.", "v": true, "e": "VRAI. C'est pourquoi la conversion en litres n'est pas nécessaire ici.", "sourceQuote": "les mL se retrouvent en mL des deux côtés" },
+    { "t": "Le calcul aboutit à V₁ = 3,75 mL.", "v": false, "e": "FAUX : il aboutit à 37,5 mL.", "sourceQuote": "= 25 + 12,5 = 37,5 mL" }
+   ]
+  },
+  {
+   "fiche": "physique-022-dilution-conservation-c1v1-c2v2.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 13,
+   "q": "On relit l'étape de vérification chiffrée qui clôt le mini-exercice. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "Le prélèvement transfère 375 mmol de NaCl.", "v": false, "e": "FAUX : il transfère 37,5 mmol.", "sourceQuote": "tu as transféré n = 0,0375 mol = 37,5 mmol de NaCl" },
+    { "t": "Dans les 250 mL finaux, le rapport 37,5 / 250 donne 1,5 mol/L.", "v": false, "e": "FAUX : il donne 0,15 mol/L.", "sourceQuote": "37,5 / 250 = 0,15 mmol/mL = 0,15 mol/L" },
+    { "t": "0,15 mmol/mL équivaut à 0,15 mol/L.", "v": true, "e": "VRAI. Les deux écritures désignent la même concentration.", "sourceQuote": "0,15 mmol/mL = 0,15 mol/L" },
+    { "t": "La solution finale contient 0,0375 mol/L de NaCl.", "v": false, "e": "FAUX : elle contient bien 0,15 mol/L.", "sourceQuote": "La solution finale contient bien 0,15 mol/L de NaCl" },
+    { "t": "On complète la fiole avec de l'eau du robinet jusqu'au trait de jauge.", "v": false, "e": "FAUX : on complète avec de l'eau distillée.", "sourceQuote": "Complète avec de l'eau distillée jusqu'au trait de jauge" }
+   ]
+  },
+  {
+   "fiche": "physique-022-dilution-conservation-c1v1-c2v2.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 14,
+   "q": "Comment la préparation se déroule-t-elle concrètement à la paillasse ? Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "La solution-mère dans laquelle on prélève est à 1 mol/L.", "v": true, "e": "VRAI. C'est la concentration de départ.", "sourceQuote": "Prélève 37,5 mL de la solution-mère à 1 mol/L à la pipette" },
+    { "t": "Le prélèvement est versé dans une fiole jaugée de 250 mL.", "v": true, "e": "VRAI. La fiole a le volume de la solution-fille.", "sourceQuote": "Verse dans une fiole jaugée de 250 mL" },
+    { "t": "On complète avec de l'eau distillée jusqu'au trait de jauge, soit 250 mL au total.", "v": true, "e": "VRAI. Le trait de jauge marque le volume final.", "sourceQuote": "Complète avec de l'eau distillée jusqu'au trait de jauge (250 mL au total)" },
+    { "t": "Le volume total obtenu à la fin dépasse 250 mL.", "v": false, "e": "FAUX : le volume final est de 250 mL au total.", "sourceQuote": "(250 mL au total)" },
+    { "t": "On prélève V₁ à la pipette, puis on complète à la fiole jaugée jusqu'au trait.", "v": true, "e": "VRAI. C'est le geste type de la dilution.", "sourceQuote": "on prélève V₁ à la pipette, on complète à la fiole jaugée jusqu'au trait" }
+   ]
+  },
+  {
+   "fiche": "physique-022-dilution-conservation-c1v1-c2v2.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 15,
+   "q": "Un coup d'œil suffit à repérer un résultat de dilution aberrant. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "La solution-fille est moins concentrée que la solution-mère.", "v": true, "e": "VRAI. C'est le sens même de la dilution.", "sourceQuote": "la fille est moins concentrée que la mère" },
+    { "t": "Cette vérification est la plus coûteuse en temps.", "v": false, "e": "FAUX : c'est au contraire celle qui coûte le moins cher.", "sourceQuote": "C'est la vérification qui coûte le moins cher : un coup d'œil" },
+    { "t": "Il est conseillé de relire V₁ avant de passer à la suite.", "v": true, "e": "VRAI. C'est le réflexe de relecture proposé.", "sourceQuote": "Une fois V₁ trouvé, relis-le avant de passer à la suite" },
+    { "t": "Cette fiche se contente de décrire une solution déjà donnée.", "v": false, "e": "FAUX : ici, on la fabrique.", "sourceQuote": "Ici, on la fabrique" },
+    { "t": "La concentration diminue indépendamment de l'augmentation de volume.", "v": false, "e": "FAUX : elle diminue proportionnellement à l'augmentation de volume.", "sourceQuote": "La concentration diminue donc proportionnellement à l'augmentation de volume" }
+   ]
+  },
+
+  {
+   "fiche": "physique-023-facteur-de-dilution.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 8,
+   "q": "Sur quoi s'appuie la notion de facteur de dilution ? Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "Une dilution entière peut se résumer en un seul nombre.", "v": true, "e": "VRAI. C'est l'annonce de la fiche.", "sourceQuote": "Une dilution entière, résumée en un seul nombre" },
+    { "t": "Trois dilutions à la suite se calculent de tête.", "v": true, "e": "VRAI. Il suffit de multiplier les facteurs.", "sourceQuote": "trois dilutions à la suite qui se calculent de tête" },
+    { "t": "La relation C₁ × V₁ = C₂ × V₂ ne vaut que pour certaines dilutions.", "v": false, "e": "FAUX : c'est la loi qui gouverne toute dilution.", "sourceQuote": "la loi qui gouverne toute dilution" },
+    { "t": "La quantité n = C × V reste constante au cours d'une dilution.", "v": true, "e": "VRAI. C'est la conservation du soluté.", "sourceQuote": "la quantité n = C × V reste constante" },
+    { "t": "Diluer, c'est ajouter du soluté sans changer le volume.", "v": false, "e": "FAUX : c'est ajouter du solvant sans changer la quantité de soluté.", "sourceQuote": "diluer une solution, c'est ajouter du solvant sans changer la quantité de soluté" }
+   ]
+  },
+  {
+   "fiche": "physique-023-facteur-de-dilution.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 9,
+   "q": "On refait pas à pas la vérification de F sur l'exemple de la fiche précédente. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "On était passé de 100 mL prélevés dans la solution-mère à 1 L au total.", "v": true, "e": "VRAI. Ce sont les deux volumes de l'exemple.", "sourceQuote": "On est passé de 100 mL prélevés dans la solution-mère (V₁) à 1 L au total (V₂)" },
+    { "t": "On met d'abord les deux volumes dans la même unité : 1 L = 1000 mL.", "v": true, "e": "VRAI. Sans quoi le rapport n'a pas de sens.", "sourceQuote": "On met d'abord les deux dans la même unité (1 L = 1000 mL)" },
+    { "t": "Le rapport des volumes donne 1000 / 100 = 10.", "v": true, "e": "VRAI. C'est le facteur de dilution de l'exemple.", "sourceQuote": "F = 1000 / 100 = 10" },
+    { "t": "La concentration est passée de 1 mol/L à 0,1 mol/L, donc divisée par 10.", "v": true, "e": "VRAI. Le même facteur se retrouve sur les concentrations.", "sourceQuote": "Elle est passée de 1 mol/L à 0,1 mol/L → elle est bien divisée par 10" },
+    { "t": "Le même nombre 10 se lit des deux côtés de la double égalité.", "v": true, "e": "VRAI. C'est ce que dit F = V₂/V₁ = C₁/C₂.", "sourceQuote": "Le même nombre 10 se lit des deux côtés" }
+   ]
+  },
+  {
+   "fiche": "physique-023-facteur-de-dilution.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 10,
+   "q": "Un étudiant énumère ce qu'il retient du facteur de dilution. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "Les deux volumes peuvent être laissés dans des unités différentes pour calculer F.", "v": false, "e": "FAUX : ils doivent être dans la même unité.", "sourceQuote": "Les deux volumes doivent être dans la même unité" },
+    { "t": "Dans une dilution au 1/10, la concentration finale vaut 10 fois celle de départ.", "v": false, "e": "FAUX : elle vaut le dixième de celle de départ.", "sourceQuote": "c'est la concentration finale qui vaut 1/10 de celle de départ" },
+    { "t": "Multiplier le volume par F multiplie aussi la concentration par F.", "v": false, "e": "FAUX : multiplier le volume par F divise la concentration par F.", "sourceQuote": "Si tu multiplies le volume par F, tu divises la concentration par F" },
+    { "t": "Le facteur de dilution apporte une information nouvelle sur la matière.", "v": false, "e": "FAUX : il n'apprend rien de neuf sur la matière.", "sourceQuote": "Le facteur de dilution ne t'apprend rien de neuf sur la matière" },
+    { "t": "Le facteur de dilution fait gagner tout le temps du calcul.", "v": true, "e": "VRAI. C'est son unique bénéfice, mais il est réel.", "sourceQuote": "il te fait juste gagner tout le temps du calcul" }
+   ]
+  },
+  {
+   "fiche": "physique-023-facteur-de-dilution.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 11,
+   "q": "On suit la colonne de droite du tableau des dilutions en cascade. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "Après la première étape, la concentration est divisée par 10.", "v": true, "e": "VRAI. C'est l'effet d'une dilution au 1/10.", "sourceQuote": "C est divisée par 10" },
+    { "t": "Après la deuxième étape, la concentration totale est divisée par 100.", "v": true, "e": "VRAI. Les facteurs se multiplient.", "sourceQuote": "C totale divisée par 100" },
+    { "t": "Après la troisième étape, elle est divisée par 1000.", "v": true, "e": "VRAI. Trois facteurs 10 multipliés entre eux.", "sourceQuote": "C totale divisée par 1000" },
+    { "t": "À chaque étage, le nouveau facteur multiplie celui déjà accumulé.", "v": true, "e": "VRAI. On ne repart pas de zéro à chaque étape.", "sourceQuote": "tu ne repars pas de zéro — le nouveau facteur vient multiplier celui que tu as déjà accumulé" },
+    { "t": "C'est ce qui rend une cascade calculable de tête.", "v": true, "e": "VRAI. Une simple multiplication suffit.", "sourceQuote": "C'est exactement ce qui rend une cascade calculable de tête" }
+   ]
+  },
+  {
+   "fiche": "physique-023-facteur-de-dilution.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 12,
+   "q": "Pourquoi enchaîne-t-on plusieurs dilutions successives, et comment mener le calcul ? Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "On enchaîne souvent des dilutions successives au laboratoire ou en pharmacie.", "v": true, "e": "VRAI. Ce sont les contextes cités.", "sourceQuote": "Au laboratoire ou en pharmacie, on enchaîne souvent plusieurs dilutions successives" },
+    { "t": "Le but est d'atteindre une concentration très faible.", "v": true, "e": "VRAI. Une seule dilution ne suffirait pas à descendre aussi bas.", "sourceQuote": "pour atteindre une concentration très faible" },
+    { "t": "Trois dilutions au 1/10 donnent un facteur total de 1000.", "v": true, "e": "VRAI. 10 × 10 × 10 = 1000.", "sourceQuote": "trois dilutions au 1/10, c'est F total = 10 × 10 × 10 = 1000" },
+    { "t": "La concentration est alors divisée par 1000.", "v": true, "e": "VRAI. Le facteur total s'applique à la concentration.", "sourceQuote": "donc une concentration divisée par 1000" },
+    { "t": "Les facteurs successifs s'additionnent.", "v": false, "e": "FAUX : ils se multiplient.", "sourceQuote": "Multiplie les facteurs, une seule fois" }
+   ]
+  },
+  {
+   "fiche": "physique-023-facteur-de-dilution.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 13,
+   "q": "Où cette technique est-elle employée, et comment se lisent les deux rapports de F ? Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "En pharmacologie, elle sert à préparer des concentrations très basses.", "v": true, "e": "VRAI. C'est l'un des trois domaines cités.", "sourceQuote": "en pharmacologie (préparer des concentrations très basses)" },
+    { "t": "En bactériologie, elle sert à peser des colonies avant dilution.", "v": false, "e": "FAUX : elle sert à compter des colonies après dilution.", "sourceQuote": "en bactériologie (compter des colonies après dilution)" },
+    { "t": "L'homéopathie est citée comme un cas de dilutions modérées.", "v": false, "e": "FAUX : elle est citée pour ses dilutions extrêmes.", "sourceQuote": "en homéopathie (dilutions extrêmes)" },
+    { "t": "Les deux rapports de la double égalité ne se lisent pas dans le même sens.", "v": true, "e": "VRAI. Volumes après/avant, concentrations avant/après.", "sourceQuote": "Les deux rapports ne se lisent pas dans le même sens" },
+    { "t": "Cette technique n'a d'application qu'en bactériologie.", "v": false, "e": "FAUX : la pharmacologie et l'homéopathie sont aussi citées.", "sourceQuote": "Cette technique est utilisée en bactériologie (compter des colonies après dilution) , en pharmacologie" }
+   ]
+  },
+  {
+   "fiche": "physique-023-facteur-de-dilution.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 14,
+   "q": "On résume l'essentiel à garder du facteur de dilution. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "F s'écrit V₂ / V₁, et aussi C₁ / C₂.", "v": true, "e": "VRAI. C'est la double égalité qui définit F.", "sourceQuote": "la double égalité F = V₂/V₁ = C₁/C₂" },
+    { "t": "Dans une cascade, les facteurs se multiplient : 1/10 puis 1/10 donne une division par 100.", "v": true, "e": "VRAI. C'est le principe de l'accumulation.", "sourceQuote": "Dans une cascade, les facteurs se multiplient : 1/10 puis 1/10 → division par 100" },
+    { "t": "Les volumes se lisent avant / après et les concentrations après / avant.", "v": false, "e": "FAUX : c'est l'inverse — volumes après/avant, concentrations avant/après.", "sourceQuote": "les volumes après / avant (V₂/V₁), les concentrations avant / après (C₁/C₂)" },
+    { "t": "Écrire F = 0,1 est une autre façon de dire « dilution au 1/10 ».", "v": false, "e": "FAUX : une dilution au 1/10 correspond à F = 10.", "sourceQuote": "« dilue au 1/10 » ne veut pas dire F = 0,1 : ça veut dire F = 10" },
+    { "t": "La loi de départ, C₁ × V₁ = C₂ × V₂, gouverne toute dilution.", "v": true, "e": "VRAI. F n'en est qu'un raccourci d'écriture.", "sourceQuote": "la loi qui gouverne toute dilution : C₁ × V₁ = C₂ × V₂" }
+   ]
+  },
+  {
+   "fiche": "physique-023-facteur-de-dilution.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 15,
+   "q": "Une élève relit la progression des facteurs accumulés dans la cascade. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    { "t": "Le facteur de dilution remplace la loi de conservation de la matière et l'invalide.", "v": false, "e": "FAUX : il n'apprend rien de neuf sur la matière, il fait seulement gagner du temps.", "sourceQuote": "Le facteur de dilution ne t'apprend rien de neuf sur la matière" },
+    { "t": "La colonne de droite affiche 10, puis 20, puis 30.", "v": false, "e": "FAUX : elle affiche 10, puis 100, puis 1000.", "sourceQuote": "Regarde la colonne de droite : 10 , puis 100 , puis 1000" },
+    { "t": "Après deux dilutions au 1/10, le facteur accumulé vaut 10.", "v": false, "e": "FAUX : il vaut 10 × 10 = 100.", "sourceQuote": "puis 10 × 10 = 100" },
+    { "t": "Après trois dilutions au 1/10, le facteur accumulé vaut 1000.", "v": true, "e": "VRAI. 10 × 10 × 10 = 1000.", "sourceQuote": "puis 10 × 10 × 10 = 1000" },
+    { "t": "La cascade oblige à refaire un calcul complet à chaque étage.", "v": false, "e": "FAUX : c'est justement ce qui rend une cascade calculable de tête.", "sourceQuote": "C'est exactement ce qui rend une cascade calculable de tête" }
+   ]
+  }
+ ]
+}

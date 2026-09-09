@@ -1,0 +1,1879 @@
+{
+ "matiere": "physique",
+ "chapitre": 1,
+ "note": "Renfort d Arene (lots 8 a 15, tous ar:1) pour six fiches de physique du chapitre 1 (mole, masse molaire, conversions, solutions, concentration ponderale). Aucun calcul nouveau n est demande : chaque item porte sur une regle enoncee ou sur un exemple deja resolu dans la fiche. Le socle des lots 1-7 reste dans physique-ch01-p2.json et physique-ch01-p3.json.",
+ "questions": [
+  {
+   "fiche": "physique-013-un-litre-eau-55-moles.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 8,
+   "q": "La fiche s'ouvre sur une question et annonce à quoi les conversions de la mole vont d'abord servir. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "La fiche part d'une question : combien y a-t-il de molécules d'eau dans un verre d'eau ?",
+     "v": true,
+     "e": "VRAI. C'est la question d'ouverture de la fiche.",
+     "sourceQuote": "Combien y a-t-il de molécules d'eau dans un verre d'eau ?"
+    },
+    {
+     "t": "Les trois conversions de la mole viennent d'être automatisées avant cette fiche.",
+     "v": true,
+     "e": "VRAI. La fiche s'appuie dessus dès la première ligne.",
+     "sourceQuote": "Tu viens d'automatiser les trois conversions de la mole"
+    },
+    {
+     "t": "On applique ces conversions au solvant de tout le vivant.",
+     "v": true,
+     "e": "VRAI. Ce n'est pas sur n'importe quoi qu'on les applique.",
+     "sourceQuote": "sur le solvant de tout le vivant"
+    },
+    {
+     "t": "La valeur obtenue ne servira que dans ce chapitre et ne resservira pas en physiologie.",
+     "v": false,
+     "e": "FAUX : c'est au contraire l'une des valeurs les plus utilisées de toute la physiologie.",
+     "sourceQuote": "la mole d'eau dans 1 litre est l'une des valeurs les plus utilisées de toute la physiologie"
+    },
+    {
+     "t": "La réponse à cette question d'ouverture est présentée comme anecdotique.",
+     "v": false,
+     "e": "FAUX : elle est présentée comme fondatrice.",
+     "sourceQuote": "La question a l'air anodine. La réponse est fondatrice"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-013-un-litre-eau-55-moles.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 9,
+   "q": "Le calcul guidé qui mène à la valeur de référence se déroule en trois temps. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "La première étape établit que 1 L d'eau, soit 1000 mL, pèse 1000 g.",
+     "v": true,
+     "e": "VRAI. L'eau a une densité de 1 g/mL.",
+     "sourceQuote": "donc 1 L = 1000 mL pèse m = 1000 g"
+    },
+    {
+     "t": "La deuxième étape décompose H₂O en 2 atomes H à 1 g/mol et 1 atome O à 16 g/mol.",
+     "v": true,
+     "e": "VRAI. C'est la composition retenue pour l'addition.",
+     "sourceQuote": "La molécule H₂O contient 2 atomes H (1 g/mol chacun) + 1 atome O (16 g/mol)"
+    },
+    {
+     "t": "Cette addition donne une masse molaire de 18 g/mol pour l'eau.",
+     "v": true,
+     "e": "VRAI. 1 + 1 + 16 = 18.",
+     "sourceQuote": "Donc 1 mole d'eau pèse M = 1 + 1 + 16 = 18 g/mol"
+    },
+    {
+     "t": "La troisième étape consiste à chercher combien de moles tiennent dans 1000 g.",
+     "v": true,
+     "e": "VRAI. C'est une simple division.",
+     "sourceQuote": "On veut savoir combien de moles tiennent dans 1000 g"
+    },
+    {
+     "t": "La division posée est 1000 g divisés par 18 g/mol.",
+     "v": true,
+     "e": "VRAI. Elle donne environ 55,56 mol.",
+     "sourceQuote": "n = 1000 g / 18 g/mol ≈ 55,56 mol"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-013-un-litre-eau-55-moles.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 10,
+   "q": "Un étudiant restitue de mémoire les chiffres du calcul guidé. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "L'eau a une densité de 18 g/mL.",
+     "v": false,
+     "e": "FAUX : sa densité vaut 1 g/mL.",
+     "sourceQuote": "L'eau a une densité de 1 g/mL"
+    },
+    {
+     "t": "1 L d'eau pure pèse 1 g.",
+     "v": false,
+     "e": "FAUX : il pèse 1 kg, soit 1000 g.",
+     "sourceQuote": "1 L d'eau = 1 kg = 1000 g"
+    },
+    {
+     "t": "Une mole d'eau pèse 55,5 g.",
+     "v": false,
+     "e": "FAUX : elle pèse 18 g. 55,5 est le nombre de moles dans 1 L.",
+     "sourceQuote": "Donc 1 mole d'eau pèse M = 1 + 1 + 16 = 18 g/mol"
+    },
+    {
+     "t": "La vérification proposée revient à se demander combien de fois 18 g tiennent dans 1000 g.",
+     "v": true,
+     "e": "VRAI. C'est la lecture en clair de la division.",
+     "sourceQuote": "1 mole pèse 18 g. Combien de moles dans 1000 g ?"
+    },
+    {
+     "t": "Dans le calcul de M(H₂O), c'est l'oxygène qui est compté deux fois.",
+     "v": false,
+     "e": "FAUX : ce sont les deux hydrogènes qui sont comptés deux fois.",
+     "sourceQuote": "M(H₂O) = 2 × 1 + 16 = 18 g/mol"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-013-un-litre-eau-55-moles.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 11,
+   "q": "Le mnémo et le résumé de la fiche fixent la valeur pour de bon. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le mnémo invite à vérifier l'intuition en portant une bouteille d'eau pleine.",
+     "v": true,
+     "e": "VRAI. C'est l'image proposée pour ancrer « 1 L d'eau = 1 kilo ».",
+     "sourceQuote": "c'est ce qu'on vérifie quand on porte une bouteille d'eau pleine"
+    },
+    {
+     "t": "La conclusion présentée comme à graver pour la vie est : 1 L d'eau pure contient environ 55,5 moles d'eau.",
+     "v": true,
+     "e": "VRAI. C'est le résultat central de la fiche.",
+     "sourceQuote": "Conclusion à graver pour la vie : 1 L d'eau pure contient ≈ 55,5 moles d'eau"
+    },
+    {
+     "t": "Le résumé écrit l'égalité 1 L d'eau = 1 kg = 1000 g.",
+     "v": true,
+     "e": "VRAI. C'est la première ligne du « À retenir ».",
+     "sourceQuote": "1 L d'eau = 1 kg = 1000 g"
+    },
+    {
+     "t": "Une fois la valeur en mémoire, on ne refait plus la division 1000 / 18.",
+     "v": true,
+     "e": "VRAI. C'est tout l'intérêt de la retenir.",
+     "sourceQuote": "tu ne refais plus jamais 1000 / 18"
+    },
+    {
+     "t": "Chaque nouveau volume d'eau impose de reprendre le calcul complet depuis la densité.",
+     "v": false,
+     "e": "FAUX : n'importe quel volume se traite par une simple règle de trois.",
+     "sourceQuote": "n'importe quel volume d'eau se traite par une simple règle de trois"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-013-un-litre-eau-55-moles.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 12,
+   "q": "La fiche chiffre l'écart entre l'eau et les solutés du plasma, puis en tire une conséquence. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Dans le vivant, l'eau écrase les solutés d'un facteur d'environ 200.",
+     "v": true,
+     "e": "VRAI. C'est le rapport donné par le résumé.",
+     "sourceQuote": "l'eau écrase les solutés d'un facteur ~200"
+    },
+    {
+     "t": "Ce rapport signifie qu'il y a environ 200 fois plus de molécules de soluté que de molécules d'eau.",
+     "v": false,
+     "e": "FAUX : c'est l'inverse, il y a 200 fois plus de molécules d'eau.",
+     "sourceQuote": "≈ 200 fois plus de molécules d'eau"
+    },
+    {
+     "t": "Les approximations que cet écart autorise concernent le pH, l'osmolarité et les équilibres biochimiques.",
+     "v": true,
+     "e": "VRAI. Ce sont les trois domaines cités.",
+     "sourceQuote": "pH , osmolarité , équilibres biochimiques"
+    },
+    {
+     "t": "Cette domination écrasante interdit toute approximation dans la suite du chapitre.",
+     "v": false,
+     "e": "FAUX : c'est elle qui les justifie.",
+     "sourceQuote": "C'est cette domination écrasante qui justifie toutes les approximations qu'on fera ensuite"
+    },
+    {
+     "t": "Dans le plasma, l'eau est à environ 0,3 mol/L et les solutés à environ 55,5 mol/L.",
+     "v": false,
+     "e": "FAUX : les deux valeurs sont inversées, l'eau est à ~55,5 mol/L.",
+     "sourceQuote": "L'eau le solvant ~ 55,5 mol/L"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-013-un-litre-eau-55-moles.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 13,
+   "q": "Le mini-exercice de la goutte d'eau est mené étape par étape. Parmi les propositions suivantes relatives à la conduite de ce calcul, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le volume de la goutte est d'abord converti en litres par une division par 1000.",
+     "v": true,
+     "e": "VRAI. C'est la première étape.",
+     "sourceQuote": "Convertir le volume en litres. 0,05 mL = 0,05 / 1000"
+    },
+    {
+     "t": "Le passage aux moles se fait ensuite par une règle de trois.",
+     "v": true,
+     "e": "VRAI. Elle s'appuie sur les 55,5 mol par litre.",
+     "sourceQuote": "Passer aux moles par une règle de trois"
+    },
+    {
+     "t": "Pour le calcul de tête, 55,5 est arrondi à 55 et l'on sépare chiffres et puissance.",
+     "v": true,
+     "e": "VRAI. C'est la technique proposée.",
+     "sourceQuote": "on arrondit 55,5 ≈ 55 et on sépare chiffres et puissance"
+    },
+    {
+     "t": "La quantité de matière trouvée pour la goutte est d'environ 2,75 × 10⁻³ mol.",
+     "v": true,
+     "e": "VRAI. C'est le résultat de l'étape 2.",
+     "sourceQuote": "n ≈ 275 × 10⁻⁵ = 2,75 × 10⁻³ mol"
+    },
+    {
+     "t": "Prendre X fois moins d'eau laisse le nombre de moles inchangé.",
+     "v": false,
+     "e": "FAUX : on a alors X fois moins de moles.",
+     "sourceQuote": "si tu prends X fois moins d'eau, tu as X fois moins de moles"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-013-un-litre-eau-55-moles.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 14,
+   "q": "La fiche insiste sur l'unité de volume à employer. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le résultat d'une formule contenant un volume ne dépend pas de l'unité choisie.",
+     "v": false,
+     "e": "FAUX : il en dépend, c'est précisément le piège signalé.",
+     "sourceQuote": "Dès qu'une formule contient un volume , le résultat dépend de l'unité choisie"
+    },
+    {
+     "t": "Une goutte laissée en millilitres donne un résultat 1000 fois trop petit.",
+     "v": false,
+     "e": "FAUX : le résultat sort 1000 fois trop grand.",
+     "sourceQuote": "et tu sors un résultat 1000 fois trop grand"
+    },
+    {
+     "t": "Cette erreur d'unité se repère immédiatement à la lecture du résultat.",
+     "v": false,
+     "e": "FAUX : elle passe justement inaperçue.",
+     "sourceQuote": "un résultat 1000 fois trop grand — sans voir l'erreur"
+    },
+    {
+     "t": "0,05 mL représente 20 000 fois moins de volume que 1 L.",
+     "v": true,
+     "e": "VRAI. C'est le rapport utilisé pour vérifier la logique du résultat.",
+     "sourceQuote": "on prend 20 000 fois moins de volume que 1 L"
+    },
+    {
+     "t": "En physique, le volume se met par défaut en millilitres.",
+     "v": false,
+     "e": "FAUX : il se met en litres.",
+     "sourceQuote": "V se met en litres"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-013-un-litre-eau-55-moles.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 15,
+   "q": "La dernière étape du mini-exercice mène des moles au nombre de molécules. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le nombre de molécules s'obtient en multipliant la quantité de matière par le nombre d'Avogadro.",
+     "v": true,
+     "e": "VRAI. C'est la formule N = n × 𝒩.",
+     "sourceQuote": "Passer des moles au nombre de molécules avec N = n × 𝒩"
+    },
+    {
+     "t": "Appliqué à la goutte, ce produit donne de l'ordre de 1,7 × 10²¹ molécules.",
+     "v": true,
+     "e": "VRAI. C'est le résultat de l'étape 3.",
+     "sourceQuote": "N = 2,8 × 10⁻³ × 6 × 10²³ ≈ 1,7 × 10²¹ molécules"
+    },
+    {
+     "t": "Cela représente 1700 milliards de milliards de molécules dans une simple goutte.",
+     "v": true,
+     "e": "VRAI. C'est la traduction en mots du résultat.",
+     "sourceQuote": "Soit 1700 milliards de milliards de molécules dans une simple goutte"
+    },
+    {
+     "t": "La mole permet de manipuler des paquets de 6 × 10²³ plutôt que des unités.",
+     "v": true,
+     "e": "VRAI. C'est ce que la fiche appelle la puissance de la mole.",
+     "sourceQuote": "on manipule des paquets de 6 × 10²³ , pas des unités"
+    },
+    {
+     "t": "Le raisonnement s'appuie sur le fait que 1 L d'eau contient 55,5 mol.",
+     "v": true,
+     "e": "VRAI. C'est la valeur démontrée juste avant.",
+     "sourceQuote": "On vient de démontrer que 1 L d'eau contient 55,5 mol"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-014-solution-solvant-solute.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 8,
+   "q": "La fiche justifie d'abord pourquoi il faut nommer précisément les pièces d'un mélange. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Ces trois mots ont en P1 une définition précise, et c'est elle qui est évaluée.",
+     "v": true,
+     "e": "VRAI. C'est l'avertissement d'ouverture.",
+     "sourceQuote": "En P1, ils ont une définition précise — et c'est elle qui tombe en QCM"
+    },
+    {
+     "t": "Nommer les pièces du mélange vient avant toute formule de concentration.",
+     "v": true,
+     "e": "VRAI. C'est l'ordre annoncé.",
+     "sourceQuote": "avant de poser la moindre formule de concentration, il faut nommer proprement les pièces du mélange"
+    },
+    {
+     "t": "La fiche s'ouvre en rappelant qu'on ne sait pas encore compter les molécules dans un volume donné.",
+     "v": false,
+     "e": "FAUX : elle rappelle au contraire qu'on sait désormais le faire.",
+     "sourceQuote": "Tu sais maintenant compter les molécules dans un volume donné"
+    },
+    {
+     "t": "Le repère rappelé en ouverture est que 1 L d'eau contient environ 5,55 moles.",
+     "v": false,
+     "e": "FAUX : le repère est d'environ 55,5 moles.",
+     "sourceQuote": "1 L d'eau contient ≈ 55,5 moles"
+    },
+    {
+     "t": "Une solution peut être un mélange hétérogène à l'échelle moléculaire.",
+     "v": false,
+     "e": "FAUX : l'homogénéité à l'échelle moléculaire fait partie de la définition.",
+     "sourceQuote": "Mélange homogène à l'échelle moléculaire de plusieurs corps"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-014-solution-solvant-solute.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 9,
+   "q": "Un étudiant doit dire, dans un mélange donné, qui est le solvant et qui est le soluté. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le solvant est le composé le plus représenté en quantité.",
+     "v": true,
+     "e": "VRAI. C'est la définition exacte.",
+     "sourceQuote": "Solvant. Le composé le plus représenté (en quantité)"
+    },
+    {
+     "t": "Le soluté est dissous dans le solvant.",
+     "v": true,
+     "e": "VRAI. C'est ce qui achève sa définition.",
+     "sourceQuote": "Le ou les composés en quantité moindre , dissous dans le solvant"
+    },
+    {
+     "t": "Le cas de la solution aqueuse est omniprésent en biologie.",
+     "v": true,
+     "e": "VRAI. C'est le cas de tous les liquides de l'organisme.",
+     "sourceQuote": "Solution dont le solvant est l'eau — le cas omniprésent en biologie"
+    },
+    {
+     "t": "Ce sont les proportions, et rien d'autre, qui désignent le solvant.",
+     "v": true,
+     "e": "VRAI. La quantité décide seule.",
+     "sourceQuote": "c'est la quantité, et rien d'autre, qui désigne lequel est le solvant"
+    },
+    {
+     "t": "C'est la nature chimique du composé qui décide s'il est solvant ou soluté.",
+     "v": false,
+     "e": "FAUX : ce n'est pas la nature du composé, c'est la quantité.",
+     "sourceQuote": "Ce n'est pas la nature du composé qui décide qui est solvant et qui est soluté"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-014-solution-solvant-solute.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 10,
+   "q": "Le tableau des trois mélanges oppose solution, dispersion et colloïde. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Une solution est homogène à l'échelle moléculaire et tient en une phase unique condensée.",
+     "v": true,
+     "e": "VRAI. Ce sont ses deux caractères propres.",
+     "sourceQuote": "Homogène à l'échelle moléculaire , en une phase unique condensée"
+    },
+    {
+     "t": "Dans une dispersion, une phase est dispersée dans une autre.",
+     "v": true,
+     "e": "VRAI. C'est ce qui la caractérise.",
+     "sourceQuote": "Une phase est dispersée dans une autre"
+    },
+    {
+     "t": "Une dispersion se fait sans dissolution moléculaire.",
+     "v": true,
+     "e": "VRAI. C'est ce qui la sépare d'une solution.",
+     "sourceQuote": "sans dissolution moléculaire"
+    },
+    {
+     "t": "Un colloïde disperse la lumière.",
+     "v": true,
+     "e": "VRAI. Ses particules ne se voient pas, mais elles dispersent la lumière.",
+     "sourceQuote": "mais elles dispersent la lumière"
+    },
+    {
+     "t": "Une solution n'est ni une dispersion ni un colloïde.",
+     "v": true,
+     "e": "VRAI. Trois mots proches, trois réalités différentes.",
+     "sourceQuote": "Une solution n'est pas la même chose qu'une dispersion ni qu'un colloïde"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-014-solution-solvant-solute.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 11,
+   "q": "Un étudiant confond les trois types de mélanges. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Les particules d'un colloïde mesurent entre 100 et 1000 nm.",
+     "v": false,
+     "e": "FAUX : elles mesurent entre 1 et 100 nm.",
+     "sourceQuote": "Particules entre 1 et 100 nm"
+    },
+    {
+     "t": "Un colloïde se voit à l'œil nu mais ne disperse pas la lumière.",
+     "v": false,
+     "e": "FAUX : c'est exactement l'inverse.",
+     "sourceQuote": "elles ne se voient pas à l'œil nu , mais elles dispersent la lumière"
+    },
+    {
+     "t": "Une dispersion suppose une dissolution à l'échelle moléculaire.",
+     "v": false,
+     "e": "FAUX : elle se fait justement sans dissolution moléculaire.",
+     "sourceQuote": "Une phase est dispersée dans une autre , sans dissolution moléculaire"
+    },
+    {
+     "t": "Le mot « mélange » ne suffit pas à désigner une solution.",
+     "v": true,
+     "e": "VRAI. Tout mélange n'est pas une solution.",
+     "sourceQuote": "« mélange » ne veut pas dire « solution »"
+    },
+    {
+     "t": "Une solution peut comporter plusieurs phases distinctes.",
+     "v": false,
+     "e": "FAUX : elle tient en une phase unique.",
+     "sourceQuote": "en une phase unique condensée"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-014-solution-solvant-solute.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 12,
+   "q": "La fiche introduit la nuance entre solution idéale et solution non idéale. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Un soluté très dilué dans son solvant forme une solution idéale.",
+     "v": true,
+     "e": "VRAI. C'est la définition retenue.",
+     "sourceQuote": "Quand un soluté est très dilué dans son solvant, on dit qu'il forme une solution idéale"
+    },
+    {
+     "t": "Les molécules de soluté y sont trop éloignées pour interagir entre elles.",
+     "v": true,
+     "e": "VRAI. C'est la raison physique de l'idéalité.",
+     "sourceQuote": "les molécules de soluté sont trop éloignées pour interagir entre elles"
+    },
+    {
+     "t": "Dans ce cas, les formules simples s'appliquent directement.",
+     "v": true,
+     "e": "VRAI. C'est l'intérêt pratique de la notion.",
+     "sourceQuote": "toutes les formules « simples » qu'on va voir s'appliquent directement"
+    },
+    {
+     "t": "Une solution non idéale est une solution encore plus diluée que la solution idéale.",
+     "v": false,
+     "e": "FAUX : elle est au contraire très concentrée.",
+     "sourceQuote": "dans une solution très concentrée , ces interactions soluté-soluté deviennent visibles"
+    },
+    {
+     "t": "Les solutions biologiques sont en général très concentrées et loin de l'idéalité.",
+     "v": false,
+     "e": "FAUX : elles sont très diluées et restent proches de l'idéalité.",
+     "sourceQuote": "la quasi-totalité des solutions biologiques sont très diluées et restent proches de l'idéalité"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-014-solution-solvant-solute.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 13,
+   "q": "Que peut-on faire, en pratique, devant un liquide de l'organisme ? Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "On peut appliquer les formules simples sans se poser de question.",
+     "v": true,
+     "e": "VRAI. C'est la conséquence directe de la quasi-idéalité.",
+     "sourceQuote": "tu peux appliquer les formules simples sans te poser de question"
+    },
+    {
+     "t": "Cette simplification vaut pour tout le programme, pas seulement pour ce chapitre.",
+     "v": true,
+     "e": "VRAI. La fiche le précise expressément.",
+     "sourceQuote": "et elle vaut pour tout le programme"
+    },
+    {
+     "t": "Une solution est un mélange formé d'un seul corps pur.",
+     "v": false,
+     "e": "FAUX : elle met en jeu plusieurs corps.",
+     "sourceQuote": "Mélange homogène à l'échelle moléculaire de plusieurs corps"
+    },
+    {
+     "t": "Dans une solution, le soluté est majoritaire et le solvant minoritaire.",
+     "v": false,
+     "e": "FAUX : c'est le solvant qui est majoritaire.",
+     "sourceQuote": "un solvant (majoritaire, ici l'eau) dans lequel sont dispersés un ou plusieurs solutés (en faible quantité)"
+    },
+    {
+     "t": "Plus une solution est concentrée, plus les calculs se simplifient.",
+     "v": false,
+     "e": "FAUX : ils se compliquent, on parle alors de solution non idéale.",
+     "sourceQuote": "les calculs se compliquent — on parle alors de solution non idéale"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-014-solution-solvant-solute.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 14,
+   "q": "Reprise des définitions posées par la fiche, sans piège. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Une solution peut contenir plusieurs solutés à la fois.",
+     "v": true,
+     "e": "VRAI. Un ou plusieurs solutés y sont dispersés.",
+     "sourceQuote": "dans lequel sont dispersés un ou plusieurs solutés (en faible quantité)"
+    },
+    {
+     "t": "Parler de solution aqueuse revient à dire que c'est l'eau qui joue le rôle de solvant.",
+     "v": true,
+     "e": "VRAI. C'est exactement ce que le mot désigne.",
+     "sourceQuote": "Solution dont le solvant est l'eau"
+    },
+    {
+     "t": "La phase unique d'une solution peut être liquide ou solide.",
+     "v": true,
+     "e": "VRAI. Les deux cas sont prévus par la définition.",
+     "sourceQuote": "en une phase unique condensée (liquide ou solide)"
+    },
+    {
+     "t": "Le soluté est le composant présent en quantité moindre.",
+     "v": true,
+     "e": "VRAI. C'est ce qui le distingue du solvant.",
+     "sourceQuote": "Le ou les composés en quantité moindre"
+    },
+    {
+     "t": "Les particules d'un colloïde se situent entre 1 et 100 nm.",
+     "v": true,
+     "e": "VRAI. C'est la fourchette donnée par le tableau.",
+     "sourceQuote": "Particules entre 1 et 100 nm"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-014-solution-solvant-solute.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 15,
+   "q": "Comment cette fiche s'articule-t-elle avec ce qui précède et ce qui suit ? Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "La nuance sur l'idéalité est annoncée comme préparant toute la suite du chapitre.",
+     "v": true,
+     "e": "VRAI. C'est ainsi qu'elle est introduite.",
+     "sourceQuote": "Dernière nuance, et elle prépare toute la suite du chapitre"
+    },
+    {
+     "t": "L'ouverture rappelle la mole et ses trois conversions.",
+     "v": true,
+     "e": "VRAI. Ce sont les acquis sur lesquels la fiche s'appuie.",
+     "sourceQuote": "la mole , les trois conversions"
+    },
+    {
+     "t": "La valeur de 55,5 moles par litre d'eau est présentée comme un repère à garder à vie.",
+     "v": true,
+     "e": "VRAI. C'est le mot employé par la fiche.",
+     "sourceQuote": "ce repère à garder à vie"
+    },
+    {
+     "t": "Solution, dispersion et colloïde recouvrent en réalité la même chose.",
+     "v": false,
+     "e": "FAUX : trois mots proches, mais trois réalités différentes.",
+     "sourceQuote": "Trois mots proches, trois réalités différentes"
+    },
+    {
+     "t": "Les définitions de solvant et de soluté sont posées après les formules de concentration.",
+     "v": false,
+     "e": "FAUX : elles viennent avant toute formule de concentration.",
+     "sourceQuote": "avant de poser la moindre formule de concentration, il faut nommer proprement les pièces du mélange"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-015-mole-nombre-avogadro.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 8,
+   "q": "La fiche pose d'abord le problème auquel la mole répond, et rappelle d'où l'on vient. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "On ne peut pas compter les molécules une par une, il y en a trop.",
+     "v": true,
+     "e": "VRAI. C'est le problème de départ.",
+     "sourceQuote": "On ne peut pas compter les molécules une par une — il y en a trop"
+    },
+    {
+     "t": "La mole est le paquet qui résout ce problème.",
+     "v": true,
+     "e": "VRAI. C'est la réponse annoncée dès le titre.",
+     "sourceQuote": "La mole, c'est le paquet qui résout le problème"
+    },
+    {
+     "t": "Les fiches précédentes portaient sur la géométrie coudée de l'eau et ses ponts hydrogène.",
+     "v": true,
+     "e": "VRAI. C'est le rappel du parcours suivi.",
+     "sourceQuote": "sa géométrie coudée qui en fait un dipôle , ses ponts hydrogène"
+    },
+    {
+     "t": "On change ici d'échelle pour compter ce qu'on ne peut pas voir.",
+     "v": true,
+     "e": "VRAI. C'est le changement d'échelle annoncé.",
+     "sourceQuote": "place à l'unité qui permet de compter ce qu'on ne peut pas voir"
+    },
+    {
+     "t": "L'eau se répartit dans trois compartiments du corps.",
+     "v": true,
+     "e": "VRAI. C'est l'un des acquis rappelés en ouverture.",
+     "sourceQuote": "la façon dont elle se répartit dans les trois compartiments du corps"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-015-mole-nombre-avogadro.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 9,
+   "q": "Un étudiant restitue les trois repères d'échelle donnés avant la définition. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "L'unité de masse atomique vaut le douzième de la masse d'un atome de carbone 14.",
+     "v": false,
+     "e": "FAUX : la référence est le carbone 12.",
+     "sourceQuote": "définie comme 1/12 de la masse d'un atome de ¹²C"
+    },
+    {
+     "t": "L'électron est environ 2000 fois plus lourd que le nucléon.",
+     "v": false,
+     "e": "FAUX : il est environ 2000 fois plus léger, et donc négligé.",
+     "sourceQuote": "L'électron est ~2000 fois plus léger (donc négligé)"
+    },
+    {
+     "t": "L'unité de masse atomique est taillée pour l'échelle macroscopique.",
+     "v": false,
+     "e": "FAUX : elle est taillée pour l'échelle de l'atome.",
+     "sourceQuote": "C'est l'unité de masse taillée pour l'échelle de l'atome"
+    },
+    {
+     "t": "Un noyau est formé de protons et de neutrons, appelés nucléons.",
+     "v": true,
+     "e": "VRAI. C'est le rappel de structure donné ici.",
+     "sourceQuote": "un noyau (protons + neutrons = nucléons)"
+    },
+    {
+     "t": "Ces repères de masse sont donnés en grammes.",
+     "v": false,
+     "e": "FAUX : ils sont donnés en kilogrammes.",
+     "sourceQuote": "la masse d'un nucléon ≈ 1,67 × 10⁻²⁷ kg"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-015-mole-nombre-avogadro.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 10,
+   "q": "Le carbone 12 intervient deux fois dans cette fiche, mais pas de la même manière. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le carbone 12 sert de référence une seconde fois, mais dans l'autre sens.",
+     "v": true,
+     "e": "VRAI. C'est la clé pour ne pas confondre les deux définitions.",
+     "sourceQuote": "Le carbone 12 sert une seconde fois de référence, mais dans l'autre sens"
+    },
+    {
+     "t": "𝒩 part d'une masse pour remonter à un nombre d'atomes.",
+     "v": true,
+     "e": "VRAI. C'est le sens de la définition d'Avogadro.",
+     "sourceQuote": "𝒩 part d'une masse pour remonter à un nombre d'atomes"
+    },
+    {
+     "t": "La masse de référence qui définit 𝒩 est de 12 g, et non de 1 g.",
+     "v": true,
+     "e": "VRAI. La fiche insiste sur ce point.",
+     "sourceQuote": "12 g — pas 1 g, et pas 12 g de n'importe quoi"
+    },
+    {
+     "t": "L'unité de masse atomique part d'une masse pour remonter à un nombre d'atomes.",
+     "v": false,
+     "e": "FAUX : elle part d'un atome pour descendre à une masse.",
+     "sourceQuote": "l'u.m.a. part d'un atome pour descendre à une masse"
+    },
+    {
+     "t": "Peu importe le corps choisi : 12 g en contiennent toujours 𝒩 atomes.",
+     "v": false,
+     "e": "FAUX : la définition vise 12 g de carbone 12, pas 12 g de n'importe quoi.",
+     "sourceQuote": "pas 12 g de n'importe quoi"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-015-mole-nombre-avogadro.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 11,
+   "q": "Que compte au juste une mole ? Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le mot « entité » est volontairement large dans la définition de la mole.",
+     "v": true,
+     "e": "VRAI. C'est ce qui rend l'unité universelle.",
+     "sourceQuote": "le mot « entité » est volontairement large"
+    },
+    {
+     "t": "Une mole d'électrons compte 6,022 × 10²³ électrons.",
+     "v": true,
+     "e": "VRAI. Le tableau le donne ligne par ligne.",
+     "sourceQuote": "Des électrons 6,022 × 10²³ électrons"
+    },
+    {
+     "t": "La mole renseigne à la fois sur le nombre et sur la nature de ce qu'on compte.",
+     "v": false,
+     "e": "FAUX : elle ne dit rien sur la nature, seulement combien.",
+     "sourceQuote": "La mole ne dit rien sur la nature de ce que tu comptes ; elle dit seulement combien"
+    },
+    {
+     "t": "Le nombre d'entités par mole change selon qu'on compte des atomes ou des ions.",
+     "v": false,
+     "e": "FAUX : la colonne de droite du tableau ne change jamais.",
+     "sourceQuote": "Regarde la colonne de droite : elle ne change jamais"
+    },
+    {
+     "t": "Les entités comptées doivent être des particules de matière, ce qui exclut les photons.",
+     "v": false,
+     "e": "FAUX : les photons figurent expressément dans la liste.",
+     "sourceQuote": "des atomes, des molécules, des ions, des électrons, des photons — peu importe"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-015-mole-nombre-avogadro.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 12,
+   "q": "Le mnémo compare la mole à d'autres façons de compter par paquets. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "L'analogie proposée cite la douzaine d'œufs, c'est-à-dire un paquet de 12.",
+     "v": true,
+     "e": "VRAI. C'est la première comparaison du mnémo.",
+     "sourceQuote": "comme on parle de « douzaines » d'œufs (paquets de 12)"
+    },
+    {
+     "t": "Le million d'habitants y est présenté comme un paquet de 1 000 000.",
+     "v": true,
+     "e": "VRAI. C'est la seconde comparaison.",
+     "sourceQuote": "« millions » d'habitants (paquets de 1 000 000)"
+    },
+    {
+     "t": "Compter par paquets évite d'avoir à jongler avec des 10²³.",
+     "v": true,
+     "e": "VRAI. C'est l'intérêt pratique du procédé.",
+     "sourceQuote": "au lieu de jongler avec des 10²³"
+    },
+    {
+     "t": "On peut alors écrire des nombres macroscopiques comme 1 mol ou 2 mol.",
+     "v": true,
+     "e": "VRAI. C'est ce que permet l'unité.",
+     "sourceQuote": "Ça permet d'écrire des nombres macroscopiques (1 mol, 2 mol…)"
+    },
+    {
+     "t": "Cette analogie montre que la taille du paquet varie selon l'espèce comptée.",
+     "v": false,
+     "e": "FAUX : c'est au contraire un seul nombre valable pour tout.",
+     "sourceQuote": "un seul nombre, valable pour tout ce qu'on veut compter"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-015-mole-nombre-avogadro.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 13,
+   "q": "Un étudiant estime avoir fait le tour de la question à la fin de cette fiche. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "La mole indique ce que pèse un paquet d'entités.",
+     "v": false,
+     "e": "FAUX : savoir ce que pèse le paquet reste précisément à voir.",
+     "sourceQuote": "Il te manque encore une chose pour te servir de ce paquet : savoir ce qu'il pèse"
+    },
+    {
+     "t": "La masse molaire a été définie dans cette fiche.",
+     "v": false,
+     "e": "FAUX : elle fait l'objet de la fiche suivante.",
+     "sourceQuote": "C'est la masse molaire — la fiche suivante"
+    },
+    {
+     "t": "L'unité de masse atomique et le nombre d'Avogadro se réfèrent à deux corps différents.",
+     "v": false,
+     "e": "FAUX : les deux se réfèrent au carbone 12.",
+     "sourceQuote": "Le carbone 12 sert une seconde fois de référence"
+    },
+    {
+     "t": "La suite du programme de physique ne s'appuie que marginalement sur la mole.",
+     "v": false,
+     "e": "FAUX : toute la suite du programme s'appuie dessus.",
+     "sourceQuote": "toute la suite du programme de physique s'appuie dessus"
+    },
+    {
+     "t": "Ne retenir que « 1,6 × 10⁻²⁷ » laisse passer sans le voir un énoncé qui échange les deux valeurs.",
+     "v": true,
+     "e": "VRAI. C'est le piège signalé par la fiche.",
+     "sourceQuote": "un QCM qui échange les deux passe inaperçu"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-015-mole-nombre-avogadro.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 14,
+   "q": "Le tableau des entités se lit ligne par ligne. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Une mole d'ions, c'est 6,022 × 10²³ ions.",
+     "v": true,
+     "e": "VRAI. C'est la ligne « des ions » du tableau.",
+     "sourceQuote": "Des ions 6,022 × 10²³ ions"
+    },
+    {
+     "t": "Une mole de molécules, c'est 6,022 × 10²³ molécules.",
+     "v": true,
+     "e": "VRAI. C'est la ligne « des molécules ».",
+     "sourceQuote": "Des molécules 6,022 × 10²³ molécules"
+    },
+    {
+     "t": "La colonne de droite du tableau ne change jamais.",
+     "v": true,
+     "e": "VRAI. C'est ce que la fiche demande d'observer.",
+     "sourceQuote": "Regarde la colonne de droite : elle ne change jamais"
+    },
+    {
+     "t": "Un même nombre sert quelle que soit l'espèce comptée.",
+     "v": true,
+     "e": "VRAI. C'est l'intérêt de la mole.",
+     "sourceQuote": "un seul nombre, valable pour tout ce qu'on veut compter"
+    },
+    {
+     "t": "Une mole de photons contient moins d'entités qu'une mole d'atomes.",
+     "v": false,
+     "e": "FAUX : c'est le même nombre, 6,022 × 10²³.",
+     "sourceQuote": "Des photons 6,022 × 10²³ photons"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-015-mole-nombre-avogadro.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 15,
+   "q": "Deux valeurs voisines sont données au début de la fiche et reprises dans le piège. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "La masse d'un nucléon est de l'ordre de 1,67 × 10⁻²⁷ kg.",
+     "v": true,
+     "e": "VRAI. C'est le repère donné pour le nucléon.",
+     "sourceQuote": "la masse d'un nucléon ≈ 1,67 × 10⁻²⁷ kg"
+    },
+    {
+     "t": "L'unité de masse atomique est définie comme le douzième de la masse d'un atome de carbone 12.",
+     "v": true,
+     "e": "VRAI. C'est sa définition exacte.",
+     "sourceQuote": "définie comme 1/12 de la masse d'un atome de ¹²C"
+    },
+    {
+     "t": "L'électron est pris en compte parce qu'il pèse autant qu'un nucléon.",
+     "v": false,
+     "e": "FAUX : il est environ 2000 fois plus léger, donc négligé.",
+     "sourceQuote": "L'électron est ~2000 fois plus léger (donc négligé)"
+    },
+    {
+     "t": "Ces deux nombres, 1,67 et 1,66, sont jumeaux au point d'être interchangeables.",
+     "v": false,
+     "e": "FAUX : presque jumeaux, mais deux définitions différentes.",
+     "sourceQuote": "deux nombres presque jumeaux, deux définitions différentes"
+    },
+    {
+     "t": "L'unité de masse atomique vaut environ 1,67 × 10⁻²⁷ kg et le nucléon 1,66 × 10⁻²⁷ kg.",
+     "v": false,
+     "e": "FAUX : les deux valeurs sont inversées.",
+     "sourceQuote": "1,67 = la masse d'un nucléon . 1,66 = l' u.m.a."
+    }
+   ]
+  },
+  {
+   "fiche": "physique-016-masse-molaire.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 8,
+   "q": "Un étudiant restitue de travers les éléments de définition posés par la fiche. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le chaînon manquant se situe entre les grammes du laboratoire et les litres.",
+     "v": false,
+     "e": "FAUX : il se situe entre les nucléons du monde atomique et les grammes de la balance.",
+     "sourceQuote": "entre le monde des atomes, où on parle de nucléons , et la balance du labo, où on parle de grammes"
+    },
+    {
+     "t": "La masse molaire s'exprime en grammes.",
+     "v": false,
+     "e": "FAUX : elle s'exprime en g/mol.",
+     "sourceQuote": "exprimée en g/mol"
+    },
+    {
+     "t": "Pour un atome, M est numériquement égale à son nombre de protons.",
+     "v": false,
+     "e": "FAUX : elle est égale au nombre de nucléons A.",
+     "sourceQuote": "M est égale au nombre de nucléons A de l'atome"
+    },
+    {
+     "t": "La fiche précédente avait donné le paquet : 6,022 × 10²³ entités.",
+     "v": true,
+     "e": "VRAI. C'est l'acquis sur lequel celle-ci s'appuie.",
+     "sourceQuote": "une mole, c'est 𝒩 = 6,022 × 10²³ entités"
+    },
+    {
+     "t": "Pour une molécule, on retient la plus grande des masses molaires atomiques.",
+     "v": false,
+     "e": "FAUX : on additionne les masses molaires atomiques.",
+     "sourceQuote": "M est la somme des masses molaires atomiques des atomes qui la composent"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-016-masse-molaire.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 9,
+   "q": "La fiche recommande de lire toute masse molaire à voix haute, dans un sens précis. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "La lecture proposée donne, pour le glucose : « 1 mole de glucose pèse 180 g ».",
+     "v": true,
+     "e": "VRAI. C'est l'une des deux phrases modèles.",
+     "sourceQuote": "« 1 mole de glucose pèse 180 g »"
+    },
+    {
+     "t": "Ainsi formulée, la masse molaire cesse d'être une simple lettre dans une formule.",
+     "v": true,
+     "e": "VRAI. C'est l'effet recherché par cette lecture.",
+     "sourceQuote": "la masse molaire cesse d'être une lettre dans une formule"
+    },
+    {
+     "t": "Cette lecture à voix haute vaut pour l'eau mais pas pour le glucose.",
+     "v": false,
+     "e": "FAUX : les deux exemples sont donnés côte à côte.",
+     "sourceQuote": "« 1 mole d'eau pèse 18 g » , « 1 mole de glucose pèse 180 g »"
+    },
+    {
+     "t": "Lue comme une phrase, la masse molaire reste une abstraction impossible à se représenter.",
+     "v": false,
+     "e": "FAUX : elle devient au contraire une quantité qu'on se représente sur une balance.",
+     "sourceQuote": "c'est une quantité que tu peux te représenter sur une balance"
+    },
+    {
+     "t": "Devant un M, le sens de lecture recommandé est toujours le même.",
+     "v": true,
+     "e": "VRAI. C'est la consigne donnée.",
+     "sourceQuote": "Devant un M, lis-le toujours dans ce sens-là"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-016-masse-molaire.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 10,
+   "q": "Le tableau des trois espèces et le commentaire qui le suit fixent un partage des rôles. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Trois masses molaires reviennent en boucle dans tout le reste du chapitre.",
+     "v": true,
+     "e": "VRAI. C'est l'annonce qui précède le tableau.",
+     "sourceQuote": "Trois masses molaires reviennent en boucle dans tout le reste du chapitre"
+    },
+    {
+     "t": "Ces trois valeurs sont H₂O = 18, NaCl = 58,5 et glucose = 180 g/mol.",
+     "v": true,
+     "e": "VRAI. Ce sont les trois valeurs du chapitre.",
+     "sourceQuote": "H₂O = 18 , NaCl = 58,5 , glucose = 180 g/mol"
+    },
+    {
+     "t": "Le sel et le glucose sont des valeurs données par l'énoncé, à reconnaître.",
+     "v": true,
+     "e": "VRAI. Le tableau le précise pour ces deux lignes.",
+     "sourceQuote": "Valeur donnée par l'énoncé — à reconnaître"
+    },
+    {
+     "t": "Ce qu'on demande à l'étudiant, c'est de savoir quoi faire de ces valeurs.",
+     "v": true,
+     "e": "VRAI. C'est la conclusion du commentaire.",
+     "sourceQuote": "Ce qu'on te demande, c'est de savoir quoi en faire"
+    },
+    {
+     "t": "L'eau fait partie des valeurs à apprendre par cœur, car elle ne se recalcule pas.",
+     "v": false,
+     "e": "FAUX : l'eau se recalcule en trois secondes.",
+     "sourceQuote": "l'eau , tu sais la recalculer en trois secondes"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-016-masse-molaire.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 11,
+   "q": "La règle d'addition est présentée puis appliquée à un exemple. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "M est la somme des masses molaires atomiques des atomes de la molécule.",
+     "v": true,
+     "e": "VRAI. C'est la règle énoncée.",
+     "sourceQuote": "M est la somme des masses molaires atomiques des atomes qui la composent"
+    },
+    {
+     "t": "Chaque atome est compté autant de fois qu'il apparaît dans la formule.",
+     "v": true,
+     "e": "VRAI. C'est la précision qui évite l'erreur d'indice.",
+     "sourceQuote": "chacun compté autant de fois qu'il apparaît dans la formule"
+    },
+    {
+     "t": "L'eau est donnée comme l'exemple à savoir refaire les yeux fermés.",
+     "v": true,
+     "e": "VRAI. C'est le statut que la fiche lui donne.",
+     "sourceQuote": "L'exemple à savoir refaire les yeux fermés, l'eau"
+    },
+    {
+     "t": "Dans H₂O, l'atome d'oxygène apporte 16 g/mol.",
+     "v": true,
+     "e": "VRAI. C'est son nombre de nucléons.",
+     "sourceQuote": "1 atome O (16 g/mol)"
+    },
+    {
+     "t": "Le total de l'addition donne 18 g/mol pour l'eau.",
+     "v": true,
+     "e": "VRAI. 1 + 1 + 16 = 18.",
+     "sourceQuote": "M(H₂O) = 1 + 1 + 16 = 18 g/mol"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-016-masse-molaire.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 12,
+   "q": "L'erreur d'indice est le piège signalé par la fiche. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Oublier un indice conduit à écrire 1 + 16 = 17 pour l'eau au lieu de 18.",
+     "v": true,
+     "e": "VRAI. C'est exactement l'erreur décrite.",
+     "sourceQuote": "H₂O, ce n'est pas 1 + 16 = 17 : il y a deux hydrogènes"
+    },
+    {
+     "t": "Un indice sauté rend faux tout le calcul qui suit, sans que rien ne le signale.",
+     "v": true,
+     "e": "VRAI. C'est ce qui rend l'erreur dangereuse.",
+     "sourceQuote": "tout le calcul qui suit est faux — sans que rien ne le signale"
+    },
+    {
+     "t": "Pour l'eau, l'addition correcte est 1 + 16 = 17 g/mol.",
+     "v": false,
+     "e": "FAUX : elle est 1 + 1 + 16 = 18 g/mol.",
+     "sourceQuote": "M(H₂O) = 1 + 1 + 16 = 18 g/mol"
+    },
+    {
+     "t": "L'oxygène compte 8 nucléons, d'où une masse molaire de 8 g/mol.",
+     "v": false,
+     "e": "FAUX : il en compte 16, d'où 16 g/mol.",
+     "sourceQuote": "l' oxygène en a 16 → 16 g/mol"
+    },
+    {
+     "t": "La règle « M égale le nombre de nucléons » ne tombe juste ni pour l'hydrogène ni pour l'oxygène.",
+     "v": false,
+     "e": "FAUX : elle tombe juste sur les deux.",
+     "sourceQuote": "l' hydrogène a 1 nucléon → 1 g/mol · l' oxygène en a 16 → 16 g/mol . La règle tombe juste"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-016-masse-molaire.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 13,
+   "q": "Avant même la définition, la fiche explique quel problème la masse molaire vient résoudre. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le paquet étant acquis, il reste à savoir ce qu'il pèse.",
+     "v": true,
+     "e": "VRAI. C'est l'accroche de la fiche.",
+     "sourceQuote": "Le paquet, tu l'as. Reste à savoir ce qu'il pèse"
+    },
+    {
+     "t": "Au laboratoire, les molécules se pèsent plutôt qu'elles ne se comptent.",
+     "v": true,
+     "e": "VRAI. C'est le constat de départ.",
+     "sourceQuote": "au laboratoire, on ne compte pas les molécules : on les pèse"
+    },
+    {
+     "t": "Le monde des atomes se compte en nucléons, la balance du laboratoire en grammes.",
+     "v": true,
+     "e": "VRAI. Ce sont les deux mondes à relier.",
+     "sourceQuote": "le monde des atomes, où on parle de nucléons , et la balance du labo, où on parle de grammes"
+    },
+    {
+     "t": "Ce chaînon existait déjà avant l'introduction de la masse molaire.",
+     "v": false,
+     "e": "FAUX : il manquait précisément, et c'est la masse molaire qui le fournit.",
+     "sourceQuote": "Il manque donc un chaînon"
+    },
+    {
+     "t": "Connaître le nombre d'entités par mole revient déjà à savoir ce que pèse cette mole.",
+     "v": false,
+     "e": "FAUX : le nombre d'entités ne dit rien du poids, c'est ce qui restait à voir.",
+     "sourceQuote": "Le paquet, tu l'as. Reste à savoir ce qu'il pèse"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-016-masse-molaire.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 14,
+   "q": "Un étudiant redonne de mémoire les trois masses molaires du chapitre. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "La masse molaire du glucose vaut 58,5 g/mol.",
+     "v": false,
+     "e": "FAUX : le glucose est à 180 g/mol.",
+     "sourceQuote": "Glucose 180 g/mol"
+    },
+    {
+     "t": "La masse molaire du sel NaCl vaut 180 g/mol.",
+     "v": false,
+     "e": "FAUX : NaCl est à 58,5 g/mol.",
+     "sourceQuote": "Sel NaCl 58,5 g/mol"
+    },
+    {
+     "t": "La masse molaire de l'eau est fournie par l'énoncé et ne se recalcule pas.",
+     "v": false,
+     "e": "FAUX : c'est justement celle qu'on recalcule soi-même.",
+     "sourceQuote": "l'eau , tu sais la recalculer en trois secondes"
+    },
+    {
+     "t": "Ces trois masses molaires n'apparaissent que dans cette fiche.",
+     "v": false,
+     "e": "FAUX : elles reviennent dans tout le reste du chapitre.",
+     "sourceQuote": "reviennent en boucle dans tout le reste du chapitre"
+    },
+    {
+     "t": "Le sel et le glucose sont à reconnaître plutôt qu'à recalculer.",
+     "v": true,
+     "e": "VRAI. L'énoncé les donne.",
+     "sourceQuote": "le sel et le glucose , l'énoncé te les donne"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-016-masse-molaire.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 15,
+   "q": "Bilan de la fiche et annonce de la suite. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le nombre de nucléons d'un atome donne directement la valeur de sa masse molaire en g/mol.",
+     "v": true,
+     "e": "VRAI. M est numériquement égale à A.",
+     "sourceQuote": "M est égale au nombre de nucléons A de l'atome"
+    },
+    {
+     "t": "Cette règle tombe juste aussi bien sur l'hydrogène que sur l'oxygène.",
+     "v": true,
+     "e": "VRAI. 1 nucléon → 1 g/mol, 16 nucléons → 16 g/mol.",
+     "sourceQuote": "La règle tombe juste"
+    },
+    {
+     "t": "On dispose désormais des deux moitiés du pont : le nombre d'entités et le poids du paquet.",
+     "v": true,
+     "e": "VRAI. C'est le bilan de fin de fiche.",
+     "sourceQuote": "les deux moitiés du pont : combien d'entités dans un paquet"
+    },
+    {
+     "t": "La fiche suivante met ces deux nombres en formules.",
+     "v": true,
+     "e": "VRAI. Ce sont les conversions à automatiser.",
+     "sourceQuote": "La fiche suivante les met en formules — les conversions à automatiser"
+    },
+    {
+     "t": "C'est M qui donne le nombre d'entités contenues dans un paquet.",
+     "v": false,
+     "e": "FAUX : c'est 𝒩 ; M dit ce que pèse le paquet.",
+     "sourceQuote": "combien d'entités dans un paquet (𝒩), et combien pèse ce paquet (M)"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-017-trois-conversions-mole.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 8,
+   "q": "La fiche part des trois grandeurs entre lesquelles la mole fait circuler. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Avec la mole, on jongle entre masse, quantité de matière et nombre d'entités.",
+     "v": true,
+     "e": "VRAI. Ce sont les trois grandeurs annoncées.",
+     "sourceQuote": "on jongle en permanence entre trois grandeurs : la masse (en g), la quantité de matière (en mol) et le nombre d'entités"
+    },
+    {
+     "t": "La masse s'exprime en grammes et la quantité de matière en moles.",
+     "v": true,
+     "e": "VRAI. Ce sont les unités indiquées.",
+     "sourceQuote": "la masse (en g), la quantité de matière (en mol)"
+    },
+    {
+     "t": "𝒩 est la taille du paquet universel et M la masse d'une mole.",
+     "v": true,
+     "e": "VRAI. Ce sont les deux nombres hérités des fiches précédentes.",
+     "sourceQuote": "𝒩 = 6,022 × 10²³ , la taille du paquet universel, et M , la masse d'une mole"
+    },
+    {
+     "t": "Ces trois formules doivent devenir des réflexes.",
+     "v": true,
+     "e": "VRAI. C'est l'objectif affiché de la fiche.",
+     "sourceQuote": "Voici les trois formules qui doivent devenir des réflexes"
+    },
+    {
+     "t": "Passer d'une masse à un nombre d'entités se fait avec une seule formule.",
+     "v": false,
+     "e": "FAUX : ce sont deux formules enchaînées.",
+     "sourceQuote": "ce sont deux formules enchaînées, jamais une seule"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-017-trois-conversions-mole.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 9,
+   "q": "Deux notations voisines sont opposées dans le piège de la fiche. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "N et 𝒩 sont deux notations quasi jumelles de natures différentes.",
+     "v": true,
+     "e": "VRAI. C'est le piège signalé.",
+     "sourceQuote": "Deux notations quasi jumelles, deux natures différentes"
+    },
+    {
+     "t": "C'est le « par mole » de 𝒩 qui fait disparaître les moles dans N = n × 𝒩.",
+     "v": true,
+     "e": "VRAI. C'est l'explication donnée par la fiche.",
+     "sourceQuote": "C'est ce « par mole » qui fait disparaître les moles quand tu écris N = n × 𝒩"
+    },
+    {
+     "t": "N est une constante qui vaut 6,022 × 10²³ et s'exprime en mol⁻¹.",
+     "v": false,
+     "e": "FAUX : c'est 𝒩 qui est cette constante ; N est un nombre d'entités.",
+     "sourceQuote": "𝒩 est une constante qui vaut 6,022 × 10²³ et s'exprime en mol⁻¹"
+    },
+    {
+     "t": "𝒩 est sans unité, comme tout nombre d'entités.",
+     "v": false,
+     "e": "FAUX : c'est N qui est sans unité.",
+     "sourceQuote": "N est un nombre d'entités , donc sans unité"
+    },
+    {
+     "t": "Le nombre d'entités N se compte en moles.",
+     "v": false,
+     "e": "FAUX : il est sans unité.",
+     "sourceQuote": "N nombre d'entités sans unité"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-017-trois-conversions-mole.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 10,
+   "q": "Un étudiant restitue la conversion réservée aux gaz. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le volume molaire d'un gaz s'exprime en mol/L.",
+     "v": false,
+     "e": "FAUX : il s'exprime en L/mol.",
+     "sourceQuote": "volume molaire d'un gaz = 22,4 L/mol"
+    },
+    {
+     "t": "Pour un gaz, on le pèse plutôt que de lire son volume.",
+     "v": false,
+     "e": "FAUX : un gaz ne se pèse pas, on lit son volume.",
+     "sourceQuote": "Un gaz, on ne le pèse pas : on lit son volume"
+    },
+    {
+     "t": "Pour retomber sur des moles, on multiplie le volume par 22,4.",
+     "v": false,
+     "e": "FAUX : on divise le volume par 22,4.",
+     "sourceQuote": "divise le volume par 22,4 et tu retombes sur des moles"
+    },
+    {
+     "t": "Le cours introduit cette formule ici sans qu'elle serve immédiatement.",
+     "v": true,
+     "e": "VRAI. Elle ne servira que plus tard.",
+     "sourceQuote": "le cours l'introduit ici, mais elle ne te servira que plus tard"
+    },
+    {
+     "t": "Les conditions de référence du volume molaire sont 20 °C et 1 atm.",
+     "v": false,
+     "e": "FAUX : ce sont 0 °C et 1 atm.",
+     "sourceQuote": "22,4 L/mol à 0 °C et 1 atm"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-017-trois-conversions-mole.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 11,
+   "q": "Chaque conversion est décrite avec son sens de circulation. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Avec m grammes sur la balance et une mole qui pèse M, on divise pour obtenir des moles.",
+     "v": true,
+     "e": "VRAI. C'est la lecture en clair de n = m / M.",
+     "sourceQuote": "Tu as m grammes sur ta balance, une mole en pèse M → tu divises, tu obtiens des moles"
+    },
+    {
+     "t": "Multiplier ses moles par 𝒩 donne un nombre sans unité.",
+     "v": true,
+     "e": "VRAI. C'est la lecture en clair de N = n × 𝒩.",
+     "sourceQuote": "Tu multiplies tes moles par 𝒩 → tu obtiens un nombre , sans unité"
+    },
+    {
+     "t": "La formule n = m / M va de la masse vers les moles.",
+     "v": true,
+     "e": "VRAI. C'est le sens indiqué par la fiche.",
+     "sourceQuote": "n = m / M — de la masse vers les moles"
+    },
+    {
+     "t": "La formule N = n × 𝒩 va du nombre d'entités vers les moles.",
+     "v": false,
+     "e": "FAUX : elle va des moles vers le nombre d'entités.",
+     "sourceQuote": "N = n × 𝒩 — des moles vers le nombre d'entités"
+    },
+    {
+     "t": "La formule n = V / Vm s'applique indifféremment aux solides et aux gaz.",
+     "v": false,
+     "e": "FAUX : c'est le cas des gaz.",
+     "sourceQuote": "n = V / V m — le cas des gaz"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-017-trois-conversions-mole.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 12,
+   "q": "La fiche pose la première conversion sur un chiffre réel, celui du sérum physiologique. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Une poche de sérum physiologique contient 9 g de NaCl par litre.",
+     "v": true,
+     "e": "VRAI. C'est la donnée de départ de l'exemple.",
+     "sourceQuote": "une poche de sérum physiologique contient 9 g de NaCl par litre"
+    },
+    {
+     "t": "L'énoncé fournit la masse molaire du sel : 58,5 g/mol.",
+     "v": true,
+     "e": "VRAI. C'est la seconde donnée du calcul.",
+     "sourceQuote": "M(NaCl) = 58,5 g/mol"
+    },
+    {
+     "t": "Aller des grammes aux moles, c'est la première des trois conversions.",
+     "v": true,
+     "e": "VRAI. C'est n = m / M.",
+     "sourceQuote": "Des grammes vers les moles, c'est la première des trois conversions"
+    },
+    {
+     "t": "Le calcul aboutit à environ 154 mmol.",
+     "v": true,
+     "e": "VRAI. 0,154 mol, soit 154 mmol.",
+     "sourceQuote": "n = 9 / 58,5 ≈ 0,154 mol , soit ≈ 154 mmol"
+    },
+    {
+     "t": "Ce chiffre reviendra en fin de chapitre, au moment de décoder le « 0,9 % » de l'étiquette.",
+     "v": true,
+     "e": "VRAI. La fiche demande de le garder.",
+     "sourceQuote": "il revient tel quel en fin de chapitre, quand on décodera le « 0,9 % » de l'étiquette"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-017-trois-conversions-mole.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 13,
+   "q": "Comment choisir la bonne conversion devant un énoncé ? Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le choix de la formule se lit dans les unités de départ et d'arrivée.",
+     "v": true,
+     "e": "VRAI. Il ne se devine pas.",
+     "sourceQuote": "Le choix de la formule ne se devine pas : il se lit dans les unités de départ et d'arrivée"
+    },
+    {
+     "t": "Les deux questions à se poser viennent dans un ordre précis.",
+     "v": true,
+     "e": "VRAI. D'abord ce qu'on a, ensuite ce qu'on demande.",
+     "sourceQuote": "deux questions dans cet ordre : qu'est-ce que j'ai"
+    },
+    {
+     "t": "Une formule ne devient un réflexe qu'une fois posée sur un vrai chiffre.",
+     "v": true,
+     "e": "VRAI. C'est la raison d'être de l'exemple chiffré.",
+     "sourceQuote": "Une formule ne devient un réflexe que le jour où tu l'as posée sur un vrai chiffre"
+    },
+    {
+     "t": "La chaîne masse → moles → nombre compte deux étapes.",
+     "v": true,
+     "e": "VRAI. Deux formules enchaînées.",
+     "sourceQuote": "masse → moles → nombre , ce sont deux formules enchaînées"
+    },
+    {
+     "t": "Ces trois conversions sont une fin en soi.",
+     "v": false,
+     "e": "FAUX : ce sont des outils, on ne fera plus que les appliquer.",
+     "sourceQuote": "Ces trois conversions ne sont pas une fin en soi : ce sont les outils"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-017-trois-conversions-mole.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 14,
+   "q": "Les équivalences de volume rappelées par la fiche servent à éviter une erreur d'unité. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Un mètre cube vaut 1000 litres.",
+     "v": true,
+     "e": "VRAI. C'est la première équivalence rappelée.",
+     "sourceQuote": "1 m³ = 1000 L · 1 L = 1000 mL = 1 dm³"
+    },
+    {
+     "t": "Un millilitre vaut un centimètre cube.",
+     "v": true,
+     "e": "VRAI. C'est la dernière équivalence de la liste.",
+     "sourceQuote": "1 L = 1000 mL = 1 dm³ · 1 mL = 1 cm³"
+    },
+    {
+     "t": "Un volume donné en m³ n'a pas besoin d'être converti avant le calcul.",
+     "v": false,
+     "e": "FAUX : mL comme m³ doivent être convertis en litres au préalable.",
+     "sourceQuote": "Si l'énoncé te donne un volume en mL ou en m³, convertis-le en L avant de poser le calcul"
+    },
+    {
+     "t": "Le résultat d'une formule contenant un volume ne dépend pas de l'unité retenue.",
+     "v": false,
+     "e": "FAUX : il en dépend directement.",
+     "sourceQuote": "le résultat dépend de l'unité que tu choisis"
+    },
+    {
+     "t": "Une erreur d'unité fait sortir un résultat 100 fois trop grand.",
+     "v": false,
+     "e": "FAUX : l'écart est d'un facteur 1000.",
+     "sourceQuote": "un résultat 1000× trop petit (ou trop grand)"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-017-trois-conversions-mole.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 15,
+   "q": "Le tableau des symboles associe à chaque lettre sa nature et son unité. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "n désigne la quantité de matière et s'exprime en mol.",
+     "v": true,
+     "e": "VRAI. C'est la première ligne du tableau.",
+     "sourceQuote": "n quantité de matière (des moles) mol"
+    },
+    {
+     "t": "M désigne la masse molaire et s'exprime en g/mol.",
+     "v": true,
+     "e": "VRAI. C'est la ligne correspondante du tableau.",
+     "sourceQuote": "M masse molaire g/mol"
+    },
+    {
+     "t": "m désigne la masse et s'exprime en grammes.",
+     "v": true,
+     "e": "VRAI. C'est l'unité indiquée pour la masse.",
+     "sourceQuote": "la masse (en g)"
+    },
+    {
+     "t": "𝒩 vaut 6,022 × 10²³ et s'exprime en mol⁻¹.",
+     "v": true,
+     "e": "VRAI. C'est le nombre d'Avogadro et son unité.",
+     "sourceQuote": "𝒩 nombre d'Avogadro = 6,022 × 10²³ mol⁻¹"
+    },
+    {
+     "t": "Vm, le volume molaire d'un gaz, vaut 22,4 L/mol.",
+     "v": true,
+     "e": "VRAI. À 0 °C et 1 atm.",
+     "sourceQuote": "volume molaire d'un gaz = 22,4 L/mol"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-018-concentration-ponderale.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 8,
+   "q": "La fiche situe d'abord la mesure des concentrations dans la pratique médicale. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Toute la pratique médicale tourne autour de concentrations.",
+     "v": true,
+     "e": "VRAI. C'est le constat d'ouverture.",
+     "sourceQuote": "toute la pratique médicale tourne autour de concentrations"
+    },
+    {
+     "t": "La natrémie s'exprime en mmol/L et la posologie d'un médicament en mg/kg.",
+     "v": true,
+     "e": "VRAI. Ce sont deux des exemples cités.",
+     "sourceQuote": "la natrémie en mmol/L, la posologie d'un médicament en mg/kg"
+    },
+    {
+     "t": "Ces différentes expressions décrivent une même réalité.",
+     "v": true,
+     "e": "VRAI. Elles répondent seulement à des questions différentes.",
+     "sourceQuote": "Des manières différentes d'exprimer la même réalité"
+    },
+    {
+     "t": "La concentration pondérale est présentée comme la plus difficile à poser.",
+     "v": false,
+     "e": "FAUX : c'est par la plus simple qu'on commence.",
+     "sourceQuote": "On commence par la plus simple à poser"
+    },
+    {
+     "t": "Avant cette fiche, les conversions de la mole n'avaient pas encore été vues.",
+     "v": false,
+     "e": "FAUX : elles viennent d'être automatisées.",
+     "sourceQuote": "tu viens d'automatiser les conversions de la mole"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-018-concentration-ponderale.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 9,
+   "q": "La formule de la concentration pondérale tient en deux termes qu'il faut lire avec soin. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Cp s'obtient en divisant une masse de soluté par un volume de solution.",
+     "v": true,
+     "e": "VRAI. C'est la formule elle-même.",
+     "sourceQuote": "C p = m / V avec m = masse de soluté (g), V = volume de solution (L)"
+    },
+    {
+     "t": "Son unité est le g/L, équivalent au kg/m³.",
+     "v": true,
+     "e": "VRAI. L'équivalence est donnée avec la formule.",
+     "sourceQuote": "Unité : g/L (équivalent à kg/m³)"
+    },
+    {
+     "t": "Le numérateur exclut la masse du mélange.",
+     "v": true,
+     "e": "VRAI. On ne pèse que le soluté.",
+     "sourceQuote": "c'est la masse du soluté seul — pas celle du mélange"
+    },
+    {
+     "t": "Le volume retenu est le volume final obtenu une fois le soluté dissous.",
+     "v": true,
+     "e": "VRAI. C'est le volume de solution.",
+     "sourceQuote": "le volume final obtenu une fois le soluté dissous"
+    },
+    {
+     "t": "Une fois ces deux termes identifiés, il ne reste qu'une division à poser.",
+     "v": true,
+     "e": "VRAI. C'est ce que dit la fiche.",
+     "sourceQuote": "Le reste n'est qu'une division"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-018-concentration-ponderale.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 10,
+   "q": "Le mnémo de la fiche traduit la formule en une question de tous les jours. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Le mnémo formule la question ainsi : combien de grammes dans 1 litre ?",
+     "v": true,
+     "e": "VRAI. C'est la concentration la plus intuitive.",
+     "sourceQuote": "C'est la concentration la plus intuitive : « combien de grammes dans 1 litre ? »"
+    },
+    {
+     "t": "C'est la concentration que l'on lit sur un bilan sanguin.",
+     "v": true,
+     "e": "VRAI. C'est ce qui la rend familière.",
+     "sourceQuote": "celle que tu lis sur un bilan sanguin"
+    },
+    {
+     "t": "Le geste décrit consiste à peser le solvant puis à diviser par le volume.",
+     "v": false,
+     "e": "FAUX : c'est le soluté que l'on pèse.",
+     "sourceQuote": "Tu pèses le soluté. Tu divises par le volume"
+    },
+    {
+     "t": "Le V de la formule est le volume de solvant de départ.",
+     "v": false,
+     "e": "FAUX : c'est le volume de solution.",
+     "sourceQuote": "Le V de la formule est le volume de solution , pas de solvant"
+    },
+    {
+     "t": "La concentration pondérale est la plus indirecte à poser.",
+     "v": false,
+     "e": "FAUX : elle est présentée comme la plus directe.",
+     "sourceQuote": "C'est la concentration la plus directe"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-018-concentration-ponderale.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 11,
+   "q": "Quatre repères de biologie clinique accompagnent cette formule. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "La protidémie normale est d'environ 70 g/L.",
+     "v": true,
+     "e": "VRAI. Ce sont les protéines plasmatiques totales.",
+     "sourceQuote": "protidémie ~70 g/L"
+    },
+    {
+     "t": "Ces repères s'étendent de 1 g/L pour la glycémie à 140 g/L pour l'hémoglobine.",
+     "v": true,
+     "e": "VRAI. C'est l'amplitude annoncée.",
+     "sourceQuote": "de 1 g/L pour la glycémie à 140 g/L pour l'hémoglobine"
+    },
+    {
+     "t": "Cet écart de cent quarante fois se lit dans la même unité et avec la même formule.",
+     "v": true,
+     "e": "VRAI. C'est ce que souligne la fiche.",
+     "sourceQuote": "Cent quarante fois d'écart — et pourtant la même unité, la même formule"
+    },
+    {
+     "t": "Ces quatre repères sont donnés comme étant à connaître.",
+     "v": true,
+     "e": "VRAI. La fiche le précise expressément.",
+     "sourceQuote": "ces quatre repères sont à connaître"
+    },
+    {
+     "t": "L'hémoglobine, chez l'homme adulte, est de l'ordre de 14 g/L.",
+     "v": false,
+     "e": "FAUX : elle est de l'ordre de 140 g/L.",
+     "sourceQuote": "hémoglobine ~140 g/L"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-018-concentration-ponderale.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 12,
+   "q": "Un étudiant redonne de mémoire les valeurs normales du tableau clinique. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "La cholestérolémie normale est de l'ordre de 20 g/L.",
+     "v": false,
+     "e": "FAUX : elle est de l'ordre de 2 g/L.",
+     "sourceQuote": "cholestérolémie ~2 g/L"
+    },
+    {
+     "t": "La glycémie normale à jeun est de l'ordre de 10 g/L.",
+     "v": false,
+     "e": "FAUX : elle est de l'ordre de 1 g/L.",
+     "sourceQuote": "glycémie ~1 g/L"
+    },
+    {
+     "t": "Les protéines plasmatiques totales se dosent en mmol/L.",
+     "v": false,
+     "e": "FAUX : la protidémie est donnée en g/L.",
+     "sourceQuote": "protidémie ~70 g/L"
+    },
+    {
+     "t": "Un écart de cent quarante fois impose de changer de formule selon la molécule dosée.",
+     "v": false,
+     "e": "FAUX : la formule et l'unité restent les mêmes.",
+     "sourceQuote": "et pourtant la même unité, la même formule"
+    },
+    {
+     "t": "Ces quatre valeurs donnent l'ordre de grandeur de ce qu'on dose en biologie clinique.",
+     "v": true,
+     "e": "VRAI. C'est leur intérêt.",
+     "sourceQuote": "ordre de grandeur de ce qu'on dose en biologie clinique"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-018-concentration-ponderale.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 13,
+   "q": "Une même concentration peut s'écrire de trois façons. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Exprimer en pourcentage massique revient à compter les grammes pour 100 g de solvant.",
+     "v": true,
+     "e": "VRAI. C'est la définition retenue.",
+     "sourceQuote": "En pourcentage massique. C'est-à-dire en grammes pour 100 g de solvant"
+    },
+    {
+     "t": "L'écriture en g/100 mL y équivaut si la densité de la solution est proche de 1.",
+     "v": true,
+     "e": "VRAI. C'est la condition posée.",
+     "sourceQuote": "C'est exactement la même chose si la densité de la solution est proche de 1"
+    },
+    {
+     "t": "Les solutions aqueuses diluées forment l'immense majorité des liquides biologiques.",
+     "v": true,
+     "e": "VRAI. C'est pourquoi l'équivalence est utilisable en pratique.",
+     "sourceQuote": "des solutions aqueuses diluées, qui sont l'immense majorité des liquides biologiques"
+    },
+    {
+     "t": "g/L, pourcentage massique et g/100 mL se lisent comme une seule et même mesure.",
+     "v": true,
+     "e": "VRAI. C'est l'habitude que la fiche demande de prendre.",
+     "sourceQuote": "lire ces trois écritures — g/L , % massique , g/100 mL — comme une seule et même mesure"
+    },
+    {
+     "t": "Savoir passer d'une écriture à l'autre permettra de décoder la poche en fin de chapitre.",
+     "v": true,
+     "e": "VRAI. C'est l'usage annoncé.",
+     "sourceQuote": "c'est ce qui te permettra de décoder cette poche en fin de chapitre"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-018-concentration-ponderale.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 14,
+   "q": "La fiche distingue ce qui est négligeable en pratique de ce qui reste exact en théorie. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "Cp dépend du volume, lequel varie avec la température par dilatation thermique.",
+     "v": true,
+     "e": "VRAI. C'est l'origine de la dépendance.",
+     "sourceQuote": "C p dépend du volume V , qui lui-même varie avec la température (dilatation thermique)"
+    },
+    {
+     "t": "Une concentration pondérale mesurée à 20 °C n'est pas exactement la même à 37 °C.",
+     "v": true,
+     "e": "VRAI. C'est la conséquence directe.",
+     "sourceQuote": "une concentration pondérale mesurée à 20 °C n'est pas exactement la même à 37 °C"
+    },
+    {
+     "t": "Négligeable en pratique ne veut pas dire faux en QCM.",
+     "v": true,
+     "e": "VRAI. C'est la mise en garde de la fiche.",
+     "sourceQuote": "Négligeable en pratique ne veut pas dire faux en QCM"
+    },
+    {
+     "t": "À la question « une concentration pondérale dépend-elle de la température ? », il faut répondre non.",
+     "v": false,
+     "e": "FAUX : la réponse est oui, à cause du volume au dénominateur.",
+     "sourceQuote": "la réponse est oui — parce qu'il y a un volume au dénominateur"
+    },
+    {
+     "t": "Pour calculer une glycémie à 37 °C, il faut corriger la dilatation.",
+     "v": false,
+     "e": "FAUX : on l'ignore, elle ne change aucun chiffre utile.",
+     "sourceQuote": "tu ignores la dilatation : 0,5 %, ça ne change aucun chiffre utile"
+    }
+   ]
+  },
+  {
+   "fiche": "physique-018-concentration-ponderale.html",
+   "origine": "ecrite",
+   "arene": true,
+   "lot": 15,
+   "q": "La fin de la fiche expose ce que la concentration pondérale ne permet pas de savoir. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?",
+   "items": [
+    {
+     "t": "La masse pesée donne directement le nombre de molécules mises en solution.",
+     "v": false,
+     "e": "FAUX : peser un soluté ne dit pas combien de molécules ont été versées.",
+     "sourceQuote": "peser un soluté ne dit pas combien de molécules tu as versées"
+    },
+    {
+     "t": "La réaction chimique dépend de la masse pesée, non des molécules.",
+     "v": false,
+     "e": "FAUX : ce sont les molécules qui réagissent.",
+     "sourceQuote": "et ce sont elles qui réagissent"
+    },
+    {
+     "t": "La grande faiblesse de Cp est qu'elle ne se mesure pas.",
+     "v": false,
+     "e": "FAUX : se mesurer est justement sa qualité.",
+     "sourceQuote": "C p a une immense qualité : elle se mesure"
+    },
+    {
+     "t": "La fiche suivante corrige ce défaut avec la concentration osmolaire.",
+     "v": false,
+     "e": "FAUX : c'est la concentration molaire.",
+     "sourceQuote": "C'est ce que corrige la fiche suivante, avec la concentration molaire"
+    },
+    {
+     "t": "Le pourcentage massique n'égale les g/100 mL que pour une densité proche de 1.",
+     "v": true,
+     "e": "VRAI. Cela vaut pour les solutions aqueuses diluées, pas pour n'importe quel liquide.",
+     "sourceQuote": "le % massique n'égale les g/100 mL que si la densité est proche de 1"
+    }
+   ]
+  }
+ ]
+}

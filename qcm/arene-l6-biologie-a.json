@@ -1,0 +1,1567 @@
+{
+  "matiere": "biologie",
+  "chapitre": 2,
+  "note": "Renfort d'arène (lots 8 à 15, tous ar:1) pour cinq fiches de biologie du chapitre 2 — preuves de la bicouche, liposome, mouvements des lipides et FRAP, flip-flop, facteurs de fluidité. Le socle des lots 1-7 reste dans biologie-ch02-p1.json et biologie-ch02-p2.json.",
+  "questions": [
+    {
+      "fiche": "biologie-015-preuves-bicouche-et-mosaique-fluide.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 8,
+      "q": "Parmi les propositions suivantes relatives aux lipides membranaires et à leur rangement spontané en deux couches, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les phospholipides, le cholestérol et les glycolipides forment les trois familles de lipides déjà rencontrées.",
+          "v": true,
+          "e": "VRAI. Ce sont les trois familles vues avant cette fiche.",
+          "sourceQuote": "les trois familles de lipides en main — phospholipides , cholestérol , glycolipides"
+        },
+        {
+          "t": "C'est leur caractère amphiphile qui fait que les phospholipides s'organisent d'eux-mêmes en deux couches.",
+          "v": true,
+          "e": "VRAI. Une tête qui aime l'eau, des queues qui la fuient : l'organisation se fait toute seule.",
+          "sourceQuote": "grâce à leur caractère amphiphile , s'organisent spontanément en deux couches en milieu aqueux"
+        },
+        {
+          "t": "Depuis le début du chapitre, le mot bicouche sert à dire comment ces lipides sont rangés.",
+          "v": true,
+          "e": "VRAI. Le mot revient sans cesse pour décrire ce rangement.",
+          "sourceQuote": "un mot revient sans cesse pour dire comment ils sont rangés : bicouche"
+        },
+        {
+          "t": "Les têtes hydrophiles sont tournées vers le centre de la bicouche.",
+          "v": false,
+          "e": "FAUX : elles regardent les milieux aqueux, de part et d'autre. Ce sont les queues qui occupent le centre.",
+          "sourceQuote": "les têtes hydrophiles sont orientées vers les milieux aqueux, intra et extracellulaires"
+        },
+        {
+          "t": "Cette organisation spontanée se met en place en milieu hydrophobe.",
+          "v": false,
+          "e": "FAUX : c'est en milieu aqueux qu'elle se produit.",
+          "sourceQuote": "s'organisent spontanément en deux couches en milieu aqueux"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-015-preuves-bicouche-et-mosaique-fluide.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 9,
+      "q": "Parmi les propositions suivantes relatives à la légende de l'image obtenue au microscope électronique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'une des deux bandes foncées correspond aux têtes polaires du feuillet externe.",
+          "v": true,
+          "e": "VRAI. Une bande foncée par rangée de têtes.",
+          "sourceQuote": "Bande foncée — les têtes polaires du feuillet externe"
+        },
+        {
+          "t": "L'autre bande foncée correspond aux têtes polaires du feuillet interne.",
+          "v": true,
+          "e": "VRAI. C'est la rangée de têtes de l'autre couche.",
+          "sourceQuote": "Bande foncée — les têtes polaires du feuillet interne"
+        },
+        {
+          "t": "La zone centrale claire correspond aux queues hydrophobes qui se font face.",
+          "v": true,
+          "e": "VRAI. Les queues occupent le milieu et donnent la zone claire.",
+          "sourceQuote": "Zone centrale claire — les queues hydrophobes, qui se font face"
+        },
+        {
+          "t": "L'image obtenue confirme la conclusion tirée du calcul de 1925.",
+          "v": true,
+          "e": "VRAI. Mesure et image aboutissent au même résultat.",
+          "sourceQuote": "L'image confirme exactement ce que le calcul de 1925 avait déduit"
+        },
+        {
+          "t": "Deux bandes de têtes polaires signifient deux couches de lipides.",
+          "v": true,
+          "e": "VRAI. C'est tout le raisonnement de cette deuxième preuve.",
+          "sourceQuote": "Deux bandes de têtes polaires = deux couches"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-015-preuves-bicouche-et-mosaique-fluide.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 10,
+      "q": "Parmi les propositions suivantes relatives à la monocouche obtenue en 1925, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans la monocouche étalée sur l'eau, les molécules forment une seule épaisseur.",
+          "v": true,
+          "e": "VRAI. C'est la définition même d'une monocouche.",
+          "sourceQuote": "en une monocouche — une seule épaisseur de molécules"
+        },
+        {
+          "t": "Il a fallu étaler les lipides à la main pour obtenir cette monocouche.",
+          "v": false,
+          "e": "FAUX : déposés sur l'eau, ils s'étalent d'eux-mêmes.",
+          "sourceQuote": "où ils s'étalent d'eux-mêmes en une monocouche"
+        },
+        {
+          "t": "La surface obtenue était environ trois fois plus grande que celle des membranes de départ.",
+          "v": false,
+          "e": "FAUX : environ deux fois plus grande.",
+          "sourceQuote": "elle est ≈ 2 fois plus grande"
+        },
+        {
+          "t": "Les lipides extraits ont été déposés sur une surface d'huile.",
+          "v": false,
+          "e": "FAUX : sur de l'eau.",
+          "sourceQuote": "Ils déposent ces lipides sur de l'eau"
+        },
+        {
+          "t": "La membrane de départ est elle-même une monocouche.",
+          "v": false,
+          "e": "FAUX : la conclusion de l'expérience est précisément l'inverse.",
+          "sourceQuote": "La membrane contient donc deux couches de lipides — une bicouche , pas une monocouche"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-015-preuves-bicouche-et-mosaique-fluide.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 11,
+      "q": "Parmi les propositions suivantes relatives au sens du mot « fluide » dans le nom du modèle, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le mot « fluide » traduit le fait que rien n'y est fixé.",
+          "v": true,
+          "e": "VRAI. C'est la moitié dynamique du nom.",
+          "sourceQuote": "fluide parce que rien n'y est fixé"
+        },
+        {
+          "t": "Dire que la membrane est fluide ne signifie pas qu'elle se défait.",
+          "v": true,
+          "e": "VRAI. Fluide veut dire mobile, pas instable.",
+          "sourceQuote": "« fluide » ne veut pas dire que la membrane se défait"
+        },
+        {
+          "t": "Les protéines ne cassent pas la bicouche : elles s'y intègrent naturellement.",
+          "v": true,
+          "e": "VRAI. Elles s'insèrent sans rompre la double couche.",
+          "sourceQuote": "elles s'y intègrent naturellement"
+        },
+        {
+          "t": "La membrane est comparée à un mur de briques dont les éléments ne bougent pas.",
+          "v": false,
+          "e": "FAUX : le mur de briques est justement l'image de l'architecture figée que le modèle écarte.",
+          "sourceQuote": "cette architecture est-elle figée , comme un mur de briques, ou mobile ?"
+        },
+        {
+          "t": "Depuis 1972, la bicouche porte le nom de mosaïque fluide.",
+          "v": true,
+          "e": "VRAI. C'est la date et le nom du modèle.",
+          "sourceQuote": "depuis 1972, cette bicouche porte un nom — la mosaïque fluide"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-015-preuves-bicouche-et-mosaique-fluide.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 12,
+      "q": "Parmi les propositions suivantes relatives à la démarche suivie pour établir l'existence de la bicouche, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "On ne peut pas prendre une membrane entre ses doigts et compter ses couches.",
+          "v": true,
+          "e": "VRAI. C'est pour cela qu'il a fallu une mesure, puis une image.",
+          "sourceQuote": "On ne peut pas prendre une membrane entre ses doigts et compter ses couches"
+        },
+        {
+          "t": "Le cours n'apporte qu'une seule preuve, tirée de la microscopie électronique.",
+          "v": false,
+          "e": "FAUX : il en donne deux, une mesure puis une image.",
+          "sourceQuote": "Le cours donne deux preuves — d'abord une mesure , ensuite une image"
+        },
+        {
+          "t": "L'expérience de 1925 repose sur une comparaison de surfaces.",
+          "v": true,
+          "e": "VRAI. On compare la surface de la monocouche à celle des membranes de départ.",
+          "sourceQuote": "Ils comparent la surface occupée par cette monocouche à la surface des membranes de départ"
+        },
+        {
+          "t": "Le microscope électronique a servi à mesurer la surface occupée par les lipides d'hématies.",
+          "v": false,
+          "e": "FAUX : le microscope donne une image en 3 feuillets ; la mesure de surface, c'est l'expérience de 1925.",
+          "sourceQuote": "Ce qu'on voit vraiment au microscope électronique"
+        },
+        {
+          "t": "Les lipides utilisés en 1925 provenaient de cellules musculaires.",
+          "v": false,
+          "e": "FAUX : d'hématies, c'est-à-dire de globules rouges.",
+          "sourceQuote": "prennent des hématies (les globules rouges) et en extraient tous les lipides"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-015-preuves-bicouche-et-mosaique-fluide.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 13,
+      "q": "Parmi les propositions suivantes relatives à ce qu'apporte chacune des deux dates du chapitre, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "1925, Gorter et Grendel : la membrane est une bicouche, c'est la structure.",
+          "v": true,
+          "e": "VRAI. Le premier couple répond à la question de l'architecture.",
+          "sourceQuote": "1925, Gorter et Grendel → la membrane est une bicouche (la structure)"
+        },
+        {
+          "t": "1972, Singer et Nicolson : cette bicouche est une mosaïque fluide, c'est la dynamique.",
+          "v": true,
+          "e": "VRAI. Le second couple répond à la question du mouvement.",
+          "sourceQuote": "1972, Singer et Nicolson → cette bicouche est une mosaïque fluide (la dynamique)"
+        },
+        {
+          "t": "Ces deux dates ne servent pas à la même chose.",
+          "v": true,
+          "e": "VRAI. L'une donne la structure, l'autre la dynamique.",
+          "sourceQuote": "Deux dates, deux noms, et ils ne servent pas à la même chose"
+        },
+        {
+          "t": "Échanger les deux couples est une erreur facile à commettre dans la précipitation.",
+          "v": true,
+          "e": "VRAI. D'où l'intérêt de fixer chaque date à son apport.",
+          "sourceQuote": "c'est un échange facile à faire dans la précipitation"
+        },
+        {
+          "t": "Ce sont Gorter et Grendel qui ont conclu à la mosaïque fluide.",
+          "v": false,
+          "e": "FAUX : ils ont conclu à la bicouche ; la mosaïque fluide, c'est Singer et Nicolson.",
+          "sourceQuote": "1925, Gorter et Grendel → la membrane est une bicouche (la structure)"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-015-preuves-bicouche-et-mosaique-fluide.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 14,
+      "q": "Parmi les propositions suivantes relatives à ce que représentent les trois bandes visibles au microscope électronique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les trois bandes correspondent à deux rangées de têtes et à la zone des queues entre elles.",
+          "v": true,
+          "e": "VRAI. Trois bandes, mais seulement deux rangées de têtes.",
+          "sourceQuote": "Les trois bandes sont deux rangées de têtes + la zone des queues entre elles"
+        },
+        {
+          "t": "L'aspect en 3 feuillets signifie que la membrane compte trois couches de lipides.",
+          "v": false,
+          "e": "FAUX : il y en a deux.",
+          "sourceQuote": "L'aspect en 3 feuillets ne veut pas dire trois couches de lipides : il y en a deux"
+        },
+        {
+          "t": "Cette image est une reconstitution obtenue à partir du calcul de 1925.",
+          "v": false,
+          "e": "FAUX : c'est une observation directe au microscope ; le calcul, c'est la première preuve.",
+          "sourceQuote": "Ce qu'on voit vraiment au microscope électronique"
+        },
+        {
+          "t": "L'image et le calcul aboutissent au même nombre de couches.",
+          "v": true,
+          "e": "VRAI. Deux couches dans les deux cas.",
+          "sourceQuote": "L'image confirme exactement ce que le calcul de 1925 avait déduit"
+        },
+        {
+          "t": "Cette image est la seconde des deux preuves données par le cours.",
+          "v": true,
+          "e": "VRAI. D'abord une mesure, ensuite une image.",
+          "sourceQuote": "Le cours donne deux preuves — d'abord une mesure , ensuite une image"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-015-preuves-bicouche-et-mosaique-fluide.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 15,
+      "q": "Parmi les propositions suivantes relatives au matériel de départ et à la conclusion de l'expérience de 1925, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Seule une partie des lipides des hématies a été extraite.",
+          "v": false,
+          "e": "FAUX : tous les lipides sont extraits, sinon la comparaison de surfaces ne voudrait rien dire.",
+          "sourceQuote": "en extraient tous les lipides"
+        },
+        {
+          "t": "Une fois étalés, ces lipides couvrent une surface plus petite que celle des membranes de départ.",
+          "v": false,
+          "e": "FAUX : environ deux fois plus grande.",
+          "sourceQuote": "elle est ≈ 2 fois plus grande"
+        },
+        {
+          "t": "La conclusion tirée est que la membrane est une monocouche.",
+          "v": false,
+          "e": "FAUX : une bicouche.",
+          "sourceQuote": "une bicouche , pas une monocouche"
+        },
+        {
+          "t": "Les hématies désignent les globules blancs.",
+          "v": false,
+          "e": "FAUX : les globules rouges.",
+          "sourceQuote": "prennent des hématies (les globules rouges)"
+        },
+        {
+          "t": "Les lipides étaient empilés sur deux épaisseurs dans la membrane.",
+          "v": true,
+          "e": "VRAI. C'est ce que la mesure de surface impose de conclure.",
+          "sourceQuote": "c'est qu'ils étaient empilés sur deux épaisseurs dans la membrane"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-016-liposome-modele-et-medicament.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 8,
+      "q": "Parmi les propositions suivantes relatives aux deux réflexes à avoir devant un liposome en P1, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La première question à se poser porte sur la composition de la paroi.",
+          "v": true,
+          "e": "VRAI. C'est le premier des deux réflexes.",
+          "sourceQuote": "De quoi est faite la paroi ?"
+        },
+        {
+          "t": "Cette paroi est faite d'une bicouche lipidique et de rien d'autre.",
+          "v": true,
+          "e": "VRAI. Pas de protéines dans un liposome.",
+          "sourceQuote": "D'une bicouche lipidique, et de rien d'autre — pas de protéines"
+        },
+        {
+          "t": "L'absence de protéines fait tout l'intérêt de ce modèle.",
+          "v": true,
+          "e": "VRAI. C'est ce qui permet d'étudier la bicouche seule.",
+          "sourceQuote": "pas de protéines , c'est là tout l'intérêt du modèle"
+        },
+        {
+          "t": "La seconde question à se poser est de savoir où va le médicament.",
+          "v": true,
+          "e": "VRAI. Deux questions suffisent : la paroi, puis le rangement du médicament.",
+          "sourceQuote": "Où va le médicament ?"
+        },
+        {
+          "t": "Un médicament lipophile se loge dans le gras de la paroi.",
+          "v": true,
+          "e": "VRAI. Ce qui fuit l'eau se glisse dans l'épaisseur grasse.",
+          "sourceQuote": "lipophile dans le gras de la paroi"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-016-liposome-modele-et-medicament.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 9,
+      "q": "Parmi les propositions suivantes relatives au rangement d'un médicament dans un liposome, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le rangement correct est : hydrophile vers la cavité aqueuse, lipophile vers la bicouche.",
+          "v": true,
+          "e": "VRAI. Chaque molécule va là où elle est à l'aise.",
+          "sourceQuote": "hydrophile → cavité aqueuse , lipophile → bicouche"
+        },
+        {
+          "t": "Le rangement inverse est également admis.",
+          "v": false,
+          "e": "FAUX : l'inverse est faux, et c'est le piège classique.",
+          "sourceQuote": "L'inverse est faux"
+        },
+        {
+          "t": "Un médicament lipophile est décrit comme soluble dans les graisses.",
+          "v": true,
+          "e": "VRAI. C'est la définition donnée dans le tableau des trois zones.",
+          "sourceQuote": "Les médicaments lipophiles (solubles dans les graisses)"
+        },
+        {
+          "t": "Un médicament hydrophile se glisse dans le cœur gras de la paroi.",
+          "v": false,
+          "e": "FAUX : ce qui aime l'eau reste dans l'eau du centre.",
+          "sourceQuote": "ce qui aime l'eau reste dans l'eau du centre"
+        },
+        {
+          "t": "Une molécule qui fuit l'eau reste dans l'eau du centre du liposome.",
+          "v": false,
+          "e": "FAUX : elle se glisse dans le cœur gras de la paroi.",
+          "sourceQuote": "ce qui fuit l'eau se glisse dans le cœur gras de la paroi"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-016-liposome-modele-et-medicament.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 10,
+      "q": "Parmi les propositions suivantes relatives à l'étape de fusion entre le liposome et la cellule cible, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les deux bicouches se rejoignent : celle du liposome et celle de la cellule.",
+          "v": true,
+          "e": "VRAI. C'est ce qu'on appelle la fusion.",
+          "sourceQuote": "Les deux bicouches se rejoignent (celle du liposome et celle de la cellule)"
+        },
+        {
+          "t": "Cette fusion est possible parce que la structure est la même des deux côtés.",
+          "v": true,
+          "e": "VRAI. Une bicouche contre une bicouche.",
+          "sourceQuote": "C'est possible justement parce que c'est la même structure des deux côtés"
+        },
+        {
+          "t": "Après fusion, le contenu se retrouve directement dans la cellule.",
+          "v": true,
+          "e": "VRAI. C'est le principe de la délivrance ciblée.",
+          "sourceQuote": "Il se retrouve directement dans la cellule → délivrance ciblée du médicament"
+        },
+        {
+          "t": "La fusion suppose des protéines de reconnaissance dans la paroi du liposome.",
+          "v": false,
+          "e": "FAUX : la paroi ne contient aucune protéine ; c'est l'identité de structure qui rend la fusion possible.",
+          "sourceQuote": "fabriquée uniquement de lipides (pas de protéines)"
+        },
+        {
+          "t": "Le liposome traverse la membrane de la cellule sans se mêler à elle.",
+          "v": false,
+          "e": "FAUX : il fusionne avec elle.",
+          "sourceQuote": "Il fusionne avec la membrane"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-016-liposome-modele-et-medicament.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 11,
+      "q": "Parmi les propositions suivantes relatives à ce qu'un liposome n'est pas, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un liposome contient quelques protéines membranaires, en petit nombre.",
+          "v": false,
+          "e": "FAUX : il n'en contient aucune.",
+          "sourceQuote": "il ne contient aucune protéine"
+        },
+        {
+          "t": "Un liposome est une cellule de très petite taille.",
+          "v": false,
+          "e": "FAUX : ce n'est pas une cellule.",
+          "sourceQuote": "Un liposome n'est pas une cellule"
+        },
+        {
+          "t": "Sa paroi est faite de deux bicouches superposées.",
+          "v": false,
+          "e": "FAUX : une bicouche, et une seule.",
+          "sourceQuote": "Entre elles, une bicouche et une seule"
+        },
+        {
+          "t": "Sa formation exige d'assembler les phospholipides un par un.",
+          "v": false,
+          "e": "FAUX : mis dans l'eau, ils s'organisent spontanément en vésicule fermée.",
+          "sourceQuote": "ils s'organisent spontanément en vésicule fermée"
+        },
+        {
+          "t": "Un liposome est une petite sphère artificielle.",
+          "v": true,
+          "e": "VRAI. Artificielle, et faite uniquement de lipides.",
+          "sourceQuote": "Un liposome est une petite sphère artificielle fabriquée uniquement de lipides"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-016-liposome-modele-et-medicament.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 12,
+      "q": "Parmi les propositions suivantes relatives à ce que chaque zone du liposome peut loger, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le milieu extérieur ne loge rien : le liposome ne fait qu'y circuler.",
+          "v": true,
+          "e": "VRAI. Rien n'y est stocké.",
+          "sourceQuote": "rien : le liposome ne fait qu'y circuler"
+        },
+        {
+          "t": "La paroi loge les médicaments lipophiles.",
+          "v": true,
+          "e": "VRAI. Le cœur gras de la bicouche les accueille.",
+          "sourceQuote": "Les médicaments lipophiles (solubles dans les graisses)"
+        },
+        {
+          "t": "La cavité intérieure loge les médicaments hydrophiles, solubles dans l'eau.",
+          "v": true,
+          "e": "VRAI. Ce qui aime l'eau reste dans l'eau.",
+          "sourceQuote": "Les médicaments hydrophiles (solubles dans l'eau)"
+        },
+        {
+          "t": "L'intérieur du liposome est un espace aqueux interne.",
+          "v": true,
+          "e": "VRAI. C'est une cavité remplie d'eau.",
+          "sourceQuote": "Une cavité remplie d'eau (l'espace aqueux interne)"
+        },
+        {
+          "t": "Chaque molécule va là où elle est à l'aise.",
+          "v": true,
+          "e": "VRAI. C'est la règle qui gouverne tout le rangement.",
+          "sourceQuote": "Chaque molécule va là où elle est à l'aise"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-016-liposome-modele-et-medicament.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 13,
+      "q": "Parmi les propositions suivantes relatives à ce qui rend possible la fabrication d'un liposome, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les phospholipides sont amphiphiles et s'organisent spontanément en bicouche en milieu aqueux.",
+          "v": true,
+          "e": "VRAI. C'est cette auto-organisation qu'on exploite au laboratoire.",
+          "sourceQuote": "les phospholipides sont amphiphiles et qu'ils s'organisent spontanément en bicouche en milieu aqueux"
+        },
+        {
+          "t": "Dans cette organisation, les queues sont cachées au milieu et les têtes tournées vers l'eau.",
+          "v": true,
+          "e": "VRAI. C'est le rangement habituel d'une bicouche.",
+          "sourceQuote": "les têtes vers l'eau, les queues cachées au milieu"
+        },
+        {
+          "t": "Une bicouche ne se formant jamais seule, il faut la construire molécule par molécule.",
+          "v": false,
+          "e": "FAUX : elle se forme toute seule, et c'est justement pour cela qu'on peut en fabriquer une au laboratoire.",
+          "sourceQuote": "si une bicouche se forme toute seule, on peut en fabriquer une au laboratoire"
+        },
+        {
+          "t": "Le modèle de la mosaïque fluide décrit une bicouche sans protéines, comme le liposome.",
+          "v": false,
+          "e": "FAUX : dans ce modèle, des protéines flottent dans la bicouche. C'est le liposome qui n'en a pas.",
+          "sourceQuote": "avec ses protéines qui flottent dedans"
+        },
+        {
+          "t": "Cette auto-organisation reste une curiosité sans conséquence pratique.",
+          "v": false,
+          "e": "FAUX : elle a une conséquence très concrète, le liposome.",
+          "sourceQuote": "Cette auto-organisation a une conséquence très concrète"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-016-liposome-modele-et-medicament.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 14,
+      "q": "Parmi les propositions suivantes relatives à l'enchaînement des quatre étapes de la délivrance d'un médicament, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La première étape consiste à piéger le médicament dans le liposome.",
+          "v": true,
+          "e": "VRAI. On l'enferme avant tout déplacement.",
+          "sourceQuote": "On piège le médicament"
+        },
+        {
+          "t": "La deuxième étape est un trajet sanguin jusqu'à la cible.",
+          "v": true,
+          "e": "VRAI. Le liposome voyage dans le sang.",
+          "sourceQuote": "Il circule dans le sang jusqu'à la cellule cible"
+        },
+        {
+          "t": "La libération du contenu vient en dernier.",
+          "v": true,
+          "e": "VRAI. Après la fusion, le contenu est libéré.",
+          "sourceQuote": "Le contenu est libéré"
+        },
+        {
+          "t": "On parle alors de délivrance ciblée du médicament.",
+          "v": true,
+          "e": "VRAI. Le médicament arrive directement dans la cellule visée.",
+          "sourceQuote": "délivrance ciblée du médicament"
+        },
+        {
+          "t": "Le médicament lipophile est enfermé dans la cavité aqueuse intérieure.",
+          "v": false,
+          "e": "FAUX : il est intégré dans la bicouche elle-même.",
+          "sourceQuote": "Lipophile → intégré dans la bicouche lipidique elle-même"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-016-liposome-modele-et-medicament.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 15,
+      "q": "Parmi les propositions suivantes relatives à l'exemple des vaccins à ARNm et à l'intérêt du liposome, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'ARN est décrit comme très fragile.",
+          "v": true,
+          "e": "VRAI. C'est ce qui justifie de le protéger dans une bulle de membrane.",
+          "sourceQuote": "protéger l'ARN, très fragile"
+        },
+        {
+          "t": "Le liposome permet de faire entrer cet ARN dans les cellules.",
+          "v": true,
+          "e": "VRAI. Protection et entrée dans la cellule, les deux à la fois.",
+          "sourceQuote": "et le faire entrer dans les cellules"
+        },
+        {
+          "t": "Le liposome sert par ailleurs de modèle simplifié de membrane.",
+          "v": true,
+          "e": "VRAI. On ne garde que la bicouche.",
+          "sourceQuote": "C'est un modèle simplifié de membrane"
+        },
+        {
+          "t": "Il permet d'étudier une bicouche avec toute la complexité d'une vraie cellule.",
+          "v": false,
+          "e": "FAUX : justement sans les protéines et sans cette complexité.",
+          "sourceQuote": "sans les protéines et sans la complexité d'une vraie cellule"
+        },
+        {
+          "t": "L'exemple médical cité concerne les vaccins à virus atténué.",
+          "v": false,
+          "e": "FAUX : les vaccins à ARNm contre la COVID-19.",
+          "sourceQuote": "certains vaccins à ARNm (COVID-19) utilisent des liposomes"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-017-mouvements-des-lipides-et-frap.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 8,
+      "q": "Parmi les propositions suivantes relatives à la flexion des lipides membranaires, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La flexion fait tourner le lipide autour d'un axe vertical.",
+          "v": false,
+          "e": "FAUX : tourner sur soi-même autour d'un axe vertical, c'est la rotation.",
+          "sourceQuote": "Il tourne sur lui-même , autour d'un axe vertical"
+        },
+        {
+          "t": "La flexion fait passer le lipide dans le feuillet opposé.",
+          "v": false,
+          "e": "FAUX : changer de feuillet, c'est la diffusion transversale.",
+          "sourceQuote": "Il passe d'un feuillet à l'autre"
+        },
+        {
+          "t": "Lors de la flexion, les chaînes d'acides gras se plient et se déplient.",
+          "v": true,
+          "e": "VRAI. Ce sont les queues qui remuent.",
+          "sourceQuote": "Ses chaînes d'acides gras se plient et se déplient"
+        },
+        {
+          "t": "La flexion déplace le lipide dans le plan de la membrane.",
+          "v": false,
+          "e": "FAUX : se déplacer dans le plan de la membrane, c'est la diffusion latérale.",
+          "sourceQuote": "Il se déplace dans le plan de la membrane"
+        },
+        {
+          "t": "La flexion est le seul des quatre mouvements à être rare.",
+          "v": false,
+          "e": "FAUX : le seul mouvement rare est le flip-flop.",
+          "sourceQuote": "un seul fait changer de feuillet (le flip-flop) — et c'est justement le seul des quatre à être rare"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-017-mouvements-des-lipides-et-frap.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 9,
+      "q": "Parmi les propositions suivantes relatives au marquage fluorescent et au faisceau laser employés en FRAP, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les molécules fluorescentes brillent quand on les éclaire.",
+          "v": true,
+          "e": "VRAI. C'est ce qui rend la membrane visible.",
+          "sourceQuote": "des molécules fluorescentes (qui brillent quand on les éclaire)"
+        },
+        {
+          "t": "Après le marquage, toute la membrane devient lumineuse.",
+          "v": true,
+          "e": "VRAI. Le marquage précède le photoblanchiment.",
+          "sourceQuote": "Toute la membrane devient lumineuse"
+        },
+        {
+          "t": "Le laser est dirigé sur une petite zone précise.",
+          "v": true,
+          "e": "VRAI. C'est cette zone qui devient sombre.",
+          "sourceQuote": "On envoie un faisceau laser intense sur une petite zone précise"
+        },
+        {
+          "t": "Le laser éteint seulement la fluorescence, sans détruire les lipides.",
+          "v": true,
+          "e": "VRAI. Les lipides blanchis restent en place.",
+          "sourceQuote": "Le laser ne détruit pas les lipides et ne les fait pas partir : il éteint seulement leur fluorescence"
+        },
+        {
+          "t": "Le laser est envoyé sur l'ensemble de la membrane marquée.",
+          "v": false,
+          "e": "FAUX : il ne vise qu'un petit endroit, qui devient sombre.",
+          "sourceQuote": "Le laser « brûle » les molécules fluorescentes à cet endroit → la zone devient sombre"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-017-mouvements-des-lipides-et-frap.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 10,
+      "q": "Parmi les propositions suivantes relatives à la diffusion latérale, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le lipide se déplace dans le plan de la membrane.",
+          "v": true,
+          "e": "VRAI. Un déplacement horizontal.",
+          "sourceQuote": "Il se déplace dans le plan de la membrane"
+        },
+        {
+          "t": "Il reste dans son feuillet, c'est-à-dire dans sa propre couche.",
+          "v": true,
+          "e": "VRAI. La bicouche en compte deux, il ne change pas de côté.",
+          "sourceQuote": "en restant dans son feuillet (sa couche à lui : la bicouche en compte deux)"
+        },
+        {
+          "t": "C'est un mouvement très fréquent et rapide.",
+          "v": true,
+          "e": "VRAI. Le plus courant des quatre.",
+          "sourceQuote": "Mouvement très fréquent et rapide"
+        },
+        {
+          "t": "C'est le mouvement que la FRAP met en évidence.",
+          "v": true,
+          "e": "VRAI. Elle le démontre et le mesure.",
+          "sourceQuote": "la technique qui met en évidence la diffusion latérale"
+        },
+        {
+          "t": "C'est ce mouvement qui explique le retour de la lumière dans la zone blanchie.",
+          "v": true,
+          "e": "VRAI. Les lipides voisins encore fluorescents migrent dans la zone sombre.",
+          "sourceQuote": "se déplacent latéralement et migrent dans la zone sombre"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-017-mouvements-des-lipides-et-frap.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 11,
+      "q": "Parmi les propositions suivantes relatives à la portée de la FRAP et à la suite du chapitre, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La FRAP permet de chiffrer la vitesse à laquelle les lipides se déplacent.",
+          "v": true,
+          "e": "VRAI. Elle ne fait pas que montrer le mouvement, elle le mesure.",
+          "sourceQuote": "elle chiffre à quelle vitesse"
+        },
+        {
+          "t": "Une récupération rapide de la fluorescence traduit une forte mobilité lipidique.",
+          "v": true,
+          "e": "VRAI. Plus la lumière revient vite, plus les lipides bougent.",
+          "sourceQuote": "Récupération rapide = forte mobilité lipidique"
+        },
+        {
+          "t": "Le flip-flop est traité en détail dans cette fiche.",
+          "v": false,
+          "e": "FAUX : il n'y est que cité ; il fait l'objet de la fiche suivante.",
+          "sourceQuote": "C'est la fiche suivante"
+        },
+        {
+          "t": "Ce qui repeuple la zone blanchie provient de l'autre feuillet.",
+          "v": false,
+          "e": "FAUX : ce sont des lipides voisins du même feuillet.",
+          "sourceQuote": "des lipides voisins du même feuillet qui glissent latéralement"
+        },
+        {
+          "t": "Les lipides qui repeuplent la zone sombre avaient eux aussi été blanchis.",
+          "v": false,
+          "e": "FAUX : ils viennent des zones voisines et n'ont pas été blanchis.",
+          "sourceQuote": "les lipides fluorescents des zones voisines , eux non blanchis"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-017-mouvements-des-lipides-et-frap.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 12,
+      "q": "Parmi les propositions suivantes relatives à la rotation et à sa place parmi les quatre mouvements, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans la rotation, le lipide tourne sur lui-même.",
+          "v": true,
+          "e": "VRAI. Il pivote sans quitter sa place.",
+          "sourceQuote": "Il tourne sur lui-même , autour d'un axe vertical"
+        },
+        {
+          "t": "L'axe de cette rotation est vertical.",
+          "v": true,
+          "e": "VRAI. Un axe perpendiculaire au plan de la membrane.",
+          "sourceQuote": "autour d'un axe vertical"
+        },
+        {
+          "t": "Sur le schéma des quatre mouvements, la rotation tourne sur place.",
+          "v": true,
+          "e": "VRAI. Le lipide ne se déplace pas.",
+          "sourceQuote": "celle de la rotation tourne sur place autour d'un axe vertical"
+        },
+        {
+          "t": "La rotation fait changer le lipide de feuillet.",
+          "v": false,
+          "e": "FAUX : elle fait partie des trois mouvements qui gardent le lipide dans son feuillet.",
+          "sourceQuote": "Trois mouvements gardent le lipide dans son feuillet"
+        },
+        {
+          "t": "La rotation est le mouvement mis en évidence par la FRAP.",
+          "v": false,
+          "e": "FAUX : la FRAP met en évidence la diffusion latérale.",
+          "sourceQuote": "la technique qui met en évidence la diffusion latérale"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-017-mouvements-des-lipides-et-frap.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 13,
+      "q": "Parmi les propositions suivantes relatives à la raison d'être de l'expérience de FRAP, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "On ne voit pas les lipides bouger : il a fallu une expérience pour le démontrer.",
+          "v": true,
+          "e": "VRAI. D'où le recours à un marquage fluorescent.",
+          "sourceQuote": "On ne les voit pas bouger. Il a fallu une expérience pour le démontrer"
+        },
+        {
+          "t": "Cette expérience permet aussi de mesurer ce déplacement.",
+          "v": true,
+          "e": "VRAI. Démontrer, puis mesurer.",
+          "sourceQuote": "et même pour le mesurer"
+        },
+        {
+          "t": "Le modèle de la mosaïque fluide affirmait déjà que la membrane bouge.",
+          "v": true,
+          "e": "VRAI. Cette fiche explique comment.",
+          "sourceQuote": "La mosaïque fluide disait « ça bouge »"
+        },
+        {
+          "t": "Dans ce modèle, les lipides forment une base liquide où les protéines flottent.",
+          "v": true,
+          "e": "VRAI. Restait à préciser ce que « fluide » veut dire.",
+          "sourceQuote": "Les lipides y forment une base liquide dans laquelle les protéines « flottent »"
+        },
+        {
+          "t": "La fiche précédente avait isolé la bicouche hors de la cellule, sous la forme d'un liposome.",
+          "v": true,
+          "e": "VRAI. Une bicouche fabriquée au laboratoire pour l'étudier seule.",
+          "sourceQuote": "le liposome , une bicouche isolée qu'on fabrique au laboratoire pour l'étudier seule"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-017-mouvements-des-lipides-et-frap.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 14,
+      "q": "Parmi les propositions suivantes relatives au partage des quatre mouvements entre ceux qui gardent le feuillet et celui qui en change, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La diffusion latérale, la rotation et le flip-flop se font à l'intérieur d'un même feuillet.",
+          "v": false,
+          "e": "FAUX : les trois mouvements internes sont la diffusion latérale, la rotation et la flexion.",
+          "sourceQuote": "trois mouvements se font à l'intérieur d'un feuillet (diffusion latérale, rotation, flexion)"
+        },
+        {
+          "t": "La flexion fait changer le lipide de feuillet.",
+          "v": false,
+          "e": "FAUX : un seul mouvement le fait, le flip-flop.",
+          "sourceQuote": "un seul fait changer de feuillet (le flip-flop)"
+        },
+        {
+          "t": "Sur le schéma, plusieurs flèches traversent la bicouche de part en part.",
+          "v": false,
+          "e": "FAUX : une seule, celle du flip-flop.",
+          "sourceQuote": "Seule la flèche du flip-flop traverse la bicouche de part en part"
+        },
+        {
+          "t": "Le flip-flop est fréquent, au même titre que la diffusion latérale.",
+          "v": false,
+          "e": "FAUX : il est crucial, mais rare.",
+          "sourceQuote": "Fonctionnellement crucial, mais rare"
+        },
+        {
+          "t": "Le flip-flop porte aussi le nom de diffusion transversale.",
+          "v": true,
+          "e": "VRAI. Deux noms pour le même mouvement.",
+          "sourceQuote": "diffusion transversale ou flip-flop, crucial mais rare"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-017-mouvements-des-lipides-et-frap.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 15,
+      "q": "Parmi les propositions suivantes relatives à l'importance de la fluidité et au décompte des mouvements, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La fluidité de la membrane n'est qu'un détail sans conséquence.",
+          "v": false,
+          "e": "FAUX : elle est indispensable aux échanges et au fonctionnement des protéines.",
+          "sourceQuote": "Cette fluidité n'est pas un détail"
+        },
+        {
+          "t": "Les lipides membranaires bougent selon quatre mouvements.",
+          "v": true,
+          "e": "VRAI. Trois dans le feuillet, un qui en change.",
+          "sourceQuote": "ses lipides bougent en permanence selon 4 mouvements"
+        },
+        {
+          "t": "Parmi eux, la diffusion latérale est très fréquente et rapide.",
+          "v": true,
+          "e": "VRAI. C'est le mouvement le plus courant.",
+          "sourceQuote": "diffusion latérale (très fréquente et rapide)"
+        },
+        {
+          "t": "La flexion concerne la tête polaire du lipide.",
+          "v": false,
+          "e": "FAUX : elle concerne les chaînes d'acides gras, donc les queues.",
+          "sourceQuote": "flexion des chaînes d'acides gras"
+        },
+        {
+          "t": "Le flip-flop est à la fois crucial et fréquent.",
+          "v": false,
+          "e": "FAUX : crucial, mais rare.",
+          "sourceQuote": "crucial mais rare"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-018-flip-flop-flippase-floppase-scramblase.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 8,
+      "q": "Parmi les propositions suivantes relatives à l'énergie et aux activateurs des protéines du flip-flop, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La flippase et la floppase ont besoin d'ATP.",
+          "v": true,
+          "e": "VRAI. Ce sont les deux protéines qui consomment de l'énergie.",
+          "sourceQuote": "flippase et floppase : ATP"
+        },
+        {
+          "t": "La scramblase est activable par le calcium.",
+          "v": true,
+          "e": "VRAI. C'est le Ca²⁺ qui la met en route.",
+          "sourceQuote": "scramblase : activable par le Ca²⁺"
+        },
+        {
+          "t": "La scramblase consomme de l'ATP pour fonctionner.",
+          "v": false,
+          "e": "FAUX : l'ATP, ce sont la flippase et la floppase qui en ont besoin.",
+          "sourceQuote": "l'ATP, ce sont la flippase et la floppase qui en ont besoin"
+        },
+        {
+          "t": "La floppase nécessite de l'ATP elle aussi.",
+          "v": true,
+          "e": "VRAI. Comme la flippase.",
+          "sourceQuote": "Elle nécessite de l'ATP elle aussi"
+        },
+        {
+          "t": "Trois protéines spécialisées prennent en charge ce mouvement.",
+          "v": true,
+          "e": "VRAI. Flippase, floppase et scramblase.",
+          "sourceQuote": "D'où trois protéines spécialisées"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-018-flip-flop-flippase-floppase-scramblase.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 9,
+      "q": "Parmi les propositions suivantes relatives au sens de travail de chacune des protéines du flip-flop, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La flippase déplace le lipide du feuillet interne vers le feuillet externe.",
+          "v": false,
+          "e": "FAUX : elle le fait entrer, de l'externe vers l'interne.",
+          "sourceQuote": "Elle fait passer le lipide du feuillet externe vers le feuillet interne"
+        },
+        {
+          "t": "La floppase fait entrer le lipide vers l'intérieur.",
+          "v": false,
+          "e": "FAUX : elle le fait sortir, de l'interne vers l'externe.",
+          "sourceQuote": "Elle travaille dans l'autre sens : du feuillet interne vers le feuillet externe"
+        },
+        {
+          "t": "La scramblase impose un ordre précis aux lipides qu'elle déplace.",
+          "v": false,
+          "e": "FAUX : elle va dans les deux sens, sans ordre.",
+          "sourceQuote": "va dans les 2 sens sans ordre"
+        },
+        {
+          "t": "La flippase et la floppase travaillent dans le même sens.",
+          "v": false,
+          "e": "FAUX : elles travaillent en sens inverse l'une de l'autre.",
+          "sourceQuote": "Elle travaille dans l'autre sens"
+        },
+        {
+          "t": "C'est la flippase qui prend en charge la phosphatidylsérine.",
+          "v": true,
+          "e": "VRAI. C'est l'exemple donné pour cette protéine.",
+          "sourceQuote": "exemple : la phosphatidylsérine"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-018-flip-flop-flippase-floppase-scramblase.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 10,
+      "q": "Parmi les propositions suivantes relatives à la taille de la tête polaire et à la vitesse de bascule, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La tête polaire du cholestérol se réduit à un simple –OH.",
+          "v": true,
+          "e": "VRAI. Une tête minuscule, donc un passage facile.",
+          "sourceQuote": "Il a une petite tête polaire (un simple –OH)"
+        },
+        {
+          "t": "Le cholestérol bascule de façon rapide et fréquente.",
+          "v": true,
+          "e": "VRAI. C'est ce qui le distingue des phospholipides.",
+          "sourceQuote": "Le cholestérol : bascule rapide et fréquente"
+        },
+        {
+          "t": "La tête polaire des phospholipides est volumineuse.",
+          "v": true,
+          "e": "VRAI. C'est ce qui rend leur passage coûteux.",
+          "sourceQuote": "Leur tête polaire est volumineuse"
+        },
+        {
+          "t": "Chez le cholestérol, ce passage coûte cher à la cellule.",
+          "v": false,
+          "e": "FAUX : il lui coûte peu.",
+          "sourceQuote": "donc le passage lui coûte peu"
+        },
+        {
+          "t": "Les phospholipides basculent eux aussi de façon rapide et fréquente.",
+          "v": false,
+          "e": "FAUX : leur bascule est lente et rare.",
+          "sourceQuote": "Les phospholipides : bascule lente et rare"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-018-flip-flop-flippase-floppase-scramblase.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 11,
+      "q": "Parmi les propositions suivantes relatives à la composition comparée des deux feuillets, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La répartition similaire du cholestérol dans les deux feuillets est la conséquence directe de sa bascule facile.",
+          "v": true,
+          "e": "VRAI. Comme il passe facilement, il finit par s'égaliser des deux côtés.",
+          "sourceQuote": "Conséquence directe : le cholestérol a une répartition similaire dans les deux feuillets"
+        },
+        {
+          "t": "Si les phospholipides basculaient facilement, les deux feuillets auraient la même composition.",
+          "v": true,
+          "e": "VRAI. C'est le raisonnement par l'absurde donné dans la fiche.",
+          "sourceQuote": "et les deux feuillets auraient la même composition"
+        },
+        {
+          "t": "L'asymétrie membranaire a été traitée plus tôt dans le chapitre.",
+          "v": false,
+          "e": "FAUX : elle est annoncée pour plus loin.",
+          "sourceQuote": "L'asymétrie membranaire, que tu verras plus loin dans le chapitre"
+        },
+        {
+          "t": "L'asymétrie membranaire ne dépend qu'en partie de la rareté du flip-flop.",
+          "v": false,
+          "e": "FAUX : elle repose entièrement là-dessus.",
+          "sourceQuote": "repose entièrement là-dessus"
+        },
+        {
+          "t": "La cellule cherche à obtenir deux feuillets de composition identique.",
+          "v": false,
+          "e": "FAUX : elle installe et maintient au contraire une différence entre les deux.",
+          "sourceQuote": "la cellule peut installer et maintenir une différence entre ses deux feuillets"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-018-flip-flop-flippase-floppase-scramblase.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 12,
+      "q": "Parmi les propositions suivantes relatives à la diffusion transversale telle que la fiche la présente, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La formule à retenir telle quelle est : fonctionnellement crucial, mais rare.",
+          "v": true,
+          "e": "VRAI. Rare ne veut pas dire secondaire.",
+          "sourceQuote": "Une formule à retenir telle quelle : fonctionnellement crucial, mais rare"
+        },
+        {
+          "t": "Les trois autres mouvements ne font pas quitter son feuillet au lipide.",
+          "v": true,
+          "e": "VRAI. Diffusion latérale, rotation et flexion restent dans le feuillet.",
+          "sourceQuote": "Les trois premiers ne font pas quitter son feuillet au lipide"
+        },
+        {
+          "t": "Sur le schéma des quatre mouvements, cette fiche ne traite qu'une seule flèche.",
+          "v": true,
+          "e": "VRAI. Celle de la diffusion transversale.",
+          "sourceQuote": "C'est cette flèche-là, et elle seule, que traite cette fiche"
+        },
+        {
+          "t": "Seule la diffusion transversale fait basculer le lipide de l'autre côté.",
+          "v": true,
+          "e": "VRAI. Les trois autres le gardent dans son feuillet.",
+          "sourceQuote": "Seule la diffusion transversale le fait basculer de l'autre côté"
+        },
+        {
+          "t": "Lors de ce passage, la tête polaire doit franchir le milieu des queues hydrophobes.",
+          "v": true,
+          "e": "VRAI. C'est de là que vient le coût du mouvement.",
+          "sourceQuote": "avec sa tête polaire à faire passer au milieu des queues hydrophobes"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-018-flip-flop-flippase-floppase-scramblase.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 13,
+      "q": "Parmi les propositions suivantes relatives au rappel des quatre mouvements en ouverture de la fiche, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les quatre mouvements cités sont la diffusion latérale, la rotation, la flexion et la diffusion transversale.",
+          "v": true,
+          "e": "VRAI. C'est la liste rappelée en ouverture.",
+          "sourceQuote": "diffusion latérale , rotation , flexion , diffusion transversale"
+        },
+        {
+          "t": "La FRAP met en évidence le premier de ces quatre mouvements.",
+          "v": true,
+          "e": "VRAI. C'est la diffusion latérale qu'elle démontre.",
+          "sourceQuote": "et la FRAP , qui met en évidence le premier"
+        },
+        {
+          "t": "Le flip-flop est un autre nom de la diffusion transversale.",
+          "v": true,
+          "e": "VRAI. Les deux termes désignent le même mouvement.",
+          "sourceQuote": "la diffusion transversale — le fameux flip-flop"
+        },
+        {
+          "t": "Un phospholipide change souvent de feuillet de lui-même.",
+          "v": false,
+          "e": "FAUX : il ne le fait presque jamais tout seul.",
+          "sourceQuote": "Un phospholipide ne change presque jamais de feuillet tout seul"
+        },
+        {
+          "t": "C'est justement la rareté de ce changement qui rend l'asymétrie possible.",
+          "v": true,
+          "e": "VRAI. Sans elle, les deux feuillets se ressembleraient.",
+          "sourceQuote": "c'est exactement pour ça que la membrane peut être asymétrique"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-018-flip-flop-flippase-floppase-scramblase.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 14,
+      "q": "Parmi les propositions suivantes relatives à la première des trois questions à se poser — qui bascule —, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le cholestérol bascule vite et souvent.",
+          "v": true,
+          "e": "VRAI. C'est le réflexe à avoir sur lui.",
+          "sourceQuote": "cholestérol = vite et souvent"
+        },
+        {
+          "t": "Les phospholipides basculent lentement et rarement.",
+          "v": true,
+          "e": "VRAI. L'inverse du cholestérol.",
+          "sourceQuote": "phospholipides = lentement et rarement"
+        },
+        {
+          "t": "Le flip-flop est fréquent pour les phospholipides et rare pour le cholestérol.",
+          "v": false,
+          "e": "FAUX : c'est exactement l'inverse.",
+          "sourceQuote": "fréquent pour le cholestérol, rare pour les phospholipides"
+        },
+        {
+          "t": "La scramblase ne travaille que dans un seul des deux sens.",
+          "v": false,
+          "e": "FAUX : elle va dans les deux.",
+          "sourceQuote": "scramblase les deux"
+        },
+        {
+          "t": "Le cholestérol et les phospholipides basculent à la même vitesse.",
+          "v": false,
+          "e": "FAUX : deux lipides, deux vitesses de bascule.",
+          "sourceQuote": "Deux lipides, deux vitesses de bascule"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-018-flip-flop-flippase-floppase-scramblase.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 15,
+      "q": "Parmi les propositions suivantes relatives au portrait de la scramblase, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La scramblase est bidirectionnelle.",
+          "v": true,
+          "e": "VRAI. Elle fait passer les lipides dans les deux sens.",
+          "sourceQuote": "Elle est bidirectionnelle et moins spécifique"
+        },
+        {
+          "t": "Elle est moins spécifique que les deux autres protéines du flip-flop.",
+          "v": true,
+          "e": "VRAI. Flippase et floppase, elles, ont un substrat de référence.",
+          "sourceQuote": "scramblase (bidirectionnelle, moins spécifique, activable par Ca²⁺)"
+        },
+        {
+          "t": "Son nom vient de SCRAMBLE, qui signifie mélanger ou brouiller.",
+          "v": true,
+          "e": "VRAI. C'est le moyen mnémotechnique donné dans la fiche.",
+          "sourceQuote": "SCRAMBLE = mélanger/brouiller"
+        },
+        {
+          "t": "Le calcium peut l'activer.",
+          "v": true,
+          "e": "VRAI. Le Ca²⁺, et non l'ATP.",
+          "sourceQuote": "Elle est activable par le calcium (Ca²⁺)"
+        },
+        {
+          "t": "Elle ne choisit pas vraiment le lipide qu'elle déplace.",
+          "v": true,
+          "e": "VRAI. Ni le sens, ni vraiment le lipide.",
+          "sourceQuote": "elle ne choisit ni le sens, ni vraiment le lipide"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-019-facteurs-de-fluidite.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 8,
+      "q": "Parmi les propositions suivantes relatives à l'état gel de la membrane, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Une membrane figée n'est plus une membrane fonctionnelle.",
+          "v": true,
+          "e": "VRAI. C'est tout l'enjeu de la fluidité.",
+          "sourceQuote": "Une membrane figée n'est plus une membrane fonctionnelle"
+        },
+        {
+          "t": "En état gel, les échanges et les protéines ne suivent plus.",
+          "v": true,
+          "e": "VRAI. Ils ont justement besoin de cette fluidité.",
+          "sourceQuote": "Les échanges et les protéines, qui ont justement besoin de cette fluidité, ne suivent plus"
+        },
+        {
+          "t": "L'état dont la cellule a besoin est l'état fluide.",
+          "v": true,
+          "e": "VRAI. C'est son état normal.",
+          "sourceQuote": "C'est l'état normal, celui dont la cellule a besoin"
+        },
+        {
+          "t": "En état gel, la membrane est souple.",
+          "v": false,
+          "e": "FAUX : elle devient rigide et non fonctionnelle.",
+          "sourceQuote": "Les lipides sont figés → la membrane devient rigide et non fonctionnelle"
+        },
+        {
+          "t": "Des acides gras longs et saturés éloignent la membrane de l'état gel.",
+          "v": false,
+          "e": "FAUX : ils diminuent la fluidité, donc rapprochent la membrane de l'état gel.",
+          "sourceQuote": "↓ fluidité s'ils sont longs (plus de surface de contact → les lipides se serrent davantage) et saturés (sans double liaison)"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-019-facteurs-de-fluidite.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 9,
+      "q": "Parmi les propositions suivantes relatives à l'ensemble des facteurs qui contrôlent la fluidité, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Trois facteurs majeurs contrôlent l'équilibre entre les deux états.",
+          "v": true,
+          "e": "VRAI. Ni un, ni deux : trois.",
+          "sourceQuote": "3 facteurs majeurs contrôlent l'équilibre"
+        },
+        {
+          "t": "Les deux premiers poussent la membrane dans un sens ou dans l'autre.",
+          "v": true,
+          "e": "VRAI. Température et type d'acides gras ont un sens d'effet unique.",
+          "sourceQuote": "Les deux premiers poussent la membrane dans un sens ou dans l'autre"
+        },
+        {
+          "t": "Le troisième, lui, la ramène au centre.",
+          "v": true,
+          "e": "VRAI. C'est le rôle régulateur du cholestérol.",
+          "sourceQuote": "le troisième, lui, la ramène au centre"
+        },
+        {
+          "t": "Ce troisième facteur joue dans les deux sens.",
+          "v": true,
+          "e": "VRAI. Selon la température, il freine ou il empêche de geler.",
+          "sourceQuote": "Trois facteurs décident de sa fluidité — et le troisième joue dans les deux sens"
+        },
+        {
+          "t": "Le troisième facteur est la longueur de la membrane.",
+          "v": false,
+          "e": "FAUX : c'est le cholestérol, l'agent régulateur.",
+          "sourceQuote": "Le cholestérol 🎯 : l'agent régulateur"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-019-facteurs-de-fluidite.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 10,
+      "q": "Parmi les propositions suivantes relatives aux affirmations à écarter sur la fluidité, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les doubles liaisons cis sont l'apanage des acides gras saturés.",
+          "v": false,
+          "e": "FAUX : ce sont les insaturés qui en portent ; un saturé n'a aucune double liaison.",
+          "sourceQuote": "insaturés , avec des doubles liaisons cis"
+        },
+        {
+          "t": "« Le cholestérol augmente toujours la fluidité » est une affirmation juste.",
+          "v": false,
+          "e": "FAUX : à haute température, il la diminue.",
+          "sourceQuote": "Un QCM qui affirme « le cholestérol augmente toujours la fluidité » est FAUX"
+        },
+        {
+          "t": "On peut retenir « le cholestérol augmente la fluidité » tout seul.",
+          "v": false,
+          "e": "FAUX : la réponse dépend toujours de la température.",
+          "sourceQuote": "Ne retiens jamais « le cholestérol augmente la fluidité » ni « le cholestérol diminue la fluidité » tout seul"
+        },
+        {
+          "t": "Donner au cholestérol un effet unique est le bon réflexe.",
+          "v": false,
+          "e": "FAUX : c'est justement un piège classique.",
+          "sourceQuote": "Autre piège classique : donner au cholestérol un effet unique"
+        },
+        {
+          "t": "Ce sont les acides gras insaturés qui augmentent la fluidité.",
+          "v": true,
+          "e": "VRAI. Leurs courbures empêchent l'empilement serré.",
+          "sourceQuote": "ce sont les insaturés , dont les doubles liaisons cis créent des courbures"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-019-facteurs-de-fluidite.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 11,
+      "q": "Parmi les propositions suivantes reprenant les repères essentiels sur la fluidité membranaire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Deux états sont possibles : fluide, souple et fonctionnelle, ou gel, rigide et non fonctionnelle.",
+          "v": true,
+          "e": "VRAI. C'est le couple d'états à retenir.",
+          "sourceQuote": "fluide (souple, fonctionnelle) ou gel (rigide, non fonctionnelle)"
+        },
+        {
+          "t": "Température élevée : la fluidité augmente ; température basse : elle diminue.",
+          "v": true,
+          "e": "VRAI. Le sens de l'effet est unique.",
+          "sourceQuote": "Température élevée → ↑ fluidité ; basse → ↓ fluidité"
+        },
+        {
+          "t": "Acides gras courts et insaturés : la fluidité augmente.",
+          "v": true,
+          "e": "VRAI. Peu de contact et des courbures : l'empilement reste lâche.",
+          "sourceQuote": "Acides gras courts et insaturés → ↑ fluidité"
+        },
+        {
+          "t": "Acides gras longs et saturés : la fluidité diminue.",
+          "v": true,
+          "e": "VRAI. Beaucoup de contact et des queues droites : l'empilement se resserre.",
+          "sourceQuote": "longs et saturés → ↓ fluidité"
+        },
+        {
+          "t": "Le cholestérol a un effet tampon qui maintient une zone de fluidité optimale.",
+          "v": true,
+          "e": "VRAI. Il joue dans les deux sens.",
+          "sourceQuote": "Cholestérol = effet tampon dans les deux sens → zone de fluidité optimale"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-019-facteurs-de-fluidite.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 12,
+      "q": "Parmi les propositions suivantes relatives à ce qui a été établi avant cette fiche et à la question qu'elle pose, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les fiches précédentes ont montré que les lipides diffusent latéralement, tournent, se plient et basculent rarement d'un feuillet à l'autre.",
+          "v": true,
+          "e": "VRAI. C'est le bilan des quatre mouvements.",
+          "sourceQuote": "ils diffusent latéralement, tournent, se plient, et basculent rarement d'un feuillet à l'autre"
+        },
+        {
+          "t": "La question posée ici est de savoir de quoi dépend cette fluidité.",
+          "v": true,
+          "e": "VRAI. Et comment la cellule garde la main dessus.",
+          "sourceQuote": "de quoi dépend cette fluidité"
+        },
+        {
+          "t": "La fluidité n'a pas d'incidence sur le fonctionnement des protéines.",
+          "v": false,
+          "e": "FAUX : elle leur est indispensable, comme aux échanges.",
+          "sourceQuote": "cette fluidité est indispensable aux échanges et au fonctionnement des protéines"
+        },
+        {
+          "t": "La cellule n'a aucun moyen d'agir sur sa propre fluidité.",
+          "v": false,
+          "e": "FAUX : le cholestérol stabilise la membrane dans toutes les conditions.",
+          "sourceQuote": "il stabilise la membrane dans toutes les conditions"
+        },
+        {
+          "t": "Le basculement d'un feuillet à l'autre est décrit comme fréquent.",
+          "v": false,
+          "e": "FAUX : il est rare.",
+          "sourceQuote": "basculent rarement d'un feuillet à l'autre"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-019-facteurs-de-fluidite.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 13,
+      "q": "Parmi les propositions suivantes relatives à la finalité de l'action du cholestérol selon la température, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "À haute température, il agit pour éviter que la membrane devienne trop liquide.",
+          "v": true,
+          "e": "VRAI. Il freine les mouvements des phospholipides.",
+          "sourceQuote": "pour éviter que la membrane devienne trop liquide"
+        },
+        {
+          "t": "À basse température, il agit pour éviter l'état gel.",
+          "v": true,
+          "e": "VRAI. Il augmente alors la fluidité.",
+          "sourceQuote": "Il augmente la fluidité , pour éviter l'état gel"
+        },
+        {
+          "t": "Il ramène toujours la membrane vers le milieu.",
+          "v": true,
+          "e": "VRAI. Là où les deux autres facteurs poussent vers un extrême.",
+          "sourceQuote": "lui la ramène toujours vers le milieu"
+        },
+        {
+          "t": "Son action ne dépend pas de la température du moment.",
+          "v": false,
+          "e": "FAUX : tout dépend justement de la température du moment.",
+          "sourceQuote": "tout dépend de la température du moment"
+        },
+        {
+          "t": "À basse température, il restreint les mouvements des phospholipides.",
+          "v": false,
+          "e": "FAUX : à basse température il les empêche de se serrer ; c'est à haute température qu'il restreint leurs mouvements.",
+          "sourceQuote": "le cholestérol empêche les phospholipides de se serrer trop fort"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-019-facteurs-de-fluidite.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 14,
+      "q": "Parmi les propositions suivantes relatives au type d'acides gras des phospholipides, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Des acides gras courts augmentent la fluidité.",
+          "v": true,
+          "e": "VRAI. Moins de contact entre les queues.",
+          "sourceQuote": "↑ fluidité s'ils sont courts"
+        },
+        {
+          "t": "Les acides gras insaturés portent des doubles liaisons cis.",
+          "v": true,
+          "e": "VRAI. Ce sont elles qui créent les courbures.",
+          "sourceQuote": "insaturés , avec des doubles liaisons cis"
+        },
+        {
+          "t": "Une plus grande surface de contact entre les queues fait que les lipides se serrent davantage.",
+          "v": true,
+          "e": "VRAI. C'est le mécanisme derrière l'effet des chaînes longues.",
+          "sourceQuote": "plus de surface de contact → les lipides se serrent davantage"
+        },
+        {
+          "t": "Un acide gras saturé ne porte aucune double liaison.",
+          "v": true,
+          "e": "VRAI. C'est ce que veut dire saturé.",
+          "sourceQuote": "saturés (sans double liaison)"
+        },
+        {
+          "t": "L'effet du type d'acides gras dépend de la température, comme celui du cholestérol.",
+          "v": false,
+          "e": "FAUX : pour la température et les acides gras, le sens de l'effet est unique.",
+          "sourceQuote": "Pour la température et les acides gras, en revanche, le sens est unique et se retient tel quel"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-019-facteurs-de-fluidite.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 15,
+      "q": "Parmi les propositions suivantes relatives à l'état fluide et à l'analogie des bâtons, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans l'analogie, ce sont les queues insaturées qui s'empilent bien serrées comme des bâtons.",
+          "v": false,
+          "e": "FAUX : ce sont les queues saturées, droites et sans double liaison.",
+          "sourceQuote": "Saturés (sans double liaison) : queues droites → s'empilent bien serrées comme des bâtons"
+        },
+        {
+          "t": "En état fluide, les lipides bougent difficilement.",
+          "v": false,
+          "e": "FAUX : ils bougent facilement, et la membrane est souple.",
+          "sourceQuote": "Les lipides bougent facilement → la membrane est souple et fonctionnelle"
+        },
+        {
+          "t": "Une température élevée ralentit les lipides.",
+          "v": false,
+          "e": "FAUX : elle les agite beaucoup.",
+          "sourceQuote": "Température élevée → les lipides s'agitent beaucoup"
+        },
+        {
+          "t": "Le cholestérol a, comme les deux autres facteurs, un effet unique.",
+          "v": false,
+          "e": "FAUX : c'est le seul des trois à ne pas avoir un effet unique.",
+          "sourceQuote": "C'est le seul des trois facteurs qui n'a pas un effet unique"
+        },
+        {
+          "t": "La membrane peut se trouver dans deux états.",
+          "v": true,
+          "e": "VRAI. L'état fluide et l'état gel.",
+          "sourceQuote": "La membrane peut être dans 2 états"
+        }
+      ]
+    }
+  ]
+}

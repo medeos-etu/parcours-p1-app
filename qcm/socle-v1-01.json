@@ -1,0 +1,1351 @@
+{
+  "matiere": "mixte",
+  "chapitre": 0,
+  "note": "socle 1-7 — fiches sans QCM, ordre du Parcours",
+  "questions": [
+    {
+      "fiche": "physique-067-sels-non-binaires-ks.html",
+      "origine": "ecrite",
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à ce qu'est un sel non-binaire et à la place de ce cas en P1, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un sel non-binaire est un sel qui ne se dissocie pas 1 pour 1.",
+          "v": true,
+          "e": "VRAI. C'est la définition même : les deux ions ne sont pas libérés en quantités égales, et c'est ce déséquilibre qui complique l'écriture de Ks.",
+          "sourceQuote": "un sel qui ne se dissocie pas 1 pour 1"
+        },
+        {
+          "t": "L'oxalate de calcium libère un cation et un anion dans des proportions 1:1.",
+          "v": true,
+          "e": "VRAI. C'est le cas simple déjà vu : un Ca²⁺ pour un oxalate²⁻, et Ks se réduit au produit des deux concentrations.",
+          "sourceQuote": "un cation et un anion dans des proportions 1:1"
+        },
+        {
+          "t": "Le phosphate d'argent libère 3 cations pour 1 anion.",
+          "v": true,
+          "e": "VRAI. Ag₃PO₄ est du 3:1 : trois ions argent pour un ion phosphate. C'est l'exemple type du sel non-binaire.",
+          "sourceQuote": "3 cations Ag⁺ pour 1 anion"
+        },
+        {
+          "t": "Pour un sel non-binaire, l'expression de Ks reste un simple produit de deux concentrations, sans aucune puissance.",
+          "v": false,
+          "e": "FAUX : c'est justement là que Ks fait apparaître des puissances, puisque les coefficients de l'équation passent en exposants.",
+          "sourceQuote": "Et là, Ks fait apparaître des puissances"
+        },
+        {
+          "t": "Ce cas de figure est rare et n'apparaît pratiquement jamais aux QCM de première année.",
+          "v": false,
+          "e": "FAUX : il tombe régulièrement. C'est une raison de plus pour maîtriser la méthode plutôt que de l'apprendre par cœur.",
+          "sourceQuote": "Ce cas tombe régulièrement aux QCM de P1"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-067-sels-non-binaires-ks.html",
+      "origine": "ecrite",
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives au tableau d'avancement et à la grandeur S, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "S désigne la solubilité, c'est-à-dire la quantité de sel qui se dissout par litre de solution avant saturation.",
+          "v": true,
+          "e": "VRAI. S se compte en moles par litre : c'est ce que la solution peut avaler avant d'être saturée.",
+          "sourceQuote": "le nombre de moles de sel qui se dissolvent par litre"
+        },
+        {
+          "t": "À l'état initial, aucun ion n'est encore présent en solution.",
+          "v": true,
+          "e": "VRAI. Le tableau part de zéro : le sel est là, mais sous forme solide, et rien n'est encore passé en solution.",
+          "sourceQuote": "À t = 0, aucun ion en solution"
+        },
+        {
+          "t": "À saturation, il reste du solide non dissous.",
+          "v": true,
+          "e": "VRAI. C'est même la condition de la saturation : le solide est encore présent, en excès, en équilibre avec ses ions.",
+          "sourceQuote": "À saturation, le solide est encore là, en excès"
+        },
+        {
+          "t": "Chaque mole de sel dissoute libère x moles de A et y moles de B.",
+          "v": true,
+          "e": "VRAI. Les coefficients de l'équation disent combien d'ions part une mole de sel qui se dissout.",
+          "sourceQuote": "chaque mole de sel dissoute libère x moles de A"
+        },
+        {
+          "t": "Les concentrations à saturation sont obtenues en multipliant S par les coefficients stœchiométriques.",
+          "v": true,
+          "e": "VRAI. D'où [A] = x·S et [B] = y·S — c'est cette ligne du tableau qu'on injectera ensuite dans Ks.",
+          "sourceQuote": "Les concentrations sont donc multipliées par les coefficients stœchiométriques"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-067-sels-non-binaires-ks.html",
+      "origine": "ecrite",
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la construction de la formule générale de Ks, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La méthode repose sur le tableau d'avancement, déjà utilisé pour la dissolution et pour les acides faibles.",
+          "v": true,
+          "e": "VRAI. C'est le même outil que celui rencontré plus tôt : rien de nouveau à apprendre, seulement à réutiliser.",
+          "sourceQuote": "déjà rencontré au ch.1 pour la dissolution et au ch.2 pour les acides faibles"
+        },
+        {
+          "t": "Dans Ks, la stœchiométrie apparaît sous forme de coefficients multiplicateurs et non d'exposants.",
+          "v": false,
+          "e": "FAUX : elle apparaît en exposants. C'est toute la difficulté du cas non-binaire, et l'erreur la plus fréquente.",
+          "sourceQuote": "qui inclut la stœchiométrie en exposants"
+        },
+        {
+          "t": "Ks n'a rien à voir avec une constante d'équilibre.",
+          "v": false,
+          "e": "FAUX : Ks est une constante d'équilibre, et son expression découle de la loi d'action de masse, la même que pour les acides faibles.",
+          "sourceQuote": "Ks est une constante d'équilibre"
+        },
+        {
+          "t": "Dans la formule générale, S apparaît à la puissance (x − y).",
+          "v": false,
+          "e": "FAUX : S apparaît à la puissance (x + y), somme des deux coefficients. C'est cette somme qui annoncera la racine à prendre à la fin.",
+          "sourceQuote": "puisque S apparaît à la puissance (x + y)"
+        },
+        {
+          "t": "Cette formule ne peut être qu'apprise par cœur, sans possibilité de la reconstruire.",
+          "v": false,
+          "e": "FAUX : on peut la mémoriser, mais aussi la retrouver en une trentaine de secondes en déroulant le tableau d'avancement.",
+          "sourceQuote": "À mémoriser, ou à savoir retrouver en 30 secondes avec le tableau d'avancement."
+        }
+      ]
+    },
+    {
+      "fiche": "physique-067-sels-non-binaires-ks.html",
+      "origine": "ecrite",
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la mise en équation du phosphate d'argent, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Avec les notations générales, x vaut 3 pour l'ion argent.",
+          "v": true,
+          "e": "VRAI. Trois ions argent libérés par mole de sel : x = 3. Et y = 1 pour l'ion phosphate.",
+          "sourceQuote": "Avec les notations générales : x = 3 (pour Ag⁺)"
+        },
+        {
+          "t": "Une mole de phosphate d'argent dissoute libère 3 moles d'ions argent et 1 mole d'ions phosphate.",
+          "v": true,
+          "e": "VRAI. Ce sont exactement les coefficients de l'équation de dissociation, rien d'autre.",
+          "sourceQuote": "libère 3 moles de Ag⁺ et 1 mole de PO₄³⁻"
+        },
+        {
+          "t": "À saturation, la concentration en ions argent vaut trois fois la solubilité.",
+          "v": true,
+          "e": "VRAI. La ligne du tableau donne [Ag⁺] = 3S, alors que l'ion phosphate reste à S.",
+          "sourceQuote": "les valeurs du tableau ([Ag⁺] = 3S et [PO₄³⁻] = S)"
+        },
+        {
+          "t": "Dans l'expression de Ks, la stœchiométrie passe en exposants.",
+          "v": true,
+          "e": "VRAI. Les coefficients 3 et 1 deviennent les puissances auxquelles sont élevées les concentrations.",
+          "sourceQuote": "La stœchiométrie passe en exposants"
+        },
+        {
+          "t": "Les exposants à utiliser sont 1 pour l'ion argent et 3 pour l'ion phosphate.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. Trois ions argent pour un ion phosphate, donc l'exposant 3 va à l'argent et l'exposant 1 au phosphate.",
+          "sourceQuote": "x = 3 (pour Ag⁺) et y = 1 (pour PO₄³⁻)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-067-sels-non-binaires-ks.html",
+      "origine": "ecrite",
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au calcul de la solubilité du phosphate d'argent à partir de son Ks, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Diviser 2,7 par 27 fait apparaître un facteur 0,1, qui abaisse encore la puissance de dix.",
+          "v": true,
+          "e": "VRAI. C'est ce petit pas de calcul mental qui transforme la valeur de départ en une puissance de dix ronde, plus facile à manipuler ensuite.",
+          "sourceQuote": "Le 2,7 divisé par 27 fait 0,1"
+        },
+        {
+          "t": "Pour remonter de Ks à S dans ce cas, il faut prendre une racine carrée.",
+          "v": false,
+          "e": "FAUX : ici S est à la puissance 4, donc c'est une racine quatrième qu'il faut prendre. La racine carrée ne vaudrait que pour un sel 1:1.",
+          "sourceQuote": "Prendre la racine quatrième"
+        },
+        {
+          "t": "La solubilité obtenue est de l'ordre de 10⁻⁵ mol/L.",
+          "v": true,
+          "e": "VRAI. On aboutit à environ 1,8 × 10⁻⁵ mol/L : très peu de sel passe effectivement en solution.",
+          "sourceQuote": "Ag₃PO₄ est très peu soluble (~10⁻⁵ mol/L)"
+        },
+        {
+          "t": "Ce résultat conduit à classer le phosphate d'argent parmi les sels très solubles.",
+          "v": false,
+          "e": "FAUX : une solubilité aussi basse le range au contraire parmi les sels quasi insolubles.",
+          "sourceQuote": "on dit que c'est un sel quasi insoluble"
+        },
+        {
+          "t": "Prendre une racine quatrième revient à multiplier l'exposant par 4.",
+          "v": false,
+          "e": "FAUX : on divise l'exposant par 4. C'est pour cela que −19 devient −4,75.",
+          "sourceQuote": "c'est l'exposant divisé par 4"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-067-sels-non-binaires-ks.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la lecture anticipée de la formule et au réflexe de méthode, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La somme des deux coefficients annonce à l'avance la racine qu'il faudra prendre.",
+          "v": true,
+          "e": "VRAI. Comme S est élevé à la puissance (x + y), cette somme donne directement l'ordre de la racine finale.",
+          "sourceQuote": "t'annonce d'avance la racine à prendre à la fin"
+        },
+        {
+          "t": "Pour le phosphate d'argent, cette somme vaut 4 et impose une racine quatrième.",
+          "v": true,
+          "e": "VRAI. 3 + 1 = 4 : on sait avant même de calculer qu'on terminera par une racine quatrième.",
+          "sourceQuote": "pour Ag₃PO₄, 3 + 1 = 4 → racine quatrième"
+        },
+        {
+          "t": "Le mnémo invite à toujours dérouler le tableau d'avancement plutôt qu'à se fier à sa mémoire.",
+          "v": true,
+          "e": "VRAI. C'est le réflexe sûr : le tableau redonne les concentrations, donc les exposants, donc la formule.",
+          "sourceQuote": "toujours dérouler le tableau d'avancement"
+        },
+        {
+          "t": "La formule générale peut être retrouvée en une trentaine de secondes.",
+          "v": true,
+          "e": "VRAI. C'est précisément l'alternative à la mémorisation : le tableau la reconstruit très vite.",
+          "sourceQuote": "à savoir retrouver en 30 secondes"
+        },
+        {
+          "t": "Dans cette formule, x et y désignent les coefficients de l'équation de dissociation du sel.",
+          "v": true,
+          "e": "VRAI. Rien d'autre : ce sont les nombres écrits devant chaque ion dans l'équation.",
+          "sourceQuote": "x et y = les coefficients de"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-067-sels-non-binaires-ks.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à l'erreur classique commise sur ce type de sel, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Beaucoup d'étudiants écrivent une expression de Ks qui se réduit à un produit sans exposants.",
+          "v": true,
+          "e": "VRAI. C'est l'erreur la plus répandue : on écrit le produit des deux concentrations en oubliant que les coefficients passent en puissances.",
+          "sourceQuote": "Beaucoup d'étudiants écrivent (faussement)"
+        },
+        {
+          "t": "L'erreur consiste à oublier les exposants x et y dans Ks.",
+          "v": true,
+          "e": "VRAI. C'est exactement le piège annoncé par la fiche, et il change complètement le résultat final.",
+          "sourceQuote": "Oublier les exposants x et y dans Ks"
+        },
+        {
+          "t": "Par rapport à la formule fautive, la formule juste donne un résultat environ 9 fois plus petit.",
+          "v": false,
+          "e": "FAUX : elle donne un résultat environ 9 fois plus grand. L'écart n'est donc pas anodin.",
+          "sourceQuote": "donne un résultat ~9 fois plus grand"
+        },
+        {
+          "t": "L'oxalate de calcium est lui aussi un sel non-binaire.",
+          "v": false,
+          "e": "FAUX : il libère un cation pour un anion, donc du 1:1. C'est justement le cas simple auquel on oppose les sels non-binaires.",
+          "sourceQuote": "et un anion dans des proportions 1:1"
+        },
+        {
+          "t": "Le phosphate d'argent n'est qu'un exemple théorique, sans place particulière dans les QCM.",
+          "v": false,
+          "e": "FAUX : c'est au contraire un grand classique des QCM. Il vaut la peine d'en connaître le déroulé complet.",
+          "sourceQuote": "un grand classique des QCM"
+        }
+      ]
+    },
+
+    {
+      "fiche": "physique-068-effet-ion-commun.html",
+      "origine": "ecrite",
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives au principe même de l'effet d'ion commun, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La solubilité chute quand la solution contient déjà un des ions du sel qu'on veut dissoudre.",
+          "v": true,
+          "e": "VRAI. C'est la définition de l'effet d'ion commun : la place disponible pour l'autre ion est déjà partiellement prise.",
+          "sourceQuote": "contient déjà un de ses propres ions"
+        },
+        {
+          "t": "Cet ion peut être apporté par un autre sel ou par l'organisme lui-même.",
+          "v": true,
+          "e": "VRAI. Peu importe sa provenance : ce qui compte, c'est qu'il soit déjà là avant l'ajout du sel.",
+          "sourceQuote": "apporté par un autre sel, ou par l'organisme"
+        },
+        {
+          "t": "Dans l'effet d'ion commun, c'est le Ks du sel qui diminue.",
+          "v": false,
+          "e": "FAUX : le Ks ne bouge pas, il ne dépend que de la nature du sel. C'est la solubilité S qui s'effondre.",
+          "sourceQuote": "Le Ks, lui, n'a pas bougé"
+        },
+        {
+          "t": "En présence d'un ion commun, le sel se dissout beaucoup moins bien.",
+          "v": true,
+          "e": "VRAI. C'est tout le principe résumé en une phrase : un ion déjà présent, et la dissolution s'arrête beaucoup plus tôt.",
+          "sourceQuote": "le sel se dissout beaucoup moins bien"
+        },
+        {
+          "t": "Cette complication vient du sel lui-même, et non de la solution dans laquelle on le jette.",
+          "v": false,
+          "e": "FAUX : contrairement au cas des sels non-binaires, elle ne vient pas du sel mais bien de la solution de départ.",
+          "sourceQuote": "elle ne vient plus du sel — elle vient de la solution"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-068-effet-ion-commun.html",
+      "origine": "ecrite",
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à la comparaison entre une urine vierge et une urine déjà chargée en oxalate, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans une urine vierge, il n'y a au départ ni calcium ni oxalate.",
+          "v": true,
+          "e": "VRAI. C'est le cas de référence : la solution est vide des deux ions, et le sel peut se dissoudre normalement.",
+          "sourceQuote": "ni Ca²⁺ ni oxalate²⁻ au départ"
+        },
+        {
+          "t": "Dans une urine vierge, le sel libère plus de calcium que d'oxalate.",
+          "v": false,
+          "e": "FAUX : le sel est 1:1, il libère autant de l'un que de l'autre, et s'arrête quand le produit atteint Ks.",
+          "sourceQuote": "en libérant autant de Ca²⁺ que d'oxalate²⁻"
+        },
+        {
+          "t": "Dans une urine déjà chargée en oxalate, une grande quantité de sel peut encore se dissoudre.",
+          "v": false,
+          "e": "FAUX : au contraire, seul un tout petit peu de sel peut passer en solution — au-delà, il précipite.",
+          "sourceQuote": "seul un tout petit peu de sel peut se dissoudre"
+        },
+        {
+          "t": "Dans une urine déjà chargée en oxalate, la concentration en calcium peut monter très haut sans que le produit dépasse Ks.",
+          "v": false,
+          "e": "FAUX : c'est l'inverse. Comme l'oxalate est déjà élevé, le calcium doit rester très bas pour que le produit ne dépasse pas Ks.",
+          "sourceQuote": "il faut que [Ca²⁺] reste très bas"
+        },
+        {
+          "t": "La règle physique qui pilote la dissolution change selon l'urine de départ.",
+          "v": false,
+          "e": "FAUX : la règle reste identique, c'est toujours le produit des deux concentrations comparé à Ks. Seule la composition de départ change.",
+          "sourceQuote": "La règle physique qui pilote sa dissolution est toujours la même"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-068-effet-ion-commun.html",
+      "origine": "ecrite",
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la formulation générale de l'effet d'ion commun, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La formulation générale s'applique à un sel écrit sous la forme A x B y, dont le Ks est le produit des deux concentrations élevées à leurs coefficients.",
+          "v": true,
+          "e": "VRAI. Le raisonnement ne se limite pas aux sels 1:1 : il vaut pour n'importe quelle stœchiométrie.",
+          "sourceQuote": "Pour un sel A x B y avec Ks"
+        },
+        {
+          "t": "Si la concentration de A est déjà élevée par un apport extérieur, celle de B doit rester petite.",
+          "v": true,
+          "e": "VRAI. C'est la contrainte imposée par Ks : si un facteur du produit est grand, l'autre doit être petit.",
+          "sourceQuote": "si [A] est déjà élevé à cause d'un apport extérieur"
+        },
+        {
+          "t": "C'est la dissolution du sel qui apporte l'ion B en solution.",
+          "v": true,
+          "e": "VRAI. Et c'est le maillon du raisonnement : si B doit rester bas, c'est que le sel n'a pas pu beaucoup se dissoudre.",
+          "sourceQuote": "c'est la dissolution du sel qui apporte"
+        },
+        {
+          "t": "Si la concentration de B doit rester petite, cela signifie que beaucoup de sel a pu se dissoudre.",
+          "v": false,
+          "e": "FAUX : c'est le contraire. Peu de B en solution veut dire que peu de sel a pu se dissoudre.",
+          "sourceQuote": "si [B] doit rester petit, c'est que peu de sel a pu se dissoudre"
+        },
+        {
+          "t": "Dans cette situation, la solubilité S augmente.",
+          "v": false,
+          "e": "FAUX : elle diminue. C'est bien le sens de l'effet d'ion commun.",
+          "sourceQuote": "peu de sel a pu se dissoudre → S diminue"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-068-effet-ion-commun.html",
+      "origine": "ecrite",
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à l'analogie de la chambre d'hôtel, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Dans cette analogie, la capacité maximale de la chambre représente le Ks.",
+          "v": true,
+          "e": "VRAI. C'est la contrainte fixe du problème : elle ne change pas, quelle que soit la situation de départ.",
+          "sourceQuote": "une capacité maximale fixée (= Ks)"
+        },
+        {
+          "t": "Une chambre vide au départ correspond à une solubilité élevée.",
+          "v": true,
+          "e": "VRAI. Rien n'occupe la place : on peut y caser beaucoup d'affaires, autrement dit dissoudre beaucoup de sel.",
+          "sourceQuote": "tu peux y caser pas mal d'affaires (= S élevée)"
+        },
+        {
+          "t": "La présence du colocataire signifie que la capacité totale de la chambre a été réduite.",
+          "v": false,
+          "e": "FAUX : la capacité totale est inchangée. C'est simplement qu'une partie est déjà occupée — exactement comme le Ks, qui ne bouge pas.",
+          "sourceQuote": "La capacité totale n'a pas changé"
+        },
+        {
+          "t": "Une chambre à moitié pleine permet d'y caser autant de choses qu'une chambre vide.",
+          "v": false,
+          "e": "FAUX : on peut y caser beaucoup moins de choses. C'est l'image même de la solubilité réduite.",
+          "sourceQuote": "tu ne peux y caser que beaucoup moins de choses"
+        },
+        {
+          "t": "Dans l'analogie, l'ion commun correspond à la valise du nouvel arrivant.",
+          "v": false,
+          "e": "FAUX : l'ion commun, ce sont les affaires du colocataire déjà installé, c'est-à-dire ce qui occupe la place avant l'arrivée du sel.",
+          "sourceQuote": "affaires d'un colocataire (= ion commun déjà en solution)"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-068-effet-ion-commun.html",
+      "origine": "ecrite",
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au premier des deux calculs sur le chlorure d'argent, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "L'exemple chiffré part d'un Ks de 10⁻¹⁰ pour le chlorure d'argent.",
+          "v": true,
+          "e": "VRAI. C'est la valeur retenue pour toute la comparaison, et elle ne changera pas d'un calcul à l'autre.",
+          "sourceQuote": "On prend Ks(AgCl) = 10⁻¹⁰"
+        },
+        {
+          "t": "Le chlorure d'argent est un sel binaire, qui se dissocie 1 pour 1.",
+          "v": true,
+          "e": "VRAI. On revient volontairement à un cas 1:1 pour que seule la solution de départ fasse la différence.",
+          "sourceQuote": "AgCl (s) ⇌ Ag⁺ + Cl⁻ (cas binaire 1:1)"
+        },
+        {
+          "t": "Dans l'eau pure, la solubilité du chlorure d'argent vaut 10⁻⁵ mol/L.",
+          "v": true,
+          "e": "VRAI. Comme les deux concentrations valent S, Ks = S², et la racine carrée de 10⁻¹⁰ donne bien 10⁻⁵ mol/L.",
+          "sourceQuote": "S = 10⁻⁵ mol/L dans l'eau pure"
+        },
+        {
+          "t": "D'un calcul à l'autre, seule la solution de départ change.",
+          "v": true,
+          "e": "VRAI. Le sel et son Ks restent les mêmes : c'est précisément ce qui rend la comparaison démonstrative.",
+          "sourceQuote": "seule la solution de départ change"
+        },
+        {
+          "t": "Dans l'eau pure, le tableau d'avancement donne des concentrations égales à S pour les deux ions.",
+          "v": true,
+          "e": "VRAI. Chaque mole dissoute libère un ion de chaque sorte, donc les deux concentrations sont égales à S.",
+          "sourceQuote": "Tableau d'avancement : [Ag⁺] = S et [Cl⁻] = S"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-068-effet-ion-commun.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives au second calcul, celui mené en présence de chlorure de sodium, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le chlorure de sodium étant totalement dissocié, il impose la concentration en ions chlorure de la solution de départ.",
+          "v": true,
+          "e": "VRAI. Comme il est entièrement dissocié, la totalité de sa concentration se retrouve en ions chlorure libres.",
+          "sourceQuote": "Le NaCl est totalement dissocié"
+        },
+        {
+          "t": "Le chlorure apporté par le chlorure d'argent est négligeable devant celui déjà présent.",
+          "v": true,
+          "e": "VRAI. C'est cette approximation qui permet de traiter la concentration en chlorure comme une constante.",
+          "sourceQuote": "est négligeable devant les 0,1 mol/L déjà présents"
+        },
+        {
+          "t": "En présence de chlorure de sodium à 0,1 mol/L, la solubilité du chlorure d'argent tombe à 10⁻⁹ mol/L.",
+          "v": true,
+          "e": "VRAI. Le produit devant rester égal à Ks, la concentration en argent est fixée par la division de Ks par 0,1.",
+          "sourceQuote": "10⁻⁹ mol/L dans NaCl 0,1 mol/L"
+        },
+        {
+          "t": "Entre les deux situations, la solubilité a été divisée par 1 000.",
+          "v": false,
+          "e": "FAUX : la chute est d'un facteur 10 000. C'est l'ampleur de cet écart qui rend l'effet d'ion commun si important en pratique.",
+          "sourceQuote": "soit un facteur 10 000"
+        },
+        {
+          "t": "Dans ce second cas, on continue légitimement à écrire que Ks est égal au carré de la solubilité.",
+          "v": false,
+          "e": "FAUX : c'est justement le piège. L'essentiel du chlorure ne vient plus du sel dissous, l'égalité Ks = S² ne tient plus.",
+          "sourceQuote": "Continuer à écrire Ks = S² dans le cas 2"
+        }
+      ]
+    },
+    {
+      "fiche": "physique-068-effet-ion-commun.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à l'application clinique et au réflexe à adopter devant un exercice, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Un régime riche en épinards, en chocolat et en fruits secs augmente la concentration urinaire en oxalate.",
+          "v": true,
+          "e": "VRAI. C'est l'alimentation qui apporte l'ion commun, et c'est par elle qu'on peut agir.",
+          "sourceQuote": "est augmentée par l'alimentation"
+        },
+        {
+          "t": "Cet excès d'oxalate joue le rôle d'ion commun pour l'acide urique.",
+          "v": false,
+          "e": "FAUX : il joue ce rôle pour l'oxalate de calcium, le sel dont il est justement l'un des deux ions.",
+          "sourceQuote": "joue le rôle d' ion commun pour l'oxalate de calcium"
+        },
+        {
+          "t": "Le conseil diététique donné aux patients lithiasiques est d'augmenter les apports en oxalates.",
+          "v": false,
+          "e": "FAUX : on conseille au contraire de les limiter, afin de retirer un ion commun et d'augmenter la tolérance de l'urine au calcium.",
+          "sourceQuote": "de limiter les oxalates"
+        },
+        {
+          "t": "Devant un calcul de solubilité, la première question à se poser porte sur la durée de l'exercice.",
+          "v": false,
+          "e": "FAUX : les deux questions à se poser sont quel sel on dissout, et ce que contient déjà la solution.",
+          "sourceQuote": "quel sel est-ce que je dissous"
+        },
+        {
+          "t": "Chez ce patient, la baisse de la solubilité apparente du calcium éloigne le risque de précipitation.",
+          "v": false,
+          "e": "FAUX : elle le rapproche. La moindre élévation de la calciurie suffit alors à atteindre la saturation et à former le calcul.",
+          "sourceQuote": "précipitation et formation du calcul"
+        }
+      ]
+    },
+
+    {
+      "fiche": "anatomie-069-dentele-anterieur.html",
+      "origine": "ecrite",
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives à la situation générale du dentelé antérieur, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le dentelé antérieur appartient à la paroi latérale du thorax.",
+          "v": true,
+          "e": "VRAI. On quitte l'avant du thorax pour en prendre le côté : c'est bien un muscle latéral.",
+          "sourceQuote": "un muscle de la paroi latérale du thorax"
+        },
+        {
+          "t": "Comme les muscles étudiés juste avant lui, il se termine sur le bras.",
+          "v": false,
+          "e": "FAUX : c'est justement ce qui le distingue. Il ne va pas au bras, il va à la scapula.",
+          "sourceQuote": "il ne va pas au bras — il va à la scapula"
+        },
+        {
+          "t": "Malgré son nom, il n'est pas situé sur la paroi antérieure du thorax.",
+          "v": true,
+          "e": "VRAI. C'est le premier piège de la fiche : le nom dit « antérieur », la situation est latérale.",
+          "sourceQuote": "il n'est pas sur la paroi antérieure"
+        },
+        {
+          "t": "Les muscles vus juste avant lui convergeaient tous vers le bas du fémur.",
+          "v": false,
+          "e": "FAUX : grand pectoral, grand dorsal et grand rond convergent vers le haut de l'humérus, donc vers le membre supérieur.",
+          "sourceQuote": "qui convergent vers le haut de l'humérus"
+        },
+        {
+          "t": "C'est un muscle accessoire, sans rôle notable pour la scapula.",
+          "v": false,
+          "e": "FAUX : il est au contraire fondamental, puisque c'est lui qui plaque la scapula contre le thorax.",
+          "sourceQuote": "C'est un muscle fondamental pour plaquer la scapula"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-069-dentele-anterieur.html",
+      "origine": "ecrite",
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à l'origine du dentelé antérieur et à ce que son nom rappelle, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Il naît sur la face externe des neuf premières côtes.",
+          "v": true,
+          "e": "VRAI. Neuf côtes, et sur leur face externe, c'est-à-dire celle qui regarde vers l'extérieur du thorax.",
+          "sourceQuote": "sur la face externe des 9 premières côtes"
+        },
+        {
+          "t": "Son origine se fait par une série de digitations en « dents de scie ».",
+          "v": true,
+          "e": "VRAI. C'est cette découpe caractéristique, côte après côte, qui donne au muscle son nom.",
+          "sourceQuote": "une série de digitations en « dents de scie »"
+        },
+        {
+          "t": "Ces digitations sont de petites languettes musculaires alignées les unes sous les autres.",
+          "v": true,
+          "e": "VRAI. Chacune s'accroche à une côte, et l'ensemble dessine l'alignement visible sur le côté du thorax.",
+          "sourceQuote": "des petites languettes musculaires alignées les unes sous les autres"
+        },
+        {
+          "t": "Le nom du muscle suffit à redonner son origine.",
+          "v": true,
+          "e": "VRAI. C'est le mnémo de la fiche : « dentelé » renvoie aux dents de scie, donc aux digitations costales.",
+          "sourceQuote": "le nom du muscle te redonne son origine"
+        },
+        {
+          "t": "Il naît sur la face interne des trois premières côtes.",
+          "v": false,
+          "e": "FAUX : ni la face, ni le nombre. C'est la face externe, et sur les neuf premières côtes.",
+          "sourceQuote": "Précisément sur la face externe des 9 premières côtes"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-069-dentele-anterieur.html",
+      "origine": "ecrite",
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au trajet du muscle et à sa terminaison, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Depuis les côtes, il chemine le long de la paroi thoracique.",
+          "v": true,
+          "e": "VRAI. C'est le deuxième temps de son trajet : des côtes vers l'arrière, en suivant la paroi.",
+          "sourceQuote": "il passe le long de la paroi thoracique"
+        },
+        {
+          "t": "Il contourne le thorax par le côté, en restant appliqué contre les côtes.",
+          "v": true,
+          "e": "VRAI. Il reste collé à la cage : c'est ce trajet plaqué qui explique son action.",
+          "sourceQuote": "il contourne le thorax par le côté"
+        },
+        {
+          "t": "Il se termine sur le bord médial de la scapula.",
+          "v": true,
+          "e": "VRAI. Sa terminaison est scapulaire, sur le bord tourné vers la colonne.",
+          "sourceQuote": "sur le bord médial de la scapula"
+        },
+        {
+          "t": "Le bord médial de la scapula est celui qui est le plus proche de la colonne vertébrale.",
+          "v": true,
+          "e": "VRAI. « Médial » veut dire vers le milieu : c'est le bord interne de l'omoplate.",
+          "sourceQuote": "le bord de l'omoplate le plus proche de la colonne"
+        },
+        {
+          "t": "Sa terminaison se fait sur la face de la scapula qui regarde les côtes.",
+          "v": true,
+          "e": "VRAI. C'est la face cachée, celle qu'on ne voit pas de dos — et c'est ce qui lui permet de plaquer l'omoplate.",
+          "sourceQuote": "sur la face cachée, celle qui regarde les côtes"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-069-dentele-anterieur.html",
+      "origine": "ecrite",
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives à la lecture du schéma du dentelé antérieur, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Sur le schéma, le nerf thoracique long descend sur la face du muscle.",
+          "v": true,
+          "e": "VRAI. Il chemine à ce niveau : c'est le seul élément à retenir de ce nerf à ce stade.",
+          "sourceQuote": "qui descend sur la face du muscle"
+        },
+        {
+          "t": "Sur le schéma, le nerf thoracique long est figuré en rouge.",
+          "v": false,
+          "e": "FAUX : il est figuré en jaune, comme les autres éléments nerveux du schéma.",
+          "sourceQuote": "le nerf thoracique long (en jaune)"
+        },
+        {
+          "t": "La nappe musculaire file vers l'avant et disparaît sous la clavicule.",
+          "v": false,
+          "e": "FAUX : elle file le long de la paroi vers l'arrière et disparaît sous la scapula, là où elle s'accroche.",
+          "sourceQuote": "elle file le long de la paroi et disparaît sous la scapula"
+        },
+        {
+          "t": "Il faut à ce stade mémoriser tout le trajet détaillé du nerf thoracique long.",
+          "v": false,
+          "e": "FAUX : il suffit de retenir qu'il chemine là. Le détail viendra plus tard, il n'est pas demandé ici.",
+          "sourceQuote": "retiens simplement qu'il chemine là"
+        },
+        {
+          "t": "Le schéma dispense d'apprendre le trajet et l'action du muscle.",
+          "v": false,
+          "e": "FAUX : le schéma sert à visualiser, mais ce qu'on retient reste le trajet et l'action.",
+          "sourceQuote": "Le schéma sert à visualiser"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-069-dentele-anterieur.html",
+      "origine": "ecrite",
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives aux actions du dentelé antérieur, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "En se contractant, il tire la scapula vers l'avant.",
+          "v": true,
+          "e": "VRAI. L'omoplate est entraînée vers l'avant, ce qui revient à avancer l'épaule.",
+          "sourceQuote": "le dentelé tire la scapula vers l'avant"
+        },
+        {
+          "t": "Le fait d'avancer l'épaule porte le nom de protraction.",
+          "v": true,
+          "e": "VRAI. C'est le terme à connaître pour ce mouvement de la scapula vers l'avant.",
+          "sourceQuote": "c'est la protraction (avancer l'épaule)"
+        },
+        {
+          "t": "Il plaque la scapula contre les côtes.",
+          "v": true,
+          "e": "VRAI. C'est même son rôle le plus important : maintenir l'omoplate appliquée sur la cage thoracique.",
+          "sourceQuote": "la plaque contre les côtes"
+        },
+        {
+          "t": "Son rôle principal est de faire décoller la scapula du thorax.",
+          "v": false,
+          "e": "FAUX : c'est exactement l'inverse. Il empêche la scapula de décoller ; c'est sa défaillance qui la fait décoller.",
+          "sourceQuote": "empêche la scapula de « décoller »"
+        },
+        {
+          "t": "Il laisse la scapula se soulever en arrière comme une aile.",
+          "v": false,
+          "e": "FAUX : il l'en empêche. Le soulèvement en aile est ce qui survient quand le muscle ne fait plus son travail.",
+          "sourceQuote": "au lieu de la laisser se soulever en arrière comme une aile"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-069-dentele-anterieur.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives au raisonnement qui permet de déduire les actions à partir du trajet, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La règle utilisée est qu'un muscle qui se contracte rapproche ses deux insertions.",
+          "v": true,
+          "e": "VRAI. C'est la règle générale déjà connue, et elle suffit ici à retrouver les actions sans les apprendre.",
+          "sourceQuote": "un muscle qui se contracte rapproche ses deux insertions"
+        },
+        {
+          "t": "Les deux points à rapprocher sont les côtes et le bord médial de la scapula.",
+          "v": true,
+          "e": "VRAI. Ce sont ses deux insertions : l'origine costale et la terminaison scapulaire.",
+          "sourceQuote": "les deux points sont les côtes"
+        },
+        {
+          "t": "En rapprochant mentalement ces deux points, l'omoplate part vers l'avant et vient s'écraser contre la cage.",
+          "v": true,
+          "e": "VRAI. Le geste mental redonne d'un coup les deux actions : protraction et plaquage.",
+          "sourceQuote": "l'omoplate part vers l'avant et vient s'écraser contre la cage"
+        },
+        {
+          "t": "Ce raisonnement permet de retrouver les actions sans rien apprendre par cœur.",
+          "v": true,
+          "e": "VRAI. C'est tout l'intérêt de la méthode : le trajet suffit, la mémoire n'est plus sollicitée.",
+          "sourceQuote": "sans rien apprendre par cœur"
+        },
+        {
+          "t": "Les deux insertions sont situées l'une en haut, l'autre en bas du thorax.",
+          "v": false,
+          "e": "FAUX : elles s'opposent d'avant en arrière, pas de haut en bas — les côtes sur le côté et en avant, la scapula en arrière.",
+          "sourceQuote": "les côtes (sur le côté, en avant) et le bord médial de la scapula (en arrière)"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-069-dentele-anterieur.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la synthèse de la fiche et aux deux pièges signalés, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le dentelé antérieur se situe sur la paroi latérale du thorax.",
+          "v": true,
+          "e": "VRAI. C'est le premier mot de la synthèse, et c'est aussi ce qui contredit son nom.",
+          "sourceQuote": "Dentelé antérieur = paroi latérale du thorax"
+        },
+        {
+          "t": "En son absence, la scapula décolle.",
+          "v": true,
+          "e": "VRAI. C'est l'annonce même de la fiche : sans lui, l'omoplate ne reste plus appliquée contre les côtes.",
+          "sourceQuote": "Sans lui, elle décolle"
+        },
+        {
+          "t": "Un premier piège vient de son nom, qui annonce « antérieur » alors que sa situation est latérale.",
+          "v": true,
+          "e": "VRAI. Le nom induit en erreur sur la paroi concernée : c'est une confusion classique.",
+          "sourceQuote": "Son nom dit « antérieur »"
+        },
+        {
+          "t": "Un second piège consiste à le faire se terminer sur la face visible du dos.",
+          "v": true,
+          "e": "VRAI. Sa terminaison est sur la face profonde de la scapula, celle qui regarde les côtes, et non sur la face visible.",
+          "sourceQuote": "il ne se termine pas sur la face visible du dos"
+        },
+        {
+          "t": "C'est précisément cette terminaison sur la face tournée vers les côtes qui lui permet de plaquer la scapula.",
+          "v": true,
+          "e": "VRAI. Une terminaison sur la face postérieure ne permettrait pas ce plaquage : la position de l'insertion explique l'action.",
+          "sourceQuote": "c'est justement ce qui lui permet de la plaquer"
+        }
+      ]
+    },
+
+    {
+      "fiche": "anatomie-070-trapeze.html",
+      "origine": "ecrite",
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives aux caractères généraux du trapèze, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le trapèze est le plus superficiel des muscles du dos.",
+          "v": true,
+          "e": "VRAI. Il occupe le premier plan de la paroi postérieure, au-dessus de tous les autres.",
+          "sourceQuote": "c'est le plus superficiel des muscles du dos"
+        },
+        {
+          "t": "C'est le premier muscle qu'on voit quand on retire la peau.",
+          "v": true,
+          "e": "VRAI. C'est la traduction pratique de sa situation superficielle en dissection.",
+          "sourceQuote": "le premier qu'on voit quand on retire la peau"
+        },
+        {
+          "t": "Il a une forme de losange.",
+          "v": true,
+          "e": "VRAI. Cette forme est la clé du schéma : les deux trapèzes réunis dessinent un grand losange sur le dos.",
+          "sourceQuote": "Il a une forme de losange"
+        },
+        {
+          "t": "Il s'étend de la base du crâne jusqu'au milieu du dos.",
+          "v": true,
+          "e": "VRAI. Son étendue verticale est grande, ce qui explique la diversité de direction de ses fibres.",
+          "sourceQuote": "de la base du crâne jusqu'au milieu du dos"
+        },
+        {
+          "t": "Il ouvre la couche superficielle de la paroi postérieure.",
+          "v": true,
+          "e": "VRAI. C'est par lui que commence l'étude de cette couche, avant les muscles situés en dessous.",
+          "sourceQuote": "Le trapèze ouvre la couche superficielle"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-070-trapeze.html",
+      "origine": "ecrite",
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives à l'organisation de la paroi postérieure et à la place du trapèze, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La paroi postérieure s'organise en couches superposées.",
+          "v": true,
+          "e": "VRAI. C'est le plan d'étude retenu : on descend couche par couche plutôt que muscle par muscle au hasard.",
+          "sourceQuote": "La paroi postérieure s'organise en couches superposées"
+        },
+        {
+          "t": "La couche superficielle rassemble les muscles qui relient le tronc à la scapula et au membre supérieur.",
+          "v": true,
+          "e": "VRAI. Ce sont des muscles de liaison : ils partent du tronc et vont vers l'épaule ou le bras.",
+          "sourceQuote": "muscles qui relient le tronc à la scapula"
+        },
+        {
+          "t": "La couche profonde est faite des muscles propres du thorax.",
+          "v": true,
+          "e": "VRAI. Ceux-là ne vont pas au membre supérieur : ils appartiennent en propre à la paroi thoracique.",
+          "sourceQuote": "faite des muscles propres du thorax"
+        },
+        {
+          "t": "Le muscle étudié juste avant le trapèze abordait la scapula par l'arrière.",
+          "v": false,
+          "e": "FAUX : le dentelé antérieur amenait à la scapula par le côté. C'est avec le trapèze qu'on passe derrière.",
+          "sourceQuote": "t'a amené jusqu'à la scapula par le côté"
+        },
+        {
+          "t": "Le trapèze est constitué de deux faisceaux.",
+          "v": false,
+          "e": "FAUX : il en compte trois, et c'est précisément ce qui lui permet trois actions différentes sur le même os.",
+          "sourceQuote": "Ses 3 faisceaux tirent la scapula"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-070-trapeze.html",
+      "origine": "ecrite",
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives au faisceau supérieur du trapèze, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Il descend de la nuque vers la clavicule.",
+          "v": true,
+          "e": "VRAI. Son origine est haute, sur l'occiput et le ligament nuchal ; sa terminaison est claviculaire.",
+          "sourceQuote": "Il descend de la nuque (occiput + ligament nuchal) vers la clavicule"
+        },
+        {
+          "t": "Comme ses fibres descendent, sa contraction tire l'épaule vers le haut.",
+          "v": true,
+          "e": "VRAI. Le sens des fibres donne le sens du mouvement : des fibres descendantes remontent l'os mobile.",
+          "sourceQuote": "elles tirent l'épaule vers le haut"
+        },
+        {
+          "t": "Son action est l'abaissement de la scapula.",
+          "v": false,
+          "e": "FAUX : il en fait l'élévation. L'abaissement est l'affaire du faisceau inférieur, qui fait exactement l'inverse.",
+          "sourceQuote": "élévation de la scapula"
+        },
+        {
+          "t": "Il se termine sur l'acromion et sur l'épine de la scapula.",
+          "v": false,
+          "e": "FAUX : c'est la terminaison du faisceau moyen. Le faisceau supérieur, lui, va sur la clavicule.",
+          "sourceQuote": "(occiput + ligament nuchal) vers la clavicule"
+        },
+        {
+          "t": "Il naît des processus épineux thoraciques moyens et bas.",
+          "v": false,
+          "e": "FAUX : c'est l'origine du faisceau inférieur. Le faisceau supérieur naît de la nuque, occiput et ligament nuchal.",
+          "sourceQuote": "de la nuque (occiput + ligament nuchal)"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-070-trapeze.html",
+      "origine": "ecrite",
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives au faisceau moyen du trapèze, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Ses fibres sont horizontales.",
+          "v": true,
+          "e": "VRAI. Il va horizontalement de la colonne vers l'épaule, ce qui commande directement son action.",
+          "sourceQuote": "Il va horizontalement des épineux cervico-thoraciques"
+        },
+        {
+          "t": "Il naît des processus épineux de la jonction cou-thorax.",
+          "v": true,
+          "e": "VRAI. Ce sont les épineux qu'on palpe en haut du dos, à la charnière entre cou et thorax.",
+          "sourceQuote": "les processus épineux de la jonction cou-thorax"
+        },
+        {
+          "t": "Il se termine sur l'acromion, pointe osseuse située au sommet de l'épaule.",
+          "v": true,
+          "e": "VRAI. L'acromion est l'un de ses deux points de terminaison, avec l'épine de la scapula.",
+          "sourceQuote": "l' acromion (la pointe osseuse au sommet de l'épaule)"
+        },
+        {
+          "t": "L'épine de la scapula est la crête située en travers de la face arrière de l'omoplate.",
+          "v": true,
+          "e": "VRAI. C'est un repère majeur de la scapula, et le faisceau moyen s'y termine avec l'acromion.",
+          "sourceQuote": "la crête en travers de la face arrière de l'omoplate"
+        },
+        {
+          "t": "Son action est la protraction de la scapula.",
+          "v": false,
+          "e": "FAUX : il fait la rétraction, c'est-à-dire qu'il tire la scapula vers la colonne. La protraction est l'affaire du dentelé antérieur.",
+          "sourceQuote": "elles tirent la scapula vers la colonne → rétraction"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-070-trapeze.html",
+      "origine": "ecrite",
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au faisceau inférieur du trapèze, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Il monte des épineux thoraciques moyens et bas vers la racine de l'épine de la scapula.",
+          "v": true,
+          "e": "VRAI. Son origine est basse et sa terminaison plus haute : ses fibres montent donc de dedans en dehors.",
+          "sourceQuote": "Il monte des épineux thoraciques moyens et bas"
+        },
+        {
+          "t": "Comme ses fibres montent, elles tirent la scapula vers le haut.",
+          "v": false,
+          "e": "FAUX : la scapula part dans le sens des fibres, donc des fibres qui montent tirent l'omoplate vers le bas.",
+          "sourceQuote": "elles tirent la scapula vers le bas"
+        },
+        {
+          "t": "La racine de l'épine est l'extrémité de cette crête située du côté de l'acromion.",
+          "v": false,
+          "e": "FAUX : la racine est l'extrémité côté colonne, là où l'épine démarre. L'acromion en est l'autre extrémité.",
+          "sourceQuote": "l'extrémité de cette crête côté colonne"
+        },
+        {
+          "t": "Son action est la rétraction de la scapula.",
+          "v": false,
+          "e": "FAUX : la rétraction revient au faisceau moyen. Le faisceau inférieur, lui, fait l'abaissement.",
+          "sourceQuote": "elles tirent la scapula vers le bas → abaissement"
+        },
+        {
+          "t": "Il naît de la clavicule.",
+          "v": false,
+          "e": "FAUX : la clavicule est la terminaison du faisceau supérieur. Le faisceau inférieur naît des épineux thoraciques moyens et bas.",
+          "sourceQuote": "des épineux thoraciques moyens et bas vers la racine de l'épine"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-070-trapeze.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives à la lecture du schéma et aux moyens mnémotechniques proposés, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Sur le schéma, les deux trapèzes dessinent ensemble un grand cerf-volant.",
+          "v": true,
+          "e": "VRAI. Le trapèze droit et le gauche réunis donnent cette forme, de la base du crâne au milieu du dos.",
+          "sourceQuote": "dessinent ensemble un grand cerf-volant"
+        },
+        {
+          "t": "Dans le faisceau moyen, les traits du schéma sont horizontaux.",
+          "v": true,
+          "e": "VRAI. Et cette horizontalité annonce directement la rétraction, sans rien avoir à mémoriser.",
+          "sourceQuote": "ils sont horizontaux dans le faisceau moyen"
+        },
+        {
+          "t": "Dans le faisceau supérieur, les traits du schéma montent.",
+          "v": false,
+          "e": "FAUX : ils descendent. Ce sont ceux du faisceau inférieur qui montent.",
+          "sourceQuote": "ils descendent dans le faisceau supérieur"
+        },
+        {
+          "t": "Le geste « hausser les épaules » correspond au faisceau inférieur.",
+          "v": false,
+          "e": "FAUX : il correspond au faisceau supérieur, qui fait l'élévation de la scapula.",
+          "sourceQuote": "Le faisceau supérieur fait l' élévation de la scapula (« hausser les épaules »)"
+        },
+        {
+          "t": "Le geste « rapprocher les omoplates » correspond au faisceau supérieur.",
+          "v": false,
+          "e": "FAUX : il correspond au faisceau moyen, celui de la rétraction.",
+          "sourceQuote": "le faisceau moyen fait la rétraction (« rapprocher les omoplates »)"
+        }
+      ]
+    },
+    {
+      "fiche": "anatomie-070-trapeze.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives au raisonnement par le trajet et au piège signalé sur le trapèze, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Sur le trapèze, l'insertion située du côté de la colonne et du crâne ne bouge pas.",
+          "v": true,
+          "e": "VRAI. C'est ce qui permet de conclure : puisque ce point est fixe, c'est la scapula qui se déplace.",
+          "sourceQuote": "l'insertion du côté de la colonne et du crâne ne bouge pas"
+        },
+        {
+          "t": "La scapula part dans le sens des fibres du faisceau qui se contracte.",
+          "v": true,
+          "e": "VRAI. C'est la clé du raisonnement : regarder la direction des fibres suffit à donner le mouvement.",
+          "sourceQuote": "elle part dans le sens des fibres"
+        },
+        {
+          "t": "Deux des trois actions du trapèze sont exactement opposées.",
+          "v": true,
+          "e": "VRAI. Le faisceau supérieur monte la scapula, le faisceau inférieur l'abaisse : un même muscle fait une chose et son contraire.",
+          "sourceQuote": "deux d'entre elles sont exactement opposées"
+        },
+        {
+          "t": "Affirmer que « le trapèze élève la scapula » n'est vrai que de son faisceau supérieur.",
+          "v": true,
+          "e": "VRAI. C'est le piège de la fiche : attribuer une seule action au muscle entier revient à ignorer les deux autres faisceaux.",
+          "sourceQuote": "n'est vrai que de son faisceau supérieur"
+        },
+        {
+          "t": "Devant un énoncé sur le trapèze, on peut répondre sans se demander quel faisceau est en cause.",
+          "v": false,
+          "e": "FAUX : c'est justement la question à se poser d'abord, sinon on risque de valider une action qui n'est pas celle du faisceau visé.",
+          "sourceQuote": "cherche toujours quel faisceau est en cause avant de répondre"
+        }
+      ]
+    },
+
+    {
+      "fiche": "biologie-069-mitose-vs-meiose.html",
+      "origine": "ecrite",
+      "lot": 1,
+      "q": "Parmi les propositions suivantes relatives aux deux objectifs de la mitose et de la méiose, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La mitose est la division destinée à la croissance et à la réparation.",
+          "v": true,
+          "e": "VRAI. C'est la division d'entretien du corps : elle fait grandir les tissus et remplace les cellules perdues.",
+          "sourceQuote": "la division pour la croissance et la réparation"
+        },
+        {
+          "t": "La mitose donne quatre cellules identiques.",
+          "v": false,
+          "e": "FAUX : elle en donne deux. Ce sont les quatre cellules qui caractérisent la méiose.",
+          "sourceQuote": "donne 2 cellules identiques"
+        },
+        {
+          "t": "La méiose est une division simple.",
+          "v": false,
+          "e": "FAUX : c'est une double division cellulaire, et c'est cette succession qui permet de diviser par deux le nombre de chromosomes.",
+          "sourceQuote": "une double division cellulaire"
+        },
+        {
+          "t": "La méiose produit deux cellules différentes à n = 23.",
+          "v": false,
+          "e": "FAUX : elle en produit quatre. Le nombre de chromosomes est bon, mais pas le nombre de cellules.",
+          "sourceQuote": "donne 4 cellules différentes (n = 23)"
+        },
+        {
+          "t": "La méiose est la division destinée à la croissance des tissus.",
+          "v": false,
+          "e": "FAUX : c'est la division de la reproduction sexuée. La croissance des tissus relève de la mitose.",
+          "sourceQuote": "la division pour la reproduction sexuée"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-069-mitose-vs-meiose.html",
+      "origine": "ecrite",
+      "lot": 2,
+      "q": "Parmi les propositions suivantes relatives aux gamètes et à ce qui distingue les deux divisions, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Les gamètes sont les spermatozoïdes et les ovules.",
+          "v": true,
+          "e": "VRAI. Ce sont les cellules de la reproduction, et ce sont elles que la méiose fabrique.",
+          "sourceQuote": "les gamètes (spermatozoïdes et ovules)"
+        },
+        {
+          "t": "Les gamètes contiennent 23 chromosomes.",
+          "v": true,
+          "e": "VRAI. Deux fois moins qu'une cellule ordinaire : c'est ce qui permet à la fécondation de restaurer les 46.",
+          "sourceQuote": "avec seulement 23 chromosomes"
+        },
+        {
+          "t": "La méiose réduit le nombre de chromosomes mais ne crée aucune diversité génétique.",
+          "v": false,
+          "e": "FAUX : elle fait les deux à la fois — elle réduit le nombre et crée une diversité génétique considérable.",
+          "sourceQuote": "réduit le nombre de chromosomes et crée une diversité génétique infinie"
+        },
+        {
+          "t": "Mitose et méiose poursuivent des objectifs très proches.",
+          "v": false,
+          "e": "FAUX : leurs objectifs sont complètement différents — entretenir le corps d'un côté, fabriquer des gamètes de l'autre.",
+          "sourceQuote": "ces deux divisions ont des objectifs complètement différents"
+        },
+        {
+          "t": "La mitose produit des cellules filles dont le nombre de chromosomes est divisé par deux.",
+          "v": false,
+          "e": "FAUX : elle conserve le nombre. Ses deux cellules filles restent à 2n = 46, identiques à la cellule mère.",
+          "sourceQuote": "2 cellules identiques à 2n = 46 chromosomes"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-069-mitose-vs-meiose.html",
+      "origine": "ecrite",
+      "lot": 3,
+      "q": "Parmi les propositions suivantes relatives à la convention de représentation utilisée dans les schémas du chapitre, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Par simplification pédagogique, les schémas dessinent 2 ou 4 chromosomes par cellule.",
+          "v": true,
+          "e": "VRAI. C'est un choix de clarté visuelle : dessiner 46 chromosomes rendrait les schémas illisibles.",
+          "sourceQuote": "dessinent 2 ou 4 chromosomes par cellule"
+        },
+        {
+          "t": "En réalité, une cellule humaine contient 46 chromosomes.",
+          "v": true,
+          "e": "VRAI. Soit 23 paires d'homologues : c'est le nombre réel, celui qu'il faut retenir.",
+          "sourceQuote": "En réalité, une cellule humaine en contient 46"
+        },
+        {
+          "t": "Quand un schéma indique « 2n = 4 », il faut comprendre « 2n = 46 ».",
+          "v": true,
+          "e": "VRAI. Le chiffre dessiné n'est qu'une commodité : la lecture correcte est toujours celle des 46 chromosomes.",
+          "sourceQuote": "Quand tu lis « 2n = 4 » sur un schéma, comprends « 2n = 46 »"
+        },
+        {
+          "t": "Quand un schéma indique « n = 2 », il faut comprendre « n = 23 ».",
+          "v": true,
+          "e": "VRAI. Même convention pour l'état haploïde : le 2 dessiné représente les 23 chromosomes réels.",
+          "sourceQuote": "quand tu lis « n = 2 », comprends « n = 23 »"
+        },
+        {
+          "t": "Les mécanismes décrits avec 2 chromosomes ne valent pas pour les 23 paires réelles.",
+          "v": false,
+          "e": "FAUX : ils valent exactement de la même façon. C'est précisément ce qui autorise la simplification du dessin.",
+          "sourceQuote": "Ce qui est vrai pour 2 chromosomes est vrai pour les 23 paires"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-069-mitose-vs-meiose.html",
+      "origine": "ecrite",
+      "lot": 4,
+      "q": "Parmi les propositions suivantes relatives aux cellules concernées et au nombre de divisions, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "La mitose concerne toutes les cellules somatiques, c'est-à-dire les cellules du corps.",
+          "v": true,
+          "e": "VRAI. Peau, foie, muqueuses : toutes se divisent par mitose pour se renouveler.",
+          "sourceQuote": "Toutes les cellules somatiques"
+        },
+        {
+          "t": "La méiose ne concerne que les cellules germinales.",
+          "v": true,
+          "e": "VRAI. Elle est réservée aux cellules germinales, celles des gonades — c'est la ligne du tableau la plus souvent oubliée.",
+          "sourceQuote": "Cellules germinales uniquement"
+        },
+        {
+          "t": "Les gonades sont les ovaires et les testicules.",
+          "v": true,
+          "e": "VRAI. Ce sont les organes qui abritent les cellules germinales, donc les seuls lieux de méiose.",
+          "sourceQuote": "les ovaires et les testicules"
+        },
+        {
+          "t": "La méiose comporte une seule division.",
+          "v": false,
+          "e": "FAUX : elle en comporte deux, successives. C'est la mitose qui n'en compte qu'une.",
+          "sourceQuote": "2 divisions successives"
+        },
+        {
+          "t": "Une cellule de peau ou de foie effectue régulièrement des méioses.",
+          "v": false,
+          "e": "FAUX : jamais. Ce sont des cellules somatiques, elles ne se divisent que par mitose.",
+          "sourceQuote": "Une cellule de peau ou de foie ne fait jamais de méiose"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-069-mitose-vs-meiose.html",
+      "origine": "ecrite",
+      "lot": 5,
+      "q": "Parmi les propositions suivantes relatives au contenu chromosomique, à l'identité génétique et au brassage, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le produit de la mitose est diploïde, avec des chromosomes qui vont par paires.",
+          "v": true,
+          "e": "VRAI. Diploïde signifie 2n = 46 : chaque chromosome y est présent avec son homologue.",
+          "sourceQuote": "Diploïde (2n = 46 : les chromosomes vont par paires)"
+        },
+        {
+          "t": "Le produit de la méiose est haploïde, avec un seul chromosome de chaque paire.",
+          "v": true,
+          "e": "VRAI. Haploïde signifie n = 23 : un seul représentant par paire, ce qui est la définition même du gamète.",
+          "sourceQuote": "Haploïde (n = 23 : un seul chromosome de chaque paire)"
+        },
+        {
+          "t": "Les cellules issues de la mitose sont identiques à la cellule mère.",
+          "v": true,
+          "e": "VRAI. C'est le sens même de la division d'entretien : refaire à l'identique ce qui existait déjà.",
+          "sourceQuote": "Cellules identiques à la cellule mère"
+        },
+        {
+          "t": "Les cellules issues de la méiose sont différentes entre elles.",
+          "v": true,
+          "e": "VRAI. Aucune des quatre n'est la copie d'une autre : c'est ce qui fonde la diversité entre frères et sœurs.",
+          "sourceQuote": "Cellules différentes entre elles"
+        },
+        {
+          "t": "La méiose brasse les gènes, la mitose non.",
+          "v": true,
+          "e": "VRAI. Le brassage est nul en mitose et double en méiose ; le détail de ces deux brassages vient plus loin dans le chapitre.",
+          "sourceQuote": "la méiose brasse les gènes, la mitose non"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-069-mitose-vs-meiose.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 6,
+      "q": "Parmi les propositions suivantes relatives au moyen mnémotechnique proposé et à la lecture du schéma comparatif, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Le passage de 2n à 2n signe la mitose, qui conserve le nombre de chromosomes.",
+          "v": true,
+          "e": "VRAI. C'est l'astuce à appliquer immédiatement devant un énoncé : lire le nombre de départ et le nombre d'arrivée.",
+          "sourceQuote": "2n → 2n = MITOSE (conserve le nombre)"
+        },
+        {
+          "t": "Le passage de 2n à n signe la mitose.",
+          "v": false,
+          "e": "FAUX : il signe la méiose, puisque le nombre de chromosomes y est divisé par deux.",
+          "sourceQuote": "2n → n = MÉIOSE (divise par 2 le nombre)"
+        },
+        {
+          "t": "La méiose est dite « équationnelle » parce qu'elle conserve le nombre de chromosomes.",
+          "v": false,
+          "e": "FAUX : elle est dite réductionnelle, justement parce qu'elle réduit ce nombre de moitié.",
+          "sourceQuote": "La méiose est « réductionnelle » car elle réduit le nombre"
+        },
+        {
+          "t": "Le détail des deux brassages est exposé dès cette comparaison.",
+          "v": false,
+          "e": "FAUX : la comparaison se contente de constater leur existence ; leur mécanisme arrive plus loin dans le chapitre.",
+          "sourceQuote": "arrive plus loin dans le chapitre"
+        },
+        {
+          "t": "Sur le schéma comparatif, la colonne de la mitose comporte deux divisions successives.",
+          "v": false,
+          "e": "FAUX : elle n'en comporte qu'une. Ce sont les deux divisions de la colonne de droite qui caractérisent la méiose.",
+          "sourceQuote": "à gauche la mitose : 1 division"
+        }
+      ]
+    },
+    {
+      "fiche": "biologie-069-mitose-vs-meiose.html",
+      "origine": "ecrite",
+      "arene": true,
+      "lot": 7,
+      "q": "Parmi les propositions suivantes relatives à la raison pour laquelle la méiose est indispensable, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "items": [
+        {
+          "t": "Sans méiose, l'union de deux cellules à 46 chromosomes donnerait un individu à 92 chromosomes.",
+          "v": true,
+          "e": "VRAI. C'est le point de départ du raisonnement : sans réduction préalable, la fécondation additionnerait deux lots complets.",
+          "sourceQuote": "un ovule à 46 chromosomes = un bébé à 92 chromosomes"
+        },
+        {
+          "t": "À la génération suivante, on atteindrait 184 chromosomes.",
+          "v": true,
+          "e": "VRAI. Puis 368, et ainsi de suite : le doublement se répéterait à chaque génération.",
+          "sourceQuote": "À la génération suivante : 184 chromosomes"
+        },
+        {
+          "t": "Un tel doublement à chaque génération resterait compatible avec la vie.",
+          "v": false,
+          "e": "FAUX : il ne l'est pas. C'est bien pour cela qu'une division réductionnelle est nécessaire.",
+          "sourceQuote": "incompatible avec la vie"
+        },
+        {
+          "t": "La fécondation restaure les 46 chromosomes à partir de gamètes à 23.",
+          "v": true,
+          "e": "VRAI. C'est l'équilibre du système : la méiose divise par deux, la fécondation remet les deux moitiés ensemble.",
+          "sourceQuote": "la fécondation restaure les 46"
+        },
+        {
+          "t": "Même sans méiose, le nombre de chromosomes resterait stable de génération en génération.",
+          "v": false,
+          "e": "FAUX : il doublerait à chaque génération, ce qui est précisément le problème que la méiose résout.",
+          "sourceQuote": "Le nombre de chromosomes doublerait à chaque génération"
+        }
+      ]
+    }
+  ]
+}
