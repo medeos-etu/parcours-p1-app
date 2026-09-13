@@ -2888,7 +2888,7 @@
     <div class="lect-bar">
       <button class="lect-fermer" onclick="fermerLecteur()">← Retour</button>
       <span class="lect-nom" id="lecteur-nom"></span>
-      <button class="gbtn" id="lect-suivant" style="display:none;width:auto;margin-left:auto;padding:10px 16px;font-size:13px"></button>
+      <button class="gbtn" id="lect-suivant" style="display:none;width:auto;margin-left:auto;padding:10px 16px;font-size:13px;white-space:nowrap;flex-shrink:0"></button>
     </div>
     <div class="lect-prog" aria-hidden="true"><i id="lect-prog-i"></i></div>
     <iframe id="fiche-frame" title="Fiche de révision"></iframe>
@@ -14748,7 +14748,7 @@ function bandeauNavigateur(){
 function accApresEntree(neuf){
   if(neuf) COMPTE_NEUF=true;
   /* la fiche demandée avant le compte s'ouvre toute seule (porte de la première fiche, 07/09) */
-  try{ if(S.ficheVoulue && S.ficheVoulue.slug){ const f=S.ficheVoulue; delete S.ficheVoulue; saveS(); setTimeout(function(){ try{ go('home'); openFiche(f.slug,f.titre); }catch(e){} }, 950); } }catch(e){}
+  try{ if(S.ficheVoulue && S.ficheVoulue.slug){ const f=S.ficheVoulue; delete S.ficheVoulue; saveS(); setTimeout(function(){ try{ go('home'); reprendreOuLire(f); }catch(e){} }, 950); } }catch(e){}
   setTimeout(()=>closeSheet('sheet-compte'),650);
   /* UN COMPTE NEUF DOIT POUVOIR REVENIR (Lucas, 05/09 : « un mail ou un moyen de se reconnecter
      facilement les prochains jours »). Le rappel du soir est enclenché dès maintenant — pas au
@@ -19591,7 +19591,25 @@ function openFiche(slug,titre){
   }catch(e){} };
   fr.src='fiches/'+slug+'.html';
   document.getElementById('lecteur-nom').textContent=titre||TITRES_FICHES[slug]||'';
-  { const nb=document.getElementById('lect-suivant'); if(nb && !SR) nb.style.display='none'; }
+  /* FILET (13/09) : une fiche lue HORS séance ne doit jamais être un cul-de-sac.
+     Si c'est justement celle que le Parcours attend, on met le chemin sous les yeux :
+     le bouton lance la séance à la restitution, exactement comme l'étape de lecture. */
+  { const nb=document.getElementById('lect-suivant');
+    if(nb && !SR){
+      nb.style.display='none'; nb.onclick=null;
+      try{
+        const cur=(typeof seanceCourante==='function')?seanceCourante():null;
+        if(cur && cur.fiches && cur.fiches[0]===slug){
+          nb.textContent='J\'ai lu →'; nb.style.display='inline-block';
+          nb.onclick=()=>{
+            try{ CONSULT=false; }catch(e){}   /* on n'est plus en simple consultation : la séance commence */
+            if(!cur.rev){ S.engage={day:arDay(), sid:cur.id}; }
+            SR={s:cur, etape:1}; sauverSR();
+            closeFiche(); setTimeout(seanceEtape,360);
+          };
+        }
+      }catch(e){}
+    } }
   { const pan=document.getElementById('compare-pan'); if(pan) pan.style.display='none'; }
   document.body.classList.add('lecture');
   L.classList.add('entree');
@@ -19649,6 +19667,30 @@ function poolArme(mat){
 
 
 const MAT_EM={Anatomie:'🫀',Biologie:'🧬',Chimie:'⚗️',Physique:'🩻'};
+
+/* ═══ LA PORTE NE DOIT PLUS CASSER LA SÉANCE (13/09) ═══
+   Relevé en base ce jour-là : sur 19 comptes créés, 9 ont ouvert la première fiche
+   et se sont arrêtés là — l'un d'eux après DIX MINUTES de lecture. La cause tenait
+   en une ligne : après l'inscription on rouvrait la fiche avec openFiche() tout nu.
+   Hors séance, le bouton « J'ai lu → » reste caché et sans action : l'élève finit sa
+   lecture et n'a plus rien devant lui, alors que sa séance était bel et bien commencée
+   (S.sr existait, étape 0). On la REPREND à l'étape où la porte l'avait interrompue. */
+function reprendreOuLire(f){
+  try{
+    const sr=S.sr;
+    if(sr && typeof SEANCES!=='undefined'){
+      const s = sr.rev || SEANCES.find(x=>x.id===sr.sid);
+      const attendue = s && s.fiches && s.fiches[Math.floor((sr.etape||0)/3)];
+      if(s && attendue===f.slug){
+        startSeance(s, sr.etape||0);
+        if(sr.note && SR) SR.note=sr.note;
+        return;
+      }
+    }
+  }catch(e){}
+  openFiche(f.slug, f.titre);
+}
+
 /* ═══ UNE SÉANCE = lire 2 vraies fiches, battre leur question après chacune ═══ */
 let SR=null;
 function startSeance(s, etape){
