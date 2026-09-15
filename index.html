@@ -3374,13 +3374,16 @@
          vacances + la pré-rentrée). Le message et le lien suivent l'année de rentrée dite dans
          le Parcours (S.profil.rentreeAn) — 2027 par défaut. Voir renderRayonMediPro(). -->
     <div class="shopcard2" id="packcard">
-      <img src="img/stage-medipro.png" alt="Medi Pro" loading="lazy">
+      <!-- 15/09 : la même carte sert DEUX offres selon la situation dite dans le Parcours.
+           Avant la rentrée → Medi Pro (les stages). Déjà en première année → Medeos Soutien
+           (un tuteur toute l'année). Les ids ci-dessous sont remplis par renderRayonMediPro(). -->
+      <img id="pk-img" src="img/stage-medipro.png" alt="Medi Pro" loading="lazy">
       <div class="sc2-body">
-        <span class="sc-tag">Medi Pro · Nos 5 stages</span>
+        <span class="sc-tag" id="pk-tag">Medi Pro · Nos 5 stages</span>
         <b id="pk-titre" style="font-size:14px;line-height:1.3;font-weight:900">Tes 5 stages pour anticiper, jusqu'à ta rentrée.</b>
         <p id="pk-texte">Un stage guidé à chaque vacances de Terminale, puis la pré-rentrée. Et dans ton Parcours : fiches sans limite.</p>
         <div class="sc-btns">
-          <button class="sc-buy" onclick="ouvrirMediPro()">Découvrir Medi Pro</button>
+          <button class="sc-buy" id="pk-btn" onclick="ouvrirMediPro()">Découvrir Medi Pro</button>
         </div>
       </div>
     </div>
@@ -15173,6 +15176,11 @@ function renderProgression(){
       : jR!=null ? 'Chaque séance élargit ton diagramme. Le bord, c\'est ce que tu peux traverser d\'ici ta rentrée, à deux fiches par jour.'
       : 'Chaque séance élargit ton diagramme. Le bord, c\'est ce qu\'un élève régulier traverse en quelques mois — dis-moi ta date de rentrée et je l\'ajuste à ta route.')+'</p>'+
     (S.stage ? '<p style="margin-top:10px;border-top:1px solid var(--line);padding-top:10px;font-size:11px;color:var(--muted);line-height:1.55">⚔️ <b>Ton Pack Medi Pro est actif</b> : toutes les fiches, tous les QCM, et 3 ascensions par jour.</p>'
+    : (typeof enP1==='function' && enP1())
+    /* déjà en première année (15/09) : l'anticipation n'a plus de sens, on montre le tuteur */
+    ? '<div style="margin-top:10px;border-top:1px solid var(--line);padding-top:10px;display:flex;align-items:center;gap:10px;flex-wrap:wrap">'+
+    '<p style="flex:1;min-width:200px;font-size:11px;color:var(--muted);line-height:1.55">🎓 <b>Déjà en première année ?</b> <b>Medeos Soutien</b>, c\'est un tuteur qui te suit toute l\'année pour ta méthode, et Medeos qui répond à tes questions de cours, dans toutes les matières.</p>'+
+    '<button class="btn small" style="flex-shrink:0" onclick="ouvrirSoutien()">En savoir plus</button></div>'
     : '<div style="margin-top:10px;border-top:1px solid var(--line);padding-top:10px;display:flex;align-items:center;gap:10px;flex-wrap:wrap">'+
     '<p style="flex:1;min-width:200px;font-size:11px;color:var(--muted);line-height:1.55">🚀 <b>Pour accélérer :</b> <b>Medi Pro</b>, ce sont tes 5 stages — les quatre stages de vacances et la pré-rentrée — et l\'app sans limite de fiches, tous les QCM, et 3 ascensions par jour au lieu de 2.</p>'+
     '<button class="btn small" style="flex-shrink:0" onclick="ouvrirMediPro(\'packs\')">En savoir plus</button></div>');
@@ -16180,7 +16188,7 @@ const TUTOS={
     const elStage=function(){ const l=document.querySelectorAll('#carte-corps .cr-stage'); return l.length? l[l.length-1] : null; };
     const s=[];
     s.push({img:'axo-guide-bienvenue', t: p1
-      ? "Tu es déjà en première année : cette route reprend <b>les bases dans l'ordre</b>, monde après monde, à ton rythme."
+      ? "Tu es déjà en première année : cette route reprend <b>les bases dans l'ordre</b>, monde après monde, à ton rythme. Et si tu veux quelqu'un qui te suit, <b>Medeos Soutien</b> t'attend en bas de l'accueil."
       : "Ta rentrée : <b>vers le 1<sup>er</sup> septembre "+d.getFullYear()+"</b>, dans "+j+" jours. D'ici là, deux fiches par jour — et tu arrives avec les bases déjà vues."});
     s.push({el:elMonde, img:'axo-guide-pointe-haut',
       t:"Ça se lit <b>de bas en haut</b>. Tu pars du <b>monde "+num+"</b> : terminé, il ouvre le suivant et t'offre une photo ou une bannière. <b>Touche une case</b> pour relire tes fiches."});
@@ -17773,9 +17781,30 @@ function lienMediPro(ancre){
   return MEDI_PRO_SITE + '/packs/medi-pro-v2/' + an + '?src=app' + (ancre ? '#' + ancre : '');
 }
 function ouvrirMediPro(ancre){ window.open(lienMediPro(ancre), '_blank'); }
-/* Le rayon « Aller plus loin » : le message suit l'année de rentrée. */
+/* ═══ MEDEOS SOUTIEN (15/09/2026) — l'offre de ceux qui sont DÉJÀ en première année.
+   Lucas : « on a une nouvelle offre Medeos Soutien qui ne figure nulle part sur notre app,
+   il faut régler ce problème et réorienter quand le contexte le permet ».
+   Le contexte, c'est enP1() : l'élève a dit « j'y suis déjà » à la question de la rentrée.
+   À lui, on ne vend plus l'anticipation (les stages), on lui montre le tuteur. Un seul lien,
+   traçant, vers la page du site — l'espace Soutien vit sur le site, jamais dans l'app. */
+function lienSoutien(){ return MEDI_PRO_SITE + '/accompagnement?src=app'; }
+function ouvrirSoutien(){ try{ traquer('soutien_vu'); }catch(e){} window.open(lienSoutien(), '_blank'); }
+/* Le rayon « Aller plus loin » : Medi Pro avant la rentrée, Medeos Soutien une fois dedans. */
 function renderRayonMediPro(){
   const t = document.getElementById('pk-titre'), p = document.getElementById('pk-texte'); if(!t || !p) return;
+  const img = document.getElementById('pk-img'), tag = document.getElementById('pk-tag'), btn = document.getElementById('pk-btn');
+  if (enP1()) {
+    if (img) { img.src = 'img/tuteur-lucas.jpg'; img.alt = 'Ton tuteur'; }
+    if (tag) tag.textContent = 'Medeos Soutien · Déjà en première année';
+    t.textContent = 'Un tuteur qui t\'accompagne vers ta réussite.';
+    p.textContent = 'Tu es déjà en première année de santé : ce n\'est plus l\'anticipation qu\'il te faut, c\'est quelqu\'un qui te suit. Un tuteur pour ta méthode, Medeos pour tes questions de cours, dans toutes les matières. 35,90 € par mois, engagement sur 6 mois minimum.';
+    if (btn) { btn.textContent = 'Découvrir Medeos Soutien'; btn.onclick = function(){ ouvrirSoutien(); }; }
+    return;
+  }
+  /* pas (encore) en première année : la carte redevient Medi Pro, même si l'élève a d'abord dit « déjà » puis corrigé */
+  if (img) { img.src = 'img/stage-medipro.png'; img.alt = 'Medi Pro'; }
+  if (tag) tag.textContent = 'Medi Pro · Nos 5 stages';
+  if (btn) { btn.textContent = 'Découvrir Medi Pro'; btn.onclick = function(){ ouvrirMediPro(); }; }
   const an = anneeRentreeMediPro();
   if (an >= 2028) {
     /* Rentrée 2028 : ses stages sont ceux de l'année 2027-2028 (sa Terminale), en pré-réservation sur la page. */
@@ -18118,7 +18147,14 @@ function renderCarte(){
         '<div><b>'+themFaits+'</b><em>thématique'+(themFaits>1?'s':'')+'</em></div>'+
         '<div><b>'+fichesBagage+'</b><em>fiches vues</em></div></div>'+
       (enP1()
-        ? '<div class="cr-audela">Tu es déjà en première année : la route entière t\'est ouverte, sans limite de date. Elle reprend les bases dans l\'ordre, monde après monde, et tes vacances sont sur le chemin.</div>'
+        ? '<div class="cr-audela">Tu es déjà en première année : la route entière t\'est ouverte, sans limite de date. Elle reprend les bases dans l\'ordre, monde après monde, et tes vacances sont sur le chemin.</div>'+
+          /* 15/09 : au sommet, à celui qui est déjà dedans, on montre le tuteur — pas les stages d'anticipation */
+          (S.stage ? '' :
+          '<a class="cr-plus" href="'+lienSoutien()+'" target="_blank" rel="noopener" onclick="try{traquer(\'soutien_vu\')}catch(e){}">'+
+            '<span class="cr-plus-k">Tu es en plein dedans</span>'+
+            '<b>Un tuteur qui te suit toute l\'année</b>'+
+            '<span class="cr-plus-l">Ta méthode avec un tuteur, tes questions de cours avec Medeos, dans toutes les matières de première année de santé. Tu poses ta question, la réponse arrive dans la foulée.</span>'+
+            '<em>Voir Medeos Soutien →</em></a>')
         : illim
         ? '<div class="cr-audela">Ta route va jusqu\'au bout, et tes stages jalonnent les vacances.</div>'
         : auDela
