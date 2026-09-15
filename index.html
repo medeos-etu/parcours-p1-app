@@ -309,6 +309,12 @@
   input.field{width:100%;border:2px solid var(--line);border-radius:12px;padding:12px 14px;font-size:16px;font-family:inherit;background:var(--card)}
 
   /* Accueil / bienvenue */
+  /* LA MARQUE À L'ARRIVÉE (15/09) — Lucas : « quand quelqu'un arrive sur notre app, il ne sait même pas
+     qu'il est sur Medeos ». Sur téléphone la barre latérale (et son logo) n'existe pas : le nouvel arrivant
+     ne voyait jamais le mot. Un cartouche logo + nom, posé en tête des écrans d'accueil et de la porte. */
+  .marque{display:inline-flex;align-items:center;gap:9px;font-size:15px;font-weight:800;letter-spacing:-.01em;color:var(--violet);margin-bottom:6px}
+  .marque img{width:28px;height:28px;border-radius:8px;display:block;box-shadow:0 4px 12px rgba(107,70,193,.25)}
+  .marque small{font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-left:2px}
   .welcome-chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
   .wchip{display:flex;align-items:center;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 12px;font-size:11.5px;font-weight:700}
   .logo-rond{width:84px;height:84px;border-radius:24px;box-shadow:0 10px 30px rgba(107,70,193,.25)}
@@ -2604,7 +2610,8 @@
   <!-- ======= ONBOARDING ======= -->
   <section class="scr nonav" id="onb1">
     <div class="center">
-      <div class="bubble">Salut ! Ici, on prépare ton entrée en médecine, étape par étape.</div>
+      <div class="marque"><img src="img/logo-m.png" alt="">Medeos<small>Univers</small></div>
+      <div class="bubble">Salut ! Ici, c'est Medeos : on prépare ton entrée en médecine, étape par étape.</div>
       <img class="axo" src="img/axo-canon.png" alt="" style="height:160px">
       <h2>Le Parcours P1</h2>
       <p>Trouve ton métier de santé, entraîne-toi sur de vrais QCM, et regarde ta progression grandir.</p>
@@ -2817,7 +2824,8 @@
       <div class="ptop-moi">
         <button class="ptop-id" onclick="go('profil')" aria-label="Voir mon profil">
           <span class="pavatar" id="pt-avatar"><img src="img/axo-canon.png" alt=""></span>
-          <span class="ptxt"><b id="pt-hello">Ton entraînement</b><span>Ta préparation P1</span></span>
+          <!-- 15/09 : la marque en tête de l'écran d'arrivée (sur téléphone, aucune barre latérale ne la porte) -->
+          <span class="ptxt"><b id="pt-hello">Ton entraînement</b><span>Univers Medeos · P1</span></span>
         </button>
         <button class="pflame" id="pt-flame" onclick="toggleFlamme(event)" aria-label="Ta série">🔥 0 j</button>
       </div>
@@ -3016,6 +3024,7 @@
     <div class="gate-veil"></div>
     <div class="gatebox">
       <img class="gaxo" src="img/axo-canon.png" alt="">
+      <div class="marque"><img src="img/logo-m.png" alt="">Medeos<small>Univers</small></div>
       <h2 id="gate-titre">Crée ton compte pour entrer</h2>
       <p>Pour ouvrir tes fiches et suivre ta progression — tes trophées, tes erreurs, tes amis — il te faut un compte. C'est gratuit, en trente secondes. La Bibliothèque et le Parcours, eux, restent en accès libre.</p>
       <button class="btn" onclick="accMode='create';focusAcc()">Créer mon compte gratuit</button>
@@ -3460,7 +3469,7 @@
     <div class="hdr" id="profil-hdr" onclick="openSheet('sheet-skin')" style="background:url('img/parcours/carte-story.jpg') center/cover no-repeat;border-radius:var(--idb-r);padding:var(--idb-pad);position:relative;overflow:hidden;cursor:pointer">
       <div style="position:absolute;inset:0;background:rgba(26,22,40,.35)"></div>
       <div class="avatar" id="profil-av" style="position:relative"><img src="img/axo-canon.png" alt=""></div>
-      <div class="who" style="position:relative"><h2 id="profil-nom" style="color:#fff">Ton profil</h2><p style="color:rgba(250,246,240,.8)">Ta préparation P1</p></div>
+      <div class="who" style="position:relative"><h2 id="profil-nom" style="color:#fff">Ton profil</h2><p style="color:rgba(250,246,240,.8)">Univers Medeos · préparation P1</p></div>
       <span style="position:absolute;top:10px;right:12px;width:26px;height:26px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:13px;color:#fff;background:rgba(255,255,255,.18)">✎</span>
     </div>
     <div class="card">
@@ -16065,8 +16074,9 @@ function introApp(){
      (Lucas, 07/09 : « un petit message qui varie en fonction de où la personne vient, juste le premier
      message, c'était pas mal ») — sans JAMAIS dire d'où l'on vient (« ça fait flicage »). Les liens qui
      visent un contenu de la Bibliothèque (panorama, guide) orientent vers cet élément, puis la suite. */
-  let d="Salut, moi c'est Axo.";
-  if(typeof COMPTE_NEUF!=='undefined' && COMPTE_NEUF) d="Ton compte est prêt. Moi, c'est Axo.";
+  /* 15/09 — la marque se dit dès la première bulle (Lucas : « il ne sait même pas qu'il est sur Medeos ») */
+  let d="Salut, moi c'est Axo, le guide de Medeos.";
+  if(typeof COMPTE_NEUF!=='undefined' && COMPTE_NEUF) d="Ton compte Medeos est prêt. Moi, c'est Axo.";
   else if(src==='depart' || ref==='alaune-commence') d="Salut, moi c'est Axo. C'est ici que ça commence.";
   else if(ref==='alaune-stages') d="Salut, moi c'est Axo. Avant les stages, tout commence ici, gratuitement.";
   else if(ref==='alaune-quionest') d="Salut, moi c'est Axo. Voici ce que l'équipe t'a construit.";
@@ -17795,7 +17805,7 @@ function renderRayonMediPro(){
   const img = document.getElementById('pk-img'), tag = document.getElementById('pk-tag'), btn = document.getElementById('pk-btn');
   if (enP1()) {
     if (img) { img.src = 'img/tuteur-lucas.jpg'; img.alt = 'Ton tuteur'; }
-    if (tag) tag.textContent = 'Medeos Soutien · Déjà en première année';
+    if (tag) tag.textContent = 'Medeos Soutien · Déjà en P1';   /* court : sur 390 px la version longue passait sur deux lignes */
     t.textContent = 'Un tuteur qui t\'accompagne vers ta réussite.';
     p.textContent = 'Tu es déjà en première année de santé : ce n\'est plus l\'anticipation qu\'il te faut, c\'est quelqu\'un qui te suit. Un tuteur pour ta méthode, Medeos pour tes questions de cours, dans toutes les matières. 35,90 € par mois, engagement sur 6 mois minimum.';
     if (btn) { btn.textContent = 'Découvrir Medeos Soutien'; btn.onclick = function(){ ouvrirSoutien(); }; }
