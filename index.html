@@ -3579,6 +3579,11 @@ function go(id){
     if(gt) gt.className='gate-tease '+(gateVers==='arene'?'t-arene':'t-home');
     const t2=document.getElementById('gate-titre');
     if(t2) t2.textContent=(gateVers==='arene')?'L\'Arène t\'attend':(gateVers==='fiche')?'Ta première fiche t\'attend':'Ton Parcours t\'attend';
+    /* 16/09 : LA MARCHE MANQUANTE DE L'ENTONNOIR. /api/app-arrivee accepte « gate_compte »
+       depuis le 07/09, mais personne ne l'envoyait : 0 événement en base, et l'admin ne
+       pouvait pas voir combien de gens VOIENT l'écran de compte avant de le remplir.
+       On ne balise que l'anonyme (celui qui a déjà un compte ne passe pas la porte). */
+    try{ if(!(typeof accOk==='function'&&accOk()) && typeof balise==='function') balise('gate_compte',{vers:gateVers}); }catch(e){}
   }
   const i=UNIVERS.indexOf(id);
   const avant=document.querySelector('.scr.on');
@@ -19733,15 +19738,38 @@ function reprendreOuLire(f){
         return;
       }
     }
+    /* ═══ 16/09 — L'AUTRE MOITIÉ DU MÊME BUG, mesurée en base ce jour-là ═══
+       Le correctif du 13/09 ne rattrape que l'élève qui avait DÉJÀ une séance en cours.
+       Or celui qui arrive d'Instagram n'en a aucune : 85 des 92 passages par la porte
+       portent « anatomie-001-position-reference », qui est très exactement la PREMIÈRE
+       FICHE de la séance p1. Il lisait donc sa fiche hors séance — sans « J'ai lu → »,
+       sans rappel, sans rien derrière. Résultat mesuré : 22 comptes sur 39 n'ont jamais
+       terminé une seule séance, et 30 sur 37 n'en lancent aucune à leur première visite.
+       Désormais, quand la fiche demandée EST la porte d'entrée de la séance du jour, on
+       ouvre LA SÉANCE : la même fiche s'affiche, mais cette fois elle mène quelque part.
+       Prudence volontaire — on ne le fait que si la séance du jour n'est pas déjà faite
+       et qu'aucune autre n'est en cours : la règle « une séance par jour » ne bouge pas. */
+    if(!sr && typeof SEANCES!=='undefined' && typeof seanceCourante==='function'){
+      const cur=seanceCourante();
+      if(cur && cur.fiches && cur.fiches[0]===f.slug && !(cur.fait&&cur.fait())){
+        startSeance(cur, 0, 'fiche_entree');
+        return;
+      }
+    }
   }catch(e){}
   openFiche(f.slug, f.titre);
 }
 
 /* ═══ UNE SÉANCE = lire 2 vraies fiches, battre leur question après chacune ═══ */
 let SR=null;
-function startSeance(s, etape){
+function startSeance(s, etape, via){
   SR={s:s, etape:etape||0};
   sauverSR();
+  /* 16/09 : ON NE MESURAIT QUE LES SÉANCES TERMINÉES. « seance » part de seanceCredit(), donc
+     à la fin : impossible de savoir si l'élève ne LANCE pas, ou s'il lance et abandonne.
+     Les deux appellent des correctifs opposés — on sépare donc les deux moments.
+     `via` dit d'où vient le lancement (bouton de l'accueil, ou fiche d'entrée). */
+  try{ if(typeof traquer==='function' && !(etape>0)) traquer('seance_debut',{id:s.id, rev:!!s.rev, via:via||'bouton'}); }catch(e){}
   seanceEtape();
 }
 function sauverSR(){
