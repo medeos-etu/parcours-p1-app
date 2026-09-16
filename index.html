@@ -19744,15 +19744,22 @@ function reprendreOuLire(f){
         return;
       }
     }
-    /* ═══ 16/09 — L'AUTRE MOITIÉ DU MÊME BUG, mesurée en base ce jour-là ═══
-       Le correctif du 13/09 ne rattrape que l'élève qui avait DÉJÀ une séance en cours.
-       Or celui qui arrive d'Instagram n'en a aucune : 85 des 92 passages par la porte
-       portent « anatomie-001-position-reference », qui est très exactement la PREMIÈRE
-       FICHE de la séance p1. Il lisait donc sa fiche hors séance — sans « J'ai lu → »,
-       sans rappel, sans rien derrière. Résultat mesuré : 22 comptes sur 39 n'ont jamais
-       terminé une seule séance, et 30 sur 37 n'en lancent aucune à leur première visite.
-       Désormais, quand la fiche demandée EST la porte d'entrée de la séance du jour, on
-       ouvre LA SÉANCE : la même fiche s'affiche, mais cette fois elle mène quelque part.
+    /* ═══ 16/09 — LA SÉANCE EST ENGAGÉE DÈS L'OUVERTURE DE LA FICHE ═══
+       ⚠️ CE COMMENTAIRE A ÉTÉ RÉÉCRIT LE 17/09 : sa première version affirmait que l'élève
+       revenu de l'inscription n'avait « rien derrière sa fiche ». C'était FAUX, Lucas l'a
+       relevé — le FILET du 13/09, quelques lignes plus bas dans openFiche(), affiche déjà
+       « J'ai lu → » hors séance quand la fiche ouverte est la 1re de la séance courante.
+       Le chemin existait. (Archivé dans 00-ENTREPRISE/FAUSSES-INFORMATIONS.md.)
+
+       CE QUE CETTE BRANCHE APPORTE RÉELLEMENT, et c'est mince : le filet attend un CLIC
+       pour engager la séance ; ici on l'engage dès l'ouverture (S.sr posé). L'élève qui
+       ferme l'app pendant sa lecture retrouve « Séance en cours — Reprendre » au lieu de
+       repartir de zéro. C'est le seul gain, et il se mesure par via:'fiche_entree'.
+
+       🔴 La vraie cause des 22 comptes sur 39 sans séance terminée reste INCONNUE : le
+       filet du 13/09 visait déjà ce symptôme (« 9 sur 19 ») et le taux n'a pas bougé.
+       C'est seance_debut qui tranchera — ne lancent-ils pas, ou abandonnent-ils en route ?
+
        Prudence volontaire — on ne le fait que si la séance du jour n'est pas déjà faite
        et qu'aucune autre n'est en cours : la règle « une séance par jour » ne bouge pas. */
     if(!sr && typeof SEANCES!=='undefined' && typeof seanceCourante==='function'){
