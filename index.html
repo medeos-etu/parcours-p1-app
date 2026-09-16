@@ -14642,6 +14642,12 @@ function appareilId(){
 function balise(type, detail){
   try{
     const corps=JSON.stringify(Object.assign({appareil:appareilId(), type:type, src:(function(){ const a=(typeof SRC0==='string')?SRC0:'', r=(typeof REF0==='string')?REF0:''; return (a&&r)? a+'-'+r : (a||r); })(), ref:String(document.referrer||'').slice(0,200)}, detail||{}));
+    /* 16/09 : UN BANC D'ESSAI NE DOIT JAMAIS ECRIRE EN PRODUCTION. Releve par l'audit de ce
+       chantier : ARRIVEE_API pointe sur medeos-sante.fr meme quand l'app tourne en local, et le
+       navigateur bloque bien la REPONSE (CORS) mais la requete, elle, atteint le serveur. Chaque
+       passage d'un banc faussait donc les arrivees et l'entonnoir. Les bancs posent window.__BANC
+       avant le chargement : la balise devient observable sans jamais partir. */
+    if(window.__BANC){ (window.__BALISES=window.__BALISES||[]).push(JSON.parse(corps)); return; }
     fetch(ARRIVEE_API,{method:'POST',headers:{'Content-Type':'text/plain'},body:corps,keepalive:true}).catch(function(){});
   }catch(e){}
 }

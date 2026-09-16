@@ -36,9 +36,15 @@ function verifier(nom, condition, vu) {
   const port = srv.address().port;
   const browser = await chromium.launch();
   const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
+  // ⛔ AVANT toute navigation : le banc ne doit JAMAIS écrire en production.
+  // ARRIVEE_API pointe sur medeos-sante.fr même en local ; le CORS bloque la réponse mais
+  // la requête atteint le serveur, et chaque passage faussait les arrivées et l'entonnoir.
+  await ctx.addInitScript(() => { window.__BANC = 1; });
   const page = await ctx.newPage();
   const erreursJs = [];
   page.on('pageerror', e => erreursJs.push(e.message));
+  const sorties = [];
+  page.on('request', r => { if (/medeos-sante\.fr/.test(r.url())) sorties.push(r.url()); });
   await page.goto(`http://localhost:${port}/`, { waitUntil: 'load' });
   await page.waitForFunction(() => typeof reprendreOuLire === 'function' && typeof SEANCES !== 'undefined', { timeout: 20000 });
 
@@ -87,15 +93,16 @@ function verifier(nom, condition, vu) {
 
   console.log('\nCAS 5 — la marche manquante de l\'entonnoir : la balise « gate_compte »');
   const cas5 = await page.evaluate(() => {
-    const envois = [];
-    const vrai = window.fetch;
-    window.fetch = function (u, o) { try { if (String(u).indexOf('app-arrivee') >= 0) envois.push(JSON.parse(o.body)); } catch (e) {} return Promise.resolve(new Response('{}')); };
+    window.__BALISES = [];              // les balises sont retenues, pas envoyées (window.__BANC)
     gateVers = 'fiche'; go('gate');
-    window.fetch = vrai;
-    return { types: envois.map(e => e.type), vers: envois.map(e => e.vers) };
+    const e = window.__BALISES || [];
+    return { types: e.map(x => x.type), vers: e.map(x => x.vers) };
   });
   verifier('« gate_compte » part quand la porte s\'affiche', cas5.types.indexOf('gate_compte') >= 0, cas5);
   verifier('elle dit vers quoi la porte menait', cas5.vers.indexOf('fiche') >= 0, cas5);
+
+  // garde-fou : AUCUNE requête ne doit être partie vers la production pendant ce banc
+  verifier('aucune écriture en production', sorties.length === 0, sorties);
 
   await browser.close(); srv.close();
   if (erreursJs.length) { console.log('\n⛔ erreurs JS pendant le test :'); erreursJs.forEach(e => console.log('   ' + e)); }
