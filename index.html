@@ -552,6 +552,13 @@
   .gatebox h2{font-family:Fredoka,Inter,sans-serif;font-size:22px;font-weight:600;letter-spacing:.01em}
   .gatebox p{font-size:13px;color:var(--muted);line-height:1.6;margin:10px 0 18px}
   .gatebox .btn{width:100%}
+  /* La porte propose le guide à qui n'est pas prêt à s'inscrire (Lucas, 19/09).
+     Détaché du bloc d'inscription par un filet, pour rester une seconde voie
+     et non un troisième bouton dans la même pile. */
+  .gate-guide{width:100%;margin-top:20px;padding-top:18px;border-top:1px solid rgba(255,255,255,.12)}
+  .gate-guide b{display:block;font-size:13.5px;margin-bottom:5px}
+  .gatebox .gate-guide p{margin:0 0 12px;font-size:12.5px}
+  .gatebox .gate-guide .btn{width:100%}
   .accerr{font-size:11.5px;color:#9B5B3A;font-weight:700}
   .accme{display:flex;align-items:center;gap:9px}
   .accme .av2{width:34px;height:34px;border-radius:50%;background:linear-gradient(145deg,var(--violet),var(--violet-deep));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:14px;flex-shrink:0}
@@ -3029,6 +3036,14 @@
       <p>Pour ouvrir tes fiches et suivre ta progression — tes trophées, tes erreurs, tes amis — il te faut un compte. C'est gratuit, en trente secondes. La Bibliothèque et le Parcours, eux, restent en accès libre.</p>
       <button class="btn" onclick="accMode='create';focusAcc()">Créer mon compte gratuit</button>
       <button class="btn ghost" style="margin-top:8px" onclick="accMode='login';focusAcc()">J'ai déjà un compte</button>
+      <!-- 19/09 (Lucas) : « inciter les gens à lire le guide ». Une porte qui ne propose que
+           l'inscription renvoie chez eux ceux qui ne sont pas prêts ; celle-ci leur donne une
+           raison de rester, et le guide fait le travail de conviction. -->
+      <div class="gate-guide">
+        <b>Pas encore décidé&nbsp;?</b>
+        <p>Lis d'abord le guide&nbsp;: ce qui t'attend vraiment en première année, et les cinq piliers à travailler avant d'y être. Gratuit, sans compte.</p>
+        <button class="btn ghost" onclick="ouvrirRessource('https://medeos-sante.fr/ressources/guide-methodologique.html?dans=app','Le guide pour préparer sa première année de santé')">Lire le guide →</button>
+      </div>
     </div>
   </section>
 
@@ -3362,15 +3377,9 @@
           <div class="rc-meta">🛠️ Le mini-guide, ~13 min</div>
         </div>
       </div>
-      <div class="rescard" id="carte-agenda" onclick="ouvrirRessource('agenda-p1.html','Agenda de la P1')">
-        <span class="pricechip">GRATUIT</span>
-        <img src="img/cover-agenda.jpg" alt="">
-        <div class="rc-body">
-          <b>Agenda P1</b>
-          <p>Un exemple concret de semaine de P1, heure par heure : à quoi ressemble vraiment l'organisation d'une année bien organisée.</p>
-          <div class="rc-meta">📅 Ton plan de route</div>
-        </div>
-      </div>
+      <!-- 19/09 (Lucas) : « l'agenda P1, enlève-le ». La carte est retirée de la
+           Bibliothèque. Le fichier biblio/agenda-p1.html reste en place mais plus
+           rien n'y mène ; il pourra être supprimé quand Lucas le confirmera. -->
     </div>
 
 
@@ -3562,12 +3571,13 @@ function attendreLaSeance(id){
   return true;
 }
 function go(id){
-  /* Parcours & Arène : réservés aux comptes connectés — la Bibliothèque reste libre (Lucas, 24/08) */
-  /* Le PARCOURS se visite sans compte : son intro se joue en entier (Lucas, 07/09 : « l'inscription
-     passera de façon beaucoup plus souple »). La porte se trouve à la PREMIÈRE FICHE (openFiche)
-     et à l'Arène. */
+  /* Parcours & Arène : réservés aux comptes connectés — la Bibliothèque reste libre (Lucas, 24/08).
+     19/09 — LUCAS REVIENT SUR L'OUVERTURE DU 07/09 : « la section Parcours sur mon app, remets-la en
+     mode verrouillé tant que la personne ne s'inscrit ou ne se connecte pas, et inciter les gens à
+     lire le guide ». Le Parcours redevient fermé sans compte ; la porte propose le guide, en accès
+     libre, qui donne une raison de rester. La Bibliothèque, elle, reste ouverte. */
   if(typeof S!=='undefined' && attendreLaSeance(id)) id='home';   /* d'abord : sans première séance, l'Arène n'existe pas encore */
-  if(id==='arene' && typeof S!=='undefined' && !accOk()){ gateVers='arene'; id='gate'; }
+  if((id==='arene' || id==='home') && typeof S!=='undefined' && !accOk()){ gateVers=id; id='gate'; }
   try{ majVerrouArene(); }catch(e){}
   const cible=document.getElementById(id); if(!cible) return;
   /* UNE VISITE NE SURVIT PAS À UN CHANGEMENT D'ÉCRAN. Sinon la bulle « Bienvenue dans
