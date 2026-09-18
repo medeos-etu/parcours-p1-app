@@ -3583,7 +3583,11 @@ function go(id){
      lire le guide ». Le Parcours redevient fermé sans compte ; la porte propose le guide, en accès
      libre, qui donne une raison de rester. La Bibliothèque, elle, reste ouverte. */
   if(typeof S!=='undefined' && attendreLaSeance(id)) id='home';   /* d'abord : sans première séance, l'Arène n'existe pas encore */
-  if((id==='arene' || id==='home') && typeof S!=='undefined' && !accOk()){ gateVers=id; id='gate'; }
+  /* 19/09 (Lucas) : « Social, ça doit montrer la même interface d'ailleurs ».
+     Le Social suppose un compte par définition — on n'a ni amis ni classement
+     sans identité. Il rejoint donc le Parcours et l'Arène derrière la porte,
+     au lieu d'afficher un écran vide à qui n'est pas inscrit. */
+  if((id==='arene' || id==='home' || id==='social') && typeof S!=='undefined' && !accOk()){ gateVers=id; id='gate'; }
   try{ majVerrouArene(); }catch(e){}
   const cible=document.getElementById(id); if(!cible) return;
   /* UNE VISITE NE SURVIT PAS À UN CHANGEMENT D'ÉCRAN. Sinon la bulle « Bienvenue dans
@@ -3594,7 +3598,10 @@ function go(id){
     const gt=document.getElementById('gate-tease');
     if(gt) gt.className='gate-tease '+(gateVers==='arene'?'t-arene':'t-home');
     const t2=document.getElementById('gate-titre');
-    if(t2) t2.textContent=(gateVers==='arene')?'L\'Arène t\'attend':(gateVers==='fiche')?'Ta première fiche t\'attend':'Ton Parcours t\'attend';
+    if(t2) t2.textContent=(gateVers==='arene')?'L\'Arène t\'attend'
+      :(gateVers==='fiche')?'Ta première fiche t\'attend'
+      :(gateVers==='social')?'Le Social t\'attend'          /* 19/09 : le Social passe aussi la porte */
+      :'Ton Parcours t\'attend';
     /* 16/09 : LA MARCHE MANQUANTE DE L'ENTONNOIR. /api/app-arrivee accepte « gate_compte »
        depuis le 07/09, mais personne ne l'envoyait : 0 événement en base, et l'admin ne
        pouvait pas voir combien de gens VOIENT l'écran de compte avant de le remplir.
