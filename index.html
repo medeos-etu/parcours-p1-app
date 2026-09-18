@@ -3354,7 +3354,7 @@
       </div>
       
       
-      <div class="rescard" id="carte-guide" onclick="ouvrirRessource('guide-methodologique.html','Le guide pour préparer sa première année de santé')">
+      <div class="rescard" id="carte-guide" onclick="ouvrirRessource('https://medeos-sante.fr/ressources/guide-methodologique.html?dans=app','Le guide pour préparer sa première année de santé')">
         <span class="pricechip">GRATUIT</span><img src="img/cover-methode-p1.png" onerror="this.src='img/cover-methode.jpg'" alt="">
         <div class="rc-body">
           <b>Préparer sa première année</b>
@@ -19676,8 +19676,20 @@ function openFiche(slug,titre){
    Les panoramas n'ont pas de barre à eux, le guide en a une : ici une seule, au même endroit pour tous.
    La hauteur du document peut changer en cours de lecture (les panoramas dévoilent la suite par étapes) :
    on recalcule à chaque défilement, jamais une fois pour toutes. */
+/* Une ressource servie par medeos-sante.fr est d'une AUTRE ORIGINE : on ne peut
+   plus lire son défilement depuis ici. Elle envoie alors sa progression par
+   message (voir guide-methodologique.html), et on l'écoute. */
+window.addEventListener('message', function(e){
+  if(e.origin!=='https://medeos-sante.fr') return;
+  const v=e.data && e.data.medeosLecture;
+  if(typeof v!=='number') return;
+  const i=document.getElementById('lect-prog-i');
+  if(i) i.style.width=Math.max(0,Math.min(100,v))+'%';
+});
 function brancherProgLecture(fr){
-  const w=fr.contentWindow, d=fr.contentDocument, i=document.getElementById('lect-prog-i');
+  let w=null,d=null;
+  try{ w=fr.contentWindow; d=fr.contentDocument; }catch(e){}   /* autre origine : interdit */
+  const i=document.getElementById('lect-prog-i');
   if(!w || !d || !i) return;
   const maj=()=>{ try{ const h=d.documentElement; const sc=h.scrollTop||(d.body&&d.body.scrollTop)||w.scrollY||0;
     const max=(h.scrollHeight-h.clientHeight)||1; i.style.width=Math.max(0,Math.min(100,sc/max*100))+'%'; }catch(e){} };
@@ -20425,7 +20437,9 @@ function ouvrirRessource(fichier, titre){
   }catch(e){} };
   L.classList.add('ressource');
   { const i=document.getElementById('lect-prog-i'); if(i) i.style.width='0%'; }
-  fr.src='biblio/'+fichier;
+  /* 19/09 — « un seul guide, à un seul endroit » : une ressource peut désormais
+     être servie par medeos-sante.fr au lieu d'être recopiée dans biblio/. */
+  fr.src = /^https?:\/\//.test(fichier) ? fichier : 'biblio/'+fichier;
   document.getElementById('lecteur-nom').textContent=titre||'';
   { const nb=document.getElementById('lect-suivant'); if(nb) nb.style.display='none'; }
   { const pan=document.getElementById('compare-pan'); if(pan) pan.style.display='none'; }
@@ -21525,7 +21539,7 @@ if(SRC0==='accueil-guide-methodologique'){
      démarrait ; la personne devait la traverser avant de lire ce pour quoi elle
      était venue. MAINTENANT : le guide s'ouvre directement, et la visite ne
      commence qu'à la fermeture du lecteur (voir closeFiche). */
-  setTimeout(()=>{ try{ ouvrirRessource('guide-methodologique.html','Le guide pour préparer sa première année de santé'); }catch(e){ TUTO_DIFFERE=null; } }, 350);
+  setTimeout(()=>{ try{ ouvrirRessource('https://medeos-sante.fr/ressources/guide-methodologique.html?dans=app','Le guide pour préparer sa première année de santé'); }catch(e){ TUTO_DIFFERE=null; } }, 350);
   /* Quand la visite démarrera — à la sortie — elle dira d'abord où le guide est rangé. */
   BIBLIO_AVANT={sel:'#carte-guide', img:'axo-guide-pointe-haut', t:"Le <b>guide</b> que tu viens de lire reste ici — tu peux le rouvrir quand tu veux."};
 }
