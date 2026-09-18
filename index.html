@@ -3042,7 +3042,7 @@
       <div class="gate-guide">
         <b>Pas encore décidé&nbsp;?</b>
         <p>Lis d'abord le guide&nbsp;: ce qui t'attend vraiment en première année, et les cinq piliers à travailler avant d'y être. Gratuit, sans compte.</p>
-        <button class="btn ghost" onclick="ouvrirRessource('https://medeos-sante.fr/ressources/guide-methodologique.html?dans=app','Le guide pour préparer sa première année de santé')">Lire le guide →</button>
+        <button class="btn ghost" onclick="ouvrirGuide()">Lire le guide →</button>
       </div>
     </div>
   </section>
@@ -3369,7 +3369,7 @@
       </div>
       
       
-      <div class="rescard" id="carte-guide" onclick="ouvrirRessource('https://medeos-sante.fr/ressources/guide-methodologique.html?dans=app','Le guide pour préparer sa première année de santé')">
+      <div class="rescard" id="carte-guide" onclick="ouvrirGuide()">
         <span class="pricechip">GRATUIT</span><img src="img/cover-methode-p1.png" onerror="this.src='img/cover-methode.jpg'" alt="">
         <div class="rc-body">
           <b>Anticiper sa première année</b>
@@ -20431,6 +20431,21 @@ function sauverNotes(slug){
    une autre page web », sans nouvel onglet vers le site). Le guide et les quatre panoramas
    sont des pages complètes copiées dans biblio/ ; on les affiche dans la liseuse des fiches,
    même origine, sans porte email. ═══ */
+/* LE GUIDE S'OUVRE SUR SA PROPRE PAGE (Lucas, 19/09) :
+   « foutre le guide dans le Parcours, c'est se tirer une balle dans le pied. Ça
+   devrait limite être sur une page à part, je n'ai pas envie que les gens quittent
+   la page — c'est un très bon moyen de conversion, et mettre une grosse flèche
+   Retour en haut incite à partir. »
+   Le lecteur de l'app coiffe toute ressource d'un bandeau « ← Retour » : sur un
+   panorama c'est juste, sur le guide c'est une sortie offerte au moment précis où
+   on veut que la personne lise. Le guide part donc dans un onglet, sur sa page
+   autonome — celle du site, sans barre de navigation ni menu.
+   L'app reste ouverte derrière : on ne la quitte pas, on ouvre à côté. */
+function ouvrirGuide(){
+  var u='https://medeos-sante.fr/ressources/guide-methodologique.html';
+  try{ traquer('ressource',{fichier:'guide-methodologique'}); }catch(e){}
+  try{ window.open(u,'_blank','noopener'); }catch(e){ location.href=u; }
+}
 function ouvrirRessource(fichier, titre){
   try{ traquer('ressource',{fichier:fichier}); }catch(e){}
   const L=document.getElementById('lecteur'), fr=document.getElementById('fiche-frame');
@@ -21566,7 +21581,7 @@ if(SRC0==='accueil-guide-methodologique'){
      démarrait ; la personne devait la traverser avant de lire ce pour quoi elle
      était venue. MAINTENANT : le guide s'ouvre directement, et la visite ne
      commence qu'à la fermeture du lecteur (voir closeFiche). */
-  setTimeout(()=>{ try{ ouvrirRessource('https://medeos-sante.fr/ressources/guide-methodologique.html?dans=app','Le guide pour préparer sa première année de santé'); }catch(e){ TUTO_DIFFERE=null; } }, 350);
+  setTimeout(()=>{ try{ ouvrirGuide(); }catch(e){ TUTO_DIFFERE=null; } }, 350);
   /* Quand la visite démarrera — à la sortie — elle dira d'abord où le guide est rangé. */
   BIBLIO_AVANT={sel:'#carte-guide', img:'axo-guide-pointe-haut', t:"Le <b>guide</b> que tu viens de lire reste ici — tu peux le rouvrir quand tu veux."};
 }
