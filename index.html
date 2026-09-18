@@ -20449,7 +20449,24 @@ function ouvrirRessource(fichier, titre){
   { const i=document.getElementById('lect-prog-i'); if(i) i.style.width='0%'; }
   /* 19/09 — « un seul guide, à un seul endroit » : une ressource peut désormais
      être servie par medeos-sante.fr au lieu d'être recopiée dans biblio/. */
-  fr.src = /^https?:\/\//.test(fichier) ? fichier : 'biblio/'+fichier;
+  const externe = /^https?:\/\//.test(fichier);
+  fr.src = externe ? fichier : 'biblio/'+fichier;
+  /* FILET DE SÉCURITÉ (19/09). Une page servie par un autre domaine ne s'affiche
+     dans ce cadre que si ELLE l'autorise (frame-ancestors). Si l'autorisation
+     n'est pas encore déployée, si un pare-feu s'interpose ou si la CSP change un
+     jour, le cadre reste VIDE et le guide devient invisible — c'est pire que
+     l'ancienne copie. On vérifie donc qu'il s'est chargé ; sinon on ferme le
+     lecteur et on ouvre la page dans un onglet. Mieux vaut sortir de l'app que
+     ne rien montrer. */
+  if(externe){
+    let charge=false;
+    fr.addEventListener('load', ()=>{ charge=true; }, {once:true});
+    setTimeout(()=>{
+      if(charge) return;
+      try{ closeFiche(); }catch(e){}
+      try{ window.open(fichier, '_blank', 'noopener'); }catch(e){ location.href=fichier; }
+    }, 2500);
+  }
   document.getElementById('lecteur-nom').textContent=titre||'';
   { const nb=document.getElementById('lect-suivant'); if(nb) nb.style.display='none'; }
   { const pan=document.getElementById('compare-pan'); if(pan) pan.style.display='none'; }
