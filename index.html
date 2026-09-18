@@ -547,7 +547,14 @@
     /* la carte HD est nette ; la « porte » générée est volontairement brumeuse → à regénérer (H4 corrigé) */
     .gate-tease.t-home{background-image:url('img/parcours/carte-monde-ordi.jpg');opacity:.18}
   }
-  .gatebox{position:relative;z-index:1;margin:auto;max-width:340px;text-align:center;display:flex;flex-direction:column;align-items:center;padding:24px 0}
+  /* 19/09 (Lucas) : « ça fait pas propre, en bas ça se mange dans la barre du bas ».
+     La boîte était centrée par margin:auto dans un conteneur qui ne défile pas :
+     dès que son contenu dépassait la hauteur de l'écran — ce qui est arrivé en
+     ajoutant le bloc « Pas encore décidé ? » — le bas passait SOUS la barre de
+     navigation, sans moyen d'y accéder. Elle défile maintenant, et garde la
+     hauteur de la barre en réserve sous elle. */
+  #gate{overflow-y:auto;-webkit-overflow-scrolling:touch}
+  .gatebox{position:relative;z-index:1;margin:auto;max-width:340px;text-align:center;display:flex;flex-direction:column;align-items:center;padding:24px 0 8px}
   .gatebox .gaxo{width:110px;margin-bottom:14px}
   .gatebox h2{font-family:Fredoka,Inter,sans-serif;font-size:22px;font-weight:600;letter-spacing:.01em}
   .gatebox p{font-size:13px;color:var(--muted);line-height:1.6;margin:10px 0 18px}
@@ -555,9 +562,9 @@
   /* La porte propose le guide à qui n'est pas prêt à s'inscrire (Lucas, 19/09).
      Détaché du bloc d'inscription par un filet, pour rester une seconde voie
      et non un troisième bouton dans la même pile. */
-  .gate-guide{width:100%;margin-top:20px;padding-top:18px;border-top:1px solid rgba(255,255,255,.12)}
-  .gate-guide b{display:block;font-size:13.5px;margin-bottom:5px}
-  .gatebox .gate-guide p{margin:0 0 12px;font-size:12.5px}
+  .gate-guide{width:100%;margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.12)}
+  .gate-guide b{display:block;font-size:13.5px;margin-bottom:4px}
+  .gatebox .gate-guide p{margin:0 0 10px;font-size:12.5px;line-height:1.5}
   .gatebox .gate-guide .btn{width:100%}
   .accerr{font-size:11.5px;color:#9B5B3A;font-weight:700}
   .accme{display:flex;align-items:center;gap:9px}
@@ -3034,7 +3041,7 @@
       <img class="gaxo" src="img/axo-canon.png" alt="">
       <div class="marque"><img src="img/logo-m.png" alt="">Medeos<small>Univers</small></div>
       <h2 id="gate-titre">Crée ton compte pour entrer</h2>
-      <p>Pour ouvrir tes fiches et suivre ta progression — tes trophées, tes erreurs, tes amis — il te faut un compte. C'est gratuit, en trente secondes. La Bibliothèque et le Parcours, eux, restent en accès libre.</p>
+      <p>Pour ouvrir tes fiches et suivre ta progression — tes trophées, tes erreurs, tes amis — il te faut un compte. C'est gratuit, en trente secondes. La <b>Bibliothèque</b>, elle, reste en accès libre.</p>
       <button class="btn" onclick="accMode='create';focusAcc()">Créer mon compte gratuit</button>
       <button class="btn ghost" style="margin-top:8px" onclick="accMode='login';focusAcc()">J'ai déjà un compte</button>
       <!-- 19/09 (Lucas) : « inciter les gens à lire le guide ». Une porte qui ne propose que
@@ -3042,7 +3049,7 @@
            raison de rester, et le guide fait le travail de conviction. -->
       <div class="gate-guide">
         <b>Pas encore décidé&nbsp;?</b>
-        <p>Lis d'abord le guide&nbsp;: ce qui t'attend vraiment en première année, et les cinq piliers à travailler avant d'y être. Gratuit, sans compte.</p>
+        <p>Ce qui t'attend vraiment en première année, et les cinq piliers à travailler avant d'y être. Gratuit, sans compte.</p>
         <button class="btn ghost" onclick="ouvrirGuide()">Lire le guide →</button>
       </div>
     </div>
