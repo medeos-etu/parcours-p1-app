@@ -169,7 +169,22 @@
     .tbl-note { font-size: 12.5px; color: #6b6275; margin: -10px 4px 20px; font-weight: 500; }
     @media print { .tbl-wrap { page-break-inside: avoid; } table.tbl { font-size: 16px; box-shadow: none; } table.tbl th { font-size: 12.5px; } }
     @media (max-width: 600px) { table.tbl { font-size: 13.5px; } table.tbl th, table.tbl td { padding: 9px 10px; } table.tbl td.axe { white-space: normal; } }
-</style>
+/* ⛔⛔ 19/09/2026 — LE PROMPT NE DOIT JAMAIS ÊTRE VISIBLE PAR UN ÉLÈVE.
+           Lucas, capture à l'appui : « c'est une catastrophe, sur tous nos panoramas
+           les images ne sont pas présentes, ça affiche les prompts. Faut absolument
+           corriger ça et plus jamais que ça arrive !! »
+           La règle .schema-box.img-missing .generation-prompt{display:block} rendait le
+           prompt AU PREMIER échec de chargement d'une image — un secours pensé pour
+           l'auteur, mais servi au public. Un schéma qui ne charge pas est un défaut
+           d'affichage ; un prompt exposé est une fuite de contenu interne.
+           Cette règle-ci passe APRÈS et gagne, en toutes circonstances. */
+        .schema-box .generation-prompt,
+        .schema-box.img-missing .generation-prompt,
+        .schema-box .copy-prompt-btn,
+        .schema-box.img-missing .copy-prompt-btn,
+        .schema-box .file-target,
+        .schema-box.img-missing .file-target { display: none !important; }
+    </style>
 </head>
 <body>
 <div class="page-container">

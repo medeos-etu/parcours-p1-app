@@ -175,7 +175,22 @@
     .formule { display: block; margin: 11px 0 9px; padding: 12px 14px; background: #fff; border: 1px solid #dccff2; border-radius: 9px; text-align: center; font-size: 15.5px; font-weight: 700; color: #4C2A85; line-height: 1.8; }
     .formule b { color: #6B46C1; }
     .formule .arrow { color: #B8895A; padding: 0 6px; font-size: 17px; }
-</style>
+/* ⛔⛔ 19/09/2026 — LE PROMPT NE DOIT JAMAIS ÊTRE VISIBLE PAR UN ÉLÈVE.
+           Lucas, capture à l'appui : « c'est une catastrophe, sur tous nos panoramas
+           les images ne sont pas présentes, ça affiche les prompts. Faut absolument
+           corriger ça et plus jamais que ça arrive !! »
+           La règle .schema-box.img-missing .generation-prompt{display:block} rendait le
+           prompt AU PREMIER échec de chargement d'une image — un secours pensé pour
+           l'auteur, mais servi au public. Un schéma qui ne charge pas est un défaut
+           d'affichage ; un prompt exposé est une fuite de contenu interne.
+           Cette règle-ci passe APRÈS et gagne, en toutes circonstances. */
+        .schema-box .generation-prompt,
+        .schema-box.img-missing .generation-prompt,
+        .schema-box .copy-prompt-btn,
+        .schema-box.img-missing .copy-prompt-btn,
+        .schema-box .file-target,
+        .schema-box.img-missing .file-target { display: none !important; }
+    </style>
 </head>
 <body>
 <div class="page-container">

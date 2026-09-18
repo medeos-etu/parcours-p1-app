@@ -156,7 +156,22 @@
         /* boutons de la lightbox plus gros au doigt */
         #medeos-lightbox button[aria-label="Fermer"] { width: 46px; height: 46px; font-size: 26px; }
     }
-</style>
+/* ⛔⛔ 19/09/2026 — LE PROMPT NE DOIT JAMAIS ÊTRE VISIBLE PAR UN ÉLÈVE.
+           Lucas, capture à l'appui : « c'est une catastrophe, sur tous nos panoramas
+           les images ne sont pas présentes, ça affiche les prompts. Faut absolument
+           corriger ça et plus jamais que ça arrive !! »
+           La règle .schema-box.img-missing .generation-prompt{display:block} rendait le
+           prompt AU PREMIER échec de chargement d'une image — un secours pensé pour
+           l'auteur, mais servi au public. Un schéma qui ne charge pas est un défaut
+           d'affichage ; un prompt exposé est une fuite de contenu interne.
+           Cette règle-ci passe APRÈS et gagne, en toutes circonstances. */
+        .schema-box .generation-prompt,
+        .schema-box.img-missing .generation-prompt,
+        .schema-box .copy-prompt-btn,
+        .schema-box.img-missing .copy-prompt-btn,
+        .schema-box .file-target,
+        .schema-box.img-missing .file-target { display: none !important; }
+    </style>
 </head>
 <body>
 <div class="page-container">

@@ -999,7 +999,22 @@
 
         /* Les deux offres côte à côte : le lecteur choisit sa voie lui-même. */
         .continue-cta .cta-duo { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
-</style>
+/* ⛔⛔ 19/09/2026 — LE PROMPT NE DOIT JAMAIS ÊTRE VISIBLE PAR UN ÉLÈVE.
+           Lucas, capture à l'appui : « c'est une catastrophe, sur tous nos panoramas
+           les images ne sont pas présentes, ça affiche les prompts. Faut absolument
+           corriger ça et plus jamais que ça arrive !! »
+           La règle .schema-box.img-missing .generation-prompt{display:block} rendait le
+           prompt AU PREMIER échec de chargement d'une image — un secours pensé pour
+           l'auteur, mais servi au public. Un schéma qui ne charge pas est un défaut
+           d'affichage ; un prompt exposé est une fuite de contenu interne.
+           Cette règle-ci passe APRÈS et gagne, en toutes circonstances. */
+        .schema-box .generation-prompt,
+        .schema-box.img-missing .generation-prompt,
+        .schema-box .copy-prompt-btn,
+        .schema-box.img-missing .copy-prompt-btn,
+        .schema-box .file-target,
+        .schema-box.img-missing .file-target { display: none !important; }
+    </style>
 <!-- medeos-jsonld -->
     <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Anatomie en P1 (PASS / LAS) — le panorama Medeos", "description": "La découverte de l'anatomie en première année de santé : os, cœur, poumons, cerveau, sens.", "url": "https://medeos-sante.fr/ressources/panorama-p1/anatomie.html", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://medeos-sante.fr/ressources/panorama-p1/anatomie.html"}, "inLanguage": "fr-FR", "isAccessibleForFree": true, "author": {"@id": "https://medeos-sante.fr/#lucas"}, "publisher": {"@id": "https://medeos-sante.fr/#organisation"}, "about": {"@type": "Thing", "name": "Anatomie — première année d'études de santé"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://medeos-sante.fr"}, {"@type": "ListItem", "position": 2, "name": "Réussir sa première année de médecine", "item": "https://medeos-sante.fr/reussir-premiere-annee-medecine"}, {"@type": "ListItem", "position": 3, "name": "Anatomie", "item": "https://medeos-sante.fr/ressources/panorama-p1/anatomie.html"}]}]}</script>
 </head>
