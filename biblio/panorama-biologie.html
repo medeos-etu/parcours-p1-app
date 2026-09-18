@@ -1903,21 +1903,19 @@ Final output: should look like a publication-quality figure from a peer-reviewed
     // Medi Pro REGROUPE les stages des vacances de Terminale et la pré-rentrée
     // (Lucas, 19/09). Les deux portes sont donc le Parcours (gratuit) et Medi Pro.
     var RAPPELS_STAGES = {
-      3: 'La cellule, la membrane, l\'ADN : trois chapitres du programme, effleurés en quelques minutes. En première année, ils s\'enchaînent vite, avec un niveau de détail bien supérieur. Le <b>Parcours</b> de l\'app te les fait travailler gratuitement, deux fiches par jour&nbsp;; <b>Medi&nbsp;Pro</b>, nos stages, dès la Toussaint.',
-      5: 'Le cycle cellulaire est l\'un des chapitres les plus tombés de la première année, et l\'un des plus piégeux en QCM. Le voir une première fois sans pression change tout&nbsp;: c\'est ce que permettent le <b>Parcours</b> de l\'app, gratuitement, et <b>Medi&nbsp;Pro</b> pendant les vacances.'
+      3: 'La cellule, la membrane, l\'ADN : trois chapitres du programme, effleurés en quelques minutes. En première année, ils s\'enchaînent vite, avec un niveau de détail bien supérieur. <b>Medi&nbsp;Pro</b>, ce sont nos stages : le premier dès la Toussaint, pour les voir sérieusement avant tout le monde.',
+      5: 'Le cycle cellulaire est l\'un des chapitres les plus tombés de la première année, et l\'un des plus piégeux en QCM. Le voir une première fois sans pression change tout : c\'est exactement ce que permet <b>Medi&nbsp;Pro</b>, pendant tes vacances de Terminale.'
     };
     function rappelStages(n){
       var t = RAPPELS_STAGES[n];
       if(!t) return '';
-      /* 19/09 (Lucas) : « on vend encore Medi Pro ET Stages Vacances, une vieille
-         offre ; maintenant on n'a plus qu'un seul produit, Medi Pro, qui regroupe
-         tous les stages des vacances de Terminale + la pré-rentrée ». Les deux
-         boutons séparés sont donc remplacés par : le Parcours (gratuit, on y est
-         déjà) et Medi Pro. */
+      /* 19/09 (Lucas) : « pour les panoramas, en vrai faut rediriger vers Medi Pro
+         UNIQUEMENT ». Une seule porte, donc un seul bouton : le Parcours partageait
+         le regard et, gratuit, il emportait le clic. Le panorama est un contenu de
+         découverte ; sa sortie est l'offre. */
       return '<div class="continue-cta"><div class="cta-mot">' + t + '</div>' +
              '<div class="cta-duo">' +
-             '<a href="#home" target="_top" class="pr" data-cta="parcours">Ouvrir mon Parcours, gratuit →</a>' +
-             '<a href="https://medeos-sante.fr/packs/medi-pro-v2/2027" target="_top" data-cta="medipro">Medi&nbsp;Pro — nos stages →</a>' +
+             '<a href="https://medeos-sante.fr/packs/medi-pro-v2/2027" target="_top" class="pr" data-cta="medipro">Découvrir Medi&nbsp;Pro →</a>' +
              '</div></div>';
     }
 

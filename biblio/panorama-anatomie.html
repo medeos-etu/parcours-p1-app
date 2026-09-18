@@ -2168,21 +2168,19 @@
     // Medi Pro REGROUPE les stages des vacances de Terminale et la pré-rentrée
     // (Lucas, 19/09). Les deux portes sont donc le Parcours (gratuit) et Medi Pro.
     var RAPPELS_STAGES = {
-      3: 'Le langage anatomique, le squelette, le cœur : trois sujets, et en première année chacun d\'eux occupe un chapitre entier, avec ses schémas à restituer. Dans le <b>Parcours</b> de l\'app, tu les travailles gratuitement, deux fiches par jour, dans l\'ordre du programme&nbsp;; <b>Medi&nbsp;Pro</b>, ce sont nos stages pour aller plus loin, à chaque vacances puis juste avant la rentrée.',
-      5: 'Cœur, poumons, cerveau : tu viens de survoler en quelques minutes ce qui occupe plusieurs semaines de cours. La différence entre survoler et savoir, c\'est le nombre de fois où tu repasses dessus — c\'est exactement ce que fait le <b>Parcours</b>, un peu chaque jour, et ce que <b>Medi&nbsp;Pro</b> accélère pendant les vacances.'
+      3: 'Le langage anatomique, le squelette, le cœur : trois sujets, et en première année chacun d\'eux occupe un chapitre entier, avec ses schémas à restituer. <b>Medi&nbsp;Pro</b>, ce sont nos stages : à chaque vacances de Terminale, puis juste avant la rentrée — pour les travailler pour de bon, avant qu\'ils comptent.',
+      5: 'Cœur, poumons, cerveau : tu viens de survoler en quelques minutes ce qui occupe plusieurs semaines de cours. La différence entre survoler et savoir, c\'est le nombre de fois où tu repasses dessus — et c\'est exactement ce que fait <b>Medi&nbsp;Pro</b>, stage après stage.'
     };
     function rappelStages(n){
       var t = RAPPELS_STAGES[n];
       if(!t) return '';
-      /* 19/09 (Lucas) : « on vend encore Medi Pro ET Stages Vacances, une vieille
-         offre ; maintenant on n'a plus qu'un seul produit, Medi Pro, qui regroupe
-         tous les stages des vacances de Terminale + la pré-rentrée ». Les deux
-         boutons séparés sont donc remplacés par : le Parcours (gratuit, on y est
-         déjà) et Medi Pro. */
+      /* 19/09 (Lucas) : « pour les panoramas, en vrai faut rediriger vers Medi Pro
+         UNIQUEMENT ». Une seule porte, donc un seul bouton : le Parcours partageait
+         le regard et, gratuit, il emportait le clic. Le panorama est un contenu de
+         découverte ; sa sortie est l'offre. */
       return '<div class="continue-cta"><div class="cta-mot">' + t + '</div>' +
              '<div class="cta-duo">' +
-             '<a href="#home" target="_top" class="pr" data-cta="parcours">Ouvrir mon Parcours, gratuit →</a>' +
-             '<a href="https://medeos-sante.fr/packs/medi-pro-v2/2027" target="_top" data-cta="medipro">Medi&nbsp;Pro — nos stages →</a>' +
+             '<a href="https://medeos-sante.fr/packs/medi-pro-v2/2027" target="_top" class="pr" data-cta="medipro">Découvrir Medi&nbsp;Pro →</a>' +
              '</div></div>';
     }
 
