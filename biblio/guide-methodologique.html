@@ -3,9 +3,12 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Anticiper ta P1 — Le guide méthode · Medeos</title>
-<!-- Copie du guide servie par l'app : la page de référence est celle du site. -->
+<title>Mini-guide pour préparer sa première année de santé · Medeos</title>
+<!-- medeos-seo : page canonique du guide (la page Next l'affiche en iframe) -->
+<meta name="description" content="Ce qui t'attend vraiment en première année de santé : environ 130 pages de cours par semaine, et 1 étudiant sur 3 qui passe du premier coup. Les cinq pistes à travailler pour tenir — et ce que tu peux installer dès maintenant, avant la rentrée.">
 <link rel="canonical" href="https://medeos-sante.fr/ressources/guide-methodologique.html">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Mini-guide pour préparer sa première année de santé : la densité réelle de l'année, et comment construire son système", "description": "Ce qui t'attend vraiment en première année de santé : environ 130 pages de cours par semaine, un classement, huit mois. Et comment construire TON système pour l'encaisser — méthode de révision, sommeil, hygiène de vie, vie à côté — avant la rentrée.", "url": "https://medeos-sante.fr/ressources/guide-methodologique.html", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://medeos-sante.fr/ressources/guide-methodologique.html"}, "inLanguage": "fr-FR", "isAccessibleForFree": true, "author": {"@id": "https://medeos-sante.fr/#lucas"}, "publisher": {"@id": "https://medeos-sante.fr/#organisation"}, "about": {"@type": "Thing", "name": "Préparation et méthode de travail — première année d'études de santé"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://medeos-sante.fr"}, {"@type": "ListItem", "position": 2, "name": "Réussir sa première année de médecine", "item": "https://medeos-sante.fr/reussir-premiere-annee-medecine"}, {"@type": "ListItem", "position": 3, "name": "Mini-guide pour préparer sa première année de santé", "item": "https://medeos-sante.fr/ressources/guide-methodologique.html"}]}]}</script>
 <!-- Servi en iframe : tout lien interne doit naviguer dans la page parente (shell /ressources), pas dans l'iframe. -->
 <base target="_top" />
 <style>
@@ -146,7 +149,13 @@
   .cta ul.clean li::before{background:var(--orange)}
   .cta .btn{display:inline-flex;align-items:center;gap:9px;margin-top:14px;background:#fff;color:var(--violet-deep);font-weight:800;font-size:16.5px;padding:15px 26px;border-radius:14px;transition:transform .12s,box-shadow .2s;border:none}
   .cta .btn:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(0,0,0,.18)}
-  .cta .small{font-size:13.5px;color:rgba(255,255,255,.7);margin-top:16px;margin-bottom:0}
+  .cta .small{font-size:13.5px;color:rgba(255,255,255,.62);margin-top:14px;margin-bottom:0}
+  /* Bouton secondaire (Lucas, 19/09 : « en dessous, découvrir Medi Pro en plus
+     petit, gris ») — discret, pour ne pas concurrencer l'achat. */
+  .cta .btn-2{display:inline-block;margin-top:11px;font-size:14px;font-weight:600;
+              color:rgba(255,255,255,.62);text-decoration:none;
+              border:none;border-bottom:1px solid rgba(255,255,255,.28);padding-bottom:2px}
+  .cta .btn-2:hover{color:rgba(255,255,255,.92);border-bottom-color:rgba(255,255,255,.6)}
 
   /* ---------- footer ---------- */
   footer{padding:40px 0 70px;text-align:center;color:var(--muted);font-size:13.5px}
@@ -345,6 +354,278 @@
 
   /* Les deux offres côte à côte : le lecteur choisit sa voie lui-même. */
   .continue-cta .cta-duo { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+        .continue-cta a.pr { color: #fff; background: #6B46C1; border-color: #6B46C1; }
+        .continue-cta a.pr:hover { background: #4C2A85; border-color: #4C2A85; }
+        /* Bloc de sortie statique vers le Parcours de l'app (08/09/2026) */
+        .pont-parcours { margin: 36px auto 14px; max-width: 620px; padding: 22px 24px; border-radius: 18px;
+                         background: #FAF6F0; border: 1px solid rgba(107,70,193,.18); text-align: center; }
+        .pont-parcours .pp-k { font-size: 11.5px; letter-spacing: .15em; text-transform: uppercase; color: #6B46C1; font-weight: 700; }
+        .pont-parcours .pp-t { font-size: 20px; line-height: 1.3; margin: 8px 0; color: #0F0F14; font-weight: 700; text-align: center; }
+        .pont-parcours p { font-size: 14.5px; line-height: 1.6; color: #3a3a44; margin: 0 0 14px; text-align: center; hyphens: none; }
+        .pont-parcours .cta-duo { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+        .pont-parcours a { display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px; font-weight: 700; color: #6B46C1;
+                           text-decoration: none; padding: 10px 18px; border-radius: 999px; border: 1.5px solid rgba(107,70,193,.35);
+                           background: rgba(107,70,193,.05); white-space: nowrap; }
+        .pont-parcours a.pr { color: #fff; background: #6B46C1; border-color: #6B46C1; }
+
+  /* ---------- LA MASSE : rendre visible le volume de cours (18/09/2026) ----------
+     Une page = un trait ; l'année = 13 romans de 300 pages (données réelles,
+     dossier de cours d'une P1, recomptage du 14/06/2026). Aucun chiffre décoratif. */
+  .masse{margin:30px 0;padding:24px 22px;background:#fff;border:1px solid var(--line);
+         border-radius:18px;box-shadow:var(--shadow)}
+  .masse .m-row + .m-row{margin-top:22px;padding-top:22px;border-top:1px solid var(--line)}
+  .masse .m-lbl{font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+                color:var(--muted);margin-bottom:12px}
+  .masse .m-bar{display:flex;flex-wrap:wrap;gap:3px;align-content:flex-start}
+  .masse .m-bar i{display:block;width:4px;height:16px;border-radius:1px;background:var(--violet);opacity:.85}
+  .masse .m-books{display:flex;flex-wrap:wrap;gap:6px;align-items:flex-end}
+  .masse .m-books i{display:block;width:17px;height:26px;border-radius:2px;
+                    background:linear-gradient(160deg,var(--violet),var(--violet-deep));
+                    box-shadow:inset -3px 0 0 rgba(255,255,255,.28)}
+  .masse .m-cap{margin-top:13px;font-size:14.5px;color:var(--ink-soft);line-height:1.6}
+  @media(min-width:640px){ .masse{padding:28px 26px} .masse .m-bar i{width:5px;height:18px} }
+
+  /* ---------- LES FILIÈRES : où atterrit une promotion (Lucas, 18/09) ---------- */
+  .filieres{margin:30px 0;padding:24px 22px;background:#fff;border:1px solid var(--line);
+            border-radius:18px;box-shadow:var(--shadow)}
+  .filieres .f-lbl{font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+                   color:var(--muted);margin-bottom:16px}
+  .filieres .f-row{display:flex;align-items:center;gap:12px;margin-bottom:11px}
+  .filieres .f-nom{flex:0 0 108px;font-size:14.5px;font-weight:700;color:var(--ink)}
+  .filieres .f-jauge{flex:1;height:14px;border-radius:999px;background:rgba(15,15,20,.06);overflow:hidden}
+  .filieres .f-jauge i{display:block;height:100%;border-radius:999px;
+                       background:linear-gradient(90deg,var(--violet),var(--violet-deep))}
+  .filieres .f-val{flex:0 0 46px;text-align:right;font-size:15px;font-weight:800;
+                   color:var(--violet-deep);font-variant-numeric:tabular-nums}
+  .filieres .f-val::after{content:" %";font-size:11.5px;font-weight:700;opacity:.65}
+  .filieres .f-src{margin-top:14px;font-size:12.5px;color:var(--muted);line-height:1.5}
+  @media(max-width:430px){ .filieres .f-nom{flex-basis:84px;font-size:13.5px} }
+
+  /* ---------- LES 6 LEVIERS, format compact (18/09/2026) ----------
+     Lucas s'est arrêté au milieu du guide : les leviers développés faisaient
+     1 300 mots de cours magistral en plein milieu du récit. Compactés ici. */
+  .leviers{margin:28px 0;display:grid;gap:1px;background:var(--line);
+           border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
+  .leviers .lv{background:#fff;padding:16px 20px;display:grid;
+               grid-template-columns:30px 1fr;gap:4px 12px;align-items:baseline}
+  .leviers .lv-n{grid-row:1/3;font-size:19px;font-weight:800;color:var(--violet);
+                 opacity:.45;font-variant-numeric:tabular-nums;line-height:1.2}
+  .leviers .lv-t{font-size:16px;font-weight:800;color:var(--ink);line-height:1.3}
+  .leviers .lv-c{font-size:14.5px;line-height:1.62;color:var(--ink-soft)}
+  @media(min-width:640px){ .leviers .lv{padding:18px 24px} .leviers .lv-t{font-size:17px} }
+
+  /* Lignes de synthèse du tableau des filières (18/09) : le total rend
+     l'arithmétique visible — 29,4+7,9+4,2+3,6+2,4 = 47,5, et le reste = 52,5.
+     Sans elles, le lecteur additionnait et croyait à une contradiction
+     avec le « 1 sur 3 » annoncé juste au-dessus (Lucas, 18/09). */
+  .filieres .f-total{margin-top:14px;padding-top:13px;border-top:1px solid var(--line)}
+  .filieres .f-total .f-nom,.filieres .f-total .f-val{color:var(--violet-deep)}
+  .filieres .f-reste .f-nom{color:var(--muted);font-weight:600}
+  .filieres .f-reste .f-val{color:var(--muted)}
+  .filieres .f-vide i{background:rgba(15,15,20,.13)}
+
+  /* ---------- LES 4 PIÈCES, en un coup d'œil (18/09/2026) ----------
+     Lucas décrochait PILE ici : la section s'ouvrait sur 285 mots d'annonce
+     (« il a quatre pièces » → liste → « on prend les quatre, une par une »).
+     Après 20 min de récit, on lui présentait un sommaire de 4 chapitres.
+     Remplacé par ces 4 cartes : même message, lu en 5 secondes. */
+  .pieces{display:grid;gap:10px;margin:26px 0}
+  @media(min-width:560px){ .pieces{grid-template-columns:1fr 1fr;gap:12px} }
+  .pieces .pc{background:#fff;border:1px solid var(--line);border-radius:16px;
+              padding:15px 17px;box-shadow:var(--shadow);
+              display:grid;grid-template-columns:auto 1fr;gap:2px 10px}
+  .pieces .pc-n{grid-row:1/3;align-self:start;width:24px;height:24px;border-radius:50%;
+                background:var(--violet-soft);color:var(--violet-deep);
+                font-size:12.5px;font-weight:800;display:flex;align-items:center;
+                justify-content:center;margin-top:2px}
+  .pieces .pc-t{font-size:16px;font-weight:800;color:var(--ink);line-height:1.25}
+  .pieces .pc-c{font-size:14px;line-height:1.55;color:var(--ink-soft)}
+
+  /* ---------- « À PRENDRE D'AVANCE » (Lucas, 18/09) ----------
+     « Tout ce que propose Medi Pro, faut essayer de dire à la personne de le
+     faire avant dans sa préparation, en lisant les différentes pièces. »
+     Chaque pièce se termine donc par ce qu'on peut installer DÈS MAINTENANT,
+     sans jamais donner le protocole — c'est l'invitation, pas la méthode. */
+  .avant{margin:26px 0;padding:18px 20px 16px;border-radius:16px;
+         background:linear-gradient(120deg,rgba(226,156,92,.10),rgba(226,156,92,.03));
+         border:1px solid rgba(226,156,92,.34)}
+  .avant .lbl{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:800;
+              letter-spacing:.12em;text-transform:uppercase;color:#9a5a22;margin-bottom:8px}
+  .avant .lbl::before{content:"→";font-size:13px;font-weight:800}
+  .avant p{margin-bottom:0;font-size:15px;line-height:1.7}
+
+  /* ---------- LES 5 PILIERS (18/09/2026, 3e présentation) ----------
+     Lucas : « j'aime pas du tout comme c'est présenté, j'ai vraiment du mal,
+     c'est pas limpide pas logique ». Deux causes traitées ici :
+     (1) le bloc ressemblait à un FORMULAIRE — 15 étiquettes en majuscules
+         (PILIER N / À APPRENDRE À FAIRE / DÈS MAINTENANT) pour 5 piliers ;
+         supprimées, il reste un paragraphe continu par pilier ;
+     (2) aucune LOGIQUE D'ENSEMBLE — cinq blocs côte à côte sans lien. Le texte
+         d'introduction dit maintenant à quoi servent les deux premiers (ce que
+         valent tes heures) et les trois suivants (les enchaîner huit mois), et
+         pourquoi ce sont ces trois-là qui font tomber.
+     Le « dès maintenant », répété cinq fois, est devenu une seule phrase après
+     la liste. */
+  .pistes{display:grid;gap:1px;margin:26px 0;background:var(--line);
+          border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
+  .pistes .pi{background:#fff;padding:17px 20px;display:grid;
+              grid-template-columns:28px 1fr;gap:3px 12px}
+  .pistes .pi-n{grid-row:1/3;font-size:20px;font-weight:800;color:var(--violet);
+                opacity:.38;font-variant-numeric:tabular-nums;line-height:1.2}
+  .pistes .pi-t{font-size:17px;font-weight:800;color:var(--ink);line-height:1.3}
+  .pistes .pi-c{font-size:14.5px;line-height:1.68;color:var(--ink-soft)}
+  /* La ligne « ce que tu devras apprendre à faire » : sortie du paragraphe pour
+     être visible (Lucas, 18/09 — « il faut dire ce que la personne doit
+     apprendre à faire »), mais sans étiquette en majuscules : le formulaire
+     précédent était illisible. */
+  .pistes .pi-f{grid-column:2;margin-top:9px;padding-left:13px;
+                border-left:2px solid rgba(107,70,193,.35);
+                font-size:14.5px;line-height:1.62;color:var(--violet-deep)}
+  .pistes .pi-f strong{color:var(--violet-deep)}
+  @media(min-width:640px){ .pistes .pi{padding:19px 24px} .pistes .pi-t{font-size:18px} }
+
+  /* ---------- LE BLOC D'OFFRE (18/09/2026) ----------
+     Lucas : « faut la soigner… faut dire exactement ce qu'on va résoudre dans
+     les problèmes cités précédemment », et « mettre la belle image, donner
+     envie ». Chaque ligne reprend un pilier du guide et met en face ce que
+     Medi Pro fait — uniquement du réel, repris de components/medi-pro/
+     OffreMediProV2.tsx (planning jour par jour, demi-journée, méthode complète
+     mémorisation/organisation/stress/sommeil, tuteur, Parcours entre les
+     stages, cours des 4 matières, concours blancs). ⛔ Aucun prix ici. */
+  /* ⛔ BUG CORRIGÉ le 19/09 (Lucas : « tu mets du noir sur fond violet, on voit
+     rien ») : la règle globale « p strong{color:var(--ink)} » s'appliquait AUSSI
+     dans l'encart violet, donc tous les <strong> des paragraphes du bloc d'offre
+     s'affichaient en noir sur violet foncé — illisibles. */
+  .cta p strong,.cta li strong{color:#fff}
+
+  .cta .cta-chapo{font-size:15.5px;color:rgba(255,255,255,.88)}
+  .cta .cta-qui{margin:18px 0 0;padding:15px 17px;border-radius:14px;
+                background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);
+                display:flex;align-items:flex-start;gap:14px}
+  .cta .cta-qui p{margin:0;font-size:15px;line-height:1.65;color:rgba(255,255,255,.93)}
+  .cta .cta-face{flex:0 0 auto;width:58px;height:58px;border-radius:50%;object-fit:cover;
+                 border:2px solid rgba(255,255,255,.55);box-shadow:0 6px 18px rgba(0,0,0,.25)}
+  @media(max-width:430px){ .cta .cta-face{width:48px;height:48px} }
+
+  /* Le nom du produit n'arrive qu'ICI (Lucas, 19/09 : « tu balances Medi Pro dès
+     le début comme si la personne connaissait »). D'abord le problème résolu,
+     ensuite seulement comment ça s'appelle. */
+  .cta .cta-nom{display:flex;align-items:center;gap:14px;margin:20px 0 4px;
+                padding:15px 17px;border-radius:16px;
+                background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.18)}
+  .cta .cta-logo{flex:0 0 auto;width:54px;height:54px;object-fit:contain;
+                 border-radius:12px;background:rgba(255,255,255,.96);padding:6px}
+  .cta .cta-nom-t{min-width:0}
+  .cta .cta-nom-k{display:block;font-size:11px;font-weight:700;letter-spacing:.14em;
+                  text-transform:uppercase;color:var(--orange)}
+  .cta .cta-nom-n{display:block;font-size:22px;font-weight:800;color:#fff;line-height:1.15;margin:2px 0 6px}
+  .cta .cta-nom p{margin:0;font-size:14.5px;line-height:1.6;color:rgba(255,255,255,.9)}
+  @media(min-width:640px){ .cta .cta-logo{width:62px;height:62px} .cta .cta-nom-n{font-size:24px} }
+
+  .resout{margin:22px 0 4px;display:grid;gap:10px}
+  .resout .rs{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.14);
+              border-radius:14px;padding:14px 16px}
+  .resout .rs-p{display:block;font-size:12px;font-weight:800;letter-spacing:.1em;
+                text-transform:uppercase;color:var(--orange);margin-bottom:5px}
+  .resout .rs-s{display:block;font-size:14.5px;line-height:1.6;color:rgba(255,255,255,.93)}
+  .resout .rs-s strong{color:#fff}
+
+  /* ---------- LES ILLUSTRATIONS (Lucas, 19/09) ----------
+     « Je pensais à un peu mieux que des petites icônes moches — là ça écrase le
+     texte sur la droite ; je pensais à des designs EN DESSOUS du texte qui
+     illustrent les propos. » Donc : plus d'icône dans la marge, mais sous chaque
+     réponse une petite figure qui montre ce que la phrase vient de dire. Tout en
+     CSS, aucune image, ~0 Ko. */
+  .resout .viz{margin-top:13px;display:flex;align-items:flex-end;gap:3px;height:42px}
+
+  /* le stock qui grossit semaine après semaine */
+  .viz-flux i{flex:1;border-radius:3px 3px 1px 1px;
+              background:linear-gradient(180deg,var(--orange),rgba(226,156,92,.35))}
+
+  /* quatorze nuits, toujours à la même heure */
+  .viz-nuit{align-items:stretch!important}
+  .viz-nuit i{flex:1;border-radius:4px;background:rgba(255,255,255,.14);position:relative;overflow:hidden}
+  .viz-nuit i::after{content:"";position:absolute;left:0;right:0;bottom:0;height:46%;
+                     background:linear-gradient(180deg,rgba(255,255,255,.5),rgba(255,255,255,.28))}
+
+  /* les huit mois, novembre en évidence */
+  .viz-mois{align-items:stretch!important;gap:4px}
+  .viz-mois i{flex:1;display:flex;align-items:center;justify-content:center;border-radius:6px;
+              font-size:11.5px;font-weight:800;font-style:normal;letter-spacing:.02em;
+              background:rgba(255,255,255,.12);color:rgba(255,255,255,.7)}
+  .viz-mois i.on{background:var(--orange);color:#2b1708;box-shadow:0 0 0 2px rgba(226,156,92,.3)}
+
+  /* la journée coupée en deux */
+  .viz-moitie{align-items:stretch!important;gap:4px}
+  .viz-moitie i{flex:1;display:flex;align-items:center;justify-content:center;border-radius:8px;
+                font-size:12px;font-weight:700;font-style:normal}
+  .viz-moitie .a{background:rgba(255,255,255,.22);color:#fff}
+  .viz-moitie .b{background:rgba(226,156,92,.28);color:#ffd9b0;
+                 box-shadow:inset 0 0 0 1px rgba(226,156,92,.45)}
+
+  /* les quatre passages sur le même cours */
+  .viz-chaine{align-items:stretch!important;gap:0}
+  .viz-chaine i{flex:1;display:flex;align-items:center;justify-content:center;text-align:center;
+                font-size:11px;font-weight:700;font-style:normal;line-height:1.2;padding:0 4px;
+                background:rgba(255,255,255,.12);color:rgba(255,255,255,.88);
+                border-right:2px solid rgba(76,42,133,.55)}
+  .viz-chaine i:first-child{border-radius:8px 0 0 8px}
+  .viz-chaine i:last-child{border-radius:0 8px 8px 0;border-right:none;background:rgba(226,156,92,.26);color:#ffd9b0}
+
+  /* ---------- LES 4 FICHES DE COURS (19/09) ----------
+     Lucas : « utilise notre design avec la carte pour visualiser les cours de ma
+     page Medi Pro ». Reprise fidèle du deck de app/packs/stages-vacances :
+     page de cours en miniature — fond crème #faf7ff, matière en orange, titre de
+     chapitre en violet profond, filet, deux lignes de texte simulées, le VRAI
+     schéma du cours encadré, puis l'encart « analogie / mnémo » qui montre que
+     le cours explique et ne fait pas que montrer.
+     ⚠️ Les schémas d'origine pèsent 180 à 640 Ko. Ils passent par l'optimiseur
+     d'images de Next (/_next/image?url=…&w=256&q=70), qui les rend en 10 à
+     32 Ko — vérifié en production. */
+  /* La pile se feuillette au clic, comme sur la page Medi Pro (Lucas, 19/09 :
+     « faut utiliser la même carte, avec la carte où les images sont empilées et
+     il faut cliquer dessus »). Trois cartes visibles, décalées et réduites. */
+  .deck{margin-top:16px;display:flex;flex-direction:column;align-items:center;gap:9px}
+  .deck-pile{position:relative;width:158px;height:214px;cursor:pointer;
+             -webkit-tap-highlight-color:transparent}
+  .deck-pile:focus-visible{outline:2px solid var(--orange);outline-offset:6px;border-radius:14px}
+  .deck-dots{display:flex;gap:5px}
+  .deck-dots i{width:5px;height:5px;border-radius:999px;background:rgba(255,255,255,.28);
+               transition:all .25s}
+  .deck-dots i.on{width:15px;background:var(--orange)}
+  .deck-hint{font-size:11.5px;color:rgba(255,255,255,.5)}
+  .deck .fiche{position:absolute;inset:0;transform-origin:top center;
+               transition:transform .38s cubic-bezier(.16,.84,.44,1),opacity .38s}
+  .deck .fiche{background:#faf7ff;border-radius:11px;padding:9px 9px 10px;
+                 border:1px solid rgba(255,255,255,.3);
+                 box-shadow:0 12px 26px -12px rgba(0,0,0,.6);
+                 display:flex;flex-direction:column;gap:3px}
+  .deck .fiche{padding:11px 11px 12px}
+  .deck .f-mat{font-size:8px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:#E29C5C}
+  .deck .f-tit{font-size:10px;font-weight:800;line-height:1.2;color:#4C2A85}
+  .deck .f-bar{display:block;height:2px;width:26px;border-radius:2px;background:#6B46C1;margin:1px 0 2px}
+  .deck .f-txt{display:flex;flex-direction:column;gap:3px}
+  .deck .f-txt i{display:block;height:3px;border-radius:2px;background:rgba(76,42,133,.22)}
+  .deck .f-txt i:last-child{background:rgba(76,42,133,.13)}
+  .deck .f-sch{display:block;margin-top:3px;border:1px solid rgba(107,70,193,.25);
+                 border-radius:4px;background:#fff;overflow:hidden}
+  .deck .f-sch img{display:block;width:100%;height:54px;object-fit:contain;padding:2px}
+  .deck .f-ins{display:block;margin-top:4px;border-left:2px solid #6B46C1;border-radius:3px;
+                 background:#f0e9ff;padding:4px 6px;font-size:8px;line-height:1.35;color:rgba(76,42,133,.82)}
+  .deck .f-ins b{display:block;font-size:7px;font-weight:800;letter-spacing:.07em;
+                   text-transform:uppercase;color:#6B46C1;margin-bottom:1px}
+
+  /* les quatre matières (ancien format, conservé si besoin) */
+  .viz-mat{align-items:stretch!important;flex-wrap:wrap;height:auto;gap:6px}
+  .viz-mat i{flex:1 1 auto;padding:7px 12px;border-radius:999px;font-style:normal;
+             font-size:12.5px;font-weight:700;text-align:center;
+             background:rgba(226,156,92,.20);color:#ffe0bd;
+             box-shadow:inset 0 0 0 1px rgba(226,156,92,.38)}
+  @media(max-width:430px){ .resout .viz{height:38px} .viz-chaine i{font-size:10px} }
+  /* L'avance sur les bases (Lucas, 19/09 : « il faut ajouter aussi le fait qu'on
+     commence à anticiper les bases avec lui dès maintenant, en plus des
+     piliers ») — détachée des cinq piliers, parce que ce n'en est pas un. */
+  .resout .rs-bonus{background:rgba(226,156,92,.16);border-color:rgba(226,156,92,.42)}
 </style>
 </head>
 <body>
@@ -354,349 +635,355 @@
 
   <!-- ============ HERO (carte crème panorama) ============ -->
   <header class="hero">
-    <span class="kicker">Guide méthode</span>
-    <h1>Anticiper ta première année de santé — et savoir exactement comment t'y prendre.</h1>
-    <p class="subtitle">La P1 ne récompense pas ceux qui sont «&nbsp;intelligents&nbsp;». Elle récompense ceux qui ont une méthode.</p>
+    <span class="kicker">Mini-guide · Préparer son année</span>
+    <h1>Préparer sa première année de santé — avant qu'elle t'arrive dessus.</h1>
+    <p class="subtitle">Deux étudiants, même lycée, même moyenne, même envie. Un an plus tard, l'un passe, l'autre recommence. Ce qui les a séparés n'est pas ce que tu crois.</p>
 
-    <p class="punch">Bonne nouvelle&nbsp;: <span class="accent">la méthode, ça s'apprend</span> — et le meilleur moment pour l'installer, c'est <em>maintenant</em>, avant que ça commence.</p>
+    <p class="punch">Ce n'est pas l'intelligence. C'est <span class="accent">le système</span> qu'ils avaient pour encaisser <em>ce qui tombe chaque semaine</em>.</p>
   </header>
 
   <!-- ============ INTRO HONNÊTE ============ -->
   <section class="intro-honnete">
     <p>En ce moment, il y a probablement trois choses dans ta tête en même temps.</p>
     <p><strong>Une ambition</strong>&nbsp;: devenir médecin, kiné, dentiste, sage-femme, pharmacien. Un métier que tu vises depuis un moment, peut-être depuis longtemps.</p>
-    <p><strong>Une peur</strong>&nbsp;: celle d'arriver en première année et de se faire submerger. Tu as entendu la phrase qui circule&nbsp;: <em>«&nbsp;la première année de santé, c'est violent.&nbsp;»</em> Et c'est vrai.</p>
-    <p><strong>Et une confusion</strong>&nbsp;: un compte te dit de travailler 14 heures par jour, un autre de dormir 9 heures, un troisième de rester «&nbsp;zen et performant&nbsp;». Tu ne sais plus quoi croire.</p>
-    <p>Cette page ne va pas ajouter une voix de plus à la confusion. Elle va faire le contraire&nbsp;: te donner de la clarté.</p>
+    <p><strong>Une peur</strong>&nbsp;: celle d'arriver en première année et de te faire submerger. Tu as entendu la phrase qui circule&nbsp;: «&nbsp;la première année de santé, c'est violent.&nbsp;» Elle est vraie, et personne ne te dit <em>pourquoi</em>.</p>
+    <p><strong>Et une confusion</strong>&nbsp;: un compte te dit de travailler 14&nbsp;heures par jour, un autre de dormir 9&nbsp;heures, un troisième de rester «&nbsp;zen et performant&nbsp;». Tu ne sais plus quoi croire.</p>
+    <p>Ce guide ne va pas ajouter une voix de plus. Il fait deux choses&nbsp;: te <strong>montrer, chiffres à l'appui, ce qui va te tomber dessus</strong> — puis te faire construire <strong>ton</strong> système pour l'absorber.</p>
 
     <div class="note">
-      <span class="lbl">Le deal de cette page</span>
-      <p>À la fin, tu n'auras pas reçu une dose de motivation qui retombe en deux jours. Tu auras une <strong>méthode</strong> — et la <strong>preuve, sur toi-même, qu'elle marche</strong>. Pas de phrases creuses. Pas de raccourci magique. Et on ne jouera jamais sur ta peur.</p>
+      <span class="lbl">Le deal de ce guide</span>
+      <p>On ne va pas te faire peur pour te vendre quelque chose&nbsp;: on va te montrer des chiffres réels, parce que <strong>la seule chose qui rend la première année vivable, c'est de savoir à quoi s'attendre avant d'y être</strong>. À la fin, tu n'auras pas une dose de motivation qui retombe en deux jours&nbsp;: tu auras ton système, écrit.</p>
     </div>
   </section>
 
-  <p class="cliff">Et la première chose à comprendre, c'est pourquoi des élèves brillants au lycée s'effondrent en première année — pendant que d'autres, plus discrets, finissent en tête.</p>
+  <hr class="hr">
 
-  <!-- ============ SECTION 01 — LE RENVERSEMENT ============ -->
+  <!-- ============ 01 — LA MASSE ============ -->
   <section>
-    <div class="step">01 — Le bon élève qui tombe</div>
-    <h2>Ce n'est pas l'intelligence. C'est le jeu qui change.</h2>
+    <div class="step">01 — Ce qui arrive vraiment</div>
+    <h2>Environ 130 pages de cours. Par semaine. Toutes les semaines.</h2>
 
-    <p class="scene">Le lycée et la première année de santé ne récompensent pas la même chose. <span class="accent">Et personne ne te prévient.</span></p>
-    <p>Au lycée, ce qui paie, c'est la <strong>rapidité</strong>&nbsp;: tu comprends vite en cours, tu fais tes exercices la veille, tu as de bonnes notes. En première année, on ne te demande plus de comprendre vite. On te demande de <strong>retenir une montagne de cours, longtemps, sous pression, sans qu'on t'explique comment.</strong> C'est un tout autre exercice — et il ne dépend presque pas de ton intelligence de départ.</p>
+    <p class="scene">Personne ne te prévient du <span class="accent">volume</span>. On te dit «&nbsp;c'est dur&nbsp;». On ne te dit jamais <em>combien</em>.</p>
+
+    <p>Alors voici le chiffre, pris sur un dossier réel&nbsp;: celui d'un étudiant qui a fait sa première année à Lille, tous ses cours scannés, comptés fichier par fichier, doublons retirés.</p>
+
+    <div class="stat">
+      <div class="num">3&nbsp;879</div>
+      <div class="cap">pages de cours sur l'année. <strong>Rien que les cours</strong>&nbsp;: ni les QCM, ni les colles, ni les concours blancs, ni les annales. 308&nbsp;fichiers, sur deux semestres (2&nbsp;029 puis 1&nbsp;850&nbsp;pages).</div>
+      <div class="src">Dossier de cours complet d'une première année (Lille), recomptage du 14/06/2026.</div>
+    </div>
+
+    <p>Ramené à la semaine, ça donne le rythme de croisière&nbsp;: <strong>environ 130&nbsp;pages de cours nouvelles chaque semaine</strong>. Pas à réviser&nbsp;: à <em>découvrir</em>. Les révisions, elles, viennent en plus.</p>
+
+    <p>Ces pages viennent d'une faculté précise, et chez toi le détail sera différent&nbsp;: d'autres matières, d'autres coefficients, un autre calendrier. Mais l'ordre de grandeur, lui, ne bouge pas. <mark>Le programme change d'une fac à l'autre. Le volume, non.</mark></p>
+
+    <div class="masse" aria-label="Le volume de cours d'une première année de santé">
+      <div class="m-row">
+        <div class="m-lbl">Une semaine — les cours à découvrir</div>
+        <div class="m-bar" id="mP1"></div>
+        <div class="m-cap"><strong>~130 pages</strong> — une page&nbsp;= un trait. Et la semaine suivante recommence à zéro.</div>
+      </div>
+      <div class="m-row">
+        <div class="m-lbl">L'année entière</div>
+        <div class="m-books" id="mBooks"></div>
+        <div class="m-cap">3&nbsp;879 pages, soit l'équivalent de <strong>13 romans de 300 pages</strong> — à connaître par cœur, pas seulement à lire.</div>
+      </div>
+    </div>
+
+    <p>Ce n'est pas une semaine difficile&nbsp;: c'est <strong>la semaine normale</strong>. Celle d'octobre, celle de février. Le volume ne baisse jamais.</p>
+
+    <p>Et le retard, lui, ne se voit pas tout de suite. Une semaine où tu prends 40&nbsp;pages de retard, ça se rattrape. Le problème, c'est que la semaine suivante en apporte 130&nbsp;nouvelles — alors le retard ne reste jamais une pile&nbsp;: il grossit tout seul, doucement, pendant des semaines. Et il te présente sa facture toujours au même moment.</p>
+
+    <div class="aha">
+      <span class="lbl">Le mois où ça casse : novembre</span>
+      <p>Tu as <strong>dix semaines de cours derrière toi</strong>, les épreuves arrivent dans cinq, la nuit tombe à 17h et tu n'as pas vu la lumière du jour depuis des semaines. En première année, ça porte un nom que tout le monde connaît&nbsp;: <strong>la déprime de novembre</strong>. Ce n'est pas le moment où le travail devient plus dur — c'est le moment où <strong>tout ce que tu as accumulé te tombe dessus d'un coup</strong>, la fatigue avec.</p>
+    </div>
+
+    <p>Novembre ne se traverse pas à la motivation&nbsp;: à ce moment-là, il n'y en a plus. Il se traverse avec ce que tu as <strong>installé avant</strong> — des révisions qui tournent sans que tu aies à y penser, des nuits qui tiennent, des journées qui ne dépendent pas de ton humeur du matin. <mark>Un flux constant ne se rattrape pas, il se tient</mark> — et ce qui te fait tenir en novembre se décide en août.</p>
+
+    <div class="stakes">
+      <div class="lbl">Les deux façons d'aborder la semaine 1</div>
+      <div class="body">
+        <div class="cell win"><span class="h">Avec un système déjà rodé</span>Tu sais où va chaque cours, quand tu le revois, à quelle heure tu dors. La semaine&nbsp;1 te teste, elle ne te surprend pas.</div>
+        <div class="cell lose"><span class="h">Sans système</span>Tu improvises 130&nbsp;pages, tu rognes sur ton sommeil pour tenir, tu t'épuises avant novembre — et tu n'as toujours pas de méthode.</div>
+      </div>
+    </div>
+
+    <p class="cliff">Et le pire, c'est que tout ce travail ne te donne même pas une note. Il te donne un rang.</p>
+  </section>
+
+  <hr class="hr">
+
+  <!-- ============ 02 — LE CLASSEMENT ============ -->
+  <section>
+    <div class="step">02 — Tu ne seras pas noté</div>
+    <h2>Tu seras classé. Et c'est un tout autre jeu.</h2>
+
+    <p>Au lycée, 14/20 est une bonne note, quoi qu'aient fait les autres. En première année de santé, ta note seule ne veut plus rien dire&nbsp;: ce qui compte, c'est <strong>où elle te place par rapport aux autres</strong>. Tu peux progresser toute l'année et reculer au classement, simplement parce que les autres ont progressé plus vite.</p>
+
+    <p>Ça change ce que coûte une erreur. Au lycée, un item raté te fait perdre un point. Là, il te fait perdre <strong>des places</strong> — et les places, contrairement aux points, sont prises par quelqu'un d'autre. C'est la même copie, mais ce n'est plus du tout le même jeu.</p>
+
+    <div class="stat">
+      <div class="num">1 sur 3</div>
+      <div class="cap">Sur 100&nbsp;étudiants entrés en première année de santé, <strong>33,8 passent en deuxième année du premier coup</strong>. Les deux autres tiers redoublent, changent de voie, ou arrêtent.</div>
+      <div class="src">Ministère de l'Enseignement supérieur (SIES), Note Flash n°&nbsp;31 — néo-bacheliers inscrits en première année de santé en 2022&nbsp;: 33,8 admis en un an&nbsp;; plus de 60&nbsp;% des admis poursuivent en médecine.</div>
+    </div>
+
+    <p>Et ces 33,8 places ne sont pas toutes en médecine&nbsp;: elles se répartissent entre <strong>cinq filières</strong> — médecine, pharmacie, kinésithérapie, dentaire et sage-femme. À elle seule, la médecine en absorbe <strong>plus de 60&nbsp;%</strong>. Autrement dit&nbsp;: si tu vises l'une des quatre autres, le nombre de places qui te concernent vraiment est <mark>encore bien plus petit que ce «&nbsp;1 sur 3&nbsp;» ne le laisse croire</mark>.</p>
+
+    <p>Relis ce chiffre en pensant à ta classe. <strong>Deux étudiants sur trois assis dans l'amphi à la rentrée n'y seront plus l'année suivante.</strong> Pas parce qu'ils n'auront pas travaillé — la plupart auront travaillé énormément. Parce qu'ils auront été classés derrière.</p>
+
+    <p>Et ça change complètement ce que veut dire «&nbsp;bien travailler&nbsp;». Dans un classement, <mark>faire comme tout le monde te place au milieu de tout le monde</mark>. Et au milieu, ça ne passe pas.</p>
+
+    <p>Alors la vraie question devient&nbsp;: qu'est-ce qui, concrètement, sépare celui qui passe de celui qui recommence&nbsp;? Ce n'est pas le nombre d'heures — la plupart en font beaucoup. Ce n'est pas l'intelligence non plus, et ça, c'est mesuré.</p>
 
     <div class="stat">
       <div class="num">25×</div>
-      <div class="cap">Ta <strong>méthode de travail</strong> pèse environ 25 fois plus lourd que ta croyance d'être «&nbsp;intelligent par nature&nbsp;» dans la réussite académique. La croyance prédit ~1&nbsp;% du résultat&nbsp;; la méthode, ~25&nbsp;%.</div>
-      <div class="src">Sisk et al., 2018 — méta-analyse de 273 études, 365 000 élèves.</div>
+      <div class="cap">Ta <strong>méthode de travail</strong> pèse environ 25&nbsp;fois plus lourd que ta croyance d'être «&nbsp;intelligent par nature&nbsp;» dans la réussite scolaire. La croyance explique ~1&nbsp;% du résultat&nbsp;; la méthode, ~25&nbsp;%.</div>
+      <div class="src">Sisk et&nbsp;al., 2018 — méta-analyse de 273&nbsp;études, 365&nbsp;000&nbsp;élèves.</div>
     </div>
 
-    <div class="aha">
+    <div class="note">
       <span class="lbl">Le renversement</span>
-      <p>Ceux qui finissent en haut du classement ne sont pas des génies génétiques. <mark>Ils sont méthodologiques.</mark> Et la méthode, contrairement au talent, <strong>ça s'apprend</strong>. C'est toute la différence — et c'est la meilleure nouvelle de cette page.</p>
+      <p>Ceux qui finissent en haut ne sont pas des génies. Ce sont ceux qui ont trouvé <strong>une façon de fonctionner qui tient 130 pages par semaine sans les casser</strong> — leur façon de réviser, de dormir, de manger, de vivre à côté. Et ça, contrairement au talent, <strong>ça se construit</strong>. C'est la meilleure nouvelle de ce guide&nbsp;: ce qui décide est exactement la seule chose sur laquelle tu as la main.</p>
     </div>
 
-    <p>Donc si tu as peur de ne pas être «&nbsp;assez intelligent&nbsp;» pour médecine&nbsp;: tu te trompes de question. La vraie question, c'est&nbsp;: <em>est-ce que tu vas apprendre à travailler de la bonne façon&nbsp;?</em> Et ça, tu peux commencer dès cette page.</p>
-
-    <p class="cliff">Cette idée, ce n'est pas qu'une statistique. Quelqu'un l'a vécue dans sa chair.</p>
+    <p class="cliff">Un étudiant a fait cette bascule en plein milieu de son année. Voilà comment.</p>
   </section>
 
-  <hr class="hr"/>
+  <hr class="hr">
 
-  <!-- ============ SECTION 02 — LE FIL ROUGE INCARNÉ ============ -->
+  <!-- ============ 03 — L'HISTOIRE ============ -->
   <section>
-    <div class="step">02 — Une histoire vraie</div>
+    <div class="step">03 — Une histoire vraie</div>
     <h2>Du milieu de tableau au haut du classement.</h2>
 
-    <p>Au lycée, Lucas n'avait rien d'un élève d'élite&nbsp;: un lycéen ordinaire, autour de 14 de moyenne. Rien d'un profil de génie. Et pourtant, son histoire en première année de santé est exactement celle de ce renversement. La voici, sans l'enjoliver.</p>
+    <p>Au lycée, Lucas n'avait rien d'un élève d'élite&nbsp;: 14 de moyenne, un lycéen ordinaire. Il est entré en première année avec ce qui marchait avant — et ça n'a pas tenu une semaine face au flux.</p>
 
     <div class="vecu">
-      <p>«&nbsp;En cours, je n'étais pas efficace&nbsp;: je suivais sans vraiment retenir. Alors je rattrapais le soir. Je révisais en relisant, encore et encore, en surlignant. Et je tirais sur la corde — je rognais sur mon sommeil pour caser plus d'heures, persuadé que c'était ça, bien travailler.&nbsp;»</p>
-      <p>«&nbsp;Résultat&nbsp;: malgré toutes ces heures, je me retrouvais en <strong>milieu de classement</strong>. Pas par manque de travail — j'en faisais énormément. Par manque de <strong>temps utile</strong>&nbsp;: je passais des heures à relire des choses que j'oubliais aussitôt. J'avais l'impression de ramer, et le classement me le confirmait.&nbsp;»</p>
-      <p class="lesson">Travailler plus ne suffisait pas. Le problème, ce n'était pas la quantité d'heures — c'était la façon de les utiliser.</p>
+      <p>«&nbsp;Je révisais en relisant, encore et encore, en surlignant. Et je tirais sur la corde — <strong>je rognais sur mon sommeil pour caser plus d'heures</strong>, persuadé que c'était ça, bien travailler. Résultat&nbsp;: malgré toutes ces heures, <strong>milieu de classement</strong>. Pas par manque de travail — par manque de <strong>temps utile</strong>.&nbsp;»</p>
+      <p>«&nbsp;Au bout de quelques semaines, j'étais épuisé et toujours au même point, à deux doigts de tout lâcher. Le déclic n'a pas été de serrer les dents&nbsp;: ça a été d'<strong>arrêter de courir pour changer de façon de faire</strong>. En plein concours, j'ai pris quelques heures — pas pour réviser, mais pour apprendre à bien réviser et remettre mes journées d'aplomb. Les heures les plus rentables de toute mon année.&nbsp;»</p>
+      <p class="lesson">Il n'avait pas un problème d'effort. Il avait un problème de système.</p>
     </div>
-
-    <p>Puis il y a eu un creux. Un vrai. Pas un détail qu'on cache dans une histoire de réussite&nbsp;: le moment où tout a failli s'écrouler.</p>
-
-    <div class="vecu">
-      <p>«&nbsp;Au bout de quelques semaines, j'étais épuisé et toujours au même point. Je m'enfonçais&nbsp;: plus je ramais sans résultat, plus j'avais peur, et plus je travaillais comme un bourrin pour compenser. J'étais à deux doigts de tout lâcher.&nbsp;»</p>
-      <p>«&nbsp;Le déclic n'a pas été de serrer les dents et de travailler encore plus&nbsp;: ça n'aurait fait qu'empirer les choses. Le déclic, ça a été d'<strong>arrêter de courir pour changer de stratégie</strong>. En plein concours, j'ai pris quelques heures — pas pour réviser, mais pour apprendre à <em>bien</em> réviser&nbsp;: comment mémoriser pour de vrai, comment organiser mes révisions, comment ne plus perdre mon temps. Ces quelques heures «&nbsp;perdues&nbsp;» ont été les plus rentables de toute mon année.&nbsp;»</p>
-      <p class="lesson">Prendre du recul pour changer de méthode, ce n'est pas perdre du temps. C'est le seul moyen d'arrêter d'en perdre.</p>
-    </div>
-
-    <p>À partir de là, il a appliqué ce qu'il venait d'apprendre&nbsp;: une vraie méthode, des révisions organisées, moins d'heures mais mieux utilisées. Et le classement a suivi. Le résultat, à la fin de l'année&nbsp;?</p>
 
     <div class="stat">
-      <div class="num" style="font-size:38px">6ᵉ</div>
-      <div class="cap">Parti du milieu de tableau, il a fini <strong>6ᵉ de sa promotion</strong>. Avec <em>moins</em> d'heures de travail qu'au départ — mais structurées.</div>
+      <div class="num">6ᵉ</div>
+      <div class="cap">Parti du milieu de tableau, il a fini <strong>6ᵉ de sa promotion</strong>. Avec <strong>moins d'heures de travail</strong> qu'au départ — mais structurées, et avec des nuits complètes.</div>
     </div>
 
-    <div class="aha">
-      <span class="lbl">La morale, et elle est précieuse</span>
-      <p><strong>Moins d'heures, meilleur résultat.</strong> Parce que c'était méthodique, pas frénétique. <mark>Ce n'est pas que tu n'es pas fait pour ça. C'est mécanique.</mark> Change la méthode, et le résultat change.</p>
-    </div>
-
-    <p>Mais il y a une chose qu'aucune méthode n'a pu rattraper, et c'est le seul vrai regret qui reste.</p>
+    <p>Moins d'heures, meilleur résultat. Mais il reste un regret, et c'est celui qui te concerne le plus.</p>
 
     <div class="vecu">
-      <p>«&nbsp;Le tout premier mois, je l'ai passé à <strong>découvrir les bases en même temps qu'il fallait déjà les retenir</strong>. Les notions de fond — celles qui demandent juste du temps pour qu'elles s'installent dans la tête — je les attaquais à froid, sous pression, alors que le rythme était déjà lancé. Je courais après le train dès le départ.&nbsp;»</p>
-      <p>«&nbsp;Avec le recul, ce qui m'aurait le plus aidé, ce n'est pas d'avoir travaillé plus dur en septembre. C'est d'avoir pris un peu d'avance <em>avant</em> — quelques heures pendant les vacances, juste pour apprivoiser tranquillement les notions de base. Pas pour tout savoir. Juste pour ne plus les découvrir en panique. Ça, ça aurait tout changé.&nbsp;»</p>
-      <p class="lesson">Les bases ne sont pas difficiles. Elles sont juste <strong>lentes à s'installer</strong>. Et le seul moment où tu as ce temps, sans pression, c'est <strong>avant</strong> — avant que ça commence.</p>
+      <p>«&nbsp;Le premier mois, je l'ai passé à <strong>découvrir les bases en même temps qu'il fallait déjà les retenir</strong> — et à chercher ma façon de travailler pendant que 130&nbsp;pages par semaine me tombaient dessus. Je construisais l'avion en plein vol. Ce qui m'aurait le plus aidé, ce n'est pas d'avoir travaillé plus dur en septembre&nbsp;: c'est d'être arrivé avec <strong>mon système déjà testé</strong>.&nbsp;»</p>
+      <p class="lesson">Un système, ça se teste tranquillement — ou ça s'improvise en panique. Tu as le choix, et tu l'as maintenant.</p>
     </div>
 
-    <p>On ne te raconte pas ça pour impressionner. On te le raconte parce que <strong>tu peux faire le même chemin</strong> — et même mieux, parce que toi, tu peux commencer <em>avant</em> que ça démarre&nbsp;: arriver en première année avec les bases déjà apprivoisées <em>et</em> une méthode en main, c'est exactement l'avance que personne n'a prise à ta place. Mais d'abord, voyons concrètement ce que «&nbsp;avoir une méthode&nbsp;» veut dire.</p>
-
-    <p class="cliff">Prends deux étudiantes, exactement au même point de départ, avec exactement le même temps. Regarde ce qui les sépare.</p>
+    <p class="cliff">Voilà pourquoi la suite de ce guide ne te donne pas une méthode. Elle te fait construire la tienne.</p>
   </section>
 
-  <hr class="hr"/>
+  <hr class="hr">
 
-  <!-- ============ SECTION 03 — SARAH & CAMILLE ============ -->
+  <!-- ============ 04 — LES CINQ PISTES (refonte du 18/09 : synthétique) ============ -->
   <section>
-    <div class="step">03 — Même temps, résultats opposés</div>
-    <h2>Sarah et Camille.</h2>
+    <div class="step">04 — Ce qu'il te reste à faire</div>
+    <h2>Cinq pistes à explorer, et tu peux commencer dès maintenant.</h2>
 
-    <p>Même cours à réviser. Même durée totale&nbsp;: 220 minutes chacune. Même intelligence. Voici ce qu'elles font.</p>
+    <p>Ce qui départage deux étudiants tient en <strong>cinq piliers</strong>, et ils ne jouent pas le même rôle. <strong>Les deux premiers décident de ce que valent tes heures de travail. Les trois suivants décident de ta capacité à les enchaîner pendant huit mois.</strong> Et ce sont ces trois-là qu'on sacrifie en premier — donc ceux qui font tomber.</p>
 
-    <p><strong>Sarah</strong> avale tout d'un coup&nbsp;: le même soir, elle lit son cours, puis le relit, puis le relit encore. Quatre fois, de la même façon, à fond, surligneur en main. Au bout de la troisième lecture, elle est épuisée — et elle a l'impression de bien connaître son cours, parce qu'elle <em>reconnaît</em> chaque phrase.</p>
+    <div class="pistes">
+      <div class="pi">
+        <div class="pi-n">1</div>
+        <div class="pi-t">Ta façon d'apprendre</div>
+        <div class="pi-c">Relire donne l'impression de savoir, et c'est faux&nbsp;: à temps de travail égal, l'écart entre deux façons de s'y prendre va <strong>du simple au double</strong>.</div>
+        <div class="pi-f">Tu dois <strong>apprendre à apprendre</strong>&nbsp;: trouver la stratégie qui te fait retenir le plus de cours possible.</div>
+      </div>
 
-    <p><strong>Camille</strong> utilise exactement les mêmes 220 minutes. Mais elle les <strong>éparpille sur plusieurs jours</strong>&nbsp;: une première lecture profonde pour comprendre, puis — les jours suivants, au lieu de relire — elle <strong>ferme le cours et essaie de se rappeler</strong> avant de vérifier. Trois fois, à quelques jours d'intervalle. Elle se trompe, elle corrige, elle recommence.</p>
+      <div class="pi">
+        <div class="pi-n">2</div>
+        <div class="pi-t">Ta gestion de la masse</div>
+        <div class="pi-c">Les 130&nbsp;pages de la semaine arrivent, mais celles d'avant ne s'en vont pas&nbsp;: à Noël, <strong>plus de 1&nbsp;500&nbsp;pages</strong> doivent être restituables.</div>
+        <div class="pi-f">Tu dois <strong>apprendre à gérer le flux</strong>&nbsp;: avancer sur les nouvelles pages sans laisser partir les anciennes.</div>
+      </div>
 
-    <p class="scene">Même temps. Même cours. <span class="accent">Camille obtient des scores nettement supérieurs.</span></p>
+      <div class="pi">
+        <div class="pi-n">3</div>
+        <div class="pi-t">Ton sommeil</div>
+        <div class="pi-c">Ce que tu apprends s'installe la nuit&nbsp;: une nuit courte n'est pas de la fatigue, <strong>elle efface une partie du travail de la veille</strong>.</div>
+        <div class="pi-f">Tu dois <strong>apprendre à protéger ton sommeil</strong>, même les semaines où tu es en retard.</div>
+      </div>
 
-    <div class="aha">
-      <span class="lbl">Le piège dans lequel tombe Sarah</span>
-      <p>Relire <em>donne l'impression</em> d'apprendre&nbsp;: c'est agréable, fluide, rassurant. On confond cette aisance avec de la maîtrise. <mark>Mais reconnaître une phrase n'est pas savoir la restituer.</mark> Sarah a confondu l'effort avec l'efficacité — et en entassant tout d'un coup, elle a oublié l'essentiel avant même son contrôle. Camille, elle, a fait <em>travailler</em> sa mémoire, et l'a laissée respirer entre deux passages.</p>
-    </div>
+      <div class="pi">
+        <div class="pi-n">4</div>
+        <div class="pi-t">Ton corps</div>
+        <div class="pi-c">Huit mois à haute intensité. Sauter un repas pour gagner vingt minutes, c'est <strong>perdre l'après-midi</strong>&nbsp;; huit heures de chaise, c'est relire trois fois la même ligne.</div>
+        <div class="pi-f">Tu dois <strong>apprendre à tenir huit mois</strong> sans te cramer en route.</div>
+      </div>
 
-    <p>Ce que Camille fait sans le nommer, ce sont des <strong>leviers</strong> — des façons précises d'utiliser son cerveau qui changent tout, à temps égal. La bonne nouvelle&nbsp;: ils ont des noms, ils sont prouvés, et on te les donne maintenant. En entier.</p>
-
-    <p class="cliff">Voici les six leviers. Aucun n'est compliqué. Et tu peux les tester sur un cours du lycée dès ce soir.</p>
-  </section>
-
-  <hr class="hr"/>
-
-  <!-- ============ SECTION 04 — LES 6 LEVIERS ============ -->
-  <section>
-    <div class="step">04 — Les 6 leviers de la méthode</div>
-    <h2>Six façons de travailler moins bête.</h2>
-    <p>Les voici, les six, chacun expliqué assez pour que tu puisses t'en servir dès ce soir. Lis-les tranquillement&nbsp;: à la fin, on t'en fera essayer un, là, sur cette page.</p>
-
-    <!-- LEVIER 1 : TESTING ACTIF (+ quick win) -->
-    <h3>Levier 1 — Teste-toi au lieu de relire</h3>
-    <p>C'est le levier de Camille, et c'est le plus rentable de tous. Au lieu de relire passivement, tu fermes le cours et tu <strong>essaies de te rappeler</strong>. Cet effort de récupération — un peu inconfortable — est exactement ce qui grave l'information dans la mémoire durable.</p>
-
-    <div class="stat">
-      <div class="num">+50&nbsp;%</div>
-      <div class="cap">Se tester améliore la mémorisation à long terme d'environ <strong>50&nbsp;%</strong> par rapport à la relecture. C'est l'une des deux seules techniques classées «&nbsp;très efficaces&nbsp;» par la science de l'apprentissage.</div>
-      <div class="src">Rowland, 2014 (méta-analyse, 159 études)&nbsp;; classement Dunlosky et al., 2013.</div>
-    </div>
-
-    <div class="aha">
-      <span class="lbl">L'expérience qui a choqué les chercheurs</span>
-      <p>Karpicke &amp; Roediger (2008)&nbsp;: les étudiants qui <strong>continuent à se tester</strong> retiennent environ <strong>80&nbsp;%</strong> une semaine plus tard. Ceux qui arrêtent dès qu'ils «&nbsp;pensent maîtriser&nbsp;»&nbsp;? <strong>33 à 36&nbsp;%.</strong> Même temps d'étude. Plus du double d'écart.</p>
-    </div>
-
-    <p>Et un QCM raté&nbsp;? Ce n'est pas une perte&nbsp;: c'est une <strong>mine</strong>. Il te montre précisément où tu ne sais pas encore — donc où creuser. La seule règle&nbsp;: être honnête avec toi-même. Soit tu as su, soit non. Pas de «&nbsp;j'avais presque&nbsp;»&nbsp;: c'est ce «&nbsp;presque&nbsp;» qui te plante deux mois plus tard.</p>
-
-    <p>Concrètement, te tester peut être aussi simple que fermer le cours et tout réécrire de mémoire sur une feuille blanche. On y reviendra — d'ailleurs, tu vas l'essayer toi-même un peu plus bas.</p>
-
-    <p class="cliff">Te tester, c'est puissant. Mais <em>quand</em> le faire&nbsp;? La réponse va à l'encontre de ton intuition.</p>
-
-    <!-- LEVIER 2 : RÉPÉTITION ESPACÉE -->
-    <h3>Levier 2 — Espace tes révisions au lieu de tout entasser</h3>
-    <p>Ton cerveau oublie, et il le fait vite&nbsp;: environ <strong>70&nbsp;% d'un cours s'efface en 24 heures</strong> si tu n'y reviens jamais. Ce n'est pas un défaut — c'est le fonctionnement par défaut de tous les cerveaux humains. La parade est mécanique elle aussi&nbsp;: revenir sur le cours à des intervalles bien choisis, juste avant que l'oubli ne fasse son travail. À chaque retour, la trace se solidifie et l'oubli ralentit.</p>
-
-    <div class="stat">
-      <div class="num">20 → 80&nbsp;%</div>
-      <div class="cap">Sans révision, il te reste ~20&nbsp;% d'un cours à un mois. Avec une chaîne de révisions espacées&nbsp;: <strong>plus de 80&nbsp;%</strong>. Même cours, même cerveau — c'est l'<em>espacement</em> qui fait la différence.</div>
-      <div class="src">Ebbinghaus, 1885 (courbe de l'oubli)&nbsp;; Cepeda et al., 2006 (méta-analyse, 184 études).</div>
-    </div>
-
-    <p>Le contre-pied qui surprend tout le monde&nbsp;: <mark>5 lectures espacées dans le temps battent 5 lectures faites le même jour — par un facteur 2 à 3,</mark> à temps de travail <em>identique</em>. Bachoter la veille, c'est le pire usage possible de ton temps.</p>
-
-    <div class="note">
-      <span class="lbl">Un exemple concret</span>
-      <p>Disons que tu vois un cours une 1ʳᵉ fois (jour J). Tu pourrais le revoir à <strong>J+1</strong>, puis <strong>J+6</strong>, puis <strong>J+14</strong>, puis <strong>J+30</strong>&nbsp;: des retours de plus en plus espacés, parce qu'à chaque fois tu oublies moins vite. Ce ne sont pas des dates sacrées — l'idée à retenir, c'est <em>revenir plusieurs fois, en espaçant</em>. Et à chaque retour, tu ne relis pas&nbsp;: tu te <em>testes</em> (Levier 1). Les deux leviers travaillent ensemble.</p>
-    </div>
-
-    <div class="vecu">
-      <p>«&nbsp;Tous les soirs, autour de 21h, je préparais le lendemain&nbsp;: quels cours j'allais revoir, en priorité les plus difficiles et ceux que j'avais vus le moins récemment. Je notais pour chacun la date de sa dernière lecture. Ça m'a pris cinq minutes par soir — et ça a tout changé&nbsp;: je ne révisais plus au hasard, je révisais ce qui était sur le point de s'effacer.&nbsp;»</p>
-      <p class="lesson">Cinq minutes le soir pour ne plus jamais réviser au feeling. C'est ça, piloter sa mémoire.</p>
-    </div>
-
-    <p>Et rassure-toi&nbsp;: une 1ʳᵉ lecture <em>imparfaite</em> suivie d'une révision à J+1 bat largement une lecture «&nbsp;parfaite&nbsp;» qu'on ne revoit jamais. Tu n'as pas besoin de tout maîtriser du premier coup. Tu as besoin de <strong>revenir</strong>.</p>
-
-    <p class="cliff">Tester, espacer… encore faut-il avoir un cerveau disponible. Et là, deux choses te le volent en silence.</p>
-
-    <!-- LEVIER 3 : 55/5 -->
-    <h3>Levier 3 — Travaille par cycles, pas en marathon</h3>
-    <p>Ta concentration n'est pas un réservoir infini. Elle fonctionne par <strong>cycles</strong>&nbsp;: la fenêtre de concentration vraiment soutenue dure entre <strong>45 et 90 minutes</strong>, puis une pause devient nécessaire. Au-delà, ta vitesse et ta précision chutent — tu continues à lire, mais tu n'encodes presque plus rien. Le bloc de 4 heures d'affilée, c'est de l'épuisement déguisé en sérieux.</p>
-    <p>D'où la méthode <strong>55/5</strong>&nbsp;: 55 minutes de travail concentré, 5 minutes de vraie pause. Simple à caler (1 cycle = 1 heure pile), assez long pour avancer, assez court pour ne pas s'effondrer.</p>
-
-    <div class="aha">
-      <span class="lbl">Le coût caché de ton téléphone</span>
-      <p>La <strong>simple présence</strong> de ton smartphone — posé sur la table, écran éteint — réduit tes ressources cognitives de <strong>10 à 20&nbsp;%</strong>. Et un «&nbsp;juste 30 secondes&nbsp;» pour répondre casse le fil mental que tu mets ensuite de longues secondes à reconstruire. Pendant tes 55 minutes&nbsp;: téléphone hors de portée, hors de vue.</p>
-    </div>
-    <p class="src" style="color:var(--muted);font-size:13px;margin-top:-6px">Cycles ultradiens&nbsp;: Lavie, 2001. Présence du smartphone&nbsp;: Ward et al., 2017.</p>
-
-    <ul class="clean">
-      <li><strong>Un minuteur visible</strong> (montre, horloge — pas le téléphone).</li>
-      <li><strong>Une seule tâche</strong> sur le cycle&nbsp;: un cours, un objectif.</li>
-      <li><strong>Une pause active</strong>&nbsp;: lève-toi, bouge, bois de l'eau, regarde au loin. <em>Pas</em> de scroll&nbsp;: c'est l'inverse d'une pause pour ton cerveau.</li>
-      <li>Après <strong>4 à 5 cycles</strong>, une vraie pause de 20-30 minutes.</li>
-    </ul>
-
-    <div class="vecu">
-      <p>«&nbsp;Pendant mes révisions, je ne restais pas assis&nbsp;: je marchais. Je tournais en rond dans la pièce en lisant <strong>au rythme de mes pas, comme un métronome</strong>. Trois bénéfices d'un coup&nbsp;: je bougeais (mon sport de la journée), le mouvement m'aidait à mémoriser, et ce rythme régulier me gardait concentré. Un vrai changement pour moi.&nbsp;»</p>
-      <p class="lesson">Ta méthode n'a pas à ressembler à celle des autres. Elle doit te garder actif et concentré — trouve ton métronome.</p>
-    </div>
-
-    <p class="cliff">Voilà les trois leviers de fond. Les trois suivants sont plus rapides — mais ils font la différence entre comprendre et juste empiler.</p>
-
-    <!-- LEVIER 4 : COMPRENDRE AVANT MÉMORISER -->
-    <h3>Levier 4 — Cherche le «&nbsp;pourquoi&nbsp;», pas seulement le «&nbsp;quoi&nbsp;»</h3>
-    <p>Face à un cours, on a le réflexe de vouloir tout mémoriser par cœur. Mais ce qui est <em>compris</em> ne s'oublie pas comme une liste. Quand tu sais <strong>pourquoi</strong> une chose fonctionne, tu peux la reconstruire même si tu en as oublié le détail. Quand tu n'as appris que le <strong>quoi</strong>, le moindre trou de mémoire te laisse sans rien.</p>
-    <p>Le geste concret&nbsp;: devant chaque notion, pose-toi la question «&nbsp;<em>pourquoi c'est comme ça&nbsp;?</em>&nbsp;» avant de chercher à la retenir. Cherche le mécanisme, l'image, le lien avec ce que tu sais déjà. Une notion reliée à dix autres a dix chemins d'accès dans ta mémoire&nbsp;; une notion isolée n'en a qu'un seul, fragile.</p>
-
-    <div class="note">
-      <span class="lbl">À voir aussi</span>
-      <p>Tu veux ressentir ce que ça fait, ce «&nbsp;changement de regard&nbsp;»&nbsp;? Nos <strong>panoramas des quatre matières</strong> sont construits exactement là-dessus&nbsp;: ils ne te font pas réciter l'anatomie, la biologie, la chimie ou la physique — ils te les font <em>comprendre</em>. Ils t'attendent dans ton espace ressources&nbsp;: c'est le meilleur exemple de ce levier en action.</p>
-    </div>
-
-    <div class="stakes">
-      <div class="lbl">Ce que tu gagnes / ce que tu perds</div>
-      <div class="body">
-        <div class="cell win"><span class="h">Si tu cherches le pourquoi</span>Tu retiens plus longtemps, tu résistes aux questions pièges, et tu réponds même à ce que tu n'as pas appris par cœur.</div>
-        <div class="cell lose"><span class="h">Si tu te contentes du quoi</span>Tu oublies en quelques semaines, et la moindre formulation inhabituelle te bloque le jour du contrôle.</div>
+      <div class="pi">
+        <div class="pi-n">5</div>
+        <div class="pi-t">Ta vie à côté</div>
+        <div class="pi-c">C'est ce qu'on coupe en premier, en croyant bien faire. Et <strong>un cerveau sans aucune respiration arrête d'apprendre correctement</strong>.</div>
+        <div class="pi-f">Tu dois <strong>apprendre à garder une place pour le reste</strong>, sans culpabiliser.</div>
       </div>
     </div>
 
-    <!-- LEVIER 5 : EXPLIQUER POUR VÉRIFIER (FEYNMAN) -->
-    <h3>Levier 5 — Explique à voix haute, comme à un ami</h3>
-    <p>Voici un test de vérité imparable&nbsp;: prends une notion et <strong>explique-la à voix haute</strong>, simplement, comme si tu l'enseignais à un copain qui n'y connaît rien. Sans regarder ton cours.</p>
-    <p>Si tu y arrives sans bloquer, tu la maîtrises. Si tu butes, si tu cherches tes mots, si tu te réfugies derrière du jargon&nbsp;: tu viens de localiser exactement ce que tu ne sais pas encore. Tu rouvres le cours sur ce point précis, tu relis, et tu recommences l'explication. C'est rapide, et c'est redoutablement efficace pour transformer un «&nbsp;je crois que je sais&nbsp;» en «&nbsp;je sais&nbsp;».</p>
+    <p>Cinq réponses à trouver, et <strong>deux façons d'y arriver</strong>&nbsp;: mener tes propres expériences, ou <strong>partir de l'expérience de ceux qui sont déjà passés par là</strong>. Les deux marchent. Ce qui ne marche pas, c'est d'attendre septembre pour commencer à chercher.</p>
+
+    <p>Tu peux t'y mettre <mark>dès maintenant, sur tes cours de Terminale</mark> — là où se tromper ne coûte encore rien. Les autres chercheront en novembre, sous 130&nbsp;pages par semaine. <strong>Toi, tu auras déjà tes réponses.</strong></p>
+
+    <p class="cliff">Il reste une sixième chose. Ce n'est pas un pilier de ton système — et pourtant c'est elle qui change le premier mois.</p>
+  </section>
+
+  <hr class="hr">
+
+  <!-- ============ 05 — L'AVANCE, PUIS L'OFFRE ============ -->
+  <section>
+    <div class="step">05 — L'avance</div>
+    <h2>Les bases, elles, s'apprennent avant.</h2>
+
+    <p>Les cinq piliers, tu les construis sur n'importe quel cours. Mais il y a une chose qu'aucune méthode ne rattrape&nbsp;: en septembre, <strong>tu découvres une notion et tu dois déjà la savoir</strong>. Un mot que tu n'avais jamais entendu lundi, il faut pouvoir le replacer dans un QCM quinze jours après. Pas le temps de le comprendre tranquillement d'abord&nbsp;: il passe, et 130&nbsp;pages arrivent derrière.</p>
+
+    <p>C'est le regret dont te parlait Lucas plus haut, et c'est le piège du premier mois.</p>
 
     <div class="aha">
-      <span class="lbl">Pourquoi ça marche</span>
-      <p>Expliquer simplement t'oblige à <strong>reconstruire</strong> l'idée avec tes propres mots, pas à la réciter. Et reconstruire, c'est apprendre. Le jargon, lui, permet de réciter sans comprendre&nbsp;: c'est le meilleur cache-misère, et l'examen le démasque toujours.</p>
+      <span class="lbl">La seule avance que personne ne prend</span>
+      <p>Les bases de la première année ne sont pas difficiles&nbsp;: <strong>elles sont lentes à s'installer</strong>. Anatomie, biologie, chimie, physique — le vocabulaire, les mécanismes, la logique de chaque matière. Rien de tout ça n'est hors de ta portée aujourd'hui. La seule chose qui te manquera en septembre, c'est le temps de les apprivoiser tranquillement.</p>
     </div>
 
-    <!-- LEVIER 6 : DESSINER DE MÉMOIRE -->
-    <h3>Levier 6 — Schématise toute la logique du cours, de mémoire</h3>
-    <p>Derrière chaque cours, il y a une logique&nbsp;: un fil qui relie les notions, une cascade de causes et d'effets, une structure d'ensemble. Le réflexe perdant, c'est de recopier joliment ses notes. Le réflexe gagnant, c'est de <strong>reconstruire cette logique de mémoire</strong>, sur une feuille vierge&nbsp;: un schéma à toi, avec tes flèches et tes liens, même quand le cours n'en proposait aucun. Tu transformes une liste à apprendre en une carte que tu as fabriquée toi-même.</p>
+    <p>Alors voilà ce que ça donne, si on résume ce guide en une phrase&nbsp;: <strong>tu as devant toi quelques mois pour explorer cinq piliers et apprivoiser les bases</strong> — pendant que les autres attendront la rentrée pour découvrir les deux à la fois.</p>
 
-    <div class="vecu">
-      <p>«&nbsp;L'exercice qui m'a le plus fait progresser tient sur une feuille A4 blanche. Tu reprends tout un cours et tu le re-schématises de tête&nbsp;: les idées, les liens, l'enchaînement. Ce sera moche, ce sera incomplet — peu importe. En te trompant, tu vois <strong>exactement</strong> ce que tu ne savais pas. Une feuille, un stylo, et le courage de se tromper avant le concours&nbsp;: c'est souvent ce qui fait passer un QCM de 4 à 14.&nbsp;»</p>
-      <p class="lesson">Se tromper sur ton brouillon aujourd'hui, c'est ne pas se tromper le jour J. Le brouillon est ton meilleur ami.</p>
-    </div>
+    <p>Tu peux tout faire seul. Et ce serait déjà beaucoup&nbsp;: presque personne n'y pensera.</p>
 
-    <p>Tu remarques le fil&nbsp;? Ces six leviers disent tous la même chose, sous des formes différentes&nbsp;: <strong>arrête d'absorber passivement, mets ton cerveau au travail.</strong> Tester, espacer, comprendre le pourquoi, expliquer, dessiner de mémoire — c'est toujours le même principe. C'est lui qui sépare Sarah de Camille.</p>
+    <p>Seulement, ce qui est difficile seul, ce n'est pas de commencer. <strong>C'est de tenir en novembre</strong> — quand les cinq piliers passent après la survie de la semaine, et qu'on revient à ce qu'on faisait avant faute de mieux. À ce moment-là, il faut trois choses qu'on ne se donne pas tout seul&nbsp;: un programme sur lequel s'entraîner, quelqu'un qui voit ce qu'on fait de travers, et un cadre qui tient quand la motivation, elle, ne tient plus.</p>
 
-    <p>Et maintenant qu'on a tout posé, on ne va pas juste te <em>dire</em> que ça marche — on va te le faire <em>vivre</em>. Voici la forme la plus simple du testing actif (Levier 1), appliquée à ce que tu viens de lire&nbsp;: la <strong>page blanche</strong>.</p>
+    <div class="cta">
+      <h2>On a construit une solution pour installer ces cinq piliers <em>avant</em> le premier jour.</h2>
+      <p class="cta-chapo">Tout se passe pendant ton année de Terminale et l'été qui suit — <strong>là où tu as encore le temps de chercher, et où te tromper ne coûte rien</strong>. L'objectif&nbsp;: qu'en septembre, tu n'aies plus rien à inventer.</p>
 
-    <!-- QUICK WIN -->
-    <div class="exo">
-      <div class="exo-head">
-        <div class="tag">À faire maintenant · 3 minutes</div>
-        <div class="t">Le test de la page blanche</div>
-      </div>
-      <div class="exo-body">
-        <ol>
-          <li><strong>Sans remonter</strong>, écris ci-dessous tous les leviers dont tu te souviens, et ce que tu en as retenu&nbsp;: les idées, les chiffres, les images qui t'ont marqué. En vrac, en bullet points, peu importe.</li>
-          <li>Lance le minuteur de 3 minutes et vide ta tête sur la page.</li>
-          <li>Ensuite seulement, remonte vérifier. Ce que tu as oublié&nbsp;= exactement ce que tu devras retravailler. Ce que tu as retrouvé&nbsp;= déjà en train de se graver.</li>
-        </ol>
-        <textarea placeholder="Les leviers et ce que j'en retiens…&#10;- &#10;- &#10;- "></textarea>
-        <div class="timer">
-          <button class="btn-timer" id="startTimer" type="button">▶ Lancer 3:00</button>
-          <span class="clock" id="clock">3:00</span>
-        </div>
-        <div class="done" id="doneMsg">
-          <strong>Voilà. Tu viens de faire du testing actif.</strong> Ce petit effort un peu inconfortable que tu as ressenti&nbsp;? C'est lui qui grave. Tu n'as pas «&nbsp;relu&nbsp;» passivement le guide&nbsp;: tu l'as <em>récupéré</em> de mémoire — la chose la plus efficace que tu puisses faire pour retenir. Et tu viens de le prouver sur toi-même.
+      <div class="resout">
+        <div class="rs"><span class="rs-p">Apprendre à apprendre</span><span class="rs-s">La méthode, module par module&nbsp;: réviser vraiment, revenir sur un cours au bon moment, se tester au lieu de relire, expliquer pour comprendre. Tu la rodes <strong>sur tes cours de Terminale</strong>, et tu arrives avec ta façon de travailler déjà trouvée.</span>
+          <div class="viz viz-chaine" aria-hidden="true"><i>Je lis</i><i>Je reviens</i><i>Je me teste</i><i>J'explique</i></div></div>
+        <div class="rs"><span class="rs-p">Gérer le flux</span><span class="rs-s">Construire ton emploi du temps, travailler avec ton rythme plutôt que contre lui, savoir où mettre ton effort en plus. On l'installe maintenant&nbsp;: <strong>tu ne le découvriras pas sous 130 pages par semaine</strong>.</span>
+          <div class="viz viz-flux" aria-hidden="true"><i style="height:14%"></i><i style="height:22%"></i><i style="height:30%"></i><i style="height:37%"></i><i style="height:45%"></i><i style="height:52%"></i><i style="height:60%"></i><i style="height:67%"></i><i style="height:75%"></i><i style="height:82%"></i><i style="height:90%"></i><i style="height:100%"></i></div></div>
+        <div class="rs"><span class="rs-p">Protéger ton sommeil</span><span class="rs-s">Un module entier — sommeil, sieste, caféine, lumière. Un rythme ne se décide pas&nbsp;: <strong>il s'installe sur des mois</strong>. Autant s'y prendre pendant que rien ne t'en empêche.</span>
+          <div class="viz viz-nuit" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+        <div class="rs"><span class="rs-p">Tenir huit mois</span><span class="rs-s">Ce qui use&nbsp;: la procrastination, le stress, le téléphone. Chacun a son module. Tu entres en première année avec <strong>les parades déjà en main</strong>, au lieu de les chercher le jour où tu es à bout.</span>
+          <div class="viz viz-mois" aria-hidden="true"><i class="">S</i><i class="">O</i><i class="on">N</i><i class="">D</i><i class="">J</i><i class="">F</i><i class="">M</i><i class="">A</i></div></div>
+        <div class="rs"><span class="rs-p">Garder une place pour le reste</span><span class="rs-s">Un emploi du temps où le repos est <strong>prévu</strong>, pas ce qui reste à la fin. Et nos stages ne prennent qu'une demi-journée par jour — l'autre moitié de tes vacances reste la tienne.</span>
+          <div class="viz viz-moitie" aria-hidden="true"><i class="a">stage</i><i class="b">à toi</i></div></div>
+
+        <div class="rs rs-bonus"><span class="rs-p">Et en plus des cinq piliers</span><span class="rs-s"><strong>On attaque les bases du programme avec toi, dès maintenant.</strong> Les cours essentiels des quatre matières — anatomie, biologie, chimie, physique — travaillés tranquillement pendant que rien ne t'oblige encore à les retenir. Avec des QCM corrigés après chaque cours, et des concours blancs chronométrés pour voir où tu en es. C'est l'avance dont on parlait juste avant&nbsp;: le premier mois, tu ne découvriras pas ces notions, <strong>tu les reverras</strong>.</span>
+          <div class="deck">
+            <div class="deck-pile" id="deckPile" role="button" tabindex="0" aria-label="Feuilleter des extraits de cours">
+              <div class="fiche">
+                <span class="f-mat">Anatomie</span>
+                <span class="f-tit">Ch.&nbsp;3 — La colonne vertébrale</span>
+                <span class="f-bar"></span>
+                <span class="f-txt"><i style="width:92%"></i><i style="width:78%"></i></span>
+                <span class="f-sch"><img src="https://medeos-sante.fr/_next/image?url=%2Fimages%2Fanatomie%2Fch3_rachis_vue_ensemble.png&amp;w=256&amp;q=70" alt="" decoding="async"></span>
+                <span class="f-ins"><b>Analogie</b>Une pile de vertèbres comme un ressort qui amortit chaque pas.</span>
+              </div>
+              <div class="fiche">
+                <span class="f-mat">Biologie</span>
+                <span class="f-tit">Ch.&nbsp;3 — La mitochondrie</span>
+                <span class="f-bar"></span>
+                <span class="f-txt"><i style="width:92%"></i><i style="width:78%"></i></span>
+                <span class="f-sch"><img src="https://medeos-sante.fr/_next/image?url=%2Fimages%2Fbiologie%2Fch3_structure_mitochondrie.png&amp;w=256&amp;q=70" alt="" loading="lazy" decoding="async"></span>
+                <span class="f-ins"><b>Analogie</b>La centrale électrique de la cellule&nbsp;: elle fabrique l'énergie.</span>
+              </div>
+              <div class="fiche">
+                <span class="f-mat">Chimie</span>
+                <span class="f-tit">Ch.&nbsp;2 — La règle de Klechkowski</span>
+                <span class="f-bar"></span>
+                <span class="f-txt"><i style="width:92%"></i><i style="width:78%"></i></span>
+                <span class="f-sch"><img src="https://medeos-sante.fr/_next/image?url=%2Fimages%2Fchimie%2Fch2-diagramme-klechkowski.png&amp;w=256&amp;q=70" alt="" loading="lazy" decoding="async"></span>
+                <span class="f-ins"><b>Mnémo</b>On remplit les sous-couches en suivant les diagonales, jamais dans le désordre.</span>
+              </div>
+              <div class="fiche">
+                <span class="f-mat">Physique</span>
+                <span class="f-tit">Ch.&nbsp;1 — Les états de la matière</span>
+                <span class="f-bar"></span>
+                <span class="f-txt"><i style="width:92%"></i><i style="width:78%"></i></span>
+                <span class="f-sch"><img src="https://medeos-sante.fr/_next/image?url=%2Fimages%2Fphysique%2Fphysique_ch1_fig01_etats_matiere.png&amp;w=256&amp;q=70" alt="" loading="lazy" decoding="async"></span>
+                <span class="f-ins"><b>Analogie</b>Solide, liquide, gaz&nbsp;: la même foule, plus ou moins serrée.</span>
+              </div>
+              <div class="fiche">
+                <span class="f-mat">Anatomie</span>
+                <span class="f-tit">Ch.&nbsp;10 — Le globe oculaire</span>
+                <span class="f-bar"></span>
+                <span class="f-txt"><i style="width:92%"></i><i style="width:78%"></i></span>
+                <span class="f-sch"><img src="https://medeos-sante.fr/_next/image?url=%2Fimages%2Fanatomie%2Fch10_coupe_globe_oculaire.png&amp;w=256&amp;q=70" alt="" loading="lazy" decoding="async"></span>
+                <span class="f-ins"><b>Analogie</b>L'œil, un appareil photo&nbsp;: cornée&nbsp;= objectif, rétine&nbsp;= capteur.</span>
+              </div>
+              <div class="fiche">
+                <span class="f-mat">Chimie</span>
+                <span class="f-tit">Ch.&nbsp;2 — Les orbitales atomiques</span>
+                <span class="f-bar"></span>
+                <span class="f-txt"><i style="width:92%"></i><i style="width:78%"></i></span>
+                <span class="f-sch"><img src="https://medeos-sante.fr/_next/image?url=%2Fimages%2Fchimie%2Fch2-formes-orbitales.png&amp;w=256&amp;q=70" alt="" loading="lazy" decoding="async"></span>
+                <span class="f-ins"><b>Mnémo</b>s, p, d, f&nbsp;: la forme change, la logique reste la même.</span>
+              </div>
+              <div class="fiche">
+                <span class="f-mat">Physique</span>
+                <span class="f-tit">Ch.&nbsp;1 — Le diagramme de phases</span>
+                <span class="f-bar"></span>
+                <span class="f-txt"><i style="width:92%"></i><i style="width:78%"></i></span>
+                <span class="f-sch"><img src="https://medeos-sante.fr/_next/image?url=%2Fimages%2Fphysique%2Fphysique_ch1_fig02_diagramme_phases_eau.png&amp;w=256&amp;q=70" alt="" loading="lazy" decoding="async"></span>
+                <span class="f-ins"><b>Repère</b>Un point triple où l'eau est solide, liquide et gazeuse à la fois.</span>
+              </div>
+            </div>
+            <div class="deck-dots" id="deckDots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="deck-hint">Clique pour feuilleter</div>
+          </div>
         </div>
       </div>
+
+      <div class="cta-qui">
+        <img class="cta-face" src="https://medeos-sante.fr/images/experts/lucas-portrait.webp" alt="Lucas Crepin" loading="lazy">
+        <p>Et à chaque étape, <strong>c'est Lucas qui te suit</strong> — celui dont tu viens de lire l'histoire. Pas un tuteur anonyme&nbsp;: celui qui est parti du milieu de tableau et a fini 6ᵉ, et qui regarde comment <strong>toi</strong> tu travailles pour te dire quoi changer.</p>
+      </div>
+
+      <div class="cta-nom">
+        <img class="cta-logo" src="https://medeos-sante.fr/images/logo-medi-pro.png" alt="" aria-hidden="true" loading="lazy">
+        <div class="cta-nom-t">
+          <span class="cta-nom-k">Cette solution</span>
+          <span class="cta-nom-n">Medi&nbsp;Pro</span>
+          <p>Des stages pendant les vacances de ta Terminale, puis la pré-rentrée d'août, juste avant le premier jour. Leur nombre dépend du moment où tu nous rejoins&nbsp;; <strong>la méthode, elle, y est dans tous les cas</strong>.</p>
+        </div>
+      </div>
+
+      <a class="btn" href="https://medeos-sante.fr/packs/medi-pro-v2/2027?src=guide&amp;i=acheter" target="_top" data-cta="medipro-acheter">Acheter Medi&nbsp;Pro — <span id="prixPack">388&nbsp;€</span> <span aria-hidden="true">→</span></a>
+      <a class="btn-2" href="https://medeos-sante.fr/packs/medi-pro-v2/2027?src=guide" target="_top" data-cta="medipro">En savoir plus</a>
+      <p class="small">Pour la rentrée 2027. Si tu entres une autre année, écris-nous&nbsp;: on te bascule sur la bonne session.</p>
     </div>
 
-    <p>Trois minutes, et tu as mieux ancré ce guide que si tu l'avais relu deux fois. C'est exactement ce geste que tu pourras refaire sur <strong>n'importe quel cours, dès aujourd'hui au lycée</strong>.</p>
-
-    <p class="cliff">Tu as les six leviers, et tu viens d'en faire l'expérience. Reste le pas le plus difficile&nbsp;: passer de «&nbsp;je sais&nbsp;» à «&nbsp;je fais&nbsp;».</p>
+    <p>Une chose est sûre, quoi que tu choisisses&nbsp;: en septembre, tu ne seras pas celui qu'on jette à l'eau sans savoir nager. Tu sauras ce qui t'attend, et par quoi commencer.</p>
   </section>
 
-  <hr class="hr"/>
-
-  <!-- ============ SECTION 05 — DU SAVOIR À L'ACTE ============ -->
-  <section>
-    <div class="step">05 — Du «&nbsp;je sais&nbsp;» au «&nbsp;je fais&nbsp;»</div>
-    <h2>Une bonne intention ne suffit pas. Un plan, oui.</h2>
-    <p>Tu connais ça&nbsp;: on lit quelque chose d'utile, on se dit «&nbsp;super, je vais le faire&nbsp;»… et la vie reprend. Ce n'est pas un manque de volonté. C'est que <strong>«&nbsp;j'ai l'intention&nbsp;» et «&nbsp;je le fais&nbsp;» sont deux choses différentes</strong> dans le cerveau. En moyenne, on ne transforme une bonne intention en acte qu'environ <strong>une fois sur deux</strong>.</p>
-    <p>Le correctif est étonnamment simple. Au lieu d'une intention vague («&nbsp;je vais m'entraîner&nbsp;»), tu écris un plan précis&nbsp;: <strong>«&nbsp;si [telle situation], alors [telle action]&nbsp;».</strong> Ce simple geste augmente nettement les chances que tu passes vraiment à l'acte, parce que tu as déjà décidé à l'avance.</p>
-    <p class="src" style="color:var(--muted);font-size:13px;margin-top:-6px">Écart intention-action&nbsp;: Sheeran, 2002. Plans «&nbsp;si-alors&nbsp;»&nbsp;: Gollwitzer &amp; Sheeran, 2006.</p>
-
-    <p>Alors fais-le, maintenant. Pas demain. Écris ton premier plan&nbsp;:</p>
-
-    <div class="plan">
-      <div class="row"><span class="kw">SI</span><input type="text" placeholder="ex : demain en révisant mon cours de SVT…" aria-label="situation"/></div>
-      <div class="row"><span class="kw">ALORS</span><input type="text" placeholder="ex : je ferai 3 min de page blanche avant de relire." aria-label="action"/></div>
-      <p style="margin:6px 0 0;font-size:14.5px;color:var(--muted)">Écris-le pour de vrai. C'est ton premier pas — sur un cours du lycée, avant même la première année.</p>
+  <!-- ============ PONT PARCOURS ============ -->
+  <section class="pont-parcours" aria-label="La suite, dans l'app">
+    <div class="pp-k">La suite, gratuitement</div>
+    <div class="pp-t">Commence à t'entraîner dès maintenant, dans le Parcours.</div>
+    <p>Tu viens de poser ton système. L'entraînement, lui, se fait un peu chaque jour&nbsp;: deux fiches par jour dans l'ordre du programme (anatomie, biologie, chimie, physique), puis des QCM pour te tester. Sans compte obligatoire, sans carte bancaire.</p>
+    <div class="cta-duo">
+      <a href="#home" target="_top" class="pr" data-cta="parcours">Ouvrir mon Parcours →</a>
+      <a href="https://medeos-sante.fr/packs/medi-pro-v2/2027" target="_top" data-cta="medipro">Aller plus loin&nbsp;: Medi&nbsp;Pro →</a>
     </div>
-
-    <div class="note">
-      <span class="lbl">C'est ça, anticiper</span>
-      <p>Tu viens de comprendre le renversement. Tu as appliqué un levier sur toi-même. Tu as un plan écrit. <strong>Tu n'as pas attendu la rentrée pour t'y mettre</strong> — et c'est exactement ça, ton avantage. Pendant que d'autres découvriront ces méthodes en septembre, dans la panique, tu les auras déjà rodées sur tes cours de Terminale.</p>
-    </div>
-
-    <p class="cliff">Tu t'es construit un premier réflexe aujourd'hui. Voilà ce qui se passe maintenant.</p>
   </section>
 
-  <hr class="hr"/>
-
-  <!-- ============ SECTION 06 — CLÔTURE DOUCE ============ -->
-  <section>
-    <div class="step">06 — Ce qui se passe maintenant</div>
-    <h2>Tu n'as pas appris la première année. Tu as changé de regard.</h2>
-
-    <p>Reprends le chemin parcouru sur cette page&nbsp;:</p>
-    <ul class="clean">
-      <li>Tu sais que la première année récompense la <strong>méthode</strong>, pas l'intelligence de départ.</li>
-      <li>Tu as vu qu'on peut partir du milieu de tableau et remonter — à condition de changer le <em>comment</em>.</li>
-      <li>Tu as six leviers concrets, et tu en as déjà testé un sur toi-même.</li>
-      <li>Tu repars avec un plan écrit, applicable dès cette semaine.</li>
-    </ul>
-
-    <p>Ce n'est pas rien. La plupart des futurs étudiants n'auront jamais vu ça avant de plonger. Mais soyons honnêtes sur ce qui reste.</p>
-
-    <p>Une méthode, ce n'est pas six idées sur une page. C'est six idées <strong>tenues, jour après jour</strong>, sur des dizaines de chapitres&nbsp;: les schémas refaits de mémoire le soir, le planning de révision recalculé chaque semaine, les heures où on bute, où on doute, où on reprend une feuille blanche jusqu'à comprendre. Ça, ce n'est pas glamour. Mais c'est ce qui transforme une bonne intention en réflexe.</p>
-
-    <div class="vecu">
-      <p>«&nbsp;Tous ceux qui finissent dans le haut du classement ont commencé là où tu es&nbsp;: devant une matière qui fait peur, sans méthode encore. Ce qui les distingue, ce n'est pas l'intelligence — c'est le moment où ils ont arrêté d'apprendre des mots pour commencer à comprendre des mécanismes. Si tu as lu cette page jusqu'ici, tu as déjà ce qu'il faut pour faire le même chemin.&nbsp;»</p>
-    </div>
-
-    <p>Ces six leviers, ils sont à toi — et ils te servent dès ce soir. Mais les tenir jour après jour, sur des dizaines de chapitres, avec un planning de révision, des QCM corrigés au format du concours et quelqu'un qui te répond quand tu bloques — c'est ce qu'on a construit dans <strong>Medi&nbsp;Pro</strong>. On ne te demande rien&nbsp;: si la curiosité te prend, jette juste un œil.</p>
-
-    <p style="margin:18px 0 4px">
-      <a href="https://medeos-sante.fr/packs/medi-pro" target="_top" onclick="try{window.parent.postMessage({medeosClick:'cta_medipro_iframe'},location.origin)}catch(e){}" style="display:inline-flex;align-items:center;gap:6px;color:var(--violet-deep);font-weight:600;font-size:14.5px;border-bottom:1px solid rgba(107,70,193,.3);padding-bottom:1px">Découvrir Medi&nbsp;Pro →</a>
-    </p>
-
-    <p style="margin-top:26px"><strong>Une chose est sûre, quoi que tu choisisses&nbsp;:</strong> en septembre, tu ne seras pas celui qu'on jette dans la piscine sans savoir nager. Tu sauras déjà comment avancer.</p>
-  </section>
-
-  <!-- ============ FOOTER + SOURCES ============ -->
   <footer>
-    <p class="sig">Medeos — anticiper la première année, sereinement.</p>
+    <p class="sig">Medeos — préparer sa première année, avec un système à soi.</p>
 
-    <div class="src-list" style="text-align:left">
+    <div class="src-list">
       <div class="lbl">Les sources, parce qu'on ne te raconte pas d'histoires</div>
       <ul>
+        <li><strong>Volume de cours</strong> — dossier de cours complet d'une première année de santé (Lille), 308&nbsp;fichiers dédoublonnés, recomptage du 14/06/2026&nbsp;: 3&nbsp;879&nbsp;pages (S1 2&nbsp;029 · S2 1&nbsp;850).</li>
+        <li><strong>Taux de passage</strong> — Ministère de l'Enseignement supérieur, SIES, note publiée en novembre&nbsp;2025 — 33,8&nbsp;% des inscrits en PASS admis en deuxième année de santé en un an.</li>
         <li>Sisk, V. F., et al. (2018). <em>Psychological Science</em>, 29(4) — méthode &gt; croyance en l'intelligence.</li>
-        <li>Ebbinghaus, H. (1885)&nbsp;; Murre, J. &amp; Dros, J. (2015), <em>PLOS ONE</em> — courbe de l'oubli.</li>
-        <li>Cepeda, N. J., et al. (2006). <em>Psychological Bulletin</em>, 132(3) — répétition espacée (184 études).</li>
-        <li>Karpicke, J. &amp; Roediger, H. (2008). <em>Science</em>, 319 — testing actif (80&nbsp;% vs 33-36&nbsp;%).</li>
-        <li>Rowland, C. (2014). <em>Psychological Bulletin</em>, 140(6) — testing, méta-analyse 159 études.</li>
+        <li>Karpicke, J. &amp; Roediger, H. (2008). <em>Science</em>, 319 — test actif (80&nbsp;% vs 33-36&nbsp;%).</li>
+        <li>Rowland, C. (2014). <em>Psychological Bulletin</em>, 140(6) — test actif, méta-analyse 159&nbsp;études.</li>
         <li>Dunlosky, J., et al. (2013). <em>Psychological Science in the Public Interest</em>, 14(1) — techniques d'étude.</li>
-        <li>Lavie, P. (2001). <em>Annual Review of Psychology</em>, 52 — cycles ultradiens (45-90 min).</li>
-        <li>Ward, A. F., et al. (2017). <em>Journal of the Assoc. for Consumer Research</em>, 2(2) — présence du smartphone.</li>
-        <li>Sheeran, P. (2002)&nbsp;; Gollwitzer, P. &amp; Sheeran, P. (2006) — intention-action &amp; plans «&nbsp;si-alors&nbsp;».</li>
+        <li>Okano, K., et al. (2019). <em>npj Science of Learning</em>, 4(16) — sommeil, régularité et résultats scolaires.</li>
       </ul>
     </div>
   </footer>
@@ -705,17 +992,36 @@
 
 <script>
 (function(){
-  // progress bar
+  /* ---------- BARRE DE PROGRESSION (revue le 18/09/2026, Lucas) ----------
+     Avant : width = scroll / hauteur. Deux défauts qui faisaient abandonner la
+     lecture — (1) à chaque palier révélé la page s'allongeait, donc la barre
+     RECULAIT ; (2) elle montait linéairement, donc au milieu du guide on voyait
+     « 50 % » et il restait visiblement autant à lire.
+     Maintenant : chaque palier occupe une TRANCHE de la barre (0→58 %, 58→86 %,
+     86→100 %), la progression dans la tranche suit une courbe qui monte vite au
+     début, et la barre ne redescend JAMAIS (Math.max). Résultat : on avance
+     toujours, et on se sent près de la fin bien avant de l'être. */
   var bar=document.getElementById('bar');
+  var etapeVue=0, nbEtapes=1, barreMax=0;
+  // Bornes des tranches selon le nombre de paliers (dernière valeur toujours 1).
+  var BORNES={1:[0,1], 2:[0,.66,1], 3:[0,.58,.86,1], 4:[0,.52,.76,.91,1]};
   function onScroll(){
     var h=document.documentElement;
     var sc=h.scrollTop||document.body.scrollTop;
     var max=(h.scrollHeight-h.clientHeight)||1;
-    bar.style.width=(sc/max*100)+'%';
+    var brut=Math.min(1,Math.max(0,sc/max));
+    var b=BORNES[nbEtapes]||BORNES[3];
+    var bas=b[etapeVue]||0, haut=b[etapeVue+1]||1;
+    // Courbe : 25 % de la page lue affiche déjà ~43 % de la tranche.
+    var v=(bas+(haut-bas)*Math.pow(brut,.62))*100;
+    if(v>barreMax) barreMax=v;          // ⛔ jamais de recul
+    bar.style.width=barreMax.toFixed(1)+'%';
   }
   window.addEventListener('scroll',onScroll,{passive:true});onScroll();
 
-  // quick-win timer (3:00 countdown)
+  // Minuteur de l'ancien exercice « 3 minutes » — RETIRÉ du guide le 18/09/2026
+  // (Lucas). Le code reste inerte (garde `if(btn)`) au cas où l'exercice
+  // reviendrait ; il ne s'exécute pas tant que #startTimer n'existe pas.
   var btn=document.getElementById('startTimer');
   var clock=document.getElementById('clock');
   var done=document.getElementById('doneMsg');
@@ -738,6 +1044,90 @@
     });
   }
 
+  /* ============ LE DECK DE COURS (19/09/2026) ============ */
+  /* Même comportement que le deck de app/packs/stages-vacances : trois cartes
+     visibles, on clique (ou on balaie) pour passer à la suivante. */
+  (function(){
+    var pile=document.getElementById('deckPile');
+    if(!pile) return;
+    var cartes=Array.prototype.slice.call(pile.querySelectorAll('.fiche'));
+    var dots=Array.prototype.slice.call(document.querySelectorAll('#deckDots i'));
+    var N=cartes.length, cur=0;
+    function rendre(){
+      cartes.forEach(function(c,i){
+        var r=(i-cur+N)%N;                       // 0 = devant
+        var visible=r<3;
+        c.style.transform='translateY('+(r*7)+'px) scale('+(1-r*0.05)+')';
+        c.style.zIndex=N-r;
+        c.style.opacity=visible?(1-r*0.16):0;
+        c.style.pointerEvents=r===0?'auto':'none';
+      });
+      dots.forEach(function(d,i){ d.className = i===cur?'on':''; });
+    }
+    function suivant(){ cur=(cur+1)%N; rendre(); }
+    pile.addEventListener('click',suivant);
+    pile.addEventListener('keydown',function(e){
+      if(e.key==='Enter'||e.key===' '){ e.preventDefault(); suivant(); }
+    });
+    var x0=null;
+    pile.addEventListener('touchstart',function(e){ x0=e.touches[0].clientX; },{passive:true});
+    pile.addEventListener('touchend',function(e){
+      if(x0===null) return;
+      var d=x0-e.changedTouches[0].clientX;
+      if(Math.abs(d)>40){ cur=(cur+(d>0?1:N-1))%N; rendre(); }
+      x0=null;
+    },{passive:true});
+    rendre();
+  })();
+
+  /* ============ LE PRIX DU PACK (19/09/2026) ============ */
+  /* Lucas veut le prix sur le bouton. ⚠️ 388 € n'est vrai QUE tant que les
+     4 stages sont devant : dès qu'un stage est passé, le pack descend à 349,
+     puis 309, puis 269 (lib/medi-pro-saison.ts — SOURCE DE VÉRITÉ, ce qui suit
+     n'en est qu'un miroir pour une page statique, qui ne peut pas l'appeler).
+     Sans ça, le bouton afficherait 388 € le 1er novembre alors que la page de
+     vente en demanderait 349 : le guide mentirait tout seul.
+     Dates = fin du stage dans la ZONE LA PLUS TARDIVE (data/stages-vacances.ts). */
+  (function(){
+    var el=document.getElementById('prixPack');
+    if(!el) return;
+    var PALIERS=[
+      ['2026-10-31', 388],  // les 4 stages encore devant
+      ['2027-01-02', 349],  // Toussaint passée
+      ['2027-03-06', 309],  // Noël passé
+      ['2027-05-01', 269]   // hiver passé ; après, il ne reste que la pré-rentrée
+    ];
+    var now=new Date();
+    for(var i=0;i<PALIERS.length;i++){
+      if(now <= new Date(PALIERS[i][0]+'T23:59:59+02:00')){
+        el.textContent=PALIERS[i][1]+'\u00A0€';
+        return;
+      }
+    }
+    // Plus aucun stage de vacances devant : on n'annonce plus de prix de pack,
+    // la page de vente fait foi.
+    el.textContent='voir le tarif';
+    el.parentNode.firstChild && (el.previousSibling && (el.previousSibling.textContent=
+      el.previousSibling.textContent.replace(' — ','\u00A0: ')));
+  })();
+
+  /* ============ LA MASSE (18/09/2026) ============ */
+  /* 130 traits = les ~130 pages de cours d'une semaine ; 13 livres = les 3 879 pages
+     de l'année (≈ 13 romans de 300 p.). Générés en JS pour ne pas alourdir le HTML. */
+  (function(){
+    function remplir(id, n, titre){
+      var el=document.getElementById(id);
+      if(!el) return;
+      var f=document.createDocumentFragment();
+      for(var k=0;k<n;k++){ f.appendChild(document.createElement('i')); }
+      el.appendChild(f);
+      el.setAttribute('role','img');
+      el.setAttribute('aria-label',titre);
+    }
+    remplir('mP1',130,'130 traits, un par page de cours d\'une semaine de première année');
+    remplir('mBooks',13,'13 livres, l\'équivalent des 3 879 pages de cours de l\'année');
+  })();
+
   /* ============ LECTURE PROGRESSIVE ============ */
   /* On regroupe le contenu en « étapes » : chaque <section> (avec le <hr> qui la
      précède) devient une étape révélée une à une via un bouton « Continuer ».
@@ -751,15 +1141,15 @@
     // On regroupe les sections en PALIERS (moins de boutons = lecture plus fluide).
     // Un palier est défini par la 1re section qu'il contient ; les autres lui sont rattachées.
     // Découpage choisi pour préserver le fil narratif :
-    //   Palier 1 (visible) : intro + « le jeu change » + l'histoire (le « pourquoi »)
-    //   Palier 2           : Sarah & Camille + les 6 leviers (le « comment » concret)
-    //   Palier 3           : le plan si-alors + la clôture + CTA Medi Pro
+    //   Palier 1 (visible) : la densité réelle + le classement + l'histoire (le « pourquoi »)
+    //   Palier 2           : les 5 pistes, en un bloc synthétique (18/09 : Lucas veut du court ici)
+    //   Palier 3           : les bases à prendre d'avance, puis l'offre Medi Pro
     // Les coupures sont détectées sur le texte du <h2> de chaque section.
     function startsNewBreak(sec){
       var h=sec.querySelector('h2');
       var t=h?h.textContent.toLowerCase():'';
-      return /moins b[êe]te/.test(t)          // début palier 2 : « Six façons de travailler moins bête » (les 6 leviers)
-          || /une bonne intention/.test(t);   // début palier 3 : « Une bonne intention ne suffit pas »
+      return /cinq pistes/.test(t)            // palier 2 : « Cinq pistes à explorer » (18/09, refonte)
+          || /s'apprennent avant/.test(t);    // palier 3 : « Les bases, elles, s'apprennent avant » + l'offre
     }
 
     // Construire les paliers en accumulant les sections (+ leur <hr>) jusqu'à une coupure.
@@ -779,6 +1169,7 @@
     if(currentNodes.length) steps.push({nodes:currentNodes, revealed:(steps.length===0)});
 
     if(steps.length<2) return;
+    nbEtapes=steps.length;   // la barre répartit ses tranches là-dessus
 
     // Rattacher tout ce qui suit la DERNIÈRE section (footer, sources, etc.) au
     // dernier palier — sinon le footer reste visible et remonte sous le 1er bouton.
@@ -797,24 +1188,28 @@
 
     // Libellés d'invitation, par palier à venir.
     var hints=[
-      'Maintenant, la méthode concrète.',
-      'Dernière étape.'
+      'Ce qu\'il te reste à faire. · 3 min',
+      'Dernière chose, et c\'est la plus rentable. · 2 min'
     ];
 
 
-    // Phrases de conversion sous « Continuer ». Les DEUX offres sont proposées à
-    // chaque fois (retour Lucas 04/08) : les Stages Vacances valent 388 € contre
-    // 147 € pour Medi Pro, ils ne peuvent pas apparaître une fois sur trois.
+    // Phrases de conversion sous « Continuer ». Les DEUX portes sont proposées à
+    // chaque fois : le Parcours de l'app (gratuit) et Medi Pro (payant).
+    // 18/09/2026 — ⛔ l'ancien commentaire ici disait « les Stages Vacances valent
+    // 388 € contre 147 € pour Medi Pro » : FAUX deux fois (388 € EST le prix de
+    // Medi Pro, et la grille « 147 € » est morte). Le prix ne s'écrit jamais dans
+    // un contenu public : la seule source est ROLE-STRATEGIE-OFFRE.md §1 + la page.
     var RAPPELS_STAGES = {
-      2: "Tu as les six leviers. Ce qui manque, c\'est un programme sur lequel les appliquer et quelqu\'un qui te dise quoi reprendre et quand : c\'est exactement ce que fait <b>Medi&nbsp;Pro</b> juste avant la rentrée." 
+      2: 'Tu as les cinq pistes. Ce qui manque, c\'est un programme sur lequel les roder&nbsp;: le <b>Parcours</b> de l\'app te le donne gratuitement, deux fiches par jour, dans l\'ordre. Et pour arriver en septembre avec les bases déjà apprivoisées, c\'est <b>Medi&nbsp;Pro</b>, nos stages.'
     };
     function rappelStages(n){
       var t = RAPPELS_STAGES[n];
       if(!t) return '';
-      // Les DEUX offres à chaque fois : le lecteur se reconnaît lui-même.
+      // Le Parcours de l'app d'abord (gratuit), Medi Pro ensuite — pivot du 07/09/2026.
       return '<div class="continue-cta"><div class="cta-mot">' + t + '</div>' +
              '<div class="cta-duo">' +
-             '<a href="https://medeos-sante.fr/packs/medi-pro" target="_top" data-cta="medipro">Découvrir Medi&nbsp;Pro →</a>' +
+             '<a href="#home" target="_top" class="pr" data-cta="parcours">Ouvrir mon Parcours, gratuit →</a>' +
+             '<a href="https://medeos-sante.fr/packs/medi-pro-v2/2027" target="_top" data-cta="medipro">Medi&nbsp;Pro — nos 5 stages →</a>' +
              '</div></div>';
     }
 
@@ -844,7 +1239,7 @@
         lastNode.appendChild(blocRappel);
         blocRappel.querySelectorAll('a').forEach(function(a){
           a.addEventListener('click', function(){
-            try { window.parent.postMessage({ medeosClick: a.dataset.cta === 'stages' ? 'cta_stages_vacances' : 'cta_medipro_iframe' }, location.origin); } catch(e) {}
+            try { window.parent.postMessage({ medeosClick: a.dataset.cta === 'parcours' ? 'cta_parcours_iframe' : 'cta_medipro_iframe' }, location.origin); } catch(e) {}
           });
         });
       }
@@ -864,7 +1259,8 @@
         // la personne continue de descendre à son propre rythme.
         // Préparer le bouton de l'étape suivante
         addContinueButton(nextIndex);
-        // recalculer la barre de progression
+        // La barre passe à la tranche du nouveau palier (elle ne recule pas).
+        etapeVue=nextIndex;
         if(typeof onScroll==='function') onScroll();
       });
     }

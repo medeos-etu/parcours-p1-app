@@ -3354,12 +3354,12 @@
       </div>
       
       
-      <div class="rescard" id="carte-guide" onclick="ouvrirRessource('guide-methodologique.html','Guide méthodologique')">
+      <div class="rescard" id="carte-guide" onclick="ouvrirRessource('guide-methodologique.html','Mini-guide pour préparer sa première année de santé')">
         <span class="pricechip">GRATUIT</span><img src="img/cover-methode-p1.png" onerror="this.src='img/cover-methode.jpg'" alt="">
         <div class="rc-body">
-          <b>Guide méthodologique</b>
-          <p>Un aperçu de la méthode : comment réviser, se tester, s'organiser sans partir dans tous les sens.</p>
-          <div class="rc-meta">🛠️ Un aperçu de la méthode</div>
+          <b>Préparer sa première année</b>
+          <p>Ce qui t'attend vraiment : ~130 pages de cours par semaine, un classement — et les cinq piliers à travailler avant d'y être.</p>
+          <div class="rc-meta">🛠️ Le mini-guide, ~13 min</div>
         </div>
       </div>
       <div class="rescard" id="carte-agenda" onclick="ouvrirRessource('agenda-p1.html','Agenda de la P1')">
@@ -19688,6 +19688,13 @@ function closeFiche(){
   const L=document.getElementById('lecteur');
   L.classList.remove('on'); L.classList.remove('ressource');
   setTimeout(()=>{ L.classList.remove('entree'); document.getElementById('fiche-frame').src='about:blank'; },340);
+  /* 19/09 — une visite mise en attente pendant la lecture démarre ICI, à la sortie.
+     Jusqu'ici TUTO_DIFFERE n'était repris qu'à la fermeture des fenêtres pioche et
+     compte : quelqu'un arrivé par le lien du guide n'aurait jamais vu l'app. */
+  if(TUTO_DIFFERE){
+    const k=TUTO_DIFFERE; TUTO_DIFFERE=null;
+    setTimeout(()=>{ if(!tutoFait(k)) startTuto(k); }, 420);
+  }
 }
 
 
@@ -21423,7 +21430,11 @@ try{ const q=new URLSearchParams(location.search);
   CODE0=String(q.get('code')||'').trim().toUpperCase().replace(/\s+/g,'');
   if(!/^MEDEOS-[A-Z0-9]{4}-[A-Z0-9]{4}$/.test(CODE0)) CODE0='';
 }catch(e){}
-if(SRC0==='accueil-panorama-p1') TUTO_DIFFERE='biblio';   /* le Panorama d'abord, la visite après */
+/* Le Panorama ET le guide : ce qu'il vient chercher s'ouvre TOUT DE SUITE, la visite
+   d'Axo attend qu'il en sorte (Lucas, 19/09 : « si quelqu'un clique sur le lien du
+   guide, être sûr qu'il ne se retrouve pas dans une introduction d'Axo — l'intro
+   c'est seulement si la personne sort du guide »). */
+if(SRC0==='accueil-panorama-p1' || SRC0==='accueil-guide-methodologique') TUTO_DIFFERE='biblio';
 /* #inscription : la porte de la PUB (Lucas, 05/09 : « un lien d'accès directement pour s'inscrire
    au Parcours »). Sans compte, on tombe sur la porte du Parcours avec le message de l'annonce et
    le formulaire déjà ouvert ; avec un compte, on entre dans le Parcours. */
@@ -21510,9 +21521,13 @@ if(SRC0==='accueil-panorama-p1'){
   setTimeout(()=>{ try{ ouvrirPanoramas(); }catch(e){ TUTO_DIFFERE=null; } }, 350);
 }
 if(SRC0==='accueil-guide-methodologique'){
-  /* il venait chercher le guide : la visite commence sur sa carte, et dit où il s'ouvre */
-  BIBLIO_AVANT={sel:'#carte-guide', img:'axo-guide-pointe-haut', t:"Le <b>guide méthodologique</b> que tu cherches est ici — touche la carte, il s'ouvre."};
-  setTimeout(()=>{ const c=document.getElementById('carte-guide'); if(c) try{ c.scrollIntoView({block:'center'}); }catch(e){} }, 300);
+  /* 19/09 — AVANT : on faisait défiler jusqu'à la carte du guide et la visite d'Axo
+     démarrait ; la personne devait la traverser avant de lire ce pour quoi elle
+     était venue. MAINTENANT : le guide s'ouvre directement, et la visite ne
+     commence qu'à la fermeture du lecteur (voir closeFiche). */
+  setTimeout(()=>{ try{ ouvrirRessource('guide-methodologique.html','Mini-guide pour préparer sa première année de santé'); }catch(e){ TUTO_DIFFERE=null; } }, 350);
+  /* Quand la visite démarrera — à la sortie — elle dira d'abord où le guide est rangé. */
+  BIBLIO_AVANT={sel:'#carte-guide', img:'axo-guide-pointe-haut', t:"Le <b>guide</b> que tu viens de lire reste ici — tu peux le rouvrir quand tu veux."};
 }
 if(CODE0){
   /* acheteur du Pack : le code s'applique tout de suite, ou dès que le compte est créé */
