@@ -21503,7 +21503,9 @@ try{ const q=new URLSearchParams(location.search);
    d'Axo attend qu'il en sorte (Lucas, 19/09 : « si quelqu'un clique sur le lien du
    guide, être sûr qu'il ne se retrouve pas dans une introduction d'Axo — l'intro
    c'est seulement si la personne sort du guide »). */
-if(SRC0==='accueil-panorama-p1' || SRC0==='accueil-guide-methodologique') TUTO_DIFFERE='biblio';
+if(SRC0==='accueil-panorama-p1') TUTO_DIFFERE='biblio';
+/* 19/09 : accueil-guide-methodologique ne charge plus l'app du tout — il redirige
+   vers la page du guide (plus bas). Il n'y a donc plus de visite à différer. */
 /* #inscription : la porte de la PUB (Lucas, 05/09 : « un lien d'accès directement pour s'inscrire
    au Parcours »). Sans compte, on tombe sur la porte du Parcours avec le message de l'annonce et
    le formulaire déjà ouvert ; avec un compte, on entre dans le Parcours. */
@@ -21590,13 +21592,17 @@ if(SRC0==='accueil-panorama-p1'){
   setTimeout(()=>{ try{ ouvrirPanoramas(); }catch(e){ TUTO_DIFFERE=null; } }, 350);
 }
 if(SRC0==='accueil-guide-methodologique'){
-  /* 19/09 — AVANT : on faisait défiler jusqu'à la carte du guide et la visite d'Axo
-     démarrait ; la personne devait la traverser avant de lire ce pour quoi elle
-     était venue. MAINTENANT : le guide s'ouvre directement, et la visite ne
-     commence qu'à la fermeture du lecteur (voir closeFiche). */
-  setTimeout(()=>{ try{ ouvrirGuide(); }catch(e){ TUTO_DIFFERE=null; } }, 350);
-  /* Quand la visite démarrera — à la sortie — elle dira d'abord où le guide est rangé. */
-  BIBLIO_AVANT={sel:'#carte-guide', img:'axo-guide-pointe-haut', t:"Le <b>guide</b> que tu viens de lire reste ici — tu peux le rouvrir quand tu veux."};
+  /* 19/09 (Lucas) : « quand quelqu'un clique sur un lien qui cible spécifiquement
+     le guide, il faudrait qu'il soit 100 % immergé dans le guide, sans cette
+     flèche retour qui le redirige vers l'app ».
+     On ne charge donc pas l'app du tout : on REDIRIGE vers la page du guide.
+     Pas de lecteur, pas de bandeau, pas d'app derrière — rien que le guide.
+     ⛔ Surtout pas window.open() ici : une fenêtre ouverte sans clic est bloquée
+     par les navigateurs, et la personne serait restée sur l'app, sans guide.
+     replace() plutôt que href : le retour du téléphone ramène à l'endroit d'où
+     l'on vient (le DM, le post), pas sur une app qu'on n'a jamais voulu ouvrir. */
+  try{ traquer('ressource',{fichier:'guide-methodologique',src:SRC0}); }catch(e){}
+  location.replace('https://medeos-sante.fr/ressources/guide-methodologique.html');
 }
 if(CODE0){
   /* acheteur du Pack : le code s'applique tout de suite, ou dès que le compte est créé */
