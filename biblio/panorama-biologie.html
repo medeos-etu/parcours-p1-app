@@ -1896,21 +1896,28 @@ Final output: should look like a publication-quality figure from a peer-reviewed
     }
     var hints = ['On continue ?', 'On poursuit le tour.', 'Prochain arrêt.', 'On continue.', 'Dernière partie.'];
 
-    // Phrases de conversion sous « Continuer ». Les DEUX offres sont proposées à
-    // chaque fois (retour Lucas 04/08) : les Stages Vacances valent 388 € contre
-    // 147 € pour Medi Pro, ils ne peuvent pas apparaître une fois sur trois.
+    // Phrases de conversion sous « Continuer ».
+    // ⛔ 19/09/2026 — le commentaire d'origine disait « les Stages Vacances valent
+    // 388 € contre 147 € pour Medi Pro » : FAUX deux fois. 388 € EST le prix de
+    // Medi Pro, et la grille à 147 € est morte. Surtout, il n'y a plus deux offres :
+    // Medi Pro REGROUPE les stages des vacances de Terminale et la pré-rentrée
+    // (Lucas, 19/09). Les deux portes sont donc le Parcours (gratuit) et Medi Pro.
     var RAPPELS_STAGES = {
-      3: 'La cellule, la membrane, l\'ADN : trois chapitres du programme, effleurés en quelques minutes. En première année, ils s\'enchaînent vite, avec un niveau de détail bien supérieur. <b>Medi&nbsp;Pro</b> te les fait voir juste avant la rentrée&nbsp;; les <b>Stages Vacances</b>, dès la Toussaint.',
-      5: 'Le cycle cellulaire est l\'un des chapitres les plus tombés de la première année, et l\'un des plus piégeux en QCM. Le voir une première fois sans pression change tout&nbsp;: c\'est ce que permettent <b>Medi&nbsp;Pro</b> l\'été prochain, ou les <b>Stages Vacances</b> dès cette année.'
+      3: 'La cellule, la membrane, l\'ADN : trois chapitres du programme, effleurés en quelques minutes. En première année, ils s\'enchaînent vite, avec un niveau de détail bien supérieur. Le <b>Parcours</b> de l\'app te les fait travailler gratuitement, deux fiches par jour&nbsp;; <b>Medi&nbsp;Pro</b>, nos stages, dès la Toussaint.',
+      5: 'Le cycle cellulaire est l\'un des chapitres les plus tombés de la première année, et l\'un des plus piégeux en QCM. Le voir une première fois sans pression change tout&nbsp;: c\'est ce que permettent le <b>Parcours</b> de l\'app, gratuitement, et <b>Medi&nbsp;Pro</b> pendant les vacances.'
     };
     function rappelStages(n){
       var t = RAPPELS_STAGES[n];
       if(!t) return '';
-      // Les DEUX offres à chaque fois : le lecteur se reconnaît lui-même.
+      /* 19/09 (Lucas) : « on vend encore Medi Pro ET Stages Vacances, une vieille
+         offre ; maintenant on n'a plus qu'un seul produit, Medi Pro, qui regroupe
+         tous les stages des vacances de Terminale + la pré-rentrée ». Les deux
+         boutons séparés sont donc remplacés par : le Parcours (gratuit, on y est
+         déjà) et Medi Pro. */
       return '<div class="continue-cta"><div class="cta-mot">' + t + '</div>' +
              '<div class="cta-duo">' +
-             '<a href="https://medeos-sante.fr/packs/medi-pro" target="_top" data-cta="medipro">Medi&nbsp;Pro — stage d\'été →</a>' +
-             '<a href="https://medeos-sante.fr/packs/stages-vacances" target="_top" class="sv" data-cta="stages">Stages Vacances →</a>' +
+             '<a href="#home" target="_top" class="pr" data-cta="parcours">Ouvrir mon Parcours, gratuit →</a>' +
+             '<a href="https://medeos-sante.fr/packs/medi-pro-v2/2027" target="_top" data-cta="medipro">Medi&nbsp;Pro — nos stages →</a>' +
              '</div></div>';
     }
 

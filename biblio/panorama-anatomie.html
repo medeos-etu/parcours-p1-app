@@ -2161,21 +2161,28 @@
     ];
 
 
-    // Phrases de conversion sous « Continuer ». Les DEUX offres sont proposées à
-    // chaque fois (retour Lucas 04/08) : les Stages Vacances valent 388 € contre
-    // 147 € pour Medi Pro, ils ne peuvent pas apparaître une fois sur trois.
+    // Phrases de conversion sous « Continuer ».
+    // ⛔ 19/09/2026 — le commentaire d'origine disait « les Stages Vacances valent
+    // 388 € contre 147 € pour Medi Pro » : FAUX deux fois. 388 € EST le prix de
+    // Medi Pro, et la grille à 147 € est morte. Surtout, il n'y a plus deux offres :
+    // Medi Pro REGROUPE les stages des vacances de Terminale et la pré-rentrée
+    // (Lucas, 19/09). Les deux portes sont donc le Parcours (gratuit) et Medi Pro.
     var RAPPELS_STAGES = {
-      3: 'Le langage anatomique, le squelette, le cœur : trois sujets, et en première année chacun d\'eux occupe un chapitre entier, avec ses schémas à restituer. <b>Medi&nbsp;Pro</b> te les fait travailler juste avant la rentrée&nbsp;; les <b>Stages Vacances</b> les répartissent sur quatre sessions de douze jours pendant l\'année.',
-      5: 'Cœur, poumons, cerveau : tu viens de survoler en quelques minutes ce qui occupe plusieurs semaines de cours. La différence entre survoler et savoir, c\'est le nombre de fois où tu repasses dessus — c\'est tout l\'objet de <b>Medi&nbsp;Pro</b> et des <b>Stages Vacances</b>.'
+      3: 'Le langage anatomique, le squelette, le cœur : trois sujets, et en première année chacun d\'eux occupe un chapitre entier, avec ses schémas à restituer. Dans le <b>Parcours</b> de l\'app, tu les travailles gratuitement, deux fiches par jour, dans l\'ordre du programme&nbsp;; <b>Medi&nbsp;Pro</b>, ce sont nos stages pour aller plus loin, à chaque vacances puis juste avant la rentrée.',
+      5: 'Cœur, poumons, cerveau : tu viens de survoler en quelques minutes ce qui occupe plusieurs semaines de cours. La différence entre survoler et savoir, c\'est le nombre de fois où tu repasses dessus — c\'est exactement ce que fait le <b>Parcours</b>, un peu chaque jour, et ce que <b>Medi&nbsp;Pro</b> accélère pendant les vacances.'
     };
     function rappelStages(n){
       var t = RAPPELS_STAGES[n];
       if(!t) return '';
-      // Les DEUX offres à chaque fois : le lecteur se reconnaît lui-même.
+      /* 19/09 (Lucas) : « on vend encore Medi Pro ET Stages Vacances, une vieille
+         offre ; maintenant on n'a plus qu'un seul produit, Medi Pro, qui regroupe
+         tous les stages des vacances de Terminale + la pré-rentrée ». Les deux
+         boutons séparés sont donc remplacés par : le Parcours (gratuit, on y est
+         déjà) et Medi Pro. */
       return '<div class="continue-cta"><div class="cta-mot">' + t + '</div>' +
              '<div class="cta-duo">' +
-             '<a href="https://medeos-sante.fr/packs/medi-pro" target="_top" data-cta="medipro">Medi&nbsp;Pro — stage d\'été →</a>' +
-             '<a href="https://medeos-sante.fr/packs/stages-vacances" target="_top" class="sv" data-cta="stages">Stages Vacances →</a>' +
+             '<a href="#home" target="_top" class="pr" data-cta="parcours">Ouvrir mon Parcours, gratuit →</a>' +
+             '<a href="https://medeos-sante.fr/packs/medi-pro-v2/2027" target="_top" data-cta="medipro">Medi&nbsp;Pro — nos stages →</a>' +
              '</div></div>';
     }
 
