@@ -2018,7 +2018,8 @@
   .lect-fermer{border:none;background:var(--line2);color:var(--ink);font-family:inherit;font-size:12.5px;
     font-weight:800;padding:8px 14px;border-radius:11px;cursor:pointer}
   .lect-nom{font-size:12px;font-weight:800;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  /* la barre de lecture des ressources (guide, panoramas, agenda) : elle avance avec le défilement du cadre */
+  /* la barre de lecture des ressources (panoramas, fiches) : elle avance avec le défilement du cadre.
+     19/09 : le guide n'y passe plus, il s'ouvre sur sa propre page ; l'agenda P1 a été retiré. */
   .lect-prog{display:none;height:3px;background:var(--line);flex-shrink:0}
   #lecteur.ressource .lect-prog{display:block}
   .lect-prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,#6B46C1,#E29C5C);transition:width .12s ease-out}
@@ -3347,7 +3348,7 @@
     <h2 class="scr-title" style="padding-top:4px">Ta Bibliothèque</h2>
     <div class="guide">
       <img src="img/axo-fiche.png" alt="">
-      <div class="bubble side">Les métiers, le panorama des matières, la méthode, l'agenda — en accès libre. L'entraînement, lui, vit dans le <b>Parcours</b> et l'<b>Arène</b>.</div>
+      <div class="bubble side">Le guide, le panorama des matières, les métiers — en accès libre. L'entraînement, lui, vit dans le <b>Parcours</b> et l'<b>Arène</b>.</div>
     </div>
 
     <div class="rescards" id="rescards-free">
@@ -16131,7 +16132,7 @@ const TUTOS={
     const ami=String(S.amiInvite||'');
     if(ami) s.push({sel:'#mainnav button[data-t="social"]', img:'axo-guide-pointe-haut', t:"<b>"+ami+"</b> t'attend dans le <b>Social</b>, juste là"+(accOk()?"." : " — dès que ton compte existe.")});
     /* la Bibliothèque se dit EN DERNIER, après le Parcours (Lucas, 07/09) */
-    s.push({sel:'#mainnav button[data-t="biblio"]', img:'axo-guide-bravo', t:"Et la <b>Bibliothèque</b>, juste là : panorama des matières, métiers, méthode — <b>en accès libre</b>. Une question ? On est sur Instagram, <b>@medeos.sante</b>.", btn:"Voir ma route →",
+    s.push({sel:'#mainnav button[data-t="biblio"]', img:'axo-guide-bravo', t:"Et la <b>Bibliothèque</b>, juste là : le guide, le panorama des matières, les métiers — <b>en accès libre</b>. Une question ? On est sur Instagram, <b>@medeos.sante</b>.", btn:"Voir ma route →",
      /* la présentation du parcours des mondes fait partie de l'introduction (Lucas, 05/09) :
         on ouvre la carte, et sa visite — ta rentrée, ton monde, les stages, le sommet — enchaîne */
      act:function(){ try{ ouvrirCarte(); }catch(e){} }});
@@ -16147,7 +16148,7 @@ const TUTOS={
     if(!tutoFait('intro')) s.push(introApp());
     s.push({sel:'#rescards-free', img:'axo-guide-carte', t: apresPanorama
       ? "Tu y trouves aussi les métiers et la méthode — <b>en accès libre</b>. Rien n'est noté."
-      : "Ici, c'est la <b>Bibliothèque</b> : panorama des matières, métiers, méthode — <b>en accès libre</b>. Rien n'est noté."});
+      : "Ici, c'est la <b>Bibliothèque</b> : le guide, le panorama des matières, les métiers — <b>en accès libre</b>. Rien n'est noté."});
     s.push(parcoursVu
       ? {sel:'#mainnav button[data-t="home"]', img:'axo-guide-bravo', t:"Ton point de départ reste le <b>Parcours</b>, juste là : deux fiches par jour, jusqu'à ta rentrée.",
          btn:"Retour au Parcours →", act:function(){ go('home'); }, skip:"Rester dans la Bibliothèque"}
