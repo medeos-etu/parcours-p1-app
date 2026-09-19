@@ -1556,6 +1556,7 @@
     background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:12px}
   .bsteps b{color:rgba(250,246,240,.95)}
   .rayon-premium .shopcard2{border:1px solid rgba(255,255,255,.09);transition:transform .18s ease, box-shadow .18s ease}
+  .rayon-premium #packcard{cursor:pointer}
   .rayon-premium .shopcard2:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(10,8,20,.45)}
   /* l'avant/après vit dans le panneau sombre : un seul jeu de règles, fond sombre, texte clair */
   .bonusbox{display:flex;flex-direction:column;gap:6px;margin:0 0 12px}
@@ -3379,7 +3380,11 @@
     <!-- PIVOT 06-07/09/2026 (Lucas) : une seule offre, MEDI PRO = nos 5 stages (4 stages de
          vacances + la pré-rentrée). Le message et le lien suivent l'année de rentrée dite dans
          le Parcours (S.profil.rentreeAn) — 2027 par défaut. Voir renderRayonMediPro(). -->
-    <div class="shopcard2" id="packcard">
+    <!-- 19/09 (Lucas) : « quand j'appuie sur la carte Medi Pro ça marche pas, je suis
+         obligé d'appuyer spécifiquement sur le bouton » — toute la carte est cliquable,
+         le bouton reste. Le clic est relayé AU BOUTON : une seule destination à tenir
+         (renderRayonMediPro() y met Medi Pro ou Medeos Soutien selon la situation). -->
+    <div class="shopcard2" id="packcard" onclick="ouvrirCartePremium(event)">
       <!-- 15/09 : la même carte sert DEUX offres selon la situation dite dans le Parcours.
            Avant la rentrée → Medi Pro (les stages). Déjà en première année → Medeos Soutien
            (un tuteur toute l'année). Les ids ci-dessous sont remplis par renderRayonMediPro(). -->
@@ -17706,6 +17711,14 @@ function lienMediPro(ancre){
   return MEDI_PRO_SITE + '/packs/medi-pro-v2/' + an + '?src=app' + (ancre ? '#' + ancre : '');
 }
 function ouvrirMediPro(ancre){ window.open(lienMediPro(ancre), '_blank'); }
+/* Le clic sur la carte du rayon premium (19/09) : on rejoue le clic du bouton plutôt que
+   de redéclarer la destination — sinon la carte enverrait vers Medi Pro alors que le bouton
+   affiche Medeos Soutien. Le clic venu du bouton lui-même est ignoré : il rebondirait. */
+function ouvrirCartePremium(ev){
+  var btn = document.getElementById('pk-btn'); if(!btn) return;
+  if (ev && ev.target && ev.target.closest && ev.target.closest('#pk-btn')) return;
+  btn.click();
+}
 /* ═══ MEDEOS SOUTIEN (15/09/2026) — l'offre de ceux qui sont DÉJÀ en première année.
    Lucas : « on a une nouvelle offre Medeos Soutien qui ne figure nulle part sur notre app,
    il faut régler ce problème et réorienter quand le contexte le permet ».
