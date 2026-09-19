@@ -3032,8 +3032,8 @@
            raison de rester, et le guide fait le travail de conviction. -->
       <div class="gate-guide">
         <b>Pas encore décidé&nbsp;?</b>
-        <p>Ce qui t'attend vraiment en première année, et les cinq piliers à travailler avant d'y être. Gratuit, sans compte.</p>
-        <button class="btn ghost" onclick="ouvrirGuide()">Lire le guide →</button>
+        <p>Ce qui vous attend vraiment en première année, et les cinq piliers à travailler avant d'y être. Gratuit, sans compte.</p>
+        <a class="btn ghost" href="https://medeos-sante.fr/ressources/guide-methodologique.html" target="_blank" rel="noopener" style="display:inline-block;text-decoration:none" onclick="traqueGuide()">Lire le guide →</a>
       </div>
     </div>
   </section>
@@ -3342,19 +3342,19 @@
     </div>
 
     <div class="rescards" id="rescards-free">
-      <div class="rescard" id="carte-guide" onclick="ouvrirGuide()">
+      <a class="rescard" id="carte-guide" href="https://medeos-sante.fr/ressources/guide-methodologique.html" target="_blank" rel="noopener" style="display:block;text-decoration:none;color:inherit" onclick="traqueGuide()">
         <span class="pricechip">GRATUIT</span><img src="img/cover-methode-p1.png" onerror="this.src='img/cover-methode.jpg'" alt="">
         <div class="rc-body">
           <b>Anticiper sa première année</b>
-          <p>Découvre les 5 piliers qui font la différence, et mets toutes les chances de ton côté pour ta première année de médecine.</p>
+          <p>Découvrez les 5 piliers qui font la différence, et mettez toutes les chances de votre côté pour votre première année de médecine.</p>
           <div class="rc-meta">📖 Le guide · 10 min</div>
         </div>
-      </div>
+      </a>
       <div class="rescard" id="carte-panoramas" onclick="ouvrirPanoramas()">
         <span class="pricechip">GRATUIT</span><img src="img/cover-panorama.jpg" alt="">
         <div class="rc-body">
           <b>Panorama de la P1</b>
-          <p>Quatre visites guidées complètes — anatomie, biologie, chimie, physique : ce que chaque matière attend de toi en P1, raconté de A à Z.</p>
+          <p>Quatre visites guidées complètes — anatomie, biologie, chimie, physique : ce que chaque matière attend de vous en P1, raconté de A à Z.</p>
           <div class="rc-meta">📖 4 panoramas · 40 à 55 min chacun</div>
         </div>
       </div>
@@ -20335,11 +20335,14 @@ function sauverNotes(slug){
    on veut que la personne lise. Le guide part donc dans un onglet, sur sa page
    autonome — celle du site, sans barre de navigation ni menu.
    L'app reste ouverte derrière : on ne la quitte pas, on ouvre à côté. */
-function ouvrirGuide(){
-  var u='https://medeos-sante.fr/ressources/guide-methodologique.html';
+/* 19/09 (Lucas) : « quand je clique sur guide ça fait encore fond blanc ».
+   window.open() depuis un onclick est bloque ou ouvre un onglet vide sur Safari
+   mobile et en PWA installee. Ce sont desormais de VRAIS liens <a target=_blank>
+   (jamais bloques) ; il ne reste ici que la mesure. */
+function traqueGuide(){
   try{ traquer('ressource',{fichier:'guide-methodologique'}); }catch(e){}
-  try{ window.open(u,'_blank','noopener'); }catch(e){ location.href=u; }
 }
+function ouvrirGuide(){ traqueGuide(); location.href='https://medeos-sante.fr/ressources/guide-methodologique.html'; }
 function ouvrirRessource(fichier, titre){
   try{ traquer('ressource',{fichier:fichier}); }catch(e){}
   const L=document.getElementById('lecteur'), fr=document.getElementById('fiche-frame');
