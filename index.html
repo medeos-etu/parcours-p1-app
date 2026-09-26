@@ -19825,11 +19825,14 @@ function majStreak(){
   if(S.stDay===hier) S.streak=(S.streak||0)+1;                                       /* consécutif */
   else if(S.stDay===_jourMoins(2) && S.gelPose===hier) S.streak=(S.streak||0)+1;    /* la pause d'un jour, posée la veille : le gel a joué */
   else S.streak=1;
+  /* LES DATES DE LA SÉRIE (Lucas, 26/09 : le record sans ses dates ne dit rien au tracker).
+     streakDebut = 1er jour de la série en cours ; streakMaxDebut/Fin = celles du record. */
+  if(S.streak===1 || !S.streakDebut) S.streakDebut=_jourMoins(S.streak-1);
   if(S.gelPose===auj) S.gels=(S.gels||0)+1;         /* posé sur aujourd'hui, mais il est venu : le gel n'a pas servi, on le rend */
   if(S.gelPose && S.gelPose<=auj) S.gelPose=null;   /* joué ou rendu : dans les deux cas, c'est fini */
   S.stDay=auj;
   if(typeof rappelActivite==='function') rappelActivite(auj);   /* le site saura que la séance du jour est faite */
-  S.streakMax=Math.max(S.streakMax||0,S.streak);
+  if(S.streak>=(S.streakMax||0)){ S.streakMax=S.streak; S.streakMaxDebut=S.streakDebut; S.streakMaxFin=auj; }
   if(S.streakMax>=14 && !S.gel14){ S.gel14=1; S.gels=(S.gels||0)+1; }   /* palier 14 j : un gel de série offert */
   saveS();
   if(typeof renderPtop==='function') renderPtop();
