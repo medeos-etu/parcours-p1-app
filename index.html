@@ -2578,6 +2578,9 @@
   .chemin-head span{font-size:11px;color:rgba(250,246,240,.75)}
   .chemin-head .embs{margin-left:auto;display:flex;gap:4px;flex-shrink:0}
   .chemin-head .embs img{width:24px;height:24px}
+  /* 29/09 (C79) : sans compte, seule la Bibliothèque — Parcours, Arène et Social disparaissent */
+  body.sans-compte #mainnav{display:none !important}
+  body.sans-compte #sidebar [data-t="home"], body.sans-compte #sidebar [data-t="arene"], body.sans-compte #sidebar [data-t="social"]{display:none !important}
 </style>
 
 
@@ -3551,6 +3554,9 @@ function go(id){
      sans identité. Il rejoint donc le Parcours et l'Arène derrière la porte,
      au lieu d'afficher un écran vide à qui n'est pas inscrit. */
   if((id==='arene' || id==='home' || id==='social') && typeof S!=='undefined' && !accOk()){ gateVers=id; id='gate'; }
+  /* 29/09 (Lucas, C79) : « Parcours, Arène, Social : les faire disparaître sauf pour les gens déjà
+     inscrits ». Sans compte (et sans code d'acheteur), seule la Bibliothèque reste dans la navigation. */
+  try{ document.body.classList.toggle('sans-compte', typeof S!=='undefined' && !accOk() && !inscriptionPermise()); }catch(e){}
   try{ majVerrouArene(); }catch(e){}
   const cible=document.getElementById(id); if(!cible) return;
   /* UNE VISITE NE SURVIT PAS À UN CHANGEMENT D'ÉCRAN. Sinon la bulle « Bienvenue dans
@@ -3561,7 +3567,8 @@ function go(id){
     const gt=document.getElementById('gate-tease');
     if(gt) gt.className='gate-tease '+(gateVers==='arene'?'t-arene':'t-home');
     const t2=document.getElementById('gate-titre');
-    if(t2) t2.textContent=(gateVers==='arene')?'L\'Arène t\'attend'
+    if(t2) t2.textContent=!inscriptionPermise()?'Espace réservé aux élèves inscrits'
+      :(gateVers==='arene')?'L\'Arène t\'attend'
       :(gateVers==='fiche')?'Votre première fiche t\'attend'
       :(gateVers==='social')?'Le Social t\'attend'          /* 19/09 : le Social passe aussi la porte */
       :'Votre Parcours t\'attend';
@@ -14728,6 +14735,12 @@ function accInit(){ if(S.ar && !('compte' in S.ar)) { S.ar.compte=null; saveS();
 /* Registre local des comptes créés sur CET appareil (prototype).
    En production, connexion et création passeront par le compte Medeos côté serveur. */
 let accMode=null;   /* 'login' | 'create' — choisi au premier affichage */
+/* 29/09 (Lucas, C79) : « on ne peut plus s'inscrire, on peut uniquement se connecter ». Les comptes
+   existants gardent tout. Seul l'acheteur Medi Pro arrivé avec son code (?code=MEDEOS-…) crée encore
+   son compte — l'app illimitée fait partie de son achat. Le serveur applique la même règle. */
+const INSCRIPTIONS_FERMEES = true;
+const PANORAMA_URL = 'https://medeos-sante.fr/ressources/panorama-p1';
+function inscriptionPermise(){ return !INSCRIPTIONS_FERMEES || !!(S && S.codeAttente); }
 function accRegistre(){ try{ return JSON.parse(localStorage.getItem('m4_comptes')||'{}'); }catch(e){ return {}; } }
 function seDeconnecter(){
   try{ traquer('deconnexion'); viderEvts(true); }catch(e){}
@@ -14797,10 +14810,12 @@ async function creerCompte(){
   if(mp.length<6){ err.textContent='Votre mot de passe doit faire au moins 6 caractères.'; return; }
   const mail=(document.getElementById('acc-mail')||{value:''}).value.trim();
   if(!/.+@.+\..+/.test(mail)){ err.textContent='Entrez un email valide — c\'est lui qui vous permet de vous reconnecter.'; return; }
+  if(!inscriptionPermise()){ accMode='login'; renderCompte(); return; }
   err.textContent='Création du compte…';
   let d; try{ d=await apiCompte('inscription',{email:mail, pseudo:id, prenom:localStorage.getItem('m4_prenom')||'', mdp:mp, etat:S, source:srcInscription(), appareil:appareilId()}); }catch(e){ d={_status:0}; }
   if(!d.ok){
-    err.textContent = d.erreur==='email-pris' ? 'Cet email a déjà un compte — passe par « J\'ai déjà un compte ».'
+    err.textContent = d.erreur==='inscriptions-fermees' ? 'Les inscriptions sont fermées : seuls les élèves qui ont déjà un compte peuvent se connecter.'
+      : d.erreur==='email-pris' ? 'Cet email a déjà un compte — passe par « J\'ai déjà un compte ».'
       : d.erreur==='pseudo-pris' ? 'Cet identifiant est déjà pris — choisis-en un autre.'
       : d._status===429 ? 'Trop d\'essais d\'un coup — réessayez dans une minute.'
       : d._status===0 ? 'Pas de connexion : réessayez dans un instant.' : 'Impossible de créer le compte pour l\'instant.';
@@ -14904,7 +14919,10 @@ function renderCompte(){
     return;
   }
   if(accMode===null) accMode=Object.keys(accRegistre()).length?'login':'create';
-  const tabs='<div class="acctabs">'+
+  if(accMode==='create' && !inscriptionPermise()) accMode='login';
+  const tabs = !inscriptionPermise()
+    ? '<p class="accerr" style="color:var(--muted)">Les inscriptions sont fermées : cet espace est réservé aux élèves qui ont déjà un compte. Pour découvrir la première année, le <a href="'+PANORAMA_URL+'?src=app&ref=inscriptions-fermees">Panorama P1</a> est en accès libre.</p>'
+    : '<div class="acctabs">'+
     '<button class="'+(accMode==='login'?'on':'')+'" onclick="accMode=\'login\';renderCompte()">J\'ai déjà un compte</button>'+
     '<button class="'+(accMode==='create'?'on':'')+'" onclick="accMode=\'create\';renderCompte()">Créer mon compte</button></div>';
   if(accMode==='reset'){
@@ -15448,7 +15466,7 @@ function renderSideAcc(){
   if(!accOk()){
     b.innerHTML='<h3>📊 Le classement</h3>'+
       '<p class="lb-vide">Vos trophées ne comptent au classement que si vous avez un compte — c\'est lui qui vous garde votre place.</p>'+
-      '<button class="btn small" style="margin-top:9px" onclick="focusAcc()">Créer mon compte</button>';
+      '<button class="btn small" style="margin-top:9px" onclick="focusAcc()">'+(inscriptionPermise()?'Créer mon compte':'Me connecter')+'</button>';
     return;
   }
   /* LES JOUEURS RÉELS, RIEN D'AUTRE : aujourd'hui l'app garde les comptes sur
@@ -21203,7 +21221,7 @@ function renderSocial(){
   if(!accOk()){
     b.innerHTML='<div class="card so-porte"><img src="img/axo-guide-bienvenue.png" alt="" onerror="this.remove()">'+
       '<h2>Vos amis, ici</h2><p>Avec un compte, vous avez votre carte — photo, bannière, trophées, avancée — et vous pouvez inviter vos amis et suivre les leurs.</p>'+
-      '<button class="btn" onclick="accMode=\'create\';focusAcc()">Créer mon compte gratuit</button>'+
+      (inscriptionPermise() ? '<button class="btn" onclick="accMode=\'create\';focusAcc()">Créer mon compte gratuit</button>' : '')+
       '<button class="btn ghost" style="margin-top:8px" onclick="accMode=\'login\';focusAcc()">J\'ai déjà un compte</button></div>';
     return;
   }
@@ -21420,6 +21438,26 @@ const CONNEXION = HASH0==='connexion';
 let LIEN0='', LIEN0_EMAIL='';
 try{ const q=new URLSearchParams(location.search); LIEN0=String(q.get('lien')||''); LIEN0_EMAIL=String(q.get('email')||'').trim().toLowerCase();
   if(!/^[a-f0-9]{64}$/.test(LIEN0)) LIEN0=''; }catch(e){}
+/* 29/09 (Lucas, C79) : « le lien parcours ne redirige plus vers le parcours mais vers le panorama ».
+   Un visiteur sans session part au Panorama P1. Restent dans l'app : un compte connecté, un lien de
+   connexion des e-mails (?lien=, #connexion), un appareil qui a déjà eu un compte (il se reconnecte),
+   un acheteur Medi Pro avec son code, et la Bibliothèque (#biblio, liens du guide et du panorama). */
+if(INSCRIPTIONS_FERMEES && !accOk() && !LIEN0 && !CONNEXION && !CODE0 && !S.codeAttente && HASH0!=='biblio'
+   && !['accueil-panorama-p1','accueil-guide-methodologique'].includes(SRC0) && !Object.keys(accRegistre()).length){
+  try{ traquer('vers_panorama',{src:SRC0||undefined, ref:REF0||undefined, hash:HASH0||undefined}); viderEvts(true); }catch(e){}
+  location.replace(PANORAMA_URL+'?src='+encodeURIComponent(SRC0||'app')+'&ref='+encodeURIComponent(REF0||HASH0||'parcours'));
+}
+/* la porte ne propose plus de créer un compte : seulement de se connecter, ou le Panorama */
+if(!inscriptionPermise()) try{
+  const g=document.getElementById('gate'), t=document.getElementById('gate-titre'), p=t && t.nextElementSibling;
+  if(t) t.textContent='Espace réservé aux élèves inscrits';
+  if(p && p.tagName==='P') p.innerHTML='Les inscriptions sont fermées. Si vous avez déjà un compte, reconnectez-vous. La <b>Bibliothèque</b> reste en accès libre.';
+  const bc=g && g.querySelector('.gatebox > .btn:not(.ghost)'); if(bc) bc.remove();
+  const bl=g && g.querySelector('.gatebox > .btn.ghost'); if(bl){ bl.classList.remove('ghost'); bl.textContent='Me connecter'; }
+  const gg=g && g.querySelector('.gate-guide');
+  if(gg) gg.innerHTML='<b>Découvrir la première année&nbsp;?</b><p>Les quatre matières de la P1, expliquées une par une. Gratuit, sans compte.</p>'+
+    '<a class="btn ghost" href="'+PANORAMA_URL+'?src=app&ref=porte" style="display:inline-block;text-decoration:none">Voir le Panorama P1 →</a>';
+}catch(e){}
 /* #inscription sans compte : la porte, avec le message de l'annonce (le lien promet l'inscription) */
 if(PUB && !(typeof accOk==='function'&&accOk())) gateVers='home';
 /* #connexion sans session : le formulaire s'ouvrez tout de suite — la visite du Parcours attend qu'il se referme (sinon les deux se superposent) */
