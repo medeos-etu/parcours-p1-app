@@ -2580,6 +2580,7 @@
   .chemin-head .embs img{width:24px;height:24px}
   /* 29/09 (C79) : sans compte, seule la Bibliothèque — Parcours, Arène et Social disparaissent */
   body.sans-compte #mainnav{display:none !important}
+  body.sans-compte #biblio > .guide{display:none !important}   /* la bulle d'Axo renvoyait au Parcours et à l'Arène */
   body.sans-compte #sidebar [data-t="home"], body.sans-compte #sidebar [data-t="arene"], body.sans-compte #sidebar [data-t="social"]{display:none !important}
 </style>
 
@@ -16233,6 +16234,9 @@ let COMPTE_NEUF=false;   /* le compte vient d'être créé dans cette ouverture 
 function tutoFait(k){ return !!(S.tuto && S.tuto[k]); }
 function startTuto(k){
   if(TU || tutoFait(k) || !TUTOS[k]) return;
+  /* 29/09 (Lucas, C79) : « pas d'introduction ni d'Axo qui parle » — sans compte, on ne voit que la
+     Bibliothèque : aucune visite guidée (elle présentait le Parcours, fermé aux inscriptions). */
+  if(!accOk() && !inscriptionPermise()) return;
   /* une visite peut se construire au moment où elle démarre : celle de la carte parle de TA rentrée */
   const s=(typeof TUTOS[k]==='function')? TUTOS[k]() : TUTOS[k];
   if(!s || !s.length) return;
@@ -16340,6 +16344,7 @@ function axoRepl(moment){
 }
 /* un petit message flottant de la mascotte, sans fenêtre */
 function toastAxo(moment){
+  if(!accOk() && !inscriptionPermise()) return;   /* 29/09 (C79) : Axo ne parle pas aux visiteurs sans compte */
   const r=axoRepl(moment); if(!r) return;
   const d=document.createElement('div'); d.className='axotoast';
   d.innerHTML='<img src="img/'+r.pose+'.png" alt="" onerror="this.remove()"><span>'+r.texte+'</span>';

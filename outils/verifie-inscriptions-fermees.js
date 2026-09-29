@@ -48,7 +48,7 @@ function verifier(nom, condition, vu) {
     const erreursJs = [];
     page.on('pageerror', e => erreursJs.push(e.message));
     await page.goto(`http://localhost:${port}${chemin}`, { waitUntil: 'load' }).catch(() => {});
-    await page.waitForTimeout(2500);
+    await page.waitForTimeout(4000);
     const url = page.url();
     let dom = null;
     if (/localhost/.test(url)) dom = await page.evaluate(() => ({
@@ -57,6 +57,8 @@ function verifier(nom, condition, vu) {
       permise: inscriptionPermise(),
       navVisible: (() => { const n = document.getElementById('mainnav'); return !!n && getComputedStyle(n).display !== 'none'; })(),
       sansCompte: document.body.classList.contains('sans-compte'),
+      visite: !document.getElementById('tuto').hidden || !!document.querySelector('.axotoast')
+        || (() => { const g = document.querySelector('#biblio > .guide'); return !!g && getComputedStyle(g).display !== 'none'; })(),
     }));
     await ctx.close();
     return { url, dom, erreursJs };
@@ -76,6 +78,11 @@ function verifier(nom, condition, vu) {
   verifier('reste dans l\'app', /localhost/.test(v.url), v.url);
   verifier('la porte ne propose plus de créer un compte', v.dom && !v.dom.boutonCreerPorte && /réservé/.test(v.dom.titrePorte), v.dom);
   verifier('Parcours, Arène, Social masqués (navigation cachée)', v.dom && v.dom.sansCompte && !v.dom.navVisible, v.dom);
+  verifier('aucune visite guidée ni Axo qui parle', v.dom && !v.dom.visite, v.dom);
+
+  console.log('CAS 3 bis — lien du Panorama vers la Bibliothèque (accueil-panorama-p1)');
+  v = await visite('/?src=accueil-panorama-p1#biblio');
+  verifier('reste dans l\'app, sans visite guidée', /localhost/.test(v.url) && v.dom && !v.dom.visite, v.dom);
   verifier('aucune erreur JS', v.erreursJs.length === 0, v.erreursJs);
 
   console.log('CAS 4 — le bouton « Me connecter » des e-mails');
