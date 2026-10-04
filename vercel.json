@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/(.*)",
+      "destination": "https://medeos-sante.fr/panorama-p1",
+      "permanent": false
+    },
+    {
       "source": "/parcours",
       "destination": "/?src=parcours#home",
       "permanent": false
